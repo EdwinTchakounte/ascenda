@@ -1,0 +1,72 @@
+[
+ {"chapitre":"5dfca591","citations":[
+  {"texte":"Alors même que l'IA n'a jamais connu autant de développements et d'applications variés, ses résultats restent largement méconnus dans leur ensemble, y compris dans la communauté des chercheurs en informatique.","page":5,"axe":"02-ia-technique-academique","theme":"Méconnaissance des résultats de l'IA","portee":"Constat de 2014 qui explique pourquoi le débat public s'est ensuite construit sur si peu de connaissance réelle."},
+  {"texte":"Si chaque chapitre peut être lu indépendamment des autres, les références croisées entre chapitres sont nombreuses et un index global de l'ouvrage permet d'aborder celui-ci de façon non linéaire.","page":5,"axe":"05-ia-education-pedagogie","theme":"Lecture non linéaire d'un traité","portee":"Principe d'organisation utile à qui aborde un ouvrage technique sans le lire d'un bout à l'autre."}
+ ]},
+ {"chapitre":"65cd4820","citations":[
+  {"texte":"L'intelligence artificielle (IA), de par son projet de doter les machines de capacités d'exploitation de données et de connaissances toujours plus sophistiquées, est au cœur des sciences du traitement de l'information.","page":9,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Définition par le projet","portee":"Définit l'IA par son projet plutôt que par ses techniques, ce qui la rend indépendante des modes."},
+  {"texte":"Peut-être à cause de cela, les contours mêmes de l'IA ont évolué avec le temps, et peuvent quelquefois poser questions à certains quant à leur exacte localisation.","page":9,"axe":"04-ia-societe-ethique-philosophie","theme":"Frontières mouvantes de l'IA","portee":"Explique pourquoi une même technique est dite d'IA à une époque et simple informatique à une autre."}
+ ]},
+ {"chapitre":"20e905a5","citations":[
+  {"texte":"De plus, il n'est sans doute pas exagéré de dire qu'à terme, l'IA, au travers des questions théoriques qu'elle soulève (et dont cet ouvrage a pu donner une idée) suscitera, en relation avec sa problématique, davantage de recherches spécifiques en mathématiques et en informatique théorique.","page":10,"axe":"02-ia-technique-academique","theme":"L'IA comme source de questions théoriques","portee":"Renverse l'ordre habituel : l'IA n'applique pas seulement les mathématiques, elle leur pose des questions."},
+  {"texte":"Enfin, une postface discute l'attente sociétale qu'a suscitée l'IA et ses mythes, tandis qu'un épilogue de l'ouvrage fait brièvement le bilan du chemin parcouru, et s'efforce de dissiper quelques malentendus.","page":10,"axe":"04-ia-societe-ethique-philosophie","theme":"Attente sociétale et mythes","portee":"Les auteurs jugent nécessaire de traiter les mythes à part, comme un objet en soi."}
+ ]},
+ {"chapitre":"9cb8d64a","citations":[
+  {"texte":"L'intelligence artificielle n'a commencé à être mentionnée comme un domaine à part entière - voire une discipline autonome - qu'au milieu des années cinquante, dans le fameux « rapport de Dartmouth », rédigé par John McCarthy, Marvin Minsky, Nathan Rochester et Claude Shannon, les pères fondateurs, en 1955.","page":15,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Acte de naissance de la discipline","portee":"Repère fondateur, à retenir pour situer l'IA dans le temps long des sciences."},
+  {"texte":"le thème de la traduction automatique bénéficia d'investissements considérables mais qui se trouvèrent brutalement réduits","page":15,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Premier retournement de financement","portee":"Premier exemple d'un cycle qui s'est répété plusieurs fois dans l'histoire de l'IA."}
+ ]},
+ {"chapitre":"a9e23718","citations":[
+  {"texte":"Pour ce concept, qui est au centre des analyses de Wiener, Latil propose un heureux néologisme : rétroaction","page":16,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Naissance du mot rétroaction","portee":"Rappelle qu'une notion technique n'existe pleinement dans une langue qu'une fois nommée."},
+  {"texte":"La « programmation non numérique », qui débutait ainsi, représentait un tournant important dans le développement des « machines à calculer électroniques », consacré jusque-là au « calcul scientifique » qui dominait les ingénieries spatiale et nucléaire.","page":16,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Du numérique au symbolique","portee":"Le basculement décisif par lequel l'ordinateur cesse d'être une simple machine à calculer."}
+ ]},
+ {"chapitre":"38793dfc","citations":[
+  {"texte":"le point de vue de l'ingénieur qui met l'accent sur les problèmes du contrôle et insiste sur les schémas de rétroaction","page":17,"axe":"02-ia-technique-academique","theme":"Le regard de l'ingénieur","portee":"Première des deux traditions dont la tension traverse toute l'histoire de la discipline."},
+  {"texte":"le point de vue du logicien en quête de formalismes et d'algorithmes de manipulation symbolique : calcul des prédicats, techniques de codage formel, problèmes de décision, évaluation de la complexité, etc.","page":17,"axe":"02-ia-technique-academique","theme":"Le regard du logicien","portee":"Seconde tradition, celle dont l'IA symbolique est directement issue."}
+ ]},
+ {"chapitre":"a3ca3566","citations":[
+  {"texte":"Parmi les métaphores géométriques élémentaires, celle du cercle est l'une des plus utilisées, mais aussi l'une des plus ambiguës : rassurante lorsqu'il s'agit de la famille ou des amis, inquiétante si c'est un raisonnement, une argumentation que l'on évoque.","page":18,"axe":"04-ia-societe-ethique-philosophie","theme":"Ambiguïté du cercle","portee":"Belle observation sur la façon dont une figure change de sens selon ce qu'elle décrit."},
+  {"texte":"La détection d'un raisonnement circulaire est cause de perplexité, voire de malaise, chez le lecteur","page":18,"axe":"09-developpement-personnel-influence","theme":"Le raisonnement circulaire","portee":"Signal à reconnaître dans un texte comme dans un discours, y compris dans une argumentation qu'on reçoit."}
+ ]},
+ {"chapitre":"a6c8ce90","citations":[
+  {"texte":"La solution n'existe donc que parce qu'il subsiste une erreur : c'est précisément le paradoxe, un paradoxe « différent » !","page":19,"axe":"02-ia-technique-academique","theme":"Le paradoxe des unités opérationnelles","portee":"Cas où la présence d'une erreur résiduelle est la condition même du bon fonctionnement."},
+  {"texte":"Ce mathématicien anglais a joué un rôle décisif, aux côtés d'Alan Turing, dans le déchiffrage du code Enigma utilisé par la marine de guerre allemande.","page":19,"axe":"01-ia-fondamentaux-vulgarisation","theme":"I.J. Good et Enigma","portee":"Rappelle le lien direct entre les débuts de l'informatique et les besoins militaires de la guerre."}
+ ]},
+ {"chapitre":"5471e850","citations":[
+  {"texte":"Good se situe ainsi dans une grande tradition anglo-saxonne qui comprend évidemment Jonathan Swift (1667-1745) avec l'Académie de Laputa et sa machine à produire de la littérature, Mary Shelley (1797-1851) et la créature du Dr Frankenstein, ainsi que Samuel Butler (1835-1901) et l'utopie d'Erewhon.","page":20,"axe":"08-litterature-romans","theme":"Généalogie littéraire de la machine pensante","portee":"Rappelle que l'imaginaire de la machine intelligente précède de trois siècles sa possibilité technique."},
+  {"texte":"Partant de nombreuses extrapolations relatives à la vitesse et à la capacité des ordinateurs, il prédit la venue d'un moment où la capacité des machines dépassera, dans tous les domaines, celle de l'homme et il en calcule même la date : 2045.","page":20,"axe":"04-ia-societe-ethique-philosophie","theme":"La singularité de Kurzweil","portee":"Prédiction fondée sur une extrapolation, à distinguer d'un résultat scientifique."},
+  {"texte":"L'utopie, en tout cas, semble immortelle !","page":20,"axe":"04-ia-societe-ethique-philosophie","theme":"Permanence de l'utopie","portee":"Jugement du préfacier sur la reprise indéfinie des mêmes promesses de génération en génération."}
+ ]},
+ {"chapitre":"a1981d4d","citations":[
+  {"texte":"Ce chapitre traite d'une question basique dans l'idée d'intelligence artificielle : que peut-on calculer avec une machine ?","page":21,"axe":"02-ia-technique-academique","theme":"La question du calculable","portee":"Question préalable à toute discussion sérieuse sur ce qu'une machine peut ou ne peut pas faire."},
+  {"texte":"Cette mathématisation a permis de prouver des résultats surprenants qui alimentent la réflexion sur l'intelligence et les machines.","page":21,"axe":"02-ia-technique-academique","theme":"Portée philosophique d'un résultat technique","portee":"Montre qu'un théorème de calculabilité pèse sur le débat sur l'esprit."}
+ ]},
+ {"chapitre":"0ea6a53f","citations":[
+  {"texte":"Ainsi, la pensée déductive peut se laisser circonscrire par quelques règles et axiomes simples, précis et explicites.","page":22,"axe":"02-ia-technique-academique","theme":"La déduction mécanisable","portee":"Conséquence du théorème de complétude, socle de la démonstration automatique."},
+  {"texte":"Résultat à la base des programmes de démonstration automatique d'aujourd'hui et que l'on peut aussi considérer comme une réduction d'une importante capacité de l'esprit humain à une capacité mécanisable.","page":22,"axe":"04-ia-societe-ethique-philosophie","theme":"Réduire une capacité de l'esprit","portee":"Formule prudente pour dire qu'une part du raisonnement humain a été rendue mécanique."}
+ ]},
+ {"chapitre":"9aae43cf","citations":[
+  {"texte":"L'adaptabilité, la souplesse, le caractère protéiforme de l'intelligence humaine, en bref son universalité, sont donc des qualités qu'une machine peut avoir.","page":23,"axe":"04-ia-societe-ethique-philosophie","theme":"Universalité de la machine","portee":"À lire avec la réserve qui suit immédiatement dans le texte sur la question quantitative."},
+  {"texte":"Ainsi, l'auto-référence, l'examen de ses propres mécanismes d'action, propriétés parfois vues comme relevant de la conscience, peuvent être possédées par un programme ou une machine.","page":23,"axe":"04-ia-societe-ethique-philosophie","theme":"Auto-référence et conscience","portee":"Désamorce l'argument qui fait de l'examen de soi une frontière infranchissable pour la machine."},
+  {"texte":"Non seulement, l'activité de déduction est mécanisable - le calculus ratiocinator - mais elle est équivalente à l'activité de calcul !","page":23,"axe":"02-ia-technique-academique","theme":"Déduire, c'est calculer","portee":"Énoncé de l'isomorphisme de Curry et Howard dans les termes les plus directs."}
+ ]},
+ {"chapitre":"c3ec83e9","citations":[
+  {"texte":"Un modèle de calcul est une représentation mathématique de ce qui est calculable suivant certaines hypothèses sur le monde physique qui nous entoure.","page":24,"axe":"02-ia-technique-academique","theme":"Ce qu'est un modèle de calcul","portee":"Définition qui rattache une notion mathématique à des hypothèses sur la physique."},
+  {"texte":"La variété de ces modèles montre la difficulté à appréhender la nature et la diversité des calculs.","page":24,"axe":"02-ia-technique-academique","theme":"Diversité des modèles","portee":"La multiplicité des formalisations est un signe de difficulté, non de richesse gratuite."}
+ ]},
+ {"chapitre":"8182126c","citations":[
+  {"texte":"C'est seulement dans les années 1980 que la notion d'algorithme, considérée comme objet d'étude, a réellement vu le jour.","page":25,"axe":"02-ia-technique-academique","theme":"L'algorithme comme objet d'étude","portee":"Distinction entre calculer et étudier la manière de calculer, tardive dans l'histoire de la discipline."},
+  {"texte":"La première bonne formalisation a été imaginée par Jacques Herbrand en 1931, quelques semaines avant sa mort (à 23 ans) dans un accident de montagne.","page":25,"axe":"02-ia-technique-academique","theme":"Herbrand","portee":"Rappel du rôle décisif d'un travail interrompu, transmis par une simple lettre."}
+ ]},
+ {"chapitre":"77830d1d","citations":[
+  {"texte":"Dans cet article, Turing argumente de façon très convaincante sur le fait que ce qui peut être calculé par un humain qui travaille mécaniquement avec un papier et un crayon en un nombre fini d'étapes est calculable par le dispositif qu'il a imaginé, et est appelé maintenant « machine de Turing ».","page":26,"axe":"02-ia-technique-academique","theme":"L'argument de Turing","portee":"Le modèle part de ce que fait un humain qui calcule, non d'une machine imaginée à l'avance."},
+  {"texte":"Une extension naturelle de la machine de Turing est de remplacer l'unique ruban par plusieurs rubans. Ou de multiplier les têtes.","page":26,"axe":"02-ia-technique-academique","theme":"Robustesse du modèle","portee":"Ces extensions n'ajoutent aucune fonction nouvelle, ce qui renforce la thèse de Church et Turing."}
+ ]},
+ {"chapitre":"a9147d4f","citations":[
+  {"texte":"Le modèle décrit ci-dessous ne permet pas non plus d'aller au-delà des fonctions calculables par machines de Turing. En revanche, son efficacité en temps est de beaucoup plus grande.","page":27,"axe":"02-ia-technique-academique","theme":"Puissance et efficacité","portee":"Distingue ce qu'une machine peut calculer de la vitesse à laquelle elle le calcule."},
+  {"texte":"Visionnaire, ici comme dans tant d'autres sujets, John von Neumann a mis en place dès 1949 un cadre théorique pour le parallélisme massif : celui des automates cellulaires.","page":27,"axe":"02-ia-technique-academique","theme":"Von Neumann et le parallélisme","portee":"Le cadre théorique précède de plusieurs décennies les machines capables de l'exploiter."}
+ ]},
+ {"chapitre":"fdbef4e7","citations":[
+  {"texte":"Le choix de von Neumann du caractère synchrone apparaît comme un axiome puissant pour un développement théorique.","page":28,"axe":"02-ia-technique-academique","theme":"Le synchronisme comme hypothèse","portee":"Un choix de modélisation peut décider de la richesse des résultats qu'on obtiendra."},
+  {"texte":"Constituée de 65 536 (soit 216) processeurs, elle a été connectée comme un hypercube de dimension 16. Mais personne n'a su exploiter réellement le parallélisme massif ainsi offert.","page":28,"axe":"06-ia-travail-management-metiers","theme":"L'échec de la Connection Machine","portee":"La puissance matérielle sans paradigme de programmation adapté ne produit rien."}
+ ]}
+]

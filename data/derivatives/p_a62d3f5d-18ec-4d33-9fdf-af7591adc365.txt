@@ -1,0 +1,1811 @@
+OUVRAGE : les 48 lois du pouvoir
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 463
+AXE : Developpement Personnel Influence
+SOMMAIRE :
+  (non structuré)
+
+[21/370 passages, 24541 tokens sur 455921]
+
+=== EXTRAITS ===
+
+[p. 4-6]
+REMERCIEMENTS
+Tout d’abord, je souhaiterais remercier Anna Biller, pour son aide inestimable
+dans mes recherches et la correction de ce texte, et pour ses remarques pertinentes
+qui ont permis de faire évoluer l’ouvrage de manière très positive aussi bien dans
+la forme que dans le fond. Sans elle, ce livre n’aurait pu voir le jour.
+Je souhaite également remercier mon cher ami Michiel Schwarz, grâce à qui
+je me suis impliqué dans la création de l’école d’art Fabrika, en Italie, où j’ai
+rencontré Joost Elffers, l’éditeur de Power, les 48 lois du pouvoir. C’est grâce à
+Fabrika que Joost et moi avons compris qu’un classique tel Machiavel ne vieillit
+pas ; de nos discussions à Venise est né ce livre.
+Je voudrais remercier Henri Le Goubin qui, durant des années, m’a raconté
+quantité d’anecdotes machiavéliques, notamment à propos des personnages
+français, qui tiennent une grande place dans ce livre.
+Je tiens également à dire merci à Les et Sumiko Biller, qui m’ont prêté de très
+nombreux ouvrages sur l’histoire japonaise et qui m’ont notamment aidé à
+comprendre tous les aspects de la cérémonie du thé au Japon. De même, je
+remercie mon amie Elizabeth Yang qui m’a apporté des éclaircissements sur
+l’histoire chinoise.
+Un tel ouvrage dépendait largement des sources disponibles et je remercie du
+fond du cœur la bibliothèque de recherche de l’Université de Californie à Los
+Angeles (UCLA) ; j’ai passé de nombreuses et agréables journées à parcourir
+leurs collections.
+Mes parents, Laurette et Stanley Green, méritent des remerciements sans fin
+pour leur patience et leurs encouragements.
+Et je dois également remercier mon chat, Boris, qui m’a tenu compagnie
+pendant ces longues journées de rédaction.
+Enfin, les personnes de talent qui, en appliquant les 48 lois du pouvoir, m’ont
+manipulé, tourmenté et fait du mal : je ne leur en veux pas et je les remercie
+d’avoir été une source d’inspiration pour écrire cet ouvrage.
+Robert Greene
+
+ 
+  
+À Anna Biller et à mes parents,
+R. G.
+
+ 
+  
+SOMMAIRE
+PRÉFACE
+page xv
+LOI 1
+page 1
+NE SURPASSEZ JAMAIS LE MAÎTRE
+Ceux qui sont au-dessus de vous doivent toujours se sentir largement supérieurs. Dans votre désir de leur plaire
+et de les impressionner, ne vous laissez pas entraîner à faire trop étalage de vos talents, ou vous pourriez obtenir
+l’effet inverse : les déstabiliser en leur faisant de l’ombre. Faites en sorte que vos maîtres apparaissent plus brillants
+qu’ils ne sont et vous atteindrez les sommets du pouvoir.
+LOI 2
+page 8
+NE VOUS FIEZ PAS À VOS AMIS, UTILISEZ VOS ENNEMIS
+Gardez-vous de vos amis : beaucoup vous trahiront par envie. D’autres se montreront gâtés, tyranniques. Un
+ancien ennemi que vous engagez sera plus loyal qu’un ami parce qu’il devra faire ses preuves. En fait, vous avez
+plus à craindre de vos amis que de vos ennemis. Si vous n’avez pas d’ennemis, trouvez le moyen de vous en faire.
+LOI 3
+page 16
+DISSIMULEZ VOS INTENTIONS
+Maintenez votre entourage dans l’incertitude et le flou en ne révélant jamais le but qui se cache derrière vos actions.
+S’ils n’ont aucune idée de ce que vous prévoyez, ils ne pourront pas préparer de défense. Guidez-les assez loin dans
+une autre direction, enveloppez-les d’un écran de fumée et quand ils perceront à jour vos desseins, il sera trop tard.
+LOI 4
+page 31
+DITES-EN TOUJOURS MOINS QUE NÉCESSAIRE
+Plus vous vous laissez aller à parler, plus vous avez l’air banal et peu maître de vous-même. Même anodines, vos
+paroles sembleront originales si elles restent vagues et énigmatiques. Les personnages puissants impressionnent et
+intimident parce qu’ils sont peu loquaces. Plus vous en dites et plus vous risquez de dire des bêtises.
+LOI 5
+page 37
+PROTÉGEZ VOTRE RÉPUTATION COMME LA PRUNELLE DE VOS YEUX
+La réputation est la pierre angulaire du pouvoir. À elle seule, elle peut vous permettre d’impressionner et de
+gagner ; cependant, lorsqu’elle est compromise, vous êtes vulnérable et l’on vous attaquera de toutes parts. Faites
+en sorte que votre réputation soit toujours impeccable. Soyez vigilant et déjouez les attaques avant qu’elles ne se
+produisent. En même temps, apprenez à détruire vos ennemis par leur réputation : ouvrez-y des brèches, puis
+taisez-vous et laissez faire la meute.
+LOI 6
+page 44
+ATTIREZ L’ATTENTION À TOUT PRIX
+Les gens jugent tout à l’apparence ; ce qui n’est pas visible ne compte pour rien. Ne vous laissez jamais noyer dans
+la foule ni sombrer dans l’oubli. Soyez à tout prix le point de mire, celui que l’on remarque. Faites-vous plus grand,
+plus chatoyant, plus mystérieux que la masse terne et morne, soyez l’aimant qui attire tous les regards.
+SOMMAIRE
+vii
+
+---
+
+[p. 26-27]
+: Rikyu, d’ori-
+gine modeste, avait fait faire une statue de lui-même en sandales, insigne
+aristocratique, et l’avait fait placer à l’étage supérieur d’un portique du
+Daitoku-ji, le principal temple de Kyôto. Pour Hiteyoshi, Rikyu avait perdu
+tout sens de la mesure. S’il avait les mêmes droits que les membres de la plus
+LOI 1
+5
+ 
+  
+haute noblesse, c’était à son maître seul qu’il le devait, mais il avait oublié
+cela et en était venu à s’en attribuer tout le mérite. Ayant surestimé sa 
+propre importance de manière impardonnable, il le paya de sa vie. Rappelez-
+vous ceci : ne considérez jamais votre position comme acquise et ne vous
+laissez jamais étourdir par les faveurs qu’on vous a accordées.
+Conscient du danger d’éclipser votre maître, vous pouvez tourner cette
+loi à votre avantage. Tout d’abord, flattez son orgueil. La flatterie ouverte,
+pour efficace qu’elle soit, a ses limites : lourde, voire grossière, elle risque
+de déplaire aux autres courtisans. Une flagornerie plus discrète est beau-
+coup plus puissante. Si vous êtes plus intelligent que lui, par exemple,
+prétendez le contraire : faites en sorte qu’il apparaisse plus intelligent que
+vous. Jouez les naïfs. Faites appel à son expérience. Commettez de petites
+fautes qui ne vous feront pas de tort mais vous donneront l’occasion de
+solliciter son aide – les maîtres adorent ce genre de requête. Un maître dont
+l’expérience ne vous apporte rien peut vous en tenir rigueur. Si vos idées
+sont plus créatives que les siennes, attribuez-les-lui, et si possible en public.
+Présentez le conseil que vous donnez comme un écho du sien.
+Si vous avez plus d’esprit que votre maître, vous pouvez jouer les fous
+du roi, mais ne le faites pas apparaître froid ni guindé en comparaison. Si
+nécessaire, mettez une sourdine et trouvez des moyens de le faire passer
+pour la source de la gaîté et du divertissement. Si vous êtes naturellement
+plus sociable que lui et plus charismatique, prenez soin de ne pas être le
+nuage qui l’obscurcit aux yeux des autres. Il doit rester le centre de l’atten-
+tion générale, le soleil autour duquel le monde entier gravite, irradiant sa
+puissance et sa splendeur. Si vous êtes appelé à le distraire, montrez-lui vos
+imperfections et vous attirerez sa sympathie. Toute tentative pour l’impres-
+sionner par votre grâce et votre générosité peut en revanche se révéler
+fatale : pensez à l’exemple de Fouquet ou payez-en le prix.
+Dans toutes ces situations, ce n’est pas faire preuve de faiblesse que de
+déguiser vos forces si cela vous conduit au pouvoir. En laissant les autres
+vous surpasser, vous gardez le contrôle de la situation au lieu d’être le jouet
+de leurs complexes. Tout cela tournera à votre avantage le jour où vous
+déciderez de vous élever de votre état d’infériorité. Si, comme Galilée, vous
+pouvez accroître encore le lustre de votre maître, alors vous serez vu
+comme un envoyé des dieux et immédiatement promu.
+6
+LOI 1
+Image :
+Les étoiles dans le
+ciel. Il ne peut y avoir qu’un
+soleil à la fois. N’obscurcissez
+jamais sa lumière, ne rivalisez pas
+avec son éclat ; au contraire, fon-
+dez-vous dans le ciel et trouvez
+les moyens de faire briller
+d’un éclat plus vif l’étoile
+du
+maître.
+
+---
+
+[p. 48-49]
+cela, ils tissent autour de leur cible un cocon familier,
+banal, inoffensif. Dans l’exemple de Yellow Kid et Sam Geezil, il s’agissait
+d’une simple transaction immobilière. Dans le cas éthiopien, c’était la trom-
+peuse obséquiosité de Sélassié : exactement ce que Balcha attendait d’un
+chef militaire plus faible que lui.
+LOI 3
+27
+ 
+  
+Une fois que vous avez ainsi détourné l’attention de votre naïf, il ne
+remarque pas la supercherie qui se trame dans son dos. C’est la consé-
+quence d’une vérité élémentaire : on ne peut se focaliser que sur une
+chose à la fois. Il est trop difficile d’imaginer que l’interlocuteur terne et
+inoffensif avec lequel on traite est en train de manigancer autre chose.
+Plus la fumée de votre écran est grise et uniforme, plus elle dissimule effi-
+cacement vos desseins. Nous avons évoqué plus haut les appâts et les
+leurres par lesquels vous distrayez activement les gens. Dans le cas de
+l’écran de fumée, vous endormez vos victimes en les entraînant dans
+votre toile. C’est tellement hypnotique que c’est souvent le meilleur
+moyen de cacher vos intentions.
+La forme la plus simple de l’écran de fumée est l’expression du visage.
+À l’abri d’une apparence morne et impassible, on peut imaginer toutes sortes
+de manigances sans en manifester quoi que ce soit. C’est une arme que les
+plus puissants personnages de l’histoire ont appris à fourbir. Personne, dit-
+on, ne pouvait déchiffrer la moindre expression sur le visage de Franklin
+Roosevelt. Le baron James Rothschild pratiqua tout au long de sa vie l’art
+de masquer ses pensées derrière des sourires fades et une apparence ordi-
+naire. Henry Kissinger faisait mourir d’ennui ses opposants à la table des
+négociations avec sa voix monocorde, son aspect quelconque et ses discours
+circonstanciés ; puis, au moment où leurs yeux se perdaient dans le vague,
+il leur assénait une série de conditions audacieuses. Pris par surprise, ils se
+laissaient facilement intimider. « Quand il a la main, explique un manuel de
+poker, un bon joueur ne doit pas chercher à se faire bon acteur. Qu’il adopte
+un comportement falot impossible à déchiffrer, qui laisse perplexes ses
+adversaires et lui permettra une meilleure concentration. »
+Comme c’est un concept adaptable, l’écran de fumée peut être pratiqué
+à différents niveaux, tous fondés sur les principes psychologiques de la 
+distraction et du détournement de l’attention. L’un des plus efficaces est le
+geste noble. Les gens veulent croire que des comportements apparemment
+nobles sont authentiques car cette croyance leur plaît. Ils remarquent rare-
+ment combien ces comportements peuvent être illusoires.
+Le marchand de tableaux Joseph Duveen fut un jour confronté à un
+terrible problème. Les millionnaires qui lui avaient acheté si cher ses
+tableaux se retrouvaient à court de place et, les droits de succession aug-
+mentant, il semblait peu probable qu’ils puissent continuer à acheter. La
+solution au problème ? La galerie nationale d’art de Washington que
+Duveen aida à créer en 1937 en obtenant d’Andrew Mellon qu’il lui donne
+sa collection. La National Gallery était une couverture parfaite pour
+Duveen : le système du don permettait à ses clients d’éviter les taxes, faisait
+de la place pour de nouveaux achats et asséchait le marché ; cette pénurie
+faisait encore monter les prix. Tout cela pendant que les donateurs faisaient
+figure de mécènes.
+Un autre écran de fumée efficace est le modèle, l’établissement d’une série
+d’actes qui séduisent la victime en lui faisant croire que vous allez continuer
+sur la même voie. Le modèle se base sur un élément de psychologie : notre
+comportement se conforme à des modèles – ou du moins le croyons-nous.
+28
+LOI 3
+
+---
+
+[p. 69-71]
+ssera, se
+désintéressera de vous et se tournera vers une nouvelle étoile. Le jeu exige
+une vigilance constante et une grande créativité. Pablo Picasso ne se laissait
+jamais disparaître du paysage ; si son nom s’attachait trop à un style parti-
+culier, il bouleversait la donne avec une série d’œuvres révolutionnaires qui
+48
+LOI 6
+ 
+  
+prenaient tout le monde au dépourvu. Mieux vaut créer quelque chose de
+laid et de dérangeant, croyait-il, que de flatter les spectateurs avec des
+œuvres connues d’avance. À retenir : les gens se sentent supérieurs à
+quelqu’un dont les actes sont prévisibles. Si vous montrez clairement qui a
+la situation en main en créant la surprise, vous gagnerez le respect et
+resserrerez votre emprise sur leur volage attention.
+LOI 6
+49
+Image :
+Les feux de la rampe.
+L’acteur qui s’avance sous cette
+brillante lumière « brûle les plan-
+ches ». Tous les regards sont sur lui. 
+Il n’y a de place que pour un seul acteur
+sous l’étroit faisceau lumineux ; faites 
+en sorte que ce soit vous. Osez des 
+gestes si larges, amusants et scanda-
+leux que la lumière s’y attarde,
+laissant les autres dans
+l ’ o m b r e .
+Autorité : Faire, et faire paraître. Les
+choses ne passent point pour ce qu’elles
+sont, mais pour ce qu’elles paraissent
+être. Savoir faire, et le savoir montrer,
+c’est double savoir. Ce qui ne se voit
+point est comme s’il n’était point. La
+raison même perd son autorité, lors
+qu’elle ne paraît pas telle... Le bon exté-
+rieur est la meilleure recommandation
+de la perfection intérieure. (Baltasar
+Gracián, 1601-1658, L’Homme de cour,
+traduit par Amelot de la Houssaie)
+
+ 
+  
+II. AURÉOLEZ-VOUS DE MYSTÈRE
+Dans un monde de plus en plus banal et familier, des dehors énigmati-
+ques attirent instantanément l’attention. Ne décrivez jamais clairement
+vos occupations présentes ni futures. Ne dévoilez pas toutes vos cartes.
+Un monde de mystère intensifie votre présence ; il crée aussi un désir :
+tout le monde aura les yeux fixés sur vous dans l’attente de ce qui va se
+passer. Jouez sur le mystère pour attirer, séduire et même effrayer.
+RESPECT DE LA LOI
+Au début de l’année 1905, la rumeur courut dans Paris que dans une
+demeure privée dansait une jeune Orientale enveloppée de voiles qu’elle
+enlevait un à un. « Une femme est venue de l’Extrême-Orient en Europe,
+chargée de parfums et de joyaux, pour faire connaître un peu de la mag-
+nificence orientale à la société repue des villes européennes », écrivit un
+journaliste qui avait assisté à l’un de ses spectacles. Le nom de la danseuse
+fut bientôt sur toutes les lèvres : Mata Hari.
+Cet hiver-là, quelques happy few prirent l’habitude de se réunir dans un
+salon peuplé de statues et autres antiquités orientales tandis qu’un orchestre
+jouait une musique inspirée de mélodies indiennes et javanaises. Après
+avoir fait languir son auditoire, Mata Hari apparaissait soudain dans un
+costume éblouissant : elle portait un soutien-gorge de coton blanc couvert
+de bijoux indiens, à la taille une ceinture ornée de pierreries retenait un
+sarong qui dévoilait plus qu’il ne cachait, à ses bras cliquetaient des rangées
+de bracelets. Puis Mata Hari dansait, dans un style que personne n’avait
+encore jamais vu en France, ondoyant de tout son corps comme si elle était
+en transe. Ces chorégraphies, racontait-elle ensuite à son auditoire émous-
+tillé et curieux, traduisaient des histoires tirées de la mythologie indienne et
+du folklore javanais. Bientôt, l’élite parisienne et les ambassadeurs étran-
+gers se disputèrent les invitations à ce salon où en réalité, disait-on, Mata
+Hari exécutait nue des danses sacrées.
+Le public voulut en savoir plus. Elle raconta aux journalistes qu’elle était
+d’origine hollandaise mais avait grandi sur l’île de Java. Elle parlait aussi
+d’années passées en Inde – ce pays dont les femmes « sont des virtuoses de
+tir et d’équitation, connaissent les logarithmes et la philosophie » –, où elle
+avait été initiée aux danses indoues. L’été 1905, bien que peu de Parisiens
+aient eu le privilège de voir Mata Hari danser, on ne parlait que d’elle.
+Au fur et à mesure de ses interviews, le récit de ses origines ne cessait
+de changer. Elle avait grandi en Inde, sa grand-mère était la fille d’une
+princesse javanaise, elle avait vécu sur l’île de Sumatra où elle « passait son
+temps à cheval, risquant sa vie le fusil à la main ». Personne ne la connais-
+sait vraiment, mais les journalistes se souciaient peu des métamorphoses de
+sa biographie. Ils la comparaient à une déesse indienne, à une créature
+échappée des pages de Baudelaire : tout ce que leur imagination voulait
+voir dans cette femme mystérieuse venue d’Orient.
+50
+LOI 6
+
+---
+
+[p. 93-94]
+roturier ; 
+mais actuellement je suis 
+votre roi : je vous 
+exhorte donc à me 
+rendre l’honneur et le
+respect qui me sont dus. »
+Il gagna tellement, par 
+ce moyen, l’affection 
+de son peuple que 
+celui-ci trouva juste 
+de se soumettre à 
+son gouvernement. 
+Hérodote,
+ve siècle av. J.-C.
+histoire,
+traduit par 
+Pierre-Henri Larcher
+ 
+  
+LOI 9
+73
+pas jusqu’au plafond. C’étaient des colonnes factices. Ainsi les deux hommes
+avaient eu chacun ce qu’ils voulaient : le maire pouvait se détendre et Wren
+savait que la postérité comprendrait.
+Lorsque vous faites la preuve concrète de votre idée, vos adversaires
+ne sont pas sur la défensive et sont donc plus ouverts à la persuasion. Leur
+faire ressentir littéralement et physiquement ce que vous voulez dire est
+beaucoup plus puissant que si vous l’exprimiez par des arguments.
+Un perturbateur interrompit une fois Nikita Khrouchtchev au milieu
+d’un discours où il dénonçait les crimes de Staline. « Vous étiez un collè-
+gue de Staline, hurla-t-il, pourquoi ne l’en avez-vous pas empêché ? »
+Khrouchtchev, qui apparemment ne pouvait pas voir qui avait parlé,
+aboya : « Qui a dit cela ? » Aucune main ne se leva. Personne ne bougea.
+Après quelques secondes d’un silence tendu, Khrouchtchev répondit fina-
+lement d’une voix calme : « Maintenant, vous savez pourquoi je ne l’ai
+pas empêché. » Au lieu de dire que tout le monde tremblait devant
+Staline, sachant que le moindre signe de rébellion signifiait une mort
+certaine, il le leur avait fait ressentir : la paranoïa, la crainte de parler, la
+terreur de se confronter au chef – dans ce cas-ci, lui, Khrouchtchev. La
+démonstration était viscérale, il n’y avait pas besoin de discuter plus
+avant.
+La persuasion la plus puissante est celle qui dépasse l’action jusque
+dans le symbole. Le pouvoir d’un symbole – drapeau, mythe, mémorial
+dédié à un événement tragique – est d’être tacitement saisi par tous. En
+1975, alors qu’Henry Kissinger était engagé dans des négociations difficiles
+avec les Israéliens à propos de la partie du Sinaï qu’ils avaient accaparée
+pendant la guerre de 1967, il interrompit brusquement une réunion tendue
+et décida d’aller faire un peu de tourisme. Il visita les ruines de l’ancienne
+forteresse de Massada, connue par tous les Israéliens comme le lieu où en
+73 apr. J.-C., plutôt que de se rendre aux troupes romaines qui les assié-
+geaient, sept cents guerriers juifs se suicidèrent. Les Israéliens comprirent
+instantanément le message : Kissinger les accusait indirectement d’aller 
+au-devant d’un suicide collectif. Ce geste ne suffit pas à les faire changer
+d’attitude, cependant il les fit réfléchir beaucoup plus sérieusement 
+qu’aucun avertissement direct ne l’aurait fait. Des symboles comme celui-ci
+parlent par l’émotion.
+Quand on recherche le pouvoir ou qu’on essaie de le conserver, il faut
+toujours chercher le moyen indirect. Et aussi choisir soigneusement ses
+batailles. S’il importe peu à long terme d’être d’accord avec l’autre – ou si
+le temps et sa propre expérience suffiront à lui faire comprendre votre
+propos – alors mieux vaut faire l’économie d’une démonstration. Épargnez
+votre énergie et passez votre chemin.
+dieu et abraham
+Le Tout-Puissant avait
+promis qu’il ne prendrait
+pas l’âme d’Abraham
+avant que ce dernier 
+ne le souhaite et ne 
+le lui demande. Quand
+Abraham fut rassasié de
+jours et que Dieu décida
+de le prendre, il lui
+envoya un ange sous 
+la forme d’un vieillard
+accablé d’infirmités. 
+Le vieil homme 
+s’arrêta devant la porte
+d’Abraham et lui dit :
+« Ô Abraham, je
+voudrais quelque chose à
+manger. » Abraham fut
+surpris en entendant cela.
+« Il vaudrait mieux que
+tu meures, s’exclama
+Abraham, plutôt que 
+de vivre ainsi. »
+Abraham avait toujours 
+de la nourriture prête 
+pour des hôtes de passage.
+Il donna donc au vieil
+homme un bol contenant
+un bouillon et des
+boulettes de viande et 
+de miettes de pain. 
+Le vieil homme s’assit
+pour manger. Il avalait
+laborieusement, à grand
+effort ; à un moment, 
+il prit de la nourriture
+dans sa main et la laissa
+échapper par terre. « Oh,
+Abraham, dit-il, aide-moi
+à manger. » Abraham 
+prit un peu de nourriture
+et la porta aux lèvres 
+du vieillard, mais elle
+
+---
+
+[p. 115-117]
+ies duperies des fausses. En acceptant sa
+réputation de malhonnêteté, Talleyrand préservait sa capacité à tromper.
+Rien dans le domaine du pouvoir n’est gravé dans la pierre. Le fait
+d’être ouvertement enclin à la duperie couvrira parfois vos traces et on vous
+admirera même pour ce que vous assumez d’être : une franche canaille.
+ 
+  
+LOI
+13
+MISEZ SUR L’INTÉRÊT 
+PERSONNEL, JAMAIS 
+SUR LA PITIÉ NI 
+LA RECONNAISSANCE
+PRINCIPE
+Si vous avez besoin d’un allié, ne lui rappelez pas l’aide
+que vous lui avez apportée ni les services que vous lui avez
+rendus, vous le feriez fuir. Mieux vaut faire valoir dans
+votre demande d’alliance un élément qui lui sera profi-
+table ; insistez sur ce point. Plus il aura à y gagner, plus
+il fera preuve d’empressement.
+95
+
+ 
+  
+96
+LOI 13
+VIOLATION DE LA LOI
+Au début du XIVe siècle, un simple soldat nommé Castruccio Castracani
+s’éleva jusqu’à la position de seigneur de la grande ville italienne de
+Lucques. Les Poggio, une des plus puissantes familles de la cité, l’avaient
+aidé dans son ascension, jalonnée de traîtrises et de meurtres. Une fois au
+pouvoir, il les oublia. Son ambition l’emportait sur tout sentiment de grati-
+tude. En 1325, tandis que Castruccio guerroyait contre Florence, principale
+rivale de Lucques, les Poggio conspirèrent avec d’autres familles de la
+noblesse pour en finir avec cet homme ambitieux et ingrat.
+Les conjurés assassinèrent le gouverneur que Castruccio avait nommé.
+Des émeutes éclatèrent : les partisans de Castruccio et ceux des Poggio
+étaient prêts à en découdre. Mais alors que la tension était à son comble,
+Stefano di Poggio, le plus âgé de sa famille, intervint et apaisa les deux
+camps. C’était un homme pacifique qui n’avait pas pris part à la conspira-
+tion. Il déclara aux siens que l’on allait à un bain de sang inutile. Il insista
+pour intercéder en leur nom, et persuader Castruccio d’écouter leurs
+doléances et de satisfaire à ce qu’ils demandaient. Stefano étant le plus âgé
+et le plus sage du clan, sa famille accepta de recourir à la diplomatie plutôt
+qu’à l’usage des armes.
+Quand la nouvelle de la rébellion parvint à Castruccio, il revint en hâte
+à Lucques. À son arrivée, les combats avaient cessé grâce à l’intervention
+de Stefano et un calme surprenant régnait dans la ville. Stefano di Poggio
+avait imaginé que Castruccio lui serait reconnaissant d’avoir calmé la rébel-
+lion, aussi rendit-il visite au prince. Il lui expliqua comment il avait ramené
+la paix, et implora son pardon. Les rebelles de sa famille, plaida-t-il,
+n’étaient que des jeunes gens impétueux, des têtes brûlées avides de pou-
+voir ; cependant, Castruccio ne se rappelait-il pas la générosité dont les
+Poggio avaient jadis fait preuve envers lui ? Pour toutes ces raisons, dit-il,
+le grand prince devait leur pardonner et accéder à leurs requêtes. C’était la
+seule conduite à tenir envers eux, qui avaient à présent déposé les armes et
+l’avaient d’ailleurs toujours soutenu par le passé.
+Castruccio écouta patiemment. Il ne fit paraître nulle colère, nul
+ressentiment. Il assura à Stefano que la justice prévaudrait et lui demanda
+d’amener les siens au palais présenter leurs doléances, afin qu’ils puissent
+tous parvenir à un accord. Tandis que Stefano prenait congé, Castruccio
+ajouta qu’il remerciait Dieu de l’occasion qu’Il lui donnait là de faire
+preuve de clémence et de bonté.
+Ce soir-là, lorsque les Poggio arrivèrent au grand complet à son palais,
+Castruccio les fit jeter en prison. Quelques jours plus tard, ils furent tous
+exécutés, Stefano compris.
+Interprétation
+Stefano di Poggio est l’archétype de ceux qui croient que la justice et la
+noblesse de leur cause auront force de loi. Certes, les appels à la justice et
+à la reconnaissance sont parfois entendus, mais le plus souvent ils ont des
+conséquences désastreuses, surtout face à des Castruccio. Stefano savait
+que le prince s’était élevé au sommet du pouvoir par la traîtrise et la
+le paysan et le
+pommier
+Un paysan avait dans son
+jardin un pommier qui ne
+portait aucun fruit et ne
+servait que de perchoir 
+aux hirondelles et aux
+sauterelles. Il résolut de le
+couper ; il empoigna sa
+hache et fit une profonde
+entaille dans ses racines.
+Les sauterelles et les
+hirondelles le supplièrent
+de ne pas couper l’arbre
+qui les abritait ; et s’il
+l’épargnait, elles
+chanteraient pour le
+réconforter dans son
+labeur. Il n’accorda aucune
+attention à leur requête
+mais frappa de sa hache
+un second coup, puis un
+troisième. Quand il
+atteignit le creux du tronc,
+il y trouva une ruche
+pleine de miel. Il en goûta
+un rayon, puis laissa
+tomber sa hache.
+Considérant l’arbre comme
+sacré, il en prit désormais
+grand soin. Certains
+hommes n’agissent qu’en
+fonction de leur propre
+intérêt.
+Ésope,
+vie siècle av. J.-C.,
+fables
+
+---
+
+[p. 139-140]
+batane, le palais était entouré
+de remparts et était complètement inaccessible au peuple. Deiocès mit 
+en place des règles très strictes : personne n’était admis en sa présence.
+On ne pouvait communiquer avec le roi que par des messagers. Nul 
+à la cour ne pouvait le voir plus d’une fois la semaine, et seulement sur 
+permission.
+ 
+  
+LOI 16
+119
+Deiocès gouverna cinquante-trois ans, agrandit l’empire mède et éta-
+blit les fondations de ce qui serait plus tard l’empire perse, sous Cyrus 
+le Grand. Pendant le règne de Deiocès, le respect du peuple pour lui se 
+mua en vénération : pour eux, de simple mortel il était devenu le fils 
+d’un dieu.
+Interprétation
+Deiocès était très ambitieux. Il avait compris très tôt que son peuple avait
+besoin d’être tenu fermement en bride et qu’il était l’homme de la situation.
+Dans un pays dévasté par l’anarchie, l’homme qui s’impose est le juge
+et l’arbitre. Aussi, Deiocès avait-il commencé sa carrière en se faisant une
+réputation d’irréprochable justice.
+Cependant, au sommet de sa fonction de juge, Deiocès avait constaté
+la pertinence de la loi de l’absence : en répondant à d’innombrables sollici-
+tations, il était devenu trop célèbre, trop disponible, et avait perdu le respect
+dont il avait joui précédemment. On considérait ses services comme un dû.
+Le seul moyen de regagner la vénération et le pouvoir qu’il désirait était de
+s’effacer complètement et de laisser les Mèdes goûter à ce qu’était la vie
+sans lui. Comme il s’y attendait, ils vinrent le supplier de régner.
+Une fois que Deiocès eut découvert la vérité de cette loi, il la porta à
+sa réalisation ultime. Dans le palais que son peuple avait construit pour lui,
+personne ne pouvait l’apercevoir à l’exception de quelques courtisans, et
+encore rarement. « Le risque était, écrit Hérodote, que si les gens le
+voyaient à tout propos ils éprouvent jalousie et ressentiment, et se mettent
+à comploter contre lui ; tandis que si personne ne le voyait, sa légende gran-
+dirait : celle d’un être différent des simples hommes. »
+Un homme dit à un derviche : « Pourquoi est-ce que je ne vous vois
+pas plus souvent ? » Le derviche répliqua : « Parce que les mots
+“Pourquoi n’êtes-vous pas venu me voir ?” sont plus doux à mon
+oreille que les mots “Pourquoi êtes-vous encore venu ?” »
+IDRIES SHAH (1968), Mulla Jami, cité dans La Caravane de rêves
+LES CLEFS DU POUVOIR
+Tout au monde subit l’influence de l’absence et de la présence. Une forte
+présence attire le pouvoir et l’attention : on brille plus intensément que 
+les autres. Mais, inévitablement, il arrive un moment où une présence
+envahissante crée l’effet opposé : plus on est vu et entendu, moins on a de
+valeur. On devient banal. Peu importe le mal que l’on se donne pour être
+différent, subtilement, sans que l’on sache pourquoi, le respect s’effrite. 
+Il faut apprendre à se retirer au bon moment, avant que les autres ne vous
+poussent inconsciemment dehors. C’est un jeu de cache-cache.
+La pertinence de cette loi peut être aisément vérifiée quand il s’agit
+d’amour et de séduction. Passé les premières étapes d’une relation
+amoureuse, l’absence de l’être cher stimule l’imagination, forme une sorte
+d’aura autour de lui. Mais cette aura s’évanouit quand on le connaît trop :
+
+---
+
+[p. 162-163]
+ta : « Si Votre Grandeur ne peut pas
+traiter Chong-er avec courtoisie, elle ferait mieux de le mettre à mort pour
+éviter des calamités dans l’avenir. » Le roi se contenta d’en rire.
+Des années plus tard, le prince de Qin retourna finalement chez lui, la
+situation ayant beaucoup changé. Il n’avait pas plus oublié ceux qui avaient
+ 
+  
+142
+LOI 19
+été aimables avec lui pendant ses années d’exil que ceux qui s’étaient
+montrés insolents. Surtout, il n’avait pas oublié le roi de Zheng. À la pre-
+mière occasion, il rassembla une puissante armée et marcha sur Zheng, prit
+huit villes, détruisit le royaume et envoya à son tour le monarque en exil.
+Interprétation
+On n’est jamais sûr de bien connaître la personne avec laquelle on traite.
+Un homme sans importance, avec de petits moyens, peut devenir une
+personne de pouvoir. On oublie beaucoup de choses dans la vie mais on
+oublie rarement une insulte.
+Comment le roi de Zheng pouvait-il savoir que le prince Chong-er 
+était ambitieux, calculateur et malin, un serpent à mémoire d’éléphant ? 
+Il n’avait en réalité aucun moyen de le savoir. Mais dans ces conditions il
+eût mieux valu ne pas tenter le sort en le provoquant. On n’a rien à gagner
+à insulter gratuitement. Résistez à la tentation d’offenser, même un faible.
+La satisfaction est maigre comparée au danger que vous courez s’il devient
+un jour puissant.
+VIOLATION IV
+1920 fut une année noire pour les marchands d’art américains. Les gros
+acheteurs – les barons de la finance du siècle précédent – arrivaient à un
+âge où ils mouraient l’un après l’autre comme des mouches et aucun
+nouveau riche n’avait encore pris leur place. Les affaires allaient si mal qu’un
+certain nombre d’importants galeristes décidèrent de mettre en commun
+leurs ressources, chose remarquable car, de notoriété publique, ils se
+détestaient.
+Le marchand d’art Joseph Duveen, qui traitait avec les hommes
+d’affaires les plus importants du pays, souffrit plus que tout autre cette
+année-là ; il rejoignit donc l’association. Le groupe réunissait les cinq plus
+grands marchands d’art du pays. À la recherche d’un nouveau client, ils
+jetèrent leur dévolu sur Henry Ford, l’homme le plus riche d’Amérique 
+à l’époque. Ford ne s’était pas encore risqué sur le marché de l’art et
+représentait une cible potentiellement si profitable que cela valait la peine
+de s’y mettre à plusieurs.
+Les marchands décidèrent de dresser une liste des « cent œuvres 
+majeures du monde » (toutes disponibles dans leurs fonds) et de proposer
+le lot à Ford. En signant un seul chèque, il deviendrait le plus grand
+collectionneur de la planète. Le consortium travailla des semaines sur un
+magnifique catalogue en trois volumes contenant de splendides reproduc-
+tions des œuvres en question, chacune accompagnée d’un texte fort érudit.
+Puis ils rendirent visite à Ford, chez lui à Dearborn, Michigan. La sobriété
+de sa maison les surprit : M. Ford était de toute évidence un homme d’une
+très grande simplicité.
+Ford les reçut dans son bureau. En feuilletant le livre, il fut émerveillé.
+Les marchands d’art, tout excités, voyaient déjà les millions de dollars
+
+---
+
+[p. 186-187]
+ent ces mots :
+« Hommes d’Angleterre !
+Vous avez le désir de 
+me tuer parce que je suis
+français. Mais ne suis-je
+pas déjà assez puni par 
+le simple fait de ne pas
+être anglais ? »
+La foule acclama ce 
+sage discours, et on le
+reconduisit sous bonne
+escorte chez lui.
+clifton fadiman (éd.),
+the little brown
+book of anecdotes,
+1985
+ 
+  
+166
+LOI 22
+Brecht n’était pas d’accord. À quoi bon, demanda-t-il, jouer les martyrs
+et gagner une maigre sympathie de la part du public si cela leur faisait
+perdre pour de longues années la possibilité de faire jouer leurs pièces et de
+vendre leurs scénarios ? Ils étaient tous bien plus intelligents que les membres
+de la commission ; pourquoi s’abaisser au niveau de leurs adversaires en
+polémiquant ? Pourquoi ne pas se montrer plus malins qu’eux en abondant
+dans leur sens, tout en se moquant subtilement d’eux ? Le groupe écouta
+Brecht jusqu’au bout mais décida de ne pas changer de plan, laissant Brecht
+agir à sa guise.
+La commission convoqua Brecht le 30 octobre. On s’attendait de sa
+part à la même conduite que celle des autres membres du groupe
+Hollywood 19 : protester, refuser de répondre aux questions, remettre en
+cause la légitimité du comité et même hurler des insultes. À la grande
+surprise de la commission, Brecht fut un modèle d’amabilité. Il mit un
+costume (ce qu’il faisait rarement), fuma le cigare (il savait que le président
+de la commission était grand amateur de cigares), répondit poliment aux
+questions et accepta leur autorité avec déférence.
+Contrairement aux autres personnes interrogées, Brecht répondit clai-
+rement – par la négative – à la question de savoir s’il appartenait au parti
+communiste. Un membre de la commission lui demanda : « Est-il vrai que
+vous avez écrit des pièces révolutionnaires ? » Brecht avait écrit quantité de
+pièces d’idéologie ouvertement communiste mais il répondit : « J’ai écrit un
+certain nombre de poèmes, de chansons et de pièces pour combattre Hitler
+et, bien sûr, cela peut être considéré comme révolutionnaire car je souhaitais
+la chute de ce gouvernement. » Cette déclaration ne fut pas contestée.
+Brecht parlait anglais tout à fait correctement, mais il utilisa un inter-
+prète pour son témoignage, ce qui lui permit de jouer sur des erreurs de
+traduction. Quand des tendances communistes étaient décelées dans les
+éditions anglaises de ses poèmes, il citait les vers en allemand à l’interprète,
+qui les traduisait ; ils paraissaient alors totalement inoffensifs. Un membre
+de la commission lut un des poèmes révolutionnaires de Brecht à voix
+haute en anglais et lui demanda si c’était bien ce qu’il avait écrit. « Non,
+répondit-il, j’ai écrit un poème allemand très différent de ce que je viens
+d’entendre. » Les réponses insaisissables de l’auteur déconcertaient les
+membres de la commission mais sa courtoisie et sa façon de se soumettre à
+leur autorité ne pouvaient que les amadouer. Après à peine une heure d’inter-
+rogatoire, les membres de la commission étaient fixés. « Merci beaucoup,
+lui dit le président, vous êtes un bon exemple pour les autres suspects. »
+Non seulement ils le libérèrent mais ils lui offrirent d’intervenir s’il
+avait le moindre problème avec les services d’immigration, qui auraient pu
+tenter de le retenir. Quelques jours plus tard, Brecht quitta les États-Unis et
+n’y retourna jamais.
+Interprétation
+L’attitude offensive du groupe Hollywood 19 valut à ses membres
+beaucoup d’estime ; des années plus tard, l’opinion publique les réhabilita.
+Mais dans l’intervalle, ils restèrent sur liste noire et ne purent travailler
+
+---
+
+[p. 208-209]
+donnait une luminescence comme
+irisée. Ses peintures étaient si étonnantes que les autres artistes redoutaient de
+voir ses œuvres accrochées à côté des leurs : celles-ci en devenaient ternes.
+Le peintre Sir Thomas Lawrence eut une fois la malchance de voir le
+chef-d’œuvre de Turner Cologne placé entre deux de ses œuvres dans une
+ 
+  
+exposition. Lawrence se plaignit amèrement au propriétaire de la galerie
+qui refusa d’intervenir : après tout, il fallait bien qu’il y ait des tableaux à
+côté de celui de Turner. Mais Turner eut vent de sa plainte et, avant
+l’ouverture de l’exposition, il barbouilla le lumineux ciel doré de Cologne et
+le rendit aussi terne que les ciels de Lawrence. En voyant le résultat, un ami
+de Turner fut horrifié : « Qu’as-tu fait à ton tableau ! – Le pauvre Lawrence
+semblait si malheureux... répondit Turner. Ce n’est que du noir de fumée :
+on l’essuiera après l’exposition. »
+Interprétation
+Les craintes des courtisans concernent le plus souvent le maître, source des
+plus grands dangers. Pourtant, c’est une erreur d’imaginer que seul le maître
+détermine votre destin. Vos égaux et vos subordonnés jouent aussi un rôle
+important. La cour est un creuset qui bouillonne de ressentiments,
+d’inquiétudes et de jalousies puissantes. Il vous faut apaiser tous ceux qui
+pourraient vous nuire un jour, calmer leurs ressentiments et leurs envies et
+diriger leur hostilité sur quelqu’un d’autre.
+Turner, qui était un grand courtisan, savait que sa bonne fortune et sa
+réputation dépendaient aussi bien de ses collègues peintres que des marchands
+et des maîtres. Combien de grands sont tombés à cause de collègues
+envieux ! Mieux vaut atténuer temporairement son rayonnement qu’essuyer
+les flèches des envieux.
+Scène XI
+Winston Churchill était peintre amateur et, après la Seconde Guerre mon-
+diale, les collectionneurs s’arrachèrent ses tableaux. L’éditeur américain
+Henry Luce, créateur des magazines Time et Life, avait un paysage de
+Churchill dans son bureau personnel à New York.
+Au cours d’un voyage aux États-Unis, Churchill rendit visite à Luce et
+les deux hommes regardèrent ensemble le tableau. L’éditeur remarqua :
+« C’est un beau tableau, mais je pense qu’il manque quelque chose au
+premier plan : un mouton peut-être. » Le jour suivant, le secrétaire de
+Churchill appela l’éditeur et, à sa grande consternation, lui demanda de
+renvoyer le tableau en Angleterre. Luce s’exécuta, mortifié d’avoir peut-être
+offensé l’ancien Premier ministre. Quelques jours plus tard cependant, 
+le tableau lui fut renvoyé avec une légère modification : un petit mouton
+paissait au premier plan.
+Interprétation
+Churchill dépassait Luce de la tête et des épaules tant en stature qu’en
+réputation mais Luce était incontestablement un homme de pouvoir ; on
+pouvait vaguement les considérer sur un pied d’égalité. Mais que pouvait
+craindre Churchill d’un éditeur américain ? Pourquoi s’incliner devant la
+critique d’un amateur ?
+Une cour – en l’occurrence le milieu des diplomates et des hommes
+d’État, et aussi les journalistes qui les courtisent – est un lieu de dépendance
+mutuelle. Il est déconseillé d’égratigner le goût des hommes de pouvoir,
+188
+LOI 24
+
+---
+
+[p. 230-231]
+e
+homme,
+On vous l’échine, 
+on vous l’assomme.
+Auprès des rois il est 
+de pareils fous :
+À vos dépens ils font 
+rire le maître.
+Pour réprimer leur 
+babil, irez-vous
+Les maltraiter ? Vous
+n’êtes pas peut-être
+Assez puissant. Il faut 
+les engager
+À s’adresser à qui peut 
+se venger.
+Jean de La Fontaine,
+1621-1695,
+fables
+LOI 26
+209
+ 
+  
+son tour un paquet de Daizen. Il y avait à l’intérieur un vase délicat d’une
+grande beauté que Daizen, dans le petit mot qui l’accompagnait, priait son
+ami d’accepter en témoignage de sa gratitude pour le tableau que Soemon
+lui avait si gracieusement offert la veille. Il expliquait que le vase était signé
+de Sen no Rikyu en personne, et portait une inscription de l’empereur
+Hideyoshi. S’il ne tenait pas spécialement au vase, suggérait Daizen, il
+pouvait en faire cadeau à un autre adepte du chanoyu, peut-être le marchand
+Kawachiya Sanemon, qui le convoitait depuis longtemps. « On dit, conti-
+nuait Daizen, qu’il est en possession d’un joli morceau de papier (la recon-
+naissance de dette de trois cents ryôs) que tu aimerais récupérer. Peut-être
+pourrais-tu négocier un échange ? »
+Comprenant ce que son ami, dans son exquise délicatesse, avait imaginé,
+Soemon porta le vase chez le riche prêteur. « D’où tenez-vous cet objet ?
+s’exclama Sanemon, lorsque celui-ci lui montra le vase. J’en ai souvent
+entendu parler mais c’est la première fois que je le vois. C’est un trésor, je
+ne veux pas qu’il sorte d’ici ! » Il offrit immédiatement d’annuler la dette 
+de Soemon contre le vase et lui offrit trois cents ryôs en prime. Mais
+Soemon, qui se souciait peu d’argent, ne voulait que la reconnaissance de
+dette et Sanemon la lui rendit de bon cœur. Soemon se dépêcha alors 
+d’aller remercier Daizen pour son aide avisée.
+Interprétation
+Kuriyama Daizen avait compris qu’il n’est jamais simple de remercier
+quelqu’un pour un service : si ce service est rendu à grand tapage, celui qui
+en bénéficie se sent accablé d’obligations. Le donateur peut éprouver un
+certain sentiment de pouvoir, mais c’est un pouvoir finalement destructeur
+parce qu’il suscite du ressentiment et qu’on cherche à lui résister. Une
+faveur accordée discrètement, avec élégance, se révèle dix fois plus efficace.
+Ainsi, Daizen savait qu’une approche directe ne ferait qu’offenser Soemon.
+En le laissant lui faire cadeau du tableau, il donna à Soemon le sentiment
+de faire lui aussi plaisir à son ami. À la fin, les trois parties furent pleine-
+ment satisfaites des transactions effectuées.
+En fait, c’est Daizen lui-même qui tira les marrons du feu. Il eut certai-
+nement un peu de mal à se séparer de son vase, mais il y gagna non seu-
+lement un tableau, mais bien davantage : le pouvoir du courtisan. Le
+courtisan utilise son gant de velours pour amortir les coups qu’il porte,
+cacher ses cicatrices et aussi rendre son aide plus élégamment discrète. En
+aidant les autres, c’est lui-même que le courtisan favorise. Le cas de Daizen
+est l’exemple type des services rendus entre amis et pairs : n’imposez
+jamais vos faveurs. Cherchez les moyens de retirer vous-même les marrons
+du feu : sortez vos amis de la détresse sans vous imposer et sans faire
+d’eux vos obligés.
+Il ne faut pas être trop droit. Voyez la forêt :
+on coupe les arbres droits, on laisse sur pied les arbres tordus.
+KAUTILYA, philosophe indien (IIIe siècle av. J.-C.)
+l’oiseau des indes
+Un commerçant gardait un
+oiseau en cage. Comme il
+devait partir pour l’Inde,
+pays d’origine de son
+volatile, il lui demanda
+s’il pouvait lui rapporter
+quelque chose. L’oiseau
+répondit : la liberté mais
+l’autre la lui refusa. Il
+demanda alors au
+commerçant de se rendre
+dans la jungle, et
+d’annoncer sa captivité
+aux oiseaux vivant là-bas
+en liberté. Et c’est ce que
+fit le marchand. À peine
+avait-il annoncé la
+nouvelle qu’un oiseau
+sauvage exactement
+semblable au sien tomba
+sans vie sur le sol.
+L’homme comprit qu’il
+s’agissait sans doute d’un
+parent de son oiseau, et
+fut navré d’avoir causé sa
+mort. À son retour, son
+oiseau lui demanda s’il
+rapportait des Indes de
+bonnes nouvelles : « Non,
+répondit le marchand. Je
+reviens avec une mauvaise
+nouvelle : quand j’ai
+annoncé ta captivité, un
+de tes parents est tombé
+mort à mes pieds. » 
+À peine avait-il prononcé
+ces mots que l’oiseau
+tomba raide mort au fond
+de sa cage. « La nouvelle
+de la mort de son parent
+l’a tué lui aussi, » songea
+le marchand. Tout piteux,
+il ramassa l’oiseau et le
+posa sur le rebord de sa
+fenêtre. Revenant aussitôt
+à la vie, l’animal alla se
+percher sur un arbre
+voisin : « Ce que tu as
+pris pour une mauvaise
+nouvelle, dit l’oiseau, était
+en fait la meilleure
+possible pour moi, tu le
+210
+LOI 26
+
+---
+
+[p. 252-253]
+but, sans
+l’expression de bassesse 
+et de honte qu’ont ceux
+qui empruntent avec
+l’intention de ne rien
+rendre. Soit il 
+est fou, soit il a toute
+confiance dans l’affaire 
+qu’il a en vue. Mais si
+j’en juge par son regard
+indomptable et à sa voix
+sonore, c’est un homme
+qui sort de l’ordinaire,
+remarquablement
+intelligent et digne
+ 
+  
+232
+LOI 28
+avertissement, ne lui laisse aucune chance et assoit votre autorité. Terrifiez
+les sceptiques et les méprisants, et vous gagnerez la confiance de ceux qui
+admirent l’audace.
+RESPECT DE LA LOI, EXEMPLE III
+En 1514, Pietro Aretino – Pierre l’Arétin –, âgé de vingt-deux ans, travail-
+lait comme domestique dans une riche famille romaine. Il avait de grandes
+ambitions d’écriture, il voulait changer le monde avec sa plume, mais
+comment un simple laquais pouvait-il caresser de tels rêves ?
+Cette année-là, le pape Léon X reçut du roi du Portugal une ambas-
+sade chargée de nombreux présents dont le plus encombrant était un
+éléphant, le premier à entrer dans Rome depuis l’époque impériale. Le
+souverain pontife se prit d’affection pour l’animal, lui témoigna beaucoup
+d’attentions et le combla de cadeaux. Mais en dépit de tous ses soins, l’élé-
+phant, appelé Hanno, tomba gravement malade. Le pape convoqua des
+médecins qui administrèrent à l’éléphant deux cent cinquante kilos de
+purgatif, mais en vain. L’animal mourut et le pape en fut très chagriné.
+Pour se consoler, il commanda au grand peintre Raphaël un portrait gran-
+deur nature de l’animal, qui serait placé sur sa tombe, avec l’inscription :
+« Ce que la nature a pris, Raphaël par son art l’a rendu. »
+Les jours suivants circula dans Rome un pamphlet intitulé « Les
+dernières volontés et le testament de Hanno l’éléphant », qui suscita une
+hilarité générale : « À mon héritier le cardinal Santa Croce, je lègue mes
+genoux pour qu’il puisse imiter mes génuflexions... À mon héritier le
+cardinal Santi Quattro, je donne mes mâchoires pour qu’il puisse mieux
+dévorer les biens du Christ... À mon héritier le cardinal Médicis, je donne
+mes oreilles pour qu’il puisse entendre tout ce qui se dit... » Quant au
+cardinal Grassi, qui avait une réputation de débauche, l’éléphant lui léguait
+la partie appropriée de son anatomie.
+Le pamphlet, anonyme, poursuivait dans le même style, n’épargnant
+aucune personnalité de la ville, pas même le pape. Chacun était touché au
+point le plus sensible. Le texte se terminait ainsi : « Veillez à faire d’Aretino
+votre ami / Parce qu’il n’est pas bon de l’avoir pour ennemi. / Ses mots à
+eux seuls peuvent détruire le grand pape / Que Dieu vous garde tous de sa
+langue acérée. »
+Interprétation
+Avec un seul libelle, l’Arétin, fils d’un pauvre cordonnier et d’une servante,
+devint célèbre. Tout le monde à Rome voulut savoir qui était cet audacieux
+pamphlétaire. Même le pape, amusé par sa témérité, le fit rechercher et le
+prit à son service. Au fil des ans, il fut surnommé le « fléau des princes »,
+et tous les grands de ce monde, du roi de France à l’empereur Charles
+Quint, apprirent à le respecter et à le craindre.
+La stratégie de l’Arétin est simple : quand on est petit et inconnu
+comme David, il faut trouver un Goliath à attaquer. Plus la cible est
+éminente, plus on attire l’attention. Plus l’attaque est hardie, plus on se
+de ma confiance. Il connaît
+l’argent et il connaît les
+hommes. L’argent rend
+souvent l’homme petit,
+mais quelqu’un comme
+celui-ci en gagne
+généralement beaucoup. 
+Et je suis ravi d’avoir aidé
+un homme exceptionnel 
+à monter une affaire 
+hors pair. »
+Ha Tae-hung,
+dans les coulisses des
+palais royaux de
+corée, 1983
+Monsieur, dont le caractère
+dominant était d’avoir
+toujours peur et défiance,
+était de tous ceux que
+j’aie jamais vus le plus
+capable de donner dans
+tous les faux pas, à force
+de les craindre tous : 
+il était en cela semblable
+au lièvre [...]
+L’irrésolution de Monsieur
+était d’une espèce toute
+particulière. Elle
+l’empêchait souvent d’agir
+quand il était le plus
+nécessaire d’agir, et elle le
+faisait quelquefois agir
+quand il était le plus
+nécessaire de ne point agir.
+cardinal de retz,
+1613-1679,
+mémoires
+
+---
+
+[p. 276-277]
+deux, poursuivit-il, 
+est contaminée par des
+agents infectieux mortels ;
+l’autre est parfaitement
+saine. Que Son
+Excellence choisisse 
+celle qu’il veut manger, 
+et je mangerai l’autre. »
+Un messager revint sans
+tarder, annonçant que le
+chancelier retirait son défi.
+Clifton Fadiman (éd.),
+the little brown
+book of anecdotes,
+1985
+ 
+  
+256
+LOI 31
+en grande pompe à Moscou. Les Russes ne pourraient plus se plaindre s’il
+agissait en dictateur : ils lui avaient eux-mêmes accordé ce pouvoir.
+Interprétation
+Ivan le Terrible se trouvait face à un cruel dilemme : capituler devant les
+boyards aurait conduit à une destruction certaine, mais la guerre civile aurait
+apporté une ruine d’un genre différent. Même si Ivan IV était parvenu à
+gagner cette guerre, le pays aurait été dévasté et ses divisions seraient
+demeurées plus fortes que jamais. Précédemment, il avait toujours fait
+preuve d’audace et de pugnacité. Mais ce comportement risquait de se
+retourner contre lui : plus il frapperait fort contre ses ennemis, plus leurs
+réactions seraient violentes.
+La faiblesse d’une démonstration de force, c’est qu’elle suscite du
+ressentiment et conduit à une réaction qui finit par détruire l’autorité.
+Ivan IV, immensément créatif au pouvoir, vit que le seul moyen d’obtenir
+la victoire consistait à feindre de se retirer. Il ne forçait pas le pays à se plier
+à sa volonté, il lui laissait le choix entre abdication et anarchie d’une part,
+pouvoir absolu de l’autre. Pour renforcer sa position, il fit clairement
+comprendre qu’il préférait abdiquer : « Prenez-moi au mot, et vous verrez
+ce qui arrivera. » Nul ne le prit au mot. Une simple absence d’un mois avait
+donné au pays un aperçu des cauchemars qui suivraient son abdication :
+invasion tartare, guerre civile, ruine. D’ailleurs, tout cela eut lieu à la mort
+d’Ivan IV.
+Le retrait et l’absence sont des moyens classiques de maîtriser les alter-
+natives. Vous donnez aux gens un aperçu de ce qui va se passer sans vous
+et vous leur proposez un « choix » : soit je me retire et vous en subissez les
+conséquences, soit je reviens à certaines conditions. Ils choisissent l’option
+qui vous donne le pouvoir parce que l’alternative est inacceptable. Vous
+leur forcez la main, mais indirectement : ils semblent avoir le choix. Et
+chaque fois que les gens ont l’illusion d’avoir le choix, ils tombent facile-
+ment dans le panneau.
+RESPECT DE LA LOI, EXEMPLE II
+La courtisane Anne Lenclos, dite Ninon de Lenclos, trouvait que sa vie ne
+manquait pas d’attraits. Ses amants étaient tous de famille princière ou
+aristocratique, ils la payaient bien, l’amusaient par leur esprit et leur intelli-
+gence, satisfaisaient ses sens passablement exigeants et la traitaient presque
+comme une égale. Cette vie était immensément préférable au mariage. En
+1643, la mère de Ninon mourut subitement et sa fille se retrouva, à vingt-
+trois ans, complètement seule au monde : pas de famille, pas de dot, rien
+sur quoi s’appuyer. Une sorte de panique s’empara d’elle. Elle entra au
+couvent, abandonnant ses illustres amants. Un an plus tard, elle quitta sa
+retraite et partit pour Lyon. Quand finalement elle réapparut à Paris, en
+1648, ses soupirants se pressèrent à sa porte, plus nombreux encore
+qu’avant, parce qu’elle était la courtisane la plus brillante de son temps et
+qu’elle leur avait beaucoup manqué.
+le menteur
+Il était une fois un roi
+d’Arménie à l’esprit
+curieux et friand de
+nouveautés, qui envoya
+ses hérauts dans tout le
+pays pour y proclamer
+ceci : « Oyez, oyez !
+Celui qui prouvera qu’il
+est le plus fieffé menteur
+d’Arménie recevra des
+propres mains de Sa
+Majesté une pomme
+d’or ! » Les gens se
+précipitèrent en foule au
+palais, venus de toutes les
+villes et de tous les
+hameaux. Il y avait là des 
+nobles et des roturiers, 
+des citadins et des
+campagnards, des riches 
+et des pauvres, des 
+grands et des petits. 
+Le pays ne manquait pas
+de menteurs, et chacun de
+narrer son histoire au roi.
+Le monarque entendit
+ainsi tous les mensonges
+possibles, mais nul ne le
+convainquit qu’un seul
+surpassât tous les autres.
+Le roi commençait à se
+lasser et envisageait
+d’annuler le concours
+quand se présenta un
+pauvre homme en
+haillons, une grosse
+marmite en terre sous le
+bras. « Que veux-tu ?
+demanda Sa Majesté. –
+Sire, répondit le miséreux
+un peu effaré. Vous 
+vous souvenez de moi ?
+Vous me devez une
+marmite d’or, et je suis
+venu la chercher. – Mais
+tu es le pire des 
+menteurs ! s’exclama le
+roi. Je ne te dois rien. –
+Le pire des menteurs,
+dites-vous ? répliqua
+l’homme en haillons.
+Dans ce cas, donnez-moi
+la pomme d’or ! »
+Le roi, comprenant que
+
+---
+
+[p. 298-299]
+etc., cet
+individu, soyez-en bien
+convaincu, n’a pas dans 
+le cœur le sentiment du
+juste ; il sera un gredin
+tout aussi bien dans les
+grandes circonstances,
+toutes les fois que la loi 
+ou la force ne lui lieront
+pas les bras. 
+Arthur Schopenhauer 
+1788-1860,
+aphorismes sur 
+la sagesse dans la vie,
+traduit par 
+J.-A. Cantacuzène
+ 
+  
+278
+LOI 33
+la bataille de
+thessalie 
+Quand les deux généraux
+furent entrés dans la
+Thessalie, et qu’ils eurent
+assis leur camp l’un 
+vis-à-vis de l’autre,
+Pompée revint d’autant
+plus volontiers à sa
+première résolution, qu’il
+était alarmé par des
+présages sinistres, et par
+une vision qu’il avait eue
+pendant son sommeil. II
+avait cru être à Rome
+dans le théâtre, où le
+peuple le recevait avec de
+grands applaudissements,
+pendant que lui-même
+s’était mis à orner la
+chapelle de Vénus
+Nicéphore. Cette vision
+lui donnait d’un côté de 
+la confiance, à cause des
+applaudissements, du
+peuple ; mais, d’un autre
+côté, il craignait que ce
+songe ne signifiât qu’il
+relèverait, par ses propres
+dépouilles, la gloire du
+descendant de Vénus, 
+à qui César rapportait 
+son origine.
+[...] Mais aucun corps de
+l’armée ne témoignait plus
+d’impatience de combattre
+que celui des chevaliers :
+fiers de la beauté de leurs
+armes, du bon état de
+leurs chevaux, de leur
+bonne mine et de leur
+nombre (car ils étaient 
+sept mille, contre mille 
+que César en avait), ils 
+se tenaient assurés de la
+victoire. Leur infanterie,
+supérieure aussi en
+nombre, était de 
+quarante-cinq mille
+hommes, et celle des
+ennemis ne se montait
+qu’à vingt-deux mille
+[...] Quand l’infanterie
+des deux armées fut ainsi
+engagée dans une mêlée
+plus célèbres favorites de l’histoire, Diane de Poitiers. Catherine le savait
+d’expérience : un tel homme veut se sentir capable de conquérir une femme
+par son seul mérite, indépendamment de son statut et de sa naissance. Or
+pareil besoin l’expose à un danger : dès lors que celle-ci se laisse conquérir,
+c’est la maîtresse qui prend le pas sur son royal amant sans que celui-ci le
+remarque : ainsi Diane de Poitiers avec Henri II. Catherine avait décidé
+d’exploiter cette faiblesse à son avantage, en l’utilisant comme un moyen 
+de contrôler les hommes de sa cour. Il lui suffisait de lâcher les plus jolies
+femmes sur ceux dont elle savait qu’ils partageaient la vulnérabilité de son
+époux.
+Repérez chez les autres les passions et pulsions irrépressibles. 
+Plus ardente est la passion, plus la personne est vulnérable. Cela peut
+surprendre, car les passionnés donnent l’illusion de la force. En fait, ils
+masquent mal leurs faiblesses et leur impuissance. Ainsi, le besoin de
+conquêtes féminines révèle chez les hommes une vulnérabilité qui fait
+d’eux des marionnettes depuis la nuit des temps. Observez les pulsions les
+plus manifestes : cupidité, sensualité, angoisse. Ce sont les penchants sur
+lesquelles on a le moins de contrôle. Et ce que l’autre ne peut contrôler,
+vous pouvez le contrôler à sa place.
+RESPECT DE LA LOI, EXEMPLE IV
+Arabella Huntington, épouse du magnat des chemins de fer Collis
+P. Huntington, était issue d’un milieu modeste. Elle avait toujours 
+lutté pour la reconnaissance de la bonne société de l’époque – la fin du
+XIXe siècle. Or, peu de gens comme il faut se montraient aux réceptions
+qu’elle donnait dans son manoir de San Francisco ; la plupart la regardaient
+comme une aventurière qui ne faisait pas partie de leur milieu. À cause de
+la fabuleuse richesse de son mari, les marchands d’art la courtisaient, mais
+sans cacher qu’ils la considéraient comme une parvenue ; un seul la traitait
+différemment : Joseph Duveen.
+Les premières années, Duveen ne fit aucun effort pour lui vendre une
+seule œuvre d’art. Il se contentait de l’accompagner dans les beaux maga-
+sins et de l’entretenir intarissablement des reines et princesses de sa
+connaissance. Enfin quelqu’un qui la traitait avec égards, voire déférence !
+Duveen ne tentait aucune approche commerciale, il faisait subtilement son
+éducation esthétique, à savoir que les plus belles œuvres sont aussi les plus
+chères. Une fois qu’Arabella eut assimilé ce principe de base, Duveen se
+comporta comme si elle avait toujours eu un goût remarquablement sûr,
+alors que son sens esthétique était inexistant.
+Quand Collis Huntington mourut en 1900, Arabella hérita d’une
+fortune colossale. Elle se mit alors à acheter les peintures les plus coûteuses,
+des Rembrandt et des Vélasquez notamment, et ce, uniquement chez
+Duveen. Plus tard, Duveen lui vendit le Blue Boy de Gainsborough à un
+prix record pour une œuvre d’art à l’époque : un achat étonnant de la part
+de quelqu’un qui n’avait jamais été collectionneur.
+
+---
+
+[p. 322-323]
+de Chesterton
+s’attendaient à ce qu’il
+réponde. L’historien
+Hilaire Belloc lui reprocha
+de n’en rien faire. « Mon
+cher Belloc, rétorqua
+Chesterton, je lui ai bel 
+et bien répondu. Avec 
+un homme aussi malin
+que Shaw, le silence 
+est la seule réponse
+insupportable. »
+Clifton Fadiman (éd.),
+the little brown
+book of anecdotes,
+1985
+ 
+  
+302
+LOI 36
+des moustiques et de l’hostilité du milieu. Errant sur un territoire qui ne
+leur était pas acquis, ils se mirent à dos les populations civiles et le gouver-
+nement mexicain. Pancho Villa, blessé par balle lors d’une escarmouche
+avec l’armée mexicaine, se cacha dans une grotte pour récupérer ; des hau-
+teurs, il observait Pershing qui battait la campagne à la tête de ses troupes
+épuisées, sans jamais atteindre son but.
+Jusqu’à l’hiver, Villa joua ainsi à cache-cache. L’opinion américaine en
+vint à considérer l’expédition comme une bouffonnerie mais, en réalité, elle
+commençait à admirer Villa, si plein de ressources qu’il était capable
+d’échapper à une force qui lui était supérieure. En janvier 1917, Wilson finit
+par ordonner le retour de Pershing. Lorsque les troupes firent demi-tour
+vers le territoire américain, les forces rebelles les poursuivirent, obligeant
+l’armée américaine à se servir de son aviation pour protéger ses arrières.
+L’expédition punitive, elle-même punie, avait tourné à la plus humiliante
+déroute.
+Interprétation
+L’expédition punitive de Woodrow Wilson était censée être une démonstra-
+tion de force : il voulait donner une leçon à Pancho Villa et, dans le même
+temps, prouver à toute la planète que personne, petit ou grand, ne peut
+impunément braver les tout-puissants Etats-Unis d’Amérique. L’expédition
+serait bouclée en quelques semaines et Pancho Villa envoyé aux oubliettes.
+Mais il en fut tout autrement. Plus l’expédition se prolongeait, plus
+devenaient visibles tant l’incompétence américaine que l’intelligence de
+Villa. Villa est passé à la postérité, mais on a perdu le souvenir du coup de
+main qui déclencha l’expédition. Un pépin mineur a fini par ridiculiser le
+pays à l’échelle internationale. L’importance des moyens mis en œuvre 
+par les Américains fous de rage, le déséquilibre entre le poursuivant et le
+poursuivi, qui garda sa liberté, transformèrent toute l’affaire en farce. Et
+finalement l’énorme armée dut quitter le Mexique la queue basse, humi-
+liée. Le résultat de l’expédition punitive était aux antipodes de son but
+initial : non seulement Villa restait en liberté, mais il était plus populaire
+que jamais.
+Qu’aurait pu faire Wilson ? Il aurait pu soit faire pression sur les
+membres du gouvernement mexicain pour qu’ils lui livrent le bandit, soit,
+puisque celui-ci avait exaspéré beaucoup de Mexicains avant même qu’il ne
+lance l’expédition punitive, travailler la mano en la mano avec eux et assurer
+le soutien populaire en faveur d’une expédition plus réduite. Il aurait aussi
+pu mettre en place un piège du côté américain de la frontière en prévision
+de la prochaine attaque. Il aurait enfin pu fermer provisoirement les yeux,
+et attendre que les Mexicains eux-mêmes règlent leurs comptes avec Villa.
+Souvenez-vous : c’est vous qui choisissez de laisser un problème vous
+tourmenter. Vous pouvez tout aussi facilement choisir de ne pas prêter
+attention à d’irritantes attaques, les considérer comme sans importance et
+indignes de votre intérêt. Vous vous mettez ainsi en position de force. Si
+vous faites le mort, vous ne risquez pas de vous engager dans une lutte
+futile. Votre honneur n’est pas en jeu. La meilleure leçon à donner à un
+l’âne et le jardinier
+Un âne avait perdu sa
+queue, ce qui l’affligeait
+beaucoup : en la cherchant
+de toutes parts, il passa à
+travers un pré et entra
+dans un jardin ; mais le
+jardinier l’ayant aperçu,
+s’imaginant qu’il voulait
+ravager son jardin, entra
+dans une furieuse colère,
+courut à l’âne et lui coupa
+les deux oreilles. Ainsi,
+l’âne qui se plaignait de
+n’avoir point de queue,
+eut encore plus de raisons
+de s’affliger lorsqu’il se vit
+sans oreilles. Quiconque
+ne prend pas la raison
+pour guide, s’égare et
+tombe dans les précipices. 
+Bidpaï,
+Inde,
+ive siècle,
+fables, traduit par Pétis
+de Lacroix 
+le prodige du bœuf
+À l’époque où le ministre
+du Droit Tokudaiji était
+chef de la police impériale,
+il arriva pendant une
+réunion de son personnel 
+à la Porte du milieu 
+qu’un bœuf échappé de
+chez un fonctionnaire du
+nom d’Akikane entre dans
+le bâtiment du ministère. 
+Il monta sur l’estrade où
+le chef était assis et s’y 
+installa pour ruminer.
+Tout le monde prit cela
+pour un présage grave et
+insista pour que le bœuf
+soit envoyé à un voyant
+yin-yang. Mais le Premier
+ministre, père de
+Tokudaiji, rétorqua :
+« Un bœuf ne sait pas ce
+qu’il fait. Il a des pattes,
+qui le portent partout.
+Cela ne rime à rien de
+priver un fonctionnaire
+
+---
+
+[p. 343-344]
+marché du
+monde. – Oh, sûrement
+pas, dit le voyageur. –
+Peut-être pas le plus
+grand, dit le citoyen, 
+mais le meilleur, ça j’en
+suis sûr. – Là, vous vous
+trompez, dit le voyageur.
+Je pourrais vous citer... »
+On enterra l’étranger à 
+la tombée de la nuit.
+Robert Louis
+Stevenson,
+1850-1894,
+fables, traduit par
+Pierre-Alain Gendre
+ 
+  
+LOI 38
+323
+lui donna dans les deux cas la liberté de travailler sans entraves, tout en
+gardant sa liberté de pensée. Finalement, il ne fut inquiété nulle part
+malgré les dangers de l’époque : il se révéla plus fort que toutes les forces
+de répression.
+Les personnes de pouvoir non seulement évitent de reproduire les
+erreurs de Pausanias et de Salk, mais apprennent aussi à se fondre dans la
+masse. Ce fut l’astuce de nombreux escrocs et hommes politiques au long
+de l’histoire. Des hommes d’État tels que Jules César et Franklin
+D. Roosevelt faisaient violence à leur naturel aristocratique pour cultiver
+une certaine familiarité avec le citoyen de base. Ils exprimaient par de petits
+gestes, souvent symboliques, leur partage des valeurs démocratiques avec
+le peuple, malgré la supériorité de leur position.
+Le prolongement logique de cette pratique est l’inestimable talent
+d’être qui l’on veut en face de n’importe qui. Lorsque vous êtes en société,
+laissez vos opinions au vestiaire et choisissez le masque qui convient le
+mieux au groupe auquel vous êtes mêlé. Bismarck joua ce jeu avec succès
+pendant des années ; certains comprirent vaguement sa manœuvre, mais
+pas assez pour en mesurer l’importance. Les gens gobent ce que vous dites
+parce que cela les flatte de constater que vous partagez leurs idées. Si vous
+êtes prudent, ils ne vous traiteront pas d’hypocrite : comment le pourraient-
+ils, puisque vous ne leur montrez pas votre vrai visage ? Ils ne vous repro-
+cheront pas non plus de manquer de valeurs. Bien sûr que vous en avez :
+en l’occurrence, celles que vous partagez avec eux lorsque vous êtes en leur
+compagnie !
+Le troupeau exclut le
+mouton noir, car il sem-
+ble ne pas être des leurs.
+Alors il s’écarte, reste à la traîne
+et devient la proie des loups.
+Restez parmi vos semblables : le
+troupeau offre la sécurité du
+grand nombre. Gardez pour vous
+vos différences, ne les affichez
+pas par la couleur de votre toison.
+Image :
+Le mouton
+noir.
+Autorité : Ne donnez pas aux chiens ce qui est sacré,
+ne jetez pas vos perles aux porcs, de peur qu’ils ne les
+piétinent et que, se retournant, ils ne vous déchirent.
+(Mt, VII, 6, Traduction Œcuménique de la Bible)
+
+---
+
+[p. 365-366]
+ge. Mais les
+eaux croupissent et deviennent pesti-
+lentielles. Seules des créatures
+immondes se développent dans les
+eaux stagnantes. Rien ne bouge,
+aucun 
+échange 
+n’est 
+possible.
+Détruisez le barrage : l’eau courante
+apporte abondance, richesse et pou-
+voir. Il faut que la rivière périodique-
+ment déborde pour être bénéfique.
+ 
+  
+LOI 40
+345
+Je n’ai volé que des gens
+qui en avaient les moyens
+et avaient accepté de se
+lancer avec moi dans des
+combines où d’autres se
+feraient rouler. Mes
+victimes voulaient l’argent
+pour l’argent, mais moi
+pour le luxe et les plaisirs
+que celui-ci me donne. 
+Ils ne s’intéressaient 
+pas à la nature humaine.
+Ils ne connaissaient pas
+grand-chose à l’homme, et
+ne s’y intéressaient pas.
+S’ils avaient étudié de
+façon plus attentive la
+nature humaine, s’ils
+avaient consacré davantage
+de temps à la compagnie 
+des autres et moins à la
+poursuite du tout-puissant
+dollar, ils n’auraient 
+pas représenté des cibles
+aussi faciles.
+«Yellow Kid » Weil,
+1875-1976
+Respect de la loi, Exemple VI
+Akimoto Suzutomo, riche adepte de la cérémonie du thé, confia un jour cent
+ryôs d’or à son page pour acheter un bol à thé mis en vente par un certain
+marchand. En voyant le bol, le page se dit qu’il devait valoir moins que cela
+et marchanda âprement : il l’obtint pour quatre-vingt-quinze ryôs. Plusieurs
+jours plus tard, après que Suzumoto eut commencé à utiliser le bol, son page
+lui raconta fièrement à quel prix il l’avait eu. « Quel ignare tu fais ! observa
+Suzutomo. Un bol de thé vendu cent ryôs d’or ne peut être qu’un souvenir
+de famille : s’il est à vendre, c’est que son propriétaire est dans le besoin.
+Dans ce cas, il espérait trouver quelqu’un qui l’achète pour cent cinquante
+ryôs d’or. Tu es un goujat, tu profites de la situation ! En plus, un bibelot
+acheté cent ryôs vaut la peine d’être mis en valeur, mais quatre-vingt-
+quinze ! Cela fait minable ! Range ce bol, je ne veux plus le voir ! »
+Le bol fut serré au fond d’un placard, pour n’en plus ressortir.
+Interprétation
+Lorsque vous marchandez, peut-être économisez-vous cinq sous mais le
+désagrément que vous causez et l’impression pitoyable que vous donnez en
+coûte à votre réputation ; or, pour les gens de pouvoir, leur réputation n’a pas
+de prix. Apprenez à payer le prix ; cela vous économisera bien des tracas.
+Respect de la loi, Exemple VII
+Un certain jour du début du XVIIe siècle, au Japon, un groupe de généraux
+se distrayaient à l’approche d’une bataille importante en disputant un
+concours : il s’agissait de reconnaître à l’odeur différents types d’encens.
+Chaque participant misait un prix pour les gagnants : arc, flèche, selle et
+autres objets appréciés par les guerriers. Le grand seigneur Date
+Masamune passait par là : on le convia à participer. Il offrit la calebasse
+qu’il portait à la ceinture. Cela fit rire, car personne ne voulait gagner un
+objet aussi insignifiant. Finalement, un domestique accepta la gourde.
+Autorité :
+Avaricieux sont en paine
+Et ne dorment jour de sepmaine
+Nonobstant ilz ne peuvent querre
+Ne seigneurie ne grand terre
+Dont ilz facent leur voulenté
+Car ilz n’ont pas d’amys planté,
+Mais qui amys vouldra avoir
+Chier ne doit avoir son avoir
+Ains par beaulx dons amys doit querre
+Car c’est la vertu de son erre,
+Comme la pierre d’ayment
+Attraict le fer subtilement
+Ainsi attraict le cueur des gens.
+(Guillaume de Lorris, vers 1200-1238, Le Roman de la rose)
+
+---
+
+[p. 385-387]
+e fois introduit dans le cercle
+restreint de la cour, Raspoutine se rendit indispensable et acquit énormé-
+ment de pouvoir. Allant droit au but, il avait visé la seule personne de
+Russie qui tenait les rênes, car la tsarine menait son mari par le bout 
+du nez ; et il n’eut même pas besoin de l’isoler, le travail était déjà fait.
+ 
+  
+LOI 42
+365
+La stratégie de Raspoutine peut vous être très profitable : prenez pour
+cibles des personnes qui détiennent des positions importantes mais qui 
+sont seules – une véritable aubaine : faciles à séduire et capables de vous
+propulser vers les plus hautes sphères du pouvoir.
+En fait, il faut viser le berger, parce que c’est à travers lui que vous
+parviendrez à capturer tout le troupeau, au-delà de même vos espérances.
+Lorsque Hernando Cortés et Francisco Pizarro unirent leurs faibles forces
+contre les empires inca et aztèque, ils ne commirent pas l’erreur de se battre
+sur plusieurs fronts ni de se laisser intimider par le nombre de leurs enne-
+mis. Ils se contentèrent d’en capturer les rois, Moctezuma et Atahualpa :
+deux immenses empires leur tombèrent entre les mains. Sans son chef, le
+groupe perd son centre de gravité et s’effondre. Visez les chefs, abattez-les,
+et vous n’aurez plus que l’embarras du choix dans la confusion qui suivra.
+Image : Le troupeau de mou-
+tons gras. Ne perdez pas un temps
+précieux à tenter de chaparder un
+mouton ou deux ; ne risquez pas votre
+peau sous les crocs des chiens. Visez le ber-
+ger. Éloignez-le et les chiens suivront.
+Abattez-le et le troupeau se dispersera : vous
+n’aurez plus qu’à cueillir les moutons un à un.
+Autorité : Si vous bandez un arc, prenez le plus
+solide. Si vous lancez une flèche, lancez la plus
+longue. Pour abattre un cavalier, abattez
+d’abord son cheval. S’il faut des captifs, saisissez
+d’abord leur chef. Comme un pays a ses frontiè-
+res, le meurtre a ses limites. Si une attaque enne-
+mie peut être arrêtée, pourquoi faire plus de
+morts et de blessés que nécessaire ? (Du Fu,
+poète chinois de la dynastie Tang, VIIIe siècle)
+
+ 
+  
+366
+LOI 42
+A CONTRARIO
+« Quand il s’agit d’offenser un homme, il faut le faire de telle manière qu’on
+ne puisse redouter sa vengeance », écrit Machiavel. Si vous essayez d’isoler
+votre ennemi, assurez-vous qu’il n’aura pas les moyens de vous rendre 
+la monnaie de votre pièce. En d’autres termes, si vous appliquez cette loi,
+veillez à être en position de supériorité pour n’avoir rien à craindre de sa
+rancœur.
+Andrew Johnson, successeur d’Abraham Lincoln à la présidence des
+États-Unis, percevait Ulysse S. Grant comme un élément gênant de son 
+gouvernement. Il l’isola pour préparer sa destitution. Cela ne fit que mettre
+en rage le grand général, qui répliqua en formant un groupe de soutien au
+parti républicain afin de briguer la présidence suivante. Il aurait été beau-
+coup plus sage de garder un homme comme Grant dans le rang, là où il
+était moins dangereux, plutôt que de risquer sa vengeance. De même, vous
+constaterez souvent qu’il est préférable de ne pas vous mettre trop de
+personnes à dos ; tenez-les à l’œil plutôt que de vous en faire des ennemis
+jurés. En les gardant à vos côtés, vous pourrez discrètement saboter leurs
+groupes de soutien. Lorsque vous déciderez de frapper, leur chute sera
+brutale et rapide, ils ne comprendront même pas ce qui leur arrive.
+
+---
+
+[p. 407-408]
+, tel celui des schizophrènes
+qui se construisent un monde miroir imaginaire, le docteur Erickson
+essayait toujours de pénétrer dans ce monde et d’y travailler. C’est ainsi
+qu’il traita un patient hospitalisé qui se prenait pour Jésus-Christ ; habillé
+de draps, il parlait par vagues paraboles et infligeait à tout l’établissement
+ 
+  
+LOI 44
+387
+des sermons passionnés. Ni les thérapies ni les médicaments n’avaient fait
+effet, jusqu’au jour où le docteur Erickson alla voir le jeune homme et lui
+dit : « J’ai cru comprendre que vous aviez des connaissances en menui-
+serie. » Étant le Christ, le patient dut répondre qu’effectivement, c’était le
+cas ; Erickson le chargea immédiatement de confectionner des étagères et
+autres objets utiles, en échange de quoi il pourrait se vêtir comme il voudrait.
+Au cours des semaines qui suivirent, l’homme se montra de moins en
+moins occupé par ses fantaisies mystiques et de plus en plus concentré sur
+son ouvrage. Le travail du bois était devenu une priorité dans son esprit,
+lui permettant de fonctionner en société.
+Interprétation
+La communication est fondée sur des métaphores et des symboles qui sont
+les fondements du langage. Une métaphore est une sorte de miroir du
+concret et du réel, souvent plus clair et plus vrai qu’une description
+littérale. Or, lorsque vous êtes confronté à la volonté intraitable d’autres
+personnes, une communication explicite ne fait généralement qu’aug-
+menter leur résistance.
+Cela apparaît clairement si vous vous plaignez du comportement
+d’autrui, notamment sur des sujets sensibles comme la façon de faire
+l’amour. Le résultat sera bien plus durable si, comme le docteur Erickson,
+vous procédez par analogie à l’aide d’un miroir symbolique de la situation,
+qui servira de guide. Le Christ lui-même l’avait compris, les paraboles 
+sont un excellent moyen d’enseigner, car elles permettent à l’auditeur de
+comprendre par lui-même.
+Lorsque vous avez affaire à des personnes perdues dans le reflet de
+mondes imaginaires – et tous ne sont pas en hôpital psychiatrique, il s’en
+faut –, n’essayez jamais de les faire entrer de force dans votre réalité en
+faisant voler leurs miroirs en éclats. Au contraire, entrez dans leur monde
+et vivez-y selon leurs règles, et vous les guiderez en douceur jusqu’à l’autre
+côté de ces miroirs.
+Effet de miroir, exemple VI
+Le grand maître de thé japonais du XVIe siècle Takeno Sho-o passait un jour
+devant une maison lorsqu’il remarqua un jeune homme arrosant ses fleurs
+près de son portail. Deux choses retinrent l’attention de Sho-o : la grâce
+avec laquelle le jeune homme accomplissait cette corvée banale, et la stupé-
+fiante beauté des hibiscus qui poussaient dans le jardin. Il s’arrêta et se
+présenta au jeune homme, qui s’appelait Sen no Rikyu. Sho-o aurait bien
+aimé rester, mais il avait rendez-vous et devait se hâter. Toutefois, avant
+qu’il ne prît congé, Rikyu l’invita à prendre le thé avec lui le lendemain
+matin. Sho-o, ravi, accepta.
+Lorsque Sho-o ouvrit le portail le lendemain, il fut horrifié : il ne restait
+pas une fleur dans le jardin. Or il était surtout venu admirer les hibiscus en
+fleur, ce qu’il n’avait pas eu le temps de faire la veille. Déçu, il fit demi-tour,
+puis se ravisa et décida d’aller jusqu’à la salle de thé de Sen no Rikyu. 
+À peine entré, il s’arrêta net, stupéfait : devant lui pendait du plafond une
+
+---
+
+[p. 428-429]
+envie, car
+Michel-Ange avait observé
+de nombreuses erreurs de
+l’architecte [...] Bramante,
+ne doutant pas que
+Michel-Ange connût ses
+erreurs, avait toujours
+cherché à le faire chasser 
+de Rome ou au moins 
+à le priver de la faveur 
+du pape, ainsi que de la
+gloire qu’il aurait pu
+trouver grâce à son talent.
+Concernant le tombeau,
+ 
+  
+408
+LOI 46
+il y parvint. Il ne fait pas
+de doute que, si l’on avait
+laissé Michel-Ange
+l’achever selon son projet
+initial, ayant un champ si
+large pour prouver 
+sa valeur, nul autre
+artiste, ceci soit dit sans
+envie, n’aurait jamais pu
+le détrôner de 
+la place qu’il aurait 
+ainsi atteinte.
+Ascanio Condivi,
+vie de michel-ange,
+1553
+Avoue-t-on jamais son
+envie ? Y a-t-il quelque
+chose dans ce vice de plus
+honteux qu’un crime de
+sang ? À cette accusation,
+chacun se récrie, et les gens
+les plus distingués ont du
+mal à y croire quand ils 
+la constatent chez
+quelqu’un d’intelligent.
+Mais comme l’envie se
+tapit non dans la tête 
+mais dans le cœur, aucun
+niveau d’intelligence 
+n’en protège.
+Herman Melville,
+1819-1891,
+billy budd
+Gracián recommande de même aux puissants d’afficher quelque
+faiblesse, péché mignon, vice sans conséquence. Donnez à ceux qui vous
+jalousent un os à ronger, pour les distraire de votre pire méfait : la réussite.
+Souvenez-vous : il n’y a que la réalité qui compte. Vous aurez peut-être à
+maquiller les apparences, mais c’est pour finalement obtenir ce qui importe
+vraiment : le pouvoir. Dans certains pays arabes, on évite d’éveiller la jalou-
+sie en ne montrant sa richesse qu’à l’intérieur de sa maison. Appliquez cette
+sagesse à votre propre tempérament.
+Méfiez-vous des masques que peut prendre l’envie. Des éloges exces-
+sifs prouvent à coup sûr que son auteur est jaloux : soit il ne vous porte
+au pinacle qu’en attendant votre chute (impossible d’être à la hauteur de
+telles louanges), soit il affûte son couteau pour vous le planter dans le dos.
+À l’opposé, ceux qui se montrent excessivement critiques à votre égard ou
+qui vous humilient publiquement sont probablement tout aussi jaloux.
+Identifiez ce comportement comme de l’envie masquée et ne rentrez pas
+dans leur jeu en leur rendant la monnaie de leur pièce ou prenant leurs
+critiques trop à cœur. Vous aurez votre revanche si vous vous contentez
+d’ignorer avec superbe leur misérable existence.
+Il est inutile d’aider un jaloux et de lui faire des faveurs : ils vous trou-
+vera condescendant. Les tentatives de Joe Orton pour aider Halliwell à
+exposer ses œuvres ne firent qu’exacerber le sentiment d’infériorité de son
+amant. Une fois que la jalousie révèle son vrai visage, la seule solution est
+souvent de fuir les jaloux et de les laisser brûler dans l’enfer qu’ils ont eux-
+mêmes créé.
+Enfin, méfiez-vous de certains contextes plus propices à la jalousie que
+d’autres. Les effets de l’envie sont plus graves entre collègues et pairs, sous
+le vernis d’une apparente égalité. La jalousie est aussi très destructrice en
+démocratie, où tout signe extérieur de pouvoir est mal vu. Le réalisateur
+suédois Ingmar Bergman, par exemple, fut harcelé par le fisc parce que 
+son opulence faisait tache dans un royaume où la reine fait elle-même son
+marché. Il est quasiment impossible d’éviter la jalousie dans des cas comme
+celui-là, et vous ne pouvez guère que l’admettre gracieusement, sans en
+faire un affront personnel. Selon le mot de Thoreau : « La jalousie est une
+taxe que toute éminence doit payer. »
+Image : Les mauvaises herbes au jardin. Certes,
+vous ne cultivez pas, mais elles prennent de la
+vigueur à la faveur de vos arrosages. À votre
+insu, elles envahissent vos plates-bandes
+et étouffent vos jolies fleurs. Avant
+qu’il ne soit trop tard, cessez 
+d’arroser à l’aveuglette. Détruisez 
+les mauvaises herbes de la
+jalousie en vous abste-
+nant de les abreuver.
+
+---
+
+[p. 449-450]
+les, ils auraient probablement souffert de la part de
+l’Occident des mêmes coups que la Chine. C’est le pouvoir de l’adapta-
+bilité : l’adversaire n’a rien à attaquer, ne peut réagir à rien.
+En général, l’hypertrophie est le premier pas vers l’extinction. Ce qui
+est immense et enflé manque de mobilité, mais doit être constamment
+ 
+  
+LOI 48
+429
+nourri. Seuls les sots se laissent séduire par l’idée que le pouvoir est propor-
+tionnel à la taille et que les plus grands sont les plus forts.
+En 483 av. J.-C., le roi Xerxès de Perse s’apprêtait à envahir la Grèce,
+certain de n’en faire qu’une bouchée. Il avait la plus grande armée jamais
+mise en branle pour une invasion : l’historien Hérodote l’estime à plus de
+cinq millions d’hommes. Les Perses allaient construire un pont de bateaux
+en travers de l’Hellespont pour déferler sur la Grèce par voie de terre,
+tandis que leur immense flotte bloquerait les ports et empêcherait les 
+trières grecques de prendre la mer. Ce plan paraissait n’avoir aucune faille ;
+pourtant, alors que Xerxès mettait en place son invasion, son conseiller
+Artaban lui fit part des doutes qui le rongeaient : « Les deux plus grandes
+puissances du monde sont contre vous », dit-il. Xerxès éclata de rire :
+« Quelles puissances pourraient faire face à cette gigantesque armée ? – Je
+vais vous le dire, répondit Artaban. Ce sont la terre et la mer. » Il n’y avait
+pas de ports suffisamment sûrs et vastes pour recevoir la flotte de Xerxès,
+expliqua-t-il. Et plus les Perses allaient conquérir de terres, plus les routes
+d’approvisionnement s’allongeraient : le coût du ravitaillement de cette
+immense armée serait ruineux.
+Traitant son conseiller de lâche, Xerxès lança son invasion. Pourtant,
+comme Artaban l’avait prédit, des tempêtes décimèrent la flotte perse, trop
+importante pour s’abriter où que ce fût. Entre-temps, à terre, l’armée perse
+détruisait tout sur son chemin et ne pouvait donc se nourrir, puisqu’elle
+brûlait les récoltes et les stocks de nourriture. C’était en outre une cible
+facile, car lente à se mouvoir. Les Grecs lancèrent toutes sortes de leurres
+qui désorientèrent les Perses. La défaite finale de Xerxès face aux Grecs fut
+un immense désastre. Cette histoire est une leçon pour tous ceux qui
+sacrifient la mobilité à la taille : les armées légères et mobiles ont presque
+toujours le dessus, car leurs choix stratégiques sont nombreux. Plus
+l’ennemi est important, plus sa ruine est aisée.
+Le manque de souplesse grandit avec l’âge, on a tendance à s’installer
+dans ses habitudes et à se crisper. On devient prévisible, ce qui est le
+premier signe avant-coureur du gâtisme. Et on devient ridicule. Même si la
+moquerie et le dédain sont des formes d’attaques assez anodines, ce sont
+des armes inusables qui sapent les fondations du pouvoir. Un adversaire
+qui ne vous respecte pas prend de l’assurance ; l’intrépidité des plus petits
+animaux fait d’eux les plus dangereux.
+À la fin du XVIIIe siècle, la cour de France, comme le prouve l’exemple
+de Marie-Antoinette, était désespérément rigide et formelle, au point que le
+Français moyen la considérait comme une relique sans intérêt. Ce mépris
+d’une institution séculaire était le signe d’une maladie en phase terminale,
+car il symbolisait la distance entre le peuple et son monarque. Au fur et
+mesure que la situation empirait, Marie-Antoinette et Louis XVI devinrent
+de plus en plus attachés au passé, ce qui les rapprocha encore de la
+guillotine. Charles Ier d’Angleterre eut la même réaction lors du tournant
+démocratique des années 1630 : il fit dissoudre le Parlement et les manières
+de la cour se firent encore plus formelles et froides. Il voulait revenir à une
+forme de gouvernement ancienne, à un protocole pointilleux. Cette rigidité

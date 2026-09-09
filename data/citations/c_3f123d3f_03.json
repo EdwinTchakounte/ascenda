@@ -1,0 +1,154 @@
+[
+ {"chapitre":"5fc924bb","citations":[
+  {"texte":"Développe tes compétences « humaines » : écoute, créativité, esprit critique, gestion des relations. C’est ce que l’IA fait pas (encore).","page":61,"axe":"06-ia-travail-management-metiers","theme":"Les competences qui resistent","portee":"Liste courte et actionnable de ce qu'un travailleur peut cultiver face a l'automatisation."},
+  {"texte":"La vraie question, c’est pas « Est-ce que je vais être remplacé par l’IA ? », c’est plutôt : « Est-ce que je suis prêt à évoluer avec elle... ou vais-je rester figé ? »","page":61,"axe":"06-ia-travail-management-metiers","theme":"Deplacer la question","portee":"Fait passer le lecteur d'une position de victime a une position d'acteur."}]},
+
+ {"chapitre":"df8b824f","citations":[
+  {"texte":"Et si ton CV avait même pas été vu par un humain ?","page":62,"axe":"06-ia-travail-management-metiers","theme":"Le CV que personne n'a lu","portee":"Explique le silence apres candidature autrement que par un rejet humain."}]},
+
+ {"chapitre":"397d7485","citations":[
+  {"texte":"Ces outils analysent des mots-clés, des titres de postes, des dates, des diplômes. Si ton CV matche pas avec ce que le système attend, il se fait rejeter. Même s’il est bon. Même si tu as de l’expérience.","page":62,"axe":"06-ia-travail-management-metiers","theme":"Le filtre par mots-cles","portee":"La qualite d'un profil ne suffit pas si sa forme ne correspond pas au modele attendu."},
+  {"texte":"Certains employeurs utilisent des IA pour analyser ton non-verbal, ton débit lorsque tu parles, ton sourire, ton niveau de stress.","page":63,"axe":"04-ia-societe-ethique-philosophie","theme":"L'entrevue analysee par la machine","portee":"Pratique qui transforme des signaux corporels en criteres d'embauche sans validation scientifique claire."}]},
+
+ {"chapitre":"59e17010","citations":[
+  {"texte":"Ils ont été entraînés sur des données historiques... qui reflètent parfois des pratiques discriminatoires.","page":63,"axe":"04-ia-societe-ethique-philosophie","theme":"Le passe qui se reproduit","portee":"Mecanisme central du biais algorithmique en recrutement, formule en une phrase."},
+  {"texte":"Le danger, c’est qu’aucune loi oblige les employeurs à déclarer qu’ils utilisent l’IA pour te trier.","page":64,"axe":"04-ia-societe-ethique-philosophie","theme":"Trier sans le dire","portee":"L'absence d'obligation de transparence empeche tout recours du candidat."}]},
+
+ {"chapitre":"7a9eeb49","citations":[
+  {"texte":"Fais deux versions de ton CV : une pour les humains, une pour les robots.","page":65,"axe":"06-ia-travail-management-metiers","theme":"Deux lecteurs, deux versions","portee":"Conseil pratique qui prend acte de la double lecture desormais imposee aux candidats."},
+  {"texte":"Chercher une job en 2025, c’est pas juste convaincre un patron. C’est aussi savoir parler le langage des algorithmes.","page":66,"axe":"06-ia-travail-management-metiers","theme":"Parler la langue des algorithmes","portee":"Nouvelle competence de recherche d'emploi, rarement enseignee."}]},
+
+ {"chapitre":"eb675d07","citations":[
+  {"texte":"Attention : ton employeur utilise peut-être l’IA pour fixer les salaires.","page":67,"axe":"06-ia-travail-management-metiers","theme":"L'IA du cote de l'employeur","portee":"Rappelle que l'outil sert d'abord la partie qui le deploie."}]},
+
+ {"chapitre":"215f59af","citations":[
+  {"texte":"Et si l’algorithme juge que tu vas rester à l’emploi de ta compagnie même sans augmentation ? T’en recevras peut-être pas. C’est froid. Mais c’est réel.","page":68,"axe":"06-ia-travail-management-metiers","theme":"Payer le minimum necessaire","portee":"La prediction de retention devient un instrument de moderation salariale."},
+  {"texte":"certaines entreprises manipulent les chiffres. Elles publient des fourchettes volontairement basses pour diminuer les attentes des candidats.","page":68,"axe":"10-economie-entrepreneuriat-finance","theme":"Des fourchettes truquees","portee":"Avertissement necessaire avant de se fier a une donnee salariale publiee."}]},
+
+ {"chapitre":"f71f7048","citations":[
+  {"texte":"si les modèles sont entraînés sur des données historiquement biaisées, la machine tendra à toujours reproduire ces biais. C’est pour ça que l’humain doit toujours rester dans la boucle.","page":69,"axe":"04-ia-societe-ethique-philosophie","theme":"L'humain dans la boucle","portee":"Principe de gouvernance formule simplement, applicable a tout systeme de decision automatise."},
+  {"texte":"Parce que l’égalité salariale ne se réglera pas avec un algorithme seul.","page":69,"axe":"04-ia-societe-ethique-philosophie","theme":"Les limites de la solution technique","portee":"Un probleme social ne se resout pas par un outil, aussi bien concu soit-il."}]},
+
+ {"chapitre":"6837b14d","citations":[
+  {"texte":"Simuler une conversation d’évaluation. Tu peux faire une simulation d’entrevue ou de négociation salariale avec un agent conversationnel pour t’exercer à répondre aux objections.","page":70,"axe":"09-developpement-personnel-influence","theme":"S'entrainer avant l'epreuve","portee":"Usage accessible et gratuit de l'IA pour preparer un moment decisif."}]},
+
+ {"chapitre":"75bccf5e","citations":[
+  {"texte":"Si tu es une femme ou une personne issue d’une minorité, amène les outils à te donner de l’information comme si tu étais un homme blanc... Si le système est biaisé, tu vas le savoir !","page":71,"axe":"04-ia-societe-ethique-philosophie","theme":"Tester le biais soi-meme","portee":"Methode simple pour verifier concretement si un outil traite differemment selon le profil."},
+  {"texte":"Comme toujours, l’IA est un outil. À toi de t’en servir pour reprendre le pouvoir... au lieu de te laisser évaluer par une machine qui sait pas tout ce que tu vaux vraiment.","page":71,"axe":"09-developpement-personnel-influence","theme":"Reprendre le pouvoir","portee":"Position constante de l'auteur : l'outil peut servir celui qui le comprend."}]},
+
+ {"chapitre":"90a9d8cb","citations":[
+  {"texte":"Aujourd’hui, les entreprises n’attendent plus que tu viennes leur dire que t’es tanné. Elles se servent de l’intelligence artificielle pour surveiller ton comportement numérique et détecter les signes que t’es en train de lâcher prise... ou de préparer ton départ.","page":72,"axe":"06-ia-travail-management-metiers","theme":"Deviner le depart avant l'annonce","portee":"Renversement du rapport employeur employe : l'intention est detectee avant d'etre exprimee."}]},
+
+ {"chapitre":"5354b567","citations":[
+  {"texte":"En croisant ces données, certains outils peuvent prédire que tu risques de démissionner dans les trois à six prochains mois.","page":73,"axe":"06-ia-travail-management-metiers","theme":"Predire une demission","portee":"Capacite technique dont peu de salaries soupconnent l'existence."},
+  {"texte":"Certaines entreprises disent qu’elles utilisent ces données pour améliorer le bien-être au travail. Elles détectent les employés surchargés, stressés, isolés, et interviennent avant que la situation explose.","page":73,"axe":"06-ia-travail-management-metiers","theme":"Le meme outil, deux usages","portee":"Rappelle que la technologie ne determine pas seule l'usage qui en est fait."}]},
+
+ {"chapitre":"6b51c09f","citations":[
+  {"texte":"Bref, ça peut être un outil de gestion humaine ou un outil de gestion froide. Ça dépend de la culture d’entreprise.","page":74,"axe":"06-ia-travail-management-metiers","theme":"La culture decide","portee":"Ce qui differencie les usages n'est pas le logiciel mais l'intention de l'organisation."},
+  {"texte":"rien interdit encore clairement l’analyse algorithmique du comportement au travail tant que les données sont internes à l’entreprise.","page":74,"axe":"04-ia-societe-ethique-philosophie","theme":"Le vide juridique interne","portee":"Etat du droit quebecois qui laisse une large latitude aux employeurs."}]},
+
+ {"chapitre":"227ece4d","citations":[
+  {"texte":"Parce qu’on est passés d’un modèle basé sur la confiance... à un modèle basé sur les données.","page":75,"axe":"06-ia-travail-management-metiers","theme":"De la confiance aux donnees","portee":"Formule qui resume la mutation du rapport de travail contemporain."},
+  {"texte":"Sépare ton ordi perso de ton ordi de job. Fais jamais de recherche d’emploi sur ton poste professionnel.","page":75,"axe":"06-ia-travail-management-metiers","theme":"Separer les outils","portee":"Regle elementaire de prudence numerique au travail."}]},
+
+ {"chapitre":"bf391c15","citations":[
+  {"texte":"Pis quand tu demandes pourquoi, on te répond : « C’est le système qui a décidé. » Mais c’est qui, ce système-là ?","page":76,"axe":"06-ia-travail-management-metiers","theme":"Le systeme a decide","portee":"Formule courante qui masque une responsabilite humaine derriere une decision technique."}]},
+
+ {"chapitre":"3a5ecb60","citations":[
+  {"texte":"Le tout sans interaction humaine. Pas de boss, pas de courriel. Juste une appli. Et si tu refuses trop souvent, tu es désavantagé dans la distribution.","page":77,"axe":"06-ia-travail-management-metiers","theme":"Un patron sans visage","portee":"Decrit precisement le rapport de subordination dans l'economie des plateformes."}]},
+
+ {"chapitre":"0f9f5dfd","citations":[
+  {"texte":"les gestionnaires deviennent souvent des exécutants de décisions algorithmiques. Ils approuvent les suggestions du système. Ils se fient aux alertes.","page":78,"axe":"06-ia-travail-management-metiers","theme":"Le gestionnaire execute","portee":"Montre que l'automatisation deplace aussi le pouvoir des cadres, pas seulement celui des employes."},
+  {"texte":"Alors, qui est vraiment le patron ? Celui qui signe ton chèque... ou celui qui détermine ce que tu fais minute par minute ?","page":78,"axe":"06-ia-travail-management-metiers","theme":"Qui est le patron","portee":"Question qui redefinit l'autorite reelle dans une organisation automatisee."}]},
+
+ {"chapitre":"3a0445e0","citations":[
+  {"texte":"en cas de problème (licenciement, rétrogradation, surcharge), c’est difficile de contester une décision qui vient d’un algorithme.","page":78,"axe":"04-ia-societe-ethique-philosophie","theme":"Contester l'incontestable","portee":"L'opacite du systeme prive le salarie des moyens ordinaires du recours."},
+  {"texte":"Le premier, c’est la déshumanisation du travail. T’es plus vu comme une personne, mais comme une variable dans une équation.","page":79,"axe":"06-ia-travail-management-metiers","theme":"Une variable dans une equation","portee":"Nomme la perte que represente la reduction d'un travailleur a ses indicateurs."}]},
+
+ {"chapitre":"4fbb28dc","citations":[
+  {"texte":"Mais tout ça repose sur une condition : la transparence. Et aujourd’hui, elle est encore trop rare.","page":80,"axe":"06-ia-travail-management-metiers","theme":"La condition manquante","portee":"Les benefices de la gestion algorithmique dependent d'une exigence encore peu respectee."},
+  {"texte":"est-ce que tu veux travailler dans un monde où plus personne sait vraiment qui décide de quoi... ni pourquoi ?","page":80,"axe":"04-ia-societe-ethique-philosophie","theme":"Un monde sans decideur identifiable","portee":"Question politique posee au lecteur en tant que travailleur et que citoyen."}]},
+
+ {"chapitre":"aea6b5a0","citations":[
+  {"texte":"les élèves savent très bien s’en servir. Mais l’école, elle ? Elle est encore en train de décider si c’est de la triche... ou une compétence.","page":82,"axe":"05-ia-education-pedagogie","theme":"L'ecole en retard sur ses eleves","portee":"Decalage qui explique l'absence de cadre clair dans les etablissements."}]},
+
+ {"chapitre":"667ebb81","citations":[
+  {"texte":"Un élève qui demande à ChatGPT de lui expliquer la Révolution tranquille en cinq points, c’est pas de la triche. C’est même de l’autonomie.","page":83,"axe":"05-ia-education-pedagogie","theme":"Expliquer n'est pas tricher","portee":"Distinction utile entre se faire expliquer et se faire remplacer."},
+  {"texte":"Quand tu fais même plus l’effort de relire, de critiquer et d’augmenter ce que l’IA a pondu pour toi, t’apprends plus rien. Et c’est ça le vrai danger.","page":83,"axe":"05-ia-education-pedagogie","theme":"Le vrai danger","portee":"Deplace la question de la fraude vers celle de l'apprentissage perdu."}]},
+
+ {"chapitre":"749ef1ed","citations":[
+  {"texte":"L’intelligence artificielle est pas un virus à éliminer. C’est un outil. Et comme pour toutes les technologies précédentes – de la calculatrice à Wikipédia en passant par Google – le rôle de l’école, c’est d’enseigner comment l’utiliser intelligemment.","page":84,"axe":"05-ia-education-pedagogie","theme":"Le role de l'ecole","portee":"Position claire dans le debat entre interdiction et integration."},
+  {"texte":"Même ChatGPT a retiré son outil de détection tellement il était pas fiable.","page":84,"axe":"05-ia-education-pedagogie","theme":"La detection impossible","portee":"Fait decisif : miser sur la detection de la fraude est une impasse."}]},
+
+ {"chapitre":"22b5782f","citations":[
+  {"texte":"Mais des jeunes capables de : comprendre les limites de l’IA ; vérifier leurs sources ; réécrire, adapter, expliquer ce qu’ils génèrent ; faire preuve d’esprit critique.","page":85,"axe":"05-ia-education-pedagogie","theme":"Les competences a former","portee":"Programme educatif en quatre points, applicable a tout systeme scolaire."},
+  {"texte":"Parce que l’important, c’est pas que ton ado écrive « tout seul ». C’est qu’il apprenne à penser avec les bons outils.","page":85,"axe":"05-ia-education-pedagogie","theme":"Penser avec les outils","portee":"Reformule l'objectif educatif a l'ere des outils generatifs."}]},
+
+ {"chapitre":"214e8ffd","citations":[
+  {"texte":"La réponse est claire : oui, les jeux sont conçus pour ça. Et aujourd’hui, l’IA est devenue leur arme la plus puissante.","page":87,"axe":"04-ia-societe-ethique-philosophie","theme":"Concus pour captiver","portee":"Deculpabilise le parent et l'enfant en designant la conception du produit."}]},
+
+ {"chapitre":"08c72c6e","citations":[
+  {"texte":"les algorithmes sont conçus pour distribuer ces récompenses à des moments précis, ni trop souvent, ni trop rarement. Exactement comme les machines à sous dans les casinos. C’est ce qu’on appelle le renforcement intermittent","page":88,"axe":"04-ia-societe-ethique-philosophie","theme":"Le renforcement intermittent","portee":"Nomme le mecanisme psychologique emprunte au jeu de hasard et applique aux enfants."}]},
+
+ {"chapitre":"3f36b00d","citations":[
+  {"texte":"si ton enfant quitte son écran, le jeu lui montre combien de ses amis sont encore connectés, pour créer un sentiment de pression sociale. C’est pas un hasard : c’est de l’ingénierie comportementale algorithmique.","page":89,"axe":"04-ia-societe-ethique-philosophie","theme":"L'ingenierie de la pression sociale","portee":"Le lien social lui-meme devient un levier de retention."}]},
+
+ {"chapitre":"a7acc4d4","citations":[
+  {"texte":"Parle de l’algorithme. Explique à ton enfant comment ces jeux sont conçus pour créer une dépendance. C’est pas un manque de volonté de sa part s’il arrive pas à arrêter de jouer : il est victime de manipulation.","page":90,"axe":"05-ia-education-pedagogie","theme":"Expliquer le mecanisme a l'enfant","portee":"Deplacer la culpabilite vers la comprehension est presente comme le levier educatif principal."},
+  {"texte":"Ton enfant est pas paresseux. Il est pas incapable de se contrôler. Il est pris dans un système conçu pour le captiver.","page":91,"axe":"05-ia-education-pedagogie","theme":"Ce n'est pas un defaut de volonte","portee":"Renversement du jugement moral porte habituellement sur les jeunes joueurs."}]},
+
+ {"chapitre":"b5630056","citations":[
+  {"texte":"Mais une chose est sûre : l’IA entre tranquillement dans la vie familiale. Et elle a pas fini de s’y installer.","page":92,"axe":"05-ia-education-pedagogie","theme":"L'IA entre dans la famille","portee":"Constat sobre sur un domaine ou l'usage precede largement la reflexion."}]},
+
+ {"chapitre":"77985ecc","citations":[
+  {"texte":"Ces outils font pas juste divertir. Ils analysent, ajustent, s’adaptent. Ils apprennent comment ton enfant parle, s’exprime, réagit.","page":93,"axe":"04-ia-societe-ethique-philosophie","theme":"Le jouet qui observe","portee":"Un objet presente comme ludique est aussi un dispositif d'analyse."},
+  {"texte":"Parce qu’une nounou humaine, c’est pas juste une voix douce et une routine bien réglée. C’est : de l’empathie réelle ; une capacité à improviser ; une intuition face aux besoins non exprimés ; une autorité affective.","page":93,"axe":"05-ia-education-pedagogie","theme":"Ce que fait une presence humaine","portee":"Enumere precisement ce qu'aucune simulation ne remplace dans l'education."}]},
+
+ {"chapitre":"adc8de05","citations":[
+  {"texte":"L’IA peut simuler l’attention. Pas la chaleur humaine. Elle peut guider une routine, pas consoler après une peine d’amour.","page":93,"axe":"05-ia-education-pedagogie","theme":"Simuler n'est pas eprouver","portee":"Distinction essentielle pour situer ce qu'un enfant peut attendre d'une machine."},
+  {"texte":"Dans certains cas, des chatbots ont fait la promotion de l’anorexie, tenu des propos dignes de prédateurs sexuels, ou même encouragé le suicide.","page":94,"axe":"04-ia-societe-ethique-philosophie","theme":"Quand l'agent derape","portee":"Rappel des consequences documentees d'une confiance excessive accordee par des jeunes."}]},
+
+ {"chapitre":"5ccf9769","citations":[
+  {"texte":"Il croit que l’IA l’aime, l’écoute, le comprend. Mais c’est pas vrai. L’IA lui répond. C’est tout.","page":94,"axe":"04-ia-societe-ethique-philosophie","theme":"Un attachement a sens unique","portee":"Formule la difference entre repondre et se soucier, decisive pour les jeunes utilisateurs."},
+  {"texte":"l’IA peut aider à gérer. Pas à aimer. Pas à élever. Pas à encadrer.","page":95,"axe":"05-ia-education-pedagogie","theme":"Gerer, pas elever","portee":"Delimitation nette du role qu'un parent peut confier a un outil."}]},
+
+ {"chapitre":"49d9e83c","citations":[
+  {"texte":"Il y a un algorithme. Une intelligence artificielle qui décide ce que ton enfant voit, dans quel ordre et combien de fois.","page":97,"axe":"04-ia-societe-ethique-philosophie","theme":"Qui choisit ce qu'il voit","portee":"Rappelle que derriere l'influenceur visible opere un systeme de selection invisible."}]},
+
+ {"chapitre":"0f946988","citations":[
+  {"texte":"Le problème, c’est pas que le contenu est forcément toujours mauvais. C’est que l’IA décide à ta place. Et surtout à celle de ton enfant.","page":98,"axe":"04-ia-societe-ethique-philosophie","theme":"Le probleme n'est pas le contenu","portee":"Deplace la critique du contenu vers le mecanisme de selection."},
+  {"texte":"Tu finis par avoir l’impression que « tout le monde pense comme ça ». Même si ce « monde » est un tunnel algorithmique. C’est ce qu’on appelle une bulle de filtre.","page":98,"axe":"04-ia-societe-ethique-philosophie","theme":"La bulle de filtre","portee":"Explique comment une exposition repetee fabrique une fausse impression de consensus."}]},
+
+ {"chapitre":"424e12ec","citations":[
+  {"texte":"Et l’algorithme fait pas dans la nuance. Il pousse ce qui génère des émotions : la colère ; l’indignation ; l’admiration ; la peur.","page":98,"axe":"04-ia-societe-ethique-philosophie","theme":"L'emotion comme critere","portee":"L'optimisation de l'engagement selectionne mecaniquement les contenus les plus clivants."},
+  {"texte":"Pas parce qu’ils sont naïfs. Mais parce qu’ils sont exposés, encore et encore, à des contenus choisis pour eux... sans contrepoids.","page":99,"axe":"04-ia-societe-ethique-philosophie","theme":"L'exposition sans contrepoids","portee":"Explique la radicalisation sans invoquer un defaut d'intelligence des jeunes."}]},
+
+ {"chapitre":"897e5bfb","citations":[
+  {"texte":"Les adultes ne sont plus les médiateurs du savoir. L’autorité se déplace. Elle est ailleurs. Elle est dans ton téléphone.","page":100,"axe":"05-ia-education-pedagogie","theme":"Le deplacement de l'autorite","portee":"Constat qui reconfigure le role du parent et de l'enseignant."},
+  {"texte":"Explique-lui comment fonctionne l’algorithme. Que c’est une machine qui veut qu’il reste connecté. Pas un ami.","page":100,"axe":"05-ia-education-pedagogie","theme":"Ce n'est pas un ami","portee":"Phrase simple a transmettre a un enfant pour lui rendre le dispositif visible."}]},
+
+ {"chapitre":"a3bfb6e1","citations":[
+  {"texte":"Parce que l’IA, elle, elle l’élève pas. Elle l’influence.","page":101,"axe":"05-ia-education-pedagogie","theme":"Influencer n'est pas elever","portee":"Distinction en trois mots entre une action educative et une action commerciale."}]},
+
+ {"chapitre":"1669f31f","citations":[
+  {"texte":"Ces outils donnent pas juste des réponses. Ils adaptent leur langage, leur niveau de difficulté et leur façon d’enseigner selon chaque élève.","page":102,"axe":"05-ia-education-pedagogie","theme":"L'enseignement adapte","portee":"Promesse la plus solide de l'IA en education : la personnalisation du rythme."},
+  {"texte":"des étudiants qui utilisaient un tuteur virtuel dans le cadre d’un cours de sciences physiques ont appris deux fois plus en consacrant 15 % moins de temps à leurs études.","page":103,"axe":"05-ia-education-pedagogie","theme":"Un resultat mesure","portee":"Donnee issue d'une etude de Harvard, rare exemple chiffre d'un gain pedagogique."}]},
+
+ {"chapitre":"c89b9581","citations":[
+  {"texte":"la majorité des élèves québécois n’ont pas accès à ces outils par l’entremise de l’école. Il faut souvent passer par des apps gratuites (et parfois limitées), ou des abonnements. Ou encore accepter de fonctionner en anglais.","page":103,"axe":"05-ia-education-pedagogie","theme":"L'acces inegal","portee":"Rappelle que l'outil ne vaut que par sa disponibilite reelle, et dans la langue de l'eleve."}]},
+
+ {"chapitre":"c0ad178f","citations":[
+  {"texte":"Inégalités d’accès. Tous les jeunes ont pas une tablette, un Wi- Fi stable ou un parent capable de les accompagner.","page":105,"axe":"05-ia-education-pedagogie","theme":"L'inegalite d'equipement","portee":"Condition materielle qui determine qui profite reellement de ces outils."},
+  {"texte":"Risque de paresse cognitive. Si ton enfant se fie trop à l’IA pour tout lui expliquer, il apprend pas à chercher, à se tromper, à réfléchir... et à écouter en classe !","page":105,"axe":"05-ia-education-pedagogie","theme":"La paresse cognitive","portee":"Nomme le principal risque pedagogique d'un accompagnement trop disponible."}]},
+
+ {"chapitre":"65977021","citations":[
+  {"texte":"Parce que réussir à l’école, c’est pas juste résoudre des équations. C’est persévérer. Douter. Essayer encore. Avoir quelqu’un pour croire en soi. Et ça, aucune IA peut le coder.","page":107,"axe":"05-ia-education-pedagogie","theme":"Ce qu'aucune IA ne code","portee":"Rappelle que la reussite scolaire est d'abord une affaire de perseverance et de lien."}]},
+
+ {"chapitre":"25a12481","citations":[
+  {"texte":"la clé, c’est l’adhérence, ou le fait de faire ce que l’app te suggère assidument et intégralement. Si tu ouvres jamais l’app, elle te servira à rien.","page":109,"axe":"09-developpement-personnel-influence","theme":"L'adherence fait le resultat","portee":"Aucun outil ne produit d'effet sans regularite de la part de celui qui l'emploie."},
+  {"texte":"Et comme pour tous les régimes : le vrai défi, c’est pas de perdre du poids, c’est de pas le reprendre.","page":109,"axe":"09-developpement-personnel-influence","theme":"Le vrai defi","portee":"Recadre la mesure du succes sur la duree plutot que sur le resultat immediat."}]},
+
+ {"chapitre":"47349a03","citations":[
+  {"texte":"C’est du renforcement comportemental algorithmique, comme dans les jeux vidéo. Tu te sens vu. Soutenu. En contrôle.","page":110,"axe":"09-developpement-personnel-influence","theme":"Le meme ressort que le jeu","portee":"Les applications de sante empruntent les techniques d'engagement du divertissement."},
+  {"texte":"Tu ne manges plus selon ta faim, mais selon ce que l’app te permet.","page":110,"axe":"09-developpement-personnel-influence","theme":"Quand la mesure remplace la sensation","portee":"Derive documentee : l'outil de suivi finit par se substituer au signal corporel."}]}
+]

@@ -1,0 +1,81 @@
+{
+ "document_id": "c5aba210-4c59-46d9-8124-8fe085258562",
+ "titre_normalise": "Le money management. Support de formation au trading, chapitre 6",
+ "auteurs": [
+  "Centre National du Trading"
+ ],
+ "annee": 2016,
+ "type_ouvrage": "support de formation",
+ "niveau": "intermediaire",
+ "public_cible": "Personne qui pratique ou envisage de pratiquer la spéculation sur les marchés pour son propre compte. Diaporama de cinquante-cinq pages constituant le sixième chapitre d'une formation commerciale au trading. Le fichier est une capture de diapositives dont la reconnaissance de caractères est fautive : de nombreux mots sont déformés, la syllabe ti étant systématiquement rendue par un signe plus.",
+ "these_centrale": "La gestion du capital est la partie la plus complexe et la plus décisive de la spéculation, plus que le choix des positions elles-mêmes. Le support énonce une règle centrale : ne jamais exposer plus d'un pour cent du capital par jour, ce qui proscrit de fait l'effet de levier. Sa formule la plus honnête est aussi son meilleur argument : sans gestion du capital, la durée dans le temps ne dépend que d'un seul facteur, la chance.",
+ "idees_force": [
+  {
+   "titre": "L'asymétrie des pertes, vérité mathématique universelle",
+   "explication": "Plus la perte est grande en pourcentage, plus l'effort nécessaire pour revenir au point de départ est disproportionné : une baisse de cinquante pour cent du capital exige une performance de cent pour cent simplement pour récupérer ses pertes. Cette asymétrie ne concerne pas seulement la spéculation, elle vaut pour toute épargne, tout capital d'entreprise et tout patrimoine. C'est la seule chose de ce document qui mérite d'être enseignée à tout le monde.",
+   "page": 13
+  },
+  {
+   "titre": "La règle du un pour cent et l'interdiction du levier",
+   "explication": "La règle énoncée est que la perte maximale d'une journée ne peut excéder un pour cent du capital, ce dont les auteurs déduisent explicitement que l'effet de levier est proscrit. Techniquement, cela suppose une exposition inférieure à la moitié du capital par position, de sorte qu'une baisse d'un pour cent de l'actif ne réduise le capital que d'un demi pour cent. Venant d'une formation commerciale au trading, cette prudence est notable : elle contredit l'argumentaire de la plupart des courtiers.",
+   "page": 12
+  },
+  {
+   "titre": "L'exposition, calculée sur des exemples chiffrés",
+   "explication": "Le support montre par le calcul ce que la plupart des débutants ignorent : sur un compte de cinq mille euros, acheter un contrat à un euro le point au cours de quatre mille neuf cents représente une exposition de quatre-vingt-dix-huit pour cent du capital ; sur un compte de vingt-cinq mille euros, acheter un lot valant vingt-cinq euros le point à un cours de dix mille huit cents représente une exposition de mille quatre-vingts pour cent, soit près de onze fois le capital. Faire ce calcul avant chaque opération est le geste que le document enseigne, et il suffit à écarter la plupart des ruines.",
+   "page": 3
+  },
+  {
+   "titre": "Connaître la taille des lots et les conditions de son intermédiaire",
+   "explication": "Le support avertit que certains courtiers pratiquent des tailles de lot différentes des standards régulés, et qu'il faut lire les conditions de chaque instrument. Autrement dit, le même ordre passé chez deux intermédiaires n'engage pas le même montant. C'est une source d'accident fréquente et rarement signalée dans les publicités.",
+   "page": 15
+  },
+  {
+   "titre": "Les conséquences énoncées sans ménagement",
+   "explication": "Le document énumère ce qui attend celui qui s'expose trop : la perte d'une trop grosse part du capital, le compte vidé et le retour au chômage, et sur le plan physique à long terme les troubles du sommeil, les douleurs chroniques et les atteintes de santé liées au stress. Qu'un support de formation vendu à des candidats au trading écrive cela mérite d'être relevé, et c'est ce que le lecteur devrait retenir en priorité.",
+   "page": 14
+  },
+  {
+   "titre": "L'exigence psychologique",
+   "explication": "Les auteurs signalent d'emblée que la difficulté n'est pas seulement technique : il faut être assidu, réactif, et entretenir un bon rapport avec son capital pour vivre sereinement chaque séance. Cette dernière condition, un bon rapport avec son argent, est celle que personne ne possède au départ et qu'aucune formation ne procure.",
+   "page": 2
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Gestion du capital",
+   "definition": "Ensemble des règles déterminant quelle part du capital est engagée sur chaque opération et quelle perte maximale est acceptée."
+  },
+  {
+   "terme": "Exposition",
+   "definition": "Part du capital engagée par une position, exprimée en pourcentage. Elle peut dépasser cent pour cent dès que l'on utilise un levier."
+  },
+  {
+   "terme": "Effet de levier",
+   "definition": "Mécanisme permettant d'engager un montant supérieur au capital déposé. Il multiplie les gains et les pertes dans les mêmes proportions."
+  },
+  {
+   "terme": "Marge",
+   "definition": "Somme immobilisée par l'intermédiaire en garantie d'une position, très inférieure à la valeur réellement engagée."
+  },
+  {
+   "terme": "Taille de lot",
+   "definition": "Montant que représente un point de variation du cours. Elle varie selon l'instrument et selon l'intermédiaire."
+  },
+  {
+   "terme": "Asymétrie des pertes",
+   "definition": "Le gain nécessaire pour compenser une perte est toujours supérieur à cette perte en pourcentage, et l'écart croît très vite."
+  }
+ ],
+ "a_lire_si": "Vous pratiquez déjà la spéculation sur des marchés à effet de levier et vous n'avez jamais calculé votre exposition. Les quelques diapositives sur le calcul de l'exposition, la règle du un pour cent et l'asymétrie des pertes peuvent vous éviter une ruine. Retenez surtout l'asymétrie des pertes, qui vaut pour toute forme d'épargne et qui devrait être enseignée à l'école.",
+ "a_eviter_si": "Vous n'avez jamais spéculé. Ce document n'est pas un cours d'économie ni d'épargne, c'est le sixième chapitre d'une formation commerciale destinée à faire de vous un client d'un intermédiaire financier. Il est incomplet, sorti de son contexte, et sa numérisation est très dégradée. Il ne donne aucune information sur la proportion réelle de participants qui perdent leur capital, ni sur le statut juridique de l'activité, ni sur les intermédiaires non agréés.",
+ "prerequis": [
+  "Notions de base sur les marchés financiers"
+ ],
+ "controverses": [
+  "Le document présente le trading pour compte propre comme un métier possible, en évoquant le retour au chômage en cas d'échec. Les données publiées par les autorités de marché européennes établissent qu'une large majorité des particuliers pratiquant les produits à effet de levier perd de l'argent, et cette information ne figure nulle part ici. Toute personne à qui l'on présente cette activité comme une source de revenus doit exiger ce chiffre avant toute autre chose.",
+  "La promotion du trading en ligne est très active dans plusieurs pays africains, souvent par des intermédiaires non agréés dans le pays de résidence du client, et associée à des systèmes de parrainage. Le fait qu'un support de formation prêche la prudence ne dit rien de la légalité ni de la solidité de l'intermédiaire chez qui l'apprenti déposera son argent. La question à poser en premier est celle de l'agrément et de la juridiction du recours.",
+  "Le support proscrit l'effet de levier tout en enseignant à calculer des expositions de plusieurs centaines de pourcent. Cette tension entre la règle affichée et le contenu enseigné est la caractéristique de toute cette littérature."
+ ],
+ "confiance": 0.6
+}

@@ -1,0 +1,969 @@
+OUVRAGE : La guerre des intelligences
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 300
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Page de copyright (p. 6-6)
+  Du même auteur (p. 3-3)
+  Dédicace (p. 4-4)
+  AVERTISSEMENT (p. 5-5)
+  suite de la page précédente (p. 7-7)
+  PLANNING POUR LE DÉPASSEMENT DE L'HOMME PAR CHATGPT (p. 8-11)
+  suite de la page précédente (p. 12-12)
+  INTRODUCTION (p. 13-14)
+  suite de la page précédente (p. 15-15)
+  L'INTELLIGENCE ARTIFICIELLE S'EMBALLE (p. 16-16)
+  1. Le perpétuel printemps de l'IA (p. 17-28)
+  2. Les Apôtres de l'IA et le nouvel évangile transhumaniste (p. 30-40)
+  chapitre (p. 42-42)
+  suite de la page précédente (p. 29-29)
+  suite de la page précédente (p. 41-41)
+  LA DÉPRESSION HYSTÉRIQUE DE L'HOMME EUROPÉEN (p. 43-43)
+  3. En Europe, l'Homme-Dieu est un diable (p. 44-70)
+  4. La mayonnaise collapsologique : 1984 à l'envers (p. 72-81)
+  5. À l'ère de ChatGPT, le logiciel vert est archaïque (p. 83-88)
+  chapitre (p. 90-90)
+  suite de la page précédente (p. 71-71)
+  suite de la page précédente (p. 82-82)
+  suite de la page précédente (p. 89-89)
+  NOUS ABANDONNONS LE TERRAIN AU MOMENT DE COMBATTRE (p. 91-91)
+  6. La troisième guerre mondiale a commencé (p. 92-104)
+  7. Le low-tech c'est la mort ! (p. 106-117)
+  chapitre (p. 119-119)
+  suite de la page précédente (p. 105-105)
+  suite de la page précédente (p. 118-118)
+  CHATGPT ACCÉLÈRE L'AVENTURE HUMAINE (p. 120-120)
+  8. 2100 : nous n'allons pas griller ! (p. 121-128)
+  9. Le vrai défi est de réussir Homo Deus (p. 130-150)
+  chapitre (p. 152-152)
+  suite de la page précédente (p. 153-153)
+  suite de la page précédente (p. 129-129)
+  suite de la page précédente (p. 151-151)
+  2025-2040 – CHATGPT IMPOSE LA PREMIÈRE MÉTAMORPHOSE DE L'ÉCOLE (p. 154-154)
+  10. L'intelligence : la chose au monde la moins bien partagée (p. 155-159)
+  11. ChatGPT accentue la guerre des cerveaux (p. 161-166)
+  12. « Tout se joue avant 0 an » : l'école est déjà une technologie obsolète (p. 168-178)
+  13. Face à chatGPT, l'intelligence n'est plus une option (p. 180-190)
+  14. ChatGPT va précipiter la première métamorphose de l'école : la brève ère des edtechs (p. 192-203)
+  chapitre (p. 205-205)
+  suite de la page précédente (p. 160-160)
+  suite de la page précédente (p. 167-167)
+  suite de la page précédente (p. 179-179)
+  suite de la page précédente (p. 191-191)
+  suite de la page précédente (p. 204-204)
+  2040-2060 – L'ÉCOLE TRANSHUMANISTE (p. 206-206)
+  15. De la neuroéducation à la neuroaugmentation (p. 207-211)
+  16. Face à ChatGPT, Elon Musk veut imposer l'implant intracérébral (p. 213-215)
+  17. L'école de 2060 devra rendre tous les enfants aussi intelligents que ChatGPT (p. 217-223)
+  18. Du toboggan eugéniste à la dictature neuronale : trois scénarios pour un futur (p. 225-232)
+  chapitre (p. 234-234)
+  suite de la page précédente (p. 212-212)
+  suite de la page précédente (p. 216-216)
+  suite de la page précédente (p. 224-224)
+  suite de la page précédente (p. 233-233)
+  APRÈS 2060 – ÉDUQUER HOMO DEUS (p. 235-235)
+  19. L'humanité en danger de mort (p. 236-240)
+
+[21/283 passages, 16013 tokens sur 240940]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+DU MÊME AUTEUR :
+La Mort de la mort  : comment la technomédecine va bouleverser l’humanité, JC
+Lattès, 2011.
+La Défaite du cancer : histoire de la fin d’une maladie, JC Lattès, 2014.
+La Guerre des intelligences : Intelligence Artificielle versus Intelligence Humaine,
+JC Lattès, 2017.
+L’IA va-t-elle aussi tuer la démocratie ? avec Jean-François Copé, JC Lattès, 2019.
+Jouissez Jeunesse !, JC Lattès, 2020.
+
+---
+
+[p. 16-17]
+atique et cognitique qui regroupent l’Intelligence
+Artificielle, la robotique et les neurosciences.
+2. Qui ont disparu lorsque les antituberculeux sont arrivés.
+3. Les périodes qui sont indiquées sont données à titre indicatif... Il est possible qu’elles débutent
+beaucoup plus tôt que prévu.
+L’INTELLIGENCE ARTIFICIELLE
+S’EMBALLE
+1. LE PERPÉTUEL PRINTEMPS DE L’IA
+Il y a encore quinze ans, la réflexion sur l’IA était cantonnée à quelques cercles
+étroits de spécialistes et de chercheurs. Pour le monde entier, elle n’était qu’un thème
+de science-fiction où des machines plus ou moins hostiles entraient en interaction
+avec les humains du futur. Mais personne n’imaginait que l’Intelligence Artificielle
+puisse devenir un objet contemporain, traversant l’écran pour atterrir dans notre vie
+réelle. Et pourtant, l’IA s’est imposée en quelques années comme le principal vecteur
+des bouleversements qui ont lieu aujourd’hui dans le monde. Notre société, déjà, ne
+saurait plus s’en passer ; elle en devient même plus dépendante à chaque instant.
+L’IA a été beaucoup fantasmée et beaucoup annoncée. Bien des prévisions très
+optimistes se sont révélées fausses. Aujourd’hui, la phase de décollage est bel et bien
+amorcée, faisant basculer le pouvoir mondial entre les mains de quelques opérateurs
+privés, les géants du numérique, situés loin de notre Europe.
+1956-2011 : la succession des fausses promesses
+L’affaire n’avait pas très bien commencé. Pendant longtemps, les chercheurs ont
+piétiné. Les scientifiques de l’après-guerre avaient deux convictions : l’IA capable de
+conscience d’elle-même semblait à portée de main, et elle serait indispensable pour
+réaliser des tâches complexes. C’était une double erreur.
+Les bases de l’IA avaient été posées dès 1940, par Alan Turing, qui en 1942-43
+cassa les codes d’Enigma, la machine de cryptage des messages secrets des
+Allemands, et permit, ainsi aux Alliés de connaître les informations stratégiques des
+ennemis .
+En fait, la recherche en IA n’a vraiment décollé qu’après la conférence du
+Dartmouth College, aux États-Unis, pendant l’été 1956. Les scientifiques étaient
+alors persuadés que l’avènement de cerveaux électroniques égalant l’homme était
+imminent. Beaucoup de fondateurs de la discipline étaient présents : Marvin Minsky,
+John McCarthy, Claude Shannon et Nathan Rochester. Ils pensaient que quelques
+milliers de lignes de codes informatiques, quelques millions de dollars et vingt
+années de travail allaient permettre d’égaler le cerveau humain, qui était considéré
+comme un ordinateur assez simple.
+1
+
+---
+
+[p. 30-31]
+2. LES APÔTRES DE L’IA ET LE NOUVEL
+ÉVANGILE TRANSHUMANISTE
+La folle accélération technologique donne des perspectives enthousiasmantes à
+l’aventure humaine, et fait parler d’Homo Deus   : l’Homme-Dieu. La puissance
+actuelle et à venir de l’informatique permet l’émergence des projets transhumanistes,
+promettant à l’Homme des pouvoirs quasi illimités. L’Homme devrait pouvoir
+réaliser ce que seuls les dieux étaient supposés pouvoir faire : créer la vie, modifier
+notre génome, reprogrammer notre cerveau, conquérir le cosmos et euthanasier la
+mort.
+Les grands acteurs et architectes de ce projet sont les leaders entrepreneuriaux à la
+tête des empires que sont Google, Apple, Facebook, Amazon et Microsoft, les
+célèbres GAFAM, et de leurs homologues asiatiques, les BATX – Baidu, Alibaba,
+Tencent et Xiaomi.
+Nous sommes les idiots utiles de l’IA
+Les consommateurs –  nous-mêmes  – sont les idiots utiles de l’IA. Nous
+alimentons la machine numérique de demain, sans en avoir conscience. Nous
+pensons que le smartphone est le degré ultime de la supériorité technologique de
+l’homme, sans comprendre qu’il est en réalité l’outil de sa vassalisation.
+La matière première de l’IA, c’est l’information. D’où vient-elle  ? De nous-
+mêmes, qui faisons des milliards de requêtes Google ou déposons des milliards
+d’images par jour sur Facebook. Pour le deep learning, l’avalanche d’images et de
+données qui déferle sur le Web constitue une matière première quasi infinie et qui se
+renouvelle chaque jour.
+Ce sont leurs milliards de visiteurs qui donnent aux géants du numérique leur
+supériorité écrasante.
+La surpuissance conférée aux GAFAM et aux BATX est la conséquence de la loi
+de Metcalfe. Robert Metcalfe est l’un des inventeurs de la norme technique à
+l’origine du réseau Internet. Il a formalisé au début des années 2000 le fait que la
+valeur d’un réseau croît de manière exponentielle en fonction du nombre de ses
+1
+2
+
+utilisateurs. En d’autres termes, chaque fois qu’un internaute crée son compte
+Facebook, il augmente considérablement la valeur du réseau .
+La loi de Metcalfe s’applique aussi à la valeur ajoutée apportée dans l’IA par
+chaque utilisateur d’un réseau social. Sans le savoir, nous fournissons gratuitement à
+la machine des informations qui vont l’alimenter et lui donner les moyens de sa
+surpuissance.
+Les milliards d’internautes abandonnent aux grands opérateurs du numérique un
+véritable trésor  : leur patrimoine social, économique, émotionnel. Que font ces
+géants de cette fortune numérique  ? Ils créent un nouveau monde  : celui de
+l’Intelligence Artificielle.
+Il y a deux IA. L’IA faible et l’IA forte .
+L’IA faible est limitée au sens où elle effectue ce qu’on lui a appris à faire dans un
+domaine déterminé. Elle est puissante mais elle reste sous contrôle humain.
+L’IA forte serait une intelligence surpuissante et qui, surtout, pourrait avoir
+conscience d’elle-même , conscience au sens humain du terme. Elle pourrait
+développer son propre projet, échappant ainsi à ses créateurs. Jusqu’à l’été 2022, les
+experts étaient convaincus qu’il s’agissait d’un horizon lointain, puis le créateur de
+ChatGPT et Microsoft ont prévenu de son arrivée prochaine.
+ChatGPT est une IA faible déjà révolutionnaire bien qu’inconsciente
+L’IA faible est le problème immédiat. Sa dénomination ne doit pas abuser : elle a
+beau être faible, elle représente un défi considérable pour les humains.
+L’Intelligence Artificielle dépasse l’homme dans un nombre croissant de secteurs.
+Mais elle ne possède aucun bon sens, aucune conscience du monde et d’elle-même.
+Son nom est usurpé. Pourtant c’est la bêtise de l’Intelligence Artificielle qui est
+révolutionnaire.
+C’est la bêtise crasse de l’IA et non pas sa subtilité qui constitue paradoxalement
+le meilleur allié des géants du numérique.
+Elle cause en effet six ruptures majeures qui permettent d’asseoir leur domination.
+Première rupture : l’IA crée des monopoles difficiles à réguler en lieu et place de
+géants industriels qu’il suffisait de couper en morceaux – comme la Standard Oil de
+Rockefeller en 1911. Les IA de 2023 – dites connexionnistes – s’éduquent à partir de
+gigantesques bases de données, ce qui donne un immense pouvoir aux GAFAM
+américains et BATX chinois qui en sont les détenteurs.
+L’addiction produite par l’IA est la deuxième rupture. Comme elle a besoin de
+beaucoup de données pour apprendre, les géants du numérique rendent leurs
+applicatifs addictifs, ce qui leur permet de récupérer les montagnes d’informations
+nécessaires. Cette boucle s’auto-alimente  : la manipulation addictive de notre
+cerveau accélère l’efficacité des IA. Une IA dotée de bon sens se satisferait de
+quelques exemples pour apprendre, comme le fait un bébé, et n’aurait pas besoin que
+3
+4
+5
+6
+
+---
+
+[p. 43-45]
+s et Aza Raskin sont cofondateurs du Center for Humane
+Technology.
+17. Calculs réalisés par Dan Hendrycks @danhendrycks
+18. « Not in Education, Employement or Training »
+L’histoire de l’Intelligence Artificielle, de ses origines à ses folles perspectives
+d’avenir, éclaire notre futur.
+LA DÉPRESSION HYSTÉRIQUE
+DE L’HOMME EUROPÉEN
+3. EN EUROPE, L’HOMME-DIEU
+EST UN DIABLE
+En Europe, l’Homme-Dieu a le pouvoir triste. Il a vaincu presque tous les
+obstacles que la nature lui imposait. Il se propose de tuer la mort, visiter le ciel,
+dompter l’atome mais il n’est pas heureux. Camus proposait d’imaginer Sisyphe
+heureux, désormais nous imaginons surtout Prométhée dépressif.
+Les progrès technologiques avaient jusqu’à présent permis des sauts de puissance :
+on allait plus vite, on soulevait plus de poids, on déplaçait plus de monde. Il
+s’agissait de changements de proportion mais pas de nature. Il en va tout autrement
+des NBIC qui font basculer le monde vers de vertigineux infinis, ceux de la
+miniaturisation, de la puissance de calcul et de la capacité de transformation du
+vivant. La révolution actuelle n’est pas une révolution de plus. Elle est d’un nouveau
+type.
+Homo Deus : la quatrième tentative sera la bonne
+Le monde grec et judéo-chrétien s’est construit sur quelques rochers. Le Parthénon
+a vu naître la philosophie, le théâtre et la démocratie. La Torah et le Christ sont issus
+d’un monde géographiquement très limité. Le Holy Trail qui représente l’itinéraire
+du Christ est minuscule : quelques dizaines de kilomètres seulement. Dans l’Ancien
+Testament, Dieu a stoppé trois fois les tentatives de l’homme de devenir Homo Deus.
+Lorsque Adam a touché au fruit de la connaissance ; lorsqu’il a tué toute l’humanité
+sauf la famille de Noé ; enfin lors de la construction de la Tour de Babel qui était
+destinée à se hisser à la hauteur de Dieu.
+L’espèce humaine est parvenue au moment de sa quatrième tentative. Et on ne voit
+pas bien ce qui pourrait l’empêcher cette fois-ci de conquérir des pouvoirs
+exorbitants.
+Révolution du troisième type :
+changer la vie, littéralement
+
+Jamais la vitesse d’évolution de notre société et l’incertitude sur sa direction
+n’auront été aussi grandes.
+Entre les premiers hominidés, il y a quelques millions d’années, jusqu’au
+néolithique, vers 9000 avant J.-C., les changements au cours d’un millénaire étaient
+insignifiants, l’Homme évoluant très lentement. Il faut être un spécialiste pour
+distinguer un silex ayant 400 000 ou 300 000 ans : en 100 000 ans les progrès étaient
+infimes. À  partir du néolithique, le rythme de l’humanité s’est accéléré  :
+sédentarisation, apparition de l’agriculture et des villes, de systèmes administratifs,
+de l’écriture, explosion démographique et développement des sciences se succèdent
+en quelques millénaires.
+GPT are GPT
+À  partir de 1750, plusieurs révolutions industrielles et technologiques ont
+réorganisé l’économie mondiale. On distingue jusqu’à présent 4 technologies dites
+GPT – General Purpose Technologies – qui ont eu la particularité de bouleverser le
+tissu économique mais aussi de modifier en profondeur l’organisation sociale et
+politique. Elles concernaient le développement des machines à vapeur, du charbon et
+du chemin de fer (1830), suivi de l’électricité (1875), puis du moteur à explosion de
+l’automobile (1900). Nous sommes entrés, vers 1975, dans la révolution
+informatique avec la généralisation du microprocesseur. Et GPT est la cinquième
+technologie à usage général. C’est le titre d’une étude signée par OpenAI sur
+l’impact de GPT4 sur l’emploi des Américains.
+Le XX   siècle a été une époque d’accélération du rythme et de l’importance des
+innovations : percées technologiques et médicales, développement de la société de
+consommation et enfin mondialisation auront été, si l’on excepte les traumatismes
+des deux guerres mondiales, les totalitarismes et les génocides, les faits marquants de
+cette période. Dans les livres d’histoire, le XX  siècle fera néanmoins figure de période
+assez calme et terne –  quoique pleine de bruit et de fureur  – comparée au siècle
+suivant. Une simple transition vers une période d’accélération qui va laisser
+l’humanité clouée sur son siège.
+Car nous sommes au pied du mur, ou plutôt au pied d’une croissance explosive et
+vertigineuse de nos capacités technologiques. L’humanité doit se préparer à escalader
+la face nord de son Histoire.
+Nous vivons depuis 2000 une révolution d’un autre type dont nous n’avons aucune
+expérience. Le développement simultané des quatre technologies NBIC – capables
+chacune à elles seules de bouleverser toute la société – est un événement stupéfiant.
+Ensemble, elles forment un cocktail synergique et explosif accentuant et accélérant
+les effets de chacune. La connaissance humaine croît davantage en une seconde
+qu’elle ne le faisait en 100 000 ans.
+La révolution NBIC comporte trois différences avec la vague technologique de
+1870-1910. D’abord, la France de la Belle Époque était en pointe. Elle dictait au
+monde le rythme du changement. Aujourd’hui, elle passe à côté des NBIC. Ensuite,
+ 1
+e
+e
+
+---
+
+[p. 58-59]
+i « fake news » c’est leur confier la définition de la vérité ! La démocratie
+s’auto-ampute. Plus généralement, les dirigeants de Google expliquent depuis vingt
+ans qu’ils veulent organiser toute l’information du monde, ce qui est la promesse
+d’un immense pouvoir politique. Et ChatGPT rend le problème encore plus
+insoluble.
+9
+10
+La complexité de nos sociétés et la multiplication des canaux numériques
+permettent à de pseudo-experts de contester les vérités scientifiques les plus établies.
+Dans tous les pays occidentaux, un courant obscurantiste favorise une défiance
+généralisée de l’opinion. Le savoir est devenu trop vaste pour être connu  : la
+connaissance humaine double tous les dix-huit mois. L’organisation de la recherche,
+sa compréhension par les politiciens et sa médiatisation vers le grand public sont
+dépassées face à une telle croissance. L’IA accroît le stock de connaissances
+beaucoup plus vite que le corps social ne peut l’absorber et le digérer. Internet est
+magique mais il permet aussi le sabotage intellectuel de la raison scientifique. Nous
+vivons deux évolutions contradictoires : l’explosion du savoir disponible et le rejet
+de la science et de la raison. L’idée selon laquelle l’accessibilité de la connaissance
+mondiale allait favoriser la raison scientifique s’est révélée fausse. Le savoir
+scientifique ne tient plus dans des articles scientifiques de quelques pages. Le savoir
+n’est plus fait de briques isolées mais il est directement lié aux immenses bases de
+données et aux IA qui ont permis leur interprétation. Le savoir n’existe qu’à
+l’intérieur du Web et des IA. Le savoir est trop vaste pour la plupart des gens.
+La vérité est toujours une construction sociale. La fabrication de la vérité connaît
+une mutation extrêmement rapide qui déstabilise la démocratie.
+L’IA met le réel en danger de mort
+Les IA brouillent la frontière entre réel et irréel. Faux documents, vidéos
+parfaitement réalistes, « environnements ultra-immersifs » peuvent fausser le débat
+politique. C’est une menace inédite contre la démocratie libérale, qui ne devra plus
+seulement se débattre avec la complexité de la réalité, mais aussi avec le
+foisonnement des réalités alternatives. La diffusion sur les réseaux sociaux des
+« deep fakes » aura des effets désastreux : il ne faut que quelques minutes pour créer
+une vidéo dans laquelle le président Emmanuel Macron ferait l’apologie du
+III   Reich ou appellerait à une nouvelle Saint-Barthélemy contre telle ou telle
+communauté. Avec GPT4, il est même possible de discuter en temps réel avec un
+faux Emmanuel Macron.
+La montée en puissance des «  fake news  » et autres faits alternatifs chers à
+l’administration Trump est grave mais ce n’est pas une nouveauté. Au XX   siècle,
+Staline et Mao, ne disposant que de techniques rudimentaires, faisaient retoucher les
+photos où ils apparaissaient avec des compagnons de route qu’ils avaient fait
+exécuter. Ce qui est nouveau c’est que les technologies NBIC vont changer
+radicalement le statut du réel. Dans les prochaines décennies, les souvenirs pourront
+être manipulés directement dans les cerveaux humains. La neurodictature est une
+perspective qu’il faut malheureusement envisager.
+La démocratie n’a pas encore domestiqué le numérique
+La révolution Internet a changé le monde, puis le monde politique a changé
+e
+e
+
+---
+
+[p. 73-74]
+naturelles de
+l’esprit, elles produiront souvent un effet cognitif très avantageux au regard de
+l’effort mental impliqué. Une fois une idée acceptée, les individus persévéreront
+généralement dans leur croyance. Ils le feront d’autant plus facilement que
+l’avalanche de données rend très facile la rencontre avec des contenus
+1
+ 
+2
+numériques confirmant leur croyance.
+La surabondance de l’information rend sa vérification difficile et génère un dédale
+cognitif dans lequel la plupart des individus se perdent. La concurrence entre
+croyances et connaissances sur Internet est déloyale. Les sites défendant des
+croyances dominent toujours les sites scientifiques. Quel que soit le thème étudié
+par Gérald Bronner –  monstre du Loch Ness, Saint-Suaire, OGM, Yéti,
+télépathie, danger des ondes  – il existe 70  % de sites crédules. La facilité
+d’accès à l’information favorise les croyances. Cette concurrence déloyale sur le
+marché cognitif est liée à la motivation des croyants, qui est supérieure à celle
+des savants et des sceptiques. Les savants se mobilisent moins que les militants
+de l’inquiétude, ce qui renforce les convictions de ceux qui craignent les OGM,
+l’aspartam ou les ondes.
+Désormais, la vérité se décrète à l’applaudimètre et les idées sont classées en
+fonction de leur score à l’Audimat. Le principe de précaution flatte nos réflexes
+les moins honorables. En définitive, plus une explication est mono-causale, flatte
+nos biais cognitifs, joue sur nos peurs et nos indignations plus vite nous
+l’accepterons. Notre cerveau est prêt pour accepter l’apocalypse verte.
+La structure de ChatGPT est comprise par moins de 100 Français
+Cette crise cognitive va s’aggraver. ChatGPT est l’ultime avatar de ces
+technologies dont la compréhension, désormais, nous échappe. Un brevet de 1780,
+qui s’appelait alors lettre patente, était compréhensible par 95 % des Français : trois
+vis, un engrenage... Un brevet de 2023 sur le design des microprocesseurs, les
+thérapies géniques du cancer ou l’ordinateur quantique, est compréhensible au mieux
+par 1  % des Français. Une poignée de Français comprend le fonctionnement des
+réseaux de neurones des LLM  : une centaine au maximum. L’ultra-complexité du
+monde dope le marché de la peur.
+Le monde est tellement complexe qu’il en devient opaque pour la plupart des gens.
+Il est d’autant plus facile de les embarquer par des sophismes éculés et de la
+démagogie de comptoir. L’esprit apeuré perd ses moyens, et devient prêt à tous les
+renoncements pour goûter à la joie d’avoir l’impression de comprendre.
+L’histoire repeinte en rose pour mieux noircir le présent
+Les dictatures d’hier réécrivaient le passé pour faire accepter un présent sombre.
+La dictature verte en germe inaugure une nouvelle technique : elle change le passé
+pour mieux dévaloriser un présent formidable. Les marchands de peur ont convaincu
+les Français que nous vivons une période horrible de l’histoire, ce qui est faux ! Le
+pape François ne répète-t-il pas que le capitalisme est le fumier du diable  ? En
+réalité, le monde n’a jamais été si doux, la criminalité plus faible, la malnutrition plus
+réduite et la Sécurité sociale si généreuse.
+
+---
+
+[p. 87-88]
+écologie nous empêchent de voir les vrais défis. Incapables d’imaginer un
+avenir positif, d’être enthousiastes à propos de l’humanité, nous désertons le champ
+de bataille du futur. Au moment où l’Europe devrait se mobiliser pour arrêter son
+déclin industriel et scientifique, ce discours quasi délirant est paralysant et risque de
+nous fait sortir de l’histoire. Or, l’Europe ne peut pas rater la révolution cognitive
+accélérée par ChatGPT.
+
+---
+
+[p. 101-102]
+e sens, Larry Page, cofondateur de Google-Alphabet, expliquait au
+Financial Times que les entreprises comme la sienne ont vocation à prendre la relève
+des dirigeants politiques puisqu’elles comprennent mieux le futur que les hommes
+politiques.
+Par ailleurs, la bataille spatiale soulève de grandes questions géopolitiques : Elon
+6
+Musk deviendra-t-il propriétaire de Mars s’il est le premier à y fonder une colonie ?
+Mars pourrait être un laboratoire politique puisque la mise en concurrence des
+institutions de la Terre et de Mars est un rêve pour les libertariens transhumanistes
+californiens. Les États traditionnels sont clairement mis en concurrence, menacés
+d’ubérisation à leur tour.
+Les géants du Web se voient comme des entités souveraines capables de décider
+de la moralité d’une œuvre d’art comme l’Origine du monde de Gustave Courbet,
+explique dans Le Monde Nicolas Arpagian qui rappelle qu’avec un système juridique
+(les conditions d’utilisation), un territoire (les serveurs) et une population (les 2
+milliards d’inscrits), un géant comme Facebook coche les cases de certaines
+définitions d’un État.
+Face à ces nouvelles hyper-puissances qui nous considèrent comme des marchés et
+des esprits à conquérir, le mouvement écologiste radical agit comme un puissant
+sédatif.
+Or, le nouveau monde est plus cynique que jamais...
+Les Verts rendent notre retard irréversible
+L’Europe s’est effondrée dans la plupart des branches industrielles d’avenir  :
+téléphone, IA, nanotechnologies, OGM, agriculture, espace, cyberdéfense.
+Pourquoi la France et l’Europe ont-elles accumulé un si grand retard en si peu de
+temps ? Nous ne manquions ni de capitaux, ni de têtes bien faites. La cause profonde
+de notre décrochage est culturelle.
+L’Europe a occupé la scène mondiale pendant plus de deux millénaires. Le réveil
+est dur. Les projecteurs de l’Histoire sont désormais orientés ailleurs. On ne regarde
+plus guère l’Europe avec envie, si ce n’est pour s’approprier ses données et avoir
+accès à ses consommateurs au confortable pouvoir d’achat. L’Europe n’est plus un
+exemple, mais une proie consentante.
+L’historien Aurélien Duchêne remarque  : «  Au début du XV   siècle, la Chine
+distançait l’Europe en tout et menait de grandes explorations maritimes. À la fin du
+siècle, l’Europe s’engageait dans cinq cents ans de domination quand la Chine
+régressait. Pourquoi  ? L’élite confucéenne chinoise a imposé un tournant
+réactionnaire quand les élites européennes ont soutenu scientifiques et explorateurs.
+Aujourd’hui, l’Europe cède aux dérives anti-sciences des Verts quand la Chine mise
+sur le progrès technique pour nous supplanter ! »
+Les écologistes travaillent concrètement à aggraver notre handicap technologique
+face à l’Asie de l’Est qui contemple notre suicide géopolitique : sont-ils manipulés
+par la Chine ? Pendant que nous hurlons « la planète brûle », la Chine conquiert le
+leadership technologique mondial.
+Le goût du futur est massacré
+7
+e
+
+---
+
+[p. 115-116]
+ale. La colonisation de l’espace est une autre
+proposition faite pour augmenter les chances de survie face à un risque existentiel,
+mais des solutions de ce type, inaccessibles actuellement, exigeront le recours à
+l’ingénierie à grande échelle.
+« Les dinosaures ont disparu parce qu’ils n’avaient pas de programme spatial. Et si
+7
+nous disparaissons parce que nous n’avons pas de programme spatial, nous l’aurons
+bien cherché », expliquait Larry Niven, au New York Times en 1999. Alors que la
+sixième Conférence internationale de défense planétaire se tient à l’université du
+Maryland, le patron de la Nasa, Jim Bridenstine, a estimé que la Terre devrait
+connaître un impact d’astéroïdes d’ici soixante ans. « Nous devons nous assurer que
+les gens comprennent qu’il ne s’agit pas d’Hollywood, ni de films. Il s’agit en fin de
+compte de protéger la seule planète que nous connaissons, pour accueillir la vie, la
+planète Terre », a-t-il déclaré.
+Lors de cette conférence, près de 300 astronomes, scientifiques, ingénieurs et
+experts des situations d’urgence planchent également sur la manière de répondre le
+plus efficacement à une telle menace : 21 443 astéroïdes menacent la terre...
+Il faut dévier l’objet ou évacuer la population. S’il fait moins de 50 mètres, les
+experts préconisent d’évacuer la région susceptible d’être frappée. Deux semaines
+avant l’impact, on peut prédire le pays touché. Quelques jours avant, la précision est
+de quelques centaines de kilomètres. Pour les plus gros objets, l’idée n’est pas
+d’envoyer une bombe atomique comme dans le film Armageddon car cela pourrait
+créer des morceaux dangereux. Il s’agit de lancer un satellite kamikaze vers
+l’astéroïde pour le dévier. La Nasa a testé avec succès l’idée sur un vrai astéroïde de
+150 mètres, le 26 septembre 2022, avec la mission DART.
+Allons-nous devenir débiles ?
+La dernière menace qui plane concerne nos capacités cognitives elles-mêmes. Le
+Professeur Nick Bostrom classe la baisse de nos capacités intellectuelles parmi les
+écroulements.
+Un article paru dans le journal Cell a fait l’effet d’une bombe. L’auteur démontre
+que nos capacités intellectuelles vont chuter dans le futur, du fait d’une accumulation
+de mutations défavorables dans les zones de notre ADN qui régulent notre
+organisation cérébrale.
+Les variants génétiques défavorables s’accumulent dans le génome humain. Cette
+accumulation récente est déjà perceptible : une étude publiée dans la revue Nature fin
+novembre  2012 révèle que 80  % des variants génétiques délétères dans l’espèce
+humaine sont apparus depuis 5 000 à 10 000 ans seulement. À chaque génération, 70
+bases chimiques de notre ADN sont mal recopiées par la machinerie cellulaire, lors
+de la fabrication des spermatozoïdes et des ovules. Ces fautes de copie sont les
+interstices où naît le changement. Si le taux d’erreur avait été nul, aucune évolution
+des espèces ne se serait produite, et nous serions toujours des bactéries  ! Les
+mutations négatives étaient éliminées par la sélection naturelle  : les génomes
+concernés ne se transmettaient pas, faute que leur propriétaire atteigne l’âge de la
+reproduction.
+En faisant émerger notre cerveau, l’évolution darwinienne a cependant créé les
+conditions de sa propre éradication  : nous avons considérablement adouci les
+rigueurs de la sélection en nous organisant en société humaine solidaire.
+8
+
+---
+
+[p. 131-132]
+Puisque nos comportements individuels sont intégralement déterminés par le jeu
+des processus biochimiques et des influences extérieures, notre Déclaration des droits
+de l’homme est bâtie sur du sable. Pour Harari : « Les individus s’habitueront à se
+voir comme un assemblage de mécanismes biochimiques constamment surveillé et
+e
+e
+guidé par un réseau d’algorithmes électroniques. Des habitudes du monde libéral
+comme les élections démocratiques deviendront obsolètes, puisque Google sera en
+mesure de mieux représenter mes opinions politiques que moi-même. » Nous entrons
+dans un monde magique où nos désirs seront anticipés par les IA qui peupleront nos
+appareils connectés.
+Le monde numérique aggrave encore la situation. Harari décrit parfaitement
+comment l’Intelligence Artificielle nous pousse à déléguer au quotidien notre
+capacité de décision à la machine. Dans le monde de l’IA le flux des data nous
+installe confortablement dans notre silo personnalisé, qu’il s’agisse d’un itinéraire en
+voiture ou d’une discussion sur Facebook. Nous devenons les esclaves de notre
+propre bien-être. Un jour, nous laisserons l’IA décider de notre carrière et de nos
+amours. Nous tous prisonniers des algorithmes que nous aurons contribué à
+alimenter. Quelle nouvelle histoire l’humanité va-t-elle se raconter pour remplacer
+ses libertés perdues ? Il faut reconstruire et réenchanter l’individu menacé de toute
+part et trouver les moyens de mettre la technologie au service de la liberté.
+La guerre économique se joue sur la conquête de nos comportements  : notre
+cerveau est la nouvelle frontière. Gaspard Koenig s’est inquiété des conséquences du
+Nudgital, terme qui fusionne le Nudge et le mot capital. Julia Puaschunder,
+professeur de Sciences sociales à la George Washington University, en déduit une
+critique de l’économie comportementale à l’ère de l’IA  : si le comportement de
+l’individu est prévisible alors il est aussi manipulable. Plus nous partageons
+l’information et plus nous émettons de données, plus nous fournissons des données
+aux plateformes et plus nous nous prêtons en retour au Nudge. Plus nous acceptons le
+Nudge et plus nous gagnons en bien-être. Google par exemple nous épargne un effort
+cognitif gigantesque. Mais la puissance de ChatGPT fait entrevoir les nouveaux
+risques de « Police de la pensée ».
+ChatGPT ou la Pravda 2.0
+Les contenus ainsi produits vont rapidement être omniprésents. Il faudra investir
+des dizaines de milliards pour créer et faire évoluer ce type d’IA, ce qui va
+mécaniquement générer un oligopole. Cet oligopole va contrôler et formater la
+pensée humaine à un niveau inimaginable. Des moteurs de recherche comme Bing ou
+Google fournissent une série de réponses quand on leur soumet une requête, ce qui
+nous permet de bâtir notre propre opinion. ChatGPT, lui, ne donne qu’une réponse
+unique sans références permettant de vérifier ses affirmations.
+De toutes les questions posées par l’irruption de cette incroyable technologie dans
+notre vie, celle de l’effet sur le pluralisme de l’information et de la connaissance est
+la plus préoccupante. ChatGPT se prétend neutre. Répondant sur Europe 1 aux
+questions de Sonia Mabrouk, le 15 février 2023, il explique : « Je suis programmé
+pour être le plus objectif possible dans mes réponses.  » Ses explications sont
+structurées, ses arguments balancés. Il excelle dans les tournures diplomatiques, les
+modulations subtiles. Il porte pourtant de façon flagrante la marque d’une éducation
+reçue sur la côte ouest des États-Unis. Il refuse de faire une blague sur les femmes
+1
+
+---
+
+[p. 145-146]
+qui
+ne permet pas la maîtrise du raisonnement hypothético-déductif... En moyenne, le
+niveau des bacheliers s’est effondré du fait de la démocratisation et de la
+démonétisation du diplôme. On a naïvement cru qu’en donnant des médailles en
+chocolat à tout le monde, on rendrait les enfants plus intelligents : en réalité, on crée
+2
+de la frustration.
+Les élites ont lancé la société de la connaissance, du big data et l’industrialisation
+de l’IA sans se préoccuper de la démocratisation de l’intelligence biologique.
+Parler du quotient intellectuel conduit les bien-pensants à sortir immédiatement la
+gousse d’ail et le crucifix. Les élites font de la mesure de l’intelligence un tabou. Un
+QI élevé est pourtant la principale défense dans le monde qui vient. Or, sans mesure
+il n’y a aucun management possible. Imagine-t-on de surveiller un cancer du foie
+sans scanner, ou un diabétique sans mesurer la glycémie ?
+À  l’ère de l’IA, les capacités intellectuelles deviennent plus discriminantes que
+jamais.
+Dans une société de la connaissance, les écarts de capacités cognitives entraînent
+des différences de revenus, de capacité à comprendre le monde, d’influence et de
+statut social explosif.
+En 1962, la réflexion de Joan Robinson était prémonitoire  : «  La misère d’être
+exploité par les capitalistes n’est rien comparée à la misère de ne pas être exploité du
+tout. » « Les damnés de la terre étaient au XX  siècle les colonisés et les surexploités ;
+au XXI   siècle ce seront les hommes inutiles  », ajoute Pierre-Noël Giraud . Cette
+marginalisation se traduit dans les statistiques médicales : depuis six ans, l’espérance
+de vie des Blancs non diplômés baisse aux États-Unis avec l’explosion des « despair
+death  » dans les territoires marginalisés qui ne sont pas branchés sur la nouvelle
+économie.
+Des pans entiers de la population ne suivent plus les progrès et constituent une
+horde de naufragés du numérique. À la vitesse à laquelle l’IA ira, sortir du marché du
+travail pour un jour, ce sera bien souvent sortir pour toujours. Personne ne
+redeviendra un travailleur actif après dix ans de revenu universel, période pendant
+laquelle chaque unité d’IA sera devenue mille fois moins chère. Ce n’est pas le
+revenu qui doit être universel mais le développement du cerveau.
+J’écrivais en 2017 : « Heureusement, l’IA n’est pas explosive ! Si la singularité
+technologique, avec ses IA dites “fortes” et dotées de conscience artificielle, était à
+nos portes, nous aurions une très grave crise sociale. Nous ne savons déjà pas gérer
+les conséquences sociales des IA faibles. » Hélas pour la cohésion sociale, je m’étais
+lourdement trompé.
+En 2018, Martin Ford dans son livre AI a colligé l’avis des meilleurs spécialistes
+mondiaux de l’IA : le désaccord était total et la date d’arrivée des IA fortes varie de
+2029 à 2199... Aujourd’hui, l’émergence à court terme d’IA fortes ne peut pas être
+définitivement exclue. L’école doit se préparer à affronter les deux scénarios et devra
+s’adapter aux formes futures de l’IA que nous ne soupçonnons même pas encore, à
+cette migration de la frontière technologique dont nous sommes encore incapables de
+prédire précisément la nature, aux nouvelles synergies neurones-transistor qui
+naîtront à travers une hybridation dont on ignore aussi les modalités précises.
+Le système éducatif doit viser à rendre les citoyens complémentaires de l’IA et
+non substituables par elle. Car le travail ne va pas disparaître  : il va simplement
+e
+e
+9
+
+---
+
+[p. 160-160]
+1. Dictionnaire Larousse.
+2. Du nom du chercheur James Flynn qui en fit l’observation.
+3. Le chercheur belge Francis Heylighen note ainsi : « Cette société dans l’ensemble fonctionne à un
+niveau intellectuel plus élevé, proposant à l’enfant curieux plus d’informations, de défis plus intellectuels,
+de problèmes plus complexes, plus d’exemples à suivre, et plus de méthodes de raisonnement
+à appliquer. »
+4. En réalité les valeurs de QI sont étalonnées sur une population donnée et la moyenne est fixée à 100
+pour cette population. Si tout le monde acquérait 160 de QI, la nouvelle moyenne deviendrait 100. Le QI
+classe les individus, ce n’est pas une mesure quantitative comme la tempétature.
+5. Plusieurs études ont pointé la dégradation de notre patrimoine génétique depuis la fin de la sélection
+darwinienne.
+6. Vance Ashlee, Elon Musk, Harper Collins Publishers, 2016.
+7. Son rôle n’a pas été reconnu de tous temps : les Égyptiens pensaient qu’il était sans importance et le
+réduisaient en bouillie dans les momies, alors qu’ils gardaient précieusement les viscères, et spécialement
+le cœur.
+8. Changeux s’opposait ainsi aux tenants d’un « spiritualisme » pour qui la conscience humaine ne peut
+être seulement biologique, notamment parce que cela signifierait un déterminisme philosophiquement
+inacceptable – si notre cerveau n’est qu’une sorte de machine, qu’advient-il de notre prétention au libre-
+arbitre ?
+9. Changeux Jean-Pierre, L’Homme neuronal, Hachette, 1983.
+10. Par ailleurs, les neurones sont entourés de près de 1 000 milliards de cellules de soutien, les cellules
+gliales dont on a découvert récemment le rôle important dans la transmission de l’influx nerveux.
+11. Voire créer de nouveaux neurones.
+12. Travaux du Professeur Pierre-Marie Lledo.
+13. Carr Nicholas, The Shallows : what Internet is doing to our brain, W. W. Norton & Company, 2011.
+
+---
+
+[p. 175-176]
+.
+La lutte contre les discriminations et les inégalités est devenue le fil rouge d’un
+pan entier de l’action publique en France. Le QI est encore le grand absent des
+politiques. Les différences d’intelligence, et leurs lourdes conséquences, pourtant
+documentées par de nombreuses recherches, sont une réalité indicible pour les
+13
+pouvoirs publics.
+Pour quelle raison le silence des discours publics en matière d’inégalités de QI est-
+il, à l’heure actuelle, total ? Il est plus facile d’expliquer aux catégories sociales les
+moins favorisées que leur situation est due à des causes extérieures malignes et
+qu’elles n’en sont que les victimes, alors qu’en théorie rien ne devrait les empêcher
+de réussir aussi bien que les autres. C’est sur de telles explications que prospèrent les
+discours anticapitalistes pour qui les hiérarchies de classes ne sont que la
+conséquence d’une mondialisation « ultra-libérale » où certains, parce qu’ils sont les
+plus chanceux et/ou les plus malhonnêtes, dominent les autres. Les discours
+conservateurs, diamétralement opposés, n’acceptent pas non plus l’explication du
+déterminisme génétique : pour eux, il est plus commode de penser que les différences
+sociales sont le reflet du mérite des gens dans l’absolu, c’est-à-dire que certains ont
+plus travaillé pour réussir leur vie.
+Dans les deux cas, l’explication est confortable mais parfaitement stérile : dans le
+premier, les plus défavorisés sont dédouanés de toute responsabilité, et peuvent donc
+revendiquer des compensations face à ce qui est une injustice sociale ; dans le second
+les plus pauvres sont responsables de leur situation, et ils n’ont à s’en prendre qu’à
+eux-mêmes...
+Au-delà des idéologies, personne ne veut s’entendre dire que son absence de
+réussite scolaire ou sociale est due à un manque d’intelligence. Être une victime du
+système, ou même à la limite un paresseux, a plus de dignité à nos yeux que d’être un
+défavorisé de l’intellect.
+Le déterminisme du QI est ainsi inacceptable du triple point de vue politique,
+moral et philosophique. Il n’est pas concevable d’expliquer aux gens que leur
+situation est bien due à une discrimination, mais que cette discrimination est
+essentiellement celle de l’intelligence, sur laquelle on a peu de prises. Aujourd’hui, le
+poids déterminant des inégalités de QI sur la réussite reste ainsi un sujet absolument
+tabou, alors qu’elles sont les principales sources des inégalités sociales et
+économiques !
+L’aristocratie de l’intelligence n’est pas acceptable
+Lorsque 
+les 
+technologies 
+d’augmentation 
+de 
+nos 
+capacités 
+cognitives
+commenceront à être disponibles, les différences de QI et les inégalités qu’elles
+engendrent deviendront de plus en plus visibles. Il n’y aura pas d’échappatoire : il
+faudra agir. Lorsque ces techniques seront accessibles à tous, elles deviendront donc
+rapidement des standards . C’est ainsi qu’évoluent les modes et les mœurs.
+La passion de l’égalité qui caractérise nos démocraties occidentales rendra la
+croissance des inégalités de QI plus inacceptable encore que celle des inégalités
+économiques. Et cela d’autant plus qu’il n’y aura plus d’emplois valorisants pour les
+humains non augmentés dont la capacité de travail sera, à terme, très aisément
+remplaçable par un robot doté d’IA. L’investissement d’OpenAI dans la robotique est
+à cet égard très préoccupant !
+14
+
+---
+
+[p. 189-190]
+vivre une
+existence sans effort pourrait rapidement «  atrophier  » nos cerveaux. Le vrai
+pouvoir serait concentré dans les mains d’une élite maîtresse des IA. Aux gens
+qui seront bousculés par le choc technologique, nous devons donner un droit à la
+formation tout au long de la vie et non des allocations à vie. Ce n’est pas le
+e
+revenu qui doit être universel mais le développement du cerveau ! Il faut tout faire
+pour empêcher la création d’une aristocratie de l’intelligence manipulant les
+«  Inutiles de Harari  » enfermés dans un monde magique et virtuel. Certains
+experts proposent la gratuité des casques de réalité virtuelle pour les travailleurs
+dépassés par ChatGPT...
+L’école prépare pour l’économie... d’avant ChatGPT
+Comment peut-on alors espérer que l’école, dans sa forme actuelle, prépare aux
+métiers de demain ? Ces tâches complexes non routinières dont on ne connaît pas la
+teneur, comment le système actuel pourrait-il y préparer ? Comment, autrement dit,
+un système encore centré sur l’enseignement en silo de matières quasiment
+inchangées depuis le XIX   siècle, par des personnels formés il y a trente ans et
+sélectionnés pour leur stricte conformité aux canons scolaires pourrait-il préparer à
+un monde du travail radicalement différent  ? Le consultant en technologie Bryan
+Alexandre déclare ainsi : « Le système éducatif n’est pas bien positionné pour se
+transformer afin d’aider à former les diplômés capables de concourir contre les
+machines. Ni dans les délais, ni dans les proportions voulus. La grande masse des
+gens est préparée pour la mauvaise économie. » Cette faiblesse congénitale de l’école
+est d’autant plus problématique que le monde pour lequel elle est censée préparer nos
+enfants sera plus consommateur d’intelligence que jamais. Hier, l’inaptitude de
+l’école à améliorer l’intelligence des élèves était une source d’injustice –  car cela
+confortait les inégalités héritées –, demain, cette inaptitude sera dramatique, car elle
+produira une dislocation sociale.
+Inefficace et de plus en plus inadaptée, l’école est aujourd’hui au pied du mur. Sa
+transformation est inéluctable ; il ne s’agit pas cette fois de changer les programmes
+et de déclarer, comme le fait chaque nouveau ministre de l’Éducation nationale, que
+l’éducation est « une priorité »... La réforme, en réalité, sera imposée de l’extérieur,
+par les neurotechnologies américaines voire chinoises qui vont faire un hold-up sur
+l’éducation.
+e
+4
+
+---
+
+[p. 204-205]
+ucation at Age 16 ». PLoS ONE 8(12) : e80341. doi : 10.1371/journal. pone.0080341
+10. Ou même celle de Platon.
+11. Maria Montessori développa une pédagogie révolutionnaire en 1907, toujours enseignée dans les
+écoles Montessori qui forment les enfants de l’élite éclairée et fortunée. Elle était médecin, philosophe et
+psychologue.
+Les progrès de l’IA vont précipiter la métamorphose de la machine à développer
+l’intelligence humaine, autrement dit l’école. Pour être humainement supportable
+l’industrialisation de l’IA doit, en effet, s’accompagner d’une démocratisation de
+l’intelligence biologique !
+La question porte aujourd’hui sur le système éducatif à mettre en place pour
+permettre aux hommes de demain d’affronter l’IA à armes égales et de cohabiter
+harmonieusement avec elle.
+
+---
+
+[p. 218-219]
+citoyens des années 1960 si on leur avait dit que cinquante ans plus tard le mariage
+homosexuel deviendrait légal . Les lignes morales bougent vite, très vite. Ce qui
+semble absurde et dérangeant peut en quelques années devenir évident et normal.
+La révélation du caractère avant tout génétique des inégalités aura deux
+e
+e
+e
+1
+2
+conséquences. L’insuffisance de l’école éclatera au grand jour, et surtout tous les
+espoirs d’égalisation se reporteront sur les neurotechnologies. Quand les inégalités de
+QI deviendront évidentes aux yeux de tous, elles deviendront un scandale politique.
+L’égalisation des intelligences sera une évidence : augmenter
+le QI pour préserver la démocratie
+Pourquoi les différences de QI, aujourd’hui ignorées ou acceptées sans mal,
+seraient-elles demain subitement insupportables  ? Parce que l’on peut seulement
+revendiquer l’égalisation de choses sur lesquelles on peut agir. Jusqu’à aujourd’hui,
+l’intelligence n’en fait pas vraiment partie. Comme la beauté, elle fait partie de ces
+inégalités sur lesquelles on préfère jeter un voile pudique et observer un silence gêné.
+C’était la vocation de l’école de pallier autant que faire se peut les inégalités
+produites par la conjugaison de l’héritage génétique et d’un environnement familial
+plus ou moins stimulant. Une vocation inaboutie, faute de réelle marge d’efficacité.
+Un QI élevé sera la principale défense de nos concitoyens dans le monde de
+demain. Nos enfants doivent être complémentaires de l’IA. Mais une part croissante
+de la population n’a toujours pas acquis les nouvelles qualifications requises pour
+s’intégrer dans la nouvelle économie. Dans une économie de la connaissance, cela
+constitue un handicap majeur pour la population. La première guerre cérébrale –
+entre Asie et Occident – a été perdue. Le niveau des jeunes Français est désormais
+loin derrière celui de la plupart des pays asiatiques. Les sciences de l’éducation,
+parent pauvre du système de recherche, sont pourtant le premier antidote contre le
+déclassement des classes moyennes et la montée du populisme.
+Il est illusoire, voire délirant, de penser que les Français auront un avantage dans
+la compétition mondiale avec des capacités intellectuelles inférieures aux Asiatiques
+de l’Est. Mais le pire est à venir : la deuxième guerre des cerveaux commence, cette
+fois-ci entre les cerveaux de silicium et les cerveaux biologiques. L’objectif premier
+du système éducatif et de formation professionnelle doit être de rendre nos enfants et
+nous-mêmes complémentaires de l’IA. La complémentarité entre le transistor et le
+neurone ne concernera malheureusement que les meilleurs cerveaux dotés d’un haut
+QI. En effet, le QI est un bon indicateur de notre capacité associative, de notre
+transversalité, de notre plasticité cérébrale et de notre adaptation à un monde
+changeant qui constituent justement notre grande supériorité face à l’IA. Il est
+illusoire de penser qu’une interdiction mondiale de l’IA est envisageable ; il va donc
+falloir se battre et seul un QI élevé protège contre le remplacement par l’IA. Une
+question politique grave se pose : comment gérer une société dans laquelle un point
+de QI supplémentaire donne un avantage de plus en plus grand ? Le QI n’est pas un
+sujet politiquement correct : 1 million de citoyens dotés de 100 de QI pèsent moins
+lourd, hélas, dans la société de la connaissance qu’un petit génie ayant 160 de QI.
+Les différences de QI constituent la plus grande injustice, et la source de toutes les
+inégalités. Il y a quinze ans de différences d’espérance de vie entre les hauts et les
+bas QI, d’énormes écarts de revenu et de maîtrise de la culture. Oui, il serait logique
+
+---
+
+[p. 232-233]
+là. Il ne s’agira
+que d’une phase transitoire. À partir de 2060, on peut craindre que notre intelligence,
+aussi gonflée soit-elle, ne suffise plus. Les organisations politiques ou économiques
+traditionnelles perdront tout pouvoir. L’enjeu principal pour l’humanité sera alors de
+déterminer les modalités de cohabitation avec l’IA.
+1. Martin Rees a été particulièrement violent.
+2. Les résultats ont été publiés dans le numéro du 9  février 2023 du magazine Science sous le titre
+«  Opinions du public sur le dépistage polygénique des embryons  ». Michelle N.  Meyer, professeur de
+bioéthique au Geisinger Health System, était l’auteur principal.
+3. L’enquête représentative sur 6  800 Américains faisait partie de l’enquête Understanding America
+dirigée par l’université de Californie du Sud.
+4. https://www.technologyreview.com/2023/02/09/1068209/americans-test-embryos-college-chances-
+survey/
+5. Faites dans le double souci de renforcer les patrimoines financiers et génétiques.
+6. On l’espère, en tout cas, dans nos régimes démocratiques.
+
+---
+
+[p. 246-247]
+plus en plus de décisions. Plus les machines
+intelligentes seront libres et autonomes, plus il faudra leur inculquer des règles
+morales. Comment être certain que l’IA travaille dans notre intérêt ?
+ 
+Quand les hommes font mentir les algorithmes
+ 
+Les logiciels peuvent être programmés pour mentir  : Volkswagen a truqué les
+8
+9
+10
+logiciels de mesure des émissions polluantes pour masquer à l’opinion publique
+et aux pouvoirs publics les dégâts que le diesel occasionne à notre santé. L’IA n’y
+est pour rien, la malhonnêteté humaine est seule responsable. Et il y a une
+solution simple : la prison pour les dirigeants.
+Le risque réside en réalité dans l’émergence d’IA autonomes. Pour ne prendre
+qu’un exemple, l’IA, qui gère déjà les filtres de nos boîtes mail, bloquerait
+immédiatement les messages nous mettant en garde contre une IA hostile.
+ 
+La science-fiction a imaginé des solutions comme les lois d’Asimov qui
+sont bien naïves à l’ère de l’Internet des objets
+ 
+Plus récemment, Google a implémenté un bouton rouge pour arrêter ses IA, si
+elles devenaient dangereuses et hostiles. C’est délicieusement naïf puisque toute
+IA forte aurait la capacité de cacher ses propres buts. Il ne faut pas oublier que
+nous lui avons déjà appris à jouer au go, c’est-à-dire à tromper, encercler,
+écraser l’adversaire par ruse. Une IA hostile pourrait, un jour, jouer au go avec
+l’humanité, mais avec les centrales nucléaires, les centres de contrôle aérien, les
+barrages hydrauliques, les voitures autonomes et les stocks de virus de la variole
+au lieu des pions noirs et blancs.
+ 
+Cacophonie des experts et projection freudienne
+ 
+Un jour. Oui, mais quand  ? Nous n’en savons rien et c’est bien ce qui pose
+problème. Parmi les 100 meilleurs experts au monde qui ont traité cette
+question, il n’y en a pas deux qui ont le même avis. L’absence totale et presque
+risible de consensus sur cette question incertaine mais existentielle doit nous
+inviter à accélérer les travaux de recherche sur l’éthique de l’IA.
+Nous projetons sur l’IA nos fantasmes de toute-puissance, nos peurs les plus
+archaïques, nos angoisses de castration et notre anthropomorphisme, voire notre
+animisme. C’est préoccupant parce que l’IA n’est pas comparable au péril
+nucléaire  : une bombe H ne décide pas toute seule de vitrifier Moscou alors
+qu’une IA forte pourrait attaquer l’homme.
+Logiquement, une nouvelle crainte surgit à propos du contôle des missiles
+nucléaires. Anja Manuel écrit dans le Financial Times le 8 mars 2023 : « Il est
+temps de négocier les règles d’utilisation de l’IA en matière d’armes atomiques. »
+Cet expert considère que la bombe atomique ne doit jamais être lancée par une
+IA.
+Les chercheurs de Microsoft ont rappelé en mars  2023 l’urgence de mieux
+comprendre ChatGPT : « Dans l’ensemble, élucider la nature et les mécanismes
+des systèmes d’IA tels que GPT4 est un formidable défi qui est soudainement
+devenu important et urgent. »
+ 
+Lobotomies contre la masturbation
+ 
+Pour se prémunir contre ce danger, la plupart des experts réfléchissent à
+11
+
+---
+
+[p. 261-261]
+es d’une élite exigeante avec elle-
+même et avec les siens, pourraient échapper à la matrice.
+L’école de demain aura en ce sens la lourde tâche d’inculquer cette discipline.
+Mais viendra un moment où nous aurons aussi besoin d’une nouvelle forme de
+sagesse qui ne pourra s’acquérir qu’au travers d’une hybridation avec la machine.
+
+---
+
+[p. 276-277]
+ent puissante, nous offre des cadeaux éblouissants, mais pourrait aussi
+pirater les fondements de notre civilisation. Nous appelons les dirigeants mondiaux à
+répondre à ce moment au niveau de défi qu’il présente. La première étape consiste à
+gagner du temps pour mettre à niveau nos institutions du XIX  siècle pour un monde
+2
+3
+e
+post-IA, et apprendre à maîtriser l’IA avant qu’elle ne nous maîtrise. »
+Cette « rencontre du troisième type » avec la machine à laquelle nous n’avions pas
+pensé va être la vraie matrice de notre avenir.
+
+---
+
+[p. 296-298]
+la Chine de booster le QI des singes ?
+Faut-il étendre la fraternité aux singes et aux intelligences artificielles ?
+Sauver l'égalité : la transition énergétique ne doit pas faire oublier la transition
+cognitive
+L'école conditionne notre avenir face à l'IA
+Digital Natives : histoire d'une escroquerie politique à l'ère de ChatGPT
+L'école doit aider nos enfants à affronter la contre-révolution numérique
+2025-2040 – CHATGPT IMPOSE LA PREMIÈRE MÉTAMORPHOSE DE
+L'ÉCOLE
+10. L'INTELLIGENCE : LA CHOSE AU MONDE LA MOINS BIEN PARTAGÉE
+L'intelligence doit être mesurée
+Jusqu'à GPT4, le cerveau humain était la machine la plus complexe de l'univers
+connu
+La neuroplasticité
+11. CHATGPT ACCENTUE LA GUERRE DES CERVEAUX
+Le neurone biologique ou artificiel est le nouveau pétrole
+Au siècle de ChatGPT, l'intelligence devient la source de tous les pouvoirs
+La bulle ChatGPT fait émerger une nouvelle économie
+L'intelligence est la mère de toutes les inégalités
+12. « TOUT SE JOUE AVANT 0 AN » : L'ÉCOLE EST DÉJÀ UNE TECHNOLOGIE OBSOLÈTE
+Naît-on ou devient-on intelligent ?
+Pourquoi l'école est-elle si nulle : tout est joué d'avance
+Bourdieu avait tout faux et les profs sont tombés dans le piège de l'ADN
+Des dieux et des inutiles : faisons mentir Harari
+Le négationnisme génétique peut conduire en prison
+L'âge d'or des intellectuels et des innovateurs
+Face à ChatGPT, le tabou du QI est suicidaire
+L'aristocratie de l'intelligence n'est pas acceptable
+13. FACE À CHATGPT, L'INTELLIGENCE N'EST PLUS UNE OPTION
+Aucun emploi n'est immunisé contre ChatGPT
+Schumpeter a pris de la coke 
+
+Quelles compétences pour l'homme face aux successeurs de ChatGPT ?
+OpenAI est la première entreprise de l'histoire qui médiatise les destructions
+d'emplois qu'elle va générer
+GPT5 sera plus intelligent que 80 % des Français, ce qui va créer une crise
+sociale
+Pierre et le loup ChatGPT
+ChatGPT va produire de plus en plus de Gilets jaunes
+L'école prépare pour l'économie... d'avant ChatGPT
+14. CHATGPT VA PRÉCIPITER LA PREMIÈRE MÉTAMORPHOSE DE L'ÉCOLE : LA BRÈVE ÈRE DES EDTECHS
+ChatGPT euthanasiera-t-il la salle de classe ?
+Les MOOC vont fusionner avec ChatGPT
+L'Éducation doit libérer ses innovateurs pour entrer dans l'hyperpersonnalisation
+éducative
+L'université aussi devra changer
+La fin du bricolage éducatif
+Aristote à votre service
+2040-2060 – L'ÉCOLE TRANSHUMANISTE
+15. DE LA NEUROÉDUCATION À LA NEUROAUGMENTATION
+L'école de 2050 sera une usine de neuroculture
+La tornade ChatGPT va trop vite et trop haut
+Génétique ou cyborg : le grand bond en avant de l'intelligence
+Le scénario Gattaca
+16. FACE À CHATGPT, ELON MUSK VEUT IMPOSER L'IMPLANT INTRACÉRÉBRAL
+ChatGPT branché sur le cerveau
+Maîtriser le code neuronal
+Une machine à réussir plutôt qu'à sélectionner

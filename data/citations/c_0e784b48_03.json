@@ -1,0 +1,308 @@
+[
+ {
+  "chapitre": "1c3d9be0",
+  "citations": [
+   {
+    "texte": "Ainsi, tous les problèmes du bachot d'il y a bien des années pouvaient être résolus par une machine ...",
+    "page": 52,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "La géométrie du lycée est décidable",
+    "portee": "Rappel utile : ce qu'une machine sait faire depuis longtemps n'est pas ce qui fait la valeur d'un apprentissage."
+   },
+   {
+    "texte": "Ce problème est indécidable : l'ensemble des familles finies pour lesquelles on peut paver ainsi n'est pas récursif",
+    "page": 52,
+    "axe": "02-ia-technique-academique",
+    "theme": "Indécidabilité du pavage",
+    "portee": "Un problème énonçable avec des carrés coloriés échappe pourtant à tout algorithme."
+   }
+  ]
+ },
+ {
+  "chapitre": "993fd015",
+  "citations": [
+   {
+    "texte": "Ainsi, dans le cas de la reconnaissance de langage, les probabilités n'apportent rien de plus.",
+    "page": 53,
+    "axe": "02-ia-technique-academique",
+    "theme": "Limite de l'apport probabiliste",
+    "portee": "Le hasard ne repousse pas la frontière du calculable, il ne change que le coût."
+   },
+   {
+    "texte": "La formalisation de la calculabilité, cette notion intuitive remontant à l'Antiquité, est un des apports mathématiques majeurs du 20ième siècle. Elle est le soubassement de la science informatique et, historiquement, elle en a été le point de départ.",
+    "page": 53,
+    "axe": "02-ia-technique-academique",
+    "theme": "Fondation de l'informatique",
+    "portee": "Rappelle que la théorie a précédé la machine, et non l'inverse."
+   },
+   {
+    "texte": "Comme l'explique Kolmogorov, les phénomènes de la nature sont d'essence discrète, sont modélisés par les mathématiques du continu car ce sont des outils performants et maîtrisés, et au final, pour le calcul par machine des valeurs explicites, on procède à une discrétisation des solutions.",
+    "page": 53,
+    "axe": "11-sciences-environnement",
+    "theme": "Discret, continu, discret",
+    "portee": "Décrit un aller retour méthodologique que tout modélisateur pratique sans toujours l'interroger."
+   }
+  ]
+ },
+ {
+  "chapitre": "cad73107",
+  "citations": [
+   {
+    "texte": "la notion d'objet aléatoire, centrale dans l'intuition probabiliste, n'a aucune définition formelle en théorie des probabilités : ces objets y sont vus dans leur ensemble, globalement donc, jamais de façon individuelle.",
+    "page": 54,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une lacune au cœur des probabilités",
+    "portee": "On peut mesurer la probabilité d'un ensemble sans savoir dire d'un objet qu'il est aléatoire."
+   },
+   {
+    "texte": "Enfin, la distinction entre calculable et non calculable intéresse tous les sujets mathématiques (cf. le §1.6) et devrait devenir une question réflexe.",
+    "page": 54,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une question à se poser partout",
+    "portee": "Recommandation de méthode adressée à toute la communauté mathématique."
+   }
+  ]
+ },
+ {
+  "chapitre": "65c88364",
+  "citations": [
+   {
+    "texte": "Ce sujet donne lieu à des résultats surprenants où l'on voit que simplicité conceptuelle n'est pas toujours synonyme d'efficacité.",
+    "page": 63,
+    "axe": "02-ia-technique-academique",
+    "theme": "Simple n'est pas efficace",
+    "portee": "Vaut bien au-delà de l'informatique, pour toute méthode jugée sur sa seule élégance."
+   },
+   {
+    "texte": "Sujet difficile dans lequel des questions simples à formuler, comme le célèbre problème P=NP (formulé en 1970), n'ont toujours pas été résolues.",
+    "page": 63,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une question ouverte depuis 1970",
+    "portee": "Une question qu'un étudiant comprend en une minute et que personne n'a su trancher en un demi-siècle."
+   }
+  ]
+ },
+ {
+  "chapitre": "433c061c",
+  "citations": [
+   {
+    "texte": "la « loi de Gordon E. Moore » : le nombre de transistors dans un circuit intégré double tous les deux ans.",
+    "page": 64,
+    "axe": "11-sciences-environnement",
+    "theme": "Loi de Moore",
+    "portee": "Régularité empirique qui a organisé les attentes de toute une industrie pendant cinquante ans."
+   },
+   {
+    "texte": "On le voit, l'échelle de complexité de la machine se rapproche de celle de certains constituants de l'humain.",
+    "page": 64,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Rapprochement des échelles",
+    "portee": "Constat quantitatif, que les auteurs se gardent de transformer en conclusion sur l'intelligence."
+   },
+   {
+    "texte": "Le succès de la théorie des automates, outre sa beauté mais c'est une question de goût, est dû au fait que les problèmes relatifs sont décidables et pour beaucoup ont une complexité assez faible, ce qui les rend utilisables en pratique.",
+    "page": 64,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi les automates ont réussi",
+    "portee": "Une théorie s'impose moins par sa profondeur que par le fait qu'on peut s'en servir."
+   }
+  ]
+ },
+ {
+  "chapitre": "255d0d7d",
+  "citations": [
+   {
+    "texte": "Prendre le chemin de la théorie de la complexité, c'est descendre de l'Olympe et réintégrer le temps linéaire comme une donnée fondamentale à la notion de calcul.",
+    "page": 65,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le temps réintroduit dans le calcul",
+    "portee": "Belle formule pour dire le passage de ce qui est possible à ce qui est faisable."
+   },
+   {
+    "texte": "Les chiffres que l'on vient de voir montrent qu'un algorithme en temps ou espace exponentiel a une complexité rédhibitoire.",
+    "page": 65,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que l'univers ne permet pas",
+    "portee": "La limite n'est pas technologique mais physique, et aucun progrès de machine ne la lèvera."
+   }
+  ]
+ },
+ {
+  "chapitre": "d3bb60c7",
+  "citations": [
+   {
+    "texte": "La complexité d'un problème peut aussi dépendre des conditions d'utilisation.",
+    "page": 66,
+    "axe": "02-ia-technique-academique",
+    "theme": "Complexité et usage",
+    "portee": "Le meilleur algorithme pour un calcul isolé n'est pas le meilleur pour un calcul répété."
+   },
+   {
+    "texte": "Mentionnons enfin que si l'algorithme de Karatsuba est implémenté dans tous les systèmes de calcul formel, ceux de Schonhage & Strassen et celui de Fürer ne le sont pas car, actuellement, ils sont grevés par une constante multiplicative gigantesque",
+    "page": 66,
+    "axe": "02-ia-technique-academique",
+    "theme": "Asymptotique et pratique",
+    "portee": "Un algorithme meilleur en théorie peut n'être jamais utilisé, et la notation asymptotique cache cette réalité."
+   }
+  ]
+ },
+ {
+  "chapitre": "5cf7ad0d",
+  "citations": [
+   {
+    "texte": "N'hésitons pas à le dire, la FFT est une révolution technologique essentielle (quoique largement méconnue du grand public).",
+    "page": 67,
+    "axe": "11-sciences-environnement",
+    "theme": "La transformée de Fourier rapide",
+    "portee": "Un algorithme dont dépendent l'image numérique et les télécommunications, et que presque personne ne nomme."
+   },
+   {
+    "texte": "Une façon de définir la complexité d'un problème est d'établir une borne inférieure et une borne supérieure.",
+    "page": 67,
+    "axe": "02-ia-technique-academique",
+    "theme": "Encadrer plutôt que mesurer",
+    "portee": "Méthode générale : on cerne une grandeur par le haut et par le bas quand on ne sait pas la calculer."
+   }
+  ]
+ },
+ {
+  "chapitre": "8cc5da8f",
+  "citations": [
+   {
+    "texte": "Tout modèle de calcul physiquement réalisable peut être simulé par une machine de Turing au prix d'un surcoût polynomial.",
+    "page": 68,
+    "axe": "02-ia-technique-academique",
+    "theme": "Thèse de Church forte",
+    "portee": "Énoncé plus fort et plus contesté que la thèse originale, car il engage aussi le coût."
+   },
+   {
+    "texte": "La complexité au pire cas fournit une borne supérieure sur une ressource donnée. Mais, en pratique, la complexité en moyenne - par rapport à une distribution des entrées - peut être beaucoup plus significative",
+    "page": 68,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pire cas et cas moyen",
+    "portee": "Distinction décisive pour juger si un algorithme est utilisable dans la vie réelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "23d82312",
+  "citations": [
+   {
+    "texte": "Un problème P est complet pour la classe de complexité C si P est dans C et si tout problème de C peut se réduire à P.",
+    "page": 69,
+    "axe": "02-ia-technique-academique",
+    "theme": "Problème complet",
+    "portee": "Notion qui permet de représenter toute une classe par un seul problème."
+   },
+   {
+    "texte": "Entrons nous dans un pays du calcul imaginaire ? Pas tout à fait, car de nombreux algorithmes sont intrinsèquement non déterministes et d'autre part cette notion est mathématiquement viable et féconde.",
+    "page": 69,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le non déterminisme n'est pas une fiction",
+    "portee": "Défend une abstraction souvent tenue pour irréelle en montrant qu'elle décrit des pratiques effectives."
+   },
+   {
+    "texte": "La célèbre question PTIME = NP n'est pas que théorique car elle a des conséquences dans la vie quotidienne",
+    "page": 69,
+    "axe": "02-ia-technique-academique",
+    "theme": "Enjeu pratique d'une question ouverte",
+    "portee": "La sécurité des communications repose sur une conjecture que personne n'a démontrée."
+   }
+  ]
+ },
+ {
+  "chapitre": "164b3f73",
+  "citations": [
+   {
+    "texte": "Nous avons juste ouvert la boîte de Pandore : il y a bien d'autres classes.",
+    "page": 70,
+    "axe": "02-ia-technique-academique",
+    "theme": "La prolifération des classes",
+    "portee": "Aveu des auteurs sur une taxinomie qui s'étend faute de résultats qui la simplifieraient."
+   },
+   {
+    "texte": "L'espace polynomial non déterministe NPSPACE ne donne rien de plus que l'espace polynomial déterministe PSPACE",
+    "page": 70,
+    "axe": "02-ia-technique-academique",
+    "theme": "Espace et non déterminisme",
+    "portee": "Pour l'espace, la question analogue à P égale NP est tranchée, ce qui rend l'ignorance sur le temps plus frappante."
+   }
+  ]
+ },
+ {
+  "chapitre": "cc8c50be",
+  "citations": [
+   {
+    "texte": "L'influence de la représentation sur la complexité des problèmes peut être considérable : on tremble à l'idée de faire une multiplication d'entiers représentés en chiffres romains ...",
+    "page": 71,
+    "axe": "02-ia-technique-academique",
+    "theme": "La représentation décide du coût",
+    "portee": "Choisir la bonne écriture d'un problème est déjà une partie de sa résolution."
+   }
+  ]
+ },
+ {
+  "chapitre": "d29c6ba7",
+  "citations": [
+   {
+    "texte": "Mentionnons que cette technique n'est pas pure théorie, elle est, en effet, implémentée dans les circuits des ordinateurs.",
+    "page": 72,
+    "axe": "02-ia-technique-academique",
+    "theme": "De la théorie au silicium",
+    "portee": "Une idée de notation abstraite se retrouve gravée dans le matériel que chacun utilise."
+   },
+   {
+    "texte": "Au lieu de considérer les codages des lettres par des mots binaires, il regarde globalement le texte et considère la taille d'un plus court programme informatique (ou de machine) capable de l'écrire, c'est la complexité de Kolmogorov du texte.",
+    "page": 72,
+    "axe": "02-ia-technique-academique",
+    "theme": "Complexité de Kolmogorov",
+    "portee": "Mesurer l'information d'un objet par la longueur du programme qui le produit."
+   },
+   {
+    "texte": "Comme le dit plaisamment Kolmogorov, la complexité d'un texte comme celui du roman « Guerre et Paix » de Léon Tolstoï peut être considérée comme bien définie indépendamment du langage de programmation choisi, la variation selon ce choix étant négligeable.",
+    "page": 72,
+    "axe": "08-litterature-romans",
+    "theme": "Guerre et Paix mesuré en bits",
+    "portee": "Illustration littéraire d'un théorème d'invariance, qui rend la notion utilisable."
+   }
+  ]
+ },
+ {
+  "chapitre": "29c212d4",
+  "citations": [
+   {
+    "texte": "Désormais, les automates finis font partie de la culture de la communauté informatique.",
+    "page": 73,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Un savoir devenu commun",
+    "portee": "Une théorie de recherche devenue socle de formation en une génération."
+   },
+   {
+    "texte": "C'est Per Martin-Lof, en 1965, alors élève de Kolmogorov, qui le premier formalise cette notion intuitive d'objet aléatoire.",
+    "page": 73,
+    "axe": "02-ia-technique-academique",
+    "theme": "Définir le hasard",
+    "portee": "Il aura fallu la calculabilité pour donner un sens précis à un mot d'usage courant."
+   }
+  ]
+ },
+ {
+  "chapitre": "d1c8f46b",
+  "citations": [
+   {
+    "texte": "Un mot u est accepté par M s'il existe un calcul de M sur u dont le dernier état est final, un tel calcul est appelé calcul réussi.",
+    "page": 74,
+    "axe": "02-ia-technique-academique",
+    "theme": "Acceptation d'un mot",
+    "portee": "Définition minimale sur laquelle repose toute la théorie des langages réguliers."
+   },
+   {
+    "texte": "Pour tout automate à n états, il existe un automate déterministe complet à au plus 2n états qui reconnaît le même langage.",
+    "page": 74,
+    "axe": "02-ia-technique-academique",
+    "theme": "Prix de la déterminisation",
+    "portee": "On peut toujours rendre un automate déterministe, mais au risque d'une explosion exponentielle du nombre d'états."
+   }
+  ]
+ }
+]

@@ -1,0 +1,910 @@
+OUVRAGE : Intelligence artificielle - Jean-Gabriel GANASCIA
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 215
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  (non structuré)
+
+[10/92 passages, 11294 tokens sur 103270]
+
+=== EXTRAITS ===
+
+[p. 1-7]
+reçues
+Jean-Gabriel Ganascia
+Intelligence artificielle
+vers une domination programmée ?
+
+‘SUONIP? 
+Nag 
+12/8489 
+97 
+ZTOZ 
+© wyBuAdoD
+
+Intelligence artificielle
+vers une domination programmée ?
+
+‘SUONIP? 
+Nag 
+12/8489 
+97 
+ZTOZ 
+© wyBuAdoD
+
+€: 
+2017 
+Le 
+Cavalier 
+Bleu 
+édit 
+ons.
+Copyright
+Intelligence artificielle
+vers une domination programmée ?
+Jean-Gabriel Ganascia
+2° édition revue et augmentée
+Issues de la tradition ou de l'air du temps, mêlant souvent
+vrai et faux, les idées reçues sont dans toutes les têtes. Les
+auteur-e-s les prennent pour point de départ et apportent
+ici un éclairage distancié et approfondi sur ce que l’on sait
+ou croit savoir.
+Le Cavalier Bleu
+FICTIONS 
+:
+
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+Jean-Gabriel Ganascia
+Suite à des études de physique et de philosophie, Jean-Gabriel
+Ganascia s’est spécialisé d’abord en intelligence artificielle
+et en apprentissage machine puis en modélisation cognitive.
+Aujourd'hui il est professeur à l’université Pierre et Marie Curie,
+EurAl Fellow et membre de l’Institut universitaire de France.
+Il a dirigé pendant 12 ans le diplôme d’études approfondies
+IARFA (Intelligence artificielle, reconnaissance des formes et
+applications). Il a aussi été chargé de mission à la direction du
+CNRS avant de diriger le programme de recherches coordon-
+nées « Sciences cognitives » et d’animer le groupement d’intérét
+scientifique « Sciences de la cognition ». Actuellement, il pilote
+l’équipe ACASA (Agents cognitifs et apprentissage symbolique
+automatique) au sein du laboratoire d’informatique de Paris-VI.
+Il est aussi le directeur adjoint du Labex OBVIL où il poursuit,
+en collaboration avec les équipes de littérature de l’université
+Paris-Sorbonne, des recherches sur le versant littéraire des huma-
+nités numériques. Enfin, il est président du comité d’éthique du
+CNRS (COMETS) et membre de la CERNA (Commission de
+réflexion sur l'éthique de la recherche dans les sciences du numé-
+rique d’Allistène).
+Du même auteur
+~ L’Ame machine, Le Seuil, 1990.
+— L'Intelligence artificielle, Flammarion, 1993.
+— 2001, l'odyssée de l'esprit, Flammarion, 1999.
+— Gédéon, ou les aventures extravagantes d'un expérimentateur en
+chambre, Éditions du Pommier, 2002.
+— Sciences cognitives, Éditions du Pommier, 2006.
+— Voir et pouvoir : qui nous surveille ?, Éditions du Pommier, 2009.
+— Le Mythe de la Singularité : faut-il craindre l'intelligence artifi-
+cielle ?, Le Seuil, 2017.
+
+2017 
+Le
+Copyright
+Tnttoductions 
+: av cs sss cow ssa saw came as aw pews oll
+L'intelligence artificielle, qui et quoi ?
+«Alan Turing est l’inventeur de l’intelligence artificielle. » . .19
+« Désormais des machines passent le test de Turing. » ..... 25
+« L'intelligence artificielle n’est pas une science. »......... 31
+« L'intelligence artificielle est une idée neuve. » .......... 37
+« Les Japonais sont les champions
+de Pintelligence artificielle. » ........................ 4B
+« La recherche en intelligence artificielle est menée
+PAPE GABA, Pisces 
+cen ssn ste 
+aaes ee dranieinos 49
+« Vintelligence artificielle pallie les défaillances
+Ge Noite nelle Perini 
+notre Seis came 55
+«Nous passerons bientôt de intelligence artificielle faible
+à l'intelligence artificielle forte. » ..................... 59
+L'intelligence artificielle, comment ça fonctionne ?
+«Il n’y a rien à craindre avec les ordinateurs,
+il suffic de les débrancher. » ............,,,,,,..,, 69
+« L'intelligence artificielle reproduit l’activité
+de notre cerveau. »...................,..........2, 75
+« L'intelligence artificielle n’est pas naturelle. »........... 81
+« Les ordinateurs raisonnent de façon binaire. » .......... 85
+« Les ordinateurs ne sc trompent jamais. » .............. 89
+« Les ordinateurs sont invincibles aux échecs et au go. » .. . .93
+« Le “Deep Learning’ révolutionne
+l'intelligence artificielle. »..........................101
+
+---
+
+[p. 27-29]
+le difficulté à laquelle
+il se heurtait à l’époque tenait à leur apparence extérieure
+qui faisait — et qui fait toujours — qu’en les voyant on ne
+peut les confondre avec des êtres humains, ce qui les discré-
+dite quelque peu à nos yeux. Une autre difficulté venait de
+ce que l’intrication entre notre corps sensible et le monde
+27
+Copyright 
+© 2017 
+Le 
+Caval 
+er 
+Bleu 
+éditons.
+Intelligence artificielle : vers une domination programmée ?
+n’est pas aisée à reproduire. II fallait donc trouver un subter-
+fuge qui affranchisse la machine de tout lien « corporel »
+avec le monde. Dès 1948, Alan Turing imagina cinq types
+d'épreuves qui ne recourent qu’à des organes élémentaires
+de vision, de parole et d’écoute, sans nécessiter un corps :
+(1) les jeux, comme le jeu d’échec, de morpion, de bridge
+ou de poker, (2) l'apprentissage des langues (3) la traduction
+d’une langue dans une autre, (4) la cryptographie, (5) les
+mathématiques. On conçoit dès lors qu’il ait recouru à la
+première épreuve, à savoir un jeu, en loccurrence le jeu
+d'échec, en 1948, puis qu'il l'ait raffiné en recourant à un
+nouveau jeu, le jeu de limitation, fondé sur l'apprentissage
+des langues par une machine en 1950. C’est dans ce contexte
+que se place son fameux test qu’il décrit merveilleusement,
+avec un exemple déconcertant de conversation entre un
+ordinateur et un homme. Sa prophétie n'apparaît alors
+qu’incidemment, comme pour montrer que le défi lancé est
+empirique et que sa réalisation n’a rien d’inimaginable.
+Contrairement à ce que beaucoup affirmèrent par la suite,
+cela ne délimite pas ce qu’Alan Turing entendaic par intelli-
+gence des machines, car il n’avait jamais ignoré les dimensions
+perceptives de l'intelligence, loin s’en faut, mais il les jugeait
+trop ardues à reproduire À court terme ; et contrairement
+aussi à ce que d’autres imaginèrent par la suite, Turing n’a
+jamais évoqué une indiscernabilité totale entre l'humain et la
+machine. En effet, la portée de cette épreuve demeure empi-
+rique au sens où elle doit pouvoir se soumettre à une expé-
+rimentation, c’est d’ailleurs ce que traduit la quantification
+précise énoncée dans sa prévision, quantification qui autorisa
+la mise en scène d’Huma Shah et de Kevin Warwick pour
+commémorer le 60° anniversaire de la mort d’Alan Turing...
+28
+
+L'intelligence artificielle, qui et quoi ?
+Bref, que l’on ait fabriqué des machines qui réalisent la
+prédiction d’Alan Turing formulée en 1950 ne clôt pas le
+débat autour de l'intelligence des machines, car tant pour
+Turing que pour ses successeurs immédiats, comme John
+McCarthy qui inventa le terme d'intelligence artificielle,
+doter les machines de pensée constitue l’horizon régulateur
+dune science à venir, et non un objectif final à atteindre
+dans un terme défini.
+
+---
+
+[p. 50-52]
+s
+@ intelligence artificielle,
+Nous pouvons donc faire deux constats qui paraissent
+à certains égards contradictoires : d’un côté, l'intelligence
+artificielle apparaît cruciale pour tous ces acteurs et, d’un
+autre côté, ces entreprises se proposent de partager gra-
+tuitement les techniques d'intelligence artificielle qu’elles
+so
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+L'intelligence artificielle, qui et quoi ?
+développent. Sans doute, ces deux attitudes semblent de
+prime abord antagoniques car, si l'intelligence artificielle est
+stratégique, cela signifie qu’elle donne un avantage compé-
+titif sur les autres, et donc qu’il serait préférable de ne pas
+dévoiler son savoir-faire en la matière.
+Pour bien comprendre ce qui est en jeu ici et montrer en
+quoi il n’y a rien la d’antinomique, en dépit des apparences,
+il faut d’abord expliquer pourquoi l'intelligence artificielle
+devient un enjeu majeur, puis montrer les facteurs clefs du
+développement des techniques d intelligence artificielle.
+L'importance de l’intelligence artificielle tient à l’économie
+spécifique de la toile qui s’est mise en place à partir de 2004,
+avec l’avénement du web 2.0. Pour saisir cette spécificité et
+l'apport de l'intelligence artificielle, rappelons qu’au début
+du développement de la toile, dans le courant des années
+1990, beaucoup pensèrent que l’économie du web se déve-
+lopperait sur le modèle classique des révolutions industrielles
+du passé, à savoir que les premiers arrivants sur les nouveaux
+marchés acquerraient rapidement des situations de domi-
+nation quasi-monopolistique. Cela explique la bulle spé-
+culative de la fin des années 1990, lorsque les investisseurs
+misaient sur tous les marchés en germes susceptibles de se
+développer, sans examiner le détail des technologies mises
+en œuvre ; cela explique aussi l’éclatement de cette bulle, au
+tournant des années 2000, car elle tenait à une piètre éva-
+luation du potentiel réel des nouvelles entreprises et surtout
+à une mauvaise analyse de la structure du tissu économique
+de l'Internet. Quelques années plus tard, en 2004, un cer-
+tain nombre d’industriels qui, en dépit de la crise, croyaient
+toujours dans la viabilité économique du web, essayèrent
+de comprendre les clefs du succès de grandes compagnies
+
+Copyright 
+© 2017 
+Le 
+Cavaler 
+Bleu 
+éditions.
+Intelligence artificielle : vers une domination programmée ?
+de [Internet comme Amazon et Google. Ils constatèrent
+que, dans le monde numérique, la réputation se défaisait
+aussi vite qu’elle se faisait et que, pour se maintenir, une
+entreprise devait exploiter toutes les sources d’information
+qui permettent d'évaluer et de comprendre l'opinion des
+consommateurs afin de remédier au plus tôt à d'éventuelles
+insatisfactions, d'améliorer ses produits en fonction de la
+demande et de répondre à des rumeurs malveillantes.
+Cela conduisit à la mise en place du web 2.0, c’est-à-dire
+du web participatif où Pon implique l'utilisateur dans la
+conception des produits et, surtout, où l’on récupère ses
+appréciations et ses réactions. Toutes ces informations
+constituent d'immenses bases de données qui traduisent les
+goûts, les opinions et les critiques des utilisateurs. Il convient
+de les exploiter pour améliorer la qualité des produits, les
+configurer au regard des besoins de chacun et définir la
+stratégie des entreprises. Dans ce but, intelligence artifi-
+cielle et, plus particulièrement, l'apprentissage machine
+jouent un rôle essentiel ; en effet, cela permet d’extraire des
+connaissances à partir de très grandes masses de données, ce
+que l’on appelle les Big Data. Ainsi, c’est pour interpréter
+ces immenses quantités d'informations recueillies sur le web
+que les grands acteurs de l'Internet manifestent le besoin
+d’intelligence artificielle et d'apprentissage machine.
+Ces techniques sont connues depuis longtemps ; elles
+ne constituent pas, en tant que telles, des nouveautés.
+Ce qui importe, ce sont d’une part les « tours de main »
+et les astuces nécessaires à leur mise en œuvre dans dif-
+férents contextes, et d’autre part les masses de données
+sur lesquelles les algorithmes d’apprentissage fonctionnent.
+Or, en rendant publiques les programmes informatiques
+52
+
+---
+
+[p. 73-76]
+e réseau, lorsque d’habiles programmeurs mal intention-
+nés franchiront les barriéres de protection et feront irruption chez
+vous dans vos objets familiers, par exemple dans votre voiture, dans
+votre montre, dans votre réfrigérateur, ce qui donne froid dans le dos,
+voire, si vous en avez un, dans votre stimulateur cardiaque !
+73
+‘SUONIP? 
+Nag 
+12/8489 
+97 
+ZTOZ 
+© wyBuAdoD
+
+Copyright 
+© 2017 
+Le 
+Caval 
+er 
+Bleu 
+éditons.
+« L'intelligence artificielle reproduit |
+l’activité de notre cerveau. »
+Longtemps, la robotique a navigué en eau trouble parce que, jusqu'au
+milieu des années quatre-vingt, inspirés par Turing, les tenants de
+l'intelligence artificielle dite « traditionnelle » n'ont cessé de vouloir
+copier le cerveau humain, d'essayer de reproduire des systèmes cognitifs
+complexes (langage, calcul, etc.), tout en essayant de donner
+un maximum de savoir à leurs créations.
+Bruno D, Cot, « Les Robots darwiniens », L'Express,
+rubrique Technologie, 21 juin 2001,
+Rappelons d’abord que la découverte de la structure
+fine de la matière cérébrale à la fin du xix° siècle par deux
+physiologistes, Camillo Golgi et Santiago Ramén Y Cajal,
+fut couronnée du prix Nobel en 1906. Dès 1870, Camillo
+Golgi savait visualiser, avec des techniques de coloration au
+nitrate d’argent, la composition des tissus cérébraux mettant
+ainsi en évidence des cellules que l’on appela les neurones.
+Quelques années plus tard, en reprenant la technique de
+Camillo Golgi, Santiago Ramén Y Cajal dessina la forme
+des neurones avec un « corps » d’où partent un ensemble
+de protubérances en saillie appelées les dendrites et un long
+filament, l’axone, le long duquel se propage l’influx ner-
+veux. Ce dernier se termine par des excroissances en boutons
+appelées les synapses, qui se connectent avec les terminai-
+sons dendritiques d’autres neurones.
+En 1943, Warren McCulloch, logicien et neuro-psychiatre,
+et Walter Pitts, mathématicien âgé à l’époque d’a peine
+75
+
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+Intelligence artificielle : vers une domination programmée ?
+20 ans, établissent un parallèle entre des réseaux d’auto-
+mates élémentaires et ce que l’on connaissait à l’époque de
+la structure du tissu cérébral, à savoir d’un côté les neu-
+rones, qu’ils assimilent à des automates élémentaires, et d’un
+autre côté les liaisons dites synaptiques entre les boutons
+synaptiques des neurones et les terminaisons dendritiques
+d’autres neurones qu’ils rapprochent des connexions entres
+ces automates. Les automates dont il est question 1a sont
+des composants électroniques idéalisés susceptibles d’être
+reliés les uns aux autres, en accrochant les sorties des uns
+aux entrées des autres par des liaisons dites synaptiques en
+référence à la métaphore cérébrale. Chacun de ces automates
+possède deux états, disons noir ou blanc, dont la valeur est
+calculée par une procédure simple, dépendant uniquement
+de la valeur des entrées.
+Il est loisible d'établir une analogie entre chaque auto-
+mate et une proposition logique qui correspond à un énoncé
+susceptible d’être vrai ou faux, puis entre l’état des auto-
+mates — noir ou blanc — et la véracité ou la fausseté des
+propositions qu ils représentent. Ainsi, si l’on prend deux
+propositions logiques : « Le ciel est couvert » et « Il pleut »,
+on peut leur associer deux automates, que nous appelle-
+rons A1 pour le premier et A2 pour le second. Et selon que
+l’automate A1 est dans l’état noir ou blanc, la proposition :
+« Le ciel est couvert » est vraie ou fausse ; de même, selon
+que l’automate Az est noir ou blanc, la proposition : « Il
+pleut » est vraie ou fausse.
+Les automates sont ensuite reliés entre eux, de façon à
+établir des liens entre les propositions qu’ils représentent.
+Par exemple, on peut imaginer que la sortie de l’automate
+A2 pointe vers l'entrée de l’automate A1. Pour simplifier,
+76
+
+---
+
+[p. 95-97]
+nnêtes lycéens. Le philosophe Hubert
+Dreyfus, critique officiel de l'intelligence artificielle depuis
+1965, en tira argument pour affirmer que l'intelligence arti-
+ficielle ne surpasserait jamais l’homme.
+Cela n’a pas suffi pour faire taire les prophètes modernes ;
+les prédications se firent entendre à nouveau dans le courant
+oS
+Copyright 
+© 2017 
+Le 
+Cavaler 
+Bleu 
+édit 
+ons.
+Intelligence artificielle : vers une domination programmée ?
+des années 1970 avec un pari lancé entre David Lévy, classé
+« maitre international » par la Fédération internationale
+d'échecs, et John McCarthy, l’un des pionniers de l’intelli-
+gence artificielle. L'enjeu était modeste : il affirmait qu’un
+ordinateur devait être en mesure de battre David Lévy dans
+un match avant la fin 1978. En 1978, le meilleur programme
+d'ordinateur de l’époque, 
+« CHESS 4.7 » fut battu dans un
+match en cinq parties par David Lévy, avec trois victoires
+pour homme, une partie nulle et une victoire pour la
+machine. Les prédictions étaient encore démenties.
+Mais les informaticiens ne désarmèrent pas. Et un peu
+plus de dix ans plus tard, en 1989, une machine, « Deep
+Thought », congue par M. Hsu, l’emporta sur David Lévy.
+Les prédictions semblaient maintenant étre réalisables, avec
+seulement un petit retard. Encouragée par cette victoire,
+l’équipe qui réalisa 
+« Deep Thought » prétendit que le titre
+de champion du monde serait à sa portée d’ici deux ou trois
+ans. La même année eut lieu un match spectacle entre le
+champion du monde Garry Kasparov et « Deep Though »,
+et la machine fut encore vaincue.
+Hsu, le concepteur de « Deep Thought », fut alors
+embauché par la firme IBM. Son programme changea de
+nom, il s'appelait désormais « Deep Blue », et il était exécuté
+sur des machines plus puissantes. À Philadelphie, en février
+1996, un match en six parties opposa Garry Kasparov et
+« Deep Blue ». Le champion du monde gagna trois parties
+sur six, la machine l’emportant uniquement sur une partie,
+la première, et laissant deux parties nulles. La machine
+était toujours battue.
+L'année suivante, du 3 au 11 mai, Garry Kasparov affronta
+à nouveau « Deep Blue », toujours sur six parties. Il gagna
+96
+
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+L'intelligence artificielle, comment ça fonctionne ?
+la première, « Deep Blue » emporta la deuxième, puis les
+trois suivantes furent nulles. Enfin, au cours de la dernière,
+Garry Kasparov déclara forfait après le 19° mouvement... Il
+s’avoua alors vaincu et troublé. Il dit avoir eu la sensation
+que la machine « lisait en lui ». « Deep Blue » avait battu
+le champion du monde en titre avec 3,5 points contre 2,5
+pour l’homme. Les prédictions d’Herbert Simon avaient été
+atteintes avec un retard de moins de trente ans, ce qui appa-
+rait bien faible au regard de l'histoire de l'humanité.
+Mais quelle signification faut-il attribuer à ces victoires ?
+Les machines sont-elles devenues invincibles ? En toute
+rigueur non, car une marge d'incertitude demeure et il peut
+toujours se trouver un esprit supérieur qui parvienne à les
+vaincre. En effet, pour l'emporter contre tout partenaire
+imaginable, une machine devrait être en mesure d’énumérer
+exhaustivement toutes les parties. Or cette énumération
+est à jamais impossible, même à l'issue d’un accroissement
+inouï de la capacité des ordinateurs, car le nombre de par-
+ties possibles, évalué 4 10°*° par le mathématicien Claude
+Shannon, est supérieur au nombre de particules dans notre
+galaxie...
+Sila machine qui l'a emporté sur Kasparov n’est pas invin-
+cible dans l’absolu, dépasse-t-elle à jamais les hommes, dans
+l’ordre de l'intelligence ? Peut-on imaginer que des hommes
+qui la fréquenteront quotidiennement apprendront, à son
+contact, à la dépasser ? Nul ne le saura, car les concepteurs
+de « Deep Blue » ont détruit leur machine, juste après sa
+victoire.
+Qui plus est, à Pissue de cette victoire, d’autres jeux,
+en particulier le go, semblaient encore hors de portée
+97
+
+---
+
+[p. 119-121]
+xemple, répondre à des ques-
+tions ou jouer aux échecs, point n’est besoin d’éprouver des
+émotions, des sentiments ou de l’empathie. Il suffit simple-
+ment qu’à une entrée donnée corresponde une sortie appro-
+priée. Ainsi, si l’on donne un théorème à démontrer à une
+machine, il suffit qu’elle fournisse la succession des mani-
+ng
+Copyright 
+© 2017 
+Le 
+Cavaler 
+Bleu 
+éditons.
+Intelligence artificielle : vers une domination programmée ?
+pulations formelles d’expressions symboliques qui, partant
+des axiomes parvient au théorème, pour être réputée l’avoir
+démontré.
+Bref, la réponse à la deuxième question s'impose : l’in-
+telligence artificielle n’a pas besoin de doter les machines
+d'émotions ni de conscience pour parvenir à des résultats
+tangibles et démontrables. Dès que, dans le temps de l’ac-
+tion, une machine se comporte comme si un être intelli-
+gent l’animait, on parle d'intelligence artificielle. C’est
+là une approche expérimentale et pragmatique, qui vise
+à reproduire sur une machine des facultés intellectuelles.
+Le malentendu tient à ce que beaucoup croient que l’in-
+telligence artificielle réduit nécessairement l’intépralité de
+l'intelligence, de la conscience, de la créativité à des méca-
+nismes élémentaires qu’une machine peut exécuter, Dès
+lors, beaucoup affirment qu’il reste toujours quelque chose
+d’irréductible et donc que l'intelligence artificielle ne peut
+être qu’un fiasco ; peut-être ont-ils raison d'affirmer que
+certaines dimensions de l'esprit échappent à la machine,
+mais cela n’empêche pas de commencer à reproduire tout
+ce que nous pouvons. Nous verrons bien un jour si l’on
+est capable de déterminer, par avance, ce qui échappera à
+jamais à la reproduction mécanique. Pour l’heure, rien ne
+permet encore de le faire !
+La troisième question touche au rôle des émotions en
+intelligence artificielle. Contrairement à une idée assez
+répandue, selon laquelle l'intelligence des machines serait
+froide, voire glacée et « métallique », le rôle des émotions
+est indubitable. En effet, intelligence d’une machine ne
+correspond pas à une propriété intrinsèque ; la seule intel-
+ligence des machines, c’est celle que nous leur attribuons.
+120
+
+Copyright 
+© 2017 
+Le 
+Cava. 
+er 
+B:cu 
+édions.
+Des machines et des hommes
+L'informatique affective
+Désormais, les ordinateurs prolifèrent et se miniaturisent, au point de
+se glisser dans nos objets les plus familiers et d'en changer quelque
+peu la fonction. Un agenda, un téléphone, une montre, une caméra
+contiennent des ordinateurs miniatures. Il en va de même avec les
+porte-monnaie, les albums photographiques ou les livres. Et il en ira
+peut-être bientôt ainsi avec notre frigidaire, qui se souviendra de ce
+qu'il contient, avec nos papiers d'identité qui stockeront toute notre
+histoire, avec nos stylos qui enregistreront nos écrits, avec nos habits
+équipés de puces et d'antennes RFID, afin que les plus désordonnés
+s'y retrouvent dans leur garde-robe, etc.
+Pour faciliter les échanges quotidiens avec tous les automates qui
+peuplent de plus en plus nos vies, et avec les robots domestiques
+qui se mettent à notre service, il faut trouver un langage commun.
+Or, dans le temps de l’action, le langage des chiffres demeure trop
+abscons pour être accessible. De même, le langage naturel se ré-
+vèle souvent difficile à interpréter, d'autant plus que la compréhen-
+sion tient en général plus à l'information implicite et à la culture
+partagée entre l'émetteur et le récepteur qu'au message lui-même. En
+revanche, le langage des émotions apparaît beaucoup plus immédiat
+et plus universel. Ainsi, le froncement des sourcils, la forme des yeux
+ou de la bouche suscitent en nous une émotion. Nous comprenons
+immédiatement l'inquiétude, la déception, la satisfaction, l'interro-
+gation, etc. Des études de psychologie ont montré l'efficacité de ce
+mode de communication. L'informatique affective en tire parti pour
+construire des interfaces homme-machine ou, plus généralement, des
+robots qui échangent avec les hommes au moyen du langage des
+émotions. Ces dernières sont suscitées en nous par les couleurs, les
+sons ou les expressions imprimées sur les visages des êtres virtuels
+avec lesquels nous sommes censés échanger.
+121
+
+---
+
+[p. 140-143]
+ur décrypter le contenu
+des téléphones des auteurs de la tuerie de San Bernardino qui
+avait eu lieu le 2 décembre 2015. Le cas de l’application Tele-
+gram, qui permet aux terroristes et aux hommes politiques
+de communiquer sans que l’on puisse accéder au contenu
+de leur message, est lui aussi illustratif de cette opposition.
+140
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+Des machines et des hommes
+Souvenons nous du rôle que cela eut dans la mobilisation
+des djihadistes qui, durant l’été 2016, ont investi l’église de
+Saint-Étienne-du-Rouvray, proche de Rouen, et ont assas-
+siné le prêtre Jacques Hamel qui s’y trouvait.
+Face aux acteurs privés qui le narguent et veulent se subs-
+tituer à lui, l’État démocratique assure de plus en plus diffi-
+cilement la sécurité intérieure des nations à l’heure des Big
+Data. Comment dès lors l’assimiler à un Big Brother, c’est-
+à-dire à un monstre froid qui dévorerait ses enfants comme
+le Léviathan de Hobbes ? Bien au contraire, aujourd’hui, il
+se montre de plus en plus impuissant et, par là, de moins en
+moins capable d'assurer la sécurité des citoyens, tandis que
+les géants de l’Internet prennent le relais. Tout en affichant
+les meilleures intentions du monde, ces derniers aspirent
+à tout dominer à la place des États. Cette tâche leur appa-
+raît d’autant plus aisée qu’ils n’ont besoin d’aucune caution
+démocratique, d’aucun vote, d’aucune légitimité autre que
+celle que leur offre la maîtrise des technologies qui régissent
+de nouvelles régions du cyberespace. Bref, avec les Big
+Data, nous n'avons pas à craindre qu’un Big Brother
+unique s'impose à tous, mais bien plutôt que les Gentils
+Organisateurs (GO) du monde moderne se substituent
+aux États et aux institutions républicaines pour vider l’idée
+démocratique de souveraineté populaire de toute substance.
+141
+
+‘SUONIP? 
+Nag 
+12/8489 
+97 
+ZTOZ 
+© wyBuAdoD
+
+Copyright 
+2017 
+Le 
+Cavalier 
+Bleu 
+éditons.
+« Les “robots tueurs” remplaceront
+bientôt les soldats. »
+Les armes autonomes choisissent leurs cibles et engagent le feu sans
+intervention humaine. Cela inclut, par exemple, des hélicoptères
+quadri-rotors armés capables de rechercher et d'éliminer des personnes
+répondant à certains critères prédéfinis, ce qui les distingue des missiles
+de croisière ou des drones pilotés à distance pour lesquels les humains
+prennent toutes les décisions de ciblage. Les technologies de l'intelligence
+artificielle ont atteint un stade où le déploiement de tels systèmes sera
+pratiquement — sinon légalement — réalisable dans les années, et non
+les décennies, qui viennent, et les enjeux en sont majeurs : les armes
+autonomes ont été décrites comme la troisième révolution dans la guerre,
+après la poudre à canon et les armes nucléaire.
+Institut du futur de la vie, 
+« Autonomous Weapons:
+an Open Letter from Al & Robotics Researchers », juillet 2015
+En juillet 2015 une lettre ouverte publiée à l’occasion de
+Pouverture de la conférence internationale 
+@ intelligence
+artificielle, PIJCAI (International 
+Joint Conference on Arti-
+ficial Intelligence), et signée par plus de 3000 spécialistes
+d'intelligence artificielle et de robotique ainsi que par plus de
+17 000 citoyens, dont des personnalités prestigieuses comme
+Pastrophysicien Stephen Hawking, l’homme d'affaire Elon
+Musk, le fondateur de la société Apple Steve Wozniak,
+le prix Nobel de physique Frank Wilczek, le philosophe
+Daniel Dennett ou le linguiste Noam Chomsky, mani-
+festait l'inquiétude des plus grands scientifiques contem-
+porains face aux applications potentielles de l’intelligence
+143
+
+---
+
+[p. 164-166]
+imagine un subterfuge, ledit
+« jeu de limitation ». Nous ne nous étendrons pas ici sur
+la pertinence de ce test d'intelligence qui a été beaucoup
+commenté et qu’on appelle le test de Turing. En revanche,
+intéressons-nous aux prédictions d’Alan Turing lui-même :
+d’après lui, on devrait être en mesure, d’ici so ans (rappelons
+164
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+L'avenir de l'intelligence artificielle
+que nous étions en 1950), de concevoir un ordinateur capable
+de tromper un interrogateur dans plus de 30 % des cas, sur
+un échange de cinq minutes. Malgré tous les déboires et
+toutes les déconvenues de l'intelligence artificielle, on est
+effectivement capable depuis quelques années de concevoir
+des machines (appelées parfois chatbots en anglais, littérale-
+ment, « robots bavards » en français, ou plus communément
+« agents conversationnels ») avec lesquelles tous peuvent
+échanger et discuter sur Internet. Or ces agents conversa-
+tionnels qui jouent au jeu de limitation obtiennent des
+performances très semblables à celles prévues par Turing.
+On prétendit d’ailleurs, en 2014, qu’un tel agent, nommé
+Eugene Goostman et développé en 2001, parvint 13 ans plus
+tard, grâce aux algorithmes d'apprentissage dont il se com-
+pose, à tenir tête à des hommes dans les conditions prévues
+par Alan Turing.
+Dans un ordre d’idées analogue, Herbert Simon, qui
+devint plus tard prix Nobel d’économie et regut la médaille
+Turing, fit avec son collégue Alan Newell des déclarations
+fracassantes. Selon eux, (nous étions en 1958) :
+— dans 10 ans, les ordinateurs, s’ils ne sont pas interdits de
+participation aux compétitions internationales, devront indu-
+bitablement devenir les champions du monde au jeu d'échecs ;
+— dans 10 ans, un ordinateur sera certainement capable
+de composer de la musique douée d’une indéniable valeur
+esthétique ;
+— dans 10 ans, les ordinateurs démontreront des théo-
+rèmes mathématiques totalement originaux ;
+— dans 10 ans, les ordinateurs simuleront le psychisme au
+point que toutes les théories psychologiques prendront la
+forme de programmes d'ordinateurs, etc.
+165
+
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+Intelligence artificielle : vers une domination programmée ?
+Il va sans dire que ces prédictions se sont toutes révélées
+erronées. Ainsi, en 1965, un enfant de 10 ans battit l’un des
+premiers programmes d'ordinateur jouant aux échecs. Pour-
+tant, en 1997, c’est-à-dire 40 ans plus tard, un ordinateur
+parvint à défier et à vaincre le champion du monde en titre
+au jeu d'échecs. Et, depuis, ils l’emportent même au jeu
+de go réputé beaucoup plus complexe, et au poker, plus
+lucratif encore, à défaut d’être plus difficile... Les ordina-
+teurs sont beaucoup utilisés par les musiciens et ils contri-
+buent à la création artistique contemporaine. Ils prennent
+une part importante dans l’activité des mathématiciens,
+pour démontrer des théorèmes. De même, les psychologues
+ont beaucoup fait appel à des modèles informatiques. Cela
+veut dire que la plupart de ces annonces n'étaient pas totale-
+ment absurdes, même si elles ont été quelques peu démenties,
+car les délais ne furent pas respectés. Mais qu'est-ce qu’un
+retard de quarante ans au regard de l’histoire de l’humanité ?
+Toujours dans le domaine de l'intelligence artificielle,
+on s’enthousiasma au début des années 1980 pour ce qu’on
+appelait les « systèmes experts », c’est-à-dire pour des logi-
+ciels qui comprenaient, en lieu et place des programmes
+informatiques traditionnels, du savoir spécialisé se référant
+à des connaissances détenues par des hommes de métier.
+Là encore, les anticipations furent déçues : le développe-
+ment industriel des systèmes experts ou des systèmes à base
+de connaissances fut beaucoup plus lent que ce que tous
+les spécialistes de prospective avaient imaginé. Pourtant,
+aujourd’hui, ces techniques se diffusent dans l’industrie, où
+elles sont couramment utilisées. Qui plus est, les progrès
+d’Internet leur ont donné une actualité neuve : ces techno-
+logies contribuent à réaliser ce que les chefs des gouver-
+166
+
+---
+
+[p. 186-188]
+lités d’action de la communauté européenne
+et de la France en matiére de financement de la recherche
+et de l’enseignement, afin de former la jeunesse aux emplois
+de l'avenir, de former les travailleur à tout age et de stimuler
+la création d’entreprises dans le secteur des technologies de
+Pintelligence et de la connaissance ?
+186
+& 2017 
+Le 
+Cava.er 
+Bleu 
+Sditions.
+Copyrigt't
+« L'intelligence artificielle constitue |
+un danger existentiel majeur
+et inéluctable pour l'humanité. »
+Tandis que l'impact à court terme de l'IA dépend de qui la contrôle,
+ses impacts à long terme dépendent uniquement de savoir
+si elle peut être contrôlée.
+Stephen Hawking, Stuart Russell, Max Tegmark, Frank Wilczek,
+The Independent, 1" mai 2014
+Le 1" mai 2014, une tribune alarmiste parue dans le
+journal The Independent et signée par quatre éminents
+scientifiques, Stephen Hawking astrophysicien fameux,
+Stuart Russell professeur à l’université de Berkeley ct auteur
+d’un manuel sur [intelligence artificielle qui fait autorité,
+Max Tegmark physicien et professeur au MIT et Frank
+Wilczek, physicien, professeur au MIT et prix Nobel de
+physique, nous alertait des dangers que l'intelligence arti-
+ficielle fait courir à l'humanité. Selon ces quatre personna-
+lités, nous atteindrons très bientôt un point de non-retour
+au-delà duquel nous irons inéluctablement à notre perte
+sans jamais pouvoir revenir en arrière. Aujourd’hui, il serait
+encorc temps ; demain, plus rien ne sera possible !
+Cet appel à la vigilance fût suivi de beaucoup d’autres
+lancés par les mêmes, par exemple par Stephen Hawking à
+la BBC, ou par Stuart Russel qui a parrainé en 2015 deux
+lettres ouvertes publiées sur le site de l’Institut du futur
+de la vie, Pune sur les dangers de l'intelligence artificielle,
+
+Copyright 
+© 2017 
+Le 
+Cavaler 
+Bleu 
+éditions.
+Intelligence artificielle : vers une domination programmée ?
+l’autre sur les méfaits potentiels des armes autonomes, ou
+par d’autres, qu'il s'agisse de philosophes, comme Nick
+Bostrom, ou d'hommes d’affaires très en vue comme Elon
+Musk et Bill Gates. Partout dans le monde, ces personnalités
+font des émules. En France, c’est le cas avec un médecin qui
+est en même temps un homme d’affaires très médiatique,
+Laurent Alexandre, et un philosophe qui s’est spécialisé
+dans le transhumanisme, Jean-Michel Besnier. En ]’occur-
+rence, ce dernier se demandait dans une émission de radio
+si l’homme était encore maître de Pintelligence artificielle
+(France Info, décembre 2014). À titre d'illustration, il men-
+tionnait l'assistance au pilotage des avions et les « robots
+traders » à la bourse qui l’un et l’autre dessaisissent l’homme
+du pouvoir d'intervenir.
+Ces déclarations publiques annoncent toutes un événe-
+ment majeur et inquiétant consécutif 
+à l’utilisation massive
+des technologies de l'information. Elles pointent sur les
+conséquences dramatiques de cet événement pour l’huma-
+nité, sur son inéluctabilité et sur son imminence. Ces trois
+points méritent d’être examinés l’un après l’autre.
+Commençons par les supposées conséquences néfastes
+pour l’humanité dans son ensemble. Aux dires de Stephen
+Hawking, le déploiement des technologies d'intelligence
+artificielle sur des ordinateurs hyperpuissants constituerait
+« notre plus grande menace existentielle », car les humains
+ne pourront plus rivaliser avec des machines devenues plus
+intelligentes qu’eux. Cela sous-entend que ces machines
+ultra-intelligentes, du fait de leur intelligence, entreraient
+en rébellion contre nous, prendraient le pouvoir et nous
+réduiraient en esclavage, ce qui signifie que les machines
+que nous fabriquerons auront des désirs, des aspirations, des
+188
+
+---
+
+[p. 211-214]
+stituent une branche des mathématiques ; elles traitent
+des objets discontinus, comme par exemple les nombres
+entiers ou les graphes.
+Système expert : un système informatique construit à
+partir du savoir d'hommes de métier et apte à résoudre les
+problèmes relevant de leur champ de compétence est appelé
+un « système expert ».
+211
+‘SUONIP? 
+Nag 
+12/8489 
+97 
+ZTOZ 
+© wyBuAdoD
+
+a
+€
+£
+5
+oO
+3
+2
+oO
+L
+2
+ni
+>
+0
+Ô
+&
+5
+Nn
+ra
+N
+Copyright
+Une encyclopédie générale en français qui donne des in-
+formations précises sur toutes les techniques informatiques :
+Akoka J. & Comyn-Wattiau I. (dir.), Encyclopédie de l'infor-
+matique et des systèmes d'information, Vuibert, 2007.
+Deux ouvrages classiques en français sur l'intelligence
+artificielle : Laurière J.-L., Intelligence artificielle : résolution
+de problèmes par l'Homme et la machine, Eyrolles, 1987 et
+Nilsson N., Principes d'intelligence artificielle, Cépadues, 1988.
+Un livre classique sur les fondements épistémologiques
+de l'intelligence artificielle par l’un des pionniers de ce
+domaine : Herbert Simon, Sciences des systèmes, sciences de
+l’artificiel, Bordas, 1991.
+Un ouvrage de référence en anglais et actuel sur l’intelli-
+gence artificielle : Russel S. & Norvig P., Artificial Intelli-
+gence a Modern Approach, Prentice Hall Series in Artificial
+Intelligence, 1995.
+Un livre passionnant sur la vie d’Alan Turing : Andrew
+Hodges, Alan Turing ou l'énigme de l'intelligence, Biblio-
+théque scientifique Payot, 2004.
+213
+
+Copyright 
+© 2017 
+Le 
+Cavalier 
+Bleu 
+éditions.
+Intelligence artificielle : vers une domination programmée ?
+Un recueil de textes classiques sur la cybernétique et les
+sciences cognitives. On y trouvera en particulier le fameux
+article de Turing traduit en français : Sciences cognitives,
+textes fondateurs (1943-1950), textes rassemblés et traduits par
+A. Pelissier, présentés et annotés par A. Tête, PUF, collec-
+tion « Psychologie et sciences de la pensée », 1994.
+Les deux articles originaux d’Alan Turing sur l’intel-
+ligence des machines : Alan Turing (1948) “Intelligent
+Machinery”, National Physical Laboratory Report, B. Meltzer
+and D. Michie (eds), Machine Intelligence 5, Edinburgh
+University Press, 1969 ; Alan Turing (1950) “Computing
+Machinery and Intelligence”, Mind 59 (236), pp. 433-60.
+Un livre écrit par un philosophe, John Searle, où il décrit
+la très célèbre expérience dite de la « Chambre chinoise »
+et où il introduit la distinction entre l'intelligence artifi-
+cielle forte et l'intelligence artificielle faible : John Searle,
+Du cerveau au savoir, Hermann, éditeurs des sciences et
+des arts, 1985.
+Un ouvrage d'imagination et de fantaisie sur l’intelli-
+gence artificielle et la créativité : Douglas Hofstadter, Güdel,
+Escher, Bach, les brins d'une guirlande éternelle, InterÉdition,
+1985.
+Deux ouvrages de fonds sur les interfaces homme-
+machine : Byron Reeves, Clifford Nass, The Media Equation,
+Cambridge University Press, 1996, et Donald Norman, The
+Design of Everyday Things, Basic Books, 2002.
+Deux livres sur le cerveau et les neurosciences : Antonio
+Damasio, L'Erreur de Descartes : la raison des émotions,
+Odile Jacob, 1995, et Jean-Noël Missa, L'Esprit-cerveau : la
+214

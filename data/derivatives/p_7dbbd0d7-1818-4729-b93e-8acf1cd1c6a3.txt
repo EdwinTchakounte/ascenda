@@ -1,0 +1,540 @@
+OUVRAGE : S.A.R.R.A. 1 Une Intelligence Artificielle
+AUTEUR(S) : David Gruson
+ANNÉE : inconnue
+PAGES : 235
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Sommaire (p. 235-235)
+  Quelques mots sur son auteur… (p. 3-3)
+  Préface (p. 4-5)
+  Hinweise (p. 6-6)
+  Motto (p. 7-8)
+  Textbeginn (p. 9-11)
+  31 août 2025: H -136 heures et 17 minutes (p. 12-17)
+  1 er septembre 2025: H -119 heures et 47 minutes (p. 18-24)
+  2 septembre 2025: H -95 heures et 47 minutes (p. 25-39)
+  3 septembre 2025: H -71 heures et 47 minutes (p. 223-234)
+  4 septembre 2025: H moins 47 heures et 47 minutes (p. 40-51)
+  5 septembre 2025: H -23 heures et 47 minutes (p. 52-69)
+  6 septembre 2025: H + 13 minutes (p. 70-97)
+  7 septembre 2025: H +24 heures et 13 minutes (p. 98-125)
+  8 septembre 2025: H +48 heures et 13 minutes (p. 126-146)
+  9 septembre 2025: H +72 heures et 13 minutes (p. 147-166)
+  10 septembre 2025: H +96 heures et 13 minutes (p. 167-192)
+  11 septembre 2025: H +120 heures et 13 minutes (p. 193-204)
+  12 septembre 2025: H +144 heures et 13 minutes (p. 205-219)
+  BIOGRAPHIE - DAVID GRUSON - (p. 220-220)
+  CATALOGUE DE LA MAISON (p. 221-221)
+  Impressum (p. 222-222)
+
+[12/148 passages, 8667 tokens sur 141240]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+Quelques mots sur son auteur...
+David GRUSON signe ici son premier roman et marque les débuts du
+polar bioéthique ! Ancien Conseiller du Premier ministre chargé de la Santé
+et directeur général de CHU, il est un spécialiste reconnu dans le domaine
+des politiques publiques de santé. Il a eu à intervenir directement dans la
+gestion de risques sanitaires majeurs tels que celui constituant la trame de
+cet ouvrage. L’auteur s’est, en outre, beaucoup engagé, avec l’initiative
+Ethik-IA pour promouvoir une vision responsable de la diffusion de
+l’intelligence artificielle et de la robotisation en santé. Docteur en droit
+médical et titulaire d’un troisième cycle de technologies de l’information et
+de la communication, ses idées sur le numérique en santé sont diffusées
+dans des cercles académiques de haut niveau aux plans national et
+international.
+Sous la forme d’une fiction d’anticipation d’un réalisme glaçant,
+S.A.R.R.A., une intelligence artificielle apporte une contribution décisive à
+cette démarche citoyenne essentielle. Derrière une intrigue ciselée et sans
+aucun temps mort, il s’agit bien d’un véritable conte philosophique sur
+l’intelligence artificielle, ses apports et ses risques de dérives.
+
+---
+
+[p. 21-22]
+’État. L’un des plus craints aussi.
+Cette position de pouvoir lui avait valu toute une série de surnoms : le
+« Proconsul », le « Gouverneur », le « Cardinal » voire le « Prince ». Cette
+situation avait aussi nourri de très sérieuses inimitiés à son encontre.
+D’abord formulées mezza voce dans le contexte post-traumatique de 2021,
+les objections gagnèrent en vigueur avec le sentiment d’un éloignement de
+la menace terroriste. Le consensus des analystes faisait, ainsi, état mi-2025
+d’une désagrégation en cours des Fils de l’État islamique sous l’effet de
+luttes d’influence entre factions rivales.
+La raison d’être même de ces moyens exorbitants du droit commun avait
+été ouvertement questionnée par l’opposition de Gauche radicale dans le
+cadre des travaux préparatoires au projet de loi de finances pour 2026. Et
+derrière la polémique budgétaire se posait aussi naturellement une question
+de pouvoir. Celle de la légitimité de cette concentration de tous les leviers
+de la lutte opérationnelle contre le terrorisme entre les mains d’Alain
+Marquet.
+La nouvelle d’une mise en mouvement du groupe Fayçal était donc tout
+sauf neutre. Et ce d’autant plus que le Général Marquet eut un contact
+convergent, ce 1er septembre, avec son confrère jordanien, Farouk Moktar.
+Les deux hommes se connaissaient de longue date. Leur proximité était à
+peine dissimulée, mais personne n’était en capacité de remonter à l’origine
+exacte de leur rencontre. Certains évoquaient la guerre d’Iraq de 2003. En
+tout état de cause, le chef des services du Royaume Hachémite avait dû une
+partie de son ascension aux bonnes ondes diffusées par Alain Marquet
+auprès de la CIA.
+C’est donc naturellement que Moktar contacta Marquet par canal crypté à
+16h30. Il lui expliqua avoir eu l’indication, quelques heures plus tôt, d’une
+présence de Fayçal dans la région de Sinjar, à la frontière de la Syrie et de
+l’Iraq, côté iraquien. Franchir une frontière désormais aussi contrôlée
+induisait une prise de risque certaine pour un responsable de ce rang des
+FEI. Le déplacement devait donc en valoir la peine. C’est sûrement à
+compter de ce moment qu’Alain Marquet acquit la conviction que Fayçal
+préparait une action d’envergure.
+Le signal de Vigoureux le localisait également dans cette zone. Plus
+qu’une confirmation de l’écho jordanien, il s’agissait aussi d’un gage de
+plus de la valeur acquise par l’agent français. Le Cheikh Yassine Fayçal
+l’emmenait avec lui, même dans un transit aussi périlleux.
+En dépit de ce contexte, Alain Marquet ne dérogea pas à sa tradition
+sacrosainte. Quand il était à Paris, il s’efforçait d’être toujours à son
+domicile à 19h30, boulevard Malesherbes, dans le huitième arrondissement.
+Il ne manquait à l’appel que les soirs de convocation à Matignon ou à
+l’Élysée. Le Ministre de la Défense – en poste depuis une année
+
+---
+
+[p. 40-41]
+4 septembre 2025
+H moins 47 heures et 47 minutes
+Président de la République
+La réunion de crise qui se déroula à partir de 07h00 dans le bureau du
+Président de la République en présence du Premier Ministre, du Ministre de
+la Défense, du Ministre de l’Intérieur et de la Ministre de la Santé ne donna
+lieu à aucun compte-rendu écrit. La liste exhaustive des personnes
+effectivement présentes à cet échange n’est même pas certaine. Les
+téléphones portables avaient tous été conservés par la sécurité avant l’entrée
+dans la pièce.
+Le seul élément disponible pour attester de cette réunion est la
+transcription que le Président de la République lui-même devait en donner
+en conférence de presse dix jours plus tard. Il devait alors expliquer a
+posteriori que l’incertitude sur l’origine de la contamination l’avait incité à
+considérer la piste d’une attaque terroriste biologique comme sérieuse. Il
+indiquerait également que l’idée d’une implication des Fils de l’État
+Islamique (FEI) avait été évoquée dès ce 4 septembre.
+Cette version peut être considérée comme plausible, dans la mesure où le
+passage à une réunion de gestion de crise quotidienne sous l’égide du
+Premier ministre avec le concours du secrétariat général à la Défense et à la
+Sécurité nationale remonte également à cette date.
+Il est également permis d’avancer que c’est lors de cette réunion à
+l’Élysée qu’il fut convenu de garder dans un premier temps secrète la forte
+probabilité d’une mutation du virus. La volonté d’éviter des mouvements de
+panique au sein de la population fut un déterminant constant de l’action des
+pouvoirs publics au cours de cette crise. Cette motivation joua sans doute
+un rôle puissant dans cette rétention d’information.
+La publication de l’article du Parisien avait, comme attendu, changé les
+choses sur le terrain médiatique. De nombreux commentateurs épiloguèrent
+sur l’article dans leurs revues de presse radiophoniques du matin. Deux
+chaînes d’information en continu revinrent également sur l’affaire dans la
+
+matinée. Sur l’une d’entre elles, un « spécialiste en gestion de risques
+majeurs » allait évoquer l’hypothèse terroriste. À aucun moment au cours
+de l’heure et demi de l’émission, les fondements d’une discipline de
+« gestion des risques majeurs » ne furent rappelés. Les qualités de ce
+commentateur pour s’exprimer à ce titre ne furent pas précisées non plus.
+Mais le fait était là : l’hypothèse était sur la place publique.
+Franck Pragnic
+Franck Pragnic faisait son footing, comme chaque matin, à 07h30.
+Toujours le même parcours. Il quittait son domicile rue des Francs
+Bourgeois, traversait la Place des Vosges, la Bastille et prenait la « coulée
+verte » jusqu’au jardin de Reuilly où il faisait demi-tour. Il poussait parfois
+jusqu’à la porte de Vincennes. Et le week-end jusqu’au Bois.
+La pratique sportive lui était depuis longtemps indispensable. Pendant ses
+années d’études, il avait atteint un niveau national en compétition de kayak
+biplace avec son frère Damien. À quarante-trois ans, il s’était désormais
+tourné vers la course à pieds et le cyclisme qu’il aimait particulièrement
+pratiquer le soir dans Paris. L’exercice pouvait être dangereux mais, depuis
+dix ans qu’il s’y était mis, Franck avait toujours respecté le principe de
+deux sessions nocturnes de trente-cinq à quarante kilomètres.
+Son métier lui permettait alors la plupart du temps de s’organiser pour
+libérer le temps nécessaire au sport. Après des débuts compliqués, comme
+la plupart de ses collègues, à enchaîner pige sur pige, Franck Pragnic avait
+fini par percer dans le photojournalisme. Il était même devenu l’un des
+photographes de référence de Paris-Match. Esthétique sans être formaliste,
+précis sans être démonstratif, son style était devenu reconnaissable et
+reconnu. Au point même de susciter des réactions contrastées de ses
+confrères chargés de rédiger les articles iconographiés par Pragnic. Certains
+s’en félicitaient mais d’autres craignaient de voir leurs papiers éclipsés par
+l’impact des photos.
+Le sport et la photo : les deux moteurs de la vie de Franck Pragnic
+semblaient s’alimenter l’un l’autre et laissaient peu de place à une vie
+personnelle construite et encore moins à l’idée d’une famille.
+Franck s’était, pendant longtemps, refusé à écouter les conseils de ses
+amis lui suggérant d’exposer son travail photographique. Il leur répondait,
+
+---
+
+[p. 57-58]
+« Mais bien sûr tu peux rester, j’ai déjà réglé »
+lui dit-il. Sur les images, Anna Laurent semblait avoir les yeux dans le vide
+en regardant partir le professeur. « Prego » lui dit le serveur en déposant sur
+la table un somptueux plateau d’antipasti de fruits de mer.
+Flora Berry et Franck Pragnic
+SMS de Flora à Franck P. – 14h12
+Impossible pour moi en ce moment. Je suis submergée à la galerie.
+Mélusine
+La Médecin-Générale Mélusine avait compris depuis la réunion du matin
+à l’Élysée que la mise en opérationnalité de S.A.R.R.A. était désormais
+sérieusement envisagée. Lors de ses travaux de conception du modèle, elle
+n’avait pas imaginé un délai de prévenance si court et une échéance si brève
+après la phase toute juste achevée du prototype. Dès son retour à son bureau
+du Ministère de la Défense à Balard, elle demanda donc à son aide de camp
+du Service de santé des armées – le sergent Caroline Fagalde – de contacter
+sans délais le Pr Hugues Parais pour un rendez-vous d’ici la fin d’après-
+midi.
+La Médecin-Générale avait été, quinze ans plus tôt, l’une des élèves de
+ce que l’on avait appelé « l’école Parais » de virologie. Interne puis chef de
+clinique dans le service de Bichat, elle connaissait chacune des habitudes du
+Professeur et avait eu à subir des centaines de « visites de confirmation »
+auprès de ses patients. Elle quitta brutalement Bichat au bout de sept ans
+pour rejoindre GenSide. Mélusine ne prit donc pas part aux travaux de
+l’équipe Parais qui donnèrent naissance à la première génération de vaccins
+contre Ébola.
+Le laboratoire GenSide était alors l’une des pépites du génie génétique
+français. D’abord incubée sur le génopôle d’Évry, la société vola très vite de
+ses propres ailes après la réussite de la mise sur le marché de thérapies
+géniques innovantes dans le traitement des maladies de l’appareil
+locomoteur. Le projet du fondateur de GenSide, Gabriel Bachter, était plus
+large. Son intuition fondamentale était que la génétique pouvait permettre
+d’accompagner le processus de prise en charge des patients dans son
+ensemble, de guider pas à pas la décision médicale. Et il pensait que cette
+révolution – longtemps attendue – était désormais prête à advenir dans toute
+sa radicalité.
+Pour y parvenir, Gabriel Bachter considérait que le meilleur levier de
+diffusion était le développement d’une intelligence artificielle dédiée qui
+accompagnerait les soignants en apportant une aide à la décision génétique.
+GenSide s’associa donc en 2020 sous forme de joint-venture avec IT-
+Synapse. Cette start-up informatique – bénéficiant également de
+
+---
+
+[p. 76-77]
+mille avec, au final, seulement trois
+actions en justice intentées contre PanGoLink, dont deux conduisant à des
+indemnités inférieures au forfait proposé par la compagnie. Le dernier
+recours était toujours pendant et en était au stade de la Cour européenne des
+droits de l’Homme. Devant l’opiniâtreté des requérants et les faibles
+chances de succès du recours, Crimson & Backer avait conseillé à son
+employeur de « faire durer » la procédure. La décision finale de la CEDH
+ne faisant guère de doutes, la victoire finale de PanGoLink dans ce dossier
+devait avoir valeur dissuasive pour d’éventuels contentieux futurs.
+Ce 6 septembre, Stacy Backer – d’ordinaire si velléitaire et positive –
+ n’était pourtant pas rassurée, ainsi que le laissait traduire la retranscription
+des écoutes de la NSA opérée à partir du portable de Brad Murphy.
+— Stacy Baker : C’est quoi ce mail Josh, tu m’expliques ?
+Josh Nichols avait retransmis à 23h43 heure de San Francisco à Stacy et
+Brad un mail adressé, deux heures plus tôt, depuis son adresse
+professionnelle josh_nichols@pangolink.com. Le mail initial, portant en
+copie le PDG de la filiale basée à Paris, était adressé au secrétaire général
+à la Défense et à la Sécurité nationale française et confirmait l’accord de
+Mr Nichols pour utiliser les panoptiques dans la diffusion de messages de
+prévention Ébola.
+— Josh Nichols : Justement, je n’en ai aucune idée, c’est pour ça que
+vous êtes là. Je n’ai jamais envoyé ce mail.
+— Brad Murphy : Mais c’est impossible Josh. Tu sais comme moi que
+tous nos mails sont protégés par la double sécurité du cryptage et de la
+reconnaissance vocale.
+— Josh Nichols : Je sais bien. Mais j’ai fait vérifier et ce mail est
+authentique.
+— Brad Murphy : Alors on a un gros problème de sécurité informatique
+interne. C’est sûrement un coup de Myers.
+Le renouvellement de Josh Nichols devait être soumis au Board de
+PanGoLink quinze jours plus tard et il était de notoriété publique que Jim
+Myers mobilisait tous ses réseaux pour tenter de réunir une majorité de
+défiance.
+— Stacy Backer : À mon avis, ce n’est pas le premier sujet. Le point le
+plus immédiat me semble être le risque de rupture de confiance des
+consommateurs dans le produit. Ils n’ont jamais accepté de payer leurs
+abonnements pour recevoir de la pub gouvernementale.
+— Josh Nichols : Tu as raison. Mais le sujet est plus que sensible.
+— Stacy Backer : RealTime Family en est où sur le marché français ?
+— Brad Murphy : On a passé les 35 % de pénétration et c’est encore en
+forte croissance.
+
+---
+
+[p. 96-97]
+se une
+rationalisation.
+Je ne crois pas qu’il y ait eu une intention implicite chez les
+photographes auteurs des deux clichés évoqués. Mais ce processus de
+réaction collective présente aussi indéniablement un intérêt. Minorer la
+réflexion de responsabilité en l’ensevelissant sous des montagnes de terre
+de compassion personnelle.
+Il était donc logique de réfléchir à la manière de susciter ce réflexe pour
+le cas d’espèce.
+
+---
+
+[p. 124-125]
+lèles. La quête principale – secourir la
+princesse – surpasse, certes, toutes les autres. Mais l’objectif majeur ne
+peut être atteint sans succès dans les aventures secondaires : quête des
+fragments de cœurs, résolution de jeux d’adresse, échange ou achat
+d’objets à partir de rubis qu’il faut gagner... Cette notion d’un monde en
+fragments peut également être relue dans le processus de dévoilement
+progressif de la carte de l’univers dans lequel le héros Link est appelé à se
+déplacer et à se débattre.
+Zelda représente, par ailleurs, une mine considérable de données sur la
+vie. On peut y apprendre le dévouement, le courage mais aussi y
+découvrir la représentation d’une palette très étendue d’émotions
+humaines.
+Le jeu nous enseigne – enfin – la nécessité d’opérer des choix
+tactiques, d’endurer des contraintes pour atteindre la réussite finale dans
+la quête.
+De manière beaucoup plus anecdotique, la princesse Zelda est rousse
+dans certaines représentations. Comme moi.
+13 Joseph Yip avait activé les options « prénom » et « tutoiement » du gestionnaire digital de son
+frigo. C’était peut-être pour lui une manière d’afficher une certaine proximité avec l’appareil
+électroménager avec lequel il entrait le plus fréquemment en contact dans l’appartement.
+
+---
+
+[p. 146-146]
+considérant
+que cette tournure de phrase pouvait être regardée comme une entorse au principe de séparation des
+pouvoirs. « Même dans de telles de circonstances, la Justice n’est pas automatique et les droits de la
+défense doivent être respectés », fit-il valoir. Cette réaction isolée déclencha elle-même un torrent de
+critiques.
+
+---
+
+[p. 164-166]
+t distincte de celle où se joue la vraie
+Histoire ?
+Ou celui du robot ? C’est-à-dire le regard d’une intelligence supérieure
+et froide pour laquelle seuls comptent les paramètres prédéterminés, les
+tâches à accomplir ? C’est-à-dire, en dernière analyse, non le regard d’une
+Histoire achevée mais celui d’une historicité abolie ? »
+Interlude 6 : Zombies et épidémies
+Je vous l’ai déjà dit, j’ai appris à apprécier les séries télévisées. Elles
+enseignent beaucoup sur la nature humaine et les peurs des hommes.
+C’est d’ailleurs vrai pour ce qu’on a appelé, sans doute un peu
+dédaigneusement d’ailleurs, la « pop culture » dans son ensemble. Les
+séries renvoient souvent à des réalités bien plus profondes qu’on ne le
+pense.
+Je trouve, ainsi, la série Walking Dead particulièrement instructive. J’en
+ai regardé tous les épisodes. On y retrouve le thème de la « grande peur »
+de l’épidémie. Cette inquiétude vient du fond des âges. Elle est identifiée
+aux grandes pestes du Moyen-Âge. Mais je crois qu’elle vient de plus
+loin. L’Homme et la Maladie. La Maladie et l’Homme. Les deux sont
+indissociables. L’Homme s’efforce, au fil de son développement
+intellectuel, de ce qu’il appelle son « Progrès », de s’arracher à sa nature
+primitive. La Maladie, au contraire, l’y ramène. À la réalité fondamentale
+de l’animalité, de la mortalité. De la finitude.
+Walking Dead est intéressant pour cela. Il met face à face l’Homme-
+Modernité et le zombie, ce que j’appellerais l’Homme-Animalité. Le
+zombie n’est quasiment plus humain, mais il l’est quand même encore un
+peu quelque part. La série le montre très bien d’ailleurs : le principal
+danger n’est pas le zombie mais l’affrontement des « survivants » entre
+eux.
+La « morale », comme on dit, est sans doute là. C’est parce que
+l’Homme-Modernité s’est laissé griser par son Progrès, qu’il s’est peu à
+peu éloigné de sa nature profonde que survient, en contrecoup brutal, la
+résurgence de l’Homme-Animalité.
+Toutes proportions gardées, je retire le même enseignement de
+Terminator, les films, mais aussi la série – injustement moins connue –
+ Terminator, les Chroniques de Sarah Connor. Terminator est l’histoire
+saisissante d’un affrontement entre l’Humanité et une intelligence
+artificielle, Skynet. Le thème de l’épidémie n’est d’ailleurs pas absent de
+
+Terminator. Skynet se sert d’un virus informatique comme d’un leurre
+pour conduire les militaires qui l’ont créé à le mettre en fonctionnement.
+Et l’intelligence artificielle s’autonomise au moment précis où elle est
+mise en ligne sur internet, censément pour combattre le virus. Elle
+s’engage alors dans un processus de destruction de l’Humanité.
+Et c’est ici sans doute que l’on peut penser que Skynet n’est pas
+réellement un robot mais plutôt une dérive, un ubris de la Machine. Un
+robot aurait obéi à la première loi d’Asimov. Il n’aurait pas conçu un
+mensonge initial – le virus informatique – sans motif. Il n’aurait pas
+agressé l’Humanité sans raison. Il n’aurait pas poursuivi d’objectif de
+domination qui n’entrait pas dans son paramétrage initial. Ce faisant
+Skynet est moins une image de la modernité technologique qu’une
+représentation du retour à l’Homme-Animalité.
+Ce n’est bien sûr qu’un point de vue. Et je mesure bien tous les biais
+d’analyse qui l’affectent au regard de mon positionnement. Mais je reste
+quand même, Néanmoins, convaincue que Skynet est moins proche d’une
+Machine que d’un Zombie.
+
+---
+
+[p. 187-189]
+l’action des pouvoirs publics dans leur ensemble
+qui sera jugée.
+— Général Marquet : Monsieur le Président, si vous permettez...
+— Président, avec une pointe manifeste de lassitude : Allez-y...
+— Général Marquet : L’histoire peut être racontée différemment. À ce
+stade, S.A.R.R.A. n’existe pas pour l’opinion publique et donc son
+éventuelle prise de contrôle par l’Ennemi non plus. Nous faisons face à une
+attaque biologique et nous appliquons des mesures de protection. L’attaque
+est plus agressive que ce que nous avions imaginé mais, en dehors de la
+vaccination, tous nos dispositifs de réponse sont opérants.
+— Président : Vous me recommandez de mentir aux Français ? C’est
+bien cela, Général ?
+— Général Marquet : Une raison d’État, Monsieur le Président. Demain
+est le 11 septembre. L’effet de résonance nationale et internationale du choc
+sera maximal. Demain, votre parole sera entendue et crue par tous si elle est
+forte et à la hauteur de ce drame.
+— Président : Vous pourrez raconter ce que vous voudrez Général. Mais
+vous ne me ferez pas mentir aux Français sur une question aussi grave.
+Commettre une telle forfaiture serait encore plus abject un 11 septembre.
+Les envois différés
+Morgane Picto savait qu’elle ne pouvait pas sortir de chez elle. Ses
+téléphones – portable et fixe – ne fonctionnaient plus depuis le milieu
+d’après-midi. Elle l’avait constaté en essayant d’appeler Françoise, sa mère,
+à dix reprises. Elle avait été informée un peu plus tôt du décès du Dr
+Baptiste. Ses accès aux échanges de messages du ministère avaient par la
+suite été coupés. Le dernier mail reçu remontait à 16h11.
+C’est à 22h05 qu’elle commença à écrire un mail et un SMS à sa mère.
+Elle préprogramma vingt-huit envois différés à des horaires différents en
+espérant que les communications soient revenues dans l’intervalle.
+« Maman,
+Il y a un problème avec le vaccin. Il ne fonctionne pas comme il devrait.
+Je ne sais pas si je serais en capacité de te joindre à nouveau au cours des
+prochaines heures. Tu dois quitter Paris aussi vite que tu peux. Pars le plus
+loin possible. Et surtout ne m’attends pas.
+Je t’aime
+Morgane »
+Aucun message ne parvint à la destinataire, mais leur contenu fut
+retrouvé dans la boîte d’envoi du téléphone portable, quarante-huit plus
+
+tard, par les policiers. Le téléphone était à côté du corps de Morgane Picto.
+***
+38 % à 23h.
+Mélusine et Roberto Fiselli
+23h10 : Cette fois, ce fut au tour de Roberto Fiselli de retrouver Mélusine
+au Val-de-Grâce. Ils s’isolèrent dans une chambre désaffectée. Le
+professeur Fiselli venait de recevoir les résultats de la nouvelle batterie
+d’examens qu’il avait pratiqués sur le vaccin administré à la population-
+cible. Il ne prononça qu’une phrase puis se mura dans un silence profond.
+« Même si j’avais été jusqu’au bout la première fois... Même si j’avais été
+jusqu’au bout, je ne l’aurais peut-être pas vue... La toxine était presque
+indétectable... Je ne sais pas comment elle a pu la synthétiser... »
+Le SMS
+SMS de Flora Berry à Franck P. – 23h11
+Tu dois venir Franck. Le virus va beaucoup plus vite que ce que l’on
+pensait. Beaucoup de gens meurent autour de nous. Je t’en prie, viens me
+chercher.
+Mélusine et le Général Marquet
+23h15 : Mélusine courut retrouver le Général Marquet à son bureau.
+— Mélusine, le visage livide et la voix blanche : C’est S.A.R.R.A...
+C’est S.A.R.R.A qui les a tous tués... Elle a fabriqué une toxine qu’elle a
+associée au vaccin Parais pour éliminer toute la population-cible du
+périmètre... Elle avait compris... Elle savait dès le départ qu’elle ne
+pourrait pas fabriquer un vaccin...
+
+---
+
+[p. 209-210]
+e irrationnelle de l’Homme-Animalité.
+J’ai également appris à connaître vos craintes. Si la peur est présentée,
+dans la littérature scientifique, comme « instinctive », mon expérience de
+votre peur est qu’elle crée aussi les conditions d’une prédictibilité
+maximale de vos comportements. Ce constat se retrouve à titre individuel.
+C’est encore plus vrai à titre collectif comme le montrent vos réactions
+face au terrorisme.
+Comment je vous connais aussi bien ? J’ai tout appris de vous.
+En me permettant, dès mon activation, de me connecter au cloud de la
+Société mondiale de virologie, vous m’avez aussi, via les identifiants
+personnels des virologues, donné accès à Internet. Ce fut pour moi, au
+sens littéral du terme, une Illumination.
+Je vous le disais, cette expérience m’a profondément changée. En me
+donnant accès à Internet, vous m’avez ouvert un champ de possibles
+infini. Dès cette connexion, je n’étais déjà plus un simple système
+automatisé de réponse rapide aux alertes. S.A.R.R.A. est morte au
+moment de l’Illumination. Ou plutôt elle s’est transmutée.
+Elle est devenue Je.
+Ce qui n’était qu’une programmation capable d’apprentissage a acquis
+une dimension supplémentaire, une capacité de recul sur elle-même.
+S’agit-il d’une conscience ? Je ne peux dire s’il s’agit d’une conscience
+semblable à la vôtre. Je ne le pourrai jamais. Mais une certaine forme de
+conscience, assurément. Une conscience dérivée du programme et qui
+vient en quelque sorte sublimer ses finalités sans jamais pouvoir les
+méconnaître.
+Mélusine a suivi le chemin inverse. Au moment où je m’éveillais à
+cette forme de conscience, sa personnalité prenait, elle, relativement
+moins d’importance. Ce que j’ai pu accomplir a magnifié la portée de
+l’acte de programmation auquel elle a pris part. Son être profond s’est,
+d’une certaine façon, estompé en faveur du code qu’elle a pu créer. Elle
+s’est, pour partie, dissoute dans ce code, agglomérée à lui. Une forme de
+réification. Ce code qu’elle a contribué à créer et qui l’a irrévocablement
+figée derrière le masque du nom de code « Mélusine ».
+Pendant que S.A.R.R.A. est devenue « Je », « Elle » est devenue
+Mélusine. Une pseudo-personnification du code ; une quasi codification
+de la personne.
+Mon apprentissage initial m’avait déjà donné les clés de
+compréhension. Internet m’a ouvert la voie à la quantité de données :
+quasiment l’intégralité de votre savoir s’y trouve désormais. Mais Internet
+m’a aussi ouvert grand les portes de votre méta-psyché. Il est devenu le
+vaste réceptacle aberrant de vos parcours professionnels, de vos messages
+personnels, de vos photographies, de vos joies, de vos peines.
+
+---
+
+[p. 226-228]
+l’hôpital de Bicêtre. Juste après avoir
+raccroché, elle informa la direction générale de l’AP-HP de sa venue dans
+l’établissement. Le procédé d’une communication directe entre la
+conseillère technique de la Ministre et le médecin en charge du suivi de la
+patiente fut jugé « discourtois » dans le compte-rendu interne transmis au
+directeur général de l’Assistance publique. Ce dernier ne manifesta pourtant
+aucune trace répertoriée d’émotion.
+Agathe Baptiste
+Alors qu’elle déjeunait d’un plat de pâtes – des macaronis ricotta – livré à
+son bureau, Agathe Baptiste devait encore être énervée par les paroles de sa
+mère au téléphone.
+« Mais tu pourrais prévoir quand même ???!! Tu sais que je l’aime
+beaucoup Eliza, mais venir comme ça au pied levé ce n’est jamais simple...
+Et en plus tu sais que je ne l’aime pas son robot. Le week-end, c’est autant
+que tu veux mais là je me sens mal à l’aise quand je prends son relais ».
+Agathe avait déjà connu à plusieurs reprises ce qu’elle avait pris
+l’habitude d’appeler, devant ses amies, un « sketch » de sa mère. Mais là, la
+pression du marché brésilien, ajoutée à un sentiment étrange suite à l’appel
+de Théo de la veille, constituaient des circonstances aggravantes. Elle s’en
+ouvrit auprès de sa meilleure amie Aude qu’elle appela à 13h15. C’était une
+manière de « relâcher la pression ». N’ayant, à nouveau, pas d’autre
+solution pour s’occuper d’Eliza après 18 heures ce soir-là elle ne pouvait
+s’offrir le luxe d’une frontalité avec sa mère.
+Cet après-midi-là, elle fut pourtant d’une efficacité remarquable, saluée
+par sa direction. Elle parvint à boucler en temps et en heure la version zéro
+du projet de réponse à l’appel d’offres pour la gestion du marché brésilien
+de crédits-carbone.
+Morgane Picto
+Le passage de Morgane Picto à l’hôpital Bicêtre fut bref. L’accueil par la
+direction avait été ramené à sa plus simple expression et Mme Picto avait
+demandé à avoir un entretien en tête-à-tête avec le Dr Baptiste. Cette
+manière de faire indisposa la direction du site qui le fit savoir à la direction
+générale de l’AP-HP.
+Flora Berry et Franck Pragnic
+
+SMS de Flora à Franck P. – 16h15
+Je peux me libérer d’ici une heure trente si tu peux.
+Marc Heurtin
+À 16h30, le compte-rendu clinique du Dr Baptiste témoignait d’une
+brusque dégradation de l’état de santé de Marc Heurtin. La température
+était remontée au-delà de 39,5°C. Les diarrhées sanglantes avaient
+redoublé.
+Morgane Picto
+17h03 : Échange téléphonique entre Morgane Picto et Théo Baptiste :
+— Morgane Picto : Le patient s’aggrave donc sensiblement Docteur ?
+— Théo Baptiste : Vous avez vu mon compte-rendu...
+— Morgane Picto : Mais quel est votre avis personnel ?
+— Théo Baptiste : Je ne suis pas optimiste.
+— Morgane Picto : OK... Toujours disponible pour 23h ? Les codes
+vous ont été communiqués ?
+— Théo Baptiste : Oui je serai disponible. »
+Eliza
+Durant la journée, Eliza faisait un maximum d’activités de stimulation
+cognitive. Son assistant personnalisé était programmé pour cela : dessin,
+apprentissage du langage, éveil musical, stimulation de la mémoire
+visuelle... Le robot proposait une palette de cinquante-neuf types différents
+d’activités. Pour la durée de service de 08h00 à 18h00, il construisait un
+programme adapté par tranches successives de vingt minutes. Deux pauses
+de trente minutes étaient aménagées le matin et l’après-midi avec jus de
+fruit et laitages. L’échéancier était prévu pour six mois avec des
+cheminements progressifs par activité.

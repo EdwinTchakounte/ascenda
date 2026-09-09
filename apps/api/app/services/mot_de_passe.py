@@ -1,0 +1,139 @@
+"""La réinitialisation de mot de passe par code.
+
+Un code à six chiffres plutôt qu'un lien : l'application est mobile, et il
+n'existe ni site déployé ni lien profond pour rattraper un clic depuis une boîte
+de courriel. Un code se recopie à la main et fonctionne partout, y compris quand
+on lit ses courriels sur un autre appareil que celui où l'application tourne.
+
+Cinq protections, chacune contre une attaque précise :
+
+- le code est **stocké haché** : lire la table ne donne pas la main sur les comptes ;
+- il **expire en trente minutes**, le temps d'aller chercher un courriel ;
+- il ne sert **qu'une fois** ;
+- **cinq essais** au maximum, sinon un million de combinaisons se parcourt vite ;
+- une demande **par quart d'heure** et par compte, pour qu'on ne puisse pas
+  noyer quelqu'un sous les courriels depuis son adresse.
+
+Et la règle qui gouverne les réponses : **on ne dit jamais si une adresse a un
+compte**. La route répond la même chose dans tous les cas.
+"""
+import hashlib
+import logging
+import secrets
+from datetime import datetime, timedelta, timezone
+
+from app.core.db import connection, execute, fetch_one
+from app.core.security import hash_password
+
+log = logging.getLogger("ascenda.mot_de_passe")
+
+VALIDITE = timedelta(minutes=30)
+TENTATIVES_MAX = 5
+DELAI_ENTRE_DEMANDES = timedelta(minutes=15)
+
+
+def _hacher(code: str) -> str:
+    return hashlib.sha256(code.encode()).hexdigest()
+
+
+def _normaliser(code: str) -> str:
+    """Retire ce que les gens ajoutent en recopiant : espaces, tirets."""
+    return "".join(c for c in (code or "") if c.isdigit())
+
+
+def nouveau_code() -> str:
+    """Six chiffres tirés d'une source cryptographique.
+
+    `secrets` et non `random` : le second est prévisible pour qui a vu quelques
+    tirages, ce qui suffirait à fabriquer le code du voisin.
+    """
+    return f"{secrets.randbelow(1_000_000):06d}"
+
+
+async def demander(email: str) -> tuple[dict, str] | None:
+    """Prépare un code. Retourne (utilisateur, code) ou None.
+
+    None couvre trois cas que l'appelant ne doit pas distinguer : l'adresse est
+    inconnue, le compte est désactivé, ou une demande est déjà partie il y a
+    moins d'un quart d'heure.
+    """
+    user = await fetch_one(
+        "select id, email, display_name, is_active from app_user where lower(email) = %s",
+        (email.lower().strip(),),
+    )
+    if not user or not user["is_active"]:
+        return None
+
+    recente = await fetch_one(
+        """select 1 from password_reset
+            where user_id = %s and created_at > now() - make_interval(mins => %s) limit 1""",
+        (user["id"], int(DELAI_ENTRE_DEMANDES.total_seconds() // 60)),
+    )
+    if recente:
+        log.info("Demande de réinitialisation ignorée : trop rapprochée.")
+        return None
+
+    code = nouveau_code()
+    await execute(
+        """insert into password_reset (user_id, code_hash, expires_at)
+           values (%s, %s, %s)""",
+        (user["id"], _hacher(code), datetime.now(timezone.utc) + VALIDITE),
+    )
+    return user, code
+
+
+async def reinitialiser(email: str, code: str, nouveau: str) -> dict | None:
+    """Pose le nouveau mot de passe. Retourne l'utilisateur, ou None si refusé.
+
+    Toutes les sessions sont fermées : quelqu'un qui réinitialise le fait
+    souvent parce qu'il craint que son compte soit déjà entre d'autres mains.
+    """
+    chiffres = _normaliser(code)
+    user = await fetch_one(
+        "select id, email, display_name, is_active from app_user where lower(email) = %s",
+        (email.lower().strip(),),
+    )
+    if not user or not user["is_active"] or len(chiffres) != 6:
+        return None
+
+    async with connection() as conn:
+        cur = await conn.execute(
+            """select * from password_reset
+                where user_id = %s and used_at is null and expires_at > now()
+                  and tentatives < %s
+                order by created_at desc limit 1
+                for update""",
+            (user["id"], TENTATIVES_MAX),
+        )
+        demande = await cur.fetchone()
+        if not demande:
+            return None
+
+        if demande["code_hash"] != _hacher(chiffres):
+            # On compte l'essai avant de refuser : sinon le compteur ne sert à rien.
+            await conn.execute(
+                "update password_reset set tentatives = tentatives + 1 where id = %s",
+                (demande["id"],),
+            )
+            return None
+
+        await conn.execute(
+            "update password_reset set used_at = now() where id = %s", (demande["id"],)
+        )
+        # Les autres demandes en cours tombent avec celle-ci : un second code
+        # envoyé plus tôt ne doit pas rester utilisable.
+        await conn.execute(
+            """update password_reset set used_at = now()
+                where user_id = %s and used_at is null""",
+            (user["id"],),
+        )
+        await conn.execute(
+            "update app_user set password_hash = %s where id = %s",
+            (hash_password(nouveau), user["id"]),
+        )
+        await conn.execute(
+            "update refresh_token set revoked_at = now() where user_id = %s and revoked_at is null",
+            (user["id"],),
+        )
+
+    return user

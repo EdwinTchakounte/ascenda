@@ -1,0 +1,586 @@
+OUVRAGE : Intelligence artificielle et éducation
+AUTEUR(S) : DNE-TN2
+ANNÉE : inconnue
+PAGES : 40
+AXE : IA Education Pedagogie
+SOMMAIRE :
+  (non structuré)
+
+[7/27 passages, 7471 tokens sur 27200]
+
+=== EXTRAITS ===
+
+[p. 1-4]
+Intelligence 
+artificielle 
+et éducation 
+Apports de la recherche 
+et enjeux pour les politiques 
+publiques 
+Avril 2023 
+
+ 
+ 
+État des lieux sur les apports 
+de la recherche et les lignes 
+directrices des institutions 
+internationales sur l’intelligence 
+artificielle et l’éducation : 
+définitions et approches, politiques 
+publiques, enjeux éthiques, applications, 
+tournant des IA génératives. 
+Current situation on the 
+Research Contributions 
+Guidelines of international 
+institutions on artificial intelligence 
+and education: 
+definitions and proposals, public policies, ethical 
+issues, applications, turning point of Generative AI. 
+</> 
+
+ 
+ 
+Table des matières 
+Résumé..........................................................................4 
+À retenir........................................................................5 
+1 . L’intelligence artificielle (IA) : une diversité 
+de définitions et d’approches...................................6 
+2 
+3 
+4 
+5 
+. Quels enjeux pour les politiques publiques ?...11 
+. Quels enjeux éthiques ? .......................................17 
+. Quels domaines d’application ? .........................19 
+. Quelles pistes de travail pour former à l’IA 
+et l’enseigner ?.............................................................23 
+6 . Le tournant des IA génératives et des grands 
+modèles de langage....................................................26 
+Références....................................................................35 
+
+ 
+ 
+Résumé 
+Ce document, réalisé par la Direction du numérique pour l’éducation/ 
+ministère de l’Éducation nationale et de la Jeunesse, propose un état des lieux 
+(Avril 2023) sur les apports de la recherche et les lignes directrices des 
+institutions internationales sur l’intelligence artificielle (IA) et l’éducation : 
+diversité des définitions et des approches, enjeux pour les politiques 
+publiques, enjeux éthiques, domaines d’application, pistes de travail pour 
+former et enseigner, perspectives avec le tournant actuel des IA génératives 
+et des grands modèles de langage. 
+Abstract 
+This document, produced by the Digital Department for Education (Ministry of National 
+Education and Youth), offers an inventory (April 2023) of the contributions of research and 
+the guidelines of international institutions on the artificial intelligence (AI) and education: 
+diversity of definitions and approaches, issues for public policies, ethical issues, fields 
+of application, avenues for training and teaching, perspectives with the current turn of 
+generative AI and large language models. 
+Resumo 
+Este documento, producido por el Departamento de Educación Digital (Ministerio 
+de Educación Nacional y Juventud), ofrece un inventario (Abril de 2023) de las 
+contribuciones de la investigación y las directrices de las instituciones internacionales 
+sobre la inteligencia artificial (IA) y la educación: diversidad de definiciones y enfoques, 
+cuestiones para las políticas públicas, cuestiones éticas, campos de aplicación, vías 
+de formación y enseñanza, perspectivas con el giro actual de las IA generativas y los 
+grandes modelos de lenguaje. 
+4 
+Carnet Hypothèses «Éducation, numérique et recherche»
+
+---
+
+[p. 7-8]
+es 
+tâches de traitement complexe.» (Popenici & Kerr, 2017) «[Cette définition] 
+permet de dépasser l’opposition entre l’intelligence humaine et l’IA et d’envisager 
+des interactions complexes entre les deux.» (Romero et al., 2023) 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+7
+ 
+ 
+1.3 Les types d’IA 
+On distingue plusieurs types d’IA : 
+Selon leur technologie : 
+« Une IA basée sur les données, ou apprentissage automatique (machine learning 
+en anglais) et une autre IA basée sur les connaissances ou IA symbolique. Un troisième 
+modèle conceptuel, l’IA hybride, combine les approches basées sur les données 
+et les connaissances avec la cognition humaine.» [Traduction] D’après (Holmes et al., 
+2022) traduction par (Bocquet, 2023) 
+Selon leur portée : 
+« On distingue l’IA faible de l’IA forte selon la portée d’application de ces programmes 
+informatiques. L’intelligence artificielle faible (weak AI) est une intelligence artificielle 
+qui se concentre sur une tâche précise alors que l’IA forte (strong AI) ou l’intelligence 
+artificielle générale (AGI: artificial general intelligence) s’applique à tout problème. Tous 
+les systèmes d’IA existants sont considérés actuellement comme des intelligences 
+artificielles faibles.» (Grand lexique français de l’Intelligence artificielle, 2021) 
+« Intelligence artificielle complète ou forte : 
+Une intelligence artificielle qui serait capable 
+de copier les aptitudes humaines (apprendre, 
+comprendre, appréhender, raisonner, prendre des 
+décisions, avoir une conscience, des émotions...). 
+À ce jour, l’intelligence artificielle forte n’existe pas, 
+c’est une croyance. 
+IA 
+Intelligence artificielle faible : C’est l’intelligence 
+artificielle qu’on connaît aujourd’hui : c’est un 
+algorithme “apprenant”, en adaptant ses paramètres 
+à des données d’apprentissage, non pourvu 
+de capacités mentales et cognitives, mais capable 
+d’effectuer avec beaucoup plus d’efficacité, 
+parfois plus que l’être humain, une tâche précise.» 
+(Inria, 2020) 
+IA classique et apprentissage automatique : 
+IA classique : « Une grande partie de l’IA des débuts 
+ou « classique », connue sous le nom d’« IA symbolique », d’« IA à base de règles » 
+ou de « bonne vieille IA » (en anglais GOFAI), implique l’écriture de séquences 
+de SI... ALORS... et d’autres règles de logique conditionnelle, c’est-à-dire des étapes 
+que l’ordinateur suit pour accomplir une tâche. Au fil du temps, des « systèmes 
+experts » d’IA basés sur des règles ont été créés et développés pour un large 
+éventail d’applications, telles que les diagnostics médicaux, les notations de crédit 
+et la production. Les systèmes experts sont basés sur une approche connue sous 
+le nom d’« ingénierie des connaissances », qui consiste à obtenir et à modéliser les 
+connaissances des experts dans un domaine donné, ce qui représente une tâche 
+exigeante en ressources et qui n’est pas sans complications. (...) 
+Apprentissage automatique (AA) : De nombreuses avancées récentes en matière 
+d’IA – notamment le traitement du langage naturel, la reconnaissance faciale et 
+les voitures autonomes – ont été rendues possibles par les progrès des approches 
+8 
+Carnet Hypothèses «Éducation, numérique et recherche»
+
+---
+
+[p. 12-13]
+a recherche et l’évaluation dans le domaine de l’IA et de l’éducation 
+7. Encourager les innovations locales en matière d’IA pour l’éducation 
+— Promouvoir le développement local des technologies de l’information 
+dans le champ éducatif 
+D’après (UNESCO, 2021) (Extraits) 
+12 
+Carnet Hypothèses «Éducation, numérique et recherche»
+ 
+ 
+2.3 Une stratégie nationale 
+« La stratégie de l’IA en éducation doit proposer des solutions aux professionnels 
+de l’enseignement et de la formation, aider aux apprentissages et aux décisions sans 
+jamais se substituer aux personnes. Elle doit explorer des partenariats d’innovation 
+entre l’École, la Recherche et les technologies de l’éducation, en particulier pour 
+l’innovation pédagogique, ainsi que l’utilisation contrôlée des données de scolarité 
+ou de formation pour améliorer les politiques publiques. Elle doit construire des 
+connaissances et des compétences de base chez tous les élèves, les enseignants 
+et les cadres pour démystifier, comprendre et utiliser de manière raisonnée et éthique 
+les potentialités de l’IA, et susciter des talents en proposant des mentions, spécialités 
+ou parcours IA aux lycéens en amont de l’enseignement supérieur.» (...) 
+QUELQUES ACTIONS CLÉS 
+y Des partenariats d’innovation et des challenges IA en éducation pour développer 
+la recherche de solutions grâce aux professionnels de l’éducation nationale, 
+de la filière EdTech et de la recherche 
+y Des formations à l’IA pour les élèves, les enseignants et des cadres 
+y Des projets et partenariats IA et l’utilisation massive des données avec 
+la recherche» 
+(Gouvernement - Direction générale des Entreprises, 2023) 
+2.4 Chronologie et implantation géographique 
+Les étapes d’élaboration de la stratégie nationale en IA 
+→ 2017 
+Concertation et groupe de travail 
+Audition 
+2 
+2 
+017 
+018 
+Prémices de 
+la communauté 
+lnitiative #France IA 
+→ Mars 2018 Rapport Villani 
+Donner un sens à l’IA » 
+Parangonnage 
+« 
+Phase 1 (2018-2022) 1,5 Md€ 
+Annonce du Président 
+de la République 
+Positionner la France 
+comme acteur majeur 
+en IA 
+Lancement 
+de la Stratégie 
+nationale en IA 
+→ 4 Axes : recherches, économie, 
+transtormation publique, défense 
+Mars 2018 
+→ 4 secteurs : défense, mobilité, 
+santé, environnement 
+→ Coordination nationale par l’lnria 
+Ministère de l’enseignement, 
+supérieur, de la recherche 
+et de l’innovation 
+Secrétaire d’État au 
+numérique 
+Programme 
+national 
+de recherche en IA 
+→ Création des 4 Instituts « 3IA » 
+Novembre 
+→ 48 chaires + 22 programmes 
+doctoraux 
+2 018 
+→ Supercalculateur « Jean Zay » 
+Phase 2 (2022-2025) 1,5 Md€ 
+Annonce d’une deuxième 
+phase 
+→ Plan massif de formation en IA 
+Soutien projets, lancement de 
+démonstrateurs d’usages IA, 
+livraison de plateformes logiciels 
+Deuxième phase 
+de la dynamique 
+de France 2030 
+→ France leader en 
+IA embarquée, IA frugale 
+et IA de confiance 
+Novembre 
+021 
+2 
+→ 
+→ 
+Accès aux données, écosystème 
+de startups, soutien PME et ETI 
+→ Accélérer le déploiement 
+de l’IA dans l’économie 
+PEPR et « Choose France » 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+13
+
+---
+
+[p. 18-20]
+l 
+qu’il a été mis en place. Cela nécessite une représentation explicite des connaissances 
+et des processus de décision. La question de l’explicabilité doit être prise en compte 
+dès la conception.» 
+(Association Française pour l’Intelligence Artificielle (AFIA), 2022) 
+1 8 
+Carnet Hypothèses «Éducation, numérique et recherche»
+ 
+ 
+4. 
+Quels domaines 
+d’application ? 
+4.1 
+Catégorisation et taxonomie 
+Catégorisation proposée par la Commission européenne 
+Soutien au système 
+éducatif 
+Enseignement 
+Soutien à l’apprenant 
+Soutien à l’enseignant 
+Environnement 
+Environnements 
+d’apprentissage 
+exploratoire 
+Évaluation formative 
+des écrits 
+Apprentissage 
+collaboratif assisté 
+par l’IA 
+Évaluation sommative 
+Exploration des 
+y 
+y 
+y 
+y 
+y 
+informatique pour 
+l’apprentissage humain 
+Systèmes tutoriels 
+fondés sur le dialogue 
+Applications d’aide 
+à l’apprentissage 
+des écrits, notation 
+Repérage de mots 
+clés dans les forums 
+d’apprenants 
+Assistants pédagogiques 
+basés sur l’IA 
+données éducatives 
+pour l’allocation 
+des ressources 
+Diagnostic 
+des difficultés 
+y 
+y 
+y 
+y 
+y 
+y 
+y 
+y 
+d’apprentissage 
+Services d’orientation 
+des langues 
+Recommandation de 
+ressource pédagogique 
+D’après (European Commission. Directorate General for Education, Youth, Sport and Culture., 2022) 
+Autre catégorisation issue des groupes thématiques numériques : 
+y Systèmes adaptatifs et personnalisés (recommandation et sélection de contenus, 
+de ressources), évaluation adaptative et correction automatique 
+y Robots conversationnels et systèmes de tutorat intelligent, par ex. pour 
+l’enseignement de la démarche d’investigation et de la démarche scientifique 
+(Cisel & Baron, 2019) 
+y Anticipation précoce, prédiction et prévention de l’abandon scolaire 
+y Détection et remédiation aux difficultés d’apprentissage 
+y Utilisation de savoirs produits par la recherche avec l’IA (analyse d’image, 
+annotation, classification, résumé/synthèse automatiques, traitement de données 
+massives sur des corpus textuels ou iconographiques) 
+y Usages administratifs 
+D’après (DNE-TN2, 2021) (DNE-TN2, 2022) (Lepage Alexandre, 2022) (Romero et al., 2021) 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+19 
+
+ 
+ 
+Taxonomie d’après la revue de littérature de (Holmes et al., 2022) 
+IA au service des élèves 
+Systèmes de tutorat intelligents 
+Applications assistées par l’IA (par exemple, mathématiques, synthèse vocale, 
+apprentissage des langues) 
+Simulations assistées par l’IA (par exemple, apprentissage par le jeu, réalité virtuelle, 
+réalité augmentée) 
+IA pour aider les apprenants à besoins éducatifs particuliers 
+Rédaction automatique d’essais 
+Agents conversationnels 
+Évaluation formative automatique 
+Orchestrateurs de réseaux d’apprentissage 
+Systèmes de tutorat basés sur le dialogue 
+Environnements d’apprentissage exploratoire 
+Assistant d’apprentissage tout au long de la vie assisté par l’IA 
+IA au service de l’enseignant 
+Détection de plagiat 
+Curation intelligente du matériel d’apprentissage 
+Surveillance de la classe 
+Évaluation sommative automatique 
+IA d’assistance de l’enseignant (y compris assistant d’évaluation) 
+Orchestration de la salle de classe 
+IA au service des institutions 
+Admissions (par exemple, sélection des élèves) 
+Planification des cours, Planification des horaires, Programmation horaire 
+Sécurité des écoles 
+Identification précoce des décrocheurs et les élèves à risque 
+e-Proctoring (surveillance des examens à distance) 
+D’après (Holmes et al., 2022) traduction par (Bocquet, 2023) 
+2 0 
+Carnet Hypothèses «Éducation, numérique et recherche»
+
+---
+
+[p. 24-25]
+entiel qu’elle repose sur une réelle compréhension du fonctionnement 
+de la technologie. 
+5 . Humanisme post-IA 
+L’idée clé est que les progrès de l’IA nous font reconsidérer, en tant qu’êtres humains, 
+certaines vérités de base.» 
+D’après (de la Higuera & Bocquet, 2020) 
+24 
+Carnet Hypothèses «Éducation, numérique et recherche»
+ 
+ 
+Production d’un module d’initiation à l’IA. Exemple d’instruction et de réponse produite 
+par ChatGPT (11/04/23) 
+Instruction 
+Dans le contexte de l’enseignement scolaire en France. Proposer, sous la forme d’un tableau, 
+un module d’environ une heure d’initiation à l’intelligence artificielle pour les professeurs 
+(enseignement primaire et secondaire). Ce module doit présenter les origines de l’IA, les définitions 
+de base, les enjeux pour l’éducation et des exemples d’application pédagogique. 
+Réponse 
+Objectif 
+Contenu 
+Durée 
+5 min 
+Introduction 
+Origines de l'IA 
+Présentation du module et des objectifs 
+Historique et évolution de l'IA 
+10 min 
+Explication des termes clés : intelligence artificielle, 
+apprentissage automatique, réseau de neurones, etc. 
+Définitions de base 
+15 min 
+Les enjeux pour l'éducation 
+Discussion sur les avantages et les défis de l'IA dans l'éducation 
+15 min 
+Présentation de projets d'IA appliqués à l'éducation, tels 
+que les chatbots d'assistance aux élèves, les systèmes de 
+recommandation de contenus éducatifs, etc. 
+Exemples d'applications 
+pédagogiques de l'IA 
+15 min 
+Discussion sur les limites de l'IA en tant qu'outil pédagogique 
+et sur les préoccupations éthiques liées à son utilisation 
+Les limites de l'IA 
+Conclusion 
+10 min 
+10 min 
+Résumé des points clés et ouverture sur les perspectives 
+d'avenir de l'IA dans l'éducation 
+« Ce module d’initiation à l’IA pour les professeurs peut être adapté en fonction de leur niveau 
+de connaissance et d’expérience. Il peut également être suivi d’un atelier pratique où les enseignants 
+pourront expérimenter eux-mêmes l’utilisation de l’IA dans leur classe. » 
+Source : https://chat.openai.com/chat 
+5 .4 Formation à l’IA et prévention 
+du décrochage scolaire 
+« La Scientothèque est une association sans but lucratif installée au sein 
+de l’Expérimentarium, musée de Physique de l’Université Libre de Bruxelles. Depuis 
+sa fondation en 2001, sa mission principale est de contribuer à la diminution des inégalités 
+sociales. Deux réalités ont mené à la mise en place de l’association : d’une part, le risque 
+accru de décrochage scolaire et la difficulté d’accès aux études supérieures pour les 
+jeunes issus de milieux précarisés (Coslin, 2012) et, d’autre part, la désaffection pour les 
+études scientifiques de la part du public féminin. Il a d’ailleurs été démontré qu’il était 
+moins évident d’attirer les filles vers les projets à caractère scientifique ou technologique 
+(Blanchard, 2021). (...) Une sélection d’activités a été proposée à deux groupes de jeunes 
+de 10-12 ans durant l’année scolaire 2020-2021 lors d’ateliers extrascolaires hebdomadaires 
+à l’Institut des Ursulines à Koekelberg. Ce projet, financé par la région de Bruxelles- 
+Capitale, visait à diminuer le décrochage scolaire pour des élèves vivant dans des quartiers 
+précarisés. Tout au long des séances, les jeunes ont pu, grâce à une approche ludique 
+et collaborative, découvrir l’histoire des machines, établir des liens avec l’intelligence 
+biologique, comprendre ce qui se cache derrière le mot « algorithme », observer et 
+programmer des robots Thymio, s’initier à la programmation sur la plateforme Scratch, 
+et débattre des conséquences de l’IA sur la société.» (Romero et al., 2023) 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+25
+
+---
+
+[p. 29-31]
+îné sur la 
+machine « Jean Zay » «un des plus puissants supercalculateurs d’Europe» (CNRS, 2022) ; 
+LLaMA de Meta AI (Touvron et al., 2023). 
+Pour plus de détails consulter aussi (Pôle d’expertise de la régulation numérique, 2023) 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+29
+ 
+ 
+6 .2.4 Les réactions et interrogations 
+Depuis l’ouverture de l’application ChatGPT les réactions et les débats ont été très 
+nombreux dans les médias et dans de nombreux milieux professionnels, parmi lesquels 
+la recherche et l’éducation. 
+« Ces IA génératives multilingues, multitâches et interactives posent 
+de nombreuses questions : les données choisies pour les entrainer, la répartition 
+des langues dans un système multilingue, les paramètres d’optimisation des 
+systèmes, la propriété des contenus générés, etc. De plus, le pouvoir génératif 
+des IA est souvent amplifié par des filtres qui permettent de censurer 
+certains sujets et des modules de déduction logique dans le but de vérifier 
+la véracité des énoncés. Une poignée d’humains (ingénieurs, transcripteurs, 
+évaluateurs) ont créé ce type de système utilisé par des millions de personnes. 
+Ces systèmes d’intelligence artificielle utilisés massivement posent donc des défis 
+éthiques majeurs parmi lesquels la transformation de la notion de production 
+d’information, le rapport à la vérité et les risques massifs liés à la désinformation 
+et la manipulation.» 
+(Devillers, 2023) 
+Les réactions ont été de la fascination, face au caractère crédible et vraisemblable 
+des «conversations» produites et à la pertinence - au moins apparente - de certaines 
+réponses, à l’inquiétude en raison des mésusages possibles (possibilité de triche pour 
+réaliser des travaux scolaires, de fraude aux examens, doute sur la paternité des écrits 
+produits dans tel ou tel contexte personnel ou professionnel) et des incertitudes sur 
+les technologies, les données mobilisées et la fiabilité des réponses produites. 
+</> 
+3 0 
+Carnet Hypothèses «Éducation, numérique et recherche» 
+
+ 
+ 
+6 .2.5 Quelles potentialités pédagogiques ? 
+Ce type d’application offre plusieurs potentialités pédagogiques très activement 
+explorées et partagée actuellement par la communauté des enseignants : 
+— un soutien à la créativité en proposant, à partir des requêtes et questions posées, 
+une première base de rédaction ou de code ; 
+— un soutien à l’apprentissage du français et des langues étrangères par la fonction 
+de suivi conversationnel ; 
+— 
+— 
+une assistance pour amorcer ou optimiser une tâche rédactionnelle ; 
+un nouveau défi pour l’éducation aux médias et à l’information (EMI) et un cadre 
+pour la formation à l’esprit critique, qui nécessite de la part des enseignants 
+et de leurs élèves de vérifier systématiquement le contenu et la pertinence 
+des réponses fournies. 
+Ces potentialités ont déjà fait l’objet de plusieurs publications, parmi lesquelles 
+(Kasneci et al., 2023) qui pointe les possibilités suivantes : apprentissage personnalisé 
+(analyse de travaux et suggestion de matériels pédagogiques adaptés), planification 
+des cours (assistance à la création de plans et d’activités inclusives), apprentissage des 
+langues (résumés et traductions). [Traduction] 
+Par ailleurs, plusieurs guides pédagogiques proposent des pistes d’utilisation pour 
+l’enseignant. Ainsi le guide produit par (Herft, 2023), enseignant australien, et traduit en 
+français, propose une série d’exemples d’instructions à saisir pour en faire un assistant 
+pédagogique et didactique. Ex. : «Créez un plan de cours pour une classe... qui couvre 
+le concept de ... et comprend une variété d’activités et d’évaluations.» 
+Les perspectives des grands modèles de langage pour les personnes 
+handicapées 
+« Afin d’autonomiser les apprenants handicapés, [ils] peuvent être utilisés en 
+combinaison avec des solutions de conversion de la parole en texte ou du 
+texte en parole pour aider les personnes souffrant de déficience visuelle. 
+En combinaison avec les possibilités de tutorat en groupe et à distance 
+mentionnées précédemment, les modèles de langue peuvent être utilisés pour 
+développer des stratégies d’apprentissage inclusives avec un soutien adéquat 
+dans des tâches telles que l’écriture adaptative, la traduction et la mise en 
+évidence de contenus importants dans différents formats. Cependant, il est 
+important de noter que l’utilisation de grands modèles de langage doit être 
+accompagnée de l’aide de professionnels tels que des orthophonistes, des 
+éducateurs et d’autres spécialistes qui peuvent adapter la technologie aux 
+besoins spécifiques des handicaps de l’apprenant.» 
+(Kasneci et al., 2023) [Traduction] 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+31
+
+---
+
+[p. 36-37]
+ielle. (2021). DataFranca Wiki. 
+https://datafranca.org/wiki/Accueil 
+Herft A. (2023). Guide de l’enseignant. L’usage de ChatGPT « ce qui marche le mieux » 
+(A. Gagné, Trad.). 
+https://labua.univ-angers.fr/wp-content/uploads/2023/01/ChatGPT-Guide-de- 
+lenseignant-FR.pdf 
+3 6 
+Carnet Hypothèses «Éducation, numérique et recherche»
+ 
+ 
+Holmes W., Persson J., Chounta I.-A., Wasson B. & Dimitrova V. (2022). Artificial 
+intelligence and education. A critical view through the lens of human rights, democracy 
+and the rule of law. Council of Europe. 
+https://rm.coe.int/artificial-intelligence-and-education-a-critical-view-through-the- 
+lens/1680a886bd 
+Holmes W. & Tuomi I. (2022). State of the art and practice in AI in education. European 
+Journal of Education, (n/a). 
+https://doi.org/10.1111/ejed.12533 
+Inria (2020). L’Intelligence Artificielle... avec intelligence ! (MOOC). FUN-MOOC. 
+https://www.fun-mooc.fr/courses/course-v1:inria+41021+session01/about 
+Inria Flowers (Réalisateur). (2023a, mars 8). Comment fonctionne ChatGPT? Un tour 
+d’horizon en moins de 5mn. 
+https://www.youtube.com/watch?v=K8gOvC8gvB4 
+Inria Flowers (Réalisateur). (2023b, mars 13). Le prompting, ou l’art de se faire comprendre 
+par ChatGPT : Explication en 5mn. 
+https://www.youtube.com/watch?v=8IQ9i_QoA3A 
+Kasneci E., Seßler K., Küchemann S., Bannert M., Dementieva D., Fischer F., Gasser U., 
+Groh G., Günnemann S., Hüllermeier E., Krusche S., Kutyniok G., Michaeli T., Nerdel C., 
+Pfeffer J., Poquet O., Sailer M., Schmidt A., Seidel T., ... Kasneci G. (2023). ChatGPT for 
+Good? On Opportunities and Challenges of Large Language Models for Education. 
+https://doi.org/10.35542/osf.io/5er8f 
+Khosravi H., Shum S. B., Chen G., Conati C., Gasevic D., Kay J., Knight S., 
+Martinez-Maldonado R., Sadiq S. & Tsai, Y.-S. (2022). Explainable Artificial Intelligence 
+in education. Computers and Education: Artificial Intelligence, 100074. 
+https://doi.org/10.1016/j.caeai.2022.100074 
+Langlais P.- C. (2023, février 7). ChatGPT : Comment ça marche ? [Billet]. 
+Sciences communes. 
+https://scoms.hypotheses.org/1059 
+Le Blanc B. (2014). Alan Turing : Les machines à calculer et l’intelligence. Hermès, 
+La Revue, 68(1), 123-126. 
+https://doi.org/10.3917/herm.068.0123 
+Le Cun Y., Brizard C. & Brizard C. (2019). Quand la machine apprend : La révolution des 
+neurones artificiels et de l’apprentissage profond. Odile Jacob. 
+Lepage Alexandre (Réalisateur). (2022, mars 3). L’intelligence artificielle en éducation. 
+https://www.youtube.com/watch?v=ZAtu0xIlcIs 
+OCDE. (2023, mars 28). Is Education Losing the Race with Technology? : AI’s Progress in 
+Maths and Reading. OCDE. 
+https://www.oecd.org/education/is-education-losing-the-race-with-technology- 
+73105f99-en.htm 
+OpenAI. (2023). GPT-4 Technical Report. OpenAI. 
+https://cdn.openai.com/papers/gpt-4.pdf 
+IA et éducation : apports de la recherche et enjeux pour les politiques publiques – DNE – 2023 
+37

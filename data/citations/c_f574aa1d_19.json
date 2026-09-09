@@ -1,0 +1,23 @@
+[
+ {"chapitre":"236463e7","citations":[
+  {"texte":"Si vous avez défini votre sujet, l'objectif du texte ainsi que le public cible et ses besoins, ou si cela a été déterminé par un client, vous pouvez demander à l'IA de vous proposer quelques titres","page":191,"axe":"03-ia-outils-pratique-prompting","theme":"Le titre vient apres","portee":"Ordre de travail a respecter : on ne titre pas avant de savoir ce que le texte veut faire et pour qui."},
+  {"texte":"Vous pouvez simplement choisir le meilleur parmi les suggestions ou combiner des idées de plusieurs titres pour en créer un nouveau.","page":194,"axe":"03-ia-outils-pratique-prompting","theme":"Choisir et combiner","portee":"Le bon usage d'une liste generee : elle sert de materiau, la decision reste humaine."}
+ ]},
+ {"chapitre":"2c19f368","citations":[
+  {"texte":"Cependant, cela rendra probablement le texte arbitraire et général.","page":195,"axe":"03-ia-outils-pratique-prompting","theme":"Un plan sans contexte ne vaut rien","portee":"Explique pourquoi tant de textes generes se ressemblent : la consigne ne portait aucun contexte."},
+  {"texte":"Le principe de la pyramide commence par l'information la plus importante ou le message principal, suivi des informations ou arguments de soutien.","page":196,"axe":"09-developpement-personnel-influence","theme":"Commencer par l'essentiel","portee":"Regle de redaction professionnelle, utile bien au dela de l'usage de l'IA."},
+  {"texte":"MECE (Mutually Exclusive, Collectively Exhaustive) est un","page":198,"axe":"09-developpement-personnel-influence","theme":"Ni chevauchement ni oubli","portee":"Critere de rigueur pour tout plan : les parties ne se recouvrent pas et couvrent tout le sujet."},
+  {"texte":"En pratique, vous devriez fournir à l'IA des informations détaillées sur les conditions exactes de l'offre. Sinon, il se peut que le texte généré contienne des affirmations qui ne correspondent pas aux faits.","page":198,"axe":"10-economie-entrepreneuriat-finance","theme":"Une promesse commerciale inventee","portee":"Risque juridique concret : la machine invente des engagements que le commercant devra tenir."}
+ ]},
+ {"chapitre":"3683d9a1","citations":[
+  {"texte":"Pour éviter les problèmes liés à la limitation de l'entrée, j'utilise toujours les informations introductives de mon prompt pour chaque texte.","page":200,"axe":"03-ia-outils-pratique-prompting","theme":"Rappeler le contexte a chaque fois","portee":"Methode de praticien pour tenir la coherence d'un texte long malgre la memoire courte du modele."},
+  {"texte":"Cela vous permet de vous assurer que les sections ou chapitres générés s'harmonisent entre eux et que vous obtenez finalement une contribution","page":200,"axe":"03-ia-outils-pratique-prompting","theme":"Faire tenir l'ensemble","portee":"La coherence d'un texte long ne vient pas du modele mais de la discipline de celui qui le pilote."}
+ ]},
+ {"chapitre":"d3c5a656","citations":[
+  {"texte":"Une technologie dont l'impact sur notre vie et notre avenir pourrait même être plus important que celui du feu ou de l'électricité dans l'histoire de l'humanité.","page":202,"axe":"04-ia-societe-ethique-philosophie","theme":"Plus que le feu et l'electricite","portee":"Affirmation du dirigeant de Google, donc d'une partie interessee. A citer en precisant son origine."},
+  {"texte":"Les seules informations dont ils peuvent apprendre sont leurs données","page":203,"axe":"02-ia-technique-academique","theme":"Enfermes dans leurs donnees","portee":"Limite structurelle rappelee juste avant les promesses d'avenir. L'ordre choisi par l'auteur est significatif."}
+ ]},
+ {"chapitre":"f8cf8f6c","citations":[
+  {"texte":"Pourtant, il existe encore des tâches auxquelles même l'IA la plus performante échoue.","page":204,"axe":"02-ia-technique-academique","theme":"Ce qui resiste encore","portee":"Contrepoint necessaire aux annonces. La conduite autonome sure reste l'exemple le plus documente."}
+ ]}
+]

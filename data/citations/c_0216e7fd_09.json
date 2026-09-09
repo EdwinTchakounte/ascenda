@@ -1,0 +1,139 @@
+[
+ {
+  "chapitre": "db21df82",
+  "citations": [
+   {
+    "texte": "Pour elle, nous sommes tous à la fois innocents et criminels.",
+    "page": 144,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Tous suspects en puissance",
+    "portee": "Un dispositif qui traite chacun comme un criminel probable renverse la présomption d'innocence."
+   },
+   {
+    "texte": "L'individu est reconduit à un statut préindividuel au travers du multiple de son potentiel par des probabilités.",
+    "page": 144,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Réduit à ses probabilités",
+    "portee": "On n'est plus jugé sur ce qu'on a fait mais sur ce que les données disent qu'on pourrait faire."
+   }
+  ]
+ },
+ {
+  "chapitre": "ef541106",
+  "citations": [
+   {
+    "texte": "Si la machine associe un risque important à un certain type d'attitude, un certain type de vêtement ou à une certaine couleur, elle va renforcer ses critères d'identification pour viser en priorité les situations et les personnes qui entrent dans cette catégorie.",
+    "page": 146,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un cercle qui se referme",
+    "portee": "Le système apprend de contrôles déjà orientés et rend ces contrôles encore plus orientés."
+   },
+   {
+    "texte": "on peut entraîner une IA à reconnaître des criminels sans pour autant que ces derniers le soient réellement",
+    "page": 146,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Reconnaître n'est pas prouver",
+    "portee": "Un système peut apprendre n'importe quelle catégorie, y compris une catégorie qui n'existe pas."
+   },
+   {
+    "texte": "Attribuer à celle-ci le visage du crime est tout bonnement une induction raciste.",
+    "page": 147,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Nommer l'erreur de raisonnement",
+    "portee": "Le racisme statistique tient dans une confusion logique précise, ce qui permet de le réfuter précisément."
+   },
+   {
+    "texte": "C'est là le danger des statistiques ethniques qui escamotent sous la catégorie de l'origine des variables cachées, telles que la pauvreté.",
+    "page": 147,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Ce que l'origine dissimule",
+    "portee": "Attribuer à l'origine ce qui relève de la pauvreté est une erreur qui fabrique la discrimination qu'elle prétend constater."
+   },
+   {
+    "texte": "Aucune loi de la nature n'a été découverte par une IA seule, indépendamment de l'humain",
+    "page": 148,
+    "axe": "02-ia-technique-academique",
+    "theme": "Aucune découverte autonome",
+    "portee": "Un fait vérifiable à opposer aux annonces sur une science bientôt faite par les machines."
+   }
+  ]
+ },
+ {
+  "chapitre": "9e40424c",
+  "citations": [
+   {
+    "texte": "Le sens échappe donc à l'accumulation des données empiriques collectées dans le temps.",
+    "page": 149,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le temps ne produit pas le sens",
+    "portee": "Observer longtemps ne suffit pas à savoir ce qui, dans ce qu'on observe, a une signification."
+   },
+   {
+    "texte": "on ne dispose pas de règle formelle pour distinguer les prédicats ayant un sens des prédicats qui n'en ont pas",
+    "page": 150,
+    "axe": "02-ia-technique-academique",
+    "theme": "Aucune règle pour trier le sens",
+    "portee": "La distinction entre ce qui a du sens et ce qui n'en a pas ne se laisse pas formaliser."
+   }
+  ]
+ },
+ {
+  "chapitre": "514b4881",
+  "citations": [
+   {
+    "texte": "cette apagogie est la preuve formelle que n'importe quoi confirme n'importe quoi",
+    "page": 151,
+    "axe": "02-ia-technique-academique",
+    "theme": "Tout confirme tout",
+    "portee": "Si toute observation confirme toute hypothèse, la confirmation cesse d'être un critère de vérité."
+   },
+   {
+    "texte": "lorsqu'elle portait un masque d'Halloween, l'IA parvenait à reconnaître un visage ; lorsqu'elle l'enlevait, elle disparaissait aux yeux de la machine",
+    "page": 151,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Disparaître aux yeux de la machine",
+    "portee": "Une expérience qui rend tangible ce que signifie ne pas figurer dans les données d'entraînement."
+   },
+   {
+    "texte": "Les regards blancs, les seuls vrais, me dissèquent. Je suis fixé.",
+    "page": 152,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Être fixé par le regard de l'autre",
+    "portee": "Fanon décrivait en 1952 l'expérience que les systèmes de reconnaissance reproduisent aujourd'hui."
+   },
+   {
+    "texte": "le coded gaze façonne dans nos sociétés postcoloniales l'image du citoyen modèle ou de l'humain standard à partir de l'homme blanc",
+    "page": 152,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Un standard qui exclut",
+    "portee": "Ce qui n'entre pas dans le modèle par défaut devient anormal, puis suspect."
+   },
+   {
+    "texte": "Il est dès lors important de diversifier les bases de données, mais également de favoriser l'intelligibilité des systèmes d'IA afin d'éviter le renforcement des discriminations systémiques.",
+    "page": 152,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Deux remèdes concrets",
+    "portee": "Diversifier les données et rendre les systèmes explicables sont deux exigences vérifiables, non des intentions."
+   }
+  ]
+ },
+ {
+  "chapitre": "98f59f1c",
+  "citations": [
+   {
+    "texte": "Pas d'objectif, pas de vérification. C'est la voie ouverte à une discrimination opaque qui ne dit pas son nom.",
+    "page": 153,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Sans objectif déclaré, aucun contrôle",
+    "portee": "Un déploiement qui n'annonce pas ce qu'il cherche à obtenir ne peut être évalué par personne."
+   },
+   {
+    "texte": "Non seulement l'homme possède le don divin de révéler les passions qui l'agitent par cette sorte de transfiguration de l'âme, mais il est aussi doué au plus haut degré de la faculté de sentir et de comprendre les expressions extrêmement variées",
+    "page": 153,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Lire un visage",
+    "portee": "Cette faculté instinctive de comprendre autrui est ce qu'aucune détection automatique ne reproduit."
+   }
+  ]
+ }
+]

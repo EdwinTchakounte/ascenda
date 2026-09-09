@@ -1,0 +1,35 @@
+[
+ {"chapitre":"90bce7b5","citations":[
+  {"texte":"Les romans mêlant thriller, drame et romance captivent parce qu’ils exploitent des émotions fortes tout en stimulant la curiosité et la tension.","page":10,"axe":"08-litterature-romans","theme":"Le melange des genres","portee":"Explique le succes commercial d'une formule. Utile a qui veut ecrire pour un large public."}
+ ]},
+ {"chapitre":"cea3b171","citations":[
+  {"texte":"Avant de poser les premiers mots, il est crucial d’avoir une idée forte et unique qui servira de pilier à votre roman. Une idée captivante ne vient pas par hasard : elle se construit en combinant créativité et réflexion.","page":11,"axe":"08-litterature-romans","theme":"L'idee se construit","portee":"Contre le mythe de l'inspiration soudaine. L'idee est un travail, pas un don."},
+  {"texte":"Les émotions personnelles sont une mine d’or pour écrire une intrigue qui touche les lecteurs.","page":11,"axe":"08-litterature-romans","theme":"Partir de son propre vecu","portee":"Ressource dont chacun dispose, quelle que soit sa bibliotheque. Elle ne coute rien et ne s'importe pas."},
+  {"texte":"Résultat : L’émotion réelle rendra l’histoire plus authentique et les personnages plus crédibles.","page":12,"axe":"08-litterature-romans","theme":"L'authenticite vient du vecu","portee":"Ce que la machine ne peut pas fournir : l'experience propre de celui qui ecrit."}
+ ]},
+ {"chapitre":"9c92d5dd","citations":[
+  {"texte":"DeepSeek est parfait pour explorer des scénarios complexes et psychologiques.","page":13,"axe":"03-ia-outils-pratique-prompting","theme":"Une affirmation sans preuve","portee":"Aucun protocole de comparaison n'est presente dans le livre. A lire comme une impression d'usage, non comme un resultat."},
+  {"texte":"Posez-vous la question \"et si ?\" : Et si l’héroïne tombait amoureuse de la mauvaise personne ?","page":13,"axe":"08-litterature-romans","theme":"La question et si","portee":"Outil de creation elementaire et gratuit. Il precede tout recours a une machine."}
+ ]},
+ {"chapitre":"2aa6dcaf","citations":[
+  {"texte":"Climax : Une confrontation explosive où la vérité éclate. Conclusion : Une résolution émotionnelle forte, avec une fin ouverte ou fermée.","page":14,"axe":"08-litterature-romans","theme":"Le troisieme acte","portee":"Schema classique en trois actes, applicable au roman comme au scenario."}
+ ]},
+ {"chapitre":"21c87fcf","citations":[
+  {"texte":"1. Quels secrets ou dilemmes chaque personnage cache-t-il ? 2. Quel est le plus grand obstacle à leur relation ? 3. Quelle est la menace principale qui les unit ou les sépare ?","page":14,"axe":"08-litterature-romans","theme":"Cinq questions pour etoffer une intrigue","portee":"Grille de travail simple, transposable a tout recit. Elle ne demande aucun outil."}
+ ]},
+ {"chapitre":"10324315","citations":[
+  {"texte":"Chaque personnage doit avoir une raison d’agir et un but à atteindre, ce qui le rend crédible et engageant.","page":15,"axe":"08-litterature-romans","theme":"Motivation et credibilite","portee":"Regle de base de la construction romanesque : sans but, pas de personnage."},
+  {"texte":"Les personnages parfaits sont ennuyeux. Les défauts rendent vos personnages réalistes et attachants.","page":16,"axe":"08-litterature-romans","theme":"Le defaut rend attachant","portee":"Vaut au dela de la fiction : c'est aussi ce qui rend un temoignage ou un portrait credible."}
+ ]},
+ {"chapitre":"0c180987","citations":[
+  {"texte":"Un bon personnage doit changer au fil de l’histoire. Ce changement peut être subtil ou radical, mais il doit refléter ce qu’il a appris ou surmonté.","page":16,"axe":"08-litterature-romans","theme":"L'evolution du personnage","portee":"L'arc du personnage donne son sens au recit. Sans transformation, il n'y a que des evenements."}
+ ]},
+ {"chapitre":"b4528f53","citations":[
+  {"texte":"L’antagoniste est plus qu’un simple \"méchant\". C’est celui qui s’oppose au protagoniste et crée les conflits nécessaires pour faire avancer l’histoire.","page":17,"axe":"08-litterature-romans","theme":"Definir l'antagoniste","portee":"Deplace la question du mal vers celle du conflit, moteur reel du recit."},
+  {"texte":"Un antagoniste qui croit être le héros de sa propre histoire est plus intéressant.","page":18,"axe":"08-litterature-romans","theme":"Le heros de sa propre histoire","portee":"Principe qui vaut aussi pour comprendre les conflits reels : chacun se juge du bon cote."}
+ ]},
+ {"chapitre":"87c422b6","citations":[
+  {"texte":"Les personnages secondaires ne sont pas des accessoires : ils doivent avoir leurs propres objectifs et motivations.","page":19,"axe":"08-litterature-romans","theme":"Les seconds roles existent","portee":"Exigence qui distingue un recit habite d'un recit fonctionnel."},
+  {"texte":"Imaginez que votre personnage tienne un journal. Que dirait-il/elle de sa journée, de ses peurs ou de ses espoirs ?","page":19,"axe":"08-litterature-romans","theme":"Le journal du personnage","portee":"Exercice d'ecriture pur, sans machine. Il developpe la voix propre de chaque personnage."}
+ ]}
+]

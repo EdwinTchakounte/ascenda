@@ -1,0 +1,86 @@
+[
+ {"chapitre":"a178d2fc","citations":[
+  {"texte":"Soit parce que nous oublions que ChatGPT n’est pas dans notre tête et qu’il ne peut pas deviner ce que nous savons déjà ou que nous supposons acquis, soit parce que nous ne savons pas quoi lui donner comme information.","page":181,"axe":"03-ia-outils-pratique-prompting","theme":"Les deux angles morts du contexte","portee":"Nomme precisement ce qui manque dans un prompt insuffisant : l'implicite et l'ignorance."},
+  {"texte":"« Pose-moi autant de questions que nécessaire pour t’assurer que tu as bien compris. »","page":181,"axe":"03-ia-outils-pratique-prompting","theme":"La phrase qui change tout","portee":"Une seule phrase qui deplace la charge du contexte de l'utilisateur vers le modele."},
+  {"texte":"Quand vous aurez répondu à toutes ses questions, non seulement ChatGPT sera en mesure d’organiser ce séjour, mais en plus il préparera un événement 100 % adapté à vos besoins !","page":186,"axe":"03-ia-outils-pratique-prompting","theme":"Le questionnement comme check-list","portee":"Les questions du modele valent deja comme inventaire de ce a quoi il faut penser."}]},
+
+ {"chapitre":"49dc0121","citations":[
+  {"texte":"Donner une liste de telles instructions peut prendre du temps, ce qui peut sembler contradictoire dans la mesure où l’utilisation de l’IA générative a pour objectif premier le gain de temps.","page":191,"axe":"03-ia-outils-pratique-prompting","theme":"Le paradoxe du prompt long","portee":"Enonce honnetement le cout d'entree de la methode, avant d'y repondre par la dictee."},
+  {"texte":"pour la qualité de la rédaction, notre style à l’oral est souvent plus fluide que celui à l’écrit, ça serait dommage de s’en priver !","page":196,"axe":"03-ia-outils-pratique-prompting","theme":"L'oral au service de l'ecrit","portee":"Argument peu attendu : dicter ameliore la qualite du prompt, pas seulement sa vitesse."}]},
+
+ {"chapitre":"112a6e55","citations":[
+  {"texte":"OpenAI avait imité la voix de Scarlett Johansson pour « Sky », en clin d’œil au film Her (Spike Jonze, 2013), mais l’entreprise a été obligée de la retirer.","page":198,"axe":"04-ia-societe-ethique-philosophie","theme":"L'imitation d'une voix","portee":"Episode revelateur des limites juridiques et morales de la synthese vocale."},
+  {"texte":"En moyenne, OpenAI estime le temps de réponse à 320 millisecondes, « ce qui est similaire au temps de réponse humain dans une conversation ».","page":199,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Le temps de reponse conversationnel","portee":"Donnee technique qui explique l'impression de dialogue naturel avec la machine."},
+  {"texte":"Cette fonction Voice est très pratique pour écouter du contenu lorsqu’on ne peut pas lire l’écran, par exemple en faisant de l’exercice ou des tâches ménagères.","page":199,"axe":"05-ia-education-pedagogie","theme":"Apprendre les mains occupees","portee":"Ouvre l'usage de l'IA aux temps ou la lecture est impossible."}]},
+
+ {"chapitre":"50154259","citations":[
+  {"texte":"Si vous ne savez pas comment construire votre prompt, demandez à ChatGPT ! C’est la magie de l’outil. À partir d’un document existant, vous pouvez lui demander quel est le prompt qui a permis d’avoir ce résultat.","page":200,"axe":"03-ia-outils-pratique-prompting","theme":"Le prompt inverse","portee":"Technique qui permet de reproduire un resultat admire sans savoir le formuler soi-meme."},
+  {"texte":"Utilise les éléments sémantiques les plus pertinents du texte suivant pour créer un prompt optimisé que je pourrai utiliser pour expliquer un autre concept","page":200,"axe":"03-ia-outils-pratique-prompting","theme":"Extraire la structure d'un texte reussi","portee":"Consigne operationnelle du reverse prompt engineering, transposable a tout domaine."}]},
+
+ {"chapitre":"65fb7bba","citations":[
+  {"texte":"Et en plus de corriger les fautes, il donne des explications sur les corrections. Parfait pour comprendre ses erreurs !","page":204,"axe":"05-ia-education-pedagogie","theme":"Corriger et expliquer","portee":"La correction devient formatrice des lors qu'elle s'accompagne d'une explication."}]},
+
+ {"chapitre":"671836b6","citations":[
+  {"texte":"Parfait pour ceux qui ne sont pas vraiment à l’aise dans l’art du prompt, ce GPT transforme n’importe quel prompt basique ou n’importe quelle requête en prompt optimisé.","page":210,"axe":"03-ia-outils-pratique-prompting","theme":"Un assistant pour construire ses prompts","portee":"Solution de repli pour qui n'a pas encore acquis la methode complete."}]},
+
+ {"chapitre":"7b1b83b4","citations":[
+  {"texte":"Les études récentes montrent que les IA génératives comme ChatGPT donnent de meilleures réponses lorsque les utilisateurs leur parlent poliment ou leur font des compliments.","page":215,"axe":"04-ia-societe-ethique-philosophie","theme":"La politesse envers la machine","portee":"Observation troublante qui invite a s'interroger sur ce que reflete un modele de langage."},
+  {"texte":"Cependant, les IA n’ont pas de véritables émotions. Ce phénomène s’explique plutôt par le fait que les IA ont été entraînées sur la base de conversations entre humains, qui sont généralement plus riches et détaillées lorsque les interlocuteurs se montrent polis","page":215,"axe":"04-ia-societe-ethique-philosophie","theme":"L'explication par les donnees","portee":"Ecarte l'interpretation animiste : c'est le corpus humain qui parle, pas une sensibilite de la machine."},
+  {"texte":"ChatGPT lui-même affirme que la politesse n’est pas indispensable pour obtenir de meilleures réponses, et que la clarté et la précision des questions sont bien plus importantes.","page":215,"axe":"03-ia-outils-pratique-prompting","theme":"Clarte plutot que courtoisie","portee":"Ramene l'attention sur ce qui compte reellement dans la formulation d'une demande."}]},
+
+ {"chapitre":"98bec925","citations":[
+  {"texte":"Grâce à l’application pour smartphone Microsoft SwiftKey AI Keyboard, les utilisateurs d’iPhone, d’iPad et d’Android peuvent maintenant utiliser l’IA lorsqu’ils tapent, écrivent et discutent.","page":216,"axe":"03-ia-outils-pratique-prompting","theme":"L'IA integree au clavier","portee":"Voie d'acces gratuite a l'IA pour qui n'utilise le numerique que par telephone."}]},
+
+ {"chapitre":"0eba9095","citations":[
+  {"texte":"Aujourd’hui encore certaines personnes sont réfractaires à l’usage de l’IA dans la rédaction. C’est pourquoi, si elles voient qu’un contenu a été rédigé avec l’aide de l’IA, elles vont passer leur chemin.","page":218,"axe":"04-ia-societe-ethique-philosophie","theme":"La reception sociale des textes generes","portee":"Rappelle que l'usage de l'IA se juge aussi au regard de ce que le lecteur accepte."},
+  {"texte":"L’utilisation excessive des mots ou expressions tels que « crucial », « dans un monde en constante évolution », « explore », « en conclusion », « imaginez », « dans le monde fascinant de », « dans l’ère »...","page":219,"axe":"03-ia-outils-pratique-prompting","theme":"Les tics d'ecriture des modeles","portee":"Inventaire utile pour reperer, et corriger, les automatismes stylistiques de l'IA."}]},
+
+ {"chapitre":"cd0cdb46","citations":[
+  {"texte":"63,5 % des utilisateurs ne peuvent pas faire la différence entre un contenu généré par ChatGPT 4 et un contenu rédigé par un auteur humain","page":220,"axe":"04-ia-societe-ethique-philosophie","theme":"L'indistinction du texte genere","portee":"Donnee Hubspot 2023 qui pose la question de la confiance dans tout texte publie."},
+  {"texte":"Le résultat indiquait que le contenu était généré par l’IA à 44 %. Or j’avais écrit la totalité avec ChatGPT sans rien corriger.","page":220,"axe":"04-ia-societe-ethique-philosophie","theme":"L'echec des detecteurs","portee":"Experience concrete qui invalide la confiance placee dans les outils de detection."},
+  {"texte":"Attention, je ne dis pas qu’on doit utiliser telles quelles les réponses générées par l’IA, bien au contraire.","page":220,"axe":"04-ia-societe-ethique-philosophie","theme":"La responsabilite de l'auteur","portee":"L'absence de detection ne vaut pas permission de publier sans retravailler."}]},
+
+ {"chapitre":"4d4e91d1","citations":[
+  {"texte":"Si vous en avez marre des réponses génériques de ChatGPT, sachez que vous pouvez le formater avec des instructions personnalisées. Vous décidez alors comment vous voulez que l’IA vous parle.","page":221,"axe":"03-ia-outils-pratique-prompting","theme":"Instructions permanentes","portee":"Reglage qui evite de repeter ses preferences a chaque nouvelle conversation."},
+  {"texte":"Il s’agit de spécifier le ton, le style et le format des réponses. Par exemple, vous pouvez demander des explications détaillées, des réponses concises ou des réponses avec une touche d’humour.","page":222,"axe":"03-ia-outils-pratique-prompting","theme":"Definir la maniere de repondre","portee":"Deuxieme volet des instructions personnalisees, distinct de ce que le modele sait de vous."}]},
+
+ {"chapitre":"c5f18b06","citations":[
+  {"texte":"Testez et affinez : mettez à jour et peaufinez régulièrement vos instructions en fonction de vos expériences.","page":224,"axe":"03-ia-outils-pratique-prompting","theme":"Affiner par l'usage","portee":"Le reglage d'un outil n'est jamais definitif : il se corrige a l'epreuve de la pratique."}]},
+
+ {"chapitre":"30dd56d2","citations":[
+  {"texte":"Si votre question est complexe ou contient plusieurs parties, essayez de la diviser en questions plus simples et posez-les séparément.","page":226,"axe":"03-ia-outils-pratique-prompting","theme":"Decomposer sa demande","portee":"Principe de resolution valable bien au-dela du dialogue avec une machine."},
+  {"texte":"Si vous ne comprenez pas pourquoi ChatGPT ne peut pas répondre, demandez des explications supplémentaires : « De quoi as-tu besoin pour me répondre ? »","page":226,"axe":"03-ia-outils-pratique-prompting","theme":"Interroger le blocage","portee":"Transforme un refus en information exploitable pour reformuler sa demande."}]},
+
+ {"chapitre":"25044966","citations":[
+  {"texte":"Une des caractéristiques les plus incroyables de ChatGPT, c’est sa faculté à comprendre et s’exprimer dans plus de cinquante langues ! Et il a la capacité de passer de l’une à l’autre très facilement !","page":227,"axe":"03-ia-outils-pratique-prompting","theme":"Le multilinguisme","portee":"Atout decisif pour un continent ou le travail se fait souvent entre plusieurs langues."},
+  {"texte":"Au lieu de lui demander d’écrire un e-mail en français puis de le traduire en italien par exemple, demandez-lui plutôt de vous répondre directement en italien.","page":227,"axe":"03-ia-outils-pratique-prompting","theme":"Ecrire directement dans la langue cible","portee":"Evite la double etape et les maladresses d'une traduction mot a mot."}]},
+
+ {"chapitre":"d5960302","citations":[
+  {"texte":"Le bouton « ChatGPT » permet d’ouvrir ChatGPT qui vous résumera automatiquement le contenu de la vidéo en cinq points clés même si vous ne lui avez rien demandé !","page":234,"axe":"03-ia-outils-pratique-prompting","theme":"Resumer une video","portee":"Usage qui rend exploitable une masse de contenus audiovisuels autrement chronophages."}]},
+
+ {"chapitre":"5bb5778a","citations":[
+  {"texte":"La tonalité est une des six étapes composantes du prompt. Elle permet de définir le style avec lequel le texte généré sera rédigé. Sans l’indication d’une tonalité particulière, le rendu sera générique et dépourvu d’émotion.","page":236,"axe":"03-ia-outils-pratique-prompting","theme":"Le role de la tonalite","portee":"Explique pourquoi les textes non parametres paraissent tous se ressembler."},
+  {"texte":"Par exemple, un ton réconfortant peut apaiser et soutenir quelqu’un qui traverse une période difficile.","page":236,"axe":"03-ia-outils-pratique-prompting","theme":"Le ton comme lien","portee":"Le choix du ton engage la relation avec le lecteur, pas seulement la forme du texte."}]},
+
+ {"chapitre":"6261dd33","citations":[
+  {"texte":"ChatGPT n’est pas seulement utile pour rédiger du texte. Voici une liste de soixante verbes d’action qui donne un aperçu de toutes les demandes qu’il est possible de lui faire","page":238,"axe":"03-ia-outils-pratique-prompting","theme":"Elargir le repertoire des demandes","portee":"Le vocabulaire de la tache determine l'etendue de ce que l'on obtient."}]},
+
+ {"chapitre":"c6c8627e","citations":[
+  {"texte":"Je lui donne une image avec du texte en caractères d’imprimerie ou manuscrit, comme une prise de notes sur un paperboard, et il extrait le texte associé.","page":240,"axe":"03-ia-outils-pratique-prompting","theme":"L'extraction de texte depuis une image","portee":"Fonction precieuse partout ou l'information circule encore sur papier ou au tableau."},
+  {"texte":"Pratique quand on voyage dans un pays avec une langue étrangère. Il peut lire le texte sur un panneau de signalisation et nous donner sa traduction dans notre langue.","page":242,"axe":"03-ia-outils-pratique-prompting","theme":"Traduire ce que l'on voit","portee":"Usage mobile qui leve une barriere concrete de langue en situation."}]},
+
+ {"chapitre":"ced44cba","citations":[
+  {"texte":"La transcription en direct dans Microsoft Teams permet de convertir automatiquement la parole en texte pendant une réunion. Ce texte apparaît à côté de la vidéo en temps réel, incluant le nom de l’orateur","page":245,"axe":"06-ia-travail-management-metiers","theme":"La transcription de reunion","portee":"Rend disponible sous forme de texte une matiere jusqu'ici perdue avec la reunion."}]},
+
+ {"chapitre":"56f2caca","citations":[
+  {"texte":"Si je peux vous donner encore un conseil, ce serait de pratiquer encore et encore.","page":247,"axe":"03-ia-outils-pratique-prompting","theme":"La pratique avant tout","portee":"Conclusion de l'ouvrage : la methode ne s'acquiert que par l'usage repete."},
+  {"texte":"Partez du principe qu’on peut tout faire avec l’IA et que même quand on ne sait pas comment, il suffit de lui demander !","page":247,"axe":"03-ia-outils-pratique-prompting","theme":"Demander a l'outil comment faire","portee":"Posture d'apprentissage autonome, particulierement utile a qui n'a pas de formateur sous la main."},
+  {"texte":"L’intelligence artificielle apporte un changement total de paradigme dans nos façons de travailler.","page":248,"axe":"06-ia-travail-management-metiers","theme":"Un changement de paradigme","portee":"Formule de cloture qui situe l'enjeu au niveau de l'organisation du travail elle-meme."}]},
+
+ {"chapitre":"e023d22f","citations":[
+  {"texte":"on parle d’hallucination pour une IA quand celle-ci raconte quelque chose qui n’est pas vrai ou qui n’existe pas vraiment. Cela arrive parfois parce qu’elle essaie de répondre à des questions même quand elle ne connaît pas la réponse exacte, et qu’elle invente donc des choses.","page":249,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Definition de l'hallucination","portee":"Definition accessible d'un phenomene central pour comprendre les limites des modeles."},
+  {"texte":"un deepfake est une technique de synthèse multimédia qui combine des images et des vidéos existantes avec l’aide de l’IA pour créer de faux contenus visuels ou audio réalistes.","page":249,"axe":"04-ia-societe-ethique-philosophie","theme":"Definition du deepfake","portee":"Notion a maitriser pour se proteger de la desinformation par l'image et le son."},
+  {"texte":"Ce sont les moteurs des chatbots textuels d’IA, ceux qui apprennent et qui « comprennent » ce qu’on leur dit.","page":250,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce qu'est un grand modele de langage","portee":"Definition simple des LLM, avec les guillemets prudents de l'auteure sur le verbe comprendre."},
+  {"texte":"sous-domaine de l’IA qui consiste à permettre aux ordinateurs d’apprendre et de s’améliorer automatiquement à partir de l’expérience sans être explicitement programmés","page":250,"axe":"02-ia-technique-academique","theme":"Definition du machine learning","portee":"Distinction fondatrice entre programmation explicite et apprentissage a partir de donnees."},
+  {"texte":"le RAG est une technique qui combine la récupération d’informations et la génération de texte pour améliorer la pertinence et la précision des réponses d’un modèle d’IA","page":252,"axe":"02-ia-technique-academique","theme":"Definition du RAG","portee":"Reponse technique au probleme des hallucinations, en ancrant la generation dans des sources."}]}
+]

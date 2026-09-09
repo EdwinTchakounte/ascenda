@@ -1,0 +1,120 @@
+{
+ "document_id": "bfc723a6-a3ef-41d3-9cc1-9343365b7f3b",
+ "titre_normalise": "L'avènement de l'IA générative et de ChatGPT",
+ "auteurs": [
+  "Utpal Chakraborty",
+  "Soumyadeep Roy",
+  "Sumit Kumar"
+ ],
+ "annee": 2023,
+ "type_ouvrage": "manuel professionnel",
+ "niveau": "intermediaire",
+ "public_cible": "Cadres, chefs de projet et responsables informatiques cherchant un catalogue de cas d'usage sectoriels de l'IA générative. BPB Online, Londres et Inde, 2023, ISBN 978-93-5551-798-2. Une trentaine de chapitres courts, chacun terminé par des « Points à retenir ». La version française est une traduction automatique non révisée : des titres de section sont restés en anglais, la terminologie varie d'un chapitre à l'autre, certaines phrases sont grammaticalement fautives.",
+ "these_centrale": "L'IA générative, et ChatGPT comme sa vitrine, est présentée comme une couche technologique transversale que chaque secteur d'activité doit adopter : banque, administration, santé, éducation, commerce en ligne, divertissement, développement logiciel. Le livre juxtapose pour chacun de ces domaines une liste d'applications, une liste d'avantages et une liste de limitations. Sa partie technique retrace la lignée GPT, de GPT-1 en 2018 à GPT-3.5 et Whisper, avec les paramètres d'architecture publiés par OpenAI.",
+ "idees_force": [
+  {
+   "titre": "La lignée GPT en chiffres, seul apport documentaire solide du livre",
+   "explication": "GPT-1 en 2018 démontre que le pré-entraînement génératif suivi d'un ajustement léger surpasse les modèles spécialisés sur neuf tâches sur douze. GPT-2, lancé le 14 février 2019, augmente données et paramètres et vise plusieurs tâches simultanément. GPT-3 en 2020 compte quatre-vingt-seize couches de quatre-vingt-seize têtes d'attention, des plongements de mots de 12 288 dimensions contre 1 600 pour GPT-2, et une fenêtre de contexte portée de 1 024 à 2 048 jetons. Ces nombres, publics et vérifiables, donnent une mesure concrète de ce que signifie l'augmentation d'échelle.",
+   "page": 72
+  },
+  {
+   "titre": "Zéro exemple, un exemple, quelques exemples",
+   "explication": "GPT-3 introduit la distinction devenue centrale : demander une tâche sans aucun exemple, avec un seul, ou avec quelques-uns fournis directement dans la question. Le modèle se comporte mieux avec quelques exemples qu'avec un seul ou aucun, sur la majorité des tâches. C'est la racine technique de tout ce qu'on appelle aujourd'hui l'art du prompt : on ne reprogramme pas le modèle, on lui montre le format attendu dans la question elle-même.",
+   "page": 72
+  },
+  {
+   "titre": "Le pré-entraînement suivi d'un ajustement est le schéma directeur",
+   "explication": "Un modèle est d'abord entraîné sur un très grand corpus généraliste, puis affiné sur une tâche particulière. Cette économie de moyens, l'apprentissage par transfert, explique pourquoi une organisation modeste peut aujourd'hui obtenir de bons résultats sans construire ni entraîner son propre modèle. Le livre note justement que des services comme ceux d'OpenAI, de Hugging Face, de Google ou d'Amazon permettent de déployer sans repartir de zéro.",
+   "page": 55
+  },
+  {
+   "titre": "Grammaticalement correct ne veut pas dire sémantiquement correct",
+   "explication": "La formulation la plus utile du livre : « l'IA générative peut produire du contenu grammaticalement correct mais sémantiquement incorrect ou trompeur ». La conséquence est immédiate dans les domaines où l'exactitude engage, documentation juridique, documentation médicale, procédure administrative. S'y ajoute la date de coupure des données d'entraînement, qui rend le modèle silencieusement obsolète sur tout événement postérieur.",
+   "page": 47
+  },
+  {
+   "titre": "Six risques nommés pour le contenu généré",
+   "explication": "Propagation de la désinformation, amplification des biais, création de fausses identités, perte d'emploi, risques de sécurité, dépendance à la qualité des données d'entraînement. La liste est juste, même si le livre ne l'approfondit pas et la reprend telle quelle d'un chapitre à l'autre.",
+   "page": 47
+  },
+  {
+   "titre": "La transcription automatique a franchi un seuil pratique",
+   "explication": "Whisper atteint des performances proches de celles de transcripteurs humains professionnels, mesurées en taux d'erreur de mots sur des enregistrements variés et comparées à quatre services commerciaux. C'est un point important pour un contexte multilingue et à forte oralité : la barrière de l'écrit peut être franchie par la voix, en entrée comme en sortie.",
+   "page": 81
+  },
+  {
+   "titre": "Le déploiement en santé est présenté avec une réserve explicite",
+   "explication": "Après avoir énuméré les usages, veille sur les traitements, accès rapide à l'information médicale, détection d'anomalies épidémiologiques, alertes précoces, le livre écrit que la technologie ne peut pas remplacer les professionnels de santé et doit être vue comme un appui. La réserve est classique, mais elle est là, et elle vaut d'être opposée aux argumentaires commerciaux qui l'omettent.",
+   "page": 158
+  },
+  {
+   "titre": "L'assistance au code produit un effet d'apprentissage",
+   "explication": "Le chapitre consacré au développement logiciel décrit une pratique réellement transférable : dialoguer avec le modèle pour clarifier l'objectif, le résultat attendu et les détails d'implémentation, puis lui demander des commentaires sur le code écrit. L'intérêt annoncé n'est pas seulement le gain de temps mais la compréhension des erreurs, donc la montée en compétence de celui qui interroge.",
+   "page": 129
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "IA générative",
+   "definition": "Famille de modèles qui produisent un contenu nouveau, texte, image, son ou code, plutôt que de choisir une réponse dans une liste préétablie."
+  },
+  {
+   "terme": "GPT, transformeur génératif pré-entraîné",
+   "definition": "Architecture de réseau de neurones fondée sur le mécanisme d'attention, entraînée d'abord à prédire la suite d'un texte sur un très grand corpus, puis ajustée pour suivre des instructions."
+  },
+  {
+   "terme": "Transformeur",
+   "definition": "Architecture introduite en 2017 qui traite une séquence entière en parallèle grâce à l'attention, au lieu de la parcourir pas à pas comme les réseaux récurrents. Elle a rendu possible l'entraînement à très grande échelle."
+  },
+  {
+   "terme": "Tête d'attention",
+   "definition": "Sous-module qui apprend à pondérer, pour chaque position du texte, l'importance de toutes les autres positions. GPT-3 en compte quatre-vingt-seize par couche, sur quatre-vingt-seize couches."
+  },
+  {
+   "terme": "Fenêtre de contexte",
+   "definition": "Nombre maximal de jetons que le modèle peut prendre en compte en une fois. 1 024 pour GPT-2, 2 048 pour GPT-3. Cette limite détermine directement la longueur des documents traitables d'un seul tenant."
+  },
+  {
+   "terme": "Jeton",
+   "definition": "Unité élémentaire de découpage du texte, généralement un fragment de mot. C'est l'unité de facturation des interfaces de programmation et l'unité de mesure des limites du modèle."
+  },
+  {
+   "terme": "Plongement de mot",
+   "definition": "Représentation d'un mot ou d'un fragment par un vecteur de nombres. Sa dimension passe de 1 600 pour GPT-2 à 12 288 pour GPT-3."
+  },
+  {
+   "terme": "Apprentissage par transfert",
+   "definition": "Réutilisation d'un modèle pré-entraîné sur une tâche nouvelle moyennant un ajustement léger, ce qui divise par plusieurs ordres de grandeur le coût d'entrée."
+  },
+  {
+   "terme": "Ajustement fin",
+   "definition": "Poursuite de l'entraînement d'un modèle général sur un corpus restreint et spécialisé, pour l'adapter à un domaine ou à un style."
+  },
+  {
+   "terme": "Apprentissage sans exemple, avec un exemple, avec quelques exemples",
+   "definition": "Trois régimes d'utilisation d'un grand modèle, selon le nombre de démonstrations placées dans la requête elle-même."
+  },
+  {
+   "terme": "InstructGPT",
+   "definition": "Variante ajustée pour suivre des instructions humaines plutôt que pour continuer un texte, étape décisive entre GPT-3 et l'interface conversationnelle grand public."
+  },
+  {
+   "terme": "Whisper",
+   "definition": "Modèle de reconnaissance vocale d'OpenAI, dont les performances approchent celles de transcripteurs professionnels sur des enregistrements variés."
+  },
+  {
+   "terme": "Taux d'erreur de mots",
+   "definition": "Mesure standard d'évaluation d'un système de transcription : proportion de mots insérés, supprimés ou substitués par rapport à la référence humaine."
+  }
+ ],
+ "a_lire_si": "Vous cherchez la chronologie technique documentée de la série GPT, avec les paramètres d'architecture et les protocoles d'évaluation publiés, ou un inventaire rapide des cas d'usage sectoriels à discuter en comité de direction. Lisez alors le chapitre sur l'aperçu technique et celui sur le développement historique de la série GPT, et seulement ceux-là.",
+ "a_eviter_si": "Vous cherchez une analyse critique, une compréhension théorique ou un texte fiable dans le détail. La traduction française est automatique et non relue : des intertitres sont restés en anglais, la terminologie change d'un chapitre à l'autre, des phrases sont fautives. Le contenu non technique relève de la brochure commerciale : les listes d'avantages se répètent d'un secteur à l'autre, les projections de marché sont reprises telles quelles d'un cabinet d'études, et un encart publicitaire pour le serveur de discussion de l'éditeur clôt chaque chapitre. Le texte est arrêté à 2023 et ne décrit pas les modèles ultérieurs.",
+ "prerequis": [
+  "Notions de base sur les réseaux de neurones"
+ ],
+ "controverses": [
+  "Le livre affirme l'adoption massive de ChatGPT en entreprise sans données de terrain, en écrivant qu'il est « probable » qu'il soit déjà utilisé. L'assertion doit être traitée comme une hypothèse commerciale et non comme un constat.",
+  "Les projections de marché citées, passage de 10,87 milliards de dollars en 2020 à environ 100 milliards en 2030 pour les médias et le divertissement, proviennent d'un unique cabinet d'études et sont reproduites sans discussion de méthode."
+ ],
+ "confiance": 0.6
+}

@@ -1,0 +1,22 @@
+[
+ {"chapitre":"9d0611fa","citations":[
+  {"texte":"L'IA est capable de proposer des idées et des suggestions créatives, totalement farfelues voire même folles.","page":172,"axe":"03-ia-outils-pratique-prompting","theme":"Provoquer des idees improbables","portee":"Usage sous-estime : demander volontairement de mauvaises idees debloque souvent la reflexion."},
+  {"texte":"Comme toujours, rappelle-toi : utilise ChatGPT comme générateur d'idées, mais ne te fie pas à 100 % aux contenus générés !","page":174,"axe":"03-ia-outils-pratique-prompting","theme":"Generateur d'idees, pas de verites","portee":"Formule qui resume le bon usage. L'idee vient de la machine, la validation revient a l'auteur."}
+ ]},
+ {"chapitre":"80ab8fb3","citations":[
+  {"texte":"En raison de l'ancienneté des données d'entraînement, ChatGPT ne peut pas en savoir plus sur un smartphone récent que sur votre CV.","page":175,"axe":"03-ia-outils-pratique-prompting","theme":"Deux ignorances de meme nature","portee":"Comparaison efficace : ce qui n'est pas dans les donnees n'existe pas, qu'il s'agisse d'un produit ou de vous."},
+  {"texte":"Vous devez donc insérer les informations pertinentes que l'IA ne peut pas connaître, afin que votre article atteigne la profondeur de contenu nécessaire sans générer de fausses informations.","page":175,"axe":"03-ia-outils-pratique-prompting","theme":"Apporter ce que la machine ignore","portee":"Regle de methode : le travail documentaire prealable conditionne la qualite du texte final."}
+ ]},
+ {"chapitre":"ecad05fb","citations":[
+  {"texte":"Il peut être extrêmement utile de d'abord interroger l'IA sur ce que vous devez prendre en compte, puis d'utiliser ces informations pour briefing l'IA.","page":176,"axe":"03-ia-outils-pratique-prompting","theme":"Faire etablir le cahier des charges","portee":"Technique en deux temps : demander les criteres avant de demander le texte."},
+  {"texte":"La manière la plus simple d'obtenir une vue d'ensemble d'un sujet avec ChatGPT est de vous faire lister des termes spécialisés liés à ce sujet","page":176,"axe":"05-ia-education-pedagogie","theme":"Entrer dans un domaine par son vocabulaire","portee":"Excellente porte d'entree pour un autodidacte : connaitre les mots avant de chercher les reponses."}
+ ]},
+ {"chapitre":"09b574af","citations":[
+  {"texte":"Cette liste de termes offre une base de départ idéale pour choisir un sujet et s'initier à la thématique.","page":178,"axe":"05-ia-education-pedagogie","theme":"Une carte du domaine","portee":"Le vocabulaire specialise sert de plan de lecture pour aborder un sujet nouveau."},
+  {"texte":"Comme vous le savez sûrement par expérience, la recherche peut prendre beaucoup de temps en pratique - mais ici aussi, l'IA peut vous aider.","page":178,"axe":"03-ia-outils-pratique-prompting","theme":"Gagner du temps sur la recherche","portee":"A nuancer par le reste du livre : le temps gagne a la recherche se reporte sur la verification."}
+ ]},
+ {"chapitre":"d8d07d8e","citations":[
+  {"texte":"Cette liste pourrait être encore prolongée en posant des questions répétées jusqu'à ce que l'énumération ne contienne plus d'entrées pertinentes ou que ChatGPT prétende qu'il n'y en a plus.","page":180,"axe":"03-ia-outils-pratique-prompting","theme":"Quand le modele dit avoir fini","portee":"Le verbe pretendre est bien choisi : l'epuisement declare d'une liste n'est pas une garantie d'exhaustivite."},
+  {"texte":"Si vous n'avez pas encore une idée claire du but de votre texte, vous pouvez vous laisser guider par les suggestions de l'IA.","page":181,"axe":"03-ia-outils-pratique-prompting","theme":"Clarifier son intention","portee":"Utile quand on hesite, a condition de trancher soi-meme ensuite. L'objectif d'un texte engage son auteur."}
+ ]}
+]

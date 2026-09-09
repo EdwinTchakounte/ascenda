@@ -1,0 +1,82 @@
+{
+ "document_id": "5a7c07cc-d142-42e7-8ce2-a3e55d8e2a49",
+ "titre_normalise": "Utiliser l'intelligence artificielle pour gagner du temps dans la gestion de son marketing numérique",
+ "auteurs": [
+  "Auvergne-Rhône-Alpes Tourisme"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "support de formation",
+ "niveau": "debutant",
+ "public_cible": "Professionnels du tourisme : offices de tourisme, comités régionaux et départementaux, hébergeurs, restaurateurs, prestataires d'activités. Support d'un webinaire de formation animé par un comité régional de tourisme français avec un consultant en commerce électronique, janvier 2024, soixante-quatre diapositives. Le déroulé alterne exposé, sondages en direct et démonstrations d'outils.",
+ "these_centrale": "Un petit professionnel du tourisme n'a pas besoin de comprendre la technologie, il a besoin de savoir quels outils font gagner du temps sur quelles tâches. Le support cadre d'abord les attentes en énumérant très explicitement ce que ces systèmes ne feront pas, puis parcourt les quatre chantiers concrets d'une activité touristique : le site web, les réseaux sociaux, la réputation en ligne, la vente.",
+ "idees_force": [
+  {
+   "titre": "La liste de ce que l'outil ne fera pas",
+   "explication": "Diapositive la plus honnête et la plus utile du support : contrairement à ce qu'on lit parfois, ces systèmes n'accueilleront pas vos clients à votre place, ne feront ni les chambres ni le ménage, ne vous feront pas gagner douze heures par semaine, et ne travailleront pas à votre place. Commencer une formation en démolissant la promesse commerciale est la bonne méthode, parce que la déception est le premier motif d'abandon.",
+   "page": 12
+  },
+  {
+   "titre": "Ce que l'outil permet réellement, formulé sans exagération",
+   "explication": "Faire mieux dans le même temps, gagner en efficacité, alléger certaines tâches fastidieuses, trouver des idées nouvelles, produire de meilleures analyses, prendre de meilleures décisions. Aucune de ces promesses n'est chiffrée, et c'est précisément ce qui les rend crédibles. La formulation faire mieux avec le même temps, plutôt que faire la même chose en moins de temps, est celle qui décrit correctement l'expérience réelle.",
+   "page": 13
+  },
+  {
+   "titre": "Ce qu'une bonne consigne n'est pas",
+   "explication": "Ce n'est pas une conversation avec un ami, et le fait de tutoyer ou de vouvoyer n'a aucun effet. Ce n'est pas une demande vague ni sans contrainte. Ce n'est pas une accumulation de sujets dans une même question. Ce n'est pas un échange unique de question et de réponse. Ce n'est pas dépourvu de granularité. Procéder par ce qu'il ne faut pas faire est pédagogiquement plus efficace que la liste des bonnes pratiques, parce que chaque item correspond à une erreur que le participant vient de commettre.",
+   "page": 36
+  },
+  {
+   "titre": "Ce que masquent les versions gratuites",
+   "explication": "Le support énumère les limites qu'un débutant découvre par surprise : nombre de requêtes plafonné, exécution ralentie, fonctions réduites aux bases, filigranes ou exports limités, nombre de générations restreint. Il compare ensuite les offres selon le critère qui compte le plus, la limite de contexte, exprimée à la fois en jetons et en mots, de l'ordre de trois mille mots pour l'offre gratuite de l'époque contre plusieurs dizaines de milliers pour les offres professionnelles. Traduire la limite technique en nombre de mots est exactement ce dont un non-technicien a besoin.",
+   "page": 18
+  },
+  {
+   "titre": "Quatre chantiers concrets pour une petite structure",
+   "explication": "Le site web, avec la construction ou la réorganisation de l'arborescence à partir de la liste des contenus existants, puis la rédaction optimisée pour la recherche en ligne. Les réseaux sociaux, avec la production de visuels, la rédaction, l'analyse du sentiment des commentaires et les agents conversationnels. La réputation en ligne. La vente. Ce découpage par chantier, et non par outil, permet à chacun de se reconnaître.",
+   "page": 38
+  },
+  {
+   "titre": "Réorganiser une arborescence est une tâche idéale",
+   "explication": "La méthode donnée est précise : lister les pages, thématiques et articles existants, laisser le système proposer plusieurs arborescences, puis demander l'optimisation d'une arborescence existante en fixant des contraintes. C'est un exemple parfait de tâche pour laquelle ces outils sont bons : le contenu est fourni par l'humain, le travail demandé est de réorganisation, et le résultat est immédiatement évaluable par celui qui connaît son activité.",
+   "page": 39
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Limite de contexte",
+   "definition": "Quantité de texte prise en compte en une fois, exprimée en jetons et convertible en nombre de mots. Critère de choix le plus concret entre les offres."
+  },
+  {
+   "terme": "Arborescence",
+   "definition": "Organisation hiérarchique des pages d'un site. Sa refonte est une tâche de réorganisation où l'assistance automatisée est particulièrement efficace."
+  },
+  {
+   "terme": "Référencement naturel",
+   "definition": "Ensemble des pratiques visant à faire apparaître un site dans les premiers résultats d'une recherche, sans achat de publicité."
+  },
+  {
+   "terme": "Analyse de sentiment",
+   "definition": "Classement automatique des avis et commentaires selon la tonalité positive ou négative qu'ils expriment."
+  },
+  {
+   "terme": "Réputation en ligne",
+   "definition": "Image d'un établissement telle qu'elle résulte des avis publiés, enjeu central pour toute activité d'accueil."
+  },
+  {
+   "terme": "Assistant spécialisé",
+   "definition": "Version préconfigurée d'un système conversationnel dédiée à une tâche, ici l'analyse et la rédaction optimisées pour la recherche."
+  },
+  {
+   "terme": "Granularité d'une consigne",
+   "definition": "Degré de découpage d'une demande en étapes distinctes plutôt qu'en une requête globale."
+  }
+ ],
+ "a_lire_si": "Vous formez des artisans, des commerçants, des hébergeurs ou de petites structures touristiques, et vous cherchez un déroulé de séance éprouvé. La progression, cadrer les attentes puis parcourir les chantiers concrets, est transposable à n'importe quel secteur de très petites entreprises, y compris africaines. Les deux diapositives sur ce que l'outil ne fera pas et sur ce qu'une mauvaise consigne contient méritent d'être reprises telles quelles.",
+ "a_eviter_si": "Vous cherchez du contenu de fond. C'est un support commercial d'animation, indissociable de la parole de l'animateur, et la lecture optique des captures d'écran a détruit une grande partie du texte, notamment le tableau comparatif dont les colonnes se mélangent. Les listes d'outils, les tarifs et les tailles de contexte datent de janvier 2024 et sont dépassés. L'histoire de l'intelligence artificielle donnée en ouverture comporte une incohérence de dates dans la présentation des hivers.",
+ "prerequis": [],
+ "controverses": [
+  "Le support fait immédiatement suivre la liste de ce que l'outil ne fera pas par un témoignage promotionnel annonçant des dizaines d'heures économisées chaque mois et un revenu augmenté de onze pour cent. Que ce voisinage soit ironique ou non, il illustre exactement le type de promesse chiffrée que la diapositive précédente vient de démentir, et il ne repose sur aucune donnée vérifiable.",
+  "La formation est financée et animée par une structure dont l'objet est la promotion du numérique auprès des professionnels. Le recensement des outils n'est donc pas neutre et ne discute ni des coûts d'abonnement cumulés, ni de la dépendance créée."
+ ],
+ "confiance": 0.55
+}

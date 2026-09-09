@@ -1,0 +1,728 @@
+[
+ {
+  "chapitre": "1265725e",
+  "citations": [
+   {
+    "texte": "Mon objectif était également de montrer que la tech n’est pas réservée à une élite, à un genre ou à une classe sociale, que tout le monde peut y arriver, quel que soit son métier.",
+    "page": 4,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'acces a la technologie",
+    "portee": "Le postulat d'ouverture de l'ouvrage : la competence numerique n'est pas un privilege de classe mais un apprentissage a la portee de chacun."
+   },
+   {
+    "texte": "L’essentiel est que vous ayez acquis cette méthode, et ce, que vous soyez en train d’utiliser un ChatGPT 4, 5 ou 1 000 !",
+    "page": 5,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La methode avant l'outil",
+    "portee": "Argument central du livre : dans un domaine ou les versions se succedent, seule la methode reste transferable."
+   },
+   {
+    "texte": "Sans méthode, vous allez être déçu·e du résultat. Pire, vous abandonnerez et vous ne percevrez pas en quoi l’IA est un formidable outil du quotidien.",
+    "page": 5,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le risque de l'abandon",
+    "portee": "Explique pourquoi tant d'utilisateurs se detournent de l'IA apres quelques essais decevants."
+   }
+  ]
+ },
+ {
+  "chapitre": "33d63975",
+  "citations": [
+   {
+    "texte": "L’intelligence artificielle (IA) générative est une forme d’intelligence artificielle entraînée à partir de données d’apprentissage pour créer des contenus originaux de façon autonome.",
+    "page": 9,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Definition de l'IA generative",
+    "portee": "Definition de reference pour distinguer l'IA generative des autres formes d'intelligence artificielle."
+   },
+   {
+    "texte": "Le contenu créé n’est pas 100 % original ! Les textes ou les images sont générés par l’IA à partir d’autres qui existent déjà.",
+    "page": 10,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Les limites de l'originalite",
+    "portee": "Nuance essentielle contre le mythe de la creation ex nihilo par la machine."
+   },
+   {
+    "texte": "L’intelligence artificielle n’est pas une nouveauté et vous l’utilisez probablement sans vous en rendre compte.",
+    "page": 8,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'IA deja presente",
+    "portee": "Rappel utile : reconnaissance vocale et filtrage des courriels relevent deja de l'IA."
+   }
+  ]
+ },
+ {
+  "chapitre": "725eda27",
+  "citations": [
+   {
+    "texte": "Un siège qui ne lui donne aucun droit de vote mais qui lui permet de savoir ce qu’il se passe à la tête d’OpenAI.",
+    "page": 11,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le poids de Microsoft dans OpenAI",
+    "portee": "Illustre la dependance financiere des laboratoires d'IA a l'egard des geants du numerique."
+   },
+   {
+    "texte": "Si à un instant T, une des solutions semble la plus puissante, chaque lancement rend obsolète le classement précédent. Bref, la course ne fait que commencer...",
+    "page": 12,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'instabilite du marche",
+    "portee": "Met en garde contre tout classement definitif des outils d'IA generative."
+   }
+  ]
+ },
+ {
+  "chapitre": "f82a4465",
+  "citations": [
+   {
+    "texte": "Le plus important est de comprendre l’apport de l’IA générative dans notre quotidien et d’identifier en quoi elle va nous faire gagner en productivité. C’est la réponse à cette question qui est primordiale, avant même de choisir un outil.",
+    "page": 13,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'usage avant l'outil",
+    "portee": "Renverse la question habituelle : ce n'est pas l'outil qui determine l'usage mais l'inverse."
+   },
+   {
+    "texte": "Je vous encourage à choisir deux IA (ou plus si vous avez le temps) et de demander à l’une et à l’autre la même chose pour comparer les résultats.",
+    "page": 16,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Comparer les outils",
+    "portee": "Methode simple et gratuite pour se forger un jugement sur les IA disponibles."
+   },
+   {
+    "texte": "Globalement, pour démarrer, toutes les IA génératives se valent et vous pourrez avec n’importe laquelle répondre à vos besoins : traduire, résumer, analyser, rédiger, optimiser vos tâches, etc.",
+    "page": 13,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Equivalence des outils au depart",
+    "portee": "Deculpabilise le debutant : le choix initial de l'outil importe moins que le fait de commencer."
+   }
+  ]
+ },
+ {
+  "chapitre": "30ff400a",
+  "citations": [
+   {
+    "texte": "Imaginez l’IA générative comme un chapeau dans lequel les sociétés sont venues injecter des données",
+    "page": 18,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Image des donnees d'entrainement",
+    "portee": "Metaphore pedagogique pour expliquer d'ou vient le savoir d'un modele de langage."
+   },
+   {
+    "texte": "Le problème ? Si les données injectées sont fausses, alors l’IA va fournir des réponses fausses. Et ce n’est pas tout. Plus les données d’entraînement sont anciennes, plus les réponses risquent d’être fausses si des éléments plus récents contredisent le passé.",
+    "page": 18,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'origine des hallucinations",
+    "portee": "Explique les deux sources d'erreur d'un modele : donnees fausses et donnees perimees."
+   },
+   {
+    "texte": "Il est donc capital de vérifier les réponses de ChatGPT et des autres IA génératives, surtout des données chiffrées.",
+    "page": 19,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La verification obligatoire",
+    "portee": "Regle de prudence a integrer a toute utilisation professionnelle de l'IA."
+   }
+  ]
+ },
+ {
+  "chapitre": "94c89cb5",
+  "citations": [
+   {
+    "texte": "De cinq minutes gagnées par-ci à dix minutes gagnées par-là, on peut gagner des heures entières à la fin de la semaine.",
+    "page": 20,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le cumul des gains de temps",
+    "portee": "Montre que le benefice de l'IA se mesure a l'echelle du mois ou de l'annee, pas de la requete."
+   },
+   {
+    "texte": "Quand Google indexe et récupère des informations à partir du contenu web, ChatGPT comprend le contexte de la question et y répond en langage naturel !",
+    "page": 21,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Moteur de recherche contre agent conversationnel",
+    "portee": "Distinction fondatrice pour changer sa maniere d'interroger un outil d'IA."
+   },
+   {
+    "texte": "Parce qu’on va pouvoir lui déléguer des tâches répétitives, on va pouvoir se concentrer sur des tâches à plus forte valeur ajoutée.",
+    "page": 20,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Redistribution de la valeur du travail",
+    "portee": "Formule la promesse professionnelle de l'IA : deleguer le repetitif pour investir l'essentiel."
+   }
+  ]
+ },
+ {
+  "chapitre": "a764487a",
+  "citations": [
+   {
+    "texte": "Mais il faut considérer que l’IA ne va pas tout faire à notre place. Nous allons l’utiliser en complément de nos compétences et savoirs et c’est le cumul des deux qui va produire des résultats incroyables.",
+    "page": 22,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Complementarite et non substitution",
+    "portee": "Position d'equilibre entre le rejet et la delegation totale."
+   },
+   {
+    "texte": "ChatGPT enregistre vos conversations, qui peuvent être consultées par les développeurs d’OpenAI et être partagées.",
+    "page": 23,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Confidentialite des echanges",
+    "portee": "Fait technique a connaitre avant tout usage professionnel de l'outil."
+   },
+   {
+    "texte": "Ne transmettez pas d’informations sensibles (données internes) ni privées. Ou sinon, pensez à anonymiser le contenu.",
+    "page": 23,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Regle de protection des donnees",
+    "portee": "Consigne minimale de securite, illustree par l'affaire Samsung."
+   }
+  ]
+ },
+ {
+  "chapitre": "d746a0e9",
+  "citations": [
+   {
+    "texte": "Parce que ChatGPT comprend au fur et à mesure des échanges ce qu’on attend de lui et enregistre les éléments qu’on lui donne. Plus nous lui partageons des informations, plus il les garde en mémoire et nous donne un résultat qui correspond à nos attentes.",
+    "page": 25,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le compromis entre confidentialite et pertinence",
+    "portee": "Enonce le dilemme reel de l'utilisateur : proteger ses donnees degrade la personnalisation."
+   },
+   {
+    "texte": "De la même manière, Gemini collecte vos conversations. Celles-ci peuvent être consultées par des évaluateurs humains et conservées pendant trois ans !",
+    "page": 26,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Duree de conservation des donnees",
+    "portee": "Chiffre concret qui donne une mesure de l'exposition consentie par l'utilisateur."
+   }
+  ]
+ },
+ {
+  "chapitre": "2d3b4457",
+  "citations": [
+   {
+    "texte": "Cette fonctionnalité de chat temporaire garde vos conversations confidentielles. Contrairement aux interactions standards, ces discussions ne sont pas enregistrées dans l’historique et n’influencent pas les réponses futures du modèle.",
+    "page": 27,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le chat ephemere",
+    "portee": "Solution technique offerte a qui veut explorer des sujets sensibles sans laisser de trace."
+   }
+  ]
+ },
+ {
+  "chapitre": "bafae81c",
+  "citations": [
+   {
+    "texte": "L’AI Act est une législation européenne créée pour réguler l’utilisation de l’intelligence artificielle. Adopté par le Parlement européen le 13 mars 2024, ce règlement vise à établir des normes claires pour l’IA. Il s’agira de la première législation mondiale consacrée à l’IA.",
+    "page": 28,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le premier cadre juridique mondial",
+    "portee": "Repere historique pour situer l'Europe dans la gouvernance de l'IA."
+   },
+   {
+    "texte": "Les risques associés à l’IA incluent les erreurs, les biais cognitifs, la discrimination et les impacts sur la protection des données.",
+    "page": 29,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Typologie des risques",
+    "portee": "Liste des dangers que le legislateur europeen a juge necessaire d'encadrer."
+   }
+  ]
+ },
+ {
+  "chapitre": "35483161",
+  "citations": [
+   {
+    "texte": "L’entraînement de GPT-3 aurait consommé 700 000 litres d’eau.",
+    "page": 30,
+    "axe": "11-sciences-environnement",
+    "theme": "Cout hydrique de l'entrainement",
+    "portee": "Chiffre frappant sur l'empreinte materielle invisible des modeles de langage."
+   },
+   {
+    "texte": "réaliser 100 requêtes sur ChatGPT (ce qui est assez rare en une journée) génère cent fois moins de CO2 que manger 100 grammes de viande de bœuf",
+    "page": 31,
+    "axe": "11-sciences-environnement",
+    "theme": "Mise en perspective de l'empreinte carbone",
+    "portee": "Invite a comparer les ordres de grandeur plutot qu'a diaboliser un usage isole."
+   },
+   {
+    "texte": "l’étude révèle que l’IA émet entre 130 et 1 500 fois moins de éqCO2 (équivalent en dioxyde de carbone) pour l’écriture d’une page de texte et entre 310 et 2 900 fois moins pour la création d’une image",
+    "page": 32,
+    "axe": "11-sciences-environnement",
+    "theme": "Comparaison IA et humain a tache egale",
+    "portee": "Resultat de l'etude de Bill Tomlinson, a manier avec prudence mais utile au debat."
+   }
+  ]
+ },
+ {
+  "chapitre": "492562a0",
+  "citations": [
+   {
+    "texte": "« Personnaliser ChatGPT » vous permet d’insérer des informations que ChatGPT prendra en compte de manière systématique et d’éviter de les répéter à chaque prompt.",
+    "page": 38,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La personnalisation permanente",
+    "portee": "Reglage qui evite de reecrire son contexte a chaque conversation."
+   },
+   {
+    "texte": "Mais attention, si vous la modifiez, ChatGPT va proposer une nouvelle réponse et donc écraser sa réponse précédente.",
+    "page": 39,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Modifier une demande deja envoyee",
+    "portee": "Avertissement pratique : la reformulation efface le resultat obtenu."
+   }
+  ]
+ },
+ {
+  "chapitre": "2293caee",
+  "citations": [
+   {
+    "texte": "Vous communiquerez alors la conversation dans son intégralité, c’est-à-dire non seulement le résultat, mais aussi le travail pour y parvenir.",
+    "page": 40,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Partager une conversation",
+    "portee": "Point de vigilance : le partage expose la demarche autant que le resultat."
+   },
+   {
+    "texte": "Vous avez pris des notes sur papier, un paperboard, un tableau, des Post-it ? Prenez ces notes en photo et demandez à ChatGPT d’écrire le texte. Gain de temps assuré !",
+    "page": 41,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La retranscription de notes",
+    "portee": "Usage mobile immediat, particulierement utile en formation ou en reunion."
+   }
+  ]
+ },
+ {
+  "chapitre": "539aafea",
+  "citations": [
+   {
+    "texte": "Avec la fonction Voice vous pouvez discuter avec l’IA. Pratique pour apprendre une langue, préparer un entretien, une négociation difficile avec un client...",
+    "page": 42,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'oral comme terrain d'entrainement",
+    "portee": "Ouvre un usage pedagogique : repeter un entretien ou une langue avec un interlocuteur disponible."
+   },
+   {
+    "texte": "La fonction mémoire de ChatGPT a pour rôle d’améliorer l’efficacité de l’agent conversationnel en lui permettant de se rappeler les sujets discutés lors de conversations précédentes.",
+    "page": 42,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La memoire de l'agent",
+    "portee": "Definit la fonction qui transforme une suite de requetes isolees en relation de travail continue."
+   }
+  ]
+ },
+ {
+  "chapitre": "d9396c42",
+  "citations": [
+   {
+    "texte": "Considérez la version gratuite comme un avant-goût ou une offre d’essai. Elle vous permet de converser avec l’IA pour tester son potentiel. Et pour un usage occasionnel, elle convient très bien.",
+    "page": 43,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le role de la version gratuite",
+    "portee": "Reponse claire a la question du budget pour un utilisateur qui debute."
+   },
+   {
+    "texte": "Cela permet au plus grand nombre de tester le modèle. Quand les uns sont bloqués, les autres peuvent essayer. Et plus il y a d’utilisateurs, plus les usages vont se répandre",
+    "page": 44,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La strategie de diffusion",
+    "portee": "Devoile la logique economique derriere la gratuite partielle des services d'IA."
+   }
+  ]
+ },
+ {
+  "chapitre": "93660567",
+  "citations": [
+   {
+    "texte": "La formule ChatGPT Team est un espace de travail collaboratif et sécurisé. Collaboratif parce qu’il permet d’avoir un accès par équipe, et sécurisé parce qu’OpenAI assure que l’entreprise cliente conserve la maîtrise de ses données.",
+    "page": 46,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Les offres pour equipes",
+    "portee": "Repere utile pour une organisation qui veut encadrer l'usage de l'IA par ses salaries."
+   }
+  ]
+ },
+ {
+  "chapitre": "e7573881",
+  "citations": [
+   {
+    "texte": "Depuis peu, DALL-E est conçu pour refuser les demandes qui demandent une image dans le style d’un artiste vivant.",
+    "page": 48,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Propriete intellectuelle et style",
+    "portee": "Premiere reponse des editeurs a la contestation des artistes sur l'imitation de style."
+   },
+   {
+    "texte": "Les créateurs peuvent désormais également exclure leurs images de l’entraînement des futurs modèles de génération d’images d’OpenAI en remplissant un simple formulaire.",
+    "page": 48,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le droit de retrait des createurs",
+    "portee": "Mecanisme de consentement encore fragile mais reel dans l'economie des donnees."
+   }
+  ]
+ },
+ {
+  "chapitre": "21613f2d",
+  "citations": [
+   {
+    "texte": "si vous prenez en photo une maison avec une piscine bleue et que vous demandez à DALL-E de vous créer la même maison mais avec une piscine verte, il n’en sera pas capable",
+    "page": 50,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Ce qu'un generateur d'images ne sait pas faire",
+    "portee": "Exemple concret qui fait comprendre qu'un modele genere par ressemblance et non par retouche."
+   },
+   {
+    "texte": "Pour réaliser une image avec DALL-E, il faut donner un minimum de cinq instructions sur le rendu que vous souhaitez obtenir.",
+    "page": 51,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Les cinq instructions d'un prompt image",
+    "portee": "Regle operationnelle : sujet, environnement, style, couleur et details supplementaires."
+   }
+  ]
+ },
+ {
+  "chapitre": "0a3a136f",
+  "citations": [
+   {
+    "texte": "Ces versions personnalisées, appelées GPT, sont des sortes de chatbots que l’on peut concevoir de manière très simple, sans avoir besoin de savoir coder.",
+    "page": 55,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Creer son propre assistant",
+    "portee": "Ouvre la conception d'agents specialises a des utilisateurs non developpeurs."
+   }
+  ]
+ },
+ {
+  "chapitre": "19ba8de5",
+  "citations": [
+   {
+    "texte": "L’intelligence artificielle ne va pas forcément vous remplacer, mais quelqu’un qui la maîtrise le pourrait.",
+    "page": 59,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La competence comme protection",
+    "portee": "Formule ramassee de l'enjeu d'employabilite lie a la maitrise de l'IA."
+   },
+   {
+    "texte": "L’intelligence artificielle va détruire des emplois en automatisant certaines tâches, c’est sûr, mais elle sera aussi source de nouvelles opportunités, notamment les prompt engineer.",
+    "page": 59,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Destruction et creation d'emplois",
+    "portee": "Position mesuree sur l'effet net de l'IA sur le marche du travail."
+   }
+  ]
+ },
+ {
+  "chapitre": "d9413994",
+  "citations": [
+   {
+    "texte": "avec ChatGPT, vous allez pouvoir lui demander de vous trouver une recette qui correspond exactement aux quantités que vous avez dans votre placard",
+    "page": 60,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La reponse sur mesure",
+    "portee": "Exemple domestique qui fait saisir la difference entre chercher et demander."
+   },
+   {
+    "texte": "Prenons par exemple un compte rendu de réunion. Vous allez pouvoir demander à ChatGPT de : ●faire un résumé de la réunion ; ●préparer le contenu d’un e-mail avec le résumé de la réunion en listant le récapitulatif des tâches de chacun",
+    "page": 60,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un document, plusieurs usages",
+    "portee": "Montre comment un meme materiau se decline en plusieurs livrables professionnels."
+   }
+  ]
+ },
+ {
+  "chapitre": "3e0ff4ef",
+  "citations": [
+   {
+    "texte": "Un prompt est simplement la série d’instructions que vous donnez à ChatGPT pour qu’il puisse travailler et fournir une réponse. Plus un prompt sera bien formulé, plus vous aurez une réponse de qualité.",
+    "page": 61,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Definition du prompt",
+    "portee": "Definition de base a partir de laquelle se construit toute la methode du livre."
+   },
+   {
+    "texte": "Un prompt trop vague donne des résultats trop vagues. Il faut donc penser à être précis.",
+    "page": 61,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le principe de precision",
+    "portee": "Explique la deception la plus frequente des debutants face aux reponses generiques."
+   },
+   {
+    "texte": "ChatGPT ne se contente pas de délivrer du contenu sur une problématique donnée mais permet de rédiger, analyser, traduire, compiler, évaluer, optimiser, comparer... Bref, il est multitâche.",
+    "page": 61,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Un outil multitache",
+    "portee": "Enumere l'etendue reelle des operations possibles, bien au-dela de la simple redaction."
+   }
+  ]
+ },
+ {
+  "chapitre": "951f482d",
+  "citations": [
+   {
+    "texte": "Un bon prompt contient six étapes clés : 1. l’identité ; 2. le contexte ; 3. l’objectif ; 4. la tâche ;",
+    "page": 62,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Les six etapes du prompt",
+    "portee": "Ossature de la methode enseignee dans tout l'ouvrage."
+   },
+   {
+    "texte": "C’est le rôle qu’on donne à ChatGPT, c’est-à-dire la compétence qu’on va chercher chez lui, ce qui n’a rien à voir avec son propre métier.",
+    "page": 62,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'identite attribuee au modele",
+    "portee": "Corrige l'erreur repandue qui consiste a decrire son propre metier plutot que la competence recherchee."
+   },
+   {
+    "texte": "On va dire à ChatGPT qui on est avec un maximum d’éléments sur soi et son environnement pour alimenter ses recherches. Dites-lui tout ce qu’il doit savoir pour travailler sur votre requête (sans pour autant donner de données confidentielles !).",
+    "page": 63,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Nourrir le contexte",
+    "portee": "Concilie l'exigence de detail et la protection des donnees sensibles."
+   },
+   {
+    "texte": "Il peut s’agir soit de la forme du rendu, comme une liste à puces ou un tableau, soit des composantes que l’on souhaite impérativement voir dans son résultat.",
+    "page": 64,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La double nature du format",
+    "portee": "Elargit la notion de format : la structure attendue autant que la presentation."
+   },
+   {
+    "texte": "Vous aurez beau avoir le meilleur des fours, les meilleurs ustensiles et les meilleurs citrons, si on ne vous apprend pas la méthode pour réaliser la tarte au citron, vous n’allez pas y arriver.",
+    "page": 61,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Analogie de la tarte au citron",
+    "portee": "Image simple pour justifier l'apprentissage d'une methode avant l'usage d'outils puissants."
+   }
+  ]
+ },
+ {
+  "chapitre": "d0919f1b",
+  "citations": [
+   {
+    "texte": "Identité : Positionne-toi comme un tuteur. Contexte :",
+    "page": 66,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le prompt d'aide aux devoirs",
+    "portee": "Ouverture d'un modele de prompt directement reutilisable en contexte scolaire."
+   },
+   {
+    "texte": "Je veux que tu m’aides à comprendre les concepts mathématiques difficiles et à effectuer les exercices de mes devoirs.",
+    "page": 66,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Comprendre plutot que recopier",
+    "portee": "L'objectif formule dans l'exemple place l'IA du cote de l'explication et non de la substitution."
+   }
+  ]
+ },
+ {
+  "chapitre": "b43951b7",
+  "citations": [
+   {
+    "texte": "Peux-tu m’aider à formuler des idées de contenu et à rédiger un exemple d’article ? Ton : Je souhaite un ton inspirant et engageant.",
+    "page": 66,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Tache et ton dans un prompt editorial",
+    "portee": "Illustre l'enchainement concret de deux des six etapes de la methode."
+   }
+  ]
+ },
+ {
+  "chapitre": "bdb97cf5",
+  "citations": [
+   {
+    "texte": "Peux-tu me fournir une liste d’expressions courantes avec leur prononciation et leur signification ? Ton : Je souhaite un ton amical et encourageant.",
+    "page": 67,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre une langue avec l'IA",
+    "portee": "Exemple de prompt pour l'apprentissage linguistique autonome avant un voyage."
+   }
+  ]
+ },
+ {
+  "chapitre": "875bfed8",
+  "citations": [
+   {
+    "texte": "Identité : Positionne-toi comme un facilitateur de brainstorming.",
+    "page": 69,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'IA comme facilitateur d'idees",
+    "portee": "Role a donner au modele lorsqu'on cherche a produire des options plutot qu'une reponse."
+   },
+   {
+    "texte": "J’aimerais une liste d’idées avec des explications sur les raisons pour lesquelles elles seraient efficaces.",
+    "page": 69,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Demander la justification",
+    "portee": "Astuce de format : exiger le raisonnement rend les propositions evaluables."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f2bfff5",
+  "citations": [
+   {
+    "texte": "Identité : Positionne-toi comme un agent de service client. Contexte : Je travaille pour une entreprise qui vend des appareils électroniques et je dois répondre aux questions fréquentes des clients.",
+    "page": 69,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le prompt de service client",
+    "portee": "Cas d'usage professionnel courant : constituer une foire aux questions coherente."
+   }
+  ]
+ },
+ {
+  "chapitre": "14229632",
+  "citations": [
+   {
+    "texte": "Chaque prompt doit contenir les six étapes clés. ChatGPT aime que les instructions soient clairement énoncées. Pour cela, revenez à la ligne entre chacune des six étapes et sautez des lignes.",
+    "page": 71,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Structurer visuellement son prompt",
+    "portee": "La mise en forme du prompt influe sur la qualite de la reponse, pas seulement son contenu."
+   },
+   {
+    "texte": "Peux-tu raconter une histoire qui inclut des choix à faire à certains moments pour que les enfants puissent décider de la suite ?",
+    "page": 70,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le recit interactif pour enfants",
+    "portee": "Usage familial de l'IA generative, ou l'enfant devient acteur du recit."
+   }
+  ]
+ },
+ {
+  "chapitre": "86e2bc29",
+  "citations": [
+   {
+    "texte": "Pour donner des mots-clés à insérer, un article à lire ou tout simplement pour séparer le prompt et le contenu que vous souhaitez qu’il traite, il faut utiliser les guillemets.",
+    "page": 73,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le role des guillemets",
+    "portee": "Technique de delimitation qui evite que le modele confonde consigne et matiere a traiter."
+   },
+   {
+    "texte": "Votre prompt est parti trop vite ? Vous avez oublié une indication importante ? Pas de panique, on peut arrêter la réponse en cours simplement en appuyant sur le bouton pause.",
+    "page": 72,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Interrompre une reponse",
+    "portee": "Petit geste d'interface qui evite d'attendre une reponse dont on sait deja qu'elle sera inutile."
+   }
+  ]
+ },
+ {
+  "chapitre": "820d14ad",
+  "citations": [
+   {
+    "texte": "Au lieu de dire « rédige un article », dites « rédige un article détaillé sur les dernières tendances en IA générative, ciblant des professionnels du secteur technologique, avec des exemples concrets et des statistiques récentes ».",
+    "page": 74,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Etre specifique",
+    "portee": "Comparaison avant apres qui montre en une phrase ce que precision veut dire."
+   }
+  ]
+ },
+ {
+  "chapitre": "4ff58bac",
+  "citations": [
+   {
+    "texte": "Évitez le jargon complexe à moins qu’il ne soit nécessaire. Un langage clair et concis est plus facilement compréhensible pour le modèle.",
+    "page": 75,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Simplicite du langage",
+    "portee": "S'applique aussi bien a la communication humaine qu'au dialogue avec une IA."
+   },
+   {
+    "texte": "au lieu d’écrire « je suis à iso vs n-1 », écrivez plutôt « mon chiffre d’affaires annuel est identique à celui de l’année précédente »",
+    "page": 75,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Traduire son jargon",
+    "portee": "Exemple qui montre combien le vocabulaire professionnel abrege nuit a la comprehension."
+   }
+  ]
+ },
+ {
+  "chapitre": "421fe58e",
+  "citations": [
+   {
+    "texte": "ChatGPT, bien qu’intelligent, n’est pas capable de lire dans vos pensées.",
+    "page": 76,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'illusion de la comprehension implicite",
+    "portee": "Rappel qui explique la premiere erreur de debutant, le prompt trop vague."
+   },
+   {
+    "texte": "ChatGPT ne peut pas deviner le contexte spécifique de votre situation personnelle ou professionnelle. Il est essentiel de fournir tous les éléments nécessaires dans votre prompt.",
+    "page": 76,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Fournir le contexte soi-meme",
+    "portee": "Deuxieme erreur de debutant : supposer que la machine connait votre situation."
+   }
+  ]
+ },
+ {
+  "chapitre": "56cb4d15",
+  "citations": [
+   {
+    "texte": "N’oubliez pas que son rôle est de fournir une réponse, pas nécessairement la réponse la plus juste.",
+    "page": 77,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qu'une reponse d'IA vaut",
+    "portee": "Phrase clef pour comprendre la nature d'un modele generatif et garder son esprit critique."
+   },
+   {
+    "texte": "Il faut compter au minimum quatre ou cinq échanges pour avoir un résultat satisfaisant.",
+    "page": 77,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le travail par iterations",
+    "portee": "Corrige l'attente d'une reponse parfaite du premier coup."
+   }
+  ]
+ },
+ {
+  "chapitre": "a190cf77",
+  "citations": [
+   {
+    "texte": "Le contexte est l’élément le plus important, car c’est celui qui influe le plus sur la qualité du résultat.",
+    "page": 78,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La primaute du contexte",
+    "portee": "Hierarchise les six etapes : le contexte pese davantage que la formulation de la tache."
+   },
+   {
+    "texte": "Imaginez que vous accueillez un nouveau collaborateur et que vous lui dites : « Rédige un e-mail pour M. Durand. »",
+    "page": 78,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Analogie du nouveau collaborateur",
+    "portee": "Rend evidente l'insuffisance d'une consigne sans contexte."
+   }
+  ]
+ },
+ {
+  "chapitre": "ca00440b",
+  "citations": [
+   {
+    "texte": "En rédigeant un prompt plus court mais moins détaillé, vous perdez non seulement en qualité de réponse mais aussi en efficacité, car vous devrez demander des éléments supplémentaires jusqu’à ce que vous obteniez la réponse parfaite.",
+    "page": 81,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'economie du temps investi",
+    "portee": "Le temps passe a decrire le contexte se recupere sur le nombre d'echanges evites."
+   },
+   {
+    "texte": "À cela, on va ajouter deux briques supplémentaires, qui sont la notation et les étapes.",
+    "page": 81,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Les deux briques du prompt avance",
+    "portee": "Passage de la methode de base a une conduite plus exigeante du dialogue."
+   },
+   {
+    "texte": "La notation : elle va consister à demander à ChatGPT de noter soit son propre travail, soit son niveau de compréhension par rapport à la demande.",
+    "page": 82,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Faire s'autoevaluer le modele",
+    "portee": "Technique qui transforme le modele en controleur de sa propre production."
+   },
+   {
+    "texte": "Étape 3 : Note ta réponse sur une échelle de 1 à 10, et si la note n’est pas de 10, indique comment tu peux t’améliorer et reformule ta réponse en conséquence.",
+    "page": 84,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La boucle d'amelioration",
+    "portee": "Consigne qui declenche une revision automatique du resultat sans intervention supplementaire."
+   }
+  ]
+ }
+]

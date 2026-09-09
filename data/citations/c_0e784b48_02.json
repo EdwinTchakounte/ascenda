@@ -1,0 +1,342 @@
+[
+ {
+  "chapitre": "0198531e",
+  "citations": [
+   {
+    "texte": "Le À-calcul est ainsi le premier exemple de système abouti de réécriture.",
+    "page": 29,
+    "axe": "02-ia-technique-academique",
+    "theme": "Premier système de réécriture",
+    "portee": "Situe le lambda-calcul comme ancêtre commun de toute une famille de langages."
+   },
+   {
+    "texte": "Church et Kleene ont montré que les termes du À-calcul représentent exactement les fonctions partielles calculables",
+    "page": 29,
+    "axe": "02-ia-technique-academique",
+    "theme": "Équivalence du lambda-calcul",
+    "portee": "Un formalisme purement fonctionnel atteint exactement la même puissance que la machine de Turing."
+   }
+  ]
+ },
+ {
+  "chapitre": "91a6b88f",
+  "citations": [
+   {
+    "texte": "Ce qui peut être calculé par une machine peut l'être par une machine de Turing.",
+    "page": 30,
+    "axe": "02-ia-technique-academique",
+    "theme": "Version physique de la thèse de Church",
+    "portee": "Formulation à ne pas confondre avec la thèse originale, qui portait sur la déduction formelle."
+   },
+   {
+    "texte": "Observons que cette variante de la thèse est intimement reliée au problème de la modélisation de notre monde physique, c'est-à-dire au problème de comprendre si les modèles de notre monde physique sont correctement reliés à ce dernier.",
+    "page": 30,
+    "axe": "11-sciences-environnement",
+    "theme": "Calcul et modélisation du monde",
+    "portee": "Rappelle qu'un énoncé sur les machines engage une position sur la physique elle même."
+   }
+  ]
+ },
+ {
+  "chapitre": "e060f5ad",
+  "citations": [
+   {
+    "texte": "on peut dire que l'argumentation de Gandy traduit dans ces quatre principes deux grandes hypothèses relatives à la nature physique : la finitude de la vitesse de la transmission de l'information et la finitude de la densité de l'information",
+    "page": 31,
+    "axe": "11-sciences-environnement",
+    "theme": "Deux hypothèses physiques",
+    "portee": "Ce que la thèse de Church suppose du monde réel, énoncé en deux propositions."
+   },
+   {
+    "texte": "La discussion de Gandy se limite aux systèmes discrets digitaux, et écarte explicitement les systèmes analogiques dès son début.",
+    "page": 31,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le périmètre écarté",
+    "portee": "Une limitation de méthode qu'il faut connaître avant d'invoquer le résultat."
+   }
+  ]
+ },
+ {
+  "chapitre": "1080f16e",
+  "citations": [
+   {
+    "texte": "Malgré le grand nombre de livres intitulés « théorie de la calculabilité », il n'y a pas de théorie significative de la calculabilité. En revanche, il y a une remarquable théorie de la calculabilité partielle.",
+    "page": 32,
+    "axe": "02-ia-technique-academique",
+    "theme": "Calculabilité et calculabilité partielle",
+    "portee": "Affirmation forte des auteurs, qui déplace le centre de gravité de toute la discipline."
+   },
+   {
+    "texte": "Ainsi, si un élément est dans l'ensemble, on finit par le savoir. En revanche, si un élément n'y est pas, on n'a a priori aucun moyen de le savoir.",
+    "page": 32,
+    "axe": "02-ia-technique-academique",
+    "theme": "Asymétrie de l'énumérabilité",
+    "portee": "Cette asymétrie est le cœur de nombreuses limites pratiques en vérification de programmes."
+   }
+  ]
+ },
+ {
+  "chapitre": "32288b2f",
+  "citations": [
+   {
+    "texte": "Tout d'abord, il dit qu'un programme et une entrée sont interchangeables : la grande idée de John von Neumann pour les ordinateurs !",
+    "page": 33,
+    "axe": "02-ia-technique-academique",
+    "theme": "Programme et donnée",
+    "portee": "Le principe même de l'ordinateur à programme enregistré, énoncé comme un théorème."
+   },
+   {
+    "texte": "Théorème qui peut aussi être vu comme théorème anti-chômage : on aura toujours besoin d'un chercheur pour essayer de décider ce genre de question, pas possible de le remplacer par un programme.",
+    "page": 33,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce qu'aucun programme ne fera",
+    "portee": "Formule plaisante, mais qui pose une limite mathématique réelle à l'automatisation du raisonnement."
+   }
+  ]
+ },
+ {
+  "chapitre": "a7115d6f",
+  "citations": [
+   {
+    "texte": "Ainsi, on ne peut décider aucune question non triviale sur la sémantique des programmes, et cela a des conséquences fondamentales pour la démonstration automatique et la vérification de programme.",
+    "page": 34,
+    "axe": "02-ia-technique-academique",
+    "theme": "Portée du théorème de Rice",
+    "portee": "Explique pourquoi aucun outil ne pourra jamais vérifier automatiquement tout ce qu'on voudrait."
+   },
+   {
+    "texte": "Si la formalisation de la notion intuitive de calculabilité est faite vers 1936, la question de savoir ce qu'est un algorithme reste cependant ouverte.",
+    "page": 34,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qu'est un algorithme",
+    "portee": "Distingue nettement la question de ce qui est calculable de celle de la manière de calculer."
+   }
+  ]
+ },
+ {
+  "chapitre": "c5bb2d5c",
+  "citations": [
+   {
+    "texte": "Le fait d'expliciter une partie statique dans les ASM souligne qu'il n'y a pas d'algorithme absolu qui dise la totalité du « comment faire ». Tout algorithme utilise des fonctions qu'il considère comme primitives et dont il ne dit pas comment elles doivent se faire.",
+    "page": 35,
+    "axe": "02-ia-technique-academique",
+    "theme": "Aucun algorithme absolu",
+    "portee": "Tout procédé, même parfaitement décrit, repose sur des opérations qu'il ne décrit pas."
+   },
+   {
+    "texte": "Toute façon « séquentielle » de calculer est simulable pas à pas par une ASM.",
+    "page": 35,
+    "axe": "02-ia-technique-academique",
+    "theme": "Thèse de Gurevich",
+    "portee": "Premier énoncé de complétude portant sur la manière de calculer et non sur le résultat."
+   }
+  ]
+ },
+ {
+  "chapitre": "581f83e9",
+  "citations": [
+   {
+    "texte": "Colson prouve que tout algorithme issu d'une définition primitive récursive s'exécute nécessairement en un temps proportionnel à x ou bien proportionnel à y, donc aucun ne peut travailler comme l'algorithme naturel",
+    "page": 37,
+    "axe": "02-ia-technique-academique",
+    "theme": "Limite des définitions récursives",
+    "portee": "Un formalisme peut calculer la bonne fonction sans jamais permettre le bon algorithme."
+   }
+  ]
+ },
+ {
+  "chapitre": "865da442",
+  "citations": [
+   {
+    "texte": "Un des résultats les plus étonnants de l'informatique théorique et de la programmation est le lien profond qui existe entre déduction et calcul.",
+    "page": 38,
+    "axe": "02-ia-technique-academique",
+    "theme": "Déduction et calcul",
+    "portee": "Annonce le résultat central de tout ce chapitre, souvent ignoré hors des cercles spécialisés."
+   },
+   {
+    "texte": "Un avantage de ce langage des preuves constructives sur les autres langages de programmation est, qu'en plus de la sortie u, le mécanisme d'extraction fournit une preuve de la formule A(t/x, u/y), c'est-à-dire une preuve de ce que t and u satisfont bien la spécification A.",
+    "page": 38,
+    "axe": "02-ia-technique-academique",
+    "theme": "Programme et preuve de correction",
+    "portee": "Le programme arrive avec la preuve qu'il fait ce qu'il annonce, ce qu'aucun langage courant ne garantit."
+   }
+  ]
+ },
+ {
+  "chapitre": "27215258",
+  "citations": [
+   {
+    "texte": "Une formule est valide si et seulement si elle est prouvable",
+    "page": 39,
+    "axe": "02-ia-technique-academique",
+    "theme": "Théorème de complétude",
+    "portee": "Énoncé le plus court de ce qui relie la vérité d'une formule à sa démontrabilité."
+   },
+   {
+    "texte": "Intuitivement, chaque formule compte. Autrement dit, A /\\ A n'est pas équivalente à A, ce qu'il faut comprendre comme disposer de deux ressources, même identiques, est différent de disposer d'une seule.",
+    "page": 39,
+    "axe": "02-ia-technique-academique",
+    "theme": "Logique linéaire",
+    "portee": "Une logique où la répétition compte, ce qui la rapproche de la gestion réelle des ressources."
+   },
+   {
+    "texte": "Comme son nom l'indique, ce système suit de très près les façons naturelles de faire des preuves, c'est-à-dire les façons de faire des mathématiciens.",
+    "page": 41,
+    "axe": "02-ia-technique-academique",
+    "theme": "Déduction naturelle",
+    "portee": "Un formalisme construit pour épouser la pratique effective plutôt que l'élégance axiomatique."
+   }
+  ]
+ },
+ {
+  "chapitre": "e5020d9e",
+  "citations": [
+   {
+    "texte": "Un examen attentif de ces règles montre que chacune correspond à une façon de raisonner tout à fait naturelle et usuelle.",
+    "page": 41,
+    "axe": "02-ia-technique-academique",
+    "theme": "Des règles conformes au raisonnement ordinaire",
+    "portee": "La force du système tient à ce qu'il formalise des gestes que chacun fait déjà sans les nommer."
+   },
+   {
+    "texte": "Le lecteur peut s'étonner de ne pas y trouver de règle pour la négation. La raison en est que l'on considère que la négation ·A est la formule A ::::} _i, c'est-à-dire la formule qui exprime que A implique le faux.",
+    "page": 41,
+    "axe": "02-ia-technique-academique",
+    "theme": "La négation dérivée",
+    "portee": "Économie de moyens caractéristique des systèmes formels bien conçus."
+   }
+  ]
+ },
+ {
+  "chapitre": "940a5281",
+  "citations": [
+   {
+    "texte": "Cette opération est donc une simple substitution",
+    "page": 44,
+    "axe": "02-ia-technique-academique",
+    "theme": "Réduction par substitution",
+    "portee": "Ce qui semble un remaniement de preuve se ramène à l'opération la plus élémentaire du calcul."
+   }
+  ]
+ },
+ {
+  "chapitre": "4e3b5ca9",
+  "citations": [
+   {
+    "texte": "Le théorème principal du sujet assure que, néanmoins, ce processus de réduction des preuves se termine.",
+    "page": 45,
+    "axe": "02-ia-technique-academique",
+    "theme": "Terminaison de la réduction",
+    "portee": "Sans ce théorème, l'élimination des coupures resterait une opération sans garantie d'aboutir."
+   },
+   {
+    "texte": "Ainsi, une preuve de A /\\ B est un couple formé d'une preuve de A et d'une preuve de B, et une preuve de A ::::} B est un algorithme qui associe à une preuve de A une preuve de B.",
+    "page": 45,
+    "axe": "02-ia-technique-academique",
+    "theme": "Interprétation de Brouwer, Heyting et Kolmogorov",
+    "portee": "Lecture des connecteurs logiques comme des constructions concrètes plutôt que comme des vérités."
+   }
+  ]
+ },
+ {
+  "chapitre": "cc2a41de",
+  "citations": [
+   {
+    "texte": "En identifiant, comme il est usuel de le faire, des objets isomorphes, on voit que le type d'une preuve est la formule qu'elle prouve.",
+    "page": 46,
+    "axe": "02-ia-technique-academique",
+    "theme": "Isomorphisme de Curry, de Bruijn et Howard",
+    "portee": "Une formule et un type sont la même chose vue de deux disciplines différentes."
+   },
+   {
+    "texte": "Evidemment, lorsqu'on n'a aucun axiome, il y a bien peu de fonctions dont on peut prouver l'existence et le langage des preuves constructives est alors un langage de programmation assez pauvre.",
+    "page": 46,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le prix de la pureté",
+    "portee": "Une théorie plus riche donne un langage plus expressif, mais menace la propriété du témoin."
+   }
+  ]
+ },
+ {
+  "chapitre": "e25f74b4",
+  "citations": [
+   {
+    "texte": "Une alternative à la solution précédente est d'abandonner les axiomes et de les remplacer par des règles de déduction non logiques.",
+    "page": 47,
+    "axe": "02-ia-technique-academique",
+    "theme": "Axiomes changés en règles",
+    "portee": "Déplacement de méthode qui préserve la structure algorithmique des preuves."
+   }
+  ]
+ },
+ {
+  "chapitre": "2130ccd1",
+  "citations": [
+   {
+    "texte": "De cette façon, les preuves classiques apparaissent comme des algorithmes non déterministes.",
+    "page": 48,
+    "axe": "02-ia-technique-academique",
+    "theme": "Preuves classiques et non déterminisme",
+    "portee": "Le passage du constructif au classique a un prix algorithmique précis."
+   },
+   {
+    "texte": "Ce théorème affirme qu'aucun système de preuve ne peut capturer pleinement le raisonnement mathématique",
+    "page": 48,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Portée du théorème d'incomplétude",
+    "portee": "Limite qui vaut pour toute prétention à mécaniser intégralement le raisonnement."
+   }
+  ]
+ },
+ {
+  "chapitre": "969702f4",
+  "citations": [
+   {
+    "texte": "Bien sûr, le théorème de Godel a obligé à une révision drastique de ce programme. Mais pas à son abandon",
+    "page": 49,
+    "axe": "02-ia-technique-academique",
+    "theme": "Après Gödel",
+    "portee": "Un résultat d'impossibilité ne ferme pas une recherche, il en déplace les méthodes."
+   },
+   {
+    "texte": "La seule façon de rectifier nos raisonnements est de les rendre aussi tangibles que ceux des mathématiciens, de sorte qu'une erreur puisse se voir d'un coup d'oeil.",
+    "page": 49,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Rendre le raisonnement vérifiable",
+    "portee": "Ambition de Leibniz, qui vaut encore comme exigence pour toute argumentation publique."
+   }
+  ]
+ },
+ {
+  "chapitre": "1f7318e0",
+  "citations": [
+   {
+    "texte": "La réponse est aujourd'hui complète et plutôt technique, mais elle a mis près de trois-quarts de siècle à être apportée !",
+    "page": 50,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le temps long de la recherche",
+    "portee": "Rappel utile sur le rythme réel auquel une question scientifique se referme."
+   }
+  ]
+ },
+ {
+  "chapitre": "9f4d2cd4",
+  "citations": [
+   {
+    "texte": "Cette arithmétique additive est alors décidable (Presburger, 1929). Ce résultat est d'une très grande importance en informatique car elle permet de modéliser nombre de situations et fournit donc des algorithmes.",
+    "page": 51,
+    "axe": "02-ia-technique-academique",
+    "theme": "Décidabilité de l'arithmétique additive",
+    "portee": "Renoncer à la multiplication suffit à faire basculer une théorie du côté du décidable."
+   },
+   {
+    "texte": "Tous les problèmes de solutions d'équations de degré quelconque posés au lycée sont donc résolubles à l'aide d'une machine",
+    "page": 51,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Décidabilité de l'algèbre réelle",
+    "portee": "Résultat de Tarski, dont la portée scolaire est immédiate même si la complexité reste énorme."
+   }
+  ]
+ }
+]

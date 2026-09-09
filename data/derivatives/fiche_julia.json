@@ -1,0 +1,88 @@
+{
+ "document_id": "9c559649-44f5-4690-8523-367ae1760a7f",
+ "titre_normalise": "L'intelligence artificielle n'existe pas",
+ "auteurs": [
+  "Luc Julia",
+  "Ondine Khayat"
+ ],
+ "annee": 2019,
+ "type_ouvrage": "essai",
+ "niveau": "debutant",
+ "public_cible": "Grand public sans bagage technique, journalistes, enseignants, décideurs exposés au discours ambiant sur l'IA. Écrit par le co-créateur de Siri, sur un ton de conversation plutôt que de traité.",
+ "these_centrale": "Le terme « intelligence artificielle » est un malentendu de vocabulaire né à la conférence de Dartmouth en 1956, et ce malentendu produit aujourd'hui des peurs infondées. Ce qui existe, ce sont des systèmes statistiques qui restituent ce qu'on leur a appris dans un domaine étroit : Luc Julia propose de parler d'« intelligence augmentée », un outil qui amplifie nos capacités sans jamais décider à notre place.",
+ "idees_force": [
+  {
+   "titre": "Deep Blue n'a pas battu Kasparov en réfléchissant",
+   "explication": "La machine a gagné grâce à une mémoire phénoménale de parties stockées et à sa capacité à explorer plus de coups à l'avance qu'un humain, « grâce au big data, et absolument pas grâce au raisonnement ». Julia utilise l'exemple le plus cité de l'histoire de l'IA pour montrer que la prouesse technique n'a rien à voir avec l'intelligence qu'on lui prête.",
+   "page": 92
+  },
+  {
+   "titre": "Les réseaux de neurones n'ont rien à voir avec le cerveau",
+   "explication": "Le perceptron manipulait des dizaines de neurones quand le cerveau en compte cent milliards, et surtout nous ne savons toujours pas comment fonctionne un cerveau. « C'est une vue de l'esprit, une belle abstraction. » Pour Julia, c'est cette métaphore biologique mal choisie qui a fait croire à une équivalence entre la technologie et l'intelligence.",
+   "page": 82
+  },
+  {
+   "titre": "L'IA a déjà connu deux hivers, et la peur peut en provoquer un troisième",
+   "explication": "Premier hiver au début des années 1970 après les échecs sur le langage et la traduction, second à la fin des années 1980 après l'échec de la « cinquième génération » japonaise. À chaque fois, un emballement fondé sur des croyances suivi d'un effondrement. Julia craint qu'un troisième hiver, cette fois provoqué par la peur, nous prive de progrès réels en santé et en environnement.",
+   "page": 82
+  },
+  {
+   "titre": "Le catastrophisme d'Elon Musk est le mythe de Frankenstein en version geek",
+   "explication": "Julia s'en prend nommément à Musk, et regrette que Hawking puis Gates l'aient suivi alors qu'ils « ne connaissaient rien à l'IA ». Il relève que la déclaration de Hawking sur une IA qui se reproduirait comme un virus informatique trahit une méconnaissance du fonctionnement des virus, et que la métaphore biologique fait peur sans avoir de fondement scientifique.",
+   "page": 113
+  },
+  {
+   "titre": "Parler d'intelligence augmentée, pas artificielle",
+   "explication": "Systèmes experts, machine learning, deep learning : « ils ne sont rien d'autre que ce que nous, humains, avons décidé qu'ils soient ». Ils assistent des tâches ponctuelles et codifiées, ils amplifient nos capacités mais ne les remplacent pas. « L'IA est là pour faciliter nos décisions, pas pour les prendre à notre place. » C'est le renversement de perspective que porte tout le livre.",
+   "page": 104
+  },
+  {
+   "titre": "L'explicabilité n'est pas perdue, elle est laborieuse",
+   "explication": "Julia résiste à l'idée de la boîte noire absolue : la reconnaissance de formes par réseau de neurones se ramène à des calculs de distance géométrique « totalement explicables ». La difficulté du deep learning vient du nombre de couches et du fait que les paramètres intermédiaires deviennent des attributs étrangers aux objets reconnus, pas d'une impossibilité de principe.",
+   "page": 123
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Intelligence augmentée",
+   "definition": "Terme que Luc Julia propose de substituer à « intelligence artificielle » : une technologie qui accroît les capacités d'un être intelligent dans des domaines spécifiques, l'humain conservant le contrôle, l'empathie et le sens commun."
+  },
+  {
+   "terme": "Hiver de l'IA",
+   "definition": "Période de désaffection et de coupe des financements qui suit un emballement d'attentes déçues. Deux épisodes recensés : début des années 1970 et fin des années 1980."
+  },
+  {
+   "terme": "Conférence de Dartmouth",
+   "definition": "Réunion de 1956 où le terme « intelligence artificielle » a été forgé. Julia y voit l'origine d'un malentendu durable : un nom de baptême choisi pour attirer des financements, pris depuis au pied de la lettre."
+  },
+  {
+   "terme": "Apprentissage supervisé",
+   "definition": "Méthode où l'on entraîne un système sur des exemples étiquetés jusqu'à ce que sa fonction converge vers un modèle. Julia l'illustre par le classifieur chien/serpent qui hésite à 50/50 devant un crocodile, un cas hors de son apprentissage."
+  },
+  {
+   "terme": "Explicabilité",
+   "definition": "Capacité à rendre compte du chemin par lequel un système est parvenu à sa sortie. Totale pour la programmation classique et les systèmes statistiques, laborieuse mais non impossible pour le deep learning."
+  },
+  {
+   "terme": "General Purpose Technology (GPT)",
+   "definition": "Terme d'économistes désignant une technologie d'intérêt général capable d'affecter tous les secteurs, machine à vapeur, électricité. Julia range l'IA dans cette catégorie, ce qui justifie selon lui une régulation favorisant son développement pour le plus grand nombre."
+  },
+  {
+   "terme": "Interopérabilité des objets",
+   "definition": "Redéfinition de l'IoT que Julia a portée chez Samsung : passer d'« Internet of Things » à « Interoperability of Things », puis à « Intelligence of Things ». Des objets simples qui, en interagissant, produisent un service qu'aucun ne rendait seul."
+  }
+ ],
+ "a_lire_si": "Vous voulez un antidote court et concret au discours catastrophiste sur l'IA, écrit par quelqu'un qui a construit ces systèmes de l'intérieur, SRI, Apple, Samsung. C'est le contrepoids naturel à Bostrom dans cette bibliothèque : à lire en regard de Superintelligence plutôt qu'à sa place.",
+ "a_eviter_si": "Vous cherchez une démonstration argumentée plutôt qu'un témoignage. Une grande partie du livre est autobiographique, anecdotes de la Silicon Valley, portrait de Steve Jobs, rencontres politiques, et un long chapitre déroule une journée fictive en 2040, techno-optimiste et peu problématisée. La thèse tient en une trentaine de pages ; le reste est du récit. Le livre date aussi de 2019, avant les grands modèles de langage : la question de savoir si son argument résiste à ChatGPT n'y est évidemment pas traitée.",
+ "prerequis": [
+  "Aucun. C'est l'une des portes d'entrée les plus accessibles du corpus.",
+  "Une notion, même vague, de ce qu'est un réseau de neurones rend le chapitre historique plus profitable, les pages 80 à 105 du livre la fournissent elles-mêmes."
+ ],
+ "controverses": [
+  "Le cœur du désaccord avec Nick Bostrom : Julia tient le scénario d'une superintelligence hors de contrôle pour une fiction, là où Superintelligence en fait la priorité morale de notre époque. Les deux ouvrages sont dans cette bibliothèque et se contredisent frontalement.",
+  "L'argument « les machines ne font que ce que nous leur demandons » est précisément ce que la thèse de la réalisation perverse conteste : un système peut satisfaire littéralement la consigne donnée par des voies que personne n'avait prévues.",
+  "L'optimisme sur l'emploi, « les pays les plus robotisés sont ceux où il y a le moins de chômage », est une corrélation présentée comme un argument causal, et le livre écarte assez vite la question de la répartition des richesses qu'il vient pourtant de soulever.",
+  "Le refus de taxer les robots au motif que ce serait taxer l'innovation est une position politique, pas un constat technique."
+ ],
+ "confiance": 0.86
+}

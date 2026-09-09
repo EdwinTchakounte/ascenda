@@ -1,0 +1,54 @@
+[
+ {"chapitre":"929ab45a","citations":[
+  {"texte":"ce qui distingue les grands joueurs de go [est] leur intuition","page":158,"axe":"09-developpement-personnel-influence","theme":"L'intuition du maître","portee":"Ce que le grand joueur possède et ne peut expliquer est précisément ce que la machine devait reproduire."},
+  {"texte":"la recherche arborescente Monte-Carlo n'a pas à deviner, à partir d'un simple regard sur une configuration donnée, le coup qui conduira le plus probablement à la victoire ; il utilise ses déroulés pour collecter des statistiques sur le nombre de fois qu'un coup donné conduit effectivement à une victoire ou une défaite","page":160,"axe":"02-ia-technique-academique","theme":"Essayer plutôt qu'évaluer","portee":"Faute de savoir juger une position, on simule des milliers de suites possibles et l'on compte les issues."}]},
+
+ {"chapitre":"bb2587d1","citations":[
+  {"texte":"Les jeux ne sont que notre plate-forme de développement.","page":163,"axe":"02-ia-technique-academique","theme":"Le jeu n'est pas le but","portee":"Position affichée des concepteurs : les victoires spectaculaires ne sont qu'un banc d'essai pour d'autres usages."}]},
+
+ {"chapitre":"32bdeaa1","citations":[
+  {"texte":"Les humains effectuent apparemment sans effort ces transferts d'une tâche à une autre ; notre capacité à généraliser ce que nous apprenons est au cœur de ce que penser signifie pour nous.","page":164,"axe":"05-ia-education-pedagogie","theme":"Généraliser, c'est penser","portee":"Ce qu'on retire d'un apprentissage se mesure à ce qu'il permet ailleurs, non à la performance obtenue sur place."},
+  {"texte":"Ainsi, dans le langage humain, nous pourrions dire qu'un synonyme d'apprentissage par transfert est, eh bien ! apprentissage, tout court.","page":164,"axe":"05-ia-education-pedagogie","theme":"Apprendre ou mémoriser","portee":"Un savoir qui ne se transfère pas ne mérite pas vraiment le nom d'apprentissage, chez la machine comme chez l'élève."}]},
+
+ {"chapitre":"c69b8b4a","citations":[
+  {"texte":"Nous l'avons vu, nombre de choses que nous humains trouvons tout à fait faciles (par exemple, décrire une photo) sont extrêmement difficiles pour les ordinateurs.","page":165,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Difficile pour qui","portee":"La difficulté d'une tâche n'a pas la même échelle selon qu'on la mesure pour un humain ou pour une machine."},
+  {"texte":"si vous y réfléchissez, elles exigent une compréhension visuelle, linguistique et sociale qui se situe bien au-delà des capacités de tout système d'IA actuel","page":166,"axe":"04-ia-societe-ethique-philosophie","theme":"Le défi des charades","portee":"Un jeu d'enfants réunit trois compréhensions que la machine ne sait pas encore articuler ensemble."}]},
+
+ {"chapitre":"75fe3948","citations":[
+  {"texte":"Toutefois, notre langue véhicule souvent des hypothèses inconscientes qui ne sont pas toujours valides pour ces programmes.","page":167,"axe":"04-ia-societe-ethique-philosophie","theme":"Le piège des mots","portee":"Dire qu'un programme a découvert ou compris quelque chose lui prête une vie mentale qu'il ne possède pas."},
+  {"texte":"Ce ne sont là que deux exemples de l'incapacité du Q-apprentissage profond à généraliser et qui contraste de manière frappante avec l'intelligence humaine.","page":167,"axe":"02-ia-technique-academique","theme":"Une compétence sans marge","portee":"Un système surhumain s'effondre si l'on déplace un élément de quelques pixels : sa maîtrise n'a aucune tolérance."},
+  {"texte":"Qu'on l'appelle abstraction, généralisation du domaine ou apprentissage par transfert, doter les systèmes de cette aptitude est encore l'un des plus importants problèmes de l'IA qui restent à résoudre.","page":168,"axe":"02-ia-technique-academique","theme":"Le problème central","portee":"Sous trois noms différents, c'est la même chose qui manque : la capacité de réemployer ailleurs ce qu'on a appris."}]},
+
+ {"chapitre":"8475b38d","citations":[
+  {"texte":"C'est parce que les gens croient que les jeux comme les échecs ou le go apprennent aux enfants (ou à toute personne) à mieux penser : comment penser logiquement, raisonner abstraitement et planifier stratégiquement.","page":169,"axe":"05-ia-education-pedagogie","theme":"Pourquoi on apprend un jeu","portee":"On ne fait pas jouer un enfant pour qu'il gagne, mais pour ce que la pratique lui laisse une fois la partie finie."},
+  {"texte":"Pour nous humains, une dimension cruciale de notre intelligence est d'être capables non pas d'apprendre une compétence particulière, mais d'apprendre à penser puis d'appliquer cette pensée de manière flexible aux situations ou défis, quels qu'ils soient, que nous rencontrons.","page":169,"axe":"09-developpement-personnel-influence","theme":"Apprendre à penser","portee":"Définition de ce que vaut une formation : non la compétence acquise, mais la souplesse qu'elle donne face à l'inconnu."},
+  {"texte":"Cela peut paraître étrange à dire, mais vu sous cet angle, le plus modeste joueur d'échecs dans une école maternelle est plus intelligent qu'AlphaGo.","page":169,"axe":"04-ia-societe-ethique-philosophie","theme":"Un renversement de perspective","portee":"Formule provocante mais précise : l'enfant apprend à penser, le programme apprend seulement à gagner à un jeu."}]},
+
+ {"chapitre":"804fbef5","citations":[
+  {"texte":"Si vous regardez les situations dans le monde, elles ne sont pas du tout encadrées, comme une partie d'échecs ou une partie de go.","page":170,"axe":"04-ia-societe-ethique-philosophie","theme":"Le monde n'a pas de cadre","portee":"Dans la vie réelle, on ne sait jamais avec certitude ce qui appartient à la situation et ce qui lui est extérieur."},
+  {"texte":"Mais le chemin sera long entre les jeux et le monde réel.","page":170,"axe":"04-ia-societe-ethique-philosophie","theme":"Du laboratoire au terrain","portee":"Les conditions qui rendent une démonstration spectaculaire sont précisément celles qui manquent dans la vie ordinaire."}]},
+
+ {"chapitre":"2a3e8f86","citations":[
+  {"texte":"Après tout, comprendre le langage – y compris les parties non dites – est une composante fondamentale de l'intelligence humaine.","page":173,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Lire entre les lignes","portee":"Comprendre un texte, c'est surtout reconstituer ce qu'il ne dit pas et que l'auteur suppose connu."}]},
+
+ {"chapitre":"8ef0939a","citations":[
+  {"texte":"La somme de connaissances de base que le programme devrait posséder afin de répondre en confiance à des questions élémentaires sur cette histoire est sidérante.","page":174,"axe":"05-ia-education-pedagogie","theme":"Le poids du non-dit","portee":"Répondre à une question simple sur un récit banal mobilise un savoir du monde que nul ne songe à énoncer."},
+  {"texte":"Le langage est intrinsèquement ambigu, dépend intimement du contexte et suppose une somme énorme de connaissances de base communes aux parties communicantes.","page":175,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Trois traits du langage","portee":"Ces trois propriétés expliquent pourquoi comprendre une phrase est plus difficile que reconnaître un visage."},
+  {"texte":"il semble impossible de saisir les subtilités langagières en appliquant un ensemble de règles explicites","page":175,"axe":"02-ia-technique-academique","theme":"L'échec des règles","portee":"Trente ans de grammaires formelles n'ont pas suffi : la langue échappe à l'énumération de règles."}]},
+
+ {"chapitre":"79550b9a","citations":[
+  {"texte":"Ce qui m'impressionne, c'est que les systèmes de reconnaissance de la parole font tout cela en ignorant absolument le sens de ce qu'ils transcrivent.","page":176,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Transcrire sans comprendre","portee":"Une tâche que l'on croyait exiger la compréhension se fait entièrement sans elle, découverte que l'autrice reconnaît n'avoir pas prévue."},
+  {"texte":"Tout projet d'ingénierie complexe est soumis à cette règle empirique bien connue : les premiers 90 % du projet prennent 10 % du temps, et les derniers 10 % prennent 90 % du temps.","page":177,"axe":"06-ia-travail-management-metiers","theme":"La règle des derniers pourcents","portee":"Règle de gestion de projet applicable partout : la finition coûte plus cher que tout le reste réuni."}]},
+
+ {"chapitre":"57b175bc","citations":[
+  {"texte":"Les données sur les films, livres et autres produits qu'une personne aime ou n'aime pas sont parfois étonnamment (et peut-être effroyablement) utiles pour prédire les futurs achats d'une personne.","page":178,"axe":"10-economie-entrepreneuriat-finance","theme":"Ce que révèlent nos goûts","portee":"Le détail de ce qu'on aime en dit plus long sur nos décisions futures que ce qu'on serait prêt à déclarer."}]},
+
+ {"chapitre":"6c4074a9","citations":[
+  {"texte":"Un regard sur les mots isolés ou suites de mots individuelles ne suffit généralement pas pour avoir une idée du sentiment d'ensemble ; il faut saisir la sémantique des mots dans le contexte de la phrase tout entière.","page":179,"axe":"02-ia-technique-academique","theme":"Le mot dans la phrase","portee":"Le sens ne se compose pas par addition : il faut la phrase entière pour fixer celui de chaque mot qu'elle porte."},
+  {"texte":"Cela donne au réseau un moyen d'interpréter les mots qu'il « lit » tout en se rappelant le contexte de ce qu'il a déjà « lu ».","page":180,"axe":"02-ia-technique-academique","theme":"Lire en se souvenant","portee":"Le principe qui a permis aux machines de traiter des phrases : conserver une trace de ce qui précède."}]},
+
+ {"chapitre":"0378bf3b","citations":[
+  {"texte":"Vous connaissez un mot par ceux auxquels il tient compagnie.","page":184,"axe":"05-ia-education-pedagogie","theme":"Le mot et ses compagnons","portee":"Formule de 1957 qui fonde toute la sémantique moderne : on apprend un mot par les contextes où on le rencontre."},
+  {"texte":"attribuer arbitrairement des nombres à des mots ne rend nullement compte du lien unissant ces mots","page":183,"axe":"02-ia-technique-academique","theme":"Coder n'est pas relier","portee":"Donner un identifiant à chaque mot ne dit rien de leur parenté, difficulté longtemps restée sans solution."},
+  {"texte":"L'idée, ici, est qu'une fois tous les mots du vocabulaire correctement placés dans l'espace sémantique, le sens d'un mot peut-être représenté par sa position dans cet espace","page":185,"axe":"02-ia-technique-academique","theme":"Le sens comme position","portee":"Idée décisive derrière les systèmes de langage actuels : représenter la signification par une place dans un espace."}]}
+]

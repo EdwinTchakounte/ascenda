@@ -1,0 +1,106 @@
+{
+ "document_id": "f6a66492-6e72-4563-9d71-238416bdeea3",
+ "titre_normalise": "Disruption. Préparez-vous à changer de monde",
+ "auteurs": [
+  "Stéphane Mallard"
+ ],
+ "annee": 2018,
+ "type_ouvrage": "guide_pratique",
+ "niveau": "debutant",
+ "public_cible": "Dirigeants, cadres, responsables des ressources humaines, entrepreneurs. Publié chez Dunod. Le livre est écrit pour être appliqué : chaque chapitre se termine sur des injonctions d'action adressées à l'entreprise et à son management.",
+ "these_centrale": "La disruption n'est pas une accélération de l'innovation, c'est la disparition de la raison d'être d'une activité. La plupart des entreprises se trompent de question : elles cherchent comment utiliser l'intelligence artificielle pour mieux faire ce qu'elles font, alors que la seule question qui compte est de savoir si ce qu'elles font aura encore un sens. Stéphane Mallard soutient qu'il faut se saborder soi même avant qu'un autre ne le fasse.",
+ "idees_force": [
+  {
+   "titre": "Le syndrome Kodak est la véritable menace, pas le retard technique",
+   "explication": "Kodak n'a pas manqué le numérique par ignorance technique, elle l'a inventé. Elle n'a pas compris que l'appareil numérique rendait obsolète son activité d'impression. Mallard en tire la seule question stratégique qui vaille : une fois compris ce que l'intelligence artificielle permet, mon activité a-t-elle encore une raison d'exister ? Si la réponse est non, il faut pivoter comme une jeune pousse, immédiatement.",
+   "page": 43
+  },
+  {
+   "titre": "Injecter de l'intelligence artificielle ne protège de rien",
+   "explication": "L'argument est économique et il est solide. Dès qu'une entreprise intègre avec succès une solution pour optimiser un processus, ses concurrents répliquent aussitôt. Le secteur se retrouve au même niveau de maturité et la concurrence recommence par les prix. Autrement dit, pas de création de valeur, seulement de la récupération de valeur existante sur des marchés existants.",
+   "page": 43
+  },
+  {
+   "titre": "Le diplôme est un signal médiocre, et les plateformes en produisent de meilleurs",
+   "explication": "Mallard applique la théorie du signal au salariat. Une entreprise ne peut pas mesurer la compétence réelle d'un candidat, elle se rabat sur le diplôme, qui certifie seulement qu'il a intégré une école et réussi ses examens. Il file la comparaison avec le vote : être élu certifie une capacité à se faire élire, pas une capacité à gouverner. Sur les plateformes d'indépendants, l'évaluation par mission produit un signal beaucoup plus précis, ce qui fonde sa thèse de la mort du salariat.",
+   "page": 70
+  },
+  {
+   "titre": "Deux règles contre-intuitives pour ne pas se faire disrupter",
+   "explication": "Reprenant Clayton Christensen, Mallard formule deux exigences qui contredisent l'enseignement des écoles de commerce : ne jamais abandonner la partie la moins exigeante et la moins rentable du marché, et ne jamais mépriser un usage nouveau qui semble sans valeur. Il ajoute un indice fiable : les professionnels d'un secteur identifient très bien les problèmes difficiles, la file d'attente en grande distribution, le stockage de l'énergie, la réutilisation des lanceurs, mais ils organisent leur production autour de ces difficultés au lieu de les affronter.",
+   "page": 82
+  },
+  {
+   "titre": "Le prix de l'intelligence humaine va chuter",
+   "explication": "Thèse centrale et la plus discutable du livre. L'expertise fondait la valeur ajoutée du tertiaire, d'où la guerre des talents. Mallard soutient que l'intelligence devient une marchandise disponible en nuage, et que ce qui se valorisera à la place relève de l'empathie et de l'attention. Il décrit un métier de programmeur qui consisterait à entraîner la machine à des concepts de haut niveau, comme on apprend les mathématiques à un enfant.",
+   "page": 107
+  },
+  {
+   "titre": "La foule connectée a remplacé le marketing",
+   "explication": "Une entreprise ne décide plus de sa notoriété. La valeur est repérée, évaluée et diffusée par les pairs. Mallard distingue les influenceurs, rémunérés, des ambassadeurs, qui recommandent gratuitement parce qu'ils y trouvent de la valeur. Il en tire une conséquence pour tous les métiers de transmission : un professeur est en concurrence avec des vulgarisateurs, et ce n'est plus le titre qui légitime la compétence à enseigner mais la réputation construite.",
+   "page": 94
+  },
+  {
+   "titre": "Les institutions protègent moins qu'elles ne freinent",
+   "explication": "L'école forme encore à des métiers dont on sait qu'ils vont se transformer profondément, et la démocratie ne fait presque aucun usage de la technologie alors que tout serait à repenser : modes de représentation, durée des mandats, consultation. Mallard ne conteste pas que les institutions garantissent une stabilité indispensable, il soutient qu'elles ne protègent plus des risques qu'elles étaient censées encadrer.",
+   "page": 121
+  },
+  {
+   "titre": "Se saborder demande une vision, donc des entrepreneurs plutôt que des gestionnaires",
+   "explication": "Mallard cite la déclaration de Goldman Sachs se présentant en 2015 comme une société de technologie, y lit l'anticipation d'un pivot, et rappelle la formule de Marc Andreessen selon laquelle le logiciel dévore le monde. Sa recommandation opérationnelle est d'adopter une posture de capital risqueur : lancer un maximum de projets en acceptant que très peu réussissent, budgéter des pertes, et valoriser l'échec au lieu de le sanctionner.",
+   "page": 134
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Disruption",
+   "definition": "Non pas une innovation rapide mais la disparition de la raison d'être d'une activité, provoquée par un acteur qui résout autrement le problème que cette activité résolvait."
+  },
+  {
+   "terme": "Dilemme de l'innovateur",
+   "definition": "Formulation de Clayton Christensen : une entreprise rationnelle abandonne les segments peu rentables et néglige les usages sans valeur apparente, et c'est précisément ce comportement rationnel qui la rend vulnérable."
+  },
+  {
+   "terme": "Syndrome Kodak",
+   "definition": "Erreur consistant à évaluer une technologie nouvelle à l'aune de l'activité existante, au lieu de se demander si cette activité survivra à la technologie."
+  },
+  {
+   "terme": "Théorie du signal",
+   "definition": "En situation d'asymétrie d'information, la partie la mieux informée émet des preuves indirectes de sa qualité. Le diplôme et l'expérience sont des signaux imparfaits de la compétence réelle."
+  },
+  {
+   "terme": "Ambassadeur",
+   "definition": "Utilisateur qui recommande gratuitement un produit à son réseau parce qu'il en tire une valeur propre, par opposition à l'influenceur rémunéré. Pour Mallard, c'est le seul signal qui compte désormais."
+  },
+  {
+   "terme": "Mémétique",
+   "definition": "Phénomène de sélection des idées par la compétition pour l'attention, appliqué à la circulation des contenus en ligne."
+  },
+  {
+   "terme": "Majordome digital",
+   "definition": "Stade attendu des assistants personnels : un mandataire agissant au nom de l'utilisateur dans son environnement numérique, sans validation préalable, sur la base d'une confiance acquise à l'usage."
+  },
+  {
+   "terme": "Commoditisation de l'intelligence",
+   "definition": "Hypothèse selon laquelle les capacités cognitives, devenues accessibles en abondance depuis un nuage, cessent d'être un facteur de différenciation économique."
+  },
+  {
+   "terme": "Pivot",
+   "definition": "Changement délibéré de modèle d'activité, opéré avant que le modèle existant ne s'effondre. Mallard en fait la seule réponse valable au diagnostic de disruption."
+  }
+ ],
+ "a_lire_si": "Vous dirigez une organisation et vous cherchez un cadre de décision plutôt qu'une analyse. Le livre est clair, structuré et directement applicable, et son chapitre sur le dilemme de l'innovateur est l'une des meilleures vulgarisations disponibles en français. Il est aussi utile comme document sur la culture entrepreneuriale de la Silicon Valley telle qu'elle se raconte elle même.",
+ "a_eviter_si": "Vous cherchez une réflexion critique. Le livre est un plaidoyer : il n'expose aucune objection sérieuse à ses propres thèses, ne cite aucun auteur en désaccord, et présente des hypothèses contestées comme des faits acquis. Il date aussi de 2018, avant les modèles génératifs, ce qui rend certaines de ses prévisions techniques intéressantes à relire mais peu fiables.",
+ "prerequis": [
+  "Aucun. C'est le titre le plus accessible de cet axe.",
+  "Une lecture préalable ou parallèle d'un ouvrage critique, celui d'Éric Sadin ou celui de Mathieu Corteel, équilibre utilement le propos."
+ ],
+ "controverses": [
+  "⚠️ Le chapitre 13 décrit sans distance critique la consommation de substances psychoactives comme un avantage concurrentiel. Il détaille l'accès aux amphétamines dans les universités américaines les plus prestigieuses, cite un dirigeant qui affirme que presque tous les milliardaires qu'il connaît consomment des hallucinogènes, et conclut que les entreprises traditionnelles affrontent des individus aux capacités affûtées par des substances amplificatrices. Aucune mention des risques sanitaires, de la dépendance ou de l'illégalité, sinon pour noter que les disrupteurs hackent même les recommandations des médecins. Ce passage n'est pas une information, c'est une valorisation.",
+  "⚠️ Le passage sur les pays en développement mérite une lecture attentive. Le constat est juste : le Kenya a bâti un système de transfert d'argent mobile là où le secteur bancaire était défaillant. Mais la conclusion, selon laquelle la technologie comble les manquements des États et devient un catalyseur de développement, escamote la question politique de savoir qui possède l'infrastructure et qui en tire la rente. Mallard note lui même que ces pays constituent un marché pour Google et Facebook sans en tirer de conséquence.",
+  "La thèse de la mort du salariat repose sur l'idée que la réputation de plateforme est un signal de compétence supérieur au diplôme. Elle ignore la question de la protection sociale, de la négociation collective et de la dépendance économique à un intermédiaire unique, qui sont précisément les raisons d'être du salariat.",
+  "L'affirmation que le prix de l'intelligence humaine va chuter est présentée comme acquise. Elle contredit d'autres ouvrages du corpus qui soutiennent exactement l'inverse, à savoir que les capacités cognitives deviennent plus discriminantes que jamais.",
+  "Le livre emploie le mot disruption, marque déposée par une agence de publicité, comme concept d'analyse. La mention figure au verso de la page de titre."
+ ],
+ "confiance": 0.87
+}

@@ -1,0 +1,944 @@
+OUVRAGE : Chatgpt : le guide du debutant
+AUTEUR(S) : Eric Sarrion
+ANNÉE : 2024
+PAGES : 286
+AXE : IA Outils Pratique Prompting
+SOMMAIRE :
+  ChatGPT : le guide du débutant (p. 1-4)
+  Sommaire (p. 5-8)
+  Introduction (p. 9-10)
+  Partie 1 : Premiers pas avec ChatGPT (p. 11-12)
+  Chapitre 1. Se connecter à ChatGPT (p. 13-13)
+  Accéder au site OpenAI, hébergeur de ChatGPT (p. 13-16)
+  Créer un compte sur ChatGPT avec son adresse e-mail (p. 17-21)
+  Description de la fenêtre principale de ChatGPT (p. 22-22)
+  Utiliser l’application ChatGPT (p. 23-24)
+  Résumé (p. 25-26)
+  Chapitre 2. Dialoguer avec ChatGPT (p. 27-27)
+  Commencer une conversation avec ChatGPT (p. 27-29)
+  Modifier le libellé associé à une conversation (p. 30-30)
+  Supprimer une conversation (p. 31-31)
+  Supprimer toutes les conversations (p. 32-33)
+  Modifier la dernière réponse affichée par ChatGPT (p. 34-35)
+  Continuer le dialogue dans la même conversation (p. 36-36)
+  Obtenir un résumé de toute une conversation (p. 37-38)
+  Partager une conversation (p. 39-40)
+  Que faire si la réponse de ChatGPT est interrompue ? (p. 41-41)
+  ChatGPT a-t-il réponse à tout ? (p. 42-43)
+  Résumé (p. 44-44)
+  Chapitre 3. Conseils pour bien utiliser ChatGPT (p. 45-45)
+  Poser de bonnes questions à ChatGPT (p. 45-46)
+  Exemples de questions inadaptées posées à ChatGPT (p. 47-47)
+  Présenter ChatGPT en tant qu’expert dans un domaine (p. 48-52)
+  Demander à ChatGPT de s’exprimer simplement (p. 53-55)
+  Ajouter des instructions personnalisées à ChatGPT (p. 56-59)
+  Autres recommandations (p. 60-62)
+  Résumé (p. 63-64)
+  Partie 2 : Utiliser ChatGPT (p. 65-66)
+  Chapitre 4. Créer des courriers (p. 67-67)
+  Rédiger une lettre de motivation (p. 67-71)
+  Rédiger une lettre de résiliation de bail (p. 72-73)
+  Rédiger une lettre d’amour (p. 74-75)
+  Résumé (p. 76-76)
+  Chapitre 5. Rédiger des courriers électroniques (p. 77-77)
+  Programmer une réunion d’équipe (p. 78-80)
+  Répondre à un client insatisfait (p. 81-81)
+  Inviter des personnes à un pot de départ (p. 82-82)
+  Résumé (p. 83-84)
+  Chapitre 6. Rédaction commerciale (p. 85-85)
+  Rédiger un message publicitaire (p. 85-87)
+  Référencement rédactionnel de produits (p. 88-90)
+  Présenter un produit de façon concise (p. 91-93)
+  Rédiger une petite annonce (p. 94-95)
+  Résumé (p. 96-96)
+  Chapitre 7. Traduire des textes (p. 97-97)
+  Intérêt de ChatGPT pour les traductions (p. 98-99)
+  Langues disponibles avec ChatGPT (p. 100-101)
+  Traduction en diverses langues (p. 102-103)
+  Traduction automatisée (p. 104-107)
+  Résumé (p. 108-108)
+  Chapitre 8. Apprendre une langue (p. 109-109)
+  Créer des listes de vocabulaire spécialisées (p. 109-112)
+  Créer des listes de vocabulaire générales (p. 113-120)
+  Améliorer ses connaissances grammaticales (p. 121-122)
+  Apprendre une langue de façon interactive (p. 123-126)
+  Résumé (p. 127-128)
+  Chapitre 9. Recruter pour une entreprise (p. 129-129)
+
+[24/192 passages, 12541 tokens sur 138348]
+
+=== EXTRAITS ===
+
+[p. 1-2]
+Éric Sarrion
+Découvrir et (mieux)
+utiliser l’IA dont tout
+le monde parle
+CHATGPT 
+GUIDE
+DU
+LE
+DÉBUTANT
+
+                                                                                                                   
+CHATGPT LE GUIDE DU DÉBUTANT
+À QUOI ÇA SERT ? COMMENT ÇA MARCHE ?
+COMMENT BIEN L’UTILISER ?
+Vous aussi, vous avez forcément entendu parler de 
+ChatGPT, la nouvelle IA qui est en train de révolution-
+ner le Web ! Lancé fi n 2022, cet outil conversationnel 
+connaît un succès retentissant à travers la planète, 
+avec une moyenne d’1,5 milliard d’utilisateurs par 
+mois un an plus tard. Google n’a qu’à bien se tenir...
+Et pour cause, si ChatGPT rencontre un tel engoue-
+ment, c’est parce qu’il sait tout (ou presque). 
+Grâce à son modèle de langage génératif pré-
+entraîné, il est capable de comprendre les demandes 
+(en français !) de n’importe quel utilisateur et
+de produire une réponse détaillée et pertinente.
+Et ce, qu’il soit en mode texte ou via des images 
+créées de toutes pièces grâce au petit frère de 
+ChatGPT, nommé Dall-E.
+Pour pouvoir profi ter pleinement de tout ce que 
+ChatGPT a à off rir, il faut d’abord apprendre à s’en 
+servir. Cet ouvrage, destiné aux débutants, est là 
+pour vous guider en vous proposant un accompa-
+gnement pas-à-pas.
+Il vous expliquera comment vous inscrire sur le site 
+OpenAI, la maison mère de ChatGPT, manipuler 
+la page de dialogue et poser des questions perti-
+nentes qui vous permet ront d’obtenir les résultats 
+escomptés. Une fois l’outil en main, vous pourrez 
+découvrir, au fi l des pages, les diff érentes fonction-
+nalités que propose ChatGPT : rédaction de textes 
+variés, création d’images, traduction, apprentissage 
+d’une langue, création artistique, culture générale...
+Les possibilités sont infi nies.
+Véritable vue d’ensemble des principales fonc-
+tions de cet e IA, ce livre vous mènera à une par-
+faite maîtrise de ChatGPT et vous fera prendre 
+conscience de l’aide précieuse qu’il peut vous
+apporter, tant sur le plan personnel que professionnel.
+Il n’y a plus qu’à vous lancer !
+Au sommaire
+Premiers pas avec ChatGPT. Se connecter à ChatGPT 
+• Dialoguer avec ChatGPT • Conseils pour bien utiliser 
+ChatGPT • Utiliser ChatGPT. Créer des courriers • Rédiger 
+des courriers électroniques • Rédaction commerciale •
+Traduire des textes • Apprendre une langue • Recruter pour 
+une entreprise • Postuler dans une entreprise • Rédiger un 
+discours • Trouver l’inspiration • Établir un plan d’action • 
+Obtenir des réponses sur divers sujets • Usages payants de 
+ChatGPT
+Formateur et développeur en tant que consul-
+tant indépendant, Éric Sarrion participe à toutes 
+sortes de projets informatiques depuis plus de 30 
+ans. Auteur de plusieurs best-sellers aux Éditions 
+Eyrolles, il est réputé pour la limpidité de ses expli-
+cations et de ses exemples.
+
+---
+
+[p. 17-20]
+15
+Chapitre 1 Se connecter à ChatGPT
+Créer un compte sur ChatGPT avec son adresse 
+e-mail
+Supposons que vous souhaitiez vous connecter à partir de votre adresse 
+e-mail professionnelle, par exemple eric@ericsarrion.com.
+Entrez votre adresse e-mail dans le champ approprié, puis cliquez sur le 
+bouton Continue (figure 1-4).
+FIGURE 1-4 CRÉATION D’UN COMPTE SUR CHATGPT
+À PARTIR D’UNE ADRESSE E-MAIL
+La page suivante apparaît alors et permet de choisir un mot de passe pour 
+la connexion à ChatGPT (figure 1-5).
+
+                                                                                                                   
+Premiers pas avec ChatGPT
+16
+FIGURE 1-5 CHOIX DU MOT DE PASSE DE CONNEXION À CHATGPT
+Après avoir renseigné votre mot de passe, cliquez sur le bouton Continue.
+Un e-mail de vérification est alors envoyé à l’adresse e-mail indiquée. 
+Ouvrez ce message et cliquez sur le bouton de confirmation qu’il contient.
+Une nouvelle fenêtre s’affiche ensuite, sur laquelle vous devez renseigner 
+vos nom, prénom et date de naissance (figure 1-6).
+La date de naissance permet de s’assurer que l’utilisateur est ma-
+jeur et qu’il a donc le droit d’utiliser ChatGPT, comme décrit dans 
+les conditions générales d’utilisation de ChatGPT.
+Les lettres DD, MM et YYYY représentent le jour (DD), le mois 
+(MM) et l’année (YYYY) de la date de naissance.
+
+                                                                                                                   
+17
+Chapitre 1 Se connecter à ChatGPT
+L’ordre de saisie de ces informations (DD, MM et YYYY) peut va-
+rier selon le pays dans lequel vous êtes et doit être respecté. Le 
+jour doit comporter deux chiffres (commencez par 0 si le jour est 
+inférieur ou égal à 9), de même que le mois, tandis que l’année est 
+indiquée sur quatre chiffres.
+FIGURE 1-6 SAISIE DU PRÉNOM, DU NOM ET DE LA DATE DE NAISSANCE
+Saisissez les informations demandées, puis cliquez sur le bouton Continue.
+Une nouvelle fenêtre s’ouvre et vous demande de confirmer votre numéro 
+de téléphone portable (figure 1-7). Un SMS sera envoyé vers ce numéro 
+afin de vérifier votre identité.
+
+                                                                                                                   
+Premiers pas avec ChatGPT
+18
+FIGURE 1-7 SAISIE DU NUMÉRO DE TÉLÉPHONE POUR RECEVOIR
+UN SMS DE CONFIRMATION
+Renseignez le numéro de téléphone portable sur lequel vous souhaitez 
+recevoir le SMS de confirmation, puis cliquez sur le bouton Send code.
+Vous recevez alors un SMS contenant un code à 6 chiffres qu’il faut saisir 
+dans le champ approprié de la fenêtre (figure 1-8).
+
+---
+
+[p. 31-33]
+avoir cliqué sur cette icône, vous devrez valider la suppression en 
+cliquant dans la fenêtre de confirmation qui apparaît.
+FIGURE 2-8 VALIDATION DE LA SUPPRESSION DE LA CONVERSATION
+Une fois la suppression de la conversation validée, cette dernière disparaît 
+de la liste des conversations affichée. Elle ne sera plus accessible.
+                                                                                                                   
+Premiers pas avec ChatGPT
+30
+Supprimer toutes les conversations
+Au bout d’un certain moment, vous aurez certainement beaucoup de 
+conversations affichées dans la barre latérale gauche. Sachez qu’il est pos-
+sible de toutes les supprimer d’un coup, ce qui s’avérera beaucoup plus ra-
+pide que de les supprimer une par une.
+Pour cela, cliquez sur votre identifiant de connexion situé en bas de la barre 
+latérale gauche (figure 2-9).
+FIGURE 2-9 IDENTIFIANT DE CONNEXION À CHATGPT
+Un menu contextuel apparaît alors et propose l’option Settings & Beta
+(figure 2-10).
+FIGURE 2-10 L’OPTION SETTINGS & BETA
+
+                                                                                                                   
+31
+Chapitre 2 Dialoguer avec ChatGPT
+Cliquez sur cette option. Elle affiche une nouvelle fenêtre de confirmation 
+(figure 2-11).
+FIGURE 2-11 SUPPRESSION DES CONVERSATIONS
+L’onglet General de cette fenêtre est présélectionné. Le bouton Clear en 
+bas à droite, situé sur la ligne Clear all chats, permet de demander 
+la suppression de toutes les conversations. ChatGPT vous demande de 
+confirmer la suppression de toutes les conversations, au cas où vous auriez 
+cliqué sur le bouton Clear par inadvertance.
+
+---
+
+[p. 43-43]
+’est pas connu avec certitude à ce jour).
+ChatGPT indique ensuite que la formulation de la question posée est im-
+portante afin d’obtenir une réponse précise et satisfaisante. Nous verrons au 
+chapitre suivant quelles sont les principales règles à suivre pour lui poser de 
+bonnes questions afin d’obtenir les réponses souhaitées.
+
+---
+
+[p. 52-54]
+avancées ou des conseils spécialisés dans un domaine 
+particulier.
+Cette technique est donc intéressante si vous avez besoin que 
+ChatGPT fournisse des informations plus pertinentes que celles 
+qu’il vous donne habituellement. Vous n’avez pas besoin de posi-
+tionner ChatGPT en tant qu’expert chaque fois que vous l’inter-
+rogez.
+                                                                                                                   
+51
+Chapitre 3 Conseils pour bien utiliser ChatGPT
+Demander à ChatGPT de s’exprimer simplement
+Il peut arriver que, en fonction de la question posée à ChatGPT, sa réponse 
+puisse être difficile à comprendre en raison des termes utilisés, du niveau 
+du sujet, etc. Dans de tels cas, n’hésitez pas à demander à ChatGPT de 
+reformuler sa réponse.
+Prenons l’exemple de l’intelligence artificielle, qui est évidemment un sujet 
+complexe. Demandons à ChatGPT de nous l’expliquer. En fonction de 
+sa réponse, nous poserons ensuite la même question, mais en variant sa 
+formulation.
+Pouvez-vous expliquer ce qu’est l’intelligence artificielle ?
+Bien sûr, l’intelligence artificielle (IA) est un domaine de l’informa-
+tique qui vise à créer des systèmes informatiques capables de réali-
+ser des tâches qui nécessitent généralement l’intelligence humaine. 
+Ces tâches incluent la compréhension du langage naturel, la résolu-
+tion de problèmes complexes, l’apprentissage, la reconnaissance de 
+formes, et bien plus encore.
+L’une des caractéristiques clés de l’IA est sa capacité à apprendre 
+à partir de données et à s’améliorer avec l’expérience. Cela se fait 
+souvent à l’aide de techniques telles que l’apprentissage automa-
+tique (machine learning) et l’apprentissage profond (deep learning). 
+Ces approches permettent aux systèmes d’IA d’analyser d’énormes 
+quantités de données pour détecter des modèles, prendre des déci-
+sions et résoudre des problèmes de manière autonome.
+L’IA est utilisée dans de nombreux domaines, tels que la médecine, 
+la finance, la logistique, la robotique, la reconnaissance vocale, la vi-
+sion par ordinateur, les jeux, et bien d’autres. Elle a le potentiel de 
+révolutionner de nombreuses industries en automatisant des tâches 
+complexes, en améliorant la prise de décision et en offrant de nou-
+velles possibilités dans le domaine de la technologie.
+
+                                                                                                                   
+Premiers pas avec ChatGPT
+52
+En résumé, l’intelligence artificielle vise à créer des systèmes infor-
+matiques qui peuvent penser, apprendre et agir de manière similaire 
+à l’intelligence humaine, ou même surpasser les capacités humaines 
+dans certaines tâches.
+La réponse de ChatGPT est complexe. Demandons-lui d’expliquer de ma-
+nière plus simple, de sorte qu’un enfant de 15 ans puisse comprendre.
+C’est tellement compliqué ! Pouvez-vous m’expliquer ce qu’est l’in-
+telligence artificielle, comme si vous parliez à un enfant de 15 ans ?
+Bien sûr ! Imagine que l’intelligence artificielle, que l’on appelle aus-
+si « IA », soit comme un super cerveau électronique. Ce cerveau 
+électronique est créé par les humains pour aider à résoudre toutes 
+sortes de problèmes et à faire des choses intelligentes, comme com-
+prendre les questions des gens, jouer à des jeux, conduire des voi-
+tures automatiquement, et bien plus encore.
+L’IA apprend comme un élève à l’école. Au lieu d’apprendre dans 
+une salle de classe, elle apprend en regardant beaucoup de données, 
+comme des photos, des textes, ou des exemples de choses à faire. 
+Plus elle apprend, plus elle devient intelligente et peut faire des 
+choses de plus en plus complexes.
+L’idée principale, c’est que l’IA peut faire des choses qui ressemblent 
+à ce que ferait un être humain intelligent, mais elle le fait à l’aide de 
+mathématiques et d’ordinateurs super puissants. Donc, en résumé, 
+l’intelligence artificielle, c’est comme avoir un copain électronique 
+super intelligent qui peut aider à résoudre des problèmes et à ac-
+complir des tâches intelligentes.
+La réponse de ChatGPT est beaucoup plus compréhensible ! Il répond 
+comme s’il parlait à un enfant de 15 ans, exactement comme nous l’avons 
+demandé.
+
+---
+
+[p. 63-65]
+utiliser plusieurs petites phrases plutôt qu’une seule phrase trop longue ;
+•
+poser une nouvelle question si besoin ;
+•
+présenter ChatGPT (si besoin) en tant qu’expert du domaine concerné ;
+•
+rester dans la même conversation (si besoin).
+Nous verrons dans la partie suivante les différentes façons dont on peut 
+utiliser ChatGPT.
+                                                                                                                   
+Partie 2
+Utiliser 
+ChatGPT
+
+---
+
+[p. 76-76]
+Utiliser ChatGPT
+74
+les barrières qui se dressent devant nous. Je suis prêt à attendre aussi 
+longtemps qu’il le faudra pour que tu prennes une décision qui te 
+semble juste et sincère.
+Nathalie, je t’aime de tout mon être et je crois fermement que notre 
+amour peut triompher de tous les obstacles. Je t’en prie, laisse notre 
+amour s’épanouir et unissons nos vies pour toujours.
+Avec tout mon amour et mon dévouement,
+[Votre nom]
+Étant donné qu’il s’agit d’une lettre d’amour, nous n’allons pas demander à 
+ChatGPT de réduire sa taille !
+Résumé
+Dans ce chapitre, nous avons vu qu’il est possible d’utiliser ChatGPT 
+comme une aide précieuse pour rédiger des courriers de toutes sortes. Les 
+différents exemples et mises en situation nous ont permis de mettre en 
+évidence la capacité de ChatGPT à générer des modèles de lettres et des 
+suggestions de phrases.
+L’utilisation de ChatGPT comme aide pour rédiger vos courriers s’avérera 
+extrêmement bénéfique et vous fera gagner beaucoup de temps. Il vous gui-
+dera pour structurer vos idées et vous proposera des suggestions de phrases.
+Avec une utilisation judicieuse et une révision attentive, ChatGPT devien-
+dra sans aucun doute un compagnon précieux pour améliorer vos compé-
+tences en rédaction et créer des courriers percutants et captivants.
+
+---
+
+[p. 86-87]
+Brise Océane  », l’exaltation de la mer est capturée dans 
+chaque flacon. Ressentez la légèreté des courants océaniques qui 
+vous enlacent, tandis que le parfum persiste délicatement sur votre 
+peau tout au long de la journée. Cette fragrance est bien plus qu’un 
+simple parfum, c’est une déclaration d’indépendance, un rappel que
+                                                                                                                   
+85
+Chapitre 6 Rédaction commerciale
+vous avez le pouvoir de vous affranchir des limites et de vivre votre 
+vie selon vos propres termes.
+Libérez l’aventurière qui sommeille en vous et laissez-vous trans-
+porter vers des horizons infinis avec « Brise Océane ». Embrassez la 
+liberté qui vous caractérise, et lancez-vous dans un voyage où l’air de 
+l’océan ouvert devient votre essence même.
+Laissez-vous envoûter par « Brise Océane » dès aujourd’hui et plon-
+gez dans un monde de possibilités infinies. La liberté de vivre selon 
+vos propres termes vous attend.
+ChatGPT a généré un texte publicitaire comme demandé mais il a égale-
+ment trouvé un nom original pour le parfum « Brise Océane ». Demandons-
+lui un résumé du texte précédent.
+ Extraordinaire ! Serait-il possible d’avoir un résumé de ce texte, en 
+10 lignes ?
+Découvrez « Brise Océane », un nouveau parfum qui capture la li-
+berté de l’air marin. Inspiré de la mer ouverte, il évoque un sen-
+timent de libération et d’indépendance. Les notes marines et les 
+accents d’agrumes apportent une sensation revigorante. Ce parfum 
+reflète l’éclat du soleil sur l’eau avec des notes de citron et de berga-
+mote. Le cœur dévoile un mélange subtil de sel marin et d’accords 
+ozoniques, rappelant la sérénité côtière. La base de musc blanc et 
+d’ambre gris laisse une trace envoûtante.
+« Brise Océane » incarne l’exaltation de la mer dans chaque vapori-
+sation. Il symbolise la liberté retrouvée et la confiance en soi. Ce 
+parfum est une déclaration d’indépendance qui rappelle que chacun 
+peut vivre selon ses propres termes. Il invite à embrasser l’aventure 
+et à se laisser transporter vers des horizons infinis. Laissez-vous en-
+voûter par « Brise Océane » et plongez dans un monde de possibi-
+lités infinies.
+
+---
+
+[p. 96-97]
+textes. 
+Grâce à son IA, il est en effet capable de traduire du contenu dans dif-
+férentes langues de manière rapide et précise. Pour les entreprises, cela 
+représente un atout non négligeable, car elles peuvent ainsi communiquer 
+au niveau mondial et s’ouvrir à de nouvelles opportunités commerciales à 
+l’échelle internationale.
+                                                                                                                   
+CHAPITRE 7
+Traduire des textes
+La mondialisation a rendu les échanges commerciaux entre les entreprises 
+internationales plus fréquents que jamais, tout en mettant ces dernières face 
+à de nouveaux défis en termes de communication. En effet, les entreprises 
+doivent désormais être en mesure de communiquer efficacement avec leurs 
+clients, partenaires et fournisseurs du monde entier, ce qui implique sou-
+vent la traduction de documents et de contenus en différentes langues.
+Dans ce chapitre, nous allons voir comment ChatGPT peut être utilisé 
+pour traduire du contenu. Nous mettrons aussi en évidence le fait qu’il est 
+plus intéressant d’utiliser ChatGPT qu’un traducteur automatique tradi-
+tionnel, tel que Google Traduction.
+
+---
+
+[p. 107-107]
+tion. Mais, comme nous sommes toujours dans cette 
+dernière, ChatGPT a connaissance de tous les textes que nous lui avons 
+demandés de traduire. Ainsi, si nous voulions traduire l’ensemble de ces 
+textes en italien, par exemple, il nous suffirait de le lui demander :
+Pourriez-vous traduire tous les textes précédents en italien ?
+
+---
+
+[p. 119-120]
+ht opportunity to retrieve the ar-
+tifact.
+Apologized to - S’excuser auprès de
+Sentence: It was crucial for Alex to apologize to the indigenous 
+tribe for any intrusion and show respect for their culture.
+Cared about - Se soucier de
+Sentence: Alex carefully cared about preserving the delicate balance 
+of nature they encountered.
+                                                                                                                   
+Utiliser ChatGPT
+118
+Depended on - Dépendre de
+Sentence: Tey depended on the guidance of experienced guides 
+and relied on their knowledge of survival skills.
+Stood for - Représenter
+Sentence: Alex stood for justice and stood up against injustice.
+Ran out of - Manquer de
+Sentence: Over time, Alex faced numerous challenges but never 
+gave up, even when they ran out of resources.
+Gave up - Abandonner
+Sentence: Tey never gave up and continued their journey with de-
+termination.
+Took care of - Prendre soin de
+Sentence: Along the way, Alex took care of preserving the delicate 
+balance of nature.
+Looked forward to - Attendre avec impatience
+Sentence: Alex looked forward to new adventures and embraced the 
+unknown with open arms.
+Dealt with - S’occuper de
+Sentence: As the journey continued, Alex dealt with various obsta-
+cles and challenges.
+Paid attention to - Faire attention à
+Sentence: Alex paid attention to the captivating stories shared by 
+the locals.
+Got along with - Bien s’entendre avec
+Sentence: Alex got along with their loyal companion, Max, 
+throughout the journey.
+Went on - Continuer
+Sentence: Tey went on, fueled by their passion for exploration.
+Ran away - S’enfuir
+
+---
+
+[p. 131-131]
+ain et de fournir une solution 
+durable pour les déplacements quotidiens. Rejoignez notre équipe 
+passionnée et contribuez à notre mission de changer la façon dont 
+le monde se déplace.
+[...]
+La trame de l’offre d’emploi est désormais définie. Nous pourrons ensuite la 
+personnaliser en fonction des besoins réels de l’entreprise.
+
+---
+
+[p. 141-143]
+pour mener à bien ce processus, 
+notamment la rédaction d’offres d’emploi attrayantes, la création de tests 
+de recrutement pertinents et la mise en place de trames d’entretien d’em-
+bauche efficaces.
+Dans le chapitre suivant, nous allons voir comment ChatGPT peut nous 
+aider à nous faire recruter dans l’entreprise de nos rêves.
+                                                                                                                   
+CHAPITRE 10
+Postuler dans une entreprise
+La recherche d’emploi peut être un processus complexe dans lequel vous 
+devrez faire preuve de compétitivité. Mais avec les bonnes stratégies et les 
+outils adéquats, vous pourrez augmenter vos chances de réussite. Dans ce 
+chapitre, nous vous montrerons comment utiliser ChatGPT pour vous ai-
+der à être recruté dans une entreprise.
+Nous aborderons plusieurs aspects essentiels tels que la création d’un CV 
+percutant, la recherche d’une liste d’entreprises ciblées, ainsi que la simula-
+tion d’entretiens d’embauche pour vous préparer efficacement.
+Grâce à l’utilisation de ChatGPT, vous bénéficierez de conseils et de res-
+sources pour optimiser votre processus de recrutement et augmenter vos 
+chances de trouver l’emploi de vos rêves. Préparez-vous à tirer parti de la 
+puissance de ce précieux outil pour atteindre vos objectifs professionnels.
+
+---
+
+[p. 153-154]
+ondre, puis vous donner un feedback sur chaque réponse. 
+Commençons :
+Question 1 : Parlez-moi de vous.
+Veuillez donner votre réponse, et je vous fournirai ensuite mon 
+feedback.
+Comme précédemment, vous répondez aux questions et ChatGPT 
+vous donne son appréciation, ce qui permet de simuler efficacement un 
+entretien d’embauche.
+                                                                                                                   
+Utiliser ChatGPT
+152
+Il est également possible d’utiliser ChatGPT pour transformer des fai-
+blesses en points forts. Par exemple, demandons à ChatGPT comment la 
+timidité peut être valorisée.
+Si l’on me pose la question « Quel est votre point faible ? », ma ré-
+ponse est « la timidité ». Pourriez-vous m’indiquer comment je peux 
+montrer le bon côté de ce point faible ?
+Absolument  ! Lorsque vous abordez la question de votre point 
+faible, comme la timidité, il est important de montrer comment 
+vous travaillez activement pour surmonter ce défi et comment cela 
+peut même avoir des aspects positifs. Voici quelques conseils pour 
+mettre en valeur le bon côté de votre timidité lors d’un entretien :
+Soulignez votre écoute active : La timidité peut rendre les per-
+sonnes plus attentives et réceptives aux autres. Vous pouvez mettre 
+en avant votre capacité à écouter attentivement les besoins et les 
+préoccupations des clients, ce qui vous permet de mieux les com-
+prendre et d’offrir des solutions adaptées.
+Exemple : « Bien que ma timidité fasse que je suis réservé dans cer-
+taines situations, j’ai développé une compétence d’écoute active. Je 
+trouve que cela me permet de vraiment comprendre les besoins de 
+mes clients, d’instaurer une relation de confiance et de leur offrir un 
+service personnalisé. »
+Mettez en avant votre préparation et votre attention aux détails : 
+La timidité peut vous inciter à vous préparer soigneusement avant 
+les interactions, ce qui vous permet de fournir des informations 
+précises et de faire preuve d’une grande attention aux détails. Cela 
+peut être particulièrement utile dans un domaine tel que la vente de 
+voitures haut de gamme, où les clients attendent un haut niveau de 
+connaissance et de professionnalisme.
+Exemple : « Ma timidité me pousse à me préparer minutieusement 
+avant chaque interaction. J’investis du temps dans la recherche ap-
+profondie des produits, des caractéristiques et des dernières ten-
+dances du marché des voitures haut de gamme. Cela me permet de
+
+---
+
+[p. 162-163]
+mmets encore 
+plus élevés.
+Je suis honoré de faire partie de cette équipe exceptionnelle. Votre 
+talent et votre dévouement sont ce qui rend ce projet possible. 
+Ensemble, nous allons réaliser quelque chose de vraiment remar-
+quable.
+Merci à vous tous pour votre engagement et votre contribution. En 
+avant vers le succès !
+Merci.
+                                                                                                                   
+161
+Chapitre 11 Rédiger un discours
+Le discours doit, bien entendu, être ressenti par l’orateur. N’hésitez pas à 
+utiliser vos propres termes afin qu’il soit encore plus fidèle à la personne 
+que vous êtes.
+Discours de vente
+Lorsqu’une entreprise lance un nouveau produit, il est essentiel qu’elle le 
+mette correctement en avant afin de favoriser les ventes. Il est souvent re-
+commandé de convier la presse et les journalistes lors de cette présentation. 
+Demandons à ChatGPT de rédiger un discours pour présenter le dernier 
+vélo électrique révolutionnaire de JetTix.
+Je dois faire un discours à la presse pour présenter le dernier vélo élec-
+trique de JetTix. On a réussi à créer un vélo électrique à moitié prix 
+de la concurrence, avec des nouveaux matériaux légers et résistants.
+Chers membres de la presse,
+Je vous remercie d’être présents aujourd’hui pour découvrir en ex-
+clusivité notre dernière innovation chez JetTix. Nous sommes ravis 
+de vous présenter notre tout nouveau vélo électrique révolutionnaire 
+qui repousse les limites de l’industrie.
+Ce vélo électrique, fruit de mois de recherche et de développe-
+ment intensifs, est conçu pour répondre aux besoins changeants des 
+consommateurs d’aujourd’hui. Nous sommes fiers de vous annoncer 
+qu’il est disponible à un prix défiant toute concurrence, soit la moitié 
+du prix des modèles similaires sur le marché. Notre objectif était de 
+rendre la technologie des vélos électriques plus accessible et d’en-
+courager davantage de personnes à adopter une mobilité durable.
+Ce qui distingue notre dernier vélo électrique, c’est l’utilisation de 
+nouveaux matériaux légers et résistants qui offrent une expérience 
+de conduite inégalée. Nous avons consacré d’innombrables heures à 
+la recherche et au développement de ces matériaux, en collaboration 
+avec des experts de l’industrie. Le résultat est un vélo électrique qui 
+allie légèreté, durabilité et performance exceptionnelle.
+
+---
+
+[p. 173-175]
+ique proposés par ChatGPT sont vraiment pertinents et 
+adaptés au parfum que l’on souhaite mettre en valeur.
+La création de nouveaux produits innovants est un processus passionnant 
+qui nécessite une réflexion créative et une compréhension approfondie des 
+besoins et des désirs des consommateurs. L’innovation constante permet de
+                                                                                                                   
+Utiliser ChatGPT
+172
+rester compétitif sur le marché et d’établir une réputation de marque axée 
+sur la créativité et l’originalité.
+Composer des chansons originales
+L’utilisation de ChatGPT pour générer des paroles de chansons permettra 
+sans conteste d’ouvrir de nouvelles perspectives pour les artistes et les ama-
+teurs de musique. Ce sera une façon amusante et innovante d’explorer sa 
+créativité, de trouver l’inspiration et de développer son propre style musical. 
+Alors, que vous soyez un musicien en herbe ou simplement curieux, n’hé-
+sitez pas à plonger dans l’univers de la génération de paroles de chansons 
+avec ChatGPT.
+Pour cet exemple, demandons-lui d’écrire une chanson originale et dyna-
+mique !
+Je voudrais créer une chanson tonique, avec des paroles faciles à mé-
+moriser. Le style associé est du Dance Floor. La chanson sera reprise 
+dans les boîtes de nuit. Elle doit permettre de bouger intensément.
+Bien sûr ! Je peux vous aider à créer une chanson tonique dans le 
+style Dance Floor avec des paroles faciles à mémoriser. Voici les 
+paroles pour une chanson entraînante :
+Refrain :
+(Refrain entraînant avec un rythme accrocheur)
+On danse toute la nuit, on bouge, on s’éclate,
+Sur le Dance Floor, on oublie tous nos tracas.
+Laisse-toi emporter par le son qui te transporte,
+Dans cette ambiance électrique, on vit à fond, c’est le feu !
+Couplet 1 :
+(Lignes rapides et rythmées)
+Les basses résonnent, la musique nous enflamme,
+La piste de danse est notre terrain de jeu, aucune place pour le calme.
+
+                                                                                                                   
+173
+Chapitre 12 Trouver l’inspiration
+On lâche prise, on se laisse guider par le beat,
+Nos corps se déchaînent, une énergie qui ne peut pas s’arrêter.
+Pré-refrain :
+(Légère montée en intensité)
+Le DJ enflamme la foule avec ses mixes,
+Les mains en l’air, on lève nos voix.
+Unis par le rythme, tous ensemble dans la danse,
+Cette nuit sera inoubliable, une expérience intense.
+Refrain :
+(Refrain entraînant avec un rythme accrocheur)
+On danse toute la nuit, on bouge, on s’éclate,
+Sur le Dance Floor, on oublie tous nos tracas.
+Laisse-toi emporter par le son qui te transporte,
+Dans cette ambiance électrique, on vit à fond, c’est le feu !
+Couplet 2 :
+(Rythme plus rapide et paroles qui incitent au mouvement)
+Les projecteurs nous éclairent, la foule est en transe,
+Les corps se déplacent, c’est la danse qui avance.
+Pas de limites, on explore tous les mouvements,
+Sur le Dance Floor, on libère nos sentiments.
+Pré-refrain :
+(Légère montée en intensité)
+Le DJ enflamme la foule avec ses mixes,
+Les mains en l’air, on lève nos voix.
+Unis par le rythme, tous ensemble dans la danse,
+Cette nuit sera inoubliable, une expérience intense.
+Refrain :
+(Refrain entraînant avec un rythme accrocheur)
+
+---
+
+[p. 186-186]
+’empathie et la 
+compréhension, et nourrir l’amour et l’engagement – vous pouvez 
+retrouver l’harmonie et la solidité dans votre relation de couple.
+Résumé pour Twitter :
+Découvrez les 5 étapes pour surmonter les défis dans votre relation 
+de couple et retrouver l’harmonie durablement. #RelationDeCouple 
+#Communication #Harmonie
+
+---
+
+[p. 195-197]
+T peut vous aider en vous four-
+nissant de nouvelles idées et des informations et vous guider tout au long 
+du processus.
+Dans les sections suivantes, nous explorerons chaque domaine spécifique, 
+en fournissant des conseils et des exemples concrets pour vous aider à 
+prendre les meilleures décisions et à atteindre vos objectifs.
+                                                                                                                   
+Utiliser ChatGPT
+194
+Planifier un voyage
+Planifier un voyage est une étape passionnante et cruciale pour s’assurer 
+de vivre une expérience mémorable. Que vous rêviez de découvrir de nou-
+veaux horizons, de vous immerger dans une culture différente ou de vous 
+détendre sur des plages paradisiaques, établir un plan d’action solide est 
+essentiel pour optimiser votre temps, votre budget et être satisfait lors de 
+votre voyage.
+Dans cette section, nous explorerons les différentes étapes qui permettent 
+de planifier efficacement un voyage, en tirant parti des ressources et des 
+informations disponibles pour vous aider à concevoir un itinéraire pitto-
+resque en Taïlande.
+Nous commencerons par déterminer la meilleure saison pour voyager en 
+Taïlande en fonction des conditions météorologiques. Ensuite, nous vous 
+guiderons à travers un parcours suggéré, en soulignant les étapes incon-
+tournables, les moyens de déplacement et d’hébergement possibles, ainsi 
+que des suggestions d’activités pour vous immerger pleinement dans les 
+merveilles de ce pays fascinant.
+Je voudrais planifier un voyage en Taïlande. Nous sommes 
+deux personnes. J’ai un budget total de 1 000 € (les billets d’avion 
+sont en plus). Je voudrais que vous m’établissiez un parcours des 
+visites les plus pittoresques à effectuer. Veuillez me proposer la date 
+qui correspond à la meilleure saison pour effectuer ce voyage (pas de 
+pluie, temps ni trop chaud ni trop froid). Indiquez-moi les montants 
+dépensés à chaque étape, ainsi que les moyens de déplacement et 
+d’hébergement possibles.
+Pour planifier votre voyage en Taïlande avec un budget total de 
+1 000 € (hors billets d’avion), voici un parcours suggéré en fonction 
+de la saison idéale :
+Saison recommandée : La meilleure période pour visiter la Taïlande, 
+en évitant les fortes pluies et les températures extrêmes, est généra-
+
+                                                                                                                   
+195
+Chapitre 13 Établir un plan d’action
+lement de novembre à février. C’est la saison fraîche et sèche, offrant 
+des conditions de voyage agréables.
+Durée du voyage : Pour un voyage équilibré, nous suggérons une 
+durée de 10 jours en Taïlande.
+Parcours suggéré :
+Jour 1-3 : Bangkok
+Budget hébergement : Comptez environ 20 à 30 € par nuit pour 
+un hébergement économique en auberge de jeunesse ou petit hôtel.
+Moyen de transport : Vous pouvez utiliser les taxis, les tuk-tuks et 
+les transports en commun (comme le BTS Skytrain ou le métro 
+MRT) pour vous déplacer à Bangkok.
+Activités suggérées : Visitez les temples emblématiques tels que le 
+Wat Arun et le Wat Phra Kaew, explorez les marchés flottants, dé-
+couvrez les quartiers animés comme Chinatown et profitez de la 
+cuisine de rue.
+Jour 4-6 : Chiang Mai
+Budget hébergement : Les hébergements économiques à Chiang 
+Mai peuvent coûter entre 15 et 25 € par nuit.
+Moyen de transport : Vous pouvez vous déplacer en utilisant les 
+tuk-tuks, les taxis ou louer un scooter pour explorer la ville et ses 
+environs.
+Activités suggérées : Visitez les temples de Chiang Mai, participez 
+à une expérience de trekking dans la jungle, explorez les marchés 
+nocturnes et découvrez la culture locale.
+Jour 7-9 : Krabi (plages et îles)
+Budget hébergement : Vous pouvez trouver des hébergements éco-
+nomiques à Krabi à partir de 20 à 30 € par nuit.
+Moyen de transport : Utilisez les ferries ou les bateaux-taxis pour 
+vous déplacer entre les différentes îles et plages de la région.
+Activités suggérées  : Explorez les magnifiques plages de Railay 
+Beach, faites de la plongée sous-marine ou du snorkeling, profitez
+
+---
+
+[p. 207-207]
+e les budgets estimés sont donnés à 
+titre indicatif et peuvent varier en fonction de la quantité comman-
+dée, des options de personnalisation et des fournisseurs choisis. 
+N’hésitez pas à contacter des fournisseurs spécialisés dans les ca-
+deaux d’entreprise pour obtenir des devis précis en fonction de vos 
+besoins spécifiques.
+
+---
+
+[p. 218-218]
+une vision plus précise des possi-
+bilités de rénovation.
+Exemple de réponse : « Je comprends que vous souhaitiez obtenir 
+des conseils d’experts. Je peux vous recommander des profession-
+nels de confiance, tels qu’un architecte ou un entrepreneur spécialisé 
+dans les rénovations. Ils pourront évaluer les travaux nécessaires et
+
+---
+
+[p. 230-232]
+n-
+droit calme, fermez les yeux et concentrez-vous sur votre respiration, 
+en laissant passer les pensées sans vous y attacher.
+Mercredi :
+Matin : Écrivez une lettre de remerciement ou de gratitude à une 
+personne qui a eu un impact positif dans votre vie. Vous pouvez 
+choisir de la lui envoyer ou simplement la garder pour vous.
+                                                                                                                   
+229
+Chapitre 13 Établir un plan d’action
+Après-midi : Prenez le temps de vous engager dans une activité qui 
+vous apporte de la joie et qui vous permet d’exprimer votre créativi-
+té, que ce soit la peinture, la danse, la cuisine ou toute autre forme 
+d’expression artistique.
+Soir : Partagez un repas ou une activité agréable avec un membre 
+de votre famille ou un ami proche. Profitez de ces moments de 
+connexion et de partage.
+Jeudi :
+Matin : Pratiquez un exercice d’acceptation en identifiant une si-
+tuation ou une circonstance sur laquelle vous n’avez aucun contrôle. 
+Répétez pour vous-même des affirmations d’acceptation et de 
+lâcher-prise, en vous rappelant que vous ne pouvez pas changer cette 
+situation, mais que vous pouvez changer votre attitude envers elle.
+Après-midi : Faites une bonne action pour quelqu’un dans le besoin. 
+Cela peut être un don à une organisation caritative, du bénévolat ou 
+simplement offrir votre aide à quelqu’un dans votre communauté.
+Soir : Lisez ou écoutez une histoire inspirante de résilience et de 
+courage. Laissez-vous inspirer par les histoires d’autres personnes 
+qui ont surmonté des difficultés et trouvé le bonheur malgré les 
+obstacles.
+Vendredi :
+Matin : Faites une liste de cinq affirmations positives ou de qualités 
+que vous aimez chez vous. Répétez-les à voix haute pour renforcer 
+votre estime de soi.
+Après-midi : Passez du temps dans la nature. Faites une randonnée, 
+allez à la plage ou simplement asseyez-vous dans un parc, en vous 
+connectant avec la beauté et la sérénité de l’environnement naturel.
+Soir : Prenez quelques minutes avant de vous coucher pour réfléchir 
+à trois moments positifs de votre journée. Remémorez-vous les mo-
+ments de joie, de gratitude ou de fierté que vous avez vécus.
+N’oubliez pas d’adapter ce programme en fonction de vos préfé-
+rences et de votre emploi du temps. L’important est de vous enga-
+
+                                                                                                                   
+Utiliser ChatGPT
+230
+ger régulièrement dans des actions qui développent les qualités de 
+gratitude, de pleine conscience, de relations positives, d’altruisme, 
+d’acceptation et de résilience.
+[...]
+Nous avons maintenant un plan d’actions quotidiennes à réaliser pour 
+atteindre un état de bonheur durable. Cependant, comment peut-on sa-
+voir que l’on est sur le bon chemin et que le véritable bonheur est en train 
+de s’installer au plus profond de notre être ? Demandons à ChatGPT les 
+signes extérieurs qui le montrent.
+Merci ! Comment puis-je savoir que j’ai progressé sur ce chemin ? 
+Quels sont les signes visibles qui le montrent ?
+Sur le chemin du bonheur, il existe plusieurs signes visibles qui 
+peuvent indiquer que vous progressez dans votre quête de bien-être 
+et d’épanouissement. Voici quelques signes courants qui peuvent 
+témoigner de votre progression :
+Une attitude positive : Vous êtes plus enclin à adopter une attitude 
+positive dans votre vie quotidienne. Vous remarquez que vous êtes 
+plus optimiste, résilient face aux difficultés et capable de trouver du 
+positif même dans les moments difficiles.
+Une plus grande gratitude : Vous ressentez un sentiment accru de 
+gratitude pour les aspects positifs de votre vie. Vous vous concentrez 
+sur ce qui va bien et vous appréciez les petites joies de la vie. Vous 
+êtes reconnaissant pour les relations, les expériences et les opportu-
+nités qui vous entourent.
+Une meilleure gestion des émotions : Vous développez une plus 
+grande maîtrise émotionnelle. Vous êtes plus conscient de vos émo-
+tions, capable de les reconnaître et de les accepter sans vous laisser 
+submerger par elles. Vous développez des compétences pour réguler 
+vos émotions de manière positive.
+
+---
+
+[p. 242-242]
+miliariser avec les princi-
+pales religions mondiales et d’explorer des religions moins connues. Grâce 
+à sa vaste base de connaissances et sa capacité à fournir des informations 
+précises, il représente une ressource précieuse pour acquérir une compré-
+hension de base des croyances, des pratiques et des enseignements religieux.
+
+---
+
+[p. 252-253]
+ersonnalisation  : comparé à Android, iOS offre 
+moins de possibilités de personnalisation de l’interface utilisateur et 
+des fonctionnalités de l’appareil.
+Options de matériel restreintes : les appareils iOS sont exclusive-
+ment fabriqués par Apple, ce qui limite le choix en termes de tailles 
+d’écran, de designs et de budgets.
+                                                                                                                   
+251
+Chapite 14 Obtenir des réponses sur divers sujets
+Dépendance à l’écosystème Apple : l’utilisation d’iOS peut entraî-
+ner une plus grande dépendance à l’écosystème Apple, ce qui peut 
+limiter la compatibilité avec d’autres appareils et services non Apple.
+Il est important de noter que les préférences en matière de système 
+d’exploitation peuvent varier en fonction des besoins et des préfé-
+rences individuelles. Ces différences répertoriées peuvent vous aider 
+à prendre une décision éclairée en fonction de vos priorités person-
+nelles et de l’expérience utilisateur souhaitée.
+ChatGPT nous propose une bonne synthèse des avantages et inconvé-
+nients des deux systèmes iOS et Android. À nous de choisir désormais 
+celui qui nous correspond le mieux !
+Résumé
+ChatGPT peut fournir des informations et des explications détaillées sur 
+de très nombreux sujets. Il offre ainsi des perspectives intéressantes per-
+mettant aux utilisateurs d’approfondir leurs connaissances et de satisfaire 
+leur curiosité.
+
+---
+
+[p. 271-272]
+269
+Chapitre 15 Usages payants de ChatGPT
+Utiliser les plugins
+Les plugins sont des programmes externes qui s’intègrent avec ChatGPT 
+pour lui fournir de nouvelles possibilités. L’utilisateur choisit les plugins 
+dans une bibliothèque de plugins, et ces plugins interagissent ensuite avec 
+ChatGPT pour fournir le résultat demandé.
+Pour afficher la liste des plugins disponibles dans la bibliothèque, il suffit de 
+sélectionner le sous-menu Plugins dans le menu GPT-4. En cliquant ensuite 
+sur le bouton No plugins enabled, le bouton Plugin store apparaît.
+Lorsque des plugins auront été installés, le bouton No plugins en-
+abled sera remplacé par les icônes des plugins installés.
+FIGURE 15-16 BOUTON PLUGIN STORE
+Cliquons sur le bouton Plugin store, la fenêtre permettant de choisir ses plu-
+gins apparaît.
+
+                                                                                                                   
+Utiliser ChatGPT
+270
+FIGURE 15-17 FENÊTRE PLUGIN STORE
+Expliquons les boutons en haut de la fenêtre.
+•
+L’onglet Popular est sélectionné par défaut, il affiche les plugins les 
+plus populaires (selon ChatGPT).
+•
+L’onglet New permet de visualiser les nouveaux plugins (les plus récents).
+•
+L’onglet All permet de voir la liste de tous les plugins possibles (environ 
+1 000 à ce jour).
+•
+L’onglet Installed (non visible ici) permet de voir les plugins déjà 
+installés. Il est possible de supprimer un plugin installé.
+•
+Le champ de recherche à droite (Search plugins) permet de recher-
+cher un plugin à partir de son nom ou d’un terme associé.
+Si vous ne savez pas quels plugins installer, vous pouvez commencer par 
+utiliser ceux qui sont les plus populaires.
+Pour installer un plugin, il suffit de cliquer sur le bouton Install affiché dans 
+la description du plugin.

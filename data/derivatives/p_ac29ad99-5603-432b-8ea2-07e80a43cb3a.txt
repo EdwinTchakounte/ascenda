@@ -1,0 +1,1824 @@
+OUVRAGE : Manuel dintelligence artificielle
+AUTEUR(S) : Louis Frécon, Okba Kazar
+ANNÉE : inconnue
+PAGES : 779
+AXE : IA Technique Academique
+SOMMAIRE :
+  (non structuré)
+
+[23/525 passages, 23099 tokens sur 554522]
+
+=== EXTRAITS ===
+
+[p. 1-7]
+&' .. 
+D'INTELLIGENCE 
+ARTIFICIELLE 
+PRESSES POLYTECHNIQUES ET UNIVERSITAIRES ROMANDES 
+
+Manuel d'intelligence artificielle 
+
+METIS LyonTech 
+Manuel 
+d'intelligence artificielle 
+Louis Frécon & Okba Kazar 
+PRESSES POLYTECHNIQUES ET UNIVERSITAIRES ROMANDES 
+
+Cet ouvrage paraît dans la collection METIS Lyon Tech qui est publiée sous la direction d'un comité d'édition placé 
+sous la responsabilité de Sophie Vareilles et Jean-Yves Cavaillé. 
+Egalement disponibles dans le domaine« Informatique et télécommunication» chez le même éditeur 
+Eléments de mathématiques discrètes 
+Louis Frécon 
+Modèles et métamodèles 
+Guy Caplat 
+Modélisation cognitive et résolution de problèmes 
+Guy Caplat 
+Les Presses polytechniques et universitaires romandes sont une fondation 
+scientifique dont le but est principalement la diffusion des travaux de l'Ecole 
+polytechnique fédérale de Lausanne et de l'Institut National des Sciences 
+Appliquées de Lyon, ainsi que d'autres universités et écoles 
+d'ingénieurs francophones. 
+Le catalogue de leurs publications peut être obtenu par courrier 
+aux Presses polytechniques et universitaires romandes, 
+EPFL - Centre Midi, CH-1015 Lausanne, par E-Mail à ppur@epfl.ch, 
+par téléphone au (0)21 693 41 40, ou par fax au (0)21 693 40 27. 
+http://www.ppur.org 
+Première édition 
+ISBN 978-2-88074-819-7 
+©Presses polytechniques et universitaires romandes, 2009 
+Tous droits réservés 
+Reproduction, même partielle, sous quelque forme 
+ou sur quelque support que ce soit, 
+interdite sans l'accord écrit de !'.éditeur. 
+Imprimé en Italie 
+
+AVANT-PROPOS 
+Origines 
+Ce manuel est issu pour l'essentiel d'enseignements donnés au Département Infor
+matique de l'INSA de Lyon, de 1 985 à 2003, aux niveaux bac+3 et bac+4, 
+d'enseignements en DEA (niveau bac+5) à l'Université Lyon 2 jusqu'en 2004, ainsi 
+qu'au Département Informatique de l'Université de Biskra, enseignements 
+s'appuyant sur des activités connexes de recherche et de formation continue. 
+Objectifs 
+Ce livre a pour but de présenter les grandes lignes de l'intelligence Artificielle. Il 
+s'adresse aux informaticiens, aux cogniticiens, éventuellement aux psychologues 
+cognitivistes ayant des bases en informatique, mais prioritairement aux étudiants de 
+second cycle. 
+L'intelligence Artificielle couvre un très grand nombre de sujets, et cet ouvrage, 
+qui se veut essentiellement didactique, présente et articule les principaux aspects de 
+cette dicipline. Mais il ne s'agit pas d'une encyclopédie.sur la question, qui couvri
+rait tous les sujets fondamentaux de l'intelligence artificielle. 
+Afin de faciliter la mise en perspective de l'intelligence Artificielle, l'exposé 
+des concepts suivra grosso modo l'ordre historique, ce qui devrait mettre en lumière 
+l'aspect dialectique de la progression de cette discipline : à une époque donnée, une 
+dominante s'impose qui règle une partie de la question ; l'époque suivante sera mar
+quée par l'émergence d'un des principaux aspects jusque-là négligés, qui appellera 
+une nouvelle dominante . . . 
+« Un cours sans exemple est un squelette » disait Francisque Salles. Deux par
+ties pratiques suivront des exposés plus généraux, afin de donner vie aux concepts 
+présentés. 
+Restrictions 
+On attachera une grande importance à la distinction symbolique/sub-symbolique. De 
+même que la psychologie cognitive ne traite pas en soi des réflexes ou des émotions, 
+l'intelligence Artificielle envisagée ici ne traitera pas en principe de la Reconnais
+sance de Formes, discipline plus biophysique, connexe mais distincte. 
+Plan proposé 
+L'introduction traite brièvement de l'intelligence, du naturel et de l'artificiel selon H. 
+Simon, des positions relatives de la Psychologie Cognitive et de l'intelligence Artifi
+cielle, et des limites de cette dernière. 
+La partie A rappelle les grandes lignes de l'approche algorithmique de 
+l'lntelligence Artificielle (I.A.), basée sur la manipulation d'arbres et la programma
+tion fonctionnelle, et donne des éléments concernant sa pratique, sur la base du lan
+gage Scheme. 
+La partie B du livre est consacrée à une approche logique classique, illustrée par 
+l'emploi de Prolog, elle aborde les logiques non standard et débouche sur la question
+
+---
+
+[p. 38-39]
+mbres pythagoriques, si nous énumérons les couples (p, q) 
+possibles, on doit avoir p2 - q2 positif, et donc q :S p :S n : il ne reste ainsi que n2/2 
+cas à tester. En se restreignant de plus aux r :S q, on recherche des triplets (p, q, r) qui 
+satisfont n2 Ù p2 = q2 + r2 avec r2 :S q2, soit 2r2 :S p2 :S 2 q2, et r :S p/.Y2 :Sq.
+Enumération et complexité 
+1 9 
+On peut donc se contenter : 
+• d'énumérer les couples (p, q) tels que 0, 7p < q -S. p -S. n, soit environ 0, 15n2 
+cas où on testera si p2-q2 est un carré parfait r2 ; 
+• d'énumérer les couples (p, r) tels que p -S. n et 0 < r < 0, 7 lp, pour lesquels on 
+testera si p2 - r2 un carré parfait : soit environ 0,35n2 cas, approche moins ef
+ficace que la précédente. • 
+2.4 
+RECHERCHE DE SOLUTIONS OPTIMALES OU DOMINANTES 
+On suppose que le problème étudié possède des solutions de principe connues, défi
+nie à l'aide de n paramètres, à valeurs discrètes, et on désirerait connaître la meil
+leure solution effective. 
+EXEMPLE. Problème du sac à dos 2. 
+Un excursionniste prépare un sac, de capacité connue, dans lequel il souhaiterait 
+emporter différents objets ayant chacun son utilité, mais qu'il ne peut tous emmener. 
+Comment peut-il former un chargement du sac d'utilité maximale ? • 
+2.4.1 Approche « produire, filtrer, trier » 
+Dans l'approche produire et filtrer, on a d'abord distingué un générateur, qui énu
+mère les solutions potentielles, et unfiltre, qui décide celles qu'on peut retenir. 
+Si l'on dispose de critères permettant de définir des solutions optimales ou do
+minantes parmi les solutions admissibles, celles-ci peuvent ensuite être évaluées. 
+Pour cela, le filtre sera suivi d'un trieur, qui évalue chaque solution admissible, 
+puis met à jour en conséquence l'ensemble des solutions les plus intéressantes obte
+nues jusque-là. Par exemple, pour le problème du sac à dos, on triera par utilité dé
+croissante les diverses solutions admissibles en termes de volume, de poids . . . 
+générateur 
+solutions 
+filtre 
+solutions 
+trieur 
+solutions 
+I--- potentielles 
+admissibles 
+dominantes 
+Fig. 2.3 Recherche optimale par énumération brute. 
+Ce procédé s'étend facilement à une évaluation multi-critère, dès lors que l'on 
+conserve à tout moment l'ensemble des solutions dominantes parmi celles déjà ren
+contrées. 
+La communication entre générateur, filtre(s) et trieur permet un certain parallé
+lisme entre les divers processus. 
+On peut ainsi obtenir des réponses de qualité croissante au cours de 
+l'énumération, et rendre le processus de recherche interruptible si, après la première 
+solution rencontrée, le trieur édite toute solution reçue au moins aussi bonne que la 
+meilleure déjà connue. 
+Dans de nombreux problèmes pratiques, où l'on cherche les solutions les plus 
+intéressantes soumises à divers impératifs, 
+• les impératifs fixeront les contraintes d'admissibilité (filtrage) ; 
+• au-delà, les souhaits serviront de base au classement par ordre d'intérêt (tri final).
+
+---
+
+[p. 73-75]
+ine. Chacun des 2 joueurs peut à son tour pousser le pion 
+situé en (k, n) : 
+• 
+à gauche en (k-i, n), 
+• 
+en bas en (k, n-i), 
+• 
+en diagonale vers (k-i, n-i), 
+pour autant que i, choisi supérieur à 0, ne fasse pas sortir le pion du quadrillage. 
+Le joueur qui amène le pion en (0, 0) a gagné. 
+Expliciter une stratégie gagnante.
+54 
+A-Approche algorithmique 
+3.6.18 Laisser une chance à la chance 
+La stratégie maxmin (resp. negmax) est la plus sûre si l'adversaire joue au mieux, 
+mais ne lui laisse aucune chance de se tromper. De ce point de vue, considérons le 
+cas 
+max(A, B), où A= l OO, et B = min ( 1 00, 1 50, 300) 
+Les stratégies mentionnées supposent qu'il est indifférent de jouer A ou B. On 
+convient de noter B = 1 00+ (lu « 1 00 et plus »), pour noter qu'il est marginalement 
+plus intéressant de jouer B (au cas où l'adversaire se tromperait). De même on posera 
+max(l OO, 75)= 1 00- etc . . . 
+Explorer les règles de calcul nécessaires aux différents cas de figure (change
+ment de signe, max et min). 
+Montrer que, sans risque aucun, on laisse ainsi une « chance marginale à la 
+chance » d'obtenir un jeu aussi sûr quoique marginalement plus brillant qu'avec les 
+stratégies maxmin (resp. negmax) pures. 
+3.6.19 Le coursier 
+Soit un coursier devant desservir divers sites A,. . ., L. Les liaisons entre sites sont 
+données par un graphe formé d'arêtes pour les liaisons bidirectionnelles, et d'arcs 
+pour les liaisons à sens unique. A chaque site est attachée une liste (éventuellement 
+vide) des objets en partance, avec pour chacun sa destination. 
+Fig. 3.18 Le coursier. 
+Envisager d'abord le problème en supposant que le nombre total d'objets est 
+assez faible, et que le coursier peut en transporter « un nombre suffisant à la fois ». 
+Pour simplifier, on s'intéressera à la taille du chemin parcouru pour aller de A à A, 
+en acheminant tous les objets. 
+Envisager ensuite le problème en supposant (a) que le nombre total d'objets est 
+assez important, (b) que le coursier peut en transporter au plus k (par exemple, 3 ou 
+5) à la fois (c) qu'on connaît un circuit hamiltonien (i.e. un itinéraire fermé passant 
+par chaque site une fois et une seule, tel que (A B G C F D E L K J 1 H A)) de Ion-
+
+Espace d'état et métaphore du labyrinthe 
+55 
+gueur totale minimale. Supposer que pendant les déplacements du coursier, de nou
+velles demandes apparaissent, tandis que l'état du réseau se modifie : du fait 
+d'accident et/ou de réparations, ce11aines liaisons deviennent inopérantes, restreintes 
+à un sens ou bidirectionnelles. Si le coursier est très occupé (trafic important et/ou 
+heuristiques malheureuses) certains objets risquent de rester en souffrance ; comment 
+améliorer la gestion globale si on indique pour chaque objet une date & heure de 
+dépôt ? comment améliorer et diversifier les services en indiquant pour chaque objet 
+une date & heure de livraison promise ? 
+3.6.20 Décodage 
+Un camarade de lycée doit vous rendre visite ; il vous a envoyé le message chiffré 
+suivant : 
+27748667 1 726334 1 6434 12632 1 86 1 428328 1 
+qui doit, comme autrefois, se référer au code du clavier téléphonique, avec la 
+convention : 
+touche 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+ca1·actère 
+a 
+d 
+g 
+j 
+.m 
+p 
+\V 
+b 
+e 
+h 
+k 
+Il 
+q 
+Il 
+X 
+c 
+f 
+0 
+V 
+y 
+z 
+Esquisser un graphe des interprétations, à raison d'un noeud par chiffre et d'un 
+arc par caractère. Que signifie un chemin ? 
+Evaluer grossièrement leur nombre. 
+Déterminer les impasses, le chemin le plus probable, et le message correspon
+dant. 
+Connaisssant la langue employée, peut-on tirer partie de la fréquence des carac
+tères ? de la probabilité d'apparition d'une lettre, relativement à la précédente ? 
+3.7 
+INDICATIONS 
+Pour 3.6.2 
+Dans un tel réseau, on cherchera un chemin de durée minimale, qui peut être une 
+recherche en profondeur bornée à 30 (<<3000) si on compte 2 minutes entre deux 
+arrêts, afin de respecter les contraintes tarifaires, pour un ticket simple, à 60 pour un 
+ticket double. De fait, le diamètre de 54, correspondant au chemin élémentaire de 
+plus grande taille, suggère de réduire la seconde borne de 60 à 54. La qualité des 
+solutions supposera (a) de procéder par approfondissements successifs, limités à la 
+profondeur 30, ou par optimisation progressive, pai1ant d'une profondeur 30 ; (b) 
+pour les correspondances, de leur assigner une durée forfaitaire accrue d'une durée 
+égale à la fréquence de la nouvelle ligne empruntée, afin de tenir compte des fré
+quences et raretés.
+
+---
+
+[p. 109-110]
+résenter « Jean dit que 
+Pierre est plus âgé que 
+Marie », dont la vérité 
+est celle de l'énoncé 
+« Jean dit que . . . » (il le 
+dit ou ne le dit pas), 
+indépendante des âges 
+effectifs de Pierre et 
+JOOI 
+Marie. 
+8-- âgo-e--,,l_ 
+8--··+ 
+Fig. 5.8 Réseau sémantique partitionné pour « Jean dit que Pierre est plus âgé que Marie ».
+90 
+A-Approche algorithmique 
+5.4 
+RÉSEAUX À PROPAGATION DE MARQUEURS DE FAHLMANN 
+En 1976, Fahlmann a proposé un nouveau type de réseau sémantique plus ou moins 
+analogue aux réseaux neuronaux. 
+Un réseau sémantique représentant un système, on suppose maintenant que la 
+structure du réseau décrit les lois du système, tandis que l'état du système est défini 
+par l'ensemble des états des sommets, chacun étant marqué actif ou inactif. 
+A la question « A est-il un B ? », le sommet A est activé ; à partir de A sont 
+activés les sommets liés à A par un lien « est! » ou « sorteDe ». Quand le réseau se 
+stabilise, la réponse est « oui » ssi le sommet B est marqué actif. 
+Ainsi, les interrogations, les héritages et les exceptions se manifestent par des 
+règles de propagation. De plus, cette représentation permet de gérer des négations à 
+l'aide de liens inhibiteurs. 
+5.5 
+RÉSEAUX DYNAMIQUES D'AGARWAL 
+Agarwal s'est intéressé à l'utilisation des réseaux sémantiques en robotique. Pour 
+cela, un réseau sémantique figure le contexte initial. Les capacités du robot sont 
+représentées par des opérateurs formés d'un triplet : 
+• précondition (applicabilité), 
+• liens à défaire, 
+• liens à créer. 
+La planification est basée sur une méthode inverse. L'état final du contexte étant 
+défini, on associe aux conditions à atteindre le ou les opérateurs pouvant les créer, 
+dont les préconditions, si elles ne sont pas satisfaites, deviennent des sous-buts re
+cherchés. 
+L'exécution peut demander des modifications du plan d'action, soit du fait 
+d'obstacles, soit du fait des liens rompus par l'exécution des opérateurs. 
+5.6 
+GRAPHES CONCEPTUELS DE SOWA 
+En 1 984, Sowa a proposé des graphes conceptuels beaucoup plus ambitieux. Fonda
+mentalement, il s'agit de graphes bi-partis concepts/relateurs. 
+Les concepts sont typés (ex : Jean:homme) ce qui enlève beaucoup de liens 
+« estl » en renvoyant à une hiérarchie des types. 
+Chaque relateur est typé par sa relation ; il possède des arcs entrants et sortants 
+numérotés, qui permettent de traiter des relateurs n-aires en distinguant les rôles des 
+concepts liés. 
+5. 7 
+CARTES COGNITIVES 
+5. 7 .1 Au sens strict 
+Ce concept de cal'te cognitive, attribué à E. Tolman (1 948), désigne la représentation 
+mentale qu'un individu se fait de l'organisation de l'espace où il se trouve.
+
+---
+
+[p. 149-151]
+vide 
+( (not (pair? L) ) (list L) ) ; ; autre atome->dans l' ensemble 
+, , sinon, L est une vraie liste 
+; ; le premier élément de L est-il répété ? 
+; ; si oui, on le saute 
+( (member (car L) (cdr L) ) (liste->ensemble (cdr L) ) ) 
+; ; sinon, on l' intègre à l' ensemble 
+(else (cons (car L) (liste->ensemble (cdr L) ) ) ) 
+) ) )
+1 3 0 
+A 2 - Eléments pratiques : Scheme 
+(define ensemble? (lambda (L) 
+(or (null? L) 
+(not (pair? L) ) 
+; ; ou si L est une vraie liste 
+(and (not (member (car L) (cdr L) ) 
+; ; dont le premier élément n' est pas répété 
+; ; et le reste est un ensemble 
+(ensemble? (cdr L) ) 
+) ) ) 
+(define union (lambda (El E2 ) (liste->ensemble (append El E2 ) ) ) ) 
+(define diff (lambda (El E2 ) 
+1
+1
+ différence ensembliste 
+(cond ( (null? El) 
+( ) ) 
+( (member (car El ) E2) 
+(diff (cdr El ) E2 ) ) 
+1
+1
+ premier élément de El interdit si présent dans E2 
+(else (cons (car El ) (diff (cdr El ) E2 ) ) ) 
+; ; sinon, premier élément de El retenu 
+) ) ) 
+(define L ' (a b r a c a d a b r a) ) 
+(define A ' (a b c d e f) ) 
+donne comme exécution 
+> (ensemble? ( ) ) 
+#t 
+> (ensemble? L) 
+#f 
+> (ensemble? A) 
+#t 
+> (ensemble? (liste->ensemble L) ) 
+#t 
+> (liste->ensemble L) 
+(c d b r a) 
+> (union L A) 
+(r a b c d e f) 
+> (diff (liste->ensemble L) A) 
+(r) 
+7. 1 1 EXERCICES 
+7.11.1 Ecrire une phrase 
+1
+1
+ liste 
+1 1 ensemble 
+Essayer les fonctions display et write. Créer une fonction écrire telle que : 
+(écrire '(le chat est sur le banc)) -7 le chat est sur le banc. 
+7.11.2 Test de la factorielle 
+Verifier les effets de (map fac! (iota 7)) 
+et de (map fact (iota (read))) . 
+
+Bases du langage Scheme 
+7.11.3 Style et performances 
+(time expr) donne la valeur de expr et le temps nécessaire pour l'évaluer. 
+On s'intéresse à la suite de Fibonacci définie par 
+fib(O) = 0, fib(l) = 1 , puis fib(n) = fib(n-1) + fib(n-2) 
+(Frécon 2002, ch. 6). 
+Comparer, pour n= 5, 1 0, 1 5, 20, 25, les performances de 
+(define fib 
+(cond 
+(lambda (n) 
+( (< n 0) (list 
+"erreur fib : argument " n " négatif") 
+( (member n ' (0 1 ) ) n) 
+(else (+ ( fib (- n 1 ) ) (fib (- n 2) ) ) ) 
+) ) ) 
+et de 
+(define fib2 (lambda (n) 
+(if 
+(< n 2) 
+) ) ) 
+(if (< n 0) (list 
+"erreur fib2 
+argument " n " négatif") 
+n) 
+(+ (fib (- n 1 ) ) (fib (- n 2) ) ) 
+Le temps observé varie comme une exponentielle. Pourquoi ? 
+« fib2 » devrait être plus rapide que « fib ». Pourquoi ? 
+7.11.4 Simplification 
+Réécrire la fonction f9 l définie ci-après sous la forme la plus simple possible. 
+(define f91 (lambda (n) 
+(cond ( (< n 0) 
+( f91 (+ n 7 ) ) ) 
+( (> n 13) ( f91 (- n 3 ) ) ) 
+(else 91) ) 
+) ) 
+7.1 1.5 Le devin (version 2) 
+Ecrire une version qui cherche un entier n non nul, non borné a priori. 
+7. 12 INDICATIONS 
+Pour 7.11.1 
+(define écrire (lambda (phrase) 
+(cond ( (null ? phrase) 
+(display #\ . ) ) 
+(else (display (car phrase) ) 
+(display #\space ) (écrire (cdr phrase) ) ) ) ) ) 
+Comparer l'effet de écrire à celui de display ou write. 
+Pour 7.11.3 
+1 3 1 
+En dernière analyse, les fib() sont fournis par une arborescence binaire dont chaque 
+nœud est un +, et chaque feuille soit un 0 soit un 1 (à 50/50) ; le nombre d'additions
+
+---
+
+[p. 186-187]
+ite la fragmentation Scheme des listes : x*y ou 1 7 /x sont vus comme 
+des identificateurs (  erreurs), à la différence de x * y ou 1 7 / x, suites de 3 objets. 
+La réduction traite essentiellement des éléments remarquables, et n'aborde pas 
+les changements de structure possibles (par associativité, commutativité, distributivi-
+Vers l'IA en Scheme 
+1 67 
+té, absorption . . . ). L'exploitation des associativités et commutativités serait plus 
+délicate, et la distributivité sera plus facilement exploitable pour factoriser que pour 
+procéder à des développements judicieux. Surtout, on a évacué la question de la 
+normalisation interne, qui, pour rendre les réductions efficaces, peut se développer 
+dans deux directions : 
+• 
+utilisation d'unjeu réduit d'opérateurs en interne : (+, -binaire, -unaire) ramenés à 
+(+, - unaire) avec par exemple (a - b)  (a + (-b)), (a - (b - c)) (a + (-(b - c))) 
+ (a + (c + (-b)) ; les écritures en (*, /, inv) ramenées à des écritures en (*, inv) ; 
+min, abs, pos ramenés à max. . . le but étant de conserver un jeu minimal 
+d'opérateurs « riches » en interne, pour une plus grande efficience générale ; 
+• 
+introduction d'opérateurs d'arités variables pour les opérateurs associatifs et 
+commutatifs, pour favoriser des réductions plus globales : 
+(a-(b-(c-a)))  (a - (b+(-c)+a)  (a+(-b) +(-(-c)))+(-a))  
+<+++ a (-b) c (-a)> 
+ <++ 0 (-b) c>  <+ (-b) c) >  (c - b) ; 
+les simplifications interviennent alors entre termes contigus dans une chaîne 
+associative, et pour toute permutation favorable dans les chaînes associativo
+commutatives. 
+Notons enfin que la réduction repose largement sur l'identification exacte de 
+valeurs (éléments idempotents, absorbants, neutres . . . ) ce qui suppose que les va
+leurs numériques se limitent aux valeurs exactes (entiers, rationnels). Les résultats ne 
+peuvent être garantis avec des nombres en virgule flottante, dont les représentations 
+et opérations sont « approchées au mieux » au sens d'une précision définie, plutôt 
+qu'exactes (cf. aussi sect. 9.9, synthèse d'une fonction à partir de sa trace). 
+Ainsi a-t-on : 
+> (- 0 . 3 0 . 1 0 . 1 0 . 1 ) 
+-2 . 7755575615628914e-017 ; ; zéro ? 
+> (- 1 . 1 1 . 0 ) 
+0 . 10000000000000009 
+; ; légère erreur numérique, pouvant engendrer une erreur qualitative 
+> (= (- 1 . 1 1 . 0) 1/10 ) 
+H ; ; raté ! 
+9.6 
+PARALLÈLISA TION DE PROGRAMMES 
+Divers auteurs dont Hoare (dans The Laws of Programming ) ont montré que les 
+programmes pouvaient être assimilés - plus ou moins selon le langage dans lequel ils 
+sont exprimés - à des expressions algébriques dans une algèbre des programmes ad 
+hoc. Appliquer les idées de la section précédente à des formules-programmes est 
+alors très intéressant. Cela peut mener : 
+• à des contrôles de bonne forme, contrôles de validité cruciaux si l'expérimen
+tation est difficile et/ou peu reproductible, 
+• à des optimisations de code, 
+• à la parallélisation automatique des programmes, pour des langages disposant 
+d'une axiomatique claire, comme occam.
+
+---
+
+[p. 229-230]
+faut développer l'enseignement... 
+s'il faut développer l'industrie ... 
+il faut gagner les élections ! 
+il faut combattre le chômage 
+il faut développer l'industrie 
+. . . développer l'ens. sans taxer 
+. . . développer l'enseignement professionnel 
+. . . ne pas taxer 
+. . . renforcer les fonds publics 
+. . . privatiser ou taxer
+2 10 
+B - Approche logique 
+14 : (....,tJp) 
+si on ne taxe pas, il faut privatiser 
+... Finalement, par 11 et 14 : 
+15: p 
+il faut privatiser ... 
+10.7.3 
+Accord/Désaccord 
+La conséquence ci-dessus est vraie et s'impose dès lors que 
+• la dérivation est valide, 
+• le germe représente bien la réalité à traiter. 
+Donc si cette conséquence s 'avère fausse : 
+• ou la dérivation est incorreete, et il faut d'abord la corriger, 
+• ou le germe représente mal la réalité (erreur de modélisation) 
+On modifiera donc d'abord prudemment les énoncés du germe pour modéliser / 
+représenter au mieux la réalité du système considéré (hypothèse d'énoncés incorrects 
+dans une logique pertinente). 
+Si cela s'avérait impossible pour obtenir des conclusions acceptables, il resterait 
+à admettre que la logique employée est inadéquate ; et donc à en chercher une autre ! 
+1 0.8 
+THÉORIE, LOGIQUE CONSISTANTES 
+Unjeu d'énoncés E est dit consistant s'il n'existe pas d'énoncé F tel que : 
+E ::::> F et E::::> --., F. 
+Un système d'inférence est dit consistant s'il n'existe pas d'énoncé F tel que : 
+0 ::::> F et 0::::> --., F. 
+Si un système d'inférence consistant nous donne 0 ::::> A, où A est un énoncé, 
+alors A est un théorème logique de ce système. 
+On appelle théorie logique attachée à un système d'inférence et à un lexique de 
+variables propositionnelles, l'ensemble Th(0) ou 9(0) des énoncés A constructibles 
+à partir de ce lexique et tels que 0 ::::> A. 
+Les énoncés E bâtis sur le même lexique mais tels que ni 0 ::::> E ni 0 ::::> --.,E 
+sont dits énoncés contingents. 
+Soit E un jeu d'énoncés consistant, d'où un système d'inférence consistant dé-
+rive A : E ::::> A 
+• A est une thèse de la théorie spécifique de germe E, (A E Th(E)). 
+• A est vérifié dans tout univers où E est vérifié. 
+Ainsi, quand on parle de « théorèmes de géométrie », il y a lieu de distinguer : 
+• un système logique consistant, la logique d'Aristote ; 
+• une collection consistante d'énoncés contingents dans cette logique, les postu
+lats de la géométrie d'Euclide formant le germe de la théorie « géométrie 
+d'Euclide » ; 
+• les thèses de cette géométrie, théorie spécifique développée à partir du germe 
+(géométrique) selon les règles du système (logique) : ces thèses, contingentes 
+à la logique, sont théorèmes de la théorie spécifique dite « géométrie 
+d'Euclide ».
+
+---
+
+[p. 270-271]
+être une liste. 
+L'idée générale est que [] désignera une liste vide, et [a, b, c] une liste formée 
+de 3 objets : a, b et c, où c est implicitement suivi d'un butoir vide. Un élément d'une 
+liste peut être lui-même une liste, comme dans : 
+[[a, l],[b, 1 , 2], [c, 1 , 2, 3]] 
+(qu'on peut considérer comme une liste associative).
+Eléments de Prolog 
+25 1 
+Pour identifier le contenu d'une liste, on convient d'une notation [Tête 1 Reste] 
+figurant unfiltre formé d'un objet au moins : s'il y a lieu, Tête s'identifie au premier 
+objet de la liste, et Reste . . . au reste de la liste, vide ou formé d'une liste résiduelle. 
+12.4.2 
+Enumération contrainte : Repas à valeur calorique limitée 
+Associons maintenant à chaque composante du repas une « valeur calorique » arbi
+traire : 
+horsDoeuvre (crudités, 5 ) . 
+horsDoeuvre (assietteAnglaise, 2 0 ) . 
+horsDoeuvre (saladeNiçoise, 1 0 ) . 
+horsDoeuvre (saladeLyonnaise, 2 0 ) . 
+horsDoeuvre (saladeGrecque , 1 5 ) . 
+platPrincipal (saucisses , lentilles , 30 ) . 
+platPrincipal ( rotiDePorc, purée , 4 0 ) . 
+platPrincipal (omelette, champignons , 2 5 ) . 
+platPrincipal (steack, frites , 35 ) . 
+dessert ( fromage, 10) . 
+dessert ( fruits , 5) . 
+dessert (yaourt, 7 ) . 
+dessert (glace , 15) . 
+Nous nous proposons 
+• de définir chaque repas par la liste de ses composantes suivie de sa valeur ca
+lorique globale, 
+• de limiter l'énumération des repas à ceux dont la valeur calorique est infé
+rieure à un certain plafond. Nous établissons comme règle : 
+repas ( [E, P, G, D, Cl , Max) : -
+horsDoeuvre (E, Cl) , 
+platPrincipal (P, G, C2 ) , 
+dessert (D, C3) , 
+C is Cl + C2 + C3 , C < Max . 
+La tête de règle regroupe en une liste la composition du repas et sa valeur calo
+rique C. Le corps de règle : 
+• forme les cas possibles un par un, en relevant pour chaque composante la va
+leur calorique associée, 
+• pour chaque cas, cumule dans C ses valeurs caloriques, pour vérifier si ce 
+cumul C respecte le maximum calorique imposé Max : dans l'affirmative, le 
+cas évalué est une solution affichée ; sinon, Prolog passe au cas suivant. 
+Avec cette règle, un plafond (trop) élevé provoque comme précédemment l'énu
+mération des 80 cas possibles. Un plafond inférieur à la valeur maximale possible pour 
+C réduit a posteriori l'énumération des solutions admissibles, comme dans : 
+17 ?- repas (L, 45) . 
+1 
+= [crudités, saucisses , lentilles , fruits , 4 0 ] ; 
+1 
+= [crudités , saucisses , lentilles , yaourt, 42 ] ; 
+L 
+= [crudités, omelette , champignons , fromage , 4 0 ] 
+L 
+[ crudités, omelette , champignons , fruits , 35 ] ; 
+L 
+= [ crudités, omelette, champignons, yaourt , 37 ] ; 
+1 
+= [ saladeNiçoise, omelette, champignons , fruits , 4 0 ] 
+L 
+= [ saladeNiçoise , omelette , champignons , yaourt, 4 2 ] 
+No
+
+---
+
+[p. 302-304]
+lement en entier la liste de chiffres reconnue. 
+Le développement des notions DCG en prédicats ajoute deux arguments à ceux 
+des notions, représentant respectivement la liste des éléments lexicaux avant et après 
+la reconnaissance de la notion. 
+52 C++, Objective C, Java, mais aussi Simula, smalltalk, Oberon, Modula 3 ou Ada 95.
+Compléments de Programmation Logique 
+283 
+Un paquet de règles DCG s'active à l'aide de prédicats prédéfinis phrase/2 et 
+phrase/3: 
+• phrase(+ Racine, + ListeEnEntrée) est équivalent àphrase(Racine, ListeEnEn
+trée, [}) . 
+• phrase(+ Racine, + ListeEnEntrée, -Reste) active le paquet DCG dont la racine 
+est indiquée, avec ListeEnEntrée comme liste de mots à analyser, Reste 
+s'unifiant avec les mots restants au-delà de la notion reconnue. 
+• L'exemple ci-après utilise les règles précédentes, de racine entier(X). 
+?- phrase(entrer(X), "42 fois", Reste) . 
+X = 42 
+Reste = (32, 102, 111, 105, 115) 
+La sémantique des différentes constructions est fixée par le tableau 13 . 1 . 
+Tableau 13.1 Constructions DCG. 
+Ecriture DCG 
+Image Prolog 
+p(X) G q(X). 
+p(X, Avant, Après):-
+a(X, Avant, Après) 
+p(X) G q(X), r(X,Y), s(Y). 
+p(X, Avant, Après):-
+q(X, A van!, Suite 1 ), 
+r(X, Y, Suitel , Suite2), 
+s(Y, Suite2, Après). 
+p(X) G [go, to], q(X), [stop]. 
+p(X, Avant, Après):--
+terminal(go, Avant, Suite 1 ), 
+terminal (to, Suite 1, Suite2), 
+q(X, Suite2, Suite3), 
+terminal(stop, Suite3, Après). 
+où 
+terminal(X, fX I Yl, Y). 
+positivelnteger(N) G (N], 
+positivelnteger(N, Avant, Après):-
+{ integer(N), N>O} 
+terminal (N, Avant, Après), 
+integer(N), N>O. 
+positiveNumber(N) G 
+positiveNumber(N, Avant, Après):-
+[NO], { integer(NO), NO>O}, 
+terminal (NO, Avant, Suite), 
+fraction(F),{formNumber(NO, F, N) } 
+integer(NO), NO>O, 
+fraction (F, Suite, Après), 
+formNumber(NO, F, N). 
+determinant G (les) ;(le); (la). 
+determinant(Avant, Après):-
+terminal(les, A va nt, Après) ; 
+terminal(le, Avant, Après); 
+terminal(la, Avant, Après) . 
+13.3.2 
+Exemple : Kozon 2 
+On s'est posé la question d'un logiciel de dialogue en langue naturelle, exploitant et 
+gérant une base de faits (voir § 5.8.5). 
+On le suppose formé d'un analyseur transformant les phrases lues en formes 
+normalisées, et d'un interprète exploitant et/ou gérant une base de faits en consé
+quence. Sur cette base, on peut développer une maquette par prototypage évolutif. 
+
+284 
+B - Approche logique 
+Niveau 0 
+On installe d'abord la boucle de base, dont on convient qu'elle sera interrompue par 
+faire (fin). 
+go :-
+catch(execO, fin, write('A bientôt . . . ')) . 
+execO :- writeln('Bonjour ! Je vous écoute .'), exec . 
+exec :- write('A vous>'), saisir(Commande), faire(Commande), exec . 
+On considère ensuite le cas d'une assertion comme « un boulanger est un arti
+san », supposée provisoirement saisie sous la forme d'une liste 
+[un, boulanger, est, un, artisan]. 
+On souhaite maintenant que : 
+la phrase 
+satisfasse 
+[un, boulanger, est, un, artisan] 
+[fin] 
+On esquisse l'analyseur par : 
+analyse( +est l (boulanger, artisan)) 
+analyse( fin) 
+saisir(Commande) :- read(Ligne), phrase(analyse(Commande), Ligne, 
+) . 
+analyse(fin) 
+--> 
+analyse(+ X) 
+--> 
+prédicat(estl(X, Y)) --> 
+nom quantifié(X) 
+--> 
+sujet(X) 
+--> 
+déterminantl 
+--> 
+nomCommun (X) 
+--> 
+dans (X, 
+[Y 1 S]) 
+[fin) . 
+prédicat (X) . 
+sujet(X), [est], nom quantifié(Y) . 
+déterminantl, nomCommun(X) . 
+déterminantl, nomCommun(X) . 
+[une]; [un] . 
+[X], { dans (X, 
+[boulanger, artisan) )} . 
+X==Y ; dans(X, S) . 
+Un premier interprète se réduira à : 
+dynamic(estl/2) . 
+faire(fin) :-
+throw(fin) . 
+/* interruption boucle principale */ 
+faire(+ Predicat) :- assert(Predicat), writeln('je le note
+.') . 
+faire(Truc) :-
+writeln('cas imprévu' : Truc) . 
+/* corrmande non prévue */ 
+On peut provisoirement vérifier que le fonctionnement est correct par 
+listing(estl/2). 
+On préférera plus naturellement poser une question, en ajoutant : 
+analyse(? X) 
+--> 
+[est-ce], [que], prédicat(X) . 
+et, au niveau de l'interprète : 
+faire(? Predicat) :-
+clause(Predicat, true), !, writeln('oui .'); 
+writeln ('non .') . 
+qui dira si, oui ou non, le prédicat demandé est connu dans la base. 
+Pour pouvoir supprimer une assertion, on ajoutera : 
+analyse(- X) 
+--> 
+faire(- Predicat) :-
+effacer, prédicat(X) . 
+retract(Predicat), writeln('je l\'oublie .'); 
+writeln('sans objet .') . 
+qui effacera le prédicat de la base s'il est présent, et sinon signalera l'absence.
+
+---
+
+[p. 338-340]
+alités 
+recherchées 
+v(XA Y) = v(--.(--.X v-, Y)) 
+et 
+v( oX) = v( --.0--.X) 
+58 Pics ou creux électriques n'ayant pas lieu d'être dans un circuit logique, et provenant généralement de 
+désynchronisations entre signaux à combiner ; dans les automates, ces anomalies peuvent induire des 
+transitions « aléatoires » catastrophiques.
+Logiques multivaluées 
+3 1 9 
+Cependant, cette approximation de la Logique Modale soulève des difficultés au 
+niveau de l 'implication 
+14.3.4 Paradoxe de l'implication : de L3 à L'3 
+Paradoxe de l'implication en L3 
+Soit v(A)= Þ. et v(8)= 0 
+• L3 donne : v( A U 8) = Þ 
+• d'où 
+v( AA( A U 8)) = Þ. valeur qu'on attendrait pour 8 issu d'un 
+modus ponens, 
+valeur de vérité de B du seul fait de A 
+B pouvant avoir d'autres causes que A, il faudrait 
+v(B) r v(A A( A U 8)) ), 
+ici : 0 r Þ 
+! ! ! 
+En L3, le couple (A, U) est donc trop généreux pour la déduction sur prémisse 
+imprécise ; de plus, tiers-exclus et non-contradiction ne sont pas respectés ... 
+L'3 corrige ces problèmes en durcissant /\ avec maintenant : 
+v(xAy)= max(v(x) + v(y) -1, 0) 
+Tableau 14.4 Opérateurs de L'3. 
+XAY 
+XY 
+XA (XY) 
+X \Y 
+0 1 
+ 1 
+1 
+0 1 
+ 1 
+1 
+0 
+1 
+ 1 
+1 
+--,X 
+XA--,X 
+0 
+0 
+0 
+0 
+1 
+1 
+1 
+0 
+0 
+0 
+1 
+0 
+1---
+1. 
+] 
+ 
+0 
+m 
+ 
+ 
+1 
+1 
+0 
+ 
+ 
+ 
+0 
+-
+1 
+0 
+ 
+1 
+0 
+ 
+1 
+0 
+ 
+1 
+0 
+0 
+L' 3 supporte la non-contradiction, le modus ponens et la réfutation. 
+14.4 
+LOGIQUES LN 
+14.4.1 
+Définition 
+En 1922, Lukasiewicz généralise son système à n valeurs, avec : 
+Ln ={ k/(n-1) 1 0 :::; k :::; n-1 } , muni de l'ordre large :S , 
+et il pose : 
+v(X/\ Y) = min( v(X), v(Y)) ; 
+v(X UY) = min( l , 1-v(X)+v(Y)) 
+v(XvY) = max(v(X),v(Y)) ; 
+v(·X) = v(X) . 
+Ce système a été étendu jusqu'au premier transfini (L1 désignant en fait LN1) 
+Il a pu être appliqué dans des études logico-arithmétiques de systèmes (maté
+riels) à base n (>3). 
+• L4 : chez Mitsubishi : étude et production de mémoires en logique quaternaire, 
+localement analogique, compatible avec le binaire, réduisant la connectique. 
+• L8 : tentative similaire de McCluskey pour Signetics, visant à un matériel en 
+logique octale ... ; tentative abandonnée probablement à cause de difficultés 
+dans la discrimination physique des 8 niveaux. 
+
+320 
+B3a - Logiques non standards (extensions algébriques) 
+On peut l'employer en planification de tâches : 
+• avec les nécessités/possibilités organisées en un graphe ET/OU, 
+• en assimilant l'échelle de vérité à une échelle de faisabilité/difficulté, 
+• en procédant à un marquage progressif du graphe pour dégager un meilleur 
+plan de travail. 
+14.4.2 
+Exemple : Planification 
+Nous reprenons ici l'exemple déjà abordé en 4 .3. l . 
+Le problème 
+On suppose le travail à faire formé de tâches, définies en termes d'alternatives et/ou 
+de conjonctions, avec par exemple : 
+PO= Pl vP2 
+Pl = P3/\P4 
+P2=P5/\P8 
+P4=P6/\P7 /\?8 
+P5=P9 vP10 
+On suppose 4 niveaux de « Facilité des Tâches » : 
+0 
+2 
+3 
+impossible difficile facile immédiat 
+le « et » étant réalisé par min, et le « ou » par max . 
+Tableau 14.5 Facilité des tâches. 
+Données 
+Traitement 
+P3= 0 
+X 
+P6= 1 
+X 
+P7= 2 
+X 
+P8= 3 
+X 
+X 
+P9= 0 
+X 
+PIO= 1 
+X 
+P4=P6/\P7 /\P8 
+1 
+X 
+P5=P9 vPJO 
+1 
+X 
+Pl = P3/\P4 
+0 
+X 
+P2=P5/\P8 
+1 
+X 
+PO= Pl vP2 
+1 
+Le meilleur plan de travail 
+La cotation des tâches élémentaires permet de coter de proche en proche les tâches 
+intermédiaires jusqu'à PO (tab. 14.5). 
+On obtient ainsi l'organisation à recommander pour PO, en imposant de réaliser 
+chaque tâche OU par sa(ses) possibilité(s) optimale(s) 
+Résultats : 
+• P4 difficile par P6
+
+---
+
+[p. 379-380]
+des révisions avec l'ajout de nouvelles prémisses. 
+Une autre limite concerne la non-décidabilité ; l'application de règles non mo
+notones nécessite généralement de vérifier la consistance entre des formules et des 
+théories - vérification non décidable pour les logiques non monotones basées sur des 
+logiques d'ordre un ou plus.
+360 
+83b - Logiques non standards (extensions inférentielles) 
+16.5 
+HYPOTHÈSE DU MONDE CLOS 
+Ce modèle a été introduit par R. Reiter en 1 978 (Brewka et al. , 1997 ; Sombé 1 989). 
+DÉFINITION. L'hypothèse du monde clos (HMC) suppose qu'un ensemble d'axiomes 
+donné est toujours complet. 
+Si une formule n'est pas incluse dans cet ensemble et ne peut être inférée à 
+partir des informations disponibles alors on en déduit sa négation. 
+Ce modèle minimise les formules vraies pour tous les prédicats (i.e. qu'il appli
+que une forme forte de fermeture). De plus l'ajout de connaissances peut nécessiter 
+de réviser les conclusions. Sous HMC, on aura : 
+A, A/\--,C  B > B 
+et 
+A, C, A/\--,C  B > O 
+car dans le premier cas C inconnu est présumé faux, ce qui autorise B ; dans le se
+cond cas, C connu vrai bloque ensuite toute déduction. HMC est donc non monotone. 
+Cette hypothèse est utilisée par d'autres logiques non monotones dont la logique 
+des défauts et la circonscription. Elle est souvent utilisée dans les systèmes de 
+consultation de base de données dans des sous-domaines: si une base de données de 
+vols aériens ne comprend pas de données pour un vol particulier et que ce vol ne 
+peut pas être inféré à partir des données disponibles, alors on peut inférer selon HMC 
+que ce vol n'existe pas. Dans les systèmes de diagnostic, elle revient à supposer 
+qu'aucun symptôme ne peut être d'origine autre qu'une origine connue. 
+HMC peut être formalisée par la règle d'inférence : 
+-o(a > p) > (a > -.p) 
+si p ne peut pas être inféré du germe a alors par défaut on infére -.p à partir de a. 
+HMC peut mener à des inconsistances : si la base d'information utilise a, p, y . . . 
+ni connus ni dérivables, par HMC on présumera simultanément (-.a, -.p, -.y . . . ) ce 
+qui peut rendre une base inconsistante. 
+16.6 
+LOGIQUE DES DÉFAUTS DE REITER 
+Dans cette logique définie par R. Reiter en 1980, défaut évoque un raisonnement par 
+défaut. 
+Aux implications classiques notées sous la forme : 
+Reiter ajoute des règles du style : 
+signifiant : 
+Si A, B, C sont vrais 
+et si on peut penser que D, 
+alors F 
+avec par exemple 
+A/\B  C 
+/antécédents 
+/justification, admissibilité de la règle 
+/conséquent 
+oiseau(x) : oiseau normal(x)  vole(x)
+
+---
+
+[p. 412-413]
+à optimiser la fonction s2 telle que : 
+s(p, q, 1) = V{p2+q2+p-q•1) 
+s2(a,b) 
+={!oc x := s(a, b, 2) ; /oc y :=s(a, b, -2) ; s(x, y, -2)} 
+Constatons d'abord que s n'est que partiellement définie ; en toute rigueur on a 
+la restriction : 
+p2+q2+p-q•r è 0 -? s(p, q, 1) = ../(p2+q2+p-q•1). 
+Pour s2, on devra avoir successivement :
+Logiques modales 
+• Pour x := s(a, b, 2) : 
+a2 + b2 + 2ab è O----> {x := s(a, b, 2)] x = V{a2 + b2 + 2ab), soit 
+{x := s(a, b, 2)] x = la+bl, la précondition étant toujours satisfaite. 
+• Pour y := s(a, b, -2) : 
+a2+b2-2abè 0 ---->{y:= s(a, b, -2)} y = V{a2 + b2 - 2ab), soit 
+[y:= s(a, b, -2)] y = la-bl, la précondition étant toujours satisfaite. 
+Donc 
+[x := s(a, b, 2); y:= s(a, b, -2)} x =la+bl /\Y= la - bl 
+• Pour s2 := s(x, y, 2) : 
+x2+y2-2xyè 0 
+----> {s2 := s(x, y, -2)} s2= V(x2 + y2 - 2xy), soit 
+[s2 := s(x, y, -2)] s2 = lx-yl, la précondition étant toujours satisfaite. 
+• Finalement, au moment de revenir au contexte d'appel de s2: 
+393 
+[x := s(a, b, 2) ; y:= s(a, b, -2) ; s2:= s(x, y, -2} x =la+bl /1 y = la - bl/I 
+s2=11a+bl-la-bll= 2 max nal, lbU. 
+Sorti de s2, on n'a plus à connaître de ses variables locales. On peut donc remplacer 
+en toute sécurité l'usage de la fonction s2 par celui de la fonction s2 1 
+s2I(a,bJ =2 max nal, lbU. 
+qui donnera le même résultat dans les mêmes conditions sans utiliser ni variables 
+locales ni racine carrée, et qui sera donc strictement moins onéreuse. 
+Si s() n'avait pas d'autre usage que s2(), elle peut être supprimée. 
+17. l l 
+EXERCICES 
+17.11.1 Sylvain & Ophélie 
+En utilisant des modalités telles que [sylvain]<ophélie> . . . pour « sylvain sait 
+qu'ophélie croit que . . . », et en supposant sylvain calculateur, établir le raisonnement 
+que sylvain a pu faire avant sa déclaration. 
+17.11.2 Problème des 3 conseillers (Mc Carthy, 1978) 
+Un roi désire savoir lequel de ses 3 conseillers est le plus sagace. Il peint un point 
+blanc sur le front de chacun d'eux, les réunit et déclare qu'il a peint sur le front de 
+chacun d'eux soit un point blanc soit un point noir, mais qu'au moins un des points 
+est blanc. Chacun peut-il deviner la couleur de son point ? Après un temps de ré
+flexion, le premier dit qu'il n'en sait rien, le second dit qu'il n'en sait rien non plus, 
+le troisième conclut que son point est blanc. Expliquez. 
+17.11.3 Méthode des concordances 
+Selon cette méthode, si A est un facteur commun à trois expériences E 1 , E2, E3 
+exhibant un phénomène P, on suppose que A est la cause de P. 
+Formaliser et commenter cette méthode.
+
+---
+
+[p. 453-456]
+. 2, pp. 697-702. 
+Rakotomalala R., 1 997, Graphes d'induction, thèse, Université Lyon 1 . 
+Shortliffe E.H., 1 976, Computer-based medical consultations : MYCJN, American 
+Elsevier. 
+Touahria M., Khababa A., Frécon L., 2005, Modélisation d'un logiciel de Conseil 
+financier COFINA, Conférence IAAER-AFC, 29-30 septembre, Bordeaux.
+434 
+B4 - Systèmes à Base de Connaissances 
+Vogel C., 1 999, Génie Cognitif, Collection Sciences Cognitives, Masson. 
+Wikipedia, Ontologie. 
+
+CHAPITRE 2 1 
+INGÉNIERIE ET GESTION DES 
+CONNAISSANCES 
+«Knowledge engineering is an engineering discipline that involves integrating 
+knowledge into computer systems in order to salve complex problems normally re
+quiring a high level of human expertise.» 
+2 1 . 1 
+ORIGINE 
+Feigenbaum et McCorduck (1 983) 
+L'intelligence artificielle a mené à la réalisation de grands Systèmes-Experts (S)E, 
+tels que : 
+• 
+MYCIN (diagnostic des maladies infectieuses, années 1 970) est passé de 200 à 
+900 règles ; GUIDON, didacticiel de formation par MYCIN ajoutait 450 règles ; 
+devant ses insuffisances et pour une meilleure simulation du raisonnement des prati
+ciens, NEOMYCIN (Clancey 1 986) introduisit 75 (méta)règles servant à gérer un 
+espace d'hypothèses générales ou spécifiques à des cas, le passage d'une hypothèse à 
+l'autre dépendant de la tâche et non plus de résultats intermédiaires. 
+• 
+XCON, configurateur VAX développé chez DEC, a compté finalement 8000 
+règles, 
+• 
+BMT, configurateur d'éléments pare-feux dans les immeubles, a atteint 30 000 
+règles, 
+• 
+un projet de simulation « du sens commun chez l'enfant de 4 ans » développé à 
+Austin (Texas) comptait s'en tirer avec 2 000 000 de règles. 
+En pratique, une règle documentée peut occuper un écran de 25 lignes. 
+On constate ainsi que : 
+• 
+l'inadéquation des premiers SE a posé des problèmes nouveaux en rapport avec 
+les sciences cognitives, d'où un génie cognitif, 
+• 
+les SE « professionnels » sont d'une taille telle qu'on retrouve à leur sujet nom-
+bre de problèmes du génie logiciel. 
+DÉFINITION. On appelle ingéniérie des connaissances l'ensemble des méthodes et 
+pratiques permettant de passer de connaissances diffuses à un SE ou SBC les exploi
+tant. 
+
+436 
+84 - Systèmes à Base de Connaissances 
+2 1.2 
+SYSTÈMES DE DEUXIÈME GÉNÉRATION 
+La nécessité s'est d'abord fait sentir de différencier la modélisation des représenta
+tions (ou savoirs) et la modélisation des traitements (ou savoir-faire), puis, pour en 
+banaliser l'usage, la modélisation de la communication. 
+Les diverses facettes évoquées pour un même SE suggèrent que si certains for
+malismes sont en principe suffisants, ils ne seront pas toujours assez commodes pour 
+telle fonctionnalité, la puissance ne garantissant pas l'expressivité. 
+Dans cet ordre d'idée, un système de deuxième génération est donc amené à 
+combiner divers paradigmes, soit par la combinaison de divers formalismes, soit par 
+l'utilisation d'un LRC hybride, combinant le plus souvent Logique+Objets. 
+Par exemple, pour les SRP, on parlera de systèmes o++ pour les systèmes de 
+style O+ étendus à la manipulation d'objets (Sohbi 1 990). 
+2 1.3 
+MODÉLISA TI ONS 
+21.3.1 
+Modélisation des connaissances 
+Base de la formalisation des connaissances, l'ontologie se situe à un certain niveau 
+d'abstraction et dans un contexte particulier ; elle fonde une conceptualisation ro
+buste, dans un domaine particulier et vers un objectif donné. Elle classifie en catégo
+ries les relations entre les concepts. 
+De façon détaillée, ces ontologies décrivent généralement : 
+• les individus, entités ou objets de base, 
+• les classes, ensembles, collections, ou types d'objets, 
+• les attributs : propriétés, fonctionnalités, caractéristiques ou paramètres que 
+les objets peuvent posséder et partager, 
+• les relations, ou liens que les objets peuvent avoir entre eux, 
+• les événements, ou changements subis par des attributs ou des relations. 
+21.3.2 
+Modélisation des traitements 
+Nous avons rencontré des traitements par essais et erreurs, et l'approche logique 
+nous a montré qu'un processus intelligent n'était pas nécessairement séquentiel. 
+Au-delà, on peut maintenant envisager que les traitements intelligents sont ef
+fectués par l'interaction de divers processus mimant divers comportements cognitifs : 
+délégation assumant une focalisation, mise en compétition d'heuristiques, coopéra
+tions, négociations . . . 
+2 1.4 
+MÉTHODES 
+Les problèmes ci-dessus et la question de la maîtrise de la complexité ont amené à 
+sortir du domaine artisanal pour appuyer le développement des grands SE par des 
+méthodes adaptées telles que :
+
+---
+
+[p. 484-485]
+outes ses sous-tâches en parallèle ; 
+• éventuellement, un autre type de contrôle défini à partir de ces types de base, 
+ou avec par exemple des aspects temps réel. 
+Les informations utilisées et produites par les tâches sont définies par les para
+mètres de la tâche, symbolisant une instance d'un des concepts décrits dans le mo-
+lngéniérie et gestion des connaissances 
+465 
+dèle des concepts. La manière dont circulent les données dans l'arbre des tâches 
+constitue le flot de données. 
+L'écriture complète des modèles formels permet d'obtenir des modèles exécuta
+bles par génération d'un code écrit en langage objet. C'est l'opérationnalisation des 
+modèles. 
+Conduite d'un projet MASK 
+Les phases ci-dessus constituent le cycle de modélisation de la méthode MASK. 
+Elles ont pour but de maîtriser la complexité d'un système de connaissances des 
+points de vue contextuel/pragmatique et sémantique/cognitif. 
+Un projet MASK commence par le cycle de modélisation ci-dessus. Dans le 
+cycle de vie MASK, tous les modèles ne sont pas nécessaires dans un projet particu
+lier, d'où la nécessité d'une phase préalable de cadrage. 
+De plus, MASK privilégie l'analyse, dans le but de maîtriser la complexité de 
+la gestion des connaissances d'un domaine, sans aboutir nécessairement à une solu
+tion finalisée (ce en quoi elle se situe en amont de la plupart des méthodes ou outils 
+existant), d'où l'intérêt d'une étape d'aide à la décision. 
+Pour un projet à vocation opérationnelle, il faut ensuite définir des étapes qui 
+articulent et orientent les phases de modélisation en fonction du projet, puis complé
+ter le cycle de modélisation de MASK par un cycle de modélisation « génie logiciel » 
+prenant en charge le niveau syntaxique/informationnel. 
+Un plan qualité a été défini qui assure le bon déroulement du cycle de vie d'un 
+projet MASK. 
+Phase de cadrage 
+Le nombre de modèles à construire représente un effo1t considérable. Les projets de 
+gestion de connaissances rencontrés sont de nature très diverse, par leur domaine 
+d'application (assurance qualité, documentation, logiciel, organisation etc.), comme 
+par leur angle d'approche (stratégique, opérationnel...) ou par leur sujet d'étude. Le 
+cycle de modélisation complet n'est donc pas perçu comme également nécessaire par 
+tous les acteurs. 
+Pour chaque projet, il faut donc définir, outre son objectif en termes stratégique 
+ou tactique, les phases de modélisation utiles à l 'objectif. C'est l'objet de la phase de 
+cadrage. Ainsi, un projet visant à répertorier les compétences sur un domaine sera 
+plus intéressé par le modèle du système de connaissances et le modèle d'activité ; un 
+projet visant à capitaliser le savoir dans un domaine sera plus intéressé par le modèle 
+du domaine ; un projet de capitalisation d'une expertise particulière utilisera les 
+modèles cognitifs ... La phase de cadrage doit identifier et mettre en place les acteurs 
+du projet : comité de pilotage qui suit et oriente, comité de projet qui réalise, comité 
+technique qui conseille . . . 
+Phases de modélisation 
+Au centre du problème de gestion de la connaissance, les modélisations exploitent 
+des sources de connaissances identifiées : experts, sources documentaires ... Elles 
+comportent une phase de recueil sous forme d'entrevues ou d'interprétation de do-
+
+---
+
+[p. 524-525]
+ppelle des GvW l paramétrées. Le premier et le 
+dernier sont franchement procéduraux ( 1 notion = 1 procédure). StarLET se 
+veut prédicatif, et s'est révélé équivalent à PDC-Prolog. La représentation des 
+affixes, externe en LET, est automatique en StarLET et en LET\ les règles 
+d'affixes étant interprétées en modèle de données.
+Formalismes grammaticaux 
+505 
+Dans tous ces langages, contrairement à Prolog, des indication annexes (typage 
+des affixes, modes des paramètres) permettent une vérification statique (forme et 
+cohérence) des grammaires/programmes, accroissant notablement la fiabilité des 
+applications conséquentes. 
+22.10.2 Utilisation en génie logiciel 
+Analyseurs 
+Dans un environnement StarLET ou LET+, il est facile d'écrire un analyseur si : 
+• les règles de notion de l'analyseur décrivent la syntaxe concrète, 
+• les règles d'affixe définissent 
+- les modalités des entités en entrée, 
+- la représentation interne ou syntaxe abstraite du résultat. 
+Cet analyseur obéit le plus souvent au principe de l'analyse lexicale indirecte : 
+on a fondamentalement une analyse syntaxique descendante, déclenchant une ana
+lyse lexicale au gré de ses besoins, analyse facilement asservie au contexte gauche. 
+Les contraintes de la sémantique statique pourront être vérifiées au fil de 
+l'analyse syntaxique, ou dans une phase ultérieure de consolidation de la représenta
+tion interne initiale. 
+Interprètes 
+En réemployant le modèle affixe de la représentation interne, la conji·ontation des 
+affixes permet d'écrire simplement un interprète normatif de la sémantique dynami
+que, i.e. des comportements à l'exécution, dans l'esprit de !'Ecole de Vienne. Cet 
+interprète doit être exact sans obligation d'efficacité : ainsi, la recherche de la valeur 
+associée à une variable respectera strictement les règles de visibilité, quitte à utiliser 
+une recherche arborescente récursive. Un interprète opérationnel ou un générateur 
+finalisé pourront préférer un calcul d'implantation menant à un adressage. 
+Générateurs 
+Fondamentalement, un générateur est l'inverse d'un analyseur : c'est un pro-gramme 
+qui crée un texte dans un langage donné, à partir d'une représentation interne. 
+Dans un compilateur, le générateur traduit dans le langage cible l'arbre qu'il 
+reçoit. 
+Dans un atelier logiciel, un paragrapheur est un générateur qui remet sous une 
+forme de langage source la représentation interne reçue, présumée réversible. Cette 
+représentation est souvent compacte (pour l'archivage) et le résultat, nécessairement 
+équivalent au texte source primitif, n'est pas forcément identique ; c'est en général 
+une forme normalisée ou rationnalisée. 
+Transformateurs d'arbres 
+La programmation grammaticale permet la transformation de représentations inter
+nes, par la transformation d'arbres.
+
+---
+
+[p. 553-555]
+ront 
+l'exclusivité de la modification de ces attributs, s'ils existent physiquement. Et, s'il 
+s'agit d'attributs restant virtuels, les attributs effectifs seront modifiés de façon 
+71 T 
+. 
+. 
+1 
+. l' 
+erme consacre ; recette serait p us rea 1ste. 
+72 Ou liste des autres arguments (terminologie empruntée au formalisme acteur).
+534 
+D - Formalismes Objet 
+conforme, de telle façon que l'utilisateur des objets n'ait pas à se soucier de la re
+présentation physique effective. 
+23.5.2 
+Règles et métarègles 
+Dans les systèmes-experts à objets, les méthodes sont remplacées par des règles 
+(d'où, par exemple, les systèmes o++, combinant règles de production et objets, tels 
+Sygemor (Sohbi 90)). 
+Dans Shirka, les règles utilisées sont elles-mêmes instances d'une classe Règle. 
+De ce fait, une règle modificatrice d'objet peut être une règle modificatrice d'objet
+règle, donc une métarègle : ce cadre permet de définir des (méta-)règles capables 
+d'effacer ou de créer d'autres règles, donc aussi de simplifier une règle ou d'en fu
+sionner plusieurs, au fil des apprentissages. 
+23.6 
+PREMIERS EXEMPLES 
+Les exemples ci-dessous définissent dans différents langages une classe Point avec 
+deux attributs x et y. Cette classe contient un constructeur, deux méthodes retournant 
+la valeur des attributs (getX() et getY()), une méthode déterminant si le point repré
+sente l'origine (isOrigin()) et une méthode effectuant une translation. 
+23.6.1 
+En C++ 
+class Point { 
+protected : 
+int x ; 
+int y; 
+public : 
+Point ( int x, 
+int y) 
+{ 
+this->x 
+x ; 
+this->y = y; 
+} 
+Il accès 
+Il initialisation d' un 'point ' 
+Il this désigne le nouvel obj et 
+int getX ( ) { return x; 
+} 
+Il extracteurs 
+} ; 
+int getY ( ) { return y; } 
+bool isürigin ( ) { return (x == 0 ) & & (y == 0 ) ; 
+} Il observateur 
+Point& translate ( Point point ) 
+{ 
+Il translation 
+} 
+Point* newPoint = new Point (x + point . X , y + point . y) ; 
+return *newPoint ; 
+23.6.2 
+En Java 
+public class Point 
+Il déclaration des attributs 
+int x ; 
+int y ; 
+public Point ( int 
+this . x = x; 
+this . y = y; 
+} 
+public int getX ( ) 
+public int getY ( ) 
+x , int y) 
+{ 
+return x ; 
+return y; 
+Il initialisation d' un obj et point 
+Il extracteurs 
+
+Langages à classes 
+535 
+public boolean isOrigin ( ) { return (x 
+0 ) & & (y == 0 ) ; 
+} 
+Il test 
+public Point translate ( Point point ) 
+{ 
+Il translation 
+return new Point (x + point . x , y + point . y) ; 
+23.6.3 
+En Python 
+class Point : 
+Il l ' indentation tient lieu de parenthésage 
+def 
+init 
+( self, x, 
+y) : 
+self . x = x 
+self . y = y 
+def getX (self) : 
+return self . x 
+def getY ( self) : 
+return self . y 
+def isOrigin ( self) : 
+return ( self . x == 0 ) and ( sel f . y == 0 ) 
+def translate ( self, point ) : 
+return Point ( self . x + point . x , self . y + point . y) 
+23.6.4 
+En SWI-Prolog 
+Nous reprenons ici un petit exemple de l'introduction à Simula 67, pour montrer 
+comment un Prolog modulaire (ici SWI Prolog) peut être étendu au formalisme ob
+jet, ce qui facilite le stockage de connaissances similaires traitables de divers points 
+de vue. 
+Le module prend le nom de la classe point à créer. Il n'exporte officiellement 
+aucun prédicat. Cependant, seul memo/3, qui concerne la mémorisation locale des 
+points(sous forme cartésienne), restera caché. Les autres prédicats (créer, tuer, liste, 
+raz, msg) ont un caractère générique : appelés à être redéfinis de classe en classe, on 
+les utilisera via la notation qualifiée <nom du module>:< nom du prédicat>. 
+% 
+Définition d' une classe point 
+module (point , 
+[ ] ) . 
+% classe point 
+% constructeurs de points 
+% représentation cartésienne effective 
+pas d' export officiel 
+créer (Nom, cart , X, Y) 
+: -
+assert (memo (Nom, X, Y) ) . 
+% représentation polaire virtuelle 
+créer (Nom, pol , R, A) 
+: -
+X is R* cos (A) , Y is R* sin (A) , 
+assert (memo (Nom, X, 
+Y) ) . 
+tuer (Nom) : -
+liste 
+raz : -
+retract (memo (Nom, 
+, 
+) ) . 
+forall (memo (Nom, X, 
+Y) , writeln ( [Nom, cart , X, 
+Y] ) ) . 
+retractall (memo (_, _, _) ) . 
+% observateurs cartésiens msg ( Point , Message , SuiteArgs ) .
+
+---
+
+[p. 588-590]
+ivre, sinon tout arrêter et se suicider (!) ; 
+• en cas d'interruption du responsable, et en l'absence de solution, tout arrê
+ter. . . 
+Pour les deux derniers cas, on notera (a) qu'il s'agit de messages Express et (b) 
+que leur réception est validée en testant qui est l'émetteur (symbolisé par &sender) 
+(d'après Yonozawa 1 986).
+Les acteurs 
+[ object ProjectLeader 
+(state [team-members := nil] [bestSolution := nil]) 
+[time-keeper := [CreateAlarmClock <== [:new Me]]]) 
+(future Solutions) 
+(script 
+(=> [:add-a-team-member M]) ([team-members := (cons M team-members)]) 
+(=> [:solve SPEC :by TIME](temporary [mySolution := nil]) 
+; variable temporaire 
+[[time-keeper <= [:wake-me-at (- TIME 20)]] 
+[team-members <= [:solve SPEC] $ Solutions] 
+; diffusion mode Futur 
+(while (and (not (ready? Solutions)) (null mySolution)) 
+do . . . essai de résolution personnelle, solution dans mySolution, tant 
+qu 'aucune n 'est trouvée 
+(atomic 
+[bestSolution := ( choose-best mySolution (ail-values Solutions))] 
+[[Manager <<= [:found bestSolution]] 
+[team-members «= [:stop-your-task]]))) 
+(=>> [:time-is-up] where (= &sender time-keeper) 
+(temporary new-deadline) 
+(if (null bestSolution) 
+th en 
+[new-deadline := [Manager <<== (:can-extend-deadline?]]] 
+(if(null new-deadline) 
+then [team-members <<= [:stop-your-task]](suicide) 
+else [time-keeper <= [:wake-me-at new-deadline]]))) 
+(=>> [:you-are-too-late] where (= &sender Manager) 
+(if (null bestSolution) 
+then [team-members <<= [:stop-your-task]] (suicide))) ) 
+25.6 
+LOGIQUES D'ACTEURS 
+25.6.1 
+Approche classique 
+569 
+Hewitt a depuis longtemps signalé que le formalisme acteur ne pouvait se réduire à 
+la programmation logique classique. 
+Une approche logique classique des acteurs se heurte en effet à diverses diffi
+cultés : 
+• Prolog n'est pas un langage « concurrent » par nature, et la question de la co
+exécution d'acteurs se pose, alors même que les traitements concurrents se 
+révèlent plus puissants que les calculs récursifs ; 
+
+570 
+E - Systèmes Multiagents 
+• Prolog étant voué à l'ordre l , il ne permet pas d'utiliser directement des pré
+dicats comme « dire à X que P » ou « X dit que P » où P serait lui-même un 
+énoncé . . . 
+De là deux tendances : ajouter à Prolog des mécanismes nouveaux, irréductibles 
+à la logique, le gain en puissance s'accompagnant d'une perte de sécurité sur la vali
+dité des résultats ; ou bien trouver des mécanismes nouveaux qui tout en couvrant les 
+besoins du formalisme acteur seraient réductibles à la logique, et donc permettraient 
+de sauver les résultats classiques en matière de bonne fin. 
+Parmi les diverses tentatives : 
+• on a pu marier programmation logique avec contraintes et programmation lo
+gique concurrente, dans le style des clauses de Horn gardées (langages Lucy 
+et Janus, Kahn K.M. & Saraswat V.A. 1 990) ; voir aussi § 26.5.2 ; 
+• avec Actor Prolog par exemple, Morozov introduit des objets-processus Pro
+log comme acteurs avec une sémantique réductible de proche en proche à la 
+logique d'ordre l . 
+25.6.2 
+Approche épistémique 
+D'un point de vue plus personnalisé, notons que la logique épistémique (cf. sect. 
+1 7.8) fournit un cadre de raisonnement sur les savoirs et croyances des uns et des 
+autres, et leurs influences sur le raisonnement de chacun. Une extension de la nota
+tion permet d'aborder la communication, avec d'éventuels biais soit intra-personnels 
+(i.e. propres à l'acteur ) soit interpersonnels (i.e. relatifs aux interlocuteurs). 
+Du point de vue d'un observateur universel et omniscient, on peut écrire au 
+sujet d'Arthur : 
+<Arthur> P h <Arthur>[ Arthur] P 
+(quand Arthur croit quelque chose, il croit qu'il le sait). 
+A voir des écritures équivalentes, subjectives, nous permettra la modélisation 
+d'acteurs réels, de rationalité variable, décrits chacun en ce qui le concerne. 
+Désignation relative des acteurs 
+Pour un acteur donné, convenons que «.» désigne « moi » (i.e. chaque acteur pour 
+lui-même), « * » désigne « tous », et « _ » n'importe qui d'autre, et qu'il pourra 
+désigner par leurs noms d'autres acteurs (jean, marguerite, zoé) ou groupes d'acteurs 
+(Spécialistes, Gestionnaires, Intégrateurs, Commerciaux, Numériciens, Potiers, Figu
+rants, Imprimantes . . . ). 
+Communication 
+Soit un émetteur i, un destinataire j, k une continuation facultative, utilisable pour 
+étendre la communication aux accointances indirectes. 
+On introduit un opérateur « ? » pour demander si, et un opérateur « ! » pour dire 
+que. 
+Une communication élémentaire est alors dénotée selon le tableau 25.3. 
+Les règles les régissant, ou règles de communication, devant être édictées le 
+plus souvent pour des familles d'énoncés, celles-ci seront représentées par des méta-
+
+---
+
+[p. 620-621]
+Paris, 1 6 déc. 
+Durfee E.H. & Grasser V.R., 1 987, Using Partial/Global plans to coordination 
+Distributed Problem Solving, Proc. of the l Oth UCAL, Milan, ltaly, 1 987. 
+Durfee E. H. & Lesser V., 1 989, Negotiating task decomposition and allocation 
+using partial global planning. in L. Gasser et M. Huhns, editors, Distributed
+Agents et SMA 
+601 
+Artificial Intelligence, vol. Il, Pitman Publishing (London) and Morgan 
+Kaufmann San Mateo, CA. 
+Earl C. & Fibry R., 1 996, Combined Execution and Monitoring for contrai of 
+autonomous Agents, Proceeding of the First International Conference on 
+autonomous Agents. 
+Ferber J. & Gallab M., 1 998, Problématiques des univers Mufti-Agents intelligents, 
+Actes 
+des Journées Nationales PRC-GRECO Intelligence Artificielle, 
+Toulouse, mars 1 998, pp. 295-320. 
+Ferber J. & Drogoul A., 1 992, Using Reactive Multi-Agent Systems in Simulation 
+and Problem Solving, in Distributed Artificial Intelligence: Theory and 
+Practice, L. Gasser et N. Avouris (Ed.), Kluwer Academic Publishers. 
+Ferber J., 1 995, Les Systèmes MuftiAgents, vers une intelligence collective, Inter
+Editions, Paris. 
+Ferber. J, 1 997, Les systèmes multi-agents : un aperçu général, Technique et 
+Sciences Informatiques. vol. 1 6, n° 8, oct. 1 997. 
+Franklin S. & Graesser A., 1 997 Is it an agent, or just a program? A taxonomy for 
+autonomous agents, in J. P. Mueller, M. Wooldridge, et N. R. Jennings, Eds, 
+Intelligent Agents III: Theories, Architectures, and Languages, Springer
+Verlag, Heidelberg (D). 
+Huang J., Jennings N.R. & Fox J., 1 994, Cooperation in distributed medical care, 
+Proc. Of Second Int. Conf. On cooperative Information Systems Toronto, 
+(CND), pp. 236-255. 
+lglesias C.A., Garijo M., Gonzàlez J.C. & Velasco J.R., 1 997, Analysis and design of 
+mufti-agent 
+systems 
+using 
+mas-commonKADS 
+{ 
+XE 
+«méthode 
+commonKADS»} , In AAAI'97 Workshop on Agent Theories, Architectures 
+and Languages, Providence, RI. 
+Jarras 1 . & Chaib-Draa B., 2002, Aperçu sur les systèmes multiagents, Série 
+Scientifique, Montréal. 
+Jennings N. R., 1 995, Controlling cooperative problem solving in industrial multi
+agent systems using joint intentions, Artificial intelligence, 74(2). 
+Jennings N.R., Mamdani E.H., Laresgoiti 1 . , Perez J. & Corea J., 1 992, GRA TE : a 
+general framework for cooperative solving, Intelligent Systems Engineering 
+1 (2) pp. 1 02 1 - 1 140. 
+Kazar O., Habira A., Houhou K., 2003, Un système mufti-agent pour la G.P.A. 0, 
+CIP2003, International Conference on Productics, Alger, 1 4- 1 6 oct. 2003 
+Kazar O., Sahnoun Z., Frécon L., 2000, Cognitive Agent Architecture For Medical 
+Care, IC-AI'2000 Las Vegas, The 2000 Inti Conference on Artificial 
+Intelligence, June 26-29, Monte Carlo Resort, edition Press CSREA 2000, vol. 
+II, Las Vegas, Nevada . 
+Kazar O., Sahnoun Z., Frécon L., 2002, Mufti-agent systems for Aeronautic 
+simulation, l st Inti Conference on Autonomous Agents and Multi-agent 
+systems workshop on Agents and Problem Spaces, July 1 5- 1 9, Bologna.
+
+---
+
+[p. 649-650]
+s B.V., 
+Amsterdam, pp. 77-92. 
+Cammarata S., McArthur D., & Steeb R., 1 983, Strategies of cooperation in 
+distributed problem solving, Proc. of the 8th Inti Joint Conference on Artificial 
+Intelligence ; (aussi dans Readings in Distributed Artificial Intelligence, Alan 
+H. Bond and Les Gasser, editors, Morgan Kaufmann, 1 988).
+630 
+E - Systèmes Multiagents 
+Chapman D. & P. Agre, 1 986, Abstract reasoning as emergent /rom concrete 
+activity In M. P. George et A. L. Lansky, editors, Reasoning About Actions & 
+Plans, Proceedings of the 1 986 Workshop. Morgan Kaufmann Publishers, San 
+Mateo, CA. 
+Chaudet H., 1 998, Intelligence artificielle et psychologie cognitive, Dunod, 1 998. 
+Chevrier V., 1 992, Coordination et structuration des échanges par négociation dans 
+les systèmes mufti-agents, Journée Systèmes Multi-Agents, PRC-GDR 
+Intelligence Artificielle, Nancy, déc. 1 992. 
+Corsini M.M., 2002, Le raisonnement en I.A., ; 
+http://www. sm. ubordeaux2. fr/Ƙcorsini/Cours/mainlA/node4 3 .html 
+Dillenseger B., 1 996, Une approche mufti-agents des systèmes de bureautique 
+communicante , Thèse Université de Caen, 26 nov. 
+Dillenseger B. & Bourdon F ., 1 994, Une approche mufti-agents des systèmes de 
+bureautique communicante, Journée «Systèmes Multi-Agents» du PRC-GDR 
+Intelligence Articielle, Paris, 1 6 déc. 
+Durfee E.H. &Grasser V.R., 1 987, Using Partial Global plans to coordinate 
+Distributed Problem Solving, Proc. of the I Oth UCAL, Milan, 1 987. 
+Durfee E. H. & Lesser V., 1 989, Negotiating task decomposition and allocation 
+using partial/global planning. in L. Gasser et M. Huhns, editors, Distributed 
+Artificial Intelligence Volume II, Pitman Publishing: London and Morgan 
+Kaufmann: San Mateo, CA. 
+Earl C. & Fibry R., 1 996, Combined Execution and Monitoring for contrai of 
+autonomous Agents, Proceeding of the First International Conference on 
+Autonomous Agents. 
+Engelmoore R. & Morgan T, 1 988, B/ackboard Systems, Addison-Wesley. 
+Erman L., 1 977, A functional description of the Hearsay-II speech understanding 
+system, Acoustics, Speech, and Signal Processing, IEEE Inti Conf. on ICASSP 
+'77, vol. 2, pp. 799-802. 
+Erman L., F. Hayes-Roth F., V. R. Lesser V.R. & R. D. Reddy R.D., 1 980, The 
+Hearsay-11 Speech Understanding System : Integrating Knowledge to Resolve 
+Uncertainty. A CM Computing Surveys, 1 2(2), pp. 2 1 3-253. 
+Farreny H., 1 985, Les systèmes experts principes et exemples, Eyrolles (F) et Berti 
+Editions (DZ). 
+Ferber J.& Gallab M, 1 998, Problématiques des univers mufti-agents intelligents, in 
+Actes des Journées Nationales PRC-GRECO Intelligence Artificielle, 
+Toulouse, mars 1 998, pp. 295-320. 
+Ferber J. & Drogoul A., 1 992, Using Reactive Multi-Agent Systems in Simulation 
+and Problem Solving, in Distributed Artificial Intelligence: The01y and 
+practice, L. Gasser et N. Avouris (Ed.), Kluwer Academic Publishers. 
+Ferber J., 1 990, Conception et programmation par objets, Technologie de pointe / 
+Informatique, Hermès, Paris. 
+Ferber J., 1 995, Les systèmes mufti-agents, vers une intelligence collective, 
+InterEditions, Paris
+
+---
+
+[p. 680-681]
+d'heures d'ouverture, compliqués aux USA par les fuseaux horaires ; le 
+relevé des commandes prises à 8h à Chicago regroupait aussi bien des com
+mandes de début de journée de la côte est que des commandes émises tard 
+dans la soirée de la côte ouest ; 
+• des horaires de traitement devenus indépendants de ceux des représentants ;
+29 - Traitement des langues naturelles 
+661 
+• une plus grande rigueur, avec la raréfaction des complications dues aux com
+mandes mal prises, d'où une accélération notable des livraisons et la réduc
+tion des contentieux. 
+Les applications proposées maintenant sont variées : 
+• diffusion d'informations (météorologiques, bancaires, trafic routier, horaires, 
+résultats . . . ) ; 
+• messagerie vocale ; 
+• diffusion de messages d'alertes ; 
+• saisie de coordonnées, saisies de commandes, saisies d'informations de suivi 
+d'actions ; 
+• qualification et distribution d'appels ; 
+• jeux ... 
+Un serveur vocal regroupe toujours des ressources, un serveur d'application et 
+des frontaux vocaux. Ces fonctions peuvent résider sur le même serveur, moyennant 
+un nombre limité de voies d'accès simultanées. Mais si le serveur vocal fait appel à 
+des modes d'interactivité nécessitant des logiciels de reconnaissance de la parole ou 
+de synthèse vocale, on conseille de dédier un serveur aux tâches frontales, le serveur 
+d'application restant commun à tous les frontaux vocaux. Les scripts doivent respec
+ter diverses contraintes selon la destination de l'application, les technologies 
+d'interaction retenues, les règles d'ergonomie propres aux applications vocales. Du 
+point de vue de l'usager, la qualité d'un service vocal dépend : 
+• de l'ergonomie des scripts, qui devraient privilégier les questions discrimi
+nantes pour éviter un dialogue inutilement long, savoir proposer des choix par 
+défaut, répondre à des interrogations, utiliser des recoupements pour accepter 
+un certain taux de non-réponse et/ou vérifier la cohérence des entrées ; 
+• de la convivialité des messages, qui devraient éviter l'obscurité (pédanterie, 
+jargon, ambiguïté) et toute familiarité excessive ; le choix du locuteur (acteur 
+ou actrice) de la voix synthétisée sera déterminé par la couleur vocale souhai
+tée pour le service. 
+Une application vocale est en général optimisée lors des premières semaines. 
+Plus l'ensemble des choix sera complexe, plus il sera important d'analyser les statis
+tiques de parcours de leur structure, afin de mesurer la pertinence des choix propo
+sés, l'efficacité des messages et des services délivrés, et de guider les modifications 
+de paramétrages, de parcours, voire même de fichiers sons. 
+29.6.1 
+Reconnaissance de la parole 
+La Reconnaissance de la Parole (RdP) affronte la grande variabilité du signal acous
+tique, support de la parole : 
+• pour un même locuteur, les invariants de sa parole seront assez abstraits, vo
+cabulaire et syntaxe variant avec son humeur ; 
+• pour une même langue, d'un individu à l'autre : 
+- les caractéristiques vocales fluctueront selon le genre et l'accent, 
+- vocabulaire et syntaxe varieront en fonction de la compétence linguistique, 
+du dialecte ou du jargon.
+
+---
+
+[p. 704-705]
+n cas de divergence dans la solution d'un problème demander à l'apprenant de 
+s'expliquer, ce qui permet de juger à la fois de la justesse de la solution, et de 
+l'assurance de l'apprenant dans cette solution. 
+Un compagnon plus strictement pertubateur peut même être utilisé comme aide 
+en phase de test (Bouahdada & coll. 2007).
+Autres systèmes intelligents spécialisés 
+685 
+30.3.4 
+Environnements d'apprentissage 
+Avec ce concept, on cherche à dépasser l'opposition entre défenseurs de 
+l'apprentissage par induction, basé sur l'activité exploratoire de l'apprenant, et les 
+tutoriels plus ou moins dérivés de l'enseignement programmé : on souhaite ici favo
+riser l'acquisition de concepts et de procédures associés à un domaine donné. Un 
+environnement d'apprentissage est donc un logiciel qui : 
+• réalise la synthèse entre les avantages de la libre exploration et de la construc
+tion progressive des objets de connaissance d'une part, et l'intérêt d'un cer
+tain guidage d'autre part ; 
+• privilégie les situations (quasi)réelles de conception et de travail, l'appren
+tissage incident des connaissances nécessaires à la résolution des tâches po
+sant moins de problèmes de motivation et d'attention que l'apprentissage a 
+priori de ces connaissances ; 
+• permet d'acquérir 
+- les automatismes nécessaires à la résolution des problèmes récurrents (or
+thographe, calculs arithmétiques, décisions statistiques .. . ), 
+la terminologie et les concepts permettant de communiquer avec les spécia
+listes du domaine. 
+30.4 
+APPLICATIONS LUDIQUES 
+30.4.1 
+Jeux proprement dits 
+Les jeux ont eu une grande importance intellectuelle aux débuts de l'intelligence 
+artificielle, 
+• comme sources de problèmes simplifiables arbitrairement pour enclencher 
+une démarche progressive, passant d'un problème résolu à un problème un 
+peu plus vaste et/ou plus réaliste, constituant un défi raisonnable ; 
+• parce que certains jeux possédaient déjà un système d'évaluation de la qualité 
+d'une solution, d'où possibilités de comparaisons et de progrès ; 
+• parce que ce cadre émoustillait plus que tout autre les capacités heuristiques 
+de divers chercheurs. 
+Les jeux ont ensuite acquis un poids économique croissant, d'abord avec les 
+micro-ordinateurs puis avec l'arrivée des jeux en ligne. 
+Avec la micro-informatique puis avec l'avènement du graphique, les ludiciels -
+ou programmes de jeux - se sont multipliés et sont maintenant l'objet d'une véritable 
+industrie éditoriale. 
+Les jeux à joueur unique sont en général basés sur un cycle saisir/mettre à 
+jour/agir, éventuellement doté de tâches annexes. 
+Les jeux à plusieurs joueurs, et notamment les jeux de rôle et jeux de stratégie, 
+s'inscrivent entre deux solutions extrêmes : 
+• le jeu en réseau : tous les joueurs sont réels, et le ludiciel gère le système à la 
+base du jeu, enregistre les actions de chacun, arbitre et conseille ;
+
+---
+
+[p. 732-733]
+e mieux comprendre leurs objectifs. Ses interactions 
+futures avec eux seront donc améliorées. 
+Non seulement ces recherches conduisent à des robots plus adaptés aux rela
+tions avec les humains, mais elles permettent de comprendre les étapes du dévelop
+pement cognitif chez l'enfant - développement dont la compréhension n'a guère
+Le projet robotique 
+7 1 3 
+progressé depuis les observations de Piaget. D e nouveau, des comportements appa
+remment complexes émergent de l'interaction de mécanismes plus simples. 
+31 .11 .3 Androïdes 
+On peut citer comme premiers androïdes mécaniques à programme fixe le joueur de 
+flûte de Vaucanson ( 1 738) puis l'enfant-écrivain de l'horloger suisse P. Jaquet-Droz 
+(1 772). 
+Il existe actuellement une centaine de projets de développement d'androïdes (cf 
+www .androidworld.com). 
+On peut considérer comme typique le cas d' Asimo (acronyme de Advanced Step 
+in lnnovative Mobility, et clin d'œil à Asimov). 
+Asimo 
+Le nouvel Asimo de Honda (déc. 2005) manifeste divers progrès par rapport à son 
+prédécesseur. Il peut vous accompagner (voire vous tenir par la main), tirer un cha
+riot ou d'autres objets, fonctionner comme réceptionniste ou agent d'accueil, ou 
+servir une boisson sur un plateau. 
+Tableau 31.4 L'androïde Asimo. 
+Caractéristiques 
+Degrés de liberté 
+taille ..... ............. .... 130cm 
+tête . .......... . ...... . .......... . ... 3 
+largeur 
+................... 45 cm 
+bras ... .............. ........... 2x7 
+profondeur ......... .. . ... 37cm 
+main ....... ........... . ........ 2x2 
+masse . .... .. . .. .. . . . ...... .. 54kg 
+torse ........ . . ..... . . . .. .. ... . .... . 1 
+vitesse max ....... ... . 6 km/h 
+jambe ......................... 2x6 
+autonomie ............... 40 mn 
+total ................. ....... ..... 34 
+Asimo reconnaît son environnement à travers des capteurs visuels, tactiles et 
+ultrasonores. Ses capteurs (caméra et capteurs d'effort) lui permettent de donner et 
+recevoir un objet tel qu'un plateau, ou de tenir la main d'une personne et de réagir en 
+synchronie avec elle. 
+Il sait ajuster l'action de ses bras et de ses poignets pour pousser un chariot, 
+même si le mouvement de celui-ci est perturbé : il sait alors par exemple ralentir ou 
+tourner. Sa vitesse normale de marche (2,7 km/h) se réduit à 1 ,6 km/h s'il pousse un 
+chariot, mais monte à 6 km/h s'il cou1t. 
+Hubo 
+Hubo, robot coréen inspiré d' Asimo, mesure 1 ,25m et pèse 55 kg. Capable de recon
+naissànce vocale et aussi visuelle, il possède 4 1 articulations, marche à 1 ,25 km/h et 
+court à 3 km/h. Il peut jouer à des jeux, danser, monter des escaliers. Il soulève des 
+objets avec ses mains à 5 doigts articulés indépendants les uns des autres, et peut 
+serrer une main sans la broyer. Proche d' Asimo pour la taille, la vitesse des dépla
+cements et les capacités, il a été construit en 2 ans pour 1 M$, contre 10 ans et 300 
+M$ pour Asimo.
+
+---
+
+[p. 757-758]
+res espèrent pouvoir réaliser d'ici 2050 une équipe de footbal
+leurs artificiels pouvant rivaliser avec les joueurs humains d'aujourd'hui. Mais ceci 
+demandera des progrès notables : les androïdes actuels savent marcher mais les faire 
+courir, et jouer au football sur un vrai terrain avec un ballon demandera encore des 
+progrès.
+738 
+H - Au-delà de l'intelligence Artificielle 
+Robots militaires 
+Certaines institutions militaires sont très intéressées par les systèmes multi-robots 
+coopérants notamment avec l'utilisation d'équipes de drones. 
+Hangars automatiques 
+Il s'agit de hangars formés d'allées donnant accès à des cases de stockage à gauche 
+et à droite sur une grande longueur (50 m et plus) et une grande hauteur ( 1 5 m et 
+plus), stockage/déstockage assurés par un ballet de « transtockeurs », manipulant des 
+marchandises sur palettes standard. Le but est de ranger les palettes qui arrivent, et, 
+ayant mémorisé leur emplacement et leur contenu, de les retirer sur demande, sans 
+collision entre transtockeurs (sécurité), avec un maximum de débit (performances) et 
+de fluidité (économie des matériels). 
+Systèmes d'expédition automatique 
+Siemens a réalisé un tel système pour une firme de VPC, qui comprend : 
+• en amont, un hangar automatique comptant en moyenne un stock de 
+5 000 000 d'unités, géré par des robots, 
+• un système qui prépare les boîtes en carton pour l'expédition, 
+• un système de convoyeurs qui acheminent boîtes en carton et articles venant 
+du hangar automatique vers une centaine de stations d'emballage fonction
+nant en 3 stades : 
+une boîte étant associée à une commande, un système d'étiquettes électro
+niques attaché à chaque article permet de sélectionner les articles corres
+pondants à la commande parmi les articles amenés ; 
+-
+ensuite sont ajoutés facture, catalogue, cadeau publicitaire . . . 
+-
+puis le paquet est scellé, reçoit un code barre et l'étiquette « adresse 
+d'expédition ». 
+Le système expédie 30 000 paquets par jour. Les interactions sont importantes à 
+tous les niveaux, de l'ordre de 800 à 900 messages entre parties du système par pa
+quet expédié. 
+Des études sont entreprises pour adapter ce système aux envois entre centrale 
+d'achats et supermarchés, la difficulté étant d'organiser au mieux, en conteneur par 
+exemple, des livraisons fondamentalement hétéroclites, formées de paquets de toutes 
+tailles et formes. 
+Ateliers flexibles 
+Il s'agit d'études du comportement de robots dans un atelier reconfigurable en fonc
+tion des besoins pour une suite de petites et moyennes séries, généralement menée à 
+l'aide de robots virtuels (i.e. simulés). Le comportement des robots est largement 
+influencé par l'apprentissage par imitation (G. Beslon ; Arnaud 2000).

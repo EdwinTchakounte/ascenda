@@ -1,0 +1,750 @@
+[
+ {
+  "chapitre": "3f632487",
+  "questions": [
+   {
+    "q": "En quoi consiste l'emulation du cerveau entier, telle que Bostrom la definit ?",
+    "choix": [
+     "Produire un logiciel intelligent en scannant et modelisant tres precisement la structure computationnelle d'un cerveau biologique",
+     "Reproduire les fonctions cognitives humaines par des regles explicites",
+     "Faire apprendre a un reseau de neurones un corpus de comportements humains",
+     "Simuler le cerveau au niveau des aires fonctionnelles seulement"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom qualifie cette voie de plagiat ehonte de la nature, puisqu'on s'y inspire totalement d'elle.",
+    "niveau": "restitution",
+    "page": 56
+   },
+   {
+    "q": "Quelle premiere etape technique l'emulation exige-t-elle ?",
+    "choix": [
+     "Creer un scan suffisamment detaille d'un cerveau humain donne, stabilise post-mortem par vitrification puis decoupe en lamelles tres fines",
+     "Enregistrer l'activite electrique du cerveau pendant plusieurs mois",
+     "Cartographier les aires corticales par imagerie fonctionnelle",
+     "Sequencer le genome du sujet"
+    ],
+    "reponse": 0,
+    "explication": "Les lamelles passent ensuite dans une machine pour etre scannees, peut-etre par une serie de microscopes electroniques, avec application eventuelle de colorants.",
+    "niveau": "comprehension",
+    "page": 56
+   },
+   {
+    "q": "Que suppose l'emulation du cerveau entier, et que ne suppose-t-elle pas ?",
+    "choix": [
+     "Elle suppose seulement de comprendre les caracteristiques fonctionnelles de niveau inferieur des elements computationnels du cerveau, non de savoir comment fonctionne la cognition humaine",
+     "Elle suppose une theorie complete de la conscience",
+     "Elle suppose de savoir programmer une intelligence artificielle",
+     "Elle suppose une percee conceptuelle majeure en neurosciences"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom precise qu'aucune percee conceptuelle ou theorique n'est requise, mais que l'emulation implique de disposer de technologies tres pointues.",
+    "niveau": "comprehension",
+    "page": 57
+   },
+   {
+    "q": "Quels sont les trois prerequis technologiques de l'emulation du cerveau entier ?",
+    "choix": [
+     "Le scan, la traduction et la simulation",
+     "La vitrification, la coloration et la reconstruction",
+     "L'imagerie, l'apprentissage et la validation",
+     "La cartographie, l'encodage et le controle"
+    ],
+    "reponse": 0,
+    "explication": "Le scan exige une microscopie a haut debit, la traduction une analyse automatique d'images produisant une structure tridimensionnelle, la simulation un materiel assez puissant.",
+    "niveau": "restitution",
+    "page": 57
+   },
+   {
+    "q": "Quel compromis Bostrom decrit-il entre technologie et comprehension theorique ?",
+    "choix": [
+     "Plus le scan est mauvais et l'ordinateur faible, plus il faut de comprehension theorique de l'architecture computationnelle ; avec un scan et une puissance suffisants, on peut emuler sans bien comprendre le cerveau",
+     "Plus la comprehension est fine, plus il faut de donnees",
+     "Plus le modele est abstrait, plus la simulation est fiable",
+     "Plus la resolution est elevee, plus le modele doit etre simple"
+    ],
+    "reponse": 0,
+    "explication": "A la limite, on pourrait emuler un cerveau au niveau des particules elementaires avec l'equation de Schrodinger, ce qui exigerait trop de puissance computationnelle et d'extraction de donnees.",
+    "niveau": "comprehension",
+    "page": 59
+   },
+   {
+    "q": "Quel serait, selon Bostrom, un niveau d'emulation correct ?",
+    "choix": [
+     "Incorporer les neurones individuels et leur matrice de connectivite, des elements de l'arborescence dendritique et peut-etre certaines variables d'etat des synapses, en modelisant a gros grains les concentrations de neurotransmetteurs",
+     "Simuler chaque molecule de neurotransmetteur",
+     "Se limiter aux aires fonctionnelles et a leurs connexions",
+     "Reproduire uniquement les patterns d'activite electrique"
+    ],
+    "reponse": 0,
+    "explication": "Le but n'est pas de predire ce qui se passe dans le cerveau original expose a des stimulations, mais de retenir assez de proprietes computationnellement fonctionnelles pour que l'emulation realise un travail intellectuel.",
+    "niveau": "comprehension",
+    "page": 60
+   },
+   {
+    "q": "Quels trois niveaux de reussite d'une emulation Bostrom distingue-t-il ?",
+    "choix": [
+     "Haute fidelite, deformee, et generique",
+     "Complete, partielle, et symbolique",
+     "Consciente, fonctionnelle, et statique",
+     "Individuelle, collective, et hybride"
+    ],
+    "reponse": 0,
+    "explication": "La haute fidelite possede tout l'ensemble des connaissances, aptitudes et valeurs du cerveau emule ; la deformee a des dispositions non humaines mais realise le meme travail intellectuel ; la generique est comme un enfant, sans les souvenirs acquis mais capable d'apprendre.",
+    "niveau": "restitution",
+    "page": 60
+   },
+   {
+    "q": "Que prevoit Bostrom quant a la qualite de la premiere emulation, si cette voie est empruntee ?",
+    "choix": [
+     "Il est tout aussi probable qu'elle soit de pietre qualite : avant de faire marcher la procedure parfaitement, on la fera sans doute imparfaitement",
+     "Elle sera necessairement de haute fidelite",
+     "Elle sera generique par construction",
+     "Elle sera indiscernable d'un cerveau biologique"
+    ],
+    "reponse": 0,
+    "explication": "Il ajoute qu'un progres technologique dans l'emulation pourrait mener a une IA neuromorphique hybride avant meme qu'on parvienne a l'emulation totalement fonctionnelle.",
+    "niveau": "comprehension",
+    "page": 61
+   },
+   {
+    "q": "Quelle date une evaluation recente propose-t-elle pour la disponibilite des capacites prerequises a l'emulation ?",
+    "choix": [
+     "Autour de 2050, avec un intervalle d'incertitude non negligeable",
+     "Autour de 2030",
+     "Autour de 2100",
+     "Aucune date n'est avancee"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom avertit que la simplicite apparente de cette feuille de route est trompeuse et qu'il ne faut pas sous-estimer ce qui reste a accomplir.",
+    "niveau": "restitution",
+    "page": 61
+   },
+   {
+    "q": "Quel organisme modele Bostrom prend-il pour montrer l'ampleur du travail restant ?",
+    "choix": [
+     "Le Caenorhabditis elegans, ver rond transparent d'un millimetre a 302 neurones, dont la matrice de connectivite est connue depuis le milieu des annees 1980",
+     "La drosophile",
+     "L'abeille",
+     "La souris"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom souligne qu'on ne sait toujours pas quelles synapses sont excitatrices ou inhibitrices, ni la force des connexions, ni les proprietes dynamiques des axones, synapses et dendrites, meme pour ce systeme nerveux tres elementaire.",
+    "niveau": "restitution",
+    "page": 63
+   },
+   {
+    "q": "Quelle sequence d'echelons la feuille de route de l'emulation prevoit-elle ?",
+    "choix": [
+     "C. elegans, abeille, souris, singe rhesus, humain",
+     "Bacterie, insecte, poisson, mammifere",
+     "Ver, poulpe, oiseau, primate",
+     "Neurone isole, ganglion, cortex, cerveau entier"
+    ],
+    "reponse": 0,
+    "explication": "Ce qui separe un echelon du suivant est, apres le premier, d'ordre quantitatif et tient surtout a la difference de taille des cerveaux a emuler.",
+    "niveau": "restitution",
+    "page": 63
+   },
+   {
+    "q": "Dans quel cas la transition vers une emulation de niveau humain risquerait-elle d'etre plus abrupte ?",
+    "choix": [
+     "Si la derniere etape necessaire est la construction d'un modele neurocomputationnel, plutot qu'un scan a haut debit ou un ordinateur tres puissant",
+     "Si les scans sont realises en secret",
+     "Si plusieurs equipes travaillent en parallele",
+     "Si l'emulation part directement du cerveau humain"
+    ],
+    "reponse": 0,
+    "explication": "On peut imaginer qu'en depit de nombreux resultats de scans et d'ordinateurs rapides, il soit delicat de faire fonctionner correctement les modeles neuronaux.",
+    "niveau": "comprehension",
+    "page": 63
+   }
+  ]
+ },
+ {
+  "chapitre": "a82e2287",
+  "questions": [
+   {
+    "q": "Quel avantage la voie de l'emulation presente-t-elle sur celle de l'intelligence artificielle, du point de vue de l'anticipation ?",
+    "choix": [
+     "Elle serait precedee de signes avant-coureurs, puisqu'elle repose sur des technologies concretes et observables et non uniquement sur des conceptions theoriques",
+     "Elle serait plus rapide a mettre en oeuvre",
+     "Elle serait plus facile a controler une fois achevee",
+     "Elle serait moins couteuse"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom ajoute qu'on peut penser avec plus de certitude que la voie de l'emulation ne reussira pas avant longtemps, alors que quelqu'un pourrait en principe coder une IA germe devant son ordinateur personnel.",
+    "niveau": "comprehension",
+    "page": 64
+   },
+   {
+    "q": "Pourquoi Bostrom ecarte-t-il l'elevage selectif comme voie vers une intelligence superieure ?",
+    "choix": [
+     "Un programme d'eugenisme a grande echelle affronterait des obstacles politiques et ethiques majeurs, et exigerait de nombreuses generations avant tout resultat substantiel",
+     "Parce que l'heritabilite de l'intelligence est nulle",
+     "Parce qu'aucun pays ne dispose des donnees necessaires",
+     "Parce que la variation genetique humaine est trop faible"
+    ],
+    "reponse": 0,
+    "explication": "Il ajoute qu'avant qu'une telle initiative porte ses fruits, la biotechnologie aurait fait des progres rendant tout programme d'elevage humain superflu.",
+    "niveau": "comprehension",
+    "page": 64
+   },
+   {
+    "q": "Quelles interventions sommaires peuvent accelerer le developpement neurologique, selon Bostrom ?",
+    "choix": [
+     "Optimiser la nutrition de la mere et de l'enfant, eliminer le plomb et les polluants neurotoxiques, eradiquer les parasites, veiller au sommeil et a l'exercice, prevenir les maladies du cerveau",
+     "Multiplier les annees de scolarite obligatoire",
+     "Reduire le temps d'ecran des enfants",
+     "Generaliser l'apprentissage precoce des langues"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom precise que les gains sont assez limites, surtout sur les populations deja bien nourries et scolarisees, mais qu'ils peuvent contribuer a la marge.",
+    "niveau": "restitution",
+    "page": 64
+   },
+   {
+    "q": "Quel scandale evitable Bostrom signale-t-il en matiere de cognition ?",
+    "choix": [
+     "La degradation permanente d'intelligence due a un deficit d'iode, encore repandue dans de nombreuses regions pauvres, qu'un peu de sel de table a quelques centimes par personne et par an empecherait",
+     "La penurie mondiale de manuels scolaires",
+     "L'absence de depistage des troubles de l'apprentissage",
+     "Le cout des consultations neurologiques"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom range cette mesure parmi celles qui ameliorent le niveau de vie des defavorises et permettent de mieux reperer les talents internationaux.",
+    "niveau": "restitution",
+    "page": 65
+   },
+   {
+    "q": "Pourquoi Bostrom juge-t-il improbable qu'une substance chimique declenche un saut spectaculaire d'intelligence ?",
+    "choix": [
+     "Parce que le fonctionnement cognitif repose sur l'orchestration fine de nombreux facteurs et qu'une structure qui s'auto-organise doit etre equilibree, ajustee et cultivee plutot qu'inondee d'une potion externe",
+     "Parce que le cerveau adulte n'est plus plastique",
+     "Parce que les molecules ne franchissent pas la barriere hemato-encephalique",
+     "Parce que les effets secondaires annulent toujours les gains"
+    ],
+    "reponse": 0,
+    "explication": "Il reconnait par ailleurs que de futurs nootropes apporteraient des benefices evidents avec moins d'effets secondaires que la generation actuelle.",
+    "niveau": "comprehension",
+    "page": 65
+   },
+   {
+    "q": "A quoi le diagnostic genetique pre-implantatoire sert-il deja, dans le cadre de la fecondation in vitro ?",
+    "choix": [
+     "A discriminer les embryons porteurs d'une maladie monogenique comme la maladie de Huntington ou d'une disposition au cancer du sein, ainsi qu'a la selection sexuelle et a l'appariement des antigenes leucocytaires",
+     "A augmenter les capacites cognitives",
+     "A determiner la couleur des yeux",
+     "A choisir le rang de naissance"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom precise que l'ensemble des traits selectionnables va beaucoup s'etendre dans les deux prochaines decennies.",
+    "niveau": "restitution",
+    "page": 65
+   },
+   {
+    "q": "Que faut-il, et que ne faut-il pas, pour selectionner un embryon sur un trait donne ?",
+    "choix": [
+     "Il faut une grande quantite de donnees sur les correlats genetiques du caractere vise, mais pas une comprehension profonde des chaines causales entre genes et phenotype",
+     "Il faut connaitre le mecanisme moleculaire complet du trait",
+     "Il faut disposer de l'environnement de developpement futur",
+     "Il faut le consentement de plusieurs generations"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom precise que tout trait dont l'heritabilite est non negligeable, y compris une capacite cognitive, pourrait alors faire l'objet d'une selection.",
+    "niveau": "comprehension",
+    "page": 66
+   },
+   {
+    "q": "Combien de points de QI une selection de 1 embryon sur 100 permettrait-elle de gagner, selon le tableau de Bostrom ?",
+    "choix": [
+     "18,8 points",
+     "4,2 points",
+     "11,5 points",
+     "24,3 points"
+    ],
+    "reponse": 0,
+    "explication": "Le tableau donne 4,2 points pour 1 sur 2, 11,5 pour 1 sur 10, 18,8 pour 1 sur 100 et 24,3 pour 1 sur 1000, sous hypothese d'information complete sur les variants additifs.",
+    "niveau": "restitution",
+    "page": 66
+   },
+   {
+    "q": "Quel phenomene limite le gain lorsqu'on augmente le nombre d'embryons dans une selection unique ?",
+    "choix": [
+     "Des rendements decroissants : la selection parmi 100 embryons ne produit pas un gain 50 fois plus important que celle entre 2 embryons",
+     "Une perte de viabilite des embryons",
+     "Une saturation des marqueurs genetiques",
+     "Une derive statistique des correlats"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom note en revanche que cette diminution des rendements est tres ralentie quand on procede a une selection sur plusieurs generations.",
+    "niveau": "comprehension",
+    "page": 67
+   },
+   {
+    "q": "Quelle technologie multiplierait considerablement le pouvoir de selection d'un couple ?",
+    "choix": [
+     "La production de spermatozoides et d'ovules viables a partir de cellules souches, deja utilisee pour obtenir une descendance fertile chez la souris",
+     "Le clonage therapeutique",
+     "L'edition du genome par CRISPR",
+     "La congelation d'ovocytes"
+    ],
+    "reponse": 0,
+    "explication": "Un petit nombre de cellules pourrait en theorie donner un nombre illimite de gametes, la ou la fecondation in vitro suppose toujours la creation de moins de dix embryons.",
+    "niveau": "restitution",
+    "page": 67
+   },
+   {
+    "q": "En quoi consiste la selection d'embryons repetee que ces gametes rendraient possible ?",
+    "choix": [
+     "Genotyper et selectionner des embryons, en extraire les cellules souches converties en gametes en six mois au plus, les croiser pour obtenir de nouveaux embryons, et repeter",
+     "Cloner l'embryon le plus prometteur en plusieurs exemplaires",
+     "Cultiver les embryons jusqu'a un stade avance avant de choisir",
+     "Croiser des embryons issus de donneurs differents"
+    ],
+    "reponse": 0,
+    "explication": "Il serait ainsi possible de realiser au moins dix generations de selection en quelques annees, et en principe une seule fois, sans recommencer a chaque naissance.",
+    "niveau": "comprehension",
+    "page": 68
+   },
+   {
+    "q": "Quel usage politique de la selection genetique Bostrom envisage-t-il explicitement ?",
+    "choix": [
+     "Des Etats pourraient inciter leurs citoyens a y recourir pour accroitre le capital humain national, ou selectionner hors de la classe dirigeante des traits comme la docilite, l'obeissance, la soumission, le conformisme et la lachete",
+     "Une interdiction internationale coordonnee",
+     "Un monopole d'Etat sur les banques de gametes",
+     "Une taxation des enfants non selectionnes"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom decrit aussi un glissement culturel possible des normes de parentalite, presentant le recours a la selection comme ce que font les couples responsables et eclaires.",
+    "niveau": "comprehension",
+    "page": 68
+   },
+   {
+    "q": "Qu'est-ce que la charge mutationnelle que chacun porte, selon ce chapitre ?",
+    "choix": [
+     "Des centaines de mutations qui reduisent l'efficacite de differents processus cellulaires, chacune quasi negligeable mais dommageables une fois combinees",
+     "Les mutations acquises au cours de la vie",
+     "Les erreurs de replication de l'ADN mitochondrial",
+     "Les variations epigenetiques transmises par les parents"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom en tire l'idee d'une correction du genome, une verification du message genetique qui menerait a un embryon debarrasse de ce bruit accumule.",
+    "niveau": "comprehension",
+    "page": 69
+   },
+   {
+    "q": "Quelle metaphore visuelle Bostrom emploie-t-il pour illustrer l'effet d'un genome corrige ?",
+    "choix": [
+     "Les visages composes, ou la superposition de seize photographies produit un visage juge plus beau que chacun de ceux dont il est compose, les imperfections etant ecartees",
+     "Le tirage d'une photographie sur-exposee",
+     "Le polissage d'une pierre brute",
+     "La reconstitution d'un puzzle incomplet"
+    ],
+    "reponse": 0,
+    "explication": "Il precise que les individus produits ne seraient pas genetiquement identiques, la correction n'eliminant que la variance due aux mutations deleteres.",
+    "niveau": "comprehension",
+    "page": 70
+   },
+   {
+    "q": "Pourquoi l'intervention sur la lignee germinale est-elle plus efficace que la therapie genique somatique, selon Bostrom ?",
+    "choix": [
+     "Elle ne traite qu'un petit nombre de cellules et permet de controler le developpement precoce du cerveau, alors que l'intervention somatique doit ajuster une structure deja la",
+     "Elle est moins encadree juridiquement",
+     "Elle ne demande pas d'essais cliniques",
+     "Elle produit des effets immediats"
+    ],
+    "reponse": 0,
+    "explication": "L'amelioration somatique supposerait d'introduire un gene modifie dans un grand nombre de cellules de l'organisme vivant, dont le cerveau.",
+    "niveau": "comprehension",
+    "page": 72
+   },
+   {
+    "q": "Quel exemple historique de changement d'opinion Bostrom cite-t-il a propos de la fecondation in vitro ?",
+    "choix": [
+     "Avant la naissance de Louise Brown en 1978, seuls 18 % d'Americains declaraient qu'ils y recourraient ; peu apres, ils etaient 53 %",
+     "L'opinion est restee stable depuis 1978",
+     "Le soutien a chute apres les premiers echecs",
+     "Aucun sondage n'a ete conduit avant 1990"
+    ],
+    "reponse": 0,
+    "explication": "Un sondage de 2004 montre que 28 % des Americains approuvent la selection d'embryons pour la force ou l'intelligence, 58 % pour eviter le cancer a l'age adulte et 68 % pour eviter une maladie infantile mortelle.",
+    "niveau": "restitution",
+    "page": 74
+   },
+   {
+    "q": "Quel pays Bostrom cite-t-il comme ayant choisi d'eviter toute pratique reproductive perçue comme destinee a l'amelioration ?",
+    "choix": [
+     "L'Allemagne d'apres-guerre, en raison de l'histoire sombre des atrocites liees au mouvement eugeniste dans ce pays",
+     "Le Japon",
+     "L'Italie",
+     "La Norvege"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom estime a l'inverse que la Chine ou Singapour, qui ont une politique de gestion a long terme de leur population, pourraient activement promouvoir ces techniques.",
+    "niveau": "restitution",
+    "page": 73
+   },
+   {
+    "q": "Vers quelle echeance Bostrom situe-t-il un impact social significatif de l'augmentation des lignees germinales ?",
+    "choix": [
+     "Pas avant le milieu du XXIe siecle, une fois cumules les delais de mise au point, de sensibilisation et de maturation de la generation augmentee",
+     "Avant 2030",
+     "Vers 2100 au plus tot",
+     "Il refuse de donner une echeance"
+    ],
+    "reponse": 0,
+    "explication": "Il compte 5 a 10 ans pour reunir l'information necessaire, 10 ans pour sensibiliser la population et 20 a 35 ans pour que la generation augmentee devienne productive.",
+    "niveau": "comprehension",
+    "page": 75
+   },
+   {
+    "q": "Quelle place Bostrom assigne-t-il a Homo sapiens dans l'echelle des intelligences possibles ?",
+    "choix": [
+     "Loin d'etre l'espece la plus intelligente, nous sommes peut-etre la plus stupide a avoir ete capable de demarrer une civilisation technologique",
+     "Nous representons l'optimum cognitif accessible a un organisme biologique",
+     "Nous sommes a mi-chemin entre les grands singes et la superintelligence",
+     "La question n'a pas de sens faute de terme de comparaison"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom precise que nous occupons cette niche parce que nous y sommes arrives les premiers, et pas parce que nous y sommes les mieux adaptes.",
+    "niveau": "comprehension",
+    "page": 75
+   },
+   {
+    "q": "Quel ecart de vitesse Bostrom donne-t-il entre l'electronique et le biologique ?",
+    "choix": [
+     "Les transistors vont dix millions de fois plus vite que les neurones biologiques",
+     "Les transistors vont mille fois plus vite",
+     "Les transistors vont cent fois plus vite",
+     "L'ecart n'est pas mesurable"
+    ],
+    "reponse": 0,
+    "explication": "Il en tire que le potentiel ultime de la machine intelligente est tres superieur a celui de l'intelligence organique.",
+    "niveau": "restitution",
+    "page": 76
+   },
+   {
+    "q": "Quelles trois conclusions Bostrom tire-t-il du scenario de la cognition biologique ?",
+    "choix": [
+     "On peut y parvenir a des formes faibles de superintelligence, cela accroit la faisabilite d'une machine intelligente avancee, et il faut compter avec une generation genetiquement augmentee d'electeurs, d'inventeurs et de savants",
+     "Cette voie est plus rapide que celle de l'IA, moins risquee, et plus facile a reguler",
+     "Cette voie est impraticable, immorale et sans effet",
+     "Cette voie remplacera la recherche en intelligence artificielle"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom souligne notamment que meme si nous etions incapables de creer une machine intelligente, celle-ci serait a la portee d'etres humains cognitivement augmentes.",
+    "niveau": "comprehension",
+    "page": 76
+   },
+   {
+    "q": "Quel effet une augmentation meme moderee de la cognition biologique pourrait-elle avoir sur le rythme des progres en IA ?",
+    "choix": [
+     "Il changerait si Monsieur Tout-le-Monde etait un intellectuel comme Alan Turing ou John von Neumann, et si des millions d'individus depassaient tout geant intellectuel du passe",
+     "Il ralentirait, la recherche devenant plus prudente",
+     "Il resterait inchange, la limite etant materielle",
+     "Il dependrait uniquement des financements"
+    ],
+    "reponse": 0,
+    "explication": "L'augmentation cognitive pourrait accelerer les progres scientifiques et technologiques, y compris vers des formes plus puissantes d'intelligence biologique.",
+    "niveau": "comprehension",
+    "page": 76
+   }
+  ]
+ },
+ {
+  "chapitre": "482df7e5",
+  "questions": [
+   {
+    "q": "Quels avantages du traitement digital les interfaces cerveau-ordinateur sont-elles censees apporter ?",
+    "choix": [
+     "Memoire parfaite, rapidite, calcul arithmetique exact et transmission de donnees de grande largeur de bande",
+     "Immunite aux biais cognitifs et a la fatigue",
+     "Acces direct a la conscience d'autrui",
+     "Correction automatique des erreurs de raisonnement"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom juge pourtant peu probable que de telles interfaces soient utilisees a grande echelle dans des delais raisonnables.",
+    "niveau": "restitution",
+    "page": 77
+   },
+   {
+    "q": "Quels risques medicaux l'implantation d'electrodes dans un cerveau comporte-t-elle ?",
+    "choix": [
+     "Des infections, un deplacement de l'electrode, une hemorragie, une perte cognitive",
+     "Une reaction immunitaire systemique",
+     "Une alteration du genome des neurones",
+     "Une dependance a la stimulation"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom cite une etude montrant chez les patients traites par implants cerebraux profonds une reduction de la fluidite verbale, de l'attention selective, des difficultes a nommer les couleurs et pour la memoire verbale.",
+    "niveau": "restitution",
+    "page": 77
+   },
+   {
+    "q": "Pourquoi l'implant contre la maladie de Parkinson est-il un cas particulierement simple ?",
+    "choix": [
+     "Il ne communique pas avec le cerveau mais remplace la stimulation electrique naturelle du noyau sous-thalamique",
+     "Il est place a l'exterieur du crane",
+     "Il ne fonctionne que quelques minutes par jour",
+     "Il n'agit que sur la moelle epiniere"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom decrit les videos ou un sujet immobilise revient soudainement a la vie lorsque la stimulation est envoyee, tout en soulignant les points negatifs qui se cachent derriere cette procedure quasi miraculeuse.",
+    "niveau": "comprehension",
+    "page": 77
+   },
+   {
+    "q": "Quelle asymetrie fondamentale Bostrom releve-t-il entre therapie et augmentation ?",
+    "choix": [
+     "L'augmentation est probablement bien plus difficile que la therapie",
+     "La therapie exige plus de precision chirurgicale",
+     "L'augmentation est mieux toleree par les patients",
+     "La therapie porte sur le cortex, l'augmentation sur le tronc cerebral"
+    ],
+    "reponse": 0,
+    "explication": "Les paralyses, les sourds, les aveugles et les patients atteints de Parkinson tirent un benefice reel des implants ; obtenir une augmentation d'intelligence inaccessible autrement est bien plus ardu.",
+    "niveau": "comprehension",
+    "page": 77
+   },
+   {
+    "q": "Pourquoi n'a-t-on pas besoin de brancher un cable de fibre optique dans le cerveau pour acceder a Internet, selon Bostrom ?",
+    "choix": [
+     "Parce que la retine transmet deja pres de dix millions de bits par seconde et dispose d'un cortex visuel dedie capable d'extraire la signification de ce torrent de donnees",
+     "Parce que le debit d'Internet reste inferieur a celui du nerf optique",
+     "Parce que le cerveau rejette les donnees non sensorielles",
+     "Parce que la fibre optique ne supporte pas la temperature du corps"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom ajoute que la plupart des benefices d'un implant chez un sujet sain s'obtiennent avec moins de risques, d'argent et d'inconvenients par nos organes sensoriels habituels.",
+    "niveau": "comprehension",
+    "page": 78
+   },
+   {
+    "q": "Quel raisonnement Bostrom oppose-t-il a l'idee d'injecter plus d'information directement dans le cerveau ?",
+    "choix": [
+     "Cet afflux n'accelererait pas nos pensees tant que la machinerie neuronale d'interpretation ne serait pas elle aussi amelioree, ce qui exigerait une prothese totale du cerveau, autre nom d'une IA generale",
+     "Le cerveau saturerait au-dela d'un certain debit",
+     "L'information serait stockee sans etre memorisee",
+     "La consommation energetique deviendrait prohibitive"
+    ],
+    "reponse": 0,
+    "explication": "Et si l'on atteint une IA de niveau humain, on peut se dispenser de toute chirurgie : un ordinateur peut aussi bien loger dans une boite en metal qu'en os.",
+    "niveau": "comprehension",
+    "page": 78
+   },
+   {
+    "q": "Que permettent aujourd'hui les liaisons cerveau-ordinateur chez les patients atteints du syndrome de deafferentation motrice ?",
+    "choix": [
+     "Deplacer un curseur sur un ecran par la pensee et taper avec peine lettre apres lettre, au rythme de quelques mots par minute",
+     "Dicter des phrases completes en temps reel",
+     "Commander un bras robotise avec precision",
+     "Communiquer par images mentales"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom imagine une generation d'implants branches dans l'aire de Broca pour capter le langage interieur, mais juge la methode peu tentante pour des individus en bonne sante.",
+    "niveau": "restitution",
+    "page": 78
+   },
+   {
+    "q": "Que permettrait au mieux un implant captant le langage interieur, compare aux moyens existants ?",
+    "choix": [
+     "Rien de plus qu'un microphone couple a un logiciel de reconnaissance de la parole, deja disponible dans le commerce",
+     "Une communication dix fois plus rapide",
+     "Un acces a des pensees non verbalisables",
+     "Une transmission sans erreur"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom ajoute la douleur, la gene, le cout et les risques de la neurochirurgie, ainsi que les relents tres orwelliens d'un dispositif d'ecoute intracranien.",
+    "niveau": "comprehension",
+    "page": 79
+   },
+   {
+    "q": "Pourquoi ne peut-on pas telecharger des pensees d'un cerveau a un autre comme on copie un fichier ?",
+    "choix": [
+     "Les cerveaux n'utilisent pas de formats de representation standardises : chacun developpe ses propres representations du contenu, fonction de son experience et de facteurs genetiques et stochastiques",
+     "Parce que la vitesse de transmission est trop faible",
+     "Parce que la memoire humaine est trop volatile",
+     "Parce que les pensees ne sont pas encodees electriquement"
+    ],
+    "reponse": 0,
+    "explication": "La signification y est probablement representee dans la structure et les patterns d'activite de regions etendues et chevauchantes, et non dans des cellules mnemoniques d'une zone delimitee.",
+    "niveau": "comprehension",
+    "page": 79
+   },
+   {
+    "q": "Quel role Bostrom assigne-t-il au langage dans cette analyse ?",
+    "choix": [
+     "Decomposer et organiser les pensees en symboles selon une convention partagee, pour qu'elles soient correctement interpretees par le cerveau qui les recoit",
+     "Compresser l'information avant transmission",
+     "Filtrer les pensees inutiles",
+     "Synchroniser les rythmes cerebraux entre interlocuteurs"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom conclut que c'est precisement le travail du langage, ce qui rend impossible une correspondance simple entre les neurones de deux cerveaux.",
+    "niveau": "comprehension",
+    "page": 80
+   },
+   {
+    "q": "Pourquoi la creation d'une interface transposant les patterns d'un cerveau dans un autre releverait-elle d'une IA complete ?",
+    "choix": [
+     "Parce qu'elle exigerait un composant capable, en temps reel, de transposer les patterns de cablage d'un cerveau en patterns semantiquement equivalents dans l'autre, ce qui suppose une comprehension detaillee de la computation neuronale",
+     "Parce qu'elle demanderait une puissance de calcul superieure a celle disponible",
+     "Parce qu'elle supposerait de lire la conscience",
+     "Parce qu'elle exigerait un langage universel prealable"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom mentionne aussi le defi technique considerable d'une lecture et d'une ecriture simultanees fiables a partir de milliards de neurones individualises.",
+    "niveau": "comprehension",
+    "page": 80
+   },
+   {
+    "q": "Quel resultat experimental Bostrom retient-il en faveur de la voie cyborg ?",
+    "choix": [
+     "Une prothese neuronale posee sur l'hippocampe du rat, qui restaure le fonctionnement quand les connexions sont bloquees et ameliore meme la performance normale dans une tache de memoire",
+     "Un implant retinien restaurant la vision des couleurs",
+     "Une interface permettant a deux rats de partager un souvenir",
+     "Un implant cortical augmentant la vitesse d'apprentissage"
+    ],
+    "reponse": 0,
+    "explication": "L'implant collecte des inputs par une douzaine ou deux d'electrodes dans l'aire CA3 et les projette sur autant de neurones de l'aire CA1, un microprocesseur ayant appris la correspondance entre deux patterns.",
+    "niveau": "restitution",
+    "page": 80
+   }
+  ]
+ },
+ {
+  "chapitre": "f680ef6c",
+  "questions": [
+   {
+    "q": "Quelles questions irresolues la prothese hippocampique laisse-t-elle ouvertes, selon Bostrom ?",
+    "choix": [
+     "Son adaptation a un plus grand nombre de souvenirs, la prevention de l'explosion combinatoire, les couts caches sur la generalisation et le desapprentissage, et son extension a d'autres regions du cerveau",
+     "Sa duree de vie et son cout de fabrication",
+     "Son acceptabilite ethique et reglementaire",
+     "Sa compatibilite avec l'imagerie medicale"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom note que la prothese tire profit de la simplicite du passage unidirectionnel entre les aires CA3 et CA1, alors que d'autres structures corticales impliquent des boucles de retroaction enchevetrees.",
+    "niveau": "comprehension",
+    "page": 81
+   },
+   {
+    "q": "Quelle version plus prometteuse de la route cyborg Bostrom envisage-t-il ?",
+    "choix": [
+     "Un dispositif implante a demeure, connecte a une ressource externe, auquel le cerveau s'adapterait intelligemment comme un cerveau d'enfant apprend a interpreter les signaux de ses yeux et de ses oreilles",
+     "Un implant dote de sa propre intelligence artificielle",
+     "Un reseau d'implants relies entre plusieurs individus",
+     "Un dispositif amovible pose sur le cuir chevelu"
+    ],
+    "reponse": 0,
+    "explication": "L'implant lui-meme n'aurait nul besoin d'etre intelligent : c'est le cerveau qui ferait le travail d'adaptation.",
+    "niveau": "comprehension",
+    "page": 81
+   },
+   {
+    "q": "Quelle objection Bostrom oppose-t-il aussitot a cette version ?",
+    "choix": [
+     "Si le cerveau peut apprendre a lire un input nouveau projete n'importe ou sur le cortex, autant projeter la meme information sur la retine ou sur la cochlee, ce qui evite des milliers de complications",
+     "Que la plasticite cerebrale decroit avec l'age",
+     "Que l'apprentissage prendrait plusieurs decennies",
+     "Que le dispositif serait rejete par l'organisme"
+    ],
+    "reponse": 0,
+    "explication": "L'alternative moins technologique laisse le cerveau utiliser ses mecanismes de reconnaissance de patterns et sa plasticite pour donner un sens a une information.",
+    "niveau": "comprehension",
+    "page": 81
+   },
+   {
+    "q": "Quelle cinquieme voie vers la superintelligence le chapitre examine-t-il pour finir ?",
+    "choix": [
+     "Le renforcement graduel des reseaux et organisations reliant les cerveaux entre eux ou avec des artefacts et des robots, vers une superintelligence collective",
+     "La fusion des grandes entreprises technologiques",
+     "La generalisation de l'enseignement superieur",
+     "L'automatisation de la recherche scientifique"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom precise que ce renforcement ne rendrait pas les individus superintelligents, mais que le systeme forme par leur mise en reseau pourrait l'etre.",
+    "niveau": "comprehension",
+    "page": 81
+   },
+   {
+    "q": "Par quels moyens l'humanite a-t-elle deja considerablement augmente son intelligence collective ?",
+    "choix": [
+     "Les innovations en matiere de communication comme le langage, l'ecriture et l'imprimerie, l'augmentation de la population et de la densite, les progres des techniques d'organisation et des normes epistemiques, l'accumulation de capital institutionnel",
+     "La specialisation du travail et l'urbanisation seules",
+     "Le developpement du commerce international",
+     "La creation des universites"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom insiste sur l'introduction du langage comme innovation decisive parmi ces moyens.",
+    "niveau": "restitution",
+    "page": 82
+   },
+   {
+    "q": "Par quoi l'intelligence collective d'un systeme est-elle limitee, selon Bostrom ?",
+    "choix": [
+     "Par les capacites des cerveaux qui le composent, par les couts de communication des informations adequates, et par les distorsions et inefficacites repandues dans toute organisation humaine",
+     "Par le nombre de ses membres uniquement",
+     "Par la qualite de sa direction",
+     "Par son acces aux ressources materielles"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom en deduit que reduire les couts de communication permet des organisations connectees plus denses, et que remedier aux derives bureaucratiques ameliorerait fortement l'intelligence collective.",
+    "niveau": "comprehension",
+    "page": 82
+   },
+   {
+    "q": "Quelles derives bureaucratiques Bostrom cite-t-il comme minant la vie des organisations ?",
+    "choix": [
+     "Les mesquineries sur les statuts, la derive des missions, la retention ou la deformation d'informations et les problemes inter-administrations",
+     "L'absentéisme et le turnover",
+     "La lourdeur des procedures d'achat",
+     "Le manque de formation continue"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom estime que meme des solutions partielles a ces problemes contribueraient fortement a ameliorer l'intelligence collective.",
+    "niveau": "restitution",
+    "page": 82
+   },
+   {
+    "q": "Quelles innovations institutionnelles Bostrom cite-t-il comme susceptibles d'augmenter l'intelligence collective ?",
+    "choix": [
+     "Les marches predictifs subventionnes, les detecteurs de credulite et les detecteurs d'aveuglement",
+     "Les referendums d'initiative citoyenne et les jurys populaires",
+     "Les agences de notation independantes",
+     "Les comites d'ethique obligatoires"
+    ],
+    "reponse": 0,
+    "explication": "Les marches predictifs valoriseraient la recherche de verite et amelioreraient les previsions sur des questions scientifiques et sociales litigieuses.",
+    "niveau": "restitution",
+    "page": 82
+   },
+   {
+    "q": "Comment Bostrom repond-il a l'idee qu'Internet pourrait un jour se reveiller ?",
+    "choix": [
+     "Le scenario le plus plausible n'est pas un reveil spontane par hasard, mais une accumulation d'ameliorations dues aux travaux de nombreuses personnes pendant de nombreuses annees",
+     "Un tel reveil est physiquement impossible",
+     "Un tel reveil a deja partiellement eu lieu",
+     "La question ne peut pas etre tranchee"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom rappelle que Vernor Vinge voyait la, en 1993, l'une des voies d'apparition de ce qu'il appelait une singularite technologique.",
+    "niveau": "comprehension",
+    "page": 83
+   },
+   {
+    "q": "Quelles capacites manquent encore au web pour contribuer davantage a l'intelligence collective, selon Bostrom ?",
+    "choix": [
+     "Plus de possibilites de deliberation, de detection de biais et d'agregation de jugements",
+     "Une bande passante superieure",
+     "Une gouvernance centralisee",
+     "Une normalisation des formats de donnees"
+    ],
+    "reponse": 0,
+    "explication": "Bostrom voit dans Internet un temoin particulierement dynamique de l'innovation et de l'experimentation, dont nombre de potentialites restent inexplorees.",
+    "niveau": "comprehension",
+    "page": 83
+   }
+  ]
+ }
+]

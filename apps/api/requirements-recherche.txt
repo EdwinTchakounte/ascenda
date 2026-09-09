@@ -1,0 +1,15 @@
+# La recherche sémantique, en supplément.
+#
+# Séparée du reste parce qu'elle change la nature de l'image : deux gigaoctets
+# de dépendances, plus deux gigaoctets de poids de modèle à télécharger au
+# premier démarrage. L'API tourne parfaitement sans, en recherche plein texte,
+# et le champ `mode` de la réponse le dit à ses clients.
+#
+# Voir apps/api/Dockerfile, argument AVEC_RECHERCHE_SEMANTIQUE.
+
+# torch en version processeur seul : la variante CUDA pèse deux gigaoctets de
+# plus pour une carte graphique que nos serveurs n'ont pas.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.13.0
+transformers==5.16.1
+sentence-transformers==6.0.0

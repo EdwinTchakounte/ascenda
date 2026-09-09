@@ -1,0 +1,339 @@
+[
+ {
+  "chapitre": "bfa6eae4",
+  "citations": [
+   {
+    "texte": "L'intelligence artificielle (IA), avec sa batterie d'algorithmes, fait de plus en plus irruption dans la sphère professionnelle et dans nos vies, regroupant nombre de technologies que les travailleurs côtoient au quotidien sans forcément en avoir conscience",
+    "page": 3,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "IA invisible au travail",
+    "portee": "Pose le probleme central du guide : on ne defend pas ses droits contre un dispositif qu'on ne sait pas etre la."
+   },
+   {
+    "texte": "certains usages peuvent menacer nos vies privées, nos droits et nos libertés",
+    "page": 3,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Droits face aux algorithmes",
+    "portee": "Position d'equilibre revendiquee des la couverture : les avantages sont reconnus indeniables, le danger porte sur des usages precis."
+   }
+  ]
+ },
+ {
+  "chapitre": "569d5071",
+  "citations": [
+   {
+    "texte": "La question n'est plus d'être pour ou contre l'IA, la question est de savoir si les entreprises sont capables de co-construire avec les partenaires sociaux des stratégies intégrant l'IA",
+    "page": 15,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Deplacer le debat",
+    "portee": "Formule de Cecile Dejoux qui reoriente la discussion du pour ou contre vers la methode. Utile pour ouvrir un debat en entreprise sans le bloquer."
+   },
+   {
+    "texte": "l'homme exerce régulièrement son doute technologique, son esprit critique",
+    "page": 15,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Doute technologique",
+    "portee": "Le doute est presente comme une competence a entretenir, au meme titre qu'une competence technique. Les exemples donnes sont volontairement banals : un GPS qui fait tourner en rond."
+   },
+   {
+    "texte": "Cet ouvrage est à la fois un baromètre et une boussole.",
+    "page": 15,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Mesurer et orienter",
+    "portee": "Bonne image pour distinguer deux fonctions souvent confondues : constater l'etat du monde, et decider de la direction a prendre."
+   }
+  ]
+ },
+ {
+  "chapitre": "a356d503",
+  "citations": [
+   {
+    "texte": "Aussi, une nouvelle responsabilité sociétale s'impose à l'entreprise : acculturer, former et faire participer les salariés à l'évolution de leur métier avec l'IA.",
+    "page": 16,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Responsabilite de formation",
+    "portee": "Trois verbes qui montent en exigence : acculturer, former, faire participer. Le troisieme est le plus rarement tenu."
+   },
+   {
+    "texte": "La formation à l'IA commence par l'apprentissage du vocabulaire",
+    "page": 16,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Commencer par les mots",
+    "portee": "Point de depart pedagogique concret et peu couteux : sans vocabulaire partage, aucune discussion collective sur un projet d'IA n'est possible."
+   }
+  ]
+ },
+ {
+  "chapitre": "d4611d16",
+  "citations": [
+   {
+    "texte": "Avoir des valeurs pour prendre des décisions constitue le socle pour instaurer des axes éthiques.",
+    "page": 17,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Fondement de l'ethique",
+    "portee": "Rappelle que la charte ou le label ne creent pas l'ethique : ils rendent visibles des valeurs deja choisies, ou masquent leur absence."
+   },
+   {
+    "texte": "Ce sujet doit être posé en mettant l'humain, le salarié, sa quête de sens et son équilibre au cœur des réflexions.",
+    "page": 18,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Centrer sur le salarie",
+    "portee": "Annonce la notion europeenne d'approche centree sur l'humain, mais formulee du point de vue du travail et non du citoyen abstrait."
+   }
+  ]
+ },
+ {
+  "chapitre": "685003d5",
+  "citations": [
+   {
+    "texte": "La Covid-19 a accéléré la transformation de la société vers plus de digital sans guère de débat démocratique.",
+    "page": 19,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une transformation sans debat",
+    "portee": "These d'ouverture du guide : ce n'est pas la vitesse du changement qui pose probleme, c'est l'absence de deliberation qui l'a accompagnee."
+   },
+   {
+    "texte": "Dans l'entreprise, la Covid-19 a été à l'origine d'une explosion des systèmes de contrôle et de télétravail, organisation qui devrait perdurer.",
+    "page": 19,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Teletravail et surveillance",
+    "portee": "Les deux sont arrives ensemble et sont restes ensemble. A garder en tete dans toute negociation sur le travail a distance."
+   }
+  ]
+ },
+ {
+  "chapitre": "8d983bb8",
+  "citations": [
+   {
+    "texte": "Un guide sur l'intelligence artificielle est bel et bien du ressort d'un syndicat, car l'IA regroupe des technologies que les travailleurs côtoient au quotidien.",
+    "page": 20,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'IA, sujet syndical",
+    "portee": "Justification de la legitimite : c'est la proximite d'usage, non la competence technique, qui fait d'un sujet une affaire de representation du personnel."
+   },
+   {
+    "texte": "afin que cette technologie soit pour tout citoyen et travailleur un moyen d'émancipation et non un outil d'asservissement.",
+    "page": 20,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Emancipation ou asservissement",
+    "portee": "Enonce l'alternative que le guide entend trancher par le droit et le dialogue social plutot que par le refus de la technologie."
+   }
+  ]
+ },
+ {
+  "chapitre": "10b8d25b",
+  "citations": [
+   {
+    "texte": "En cinq ans, le marché mondial de l'intelligence artificielle a été multiplié par dix",
+    "page": 25,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Croissance du marche",
+    "portee": "Ordre de grandeur a citer avec sa date. Il explique pourquoi le sujet a surgi dans les entreprises avant d'atteindre les instances representatives."
+   },
+   {
+    "texte": "Cette explosion du marché de l'intelligence artificielle est liée aux espérances de gains de productivité.",
+    "page": 25,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le moteur economique",
+    "portee": "Cle de lecture indispensable : l'IA se deploie d'abord la ou elle promet de la productivite, pas necessairement la ou elle ameliore le travail."
+   },
+   {
+    "texte": "la proportion des DRH qui affirmaient utiliser l'analyse prédictive pour identifier les employés qui allaient partir, était passée de 10 % en 2016 à 39 % en 2020",
+    "page": 25,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Analyse predictive en RH",
+    "portee": "Chiffre precieux : il documente l'installation rapide d'un usage tres sensible, la prediction des departs, dans la gestion ordinaire du personnel."
+   }
+  ]
+ },
+ {
+  "chapitre": "e973b858",
+  "citations": [
+   {
+    "texte": "les États-Unis et la Chine représentent à eux deux plus de 80 % des 25 milliards d'euros",
+    "page": 28,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Concentration des investissements",
+    "portee": "Chiffre de la Banque europeenne d'investissement. Les 27 pays europeens ne pesent que 7 % du meme total."
+   },
+   {
+    "texte": "de plus en plus de start-up en France ou ailleurs, se créent sur des technologies liées à l'intelligence artificielle",
+    "page": 27,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ticket d'entree abaisse",
+    "portee": "Contrepoint utile a la these du verrouillage par les geants : l'open source et le cloud permettent d'entreprendre sans posseder l'infrastructure."
+   }
+  ]
+ },
+ {
+  "chapitre": "843936aa",
+  "citations": [
+   {
+    "texte": "en Chine, sous prétexte de préserver la sécurité des citoyens et de rendre les villes sûres, une surveillance des citoyens dans leurs moindres activités a abouti à un système de notation sociale",
+    "page": 29,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Notation sociale",
+    "portee": "Contre-modele absolu du guide. Le mecanisme decrit est general : un motif de securite, une collecte totale, puis un classement des personnes."
+   },
+   {
+    "texte": "l'usage non encadré de l'intelligence artificielle peut avoir des conséquences qui nous rendent vulnérables au contrôle et susceptibles de subir des cyberattaques ou des piratages.",
+    "page": 32,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Vulnerabilite collective",
+    "portee": "Conclusion tiree de la chronologie Prism, Snowden, Cambridge Analytica, Pegasus. Le risque n'est pas hypothetique, il est documente."
+   }
+  ]
+ },
+ {
+  "chapitre": "1affd17a",
+  "citations": [
+   {
+    "texte": "En Europe, les données personnelles sont considérées comme une propriété intrinsèque de la personne",
+    "page": 33,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Deux conceptions du droit",
+    "portee": "Aux Etats-Unis elles relevent plutot de la propriete materielle, donc d'un dedommagement possible. Cette divergence explique la plupart des conflits transatlantiques."
+   },
+   {
+    "texte": "Nos données personnelles constituent une marchandise qui s'achète et se revend au plus offrant.",
+    "page": 33,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Marche de la donnee",
+    "portee": "Phrase simple a opposer a l'idee que les services numeriques seraient gratuits : le prix existe, il n'est simplement pas paye en monnaie."
+   },
+   {
+    "texte": "Le fonctionnement de l'intelligence artificielle peut avoir un impact sur les droits de l'Homme, sur la démocratie et l'État de droit.",
+    "page": 36,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Portee politique de l'IA",
+    "portee": "Constat de la Cour europeenne des droits de l'homme, qui elargit la question au dela de la vie privee : dignite, egalite, droits sociaux et economiques."
+   },
+   {
+    "texte": "voulons-nous autoriser un système d'intelligence artificielle ou une utilisation particulière de l'Intelligence artificielle et si oui, dans quelles conditions ?",
+    "page": 37,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question zero",
+    "portee": "Question dite zero parce qu'elle precede toutes les questions techniques et juridiques : elle laisse ouverte la possibilite de dire non."
+   }
+  ]
+ },
+ {
+  "chapitre": "b65c693d",
+  "citations": [
+   {
+    "texte": "La Cour a réclamé « un haut niveau de garanties » pour ces fameuses clauses de conditions générales, que nous remplissons souvent en cliquant sur « accepter » sans les lire réellement.",
+    "page": 38,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le consentement fictif",
+    "portee": "Met le doigt sur la faiblesse du consentement par clic, base juridique de la plupart des transferts de donnees vers les Etats-Unis."
+   }
+  ]
+ },
+ {
+  "chapitre": "5881b61d",
+  "citations": [
+   {
+    "texte": "Il a également demandé l'interdiction des technologies capables d'identifier des émotions ou de détecter des traits de personnalité, des sentiments, un état de santé mentale ou un niveau d'engagement des travailleurs.",
+    "page": 40,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Interdire la lecture des emotions",
+    "portee": "Recommandation du Conseil de l'Europe qui vise directement les outils de surveillance manageriale. A citer face a tout projet de mesure automatisee de l'engagement."
+   }
+  ]
+ },
+ {
+  "chapitre": "72c0893b",
+  "citations": [
+   {
+    "texte": "il s'était révélé incapable de sélectionner les meilleurs CV et les profils de femmes qualifiées",
+    "page": 41,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le cas Amazon",
+    "portee": "Cas d'ecole du biais de recrutement. Il ne s'agit pas d'une erreur de code mais d'une reproduction fidele du passe de l'entreprise."
+   },
+   {
+    "texte": "même s'ils excellent à identifier des modèles, par exemple des phrases typiques utilisées par les employés qui réussissent, ils ne comprennent pas la signification de ces phrases",
+    "page": 41,
+    "axe": "02-ia-technique-academique",
+    "theme": "Reconnaitre sans comprendre",
+    "portee": "Explication technique claire et sans jargon de ce que fait un modele statistique : il etiquette des motifs, il ne saisit pas ce qu'est la reussite ni ce qu'est un employe."
+   }
+  ]
+ },
+ {
+  "chapitre": "8b27b123",
+  "citations": [
+   {
+    "texte": "Atteindre la parité entre les différentes catégories n'est pas la même chose que d'atteindre la diversité ou l'équité",
+    "page": 43,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Parite et equite",
+    "portee": "Distinction essentielle, tiree du cas IBM Diversity in Faces : equilibrer des categories mal construites ne corrige pas la classification elle-meme."
+   },
+   {
+    "texte": "que le système soit en mesure d'expliquer sa décision et si tel n'est pas le cas, qu'il soit audité et réponde aux exigences du respect des droits fondamentaux. Si cela n'est pas possible, son utilisation doit être interdite.",
+    "page": 43,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Expliquer, auditer, interdire",
+    "portee": "Recommandation operationnelle centrale du guide, en trois degres. Directement transposable dans une revendication en comite social et economique."
+   },
+   {
+    "texte": "le système de réservation par les riders des tranches horaires de travail qui donnait la priorité aux livreurs les mieux notés, était « aveugle », puisqu'il ne tenait pas compte des motivations d'absence, pénalisant en particulier ceux qui adhéraient à une grève",
+    "page": 44,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Algorithme et droit de greve",
+    "portee": "Jugement du tribunal de Bologne du 31 decembre 2020. Premiere reconnaissance judiciaire qu'un algorithme neutre en apparence peut entraver un droit fondamental."
+   }
+  ]
+ },
+ {
+  "chapitre": "ff5cf3ba",
+  "citations": [
+   {
+    "texte": "L'Europe ne veut ni laisser de puissantes entreprises technologiques comme les GAFAM livrées à elles-mêmes comme aux États-Unis, ni suivre l'exemple de la Chine",
+    "page": 47,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La troisieme voie europeenne",
+    "portee": "Resume en une phrase le positionnement europeen, entre laisser-faire et Etat de surveillance. A discuter : est-ce une voie ou un entre-deux ?"
+   },
+   {
+    "texte": "Exiger une « éthique » de l'intelligence artificielle signifie questionner les systèmes d'IA sur le respect des droits fondamentaux européens",
+    "page": 47,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ethique ramenee au droit",
+    "portee": "Deplacement decisif : l'ethique cesse d'etre un supplement d'ame volontaire pour devenir du droit existant et opposable."
+   }
+  ]
+ },
+ {
+  "chapitre": "e16e962b",
+  "citations": [
+   {
+    "texte": "L'humain doit garder la main sur les décisions.",
+    "page": 49,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Controle humain",
+    "portee": "Premiere des sept exigences europeennes pour une IA digne de confiance, enoncee dans sa forme la plus courte et la plus citable."
+   }
+  ]
+ },
+ {
+  "chapitre": "6931fe20",
+  "citations": [
+   {
+    "texte": "ce texte ne s'applique qu'aux données à caractère personnel, et non aux données agrégées « anonymes », qui sont généralement utilisées pour l'apprentissage des modèles.",
+    "page": 50,
+    "axe": "02-ia-technique-academique",
+    "theme": "Angle mort du RGPD",
+    "portee": "Faille structurelle rarement soulignee : les modeles s'entrainent precisement sur les agregats que le reglement ne couvre pas."
+   },
+   {
+    "texte": "de nombreux chercheurs ont montré que les préjugés dans les systèmes d'intelligence artificielle reflètent des modèles historiques de discrimination",
+    "page": 50,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Discrimination heritee",
+    "portee": "Le biais n'est pas une anomalie technique mais une trace de l'histoire sociale enregistree dans les donnees."
+   }
+  ]
+ }
+]

@@ -1,0 +1,818 @@
+OUVRAGE : L'intelligence artificielle en pratique avec Python : Recherche, optimisation, apprentissage Ed. 2
+AUTEUR(S) : Bersini, Hugues
+ANNÉE : inconnue
+PAGES : 174
+AXE : IA Technique Academique
+SOMMAIRE :
+  L'intelligence artificielle en pratique avec Python (p. 1-6)
+  Avant-propos (p. 7-10)
+  Table des matières (p. 11-14)
+  Introduction (p. 15-18)
+  Installation de Python (p. 19-19)
+  Installation de poetry (p. 20-20)
+  Sous Windows (p. 20-20)
+  Sous Linux (p. 21-21)
+  Fichiers des différents projets (p. 21-21)
+  Installer et utiliser les projets (p. 22-22)
+  Chapitre 1 : Jouons au taquin (p. 23-23)
+  Principe – Choix algorithmique (p. 23-24)
+  Recherche : A* (p. 25-27)
+  Le logiciel Python du taquin (8Puzzle) en pratique (p. 28-28)
+  Recherche A* (p. 29-29)
+  Apprentissage par renforcement : le Q-learning (p. 30-32)
+  Application au taquin (p. 33-35)
+  L’algorithme d’optimisation génétique (p. 36-40)
+  Chapitre 2 : Découvrir le plus court chemin (p. 41-41)
+  Principe – Choix algorithmique (p. 42-42)
+  Recherche du plus court chemin (p. 42-44)
+  Problème du voyageur de commerce (p. 45-46)
+  Le logiciel Python de la recherche du plus court chemin en pratique (p. 47-50)
+  Chapitre 3 : Jouons au sudoku (p. 51-51)
+  Principe – Choix algorithmique (p. 52-55)
+  Le logiciel Python du sudoku en pratique (p. 56-56)
+  Recherche best-first (p. 56-56)
+  Algorithme génétique (p. 57-60)
+  Chapitre 4 : Jouons à Puissance 4 (p. 61-61)
+  Principe – Choix algorithmique (p. 61-66)
+  Le logiciel Python de Puissance 4 en pratique (p. 67-67)
+  Min-Max (p. 67-69)
+  MCTS (p. 70-74)
+  Chapitre 5 : Jouons au Snake (p. 75-75)
+  Principe – Choix algorithmique (p. 75-77)
+  Réseaux de neurones artificiels (p. 78-81)
+  Retour au Snake (p. 82-83)
+  Le logiciel Python du Snake en pratique (p. 84-84)
+  Recherche A* (p. 84-86)
+  Réseau de neurones et algorithme génétique (p. 87-96)
+  Chapitre 6 : Jouons à Tetris (p. 97-97)
+  Principe – Choix algorithmique (p. 98-98)
+  L’apprentissage par renforcement pour le Tetris (p. 99-102)
+  Le logiciel Python du Tetris en pratique (p. 103-103)
+  Apprentissage par renforcement neuronal (p. 103-107)
+  Algorithme génétique (p. 108-114)
+  Chapitre 7 : Comment reconnaître un spam (p. 115-115)
+  Principe – Choix algorithmique (p. 116-118)
+  Le logiciel Python du détecteur de spams en pratique (p. 119-119)
+  Classificateur naïf de Bayes (p. 120-122)
+  Chapitre 8 : Découvrir les règles d’accès au crédit (p. 123-123)
+  Principe – Choix algorithmique (p. 123-123)
+  Démarrons par un petit récit pe (p. 123-124)
+  Et l’apprentissage vint à la rescousse (p. 125-125)
+  Comment fonctionnent les arbres de décision ? (p. 126-130)
+  De l’arbre à la forêt (p. 131-131)
+  De l’éthique de l’apprentissage machine (p. 131-132)
+  L’arbre de décision en pratique (p. 133-137)
+  Construire un arbre de décision en utilisant sklearn (p. 138-140)
+  Chapitre 9 : Aider à trier la presse ou les avis de clients (p. 141-141)
+
+[18/155 passages, 10221 tokens sur 128898]
+
+=== EXTRAITS ===
+
+[p. 1-2]
+Ken Hasselmann
+L,intelligence artificielle
+en pratique avec
+Python
+Recherche, optimisation, apprentissage
+2e édition
+Hugues Bersini
+
+Un livre à la fois théorique et pratique
+Cet ouvrage à vocation pédagogique a pour but d’aider les débutants et même les praticiens confirmés de l’intelligence artificielle à 
+mieux faire le tri entre certains mécanismes algorithmiques propres à cette discipline et souvent confondus dont les trois fondamentaux : 
+« la recherche », « l’optimisation » et « l’apprentissage ».
+Même si le Web regorge de solutions algorithmiques et de codes clés en main mis à disposition des internautes, ces codes constituent rarement 
+la bonne solution pour faire face à un problème. En effet, il faut souvent prendre du recul, et c’est précisément ce que propose cet ouvrage, 
+pour pouvoir trancher entre les différentes offres algorithmiques (les trois fondamentaux) et choisir celle qui sera la plus appropriée au cas de 
+figure que l’on rencontre.
+Dix problèmes très classiques de l’univers algorithmique et de l’IA sont abordés dans la 2e édition ce livre. Pour chacun, nous allons détailler 
+l’une ou l’autre méthode issue d’un des trois mécanismes fondamentaux (recherche, optimisation ou apprentissage) : 
+À qui s’adresse cet ouvrage ? 
+• Aux étudiants, en informatique ou pas, qui découvrent l’IA dans leur parcours académique
+• Aux informaticiens, même les plus confirmés, qui se sentent de plus en plus décontenancés devant l’offre pléthorique des recettes
+d’IA dont ils n’arrivent pas toujours à comprendre « qui fait quoi »
+Compléments web
+Le code source des exemples du livre en Python est disponible sur le site d’accompagnement www.editions-eyrolles.com/dl/0101094
+Membre de l’Académie royale de Belgique, Hugues Bersini enseigne l’informatique et la pro-
+grammation aux facultés polytechnique et Solvay de l’Université Libre de Bruxelles, dont il dirige 
+le laboratoire d’intelligence artificielle. Il est l’auteur de très nombreuses publications (systèmes 
+complexes, génie logiciel, sciences cognitives et bioinformatique) et de plusieurs ouvrages 
+d’introduction à la programmation, l’intelligence artificielle et les systèmes complexes qui font 
+aujourd’hui autorité dans le monde académique. 
+Ken Hasselmann est enseignant-chercheur à l’École Centrale des Arts et Métiers (ECAM) à 
+Bruxelles dans le département d’informatique et d’électronique, et doctorant à l’université libre 
+de Bruxelles au sein de l’Institut de Recherches Interdisciplinaires et de Développements en 
+Intelligence Artificielle (IRIDIA). Il y étudie la conception automatique d’algorithmes dans les 
+essaims de robots, et participe notamment au projet européen ERC DEMIURGE dans le cadre 
+de ses recherches.
+Au sommaire
+Introduction • Jouons au taquin • Découvrir le plus court chemin • Jouons au sudoku • Jouons à Puissance 4 • Jouons au Snake • Jouons à
+Tetris • Comment reconnaître un spam • Découvrir les règles d’accès au crédit • Aider à trier la presse ou les avis de clients • Comment distin-
+guer un chien d’un chat • Conclusion : les deux IA
+• le jeu du taquin ;
+• l’algorithme du plus court chemin (celui qu’on trouve dans les GPS) ;
+• le jeu du sudoku ;
+• le jeu de Puissance 4 à deux joueurs ;
+• le jeu du Tetris ; Mis à jour
+• le jeu du Snake ;
+• la séparation des spams et des non-spams ;
+• les règles d’accès au crédit ;
+• les aides au tri de la presse ou des avis de clients ;
+• la reconnaissance sur photo de chiens ou de chats.
+Nouveau
+Nouveau
+
+---
+
+[p. 12-13]
+. . . 117
+De l’éthique de l’apprentissage machine . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 117
+L’arbre de décision en pratique . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 119
+Construire un arbre de décision en utilisant sklearn . . . . . . . . . . . . . . . . . . . . . . 124
+Table des matières
+XI
+CHAPITRE 9
+Aider à trier la presse ou les avis de clients ........................... 127
+Principe – Choix algorithmique  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+Supervisé et non supervisé  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 127
+L’algorithme LDA (Latent Dirichlet Allocation)  . . . . . . . . . . . . . . . . . . . . . . . 129
+Word2Vec et Doc2Vec – Catégoriser le sens profond et non plus les mots  . . . . . 131
+Le logiciel Python de la catégorisation de documents en pratique . . . . . . . . . . . . . . . . 132
+LDA  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 132
+Représenter les documents par un vecteur de « sens »  . . . . . . . . . . . . . . . . . . . . 136
+CHAPITRE 10
+Comment distinguer un chien d’un chat................................. 139
+Principe – Choix algorithmique  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 140
+Le logiciel Python de la reconnaissance chien/chat en pratique  . . . . . . . . . . . . . . . . . 147
+Apprentissage profond . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 147
+Conclusion : les deux IA............................................................ 151
+Index........................................................................................... 159
+
+---
+
+[p. 21-22]
+te commande ne fonctionne pas, référez-vous à la documentation de poetry dans la section Alternative instal-
+lation methods : https://python-poetry.org/docs/#alternative-installation-methods-not-recommended.
+sudo apt install poetry
+curl –sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | 
+python3 -
+L’intelligence artificielle en pratique avec Python
+8
+Installer et utiliser les projets
+Une fois dans le dossier principal, les différents projets s’installent de façon analogue. Rendez-vous
+dans le dossier du projet (par exemple, cd 8Puzzle depuis le dossier principal).
+Puis entrez la commande suivante (une seule fois pour chaque projet) :
+Ou souvent dans le Powershell de Windows :
+Une fois les dépendances installées et l’environnement créé, vous n’avez plus qu’à exécuter le code
+de chaque projet à l’aide de la commande run de poetry ; par exemple, pour le taquin (8Puzzle),
+cela donne la commande suivante :
+Ou souvent dans le Powershell de Windows :
+poetry install
+python –m poetry install
+poetry run python3 main.py
+python –m poetry run python main.py
+
+---
+
+[p. 30-31]
+to compute
+            the total Manhattan distance.
+  :return:  Total Manhattan distances for all tiles
+            in configuration.
+  """
+  dist = 0
+  for i in range(9):
+    # Sum of Manhattan distances for all tiles
+    dist += abs(n[i][0] - puzzle.winCdt[i][0]) + abs(
+            n[i][1] - puzzle.winCdt[i][1])
+  return dist
+Jouons au taquin
+CHAPITRE 1
+17
+En fait, l’algorithme ici va essayer d’associer à chaque état rencontré (chaque configuration du
+taquin) la meilleure action possible, afin de parvenir au but poursuivi de façon optimale. On parle
+d’apprentissage, car ces meilleures actions possibles (ici les meilleurs coups) vont être découvertes
+par essais/erreurs, en s’appuyant sur les renforcements perçus et accumulés au cours du temps. À la
+différence du A* et de la recherche en général, qui résout le problème en un coup, le logiciel
+apprend ici tout en jouant de mieux en mieux. Une fois l’apprentissage terminé, on a la solution
+optimale, idéalement la même que celle découverte par A*.
+Comment procède l’algorithme du Q-learning dans le cas du taquin ? On définit toutes les confi-
+gurations possibles (tous les états possibles). Chaque configuration est représentée par une chaîne
+de neuf chiffres, chacun de ces chiffres prenant une valeur entre 1 et 9 (figure 1–7). Il y a donc
+neuf configurations possibles. Pour chacune d’entre elles, on définit les quatre déplacements pos-
+sibles auxquels on associe une valeur appelée la Q-valeur, initialisée aléatoirement au début et qui
+évalue la pertinence de ce coup dans cet état donné (plus la Q-valeur est élevée, plus ce coup
+semble être le meilleur à jouer). Dans la figure qui suit, on découvre les quatre Q-valeurs pour les
+quatre coups possibles à jouer dans la configuration 687219543.
+L’apprentissage peut alors démarrer en partant d’une configuration initiale. Le choix de l’action
+dans chaque configuration se fait sur la base de ces Q-valeurs, en favorisant l’exploration (choix au
+hasard) au début de l’apprentissage et l’exploitation vers la fin (l’action avec la plus grande
+Q-valeur est privilégiée, car on a appris de plus en plus de choses). Cette stratégie de choix
+Figure 1–6
+L’apprentissage par 
+renforcement en général 
+et son représentant le plus 
+illustre : le Q-learning.
+Figure 1–7
+Représentation de l’état 
+du taquin avec les quatre 
+Q-valeurs associées aux quatre 
+actions possibles.
+Environnement
+Perceptions
+Actions
+Récompense
+retardée
+Nouveau
+comportement
+Q-Learning
+Initialisation de Q
+Choix d'une action sachant Q
+Effectuer l'action
+Mesure de la récompense
+Mise à jour de Q
+6
+8
+7
+2
+1
+5
+4
+3
+0.1
+0.3
+0
+0.2
+Q-Values
+0.3
+0
+0.1
+0.2
+State's string = "68721543"
+Entry index = rank("68721543")
+
+---
+
+[p. 39-41]
+t de ces mêmes activités. Un compromis judicieux
+deviendra toujours plus d’actualité entre la mise en œuvre du génie humain, pour laborieuse qu’elle
+soit, en vue d’une écriture subtile d’algorithmes sobres et de faible consommation, et la compensa-
+tion de notre laxisme intellectuel par la puissance de calcul de nos ordinateurs.
+2
+Découvrir le plus court chemin
+Figure 2–1
+Capture d’écran du logiciel 
+Python mis à votre disposition 
+pour le problème du plus court 
+chemin.
+
+---
+
+[p. 50-50]
+rencontre,
+mais pas nécessairement le plus court sur l’ensemble du chemin.
+    direction = other(direction)
+  if len(self.path) == 0:
+    self.logger.warn("No solution found")
+    return
+  self.logger.info(
+    f"Found path to goal with cost {self.cost:.2f} in {iterations} iterations"
+  )
+  self.logger.info(f"Path: {self.path}")
+
+---
+
+[p. 61-62]
+Principe – Choix algorithmique
+Les mêmes hésitations et difficultés de choix algorithmique surgissent dans un autre type d’appli-
+cation qui a fait les beaux jours de l’IA : les jeux de société à deux adversaires, tels le tic-tac-toe
+(appelé aussi parfois pour d’étranges raisons le morpion), le Puissance 4, les dames, les échecs,
+le go, les jeux de cartes et tant d’autres... Et, là encore, nos étudiants se plaisent, sans toujours se
+4
+Jouons à Puissance 4
+Figure 4–1
+Capture d’écran du logiciel 
+Python mis à votre disposition 
+pour le problème 
+du Puissance 4.
+
+L’intelligence artificielle en pratique avec Python
+48
+poser les bonnes questions, sans prendre le recul nécessaire, à se lancer dans l’écriture d’algo-
+rithmes de type recherche (ici, comme on le verra, l’algorithme Min-Max est le plus prisé), opti-
+misation (comme à nouveau l’algorithme génétique), apprentissage par renforcement (le Deep-
+Q-learning marche tellement bien pour le jeu de go).
+Dans le jeu du Puissance 4, bien plus accessible et facile à comprendre que le jeu de go, chaque
+joueur, en alternance, place un petit disque de sa couleur dans un emplacement vide se trouvant dans
+une colonne, dans le but ultime de créer des lignes verticales, horizontales ou diagonales de quatre de
+ces petits disques de même couleur, tout en empêchant son adversaire d’y parvenir également.
+L’algorithme Min-Max, un autre ancêtre de l’IA que l’on doit au grand-père de ce domaine scien-
+tifique (de l’IA comme de l’informatique en général), John Van Neumann, et qui, dans la tradition
+première des algorithmes de recherche, fonctionne par l’élaboration d’un arbre de coups, est com-
+posé non seulement des coups du programme apprenant, mais également de ceux de son adver-
+saire. À nouveau, la source d’inspiration première est évidente : notre cognition. Nous n’agissons
+pas différemment lorsqu’il s’agit de jouer : nous anticipons jusqu’à une certaine profondeur nos
+coups et ceux de l’adversaire.
+Le nom « Min-Max » vient du fait que, après une certaine profondeur d’anticipation, par exemple
+quatre coups de l’un et quatre coups de l’autre, les feuilles de l’arbre se voient attribuer à nouveau
+une évaluation heuristique tentant de prédire au mieux les chances de l’emporter pour le
+programme IA. Une heuristique possible pourrait être le nombre de lignes que l’IA peut encore
+réaliser duquel on soustrait le nombre de lignes possibles de son adversaire. Une autre possible
+heuristique consiste à attribuer une certaine récompense pour le nombre de disques que l’IA a
+réussi à juxtaposer (2 pour 2 et 3 pour 3) et soustraire ces mêmes nombres pour les juxtapositions
+des disques de l’adversaire. Sans surprise, de multiples évaluations sont possibles et de la qualité de
+celle retenue dépendra en grande partie la performance de l’algorithme. Cette évaluation réalisée
+pour toutes les feuilles terminales de l’arbre, il suffit alors de remonter le long de cet arbre, en pre-
+nant la valeur minimum des nœuds de l’adversaire (minimiser les chances de gagner pour l’adver-
+saire) et la valeur maximum des nœuds du joueur IA (maximiser les chances de gagner pour l’IA),
+jusqu’à arriver au coup à jouer pour ce dernier ; d’où l’appellation « Min-Max ».
+Il est clair que, plus l’évaluation heuristique est précise, meilleure est la prédiction de victoire et
+moins l’arbre se doit d’être profond. Dans le cas contraire, et la puissance de calcul aidant (c’est par
+Figure 4–2
+Le jeu du Puissance 4. 
+À droite, les jaunes (en gris) 
+ont fini par gagner la manche.
+
+---
+
+[p. 73-74]
+am node: current node from which we start the backtracking
+  :param reward: reward corresponding to that particular node
+  :param turn: 1 or -1 depending on whose turn it is
+  """
+  while node != None:
+    node.visits += 1
+    node.reward -= turn * reward
+    # node.reward += reward
+    node = node.parent
+    turn *= -1
+  return
+L’intelligence artificielle en pratique avec Python
+60
+On détermine quel nœud doit être visité par la fonction suivante :
+où wi est le nombre de victoires du nœud fils considéré (donc la valeur totale de récompense), ni le
+nombre total de visites du nœud fils et Ni le nombre de visites pour le nœud parent. Ces deux
+termes sont à la base du compromis exploration-exploitation typique des algorithmes d’apprentis-
+sage par renforcement. Le paramètre c (dans le code exploration_parameter) est un paramètre de
+l’algorithme qui calibre le ratio entre exploration et exploitation.
+def best_child(self, node, exploration_parameter):
+  """
+  Returns the best child of a node based on a scoring system proposed by 
+  Auer, Cesa-Bianchi and Fischer. This formula combines a term of 
+  exploration and a term of exploitation.
+  :param node: node from which we want to find the best child
+  :param factor: exploration parameter
+  """
+  best_score = -float("inf")
+  best_children = []
+  for c in node.children:
+    exploitation = c.reward / c.visits
+    exploration = math.sqrt(math.log2(node.visits) / c.visits)
+    score = exploitation + exploration_parameter * exploration
+    if score == best_score:
+      best_children.append(c)
+    elif score > best_score:
+      best_children = [c]
+      best_score = score
+  res = random.choice(best_children)
+  return res
+c
+w
+n
+N
+n
+ln
+i
+i
+i
+i
++
+
+---
+
+[p. 83-83]
+fficaces aux différentes situations du jeu. Souvent, ce sont essentiellement des images des
+états du jeu encodées en entrée d’un réseau de neurones. Ce dernier cherche alors à dériver les
+Figure 5–9
+Recombinaison des deux 
+ensembles de poids 
+synaptiques, à gauche, pour en 
+générer un troisième, à droite.
+Figure 5–10
+Avant
+Après
+
+---
+
+[p. 95-95]
+e(self, mutationRate=0.01):
+  """
+  Mutate the DNA.
+  mutationRate (float): The probability for a value of the layer to be mutated
+  """
+  # Mutation of the weights
+  for layer in self.weights:
+    self.mutate_layer(layer, mutationRate)
+  # Mutation of the bias
+  for layer in self.bias:
+    self.mutate_layer(layer, mutationRate)
+
+---
+
+[p. 107-107]
+ons of the backpropagation
+  """
+  if len(self.memory) < batch_size:
+    return
+  # randomly select a batch of experiences
+  experiences = random.sample(self.memory, batch_size)
+  # compute the target for the neural network
+  next_states = [experience[1] for experience in experiences]
+  scores = self._predict_scores(next_states)
+
+---
+
+[p. 118-118]
+rue_pos + false_pos)
+  recall = true_pos / (true_pos + false_neg)
+  accuracy = (true_pos+true_neg) / (true_pos+true_neg+false_pos+false_neg)
+P(mot|spam) = nombre d’occurrences de ce mot dans les spams divisé par le nombre de mots 
+au total dans les spams
+IDF mot
+(
+)
+log
+i
+nombre de messages
+nombre de messages contenant le moti
+=
+
+---
+
+[p. 126-126]
+L’intelligence artificielle en pratique avec Python
+112
+solvabilité, un algorithme de type « arbre de décision » peut induire des règles comme (les quan-
+tités n’ont ici aucune importance) : « SI le salaire est inférieur à 100 et le taux d’endettement est
+supérieur à 300 ALORS le client est peu fiable à 80 % ». Cela signifie que 80 % des clients pré-
+sents dans la base de données et se trouvant dans cette situation au départ de l’emprunt ne se sont
+jamais acquittés de leur dette.
+D’autres attributs descriptifs des clients (état civil, lieu d’habitation, citoyenneté) sont souvent pris
+en compte pour améliorer le taux de réussite. Une des forces de ces algorithmes d’apprentissage est
+que rien ne les empêche d’accumuler toutes ces variables descriptives, même celles qui, comme
+résultat de l’algorithme, ne seraient d’aucune utilité. L’algorithme le déduira de lui-même. L’exis-
+tence des erreurs de classification maintient un état d’incertitude qui, pris en compte de façon fré-
+quentielle dans la décision finale, le sera, en fait, de manière optimale, de cette manière qui
+échappe à l’entendement humain.
+Afin de faire mieux encore, les experts en apprentissage machine cherchent à minimiser leur taux
+d’erreur, non pas sur l’ensemble dit d’apprentissage, mais sur un ensemble à part, non rencontré
+pendant l’apprentissage, et qui est appelé « ensemble de validation », car le risque existe que le
+modèle soit surentraîné sur l’ensemble d’apprentissage et perde en pouvoir inductif (la raison pre-
+mière de sa mise en œuvre). Ce prédicteur doit fonctionner au mieux, non plus sur les clients
+d’hier (ceux-là, on sait comment cela s’est terminé), mais bien sur les clients de demain, présentant
+leur visage inquiet devant le guichet. Dès lors, tester le comportement de l’algorithme sur un
+ensemble de validation donne une bonne idée de cette capacité à anticiper l’avenir et la solvabilité
+des débiteurs en devenir.
+Une procédure d’apprentissage automatisé, nourrie par des données expérimentales, peut très
+avantageusement pallier des défaillances décisionnelles. Ceci explique le succès fulgurant ces der-
+nières années des algorithmes d’apprentissage machine qui cherchent, chaque jour un peu plus, à
+se débarrasser de l’expertise humaine dans la mise au point d’outils décisionnels.
+Retour à mon expérience personnelle : ce nouveau système informatique mit au rebut le système
+expert jusqu’ici utilisé pour l’attribution des emprunts car, d’après la banque, le petit nouveau sem-
+blait en effet fonctionner de manière moins brutale et grossière, surtout pour les personnes aux
+revenus et à l’endettement moyen, une partie non négligeable de sa clientèle. Ce sont bien des
+années plus tôt que j’aurais pu exhiber fièrement ma voiture neuve aux copains.
+Comment fonctionnent les arbres de décision ?
+Après ces propos introductifs et ce récit quelque peu personnel, entrons plus dans le vif de la tech-
+nique et le codage de ces arbres de décision. Comme nous le savons déjà à ce stade, le langage
+Python a donné naissance à un ensemble conséquent de bibliothèques extrêmement précieuses
+pour le développement, la récupération et l’adaptation d’algorithmes classiques de l’IA, surtout
+ceux impliqués dans le traitement et l’analyse de données. Parmi celles-ci, Panda se repose presque
+essentiellement sur le concept de dataframe, juste un tableau de données dont les colonnes sont les
+attributs et les lignes les valeurs prises par ces attributs.
+Ainsi, installons six anciens clients de la banque dans un tel dataframe en y renseignant essentiel-
+lement quatre attributs : leur nom, leur solde, leur taux d’endettement et un attribut final booléen
+
+---
+
+[p. 133-133]
+Découvrir les règles d’accès au crédit
+CHAPITRE 8
+119
+Une nouvelle fois, et malgré l’exactitude partielle de ses prédictions, ce n’est pas tant sa qualité pré-
+dictive qui doit inquiéter, mais bien davantage l’amplification et la dégradation de la situation qu’il
+cherche à améliorer. C’est la thèse largement développée dans l’ouvrage de Virginia Eubanks, Auto-
+mating inequality2 qui dénonce cette politique algorithmisée qui en vient à réaliser ce qu’elle souhaite
+justement dénoncer. Ne plus libérer prioritairement les noirs pourrait n’arranger en rien le quotidien
+des Américains, d’où l’option alternative, par exemple, de mettre tous les faux négatifs sur un pied
+d’égalité ou, plus audacieux encore, de libérer équitablement toutes les catégories de prisonniers.
+Il devient plus qu’urgent de mieux cibler ce qu’on reproche à cet algorithme d’apprentissage, car cela
+reste l’objet de beaucoup d’incompréhension, d’ambiguïté et de controverses. Pour un informaticien,
+ce qui compte et doit compter reste avant tout la qualité de la prédiction (que l’on peut aisément éva-
+luer et valider). Pour un juge ou un sociologue, même un algorithme particulièrement précis risque de
+faire de très gros dégâts et de devenir grandement suspect. Chacun doit garder son rôle et sa partition
+pour autant qu’on se parle et qu’on se comprenne. Il faut éviter la confusion actuelle entre deux attri-
+butions de l’adjectif « mauvais », soit au modèle prédictif soit à la société que ce modèle cherche à
+décrire et à réguler. Le modèle est « mauvais » si ses prédictions sont « à côté de la plaque » ou si les
+données qu’il exploite ne sont qu’un très pâle reflet de la réalité sociale (la répartition statistique des
+variables sensibles n’est pas fidèle à la réalité). La société peut être « mauvaise » si une catégorie
+d’individus se trouve discriminée, même si le modèle prédit un risque considérable à les adouber. Il
+est parfaitement absurde d’attendre d’un modèle prédictif qu’il fasse preuve de discrimination posi-
+tive. Et c’est justement car le modèle nous permet de diagnostiquer l’impact de ces variables sensibles
+que, et malgré ses prédictions, un décideur (juge, directeur d’école, banquier, responsable d’unité de
+santé...) peut s’en affranchir et discriminer « positivement » l’une ou l’autre catégorie sociale. Ce
+modèle est juste un miroir présenté devant la société, aussi cruellement fidèle et précis qu’il soit. Il
+appartient aux décideurs d’en faire le meilleur usage pour que ses prédictions en matière de crimina-
+lité ou autre, ne se stabilisent pas, pire encore, ne s’améliorent pas avec le temps.
+Le débat continue de faire rage parmi les informaticiens et les philosophes sur le caractère équi-
+table d’un tel algorithme. Notez que, en sus de l’égalité des faux négatifs, d’autres définitions de
+l’équité de traitement sont possibles, l’égalité de tous les positifs (vrais et faux) ou, le plus simple-
+ment du monde que, parmi les débiteurs, on souhaite autant de religieux X que de religieux Y, de
+pauvres que de riches, un point c’est tout. Le choix de l’une ou l’autre manière d’accroître ce carac-
+tère équitable s’avère essentiellement arbitraire, ne se résolvant qu’à l’issue d’une discussion entre
+les principaux concernés, conscients des conséquences de leur choix sur la dégradation des résultats
+prédictifs mais aussi et surtout sur la société qu’ils souhaitent.
+L’arbre de décision en pratique
+Pour illustrer la création d’un arbre de décision à l’aide de Python, nous présentons ici une pre-
+mière implémentation originale de l’algorithme, puis on utilisera la bibliothèque sklearn, dont
+l’implémentation standard est aujourd’hui probablement la plus utilisée.
+2. Paru en 2018 aux éditions St Martin’s Press.
+
+---
+
+[p. 143-143]
+Aider à trier la presse ou les avis de clients
+CHAPITRE 9
+129
+Nos commanditaires cette fois nous mettent au défi de parvenir à améliorer et même modifier la
+manière dont jusqu’ici ces documents, ô combien sensibles pour eux, ont été thématisés et répartis.
+Il peut en être ainsi si le fabricant n’est pas totalement satisfait du classement actuel, ou pour l’édi-
+teur de presse qui se demande si l’on n’a pas eu trop tendance à réunir dans une même catégorie
+des messages qui, finalement, se distinguent de façon évidente pour qui les relit attentivement.
+Une autre raison est que la classification utilisée jusqu’ici est devenue obsolète et que de nouveaux
+sujets sont apparus, qui ont beaucoup de mal à rentrer dans les catégories existantes. Une nouvelle
+thématique est en train d’éclore ; il faut la saisir au bond. L’apprentissage non supervisé est délicat
+à mettre en œuvre, car il est difficile d’évaluer objectivement la qualité du résultat ; il faut, dans le
+même temps, découvrir les classes et y répartir les documents. On ne peut donc plus se reposer sur
+un ensemble test pour valider la qualité du résultat. On procède bien davantage à l’aveugle,
+l’appréciation du résultat final devenant souvent l’objet d’un regard subjectif du connaisseur du
+domaine.
+L’algorithme LDA (Latent Dirichlet Allocation)
+Parmi les algorithmes de classification non supervisée de données textuelles, un des plus populaires
+est le LDA qui, à partir d’un corpus documentaire, débouche sur deux résultats de nature
+probabiliste : un ensemble de sujets, chacun caractérisé par des mots-clés de pertinence décrois-
+sante, et, pour chacun des documents, la probabilité qu’il se réfère à l’un de ces sujets. Il découvre
+donc cet ensemble de sujets dissimulés jusqu’à présent de manière « latente » dans les documents.
+Le tout s’effectue par un tour de passe-passe de nature statistique. La base de l’algorithme est la
+recherche de deux distributions de probabilités :
+• P(Sujet(j)/Doc(k)) (en substance, l’importance que prend le sujet j pour le document k)
+• et P(Mot(i)/Sujet(j)) (l’importance qu’a le mot i dans la description du sujet j).
+De cette première formalisation statistique, nous déduisons déjà deux aspects importants. Premiè-
+rement, chaque document est décrit par un ensemble de mots, chacun avec sa propre pondéra-
+tion. Il devient donc important de les passer à la même « moulinette » algorithmique, comme nous
+l’avons fait avant de trier les courriels : supprimer les stop-words, ramener les mots à leur racine et
+d’autres manipulations qui visent à diminuer leur nombre. Deuxièmement, mais comme c’est très
+souvent le cas dans les algorithmes de classification non supervisée, l’algorithme LDA de base
+démarre avec un nombre prédéfini de sujets. On fixe ce nombre en espérant en découvrir la nature
+et qu’il soit une espèce d’optimum. Il reste toujours possible de réaliser une succession de tests, en
+modifiant ce nombre, jusqu’à aboutir à ce qui paraît subjectivement comme le découpage le plus
+satisfaisant.
+Une autre structure de données très importante dans le fonctionnement de l’algorithme est la
+suivante : P(Mot(i),Sujet(j),Doc(k)), qui affecte chaque mot i du document k à un sujet j particu-
+lier. Les deux résultats de l’algorithme sont représentés par la figure 9–2.
+
+---
+
+[p. 151-153]
+e le même résultat qu’avec LDA :
+[1 1 2 2 2 0 1 2], chaque nombre indiquant à quel groupe appartient la phrase. Sur la figure 9–5,
+on voit les huit points représentant les phrases, relativement regroupées selon la signification pro-
+fonde des mots qui les composent.
+Figure 9–5
+Représentation de phrases
+par un vecteur de « sens »
+10
+Comment distinguer
+un chien d’un chat
+Figure 10–1
+Capture d’écran du logiciel 
+Python mis à votre disposition 
+pour la reconnaissance d’un 
+chien ou d’un chat sur une 
+photo.
+
+---
+
+[p. 164-165]
+f.imgIndex]
+      )
+    except:
+      QMessageBox(
+        QMessageBox.Warning,
+        "Error",
+        "Cannot convert image, please select a valid image",
+      ).exec_()
+  else:
+    QMessageBox(
+      QMessageBox.Warning,
+      "Error",
+      "Please select an image and a neural network model before reduction",
+    ).exec_()
+Nous sommes en 1950, maître Alan Turing sur son génie perché n’a pas encore subi l’horrible
+« traitement de faveur » que l’on réservait aux homosexuels à cette époque. Il a trente-huit ans, sa
+créativité est au zénith et encore inimaginable est le morceau de pomme empoisonnée qui mettra
+fin à ses jours. Autour de lui, et grâce à lui, de nombreux chercheurs prennent conscience qu’un
+ordinateur, dénommé par le maître « machine universelle », pourrait, par son câblage et sa pro-
+grammation, produire le type de processus cognitif dont jusqu’à présent les humains se réservaient
+la primeur. À l’instar d’une forêt neuronale inextricable d’où jaillissent souvenirs, prévisions, infé-
+rences et raisonnements, les mêmes souvenirs, prévisions, inférences et raisonnements pourraient
+jaillir d’une forêt inextricable, mais cette fois de transistors en silicium et de portes logiques. Ce
+cerveau-machine, Turing l’ambitionne aussi infiniment programmable que l’est notre cerveau,
+dont les mêmes neurones se voient sollicités pour des tâches cognitives d’une variété infinie. Entre
+deux marathons dont les photos d’époque témoignent, il perce le mystère de ces niveaux empilés
+d’abstraction qui font de l’informatique aujourd’hui la technologie la plus extraordinaire, la plus
+envahissante et la plus déconcertante jamais produite par l’humain : machine universelle, machine
+à tout faire, universellement programmable et universellement intelligente.
+Quand on l’interroge sur sa définition de l’intelligence, dès lors que c’est d’ordinateur qu’il s’agit (il
+faudra attendre la conférence de Darthmouth en 1956 pour que le terme « intelligence artificielle »
+prenne vraiment son envol), il se trouve à ce point dépourvu qu’il s’en tire par une pirouette : plutôt
+qu’une définition, c’est un test qu’il propose, que dit-on un test, une performance. Bien évidem-
+ment, et il en est conscient déjà, c’est la notion d’intelligence qui fait débat. D’ailleurs, aujourd’hui,
+on ne compte plus les nombreux types d’intelligence qui se disputent le sacre : rationnelle, émo-
+tionnelle, sociale, animale, en essaim.... Sans doute, une définition audacieuse et quelque peu
+immodeste aurait pu être : « moi ». Néanmoins, tout génie qu’il est, Turing entrevoyait déjà
+l’horizon très lointain et sans doute inatteignable de telles fulgurances pour sa créature. Il choisit
+alors de se cantonner à une tâche ô combien banale mais à la fois si emblématique de notre
+humanité : le dialogue. Son test prend la forme suivante : « si, lors d’un dialogue par écran inter-
+posé, un ordinateur est capable de vous confondre sur sa nature première, c’est-à-dire de se faire
+passer pour un interlocuteur humain, l’ordinateur ou l’algorithme en question que ce dernier exé-
+cute pourra être qualifié d’intelligent ».
+Conclusion : les deux IA
+
+---
+
+[p. 173-174]
+Index
+A
+A* 2, 11, 13, 15, 17, 19, 24, 28, 40, 62, 63, 70
+accuracy 104, 125
+action 10, 16, 62
+Adam 66, 86, 146
+algorithme
+fourmis 31
+génétique 2, 24, 31, 39, 48, 68, 69, 73, 84
+glouton 124
+AlphaGo 52, 157
+AlphaZero 52
+analyse en composantes principales 136
+apprentissage 1, 11, 50, 112, 156
+non supervisé 128, 129
+off-policy 22
+on-policy 22
+par renforcement 2, 16, 19, 48, 64, 69, 84, 88
+profond 3, 64, 132, 140, 153
+supervisé 64, 102, 103, 113, 117, 128
+arbitrage exploration/exploitation 40, 50
+arbre de décision 112, 113, 116
+critère d’arrêt 116
+forêt 117, 124
+arbre de recherche 10, 24, 28, 40, 48
+B
+backtracking 10, 40
+bag of words 105
+biais 155
+C
+CBMPI – Classification-based modified policy iteration 88
+classification 112, 141
+binaire 102, 113
+éthique 117
+naïve bayésienne 102, 106
+récursivité 116
+supervisée 117
+cognition humaine 14, 19, 48, 152, 156, 157
+compréhension du langage naturel 153
+condition de Markov 18, 31
+conférence de Dartmouth 4, 64, 151, 154
+convolution 145
+coût de calcul 157
+croisement 22
+cycle hamiltonien 70
+D
+Deep Blue 50
+Dijkstra 29
+Dirichlet 129, 134
+distance
+de Manhattan 14, 63, 70
+euclidienne 28
+données
+d’entraînement 103, 122, 145
+de test 122, 145
+de validation 112, 116, 145
+enrichissement 145
+textuelles 129
+dropout 145
+E
+Eliza 152
+entropie 114
+entropie croisée binaire 146
+erreur moyenne quadratique 146
+espace de solutions 24
+essai/erreur 3, 17, 19
+état 10, 16, 62
+évaluation 22, 39, 68
+expansion 50
+F
+fitness 40
+fonction d’activation
+ReLU 66, 77, 86, 145
+Sigmoid 65, 146
+fonction de coût 40, 146
+fourmi 32
+
+L’intelligence artificielle en pratique avec Python
+160
+G
+GPS – General Problem Solver 10, 154
+graphe 30
+H
+heuristique 13, 19, 28, 40, 48
+hybridation 41, 52, 68
+I
+IDF – Inverse Document Frequency 104
+index de Gini 114, 115
+inférence logique 110
+intelligence 151
+intelligence artificielle
+consciente 154, 155
+démarche 157
+inconsciente 154, 155
+J
+justesse 125
+K
+Kaggle 105, 145
+K-moyennes 132
+L
+LDA 129, 132
+M
+MCTS – Monte Carlo Tree Search 50, 52
+méthode de gradient 66, 69
+Min-Max 48, 52
+modèle mental 2
+multiparamétrage 143
+mutation 22, 39, 68, 69
+N
+n-gram 104
+NLTK 104
+O
+optimisation 1, 38, 48, 66, 143, 156
+génétique 22
+P
+PCA 136
+plus court chemin 28
+policy 20
+pooling 144
+précision 104
+programmation dynamique 19
+Q
+Q-learning 2, 3, 16, 48, 84, 85
+policy iteration 86
+R
+racinisation 104
+rappel 104
+recherche 1, 11, 15, 17, 38, 48, 156
+best-first search 40
+bidirectionnelle 30
+largeur d’abord 11, 28
+profondeur d’abord 11
+recombinaison 39, 68
+réseau de neurones 3, 24, 64, 65, 73, 84, 86, 131, 140, 154, 
+156
+convolution 143, 144
+pooling 143, 144
+profond 140
+rétropropagation 50, 66
+RMSprop 146
+S
+sac de mots 105, 108
+sélection 22, 39, 50, 68
+similarité 103
+simulation 50
+solution 10, 17, 62
+stemming 104
+stratégie 20
+élitiste 39
+surapprentissage 125, 144
+système expert 110
+T
+temps de calcul 24
+test de Turing 152
+TF – Term Frequency 104
+traitement du langage naturel 102, 104
+transfer learning 146
+V
+valeur prédictive positive 104
+voyageur de commerce 31
+W
+Waze 30
+word embedding 131

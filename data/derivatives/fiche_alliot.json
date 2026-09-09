@@ -1,0 +1,109 @@
+{
+ "document_id": "bddb66da-79da-4aff-9e4d-54dbbdc71ba5",
+ "titre_normalise": "Intelligence artificielle et informatique théorique",
+ "auteurs": [
+  "Jean-Marc Alliot",
+  "Thomas Schiex",
+  "Pascal Brisset",
+  "Frédérick Garcia"
+ ],
+ "annee": 2002,
+ "type_ouvrage": "manuel",
+ "niveau": "avance",
+ "public_cible": "Étudiants d'école d'ingénieurs et de second cycle universitaire en informatique, enseignants, chercheurs. Deuxième édition publiée par Cépaduès en 2002. Les quatre auteurs sont docteurs en informatique ou en intelligence artificielle, issus de Polytechnique, de Centrale, de l'École normale supérieure et de Supaéro.",
+ "these_centrale": "L'intelligence artificielle n'est pas une discipline à part : c'est une partie de l'informatique, et ses résultats se démontrent avec les outils de l'informatique théorique. L'ouvrage établit d'abord la logique, les systèmes formels, la calculabilité et la complexité, puis montre que les techniques réputées mystérieuses en découlent. Le postulat mécaniste sur lequel repose tout le champ est présenté non comme une évidence mais comme une hypothèse, dont les auteurs indiquent précisément où elle cesse d'être défendable.",
+ "idees_force": [
+  {
+   "titre": "Le vocabulaire savant sert trop souvent à impressionner",
+   "explication": "Le passage le plus tranchant du livre. Non déterminisme, logique floue, algorithmes génétiques s'interprètent simplement par le passage d'une exécution séquentielle à une exécution arborescente, par la combinaison de coefficients numériques, ou par une optimisation dans un espace discret. Les auteurs écrivent que ces mots sont trop souvent employés par de pseudo-spécialistes comme certains faiseurs de faux miracles employaient abracadabra, dans le seul but d'impressionner une assistance trop inculte, trop crédule ou trop heureuse d'assister à un événement d'une telle importance.",
+   "page": 25
+  },
+  {
+   "titre": "Le premier échec de la traduction automatique a fondé la discipline",
+   "explication": "Des cryptanalystes de guerre ont cru pouvoir traduire sans comprendre le sens, et annoncèrent un traducteur en cinq ans. L'échec fut complet, mais il révéla ce que personne n'avait vu : l'importance considérable, dans le raisonnement humain, de l'ensemble des connaissances non exprimées. Il révéla aussi l'impossibilité d'énoncer toutes les connaissances, donc la nécessité de les formuler de manière générique. Les auteurs notent que c'est de ces constats qu'est née la représentation des connaissances.",
+   "page": 25
+  },
+  {
+   "titre": "Un échec bien mené est un résultat",
+   "explication": "Les auteurs citent le maître d'échecs Tchigorine, mes défaites m'ont plus appris que mes victoires, et l'appliquent à la recherche : avoir échoué, c'est aussi avoir examiné à fond un domaine et avoir établi qu'il fallait une autre approche, ce qui est en soi un résultat positif. C'est une leçon de méthode qui vaut bien au delà de l'informatique.",
+   "page": 26
+  },
+  {
+   "titre": "Le postulat mécaniste, et l'endroit exact où il devient contestable",
+   "explication": "L'analogie de Kleene présente la bande de la machine de Turing comme une feuille de papier, ses symboles comme ceux du calcul, et ses états comme les états mentaux d'un calculateur humain qui se rappelle où il en est. Turing ajoute que le nombre d'états mentaux à considérer est fini, faute de quoi certains seraient trop voisins et il y aurait confusion. Les auteurs concèdent que ce postulat est peu critiquable pour le calcul numérique, puis marquent la limite : il est loin d'être évident pour la compréhension du langage ou la perception des formes. Et ils rappellent que c'est précisément sur ces paroles que se sont appuyées les thèses mécanistes du champ.",
+   "page": 70
+  },
+  {
+   "titre": "Trois schémas d'axiomes suffisent",
+   "explication": "Le calcul propositionnel est reconstruit à partir du plus petit ensemble d'axiomes connu qui atteigne le but, augmenté du seul modus ponens. La conjonction, la disjonction et l'équivalence n'y figurent pas : elles sont définies comme des abréviations d'expressions écrites avec l'implication et la négation. Le lecteur voit ainsi ce que veut dire fonder une théorie, et pourquoi la question du minimum d'axiomes n'a de sens que relativement à un objectif.",
+   "page": 48
+  },
+  {
+   "titre": "Ce que le théorème d'incomplétude ne dit pas",
+   "explication": "Correction d'une confusion répandue, énoncée avec netteté. Le théorème d'incomplétude établit qu'il existe des propriétés vraies non démontrables. Le second théorème n'affirme en aucun cas qu'il existe des propriétés démontrables qui ne soient pas vraies : il dit qu'on ne peut démontrer la consistance de l'arithmétique par ses seuls axiomes et par des méthodes finitistes, comme l'exigeait Hilbert. Les auteurs rappellent que Gentzen en a publié une démonstration peu après, au prix de l'induction transfinie, et concluent qu'il ne faut jamais parler de théorème d'inconsistance.",
+   "page": 90
+  },
+  {
+   "titre": "Deux questions que l'on confond, et qu'il faut séparer",
+   "explication": "Au chapitre intitulé faut-il jeter la logique, les auteurs distinguent le problème philosophique, un axiome est-il vrai et qu'est-ce que la vérité, du problème mathématique, quelle relation existe entre une théorie de la vérité et son axiomatisation. Ils y voient deux étapes du travail réel : face à une réalité trop vaste, on la réduit d'abord à un langage formel où l'on définit une théorie de la vérité et un modèle, puis on construit une théorie de la démonstration.",
+   "page": 90
+  },
+  {
+   "titre": "Aucun langage de programmation logique ne fait le test qu'il devrait faire",
+   "explication": "Détail technique qui en dit long sur l'écart entre théorie et pratique. Unifier une variable avec un terme qui la contient produit un terme infini, que l'univers de référence n'est pas censé contenir. La rigueur imposerait donc de vérifier ce cas avant chaque unification. Les auteurs constatent en note qu'aucun des langages de programmation logique en usage n'effectue ce contrôle.",
+   "page": 112
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Postulat mécaniste",
+   "definition": "Hypothèse fondatrice du champ, énoncée par McCarthy à Dartmouth : toute activité intelligente serait modélisable et reproductible par une machine. Le livre la traite comme un postulat, non comme un acquis."
+  },
+  {
+   "terme": "Schéma d'axiome",
+   "definition": "Énoncé où les lettres désignent n'importe quelle formule du langage, et non des propositions particulières. La substitution uniforme y est donc implicite, ce qui distingue un schéma d'un axiome au sens strict."
+  },
+  {
+   "terme": "Machine de Turing non déterministe",
+   "definition": "Machine dont la fonction de transition renvoie une liste d'actions possibles plutôt qu'une seule. Le schéma d'exécution devient arborescent. Peu employée par les logiciens, centrale en théorie de la complexité."
+  },
+  {
+   "terme": "Fonction calculable",
+   "definition": "Fonction pour laquelle il existe une machine capable de la calculer pour toute valeur d'entrée, y compris arbitrairement grande. C'est cette exigence de totalité qui rend possible la construction d'une fonction non calculable."
+  },
+  {
+   "terme": "Théorie catégorique",
+   "definition": "Théorie dont tous les modèles sont isomorphes, donc mathématiquement indiscernables. Le théorème de Löwenheim et Skolem montre qu'une théorie du premier ordre suffisamment riche ne peut l'être."
+  },
+  {
+   "terme": "Résolution",
+   "definition": "Méthode de démonstration automatique procédant par réfutation : on ajoute la négation de la conclusion aux hypothèses et on cherche à produire la contradiction."
+  },
+  {
+   "terme": "Unification",
+   "definition": "Opération consistant à trouver la substitution la plus générale rendant deux termes identiques. C'est le moteur de la résolution et de l'exécution de Prolog."
+  },
+  {
+   "terme": "Test d'occurrence",
+   "definition": "Vérification qu'on n'unifie pas une variable avec un terme qui la contient. Théoriquement obligatoire, pratiquement omis par tous les langages logiques."
+  },
+  {
+   "terme": "Skolémisation",
+   "definition": "Transformation d'une formule en forme normale par élimination des quantificateurs existentiels, préalable indispensable à la résolution automatique."
+  }
+ ],
+ "a_lire_si": "Vous voulez la fondation théorique et vous acceptez le prix à payer. C'est l'ouvrage le plus rigoureux du corpus, celui qui démontre au lieu d'affirmer, et le seul qui traite sérieusement de calculabilité, de complexité et des théorèmes de Gödel. Pour un ingénieur, il fournit exactement ce qui manque partout ailleurs : les raisons pour lesquelles certaines choses sont impossibles, et pas seulement difficiles.",
+ "a_eviter_si": "Vous n'avez pas de bagage mathématique. Le livre exige de la logique formelle, de la théorie des ensembles et une pratique de la démonstration. Publié en 2002, il ne traite ni de l'apprentissage profond ni des modèles de langage, et son propos n'est de toute façon pas là. Ce n'est pas un livre à lire une fois, c'est un livre à travailler.",
+ "prerequis": [
+  "Un niveau de deuxième ou troisième année d'études supérieures en informatique ou en mathématiques.",
+  "Une familiarité avec la notation logique et avec le raisonnement par récurrence.",
+  "La lecture du Manuel d'intelligence artificielle de Frécon et Kazar prépare bien la partie pratique, celui ci étant plus théorique et moins exercé."
+ ],
+ "controverses": [
+  "La position défendue par les auteurs, selon laquelle l'intelligence artificielle est une partie de l'informatique et rien de plus, est une prise de position dans un débat disciplinaire réel. Elle a l'avantage de la clarté et le défaut de rendre difficile la prise en compte de ce qui vient de la psychologie, de la linguistique ou des neurosciences.",
+  "La dénonciation des pseudo-spécialistes est salutaire et un peu confortable : elle vise ceux qui emploient un vocabulaire sans le comprendre, mais elle ne dit rien du fait que la vulgarisation d'un champ formel est une difficulté réelle et non une faute morale.",
+  "Publié en 2002, l'ouvrage se situe au creux de la vague qui a précédé l'apprentissage profond, et son insistance sur la réduction de l'intelligence artificielle à l'informatique théorique a moins bien vieilli que sa partie logique, qui reste juste.",
+  "L'exemplaire numérisé du corpus a été récupéré par reconnaissance de caractères. Les formules logiques, les tableaux et les indices sont souvent altérés. Le texte suivi reste lisible, mais les démonstrations doivent être vérifiées sur une édition papier."
+ ],
+ "confiance": 0.83
+}

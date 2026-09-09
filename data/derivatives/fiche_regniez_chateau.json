@@ -1,0 +1,95 @@
+{
+ "document_id": "fb5583ea-77a3-4411-a4c9-205f1305f81a",
+ "titre_normalise": "Notre Château",
+ "auteurs": [
+  "Emmanuel Régniez"
+ ],
+ "annee": 2016,
+ "type_ouvrage": "roman",
+ "niveau": "avance",
+ "public_cible": "Lecteur adulte averti, amateur de littérature contemporaine et de récits inquiétants. Éditions Le Tripode, 2016. Roman court, composé de séquences numérotées et de reprises obsessionnelles, accompagné de photographies de Thomas Eakins et placé sous l'épigraphe musicale d'un mouvement de trio de Schubert.",
+ "these_centrale": "Un homme et sa sœur Véra vivent depuis vingt ans coupés du monde dans une maison qu'ils appellent Notre Château, entourés de Notre Bibliothèque. Un samedi à onze heures trois, on sonne à leur porte, ce qui n'arrive jamais. La veille, le narrateur a vu sa sœur dans un autobus qu'elle n'a pas pu prendre. Tout le livre tient dans l'écart entre ces deux faits impossibles, et il avance en tournant en rond, chaque reprise déplaçant légèrement ce qu'on croyait acquis.",
+ "idees_force": [
+  {
+   "titre": "Le grand roman fantôme de nos lectures",
+   "explication": "Les deux reclus consignent depuis toujours des passages relevés dans leurs livres, et le narrateur écrit : nous avons dans ces boîtes le grand roman de nos lectures, un grand roman fantôme, rempli des voix des autres, capturées par nous. C'est la plus belle définition qu'on puisse donner d'un carnet de lecture : non un résumé de ce qu'on a lu, mais une œuvre nouvelle faite des voix qu'on a retenues. Le passage vaut d'être médité par quiconque construit un dispositif de lecture accompagnée.",
+   "page": 10
+  },
+  {
+   "titre": "Les bibliothécaires fantômes",
+   "explication": "Il ajoute que peut-être seront-ils un jour eux aussi de ces anciens bibliothécaires qui ne peuvent quitter leur profession et qui, devenus bénévoles, continuent d'errer parmi les rayons. L'image est drôle et funèbre à la fois, et elle dit une vérité sur les métiers du livre : on n'en sort pas.",
+   "page": 10
+  },
+  {
+   "titre": "La litanie des mondes parallèles",
+   "explication": "Il y a un autre monde où nos parents ne sont pas morts. Il y a un autre monde où je suis mort. Il y a un autre monde où je fume encore. Il y a un autre monde où ma sœur a une vie normale. Il y a un autre monde où je ne suis pas l'amant de ma sœur. La litanie avance par additions égales et laisse tomber au milieu, sans emphase, l'aveu autour duquel tout le livre tourne. C'est un des grands effets de la littérature contemporaine : dire l'essentiel dans le même ton que le reste.",
+   "page": 19
+  },
+  {
+   "titre": "La perte du temps trouvé",
+   "explication": "Notre objectif à Véra et moi n'a jamais été la recherche d'un temps perdu, mais plutôt la perte du temps trouvé. Le renversement de la formule de Proust énonce le programme de ces deux vies : non retrouver le passé, mais dissoudre le présent. C'est ce qui distingue leur réclusion d'une nostalgie ordinaire.",
+   "page": 19
+  },
+  {
+   "titre": "Ce n'est pas normal, et c'est la seule vie possible",
+   "explication": "Je sais que la vie que nous menons n'est pas normale. Ce n'est pas normal de vivre comme nous vivons. Je le sais. Elle le sait. Et pourtant c'est la seule vie que nous pouvons mener, la seule vie qui nous est offerte. Régniez ne demande pas au lecteur d'excuser ses personnages, ni de les condamner. Il montre une lucidité qui ne change rien, ce qui est la définition même de l'enfermement.",
+   "page": 19
+  },
+  {
+   "titre": "La mémoire qui se fabrique",
+   "explication": "Il ne reste aucune photographie des parents, aucun album. Le narrateur ne saurait faire le portrait de son père, se souvient vaguement de la coiffure de sa mère sans être sûr de son souvenir, et conclut : nous nous fabriquons une vie sur mesure à mesure que le temps passe, et nos souvenirs, nos vrais souvenirs s'effacent, aussi sûrement qu'une figure sur le sable. Puis il énumère des images d'enfance, la poule qui picore sur la tablette de la chaise haute, la poupée, le chien, le chat sur l'épaule de la mère, avant de s'interrompre : est-ce que j'étais là ? Je n'en suis plus sûr. La phrase se casse en pleine ligne et le récit avec elle.",
+   "page": 23
+  },
+  {
+   "titre": "La liste des supplices",
+   "explication": "Le livre insère, sans commentaire, une série de châtiments empruntés aux contes : elle est jetée dans le fleuve, embarquée sur un bateau percé qu'on envoie au large, enfermée dans un sac et noyée vivante, contrainte de chausser des souliers de fer chauffés à blanc et de danser jusqu'à s'effondrer morte. Ce sont les punitions réservées aux femmes coupables dans les recueils que nos enfances tiennent pour innocents. Régniez les remet côte à côte et laisse le lecteur mesurer ce qu'il a lu sans le voir.",
+   "page": 26
+  },
+  {
+   "titre": "La répétition comme forme",
+   "explication": "Comme tous les soirs nous le retrouvons, comme tous les soirs j'embrasse Véra dans le cou, comme tous les soirs nous nous endormons. Le livre est fait de ces reprises. Elles installent d'abord une douceur de rituel, puis deviennent oppressantes à mesure que le lecteur comprend que rien ne peut plus changer. La forme du texte est le sujet du texte.",
+   "page": 14
+  },
+  {
+   "titre": "L'horaire comme obsession",
+   "explication": "Onze heures trois le samedi deux avril, quatorze heures trente-deux dans l'autobus numéro trente-neuf qui va de la gare à la cité des Trois Fontaines en passant par l'hôtel de ville. Ces précisions reviennent inchangées tout au long du livre. Chez un narrateur qui ne se souvient de rien de son enfance, l'exactitude s'est réfugiée dans les horaires et les numéros de ligne. C'est le signe clinique que le texte donne sans jamais le nommer.",
+   "page": 8
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Narrateur non fiable",
+   "definition": "Voix qui raconte et dont le lecteur découvre progressivement qu'elle se trompe, oublie ou dissimule, sans que le texte le déclare jamais."
+  },
+  {
+   "terme": "Reprise",
+   "definition": "Retour d'une même phrase ou d'une même scène, légèrement modifiée. Procédé qui produit ici l'effet d'enfermement."
+  },
+  {
+   "terme": "Mondes parallèles",
+   "definition": "Figure par laquelle le narrateur énumère les vies qu'il n'a pas eues, et qui lui sert à énoncer l'inavouable sans l'assumer."
+  },
+  {
+   "terme": "Huis clos",
+   "definition": "Récit dont l'action est enfermée dans un lieu unique dont les personnages ne peuvent ou ne veulent sortir."
+  },
+  {
+   "terme": "Carnet de lecture",
+   "definition": "Recueil de passages relevés au fil des lectures. Le roman en fait une œuvre à part entière, faite des voix des autres."
+  },
+  {
+   "terme": "Inquiétante étrangeté",
+   "definition": "Effet produit quand le familier devient menaçant sans cesser d'être familier. Régime dominant du livre."
+  }
+ ],
+ "a_lire_si": "Vous vous intéressez à la construction d'un récit, à la manière dont un texte fait comprendre au lecteur ce qu'il ne dit pas. C'est un livre bref et exigeant, admirablement tenu, qui se prête à un travail d'analyse littéraire. Ses pages sur le carnet de lecture et sur l'effacement de la mémoire dépassent le cadre du roman.",
+ "a_eviter_si": "Vous cherchez une lecture de détente ou une lecture pour la jeunesse. Le livre traite d'un rapport incestueux, de réclusion et d'effondrement mental, avec une froideur qui rend la chose plus dure encore. Il n'a rien d'explicite mais tout d'oppressant, et sa fin ne résout rien. Il ne convient ni à un public scolaire ni à un lecteur fragile, et n'a pas sa place dans un parcours d'entrée en lecture.",
+ "prerequis": [
+  "Habitude de la littérature contemporaine"
+ ],
+ "controverses": [
+  "Le roman ne juge pas ses personnages et refuse toute explication psychologique. Ce parti pris est sa force littéraire et pose une question de responsabilité : donner voix à un narrateur incestueux sans distance narrative expose le lecteur non averti.",
+  "Le texte est numérisé à partir d'une source qui n'est pas l'éditeur. Il est protégé et ne peut faire l'objet ni de diffusion ni de citation étendue."
+ ],
+ "confiance": 0.85
+}

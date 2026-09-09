@@ -1,0 +1,465 @@
+OUVRAGE : Cours-Intelligence-artificielle-18
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 26
+AXE : IA Technique Academique
+SOMMAIRE :
+  (non structuré)
+
+[6/6 passages, 4216 tokens sur 4216]
+
+=== EXTRAITS ===
+
+[p. 1-7]
+INTRODUCTION À L’INTELLIGENCE ARTIFICIELLE ET  
+LA ROBOTIQUE 
+Abdeldjalil Ramoul 
+Abdeldjalil.ramoul@imag.fr 
+Université Pierre Mendes-France 
+Département d’Informatique 
+Licence MASS 
+Tiré du cours de Damien Pellier 
+
+Objectifs du cours 
+§ Présenter les fondements de l’intelligence artificielle et de 
+la robotique. 
+§ Former les étudiants aux techniques classique 
+d’intelligence artificielle. 
+§ Confronter les étudiants à l’intégration pratique de 
+techniques d’IA dans un robot. 
+2/26 
+
+Plan de cours 
+1.  Introduction à l’intelligence artificielle 
+2.  Agents intelligents 
+3.  Algorithmes classiques de recherche en IA 
+4.  Algorithmes et recherches heuristiques 
+5.  Programmation des jeux de réflexion 
+6.  Problèmes de satisfaction de contraintes 
+7.  Agents logiques 
+8.  Logique du premier ordre 
+9.  Inférence en logique du première ordre 
+10.  Introduction à la programmation logique avec Prolog 
+11.  Planification 
+12.  Apprentissage 
+3/26 
+
+Prérequis souhaitables 
+•  Algorithmique. 
+•  Complexité. 
+•  Programmation (impérative ou orientée objets. 
+•  Connaissance d’un environnement de développement 
+intégré. 
+•  Sensibilisation aux problématiques de l’embarqué. 
+4/26 
+
+Compétences visées 
+•  Poser une démarche de résolution de problème. 
+•  Implémenter les algorithmes classiques de l’intelligence 
+artificielle 
+•  Maitriser les limites des algorithmes présentés en termes 
+d’activités et de Complexité 
+•  Maitriser les limites d’un système embarqué temps réel. 
+•  Savoir concevoir les logiciels d’un robot autonome simple. 
+5/26 
+
+Objectifs des travaux pratiques 
+•  Programmer un robot capable de ramasser un maximum 
+de palets sur un plateau en un minimum de temps. 
+•  Contraintes: Les détails du règlement est sur le site web 
+de la compétition http://persycup.imag.fr/ 
+•  Le programme devra être embarqué sur le robot 
+•  La forme des robots vous est imposée 
+•  L’évaluation consistera à opposer vos déférents robots l ors d’ une 
+compétition au bout de 10 semaines de préparation 
+•  Le projet est à réaliser en quadrinôme 
+6/26 
+
+Planning des travaux dirigés 
+Semaine 
+Date 
+Tâche 
+Documents à rendre 
+N°1 
+08/10/15 
+Définition des objectifs 
+N°2 
+15/10/15 
+Analyse des besoins 
+N°3 
+22/10/15 
+Spécifications 
+Cahier des charges 
+N°4 
+05/11/15 
+Conception 
+N°5 
+12/11/15 
+Développement 
+Plan de développement 
+N°6 
+19/11/15 
+Développement 
+N°7 
+26/11/15 
+Développement 
+N°8 
+03/12/15 
+Développement 
+N°9 
+10/12/15 
+Intégration 
+Plan de tests 
+N°10 
+17/12/15 
+Recette et évaluation 
+Code source et rapport 
+7/26
+
+---
+
+[p. 7-14]
+°3 
+22/10/15 
+Spécifications 
+Cahier des charges 
+N°4 
+05/11/15 
+Conception 
+N°5 
+12/11/15 
+Développement 
+Plan de développement 
+N°6 
+19/11/15 
+Développement 
+N°7 
+26/11/15 
+Développement 
+N°8 
+03/12/15 
+Développement 
+N°9 
+10/12/15 
+Intégration 
+Plan de tests 
+N°10 
+17/12/15 
+Recette et évaluation 
+Code source et rapport 
+7/26
+Modalités de contrôle de connaissances  
+ 
+•  Note finale : 50% examen final et 50% travaux pratiques 
+et projet 
+•  La note de projet tient compte des évaluations hebdomadaires 
+ainsi que des documents à rendre.  
+•  ECTS:6 
+•  Volume horaire : 24h de cours et 24h de TD/TP  
+8/26 
+
+Bibliographie  
+ 
+•  S. Russell and P. Norvig, Artificial Intelligence : A Modern Approach , 
+Prentice Hall, 2002  
+•  J-G. Ganascia, L’intelligence artificielle . Flammarion, 1993.  
+•  I. Bratko, Programmation en Prolog pour l’intelligence artificielle , 
+2001  
+•  J. Alliot et T. Schiex, Intelligence Artificielle et Informatique Théorique , 
+Cépaduès Editions, 1993.  
+•  N. Nilsson, Artificial Intelligence : A New Synthesis , Morgan 
+Kaufmann, 1998.  
+9/26 
+
+Comment réussir ce module ?  
+ 
+•  Règle 1 : Assistez à tous les cours, TD et TP  
+•  En cas d’absence à un cours rattrapez rapidement  
+•  Une absence non rattrapée => un décrochage  
+•  Règle 2 : Posez des questions !  
+•  Les enseignants sont l`a pour y répondre 
+•  Règle 3 : Ne laissez pas passer un mot ou un concept 
+sans le comprendre  
+•  Demandez systématiquement à un enseignant 
+•  Règle 4 : Relisez votre Cours ou TD 
+•  Profitez de la séance suivante pour poser les questions que vous 
+aurez préalablement préparées  
+10/26 
+
+PREMIÈRE PARTIE 
+Introduction à l’intélligence artificielle 
+11/26 
+
+Plan 
+1.  Introduction à l’intelligence artificielle 
+2.  Agents intelligents 
+3.  Algorithmes classiques de recherche en IA 
+4.  Algorithmes et recherches heuristiques 
+5.  Programmation des jeux de réflexion 
+6.  Problèmes de satisfaction de contraintes 
+7.  Agents logiques 
+8.  Logique du premier ordre 
+9.  Inférence en logique du première ordre 
+10.  Introduction à la programmation logique avec Prolog 
+11.  Planification 
+12.  Apprentissage 
+12/26 
+
+En Bref ... 
+•  Qu’est-ce que l’Intelligence Artificielle (IA) ?  
+•  Un peu d’histoire  
+•  Que peut on faire avec l’IA ?  
+13/26 
+
+Qu’est-ce que l’Intelligence Artificielle?  
+ 
+•  Terme inventé par John McCarthy  
+•  Définition (Marvin Lee Minsky):  
+“Construction de programmes informatiques qui s’adonnent à des 
+tâches qui sont, pour l’instant, accomplies de façon plus satisfaisantes 
+par des êtres humains car elles demandent des processus mentaux de 
+haut niveau tels que l’apprentissage perceptuel, l’organisation de la 
+mémoire et le raisonnement critique.”  
+14/26
+
+---
+
+[p. 14-19]
+sky):  
+“Construction de programmes informatiques qui s’adonnent à des 
+tâches qui sont, pour l’instant, accomplies de façon plus satisfaisantes 
+par des êtres humains car elles demandent des processus mentaux de 
+haut niveau tels que l’apprentissage perceptuel, l’organisation de la 
+mémoire et le raisonnement critique.”  
+14/26
+L’IA forte et l’IA faible  
+•  Intelligence artificielle forte 
+•  Le concept d’intelligence artificielle forte fait référence à une 
+machine capable non seulement de produire un comportement 
+intelligent, mais d’éprouver une impression d'une réelle conscience 
+de soi, de « vrais sentiments », et une compréhension de ses 
+propres raisonnements 
+•  Intelligence artificielle faible 
+•  La notion d’intelligence artificielle faible constitue une approche 
+pragmatique d’ingénieur : chercher à construire des systèmes de 
+plus en plus autonomes, des algorithmes capables de résoudre 
+des problèmes en simulant l'intelligence 
+15/26 
+
+Qu’est-ce que l’Intelligence Artificielle?  
+ 
+Pensent comme des êtres humains 
+Pensent de manière rationnelle 
+Agissent comme des êtres humains 
+Agissent de manière rationnelle 
+Des systèmes qui ... 
+16/26 
+
+Agir comme un être humain : le test de Turing  
+ 
+•  Alan Turing (1950)”Computing machinery and intelligence” :  
+•  ”Les machines peuvent-elles penser?” 
+•  ”Les machines peuvent-elles se comporter intelligemment ?” 
+•  Test opérationnel pour établir un comportement intelligent : l’imitation  
+ 
+Problème  
+Le test de Turing n’est pas reproductible et ne se prête pas à une 
+analyse scientifique  
+17/26 
+
+Les prédictions d’Alan Turing  
+ 
+•  Alan Turing a prédit :  
+•  qu’en 2000, une machine aurait 30% de chance de 
+tromper une personne pendant 5 minutes  
+•  les principaux arguments contre l’IA pour les 50 années 
+suivantes 
+•  les principales composantes de l’IA : représentation des 
+connaissances, TALN, raisonnement, compréhension, 
+apprentissage  
+18/26 
+
+Penser comme un être humain : l’approche cognitive  
+ 
+•  Un programme pense-t-il comme un humain? 
+•  Déterminer comment pense les êtres humains? 
+•  L’introspection: Essayer de se saisir de ces propres pensées. 
+•  Les expériences psychologique: Observer une autre personne. 
+•  Observer le fonctionnement du cerveau. 
+•  Les sciences cognitives regroupent un ensemble de disciplines 
+scientifiques dédiées à la description, l'explication, et le cas 
+échéant la simulation, des mécanismes de la pensée humaine, 
+animale ou artificielle. 
+•  Les sciences cognitives et les neurosciences cognitives sont 
+désormais distinctes de l’IA mais Les 3 domaines vont dans la 
+même direction!  
+19/26
+
+---
+
+[p. 19-23]
+ensemble de disciplines 
+scientifiques dédiées à la description, l'explication, et le cas 
+échéant la simulation, des mécanismes de la pensée humaine, 
+animale ou artificielle. 
+•  Les sciences cognitives et les neurosciences cognitives sont 
+désormais distinctes de l’IA mais Les 3 domaines vont dans la 
+même direction!  
+19/26
+Penser rationnellement : les ”lois de la pensée”  
+•  Quels sont les arguments et les processus de pensée 
+corrects? 
+•  Aristote a essayé de codifier le « bien penser ». 
+•  Le syllogisme: raisonnement logique augmentatif à deux propositions 
+conduisant à une conclusion vraie 
+•  Ex: Tous les hommes sont mortels + Socrate est un homme donc 
+Socrate est mortel.  
+•  En ligne directe depuis les mathématiques et la philosophie 
+jusqu’`a l’IA moderne  
+Obstacles  
+Difficulté d’isoler une connaissance informelle et de l’exprimer sous 
+forme d’une règles de la logique. 
+Des problèmes de quelques centaines de faits peut rapidement épuiser 
+les ressources de calcul 
+20/26 
+
+Agir rationnellement  
+•  Comportement rationnel : faire la chose adéquates 
+•  La chose adéquate : celle qui, étant données les informations 
+disponibles, doit permettre d’atteindre au mieux l’objectif  
+•  Cela n’implique pas nécessairement une réflexion (ex : 
+clignement de l’œil / réflexe) mais la réflexion doit être au 
+service de l’action rationnelle  
+•  Aristote (Ethique à Nicomaque) : Tout art et toute 
+investigation, et pareillement toute action et sa suite, est 
+pensé pour viser quelque chose de bon  
+21/26 
+
+Les agents rationnels  
+•  Un agent est une entité qui perçoit et qui agit.  
+•  Ce cours concerne la conception d’agents rationnels 
+•  De manière abstraite, un agent est une fonction qui fait correspondre 
+à un historique de perceptions un ensemble d’actions  
+ 
+ 
+ 
+ f : P* →A  
+•  Pour une classe donnée d’environnements et de tâches, nous 
+cherchons l’agent (ou classe d’agents) avec la meilleure performance  
+Attension  
+Les limites computationnelles rendent la rationalité parfaite inatteignable  
+ 
+-> conception du meilleur programme étant données les ressources de 
+la machine. 
+22/26 
+
+Fondements de l’intelligence artificielle 
+•  Philosophie 
+•  Peut-on utiliser des règles formelles pour tirer des conclusions valides? 
+•  D’ou provient la connaissance? 
+•  Comment la connaissance conduit-elle à l’action? 
+•  Psychologie 
+•  Comment les hommes et les animaux pensent-ils et agissent-ils? 
+•  Mathématique 
+•  Quelles sont les règles formelles qui permettent de tirer des conclusions 
+valides? 
+•  Qu’est ce qui peut être calculé? 
+•  Comment raisonne-t-on à partir d’informations incertaines? 
+•  Économie 
+•  Comment prendre des décisions qui maximisent les gains? 
+•  Comment faire quand les autres risquent de ne pas coopérer? 
+•  Neurosciences 
+•  Quels sont les mécanismes qui permettent au cerveau de traiter l’information? 
+23/26
+
+---
+
+[p. 23-26]
+qui peut être calculé? 
+•  Comment raisonne-t-on à partir d’informations incertaines? 
+•  Économie 
+•  Comment prendre des décisions qui maximisent les gains? 
+•  Comment faire quand les autres risquent de ne pas coopérer? 
+•  Neurosciences 
+•  Quels sont les mécanismes qui permettent au cerveau de traiter l’information? 
+23/26
+Résumé de l’histoire de l’IA  
+1943 
+McCulloch & Pitts : Modèle du cerveau avec un circuit booléen  
+1950 
+Turing’s ”Computing Machinery and Intelligence” 
+1950 69 
+Les grandes espérances 
+Années 50 
+Premiers programmes d’IA, jeux d’échecs de Samuel, Théoricien logique de 
+Newell & Simon, moteur géométrique de Gelernter  
+1956 
+Conférence de Dartmouth : adoption du terme ”Intelligence Artificielle”  
+1965 
+Algorithme complet pour le raisonnement logique de Robinson 
+1966-74 
+L’IA découvre la complexité computationnelle 
+La recherche sur les réseaux de neurones disparait presque  
+1969-79 
+Premiers développements des systèmes fondés sur les connaissances  
+1980-88 
+Explosion de l’industrie des systèmes experts 
+1988-93 
+Fin de l’industrie des systèmes experts : ” l’hiver de l’IA” 
+1985-95 
+Retour en grâce des réseaux de neurones  
+1988- 
+Résurgence des modèles probabilistes ; l’IA devient une science ”Nouvelle 
+IA” : vie artificielle, algorithmes génétiques, soft computing  
+1995- 
+Des agents partout . . . 
+2003- 
+IA de niveau humain de retour sur l’agenda, Big data  
+24/26 
+
+Que peut on faire avec l’IA ?  
+•  Jouer correctement au tennis de table ? 
+•  Oui , le robot d’Anderssone (1988)  
+•  Conduire en toute sécurité à Paris dans une artère bondée ?  
+•  Non pas encore mais des gens y travaille (Darpa Project) 
+•  Commander sur le web une semaine de nourriture ?  
+•  Oui, sans aucun problème et au meilleur prix  
+•  Faire les courses de la semaine dans un centre commercial ?  
+•  Non, pas encore malheureusement, sauf pour des produits limités  
+•  Jouer correctement au bridge ?  
+•  Oui, sans aucun problème  
+•  Découvrir et prouver un nouveau théorème mathématique ?  
+•  Oui, pour certain mais pas pour tous  
+•  Concevoir et réaliser un programme de recherche en biologie moléculaire ?  
+•  Non, pas encore  
+•  Ecrire une histoire drôle  
+•  Non, pas intentionnellement  
+25/26 
+
+Que peut on faire avec l’IA ?  
+•  Donner un conseil juridique avisé? 
+•  Oui, dans des domaines spécialisés du droit  
+•  Traduire de l’anglais au suédois en temps réel ?  
+•  Oui, pour des textes limités. 
+•  Discuter pendant une heure avec un être humain ?  
+•  Non, mais je peux faire illusion quelques instants.  
+•  Réaliser une opération chirurgicale complexe ?  
+•  Oui mais sous surveillance d’un chirurgien 
+•  Vider un lave-vaisselle et tout ranger ?  
+•  Non, pas encore malheureusement.  
+•  Tondre la pelouse ? 
+•  Oui, sans problème  
+26/26
+
+---
+
+[p. 26-26]
+nt une heure avec un être humain ?  
+•  Non, mais je peux faire illusion quelques instants.  
+•  Réaliser une opération chirurgicale complexe ?  
+•  Oui mais sous surveillance d’un chirurgien 
+•  Vider un lave-vaisselle et tout ranger ?  
+•  Non, pas encore malheureusement.  
+•  Tondre la pelouse ? 
+•  Oui, sans problème  
+26/26

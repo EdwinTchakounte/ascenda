@@ -1,0 +1,166 @@
+[
+ {
+  "chapitre": "ce91aa12",
+  "citations": [
+   {
+    "texte": "Les confrontations les plus marquantes sont celles où les personnages dévoilent leurs failles.",
+    "page": 29,
+    "axe": "08-litterature-romans",
+    "theme": "La faille dans la dispute",
+    "portee": "Ce n'est pas la violence de l'echange qui compte mais ce qu'il laisse voir."
+   },
+   {
+    "texte": "Utilisez la confrontation pour dévoiler une information clé.",
+    "page": 29,
+    "axe": "08-litterature-romans",
+    "theme": "Reveler dans le conflit",
+    "portee": "Une information arrachee dans la tension se retient mieux qu'une explication donnee au calme."
+   },
+   {
+    "texte": "Ne précipitez pas la romance. Faites-la évoluer naturellement à travers des moments de complicité et de vulnérabilité.",
+    "page": 29,
+    "axe": "08-litterature-romans",
+    "theme": "Le temps de la relation",
+    "portee": "La patience narrative est ici une technique. Elle vaut aussi pour le lecteur qu'on veut attacher."
+   }
+  ]
+ },
+ {
+  "chapitre": "e11ff397",
+  "citations": [
+   {
+    "texte": "Les scènes de romance doivent révéler les craintes et les désirs des personnages.",
+    "page": 30,
+    "axe": "08-litterature-romans",
+    "theme": "Ce que la scene revele",
+    "portee": "Une scene amoureuse qui n'apprend rien sur les personnages ne sert pas le recit."
+   },
+   {
+    "texte": "Une romance est plus captivante lorsqu’elle est ponctuée de doutes ou de conflits.",
+    "page": 29,
+    "axe": "08-litterature-romans",
+    "theme": "Le doute nourrit la romance",
+    "portee": "Le contraste, et non l'accord, tient le lecteur en haleine."
+   }
+  ]
+ },
+ {
+  "chapitre": "eb249960",
+  "citations": [
+   {
+    "texte": "Une fois votre premier jet terminé, le véritable travail commence : la révision.",
+    "page": 31,
+    "axe": "08-litterature-romans",
+    "theme": "Le vrai travail commence apres",
+    "portee": "Message essentiel pour un auteur debutant : finir un premier jet n'est pas finir un livre."
+   },
+   {
+    "texte": "Le premier jet est souvent imparfait : il contient des incohérences, des descriptions faibles, et parfois des scènes inutiles.",
+    "page": 31,
+    "axe": "08-litterature-romans",
+    "theme": "Accepter l'imperfection du debut",
+    "portee": "Autorise a ecrire mal d'abord, ce qui debloque beaucoup d'auteurs empeches."
+   }
+  ]
+ },
+ {
+  "chapitre": "0fc448ba",
+  "citations": [
+   {
+    "texte": "1. Révision macro : Travaillez sur les éléments globaux (intrigue, personnages, structure). 2. Révision micro : Concentrez-vous sur les détails (dialogues, descriptions, transitions). 3. Correction linguistique : Corrigez la grammaire, l’orthographe et la ponctuation.",
+    "page": 32,
+    "axe": "08-litterature-romans",
+    "theme": "Trois phases dans l'ordre",
+    "portee": "L'ordre est le point important : corriger l'orthographe d'une scene qu'on va supprimer est du temps perdu."
+   },
+   {
+    "texte": "Un bon roman alterne entre moments d’action, de tension et de calme.",
+    "page": 32,
+    "axe": "08-litterature-romans",
+    "theme": "L'alternance du rythme",
+    "portee": "Critere verifiable a la relecture, chapitre par chapitre."
+   }
+  ]
+ },
+ {
+  "chapitre": "10d466cf",
+  "citations": [
+   {
+    "texte": "Un dialogue doit être réaliste, révéler les émotions des personnages et faire avancer l’histoire.",
+    "page": 33,
+    "axe": "08-litterature-romans",
+    "theme": "Trois exigences pour un dialogue",
+    "portee": "Un dialogue qui ne remplit aucune des trois fonctions peut etre coupe sans perte."
+   },
+   {
+    "texte": "Les descriptions immersives aident le lecteur à visualiser la scène.",
+    "page": 33,
+    "axe": "08-litterature-romans",
+    "theme": "Faire voir",
+    "portee": "La comparaison avant et apres revision donnee par l'auteur rend la technique immediatement imitable."
+   }
+  ]
+ },
+ {
+  "chapitre": "3f870afb",
+  "citations": [
+   {
+    "texte": "Cherchez les fautes d’orthographe, les répétitions et les phrases maladroites. Lisez également à voix haute pour repérer les problèmes de rythme.",
+    "page": 34,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Relire a voix haute",
+    "portee": "Methode gratuite et ancienne, plus efficace qu'un correcteur automatique pour le rythme."
+   },
+   {
+    "texte": "Des lecteurs externes peuvent vous donner un avis objectif sur votre roman.",
+    "page": 34,
+    "axe": "08-litterature-romans",
+    "theme": "Le regard exterieur",
+    "portee": "Aucun outil ne remplace un lecteur reel qui dit ou il a decroche."
+   }
+  ]
+ },
+ {
+  "chapitre": "686240ed",
+  "citations": [
+   {
+    "texte": "L’intrigue est-elle captivante ? Les personnages sont-ils crédibles ? Y a-t-il des passages où ils ont décroché ?",
+    "page": 34,
+    "axe": "08-litterature-romans",
+    "theme": "Les bonnes questions au lecteur",
+    "portee": "La troisieme question est la plus utile et la plus rarement posee."
+   }
+  ]
+ },
+ {
+  "chapitre": "0c5b78e5",
+  "citations": [
+   {
+    "texte": "Descriptions immersives : Revois les descriptions pour inclure plus de détails sensoriels (vue, son, toucher, odeur, etc.).",
+    "page": 36,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Demander les cinq sens",
+    "portee": "Etape la plus utile de la consigne de revision : elle transforme un resume en scene."
+   }
+  ]
+ },
+ {
+  "chapitre": "3f6749c5",
+  "citations": [
+   {
+    "texte": "Écrire un roman est une réalisation incroyable, mais pour en faire une source de revenus, vous devez apprendre à le publier et à le promouvoir efficacement.",
+    "page": 37,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ecrire ne suffit pas a vendre",
+    "portee": "Verite economique que beaucoup d'auteurs decouvrent trop tard. Publier et promouvoir sont des metiers distincts."
+   },
+   {
+    "texte": "Merci d’identifier les points faibles et de proposer une version améliorée de la scène, en respectant le ton thriller romantique et les arcs des personnages.",
+    "page": 37,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Une consigne de revision complete",
+    "portee": "Bon exemple de consigne structuree en etapes. Le lecteur peut l'adapter a son propre genre."
+   }
+  ]
+ }
+]

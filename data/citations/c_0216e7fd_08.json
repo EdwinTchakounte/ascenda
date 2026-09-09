@@ -1,0 +1,118 @@
+[
+ {
+  "chapitre": "1d2f6ea3",
+  "citations": [
+   {
+    "texte": "Ce qui compte, c'est de trouver un moyen de justifier le contrôle par le contrôle en réduisant statistiquement les crimes par les interpellations.",
+    "page": 135,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un outil qui se justifie lui-même",
+    "portee": "Un dispositif peut être conservé parce qu'il rend service à l'institution, non parce qu'il fonctionne."
+   },
+   {
+    "texte": "Plus un modèle a rendu service, plus il a marqué son temps, plus il a fini par devenir une seconde nature.",
+    "page": 135,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le modèle devenu évidence",
+    "portee": "Un outil longtemps utilisé cesse d'être questionné et finit par tenir lieu de réalité."
+   },
+   {
+    "texte": "Cette microphysique du pouvoir valorise son action et le pousse à faire du chiffre.",
+    "page": 136,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le chiffre qui commande le geste",
+    "portee": "Une prime à l'interpellation transforme le métier de policier en production de statistiques."
+   }
+  ]
+ },
+ {
+  "chapitre": "9fcfb2bd",
+  "citations": [
+   {
+    "texte": "Il élude la capacité de discernement de l'agent de police qui se trouve pris au piège de sa propre action.",
+    "page": 137,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le discernement mis hors circuit",
+    "portee": "Un système qui prescrit où intervenir dispense d'exercer le jugement qui justifiait le métier."
+   },
+   {
+    "texte": "Une fois dans la machine judiciaire, il devient quasiment impossible de s'en extraire.",
+    "page": 137,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Entrer dans la machine",
+    "portee": "Le coût pour une personne d'être signalée à tort ne se limite pas au moment du contrôle."
+   }
+  ]
+ },
+ {
+  "chapitre": "563169de",
+  "citations": [
+   {
+    "texte": "Le recours systématique à des interpellations sur fond d'une carte numérique pousse le policier à traiter des suspects de manière désindividualisée",
+    "page": 138,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Traiter des données, non des personnes",
+    "portee": "Quand une personne devient un point sur une carte, la relation qui rendait le contrôle acceptable disparaît."
+   },
+   {
+    "texte": "Cet agencement nous fait sortir de la linéarité temporelle du roman policier : le crime n'arrive pas, car il est toujours déjà là.",
+    "page": 139,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un crime déjà là",
+    "portee": "Traiter un acte futur comme s'il était accompli renverse l'ordre du temps et celui du droit."
+   }
+  ]
+ },
+ {
+  "chapitre": "6eb64e1a",
+  "citations": [
+   {
+    "texte": "Le maintien de l'ordre lui-même génère de nouvelles données, qui justifient un maintien accru de l'ordre.",
+    "page": 140,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La boucle qui se nourrit d'elle-même",
+    "portee": "Envoyer la police là où elle a déjà arrêté des gens produit mécaniquement les données qui l'y renverront."
+   },
+   {
+    "texte": "même si un modèle est aveugle à la couleur, le résultat est tout autre. Dans nos villes largement ségréguées, la géographie est un indicateur très efficace de la race",
+    "page": 140,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Neutre en apparence, discriminant en fait",
+    "portee": "Un algorithme qui n'utilise aucune donnée ethnique peut discriminer aussi sûrement par l'adresse."
+   },
+   {
+    "texte": "est vu mais il ne voit pas ; objet d'une information, jamais sujet d'une communication",
+    "page": 141,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Être regardé sans regarder",
+    "portee": "La formule de Foucault décrit exactement la position de qui est traité par un système qu'il ne voit pas."
+   },
+   {
+    "texte": "Le contrôle est toujours le contrôle de l'avenir dans le présent.",
+    "page": 142,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Punir ce qui n'a pas eu lieu",
+    "portee": "Agir sur un acte non commis renverse le principe même de la responsabilité pénale."
+   }
+  ]
+ },
+ {
+  "chapitre": "f1624f05",
+  "citations": [
+   {
+    "texte": "gouverner est un mouvement qui intervient, qui transforme, qui oblige",
+    "page": 143,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que gouverner veut dire",
+    "portee": "Une définition qui permet de reconnaître un exercice de pouvoir même sans ordre explicite."
+   },
+   {
+    "texte": "Le contrôle de l'information adoucit ainsi la violence de la contrainte et élève l'action cybernétique à un niveau supérieur.",
+    "page": 143,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une contrainte devenue douce",
+    "portee": "Un pouvoir qui n'a plus besoin de frapper est plus difficile à identifier et donc à contester."
+   }
+  ]
+ }
+]

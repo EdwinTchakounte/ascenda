@@ -1,0 +1,3769 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ASCENDA",
+    "description": "API de lecture guidée. Un corpus de 78 ouvrages, un chronogramme adaptatif, et un agent qui cite toujours le livre et la page.",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/sante": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "Sante",
+        "description": "Vérifie que l'API répond et que la base est joignable.",
+        "operationId": "sante_sante_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/inscription": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Inscription",
+        "operationId": "inscription_v1_auth_inscription_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InscriptionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionOuverte"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/connexion": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Connexion",
+        "operationId": "connexion_v1_auth_connexion_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnexionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SessionOuverte"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/rafraichir": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Rafraichir",
+        "description": "Rotation du refresh : l'ancien jeton est révoqué à l'usage.\n\nUne connexion irrégulière peut faire échouer la réponse après révocation ;\nle client doit alors repasser par /auth/connexion. C'est le prix d'une\nrotation stricte, et c'est le bon compromis pour un jeton de 60 jours.",
+        "operationId": "rafraichir_v1_auth_rafraichir_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RafraichirIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Jetons"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/deconnexion": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Deconnexion",
+        "operationId": "deconnexion_v1_auth_deconnexion_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RafraichirIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/auth/deconnexion-partout": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Deconnexion Partout",
+        "operationId": "deconnexion_partout_v1_auth_deconnexion_partout_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/auth/mot-de-passe-oublie": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Demander un code de réinitialisation",
+        "description": "Répond toujours 204, que l'adresse existe ou non.\n\nDistinguer les deux cas transformerait cette route en annuaire : on\nsaurait, adresse par adresse, qui a un compte chez nous.",
+        "operationId": "mot_de_passe_oublie_v1_auth_mot_de_passe_oublie_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MotDePasseOublieIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/mot-de-passe-reinitialiser": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Poser un nouveau mot de passe avec le code reçu",
+        "operationId": "reinitialiser_mot_de_passe_v1_auth_mot_de_passe_reinitialiser_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReinitialiserIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/auth/moi": {
+      "get": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Moi",
+        "operationId": "moi_v1_auth_moi_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Utilisateur"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/auth/mot-de-passe": {
+      "post": {
+        "tags": [
+          "Authentification"
+        ],
+        "summary": "Changer Mot De Passe",
+        "operationId": "changer_mot_de_passe_v1_auth_mot_de_passe_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangerMotDePasseIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/axes": {
+      "get": {
+        "tags": [
+          "Axes"
+        ],
+        "summary": "Liste des 11 axes",
+        "operationId": "lister_axes_v1_axes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/axes/{slug}": {
+      "get": {
+        "tags": [
+          "Axes"
+        ],
+        "summary": "Un axe et ses ouvrages",
+        "operationId": "detail_axe_v1_axes__slug__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bibliotheque": {
+      "get": {
+        "tags": [
+          "Bibliothèque"
+        ],
+        "summary": "Liste des ouvrages, filtrable",
+        "operationId": "lister_v1_bibliotheque_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "axe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "slug d'axe",
+              "title": "Axe"
+            },
+            "description": "slug d'axe"
+          },
+          {
+            "name": "niveau",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "debutant",
+                    "intermediaire",
+                    "avance"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Niveau"
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Type"
+            }
+          },
+          {
+            "name": "duree_max",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "minutes de lecture",
+              "title": "Duree Max"
+            },
+            "description": "minutes de lecture"
+          },
+          {
+            "name": "lecture_integrale",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Lecture Integrale"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "recherche sur le titre et l'auteur",
+              "title": "Q"
+            },
+            "description": "recherche sur le titre et l'auteur"
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 24,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bibliotheque/filtres": {
+      "get": {
+        "tags": [
+          "Bibliothèque"
+        ],
+        "summary": "Valeurs disponibles pour les filtres",
+        "operationId": "filtres_v1_bibliotheque_filtres_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bibliotheque/{document_id}": {
+      "get": {
+        "tags": [
+          "Bibliothèque"
+        ],
+        "summary": "Fiche d'un ouvrage",
+        "operationId": "fiche_v1_bibliotheque__document_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bibliotheque/{document_id}/sommaire": {
+      "get": {
+        "tags": [
+          "Bibliothèque"
+        ],
+        "summary": "Sommaire par chapitre",
+        "operationId": "sommaire_v1_bibliotheque__document_id__sommaire_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bibliotheque/{document_id}/pack": {
+      "get": {
+        "tags": [
+          "Bibliothèque"
+        ],
+        "summary": "Le pack complet d'un ouvrage",
+        "description": "Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel.\n\nDestiné au téléchargement hors ligne : l'application le garde sur le\ntéléphone et reste utilisable sans réseau, y compris pour passer les quiz.\nLes réponses sont donc incluses, sans quoi rien ne se corrige hors ligne.",
+        "operationId": "pack_complet_v1_bibliotheque__document_id__pack_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/bibliotheque/{document_id}/export.pdf": {
+      "get": {
+        "tags": [
+          "Bibliothèque"
+        ],
+        "summary": "Export PDF d'un ouvrage",
+        "description": "Le même pack, mis en page pour être imprimé ou partagé.\n\nPar défaut, un compagnon de lecture d'une dizaine de pages. `complet=true`\nrend l'intégralité, ce qui peut représenter plus de quarante pages et\nplusieurs secondes de fabrication.",
+        "operationId": "export_v1_bibliotheque__document_id__export_pdf_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "complet",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "toutes les citations et questions",
+              "default": false,
+              "title": "Complet"
+            },
+            "description": "toutes les citations et questions"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lecteur/{document_id}/chapitre/{chapter_id}": {
+      "get": {
+        "tags": [
+          "Lecteur"
+        ],
+        "summary": "Le texte d'un chapitre",
+        "operationId": "chapitre_v1_lecteur__document_id__chapitre__chapter_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "chapter_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Chapter Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lecteur/{document_id}/pages": {
+      "get": {
+        "tags": [
+          "Lecteur"
+        ],
+        "summary": "Le texte d'une plage de pages",
+        "operationId": "pages_v1_lecteur__document_id__pages_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "debut",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Debut"
+            }
+          },
+          {
+            "name": "fin",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Fin"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lecteur/{document_id}/citations": {
+      "get": {
+        "tags": [
+          "Lecteur"
+        ],
+        "summary": "Les citations retenues d'un ouvrage",
+        "description": "Les citations sont déjà courtes et vérifiées mot à mot contre le texte source :\nelles sont servables même sur un ouvrage non redistribuable.",
+        "operationId": "citations_v1_lecteur__document_id__citations_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "chapitre_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Chapitre Id"
+            }
+          },
+          {
+            "name": "axe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Axe"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lecteur/{document_id}/ouvert": {
+      "post": {
+        "tags": [
+          "Lecteur"
+        ],
+        "summary": "Signaler l'ouverture d'un ouvrage",
+        "description": "Alimente le journal de progression, qui rend le chronogramme adaptatif.",
+        "operationId": "signaler_ouverture_v1_lecteur__document_id__ouvert_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/recherche": {
+      "get": {
+        "tags": [
+          "Recherche"
+        ],
+        "summary": "Rechercher dans le corpus",
+        "operationId": "rechercher_v1_recherche_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "description": "mots recherchés",
+              "title": "Q"
+            },
+            "description": "mots recherchés"
+          },
+          {
+            "name": "axe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Axe"
+            }
+          },
+          {
+            "name": "document_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "minimum": 1,
+              "default": 20,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/recherche/suggestions": {
+      "get": {
+        "tags": [
+          "Recherche"
+        ],
+        "summary": "Complétion sur les titres, auteurs et concepts",
+        "operationId": "suggestions_v1_recherche_suggestions_get",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 2,
+              "title": "Q"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "default": 8,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/agent/questions": {
+      "post": {
+        "tags": [
+          "Agent"
+        ],
+        "summary": "Poser une question",
+        "operationId": "poser_v1_agent_questions_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuestionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/agent/conversations": {
+      "get": {
+        "tags": [
+          "Agent"
+        ],
+        "summary": "Vos conversations",
+        "operationId": "conversations_v1_agent_conversations_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "default": 30,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/agent/conversations/{conversation_id}": {
+      "get": {
+        "tags": [
+          "Agent"
+        ],
+        "summary": "Une conversation",
+        "operationId": "conversation_v1_agent_conversations__conversation_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Agent"
+        ],
+        "summary": "Supprimer",
+        "operationId": "supprimer_v1_agent_conversations__conversation_id__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "conversation_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Conversation Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/agent/suggestions": {
+      "get": {
+        "tags": [
+          "Agent"
+        ],
+        "summary": "Questions proposées dans un contexte de lecture",
+        "description": "Des questions tirées du contenu réel plutôt qu'une liste générique.\n\nOn s'appuie sur les thèmes des citations retenues et sur les idées-force de\nla fiche : ce sont les objets sur lesquels l'agent aura effectivement de quoi\nrépondre.",
+        "operationId": "suggestions_v1_agent_suggestions_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "chapitre_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Chapitre Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quiz/document/{document_id}": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Quiz disponibles pour un ouvrage",
+        "operationId": "quiz_disponibles_v1_quiz_document__document_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quiz/{quiz_id}": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Passer un quiz",
+        "operationId": "passer_v1_quiz__quiz_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "quiz_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Quiz Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quiz/{quiz_id}/corriger": {
+      "post": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Corriger un quiz",
+        "operationId": "corriger_v1_quiz__quiz_id__corriger_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "quiz_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Quiz Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReponsesIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/quiz/document/{document_id}/historique": {
+      "get": {
+        "tags": [
+          "Quiz"
+        ],
+        "summary": "Vos tentatives sur cet ouvrage",
+        "operationId": "historique_v1_quiz_document__document_id__historique_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "default": 20,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/diagnostic": {
+      "get": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Le questionnaire d'entrée",
+        "description": "Six questions de profil, puis jusqu'à quatre questions tirées des quiz\nréels de l'axe choisi. Sonder la connaissance sur le corpus lui-même vaut\nmieux que la faire déclarer : le lecteur se surestime ou se sous-estime.",
+        "operationId": "diagnostic_v1_diagnostic_get",
+        "parameters": [
+          {
+            "name": "axe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "slug d'axe",
+              "title": "Axe"
+            },
+            "description": "slug d'axe"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Enregistrer le diagnostic et en déduire un niveau",
+        "operationId": "enregistrer_diagnostic_v1_diagnostic_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiagnosticIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/chronogrammes": {
+      "get": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Vos chronogrammes",
+        "operationId": "lister_v1_chronogrammes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Générer un chronogramme",
+        "operationId": "creer_v1_chronogrammes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChronogrammeIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/chronogrammes/{chronogramme_id}": {
+      "get": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Un chronogramme et ses séances",
+        "operationId": "detail_v1_chronogrammes__chronogramme_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "chronogramme_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Chronogramme Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/aujourdhui": {
+      "get": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "La séance du jour",
+        "description": "L'écran d'accueil de l'application : ce qu'il y a à faire maintenant.",
+        "operationId": "aujourdhui_v1_aujourdhui_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/seances/{seance_id}": {
+      "patch": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Marquer une séance",
+        "operationId": "marquer_v1_seances__seance_id__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "seance_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Seance Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SeanceStatutIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/chronogrammes/{chronogramme_id}/replanifier": {
+      "post": {
+        "tags": [
+          "Chronogramme"
+        ],
+        "summary": "Replanifier (Ascension)",
+        "description": "Regénère les séances restantes en une nouvelle version, sans toucher à\nl'historique. Le plan précédent passe en « remplacé » : on garde la trace de\nce qui avait été promis, ce qui est la condition d'un plan honnête.",
+        "operationId": "replanifier_v1_chronogrammes__chronogramme_id__replanifier_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "chronogramme_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Chronogramme Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/progression": {
+      "get": {
+        "tags": [
+          "Progression"
+        ],
+        "summary": "Vue d'ensemble",
+        "operationId": "vue_ensemble_v1_progression_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/progression/regularite": {
+      "get": {
+        "tags": [
+          "Progression"
+        ],
+        "summary": "Courbe de régularité",
+        "description": "Un point par jour sur la période, y compris les jours sans activité :\nc'est l'irrégularité qui se voit, pas la somme.",
+        "operationId": "regularite_v1_progression_regularite_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "jours",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 365,
+              "minimum": 7,
+              "default": 84,
+              "title": "Jours"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/progression/maitrise": {
+      "get": {
+        "tags": [
+          "Progression"
+        ],
+        "summary": "Carte de maîtrise des notions",
+        "operationId": "maitrise_v1_progression_maitrise_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 300,
+              "default": 120,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/progression/journal": {
+      "get": {
+        "tags": [
+          "Progression"
+        ],
+        "summary": "Le journal brut",
+        "operationId": "journal_v1_progression_journal_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/notes": {
+      "get": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Vos notes",
+        "operationId": "lister_notes_v1_notes_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Écrire une note",
+        "operationId": "creer_note_v1_notes_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoteIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/notes/{note_id}": {
+      "patch": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Modifier une note",
+        "operationId": "modifier_note_v1_notes__note_id__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "note_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Note Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NoteIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Supprimer une note",
+        "operationId": "supprimer_note_v1_notes__note_id__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "note_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Note Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/surlignages": {
+      "get": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Vos surlignages",
+        "operationId": "lister_surlignages_v1_surlignages_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Surligner",
+        "operationId": "creer_surlignage_v1_surlignages_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SurlignageIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/surlignages/{surlignage_id}": {
+      "delete": {
+        "tags": [
+          "Notes"
+        ],
+        "summary": "Retirer un surlignage",
+        "operationId": "supprimer_surlignage_v1_surlignages__surlignage_id__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "surlignage_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Surlignage Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/concepts": {
+      "get": {
+        "tags": [
+          "Concepts & révision"
+        ],
+        "summary": "Glossaire",
+        "operationId": "glossaire_v1_concepts_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "axe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Axe"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 2
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 50,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/concepts/a-reviser": {
+      "get": {
+        "tags": [
+          "Concepts & révision"
+        ],
+        "summary": "Les notions à revoir aujourd'hui",
+        "operationId": "a_reviser_v1_concepts_a_reviser_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 50,
+              "default": 20,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/concepts/revision": {
+      "post": {
+        "tags": [
+          "Concepts & révision"
+        ],
+        "summary": "Enregistrer une révision",
+        "operationId": "reviser_v1_concepts_revision_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RevisionIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/concepts/{concept_id}": {
+      "get": {
+        "tags": [
+          "Concepts & révision"
+        ],
+        "summary": "Une notion et ses occurrences dans le corpus",
+        "operationId": "detail_v1_concepts__concept_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "concept_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Concept Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/paiements/tarifs": {
+      "get": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "La grille tarifaire",
+        "description": "Lue en base : la page de tarifs ne peut pas diverger de ce qui est\nréellement facturé.",
+        "operationId": "grille_v1_paiements_tarifs_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/paiements": {
+      "post": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "Payer un abonnement",
+        "description": "Crée le paiement puis déclenche la demande sur le téléphone.\n\nLe membre valide avec son code mobile money. La confirmation arrive ensuite\npar notification du fournisseur, ou à défaut par la réconciliation.",
+        "operationId": "payer_v1_paiements_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AchatIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "Vos paiements",
+        "operationId": "historique_v1_paiements_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "default": 30,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/paiements/{paiement_id}": {
+      "get": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "Suivre un paiement",
+        "operationId": "suivre_v1_paiements__paiement_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "paiement_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Paiement Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/paiements/webhook/tara": {
+      "post": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "Notification de Tara",
+        "description": "Répond toujours 200.\n\nUn code d'erreur ferait rejouer Tara en boucle sans rien résoudre. Ce qui ne\npasse pas est journalisé dans `payment_event`, avec un paiement nul quand le\nrattachement a échoué.",
+        "operationId": "webhook_v1_paiements_webhook_tara_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/paiements/abonnement/etat": {
+      "get": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "Votre abonnement",
+        "operationId": "etat_v1_paiements_abonnement_etat_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/paiements/dev/{paiement_id}/confirmer": {
+      "post": {
+        "tags": [
+          "Paiement"
+        ],
+        "summary": "Confirmer un paiement (développement)",
+        "description": "Simule la notification du fournisseur. Refusée hors développement.",
+        "operationId": "confirmer_dev_v1_paiements_dev__paiement_id__confirmer_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "paiement_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Paiement Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/compte": {
+      "get": {
+        "tags": [
+          "Compte"
+        ],
+        "summary": "Votre compte",
+        "operationId": "compte_v1_compte_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "patch": {
+        "tags": [
+          "Compte"
+        ],
+        "summary": "Modifier votre profil",
+        "operationId": "modifier_v1_compte_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfilIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/compte/usage": {
+      "get": {
+        "tags": [
+          "Compte"
+        ],
+        "summary": "Vos compteurs",
+        "operationId": "usage_v1_compte_usage_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/compte/formules": {
+      "get": {
+        "tags": [
+          "Compte"
+        ],
+        "summary": "Les formules disponibles",
+        "description": "Lues depuis plan_quota : la page de tarifs ne peut pas diverger du code\nqui applique les limites.",
+        "operationId": "formules_v1_compte_formules_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AchatIn": {
+        "properties": {
+          "periode_mois": {
+            "type": "integer",
+            "enum": [
+              1,
+              3,
+              12
+            ],
+            "title": "Periode Mois",
+            "default": 1
+          },
+          "telephone": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 8,
+            "title": "Telephone"
+          },
+          "reseau": {
+            "type": "string",
+            "enum": [
+              "MTN",
+              "ORANGE"
+            ],
+            "title": "Reseau"
+          }
+        },
+        "type": "object",
+        "required": [
+          "telephone",
+          "reseau"
+        ],
+        "title": "AchatIn"
+      },
+      "ChangerMotDePasseIn": {
+        "properties": {
+          "ancien": {
+            "type": "string",
+            "title": "Ancien"
+          },
+          "nouveau": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 8,
+            "title": "Nouveau"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ancien",
+          "nouveau"
+        ],
+        "title": "ChangerMotDePasseIn"
+      },
+      "ChronogrammeIn": {
+        "properties": {
+          "axe": {
+            "type": "string",
+            "title": "Axe",
+            "description": "slug de l'axe"
+          },
+          "objectif": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objectif"
+          },
+          "date_debut": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date Debut"
+          },
+          "date_cible": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Date Cible"
+          },
+          "minutes_semaine": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 2000.0,
+                "minimum": 15.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minutes Semaine"
+          },
+          "duree_seance": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 120.0,
+                "minimum": 10.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duree Seance"
+          },
+          "adaptatif": {
+            "type": "boolean",
+            "title": "Adaptatif",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "axe"
+        ],
+        "title": "ChronogrammeIn"
+      },
+      "ConnexionIn": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "mot_de_passe": {
+            "type": "string",
+            "title": "Mot De Passe"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "mot_de_passe"
+        ],
+        "title": "ConnexionIn"
+      },
+      "DiagnosticIn": {
+        "properties": {
+          "axe": {
+            "type": "string",
+            "title": "Axe"
+          },
+          "reponses": {
+            "additionalProperties": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "object",
+            "title": "Reponses"
+          }
+        },
+        "type": "object",
+        "required": [
+          "axe",
+          "reponses"
+        ],
+        "title": "DiagnosticIn"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "InscriptionIn": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "mot_de_passe": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 8,
+            "title": "Mot De Passe"
+          },
+          "nom": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nom"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "mot_de_passe"
+        ],
+        "title": "InscriptionIn"
+      },
+      "Jetons": {
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "title": "Access Token"
+          },
+          "refresh_token": {
+            "type": "string",
+            "title": "Refresh Token"
+          },
+          "token_type": {
+            "type": "string",
+            "const": "bearer",
+            "title": "Token Type",
+            "default": "bearer"
+          },
+          "expire_dans": {
+            "type": "integer",
+            "title": "Expire Dans"
+          }
+        },
+        "type": "object",
+        "required": [
+          "access_token",
+          "refresh_token",
+          "expire_dans"
+        ],
+        "title": "Jetons"
+      },
+      "MotDePasseOublieIn": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email"
+        ],
+        "title": "MotDePasseOublieIn"
+      },
+      "NoteIn": {
+        "properties": {
+          "document_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document Id"
+          },
+          "chunk_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Id"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Page"
+          },
+          "texte": {
+            "type": "string",
+            "maxLength": 8000,
+            "minLength": 1,
+            "title": "Texte"
+          }
+        },
+        "type": "object",
+        "required": [
+          "texte"
+        ],
+        "title": "NoteIn"
+      },
+      "ProfilIn": {
+        "properties": {
+          "nom": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nom"
+          },
+          "minutes_semaine": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 2000.0,
+                "minimum": 15.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minutes Semaine"
+          },
+          "vitesse_lecture_wpm": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 800.0,
+                "minimum": 80.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Vitesse Lecture Wpm"
+          },
+          "objectif": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objectif"
+          },
+          "langue": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 8
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Langue"
+          }
+        },
+        "type": "object",
+        "title": "ProfilIn"
+      },
+      "QuestionIn": {
+        "properties": {
+          "question": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 3,
+            "title": "Question"
+          },
+          "conversation_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Conversation Id"
+          },
+          "document_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document Id",
+            "description": "restreindre à un ouvrage"
+          },
+          "axe": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Axe",
+            "description": "restreindre à un axe"
+          }
+        },
+        "type": "object",
+        "required": [
+          "question"
+        ],
+        "title": "QuestionIn"
+      },
+      "RafraichirIn": {
+        "properties": {
+          "refresh_token": {
+            "type": "string",
+            "title": "Refresh Token"
+          }
+        },
+        "type": "object",
+        "required": [
+          "refresh_token"
+        ],
+        "title": "RafraichirIn"
+      },
+      "ReinitialiserIn": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "title": "Email"
+          },
+          "code": {
+            "type": "string",
+            "maxLength": 12,
+            "minLength": 6,
+            "title": "Code"
+          },
+          "nouveau": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 8,
+            "title": "Nouveau"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "code",
+          "nouveau"
+        ],
+        "title": "ReinitialiserIn"
+      },
+      "ReponsesIn": {
+        "properties": {
+          "reponses": {
+            "additionalProperties": {
+              "type": "integer"
+            },
+            "type": "object",
+            "title": "Reponses",
+            "description": "index de question -> index de choix"
+          },
+          "duree_sec": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duree Sec"
+          },
+          "session_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Session Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "reponses"
+        ],
+        "title": "ReponsesIn"
+      },
+      "RevisionIn": {
+        "properties": {
+          "concept_id": {
+            "type": "string",
+            "title": "Concept Id"
+          },
+          "reussi": {
+            "type": "boolean",
+            "title": "Reussi"
+          }
+        },
+        "type": "object",
+        "required": [
+          "concept_id",
+          "reussi"
+        ],
+        "title": "RevisionIn"
+      },
+      "SeanceStatutIn": {
+        "properties": {
+          "statut": {
+            "type": "string",
+            "enum": [
+              "fait",
+              "reporte",
+              "abandonne",
+              "a_venir"
+            ],
+            "title": "Statut"
+          },
+          "duree_reelle_min": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duree Reelle Min"
+          }
+        },
+        "type": "object",
+        "required": [
+          "statut"
+        ],
+        "title": "SeanceStatutIn"
+      },
+      "SessionOuverte": {
+        "properties": {
+          "utilisateur": {
+            "$ref": "#/components/schemas/Utilisateur"
+          },
+          "jetons": {
+            "$ref": "#/components/schemas/Jetons"
+          }
+        },
+        "type": "object",
+        "required": [
+          "utilisateur",
+          "jetons"
+        ],
+        "title": "SessionOuverte"
+      },
+      "SurlignageIn": {
+        "properties": {
+          "document_id": {
+            "type": "string",
+            "title": "Document Id"
+          },
+          "chunk_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chunk Id"
+          },
+          "page": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Page"
+          },
+          "citation": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Citation"
+          },
+          "couleur": {
+            "type": "string",
+            "pattern": "^(or|sauge|terracotta|ardoise)$",
+            "title": "Couleur",
+            "default": "or"
+          }
+        },
+        "type": "object",
+        "required": [
+          "document_id",
+          "citation"
+        ],
+        "title": "SurlignageIn"
+      },
+      "Utilisateur": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Email"
+          },
+          "nom": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Nom"
+          },
+          "plan": {
+            "type": "string",
+            "title": "Plan"
+          },
+          "plan_until": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Plan Until"
+          },
+          "locale": {
+            "type": "string",
+            "title": "Locale",
+            "default": "fr"
+          },
+          "cree_le": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Cree Le"
+          }
+        },
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "nom",
+          "plan",
+          "cree_le"
+        ],
+        "title": "Utilisateur"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    },
+    "securitySchemes": {
+      "HTTPBearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  }
+}

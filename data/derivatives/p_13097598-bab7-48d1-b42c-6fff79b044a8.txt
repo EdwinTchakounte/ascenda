@@ -1,0 +1,1500 @@
+OUVRAGE : Comment l'IA Transformera Notre Avenir: Comprendre l'Intelligence Artificielle pour être à l'Avant-garde. Apprentissage Automatique. IA Générative. Robots. Superintelligence. (French Edition)
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 605
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  PEDRO URIA-RECIO (p. 3-3)
+  COMMENT L'IA TRANSFORMERA NOTRE AVENIR (p. 4-4)
+  Publication (p. 5-6)
+  Comment l’IA transformera notre avenir (p. 7-9)
+  Critiques (p. 10-15)
+  Table des matières (p. 16-20)
+  Prologue (p. 21-22)
+  Thèse (p. 23-27)
+  Résumé du livre (p. 28-31)
+  Un mot de l'auteur (p. 32-34)
+  Partie I : Le vieux mythe (p. 35-35)
+  Préambule (p. 36-38)
+  1. Mythes anciens sur les êtres artificiels (p. 39-45)
+  2. La science-fiction, de Frankenstein à la course à l'espace (p. 46-55)
+  Partie II : Le nouvel esprit (p. 56-56)
+  Préambule (p. 57-60)
+  3. Philosophes, mathématiciens et premier ordinateur (p. 61-75)
+  4. L'atelier de Dartmouth et le premier hiver de l'IA (p. 76-89)
+  5. Les systèmes experts et le deuxième hiver de l'IA (p. 90-97)
+  6. L'apprentissage automatique pendant le Dot-Com et le troisième hiver de l'IA (p. 98-122)
+  7. La grande crise financière et le long été de l'IA (p. 123-141)
+  8. L'essor de la créativité artificielle (p. 142-164)
+  9. Prélude à l'intelligence artificielle générale (p. 165-179)
+  Partie III : Le nouveau corps (p. 180-180)
+  Préambule (p. 181-183)
+  10. Des automates mécaniques à la révolution industrielle (p. 184-195)
+  11. Le grand débat : logique symbolique ou logique analogique (p. 196-207)
+  12. La force musculaire du bras robotique (p. 208-219)
+  13. Le pays du Robot levant (p. 220-230)
+  14. Les réseaux neuronaux et le rêve robotique de la mobilité (p. 231-251)
+  15. L'art de la guerre avec les robots (p. 252-261)
+  16. Les robots vont dans l'espace (p. 262-272)
+  17. Le dilemme japonais : immigration ou humanoïdes (p. 273-286)
+  18. Robot amoureux (p. 287-301)
+  Partie IV : La transition (p. 302-302)
+  Préambule (p. 303-306)
+  19. Entrelacement IA-humain et posthumanité (p. 307-316)
+  20. La robotique s'étend aux cyborgs (p. 317-336)
+  21. L'IA au service de la biologie synthétique (p. 337-357)
+  22. L'utopie de l'IA : Redistribution, durabilité, équité (p. 358-387)
+  23. La dystopie de l'IA : Autoritarisme, chômage, politique des castes (p. 388-420)
+  24. La Chine et la guerre froide de l'intelligence artificielle (p. 421-446)
+  Partie V : Le nouvel être (p. 447-448)
+  Préambule (p. 449-451)
+  25. L'informatique quantique, un catalyseur probable (p. 452-471)
+  26. Superintelligence (p. 472-488)
+  27. Téléchargement de l'esprit, émulations et immortalité (p. 489-502)
+  28. Apprivoiser la bête (p. 503-524)
+  29. AI, le Dieu (p. 525-537)
+  30. Y aura-t-il une guerre ? (p. 538-546)
+  31. La cible de l'évolution (p. 547-554)
+  Épilogue : Garder une longueur d'avance (p. 555-555)
+  Le cadre actuel de l'IA dans le monde : Davos 24 janvier (p. 556-562)
+  Notre cadre de transition (p. 563-564)
+  Une dernière demande (p. 565-567)
+  Références (p. 568-595)
+  Glossaire (p. 596-601)
+  À propos de l'auteur (p. 602-603)
+  Comment l’IA transformera notre avenir (p. 604-605)
+
+[32/535 passages, 25470 tokens sur 453591]
+
+=== EXTRAITS ===
+
+[p. 5-6]
+PUBLICATION
+“Comment l'IA Transformera Notre Avenir”, Droits d'auteur © 2024 par
+Pedro URIA-RECIO.
+Édition : 1
+Numéro d'enregistrement du droit d'auteur : TX0009403052.
+Traducteur au français : Pedro URIA-RECIO
+Aucune partie de ce livre ne peut être reproduite sous quelque forme que ce
+soit sans la permission écrite de l'éditeur ou de l'auteur, sauf dans les cas
+autorisés par les lois sur le droit d'auteur.
+Les opinions exprimées dans ce livre sont uniquement celles de l'auteur et
+ne reflètent pas nécessairement les points de vue ou opinions des
+employeurs 
+actuels 
+ou 
+précédents 
+de 
+l'auteur. 
+Les 
+affiliations
+professionnelles de l'auteur sont indépendantes du contenu présenté dans ce
+livre.
+ISBN du livre électronique : 978-1-7637017-3-1
+ISBN du livre en format broché : 978-1-7637017-4-8
+ISBN du livre en couverture rigide : 978-1-7637017-5-5
+Couverture : Variation inspirée par l'affiche de sortie en salle de Heinz
+Schulz-Neudamm pour le film Metropolis, réalisé par Fritz Lang en 1927.
+La Fondation Friedrich Wilhelm Murnau détient les droits d'auteur du film.
+Aux États-Unis, ces droits ont expiré le 1er janvier 2023 [Bailey]. L'auteur
+a contacté la Fondation concernant les droits d'auteur pour les territoires en
+dehors des États-Unis. La Fondation a précisé qu'elle est uniquement
+
+responsable de la gestion des droits du film lui-même et ne supervise pas les
+droits de l'affiche de sortie en salle.
+www.howaiwillshapeourfuture.com
+
+---
+
+[p. 31-33]
+ues, peut-être des humains.
+Dans l'épilogue, nous disséquons les déclarations sur l'IA du Forum
+économique mondial (FEM, ou WEF, World Economic Forum), le bras
+politique autoproclamé des mondes occidentaux et émergents en matière
+d'IA, et nous exposons notre point de vue sur la meilleure façon d'éviter les
+résultats dystopiques.
+UN MOT DE L'AUTEUR
+Ce livre est un mélange de mathématiques, de technologie, d'histoire,
+de littérature, de spiritualité et d'économie. Nous l'avons écrit de cette
+manière parce que l'IA est omniprésente et touche littéralement tous les
+domaines de l'activité humaine, et pour vraiment comprendre ce qu'elle
+signifie pour l'humanité, il faut l'examiner à travers de multiples
+dimensions.
+J'ai toujours été passionné par les mathématiques et je suis, à la base,
+un mathématicien. Plus tard, je suis devenu ingénieur et je me suis
+spécialisé dans les données et l'IA, qui est probablement le domaine le plus
+purement mathématique de tous les domaines technologiques. Ma tendance
+mentale est d'aborder toutes les questions de ce point de vue. Cela m'a été
+utile pour ce livre, car pour vraiment comprendre l'IA, il faut avoir une idée
+de la façon dont la technologie s'est développée, percée après percée. Nous
+avons rédigé cet ouvrage dans un langage que tout lecteur peut suivre, y
+compris et surtout ceux qui ne sont pas technologues. Il est impératif que
+vous compreniez ce que signifie l'IA en comprenant comment elle a évolué.
+Nous couvrons des domaines disparates tels que les algorithmes, la
+robotique, la biologie synthétique, l'informatique quantique et d'autres
+encore, car ils sont tous en train de converger.
+En plus de mon diplôme d'ingénieur, j'ai également obtenu un Master
+of Business Administration à la Booth School of Business de l'Université de
+Chicago et j'ai travaillé chez McKinsey en tant que consultant pendant cinq
+ans, complétant ainsi mes connaissances dans le domaine des affaires. Mon
+intérêt va au-delà de la compréhension des fondements mathématiques de
+l'IA et s'étend à l'exploration de ses implications pour les entreprises et
+l'économie politique des sociétés. Dans ce livre, nous avons utilisé les
+cycles économiques et l'économie politique pour expliquer l'évolution de
+l'IA et de la robotique et pour examiner comment les perspectives politico-
+économiques mondiales du XXIe siècle sont susceptibles d'influencer leur
+avenir.
+
+Parallèlement aux affaires et à la technologie, je nourris une ardeur
+profonde pour l'histoire. L'histoire se situe au-dessus des acteurs individuels
+qui la composent, car elle se construit du passé au présent, un continuum
+d'influence connecté qui marque ce que les humains ont fait et offre une
+trajectoire vers laquelle l'humanité se dirige. Nous pensons que l'émergence
+de l'IA est une force tectonique dans l'histoire, prête à révolutionner toutes
+les facettes de notre société, y compris les attributs physiques et
+psychologiques de l'humanité.
+Au sein de l'histoire, la littérature sert de vaisseau pour les récits
+d'individus naviguant dans ses courants. L'un des passages les plus
+captivants que j'ai lus est “L'épopée de Gilgamesh” [mésopotamien], un
+ancien poème mésopotamien gravé sur des tablettes d'argile il y a quatre
+mille ans. Il est souvent considéré comme la plus ancienne œuvre littéraire
+connue. Ce récit épique raconte la quête d'immortalité d'un roi. Ce qui m'a
+profondément frappé dans ce livre ancien, c'est que je me suis senti
+émotionnellement proche des anciens Sumériens et que les aventures, les
+ambitions et les chagrins de Gilgamesh résonnent encore en moi. Je fais
+partie de la même humanité, de la même espèce, avec des sentiments et des
+ambitions identiques à ceux de ces anciens Sumériens.
+Toutefois, cette continuité est sur le point d'être bouleversée par l'IA,
+la robotique, les technologies des cyborgs et la biologie synthétique, ainsi
+que par les changements physiologiques qu'elles introduiront dans la nature
+humaine. Cette transformation fera de nous une nouvelle espèce intimement
+entrelacée avec l'IA. L'espèce hybride qui en résultera pensera, agira et
+ressentira les choses d'une manière entièrement nouvelle, s'éloignant ainsi
+des caractéristiques humaines intemporelles qui nous ont définis à travers
+les âges. Au fur et à mesure que nous nous entrelacerons avec l'IA, notre
+compréhension et notre connexion empathique avec des personnages
+comme Gilgamesh pourraient subir des changements radicaux, car nos
+esprits et nos corps prendront des configurations entièrement nouvelles. Si
+nous nous entrelacions effectivement avec un système d'IA immortel, nous
+ne comprendrions naturellement plus la quête d'immortalité de Gilgamesh.
+La science-fiction est une forme de littérature que j'apprécie
+particulièrement, compte tenu de ma passion pour la technologie. L'attrait
+de la science-fiction réside dans sa capacité unique à offrir un aperçu de
+l'avenir tel qu'il a été envisagé par les auteurs du passé. Bien que les
+changements technologiques et sociétaux présentés par la science-fiction ne
+
+---
+
+[p. 51-52]
+.
+Troisièmement, son apparence visuellement captivante et mémorable,
+imprégnée d'une allure artistique et esthétique métallique, résume la beauté
+et l'attrait de cette technologie d'IA spécifique, présageant une fois de plus
+de la puissance de l'IA générative et du charisme que l'on peut obtenir
+simplement grâce aux algorithmes.
+Explorer l'univers d'Asimov et les trois lois
+Isaac Asimov est probablement l'auteur le plus influent de l'histoire de
+la science-fiction. Isaac Asimov a écrit ses romans et ses histoires lorsque
+l'IA était encore naissante. Nombre de ses récits ont été écrits avant l'atelier
+de Dartmouth de 1956, considéré par beaucoup comme le moment
+fondateur de l'IA. Nous aborderons cet atelier au chapitre 4. Après l'atelier
+de Dartmouth, de nombreux pionniers de l'IA qui ont contribué aux
+avancées technologiques évoquées dans ce livre se sont fréquemment
+inspirés de ses écrits. Asimov s'est servi de sa fascination pour la science et
+de ses talents exceptionnels d'écrivain pour écrire des histoires futuristes
+captivantes. Aujourd'hui encore, son influence sur le monde de la
+technologie est considérable. Grâce au génie d'Asimov, la technologie et la
+science-fiction s'influencent mutuellement de manière profonde.
+L'une de ses œuvres les plus célèbres liées aux robots est “I, Robot”,
+publiée en 1950. Ce livre est un recueil de nouvelles interconnectées
+qu'Asimov a écrites au cours d'une décennie, explorant l'interaction entre
+les humains et les robots à travers les yeux d'un psychologue robotique.
+L'un des récits, “Runaround”, datant de 1941, présente les trois lois de la
+robotique et examine la manière dont ces règles influencent le
+comportement des robots, ainsi que leurs conséquences éthiques et morales.
+Les trois lois de la robotique d'Asimov sont les suivantes :
+●     Première loi : “Un robot ne peut blesser un être humain ou, par son
+inaction, permettre qu'un être humain soit blessé.”
+●     Deuxième loi : “Un robot doit obéir aux ordres qui lui sont donnés
+par des êtres humains, sauf si ces ordres sont contraires à la première
+loi.”
+●     Troisième loi : “Un robot doit protéger sa propre existence tant que
+cette protection n'entre pas en conflit avec la première ou la deuxième
+loi.” [Asimov]
+●     Dans ses dernières histoires, Asimov a introduit une quatrième loi de
+la robotique : “Un robot ne doit pas nuire à l'humanité ou, par son
+inaction, permettre à l'humanité de nuire.” [Asimov]
+Ces lois ont laissé une profonde impression sur la psyché collective
+des technologues et des auteurs de science-fiction et ont influencé l'éthique
+et la philosophie de la robotique et de l'IA. Elles servent souvent de point de
+
+---
+
+[p. 71-72]
+IA et les robots contemporains
+s'appuient sur la logique symbolique pour représenter et traiter les données
+recueillies par leurs capteurs, notamment les images, les sons et les textes.
+La logique symbolique permet à ces systèmes de prendre des décisions
+logiques, de planifier des actions et de naviguer dans l'espace, guidés par
+des représentations symboliques du monde. En bref, la logique symbolique
+est un langage analytique qui permet aux machines de se faire une
+représentation du monde et de prendre des décisions logiques à partir de
+cette représentation.
+Les travaux révolutionnaires de George Boole sont fondamentaux en
+tant que point de départ de la logique symbolique, car ils ont donné
+naissance à l'algèbre binaire en 1847, souvent appelée algèbre de Boole.
+L'algèbre binaire fait partie de la logique symbolique et a introduit un
+concept révolutionnaire dans lequel les valeurs logiques, telles que le vrai et
+le faux, sont représentées numériquement par 1 et 0, respectivement. Cette
+représentation binaire constitue le fondement du traitement de l'information
+numérique et fait partie intégrante de divers langages de programmation et
+systèmes informatiques [Nahin].
+S'appuyant sur les travaux de Boole, les mathématiciens britanniques
+Bertrand Russell et Alfred North Whitehead ont publié “Principia
+Mathematica” [Whitehead et Russell] en 1913. Ce livre est célèbre pour sa
+tentative de déduire des vérités mathématiques à partir de principes
+logiques fondamentaux, démontrant ainsi que les mathématiques sont
+réductibles à la logique. Plus important encore, “Principia Mathematica” a
+introduit un nouveau système de notation pour la logique symbolique, qui a
+été utilisé par les premiers systèmes d'intelligence artificielle et les robots
+dont nous parlerons au chapitre 11.
+Enfin, Alan Turing, mathématicien, informaticien et philosophe
+britannique, a joué un rôle central dans le développement mathématique qui
+a ouvert la voie au premier ordinateur. À ce titre, il est souvent considéré
+comme le père de l'informatique et de l'intelligence artificielle. Alan Turing,
+avec Alonzo Church, a proposé que toute forme de raisonnement
+mathématique puisse être mécanisée [Turing]. Cette thèse postulait qu'un
+dispositif mécanique capable de manipuler des symboles aussi simples que
+0 et 1 selon des règles précises pouvait imiter n'importe quel processus
+concevable de déduction mathématique. En d'autres termes, les machines
+pourraient être programmées pour effectuer n'importe quel calcul
+mathématique pouvant être défini de manière claire et précise.
+Fort de cette thèse, Alan Turing a présenté en 1936 la “machine de
+Turing”, une conception abstraite d'une machine capable d'exécuter des
+instructions et de manipuler des symboles pour effectuer tous les calculs
+
+---
+
+[p. 92-93]
+experts, investissant plus d'un milliard de dollars
+dans ces solutions en 1985, soit en les achetant à des fournisseurs de
+logiciels, soit en les développant en interne. Ce boom des systèmes experts
+a alimenté la croissance de l'industrie de l'IA, les entreprises de matériel et
+de logiciels fournissant un soutien à ces systèmes.
+En outre, l'essor des systèmes experts a modifié le paysage du
+financement en changeant la base du développement, qui n'était plus
+exclusivement entre les mains de la R&D gouvernementale, mais
+comprenait une composante substantielle de la part des entreprises. De
+nombreuses entreprises ont investi massivement dans la recherche et la
+mise en œuvre de systèmes experts afin d'acquérir un avantage
+concurrentiel, stimulant ainsi l'innovation dans des secteurs allant de la
+finance et des soins de santé à la fabrication et à la logistique. À long terme,
+non seulement le financement par les entreprises renforce la résilience de la
+recherche sur l'IA, mais il sert également à déterminer son orientation
+positive ou négative.
+Nous notons que cette situation est analogue à celle qui s'est produite
+dans le domaine de l'exploration spatiale. Les programmes d'exploration
+spatiale aux États-Unis étaient autrefois menés exclusivement par la NASA,
+qui a progressivement commencé à faire appel à des entreprises privées
+pour développer des éléments de ses projets. Aujourd'hui, une part
+importante de l'exploration spatiale est entièrement privée, comme SpaceX
+et le projet Kuiper d'Amazon - des constellations internet par satellite qui
+fournissent l'internet à haut débit à faible latence - et même des idées
+novatrices comme Sea Launch, un consortium qui fournit des services de
+lancement orbital.
+Avantages et limites des systèmes experts
+Les systèmes experts ont révolutionné les processus de prise de
+décision en émulant l'expertise humaine dans des domaines spécifiques. Si
+ces systèmes ont offert des avantages remarquables, leurs limites inhérentes
+ont également façonné la trajectoire du développement de l'IA.
+En ce qui concerne les avantages, les systèmes experts ont excellé
+dans des domaines de connaissance bien définis, dépassant souvent les
+capacités humaines en termes de précision et de rapidité. En outre, ces
+systèmes appliquaient les règles de manière cohérente sans succomber à
+l'influence de la fatigue ou des biais cognitifs humains. Comme ils étaient
+basés sur des règles et des arbres de décision, leur interprétabilité constituait
+un avantage significatif, en particulier dans les secteurs critiques des soins
+de santé et des services financiers, qui sont très réglementés.
+
+---
+
+[p. 112-113]
+rmet de relever efficacement le défi des
+dépendances à long terme dans les séquences et de résoudre le problème
+susmentionné. En outre, dans un réseau LSTM, les informations circulent
+dans deux directions, vers l'avant et vers l'arrière dans le temps. Les
+connexions vers l'avant sont les connexions standard d'un réseau neuronal,
+et les connexions vers l'arrière sont appelées connexions récurrentes. Cette
+bidirectionnalité leur permet de saisir plus efficacement les dépendances
+temporelles à long terme, comme des mots ou des idées dont la signification
+dépend d'un autre mot prononcé auparavant. En raison de cette récurrence,
+ces réseaux sont appelés réseaux neuronaux récurrents.
+Les RRN sont en fait beaucoup plus anciens que les LSTM. En 1982,
+un physicien du nom de John Hopfield en avait déjà mis un en œuvre, le
+réseau Hopfield [Hopfield]. Mais c'est la LSTM qui a perfectionné le
+concept de RRN. Les LSTM jouent un rôle crucial dans des applications
+telles que la traduction automatique, la génération de texte et l'analyse des
+sentiments. Ils sont également utilisés dans la prédiction de séries
+temporelles en finance, l'analyse vocale et la détection d'anomalies dans les
+données séquentielles.
+La polyvalence des LSTM a conduit à leur adoption généralisée dans
+diverses industries au cours des décennies suivantes. Jusqu'à ce que l'IA
+générative devienne courante, les LSTM étaient le principal algorithme qui
+alimentait les chatbots et les voicebots. Nous aborderons l'IA générative au
+chapitre 7. Outre le langage, nous utilisons aujourd'hui les LSTM dans des
+problèmes structurés par des séquences temporelles de données. Par
+exemple, dans le domaine de la finance, les LSTM sont utilisées pour la
+prédiction du cours des actions et le trading algorithmique. Dans le domaine
+de la santé, les LSTM sont utilisées pour surveiller les signes vitaux afin
+d'anticiper les interventions médicales. Les LSTM sont également utilisées
+dans les véhicules autonomes pour prédire la trajectoire des objets en
+mouvement, comprendre les schémas de circulation et améliorer les
+processus de prise de décision.
+Identification des formes avec les réseaux
+neuronaux convolutifs
+Notre sens visuel est l'un des principaux canaux de perception et de
+compréhension du monde. Les CNN sont des algorithmes intelligents
+spécialement conçus pour interpréter les images. Ils fonctionnent comme
+des détectives numériques qui examinent méticuleusement les images à la
+recherche de motifs critiques tels que des bords, des formes ou des
+caractéristiques spécifiques. Pour ce faire, ils utilisent des couches de filtres
+
+---
+
+[p. 129-130]
+r une partie du
+dictionnaire, chaque phonème de chaque mot prononcé dans les différents
+timbres de voix de 100 millions de personnes, multiplié par la combinaison
+de mots qui doivent être combinés en expressions et en phrases pour
+pouvoir agir. Cette formation permet aux AV de transcrire avec précision la
+langue parlée en texte.
+Après cette transcription initiale, le système passe au traitement du
+langage naturel (NLP) et à la compréhension. Le texte saisi est analysé en
+profondeur afin de déterminer l'intention de l'utilisateur et d'extraire les
+informations pertinentes. Les algorithmes de compréhension du langage
+utilisent diverses techniques, notamment l'intégration des mots, la
+reconnaissance des entités nommées, l'analyse des sentiments et la
+modélisation du langage, pour discerner les mots-clés, les phrases et
+l'objectif de l'interaction de l'utilisateur. Les enchâssements de mots revêtent
+une grande importance et seront abordés dans le chapitre suivant, qui traite
+de l'IA générative, puisqu'ils en sont le précurseur.
+Une fois que l'assistant vocal a saisi l'intention de l'utilisateur, il
+procède à la recherche d'une réponse. Par exemple, si un utilisateur
+demande le temps qu'il fera ce jour-là, le système doit formuler une requête
+pour récupérer des informations météorologiques actualisées sur le web ou
+dans des bases de données internes. La capacité à fournir des réponses
+informatives dépend souvent de l'accès aux graphes de connaissances et aux
+capacités de recherche. Ces systèmes puisent dans de vastes référentiels de
+données structurées, qui contiennent des informations sur un nombre
+incalculable d'entités, de lieux et de concepts. Ces connaissances étendues
+permettent aux assistants virtuels de fournir aux utilisateurs des réponses
+précises à diverses questions.
+Ensuite, ces systèmes utilisent la technologie de synthèse vocale pour
+fournir des réponses aux utilisateurs. Les algorithmes de synthèse vocale
+transforment les informations textuelles en paroles naturelles, souvent avec
+des options de personnalisation basées sur les préférences de l'utilisateur.
+Enfin, dans le cas de conversations à plusieurs tours, une gestion efficace du
+dialogue joue un rôle essentiel. Les assistants vocaux doivent conserver le
+contexte des interactions précédentes, afin que leurs réponses restent
+cohérentes et pertinentes tout au long des discussions.
+Si cette génération d'assistants vocaux s'est avérée utile dans les
+applications commerciales, en moins de dix ans, leur technologie a été
+complètement dépassée - et rendue obsolète, comme nous le verrons plus
+loin - par l'IA générative.
+
+---
+
+[p. 147-148]
+a génération de codes, parmi de nombreuses
+autres applications.
+Former un transformateur : Apprentissage auto-
+supervisé
+Les modèles traditionnels d'apprentissage supervisé s'appuient sur des
+données étiquetées pour former les modèles, ce qui nécessite un effort
+humain considérable en matière de structuration, de présentation et
+d'annotation des données. L'annotation manuelle des données est très
+coûteuse. En outre, les algorithmes non supervisés pour le NLP, tels que le
+word embeddings, le BERT et les HHM, comme expliqué quelques
+paragraphes plus haut, n'ont pas fonctionné de manière irréprochable.
+Cependant, un changement de paradigme s'est produit avec le concept
+d'apprentissage auto-supervisé, dans lequel les modèles extraient des
+connaissances des données au lieu de s'appuyer sur des étiquettes explicites.
+Ce changement permet aux systèmes d'IA d'extraire de manière autonome
+des corrélations, des modèles et des structures cachées dans de vastes
+ensembles de données non étiquetées, ce qui les rend plus adaptables et
+évolutifs.
+Dans le domaine du NLP, les stratégies d'apprentissage auto-supervisé
+telles que la modélisation du langage masqué se sont avérées inestimables.
+Dans cette technique, les mots d'une phrase sont masqués de manière
+aléatoire et le modèle doit prédire les mots manquants en se basant sur le
+contexte environnant. Prenons l'exemple de la phrase suivante : “Le chat a
+poursuivi le ______ dans la cour”. Un modèle auto-supervisé peut déduire
+que le mot manquant est probablement “écureuil” ou “souris” parce qu'il
+est logique dans le contexte donné. Cette méthode d'apprentissage sur de
+grands corpus de textes permet aux modèles d'acquérir une connaissance
+approfondie de la sémantique, de la syntaxe et du contexte de la langue. Ces
+connaissances peuvent ensuite être appliquées à une variété de tâches NLP
+en aval, telles que l'analyse des sentiments dans le texte, le résumé et la
+reconnaissance des entités nommées. À un niveau fondamental, c'est la
+technique de formation qui a été employée pour former ChatGPT ou
+n'importe lequel de ses concurrents.
+Une fois qu'un modèle a été formé de cette manière, il peut être utilisé
+pour générer du texte un mot à la fois, en se basant sur les mots générés
+précédemment. Par exemple, à partir du texte “Il était une fois un jeune
+sorcier nommé Harry”, le modèle peut poursuivre l'histoire en prédisant des
+mots tels que “qui”, “fréquentait”, “a”, “magique”, “école”, “appelé”,
+“Poudlard”. L'apprentissage auto-supervisé permet aux modèles de langage
+d'appréhender le flux narratif, la cohérence et la créativité, ce qui les rend
+efficaces dans des tâches telles que la génération d'histoires, la création de
+contenu et la génération de code.
+
+---
+
+[p. 166-167]
+y compris le
+GPT-4 d'OpenAI [TechCrunch]. Spéculer sur ce que Q* pourrait être est un
+moyen pratique de présenter les domaines de recherche actuels pour
+atteindre l'AGI. C'est le cadre de ce chapitre.
+Les pages qui suivent plongent dans les multiples domaines d'étude
+actuels, qui constituent en fait le point de départ de l'AGI.
+Appliquer la logique pour résoudre des problèmes
+mathématiques
+L'une des explications potentielles de ce qu'est réellement Q* concerne
+l'initiative de l'OpenAI de résoudre des problèmes mathématiques. Bien que
+cela puisse sembler être une simple réalisation que l'IA a déjà abordée, il est
+important que l'IA comprenne le raisonnement mathématique. La véritable
+importance réside dans le potentiel de l'IA à comprendre les preuves
+mathématiques, avec des implications de grande portée dans divers
+domaines, étant donné le rôle fondamental des mathématiques dans le
+monde [Berman].
+Cela nous rappelle le “General Problem Solver” conçu par Allen
+Newel et Herbert Simon en 1957 et l'approche de la logique symbolique
+défendue par John McCarthy, dont nous avons parlé au chapitre 4. Plus de
+60 ans se sont écoulés depuis, mais les machines ont toujours du mal à
+accomplir des tâches impliquant la logique et le raisonnement et ne peuvent
+toujours pas procéder sans directives spécifiques et codées.
+La capacité de générer indépendamment des preuves mathématiques
+ou logiques exige une compréhension plus profonde des preuves elles-
+mêmes, qui dépasserait les capacités prédictives des LLM actuels.
+Lorsqu'ils sont confrontés à un problème impliquant des concepts
+mathématiques ou logiques, les modèles LLM peuvent fournir des réponses
+correctes sans véritablement comprendre les preuves théoriques sous-
+jacentes, se contentant de reproduire les schémas de leur programmation et
+de leurs données d'entraînement. Cela souligne les limites actuelles de la
+capacité à saisir les raisons qui sous-tendent les principes logiques. La tâche
+consistant à comprendre pourquoi les réponses sont correctes ou
+incorrectes, plutôt que de simplement prédire le caractère suivant d'une
+séquence, est actuellement un défi insurmontable pour les LLM.
+À cet égard, un document de recherche intitulé “STaR : Bootstrapping
+Reasoning with Reasoning” a été publié par Stanford et Google en mai
+2022 [Zelikman et al.]. Ce document explore la génération de chaînes de
+pensée étape par étape afin d'améliorer les performances des modèles de
+langage dans des tâches de raisonnement complexes, telles que les
+questions de bon sens ou les mathématiques. Le concept de “chaîne de
+pensée” consiste à guider le modèle pour qu'il raisonne sur des étapes
+
+---
+
+[p. 187-188]
+-d'œuvre, la tour Su Song à
+Kaifeng, en Chine, construite en 1088 après J.-C. [Lin et Yan]. Cette tour
+abritait une série de mannequins automatiques qui accomplissaient diverses
+tâches, allant de la mesure du temps à l'indication de la direction des vents,
+en passant par la sonnerie des cloches et les représentations théâtrales.
+L'islam médiéval révolutionne la mécanique
+Le monde arabe médiéval a connu une ère remarquable de progrès
+intellectuels et technologiques, connue sous le nom d'âge d'or islamique.
+Cette époque, dirigée par la dynastie abbasside, qui a régné du VIIIe au
+XIIe siècle, a été le témoin de développements étonnants dans diverses
+disciplines, telles que la science, la philosophie, la médecine, les arts et
+l'architecture. Elle a commencé par l'expansion de l'islam sous les califats
+omeyyades et abbassides, qui ont établi de vastes empires s'étendant de
+l'Espagne à la Perse. Sous la direction de la dynastie abbasside, Bagdad est
+devenue un centre intellectuel et culturel de premier plan, où des avancées
+significatives ont été réalisées dans des domaines tels que les
+mathématiques, l'astronomie et la médecine, laissant un impact durable sur
+la civilisation mondiale.
+Ismail al-Jazari est un musulman polymathe qui a laissé une trace
+indélébile dans l'histoire de l'ingénierie. Al-Jazari a vécu au XIIe siècle dans
+le nord de la Mésopotamie, et son héritage perdure grâce à son ouvrage, le
+“Livre de la connaissance des dispositifs mécaniques ingénieux”, écrit en
+1206. Dans ses pages, il décrit méticuleusement plus de 50 dispositifs
+mécaniques, dont des automates humanoïdes d'une étonnante complexité
+[Elices].
+L'un des automates les plus célèbres d'Al-Jazari était un bateau équipé
+de quatre musiciens automatiques qui captivaient les invités lors de
+somptueuses fêtes royales. Ces musiciens, qui jouaient de la flûte, du
+tambour, du luth et d'autres instruments traditionnels de l'époque, étaient
+parfaitement synchronisés grâce à un système complexe d'engrenages, de
+cames et de leviers actionnés par un système de poids et d'eau. Chaque
+musicien automatique jouait des mélodies préprogrammées, à la manière
+d'un “piano mécanique”, offrant au public une expérience musicale unique.
+Un autre automate remarquable construit par Al-Jazari était une
+serveuse mécanique qui servait de l'eau, du thé et d'autres boissons. La
+boisson s'écoulait d'un réservoir dans une cruche puis, après quelques
+minutes, dans une tasse. Une porte automatisée s'ouvrait alors pour
+permettre à la serveuse de terminer son service. Al-Jazari a également créé
+un automate pour le lavage des mains qui comprenait un mécanisme de
+chasse d'eau antérieur à la technologie des toilettes contemporaines. Cette
+invention mettait en scène un automate humanoïde près d'un évier rempli
+
+---
+
+[p. 206-207]
+'intelligence artificielle, y compris l'apprentissage automatique
+et l'apprentissage profond, qui s'appuient sur des représentations
+symboliques des données. Cette approche facilite les tâches complexes
+telles que la compréhension du langage naturel, le raisonnement de haut
+niveau et la planification dans les systèmes autonomes.
+En outre, l'approche consistant à créer des modèles du monde,
+défendue par la logique symbolique, devient encore plus pertinente en
+2024, car c'est l'une des voies les plus explorées par les grands géants de la
+technologie pour parvenir à l'intelligence artificielle générale. Nous avons
+abordé cette question au chapitre 9.
+
+---
+
+[p. 226-228]
+et de l'IA, on retrouve toujours les mêmes personnes.
+Robotique japonaise Sociétés internationales dans
+le monde entier
+L'autre évolution des années 1980 a été l'expansion internationale des
+entreprises japonaises. De nombreuses sociétés se sont implantées aux
+États-Unis et en Europe, notamment Kawasaki, Mitsubishi et Denso, une
+filiale de Toyota. Cependant, FANUC est le meilleur exemple de réussite
+dans les coentreprises avec des géants américains.
+La société FANUC (Fuji Automatic Numerical Control) a été fondée
+en 1956, mais c'est à cette époque qu'elle a pris son essor. FANUC s'est
+d'abord concentrée sur la fabrication de commandes numériques tout au
+long des années 1960. Les commandes numériques sont les panneaux de
+commande utilisés dans les processus de fabrication pour contrôler les
+mouvements des robots. Compte tenu de sa force dans le domaine des
+commandes numériques, FANUC s'est lancée dans la robotique en 1977 et a
+présenté le robot FANUC M-1, le premier robot industriel contrôlé par un
+microprocesseur.
+Ce qui est remarquable avec FANUC, c'est qu'elle a été l'une des
+premières entreprises japonaises de robotique à se développer à
+l'international. En 1982, FANUC a créé une coentreprise 50-50 avec GM,
+appelée GM FANUC Robotics Corporation, dont le siège se trouve à
+Detroit, pour fabriquer et vendre des robots aux États-Unis. GM a supervisé
+la gestion, tandis que FANUC a apporté son expertise en matière de
+développement de produits et de fabrication.
+Par la suite, en 1986, FANUC et General Electric (GE) ont développé
+une collaboration qui a conduit à la création de trois filiales : aux États-
+Unis, en Europe au Luxembourg et en Asie au Japon. Dans le cadre de cette
+collaboration, GE a cessé sa production de commandes numériques et a
+transféré cette installation à la nouvelle coentreprise, GE FANUC
+Automation Corporation, aux États-Unis.
+L'afflux de sociétés japonaises aux États-Unis a considérablement
+transformé le paysage de la robotique industrielle à la fin des années 1970,
+provoquant un changement sismique pour Unimation. Ces entreprises
+japonaises se sont inspirées (et peut-être même davantage) de la technologie
+d'Unimation pour atteindre l'excellence en matière de robotique et ont
+finalement commencé à concurrencer directement Unimation sur son
+marché national, ce qui a entraîné la chute d'Unimation, comme nous
+l'avons raconté dans le chapitre précédent.
+
+Les ambitions du Japon en matière d'IA : En
+avance sur son temps
+Si le Japon est réputé pour ses réalisations dans le domaine de la
+robotique, l'archipel a également investi de manière substantielle dans le
+développement de capacités d'IA au cours des années 1970 et 1980.
+Le premier domaine de recherche au cours de cette période a été le
+traitement du langage naturel, qui a donné lieu à la création de systèmes
+avancés de traitement de la langue japonaise, d'outils de traduction
+automatique et de technologies de pointe en matière de reconnaissance
+vocale, avec des avancées particulières de Toshiba et de l'université de
+Kyushu [Nishida].
+En outre, la vision par ordinateur est devenue un deuxième domaine
+d'intérêt. Des entreprises de robotique comme FANUC et des géants de
+l'automobile comme Toyota ont commencé à intégrer des systèmes de
+vision par ordinateur dans leurs processus de fabrication. Ces systèmes
+permettaient aux robots d'exécuter des tâches de contrôle de la qualité et
+d'assemblage avec une précision inégalée. En outre, lors de l'exposition
+universelle d'Osaka en 1970, une équipe de l'université de Kyoto a présenté
+le premier système de reconnaissance faciale au monde [Gates] [Nishida].
+Comme nous l'avons vu au chapitre 5, les années 1980 ont été la
+décennie des systèmes experts, et ce fut également le cas au Japon. Parmi
+les exemples notables, on peut citer le Scheplan d'IBM Japon pour
+l'industrie sidérurgique, l'OHCS de Kayaba pour la conception de systèmes
+hydrauliques et le système automatique d'acheminement des tuyaux
+d'Hitachi pour les centrales électriques [Motoda].
+Dans ce contexte de recherche et de développement robustes en
+matière d'IA et de succès remarquables du Japon dans le domaine de la
+robotique, le gouvernement japonais a lancé l'ambitieux projet FGCS (Fifth
+Generation Computer Systems ou 5ème génération) en 1982, avec un
+financement substantiel de 400 millions de dollars [Pollack]. Son objectif
+premier était de construire des centres de données dotés d'un grand nombre
+d'ordinateurs capables de s'attaquer à des problèmes d'IA complexes tels
+que le raisonnement, la compréhension du langage naturel, l'apprentissage
+automatique et, en fin de compte, l'émulation d'une intelligence semblable à
+celle de l'homme. L'intention était d'exploiter le potentiel du traitement
+
+---
+
+[p. 244-245]
+ment conçus pour fonctionner en
+toute sécurité à côté des piétons et des animaux domestiques. Lorsque la
+boîte approche de sa destination, les clients reçoivent une notification qui
+leur permet de la récupérer directement auprès du robot. Cette solution
+innovante de livraison au dernier kilomètre accélère les délais de livraison
+et minimise l'impact environnemental généralement associé aux méthodes
+de livraison traditionnelles.
+Outre les robots terrestres, Amazon a beaucoup investi dans la
+technologie des drones afin d'améliorer les livraisons sur le dernier
+kilomètre. Prime Air, le service de livraison par drone d'Amazon, utilise des
+drones dotés de capacités de décollage et d'atterrissage verticaux, ce qui
+leur permet de passer en toute transparence du mode de vol au mode de vol
+stationnaire. Ces drones sont dotés de systèmes avancés de vision par
+ordinateur, de LiDAR et de GPS, ce qui leur permet de naviguer en toute
+sécurité, d'éviter les obstacles et d'identifier avec précision l'emplacement
+de la livraison. Conçus pour accueillir des colis de tailles et de poids
+différents, ces drones offrent une grande polyvalence pour la livraison d'une
+large gamme de produits. Amazon envisage d'utiliser les drones pour des
+livraisons ultra-rapides le jour même dans les zones urbaines et
+suburbaines, offrant ainsi aux clients une option de livraison pratique et
+efficace.
+Du côté négatif, un nombre croissant d'incidents de vandalisme contre
+des robots de livraison à partir de 2023 jette une ombre sur l'acceptation et
+l'adoption de cette technologie émergente. Les actes délibérés de
+détérioration et de vol perturbent non seulement l'efficacité des livraisons
+autonomes, mais nous rappellent également les actes de vandalisme contre
+les robots décrits dans le film “A.I.” de Steven Spielberg en 2001, où la
+mise en œuvre des robots suscitait un rejet généralisé de la part de la
+société.
+Le zénith de l'agilité des robots avec Boston
+Dynamics
+Au-delà des voitures autonomes, des robots d'entrepôt ou de livraison,
+les humanoïdes sont sans doute la quintessence de la mobilité robotique, et
+Boston Dynamics en est l'entreprise la plus emblématique. Fondée par Marc
+Raiber, Boston Dynamics est issue en 1992 du Leg Laboratory du MIT, qui
+a posé les bases scientifiques de l'entreprise.
+Les robots de Boston Dynamics sont réputés pour leur équilibre
+exceptionnel et leur habileté à accomplir diverses tâches physiques. Les
+robots de Boston Dynamics ont réalisé des exploits impressionnants,
+
+---
+
+[p. 263-264]
+marqué l'aboutissement de
+l'objectif principal du programme Apollo, et la NASA avait déjà planifié de
+nombreuses nouvelles missions. Un vaisseau spatial réutilisable, capable de
+transporter des astronautes et des charges utiles vers et depuis l'orbite, est
+apparu comme une alternative rentable aux coûteux véhicules de lancement
+jetables utilisés jusqu'alors. Cette vision s'est cristallisée en 1981 lorsque la
+navette spatiale a effectué son premier vol. Le programme de la navette
+spatiale a été salué comme révolutionnaire, offrant un accès fréquent et
+polyvalent à l'espace, et il est devenu la pierre angulaire des efforts de la
+NASA au cours des décennies suivantes [Smibert].
+L'une des principales missions de la navette spatiale consistait à
+assurer la maintenance du télescope spatial Hubble. Le Hubble a été
+déployé dans l'espace en 1990 à bord de la navette spatiale. Ce télescope a
+été conçu pour surmonter les distorsions causées par l'atmosphère terrestre,
+qui brouillent les images capturées par les télescopes au sol. Au fil des ans,
+le Hubble a capturé des images étonnantes et emblématiques de galaxies
+lointaines, de nébuleuses et d'objets célestes, permettant de mieux
+comprendre la formation des étoiles, des galaxies et l'expansion de
+l'univers. Le Hubble a également mené des recherches approfondies sur les
+exoplanètes, la matière noire et l'évolution des galaxies, laissant une trace
+indélébile dans le domaine de l'astronomie et de l'exploration spatiale
+[Bell].
+En outre, les observations de Hubble ont contribué à d'importantes
+découvertes scientifiques liées à Edwin Hubble, l'astronome américain qui a
+donné son nom au télescope. Edwin Hubble a démontré que l'univers était
+en expansion, mais ne savait pas à quelle vitesse. Le télescope Hubble a
+mesuré la vitesse de cette expansion, aujourd'hui connue sous le nom de
+constante de Hubble.
+Trente ans plus tard, le Hubble est toujours en service, ce qui en fait
+l'un des instruments scientifiques les plus durables et les plus productifs de
+l'histoire. Sa longévité a été assurée par une série de cinq missions
+d'entretien effectuées par des équipages de la navette spatiale, qui ont
+permis d'effectuer des mises à niveau et des réparations qui ont prolongé sa
+durée de vie opérationnelle. Le bras robotique connu sous le nom de
+Canadarm, qui permet aux astronautes de positionner le télescope avec
+précision pour les réparations et les mises à niveau, a joué un rôle essentiel
+dans le succès de ces missions de réparation. L'Agence spatiale canadienne
+a mis au point le Canadarm, un bras robotisé qui peut s'étendre depuis la
+soute de la navette et manipuler des objets dans l'espace avec une grande
+précision [Barath].
+
+---
+
+[p. 281-282]
+onçu pour
+collaborer avec les travailleurs humains, en suivant leur exemple et en
+complétant leurs efforts. Cela ouvre des possibilités d'amélioration de
+l'efficacité, de la sécurité et de la productivité sur les chantiers de
+construction, où les défis imprévisibles et le besoin d'adaptabilité sont
+courants [Kaneko et Kaminaga].
+La marée montante de l'automatisation des
+humanoïdes dans les industries de services
+Outre la production industrielle et la construction, l'industrie des
+services est un autre domaine où l'automatisation basée sur les humanoïdes
+se développe plus rapidement au Japon que dans le reste du monde.
+Le Japon est traditionnellement favorable à une immigration limitée
+pour les raisons que nous avons évoquées, et cela a été un véritable
+catalyseur pour le développement et la mise en œuvre de robots humanoïdes
+dans de multiples aspects de la vie économique, sociale et même religieuse.
+Nous notons toutefois l'influence culturelle concurrente de la priorité
+donnée à l'interaction humaine par rapport aux interfaces machines dans
+diverses industries de services, qui va ostensiblement dans une direction
+opposée. Le Japon entretient en effet une profonde culture du service qui
+s'étend à l'hôtellerie, aux soins de santé et à la vente au détail.
+Néanmoins, la nécessité est la mère de l'invention ; la société vieillit et
+il est peu probable qu'elle envisage l'immigration et l'importation
+d'influence non japonaise comme une solution à ses pénuries de main-
+d'œuvre. L'automatisation pilotée par des humanoïdes apparaît comme une
+solution viable, dont la portée dépasse le secteur manufacturier
+conventionnel et s'étend aux industries de services telles que la banque,
+l'assurance et la santé. Le secteur bancaire japonais a connu une adoption
+croissante des technologies d'automatisation, notamment des chatbots
+pilotés par l'IA et des systèmes de service à la clientèle automatisés. En
+2020, près de 80 % des banques japonaises ont activement recherché ou mis
+en œuvre des technologies d'IA et de robotique pour améliorer les
+interactions avec les clients et rationaliser les opérations. De même, le
+secteur de l'assurance a commencé à tirer parti des algorithmes d'IA pour
+évaluer et traiter plus efficacement les demandes d'indemnisation, réduisant
+ainsi le besoin d'une importante main-d'œuvre humaine [NTT DATA] et
+maintenant sa résistance à l'utilisation de la main-d'œuvre étrangère
+externalisée.
+Par exemple, Pepper, un robot humanoïde développé par SoftBank
+Robotics, a été présenté en 2014, dans le but d'améliorer les interactions
+avec les clients et d'apporter une aide dans divers secteurs de services au
+Japon. Les caractéristiques remarquables de Pepper comprennent le
+
+---
+
+[p. 299-301]
+évolutive des relations entre l'homme et l'IA.
+Dans “Ex Machina”, la capacité d'Ava à imiter les émotions soulève
+de profondes questions sur ce que signifie être humain. Alors que Caleb est
+aux prises avec l'intelligence émotionnelle d'Ava, le film incite les
+spectateurs à s'interroger sur l'essence de l'humanité. De même, “Her”
+explore la nature de l'amour entre un humain et une IA. La relation entre
+Theodore et Samantha remet en question les normes sociétales, ce qui
+conduit à une réflexion plus large sur la fluidité des émotions humaines et
+l'adaptabilité de l'amour.
+Un autre aspect critique mis en lumière par ces œuvres est l'impact des
+robots sur la dynamique sociale et le bien-être individuel. Dans “Ex
+Machina”, la dynamique du pouvoir entre les humains et l'IA est dépeinte
+de manière saisissante, alors que Caleb s'empêtre dans un réseau de
+manipulation et de tromperie. Le film soulève des inquiétudes quant à
+l'utilisation potentiellement abusive de l'IA et aux dilemmes éthiques qui
+peuvent survenir lorsque la technologie progresse plus rapidement que notre
+capacité à la réguler et à en comprendre les conséquences. Le film “Her”,
+quant à lui, explore les implications sociétales de la généralisation des liens
+émotionnels avec l'IA. Alors que de plus en plus d'individus dans le film
+nouent des relations avec des IA, les normes sociétales évoluent et les
+frontières entre les relations humaines et les relations avec les IA
+deviennent de plus en plus floues, une vision potentielle de la façon dont
+l'Entrelacement est susceptible de se produire. Cela incite à réfléchir au
+potentiel de restructuration de la société et à la nécessité de nouveaux
+cadres éthiques pour guider ces connexions en évolution. 
+
+Merci !
+Merci de prendre le temps de lire Comment l’IA Transformera Notre
+Avenir. J'espère sincèrement que vous l'appréciez.
+Ce livre, mon tout premier, est le fruit de mois de travail acharné, de
+passion et de réflexion. Il reflète mes recherches, mes espoirs, mais aussi
+mes préoccupations face à l'avenir de l'IA. Votre retour, qu’il soit élogieux,
+constructif ou critique, m'est précieux.
+Laissez un commentaire sur la plateforme où vous l'avez acheté - cela
+m’aidera à progresser et à toucher un plus large public.
+Vous pouvez poster votre avis sur Amazon.fr en scannant le QR code
+ci-dessous.
+
+---
+
+[p. 320-321]
+eur désir de contrôle. Le pouvoir absolu
+corrompt absolument. Nous pensons qu'il est impératif que tous ceux qui,
+dans les sociétés occidentales, votent pour des dirigeants politiques exigent
+un point de vue spécifique sur la politique et la gestion de l'IA à ce stade,
+alors que l'orientation peut encore être pleinement définie.
+La musique des interfaces cerveau-ordinateur
+La pierre angulaire de la technologie des cyborgs repose sur sa
+connexion avec le cerveau humain. Ce lien permet au cerveau de contrôler
+divers implants mécaniques de cyborg, tels que des membres bioniques ou
+des sens améliorés. En outre, il existe d'autres méthodes d'intégration de la
+technologie cyborg dans le corps qui ne nécessitent pas de connexion au
+cerveau, comme l'insertion d'un cœur mécanique.
+Le lien entre les implants corporels et le cerveau est d'autant plus
+puissant qu'il permet une communication directe avec les systèmes
+informatiques, ce qui élimine le besoin de mouvement physique, comme
+l'utilisation d'un clavier. Cela ouvre la porte à une myriade de possibilités
+où l'intelligence humaine s'intègre de manière transparente à l'IA. Cette
+technologie avancée, connue sous le nom d'interfaces cerveau-ordinateur
+(BCI en anglais, Brain-Computer Interface), existe déjà.
+Une BCI connecte les signaux électriques du cerveau à un dispositif
+externe, tel qu'un robot ou un ordinateur. Les BCI sont fréquemment
+utilisées pour améliorer ou restaurer les capacités cognitives, motrices et
+sensorielles de l'homme. Cependant, ils risquent de brouiller la distinction
+entre le cerveau et les machines.
+L'un des premiers exemples de BCI fonctionnelle a été démontré dans
+la composition “Music for Solo Performer” en 1965 par le compositeur
+américain 
+Alvin 
+Lucier. 
+Cette 
+performance 
+utilisait 
+un
+électroencéphalogramme (EEG) en conjonction avec des équipements
+musicaux tels que des amplificateurs, des filtres et une table de mixage.
+L'objectif était de synchroniser les percussions avec les ondes cérébrales, en
+particulier les ondes alpha, d'une personne se trouvant sur la scène. Un
+mécanisme était activé pour jouer des instruments en fonction des
+vibrations des ondes alpha, et le son résultant était émis par des haut-
+parleurs [Straebel et Thoben].
+Malgré cela et d'autres antécédents, ce n'est qu'en 1973 que le terme
+officiel d’“interface cerveau-ordinateur” a été introduit par Jacques Vidal,
+un professeur de l'UCLA (University of California Los Angeles) qui
+effectuait des recherches sur l'activité cérébrale grâce à une subvention de la
+DARPA, qui est l'agence de recherche de l'armée américaine, comme nous
+l'avons vu dans plusieurs chapitres précédents. En 1977, Vidal a réalisé une
+
+---
+
+[p. 338-339]
+ismes naturels. Ces organismes synthétiques pourraient être conçus
+à des fins industrielles, médicales ou environnementales spécifiques.
+Aujourd'hui, nous disposons déjà d'exemples d'organismes non naturels
+entièrement issus de la bio-ingénierie, de sorte que la direction dans
+laquelle la discipline s'engage devient très claire.
+Par exemple, il existe des souches de levure synthétique conçues pour
+produire des saveurs et des arômes spécifiques, ce qui permet de créer des
+produits innovants dans le domaine de la bière et du vin. Des entreprises
+comme Ginkgo Bioworks sont actives dans ce domaine. Des acteurs comme
+Synthetic Genomics, en collaboration avec ExxonMobil, ont travaillé sur la
+modification génétique de souches d'algues afin d'améliorer leurs capacités
+de production de pétrole. De même, des bactéries synthétiques ont été
+conçues pour la production de médicaments, des entreprises comme
+Genentech et Novartis ayant conçu des bactéries pour produire des produits
+pharmaceutiques tels que l'insuline et l'hormone de croissance humaine
+(HCH). Enfin, des entreprises telles que Pivot Bio ont conçu des microbes
+synthétiques pour qu'ils agissent comme des biofertilisants, contribuant
+ainsi à améliorer l'absorption des nutriments par les plantes et à réduire le
+besoin d'engrais chimiques traditionnels.
+Les pages suivantes présentent le potentiel de modification de la
+nature biologique des êtres humains par la biologie synthétique lorsque l'IA
+est appliquée. Nous voyons l'impact de la biologie synthétique et de l'IA
+résoudre la question persistante de savoir “comment” l'Entrelacement se
+produira mécaniquement.
+La science-fiction de la biologie synthétique
+La biologie synthétique est sans doute l'une des applications les plus
+révolutionnaires de l'IA. Elle a le potentiel incontestable de transformer
+l'essence des êtres humains et de nos écosystèmes actuels en modifiant leurs
+fondements biologiques, en permettant aux gens de vivre plus longtemps,
+de résister aux maladies et d'acquérir des capacités surhumaines grâce à des
+organoïdes spécialement conçus. En outre, l'intégration d'éléments
+électroniques ou d'apprentissage machine dans les circuits biologiques
+humains ouvre une voie solide pour l'Entrelacement humain-IA et, à notre
+avis, résout un problème concret de “comment faire” qui est nécessaire pour
+que l'Entrelacement se produise. En outre, la biologie synthétique détient la
+clé de la création de nouvelles formes de vie, dont certaines n'auraient
+jamais vu le jour.
+Pour explorer les implications de la biologie synthétique dans
+l'humanité, nous pouvons nous tourner vers deux œuvres de science-fiction
+: le film “Gattaca” réalisé par Andrew Niccol en 1997, et le roman “The
+
+---
+
+[p. 355-356]
+rcuit biologique capable d'exécuter des fonctions
+logiques telles qu’AND, OR et XOR a été implémenté dans des cellules de
+mammifères [Rinaudo]. En outre, en 2011, des scientifiques ont mis au
+point une stratégie thérapeutique utilisant des calculs numériques
+biologiques pour détecter et éliminer les cellules cancéreuses humaines
+[Xie]. En outre, en 2016, les principes de l'ingénierie informatique ont été
+appliqués pour automatiser la conception de ce type de circuits numériques
+dans des cellules bactériennes [Nielsen], et en 2017, l'arithmétique et la
+logique booléenne ont également été mises en œuvre dans des cellules de
+mammifères [Weinberg].
+Outre la construction de ces circuits informatiques plus simples, il est
+également possible de mettre en œuvre des analogues de réseaux neuronaux
+artificiels complexes à l'aide de composants biomoléculaires. Cela permet
+notamment 
+d'exécuter 
+des 
+processus 
+complexes 
+d'apprentissage
+automatique au sein d'un système biologique. En outre, en 2019, une
+architecture théorique pour un réseau neuronal biomoléculaire a été
+présentée [Pandi et al.] Cette architecture est un réseau de réactions
+chimiques qui exécute avec précision des calculs de réseau neuronal et
+démontre son utilisation pour résoudre des problèmes de classification. Elle
+constitue l'équivalent biomoléculaire du perceptron construit en 1957 par
+Frank Rosenblatt, avec une structure simple similaire composée d'une
+couche de neurones artificiels.
+Les implications de la possibilité de construire des algorithmes
+d'apprentissage automatique à l'intérieur de systèmes biologiques sont
+énormes, car cela signifie qu'il serait possible d'augmenter le niveau
+d'intelligence des êtres vivants, même des humains, en suivant des
+architectures informatiques construites avec des matériaux biologiques.
+Les maîtres de la création
+La biologie synthétique est sans doute l'application la plus
+révolutionnaire de l'IA. Elle a le potentiel de transformer l'essence des êtres
+humains en modifiant leurs fondements biologiques, ce qui leur permettrait
+de vivre plus longtemps, de résister aux maladies et d'acquérir des capacités
+surhumaines grâce à des organoïdes spécialement conçus. Sous l'impulsion
+de la puissance de l'IA, elle se produira parallèlement au développement de
+formes de vie biologique entièrement nouvelles. Des avancées telles que
+l'intégration d'éléments électroniques ou d'apprentissage automatique dans
+les circuits biologiques permettent de résoudre d'épineux problèmes
+mécaniques concernant la manière dont l'entrelacement se produira et
+ouvrent une voie solide pour l'entrelacement entre l'homme et l'IA.
+
+---
+
+[p. 374-375]
+de performance, il était soit éliminé,
+soit affiné, ce qui le replongeait dans ce processus d'exploration, où
+l'évaluation des goûts des consommateurs est une perpétuelle “supposition
+éclairée”. L'investissement en temps et l'utilisation de ressources limitées
+nécessaires à chaque étape du processus ne sont pas sans conséquence.
+Mais au lieu d'un succès sur 1000, le processus de développement de
+produits affiné a permis d'obtenir un succès sur 25.
+Lorsque des modèles d'IA entraînés rassemblent de grandes quantités
+de données sur les consommateurs, le marché, les concurrents, les ventes, la
+formule des boissons et des données scientifiques sur les ingrédients et les
+combinaisons de goûts avant même que le nouveau produit ne soit
+envisagé, de la même manière que les modèles d'IA non supervisés peuvent
+prédire les défaillances de crédit avec un degré élevé de précision, comme
+nous l'avons vu au chapitre 6, l'ensemble de la chaîne de développement du
+produit est dérisqué et amélioré. Plus le modèle d'IA est performant, plus le
+résultat du développement de produits se rapprochera d'un ratio
+développement-succès de 1 pour 1. Il en résultera des économies de capital,
+de ressources et de temps, qui se traduiront par un plus grand nombre de
+produits mieux adaptés aux préférences des consommateurs et par des prix
+plus bas, les ressources économisées pouvant être affectées à d'autres
+produits et applications. L'IA favorisera cette évolution dans toutes les
+catégories de produits, permettant à un dollar de consommation d'aller plus
+loin dans un éventail de produits et de services. L'économie se développera.
+Nous prévoyons que l'IA contribuera à réduire les risques liés au
+développement et à la mise sur le marché rapides de nouveaux produits et
+services qui correspondent aux préférences et aux intérêts individuels, bien
+plus que ce que nous avons connu jusqu'à présent dans l'histoire
+économique. Des voies de distribution optimisées garantissent également
+que ces produits sont livrés plus efficacement et sans erreur. Les produits et
+services existants subiront également des améliorations qui augmenteront
+l'utilité pour le client. D'énormes quantités de préférences et d'autres
+données sont nécessaires pour intégrer l'IA dans ce processus, mais comme
+nous l'avons déjà vu dans les chapitres 6 et 7, des algorithmes d'IA sont déjà
+développés dans ce domaine.
+L'IA industrielle et l'usine du futur
+Bien que la majorité des applications de l'IA se concentrent
+actuellement sur les marchés de consommation et les applications B2C, l'IA
+aura également un impact sur les applications industrielles B2B qui peuvent
+contribuer à faire évoluer la société vers des résultats utopiques.
+
+---
+
+[p. 392-393]
+u genre, certains d'entre eux passant des pronoms
+masculins aux pronoms féminins au milieu du livre.
+En revanche, “Manna” de Marshall Brain se déroule dans un monde
+où les États-Unis sont aux prises avec des disparités économiques et des
+bouleversements sociaux croissants, marqués par l'augmentation de la
+pauvreté et du chômage.
+Voici comment Marshall Brain décrit la situation, avec ses propres
+mots : “En 2050, l'Amérique n'est pas différente d'une nation du tiers-
+monde. Avec l'arrivée des robots, des dizaines de millions de personnes ont
+perdu leur emploi au salaire minimum et la richesse s'est concentrée très
+rapidement. Les riches contrôlaient la bureaucratie, l'armée, les entreprises
+et les ressources naturelles de l'Amérique, et les chômeurs vivaient en
+terrafoam, coupés de toute possibilité de changer leur situation. Il y avait la
+façade des “élections libres”, mais seuls les candidats soutenus par les
+riches pouvaient se présenter aux élections. Le gouvernement était
+entièrement contrôlé par les riches, tout comme les forces de sécurité
+robotisées, l'armée et les services de renseignement. La démocratie
+américaine s'est transformée en une dictature du tiers-monde dirigée par
+l'élite riche... En 2030, des caméras de sécurité vidéo et des microphones
+couvraient et enregistraient presque chaque centimètre carré de l'espace
+public américain. Toutes les conversations téléphoniques et tous les
+messages Internet étaient mis sur écoute, à la recherche d'indices de
+terrorisme. Si quelqu'un envisageait d'organiser un rassemblement de
+protestation ou une émeute, ou discutait d'une quelconque forme de
+désobéissance civile avec quelqu'un d'autre, il était qualifié de terroriste et
+mis en prison de manière préventive”.
+"Manna” semble dépeindre un scénario dystopique pour les États-
+Unis, marqué par une augmentation de la pauvreté et du chômage,
+contrastant avec un portrait apparemment utopique de l'Australie. Pour
+tenter d'atténuer les troubles sociaux, l'Australie adopte une voie différente
+de celle des États-Unis et met en place un système de revenu de base
+universel (RBU) pour répondre aux besoins fondamentaux des citoyens.
+Le nom de la nouvelle est judicieusement choisi car la Manne fait
+référence à une substance biblique, une matière comestible miraculeuse qui
+a nourri les Israélites pendant leur errance dans le désert. L'intention de
+Marshall Brain est en effet de dépeindre l'UBI australien comme une utopie
+et la voie à suivre pour l'humanité. Cependant, un examen plus approfondi
+révèle que les deux pays subissent des transformations dystopiques de
+manière distincte. La promesse utopique de l'UBI devient rapidement
+sinistre car elle se transforme en un outil de contrôle, manipulant la
+population par le biais de la dépendance économique.
+Le roman brosse un tableau sombre de la façon dont un système de
+revenu universel apparemment bienveillant peut devenir un mécanisme de
+
+---
+
+[p. 409-410]
+, ciblage
+publicitaire, modération du contenu, prédiction de l'engagement et détection
+des tendances en temps réel, parmi de nombreux autres aspects. La
+recherche de la vérité est ainsi freinée par la “surcharge d'informations”. Si
+quelqu'un ne cherche pas activement la vérité, il y a de fortes chances qu'il
+ne la trouve jamais.
+Troisièmement, au chapitre 9, nous avons abordé la question des
+données synthétiques, qui consiste à utiliser des données réalistes mais
+finalement fausses pour entraîner les algorithmes. Cet aspect est important
+car très peu d'entreprises ont accès à des ensembles de données
+suffisamment importants, exploitables et mis à l'échelle, à l'exception de
+géants tels que Facebook, Google, Tesla et quelques autres. Par conséquent,
+les entreprises qui cherchent à développer des algorithmes d'IA complexes
+mais qui n'ont pas accès à de vastes données réelles doivent recourir à des
+données synthétiques. Les données synthétiques imitent la réalité mais ne
+sont pas des données authentiques. Elles peuvent donc être une arme à
+double tranchant, car elles peuvent par inadvertance conduire les
+algorithmes à produire des résultats qui ne sont pas fondés sur des données
+réelles. Par conséquent, avec le temps, l'utilisation croissante de l'IA dans
+l'économie rendra de plus en plus difficile la distinction entre les résultats
+réels et les résultats fictifs.
+Quatrièmement, une désinformation manifeste est diffusée dans la
+société à chaque point de contact. Selon le rapport du Forum économique
+mondial intitulé “Global Risks 2024”, au cours des deux prochaines années,
+la désinformation sera le risque le plus grave auquel l'Occident sera
+confronté, dépassant les guerres, la polarisation sociale, les crises ou même
+le changement climatique. Le FEM (Forum Économique Mondial) affirme
+que si l'IA n'est pas limitée, des acteurs malveillants pourraient diffuser de
+la désinformation, en particulier en période d'élections importantes dans les
+sociétés occidentales.
+Le FEM semble très préoccupé par la légitimité des gouvernements et
+présente la désinformation comme une menace pour la paix et la sécurité
+mondiales. Pour y remédier, le FEM plaide en faveur d'un contrôle de
+l'information, qui pourrait déboucher sur l'exercice d'une censure officielle.
+Comme le dit George Soros : “L'IA [...] n'a absolument rien à voir avec la
+réalité. L'IA crée sa propre réalité et lorsque cette réalité artificielle ne
+correspond pas au monde réel - ce qui arrive assez souvent - elle est rejetée
+comme une hallucination. Cela m'a rendu presque instinctivement opposé à
+l'IA et je suis tout à fait d'accord avec les experts qui affirment qu'elle doit
+être réglementée”. [Soros et al.]
+La lutte contre la désinformation a été officiellement inaugurée à
+Davos 2024. Comme nous l'avons souligné tout au long de ce livre, la
+volonté de contrôler et de réglementer l'IA n'est pas menée dans l'intérêt
+
+---
+
+[p. 427-428]
+veloppement de l'IA de 2017 a marqué
+un tournant aux conséquences considérables pour les États-Unis et leurs
+alliés. Ce plan a déclenché des tensions croissantes entre la Chine et les
+États-Unis, donnant naissance à une nouvelle rivalité géopolitique souvent
+appelée la “guerre froide de l'IA” [Thompson et Bremmer]. Contrairement
+à la guerre froide du XXe siècle, définie par l'armement nucléaire et les
+affrontements idéologiques, cette guerre froide contemporaine est centrée
+sur la technologie de l'IA et l'idéologie économique mercantiliste des
+Chinois. Elle présente un récit de compétition économique, où l'innovation
+technologique détermine la position géopolitique des nations. L'approche
+distincte de la Chine en matière de développement de l'IA pose de
+formidables défis aux États-Unis, notamment en ce qui concerne les
+applications autoritaires de l'IA, telles que le système de crédit social (SCS),
+que nous aborderons plus loin dans cette section, et le déploiement actif de
+l'IA dans des contextes militaires.
+Comme les États-Unis, la Chine exploite l'IA pour améliorer le
+renseignement militaire et accélérer la prise de décision sur le champ de
+bataille. La Chine étudie activement les véhicules autonomes terrestres,
+maritimes, sous-marins et aériens, ainsi que les opérations de cyberguerre
+[Kania et Scharre]. Sans surprise, compte tenu de ses antécédents en
+matière de vol de propriété intellectuelle, lorsqu'elle n'a pas été en mesure
+de se l'approprier et qu'elle souhaite un accès permanent à la technologie et
+à la propriété intellectuelle américaines, la Chine a réalisé des
+investissements stratégiques sur le marché américain de l'IA, en particulier
+dans les entreprises d'IA actives dans le domaine de la défense. Entre 2010
+et 2017, les investissements chinois en capital-risque dans les entreprises
+américaines d'IA se sont élevés à environ 1,3 milliard de dollars [Singh et
+Brown]. L'utilisation militaire de l'IA par la Chine suscite des inquiétudes
+aux États-Unis quant à son impact sur la stabilité mondiale et à l'escalade
+des tensions existantes.
+La crainte de voir la Chine dépasser les États-Unis dans le domaine de
+l'IA a dominé les discussions sur la politique technologique à Washington.
+La Chine s'est imposée comme un concurrent redoutable, produisant des
+recherches de pointe en matière d'IA comparables à celles des États-Unis et
+intégrant cette technologie dans son économie et ses systèmes de
+surveillance internes, tels que le SCS. Dans la course au développement
+d'algorithmes d'IA avancés, la Chine a rapidement comblé son retard sur les
+laboratoires de recherche américains, obtenant souvent des résultats
+comparables en l'espace de quelques années seulement.
+L'escalade des tensions entre les deux nations a incité le gouvernement
+américain à adopter des politiques visant à freiner l'avancée de l'IA en
+Chine, principalement par la mise en place de contrôles des exportations
+
+---
+
+[p. 446-446]
+ussi
+mes préoccupations face à l'avenir de l'IA. Votre retour, qu’il soit élogieux,
+constructif ou critique, m'est précieux.
+Laissez un commentaire sur la plateforme où vous l'avez acheté - cela
+m’aidera à progresser et à toucher un plus large public.
+Vous pouvez poster votre avis sur Amazon.fr en scannant le QR code
+ci-dessous.
+
+---
+
+[p. 464-465]
+plan peut séparer efficacement les deux
+classes (chats et chiens) et discerner les caractéristiques complexes qui
+peuvent ne pas être aussi apparentes dans l'espace bidimensionnel d'origine.
+La capacité des SVM à traiter des données non linéaires et leurs
+performances dans la résolution de problèmes à haute dimension en ont fait
+des outils essentiels pour les scientifiques des données dans le domaine des
+affaires et de la recherche en intelligence artificielle.
+Les SVM classiques peuvent être très exigeants en termes de calcul
+dans les applications réelles, en particulier lorsqu'ils sont confrontés à un
+très grand nombre de caractéristiques ou à des ensembles de données
+d'apprentissage considérables. L'accélération quadratique des SVM
+quantiques implique des gains de temps significatifs dans des tâches telles
+que la classification d'images et de textes, la modélisation financière et les
+diagnostics médicaux.
+Algorithmes quantiques d'apprentissage
+automatique avec accélérations sélectives
+Le troisième groupe comprend des algorithmes qui offrent des
+accélérations importantes par rapport à leurs homologues classiques, mais
+uniquement dans des cas particuliers et clairement définis. C'est ce que l'on
+appelle les accélérations sélectives en informatique quantique.
+L'algorithme HHL (Harrow-Hassidim-Lloyd, d'après les noms des
+auteurs), introduit en 2009 pour résoudre efficacement les systèmes
+d'équations linéaires sur un ordinateur quantique, en est un exemple. La
+résolution de ce type de système linéaire nécessite l'inversion d'une matrice.
+L'algorithme HHL exploite la superposition et l'intrication quantiques pour
+rationaliser l'inversion de la matrice [Harrow et al.]
+Les algorithmes classiques de résolution de systèmes linéaires ont
+généralement une complexité temporelle qui s'échelonne au moins sur N3,
+où N est la dimension du système. En revanche, la complexité temporelle
+de l'algorithme HHL peut descendre jusqu'à log(N). Par exemple, un
+système linéaire qui prend 100 heures dans un ordinateur classique
+prendrait environ 40 minutes sur un ordinateur quantique exécutant
+l'algorithme HHL. Il s'agit d'une accélération exponentielle car N3 /log(N)
+croît de manière exponentielle.
+Cependant, l'accélération est très spécifique au problème car elle
+dépend de la taille du problème, de la structure de la matrice et des
+capacités du matériel quantique. Dans les cas où ces conditions sont
+remplies, l'algorithme HHL peut offrir un avantage substantiel en termes de
+temps de calcul, le rendant potentiellement plus rapide de plusieurs ordres
+
+---
+
+[p. 482-483]
+teur exécute ensuite un modèle de
+simulation très précis, lui-même un algorithme d'intelligence artificielle,
+pour imiter la fonctionnalité du cerveau original, ce qui aboutit à une forme
+d'immortalité. En raison de la complexité du comportement des neurones
+biologiques, des modèles neuronaux très complexes sont nécessaires pour
+simuler un cerveau, bien plus complexes que les réseaux neuronaux
+artificiels traditionnels. Certains projets de recherche développent des
+modèles cérébraux avancés pour la simulation sur des architectures
+informatiques conventionnelles. Nous aborderons cette technologie en
+détail dans le chapitre suivant. Cette approche semble réalisable en tant
+qu'extrapolation de la technologie connue, mais nous notons que, selon la
+loi des rendements accélérés, la complexité mathématique de la simulation
+d'un cerveau pourrait nécessiter des ordinateurs qui n'existeraient qu'aux
+alentours de l'année 2100. Comme la position de ce livre est que tous les
+aspects de la pensée et de la cognition humaines peuvent être réduits à des
+opérations mathématiques, nous pensons que la technologie permettra cette
+fonctionnalité, mais aussi qu'il est peu probable qu'elle soit la voie précise
+vers la superintelligence, devenant plutôt simplement une autre voie pour
+ajouter à l'intelligence collective et assurer l'immortalité individuelle.
+Il existe une troisième voie, moins probable, pour parvenir à la
+superintelligence, une approche purement biologique impliquant la biologie
+synthétique et l'eugénisme, que nous avons présentée aux chapitres 21 et 23,
+respectivement. Cette approche vise à améliorer l'intelligence humaine par
+des méthodes biotechnologiques, y compris des modifications génétiques et
+l'optimisation sélective des embryons et des gamètes. Le développement
+d'algorithmes et de logiciels d'IA sera essentiel pour concevoir un ADN
+humain optimisé susceptible d'accroître les capacités intellectuelles.
+Historiquement, cette méthode a été utilisée pour des tâches telles que la
+sélection du sexe de l'enfant et le dépistage des troubles génétiques. À
+l'avenir, outre les questions éthiques qu'elles soulèvent, nous nous attendons
+à ce que des technologies spécifiques pour l'amélioration cognitive et
+intellectuelle de l'homme soient créées. Elles sont déjà disponibles sous une
+forme plus légère, et ce type de processus de sélection sera étendu pour
+englober les traits cognitifs et comportementaux. Néanmoins, il ne sera
+peut-être pas possible d'atteindre la superintelligence en tant que telle, car
+l'esprit humain basé sur le carbone n'en est peut-être pas capable. De la
+même manière, un tuk-tuk n'est tout simplement pas conçu pour atteindre le
+record de vitesse terrestre, même s'il est équipé du meilleur moteur.
+
+---
+
+[p. 500-501]
+s espèces à l'encontre des humains
+ou des émulations. En outre, cela pourrait également accroître la probabilité
+d'une guerre entre le monde réel et le monde émulé. L'une des difficultés
+rencontrées par les dirigeants humains biologiques serait le manque de
+temps potentiel pour prendre des décisions éclairées, car les émulations
+fonctionnent beaucoup plus rapidement que les humains. La situation
+pourrait devenir encore plus compliquée pour les humains biologiques si les
+émulations prenaient le contrôle des ressources militaires dans le monde
+hors ligne. La question de la guerre sera abordée plus en détail au chapitre
+30.
+Le téléchargement de cerveau et l'exploration
+spatiale
+L'immortalité 
+n'est 
+qu'une 
+des 
+applications 
+potentielles 
+du
+téléchargement de l'esprit. Mais ce n'est pas la seule. L'exploration spatiale
+représente un autre domaine fascinant où l'introduction d'un astronaute
+émulé au lieu d'un astronaute “vivant” pourrait transformer les vols
+spatiaux humains. Cette avancée permettrait d'atténuer les risques liés à
+l'apesanteur, au vide spatial et à l'exposition aux rayonnements cosmiques.
+Cette innovation ouvre la voie à l'utilisation d'engins spatiaux plus
+miniatures, même de la taille de quelques centimètres, qui nécessitent
+beaucoup moins d'énergie pour se déplacer sur des distances de plusieurs
+millions d'années-lumière et qui, par conséquent, pourraient être accélérés à
+des vitesses plus élevées et couvrir de plus grandes distances en moins de
+temps. Un exemple est le projet Breakthrough Starshot, lancé en 2016, avec
+la collaboration de personnalités telles que Stephen Hawking et Mark
+Zuckerberg [Overbye].
+L'objectif principal de ce projet est de créer une flotte prototype de
+sondes interstellaires à voile léger, appelées Starchip, dans le but de faciliter
+un voyage vers le système stellaire Alpha Centauri, qui se trouve à environ
+4,4 années-lumière de notre système solaire. Le système d'Alpha Centauri
+est composé de trois étoiles : Alpha Centauri A, Alpha Centauri B et
+Proxima Centauri. Ce système est important car, dans la région habitable de
+Proxima Centauri, se trouve une planète qui présente des caractéristiques
+semblables à celles de la Terre et qui pourrait potentiellement abriter la vie.
+C'est pourquoi le projet envisage une mission de survol à la recherche d'une
+vie extraterrestre sur cette planète.
+Cette initiative innovante représente une entreprise significative dans
+le domaine de l'exploration spatiale. L'expédition durerait environ 20 à 30
+ans, tandis que la transmission d'un message de retour du vaisseau vers la
+
+---
+
+[p. 520-521]
+fin de créer des barrières à l'entrée tout en
+construisant leur propre vision de l'IA avant toute gouvernance, ce qui
+conduit à ce qu'il perçoit comme une stratégie potentielle de création de
+monopole où un petit nombre de grandes entreprises exerceraient une
+influence et un contrôle importants sur l'ensemble du domaine de l'IA.
+Nous voyons les choses de la même manière et soulignons que, sans
+surprise, ces mêmes entreprises disposent de suffisamment de données de
+base à l'échelle de la population sur de vastes pans de l'activité humaine
+pour fournir la base, peut-être insurmontable, pour l'entraînement et
+l'évolution des algorithmes. Cela constitue potentiellement la “longueur
+d'avance” nécessaire pour créer un effet de réseau non naturel dans le
+domaine de l'IA, par exemple en évinçant les concurrents à mesure que les
+coûts d'assemblage et de mise à l'échelle des algorithmes et de leur
+formation deviennent de plus en plus prohibitifs au fil des jours.
+Comme nous l'avons vu au chapitre 24, le gouvernement chinois
+poursuit une stratégie similaire de cartel de l'IA. Aux États-Unis,
+contrairement à la Chine, il n'existe pas de base de données centralisée en
+tant que telle, et aucune base de données ne possède toutes les données
+nécessaires. Mais le “cartel de réseaux” collaboratif qui se met en place en
+Chine pourrait également voir le jour aux États-Unis, même en présence de
+lois sur la protection des données ; il n'est pas nécessaire d'avoir beaucoup
+d'acteurs différents pour parvenir à une collusion, les mêmes acteurs qui
+font actuellement pression sur le gouvernement pour obtenir des règles de
+surveillance, un scénario classique du “renard qui surveille le poulailler”.
+L'Open-Source et la logique de profit du marché nous protègent contre ce
+scénario.
+Elon Musk présente un exemple de préoccupation. Le 29 mars 2023,
+Elon Musk a soutenu une lettre ouverte appelant à un moratoire sur le
+développement de systèmes d'IA à grande échelle. Des personnalités telles
+que Steve Wozniak, cofondateur d'Apple, Yuval Noah Harari, auteur de
+best-sellers, Andrew Yang, cofondateur de Skype, Jaan Tallinn, et d'autres
+ont également soutenu cette initiative [futureoflife]. On pourrait s'attendre à
+ce que la signature d'une telle lettre implique un engagement à l'égard de ce
+qu'elle énonce. Or, Elon Musk a fait exactement le contraire. Vingt jours
+avant la publication de la lettre ouverte, il avait créé une entreprise dans le
+Nevada nommée X.ai, et au cours du moratoire de six mois qu'il a signé,
+Musk a développé un service de chatbot pour concurrencer ChatGPT. Juste
+au moment où le moratoire aurait pris fin, le 4 novembre 2023, Musk et
+X.ai ont dévoilé “Grok”, un chatbot d'IA étroitement intégré à X.
+Les logiciels libres ont démontré leurs avantages au fil des décennies.
+La nature collaborative du développement de l'Open-Source faciliterait la
+création d'une communauté diversifiée et mondiale de millions d'experts en
+
+---
+
+[p. 539-540]
+individus avec leurs ancêtres décédés par des moyens scientifiques,
+apportant un futur utopique où la mort serait vaincue, et où l'humanité
+explorerait et finalement s'unirait à l'espace.
+Les pages qui suivent offrent un aperçu de la façon dont le cosmisme
+devient un archétype représentant ceux qui ont accès aux récompenses des
+systèmes pilotés par l'IA, une référence qui permet de mieux comprendre
+les conflits armés potentiels centrés sur la transition vers l'AGI.
+La science-fiction des guerres de l'IA
+Pour illustrer notre réflexion sur ce sujet, nous nous penchons sur “The
+Creator”, un film hollywoodien de 2023 réalisé par Gareth Edwards. “The
+Creator” se penche sur les conséquences d'une guerre, où les frontières
+entre l'humanité et les robots, le bien et le mal, sont floues.
+Dans “The Creator”, le conflit n'éclate pas entre l'IA et l'humanité,
+mais entre deux factions humaines différentes, l'une qui soutient l'IA et
+l'autre qui ne la soutient pas. À la suite d'un événement catastrophique au
+cours duquel une IA déclenche une ogive nucléaire au-dessus de Los
+Angeles, les États-Unis déclenchent une guerre mondiale contre l'IA. La
+complexité s'accroît lorsque l'État de la Nouvelle Asie - qui englobe l'Asie
+du Sud-Est et l'Asie du Sud dans le film - choisit de soutenir l'IA, ce qui
+ajoute des couches complexes au récit qui se déroule. “The Creator”
+explore les identités mixtes de l'homme et de l'IA. Le film présente de
+nombreux personnages dotés d'améliorations cybernétiques, comme des
+bras robotisés. En outre, une part importante de la population de la
+Nouvelle-Asie est constituée de cyborgs. Cette intégration de la technologie
+au corps et à l'identité humaine ajoute à la complexité du récit.
+Au fur et à mesure que l'histoire se déroule, il devient évident que la
+détonation à Los Angeles n'était pas uniquement le résultat d'une IA
+malveillante. C'est plutôt une erreur de codage humaine qui a déclenché la
+catastrophe. Cette révélation, associée à la dynamique complexe des
+personnages, brouille les frontières entre héros et méchants, remettant en
+question les idées reçues sur le rôle de l'IA dans le monde. Le film remet en
+question l'idée que la technologie et l'IA sont intrinsèquement bonnes ou
+mauvaises. Cette complexité oblige les spectateurs à réfléchir à la
+responsabilité directe de l'humanité dans l'élaboration de sa relation avec la
+technologie et aux conséquences d'une mauvaise utilisation des
+technologies avancées. “The Creator” comporte plusieurs sous-textes qui
+convergent vers un thème central : l'approche que l'humanité adopte vis-à-
+vis du développement de l'IA - non seulement technologique, mais aussi
+sociétale, politique, économique et spirituelle - s'inscrit dans une menace de
+guerre omniprésente.
+
+---
+
+[p. 559-560]
+re toutes les implications de l'IA, au
+risque d'étouffer l'innovation et de créer des barrières à l'entrée qui iront à
+l'encontre de l'objectif recherché, comme nous l'avons expliqué au chapitre
+8. Cela dit, nous sommes d'accord avec certains aspects de la loi
+européenne, tels que la punition pour représenter un “deepfake” comme
+étant réel ou pour représenter un contenu généré par l'IA comme étant
+généré par l'homme.
+Nous pensons que la réglementation de l'IA doit être minimale mais
+efficace, préserver les droits individuels et ne pas confondre sécurité et
+contrôle. Par-dessus tout, nous ne pouvons pas permettre qu'un cadre
+réglementaire utilise la “peur de l'IA” comme excuse pour surréglementer,
+protéger un oligopole ou consolider le pouvoir autour du collectivisme et de
+l'autoritarisme. Nous constatons une attraction gravitationnelle naturelle
+dans cette direction en l'absence de mesures spécifiques pour la contrer. Pire
+encore, il existe un risque de “crises fabriquées” de toutes sortes -
+économiques, sécuritaires, sanitaires - pour tenter de forcer une société à
+s'orienter dans cette direction. Nous nous interrogeons sur une démarcation
+claire entre les meilleures pratiques en matière d'IA et les politiques visant à
+réorganiser le système d'exploitation d'une société en fonction de la vision
+de quelques-uns.
+En outre, comme nous l'avons vu précédemment, l'IA est une
+technologie purement en réseau et collectiviste, ce qui pourrait entraîner
+différents risques de manipulation. Ce collectivisme est largement promu
+par des organisations comme le FEM dans différents domaines de la
+politique publique. Quel serait le contrepoids aux excès de l'IA ? Nous
+pensons qu'il est important de remettre l'accent sur les libertés individuelles
+et la propriété individuelle en tant que mécanisme de gestion des risques
+afin d'éviter les excès non arbitraires et politiquement inspirés de l'IA, y
+compris les aides redistributives telles que l'UBI.
+4. Coopération internationale : Compte tenu de la nature mondiale
+du développement et du déploiement de l'IA, le FEM préconise une
+coopération internationale pour relever les défis communs et établir des
+normes harmonisées. Il s'agit notamment d'initiatives visant à promouvoir le
+partage d'informations, l'échange de bonnes pratiques et la collaboration en
+matière de recherche et de développement.
+Encore une fois, il est difficile d'être en désaccord avec une idée noble
+comme la collaboration internationale. Mais les attentes spécifiques qui
+l'entourent sont importantes, et il y a un risque de “jeu de frappe sur les
+taupes” entre les pays, où la conformité sous pression à grande échelle crée
+des problèmes imprévus. Tout d'abord, il n'est pas raisonnable d'attendre de
+tous les pays qu'ils suivent les mêmes réglementations ou approches en
+
+---
+
+[p. 578-579]
+jia, and Anne Bowser. “How China is preparing for an AI-powered Future.” Wilson Center, 6
+2017,
+https://www.wilsoncenter.org/sites/default/files/media/documents/publication/how_china_is_pr
+eparing_for_ai_powered_future.pdf. Accessed 26 December 2023.
+Heinlein, Robert A. Stranger in a Strange Land. Penguin Publishing Group, 2018.
+Helou, Agnes, and Barry Rosenberg. “With Turkish drones in the headlines, what happened to
+Ukraine's 
+Bayraktar 
+TB2s?” 
+Breaking 
+Defense, 
+6 
+October 
+2023,
+https://breakingdefense.com/2023/10/with-turkish-drones-in-the-headlines-what-happened-to-
+ukraines-bayraktar-tb2s/. Accessed 28 December 2023.
+Hemal, Ashok K., and Mani Menon, editors. Robotics in Genitourinary Surgery. Springer
+International Publishing, 2018. Accessed 27 December 2023.
+Hemingway, Ernest, and Seán A. Hemingway. The Sun Also Rises: The Hemingway Library Edition.
+Edited by Seán A. Hemingway, Scribner, 1926.
+Hempel, Jessi. “How Fei-Fei Li Will Make Artificial Intelligence Better for Humanity.” WIRED, 13
+November 
+2018, 
+https://www.wired.com/story/fei-fei-li-artificial-intelligence-humanity/.
+Accessed 26 December 2023.
+Henshall, Will. “Elon Musk Says AI Will Eliminate the Need for Jobs.” Time, 2 November 2023,
+https://time.com/6331056/rishi-sunak-elon-musk-ai/. Accessed 28 December 2023.
+Herbert, Frank. Dune, 40th Anniversary Edition (Dune Chronicles, Book 1). Penguin Publishing
+Group, 2005.
+Herbert, Frank. Dune, 40th Anniversary Edition (Dune Chronicles, Book 1). Penguin Publishing
+Group, 2005.
+Herculano‐Houzel, Suzana. “The human brain in numbers: a linearly scaled-up primate brain.”
+Frontiers in Human Neuroscience, no. 2009.
+Hetzner, Christiaan. “Omar Al Olama, world's first AI minister, says the technology could change the
+world 
+like 
+the 
+printing 
+press.” 
+Fortune, 
+28 
+November 
+2023,
+https://fortune.com/asia/2023/11/28/artificial-intelligence-ai-technology-regulation-policy-
+guardrails-uae-fortune-global-forum/. Accessed 28 December 2023.
+Hinton, Geoffrey, and David Rumelhart. “Learning representations by back-propagating errors.”
+Nature, Nature.
+“The HiPEAC Vision 2019—Inria—Institut national de recherche en sciences et technologies du
+numérique.” Hal-Inria, 10 November 2019, https://inria.hal.science/hal-02314184. Accessed 12
+February 2024.
+Ho, Tin Kam. “A theory of multiple classifier systems and its application to visual word
+recognition.,.” A theory of multiple classifier systems and its application to visual word
+recognition, 1992, https://dl.acm.org/doi/book/10.5555/142930.
+Hobbes, Thomas. Leviathan. Edited by Christopher Brooke, Penguin Publishing Group, 2017.
+Hochreiter, Sepp, and Jürgen Schmidhuber. “Long Short-Term memory.” Neural Computation, 1997.
+Holley, Peter. “Amazon's autonomous robots have started delivering packages in a new location:
+Southern 
+California.” 
+Washington 
+Post, 
+12 
+August 
+2019,
+https://www.washingtonpost.com/technology/2019/08/12/amazons-autonomous-robots-have-
+started-delivering-packages-new-location-southern-california/. Accessed 28 December 2023.
+Holpuch, Amanda. “Why Countries Are Trying to Ban TikTok.” The New York Times, 12 December
+2023, https://www.nytimes.com/article/tiktok-ban.html. Accessed 31 January 2024.
+Holusha, John. “JAPANESE ART OF AUTOMATION.” The New York Times, 28 March 1983,
+https://www.nytimes.com/1983/03/28/business/japanese-art-of-automation.html. Accessed 28
+December 2023.
+Hong, N. “3D bioprinting and its in vivo applications.” Journal of Biomedical Materials Research,
+2018.
+Honnecourt, Villard. The Sketchbook of Villard de Honnecourt. Indiana University Press, 1968.
+Hopfield, John. “Neurons with graded response have collective computational properties like those
+of two-state neurons.” Proceedings of the National Academy of Sciences of the United States
+of America.
+Hornyak, Timothy N. Loving the Machine: The Art and Science of Japanese Robots. Kodansha
+International, 2006.
+
+---
+
+[p. 595-595]
+August 2023, https://www.iar-gwu.org/print-archive/blog-post-title-four-xgtap. Accessed 31
+January 2024.
+Zukerman, Wendy. “Hayabusa 2 will seek the origins of life in space.” New Scientist, 18 August
+2010, https://www.newscientist.com/article/dn19332-hayabusa-2-will-seek-the-origins-of-life-
+in-space/. Accessed 28 December 2023.

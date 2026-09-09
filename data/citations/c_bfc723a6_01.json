@@ -1,0 +1,597 @@
+[
+ {
+  "chapitre": "83b7e645",
+  "citations": [],
+  "motif": "Page de copyright : mentions legales et coordonnees de l'editeur, sans propos citable."
+ },
+ {
+  "chapitre": "1674631b",
+  "citations": [
+   {
+    "texte": "Utpal est un conférencier et un écrivain reconnu sur l'intelligence artificielle, l'informatique quantique, le Web3 et Metaverse, intervenant lors de conférences, dans des collèges de premier plan et dans des universités du monde entier.",
+    "page": 7,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Qui parle dans ce livre",
+    "portee": "Situer l'auteur avant de le lire : ici un praticien de l'industrie, non un universitaire."
+   },
+   {
+    "texte": "Il a aidé et encadré des startups dans leur parcours, en aidant des institutions comme les IIT dans leurs divers programmes de recherche.",
+    "page": 7,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'accompagnement des jeunes entreprises",
+    "portee": "L'encadrement des start-ups par des praticiens experimentes, pratique installee en Inde."
+   }
+  ]
+ },
+ {
+  "chapitre": "1bd3ffbb",
+  "citations": [
+   {
+    "texte": "Dr Sarkar a apporté une contribution significative aux groupes de réflexion en matière de politique au sein du gouvernement indien, y compris NITI Aayog, où il a contribué à l'élaboration de la première stratégie d'IA de l'Inde et d'une feuille de route pour l'utilisation des données, de l'analyse et de l'intelligence artificielle pour la gouvernance et l'élaboration des politiques dans divers secteurs.",
+    "page": 9,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Une strategie nationale d'IA",
+    "portee": "Modele suivi par l'Inde : une strategie nationale d'IA adossee a une feuille de route sectorielle, transposable en Afrique."
+   }
+  ]
+ },
+ {
+  "chapitre": "27c57501",
+  "citations": [
+   {
+    "texte": "L'un des progrès les plus remarquables a été réalisé dans le domaine du traitement du langage naturel, qui a permis aux machines de comprendre, d'interpréter et de générer le langage humain.",
+    "page": 11,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La percee du langage",
+    "portee": "C'est par le langage que l'IA est devenue accessible au grand public, non par le calcul."
+   },
+   {
+    "texte": "Son architecture avancée et ses méthodes de formation lui ont permis d'atteindre des niveaux de précision et de fluidité inégalés, ce qui en fait un outil puissant pour les entreprises de divers secteurs.",
+    "page": 11,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Precision et fluidite",
+    "portee": "Deux qualites distinctes qu'il faut apprendre a separer : un texte fluide n'est pas un texte exact."
+   },
+   {
+    "texte": "Ce livre s'adresse aux dirigeants d'entreprise, aux entrepreneurs et à toute personne intéressée par la découverte du pouvoir de l'IA générative et de son impact potentiel sur le paysage des affaires.",
+    "page": 11,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le public vise",
+    "portee": "Ouvrage ecrit pour des decideurs, ce qui explique son angle pratique plutot que technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "8a0df43d",
+  "citations": [],
+  "motif": "Appareil editorial de l'editeur : errata, offres commerciales, mentions sur le piratage et liens Discord, sans propos citable."
+ },
+ {
+  "chapitre": "11d992fb",
+  "citations": [
+   {
+    "texte": "Bien qu'il puisse ressembler un peu à un chatbot et à son fonctionnement, en réalité, il est très différent d'un chatbot d'un point de vue technique.",
+    "page": 26,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ni chatbot ni moteur de recherche",
+    "portee": "Premiere clarification a poser avant tout usage : la ressemblance de surface cache une difference de nature."
+   },
+   {
+    "texte": "ChatGPT est un modèle génératif, ce qui signifie qu'il peut générer des réponses nouvelles plutôt que de simplement sélectionner une réponse prédéfinie dans une liste.",
+    "page": 26,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce que veut dire generatif",
+    "portee": "Definition en une phrase du mot le plus employe et le moins compris de cette technologie."
+   },
+   {
+    "texte": "De la réponse aux questions sur n'importe quel sujet à l'écriture d'articles, de blogs, de livres blancs, de programmes logiciels et même à la correction d'un code de programme erroné, il n'y a pas de limites.",
+    "page": 26,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'etendue des usages",
+    "portee": "Inventaire des taches confiees a l'outil des sa sortie, du texte au code."
+   }
+  ]
+ },
+ {
+  "chapitre": "4bce74da",
+  "citations": [
+   {
+    "texte": "l'intelligence que ChatGPT possède provient des conversations que vous avez eues à tout moment sur l'une des plateformes de médias sociaux ou de messagerie.",
+    "page": 26,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "D'ou vient l'intelligence de la machine",
+    "portee": "Rappel inconfortable : ce que la machine sait dire vient de ce que des humains ont ecrit, souvent sans le savoir."
+   },
+   {
+    "texte": "Pendant l'entraînement, le modèle est présenté avec une séquence de jetons et on lui demande de prédire le jeton suivant dans la séquence, certains des jetons de la séquence d'entrée étant masqués.",
+    "page": 26,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le principe de l'entrainement",
+    "portee": "Le coeur technique en une phrase : tout le reste decoule de cette tache de prediction du mot suivant."
+   },
+   {
+    "texte": "Cela oblige le modèle à utiliser le contexte des jetons non masqués pour faire une prédiction pour le jeton masqué, ce qui l'aide à apprendre une représentation du langage polyvalente.",
+    "page": 26,
+    "axe": "02-ia-technique-academique",
+    "theme": "Apprendre par le contexte",
+    "portee": "C'est en devinant ce qui manque que le modele apprend a representer le langage."
+   },
+   {
+    "texte": "Un avantage majeur de ChatGPT est sa capacité à gérer le contexte et à maintenir la cohérence d'une conversation.",
+    "page": 27,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La coherence conversationnelle",
+    "portee": "Ce qui distingue l'outil des systemes precedents et qui conditionne la maniere de l'interroger."
+   },
+   {
+    "texte": "Ces chatbots peuvent être intégrés au site web ou aux plateformes de médias sociaux d'une entreprise et peuvent fournir des réponses instantanées aux questions courantes, libérant ainsi les représentants du service client humains pour traiter des problèmes plus complexes.",
+    "page": 28,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Repartir le travail avec la machine",
+    "portee": "Modele de repartition realiste : la machine prend le repetitif, l'humain garde le complexe."
+   }
+  ]
+ },
+ {
+  "chapitre": "c3f6c9d2",
+  "citations": [
+   {
+    "texte": "Ces entreprises proposent des outils et des services qui permettent aux entreprises de construire et de déployer des systèmes d'IA basés sur le langage sans avoir à construire et à former leurs propres modèles à partir de zéro.",
+    "page": 29,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Ne pas repartir de zero",
+    "portee": "Point decisif pour une petite structure : on construit sur des modeles existants, on ne les recree pas."
+   }
+  ]
+ },
+ {
+  "chapitre": "ecf82175",
+  "citations": [
+   {
+    "texte": "L'intelligence artificielle générative désigne un sous-domaine de l'intelligence artificielle qui consiste à créer de nouveaux contenus ou données à partir d'un ensemble donné d'entrées, souvent en utilisant des techniques telles que l'apprentissage profond et les réseaux neuronaux.",
+    "page": 31,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Definir l'IA generative",
+    "portee": "Definition simple a retenir : creer du nouveau contenu a partir d'entrees, par apprentissage profond."
+   },
+   {
+    "texte": "Les premiers systèmes d'IA générative se sont principalement concentrés sur des tâches simples telles que la reconnaissance de motifs et la prise de décisions basées sur des règles.",
+    "page": 31,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Les debuts modestes",
+    "portee": "Rappel que l'histoire commence dans les annees 1950 et non avec ChatGPT."
+   },
+   {
+    "texte": "ce n'est qu'avec le développement des algorithmes d'apprentissage profond et des réseaux neuronaux dans les années 2010 que l'IA générative a vraiment commencé à prospérer.",
+    "page": 31,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le tournant des annees 2010",
+    "portee": "Date le vrai basculement, bien avant la mise a disposition publique de ces outils."
+   }
+  ]
+ },
+ {
+  "chapitre": "8d6d45b7",
+  "citations": [
+   {
+    "texte": "L'évaluation de l'IA générative est un défi constant, car il peut être difficile de mesurer objectivement la qualité et la créativité des résultats générés.",
+    "page": 32,
+    "axe": "02-ia-technique-academique",
+    "theme": "Comment juger une machine creative",
+    "portee": "Probleme non resolu : on sait mesurer une erreur, pas une qualite ni une invention."
+   },
+   {
+    "texte": "Dans l'industrie de la santé, l'IA générative peut être utilisée pour créer des plans de traitement personnalisés basés sur les données des patients, et dans l'industrie financière, elle peut être utilisée pour générer des algorithmes de trading et des prévisions financières.",
+    "page": 32,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Des usages sectoriels",
+    "portee": "Panorama d'applications qui montre l'ampleur du champ, du divertissement a la sante."
+   }
+  ]
+ },
+ {
+  "chapitre": "70bdb8da",
+  "citations": [
+   {
+    "texte": "L'IA générative peut être utilisée pour analyser de grandes quantités de données financières afin d'identifier d'éventuels cas de fraudes ou de crimes financiers.",
+    "page": 34,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Detecter la fraude",
+    "portee": "Premier usage bancaire cite, et le plus mature : reperer l'anomalie dans le flux."
+   },
+   {
+    "texte": "Par exemple, l'IA générative peut être utilisée pour analyser les données de transactions afin d'identifier des motifs d'activités suspectes, telles que des transactions qui sortent de la plage habituelle de comportement d'un client.",
+    "page": 34,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'anomalie de comportement",
+    "portee": "La fraude se detecte moins par la regle que par l'ecart au comportement habituel."
+   }
+  ]
+ },
+ {
+  "chapitre": "c6d94aef",
+  "citations": [
+   {
+    "texte": "un chatbot alimenté par l'IA générative pourrait aider les clients à répondre à des questions financières de base et recommander des produits et services adaptés à leurs besoins et préférences spécifiques.",
+    "page": 35,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le conseil automatise",
+    "portee": "Promesse d'inclusion financiere, a lire avec la question du conflit d'interets sur les produits recommandes."
+   },
+   {
+    "texte": "Cela peut aider les clients à prendre des décisions d'investissement plus éclairées et à améliorer leurs chances de réaliser leurs objectifs financiers.",
+    "page": 35,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Decider mieux informe",
+    "portee": "Argument central des recommandations automatisees, dont la valeur depend de la qualite des donnees."
+   }
+  ]
+ },
+ {
+  "chapitre": "eeb5c86d",
+  "citations": [
+   {
+    "texte": "L'IA générative peut aider à améliorer l'efficacité des opérations bancaires et financières en automatisant de nombreuses tâches routinières, telles que la détection de la fraude et le service clientèle.",
+    "page": 36,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'automatisation du routinier",
+    "portee": "Le gain porte sur la tache repetitive, ce qui pose ensuite la question de ceux qui l'effectuaient."
+   },
+   {
+    "texte": "L'un des plus grands défis de l'IA générative dans le secteur bancaire et financier est de garantir que les données des clients sont protégées et sécurisées.",
+    "page": 36,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Proteger les donnees des clients",
+    "portee": "Le premier defi cite n'est pas technique mais fiduciaire : la garde des donnees confiees."
+   }
+  ]
+ },
+ {
+  "chapitre": "6b090dff",
+  "citations": [
+   {
+    "texte": "L'IA générative peut soulever des préoccupations éthiques, notamment en ce qui concerne les problèmes de biais et de discrimination.",
+    "page": 37,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Biais et discrimination",
+    "portee": "Un systeme de credit ou d'assurance biaise reproduit et amplifie des exclusions existantes."
+   },
+   {
+    "texte": "La demande de professionnels de l'IA compétents est élevée et il y a actuellement une pénurie de professionnels ayant les compétences et l'expérience nécessaires pour développer et déployer des systèmes d'IA génératifs dans l'industrie bancaire et financière.",
+    "page": 37,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La penurie de competences",
+    "portee": "Contrainte concrete du deploiement, et opportunite de carriere pour qui se forme maintenant."
+   }
+  ]
+ },
+ {
+  "chapitre": "13e43630",
+  "citations": [
+   {
+    "texte": "Pour éviter les éventuels inconvénients, l'utilisation de l'IA générative doit être guidée par la transparence, la responsabilité et l'équité.",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Trois principes directeurs",
+    "portee": "Triptyque simple a retenir avant d'ouvrir un chantier d'IA dans une organisation."
+   },
+   {
+    "texte": "Les modèles d'IA générative peuvent générer du contenu tel que du texte, des images et de la musique qui peuvent potentiellement violer les droits de propriété intellectuelle existants.",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le droit d'auteur en question",
+    "portee": "Risque juridique reel pour toute entreprise qui publie du contenu genere sans verification."
+   },
+   {
+    "texte": "Les modèles d'IA générative nécessitent souvent de grandes quantités de données pour être entrainés, ce qui peut inclure des informations personnelles.",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des donnees personnelles dans l'entrainement",
+    "portee": "Rappel que les corpus d'entrainement contiennent des donnees dont les personnes ignorent l'usage."
+   }
+  ]
+ },
+ {
+  "chapitre": "23473e15",
+  "citations": [
+   {
+    "texte": "Les modèles d'IA générative peuvent perpétuer des biais et des discriminations existants, en particulier lorsqu'ils sont entrainés sur des ensembles de données biaisés.",
+    "page": 40,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le biais se transmet",
+    "portee": "Un modele ne cree pas le prejuge, il le recopie et le diffuse a l'echelle."
+   },
+   {
+    "texte": "Les modèles d'IA générative peuvent être utilisés pour créer un contenu réaliste et convaincant, y compris de fausses informations, des deepfakes et des attaques de phishing.",
+    "page": 40,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le realisme comme arme",
+    "portee": "La qualite du rendu, presentee comme une prouesse, est aussi ce qui rend l'abus efficace."
+   },
+   {
+    "texte": "Encourager la collaboration entre l'industrie, l'université et le gouvernement pour développer des normes et des meilleures pratiques pour l'utilisation éthique et responsable de l'IA générative.",
+    "page": 40,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une reponse a trois voix",
+    "portee": "Aucun des trois acteurs ne peut fixer seul les normes : c'est la these des auteurs."
+   }
+  ]
+ },
+ {
+  "chapitre": "e22e65b3",
+  "citations": [
+   {
+    "texte": "L'IA générative peut être utilisée pour générer des cartes et des modèles des zones touchées par une catastrophe, ce qui aide les responsables gouvernementaux à planifier et coordonner les efforts de secours.",
+    "page": 42,
+    "axe": "11-sciences-environnement",
+    "theme": "L'IA dans la reponse aux catastrophes",
+    "portee": "Usage d'interet public direct, particulierement pertinent pour les regions exposees aux crises climatiques."
+   }
+  ]
+ },
+ {
+  "chapitre": "4fa9b50b",
+  "citations": [
+   {
+    "texte": "L'IA générative peut être utilisée pour analyser des données financières, telles que des déclarations fiscales et des données de transaction, afin de détecter d'éventuelles fraudes ou infractions financières.",
+    "page": 43,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Detecter la fraude fiscale",
+    "portee": "Levier concret pour un Etat dont les recettes fiscales fuient : l'analyse automatisee des declarations."
+   },
+   {
+    "texte": "L'IA générative peut être utilisée pour analyser de grandes quantités de données afin d'identifier des schémas et des tendances, telles que la prédiction de futures épidémies de maladies ou de points chauds de criminalité.",
+    "page": 43,
+    "axe": "11-sciences-environnement",
+    "theme": "L'analyse predictive publique",
+    "portee": "Promesse de prevention sanitaire, a mettre en regard des derives possibles de la police predictive."
+   },
+   {
+    "texte": "il est important de veiller à ce que l'intelligence artificielle générative soit développée et utilisée de manière éthique et responsable, avec des dispositions appropriées pour protéger la vie privée des citoyens et prévenir les abus.",
+    "page": 43,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La vie privee des citoyens",
+    "portee": "Reserve posee au moment meme ou l'ouvrage vante l'analyse des images de surveillance."
+   }
+  ]
+ },
+ {
+  "chapitre": "b22b290e",
+  "citations": [
+   {
+    "texte": "ChatGPT peut être utilisé pour récupérer des informations à partir de bases de données et de documents gouvernementaux, tels que des lois et des réglementations, afin d'aider les employés du gouvernement à effectuer leur travail de manière plus efficace.",
+    "page": 44,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Retrouver la regle applicable",
+    "portee": "Usage sobre et utile : rendre accessible un corpus juridique que personne ne peut lire en entier."
+   },
+   {
+    "texte": "ChatGPT peut être utilisé pour traduire des documents et des communications entre différentes langues, aidant les employés du gouvernement à communiquer avec les citoyens et les parties prenantes de manière plus efficace.",
+    "page": 44,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Traduire pour administrer",
+    "portee": "Enjeu majeur pour des Etats plurilingues : atteindre le citoyen dans sa langue sans multiplier les services."
+   }
+  ]
+ },
+ {
+  "chapitre": "3edb1e22",
+  "citations": [
+   {
+    "texte": "ChatGPT peut être utilisé pour analyser et évaluer des propositions politiques et la législation, aidant les responsables gouvernementaux à prendre des décisions éclairées sur les politiques publiques.",
+    "page": 45,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Analyser la loi par la machine",
+    "portee": "Usage a manier avec prudence : evaluer une politique n'est pas un exercice purement technique."
+   },
+   {
+    "texte": "ChatGPT peut être utilisé pour développer des assistants virtuels capables d'interagir avec les citoyens, les aidant ainsi à accéder plus facilement aux services gouvernementaux et aux informations.",
+    "page": 45,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "L'acces aux services publics",
+    "portee": "Piste d'inclusion administrative pour des populations eloignees des guichets."
+   }
+  ]
+ },
+ {
+  "chapitre": "18240f44",
+  "citations": [
+   {
+    "texte": "Le niveau d'authenticité et de validité du contenu créé par l'IA générative dépend de l'application spécifique et de la qualité des données d'entraînement utilisées pour développer le modèle d'IA.",
+    "page": 47,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La qualite depend des donnees",
+    "portee": "Regle de base : la fiabilite d'une reponse depend de ce sur quoi le modele a ete entraine."
+   },
+   {
+    "texte": "l'IA générative peut produire du contenu grammaticalement correct mais sémantiquement incorrect ou trompeur.",
+    "page": 47,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Correct mais faux",
+    "portee": "Formule a retenir : la forme impeccable d'un texte ne dit rien de la verite de son contenu."
+   },
+   {
+    "texte": "Si les données d'entraînement sont précises, diversifiées et représentatives du public cible, le contenu généré est plus susceptible d'être authentique et valide.",
+    "page": 47,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Trois qualites des donnees",
+    "portee": "Precision, diversite et representativite : les trois conditions d'un resultat fiable."
+   }
+  ]
+ },
+ {
+  "chapitre": "c80fbe43",
+  "citations": [
+   {
+    "texte": "Comme ChatGPT n'est pas mis à jour avec des données récentes et qu'il est également formé sur des bases de données passées, il est possible que les données ne soient pas parfaitement validées et mises à jour.",
+    "page": 47,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Un savoir date",
+    "portee": "Limite structurelle a garder en tete pour toute question portant sur l'actualite."
+   },
+   {
+    "texte": "Dans des applications hautement diligentes, telles que des contrats juridiques ou des rapports médicaux, il peut être nécessaire d'avoir une supervision humaine et une validation pour garantir l'exactitude et la fiabilité du contenu.",
+    "page": 47,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Garder l'humain dans la boucle",
+    "portee": "Regle d'usage professionnel : plus l'enjeu est lourd, plus la validation humaine est obligatoire."
+   },
+   {
+    "texte": "Si les données d'apprentissage sont biaisées, le contenu généré peut également être biaisé, entraînant des inexactitudes et des malentendus.",
+    "page": 48,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le biais entre et ressort",
+    "portee": "Enonce le plus simple du probleme : ce qui entre biaise ressort biaise."
+   },
+   {
+    "texte": "Bien que l'IA générative puisse produire rapidement et efficacement de grandes quantités de contenu, elle peut ne pas toujours être en mesure de représenter avec précision des idées complexes ou des informations techniques.",
+    "page": 48,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La quantite n'est pas la profondeur",
+    "portee": "La productivite de l'outil est reelle, sa capacite a rendre une idee complexe ne l'est pas toujours."
+   }
+  ]
+ },
+ {
+  "chapitre": "12ac32d0",
+  "citations": [
+   {
+    "texte": "La désinformation peut se propager rapidement sur les médias sociaux et d'autres plateformes en ligne, entraînant confusion, panique et préjudice.",
+    "page": 49,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La vitesse de la fausse nouvelle",
+    "portee": "Le danger n'est pas la production du faux mais la vitesse de sa diffusion."
+   },
+   {
+    "texte": "si les données d'entraînement sont biaisées contre certains groupes, le contenu généré peut également être biaisé, perpétuant ainsi des stéréotypes et discriminations préjudiciables.",
+    "page": 49,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'amplification des stereotypes",
+    "portee": "Question directe pour les populations sous-representees dans les corpus d'entrainement."
+   },
+   {
+    "texte": "L'IA générative a le potentiel d'automatiser de nombreuses tâches et emplois, entraînant ainsi une perte d'emplois et du chômage.",
+    "page": 49,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La perte d'emplois",
+    "portee": "Enonce sans detour, place par les auteurs parmi les dangers et non parmi les benefices."
+   },
+   {
+    "texte": "L'IA générative peut être utilisée pour créer des attaques de phishing sophistiquées, des deep fakes et d'autres formes de cyberattaques.",
+    "page": 49,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des attaques sur mesure",
+    "portee": "L'arnaque generique devient personnalisee et donc beaucoup plus difficile a reperer."
+   }
+  ]
+ },
+ {
+  "chapitre": "dafac22a",
+  "citations": [
+   {
+    "texte": "Il est également important de veiller à ce que les avantages de l'IA générative soient distribués de manière équitable et que les travailleurs qui sont remplacés par l'automatisation bénéficient d'une formation et d'un soutien.",
+    "page": 50,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Repartir les gains",
+    "portee": "Exigence rarement chiffree mais toujours enoncee : accompagner ceux que l'automatisation deplace."
+   },
+   {
+    "texte": "L'architecture transformer est un type de réseau neuronal qui a été introduit dans l'article \"Attention is All You Need\" de Vaswani et al. et est devenue très populaire pour les tâches de traitement du langage naturel.",
+    "page": 50,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'article fondateur",
+    "portee": "Reference a connaitre : un seul article de 2017 fonde toute la generation actuelle de modeles."
+   },
+   {
+    "texte": "le développement de grands modèles de langage comme ChatGPT implique une combinaison de recherches et d'efforts d'ingénierie, et est généralement le résultat du travail collaboratif d'une équipe d'experts",
+    "page": 50,
+    "axe": "02-ia-technique-academique",
+    "theme": "Un travail d'equipe",
+    "portee": "Rappel contre le mythe du genie isole : ces modeles sont des oeuvres collectives."
+   }
+  ]
+ },
+ {
+  "chapitre": "e8e2c15b",
+  "citations": [
+   {
+    "texte": "Le TALN utilise des techniques informatiques pour permettre aux ordinateurs de comprendre, d'interpréter et de générer du langage humain.",
+    "page": 53,
+    "axe": "02-ia-technique-academique",
+    "theme": "Definir le traitement du langage",
+    "portee": "Definition courte du sous-domaine dont sont issus tous les outils conversationnels."
+   },
+   {
+    "texte": "Le TALN a connu des avancées considérables ces dernières années, grâce à la disponibilité de vastes ensembles de données, de ressources informatiques puissantes et d'algorithmes d'apprentissage automatique avancés.",
+    "page": 53,
+    "axe": "02-ia-technique-academique",
+    "theme": "Trois conditions de la percee",
+    "portee": "Donnees, puissance de calcul et algorithmes : aucune des trois ne suffit seule."
+   }
+  ]
+ },
+ {
+  "chapitre": "c6f0e909",
+  "citations": [
+   {
+    "texte": "Selon l'université Stanford, le premier besoin en TALN est apparu pendant la Seconde Guerre mondiale, où la traduction d'urgence était nécessaire.",
+    "page": 54,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ne d'une urgence",
+    "portee": "L'origine du traitement automatique du langage est militaire, comme beaucoup de technologies civiles."
+   },
+   {
+    "texte": "En 1950, Alan Turing a proposé le \"test de Turing\", une référence pour l'intelligence artificielle qui consistait en la capacité d'un ordinateur à mener une conversation indiscernable d'une conversation humaine.",
+    "page": 54,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le test de Turing",
+    "portee": "Le critere pose en 1950 reste la reference implicite quand on juge un agent conversationnel."
+   },
+   {
+    "texte": "Dans les années 1980 et 1990, les chercheurs se sont concentrés sur le développement de modèles statistiques pour le traitement du langage, ce qui a permis aux ordinateurs d'apprendre à partir de vastes ensembles de données de langage humain.",
+    "page": 54,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le tournant statistique",
+    "portee": "Etape decisive : on cesse d'ecrire des regles pour laisser la machine apprendre des exemples."
+   }
+  ]
+ },
+ {
+  "chapitre": "afefa9f9",
+  "citations": [
+   {
+    "texte": "Un autre développement important dans le NLP a été l'utilisation de l'apprentissage par transfert, où les modèles sont d'abord pré-entraînés sur un grand ensemble de données, puis affinés pour une tâche spécifique.",
+    "page": 55,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'apprentissage par transfert",
+    "portee": "Principe qui rend l'IA accessible : partir d'un modele general et l'ajuster a son propre besoin."
+   },
+   {
+    "texte": "Cela inclut le développement de méthodes pour détecter et atténuer les biais dans les données et les modèles linguistiques, ainsi que pour s'assurer que les applications de NLP sont accessibles aux personnes de différents milieux linguistiques et culturels.",
+    "page": 55,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "L'accessibilite linguistique",
+    "portee": "Enjeu direct pour les langues africaines, tres peu representees dans les corpus d'entrainement."
+   }
+  ]
+ },
+ {
+  "chapitre": "321f56d1",
+  "citations": [
+   {
+    "texte": "Le modèle Transformers, créé par Google\nen 2017, est la base et l'élément préliminaire de ce modèle GPT.",
+    "page": 56,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'origine du modele",
+    "portee": "Le socle technique de ChatGPT vient d'un concurrent : Google, en 2017."
+   },
+   {
+    "texte": "L'ensemble du\nGPT-3 est composé d'environ 175 milliards de paramètres dans son modèle\nentier, ce qui est environ 50 fois plus élevé que le modèle linguistique\nintroduit par Google en 2018, BERT.",
+    "page": 56,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'echelle des parametres",
+    "portee": "Ordre de grandeur a retenir pour comprendre le cout et la puissance de ces modeles."
+   }
+  ]
+ }
+]

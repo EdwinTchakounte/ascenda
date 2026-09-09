@@ -1,0 +1,37 @@
+# Corpus et données lourdes, hors dépôt
+livres/
+livres-connaissances/
+data/extracted/
+data/logs/
+
+# Environnements
+.venv/
+node_modules/
+.env
+*.db
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Flutter et Dart
+apps/mobile/build/
+apps/mobile/.dart_tool/
+apps/mobile/.flutter-plugins*
+apps/mobile/ios/Pods/
+apps/mobile/**/Flutter/ephemeral/
+apps/mobile/**/.gradle/
+apps/mobile/android/local.properties
+.packages
+pubspec.lock
+
+# Next.js
+apps/web-vitrine/.next/
+apps/web-vitrine/out/
+apps/web-vitrine/.env.local
+next-env.d.ts
+
+# Système
+.DS_Store
+*.log
+vectorisation.log

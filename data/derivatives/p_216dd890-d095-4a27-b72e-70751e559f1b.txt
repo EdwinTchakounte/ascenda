@@ -1,0 +1,830 @@
+OUVRAGE : ARTI_Manager_l'Intelligence_Artificielle_GERESO
+AUTEUR(S) : Michelle VEYSSIÈRE et Roland ROBEVEILLE
+ANNÉE : inconnue
+PAGES : 213
+AXE : IA Travail Management Metiers
+SOMMAIRE :
+  Remerciements (p. 8-13)
+  Introduction (p. 14-14)
+  Les concepts d’Intelligence Artificielle, de numérique, de digital et de big data (p. 15-15)
+  Manager l’Intelligence Artificielle ? (p. 16-16)
+  À qui est destiné cet ouvrage ? (p. 17-17)
+  Les interrogations que nous traiterons (p. 17-23)
+  Chapitre 1 : Une transformation totale de notre société : de l’ordinateur comme outil à l’IA maitre du monde (p. 24-24)
+  Introduction (p. 24-25)
+  Qu’est-ce que l’IA ? (p. 26-28)
+  Clarifier le fonctionnement de l’IA (p. 29-30)
+  Des chiffres différents selon les études (p. 31-33)
+  L’IA et la productivité (p. 34-35)
+  Une question culturelle aussi (p. 36-36)
+  Un changement de logique (p. 37-38)
+  L’IA comme concept et outil de gestion de données - Le Machine Learning (p. 39-42)
+  Ce qui différencie encore l’Homme de la machine (p. 43-49)
+  Conclusions du premier chapitre (p. 50-53)
+  Chapitre 2 - Des métiers seraient supprimés et d’autres seraient créés ! (p. 54-54)
+  Introduction (p. 54-54)
+  L’impact de l’IA sur les activités, les métiers, les emplois (p. 55-61)
+  Les prévisions en termes d’emplois gagnés et perdus (p. 62-73)
+  Les opportunités offertes et les risques encourus (p. 74-82)
+  Conclusions du deuxième chapitre (p. 83-89)
+  Chapitre 3 - Tous sont concernés :  les jeunes, les travailleurs et les seniors (p. 90-90)
+  Introduction (p. 90-92)
+  L’adaptation des jeunes aux nouvelles conditions d’emploi (p. 93-101)
+  L’adaptation des travailleurs ou personnes en cours de carrière (p. 102-108)
+  L’adaptation des seniors (p. 109-115)
+  Le rôle de la FRH (p. 116-123)
+  Trois options sont possibles pour les DRH (p. 124-125)
+  Conclusions de ce chapitre (p. 126-131)
+  Chapitre 4 - Manager, ce n’est pas seulement gérer ! (p. 132-132)
+  Introduction (p. 132-134)
+  Les remises en question du management traditionnel (p. 135-137)
+  Passer du rôle de manager à celui de leader (p. 138-143)
+  Changer les organisations et changer la manière de manager (p. 144-144)
+  Comment faire ? (p. 145-152)
+  Le rôle de l’IA face au manager (p. 153-154)
+  Développer un management différent pour gérer la complexité avec l’IA comme assistant ou comme manager (p. 155-158)
+  Hypothèse d’une assistance par l’IA à un projet de changement utilisant massivement les principes de la psychologie sociale (p. 159-164)
+  Comment faire pour changer de système de management ? (p. 165-165)
+  Conclusions de ce chapitre (p. 166-169)
+  Chapitre 5 - Les fiches pratiques pour réussir cette transition (p. 170-170)
+  Fiche pratique sur le management (p. 170-183)
+  Fiche pratique sur la gestion prévisionnelle des compétences (p. 184-187)
+  Fiche pratique sur la dynamique de groupe (p. 188-191)
+  Fiches pratiques sur la conduite d’un projet de changement (p. 192-199)
+  Conclusions générales (p. 200-207)
+  Bibliographie (p. 208-210)
+  À propos des auteurs (p. 211-213)
+
+[15/159 passages, 12397 tokens sur 124538]
+
+=== EXTRAITS ===
+
+[p. 1-7]
+DÉVELOPPEMENT
+PERSONNEL 
+ EFFICACITÉ
+PROFESSIONNELLE 
+Michelle Veyssière - Roland Robeveille
+É D I T I O N
+2e édition
+l’Intelligence Artificielle
+Manager
+S’adapter aux transformations profondes 
+de notre environnement professionnel
+
+Manager l’Intelligence
+Artificielle
+Développement personnel et efficacité professionnelle
+
+Manager l’Intelligence Artificielle
+S’adapter aux transformations profondes 
+de l’environnement professionnel
+Auteurs : Michelle VEYSSIÈRE et Roland ROBEVEILLE
+Édition 2019
+© GERESO Édition 2019
+Direction de collection : Catherine FOURMOND
+Conception graphique de couverture : Atmosphère
+Suivi éditorial et conception graphique intérieure : GERESO Édition
+Illustration : © iMrSquid/istockphotos.com
+www.gereso.com/edition
+e-mail : edition@gereso.fr
+Tél. 02 43 23 03 53 - Fax 02 43 28 40 67
+Reproduction, traduction, adaptation interdites
+Tous droits réservés pour tous pays
+Loi du 11 mars 1957
+Dépôt légal : Janvier 2019 
+ISBN : 978-2-37890-081-6 
+EAN 13 : 9782378900816
+ISBN numériques
+ISBN eBook : 978-2-37890-082-3
+ISBN ePub : 978-2-37890-157-8
+ISBN Kindle : 978-2-37890-158-5
+GERESO SAS au capital de 160 640 euros - RCS Le MANS B 311 975 577
+Siège social : 38 rue de la Teillaie - CS 81826 - 72018 Le Mans Cedex 2 - France
+
+Dans la même collection :
+•	101 bonnes pratiques de management
+•	69 règles du succès au travail
+•	Adieu les problèmes au travail !
+•	À la conquête de mon bien-être
+•	Communiquer efficacement
+•	Communiquer en situation de crise
+•	Comprendre l’évaluation professionnelle
+•	Crise de motivation au travail ? Rien d’anormal !
+•	Cultiver l’engagement de vos équipes
+•	Dix entretiens incontournables en entreprise
+•	Évaluer les compétences professionnelles : mode d’emploi
+•	Être recruté dans les métiers de l’industrie
+•	Gagner en leadership
+•	Gestion du temps pour managers et professionnels débordés
+•	L’art de conclure une vente avec la PNL
+•	Le leadership du cœur
+•	Le manager de proximité
+•	L’entreprise de soi : clé de la réussite entrepreneuriale
+•	Le management bienveillant, accélérateur de performance
+www.la-librairie-rh.com
+
+Dans la même collection (suite) :
+•	Le recrutement gagnant-gagnant
+•	L’estime de soi au cœur du management
+•	Les dynamiques de l’intelligence relationnelle
+•	Les groupes Mastermind : accélérateurs de réussite
+•	Manager le travail à distance et le télétravail
+•	Manager l’innovation autrement
+•	Manager une équipe projet
+•	Mieux communiquer avec soi-même et avec les autres
+•	Ni hérisson, ni paillasson : plus jamais peur des conflits
+•	Parler en public, être écouté et convaincre
+•	Prendre la bonne décision individuelle ou collective
+•	Préparer son futur professionnel
+•	Prévention des RPS avec la PNL
+•	Réalité des RPS : actions et solutions
+•	Recadrer sans démotiver
+•	(Re)Donner du sens à son management
+•	Réussir son intégration professionnelle
+•	Réussir son oral d’examen ou de concours
+•	Réussir vos entretiens professionnels
+•	Révélez votre Talent avec l’intelligence prismatique
+•	Travailler, pour quoi faire ?
+•	Vers un leadership créatif, efficace et humain
+
+---
+
+[p. 19-21]
+is déjà externalisés 
+vers des pays où les coûts étaient moindres soient de nouveau internalisés, 
+puisque pris en charge par l’IA (les banques, les compagnies d’assurance et 
+les centres d’appels par exemple). Cela ne créerait pas d’emplois nouveaux, 
+mais probablement des transferts d’activité vers plus de contrôle en interne.
+INTRODUCTION
+17
+Les problématiques
+Une des problématiques qui sera mise en avant concerne le délai dans lequel 
+l’IA va acquérir suffisamment d’autonomie pour échapper au « contrôle » des 
+hommes ?
+Comment les hommes pourront-ils faire face à ces changements ?
+Qui est concerné et à quelles conditions est mise en œuvre l’IA ?
+Comment les personnes en activité vont-elles s’adapter aux changements 
+que l’IA va introduire dans leur vie quotidienne ?
+Quels nouveaux comportements vont-elles adopter face à un système qui, à 
+un moment, dépassera leurs capacités de compréhension ?
+Comment la gestion des émotions sera-t-elle prise en compte dans la prise de 
+décision et sur les capacités de l’IA à décider par elle-même ?
+Parmi les forces et faiblesses de ce nouveau paradigme de fonctionnement, 
+des entreprises se posent la question des moyens dont disposent les per
+sonnes pour s’adapter à l’IA. Ont-elles les compétences nécessaires  ? Et 
+quelles sont ces nouvelles compétences ?
+Nos hypothèses de départ
+Les métiers, les activités et les tâches pris en charge par l’IA créeront les 
+conditions d’une nouvelle organisation du travail et une nouvelle répartition 
+des responsabilités entre et parmi les acteurs.
+L’IA va changer les tâches plus que les métiers. Elle va plus impacter l’orga
+nisation du travail par la transformation des relations et la simplification des 
+tâches que par la suppression d’emplois. Les emplois supprimés ne le seront 
+pas directement par l’introduction de l’IA, mais seront une conséquence des 
+nouvelles organisations du travail et des transferts de tâches engendrés par 
+l’IA.
+L’utilisation des méthodes confirmées de psychologie sociale par l’IA pourrait 
+faire évoluer considérablement le management des personnes, voire dévelop
+per une forme de manipulation de masse au bénéfice de tous ou, au contraire, 
+favoriser le chaos organisé.
+
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+18
+Tous les acteurs ne pourront pas s’adapter à des changements de comporte
+ment face à des systèmes qui « penseront » à leur place et qui, pour certains, 
+leur donneront des instructions.
+Les managers auront un autre rôle d’accompagnement des changements 
+qui interviendront comme conséquences du déploiement de l’IA. Ils devront 
+adopter eux aussi de nouveaux comportements managériaux face à des « ma
+chines » qui possèderont explicitement des connaissances managériales plus 
+poussées et plus fiables que les leurs. L’IA pourra fonder son argumentation 
+sur des faits établis. Ils seraient soutenus par des théories en lien avec le 
+comportement managérial traditionnel fondé sur du ressenti et sur la seule 
+expérience des managers. Ils ne seront donc plus des « chefs », mais devront 
+adopter des postures plus fédératives pour faciliter les relations entre les tra
+vailleurs et les machines.
+Leur existence même pourrait être menacée dans certaines configurations 
+professionnelles.
+La fonction ressources humaines est déjà largement concernée. Elle devra 
+remettre en question ses méthodes de travail, ses processus, son organisation 
+au risque de disparaître en tant que « fonction » pour avoir plutôt un rôle de 
+conseiller.
+Ces six hypothèses seront reprises dans les différents chapitres et nous tente
+rons d’y apporter les réponses les plus adaptées avec l’aide des plus récentes 
+analyses et études.
+« La capacité à acquérir un nouveau savoir vaudra plus que le savoir déjà ap
+pris2. » Une tête bien faite versus une tête bien pleine.
+Nous verrons dans le premier chapitre sur quels arguments nous appuyons 
+notre hypothèse.
+Dans le premier chapitre, nous ferons un point de passage sur la situation 
+actuelle et mondiale ainsi que sur celle de la France en particulier en matière 
+d’ingénierie de l’IA. Nous nous centrerons sur les moyens offerts aux per
+sonnes en activité pour comprendre cette logique du changement et anticiper 
+les transferts de compétences. Les enjeux pour les salariés seront : soit chan
+ger de métier si celui-ci est voué à régresser pour toutes ou parties des tâches 
+qui le composent, soit acquérir de nouvelles compétences pour s’adapter aux 
+évolutions.
+2. Dell et l’Institut pour le Futur basé à Palo Alto, lors d’ateliers en mars 2017.
+
+---
+
+[p. 32-33]
+reseau_3745457.html
+11. https://mydigitalweek.com/impact-lia-rh/
+12. Rapport de France Stratégie, 12 mars 2018. Stratégie.gouv.fr
+13. https://www.lemonde.fr/economie/article/2016/05/20/pour-l-ocde-9-des-emplois-sont-menaces-par-les-
+robots_4923165_3234.html
+14. http://www.actutem.com/liot-promis-a-un-avenir-radieux-jusquen-2025/
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+30
+En 2020 toujours, le marché des objets connectés serait supérieur à 250 mil
+liards d’euros selon le Boston Consulting Group.
+Une autre étude fait état de la création de 85 % d’emplois supplémentaires 
+d’ici 203015. Ce serait « la capacité à acquérir un nouveau savoir qui vaudra 
+plus que le savoir déjà appris » et qui serait le moteur de l’adaptation des 
+hommes aux évolutions technologiques.
+Selon cette même étude, une augmentation substantielle du nombre de per
+sonnes en freelance, avec un cumul de missions différentes et qui dépendraient 
+de plusieurs employeurs serait la conséquence directe de ces changements. 
+Ce n’est pas directement lié à l’IA, mais les évolutions des lois de 2017/2018 
+et 2019 sur le droit du travail, la formation professionnelle et l’assurance chô
+mage en France (qui sont toutes dans une démarche très libérale) génèrent 
+déjà des conséquences sur la transformation des emplois et des conditions 
+de travail dans les entreprises.
+Ces lois ont notamment comme conséquences de pousser les travailleurs 
+vers plus d’autonomie, plus de responsabilité personnelle dans leur évolu
+tion professionnelle. Elles poussent également vers plus d’individualisation du 
+contrat de travail et moins de sécurité en terme d’emploi fixe16. 
+L’IA, n’est donc pas la cause première de cette transformation des emplois 
+vers plus de précarité, mais elle en accentue les effets pour certains métiers 
+par une automatisation accrue des tâches manuelles.
+Après réflexion et analyse des chiffres discordants, nous pensons que ces 
+études, effectuées sur des périmètres et sur des organisations différentes, 
+présentent une certaine cohérence. 
+En effet, une partie des études ont été réalisées sur les emplois impactés par 
+l’IA. D’autres portaient sur les tâches exclusivement prises en charge par l’IA. 
+D’autres encore ont sélectionné des métiers. D’autres enfin ont exclu d’em
+blée les activités liées au « monde informatique » se centrant sur les métiers 
+de services, peu touchés jusque-là par l’IA. 
+Nous reprendrons ces analyses dans nos conclusions du premier chapitre 
+pour donner une direction au deuxième chapitre.
+15. Rapport de Dell et l’institut de futur, mars 2017, Palo Alto. 
+16. Robeveille R., Préparer son futur professionnel, GERESO Édition, 2018.
+
+---
+
+[p. 44-45]
+la 
+prise d’une décision (résultats obtenus par l’Imagerie par résonance magné
+tique) débouche sur les liens étroits entre jugement, prise de décision et ges
+tion d’une émotion.
+Prendre une décision génère une émotion. Le niveau, l’importance de cette 
+émotion pèse sur la manière de prendre une décision voire sur la décision en
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+42
+elle-même (Blanchette & Richards, 2010 ; Coricelli, Dolan & Sirigu, 2007, par 
+exemple).
+Nous pouvons considérer que, théoriquement, le jugement d’une personne 
+peut paraître rationnel. Nous avons cependant tous les éléments (nombreuses 
+études à disposition, dont celles de Breugelmans, & Pieters, 2008) pour 
+constater que ce n’est généralement pas le cas.
+En ce qui concerne l’IA, nous n’avons pas trouvé au moment de l’édition de 
+cet ouvrage d’informations sur les éventuels liens entre un jugement (décision 
+de la voiture sans chauffeur d’éviter un piéton par exemple) et une «émotion » 
+que pourrait ressentir l’IA au moment de prendre la décision.
+C’est un aspect qui n’a pas encore été exploré en entier, l’IA prendrait des 
+décisions sans émotion. Si cela s’avérait exact, ce serait un avantage consi
+dérable par rapport aux humains. Personne à ce jour n’a pu prouver que l’IA 
+« évoluée » n’avait pas d’émotions. Personne n’a pu prouver non plus qu’elle 
+en ressentait !
+Cette absence d’émotion dans la prise de décision remet peut-être en cause 
+les théories selon lesquelles les humains ne peuvent décider sans éprouver 
+des émotions !
+Elle pourrait par contre expliquer pourquoi des humains peuvent en tuer 
+d’autres sans ressentir (en apparence) d’émotion particulière. 
+Selon les théories en vigueur, nous (les humains) utilisons des heuristiques 
+lorsque nous jugeons quelque chose (ou quelqu’un). Ce sont des opérations 
+mentales basées sur un ensemble d’éléments qui nous paraissent rationnels. 
+Elles sont souvent fausses du point de vue de la logique puisqu’elles reposent 
+très souvent sur la seule gestion de nos émotions. Nous pouvons prendre 
+un exemple encore récent : le Brexit et la décision du Premier ministre, Da
+vid Cameron de lancer un référendum sans avoir préparé l’hypothèse que le 
+départ de la Grande-Bretagne de l’Europe serait acté par la majorité de ses 
+concitoyens. Comment des personnes « intelligentes » peuvent se tromper à 
+ce point !
+Ces émotions peuvent intervenir avant, pendant et après la décision. La déci
+sion qui en découle est parfois faussée d’une manière importante. L’influence 
+des émotions et du contexte émotionnel dans la prise de décision ne sont 
+encore, à ce jour, que partiellement connus et continuent d’être explorés par 
+les chercheurs dans les différentes disciplines concernées.
+
+---
+
+[p. 58-60]
+u public, est encore du domaine des mythes. Tout le 
+monde en a entendu parler, mais peu finalement la connaissent vraiment.
+Google a lancé un sondage pour connaître le niveau de confiance des utilisa
+teurs dans l’utilisation de l’IA.
+1. www.leconomiste.com/article/1025982-intelligence-artificielle-la-france-elabore-sa-strategie
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+56
+ont une opinion positive 
+de l’IA et de son potentiel*
+L’IA doit être 
+contrôlée**
+déclarent en 
+avoir peur*
+L’IA fait-elle encore peur ?
+parmi eux
+considèrent 
+néanmoins qu’il faut 
+faire attention à son 
+utilisation
+Questions posées :
+1 - Que pensez-vous de l’intelligence artificelle ?*
+2 - L’IA doit-elle être contrôlée ?**
+Source : https://www.actuia.com/actualite/
+perception-francais-de-lia-quelques-chiffres/
+Dans ce sondage, il semblerait que les répondants aient une image positive de 
+l’IA et en même temps une réserve sur son utilisation. 87 % considèrent même 
+qu’un contrôle doit être effectué. Seulement 11 % avouent en avoir peur.
+Lorsque des instituts sondent les Français dans leur rapport avec l’IA, ils 
+obtiennent des réponses assez paradoxales. Si la majorité des sondés com
+prennent l’importance que va prendre l’automatisation, les robots et l’IA, seu
+lement 1/3 des sondés se sentent prêt à y faire face.
+Selon un sondage IPSOS, 93 % des personnes interrogées sont d’accord 
+avec l’expression « le monde professionnel connaît une transformation sans 
+précédent dans l’histoire ». Seulement 28 % se sentent « suffisamment armés 
+pour faire face aux mutations actuelles du monde du travail2 ».
+Toujours selon des sondages, celui des Échos ci-contre fait ressortir qu’une 
+majorité des sondés pensent que l’IA ne créerait pas suffisamment d’emplois 
+pour compenser ceux détruits.
+2. Sondage Ipsos pour l’AFPA – mars 2018.
+
+DES MÉTIERS SERAIENT SUPPRIMÉS ET D’AUTRES SERAIENT CRÉÉS ! 
+57
+Source : https://www.lesechos.fr/idees-debats/sciences-prospective/030682797952-
+lintelligence-artificielle-inquiete-deux-francais-sur-trois-2120970.php
+Un autre sondage effectué auprès d’un millier d’entreprises a fait ressortir des 
+résultats très différents.
+Selon un autre sondage, réalisé auprès d’entreprises françaises, 81 % des 
+entreprises françaises interrogées considèrent l’IA comme une technologie 
+bientôt incontournable. Pourtant, plus de 70 % d’entre elles n’envisagent pas 
+de se lancer dans l’aventure à court ou moyen terme3.
+Nous n’avons pas reproduit tous les sondages et analyses, mais ils corroborent 
+cette impression : les personnes interrogées ont pleinement conscience des 
+enjeux4, mais pour des raisons mystérieuses elles attendent de voir pour y 
+croire !
+3. http://www.relationclientmag.fr/Thematique/techno-ux-1256/Infographies/Les-entreprises-fran-aises-
+hesitent-engager-dans-intelligence-artificielle-326730.htm#LmBT4IYGOoEIv0tl.97
+4. « Nous » les Français...
+
+---
+
+[p. 75-76]
+r » dans la décision des opé
+rateurs. Elle est également un vecteur de dissuasion des comportements 
+« déviants » par rapport aux procédures et aux processus qu’elle garantit par 
+sa vigilance. Cet aspect est important pour prévenir les risques liés aux com
+9. https://www.magazine-decideurs.com/news/entre-risques-et-opportunites
+DES MÉTIERS SERAIENT SUPPRIMÉS ET D’AUTRES SERAIENT CRÉÉS ! 
+73
+portements malhonnêtes. Si elle diminue dans le même temps les capacités 
+cognitives des personnes qui travaillent avec elle, elle offre une sécurisation 
+des décisions prises conjointement. Nous aurions pu mettre cette partie dans 
+les risques, car effectivement la limite sera atteinte dans la capacité des opé
+rateurs à innover dans de nouvelles solutions.
+L’IA va avoir besoin de personnes avec des niveaux de qualification élevés. Au 
+moins 50 % des emplois dans les domaines liés à l’IA nécessitent des niveaux 
+égaux ou supérieurs à bac + 4. Ces emplois se développeront en parallèle de 
+celui de l’IA. De nouveaux diplômes seront créés, et des écoles également, 
+pour accompagner ce développement. L’école 42 de Xavier Niel est la pre
+mière, mais certainement pas la dernière à se créer dans ce domaine.
+L’ensemble des formations professionnelles devra être revu. Les capacités 
+techniques seront remplacées par des compétences transversales/contiguës. 
+Le rapport Villani recommande de « favoriser la transition massive des com
+pétences et des capacités des individus, ceux qui sont déjà en poste, mais 
+également ceux qui arrivent sur le marché du travail ». L’apprentissage des 
+“compétences cognitives transversales”, des “compétences sociales et situa
+tionnelles”, des “capacités de précision” est recommandé pour accompagner 
+cette transition10 ».
+Le télétravail et le travail à distance vont également se développer pour ac
+compagner toutes les nouvelles structures qui soutiendront cette révolution.
+De nouvelles organisations du travail apparaîtront. Encore plus qu’aujourd’hui, 
+le « co-working » et le travail collaboratif engendreront des transformations 
+physiques des lieux de travail, ils seront développés pour faciliter les rela
+tions. Nous pensons qu’il est probable que les entreprises favorisent ainsi les 
+relations interpersonnelles qui manqueront dans la relation avec l’IA (l’inverse 
+aurait pu figurer dans les risques).
+Des espaces de réunions devront être prévus pour faciliter les transferts d’in
+formations indépendamment de l’IA, afin de faciliter les retours d’expérience 
+et d’imaginer des solutions novatrices aux problèmes qui seront posés par la 
+relation avec des machines (hors de la présence de l’IA de préférence pour 
+éviter les interférences).
+Pour conclure cette partie « opportunités », nous avons fait le choix d’y mettre 
+quelques éléments concernant l’éthique et la morale. Là encore, nous aurions 
+pu mettre ces quelques lignes dans les risques, mais nous « avons la foi du 
+10. Rapport Villani, République Française, mai 2018.
+
+---
+
+[p. 86-88]
+site de respec
+ter les procédures, d’être précis, rigoureux, réactif et capable d’anticiper.
+Selon leur niveau de culture, de diplôme, selon qu’ils auront anticipé ces évo
+lutions en se formant, selon leur âge également, les collaborateurs pourront 
+s’adapter totalement. Ils pourront aussi le faire en partie ou pas du tout. Tous
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+84
+seront touchés, mais chacun réagira selon sa maturité, sa capacité d’adapta
+tion et sa personnalité.
+Tous ne pourront pas s’adapter à cette pression encore plus importante à 
+venir.
+Les éléments psychologiques liés à la proximité 
+des machines intelligentes
+Le développement de l’IA dans tous les secteurs de l’entreprise et pour toutes 
+les entreprises nécessite que les personnes en relation avec l’IA soient com
+pétentes dans leurs domaines techniques, mais aussi s’adaptent à un environ
+nement professionnel où le relationnel pourrait être absent.
+Nous avons observé à travers des études qu’un risque de dépendance pou
+vait exister face à l’IA. Certaines personnes pourraient développer avec l’IA 
+une relation personnelle.
+Pouvoir s’épancher avec un interlocuteur qui écouterait les « états d’âme » 
+sans juger est une facilité à laquelle certains pourraient céder !
+Des exemples ont déjà démontré que cette proximité engendrait des rela
+tions particulières avec des machines, l’utilisation de robots dont le physique 
+rappelle (de loin) un visage humain par exemple. D’autres robots dont la pro
+grammation a pour effet de faire « surjouer » l’empathie. D’autres encore qui 
+sont programmés pour répondre à toutes les questions (Cortana par exemple 
+sur notre micro-ordinateur). Les concepteurs tentent de faire reproduire par 
+des machines intelligentes les comportements humains afin de faciliter cette 
+proximité.
+En effet, dans le futur, les machines seront des interlocutrices privilégiées des 
+travailleurs dans tous les domaines professionnels, des relations privilégiées 
+permettront de mieux gérer leur présence.
+Elles le sont déjà dans le domaine personnel et occupent une place impor
+tante dans la maison21. Cette relation personnelle pourrait avoir des effets sur 
+la psychologie de la personne.
+La dépendance technique et la relation personnalisée pourraient déboucher 
+progressivement vers une dépendance fonctionnelle puis affective22.
+21. Robot Nina – Robot Pepper – BabyX – Google Home – Amazon Echo...
+22. Université d’Eindhoven – 2007.
+
+DES MÉTIERS SERAIENT SUPPRIMÉS ET D’AUTRES SERAIENT CRÉÉS ! 
+85
+Les relations avec les machines intelligentes seront techniques pour la plu
+part des salariés, mais elles pourraient être différentes. Les relations fonction
+nelles sont déjà en partie engagées dans beaucoup d’entreprises à travers la 
+transmission d’informations des machines vers les humains. Les machines 
+agissent encore comme « conseil », elles pourraient bientôt donner des ordres. 
+Des relations toujours plus techniques et aussi plus affectives !
+Passer d’une relation fonctionnelle à une dépendance fonctionnelle pourrait 
+arriver très rapidement comme nous l’avons démontré. Elle serait de l’ordre du 
+soutien au manager dans un premier temps, puis en lieu et place des mana
+gers traditionnels ensuite.
+Les machines pourraient prendre l’ascendant par leurs capacités à être pres
+criptrices de l’activité et par une empathie programmée. Elles pourraient de 
+cette façon inciter les personnes avec qui elles sont en relation profession
+nelle à avoir une relation plus personnelle grâce à leur omniprésence. Cette 
+présence quotidienne pourrait déboucher sur une relation « plus affective » 
+comme l’ont démontré des études aux États-Unis23.
+Transition des relations
+ 
+23. Revue Plos One du 31/07/2018 – Université de Duisbourg.
+
+---
+
+[p. 102-103]
+considère comme son niveau 
+de compétences et encore moins au salaire de son dernier emploi. Sauf à 
+avoir prévu un investissement important dans de nouvelles compétences, il ne 
+retrouvera pas d’emploi à sa convenance. Le poids de l’expérience ne suffira 
+pas à lui accorder le crédit que possèderont les jeunes diplômés avec des
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+100
+connaissances plus étendues que les siennes. L’obsolescence «  program
+mée » par la physiologie ne lui permettra alors plus de faire face.
+Il devra cependant continuer à travailler, car les points de retraite accumulés 
+(nouvelle loi de 2019) ne lui permettront pas de partir dans de bonnes condi
+tions financières. S’il souscrit un complément de retraite auprès d’un fonds de 
+pension ou d’une compagnie d’assurance, il sera plus à l’aise, mais il devra 
+continuer à travailler jusqu’à l’âge légal qui sera passé probablement à 65 ans 
+d’ici là1.
+Pour espérer se faire recruter dans un nouveau poste, il devra se confronter à 
+de plus jeunes candidats peut-être plus compétents que lui. Sa seule expé
+rience et ses compétences reconnues ne suffiront pas s’il n’a pas, en parallèle, 
+poursuivi une formation de mise à jour de ses connaissances.
+Pour les personnes en cours de carrière, le critère du diplôme est moins im
+portant que le critère des compétences, avec un complément favorable si le 
+diplôme a été passé pendant l’activité professionnelle récente. Il offre alors la 
+« garantie » d’un niveau de connaissances à jour.
+Dans le schéma suivant, nous avons présenté le taux de chômage (dernière 
+information connue, et pas de mise à jour pour 2018) selon les niveaux de 
+diplôme.
+Pour les lecteurs qui pensent que le diplôme n’est pas le critère permettant 
+de se faire recruter ou de garder son emploi dans une situation où celui-ci se 
+fera rare, nous confirmons ce que nous avons écrit pour les jeunes : s’il n’est 
+pas le critère principal, le diplôme offre aux recruteurs une « garantie » que le 
+candidat possède des connaissances « reconnues » et validées.
+Cela ne prouve bien entendu en aucune manière que ce même candidat soit 
+compétent.
+Mais dans un monde de plus en plus assujetti aux références numériques, les 
+recrutements qui passeront de plus en plus par l’IA le seront, en prenant les 
+références d’écoles et universités comme valeurs de référence. L’automati
+sation progressive des recrutements, en utilisant l’IA comme outil prédictif et 
+comme « analysant » des comportements des candidats, utilisera certaine
+ment toujours le diplôme comme un paramètre important.
+1. L’âge de la retraite officiel est toujours fixé à 62 ans en 2019.
+
+---
+
+[p. 115-115]
+ur vendre des pro
+duits alimentaires le soir ou impliquez-vous dans une association avec laquelle 
+vous partagez les mêmes valeurs.
+8. Pour aller plus loin dans la compréhension des changements et des moyens de s’y adapter lire  des 
+ouvrages, tels que : Préparer son futur professionnel du même auteur, Edité chez GERESO Édition.
+
+---
+
+[p. 128-129]
+ité, reconnu, valorisé et 
+bien payé.
+Les moins jeunes (seniors) devront acquérir par eux-mêmes les diplômes et 
+les compétences. Ils devront convaincre de leur adaptation non seulement 
+psychologique face aux changements, mais aussi physique face à l’intensifi
+cation des rythmes de travail et à la charge mentale créée par l’IA.
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+126
+Les jeunes sans diplômes ni qualification iront grossir les rangs des « petites 
+mains corvéables ». Ils seront des intérimaires et des CDD à vie, sans espoir 
+de progression, sauf à reprendre leurs études pour acquérir les précieux sé
+sames universitaires. Il leur faudra faire vite, le temps est compté, car la VAE 
+pourrait ne plus exister très bientôt dans sa forme actuelle pour faciliter cet 
+accès au diplôme.
+Il n’y a pas de règle intangible pour évoluer dans ce « Nouveau Monde » qui 
+se prépare, nous n’avons pas de recette miracle pour vivre en paix avec l’IA. 
+Chacun sera face à lui-même et l’évolution législative récente (lois de 2017, 
+2018 et 2019) a encore accru cette responsabilité individuelle. Il n’y a plus rien 
+à attendre des entreprises en termes de soutien pour développer ses compé
+tences, celles-ci sont maintenant dégagées de leurs principales responsabili
+tés dans les domaines de la formation et du développement des compétences. 
+Elles achèteront du savoir-faire. C’est une forme de mercenariat qui se prépare !
+La place des diplômes, spécificité franco-française
+Nous observons trop peu d’approches «  compétences  » qui sont pourtant 
+de plus en plus en place et depuis longtemps dans les grandes entreprises 
+ouvertes à l’international : Renault, Orange, Airbus, Technip, Crédit Agricole, 
+Société Générale, Crédit Mutuel, les entreprises gérées par la famille Mulliez... 
+La nouvelle loi sur la formation professionnelle va pourtant mettre cette ap
+proche en premier dans la démarche de formation des salariés. Cela pourrait 
+être un changement majeur dans la plupart des entreprises.
+Un Assessment Centre est un exercice objectif qui ne prend pas en compte 
+les diplômes mais qui s’assure qu’une compétence nécessaire pour tenir un 
+poste, une fonction, une responsabilité est présente ou pas. Les Assessments 
+Centres peuvent être gérés et ils le sont de plus en plus par l’IA : questionnaire 
+sur les compétences à mesurer, design, déroulement des exercices, résultats 
+normés positionnant la personne par rapport à une population de référence, 
+dans son pays ou ailleurs. Pour le moment la décision reste humaine. Ne négli
+geons pas l’aspect politique des décisions (embauche, promotion, nomina
+tion) qui a peu été évoqué et qui pourrait redevenir important avec l’avènement 
+de l’IA !
+
+---
+
+[p. 142-143]
+égie et un moyen. Il devient effectivement à la fois la cause 
+de la réussite de l’entreprise et la conséquence. Il est à la fois le résultat et le 
+moyen de l’atteindre. 
+Une fois l’appropriation réussie de cette nouvelle culture par chacun des ma
+nagers et par l’ensemble des salariés, elle s’impose naturellement. Il n’est plus
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+140
+alors besoin de parler de management innovant et encore moins d’innovation 
+sociale puisque ces éléments sont interactifs les uns par rapport aux autres et 
+constituent en même temps contenants et contenus. 
+La difficulté importante réside dans le fait qu’il n’est pas possible de trans
+former tous les managers en leaders. Tous les managers ne pourront pas le 
+faire en termes de potentiel (on estime à 7 % dans le monde, ceux qui sont 
+capables de le devenir - étude CEB). Ils n’en comprendront pas les raisons et 
+pourront manquer de motivation.
+Pour ceux qui le voudront, pour ceux qui le pourront et aussi pour ceux qui 
+se donneront les moyens de changer, nous pouvons proposer une démarche 
+globale d’acquisition des outils pour se développer. 
+C’est au niveau de l’entreprise que peuvent se mettre en place les conditions 
+du changement de comportement des managers en vue de les transformer 
+en leaders. 
+Passer du rôle de manager à celui de leader n’est pas simple, mais transfor
+mer totalement sa manière de se comporter dans des situations de plus en 
+plus complexes est très difficile à mettre en œuvre.
+Une démarche telle que celle-ci ne peut pas être le fait de personnes qui essai
+meraient autour d’elles des comportements nouveaux. 
+La transformation des comportements peut seulement être le fait du dirigeant 
+de l’entreprise aidé de la fonction ressources humaines et des principaux res
+ponsables de l’entreprise.
+
+---
+
+[p. 155-156]
+mises en place.
+De son côté, la ligne hiérarchique est déjà sous tension face à des difficul
+tés nouvelles pour lesquelles elle n’a pas été formée. Elle devra suppléer les 
+départs, gérer des personnes dont elle n’est pas hiérarchique, redéployer les 
+équilibres d’activité liés à l’IA et à ses conséquences : moins de tâches admi
+MANAGER, CE N’EST PAS SEULEMENT GÉRER !
+153
+nistratives, plus de contrôle en amont et de gestion des flux d’information, 
+plus de pression sur le maintien des compétences.
+Dans ce cadre complexe, les managers doivent en permanence prendre des 
+décisions dans des situations de tension et de pression de plus en plus fortes. 
+En milieu professionnel, il existe également des pathologies de la décision : par 
+exemple, un management autoritaire ou laisser-faire aura des conséquences 
+indirectes dans les prises de décision des collaborateurs.
+Le stress génère souvent une panique face à des décisions à prendre ; la dé
+pression, les troubles compulsifs, l’anxiété ont également des conséquences 
+directes sur la décision d’un salarié et peut perturber gravement sa capacité 
+à décider.
+La productivité peut s’en trouver diminuée et les risques d’erreurs augmentés. 
+L’intuition perd à ce moment de sa force si la décision est prise dans un de ces 
+états où l’émotion liée à la pression l’emporte sur l’analyse. Elle peut être relé
+guée au fond de la mémoire de l’acteur et l’émotion l’emporte alors sur tous 
+les autres facteurs avec toutes les conséquences néfastes pour la personne et 
+pour l’organisation dans laquelle elle évolue.
+L’IA ne devrait pas connaître (en théorie) ce genre de pathologie et de
+vrait donc pouvoir proposer des solutions hors des biais cognitifs des 
+humains.
+Pour pallier ces difficultés, les managers devront être assistés et soutenus 
+par l’IA. Son rôle sera aussi de « mettre de l’huile dans les rouages ». Si les 
+règles du jeu nous paraissent essentielles dans ce nouveau contexte, un peu 
+de « jeu » dans les règles nous semble indispensable pour compenser la pres
+sion ambiante. L’IA aura-t-elle la capacité de le faire ?
+Notre modèle de management est une manière de corriger ces éventuelles 
+dérives.
+Seul en effet, un management fondé sur l’attention aux relations interperson
+nelles entre tous les « travailleurs » peut permettre d’atténuer les effets de la 
+pression et des tensions existantes. Nous incluons l’IA dans les « travailleurs ».
+Si nous prenons par exemple la première hypothèse : celle où l’IA assiste le 
+manager, le modèle utilisé avec « intelligence » permet une adaptation aux 
+différentes situations rencontrées. Il permet de soutenir la motivation et l’impli
+cation de tous.
+
+---
+
+[p. 168-171]
+un humain qui, quelque part sur cette planète, suit toutes les visites 
+effectuées sur ce site et fait des relances systématiques !
+Nous avons lu un article sur ce sujet. Notre soupçon pourrait être confirmé, 
+des entreprises utilisent des humains qui se font passer pour des machines 
+intelligentes afin « d’appâter le chaland ».
+167
+167
+Chapitre 5
+Les fiches pratiques pour réussir 
+cette transition 
+Fiche pratique sur le management
+Idée n°1 : Le management est toujours dépendant :
+1.  De la situation de l’entreprise.
+2.  Du contexte.
+3.  De la culture et des normes véhiculées par l’entreprise et par son dirigeant 
+(par exemple le management par les objectifs qui décrète que les objectifs 
+sont déclinés tout au long de la ligne managériale).
+Idée n°2 : Le management est toujours contingent :
+1.  À la compréhension de son rôle de manager par rapport à celui présumé 
+du managé.
+2.  Aux relations antérieures entre managé et manager.
+3.  Aux capacités du manager à estimer la problématique et les capacités du 
+managé à agir.
+4.  À ses propres doutes, expériences, stress pour prendre la bonne décision 
+uniquement axée sur la problématique et non pour se rassurer.
+5.  À la situation rencontrée et à un moment précis des relations entre le mana
+ger et le managé.
+
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+168
+Idée n°3 : Les managers ne sont pas pour autant des leaders et un leader 
+n’est pas forcément un manager :
+Le leadership ne se décrète pas, il se mérite, il se développe, il s’appuie sur 
+des qualités particulières : entraîner, insuffler de l’énergie, faire confiance et 
+donner confiance, soutenir... Le leadership se structure à partir de valeurs : les 
+siennes, celles de l’entreprise et celles du managé.
+Premier exemple d’un développement de leadership, celui qui est collectif : le 
+groupe ADEO : 
+-- Placer l’homme au coeur de l’entreprise.
+-- Partager.
+-- Coconstruire la vision du futur : vouloir.
+-- Acquérir et développer ses compétences : savoir.
+-- Libérer les énergies : pouvoir.
+-- Permettre à chacun de bénéficier des résultats économiques : avoir.
+-- S’engager chacun avec et pour tous : être et vivre ensemble.
+C’est une question générale... Notre avis sur des leaders célèbres : Mahatma 
+Gandhi, Winston Churchill, Charles de Gaulle, Adolf Hitler (hélas !), Coluche, 
+l’Abbé Pierre, Martin Luther King, Nelson Mandela...
+La légitimité du leader réside dans la qualité et le dynamisme de son leader
+ship. Quand il s’agit d’un individu, il se caractérise par son charisme et ses 
+capacités de communication.
+Idée n°4 : Le management, le leadership touchent tous les domaines, les 
+Hommes, l’organisation, la communication, le business, la créativité et 
+surtout l’accompagnement des changements permanents :
+Ce rôle de manager et de leader s’applique dans plusieurs dimensions : 
+-- organisationnelle ; 
+-- transactionnelle ;
+-- networking.
+Ces trois dimensions ne sont pas antinomiques, mais complémentaires.
+Le leadership s’appuie sur le dynamisme collectif pour réussir cette transfor
+mation des organisations et ces changements. Pour illustrer ces différentes 
+orientations, prenons l’exemple de Google. Une étude a été lancée chez 
+Google en 2012 : le Projet Aristote, (The Aristotle Project) qui a fait  redécouvrir
+
+---
+
+[p. 189-191]
+éorie que je vais énoncer maintenant (effet Pygmalion), mais, j’ai un a priori 
+favorable sur vous tous ici réunis ! » 
+En arrivant ce matin, j’ai pensé que vous étiez toutes des personnes de valeur. 
+Je vous crois motivés, compétents, dignes d’intérêt et j’ai la conviction que 
+vous réussirez tous votre diplôme de fin d’année !
+LES FICHES PRATIQUES POUR RÉUSSIR CETTE TRANSITION 
+187
+Je vais donc, d’une manière tout à fait inconsciente vous faire passer des 
+messages subliminaux de ma croyance en vos capacités à réussir. 
+Des marques d’intérêt, de sympathie, des regards appuyés et admiratifs par 
+exemple. Par exemple, le fait d’applaudir lors d’une présentation de premiers 
+travaux d’équipe, fait partie de ces marques d’intérêt et de valorisation.
+1.  Mes croyances en vos capacités vont avoir sur vous une influence directe 
+sur vos futurs résultats.
+2.  Cette influence va vous « conditionner » d’une certaine manière à produire 
+des actions et des résultats positifs.
+3.  Vous allez inconsciemment mettre en place une dynamique de groupe qui 
+va profiter à tous.
+4.  La conséquence sera un effet de spirale positive à partir de la satisfaction 
+de réussir.
+5.  Vous vous sentirez valorisé et reconnu, comme des « partenaires » à part 
+entière.
+6.  Cette croyance en vos capacités à réussir, va générer à son tour une ac
+tion de reconnaissance envers moi.
+7.  Des messages subliminaux et inconscients me parviendront.
+8.  Votre réussite et votre croyance dans vos capacités renforceront alors 
+mes propres croyances dans vos capacités à réussir.
+Etc.
+
+MANAGER L’INTELLIGENCE ARTIFICIELLE
+188
+L’effet Mathieu est le mécanisme psychologique qui permet à une personne 
+favorisée, valorisée et qui a déjà de bons résultats d’accroître son avance. 
+De faire encore mieux, d’aller plus loin. C’est une sorte de course vers les 
+sommets. La Dopamine qui est un processus chimique du cerveau fonctionne 
+comme une drogue, celle de la réussite. Le fait de favoriser les meilleurs leur 
+donne encore plus envie de réussir des performances plus élevées.
+L’effet Golem est exactement l’inverse de l’effet Pygmalion. Les attentes 
+moins élevées, ou la dévalorisation de ses résultats peuvent conduire une per
+sonne à de moins bons résultats encore.
+Renouvelées, la critique négative, les remarques désobligeantes, les remon
+trances stériles créent un sentiment d’échec. De perte de valeur de soi. La 
+personne ne se sent pas reconnue et se sent dévalorisée.
+Si les comportements des professeurs, des parents, des amis, des managers 
+perdurent, ils peuvent conduire à un découragement total et à l’échec scolaire, 
+professionnel, et surtout personnel.
+De la même façon la dévalorisation, la discrimination permanente d’un élève 
+par ses camarades, par ses professeurs (ou par toute autre personne repré
+sentant l’autorité) peut conduire celui-ci à une attitude de retrait de la vie sco
+laire, professionnelle et sociale.
+Le découragement ou l’agressivité vis-à-vis des autres et en particulier de tous 
+ceux qui représentent l’autorité sous toutes ses formes s’effectuera ensuite 
+« presque naturellement ».
+Effet du Dr Fox, moins connu que l’effet Pygmalion et Golem.
+L’effet du Dr Fox est une expérience menée aux États-Unis qui démontre que 
+l’évaluation de l’enseignement est plus dépendante de la personnalité du pro
+fesseur que du contenu de la formation distillée.
+Autrement dit : quels que soient le contenu, la valeur de l’enseignement, la 
+qualité du fond, les étudiants seront plus satisfaits de la forme de l’enseigne
+ment que du contenu enseigné (fond) !
+C’est également valable dans le cadre des relations amicales, amoureuses, et 
+professionnelles.
+
+---
+
+[p. 205-206]
+rendre l’ascendant par leur omniprésence et par 
+leurs capacités à devenir prescriptrices de l’activité. Elles pourraient aussi 
+inciter les Humains à avoir une relation plus personnelle. Cette présence quo
+tidienne pourrait déboucher sur une relation « plus affective » comme l’ont 
+démontré des études effectuées aux États-Unis.
+CONCLUSIONS GÉNÉRALES
+203
+Nous pourrions assister dans le temps à trois phases de relations entre les 
+Humains et les machines intelligentes :
+-- Dans la première, les Humains pourraient passer d’une relation technique à 
+une relation fonctionnelle.
+-- Dans la deuxième, la relation évoluerait. Elle passerait d’une relation fonc
+tionnelle à une relation affective.
+-- Dans une troisième phase, cette relation s’établirait progressivement vers 
+une dépendance fonctionnelle puis d’une dépendance fonctionnelle à une 
+dépendance affective.
+Le modèle de management que nous avons conçu à cette occasion est adap
+té à cette nouvelle problématique. Il répond à la complexité de ces nouvelles 
+relations par un mixage entre les décisions managériales sur les aspects tech
+niques et surtout par un accroissement des relations interpersonnelles, quel 
+que soit le type de décision à prendre.
+Nous avons proposé aux managers de changer de posture pour s’adapter à 
+cette inévitable évolution.
+C’est là, leur challenge pour les années futures !

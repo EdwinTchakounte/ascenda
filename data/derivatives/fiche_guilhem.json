@@ -1,0 +1,138 @@
+{
+ "document_id": "97223320-a507-4a1a-be0b-752ab928a83a",
+ "titre_normalise": "L'IA et nous",
+ "auteurs": [
+  "Olivier Guilhem"
+ ],
+ "annee": 2019,
+ "type_ouvrage": "essai",
+ "niveau": "debutant",
+ "public_cible": "Lecteur non technicien qui veut comprendre à la fois le fonctionnement, les usages et surtout l'encadrement juridique de l'intelligence artificielle. Éditions Le Pommier, groupe Humensis, Paris, octobre 2019, ISBN 978-2-7465-1915-2. Six chapitres : évolution et limites, la question du surhumain, les besoins réels, les usages qui dérangent, une IA raisonnée et bénéfique, l'IA et le droit. Ce dernier chapitre, le plus long, est l'apport le plus original du livre.",
+ "these_centrale": "L'intelligence artificielle est un ensemble de techniques statistiques dont il faut d'abord mesurer les limites réelles avant de discuter de leurs effets. Une fois ces limites établies, la question devient juridique et politique : comment encadrer des systèmes qui décident sans expliquer, apprennent sur des corpus dont on ne peut pas garantir la représentativité, et servent à influencer des opinions ? L'auteur défend un encadrement anticipé plutôt que curatif, construit dès la conception, avec une exigence de traçabilité qu'il compare à la boîte noire des avions.",
+ "idees_force": [
+  {
+   "titre": "Un modèle n'est pas une règle, et il n'explique rien",
+   "explication": "La distinction la plus utile du livre : un système à base de règles dit pourquoi il conclut ; un modèle statistique appris sur des exemples ne dit que ce qu'il conclut. On peut entraîner un système à prédire très précisément la vitesse d'une balle qui tombe en lui montrant des milliers de films de chutes, sans qu'il ait la moindre notion de gravité. En médecine, la même méthode peut faire apparaître des corrélations que les experts n'avaient pas vues, ce qui est précieux, mais elle ne relie jamais la cause à l'effet.",
+   "page": 20
+  },
+  {
+   "titre": "Vous étiquetez gratuitement les données qui servent à vous vendre",
+   "explication": "Les plateformes ont trouvé le moyen de faire annoter des images sans payer personne : en invitant les utilisateurs à nommer leurs photos, mariage de Julie, coucher de soleil, nouvelle voiture de Raymond. Officiellement pour retrouver ses souvenirs, techniquement de la labellisation gratuite. Le travail invisible qui rend l'apprentissage supervisé possible est en partie fourni par ses futurs clients.",
+   "page": 20
+  },
+  {
+   "titre": "Les systèmes appris sont structurellement aveugles à l'inédit",
+   "explication": "L'apprentissage oriente le système vers ce qui ressemble à ce qu'il a déjà vu ; l'enquête, elle, part de ce qui détonne. Un système peut au mieux signaler une saillance, un élément qui n'est pas comme d'habitude, mais il ne peut rien en déduire, parce qu'il ne sait raisonner que sur des cas déjà rencontrés. Aucune quantité de séries policières visionnées ne permettrait à une machine de résoudre une affaire nouvelle. C'est la limite la plus profonde et la moins souvent énoncée.",
+   "page": 34
+  },
+  {
+   "titre": "L'informatique affective repose sur un corpus impossible à constituer",
+   "explication": "Reconnaître les émotions dans un visage, une voix ou un geste est une application classique de l'apprentissage profond. La difficulté n'est pas l'algorithme mais le corpus : il faudrait des exemples représentatifs de toutes les émotions, exprimées par toutes les catégories de personnes. Autrement dit, la reconnaissance d'émotions est fiable pour les populations sur lesquelles elle a été entraînée et douteuse pour toutes les autres.",
+   "page": 34
+  },
+  {
+   "titre": "Deux niveaux de conscience simulée dans un robot, et pourquoi ce n'est pas de la conscience",
+   "explication": "Le robot qui vérifie que la porte qu'il devait fermer est bien fermée exécute un second programme surveillant le premier : c'est le programmeur qui a été consciencieux, pas la machine. La saturation des commandes articulaires est plus intéressante : quand l'asservissement ne peut pas atteindre la position demandée, batterie faible, collision, délai trop court, il renvoie une erreur au calculateur central. Le corps refuse l'ordre du cerveau, comme une douleur musculaire ou un réflexe. Le réfléchi et le réflexe sont donc simulables ; ce qui ne l'est pas, c'est l'interrogation spontanée sur ce que l'on fait.",
+   "page": 47
+  },
+  {
+   "titre": "Les vieilles méthodes valent souvent mieux que la dernière mode",
+   "explication": "L'auteur raconte un problème d'optimisation de tournées résolu par un algorithme classique du voyageur de commerce, là où l'on aurait pu croire à un besoin d'apprentissage profond. En informatique aussi, c'est parfois dans les vieux pots qu'on fait les meilleures soupes. Conseil directement applicable à toute organisation tentée d'acheter de l'intelligence artificielle avant d'avoir posé son problème.",
+   "page": 61
+  },
+  {
+   "titre": "Le véhicule autonome vaut moins par la conduite que par le partage",
+   "explication": "Une voiture individuelle est immobile quatre-vingt-quinze pour cent du temps. Un parc de véhicules autonomes pourrait desservir successivement plusieurs usagers, se garer proprement, et réduire fortement le nombre de véhicules à fabriquer. L'argument écologique et économique est plus fort que l'argument de confort, et il est rarement mis en avant.",
+   "page": 61
+  },
+  {
+   "titre": "La manipulation politique est le vrai scandale de l'affaire Cambridge Analytica",
+   "explication": "L'usage abusif des données personnelles est ancien et désormais réglementé en Europe depuis mai 2018. Ce qui a fait couler beaucoup moins d'encre, souligne l'auteur, ce sont les logiciels conçus pour influencer les opinions politiques des électeurs, avec pour devise affichée sur le site de la société : les données déterminent tout ce que nous faisons. À quoi s'ajoutent les centaines de faux profils créés par l'Internet Research Agency pour exacerber les tensions politiques américaines, avec publicités ciblées sur des communautés préalablement profilées.",
+   "page": 74
+  },
+  {
+   "titre": "La bulle filtrante fige plutôt qu'elle ne convertit",
+   "explication": "L'homophilie, cette attirance naturelle vers ce qui nous ressemble, est exploitée par les algorithmes de recommandation qui cherchent à satisfaire les attentes du visiteur. Le résultat, décrit par Eli Pariser en 2011, n'est pas de changer l'opinion mais de l'enfermer dans ses certitudes. La différence avec les filtres traditionnels, journal choisi, entourage, est que celui-ci est invisible et non choisi.",
+   "page": 74
+  },
+  {
+   "titre": "Un corpus représentatif d'une population inconnue est un problème non résolu",
+   "explication": "En statistique classique, on peut vérifier qu'un échantillon est représentatif parce qu'on connaît la répartition de la population totale par sexe, âge, catégorie sociale. Les concepteurs de systèmes apprenants doivent trouver un échantillon représentatif d'une population dont ils ne savent potentiellement rien, puisque l'innovation consiste souvent à exploiter des données d'un type nouveau. Il n'existe aujourd'hui aucune méthode pour garantir qu'un corpus est représentatif. C'est l'argument technique le plus solide en faveur d'une obligation d'audit.",
+   "page": 88
+  },
+  {
+   "titre": "La boîte noire logique et la transparence par conception",
+   "explication": "L'auteur propose que tout système décisionnel conserve la trace de son fonctionnement, comme la boîte noire d'un avion, afin qu'une décision contestée, refus de candidature, refus de location, puisse être auditée pour vérifier qu'elle ne reproduit pas un stéréotype présent dans les données. La transparence doit être intégrée dès la conception, non ajoutée après coup, faute de quoi elle est techniquement impossible.",
+   "page": 88
+  },
+  {
+   "titre": "Deux modèles de notation sociale, décentralisé et centralisé",
+   "explication": "D'un côté un modèle où chaque entreprise développe sa propre évaluation, où l'on est tour à tour évalué et évaluateur, mauvais passager et excellent locataire. De l'autre une notation coordonnée par l'État. La Chine annonce le 20 juillet 2017 son plan pour devenir le premier pays en intelligence artificielle à l'horizon 2030, avec plus de vingt-trois milliards de dollars annuels prévus, et ses champions nationaux Baidu, Alibaba, Tencent, Xiaomi. Deux façons opposées d'organiser la même technologie, ce qui montre que la technologie ne dicte pas le régime politique.",
+   "page": 101
+  },
+  {
+   "titre": "Légiférer trop tôt ou trop tard, le vrai dilemme",
+   "explication": "L'absence de définition juridique de l'intelligence artificielle pousse à l'attentisme, et l'on procède aujourd'hui par textes ponctuels : règlement européen sur les données, ordonnance du 3 août 2016 sur l'expérimentation des véhicules à délégation de conduite, loi du 22 décembre 2018 contre la manipulation de l'information. L'objection décisive à l'attentisme est empirique : l'absence de législation globale n'a fait éclore aucun champion européen. Une régulation claire peut donc être un avantage compétitif plutôt qu'un frein. La tendance qui se dessine est de réguler indirectement les systèmes en encadrant les données qu'ils manipulent.",
+   "page": 114
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Apprentissage classique",
+   "definition": "Famille de méthodes proches des statistiques anciennes, qui établissent une corrélation entre des variables identifiées et une réponse, sans passer par des règles explicites."
+  },
+  {
+   "terme": "Modèle",
+   "definition": "Nom donné à la base statistique construite à partir des exemples et qui permet au logiciel de conclure. Le mot est trompeur : il ne s'agit pas d'un modèle explicatif du phénomène."
+  },
+  {
+   "terme": "Labellisation",
+   "definition": "Annotation manuelle des données servant d'exemples d'entraînement. Coût principal de l'apprentissage supervisé, souvent externalisé ou obtenu gratuitement des utilisateurs."
+  },
+  {
+   "terme": "Saillance",
+   "definition": "Élément qui s'écarte de l'ordinaire. Un système peut le détecter, mais non l'interpréter, faute de pouvoir raisonner sur ce qu'il n'a jamais vu."
+  },
+  {
+   "terme": "Informatique affective",
+   "definition": "Domaine visant à reconnaître et simuler les émotions, développé pour accompagner les avatars et les robots compagnons."
+  },
+  {
+   "terme": "Asservissement",
+   "definition": "Programme qui pilote les moteurs d'une articulation robotique pour atteindre une position commandée, et signale son échec le cas échéant."
+  },
+  {
+   "terme": "Corpus de vérité terrain",
+   "definition": "Ensemble de données annotées par des humains, servant de référence. On le partage en une partie d'entraînement et une partie de test que le système n'a jamais vue."
+  },
+  {
+   "terme": "Homophilie",
+   "definition": "Tendance psychologique à être attiré par ce qui nous ressemble, exploitée par les algorithmes de recommandation."
+  },
+  {
+   "terme": "Bulle filtrante",
+   "definition": "Environnement informationnel personnalisé qui enferme l'internaute dans ses propres préférences, décrit par Eli Pariser en 2011."
+  },
+  {
+   "terme": "Boîte noire logique",
+   "definition": "Dispositif de traçabilité intégré à un système décisionnel, conservant l'historique de son fonctionnement pour permettre un audit en cas de litige."
+  },
+  {
+   "terme": "Transparence par conception",
+   "definition": "Principe selon lequel l'auditabilité doit être une contrainte de départ de l'architecture, non un ajout ultérieur."
+  },
+  {
+   "terme": "Régulation indirecte",
+   "definition": "Stratégie consistant à encadrer non pas les algorithmes eux-mêmes, difficiles à définir en droit, mais les données qu'ils traitent."
+  }
+ ],
+ "a_lire_si": "Vous cherchez la dimension juridique, absente de presque tous les autres ouvrages de vulgarisation : responsabilité, traçabilité, encadrement, ainsi qu'un exposé clair et honnête des limites techniques. Utile en particulier à quiconque doit conseiller une institution publique ou rédiger une politique d'usage. Le passage sur l'impossibilité de garantir la représentativité d'un corpus est le meilleur argument disponible pour exiger des tests avant tout déploiement.",
+ "a_eviter_si": "Vous cherchez de la profondeur technique ou philosophique : le livre reste au niveau de l'introduction, et les analogies tirées des séries télévisées, si elles rendent le propos accessible, occupent parfois la place de l'argument. Le cadre juridique de référence est européen et français, l'analyse est datée de 2019 et antérieure au règlement européen sur l'intelligence artificielle.",
+ "prerequis": [],
+ "controverses": [
+  "Faut-il une loi générale sur l'intelligence artificielle ou une accumulation de textes sectoriels ? L'auteur expose les deux positions et penche pour l'approche globale, en observant que l'absence de cadre n'a produit aucun champion européen.",
+  "Qui est responsable quand un système ne fait pas ce qu'on en attendait : le concepteur, l'éditeur, l'exploitant, l'utilisateur ? La question est posée et reste ouverte.",
+  "Notation décentralisée par les entreprises ou centralisée par l'État : deux modèles présentés comme opposés, sans que le premier soit tenu pour inoffensif."
+ ],
+ "confiance": 0.85
+}

@@ -1,0 +1,53 @@
+[
+ {"chapitre":"0c7c4e51","citations":[
+  {"texte":"Il s'agit d'un outil conversationnel entraîné sur une grande quantité de données textuelles, capable de générer des réponses pertinentes à partir des différentes demandes des utilisateurs.","page":9,"axe":"03-ia-outils-pratique-prompting","theme":"Définir l'outil avant de s'en servir","portee":"Savoir qu'un tel outil génère à partir de textes lus oriente déjà ce qu'on peut lui demander."}
+ ]},
+ {"chapitre":"7400b9a8","citations":[
+  {"texte":"Il a été mis à la disposition du public le 30 novembre 2022. Au bout de trois mois, il y avait déjà plus de 100 millions d'utilisateurs dans le monde entier","page":13,"axe":"10-economie-entrepreneuriat-finance","theme":"Une adoption sans précédent","portee":"La vitesse de diffusion d'un outil grand public façonne les usages avant que les règles n'existent."},
+  {"texte":"Ne cliquez pas sur les autres liens proposés par Google car ils ne mènent pas vers ChatGPT, mais d'autres solutions dont certaines sont payantes.","page":12,"axe":"03-ia-outils-pratique-prompting","theme":"Reconnaître le site officiel","portee":"Un conseil élémentaire mais décisif pour qui découvre un outil très recherché et donc très imité."}
+ ]},
+ {"chapitre":"631a04bc","citations":[
+  {"texte":"contrairement à un moteur de recherche tel que Google (qui ne demande aucun renseignement pour l'utiliser), ChatGPT conserve un historique des conversations que chaque utilisateur a eu avec lui.","page":21,"axe":"04-ia-societe-ethique-philosophie","theme":"Ce que le compte permet de conserver","portee":"Ouvrir un compte, c'est accepter qu'un historique de ses questions soit attaché à son identité."}
+ ]},
+ {"chapitre":"f49054d1","citations":[
+  {"texte":"Si le sujet de la conversation est le même que celui d'une précédente conversation, il est préférable de revenir dans cette conversation.","page":37,"axe":"03-ia-outils-pratique-prompting","theme":"Gérer le contexte de ses échanges","portee":"Regrouper ce qui va ensemble et séparer ce qui diffère améliore la qualité des réponses obtenues."},
+  {"texte":"Le dialogue avec ChatGPT est similaire à celui que l'on pourrait avoir avec un être humain. Mais ChatGPT étant un programme informatique, ses réponses seront plus rapides.","page":38,"axe":"01-ia-fondamentaux-vulgarisation","theme":"La ressemblance de surface du dialogue","portee":"L'aisance de l'échange invite à prêter à l'outil une compréhension qu'il n'a pas."}
+ ]},
+ {"chapitre":"5dcdbb8b","citations":[
+  {"texte":"l'un d'entre eux, « max_length », définit le nombre maximal de tokens (similaires à des mots) que peut contenir la réponse fournie.","page":41,"axe":"03-ia-outils-pratique-prompting","theme":"Une limite technique visible à l'usage","portee":"Comprendre pourquoi une réponse s'interrompt évite de croire à une panne ou à un refus."}
+ ]},
+ {"chapitre":"0485273a","citations":[
+  {"texte":"Contrairement aux moteurs de recherche comme Google, ChatGPT fournit une réponse unique à une question posée.","page":42,"axe":"03-ia-outils-pratique-prompting","theme":"Une seule réponse au lieu d'une liste","portee":"L'absence de liste supprime le travail de comparaison que le lecteur faisait lui-même."},
+  {"texte":"Bien que ChatGPT ait été entraîné sur une énorme quantité de données textuelles, il est peu probable qu'il ait vu toutes les combinaisons possibles de phrases ou de sujets.","page":43,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Les limites annoncées par l'outil lui-même","portee":"Aucune quantité de données ne garantit une couverture complète des questions possibles."},
+  {"texte":"le modèle de langage utilisé dans GPT-3 (la version 3 du modèle des données de ChatGPT, qui date de 2020) utilise 175 milliards de paramètres","page":43,"axe":"02-ia-technique-academique","theme":"L'ordre de grandeur des modèles","portee":"Un repère chiffré utile pour situer les annonces successives des éditeurs."}
+ ]},
+ {"chapitre":"b108ea49","citations":[
+  {"texte":"Plus la question sera précise et concise, plus il sera facile pour ChatGPT de comprendre votre demande et de fournir une réponse pertinente.","page":45,"axe":"03-ia-outils-pratique-prompting","theme":"La précision de la demande","portee":"La qualité de la réponse dépend d'abord du travail fait sur la question."},
+  {"texte":"Essayez d'utiliser des termes précis et spécifiques dans votre question.","page":45,"axe":"03-ia-outils-pratique-prompting","theme":"Choisir des termes spécifiques","portee":"Remplacer un mot général par un mot exact change souvent toute la réponse obtenue."}
+ ]},
+ {"chapitre":"88abc618","citations":[
+  {"texte":"Les questions posées dans une conversation bénéficient donc des questions et réponses apportées précédemment, même si l'échange s'étale sur plusieurs jours.","page":47,"axe":"03-ia-outils-pratique-prompting","theme":"Le contexte accumulé d'une conversation","portee":"Un échange suivi vaut mieux qu'une série de questions isolées reposant chaque fois le décor."}
+ ]},
+ {"chapitre":"761513d6","citations":[
+  {"texte":"Il est parfois utile de placer ChatGPT en tant qu'expert d'un domaine particulier.","page":48,"axe":"03-ia-outils-pratique-prompting","theme":"Assigner un rôle à l'outil","portee":"Donner un cadre à la demande oriente le niveau et le contenu de la réponse."},
+  {"texte":"Lorsque vous me donnez un contexte spécifique ou me présentez comme un expert dans un domaine, je peux ajuster mes réponses en conséquence","page":48,"axe":"03-ia-outils-pratique-prompting","theme":"Le contexte modifie la génération","portee":"Ce n'est pas une compétence nouvelle qui apparaît, mais une manière différente de puiser dans ce qui a été appris."},
+  {"texte":"Remarquons que ChatGPT fournit toujours une réponse, qu'il soit ou non mis dans la position d'un expert.","page":49,"axe":"04-ia-societe-ethique-philosophie","theme":"Toujours une réponse, jamais un silence","portee":"Un outil qui ne se tait jamais ne signale pas non plus quand il ne sait pas."}
+ ]},
+ {"chapitre":"00b543fe","citations":[
+  {"texte":"Dans de tels cas, n'hésitez pas à demander à ChatGPT de reformuler sa réponse.","page":53,"axe":"05-ia-education-pedagogie","theme":"Demander une reformulation","portee":"Le droit de redemander autrement est le geste d'apprentissage le plus simple à acquérir."},
+  {"texte":"Nous pouvons voir que ChatGPT s'adapte à la manière dont vous souhaitez qu'il fournisse les informations demandées.","page":55,"axe":"05-ia-education-pedagogie","theme":"Régler le niveau de l'explication","portee":"Préciser à qui l'on parle et pour quel usage vaut mieux que de subir un niveau imposé."}
+ ]},
+ {"chapitre":"ba23e7ea","citations":[
+  {"texte":"Cela élimine la nécessité de spécifier à plusieurs reprises des instructions particulières au cours de chaque conversation, qui sont souvent les mêmes.","page":56,"axe":"03-ia-outils-pratique-prompting","theme":"Fixer ce qui se répète","portee":"Automatiser les consignes récurrentes libère l'attention pour la demande réelle."},
+  {"texte":"Les applications de ce concept d'ajout d'instructions personnalisées sont nombreuses et limitées uniquement par votre imagination.","page":56,"axe":"03-ia-outils-pratique-prompting","theme":"Un réglage laissé à l'usage de chacun","portee":"Le paramétrage devient un savoir-faire personnel qui distingue un usage sommaire d'un usage efficace."},
+  {"texte":"Une fois que la fenêtre est validée, les instructions fournies seront exécutées pour chaque nouvelle conversation avec ChatGPT. Les conversations précédentes reprises ultérieurement ne les prendront pas en compte.","page":57,"axe":"03-ia-outils-pratique-prompting","theme":"Une portée limitée aux nouveaux échanges","portee":"Savoir exactement quand un réglage s'applique évite d'attribuer à l'outil des résultats incohérents."}
+ ]},
+ {"chapitre":"5f096c11","citations":[
+  {"texte":"Ne considérez pas les réponses de ChatGPT comme des faits vérifiés sans effectuer une recherche supplémentaire.","page":60,"axe":"04-ia-societe-ethique-philosophie","theme":"Vérifier avant de reprendre à son compte","portee":"La vérification reste la charge de celui qui utilise la réponse, pas de celui qui la produit."},
+  {"texte":"Évitez de partager des informations personnelles sensibles ou confidentielles avec ChatGPT.","page":60,"axe":"04-ia-societe-ethique-philosophie","theme":"Ce qu'on ne confie pas à un service en ligne","portee":"Une règle simple à enseigner avant tout usage professionnel ou familial de ces outils."},
+  {"texte":"N'oubliez pas que ChatGPT est un modèle linguistique et qu'il ne remplace pas les conseils d'experts qualifiés.","page":62,"axe":"06-ia-travail-management-metiers","theme":"La frontière avec l'avis professionnel","portee":"Pour la santé, le droit ou les décisions engageantes, l'outil prépare la question mais ne tranche pas."}
+ ]},
+ {"chapitre":"a6f1d234","citations":[
+  {"texte":"utiliser plusieurs petites phrases plutôt qu'une seule phrase trop longue","page":63,"axe":"03-ia-outils-pratique-prompting","theme":"Découper sa demande","portee":"Une consigne segmentée se comprend mieux, pour une machine comme pour un lecteur."}
+ ]}
+]

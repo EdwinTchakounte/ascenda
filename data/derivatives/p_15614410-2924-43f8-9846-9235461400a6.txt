@@ -1,0 +1,648 @@
+OUVRAGE : L'intelligence artificielle
+AUTEUR(S) : Margaret A. Boden;
+ANNÉE : inconnue
+PAGES : 192
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Remerciements (p. 8-9)
+  Sommaire (p. 10-11)
+  Préface (p. 12-13)
+  Qu’est-ce au juste que l’intelligence artificielle ? (p. 14-33)
+  Avec l’intelligence artificielle générale pour Graal (p. 34-69)
+  Langage, créativité et émotions (p. 70-91)
+  Les réseaux de neurones artificiels (p. 92-113)
+  Les robots et la vie artificielle (A-life) (p. 114-131)
+  Mais, est-ce réellement de l’intelligence ? (p. 132-155)
+  La Singularité (p. 156-177)
+  Références (p. 178-183)
+  Lectures complémentaires (p. 184-185)
+  Index (p. 186-192)
+
+[12/144 passages, 11223 tokens sur 129406]
+
+=== EXTRAITS ===
+
+[p. 2-6]
+L’intelligence 
+artificielle
+
+L’intelligence 
+artificielle
+Margaret A. Boden
+Traduit de l’anglais par Alan Rodney
+
+ChronoSciences
+Collection destinée à un large public qui invite le lecteur à découvrir de façon 
+très complète mais de manière abordable un sujet ou une thématique précise.
+« Dans la même collection »
+La Théorie quantique, John Polkinghorne
+Les Marées, David George Bowers et Emyr Martyn Roberts (à paraître)
+L’Anthropocène, Erle C. Ellis (à paraître)
+L’Odorat, Matthew Cobb (à paraître)
+Artificial intelligence: a very short introduction, first edition was originally published 
+in English in 2016. This translation is published by arrangement with Oxford 
+University Press.
+Artificial intelligence: a very short introduction, first edition, a été initialement publiée 
+en anglais en 2016. Cette traduction est publiée avec l’autorisation d’Oxford 
+University Press.
+© Margaret A. Boden 2016, 2018
+© Pour la traduction française, EDP sciences, 2021.
+Composition et mise en page : Desk (www.desk53.com.fr)
+Imprimé en France
+ISBN : 978-2-7598-2579-0
+Ebook : 978-2-7598-2580-6
+Tous droits de traduction, d’adaptation et de reproduction par tous procédés, réservés 
+pour tous pays. La loi du 11 mars 1957 n’autorisant, aux termes des alinéas 2 et 3 
+de l’article 41, d’une part, que les « copies ou reproductions strictement réservées 
+à l’usage privé du copiste et non destinées à une utilisation collective », et d’autre 
+part, que les analyses et les courtes citations dans un but d’exemple et d’illustration, 
+« toute représentation intégrale, ou partielle, faite sans le consentement de l’auteur 
+ou de ses ayants droit ou ayants cause est illicite » (alinéa 1er de l’article 40). Cette 
+représentation ou reproduction, par quelque procédé que ce soit, constituerait donc 
+une contrefaçon sanctionnée par les articles 425 et suivants du code pénal.
+
+Pour Byron, Oscar, Lukas et Alina
+
+---
+
+[p. 23-24]
+et donc par une Machine de Turing.
+En bref, la neurophysiologie, la logique et le calcul ont été ainsi regrou-
+pés – et la psychologie s’y est jointe. McCulloch et Pitts croyaient (comme 
+beaucoup de philosophes d’ailleurs à l’époque) que le langage naturel 
+se résumait, en substance – et pouvait être réduit – à des expressions
+  Qu’est-ce au juste que l’intelligence artificielle ?  
+ 23 
+logiques. Ainsi, tous les raisonnements et les opinions, de l’argument 
+scientifique aux délires schizophrènes, alimentaient leur « moulin » théo-
+rique. Ils prévoyaient une époque où, pour l’ensemble de la psychologie, 
+« la spécification du réseau [de neurones] apporterait tout ce qui pouvait être 
+réalisé dans ce domaine ».
+L’implication principale était claire : une seule et même approche 
+théorique, à savoir le calcul de Turing, pouvait être appliquée à l’intelli-
+gence des hommes et des machines.
+Turing, bien sûr, était d’accord. Mais il ne pouvait pas progresser 
+beaucoup plus loin avec l’IA : la technologie disponible était encore trop 
+« primitive ». Au milieu des années 1950, cependant, des machines plus 
+puissantes et/ou plus faciles à utiliser ont été développées. « Faciles 
+à utiliser » signifie ici qu’il devenait plus facile de définir de nouvelles 
+machines virtuelles (par exemple, des langages de programmation), qui 
+pouvaient être utilisées plus facilement pour définir des machines vir-
+tuelles de plus haut niveau (par exemple, des programmes pour faire 
+des mathématiques ou de la planification).
+La recherche en IA symbolique, largement explicitée dans l’esprit du 
+manifeste de Turing, a commencé des deux côtés de l’Atlantique. L’un 
+des points de repère de la fin des années 1950 a été le jeu de dames 
+d’Arthur Samuel, qui a fait « la une » des journaux parce qu’il a appris 
+à battre Samuel lui-même. C’était une indication que les ordinateurs 
+pouvaient un jour développer une intelligence surhumaine, dépassant 
+les capacités de leurs programmeurs.
+La deuxième de ces révélations a également eu lieu à la fin des années 
+1950, lorsque la Machine de la Théorie Logique a non seulement résolu 
+dix-huit des principaux théorèmes logiques de Russell, mais a présenté 
+une preuve plus élégante pour l’un d’entre eux. C’était vraiment impres-
+sionnant. Alors que Samuel n’était lui-même qu’un joueur de dames 
+médiocre, Russell était un logicien de premier plan (et lui-même était 
+ravi de cette réalisation, mais le Journal of Symbolic Logic a refusé de publier 
+un article avec un programme informatique nommé comme auteur, 
+d’autant plus qu’il n’avait pas résolu un nouveau théorème).
+
+---
+
+[p. 39-40]
+ette condition préalable (prérequise), 
+pour atteindre tel ou tel sous-objectif. Les systèmes d’IA emploient 
+généralement des techniques de couplage avant et de couplage arrière, 
+qui expliquent comment le programme a trouvé sa solution. Cela aide 
+l’utilisateur à juger si l’action/conseils du programme sont appropriés 
+ou non.
+  Avec l’intelligence artificielle générale pour Graal  
+ 39 
+Certains systèmes de planification actuels disposent de dizaines de 
+milliers de lignes de code, définissant des espaces de recherche hié-
+rarchiques à de nombreux niveaux. Ces systèmes sont souvent très 
+différents de ceux des premiers planificateurs.
+Par exemple, la plupart ne partent pas du principe que tous les 
+sous-objectifs peuvent être traités indépendamment (c’est-à-dire que 
+les problèmes sont parfaitement sécables). Dans la vie réelle, après tout, 
+le résultat d’une activité orientée vers un objectif peut être annulé par 
+une autre activité. Les planificateurs d’aujourd’hui peuvent traiter des 
+problèmes partiellement sécables : ils travaillent sur des sous-objectifs de 
+manière indépendante, mais peuvent effectuer un traitement supplé-
+mentaire pour combiner les sous plans résultants, si nécessaire.
+Les planificateurs classiques ne pouvaient s’attaquer qu’à des pro-
+blèmes dans lesquels l’environnement était entièrement observable, 
+déterministe, fini et statique. Mais certains planificateurs modernes 
+peuvent faire face à des environnements partiellement observables 
+(c’est-à-dire que le modèle du monde du système peut être incom-
+plet et/ou inexact) et probabilistes. Dans ces cas, le système doit suivre 
+l’évolution de la situation en cours d’exécution, afin de modifier le plan 
+et/ou ses propres croyances sur le monde, le cas échéant, et certains 
+planificateurs modernes peuvent le faire sur de très longues périodes : 
+ils s’engagent dans la formulation, l’exécution, l’ajustement et l’abandon 
+continus des objectifs, en fonction de l’évolution de l’environnement.
+De nombreux autres développements ont été ajoutés, et sont encore 
+de nos jours, à la planification classique. Il peut donc sembler surprenant 
+que la planification ait été rejetée par certains roboticiens dans les années 
+1980, la robotique située étant recommandée comme alternative (cf. 
+chapitre 5). La notion de représentation interne – des objectifs et des 
+actions possibles, par exemple – a également été rejetée. Cependant, 
+cette critique était largement erronée. La robotique a souvent besoin 
+de planification et de réactions purement réactives – pour construire 
+des robots qui jouent au football, par exemple.
+
+---
+
+[p. 53-54]
+ls ils sont censés faire face. Dans le 
+cas général, ils ne peuvent pas faire de recherche de trajectoire ou de 
+manipulation d’objets. Certains robots simulent une vision animée, dans 
+laquelle les mouvements du corps fournissent des informations utiles 
+(parce qu’ils modifient systématiquement les données à l’entrée visuelle).
+  Avec l’intelligence artificielle générale pour Graal  
+ 53 
+Mais même eux ne peuvent pas remarquer un cheminement possible, 
+ou reconnaître que cette chose peu familière pourrait être saisie par leur 
+main de robot alors que cela ne peut pas se faire.
+Au moment de la publication de ce livre, il pourrait y avoir quelques 
+exceptions. Mais elles aussi auront des limites. Par exemple, ils ne com-
+prendront pas « je ne peux pas ramasser ça », parce qu’ils ne comprendront 
+pas « peux » et « ne peux pas ». C’est parce que la non monotonique requise 
+ne sera probablement pas encore disponible pour la représentation de 
+leurs connaissances.
+Parfois, la vision peut ignorer l’espace en 3D, par exemple lorsqu’il 
+s’agit de lire une écriture manuscrite. Mais même la vision informatique 
+en 2D est limitée. Malgré des efforts de recherche considérables sur les 
+représentations analogiques, ou iconiques, l’IA ne peut pas utiliser de 
+manière fiable les diagrammes pour résoudre des problèmes, comme 
+nous le faisons pour le raisonnement géométrique ou pour esquisser des 
+relations abstraites au dos d’une enveloppe. (De même, les psychologues 
+ne comprennent pas encore comment nous faisons ces choses).
+Pour résumer, la plupart des réalisations visuelles humaines dépassent 
+l’IA d’aujourd’hui. Souvent, les chercheurs en IA ne savent pas très bien 
+quelles questions poser. Par exemple, pensez à la tâche qui consiste à 
+plier correctement une robe en satin qui glisse partout. Aucun robot 
+ne peut le faire (bien que l’on puisse apprendre à certains, étape par 
+étape, comment plier une serviette-éponge rectangulaire). Ou pensez 
+à la tâche d’enfiler un T-shirt : la tête doit entrer en premier, et pas par 
+une manche – mais pourquoi ? De tels problèmes topologiques ne sont 
+guère présents dans l’IA.
+Rien de tout cela n’implique que la vision par ordinateur à l’échelle 
+humaine soit impossible. Mais il est beaucoup plus difficile d’y parvenir 
+que la plupart des gens ne le croient.
+Il s’agit donc d’un cas particulier du fait mentionné au chapitre 1 : 
+l’IA nous a appris que l’esprit humain est beaucoup plus riche et plus 
+subtil que les psychologues ne l’imaginaient auparavant. C’est d’ailleurs 
+la principale leçon à tirer de l’IA.
+
+---
+
+[p. 71-72]
+lage : il faut d’abord distinguer les mots eux-mêmes, pro-
+noncés par de nombreuses voix différentes et avec des accents locaux/
+étrangers différents. Les distinctions de mots sont gratuites dans les 
+textes imprimés. L’apprentissage approfondi (cf. chapitre 4) a permis 
+des progrès significatifs dans le traitement de la parole.
+  Langage, créativité et émotions  
+ 71 
+Parmi les exemples impressionnants de ce qui ressemble à une com-
+préhension de phrases entières, on peut parler de la traduction automa-
+tique, l’exploration de données à partir de grandes collections de textes en 
+langue naturelle, le résumé d’articles dans des journaux et des revues ; la 
+réponse à des questions ouvertes (à réponse libre, de plus en plus utilisée 
+dans les recherches sur Google et dans l’application Siri pour l’iPhone®).
+Mais ces systèmes peuvent-ils vraiment apprécier la langue ? Peuvent-
+ils, par exemple, traiter correctement les questions de grammaire ?
+Aux débuts de l’IA, les gens pensaient que la compréhension du lan-
+gage nécessitait une analyse syntaxique. Des efforts considérables ont 
+été consacrés à l’écriture de programmes pour y parvenir. L’exemple 
+remarquable – qui a attiré l’attention d’innombrables personnes qui n’en 
+avaient jamais entendu parler était le SHRDLU 1 de Terry Winograd, écrit 
+au MIT au début des années 1970, est un programme qui a été considéré 
+comme impossible.
+Ce programme acceptait des instructions en anglais disant à un 
+robot de construire des structures faites de blocs coloriés, et déterminait 
+comment certains blocs devaient être déplacés pour atteindre l’objectif. 
+Il a eu une influence considérable pour de nombreuses raisons, dont 
+certaines s’appliquaient à l’IA en général. Ici, ce qui est pertinent, c’est sa 
+capacité sans précédent à assigner une structure grammaticale détaillée 
+à des phrases complexes, telles que : Combien d’œufs auriez-vous utilisés 
+dans le gâteau si vous n’aviez pas appris que la recette de votre grand-mère 
+était erronée ? (Essayez-le !)
+Pour des raisons technologiques, SHRDLU a déçu. Le programme, 
+écrit en MacLisp, contenait de nombreux bogues, et ne pouvait donc 
+être utilisé que par une poignée de chercheurs hautement qualifiés. 
+1.  Ce curieux enchaînement correspond aux touches des machines Linotype avec lesquelles 
+on assemblait les blocs de lettres d’impression des journaux, etc., en plomb. ETAOIN était la 
+première colonne, SHDLU la seconde (c’est une question de fréquence d’apparition de ces lettres 
+dans le texte). Terry Vinograd a adopté la seconde colonne pour baptiser son programme à 
+MIT. C’est aujourd’hui remplacé par les rangées QUERTY (US) ou AZERTY (langues latines).
+
+---
+
+[p. 83-84]
+ne AGI pouvait analyser les 
+styles (en art ou en science) pour elle-même que ses explorations créatives 
+2.  Fin du xixe, début du xxe siècle, Frank Lloyd Wright dessinait des maisons, toutes différentes, 
+censées être victoriennes à un seul étage. Le plus célèbre modèle s’appelle la Prairie House 
+Frederic C. Robie, 1906-1909.
+  Langage, créativité et émotions  
+ 83 
+seraient « son propre travail ». Malgré quelques exemples récents, très 
+limités, de styles artistiques reconnus par un apprentissage approfondi 
+(cf. chapitres 2 et 4), et c’est une tâche difficile.
+L’IA a permis aux artistes humains de développer une nouvelle forme 
+d’art : l’art généré par ordinateur (Computer-Generated Art [CGA]). Cela 
+concerne l’architecture, le graphisme, la musique, la chorégraphie et – 
+sans succès (étant donné les difficultés du TLN en matière de syntaxe et 
+de pertinence) – des œuvres littéraires. Dans l’art généré par ordinateur, 
+l’ordinateur n’est pas un simple outil, comparable à un nouveau pin-
+ceau qui aide l’artiste à produire ce que l’ordinateur peut faire d’office ; 
+autrement dit, le travail n’aurait pas pu être fait, ou peut-être même 
+imaginé, sans elle.
+L’art des images de synthèse illustre ces trois types de créativité. Pour 
+les raisons évoquées plus haut, il n’y a pratiquement pas d’art contem-
+porain qui soit combinatoire. L’œuvre de Simon Colton intitulée The 
+Painting Fool a produit des collages visuels afférents à la guerre – mais il 
+a été spécifiquement chargé de rechercher des images associées au mot 
+« guerre », facilement disponibles dans sa base de données. La plupart 
+des œuvres de CGA sont de forme exploratoire ou transformationnelle.
+Parfois, l’ordinateur génère l’œuvre d’art de manière entièrement 
+indépendante, exécutant le programme écrit par l’artiste. Ainsi, le pro-
+gramme AARON produit des dessins au trait et des images coloriées 
+sans aide (en générant parfois des couleurs si audacieusement belles 
+que Cohen dit qu’il est meilleur coloriste que lui-même).
+En revanche, dans l’art interactif, la forme de l’œuvre finale dépend en 
+partie de l’apport du public, qui peut ou non avoir un contrôle volontariste 
+sur ce qui se passe. Certains artistes interactifs considèrent le public 
+comme des collègues créateurs, d’autres comme de simples facteurs de 
+causalité qui, sans le savoir, influencent l’œuvre d’art de diverses manières 
+(et certains, comme Ernest Edmonds, ont adopté les deux approches). 
+Dans l’art évolutionniste, illustré par William Latham et Jon McCormack, 
+les résultats sont continuellement générés/transformés par l’ordinateur, 
+mais la sélection est généralement effectuée par l’artiste ou le public.
+
+---
+
+[p. 99-101]
+-
+dynamique. Les niveaux d’énergie en physique sont exprimés numé-
+riquement, tout comme les poids dans l’approche du TDP. Si la règle 
+d’apprentissage est parallèle aux lois physiques (et si les unités cachées 
+sont stochastiques), les mêmes équations statistiques de Boltzmann 
+peuvent décrire les changements dans les deux cas.
+  Les réseaux de neurones artificiels  
+ 99 
+Le TDP peut même emprunter la méthode utilisée pour refroidir 
+des métaux rapidement mais uniformément. Le recuit commence à 
+une température élevée et le matériau se refroidit progressivement. 
+Les chercheurs du TDP utilisent parfois le recuit simulé, où les change-
+ments de poids dans les premiers cycles d’équilibrage sont beaucoup 
+plus importants que ceux des cycles ultérieurs. Cela permet au réseau 
+d’échapper à des situations (« minima locaux ») où la cohérence globale 
+a été atteinte par rapport à ce qui s’est passé auparavant, mais où une 
+cohérence encore plus grande (et un équilibre plus stable) pourrait être 
+atteinte si le système était perturbé. Vous pouvez comparer avec l’acte 
+de secouer un sac de billes, pour déloger celles des billes qui reposeraient 
+sur une crête interne : il faut commencer par secouer vigoureusement, 
+mais terminer en secouant doucement.
+Un moyen plus rapide – et plus largement utilisé – d’obtenir une 
+cohérence maximale est d’utiliser la rétropropagation de gradient. Mais 
+quelle que soit la règle d’apprentissage utilisée, l’état de l’ensemble du 
+réseau (et surtout des unités de sortie), à l’équilibre, est considéré comme 
+la représentation du concept concerné.
+LA RÉTROPROPAGATION DE GRADIENT 
+ET LES CERVEAUX – L’APPRENTISSAGE PROFOND
+Les adeptes du TDP affirment que leurs réseaux sont biologiquement 
+plus réalistes que ceux de l’IA symbolique. Il est vrai que le TDP s’inspire 
+du fonctionnement du cerveau, et que certains neuroscientifiques l’uti-
+lisent pour modéliser celui des neurones. Cependant, les RNA diffèrent 
+considérablement de ce qui se trouve dans notre tête.
+L’une des différences entre les RNA et le cerveau (la plupart) est la 
+rétropropagation. Il s’agit d’une règle d’apprentissage – ou plutôt d’une 
+catégorie générale de règles d’apprentissage – qui est fréquemment 
+utilisée dans le TDP. Anticipée par Paul Werbos en 1974, elle a été définie 
+de manière plus commode par Geoffrey Hinton au début des années 
+1980. Elle résout le problème de l’attribution de crédits.
+
+  L’intelligence artificielle  
+ 100 
+Ce problème se pose pour tous les types d’IA, surtout lorsque le 
+système est en constante évolution. Dans un système d’IA complexe 
+qui fonctionne bien, quelles sont les parties qui sont les plus responsables 
+de son succès ? Dans l’IA évolutive, les crédits sont souvent attribués 
+par l’algorithme dit du « seau à jetons » (cf. chapitre 5). Dans les sys-
+tèmes TDP avec des unités déterministes (non stochastiques), le crédit 
+est généralement attribué par une rétropropagation.
+L’algorithme de rétropropagation trace la responsabilité de la couche 
+de sortie vers les couches cachées, en identifiant les unités individuelles 
+qui doivent être adaptées. (Les poids sont mis à jour pour minimiser les 
+erreurs de prédiction.) L’algorithme a besoin de connaître l’état précis de 
+la couche de sortie lorsque le réseau donne la bonne réponse. (Ainsi, la 
+rétropropagation peut en fait être assimilé à un apprentissage supervisé.) 
+Des comparaisons unité par unité sont effectuées entre cette sortie 
+exemplaire et la sortie réellement obtenue du réseau. Toute différence 
+entre l’activité d’une unité de sortie dans les deux cas est considérée 
+comme une erreur.
+L’algorithme suppose que l’erreur dans une unité de sortie est due 
+à une ou à plusieurs erreurs dans les unités qui lui sont connectées. En 
+travaillant à rebours dans le système, il attribue une quantité d’erreur 
+spécifique à chaque unité de la première couche cachée, en fonction du 
+poids de la connexion entre elle et l’unité de sortie. L’« erreur blâmable » 
+est partagée entre toutes les unités cachées connectées à l’unité de 
+sortie erronée. Si une unité cachée est liée à plusieurs unités de sortie, 
+ses mini-couacs s’additionnent. Des changements de poids proportion-
+nels sont ensuite apportés aux connexions entre la couche cachée et 
+la couche précédente.
+Cette couche peut être une autre (et une autre) strate d’unités 
+cachées. Mais en fin de compte, il s’agira de la couche d’entrée, et les 
+changements de poids s’arrêteront. Ce processus est répété jusqu’à ce 
+que les écarts au niveau de la couche de sortie soient minimisés.
+Pendant de nombreuses années, la rétropropagation n’a été utilisée 
+que sur les réseaux ayant une couche cachée. Les réseaux multicouches
+
+---
+
+[p. 116-117]
+les autres doivent 
+compenser pour ne pas perdre l’équilibre.
+Les robots de Beer reflètent la neuro-anatomie et les commandes 
+sensorimotrices de vrais cafards. Ils peuvent monter des escaliers, mar-
+cher sur un terrain accidenté, escalader des obstacles (au lieu de sim-
+plement les éviter) et se remettre debout après une chute.
+  L’intelligence artificielle  
+ 116 
+La roboticienne Barbara Webb examine des criquets, pas les cafards. 
+Elle ne se concentre pas sur la locomotion (ses robots sont équipés de 
+roues), elle veut que ses appareils identifient, localisent et approchent un 
+modèle sonore particulier. Il est clair qu’un tel comportement (appelée la 
+phonotaxie) pourrait avoir de nombreuses applications pratiques.
+Les criquets femelles peuvent le faire en entendant le chant d’un mâle 
+spécifique. Cependant, le criquet ne peut reconnaître qu’un seul chant, 
+chanté à une seule cadence et à une seule fréquence. La cadence et la 
+fréquence varient en fonction des différentes espèces de criquet. Mais 
+la femelle ne choisit pas entre différents chants, car elle ne possède pas 
+de détecteurs de caractéristiques codant une gamme de sons. Elle utilise 
+un mécanisme qui n’est sensible qu’à une seule fréquence. Ce n’est pas 
+un mécanisme neural, comme le sont les détecteurs auditifs du cerveau 
+humain. Chez le criquet, il s’agit d’un tube de longueur fixe situé dans 
+son thorax, relié aux oreilles de ses pattes avant et à ses spiracles. La 
+longueur du tube est une proportion exacte de la longueur d’onde de 
+la chanson du criquet mâle. La physique garantit que les annulations de 
+phase (entre l’air dans le tube et l’air extérieur) ne se produisent que pour 
+les chansons ayant la bonne fréquence, et que la différence d’intensité 
+dépend entièrement de la direction de la source sonore. L’insecte femelle 
+est neuronalement câblée pour se déplacer dans cette direction : le mâle 
+chante, la femelle approche. C’est en effet un « comportement localisé ».
+Webb a choisi la phonotaxie du criquet parce qu’elle avait été étu-
+diée de près par des neuro-éthologues. Mais de nombreuses questions 
+restaient sans réponse. Si (et comment) la direction et le son de la chan-
+son sont traités indépendamment, si l’identification et la localisation 
+sont indépendantes, comment la marche de la femelle est déclenchée 
+et comment sa direction en zigzag est contrôlée ? Webb a conçu le 
+mécanisme le plus simple possible (seulement quatre neurones) qui 
+pourrait générer et reproduire un comportement similaire. Plus tard, son 
+modèle a incorporé plus de neurones (sur la base de données détaillées 
+de la vie réelle), a inclus des caractéristiques neuronales supplémentaires 
+(par exemple, latence, cadence d’allumage et potentiel de membrane)
+
+---
+
+[p. 129-130]
+crée également des structures 
+neurales prévisibles.
+Par exemple, les singes nouveau-nés possèdent des détecteurs 
+d’orientation qui s’étendent systématiquement sur 360 degrés. Ceux-ci 
+ne peuvent pas avoir été appris par l’expérience du monde extérieur, il 
+est donc naturel de supposer qu’ils sont codés dans les gènes. Mais ce
+  Les robots et la vie artificielle (A-life)  
+ 129 
+n’est pas le cas. Au lieu de cela, ils surgissent spontanément à partir d’un 
+réseau initialement aléatoire.
+Cela a été démontré non seulement par la modélisation informatique 
+biologiquement réaliste réalisée par les neuroscientifiques, mais aussi 
+par l’IA « pure ». Le chercheur d’IBM Ralph Linsker a défini des réseaux 
+dits feedforward multicouches (cf. chapitre 4) en montrant que des règles 
+hebbiennes simples, compte tenu d’une activité aléatoire (comme le 
+« bruit » dans le cerveau embryonnaire), peuvent générer des collections 
+structurées de détecteurs d’orientation.
+Linsker ne s’appuie pas uniquement sur des démonstrations pra-
+tiques, ni ne se concentre uniquement sur les détecteurs d’orientation : sa 
+théorie abstraite « infomax » est applicable à tout réseau de ce type. Elle 
+affirme que les connexions de réseau se développent pour maximiser la 
+quantité d’informations préservées lorsque les signaux sont transformés 
+à chaque étape du traitement. Toutes les connexions se forment sous 
+certaines contraintes empiriques, telles que des limitations biochimiques 
+et anatomiques. Toutefois, les mathématiques garantissent l’émergence 
+d’un système coopératif d’unités de communication. La théorie de l’info-
+max se rapporte également à l’évolution phylogénétique. Elle rend moins 
+contre-intuitif le fait qu’une seule mutation, dans l’évolution d’un système 
+complexe, sera adaptative. Le besoin apparent de plusieurs mutations 
+simultanées s’étiole si chaque niveau peut s’adapter spontanément à une 
+petite altération dans un autre niveau.
+En ce qui concerne l’auto-organisation au niveau cellulaire, tant la 
+biochimie intracellulaire que la formation des cellules/parois cellulaires 
+ont été modélisées. Ce travail exploite celui de Turing sur la diffusion des 
+réactions. Cependant, il s’appuie davantage sur des concepts biologiques 
+que sur des idées issues de l’A-Life.
+En résumé, l’IA fournit de nombreuses idées théoriques concernant 
+l’auto-organisation et les artefacts d’auto-organisation abondent.
+
+---
+
+[p. 148-150]
+ce) et l’incarnation.
+Être incarné, c’est être un corps vivant dans un environnement dyna-
+mique et qui s’y engage activement. L’environnement – et l’engagement 
+– est à la fois physique et socioculturel. Les principales propriétés psy-
+chologiques ne sont pas le raisonnement ou la pensée, mais l’adaptation 
+et la communication.
+  L’intelligence artificielle  
+ 148 
+Les philosophes de l’incarnation ont peu de temps pour l’IA 
+symbolique, la considérant comme trop cérébrale. Seules les approches 
+basées sur la cybernétique sont privilégiées (cf. les chapitres 1 et 5). 
+Et puisque,  elon ce point de vue, la véritable intelligence est basée sur 
+le corps, aucune AGI à l’écran ne pourrait être réellement intelligente. 
+Même si le système à l’écran est un agent autonome structurellement 
+couplé à un environnement physique, il ne serait pas considéré comme 
+incarné.
+Alors, qu’en est-il des robots ? Après tout, les robots sont des êtres 
+physiques ancrés dans le monde réel et qui s’y adaptent. En effet, la 
+robotique située est parfois louée par ces philosophes. Mais les robots 
+ont-ils un corps ? Ou des intérêts ? Ou des formes de vie ? Sont-ils vivants ?
+Les phénoménologues diraient : « Certainement pas ! » Ils pourraient 
+citer la célèbre remarque de Wittgenstein : « Si un lion pouvait parler, nous 
+ne le comprendrions pas. » La forme de vie du lion est si différente de la 
+nôtre que la communication serait presque impossible. Il est vrai que la 
+psychologie du lion et la nôtre se recoupent suffisamment (par exemple, 
+la faim, la peur, la fatigue, etc.) pour qu’un minimum de compréhension 
+– et d’empathie – soit possible. Mais même cela ne serait pas possible 
+lorsqu’on « communique » avec un robot. (C’est pourquoi la recherche sur 
+les compagnons informatiques est si préoccupante : cf. chapitres 3 et 7).
+LA COMMUNAUTÉ MORALE
+Accepterions-nous une AGI à dimension humaine comme membre 
+de notre communauté morale ? Si nous le faisions, cela aurait des 
+conséquences pratiques importantes, car cela affecterait l’interaction 
+homme-machine de trois façons.
+Premièrement, l’AGI accueillerait notre préoccupation morale – 
+comme le font les animaux. Nous respecterions ses intérêts, jusqu’à 
+un certain point. Si elle demandait à quelqu’un d’interrompre son repos 
+ou ses mots croisés pour l’aider à atteindre un objectif « hautement 
+prioritaire », il le ferait. (Ne vous êtes-vous jamais levé de votre fauteuil 
+
+  Mais, est-ce réellement de l’intelligence ?  
+ 149 
+pour promener le chien, ou pour laisser une coccinelle s’échapper vers 
+le jardin ?) Plus on jugeait que ses intérêts comptaient pour elle, plus 
+on se sentait obligé de les respecter. Toutefois, ce jugement dépendrait 
+largement de la question de savoir si nous attribuons une conscience 
+phénoménale (y compris des émotions ressenties) à l’AGI.
+Deuxièmement, nous considérerions ses actions comme étant mora-
+lement évaluables. Les drones tueurs d’aujourd’hui ne sont pas moralement 
+responsables (contrairement à leurs utilisateurs/concepteurs : cf. chapitre 
+7). Mais peut-être qu’une AGI vraiment intelligente le serait ? Ses décisions 
+pourraient vraisemblablement être influencées par nos réactions à leur 
+égard ; par nos louanges ou par nos reproches. Sinon, il n’y a pas de com-
+munauté. Elle pourrait apprendre à être « morale » tout comme un enfant 
+(ou un chien) peut apprendre à bien se comporter, ou un enfant plus âgé 
+à être attentionné. La considération exige le développement de ce que 
+les psychologues cognitifs appellent la théorie de l’esprit, qui interprète le 
+comportement des gens en termes d’agence, d’intention et de croyance. 
+Même une punition peut être justifiée, pour des raisons instrumentales.
+Et troisièmement, nous en ferions la cible d’une argumentation et 
+d’une persuasion sur les décisions morales. Il pourrait même offrir des 
+conseils moraux aux gens. Pour que nous nous engagions sérieusement 
+dans de telles conversations, nous devrions être convaincus que (outre 
+le fait d’avoir une intelligence de niveau humain) elle se prêterait à des 
+considérations spécifiquement morales. Mais qu’est-ce que cela signifie 
+au juste ? Les éthiciens sont en profond désaccord non seulement sur 
+le contenu de la moralité mais aussi sur ses fondements philosophiques.
+Plus on considère les implications de la « communauté morale », plus 
+l’idée d’admettre les AGI semble problématique. En effet, la plupart des 
+gens ont la forte intuition qu’évoquer la suggestion même est absurde.
+LA MORALITÉ, LA LIBERTÉ ET LE SENS DU SOI
+Cette intuition est due en grande partie au fait que le concept de 
+responsabilité morale est intimement lié à l’agencement conscient des
+
+---
+
+[p. 162-164]
+ordi-
+nateurs et de la disponibilité des données (grâce au stockage dans le 
+« nuage » (cloud) et aux capteurs fonctionnant « 24 sur 24 et 7 sur 7 » sur 
+l’Internet des Choses (IoT –Internet of Things) ne garantira pas une IA 
+de type humain. C’est une mauvaise nouvelle pour les S-croyants, car 
+l’ASI a besoin de l’AGI d’abord.
+  L’intelligence artificielle  
+ 162 
+Les S-croyants ignorent les limites de l’IA actuelle. Ils ne considèrent 
+tout simplement pas que l’avancée technologique soit en train de réé-
+crire tous les recueils de règles. Cela leur permet de faire des prédictions 
+à volonté. Ils admettent parfois que leurs prédictions de fin de siècle 
+peuvent être irréalistes. Cependant, ils insistent sur le fait que « jamais » 
+est une très lointaine échéance.
+« Jamais » en effet, est un très long moment. Les sceptiques, dont je fais 
+partie, peuvent donc se tromper. Ils n’ont pas d’arguments à faire valoir, 
+surtout s’ils admettent la possibilité de l’AGI en principe (comme je le fais). 
+Ils peuvent même être persuadés que la Singularité, bien qu’énormément 
+retardée, finira par se produire.
+Néanmoins, un examen attentif de l’IA de pointe donne de bonnes 
+raisons de soutenir l’hypothèse des sceptiques (ou leur pari, si vous pré-
+férez), plutôt que les spéculations absurdes des S-croyants.
+L’ÉMULATION TOTALE DU CERVEAU
+Les partisans de la théorie de la « AG-S » prédisent une avancée 
+technologique exponentielle dans les domaines de l’IA, de la biotech-
+nologie et de la nanotechnologie, ainsi que dans la coopération entre ces 
+domaines. En effet, cela se produit déjà. Les analyses de Big Data sont 
+utilisées pour faire progresser le génie génétique et le développement de 
+médicaments, ainsi que de nombreux autres projets à base scientifique 
+(Ada Lovelace a soutenu cet axe de progrès : cf. chapitre 1er). De même, 
+l’IA et les neurosciences sont combinées dans l’émulation du cerveau 
+entier (en anglais WBE whole-brain emulation).
+L’objectif de la WBE est d’imiter un vrai cerveau en simulant ses 
+composants individuels (neurones), ainsi que leurs connexions et leurs 
+capacités de traitement de l’information. L’espoir est que les connais-
+sances scientifiques acquises auront de nombreuses applications, y com-
+pris des traitements pour des pathologies mentales allant de la maladie 
+d’Alzheimer à la schizophrénie.
+
+  La Singularité  
+ 163 
+Cette « ingénierie inverse » nécessitera des calculs neuro-morphiques, 
+qui modélisent les processus infra-cellulaires tels que le passage d’ions 
+à travers la membrane cellulaire (cf. chapitre 4).
+L’informatique neuro-morphique se basera sur notre connaissance de 
+l’anatomie et de la physiologie des différents types de neurones. Mais la 
+WBE nécessitera également des preuves détaillées sur les connexions et 
+les fonctionnalités neuronales spécifiques, y compris le timing. Pour ce 
+faire, il faudra en grande partie améliorer la scintigraphie du cerveau, avec 
+des sondes neurométriques miniaturisées qui surveillent en permanence 
+les différents neurones.
+Divers projets de WBE sont actuellement en cours, souvent comparés 
+par leurs promoteurs au projet du génome humain ou à la course à la 
+lune. Par exemple, en 2013, l’Union européenne a annoncé le projet [de 
+dix ans] sur le Cerveau Humain [EU- Human Brain Project ou HBP)], dont 
+le coût est estimé à un milliard de livres sterling [1,12 milliard d’euros]. Plus 
+tard la même année, le président américain Barack Obama a fièrement 
+annoncé BRAIN, un projet étalé sur dix ans, financé par le gouvernement 
+américain à hauteur de 3 milliards de dollars [2,5 milliards d’euros] (plus 
+un montant important de fonds privés). Il vise d’abord à générer une 
+carte dynamique de la connectivité du cerveau de la souris, puis à émuler 
+celui de l’homme.
+Des tentatives antérieures d’émulation partielle du cerveau ont éga-
+lement été financées par le gouvernement. En 2005, la Suisse a parrainé 
+le projet Blue Brain – initialement pour simuler la colonne corticale d’un 
+rat, mais avec l’objectif à long terme de modéliser le million de colonnes 
+du néocortex humain. En 2008, le DARPA a fourni près de 40 millions 
+de dollars pour SyNAPSE (Systems of Neuromorphic and Plastic Scalable 
+Electronics) ; Avec pour horizon 2014 – et 40 millions de dollars supplé-
+mentaires – ce projet utilise des micro-processeurs intégrant 5,4 mil-
+liards de transistors, chacun contenant un million d’unités (neurones) et 
+256 millions de synapses. L’Allemagne et le Japon collaborent également 
+à l’utilisation de la NEST (technologie de simulation neuronale) pour 
+développer l’ordinateur K ; en 2012, il fallait encore quarante minutes
+
+---
+
+[p. 175-176]
+cinq ans) a été saluée par les médias. 
+Il s’agit d’un projet de cinq universités (Yale, Brown, Tufts, Georgetown 
+et l’Institut Rensselaer), visant à développer la « compétence morale » des 
+robots. Il implique des psychologues cognitifs et sociaux et des philo-
+sophes moraux, ainsi que des programmeurs et des ingénieurs en IA.
+  La Singularité  
+ 175 
+Ce groupe interdisciplinaire n’essaie pas de fournir une liste d’al-
+gorithmes moraux (comparable aux lois d’Asimov), ni de donner la 
+priorité à une méta-éthique particulière (par exemple l’utilitarisme), ni 
+même de définir un ensemble de valeurs morales non concurrentes. Elle 
+espère plutôt développer un système informatique capable de raisonner 
+moralement (et de discuter de la morale) dans le monde réel. En effet, 
+les robots autonomes prendront parfois des décisions délibératives et 
+ne se contenteront pas de suivre des instructions (et encore moins de 
+réagir de manière rigide à des indices « situés » : cf. chapitre 5). Si un 
+robot est engagé dans une opération de recherche et de sauvetage, 
+par exemple, qui doit-il évacuer ou secourir en premier ? Ou s’il fournit 
+un accompagnement social, quand – si jamais – doit-il éviter de dire la 
+vérité à son utilisateur ?
+Le système proposé intégrerait la perception, l’action motrice, le TNL, 
+le raisonnement (tant déductif qu’analogique) et l’émotion. Cette der-
+nière inclurait la pensée émotionnelle (qui peut signaler des événements 
+importants et prévoir des objectifs contradictoires : cf. chapitre 3), les 
+manifestations robotisées de « protestation et de détresse », qui pourraient 
+influencer les décisions morales prises par les personnes qui interagissent 
+avec elle, et la reconnaissance des émotions chez les humains qui l’en-
+tourent. L’annonce officielle précise que le robot pourrait même « dépas-
+ser » la compétence morale ordinaire (c’est-à-dire humaine).
+Compte tenu des obstacles à l’AGI mentionnés aux chapitres 2 et 3, 
+ainsi que des difficultés liées spécifiquement à la moralité (cf. chapitre 
+6), on peut douter que cette tâche soit réalisable. Mais le projet pourrait 
+néanmoins en valoir la peine. En effet, en considérant les problèmes du 
+monde réel (comme les deux exemples très différents donnés plus haut), 
+il peut nous alerter sur les nombreux dangers de l’utilisation de l’IA dans 
+des situations moralement problématiques.
+Outre ces efforts institutionnels, un nombre croissant de scientifiques 
+spécialisés dans l’IA visent ce qu’Eliezer Yudkowsky appelle l’« IA convi-
+viale ». Il s’agit d’une IA qui a des effets positifs pour l’humanité, étant à la 
+fois sûre et utile. Elle impliquerait des algorithmes intelligibles, fiables et

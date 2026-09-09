@@ -1,0 +1,74 @@
+{
+ "document_id": "bab560ea-48f6-464f-8a02-0e05b48845a3",
+ "titre_normalise": "Enseigner avec l'IA à l'ère de la digitalisation des enseignements",
+ "auteurs": [
+  "Center for Inclusive Education and Sustainable Development"
+ ],
+ "annee": 2025,
+ "type_ouvrage": "tutoriel",
+ "niveau": "debutant",
+ "public_cible": "Enseignants du primaire et du secondaire découvrant les outils génératifs, formateurs d'enseignants, animateurs d'ateliers. Support produit par le Center for Inclusive Education and Sustainable Development, établi à Buea au Cameroun. Dix-neuf pages composées presque entièrement de captures d'écran annotées, avec une consigne par page.",
+ "these_centrale": "Un enseignant peut produire un plan de cours complet et une présentation illustrée en une session, sans compétence technique, en enchaînant deux outils gratuits : un assistant spécialisé dans la conception de cours, puis un générateur de diapositives qui met en forme le texte obtenu. Le support ne théorise rien, il montre chaque clic, de l'inscription à la présentation finie.",
+ "idees_force": [
+  {
+   "titre": "Une chaîne de production en deux outils",
+   "explication": "Premier temps, un assistant spécialisé produit la structure du cours : titres, contenus par diapositive, exemples visuels suggérés, activités. Deuxième temps, le texte obtenu est collé dans un générateur de présentations qui le met en page automatiquement. Le principe est transposable à d'autres outils : un outil pour la structure, un outil pour la forme, l'enseignant pour le contenu et la vérification.",
+   "page": 4
+  },
+  {
+   "titre": "Les assistants spécialisés existent déjà et sont gratuits",
+   "explication": "Le support montre comment rechercher dans le répertoire d'assistants préconfigurés ceux qui sont dédiés à la création de cours, et en présente plusieurs : générateur de plan et de contenu de leçon fondé sur les bonnes pratiques, générateur de programme pour l'enseignement secondaire à partir de paramètres donnés, constructeur de parcours à partir d'un sujet, d'un temps disponible et d'un mode d'apprentissage préféré. Un enseignant n'a donc pas à inventer ses consignes : d'autres l'ont fait et les ont publiées.",
+   "page": 2
+  },
+  {
+   "titre": "Un exemple travaillé de bout en bout",
+   "explication": "Le cas retenu est une leçon d'introduction à l'évolution pour des enfants de dix ans, en dix diapositives, partant des animaux pour arriver à l'histoire humaine. Le plan produit comporte une définition simple, un arbre généalogique, l'adaptation, les fossiles comme preuve, les étapes de l'évolution humaine, et une conclusion élargissant aux plantes et aux insectes. L'exemple est complet, ce qui permet à un enseignant de juger de la qualité réelle du résultat avant de se lancer.",
+   "page": 5
+  },
+  {
+   "titre": "Le système propose de lui-même des activités interactives",
+   "explication": "Le plan engendré se termine par des suggestions non demandées : un questionnaire rapide de vérification de la compréhension avec deux exemples de questions, des illustrations et animations pour concrétiser, et une activité invitant les élèves à imaginer comment leur propre corps pourrait évoluer pour s'adapter à de nouveaux environnements. Cette dernière proposition est pédagogiquement bonne. Elle montre où l'outil est le plus utile : non pour dire le savoir, mais pour relancer l'imagination du professeur.",
+   "page": 7
+  },
+  {
+   "titre": "Trois modes de génération, à ne pas confondre",
+   "explication": "Le générateur de présentations distingue trois traitements du texte fourni : engendrer à partir de notes ou d'un plan, ce qui reformule ; synthétiser un texte long pour le rendre présentable, ce qui condense ; ou conserver le texte exact tel quel. Le troisième mode est celui qui protège le travail de l'enseignant : il met en forme sans réécrire. C'est la distinction la plus importante et la plus facile à manquer.",
+   "page": 8
+  },
+  {
+   "titre": "Une initiative locale, produite au Cameroun",
+   "explication": "Le document a été conçu et diffusé depuis Buea par une organisation dont l'objet est l'éducation inclusive et le développement durable. Sa valeur dépasse son contenu : il atteste qu'un accompagnement des enseignants africains à ces outils existe déjà, produit localement, en français, et distribué gratuitement. C'est le seul document du fonds dans ce cas.",
+   "page": 1
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Assistant préconfiguré",
+   "definition": "Version spécialisée d'un système conversationnel, dotée d'instructions et de connaissances propres à une tâche, publiée par un tiers et réutilisable."
+  },
+  {
+   "terme": "Générateur de présentation",
+   "definition": "Outil transformant automatiquement un texte structuré en diapositives mises en page, avec choix de thème visuel."
+  },
+  {
+   "terme": "Plan de cours",
+   "definition": "Structure ordonnée d'une séance : objectifs, contenus, exemples, activités, évaluation. Ce que l'assistant produit en premier."
+  },
+  {
+   "terme": "Conserver le texte exact",
+   "definition": "Mode de génération qui met en forme sans reformuler. À privilégier quand le contenu a été rédigé ou validé par l'enseignant."
+  },
+  {
+   "terme": "Séparateur de sections",
+   "definition": "Marque insérée entre deux blocs de texte pour forcer le découpage en diapositives, au lieu de laisser l'outil décider."
+  }
+ ],
+ "a_lire_si": "Vous formez des enseignants et vous cherchez un support d'atelier prêt à l'emploi, adapté au contexte francophone africain et gratuit. La progression est concrète et l'exemple travaillé permet de finir la séance avec un résultat visible, ce qui est la condition d'une formation réussie auprès d'un public qui doute de sa compétence technique. C'est aussi une référence utile pour identifier des partenaires : l'organisation qui l'a produit travaille déjà sur ce terrain.",
+ "a_eviter_si": "Vous cherchez de la réflexion pédagogique. Le support ne dit rien de la fiabilité des contenus produits, ni de la vérification que l'enseignant doit exercer, ni des questions de droits sur les images engendrées, ni de ce qu'il convient de déclarer aux élèves. Il ne traite pas non plus de la contrainte la plus forte dans beaucoup d'établissements africains, qui est la connexion et l'accès aux équipements. Techniquement, c'est un empilement de captures d'écran, illisible par endroits une fois reconnu par lecture optique, et les interfaces montrées auront changé d'ici peu.",
+ "prerequis": [],
+ "controverses": [
+  "Enseigner l'outil sans enseigner la vérification revient à transmettre une compétence incomplète. Le support doit impérativement être accompagné d'une séance sur la fiabilité des réponses et sur la validation des contenus par l'enseignant.",
+  "La chaîne proposée suppose un accès stable à internet, un ordinateur personnel et un compte sur deux services étrangers. Ces prérequis, non discutés, excluent une part importante des enseignants visés."
+ ],
+ "confiance": 0.65
+}

@@ -1,0 +1,182 @@
+[
+ {
+  "chapitre": "f6221f5b",
+  "citations": [
+   {
+    "texte": "Ces failles tiennent à la nature même de l'IA qui module, déplace, hiérarchise des symboles a-signifiants en suivant aveuglément des règles qui la déterminent, de telle sorte qu'on peut la pousser à agir contre elle-même.",
+    "page": 61,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi les garde-fous cèdent",
+    "portee": "Un système qui suit aveuglément des règles peut toujours être conduit à les retourner contre elles-mêmes."
+   },
+   {
+    "texte": "le mathématicien n'est pas régi par le système des mathématiques, il peut s'en extraire",
+    "page": 62,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pouvoir sortir du système",
+    "portee": "La liberté de quitter le cadre où l'on travaille est précisément ce qui manque à la machine."
+   },
+   {
+    "texte": "En démontrant, dans son fameux théorème d'incomplétude, qu'il existe des formules indémontrables et irréfutables mathématiquement, Gödel a tracé les limites de l'axiomatisation de notre pensée.",
+    "page": 61,
+    "axe": "02-ia-technique-academique",
+    "theme": "Les limites du calcul",
+    "portee": "Un résultat mathématique établit qu'aucun système formel ne peut tout démontrer de lui-même."
+   }
+  ]
+ },
+ {
+  "chapitre": "a9a65061",
+  "citations": [
+   {
+    "texte": "Elle fait passer des Cn1 pour des Cn2. La confusion de ces ordres de connaissance nous illusionne.",
+    "page": 63,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Confondre deux ordres de connaissance",
+    "portee": "Prendre un tri de symboles pour une compréhension est l'erreur d'où découlent toutes les autres."
+   },
+   {
+    "texte": "un cerveau plongé dans une cuve ne dispose d'aucun critère extérieur pour se décrire en tant que tel",
+    "page": 64,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Sans repère extérieur",
+    "portee": "Juger de sa propre situation suppose un point d'appui hors de cette situation."
+   },
+   {
+    "texte": "le langage autoréférentiel basé uniquement sur un traitement de signes a-signifiants ne peut donc pas être le fondement de la pensée",
+    "page": 65,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un langage qui ne renvoie à rien",
+    "portee": "Une langue coupée du monde peut être cohérente sans jamais rien dire de vrai."
+   }
+  ]
+ },
+ {
+  "chapitre": "3d8ff41e",
+  "citations": [
+   {
+    "texte": "Le sens est toujours un effet. Non pas seulement effet au sens causal ; mais un effet au sens de « effet optique », « effet sonore », ou mieux effet de surface",
+    "page": 66,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le sens comme effet de surface",
+    "portee": "Ce que nous prenons pour la profondeur d'un texte peut n'être qu'un effet produit à sa surface."
+   },
+   {
+    "texte": "On peut cependant se laisser prendre au piège ; cela dépend de la robustesse de notre esprit critique.",
+    "page": 66,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'esprit critique comme rempart",
+    "portee": "Face à ces outils, la formation du jugement devient une protection concrète, pas un idéal abstrait."
+   },
+   {
+    "texte": "C'est la distribution du mot dans des séries de mots qui fait émerger son sens.",
+    "page": 66,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le sens par voisinage",
+    "portee": "Ces modèles ne connaissent des mots que leurs fréquentations, jamais les choses qu'ils désignent."
+   }
+  ]
+ },
+ {
+  "chapitre": "f978e97f",
+  "citations": [
+   {
+    "texte": "L'épuisé, comme une IA LLM, utilise la combinatoire au point d'épuiser toutes les possibilités de son langage et de son monde.",
+    "page": 68,
+    "axe": "08-litterature-romans",
+    "theme": "Épuiser le possible",
+    "portee": "Beckett avait décrit avant l'heure ce que devient une parole qui ne vise plus rien."
+   },
+   {
+    "texte": "La manifestation du sujet s'efface dans la combinatoire à travers une mortification du soi",
+    "page": 68,
+    "axe": "08-litterature-romans",
+    "theme": "Le sujet qui s'efface",
+    "portee": "Une langue purement combinatoire finit par ne plus avoir personne pour la parler."
+   }
+  ]
+ },
+ {
+  "chapitre": "f3ed70f3",
+  "citations": [
+   {
+    "texte": "si l'on branchait ensemble deux de ces machines, et si elles jouaient entre elles au jeu de l'imitation, elles se berneraient mutuellement pour toujours, même si le reste du monde cessait d'exister",
+    "page": 70,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un dialogue sans monde",
+    "portee": "Deux systèmes peuvent converser indéfiniment sans qu'aucun fait n'intervienne jamais."
+   },
+   {
+    "texte": "le langage ne naît pas avec nous, nous naissons dans le langage",
+    "page": 71,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Hériter d'une langue",
+    "portee": "Nous recevons une langue faite, et c'est en l'habitant que nous devenons capables de penser."
+   },
+   {
+    "texte": "on prolonge dans nos têtes, non plus la langue des autres, de notre culture, de notre histoire ; on prolonge la langue vide des IA",
+    "page": 71,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Ce que l'on prolonge en soi",
+    "portee": "Une culture se transmet par les voix qu'on laisse résonner en soi, et celles-ci peuvent être remplacées."
+   }
+  ]
+ },
+ {
+  "chapitre": "69066753",
+  "citations": [
+   {
+    "texte": "L'imagination à l'œuvre dans l'image technique est d'une telle puissance que non seulement nous prenons les images pour la réalité, mais encore nous vivons en fonction d'elles.",
+    "page": 72,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Vivre en fonction des images",
+    "portee": "Les images ne trompent pas seulement notre regard, elles orientent nos décisions et nos désirs."
+   },
+   {
+    "texte": "On répète les mêmes gestes sur nos interfaces sans s'en rendre compte.",
+    "page": 74,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'automatisme du geste",
+    "portee": "Le premier effet des interfaces n'est pas sur ce que nous pensons mais sur ce que nous faisons sans y penser."
+   },
+   {
+    "texte": "Le rétrécissement du champ de la conscience établit de la distraction, de l'instinct, de l'habitude et de la passion.",
+    "page": 74,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Un champ de conscience qui se rétrécit",
+    "portee": "L'attention captée n'est pas seulement du temps perdu, c'est un rétrécissement de ce que l'on perçoit."
+   }
+  ]
+ },
+ {
+  "chapitre": "b2ad7a0d",
+  "citations": [
+   {
+    "texte": "Au lieu de produire un programme qui simule l'esprit de l'adulte, pourquoi ne pas plutôt essayer d'en produire un qui simule celui de l'enfant ?",
+    "page": 78,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'intuition de Turing sur l'enfance",
+    "portee": "Une intuition de 1950 qui gouverne encore la recherche, et qui compare l'enfant à un programme à éduquer."
+   }
+  ]
+ },
+ {
+  "chapitre": "a8961033",
+  "citations": [
+   {
+    "texte": "les scientifiques sont parvenus à entraîner une IA à apprendre des mots d'anglais en lien avec des images et des sons perçus",
+    "page": 78,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre avec peu de données",
+    "portee": "Un résultat qui bouscule l'idée qu'il faille des corpus immenses pour associer des mots à des choses."
+   },
+   {
+    "texte": "la machine agence donc des données selon un ensemble de règles préalablement définies par l'humain",
+    "page": 79,
+    "axe": "02-ia-technique-academique",
+    "theme": "Qui fixe les règles",
+    "portee": "Derrière l'apparente autonomie d'un apprentissage se tiennent des choix humains explicites."
+   }
+  ]
+ }
+]

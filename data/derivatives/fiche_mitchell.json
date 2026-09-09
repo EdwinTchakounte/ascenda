@@ -1,0 +1,163 @@
+{
+ "document_id": "96c46597-1638-41d4-883f-803dc796f8c4",
+ "titre_normalise": "Intelligence artificielle. Triomphes et déceptions",
+ "auteurs": [
+  "Melanie Mitchell"
+ ],
+ "annee": 2021,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Lecteur curieux qui veut comprendre ce que l'IA fait réellement, sans mathématiques. Titre original : Artificial Intelligence: A Guide for Thinking Humans, copyright 2019, avec la collaboration de Robert French, traduction française Dunod 2021, ISBN 978-2-10-083219-4, préface de Douglas Hofstadter. Mitchell est chercheuse au Santa Fe Institute, ancienne doctorante de Hofstadter, autrice de Analogy-Making as Perception et de An Introduction to Genetic Algorithms.",
+ "these_centrale": "L'intelligence artificielle contemporaine réussit spectaculairement des tâches que nous croyions difficiles, comme les échecs, le go, la reconnaissance d'objets, la traduction, et échoue lamentablement sur ce que le moindre enfant fait sans y penser : comprendre une situation. Cet écart n'est pas un retard technique que davantage de données ou de couches viendrait combler. Mitchell l'appelle la barrière du sens. Les systèmes actuels apprennent des corrélations statistiques dans leurs données d'apprentissage, pas des concepts ; ils n'ont ni bon sens, ni modèle causal, ni capacité d'abstraction et d'analogie. Tant que cette barrière tient, confier à ces systèmes des décisions engageant des vies revient à parier sur une compétence qu'ils n'ont pas.",
+ "idees_force": [
+  {
+   "titre": "Le paradoxe des choses faciles",
+   "explication": "Le titre de section revient comme un refrain dans le livre : « Les choses faciles sont difficiles ». Battre le champion du monde d'échecs a demandé quarante ans, décrire correctement une photographie de vestiaire n'est toujours pas résolu. Minsky l'avait formulé ainsi : « En général, nous avons moins conscience de ce que notre esprit fait le mieux. » Ce que nous appelons intelligence chez nous-mêmes est en grande partie invisible à notre introspection, donc absent de nos cahiers des charges.",
+   "page": 34
+  },
+  {
+   "titre": "Le perceptron expliqué par vos amis cinéphiles",
+   "explication": "Mitchell donne la meilleure image pédagogique disponible du neurone artificiel. Vous demandez à plusieurs amis leur avis sur un film. Vous ne leur accordez pas la même confiance : chacun a un poids. Vous additionnez leur enthousiasme pondéré. Si le total dépasse un seuil intérieur, vous allez voir le film. Un perceptron est exactement cela, un programme qui prend une décision binaire selon que la somme de ses entrées pondérées dépasse ou non un seuil. Apprendre, pour lui, c'est ajuster les poids et le seuil.",
+   "page": 27
+  },
+  {
+   "titre": "Les unités cachées ne cachent rien",
+   "explication": "Le vocabulaire de l'apprentissage profond intimide sans raison. Mitchell le désamorce : les unités dites cachées sont simplement celles qui ne touchent ni l'entrée ni la sortie du réseau, et elle note qu'« un nom plus heureux aurait peut-être été unité intérieure ». Même travail de démystification pour la rétropropagation, les cartes d'activation, les réseaux convolutifs, les réseaux récurrents et les vecteurs-mots, tous expliqués en prose et en figures, sans une équation.",
+   "page": 37
+  },
+  {
+   "titre": "ImageNet a été étiqueté par des humains sous-payés",
+   "explication": "La révolution de la vision par ordinateur repose sur 1,2 million d'images d'apprentissage étiquetées à la main, via la plateforme Amazon Mechanical Turk, dont le nom vient de l'automate joueur d'échecs du dix-huitième siècle qui dissimulait un homme. Amazon décrit son service comme de l'« intelligence artificielle artificielle ». L'ironie est exacte : la performance des machines a été payée en travail humain invisible et mal rémunéré.",
+   "page": 82
+  },
+  {
+   "titre": "Surpasser l'humain ne veut pas dire ce qu'on croit",
+   "explication": "Les annonces de dépassement humain en reconnaissance d'objets portent sur un protocole précis : mille catégories fixées, cinq réponses autorisées par image, réussite si la bonne figure dans le lot. Sorties de ce cadre, les mêmes machines s'effondrent. Un réseau entraîné sur des photos du Web reconnaît mal les objets filmés par un robot circulant dans une maison, parce que les gens ne photographient pas pour le Web ce qu'un robot voit au sol. Un léger flou, un léger mouchetage, une rotation d'objet suffisent à provoquer des erreurs massives, alors que ces mêmes perturbations ne gênent aucun humain.",
+   "page": 90
+  },
+  {
+   "titre": "Le racisme des systèmes n'est pas un accident isolé",
+   "explication": "En 2015 l'étiqueteur automatique de Google Photos a attribué la catégorie « Gorilles » à un selfie de deux Afro-Américains. Le correctif adopté fut de supprimer la catégorie Gorilles de la liste. Le cas est célèbre, mais Mitchell insiste sur le plus grave : les systèmes commerciaux de reconnaissance faciale sont systématiquement moins performants sur les visages féminins et sur les visages à peau foncée, certains logiciels d'appareils photo ne détectent pas les visages sombres et classent les visages asiatiques comme un clignement des yeux. Point capital pour un lecteur africain : ces systèmes sont exportés tels quels vers des populations sur lesquelles ils n'ont jamais été validés.",
+   "page": 104
+  },
+  {
+   "titre": "Les exemples adverses révèlent qu'il n'y a pas de concept",
+   "explication": "On peut modifier une image de manière imperceptible pour l'œil humain et faire basculer la réponse d'un réseau profond avec une confiance élevée. On peut aussi fabriquer des images de pur bruit que le réseau classe avec certitude. Des lunettes imprimées d'un certain motif trompent la reconnaissance faciale, quelques autocollants sur un panneau stop le font lire comme une limitation de vitesse, et l'attaque fonctionne aussi sur l'imagerie médicale. Ce n'est pas un bogue à corriger : c'est la preuve que le réseau n'a jamais appris le concept, seulement une frontière statistique dans un espace de pixels.",
+   "page": 109
+  },
+  {
+   "titre": "Le Grand Compromis de l'IA",
+   "explication": "Mitchell nomme ainsi l'arbitrage que la société est en train d'accepter sans en délibérer : nous confions à des systèmes utiles mais opaques et fragiles des décisions de recrutement, de crédit, de justice, de conduite, de médecine, en échange de rapidité et de coût. La question n'est pas de savoir si l'IA est bénéfique, elle l'est manifestement en santé, en modélisation climatique, en analyse scientifique, mais de savoir ce que nous acceptons de perdre en fiabilité et en recours.",
+   "page": 120
+  },
+  {
+   "titre": "La morale suppose la compréhension, donc elle reste hors de portée",
+   "explication": "L'enquête sur les voitures autonomes est un miroir cruel : les mêmes personnes approuvent le véhicule qui sacrifie ses passagers pour sauver dix piétons, et déclarent qu'elles n'achèteraient jamais un tel véhicule. Le psychologue Joshua Greene en tire la formule : « Avant de pouvoir intégrer nos valeurs dans des machines, nous devons donner plus de clarté et de cohérence à ces valeurs. » Mitchell va plus loin : un robot ne peut obéir à l'ordre de ne pas nuire s'il ne comprend pas ce qu'est nuire dans une situation donnée. Le raisonnement moral exige la causalité, la projection dans plusieurs futurs, la théorie de l'esprit d'autrui. Le préalable à une machine morale est le bon sens, dont aucun système ne dispose.",
+   "page": 127
+  },
+  {
+   "titre": "Les jeux ne se transfèrent pas au monde",
+   "explication": "Hassabis présente les jeux comme une simple plate-forme de développement vers une IA générale. Mitchell vérifie la promesse et la trouve creuse. AlphaGo n'a pas maîtrisé les échecs pendant son temps libre, l'apprentissage par transfert reste très limité. Les succès de l'apprentissage par renforcement se concentrent dans les domaines parfaitement simulables. Karpathy, directeur de l'IA chez Tesla, le dit sans détour : dans les tâches réelles, presque toutes les hypothèses dont AlphaGo tire avantage sont violées. Un robot qui charge un lave-vaisselle affronte un chien imprévisible, des casseroles au fond de l'évier et des millions d'assiettes à ne pas casser.",
+   "page": 170
+  },
+  {
+   "titre": "Comprendre, c'est simuler mentalement",
+   "explication": "Mitchell s'appuie sur les travaux du psychologue Lawrence Barsalou : notre compréhension d'une situation vient des simulations mentales que nous en faisons, avec notre corps, notre mémoire d'expériences vécues, notre physique intuitive acquise dans la prime enfance. Cette connaissance de base, invisible et non verbalisée, est ce que les machines n'ont pas. D'où l'échec de Cyc, l'entreprise trentenaire d'encodage manuel du sens commun, que Pedro Domingos qualifie d'« échec le plus notoire de l'histoire de l'IA » et que Rodney Brooks juge héroïque mais stérile.",
+   "page": 229
+  },
+  {
+   "titre": "L'analogie est le cœur de la cognition, et personne ne sait la programmer",
+   "explication": "Mitchell revient à son propre domaine, hérité de Hofstadter : le glissement conceptuel. Reconnaître « promener un chien » dans une photo prototypique est facile ; le reconnaître dans quatre situations atypiques suppose de déformer le concept sans le rompre. Copycat, Metacat, Situate, les problèmes de Bongard sont autant de tentatives de modéliser cette fluidité. Son verdict est sans appel : « si l'analogie est fondamentale à tous les niveaux de la connaissance humaine, il n'existe encore aucun programme d'IA doté un tant soit peu des capacités humaines à créer des analogies ».",
+   "page": 254
+  },
+  {
+   "titre": "Les prédictions d'experts ne valent pas mieux que les vôtres",
+   "explication": "Le livre collectionne les prophéties ratées, celles de Shane Legg, de Zuckerberg, l'enquête Müller et Bostrom de 2013 donnant cinquante pour cent de chances d'une IA de niveau humain vers 2040, et l'attente kurzweilienne de la Singularité que le journaliste Andrian Kreye a raillée comme un « Ravissement technologique », c'est-à-dire une eschatologie religieuse en habits d'ingénieur. Mitchell rappelle aussi la remarque de Kevin Kelly sur le modèle d'affaires dominant : « prenez X et ajoutez IA ». Savoir dater et pondérer une prédiction est une compétence de lecture, pas de technique.",
+   "page": 58
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Barrière du sens",
+   "definition": "Expression centrale du livre, empruntée au mathématicien Gian-Carlo Rota : le mur qui sépare la performance statistique de la compréhension. Une machine peut classer un million d'images sans savoir ce qu'est un objet, une scène, une intention."
+  },
+  {
+   "terme": "IA symbolique",
+   "definition": "Approche fondatrice où la connaissance est représentée par des symboles et des règles manipulés explicitement, lisibles par un humain. Puissante en logique, impuissante en perception."
+  },
+  {
+   "terme": "IA sub-symbolique",
+   "definition": "Approche inspirée du neurone, où la connaissance est distribuée dans des poids numériques ajustés par apprentissage. Les perceptrons puis les réseaux profonds en descendent. Efficace en perception, opaque et non explicable."
+  },
+  {
+   "terme": "Perceptron",
+   "definition": "Programme qui calcule la somme pondérée de ses entrées et répond oui ou non selon un seuil. Brique élémentaire des réseaux de neurones."
+  },
+  {
+   "terme": "Rétropropagation",
+   "definition": "Algorithme d'apprentissage des réseaux multicouches : l'erreur constatée en sortie est renvoyée vers l'arrière pour corriger les poids de chaque couche. C'est ce qui a rendu caduc le verdict de Minsky et Papert selon lequel les réseaux multicouches seraient une voie « probablement stérile »."
+  },
+  {
+   "terme": "Unité cachée",
+   "definition": "Neurone artificiel situé entre l'entrée et la sortie. Mitchell suggère qu'il faudrait plutôt dire unité intérieure : il n'y a aucun mystère, seulement une position dans l'architecture."
+  },
+  {
+   "terme": "Réseau convolutif ou ConvNet",
+   "definition": "Architecture inspirée du cortex visuel, qui applique les mêmes détecteurs sur toutes les régions de l'image et construit des cartes d'activation de plus en plus abstraites couche après couche."
+  },
+  {
+   "terme": "Réseau récurrent",
+   "definition": "Réseau dont les activations d'un pas de temps servent d'entrée au pas suivant, ce qui lui permet de garder trace du contexte déjà lu. Base des premiers systèmes de traitement du langage."
+  },
+  {
+   "terme": "Architecture encodeur-décodeur",
+   "definition": "Un premier réseau comprime une phrase entière en un vecteur d'activations, un second réseau engendre à partir de ce vecteur la phrase dans la langue cible. Fondement de la traduction automatique neuronale adoptée par Google en 2016."
+  },
+  {
+   "terme": "Vecteur-mot",
+   "definition": "Représentation d'un mot par une liste de nombres apprise à partir des contextes d'usage, de sorte que les mots employés de manière semblable se retrouvent proches dans l'espace. Une des avancées majeures du traitement du langage de la dernière décennie."
+  },
+  {
+   "terme": "Surapprentissage",
+   "definition": "Le système apprend les particularités de ses données d'entraînement plutôt que la régularité visée. Il réussit le test et échoue dans le monde."
+  },
+  {
+   "terme": "Longue traîne",
+   "definition": "La masse des situations rares qui, prises ensemble, sont fréquentes. Les systèmes appris excellent sur le centre de la distribution et s'effondrent dans la traîne, ce qui est précisément là que se produisent les accidents."
+  },
+  {
+   "terme": "Exemple adverse",
+   "definition": "Entrée modifiée de manière imperceptible pour un humain mais qui fait basculer la réponse d'un réseau avec une grande confiance. Preuve empirique de l'absence de concept."
+  },
+  {
+   "terme": "Apprentissage par renforcement",
+   "definition": "Apprentissage par essais, erreurs et récompenses, sans exemples étiquetés. Spectaculaire dans les univers simulables comme les jeux Atari ou le go, fragile dès que le monde réel intervient."
+  },
+  {
+   "terme": "Apprentissage par transfert",
+   "definition": "Capacité à réutiliser dans une tâche nouvelle ce qui a été appris ailleurs. Naturelle chez l'humain, très limitée chez les systèmes actuels, malgré les titres de presse qui affirment le contraire."
+  },
+  {
+   "terme": "Glissement conceptuel",
+   "definition": "Expression de Hofstadter : la déformation contrôlée d'un concept qui permet de reconnaître un cas atypique comme relevant tout de même du concept. Mécanisme supposé de l'analogie humaine."
+  },
+  {
+   "terme": "IA étroite et IA générale",
+   "definition": "L'IA étroite excelle dans un domaine délimité, l'IA générale transposerait sa compétence à des domaines nouveaux. Tout ce qui existe aujourd'hui est étroit."
+  },
+  {
+   "terme": "Singularité",
+   "definition": "Hypothèse d'une accélération auto-entretenue du progrès des machines aboutissant à un dépassement radical de l'humain. Mitchell la traite comme une croyance, en rappelant les échéances déjà démenties."
+  }
+ ],
+ "a_lire_si": "Vous voulez une seule lecture qui vous rende capable de comprendre techniquement ce que font les systèmes d'IA et de résister au discours promotionnel qui les entoure. C'est le meilleur ouvrage de vulgarisation rigoureuse du fonds : écrit par une chercheuse en activité, sans équation, avec des exemples vérifiables et des sources citées. À lire avant toute décision d'adoption d'un outil d'IA dans une institution, une entreprise ou une administration.",
+ "a_eviter_si": "Vous cherchez un manuel de mise en œuvre, du code, ou un guide de prompts. Vous cherchez aussi ailleurs si vous voulez l'état de l'art des grands modèles de langage : le texte est arrêté en 2019 et ne couvre ni les transformeurs à grande échelle ni les modèles génératifs qui ont suivi. Les architectures qu'il décrit en détail, réseaux récurrents et encodeurs-décodeurs, ont depuis été supplantées. Ses analyses de fond sur la fragilité, les biais et la barrière du sens, elles, restent valides et se sont plutôt confirmées.",
+ "prerequis": [],
+ "controverses": [
+  "L'apprentissage profond peut-il conduire seul à une intelligence générale, ou lui manque-t-il quelque chose de fondamental ? Mitchell penche pour la seconde réponse, aux côtés de Gary Marcus, contre l'optimisme d'échelle défendu par une grande partie de l'industrie.",
+  "L'échéance de l'IA de niveau humain : entre les experts consultés par Müller et Bostrom, Kurzweil et les sceptiques, l'écart des prévisions est tel qu'il disqualifie l'exercice lui-même.",
+  "Faut-il programmer les règles morales des machines ou les leur faire apprendre par observation du comportement humain ? Mitchell rejette les deux voies tant que la compréhension des situations fait défaut.",
+  "Le sens commun s'encode-t-il à la main, comme l'a tenté Cyc pendant trente ans, ou s'acquiert-il par expérience incarnée ? Le verdict de Domingos et Brooks sur Cyc est sévère, mais aucune alternative n'a encore produit de résultat."
+ ],
+ "confiance": 0.95
+}

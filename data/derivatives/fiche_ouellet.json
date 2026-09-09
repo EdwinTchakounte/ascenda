@@ -1,0 +1,114 @@
+{
+ "document_id": "3f123d3f-91c1-45e9-be6f-2be83308aa3d",
+ "titre_normalise": "L'IA débarque. Qu'est-ce que ça change dans ta vie ?",
+ "auteurs": [
+  "Jean-François Ouellet"
+ ],
+ "annee": 2025,
+ "type_ouvrage": "guide pratique",
+ "niveau": "debutant",
+ "public_cible": "Grand public non technique, adulte actif, consommateur. Guy Saint-Jean Éditeur, Québec, 2025. Écrit au tutoiement, en français québécois oral assumé, avec un glossaire des termes soulignés. Une quarantaine de chapitres courts organisés en parties thématiques : ton argent, ton travail, ta santé, ton magasinage, ton temps libre, ta vie citoyenne. Chaque chapitre se termine par « Ce que tu peux faire (ou pas) » et une conclusion.",
+ "these_centrale": "L'intelligence artificielle n'est pas un sujet d'avenir mais une réalité déjà installée dans les transactions ordinaires de la vie quotidienne, et le plus souvent du côté de celui qui vend, embauche, assure ou surveille, pas du côté du particulier. Le livre inverse le point de vue habituel de la vulgarisation : au lieu d'expliquer comment fonctionnent les systèmes, il montre où ils vous touchent déjà, dans le prix de votre billet d'avion, le tri de votre curriculum vitae, la circulaire de votre supermarché, la recommandation de votre application bancaire, et il donne pour chaque cas une liste de gestes concrets de reprise de contrôle.",
+ "idees_force": [
+  {
+   "titre": "La tarification dynamique est une négociation contre un algorithme",
+   "explication": "Quand vous cherchez un billet d'avion, une assurance ou un sac à dos, vous croyez chercher le meilleur prix ; en réalité vous négociez contre un système qui observe combien de fois vous êtes revenu sur la page, sur quel appareil, à quelle heure, depuis quel quartier. Le nom technique est discrimination algorithmique par les prix. Deux personnes paient des prix différents pour le même bien, et c'est légal dans la plupart des juridictions faute de texte spécifique.",
+   "page": 27
+  },
+  {
+   "titre": "La carte de fidélité est un capteur, pas un cadeau",
+   "explication": "En scannant votre carte, vous n'obtenez pas seulement un rabais : vous informez l'enseigne que cette tactique fonctionne sur vous et pas sur votre voisin qui dépense moins. Conséquence : le placement des produits en rayon est optimisé pour que ceux qui dépensent le plus trouvent encore plus à dépenser. La promotion n'est pas une remise, c'est un investissement dont le rendement est mesuré sur vous.",
+   "page": 36
+  },
+  {
+   "titre": "L'interface en ligne n'est pas neutre",
+   "explication": "Une fois le profil constitué, vous voyez toujours les mêmes produits, dans le même ordre, avec les mêmes suggestions. Vous croyez choisir librement, mais vingt ans de recherche établissent que l'on choisit presque toujours parmi les premiers résultats affichés, et plus encore sur téléphone, et plus encore par assistant vocal. La liberté de choix se joue dans l'ordre d'affichage, que vous ne contrôlez pas.",
+   "page": 37
+  },
+  {
+   "titre": "Votre banque prédit vos décisions avant que vous les preniez",
+   "explication": "Des systèmes de recommandation prédictive estiment le moment où vous demanderez un prêt, ou celui où vous partirez à la concurrence, et déclenchent une sollicitation avant que la question vous vienne. La même technologie produit des services réellement utiles, alerte de fraude, détection de double facturation, repérage d'abonnements dormants. L'auteur ne diabolise pas : il demande dans l'intérêt de qui l'anticipation est faite, ce qui est la bonne question.",
+   "page": 45
+  },
+  {
+   "titre": "Votre curriculum vitae est lu par un ATS avant tout humain",
+   "explication": "Le système de suivi des candidatures trie, classe et élimine avant qu'un recruteur regarde. Certaines banques nord-américaines ajoutent une entrevue automatisée où l'algorithme analyse chaque mot, chaque pause, chaque expression du visage. Le biais est structurel : ces modèles apprennent sur les décisions passées, donc reproduisent les préférences passées. Le chapitre donne des consignes concrètes de rédaction pour passer le premier filtre, ce qui est plus utile que de le déplorer.",
+   "page": 63
+  },
+  {
+   "titre": "L'IA négocie déjà, mais du côté de l'employeur",
+   "explication": "Les outils d'analyse salariale sont d'abord des outils patronaux, qui estiment le plus bas montant qu'un candidat acceptera. La transparence algorithmique des grilles peut se retourner contre le salarié en figeant une valeur de marché défavorable, particulièrement pour les femmes dont l'historique salarial est plus bas. La contre-mesure proposée est symétrique : utiliser les mêmes sources de données pour connaître sa valeur avant d'entrer dans la discussion.",
+   "page": 73
+  },
+  {
+   "titre": "L'automatisation partielle ne libère pas vraiment de temps",
+   "explication": "Le lave-vaisselle connecté optimise ses cycles, l'aspirateur robot ramasse les miettes, le robot cuiseur prépare le repas ; mais quelqu'un doit encore transvaser le linge, vider la station de base, ranger les assiettes. L'auteur nomme le point de blocage : l'interopérabilité. Tant que les maillons ne se parlent pas, le gain se dissipe dans les raccords manuels. C'est une observation qui vaut bien au-delà de l'électroménager, notamment pour l'informatisation des entreprises.",
+   "page": 213
+  },
+  {
+   "titre": "La création automatisée est déjà commercialisée",
+   "explication": "Suno, Aiva et Amper composent des morceaux complets, paroles, mélodie, voix et arrangements. En 2023 le disc-jockey David Guetta a reconnu avoir fabriqué une fausse voix d'Eminem par synthèse. La question n'est plus de savoir si c'est possible mais ce que cela vaut, et qui est payé.",
+   "page": 194
+  },
+  {
+   "titre": "La politique se joue désormais dans votre fil d'actualité",
+   "explication": "Le ciblage émotionnel remplace le débat : le message n'est plus adressé à un électorat mais calibré individu par individu selon ce qui vous fait réagir. L'auteur propose une hygiène simple et applicable : devant un message politique qui provoque une réaction forte, se demander si c'est une conviction qui monte ou un déclencheur qui a été choisi pour vous.",
+   "page": 223
+  },
+  {
+   "titre": "La liste des gestes concrets est le vrai apport du livre",
+   "explication": "Effacer périodiquement l'historique de recherche des plateformes marchandes, utiliser un bloqueur, naviguer en mode privé pour les recherches que l'on ne veut pas voir se transformer en publicité, éloigner les assistants vocaux des pièces où l'on parle de sujets sensibles, lire au moins en diagonale les politiques de confidentialité avant de connecter des appareils entre eux, tester plusieurs applications de budget, ne jamais confondre l'alerte automatique avec la décision. Ces consignes sont transposables partout et ne coûtent rien.",
+   "page": 32
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Tarification dynamique",
+   "definition": "Ajustement automatique et continu du prix affiché selon la demande, le moment et le profil de l'acheteur."
+  },
+  {
+   "terme": "Discrimination algorithmique par les prix",
+   "definition": "Cas particulier où le prix varie d'un client à l'autre pour un même bien, en fonction de ce que le système estime que ce client est prêt à payer."
+  },
+  {
+   "terme": "Profilage",
+   "definition": "Construction d'un modèle prédictif d'un individu à partir de traces d'usage : achats, durées de consultation, appareils, déplacements."
+  },
+  {
+   "terme": "ATS, système de suivi des candidatures",
+   "definition": "Logiciel qui filtre et classe automatiquement les curriculum vitae avant toute lecture humaine, généralement par correspondance de mots clés puis par score appris."
+  },
+  {
+   "terme": "Robot-conseiller",
+   "definition": "Service de placement automatisé qui construit et rééquilibre un portefeuille selon un profil de risque déclaré, à frais réduits, sans conseil humain."
+  },
+  {
+   "terme": "Recommandation prédictive",
+   "definition": "Système qui anticipe le besoin ou la décision d'un client et déclenche une offre au moment estimé le plus favorable pour le vendeur."
+  },
+  {
+   "terme": "Interopérabilité",
+   "definition": "Capacité de plusieurs systèmes automatisés à se transmettre données et tâches sans intervention manuelle. Son absence annule une grande partie du gain de l'automatisation."
+  },
+  {
+   "terme": "Surveillance au travail",
+   "definition": "Mesure automatisée de l'activité des salariés, frappes clavier, temps d'écran, déplacements, ton des messages, généralement présentée comme un outil de productivité."
+  },
+  {
+   "terme": "Hypertrucage, deepfake",
+   "definition": "Fabrication par synthèse d'une image, d'une voix ou d'une vidéo imitant une personne réelle."
+  },
+  {
+   "terme": "Biais historique",
+   "definition": "Reproduction par un modèle des discriminations contenues dans les décisions passées sur lesquelles il a appris."
+  }
+ ],
+ "a_lire_si": "Vous voulez faire comprendre l'intelligence artificielle à quelqu'un qui n'a aucun goût pour la technique, ou vous cherchez un matériau d'animation, de formation courte ou de sensibilisation. Le format question, exemple, geste concret est directement réutilisable en atelier. C'est aussi le seul type d'ouvrage du fonds qui traite l'IA du point de vue du consommateur plutôt que du concepteur ou du philosophe.",
+ "a_eviter_si": "Vous cherchez une explication du fonctionnement des systèmes : il n'y en a pratiquement aucune, et le glossaire tient lieu de théorie. Le style oral et le tutoiement peuvent gêner un lecteur habitué à l'essai. Surtout, tout l'appareil d'exemples et de recours juridiques est québécois : Desjardins, Hilo, Voilà de IGA, Air Canada, l'Office de la protection du consommateur. Les mécanismes décrits sont universels, les institutions et les protections ne le sont pas.",
+ "prerequis": [],
+ "controverses": [
+  "Faut-il réglementer spécifiquement la tarification personnalisée ou la traiter comme une pratique commerciale ordinaire ? L'auteur constate le vide juridique sans proposer de réponse.",
+  "La responsabilité incombe-t-elle au consommateur individuel, comme le suggère la structure du livre en gestes personnels, ou faut-il une action collective et réglementaire ? Le format guide pratique pousse implicitement vers la première réponse, ce qui est sa limite politique."
+ ],
+ "confiance": 0.88
+}

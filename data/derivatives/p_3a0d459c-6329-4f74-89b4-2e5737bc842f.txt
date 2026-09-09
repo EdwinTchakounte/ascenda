@@ -1,0 +1,1058 @@
+OUVRAGE : Panorama de lIntelligence Artificielle - Ses bases méthodologiques, ses développements - Volume 2, Algorithmes pour...
+AUTEUR(S) : Pierre Marquis, Odile Papini etc.
+ANNÉE : inconnue
+PAGES : 368
+AXE : IA Technique Academique
+SOMMAIRE :
+  (non structuré)
+
+[19/323 passages, 19988 tokens sur 344098]
+
+=== EXTRAITS ===
+
+[p. 1-5]
+PANORAMA DE L'INTELLIGENCE ARTIFICIELLE 
+ses bases methodologiques, ses developpements 
+Algorithmes 
+pour l'intelligence artificielle 
+C'paduiJs 
+EDITIONS 
+** 
+Coordinateurs : 
+Pierre Marquis 
+Odile Papini 
+Henri Prade 
+Preface: 
+Alain Colmerauer 
+
+PANORAMA DE L'INTELLIGENCE ARTIFICIELLE 
+ses bases methodologiques, ses developpements 
+Volume 2 
+Algorithmes 
+pour l'intelligence artificielle 
+Coordlnateurs : 
+Pierre Marquis 
+Odile Papini 
+Henri Prade 
+Preface: 
+Alain Colmerauer 
+CEPADUES·EDITIONS 
+Ill, rue Nicolas Vauquelin 
+31100 Toulouse - France 
+Tel. : 05 61 40 57 36 - Fax : 05 61 41 79 89 
+www.cepadues.com 
+Courriel : cepadues@cepadues.com 
+Coordonnees GPS en WGS 84 
+N 43° 34'43,2" 
+E 001° 24'21,5" 
+** 
+
+Illustration de couverture realisee par Emilie Prade, http://emilieprade.com/ 
+Photographie de couverture : Sylvain Erdei 
+C> CEPAD 2014 
+ISBN : 978.2.36493.042.1 
+Le code de la propriete lntellectuelle du 1°' julllet 1992 lnterdlt expressement la photocople a usage col
+lectif sans autorisation des ayants droit. Or, cette pratique en se generalisant provoquerait une baisse bru
+tale des achats de livres, au point que la possibilite meme pour !es auteurs de creer des reuvres nouvelles 
+et de !es faire editer correctement est aujourd'hui menacee. 
+Nous rappelons done que toute reproduction, partielle ou totale, du present ouvrage est interdite sans 
+autorisation de l'3diteur ou du Centre fran4ais d'exploitation du droit de copie (CFC- 3, rue d'Hautefeuille 
+- 75006 Paris). 
+Dep6t legal : mai 2014 
+
+Presentation de l'ouvrage 
+L'intelligence artificielle (IA) a cinquante ans revolus. Elle occupe une place sin
+guliere dans le champ tres vaste de l'informatique. Alors meme que l'IA n'a jamais 
+connu autant de developpements et d'applications varies, ses resultats restent large
+ment meconnus dans leur ensemble, y compris dans la communaute des chercheurs en 
+informatique. 
+Au-dela de monographies introductives, il n'existe pas de traite offrant une vue 
+d'ensemble approfondie, et a jour, des recherches dans ce domaine. C'est pourquoi il 
+etait important de dresser l'etat des lieux des travaux en IA au plan international. 
+Le present « panorama de !'intelligence artificielle - ses bases methodologiques, ses 
+developpements )) vise a repondre a cette demande. 
+Pour cette entreprise de grande ampleur, il a ete fait largement appel a la com
+munaute frarn;aise en IA. Chaque chapitre est ecrit par un ou des specialiste(s) du 
+domaine aborde. 
+L'ouvrage est organise est trois volumes : 
+- le premier volume regroupe vingt chapitres traitant des fondements de la repre
+sentation des connaissances et de la formalisation des raisonnements ; 
+- le deuxieme volume offre une vue de l'IA, en onze chapitres, sous l'angle des 
+algorithmes ; 
+- le troisieme volume, en onze chapitres egalement, decrit les principales frontieres 
+et applications de l'IA. 
+Si chaque chapitre peut etre lu independamment des autres, les references croisees 
+entre chapitres sont nombreuses et un index global de l'ouvrage permet d'aborder 
+celui-ci de fac;on non lineaire. 
+Quelle que soit la fac;on dont le lecteur utilisera cet ouvrage, nous esperons que le 
+panorama propose le rejouira et satisfera sa curiosite.
+
+---
+
+[p. 27-28]
+sentent le defaut de maintenir en memoire tous les etats engendres. 
+Par exemple, lorsque A*, muni de P, resout le probleme de la figure 3, quoiqu'il il 
+s'agisse d'un probleme dont la solution minimale ne compte que 9 coups, il execute 18 
+developpements et garde les 45 etats en resultant. A la fin, le front compte 27 etats, la
+666 - Panorama de !'intelligence artificielle. Volume 2 
+reserve en compte 18. Ces nombres sont lies a l'hypothese suivante : pour developper 
+tout etat on considere d'abord le fils obtenu en deplac;ant la case vide vers le haut puis 
+la gauche, puis la droite, puis le bas. 
+Pour eviter la saturation de la memoire centrale, Chakrabarti et ses collegues ont 
+conc;u MA* (Memory-bounded A*), comme un algorithme A* qui s'accommode de 
+l'espace-memoire disponible (Chakrabarti et al., 1989] ; lorsque la memoire vient a 
+manquer, MA* libere l'espace occupe par les etats qui presentent les pires evaluations, 
+mais conserve certaines caracteristiques des branches elaguees de maniere a pouvoir les 
+reconstituer si la suite de !'exploration l'exige ; MA* presente le tres grand avantage 
+de ne pas bloquer la recherche mais le temps d'execution peut devenir prohibitif. 
+1 . 5 
+Recherche heuristiquement ordonnee A* 
+bidirectionnelle 
+Pour chercher un chemin minimal dans un graphe d'etats G depuis un etat s vers un 
+etat t precis, tres tot est apparue l'idee de controler les fonctionnements imbriques 21 de 
+deux algorithmes A*. L'un travaille depuis s vers t dans le graphe G ; l'autre travaille 
+depuis t vers s dans le graphe Ginverse obtenu a partir de G en inversant le sens de 
+tous les arcs. Un module supervise !'allocation de cycles d'expansion a l'un OU l'autre 22 
+des deux A* ; il surveille aussi !'occurrence d'une intersection entre les deux graphes de 
+recherche courants. 
+Pohl a ete le principal pionnier de cette approche, avec, notamment, l'algorithme 
+BHPA : Bi-directional Heuristic Path Algorithm (Pohl, 1971] ; l'algorithme A* qui 
+travaille de s vers t (respectivement de t vers s) dispose d'une heuristique minorante 
+et monotone notee sh (respectivement : th) et maintient un front de recherche sfront 
+(respectivement : tfront) ; pour tout n de sfront (respectivement : tfront) I' estimation 
+heuristique h(n) vaut sh(n) (respectivement : th(n)]. Au plan formel, Pohl etablit 23 
+que BHP A trouve bien un chemin minimal des lors qu'il s'arrete ; au plan pratique, il 
+constate que la focalisation commandee par l'heuristique des deux cotes de la recherche, 
+peut conduire a des arrets tardifs. 
+De Champeaux et Sint ont propose l'algorithme BH FF A : Bi-directional Heuristic 
+Pront-to-Pront Algorithm (de Champeaux et Sint, 1977] comme un perfectionnement 
+de BHP A. BH FF A dispose d'une heuristique E pour estimer chaque fois qu'il en est 
+besoin la distance entre un etat p du sfront courant et un etat q du tfront courant. 
+Pout tout n de sfront, l'algorithme A* qui cherche depuis s vers t, calcule !'estimation 
+heuristique h(n) comme le minimum, etendu a tous les etats y du tfront courant, 
+de E(n, y) + tg(y), ou tg(y) est la longueur du chemin minimal couramment connu 
+depuis t jusqu'a y ; noter : h(n) n'est pas calcule comme E(n, t). Le fonctionnement 
+de l'algorithme A* qui cherche dans l'autre sens est symetrique. Au plan formel, De 
+Champeaux et Sint etablissent 24 que BH FF A s'arrete en trouvant un chemin minimal 
+21. Le processeur, suppose unique, alloue aux deux A* des periodes disjointes de fonctionnement. 
+22. La premiere idee est d'accorder le controle, a chaque cycle de developpement, a celui des deux 
+algorithmes dont le front presente un etat de meilleure evaluation. 
+23. Pohl suppose que !es coftts d'arcs sont positifs, ainsi que !es fonctions sh et th. 
+24. En respectant !es 5 conditions introduites clans l'enonce du tMoreme d'admissibilite des A*.
+
+---
+
+[p. 47-48]
+mbre significativement plus petit, au risque d'avoir des collisions 
+( appelees collisions de type 1). Zobrist a invente un codage permettant de representer 
+une position avec un nombre entier utilisable avec un ordinateur actuel ( un nombre 
+sur 32 ou 64 bits), avec une probabilite de collision arbitrairement faible. Pour cela,
+686 - Panorama de !'intelligence artificielle. Volume 2 
+a chaque valeur de propriete de la position est associee un nombre aleatoire, fixe hors 
+ligne. (Par exemple, au Go, a la couleur blanche de l'intersection numero 4 du damier 
+correspond un nombre ateatoire fixe, a la couleur noire de l'intersection numero 4 
+correspond un autre nombre aleatoire fixe, et a la couleur vide de cette intersection 
+correspond le nombre 0, et ainsi de suite pour toutes les intersections du damier). Le 
+nombre de Zobrist d'une position est alors le XOR des nombres aleatoires associes 
+aux valeurs des proprietes de la position. (Par exemple, au Go 9x9, le nombre de 
+zobrist d'une position est le XOR de tous les nombres de Zobrist correspondant aux 81 
+intersections du damier). Quand un coup est joue, le nombre de Zobrist de la nouvelle 
+position est mis a jour incrementalement en fonction des changements de valeurs des 
+proprietes de la position (Au Go, si une pierre blanche est posee sur une intersection 
+i, le nombre de Zobrist de la nouvelle position est le XOR de l'ancienne position avec 
+le nombre de Zobrist correspondant a la couleur blanche de !'intersection i). Zobrist 
+montre que la probabilite de collision de type 1 entre deux positions peut etre rendue 
+arbitrairement faible [Zobrist, 1990J. Ce mecanisme s'appelle le hachage de Zobrist. 
+En pratique, la taille de la TT est limitee, disons egale a 2£ (avec L = 20 OU L = 30). 
+On prend alors les L premiers bits du nombre de Zobrist pour obtenir l'index d'un 
+enregistrement dans la table. Des collisions peuvent alors se produire si deux positions 
+differentes ont des index identiques (collisions de type 2). Pour eviter une collision de 
+type 2 et !'utilisation des informations sur un enregistrement ne correspondant pas a la 
+position courante, la premiere chose faite par l'algorithme de recherche est de verifier 
+que le nombre de Zobrist de la position courante est egal a celui de l'enregistrement 
+trouve avec l'index. Si c'est le cas, l'algorithme peut utiliser l'information contenue 
+dans l'enregistrement, sinon il fait comme si l'enregistrement n'existait pas et explore 
+la position. 
+Les premiers programmes d'Echecs [Greenblatt et al., 1967] utilisaient deja les TT. 
+Le hachage de Zobrist est un mecanisme tres general, utilise dans beaucoup de jeux 
+utilisant une recherche arborescente. 
+2.2.4 
+Iterative deepening 
+AB est un algorithme en profondeur d'abord. Si la solution optimale est courte et 
+situee en dessous du second nreud de la racine, Alpha-Beta explore d'abord tous les 
+nreuds situes sous le premier nreud. Il peut alors depenser un temps inutile a explorer 
+les profondeurs sous ce premier nreud. 
+Iterative Deepening (ID) est un algorithme iteratif appelant AB a profondeur 1, 
+puis 2, etc, tant que du temps de reflexion existe [Korf, 1985a] (cf. chapitre II.l). Le 
+premier avantage de ID est d'etre « anytime » (tant que du temps reste, ID explore 
+la profondeur suivante, si le temps est ecoule, ID retourne le coup calcule a !'iteration 
+precedente). Un deuxieme avantage est de trouver la solution optimale la plus courte. 
+Un troisieme avantage est son couplage avec les TT. A une iteration donnee et sur 
+une position donnee, ID stocke le meilleur coup trouve. Aux iterations suivantes, ID 
+explore le meilleur coup d'une position d'abord, ce qui produit des coupes et rend AB 
+efficace. Ce mecanisme a ete utilise dans les premiers programmes d'Echecs [Slate et 
+Atkin, 1977].
+
+---
+
+[p. 66-67]
+OUANDEAU, N. (2007). On the parallelization ofUCT. In Proceedings 
+of CGW07, pages 93-101. 
+CHASLOT, G., SAITO, J., Bouzv, B., UITERWIJK, J. W. H. M. et van den HERIK, H. J. 
+(2006). Monte-Carlo Strategies for Computer Go. In SCHOBBENS, P.-Y., VANHOOF, 
+W. et ScHWANEN, G., editeurs : Proceedings of the 18th BeNeLux Conference on
+2. Jeux et recherche heuristique - 705 
+Artificial Intelligence, Namur, Belgium, pages 83-91. 
+CHASLOT, G., WINANDS, M., UITERWIJK, J., van den HERIK, H. et BouzY, B. (2008). 
+Progressive strategies for monte-carlo tree search. New Mathematics and Natural 
+Computation, 4(3) :343-357. 
+CHEN, J. (2007). Flow in games (and everything else). Communications of the ACM, 
+50(4) :34. 
+CoRRUBLE, V. et RAMALHO, G. (2009). Jeux video et Systemes Multi-Agents, pages 
+235-264. IC2 Series. Hermes Lavoisier. isbn : 978-2-7462-1785-0. 
+COULOM, R. (2006). Efficient selectivity and backup operators in monte-carlo tree 
+search. In P. Ciancarini and H. J. van den Herik, editors, Proceedings of the 5th 
+International Conference on Computers and Games, Turin, Italy. 
+COULOM, R. (2007). Computing "Elo ratings" of move patterns in the game of go. 
+ICGA Journal, 4(30) :198-208. 
+CSIKSZENTMIHALYI, M. et CSIKSZENTMIHALYI, I. (1975). Beyond boredom and anxiety. 
+Jossey-Bass San Francisco. 
+CSIKSZENTMIHALYI, M. et CSIKZENTMIHALY, M. (1990). Flow : The psychology of 
+optimal experience. Harper & Row New York. 
+CULBERSON, J. C. et SCHAEFFER, J. (1998). Pattern Databases. Computational In
+telligence, 4(14) :318-334. 
+De MESMAY, F., RIMMEL, A., VoRONENKO, Y. et PuscHEL, M. (2009). Bandit-Based 
+Optimization on Graphs with Application to Library Performance Tuning. In ICML, 
+Montreal Canada. 
+DEGRIS, T., SIGAUD, O. et WUILLEMIN, P. (2009). Apprentissage par renforcement 
+factorise pour le comportement de personnages non joueurs . Revue d'Intelligence 
+Artificielle, 23(2) :221-251. 
+DONNINGER, C. (1993). Null move and deep search : selective search heuristics for 
+obtuse chess programs. ICCA Journal, 16(3) :137-143. 
+FELNER, A., KORF, R. E. et HANAN, S. (2004). Additive pattern database heuristics. 
+J. Artif. Intell. Res. ( JAIR}, 22 :279-318. 
+FELNER, A., KORF, R. E., MESHULAM, R. et HOLTE, R. c. (2007). Compressed pattern 
+databases. J. Artif. Intell. Res. ( JAIR}, 30 :213-247. 
+FINNSSON, H. et BJORNSSON, Y. (2008). Simulation-based approach to general game 
+playing. In AAA!, pages 259-264. 
+FLOREZ-PUGA, G., GOMEZ-MARTIN, M., DIAZ-AGUDO, B. et GONZALEZ-CALERO, P. 
+(2008). Dynamic Expansion of Behaviour Trees. In AAA! conference on Artificial 
+Intelligence and Interactive Digital Entertainement, pages 36-41. 
+GELLY, S., HOOCK, J. B., RIMMEL, A., TEYTAUD, 0. et KALEMKARIAN, Y. (2008). 
+The parallelization of monte-carlo planning. In Proceedings of the International 
+Conference on Informatics in Control, Automation and Robotics {!CINCO 2008}, 
+pages 198-203. To appear. 
+GELLY, s., WANG, Y., MUNOS, R. et TEYTAUD, 0. (2006). Modification of uct with 
+patterns in monte-carlo go. Rapport de recherche INRIA RR-6062.
+
+---
+
+[p. 84-85]
+est un arbre, dont les nceuds sont etiquetes par des formules. L'arbre 
+initial comporte un unique nceud etiquete par la formule (ou les formules) dont on 
+veut tester la satisfaisabilite ; des regles permettent ensuite d'etendre cet arbre initial. 
+En suivant une notation introduite par Smullyan (1963] et devenue standard, nous
+a 
+<p /\ 1/J 
+-i(<p V 'l/J) 
+-i(<p * 'l/J) 
+...,...,<p 
+a1 
+a2 
+f3 
+<p 
+1/J 
+<p v 1/J 
+-i<p -i'l/J 
+-i( <p /\ 1/J) 
+<p 
+-i'l/J 
+<p * 1/J 
+<p 
+(a) Formules a et {:J 
+!31 
+!32 
+<p 
+1/J 
+-i<p -i'l/J 
+-i<p 
+1/J 
+3 . Deduction automatique - 723 
+(ra) 
+f3 
+!31 I !32 (rf3) 
+P 
+x...,P (rx) 
+(b) Regles pour !es tableaux pro
+positionnels 
+FIGURE 3 - Regles pour les tableaux propositionnels 
+regroupons ces regles selon le type d'extension : prolongation (formules a) ou branche
+ment (formules {3). La figure 3(a) contient la repartition des formules selon les deux 
+types et la figure 3(b) contient les regles d'expansions. Pour simplifier l'exposition nous 
+identifierons souvent une formule avec son type. 
+Definition 55. Un tableau pour un ensemble de formules S est defini inductivement 
+comme suit. Base : un arbre 7 constitue par un seul namd etiquete avec <p E S est un 
+tableau pour S. Etapes inductives : soit 7 un tableau pour S et f3 une branche de 7, 
+al ors 
+(i) si <p E S, l'arbre 7' obtenu en prolongeant f3 avec un nceud etiquete par <p est un 
+tableau pour S, 
+(ii) si a E f3 l'arbre 7' obtenu en prolongeant f3 avec un nceud n etiquete par a1 et 
+(si necessaire) un successeur direct n' de n etiquete par a2 est un tableau pour 
+s, 
+(iii) si f3 E f3 l'arbre 7' obtenu en prolongeant f3 avec deux nceuds nl et n2 etiquetes 
+respectivement par /31 et f32 est un tableau pour S. 
+Si S = { <p }, on ecrira que 7 est un tableau pour <p. La regle (rx) s'applique 
+uniquement a des litteraux p et -ip d'une meme branche f3. 
+Definition 56. Etant donne un tableau 7, une branche f3 est fermee si la regle ( r x) 
+est applicable a f3, sinon elle est ouverte. Un tableau est ferme si toutes ses branches 
+sont fermees et ouvert clans le cas contraire. Une branche f3 ouverte est saturee si, pour 
+chaque formule <p dans la branche, elle contient au moins une des consequences de la 
+regle (unique) qui peut etre appliquee a <p. 
+Le tableau ferme de la figure 4 montre l'echec des tentatives de construction de 
+modeles pour la negation de la formule (p v q) * ((p * q) * q). 
+La methode est correcte et complete : une formule propositionnelle <p est valide si 
+et seulement s'il existe un tableau ferme pour -i<p. 
+On peut observer que la construction d'un tableau initialise avec une formule (ou un 
+ensemble fini de formules) se termine toujours en produisant soit un tableau ferme, soit 
+un tableau contenant une branche saturee et ouverte. Pour cette raison, la correction 
+et la completude sont prouvees normalement dans la forme contraposee : la formule -i<p 
+est satisfaisable si et seulement s'il y a un tableau 7 pour -i<p contenant une branche
+
+---
+
+[p. 104-105]
+antique procedurale (dite « en chalnage arriere » car partant 
+de la question), !'unification, qui est l'unique mecanisme de passage de parametres de la 
+programmation logique en clauses de Horn, doit etre definie. Un unificateur pour deux 
+atomes est une substitution, c'est-a-dire une fonction des variables dans les termes, qui
+4. Programmation logique - 743 
+a pour objectif de les rendre, une fois appliquee, egaux. Si deux termes sont unifiables 
+alors il existe necessairement un unificateur le plus general, substitution qui instancie le 
+moins possible les deux termes, unique au renommage des variables pres. La resolution 
+SLD applique de maniere indeterministe en une derivation SLD la regle de resolution 
+SLD suivante : si Q1, . . . , Qm-1 , Qm, Qm+1 , . . . , Qr est une conjonction d'atomes et 
+A 7 A1, . . . , An est (une copie avec des variables nouvellement renommees de maniere 
+coherente d') une clause definie telle que (} est l'unificateur le plus general de Qm et 
+A alors 0( Q1 , . . . , Qm-i . Ai, . . . , An, Qm+i , . . . , Qr) est une resolvante selon la clause 
+definie et l'atome selectionne Qm. La resolution SLD [Loveland, 1968 ; Luckham, 1968) 
+est une restriction lineaire avec fonction de selection pour des clauses definies de la 
+resolution de Robinson [Robinson, 1965). Une derivation SLD d'une question mene a 
+un echec si au moins un des atomes ne peut etre elimine et a un succes si la regle de 
+resolution SLD parvient a eliminer tous les atomes et atteindre une resolvante vide, 
+un succes. Le cumul des unificateurs applique a la question initiate est alors la reponse 
+calculee. Une fois la strategie de selection de l'atome dans la resolvante fixee, l'ensemble 
+des derivations pour une question donnee forme un arbre SLD ; la strategie de recherche 
+etant la maniere de parcourir cet arbre. Si la strategie de recherche est equitable, c'est
+a-dire que sur chaque resolvante sera appliquee, si possible, la regle de resolution SLD 
+alors la strategie de selection peut etre quelconque. L'ensemble des elements de la 
+base de Herbrand d'un programme defini P tels qu'il existe pour chaque element une 
+derivation SLD menant a un succes coincide avec le plus petit modele de Herbrand 
+de P. Ainsi la semantique procedurale d'un programme defini est-elle aussi double et 
+coincide avec les deux semantiques declaratives offrant a tout programme une double 
+lecture, une double approche de la programmation. De plus, la selection de l'atome dans 
+la resolvante et la selection de la clause a unifier avec l'atome ouvrent la possibilite a 
+deux formes de parallelisme. 
+4.2.3 Le langage Prolog 
+Le langage Prolog (pour « Programmation en logique ») est une instance particuliere 
+de la programmation logique en clauses de Horn, plus « programmation » que « lo
+gique ». La programmation logique en clauses de Horn est un outil theorique qui induit 
+par l'indeterminisme, potentiellement une infinite de derivation SLD a mener en paral
+lele. Seule une strategie de recherche equitable garantit la completude de la resolution 
+SLD, comme par exemple par un parcours de l'arbre SLD en largeur d'abord, mais cela 
+induit necessairement un mecanisme trop couteux pour etre efficace ; en consequence, 
+c'est une strategie de recherche par un parcours de l'arbre SLD en profondeur d'abord 
+qui est presente dans le mecanisme de gestion de l'indeterminisme, faisant appel a une 
+pile de retour-arriere pour sauvegarder les points de choix qui conservent les branches de 
+l'arbre SLD non encore explorees, abandonnant par la meme la completude du langage 
+en tant que demonstrateur de theoremes. Une autre source d'inefficacite potentielle est 
+!'utilisation du test d'occurrence dans !'unification qui interdit d'unifier une variable 
+avec un terme la contenant, test necessaire a la correction de la regle de resolution 
+SLD ; ce test necessitant le parcours d'un terme, il est optionnel dans Prolog et non 
+active par defaut. Par la meme, la correction du langage en tant que demonstrateur de 
+theoremes est abandonnee.
+
+---
+
+[p. 121-122]
+corps ne pourra etre ac
+cepte comme answer set du programme. Programmer en ASP, consiste done de ma
+niere totalement declarative a ecrire des regles capables de generer tous les «points» 
+de l'espace de recherche et a ajouter des contraintes qui vont supprimer les ensembles 
+ne respectant pas les contraintes du probleme initial.
+760 - Panorama de l'intelligence artificielle. Volume 2 
+Selon les solveurs employes, on pourra utiliser un certain nombre d'extensions ou 
+facilites de codage (la plupart deja introduites dans (Niemela et al., 1999]) parmi les
+quelles : 
+- les expressions arithmetiques (X + Y < Z, Z = Y mod 2, . . . ) ; 
+- des litteraux conditionnels ( {p(X) 
+q(X)} representant !'enumeration 
+{ . . . , p(ai), . . . } satisfaisant egalement q(ai)) j 
+- des contraintes de cardinalite comme (Kmin { . . . , li, . . . }Kmax representant les 
+ensembles contenant entre Kmin et Kmax litteraux parmi les li), une version 
+simplifiee en etant la regle de choix comme dans { x, y, z} ; 
+- des extensions avec des litteraux ponderes (Pmin{· . . , li = Pi . . . }Pmax, dans ce 
+cas la somme des poids Pi des litteraux li appartenant a !'ensemble reponse doit 
+etre comprise entre Pmin et Pmax) ; 
+- des 
+fonctions 
+d'agregat 
+(count, min, max, sum, . . . 
+pour 
+ler une valeur numenque a partir d'un ensemble, ex 
+#countX, Y : a(X, Z, k), b(l, Z, Y) <= 3). 
+0 
+cal cu
+<= 
+Signalons enfin les directives #minimize et #maximize appliquees a une fonction objec
+tif permettent de ne retourner que le ou les ensembles reponses satisfaisant un critere 
+d'optimalite donne par l'utilisateur. 
+L' ASP pour la representation des connaissances en IA 
+En tant que formalisme de programmation logique non monotone, un des pre
+miers champs d'application de l'ASP est tout naturellement le raisonnement par 
+defaut au sens de Reiter. En effet, toute regle de programme logique normal c t
+ai , . . . , an, not bi , . . . , not bm. peut se coder en logique des defauts [Reiter, 1980] 
+par la regle ail\ .. ·/\ au=; bi, .. . ,...,bm . Meme si la correspondance inverse, de la logique des 
+defauts vers les programmes logiques normaux n'est pas possible en theorie (les classes 
+de complexite n'etant pas les memes), en pratique de tres nombreuses connaissances 
+de sens commun modelisees en logique des defauts peuvent se coder en un programme 
+logique etendu en vue de leur traitement automatise par un solveur ASP. Par exemple, 
+pour le «frame problem», la loi d'inertie pour une propriete p indexee sur le temps 
+se represente facilement par la regle p(T + 1) t- p(T), not -.p(T + 1). Ainsi, l'ASP 
+se revele particulierement bien adapte pour traiter le probleme de la generation de 
+plan [Lifschitz, 2002]. 
+Voici un exemple d'utilisation pratique du raisonnement par defaut. Partant d'une 
+description textuelle d'un accident de la route, le systeme decrit dans [Kayser et 
+Nouioua, 2009] est capable d'en exhiber automatiquement la cause. L'idee directrice 
+de ce travail est que la semantique de la langue naturelle est basee sur des normes. De 
+meme, un accident etant un evenement anormal c'est qu'il resulte de la violation d'une 
+norme. La modelisation theorique du raisonnement a done ete realisee dans le cadre de 
+la logique des defauts. Puis, son implantation a ete effectuee en ASP et !'utilisation des 
+systemes Lparse et Smodels a permis d'obtenir un systeme operationnel pour toute 
+la chalne automatisee de traitement. Dans cet exemple d'une forme de raisonnement 
+causal, l'ASP a montre sa fl.exibilite clans la representation des connaissances grace a 
+des regles par defaut et a !'utilisation d'un langage reifie permettant de simuler des 
+modalites et des comportements de logique de second ordre.
+
+---
+
+[p. 140-141]
+lause d'apres deux autres clauses. C'est l'une des regles de deduction de 
+base en logique propositionnelle, d'abord en raison de sa simplicite, mais aussi de son 
+efficacite pratique. Elle se definit ainsi. Soient deux clauses c1, c2 et x une variable 
+propositionnelle, la regle de resolution est la regle d'inference suivante :
+5. Logique propositionnelle et algorithmes autour de SAT - 779 
+La clause c1 V c2 est appelee clause resolvante sur x des clauses (x V c1) et ( •x V c2) . 
+Cette regle est tres proche du raisonnement commun. Elle peut etre vue comme une 
+application directe de la regle de coupure, ou syllogisme conjonctif (si on a f --+ g et 
+g --+ h, alors on a f --+ h), dans le cas particulier oit f est une clause, g un litteral et 
+h un produit. Bien entendu, cette simple regle de deduction est correcte : on a bien 
+(c1 v x) A (c2 v •x) f= c1 v c2 . Il est de plus aise de verifier qu'elle est aussi complete 
+pour la refutation. Si f est insatisfaisable, alors · on a la garantie qu'il existe bien une 
+suite finie de resolutions permettant de deduire la clause vide. 
+Une preuve par resolution dans E d'une clause c' fondamentale est une suite de 
+clauses P = c1 , . . . , Ck telle que Ck == c' et telle que l'on ait, pour tout i ļ k : ou bien 
+Ci E E ; ou bien il existe Cm et cn ( m < i et n < i) dans P tels que Ci soit la resolvante de 
+Cm et Cn . On note E f-n c' le fait qu'il existe une telle preuve. Sauf mention contraire, 
+nous notons simplement E f- c' pour E f-n c'. La resolution permet done de proposer 
+des algorithmes pour la deduction automatique. La question est maintenant d'obtenir 
+des algorithmes effi.caces. On pourrait en effet saturer la base de clauses initiale (Quine, 
+1955] par resolution jusqu'a ce que plus aucune nouvelle information ne puisse etre 
+deduite. Si l'on peut imaginer obtenir ainsi la reponse souhaitee, cela ne serait pas sans 
+entrainer un cout prohibitif. Pour tenter de le reduire, il est courant de limiter le nombre 
+de resolutions possibles a chaque etape, de maniere a reduire les possibilites de choix des 
+algorithmes, en en ecartant certaines qui ne seraient pas indispensables a la completude 
+( efficacite). Il faut cependant prendre gare a ne pas trop restreindre les possibilites, sans 
+quoi le systeme pourrait perdre la completude pour la refutation. Dans le meilleur des 
+cas ( ou le moins pire), cette restriction peut entrainer un accroissement exponentiel de 
+la longueur de preuve minimale pour la refutation. Il faut done trouver un compromis 
+entre longueur de preuve, completude et effi.cacite. De nombreuses restrictions ont ete 
+proposees [Chang et Lee, 1973] : on peut par exemple imposer que l'ordre des resolutions 
+soit le meme pour toutes les clauses produites dans la preuve (resolution dirigee [Davis 
+et Putnam, 1960 ; Dechter et Rish, 1994]) ou simplement empecher de produire toute 
+clause demandant plusieurs resolutions Sur une meme variable (resolution reguliere 
+[Davis et al., 1962 ; Galil, 1977]). Si ces deux restrictions ne sont pas trop fortes (elles 
+conservent la completude pour la refutation) ce n'est pas le cas par exemple lorsqu'on 
+impose de n'effectuer que des resolutions unitaires : une preuve par resolution unitaire 
+dans E d'une clause c impose que toutes les resolutions soient unitaires (au moins une 
+des deux clauses est unitaire). 
+En pratique, malgre la perte de completude, la resolution unitaire est tres utilisee 
+pour ces bonnes proprietes algorithmiques ( elle permet de concevoir des algorithmes 
+resolvant les problemes en temps lineaire ( ou sous-lineaire) dans la taille de la formule 
+manipulee (Dowling et Gallier, 1984 ; Zhang, 1997]). On la retrouve aussi au comr des 
+solveurs dit « modernes », qui assurent une propagation unitaire extremement effi.cace 
+en cours de calcul. Cependant, pour baser un moteur de raisonnement uniquement sur 
+cette methode, on peut aussi restreindre les formules traitees a celles qui garantissent 
+tout de meme la completude. C'est le cas, par exemple, si toutes les clauses sont des 
+clauses de Horn (toutes les clauses ont au plus un litteral positif), ou Horn-Renomables. 
+Plus generalement, on peut parler de base de clauses complete pour la resolution unitaire 
+si la base permet de garantir la completude pour la refutation grace a la resolution
+
+---
+
+[p. 157-158]
+est la base de l'approche proposee par [Selman et Kautz, 1996] ou !'ap
+proximation est faite par des formules de Horn, pour le test de satisfaisabilite. Ces 
+formules permettent une resolution efficace (lineaire) par les mecanismes puissants de 
+resolution unitaire. Malheureusement, toute theorie ne peut pas etre compilee en une
+796 - Panorama de !'intelligence artificielle. Volume 2 
+theorie equivalente de Horn 5• Les auteurs proposent done d'encadrer la theorie initiale 
+par deux theories de Horn, en caracterisant les formules de Horn inferieures et supe
+rieures les plus proches {plus grand minorant {GLB) et plus petit majorant {LUB)). 
+En ce sens, cette approche est une approche par approximation de la theorie initiale. 
+5.5.4 Abstraction de la problematique de compilation 
+Au debut des annees 2000, [Darwiche et Marquis, 2001] proposent une nouvelle vi
+sion de la CBC, en en abstrayant les problematiques. Ainsi, plutot que de selectionner 
+le langage cible en fonction des habitudes du domaine, ou de sa lisibilite directe, ils pro
+posent de le definir en fonction des operations qu'il permet de supporter efficacement. 
+Etant donnee une BC formalisee par une formule E dans .C, le langage .C satisfait un 
+certain nombre de proprietes s'il peut repondre a certaines questions Sur E en temps 
+polynomial par rapport a la taille de E. Ils definissent ainsi par exemple CO pour la 
+consistance, VA pour la validite et CE pour le fait de verifier E F c pour n'importe 
+quelle clause C de FNC. D'autres operations sont bien entendu definies, comme par 
+exemple le fait de savoir si un produit implique E {IM) ou si l'on peut compter le 
+nombre de modeles de E (CT), ou les enumerer {ME) (voir [Darwiche et Marquis, 
+2001] pour une presentation complete). 
+Il faut aussi pouvoir definir des operations de transformation des BC, pour per
+mettre par exemple leur mise a jour, ou la conjonction de deux BC (par exemple en 
+autorisant l'arrivee de nouvelles connaissances). Les auteurs definissent par exemple 
+V C {resp. /\ C), si, pour tout ensemble fini de formules Ei , . . . , En de .C, il existe un 
+algorithme polynomial donnant la representation de Ei V · · · V En (resp. Ei /\ · · · /\ En) 
+dans .C (les cas n borne a 2 sont traites comme des operateurs speciaux, resp. notes 
+V BC et /\ BC). On trouvera d'autres operations comme la possibilite de calculer la 
+negation d'une BC {note --, C), la disjonction {note V C) ou encore 1'« oubli » de 
+variables {note FO et SFO lorsqu'une seule variable doit etre oubliee). 
+Dans la suite de leurs travaux, les auteurs introduisent aussi la notion de compacite, 
+qui permet de comparer la taille minimale demandee a une BCC pour representer une 
+BC initiale suivant les langages de compilation vises (et done les operations et requetes 
+qu'elle autorise). Intuitivement, on cherchera a produire les BC les plus compactes au
+torisant les operations et transformations imperativement necessaires a !'application 
+visee. Soient .C1 et .C2 deux sous-ensembles des FNN, .C1 est au moins aussi compact 
+que .C2 (note .C1 :::; .C2), ssi pour toute formule E2 de .C2, il existe une formule equiva
+lente E1 de .C1 telle que la taille de E1 soit bornee polynomialement par la taille de E2. 
+Cette notion va done permettre de hierarchiser les langages cibles usuels, mais aussi de 
+voir que de nouveaux langages sont, d'un point de vue theorique, mieux places pour les 
+problematiques usuelles de compilation. Ainsi, le langage FNNV offre des compromis 
+particulierement interessants. 
+Une formule sous forme normale negative decomposable (FNNV) est une FNN 
+satisfaisant la propriete de decomposition : pour toute conjonction /\i fi apparaissant 
+dans la formule, aucune variable n'est partagee par deux fi. Ce langage tente de ne 
+5. Notons que toute theorie peut etre tout de meme compilee en une theorie complete pour la 
+resolution unitaire [de! Val, 1994].
+
+---
+
+[p. 175-176]
+ance et Es
+pagne, appelons-la ci, qui garantit que France (variable x1) et Espagne (variable 
+x2) prendront des couleurs differentes, peut se definir par X(c1) = (x1, x2) et 
+c1 = {(B, J), (B, R), (B, V), (V, B), (V, J), (V, R)} ou plus simplement par x1 =I x2. 
+Le concept d'instanciation est essentiel a la suite de ce chapitre.
+8 1 4 - Panorama de l'intelligence artificielle. Volume 2 
+Definition 59 (Instanciation). Une instanciation I sur un ensemble Y ƌ X de va
+riables est une fonction qui affecte a chaque variable Xi de Y une valeur de son domaine 
+D(xi) 1. Si W est un sous-ensemble de Y, on note I[W] la restriction (ou projection) 
+de I aux variables de W. On dit d'une instanciation qu'elle satisfait une contrainte ci 
+si X(cj) ƌ Y et I[X(cj)] E Cj · Si X(cj) ƌ Y et I(X(cj)] ¢ Cj , on <lit que I viole ci. On 
+dit d'une instanciation qu'elle est localement coherente si et seulement si aucune des 
+contraintes de C n'est violee. 
+Exemple 14. Sur notre exemple de coloriage de carte, {(xi, B); (x2, J); (x4, B)} 
+est une instanciation sur {x1, x2, x4} (c'est-a-dire sur France, Espagne et Italie) 
+qui n'est pas localement coherente car elle viole la contrainte entre x1 et x4• 
+{(xi, B); (x2, J); (x4, R)} est une instanciation sur {xi, x2, x4} localement coherente. 
+Definition 60 (Solution). Une solution S d'un reseau de contraintes P = (X, D, C) est 
+une instanciation sur X qui ne viole aucune contrainte de C. On note Sol(P) !'ensemble 
+de toutes les solutions de P. 
+Definition 61 (CSP). On appelle probleme de satisfaction de contraintes (note CSP) 
+le probleme defini par : 
+Instance : Un reseau de contraintes P = (X, D, C) 
+Question : Sol(P) =/:- 0 ? 
+Theoreme 37. CSP est NP-complet. 
+Preuve. C'est une consequence directe du fait que SAT, le premier probleme montre 
+NP-complet, est un CSP particulier. D 
+Maintenant que nous avons cerne le modele et la question centrale que l'on se pose, 
+le chapitre suivant va recenser les techniques de base qui permettent de traiter cette 
+question. 
+6.3 
+Backtracking 
+Comme clans tout probleme NP-complet, !'enumeration des possibilites est une 
+technique naturelle pour resoudre le probleme, c'est-a-dire trouver une solution. La 
+methode « generer et tester » (qui consiste a generer toutes les instanciations sur x 
+jusqu'a en trouver une qui soit solution) etant quand meme un peu bete, je vais direc
+tement presenter sa version amelioree qu'est le backtrack chronologique (BT) (Golomb 
+et Baumert, 1965]. 
+La fonction BT presentee en algorithme 6.1 prend en parametre un reseau de 
+contraintes P et une instanciation partielle localement coherente I. L'appel BT(P, 0) 
+imprime la premiere solution trouvee et renvoie true si P a des solutions, sinon renvoie 
+false. Apres avoir teste si I n'est pas une instanciation complete (ligne 1), la fonction 
+1. Dans la suite on representera une instanciation indifferemment comme une sequence ou comme 
+un ensemble d'affectations de valeurs a des variables. L'affectation de la valeur 'IJi a la variable Xi est 
+notee (xi , vi) ·
+
+---
+
+[p. 193-194]
+s 175-180, Portland OR. 
+FIKES, R. (1970). REF-ARF : A system for solving problems stated as procedures. 
+Artificial Intelligence, 1 :27-120. 
+FREUDER, E. (1978). Synthesizing constraint expressions. Communications of the 
+ACM, 21(11) :958-966. 
+FREUDER, E. (1982). A sufficient condition for backtrack-free search. Journal of the
+832 - Panorama de l'intelligence artificielle. Volume 2 
+ACM, 29(1) :24-32. 
+FREUDER, E. (1985). A sufficient condition for backtrack-bounded search. Journal of 
+the ACM, 32(4) :755-761. 
+FREUDER, E. (1990). Complexity of k-tree structured constraint satisfaction problems. 
+In Proceedings AAAI'90, pages 4-9, Boston MA. 
+FREUDER, E. (1991). Eliminating interchangeable values in constraint satisfaction 
+problems. In Proceedings AAAI'91, pages 227-233, Anaheim CA. 
+FREUDER, E. et WALLACE, R. (1992). Partial constraint satisfaction. Artificial Intel
+ligence, 58 :21-70. 
+GASCHNIG, J. (1979). Performance measurement and analysis of certain search al
+gorithms. Rapport technique Technical Report CMU-CS-79-124, Carnegie-Mellon 
+University, Pittsburgh PA. 
+GENT, L, PETRIE, K. et PUGET, J. (2006). Symmetry in constraint programming. In 
+Rossi, F., van BEEK, P. et WALSH, T., editeurs : Handbook of Constraint Program
+ming, chapitre 10. Elsevier. 
+GERVET, C. (1994). Conjunto : Constraint logic programming with finite set domains. 
+In Proceedings ILPS'94, pages 339-358, Ithaca NY. 
+GOLOMB, S. et BAUMERT, L. (1965). Backtrack programming. Journal of the ACM, 
+12(4) :516-524. 
+GOTTLOB, G., LEONE, N. et SCARCELLO, F. (2000). A comparison of structural esp 
+decomposition methods. Artificial Intelligence, 124(2) :243-282. 
+HARALICK, R. et ELLIOTT, G. (1980). Increasing tree seach efficiency for constraint 
+satisfaction problems. Artificial Intelligence, 14 :263-313. 
+JANSSEN, P., JEGOU, P., NOUGUIER, B. et VILAREM, M. c. (1989). A filtering process 
+for general constraint-satisfaction problems : Achieving pairewise-consistency using 
+an associated binary representation. In Proceedings IEEE-ICTAI'89, pages 420-427, 
+Fairfax VA. 
+JEGOU, P. (1993). On the consistency of general constraint-satisfaction problems. In 
+Proceedings AAAI'93, pages 114-119, Washington D.C. 
+JEGOU, P. et TERRIOUX, C. (2003). 
+Hybrid backtracking bounded by tree-
+decomposition of constraint networks. Artificial Intelligence, 146(1) :43-75. 
+LAURIERE, J. (1978). A language and a program for stating and solving combinatorial 
+problems. Artificial Intelligence, 10 :29-127. 
+LECOUTRE, C. et HEMERY, F. (2007). A study of residual supports in arc consistency. 
+In Proceedings IJCAI'01, pages 125-130, Hyderabad, India. 
+LECOUTRE, c., SAIS, L., TABARY, s. et VIDAL, v. (2006). Last conflict based reasoning. 
+In Proceedings ECAI'06, pages 133-137, Riva del Garda, Italy. 
+LHOMME, 0. (1993). Consistency techniques for numeric CSPs. In Proceedings IJ
+CAI'93, pages 232-238, Chambery, France. 
+MACKWORTH, A. (1977). Consistency in networks of relations. Artificial Intelligence, 
+8 :99-118. 
+MEHTA, D., O'SULLIVAN, B. et QUESADA, L. (2011). Value ordering for finding all
+
+---
+
+[p. 212-213]
+tes peuvent aussi se 
+reduire a un probleme VCSP additif. C'est en particulier le cas du critere <lit « lexico
+graphique » [Schiex et al., 1995]. 
+7 .8 
+Conclusion 
+Cette rapide presentation n'a evidemment pas vocation a etre exhaustive. Nous 
+n'avons pas, par exemple, aborde les techniques de compilation de connaissances (know-
+7. Reseaux de contraintes values - 85 1 
+ledge compilation), bien connues dans le monde CSP et en logique propositionnelle (voir 
+le chapitre II.5) et qui ont egalement ete etendues aux VCSP [Darwiche et Marquis, 
+2004 ; Fargier et Marquis, 2007] OU aux CSP a semi-anneau, dans une version eten
+due [Wilson, 2005]. 
+Neanmoins, ce chapitre montre que le formalisme des CSP values s'est, en une di
+zaine d'annees, dote d'un ensemble de resultats fondamentaux (classes polynomiales), 
+de techniques, d'algorithmes (recherche arborescente, coherences locales, elimination de 
+variables ... ) et d'outils logiciels qui en font un modele solide pour formuler et resoudre 
+des problemes d'optimisation combinatoire sur les modeles graphiques ( deterministes 
+ou stochastiques). Les recentes extensions de la notion de contrainte globale (ou de 
+fonction de cout globale) basees sur les coherences locales du domaine devraient per
+mettre d'ici peu d'offrir au modelisateur un outil aussi riche que la programmation par 
+contraintes classique, mais avec un pouvoir d'expression et une efficacite accrue pour 
+les problemes d'optimisation. D'autres domaines, tels que !'exploitation de symetries 
+dans les VCSP par exemple, sont encore peu etudies. 
+La notion de modele graphique value a, de fait, ete utilisee au-dela de la communaute 
+de la programmation par contraintes. Les notions de modeles graphiques stochastiques 
+discrets tels que les reseaux bayesiens ou plus encore les champs de Markov [Chellappa 
+et Jain, 1993] ou les graphes de facteurs [Kschischang et al., 2001] constituent autant 
+de formalismes qui sont essentiellement equivalents aux reseaux de fonctions de cout 
+mais dont !'interpretation probabiliste pose naturellement des problemes de denombre
+ment de solutions - lies a des calculs de « marginales » 
+- plutot que des problemes 
+d'optimisation. Les notions de coherence locale des VCSP, preservant les distributions 
+jointes, pourraient trouver ici un domaine d'application nouveau, tout comme les fonc
+tions de cout globales pourront augmenter le pouvoir d'expression de ces formalismes, 
+souvent limites, dans le cas discret, a !'expression de fonctions de cout (probabilites 
+conditionnelles, potentiels, facteurs) impliquant peu de variables et definies par des 
+tables. 
+Les reseaux de fonctions de cout offrent ainsi un outil ideal pour exprimer et traiter 
+simultanement preferences/utilites, incertitudes/probabilites I.3 et plus classiquement 
+faisabilites et contraintes. Dans ce cadre, on distingue habituellement les variables 
+controlables (par le decideur) des variables non controlables (representant l'environne
+ment et la source d'eventuelles incertitudes). On pourra se reporter a [Dubois et al., 
+1996] pour le cas possibiliste, le traitement algebrique de tels problemes ayant ete etudie 
+en particulier dans [Pralet et al., 2007]. 
+· 
+References 
+AARTS, E. et LENSTRA, J. K. (1997). Local Search in Combinatorial Optimization. 
+Interscience Series in Discrete Mathematics and Optimization. John Wiley and sons. 
+AJI, S. et McELIECE, R. (2000). The generalized distributive law. Information Theory, 
+IEEE Transactions on, 46(2) :325-343. 
+ALLOUCHE, D., BESSIERE, C., BoIZUMAULT, P., de GIVRY, S., METIVIER, J., GU
+TIERREZ, P., LOUDNI, s. et SCHIEX, T. (2012a). Filtering decomposable global cost
+
+---
+
+[p. 231-232]
+e de l'identifiabilite. En effet, un meme modele 
+d'independance peut correspondre a plusieurs structures de reseaux bayesiens. Cette 
+notion denommee equivalence de Markov OU .equivalence de vraisemblance fait que les 
+algorithmes d'apprentissage classiques ne peuvent identifier une structure qu'a sa classe 
+d'equivalence pres.
+870 - Panorama de !'intelligence artificielle. Volume 2 
+8.3.3 Apprentissage a base de contraintes 
+Cette famille d'algorithmes est issue des travaux des initiateurs des reseaux baye
+siens avec Pearl et Verma d'un cote pour l'algorithme IC (Pearl et Verma, 1991 ; Pearl, 
+2000] et Spirtes, Glymour et Scheines de l'autre pour l'algorithme PC (Spirtes et al., 
+1993, 2000]. Ces algorithmes sont bases sur un principe identique : 
+- construire un graphe non dirige contenant les relations de dependance entre 
+variables, a partir de tests d'independance conditionnelle, 
+- identifier les V-structures, sous-structures dirigees ayant des proprietes de de
+pendances conditionnelles que n'ont pas les autres sous-structures, 
+- completer !'orientation d'autres aretes en utilisant le fait que {1) toutes les V
+structures ont deja ete detectees et (2) que le graphe oriente ne doit pas contenir 
+de circuit. Cette etape applique un ensemble de regles decrites dans [Meek, 1995]. 
+Le nombre de tests statistiques a effectuer explosant de maniere combinatoire, plu
+sieurs heuristiques ont ete proposees. La plus connue, utilisee dans l'algorithme PC 
+(Spirtes et al., 1993], consiste a effectuer tout d'abord les tests d'independance, puis les 
+tests conditionnellement a une seule variable, puis deux variables, etc ... en reduisant 
+a chaque etape le nombre de tests a effectuer. 
+11 faut noter que la fiabilite des tests statistiques utilises diminue de maniere expo
+nentielle par rapport au nombre de variables considerees, ce qui fait que ces methodes 
+sont souvent limitees a des problemes de moins d'une centaine de variables. 
+8.3.4 Algorithmes a base de score 
+Cette deuxieme famille de methodes a pour but de parcourir de maniere heuris
+tique l'espace super-exponentiel des solutions, en maximisant une fonction de score 
+determinee. 
+Fonctions de score 
+Les fonctions de score utilisees sont des approximations de la vraisemblance margi
+nale P(VIB) (Chickering et Heckerman, 1996]. 
+Une premiere approximation du calcul de cette vraisemblance mene aux scores AIC 
+et BIC, OU l'on retrouve les principes tres generaux de selection de modele proposes 
+par (Akaike, 1970] et (Schwartz, 1978] : 
+ScoreAIC(B, 'D) = log L(VIOMv, B) - Dim(B) 
+. 
+1 
+ScoreBIC(B, V) = log L(VIOMv, B) - 2 Dim(B) log N 
+(8.11) 
+{8.12) 
+ou N est la taille de la base de donnees et Dim(B) la dimension du reseau bayesien, 
+nombre de parametres independants permettant de decrire }'ensemble des distributions 
+de probabilite conditionnelle associe au graphe. 
+n 
+Dim(B) = L (ri - l)qi 
+(8.13) 
+i=l
+
+---
+
+[p. 250-251]
+une action et 
+retire par une autre. La concurrence peut meme etre necessaire pour l'obtention 
+d'un plan dans certains problemes, comme en temoignent divers travaux sur la 
+notion de planification <lite temporellement expressive [Cushing et al., 2007a,b] 
+1. International Planning Competition : http ://ipc.icaps-conference.org
+9. Planification en intelligence artificielle - 889 
+pour laquelle la complexite theorique du probleme de !'existence d'un plan est 
+EXPSPACE-complet [Rintanen, 2007]. Les variables numeriques sont des quanti
+tes dont une valeur (minimale, maximale ou exacte) est requise en precondition, 
+et qui sont modifiees par !'execution de l'action par augmentation, diminution 
+OU assignation. Ces variables numeriques servent notamment a representer des 
+ressources, notion couramment utilisee dans le domaine de l'ordonnancement [La
+borie et Ghallab, 1995 ; Laborie, 2003]. Le langage permet aussi de definir une 
+fonction objectif Sur la qualite du plan, exprimee comme une combinaison lineaire 
+de la duree globale d'execution du plan (le makespan) et des variables numeriques. 
+L'extension de PDDL 2.1 denommee PDDL+ [Fox et Long, 2006], inutilisee lors 
+des competitions, etend les notions temporelles et numeriques de PDDL 2.1 a 
+la modelisation de processus continus, permettant entre autres la representation 
+d'evenements exogenes et une prise en compte plus fine de la modification des 
+variables numeriques ( vue comme un processus continu lineaire) augmentant la 
+possibilite de concurrence entre les actions. 
+PDDL 2.2 [Hoffmann et Edelkamp, 2004] : version utilisee pour la competition 
+de 2004 [Hoffmann et Edelkamp, 2005]. Deux extensions mineures sont proposees : 
+les predicats derives et les litteraux temporels initiaux. Les predicats derives sont 
+des atomes non affectes par les actions, dont !'apparition se produit lorsqu'une 
+formule donnee (similaire a une precondition d'action) est verifiee dans un etat, 
+permettant eventuellement le declenchement de nouvelles actions. Ils fournissent 
+entre autres un moyen concis pour representer la fermeture transitive d'une re
+lation, et augmentent strictement l'expressivite du langage : il peut s'averer im
+possible de les compiler vers une version anterieure du langage [Thiebaux et al., 
+2003]. Les litteraux temporels initiaux permettent la representation d'une forme 
+reduite d'evenements exogenes, dont la date d'apparition est connue a l'avance 
+et exprimee dans l'etat initial du probleme. 
+PDDL 3.0 [Gerevini et Long, 2005] : version utilisee pour la competition de 2006 
+[Gerevini et al., 2009]. Elle introduit deux extensions importantes : les contraintes 
+sur les trajectoires et les preferences sur les buts. Ces extensions sont motivees 
+par le fait que clans les applications reelles, d'une part la forme d'un plan est au 
+moins aussi importante que son obtention, et d'autre part il est souvent impos
+sible de satisfaire entierement tous les buts d'un probleme. Les contraintes sur 
+les trajectoires permettent de contraindre certains enchalnements d'actions et 
+d'etats intermediaires atteints lors de !'execution du plan, et peuvent etre <lures 
+(a satisfaire obligatoirement) ou molles (leur satisfaction est associee a un poids 
+entrant dans le calcul de la qualite globale du plan). Les preferences sur les buts 
+permettent de differencier les buts dont l'obtention est obligatoire, des buts dont 
+l'obtention ne l'est pas ; mais entrent, comme pour les contraintes de trajectoire 
+molles, dans le calcul de la qualite du plan. Si les contraintes molles sont etu
+diees depuis longtemps en CSP [Meseguer et al., 2006], leur prise en compte en 
+planification classique est plus recente et fragmentaire. 
+PDDL 3.1 [Helmert et al., 2008a] : version utilisee pour les competitions de 2008 
+[Helmert et al., 2008b] et 2011. Elle introduit les variables d'etat binaires, per
+mettant une representation plus concise des faits de l'univers, non plus enumeres
+
+---
+
+[p. 267-268]
+isant le degre de possibilite ou de necessite d'atteindre un etat but 
+sont calcules. Les problemes sont modelises dans un langage logique de type STRIPS. 
+Par la suite, la theorie des possibilites a ete utilisee afin de definir une contrepartie 
+qualitative des processus decisionnels de Markov [Sabbadin et al., 1998 ; Sabbadin,
+906 - Panorama de !'intelligence artificielle. Volume 2 
+2001]. Recemment, ces travaux ont ete etendus pour offrir un langage structure et des 
+algorithmes de resolution adaptes pour la planification dans l'incertain [Garcia et Sab
+badin, 2008]. D'autres extensions de ce cadre sont presentees dans [Mouaddib et al., 
+2008]. 
+9.5 
+Conclusion 
+Dans ce chapitre nous avons propose une revue, forcement sommaire et non exhaus
+tive, des travaux de la communaute de l'IA autour de la planification classique et de 
+la planification dans l'incertain. Nous avons tout d'abord presente le cadre de la plani
+fication classique STRIPS propositionnelle, puis presente ses extensions basees sur le 
+langage de description de problemes PDDL devenu un standard dans la communaute. 
+Nous avons traite brievement la tMmatique de !'analyse structurelle de problemes, a 
+l'origine du developpement de planificateurs performants, et decrit les principaux al
+gorithmes de planification classique et planificateurs associes. Nous avons ensuite mis 
+l'accent sur le cadre des processus decisionnels markoviens (PDM) que la communaute 
+de !'intelligence artificielle s'est approprie afin de l'utiliser en planification sous incer
+titude. A cet effet des algorithmes novateurs de resolution approchee ou non de PDM 
+ont ete proposes. De plus, certains des points forts de l'IA en termes de representation 
+des connaissances (logique, reseaux bayesiens) ont ete mis a profit afin d'ameliorer le 
+faible pouvoir d'expression du modele PDM traditionnel. 
+Nous avons tente dans ce chapitre de presenter brievement les aspects saillants de 
+ces diverses approches et propose des pointeurs vers des articles les traitant de maniere 
+plus approfondie. Les lecteurs interesses par la planification classique, les processus de
+cisionnels de markov et leurs utilisations en IA sont invites a se pencher sur l'abondante 
+source bibliographique (souvent anglo-saxonne) existant sur le sujet. 
+Nous avons dfi faire des choix sur les approches decrites dans ce chapitre. Nous avons 
+en particulier laisse de cote un pan entier, tres actif, de la recherche en planification en 
+intelligence artificielle, celui de la planification multiacteur. Le lecteur interesse par ce 
+domaine pourra par exemple s'orienter vers des references generales sur la planification 
+distribuee [Durfee, 1999] ou sur la planification multiagent [Vlassis, 2009 ; Shoham et 
+Leyton-Brown, 2009] et ses liens avec les MDP [Beynier et al., 2010 ; Canu et Mouaddib, 
+2011]. 
+References 
+AKSTROM, K. J. (1965). Optimal control of Markov decision processes with incomplete 
+state estimation. Journal of Mathematical Analysis and Applications, 10 :174-205. 
+BACCHUS, F. (2001). The 2000 AI planning systems competition. AI Magazine, 22(3) : 
+47-56. 
+BACKSTROM, C. et NEBEL, B. (1995). Complexity results for SAS+ planning. Com
+putational Intelligence, 11( 4) :625-655.
+
+---
+
+[p. 285-286]
+e la forme 
+de fonctions prises dans des families plus complexes, par exemple les splines. 
+De fait, si l'on dispose d'un dictionnaire de fonctions de base adapte, il est 
+possible d'approcher n'importe quel signal ou n'importe quelle fonction cible 
+[Hastie et al., 2009], la question etant evidemment de trouver ce dictionnaire.
+924 - Panorama de l'intelligence artificielle. Volume 2 
+L'apprentissage par boosting, qui, clans sa version de base, apprend une combi
+naison lineaire de « classifieurs faibles » (faibles au sens ou chaque classifieur 
+ht(·) de la combinaison peut n'etre qu'a peine meilleur qu'un classifieur ope
+rant par tirage aleatoire de la classe a predire) : hr(x) = signe{E[=1 Wt ht(x)} 
+est un bel exemple de la puissance de telles methodes. lei, chaque fonction de 
+base est alors adaptative et apprise en meme temps que les coefficients Wt de la 
+combinaison (Schapire, 2003 ; Shapire et Freund, 2012 ; Zou, 2012). 
+- Les modeles de melanges, qui font partie des approches generatives de l'ap
+prentissage, servent a estimer la densite de probabilite p x par une formule du 
+type : p(x) = E}=l 11'i Pi(xlBi)· La densite de probabilite generale sur X est 
+ainsi decomposee en une somme ponderee de fonctions de densite. Chacune des 
+fonctions de base Pi(xlOi) consiste typiquement en une fonction parametrique 
+simple (de parametre Oi) comme une densite normale par exemple. Le coeffi
+cient 11'i represente la probabilite qu'un point tire au hasard ait ete engendre a 
+partir de la densite i, que l'on interprete parfois comme une classe de formes 
+« expliquant » les observations. 
+- Les perceptrons multicouche combinent des fonctions de base ( typiquement 
+des sigmoldes), realisees par les « neurones », clans une structure hierarchique 
+fixee par l'utilisateur entre une couche d'entree et la couche de sortie via des 
+couches cachees (voir figure 2). L'apprentissage consiste clans ce cadre a ap
+prendre les poids des connexions entre les neurones de couches consecutives, 
+soit encore les coefficients Vk pris en compte clans la fonction d'activation (sou
+vent une sigmolde s(a) = l+ex~(-a)) : 
+g(x) = s (t VkXk + Vo) 
+J=l 
+s(v · x) 
+ou s est la fonction d'activation (e.g. une sigmoide) (une reference assez complete 
+sur ces methodes neuronales est [Dreyfus et al., 2008)). 
+Couche d'entn!e Couche cachl!e 
+Couche de sonie 
+Flot des signaux 
+Sortie : Yk --+-
+.,.._ Sortie dȘsir¢e : Uk 
+FIGURE 2 - Schema d'un perceptron multicouche. 
+- Les modeles graphiques a structure fixee, dont les reseaux bayesiens OU 
+les modeles de Markov font partie, sont des representations de dependances
+
+---
+
+[p. 302-303]
+e 
+probleme n'est plus trivial. Cette decouverte a ete etendue a certains types de proble
+mes en inference grammaticale. L'impact de ce phenomene de transition de phase et 
+les moyens d'y faire face font l'objet de debats [Saitta et al., 2011]. 
+Notons enfin que si la classification supervisee a ete longtemps la principale tache
+10. Algorithmique de l'apprentissage et de Ia fouille de donnees - 94 1 
+etudiee en ILP, il existe actuellement des travaux sur la recherche de motifs frequents 
+dans les bases de donnees relationnelles, ou la decouverte de sous-groupes. 
+Parmi les references importantes, citons [Lavrac et Dzeroski, 1994 ; Dzeroski et 
+Lavrac, 2001 ; Raedt, 2008 ; Fiirnkranz et al., 2012). 
+La recherche de motifs frequents et de regles d'association : l'algorithme 
+A priori. 
+On appelle motif ( ou items et) toute conjonction de propositions ou de relations 
+attribut-valeur, par exemple (age > 60) /\ ( HDL-cholesterol > 1, 65 mmol/L), suivant 
+le langage de description choisi et on appelle motif frequent tout motif dont la frequence 
+d'apparition dans une base de donnees depasse un certain seuil appele support. Un pro
+bleme essentiel en fouille de donnees est de rechercher les motifs frequents. Entre autres, 
+cela permet ensuite d'identifier des regles d'association que l'on espere interessantes, 
+une regle d'association etant de la forme I --+ J OU I et J sont des motifs disjoints. 
+Comme dans la technique de calcul de l'espace des versions, il est nature} de consi
+derer la relation de generalite entre motifs. Un motif est plus general qu'un autre si 
+les exemples dans lesquels il apparait contient les exemples dans lesquels apparait le 
+second. L'operateur de generalisation (resp. specialisation) est ici la suppression (resp. 
+ajout) d'un terme du motif. On pent alors definir un treillis modelisant la relation de ge
+neralite dans l'espace des motifs. A ce treillis est associee une relation d'anti-monotonie : 
+tout motif non frequent ne pent etre specialise en un motif frequent, c'est-a-dire que 
+si un motif n'est pas frequent, il est inutile de lui ajouter des termes, il restera non 
+frequent. 
+Cette observation est a la base de l'algorithme Apriori [Agrawal et Srikant, 1994), 
+certainement le plus connu des algorithmes de recherche de motifs frequents et de regles 
+d'association. L'algorithme se decompose en deux etapes : la recherche des motifs fre
+quents puis la construction a partir de ces motifs des regles d'association. La premiere 
+etape necessite de confronter les hypotheses a la base de donnees, elle pose des proble
+mes de complexite importants et c'est done celle qui a rec;u le plus d'attention. 
+Dans le cadre le plus simple, Apriori effectue une recherche en largeur dans le treillis, 
+considerant d'abord les motifs de taille 1, puis ceux de taille 2 et ainsi de suite. La base 
+de donnees n'est parcourue qu'une seule fois par niveaux pour calculer le support 
+des motifs de ce niveau. Pour elaguer la recherche, la contrainte d'anti-monotonie est 
+utilisee. La complexite depend de la taille de la base de donnees (parcourue pour 
+calculer les supports) et du nombre de parcours de la bases de donnees, que l'on peut 
+estimer comme de l'ordre de la taille des plus grands motifs frequents. 
+La complexite d' A priori restant trop elevee, de nombreux algorithmes ont ete de
+veloppes, soit proposant de nouvelles strategies de recherche (par partitionnement de 
+la base de donnees OU par echantillonnage), soit reposant Sur des representations dif
+ferentes des bases de donnees : association a chaque itemset des identifiants de la base 
+de donnees (APriori-Tid (Agrawal et Srikant, 1994)), representation sous forme d'un 
+arbre (FP-Growth, [Han et al., 2004)), ... 
+Enfin, notons qu'une autre source de complexite est le nombre de motifs frequents 
+engendres. On s'est done interesse a definir des representations condensees de ces motifs. 
+La plupart des travaux reposent sur la notion de connexion de Galois et de fermeture
+
+---
+
+[p. 321-322]
+oisinage de la combinaison courante. Ce choix d'une combinaison 
+voisine est appele « mouvement ». 11 existe un tres grand nombre de strategies de choix. 
+On peut par exemple selectionner a chaque iteration le meilleur voisin [Selman et al., 
+1992], c'est-a-dire, celui qui ameliore le plus la fonction objectif OU bien le premier
+960 - Panorama de !'intelligence artificielle. Volume 2 
+voisin trouve qui ameliore la fonction objectif. De telles strategies « gloutonnes » (aussi 
+appelees « montees de gradients ») risquent fort d'etre rapidement piegees dans des 
+optima locaux, c'est-a-dire, sur des combinaisons dont toutes les voisines sont moins 
+bonnes. Pour s'echapper de ces optima locaux, on peut considerer differentes meta
+heuristiques, par exemple, pour n'en citer que quelques-unes : 
+- la marche aleatoire (random walk) [Selman et al., 1994], qui autorise avec une 
+tres petite probabilite de selectionner un voisin de fagon completement aleatoire ; 
+- le recuit simule (simulated annealing) [Aarts et Korst, 1989), qui autorise de 
+selectionner des voisins de moins bonne qualite selon une probabilite qui decroit 
+avec le temps ; 
+- la recherche taboue (tabu search) [Glover et Laguna, 1993), qui empeche de bou
+cler sur un petit nombre de combinaisons autour des optima locaux en memo
+risant les derniers mouvements effectues dans une liste taboue et en interdisant 
+les mouvements inverses a ces derniers mouvements ; 
+- la recherche a voisinage variable [Mladenovic et Hansen, 1997), qui change d'ope
+rateur de voisinage lorsque la combinaison courante est un optimum local par 
+rapport au voisinage courant. 
+Repetition du processus de recherche locale : 
+une recherche locale peut etre 
+repetee plusieurs fois a partir de combinaisons initiales differentes. Il peut s'agir de com
+binaisons initiales independantes, generees aleatoirement. On parle alors de recherche 
+locale a plusieurs points de depart (multi-start local search). Il peut egalement s'agir 
+de combinaisons initiates obtenues en perturbant une combinaison issue d'un processus 
+de recherche locale precedent. On parle alors de recherche locale iteree (iterated local 
+search) [Lourenco et al., 2002). On peut par ailleurs faire plusieurs recherches locales en 
+parallele, en partant de differentes combinaisons initiales, et redistribuer regulierement 
+les combinaisons courantes en supprimant les moins bonnes et dupliquant les meilleures 
+selon le principe « aller avec les meilleurs » (go with the winner) [Aldous et Vazirani, 
+1994). 
+1 1 .3 
+Meta-heuristiques constructives 
+Les approches constructives construisent une ou plusieurs combinaisons de fagon 
+incrementale, c'est-a-dire, en partant d'une combinaison vide, et en ajoutant des com
+posants de combinaison jusqu'a obtenir une combinaison complete. Ces approches sont 
+<lites « basees sur les modeles » dans [Zlochin et al., 2004), dans le sens ou elles uti
+lisent un modele, generalement stochastique, pour choisir a chaque iteration le prochain 
+composant de combinaison a ajouter a la combinaison en cours de construction. 
+11 existe differentes strategies pour choisir les composants a ajouter a chaque ite
+ration, les plus connues etant les strategies gloutonnes aleatoires, decrites en 11.3.1, 
+les algorithmes par estimation de distribution, decrits en 11.3.2 et la meta-heuristique 
+d'optimisation par colonies de fourmis, introduite en 11.3.3.
+
+---
+
+[p. 338-339]
+KHICHANE, M., ALBERT, P. et SOLNON, C. (2010). Strong integration of ant colony 
+optimization with constraint programming optimization. In 7th International Confe
+rence on Integration of Artificial Intelligence and Operations Research Techniques in 
+Constraint Programming (CPA/OR}, volume 6140 de LNCS, pages 232-245. Sprin
+ger.
+1 1 . Meta-heuristiques et intelligence artificielle - 977 
+LARDEUX, F., SAUBION, F. et HAO, J. (2006). Gasat : a genetic local search algorithm 
+for the satisfibility problem. Evolutionary Computation, 14(2) :223-253. 
+LARRANAGA, P. et LOZANO, J. A. (2001). Estimation of Distribution Algorithms. A 
+new tool for Evolutionary Computation. Kluwer Academic Publishers. 
+LI, C. et HUANG, W. (2005). Diversification and determinism in local search for sa
+tisfiability. In Proceedings of SAT 2005, volume 3569 de LNCS, pages 158-172. 
+Springer. 
+LOURENCO, H. R., MARTIN, 0. et STUETZLE, T. (2002). Handbook of Metaheuristics, 
+chapitre Iterated Local Search, pages 321-353. Kluwer Academic Publishers. 
+Lu, Z. et HAO, J.-K. (2010). A memetic algorithm for graph coloring. European Journal 
+of Operational Research, 200(1) :235-244. 
+MALAGUTI, E., MONACI, M. et TOTH, P. (2008). A metaheuristic approach for the 
+vertex coloring problem. INFORMS Journal on Computing, 20(2) :302-316. 
+MARCHIORI, E. et Rossi, C. (1999). A flipping genetic algorithm for hard 3-sat pro
+blems. In Proc. of the Genetic and Evolutionary Computation Conference, volume 1, 
+pages 393-400. 
+MAZURE, B., SAIS, L. et GREGOIRE, E. (1997). Tahu search for SAT. In Proc. of the 
+AAAI-97. 
+McALLESTER, D., SELMAN, B. et KAUTZ, H. (1997). Evidence for invariants in local 
+search. In Proc. of the AAAI 97. 
+MINTON, S., JOHNSTON, M. D., PHILIPS, A. B. et LAIRD, P. (1992). Minimizing 
+conflicts : a heuristic repair method for constraint satisfaction and scheduling pro
+blems. Artificial Intelligence, 58 :161-205. 
+MLADENOVIC, N. et HANSEN, P. (1997). Variable neighborhood search. Comps. in 
+Oerations Research, 24 :1097-1100. 
+MOSCATO, P. (1999). Memetic algorithms : a short introduction. In CORNE, D., 
+DORIGO, M. et GLOVER, F., editeurs : New Ideas in Optimization, pages 219-234. 
+McGraw-Hill Ltd., Maidenhead, UK. 
+NERI, F., COTTA, c. et MOSCATO, P. (2011). Handbook of Memetic Algorithms. 
+Springer. 
+NEVEU, B., TROMBETTONI, G. et GLOVER, F. (2004). Id walk : A candidate list 
+strategy with a simple diversification device. In International Conference on Prin
+ciples and Practice of Constraint Programming {GP}, volume 3258 de LNCS, pages 
+423-437. Springer Verlag. 
+NONOBE, K. et IBARAKI, T. (1998). A tabu search approach to the constraint satisfac
+tion problem as a general problem solver. European Journal of Operational Research, 
+106 :599-623. 
+PELIKAN, M., GOLDBERG, D. E. et CANTU-PAZ, E. (1999). BOA : The Bayesian 
+optimization algorithm. In Proceedings of the Genetic and Evolutionary Computation 
+Conference GECC0-99, volume I, pages 525-532. Morgan Kaufmann Publishers, San 
+Fransisco, CA. 
+PHAM, D. N., THORNTON, J. et SATTAR, A. (2007). Building structure into local search 
+for sat. In Proceedings of IJCAI, pages 2359-2364.

@@ -1,0 +1,72 @@
+{
+ "document_id": "27dec70c-0320-4863-8b70-297188c68f0b",
+ "titre_normalise": "La révolution de l'IA. Comment l'intelligence artificielle transforme notre monde",
+ "auteurs": [
+  "Konan Joël Kouadio"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "essai de vulgarisation",
+ "niveau": "debutant",
+ "public_cible": "Lecteur francophone qui découvre le sujet et veut un tour d'horizon sectoriel en une soirée. Ouvrage auto-édité, 2024, soixante et une pages, douze chapitres répartis en trois parties : l'IA dans la vie quotidienne, l'IA et les industries, les défis de l'IA. Même auteur que L'IA au service de tous, également présent dans ce fonds.",
+ "these_centrale": "L'intelligence artificielle est passée du laboratoire à la vie ordinaire et transforme simultanément la mobilité, la santé, l'éducation, la production industrielle, la finance, le commerce et l'agriculture. Chaque chapitre décrit les usages d'un secteur, puis les risques associés, puis les précautions à prendre. La position d'ensemble est celle d'un optimisme mesuré : la technologie est bénéfique à condition d'être encadrée et que les travailleurs soient formés à temps.",
+ "idees_force": [
+  {
+   "titre": "La maintenance prédictive, l'usage industriel le mieux expliqué du livre",
+   "explication": "Des capteurs surveillent la vibration, la température et le niveau sonore des machines ; un système apprend à reconnaître les signes précurseurs d'une défaillance et alerte avant la panne. Le gain n'est pas seulement l'arrêt évité : il porte aussi sur la gestion des stocks de pièces de rechange et la planification des équipes. C'est l'application la plus rentable et la moins spectaculaire, donc la plus souvent négligée dans les discussions.",
+   "page": 34
+  },
+  {
+   "titre": "L'automatisation déplace les compétences plus qu'elle ne supprime les emplois",
+   "explication": "Les tâches répétitives et dangereuses partent vers les machines, mais des postes apparaissent qui exigent de programmer et d'entretenir les robots, de piloter les systèmes et d'interpréter les données produites par les capteurs. L'auteur en tire la conclusion pratique : entreprises, établissements de formation et pouvoirs publics doivent bâtir ensemble des programmes de requalification, et le faire avant la transition et non après.",
+   "page": 34
+  },
+  {
+   "titre": "En santé, la décision doit rester humaine",
+   "explication": "Le chapitre énumère les apports, diagnostic assisté, accélération de la recherche, personnalisation des soins, puis pose trois conditions : chiffrement et authentification forte des données médicales, consentement éclairé avec possibilité de refus du partage, et représentativité des données d'entraînement pour éviter des écarts de diagnostic entre populations. La conclusion est nette : le système recommande, le praticien décide, et la relation de confiance ne se délègue pas.",
+   "page": 27
+  },
+  {
+   "titre": "L'agriculture et l'environnement figurent parmi les domaines traités",
+   "explication": "Un chapitre entier leur est consacré, ce qui distingue ce livre de la plupart des ouvrages de vulgarisation écrits depuis l'Europe ou l'Amérique du Nord, où ce sujet est absent ou marginal. Pour un lecteur africain, c'est le chapitre à lire en premier.",
+   "page": 42
+  },
+  {
+   "titre": "La domotique appelle une hygiène de sécurité",
+   "explication": "Les objets connectés du foyer collectent en permanence. L'auteur invite à adopter des pratiques de sécurité appropriées et à suivre l'évolution de la réglementation pour profiter du confort sans abandonner la vie privée. Le conseil est juste, même s'il reste général.",
+   "page": 22
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Maintenance prédictive",
+   "definition": "Analyse continue des données de capteurs pour prévoir une panne et intervenir avant qu'elle survienne."
+  },
+  {
+   "terme": "Automatisation industrielle",
+   "definition": "Exécution par des machines pilotées de tâches d'assemblage, de contrôle qualité et de manipulation, avec ajustement en temps réel des paramètres de production."
+  },
+  {
+   "terme": "Personnalisation de l'expérience client",
+   "definition": "Adaptation des recommandations, des publicités et des offres à partir de l'historique d'achat et du comportement de navigation."
+  },
+  {
+   "terme": "Biais algorithmique",
+   "definition": "Reproduction ou amplification par un système des inégalités présentes dans ses données d'entraînement."
+  },
+  {
+   "terme": "Consentement éclairé",
+   "definition": "Information préalable de la personne sur l'usage qui sera fait de ses données, assortie de la possibilité de refuser."
+  },
+  {
+   "terme": "Requalification",
+   "definition": "Formation d'un travailleur à de nouvelles compétences rendues nécessaires par la transformation de son métier."
+  }
+ ],
+ "a_lire_si": "Vous voulez un survol rapide, en français, écrit depuis l'Afrique de l'Ouest, et vous souhaitez pouvoir citer des exemples sectoriels sans entrer dans la technique. Le chapitre sur l'agriculture et l'environnement et celui sur l'emploi et les compétences sont les plus utiles.",
+ "a_eviter_si": "Vous cherchez de la précision : le texte procède par généralités et son style est celui d'une rédaction assistée, avec des paragraphes de structure très régulière, des transitions formulaires et de nombreuses répétitions d'un chapitre à l'autre. Aucune source n'est citée, aucun chiffre n'est référencé, et les pages liminaires portent des mentions manifestement erronées, notamment une clause de fiction sans objet dans un ouvrage documentaire. Traiter les affirmations comme des pistes à vérifier, jamais comme des références.",
+ "prerequis": [],
+ "controverses": [
+  "Le livre affirme les bénéfices de l'IA dans chaque secteur sans jamais citer d'étude ni de mesure. Cette absence de sources interdit d'en faire une référence, quelle que soit la justesse des intuitions."
+ ],
+ "confiance": 0.5
+}

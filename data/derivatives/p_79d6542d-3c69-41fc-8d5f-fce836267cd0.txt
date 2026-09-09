@@ -1,0 +1,557 @@
+OUVRAGE : Surveillance globale: ENQUETE SUR LES NOUVELLES FORMES DE CONTROLE
+AUTEUR(S) : Eric Sadin
+ANNÉE : inconnue
+PAGES : 159
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Couverture (p. 2-2)
+  Identité (p. 3-3)
+  Copyright (p. 4-4)
+  Couverture (p. 5-5)
+  DU MÊME AUTEUR (p. 6-7)
+  INTRODUCTION - Un « bouillon de culture » inédit (p. 8-8)
+  Moment historique décisif (p. 8-10)
+  La surveillance : une notion multifonctionnelle (p. 11-16)
+  Conjonction de facteurs hétérogènes (p. 17-21)
+  I - INTERCONNEXION - Maillage électronique intégral (p. 22-22)
+  Un monde interconnecté (p. 22-23)
+  Le corps/interface (p. 24-27)
+  II - GÉOLOCALISATION - Perception extra-atmosphérique hors-mesure (p. 28-28)
+  Quadrillage universel (p. 28-34)
+  Clairvoyance panosphérique (p. 35-37)
+  Un nouveau capteur global : Galileo (p. 38-42)
+  III - VIDÉOSURVEILLANCE - Anticipation « précognitive » (p. 43-43)
+  Quadrillage universel et exponentiel (p. 43-47)
+  « Précognition » (p. 48-59)
+  Vidéosurveillance « intelligente » (p. 60-64)
+  Équilibres instables (p. 65-74)
+  IV - BASES DE DONNÉES - Récolter / analyser / alerter (p. 75-75)
+  Les chiffres et les choses (p. 75-78)
+  L’individu réduit à des codes ? (p. 79-81)
+  Machines désirantes (p. 82-85)
+  Changement de paradigme (p. 86-89)
+  Totale asymétrie (p. 90-92)
+  Classifications « verticales » (p. 93-94)
+  Sophistications marketing (p. 95-98)
+  Pénétrer l’esprit (p. 99-101)
+  « Réseaux sociaux » (p. 102-102)
+  Marketing et sécurité nationale (p. 103-110)
+  V - BIOMÉTRIE - Le corps indexé (p. 111-111)
+  Double régime provisoire (p. 111-111)
+  Procédés multiples (p. 112-114)
+  Extension universelle (p. 115-115)
+  Future « biotransparence » (p. 116-121)
+  VI - INTERCEPTION DES COMMUNICATIONS / PUCES RFID / NANOTECHNOLOGIES - Du télescope au « nanoscope » (p. 122-122)
+  Ambitions intégrales (p. 122-125)
+  Travail/évaluation (p. 126-126)
+  RFID : le monde animé des objets (p. 127-131)
+  Transhumanisme nanotechnologique (p. 132-136)
+  VII - HORIZONTALISATION DE LA SURVEILLANCE - Voyeurisme et exhibitionnisme généralisés (p. 137-137)
+  Familistère de Guise (p. 137-138)
+  Troisième ville (p. 139-140)
+  Reality shows (p. 141-142)
+  Repérages « à la demande » (p. 143-144)
+  Tous témoins (p. 145-146)
+  Identités individuelles mises à nu par le Web même (p. 147-153)
+  DISCOURS DE LA SERVITUDE VOLONTAIRE (SUITE ET FIN ?) (p. 154-159)
+
+[13/157 passages, 8714 tokens sur 125787]
+
+=== EXTRAITS ===
+
+[p. 4-4]
+Sadin Éric
+Surveillance globale
+Enquête sur les nouvelles formes de contrôle
+Flammarion
+Maison d’édition : Climats
+© Climats, un département des éditions Flammarion, 2009
+Dépôt légal : février 2009
+ISBN numérique : 978-2-0812-3545-8
+N° d’édition numérique : N.01EHBN000108.N001
+Le livre a été imprimé sous les références :
+ISBN : 978-2-0812-2297-7
+Ouvrage composé et converti par Nord Compo
+
+---
+
+[p. 18-19]
+sées « forces occultes du pouvoir ».
+C’est ignorer d’abord la force de chacun à recomposer, à reconstruire
+chaque situation ; à ce sujet les remarquables analyses de Michel de Certeau
+sur les capacités de réappropriation individuelle, les usages propres, les
+tactiques et ruses singulières, n’ont probablement pas été suffisamment
+reçues6. C’est ignorer encore la quantité de « trous » qui affaiblissent les
+« maillages ». Une infinité d’événements échappent, et repoussent de facto
+toute perception massive et close des phénomènes. Si nous étions dans une
+société de contrôle, nous pourrions approcher du « risque zéro ». Si nous
+étions dans une société de contrôle, les attentats du 11 septembre 2001 aux
+États-Unis, du 11 mars 2004 à Madrid, de juillet 2005 à Londres, ne
+seraient pas advenus, les traces auraient été repérées ; or ce qu’exposent
+ces impacts inattendus, c’est précisément la profusion de « cases vides ».
+En revanche, la « société du risque » concourt à étendre selon des mesures
+inouïes des dispositifs de surveillance presque omniprésents. Mais
+« contrôle » et « surveillance » constituent deux notions différentes, l’une
+ambitionne vainement d’orienter les individus, l’autre de recueillir des
+informations à leur sujet ; chacune renvoie à des illusions ou à des efficaces
+distinctes.
+Trop d’appréciations sont fondées sur des logiques binaires, modalités
+qui devraient définitivement appartenir à des comportements historiques
+révolus. Les « surveillants » ne sont pas situés d’un côté et les « surveillés »
+de l’autre, nous verrons que le statut des uns et des autres glisse en
+permanence, ce qui rend la situation si fluctuante et abyssale. Certes,
+quantité de machines d’observation prolifèrent, mais elles restent
+fragmentées, et tant que la plupart d’entre elles ne seront pas reliées,
+« agrégées », alors la figure omnipotente de « Big Brother » s’exposera
+comme une chimère patente d’ignorance aveugle à une cartographie
+polymorphe des réalités. Enfin, la représentation du « contrôle » n’est
+jamais très éloignée de l’illusion de la « théorie du complot », qui voudrait
+percevoir l’ensemble des faits « manœuvré » par des forces « masquées ».
+Un des pires maux de l’époque consiste à entretenir et à diffuser des
+formules simplificatrices, à un moment de l’histoire traversé par des
+problématiques d’une extrême complexité, laquelle requiert des efforts
+d’analyse aptes à balayer et à faire pivoter la multitude des éléments
+hétérogènes qui composent les situations autant que les jeux manifestes ou
+plus discrets de leurs interactions.
+ 
+Un des enjeux de cet ouvrage consisterait encore à développer une
+posture active, à encourager des processus de subjectivation, à s’opposer à
+l’idée reçue selon laquelle la grande majorité serait le « jouet » d’une
+minorité qui contribuerait, pour toute une série de raisons, à instaurer un
+
+---
+
+[p. 33-34]
+urveillance – évidemment par les
+organes d’État : police, sécurité intérieure..., mais tout autant, quoique selon
+des visées distinctes, par le marketing contemporain ou par les individus
+entre eux). C’est encore le cas de certaines techniques biométriques ou
+certains programmes de reconnaissance des visages et des formes. C’est
+enfin le cas, nous l’avons vu, de la géolocalisation. De nombreuses
+innovations militaires chargées de prévenir, détecter, situer, ont fait l’objet
+de développements ultérieurs au sein de laboratoires civils, dont les produits
+ont été mis sur le marché, destinés à d’autres usages, mais qui ont
+finalement recouvert pour partie leur fonction initiale – comme un retour du
+refoulé –, déployée non plus à l’intérieur d’un champ de bataille virtuel
+mais dans le champ de la socialité, favorisant une augmentation généralisée
+des capacités collectives et individuelles de surveillance.
+À l’inverse, on peut constater la récupération par les militaires
+d’innovations issues du civil, à l’exemple des jeux vidéo en vue de
+développer des scénarios de simulation ou de stimuler les capacités de
+réactivité, selon des jeux de « recyclage » entre champs hétérogènes qui
+engagent des utilisations inattendues, par effets de recontextualisation qui
+signalent à quel point chaque protocole est disposé, autant que possible, à
+offrir des applications initialement imprévues dans les programmes initiaux.
+La technique, contrairement aux clichés trop répandus, ne constitue jamais
+une force qui impose, mais une puissance qui propose, au nom de la faculté
+proprement humaine à se réapproprier les objets, à rejouer les fonctions et
+les relations, selon des configurations qui jamais ne se confondent
+exactement avec le mode d’emploi originaire9.
+À coup sûr ne relève pas du hasard le fait qu’à l’intérieur de notre
+environnement épistémologique, marqué par la multiplicité, le nombre, le
+foisonnement, s’épanouisse une tendance artistique majeure qui consiste à
+jouer et à composer avec quantité de sources, à envisager les particules
+constitutives de la pluralité comme formant autant d’ensembles mouvants et
+disponibles, bases de données ouvertes à une infinité de procédures
+combinatoires ; phénomène emblématique dans le DJing. Une disposition
+ici se développe qui souhaite négocier avec l’« existant », capable de
+transformer des plans reconnaissables en des figures inédites. L’étendue
+croissante des structures de surveillance offre notamment aux pratiques
+artistiques l’occasion d’investir un champ d’exploration aux multiples
+enjeux et de se confronter à des technologies sophistiquées (capteurs,
+systèmes d’analyse et de détection, protocoles de transmission...). Usages et
+fonctions sont susceptibles d’être exemplifiés, intensifiés, déjoués dans
+l’espace public ou privé. Apparaît la perspective de mise en place de
+dispositifs non encore élaborés, à l’efficacité infaillible, ou à la dimension
+effrayante ou inutile, qui tous ont le mérite de requérir l’expérience,
+
+---
+
+[p. 46-47]
+un après Londres », relativement aux
+moyens technologiques déployés par leurs collègues britanniques pour
+traquer et identifier les poseurs de bombes des 7 et 21 juillet 2005. Le
+11 septembre 2001 a marqué une rupture historique à l’égard de la relation
+que certains États, et particulièrement les États-Unis, pouvaient entretenir
+au renseignement, envisagé depuis comme le socle stratégique déterminant,
+seul capable de cartographier les risques et de les prévenir. L’opposition à
+l’égard de la « nébuleuse terroriste » impose une architecture de défense
+dont la captation d’informations constitue le fondement cardinal, première
+articulation décisive, apte à signaler la nature et le volume des attaques en
+préparation. C’est conformément à cette logique que s’est formé en
+quelques années (simultanément à une sophistication continue des
+technologies) un environnement planétaire pénétré d’instruments de
+collecte de données toujours plus sensibles et densifiés.
+ 
+Les attentats de Londres de juillet 2005 constituent un autre type de
+rupture relativement à la façon dont les organes de sécurité (ministères de
+l’Intérieur, polices, agences de renseignement) perçoivent désormais la
+vidéosurveillance. Jamais dans l’histoire moderne de la police judiciaire, le
+recours 
+aux 
+enregistrements 
+des 
+caméras, 
+allié 
+aux 
+techniques
+d’investigation traditionnelles, n’a été revendiqué à une aussi grande
+échelle pour traquer des criminels présumés. L’étendue de la « couverture »
+à Londres, qui a rendu possible une investigation a posteriori extrêmement
+efficace, impose dans les faits l’outil comme un dispositif décisif non pas
+tant en termes de dissuasion qu’en termes d’instrument d’enquête
+indispensable et nécessaire à un arsenal complexe, destiné, sous diverses
+formes, à s’opposer aux forces dissimulées du terrorisme. Une nouvelle
+légitimité a été acquise depuis ces événements, qui a encouragé au-delà de
+toute mesure précédente une utilisation étendue – particulièrement en
+Europe, 
+jusque-là 
+plutôt 
+réticente 
+à 
+une 
+généralisation 
+de 
+la
+vidéosurveillance. Depuis, le taux d’assentiment en Grande-Bretagne relatif
+à ces mesures, estimé au cours de sondages successifs, se situe aux
+alentours de 70 %, suivant des perceptions rapidement considérées comme
+quasi unanimement approbatrices, associant de facto vidéosurveillance et
+sécurité, favorisant consciemment et inconsciemment une infiltration
+continue d’yeux électroniques dans l’environnement. Cette omniprésence a
+encouragé Manu Luksch, artiste autrichienne installée à Londres, à réaliser
+un film intitulé Faceless, 
+composé exclusivement d’images de
+vidéosurveillance : « Un projet rendu possible grâce à la loi britannique sur
+la protection des données qui permet aux personnes filmées de réclamer une
+copie des enregistrements où elles apparaissent. Il y avait tellement de
+caméras partout que j’ai trouvé superflu de rajouter la mienne2. »
+
+---
+
+[p. 59-59]
+quipées de systèmes qui
+permettent aux agents de sécurité placés devant leurs écrans de zoomer sur
+les images, de lire une plaque minéralogique située à trois cents mètres du
+viseur, de déplacer les caméras à tourelle, et de prévenir à tout moment les
+brigades mobiles, suivant des délais d’intervention de plus en plus resserrés.
+
+---
+
+[p. 71-72]
+ateur ou du regardeur en
+regardeur/regardé brouillent les pistes : on est à la fois le surveillant et le
+surveillé, le veilleur et le veillé. Continuité temporelle, séparation spatiale,
+impossibilité de (tout) voir... On retrouve bien ici les composantes
+essentielles du dispositif de vidéosurveillance, à une nuance près, mais de
+taille : on entre et on sort du dispositif comme on l’entend, on y joue
+plusieurs rôles25. »
+Le glissement des fonctions et des rôles constitue l’enjeu central de la
+pièce, impliquant notamment une dimension de voyeurisme ludique ;
+dimension aujourd’hui amplifiée par la miniaturisation des objets
+numériques, qui généralise les phénomènes d’individualisation de la
+surveillance contemporaine. Denis Beaudois, par exemple, a développé des
+stratégies plus frontales, consistant à se poster dans l’espace public face à
+des caméras et à exhiber des panneaux sur lesquels il était notamment écrit :
+« Move the camera up & down to agree », à l’occasion de performances de
+plusieurs heures intitulées In the Event of Amnesia the City Will Recall,
+Sydney & Cleveland Performances. L’objet de notre recherche ne consiste
+pas ici à retracer une généalogie ou un panorama actuel d’expérimentations
+artistiques, mais à signaler au passage l’efficace possible de certains
+agencements destinés à faire partager une expérience, dont une des valeurs
+consiste à pointer, ou à faire éprouver par le corps, quelques processus ou
+conséquences en jeu à l’occasion de la « traversée » d’un dispositif de
+surveillance, et de susciter des effets de conscience à l’écart de logiques
+discursives dénonciatrices.
+ 
+La vidéosurveillance fait aujourd’hui l’objet d’une méfiance et d’une
+peur généralisées, probablement par sa capacité de « vision » autonome, qui
+personnalise presque le procédé et induit une dimension anonyme,
+inquiétante et virtuellement omniprésente. Néanmoins, cette angoisse se
+leurre par le fait d’un trop grand privilège accordé à la partie visible des
+dispositifs et qui occulte les processus déterminants qui se mettent en place
+depuis plusieurs années, qui se développent et s’affinent sans cesse, selon
+des modalités invisibles et aux formes quasi immatérielles : l’articulation de
+l’ensemble des techniques de traçabilité à des bases de données. L’avenir
+dessine 
+une 
+gigantesque 
+maille 
+interconnectée 
+physiquement
+incontournable : la totalité des moyens de repérage ou d’identification
+(vidéosurveillance, biométrie), de localisation (satellites + récepteurs ;
+capteurs + puces électroniques), d’élaboration de profils (dissection des
+comportements : communications, achats, déplacements...), est connectée à
+des serveurs stockant des « océans informationnels » traités par des
+algorithmes adéquats, au pouvoir toujours plus intrusif, grâce aux
+développements de l’intelligence artificielle et de l’industrie des
+
+---
+
+[p. 83-84]
+s le film Ennemi d’État, analysent
+simultanément les « données comparatives » entre deux profils, qui révèlent
+quantité de « jonctions » : retraits bancaires pour l’un, presque aussitôt
+suivis d’opérations de crédit de sommes identiques sur le compte de l’autre.
+Procédures d’observation « multicibles », capables de divulguer les
+proximités discrètes ou secrètes entre personnes, d’après un mode de
+perception des corps qui superpose sans cesse autopsie des multitudes
+singulières et estimation de leurs degrés d’affinité.
+ 
+Ce gigantesque rhizome se forme grâce à l’infinité des liens qui unissent
+les êtres entre eux et les êtres aux choses, qui permettent de déduire des
+« significations » d’après des calculs élaborés sur des critères
+comportementaux, des modèles de proximité sociale, des calculs
+statistiques. Chaque personne est le point de départ et d’arrivée d’une
+immense toile quantifiée et tramée en continu grâce aux techniques qui
+explorent la structure et la nature des liens : le link analysis. Ces
+technologies ont été prioritairement développées depuis le 11 septembre
+2001, suite aux défaillances des systèmes de renseignement qui n’ont pas su
+conclure à la préparation d’attentats, alors que la mise en corrélation entre
+de nombreux paramètres et similitudes aurait dû alerter (cours suivis et
+communs de pilotage, communications avec le Moyen-Orient, trains de vie
+supposés modestes et achats de sièges en classe affaires...). Une nouvelle
+logique axée sur l’impératif, sécuritaire et économique, d’anticipation, de
+précognition – avons-nous déjà dit à propos de la « vidéosurveillance
+intelligente », en référence au livre de Philip K. Dick et au film de Steven
+Spielberg Minority Report – s’instaure, se généralise et se perfectionne sans
+cesse, situant la notion même de contrôle en tant que procédure de
+vérification (la fonction des « télécrans » dans l’ouvrage d’Orwell, 1984)
+comme une catégorie historique définitivement obsolète.
+La surveillance du XXe siècle se chargeait de placer sous contrôle les
+personnes 
+avérées 
+délictueuses 
+ou 
+ennemies, 
+ou 
+s’intéressait
+particulièrement à celles susceptibles d’être suspectes ; la matrice du
+XXIe siècle, elle, se déploie sur une estimation indifférenciée de la totalité
+des unités mobiles et interconnectées, dont les gestes (communications et
+activités) vont produire des masses de données aptes à signaler des profils
+vers lesquels il faudra resserrer davantage le focus, non par une
+amplification des procédures d’observation, mais par la plus grande récolte
+informationnelle – en vue d’élargir le spectre des personnes éventuellement
+rattachées à l’unité initiale repérée et peut-être également en cause –, et
+arrêter une juste décision relativement au moment jugé opportun pour une
+intervention (une opération trop précoce, et c’est l’hypothèse de quantité
+d’informations précieuses qui seraient probablement perdues ; une initiative
+
+---
+
+[p. 96-97]
+les éléments de l’interconnexion
+généralisée se mettaient seulement en place et qu’elle a depuis enveloppé la
+planète, donc infiniment accru la sophistication des méthodes de
+quantification des individus : « Le marketing est maintenant l’instrument du
+contrôle social, et forme la race impudente de nos maîtres. Le contrôle est à
+court terme et à rotation rapide, mais aussi continu et illimité, tandis que la
+discipline était de longue durée, infinie et discontinue15. »
+ 
+Les agences de communication ne constituent que très rarement leurs
+fichiers, mais font appel à des sociétés spécialisées dans l’établissement et
+le commerce de bases de données personnelles et comportementales ;
+activité en plein essor, propre au « secteur quaternaire » fondé sur les
+transactions dites « immatérielles », ou plus précisément de nature
+strictement informationnelle. La stratégie majeure vise à accumuler le plus
+grand nombre de renseignements à l’égard de chaque « prospect », à ajuster
+des profils extrêmement précis selon une technique privilégiée : soumission
+de questionnaires – parfois rémunérés, ou à l’occasion de l’affiliation à un
+programme de fidélisation, à l’inscription d’un site d’achat... – invitant à
+détailler profession, situation familiale, loisirs, habitudes alimentaires... De
+surcroît, ces « confessions intimes » contemporaines peuvent être agrégées
+aux achats effectués par cartes de crédit, aussi bien en magasin que sur
+Internet, permettant de dessiner des cartographies singularisées, à la fois
+stables (conditions générales d’existence) et évolutives (conduites de
+consommation quotidiennes)16.
+Les navigations à travers les sites Web peuvent encore être archivées à
+l’aide d’un logiciel contenant un numéro d’identification (cookie)
+automatiquement infiltré sur le disque dur. DoubleClick – la plus
+importante société de publicité en ligne, récemment acquise par Google –
+organise notamment, à l’aide de cet outil, la distribution ciblée de bannières
+sur les pages. L’enjeu consiste à s’accorder le plus pertinemment aux usages
+de chaque internaute, en vue de faire apparaître des annonces sur mesure.
+La notion de « rich media » conceptualisée par l’entreprise définit l’étendue
+et la profondeur des possibilités relationnelles et commerciales que la
+connectivité autorise. Elle appelle la mise en place de stratégies
+ambivalentes, à la fois intrusives et propres à inspirer confiance ; c’est dans
+l’intention de maintenir autant que possible cet équilibre que les collectes
+informationnelles se constituent désormais avec l’assentiment exprès, selon
+le principe de l’« opt-in », qui suppose une implication consciente et
+autorise en théorie la désinscription.
+ 
+La tension entre présence d’un individu à l’intérieur d’une zone
+géographique et propositions commerciales adaptées et situées à proximité
+
+---
+
+[p. 107-108]
+transnational de société majeur de notre temps –
+fasse l’objet de délibérations publiques à hauteur nationale et globale.
+L’usage et la finalité des récoltes n’ont pas encore fait l’objet
+d’encadrements juridiques précis. L’ignorance de la diffusion et de la
+destination des flux amplifie encore l’écart entre citoyens souvent peu
+informés 
+et 
+dispositifs 
+techniques 
+extrêmement 
+puissants. 
+La
+commercialisation de nos « ombres digitales », informations relatives à la
+vie privée, inscrit l’identité humaine comme une marchandise, ultime objet
+de transaction de l’économie libérale, disposée à monnayer ses
+planisphères individualisés à quiconque : instances financières ou
+sécuritaires. L’avenir des bases de données consistera à relier en temps réel
+profil momentané de chacun et réseau d’offres commerciales et médicales
+adaptées, situées dans une opportunité spatio-temporelle immédiate, à
+l’intérieur d’un halo électronique personnalisé et permanent où individus et
+puissances de vente ou d’examens anatomiques seront connectés et
+interagiront sans fin. Signalements mutuels des désirs, des offres et des états
+de santé, consultables parallèlement par les agences de renseignement,
+capables de suivre à la trace déambulations spatiales, conduites d’achat et
+conditions thérapeutiques. Architecture appelée à être perfectionnée par
+l’inscription du corps au centre du système, surface désormais directement
+lisible, interface privilégiée, au contact de capteurs biométriques toujours
+plus omniprésents et programmés à identifier, authentifier, tracer. À
+l’intérieur d’une matrice intégrale où chaque mouvement sera non
+seulement repéré et validé, mais contribuera aussi à amplifier les flots de
+données personnelles, classées suivant des distributions plus finement
+différenciées et spécifiées, et dont l’interopérabilité aux autres types
+d’information intensifiera la puissance et l’exactitude de la machine
+universelle de quantification spatio-temporelle des individus, désormais
+envisagés comme des points « organico-électroniques » de traitement et
+d’évaluation.
+1- Cf. André Leroi-Gourhan, La Mémoire et les Rythmes, Paris, Albin Michel, 1965 ; voir plus précisément le chapitre IX, « La
+mémoire en expansion », p. 63-76.
+2- Georges Banu, La Scène surveillée, Actes Sud, 2006, p. 80.
+3- Paris, Le Seuil, 1972.
+4- « Un bon souverain, que ce soit un souverain collectif ou individuel, c’est quelqu’un qui est bien placé à l’intérieur d’un
+territoire, et un territoire qui est bien placé au niveau de son obéissance au souverain est un territoire qui a une bonne disposition
+spatiale. » (Michel Foucault évoquant les cadres sécuritaires qui régissent les villes à l’âge classique, in Sécurité, territoire,
+population, cours au Collège de France, 1977-1978, Paris, Gallimard/Le Seuil, 2004, p. 16).
+5- Gilles Deleuze, « Post-scriptum sur les sociétés de contrôle », L’Autre Journal, no1, mai 1990.
+6- Michel Foucault, Surveiller et punir, op. cit., p. 235.
+
+---
+
+[p. 119-120]
+ontrainte des événements » l’ordre des priorités politiques et sociales :
+« Conformément à une tendance en acte dans toutes les démocraties
+occidentales, la déclaration de l’état d’exception est progressivement
+remplacée par une généralisation sans précédent du paradigme de la
+sécurité comme technique normale de gouvernement4. »
+L’objectif majeur du dispositif consiste à éviter les fraudes à l’identité et
+à tendre vers la plus grande fiabilité et sécurisation des titres. But a priori
+louable, mais qui entraîne avec sa réalisation quantité d’effets collatéraux
+qui s’additionnent à d’autres simultanément produits par les protocoles déjà
+évoqués, pour finalement se multiplier et se « potentialiser » entre eux. Qui
+perturbent toujours plus violemment le droit historique des individus à
+maintenir une part de leur existence à l’abri d’instruments automatisés de
+repérage en temps réel de leurs conduites et de leurs référencements civils –
+ de surcroît toujours susceptibles d’être connectés à d’autres sources,
+marketing ou professionnelles par exemple. Cependant, malgré les craintes
+suscitées par les cartes équipées de puces lisibles sans contact (à l’instar du
+« passe Navigo » commercialisé par la RATP), ces dernières ne pourraient
+pas, jusqu’à maintenant du moins, techniquement et légalement laisser
+supposer des contrôles d’identité à l’insu des intéressés par des myriades de
+capteurs dissimulés.
+Dimension appelée à coup sûr à se matérialiser par la généralisation des
+biopuces, saut ultérieur dans la traçabilité intégrale des individus, aux
+conséquences juridiques et éthiques abyssales, dont les sociétés
+contemporaines devront bien prendre la véritable mesure. Architecture
+implacable contre laquelle il demeure encore possible d’élaborer des
+stratégies d’information et d’action, capables d’exposer publiquement la
+complexité des menaces et des enjeux que suppose la pénétration de
+composants électroniques et géolocalisés dans les corps du XXIe siècle. La
+biométrie forme une autre strate au sein de l’architecture globale de
+collecte de données, distribuée suivant des procédures multiples. Outre
+celles explorées jusque-là, d’autres systèmes encore se complètent ou se
+relaient dans la maille universelle et multicouches : interception à grande
+échelle de communications ou introduction récente et expansive de puces
+électroniques à l’intérieur d’objets du quotidien, désormais capables d’être
+suivis à la trace et de témoigner de leur « physiologie » ou de leurs usages.
+1- Les androïdes rêvent-ils de moutons électriques ?, Paris, Lattès, 1979 (nouvelle renommée Blade Runner à la suite du film
+de Ridley Scott).
+2- Philip K. Dick, Substance Mort, Paris, Denoël, 1978.
+3- « Apparemment personne ne connaît son aspect ; il doit changer de canevas physiognomonique tous les mois » (Philip
+K. Dick, Ubik, Paris, Robert Laffont, « 10-18 », 1970, p. 8).
+
+---
+
+[p. 132-132]
+d’autant plus prometteur qu’il sera relié pour le « meilleur des mondes » à
+tous les autres, au sein d’un système universel d’échanges « fluidifiés »,
+offrant une infinité de services « on demand », décidant néanmoins de
+procédures de quantification approfondies et continues.
+Transhumanisme nanotechnologique
+Si des microprocesseurs sont appelés à intégrer la plupart des unités
+matérielles de notre environnement, ils s’incorporeront bientôt aux tissus
+des organismes, situant tout individu comme une puissance de signal
+multifonctions indéfiniment transmise à flux tendus. Ce qui pouvait
+apparaître comme une hypothèse futuriste et improbable commence depuis
+peu à trouver les formes d’une réalisation effective. L’entreprise américaine
+Verichip a déjà mis au point une puce fondée sur la technologie RFID en
+perfectionnant un système existant destiné à marquer le bétail ou les
+animaux domestiques. En 2004, le Verichip « humain » a obtenu son
+autorisation de mise sur le marché, et cherche depuis à étendre ses champs
+d’application possibles. Le secteur médical entend capitaliser la potentialité
+offerte par la mise en relation entre puces et bases de données, capable
+d’informer immédiatement des antécédents d’un patient, quelle que soit sa
+capacité ou non à s’exprimer. Plusieurs discothèques proposent l’usage
+d’implants afin de bénéficier d’entrées prioritaires et de régler les
+consommations par scannage de la peau. D’autres entreprises investissent
+un marché virtuellement gigantesque et explorent de nouvelles
+fonctionnalités : suivi d’unités militaires d’élite, de personnes atteintes de la
+maladie d’Alzheimer ou d’enfants en vue de prévenir des enlèvements...
+Une des fonctions majeures à venir consistera à les substituer à terme
+aux documents d’identité et cartes de crédit magnétiques, à l’intérieur d’un
+environnement global modifié par le repérage en continu des corps et de
+leurs actions dans l’espace et le temps, par omniprésence de capteurs
+connectés à des banques de données dédiées. L’introduction de composants
+électroniques dans les tissus biologiques constitue un saut décisif dans
+l’histoire ; à coup sûr représente-t-elle la forme la plus achevée et la plus
+parfaite du suivi – sans rupture et multitâches – des personnes. Un système
+intégral de récolte informationnelle favorisera pistage ininterrompu des
+déplacements, analyses des flux biotiques, traçages des relations
+professionnelles, amicales ou sexuelles (par communication entre puces
+
+---
+
+[p. 144-144]
+ternet, et qui redoublent le principe de défiance
+indifférenciée déployé dans les nouveaux paradigmes sécuritaires, que nous
+avons déjà examinés suivant cette mesure-là. Méfiance qui semble
+sournoisement gagner les rapports entre individus, favorisée par
+l’élaboration de techniques destinées à découvrir les « arrière-mondes » de
+
+---
+
+[p. 158-159]
+technologies certes efficaces mais
+en tout point sensibles, à moduler nos usages, à sortir d’une période ébahie
+et enivrée par la nouveauté miraculeuse, pour entrer dans un autre moment
+probablement plus mature – une sorte de « seconde hypermodernité », non
+pas moins enthousiaste mais éveillée à l’égard de l’animisme inédit qui
+désormais rythme notre environnement pour le meilleur et pour le pire, qui
+appelle l’ajustement continu de nos pratiques, dans le risque et la joie de ce
+qui vient à la fois malgré nous autant que par le fait de nos puissances
+d’adaptation et d’inventivité, collectives et individuelles.
+1- Pierre Hassner, « La revanche des passions », revue Commentaire, no 110, été 2005.
+2- Giorgio Agamben, État d’exception, Homo Sacer, op. cit., p. 35.
+3- Victor Klemperer, LTI, la langue du Troisième Reich. Carnets d’un philologue, Paris, Albin Michel, « Bibliothèque Idées »,
+1996, p. 27.
+4- Judith Shklar, The Liberalism of Fear, University of Chicago Press, publication posthume 1998, p. 27.
+5- La Boétie, Discours de la servitude volontaire (vers 1548), Paris, Mille et une nuits, p. 12.
+6- Ibid., p. 21.
+7- Alex Türk, « La majorité des Français n’ont pas conscience qu’aujourd’hui leur sphère de vie privée est en cause », chat
+modéré par Jean-Marc Manach, www.lemonde.fr, 10 juillet 2007.
+8- Notion ici exactement entendue dans une perspective foucaldienne : qui inspire des écrits, des règlements, des conduites,
+des agencements spatiaux... « Ce que j’essaie de repérer sous ce nom c’est [...] un ensemble résolument hétérogène comportant
+des discours, des institutions, des aménagements architecturaux, des décisions réglementaires, des lois, des mesures
+administratives, des énoncés scientifiques, des propositions philosophiques, morales, philanthropiques ; bref, du dit aussi bien que
+du non-dit, voilà les éléments du dispositif » (Michel Foucault, Dits et écrits, Paris, Gallimard, vol. III, p. 299).
+9- Emmanuel Kant, Idée d’une histoire universelle au point de vue cosmopolitique, sixième proposition, 1784.
+images

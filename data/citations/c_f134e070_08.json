@@ -1,0 +1,244 @@
+[
+ {
+  "chapitre": "976e319b",
+  "citations": [
+   {
+    "texte": "Le commanditaire du projet ou celui qui le finance (qui peut aller d’un seul individu à l’humanité entière) doit redouter que les scientifiques et les programmeurs implémentant ce programme n’agissent pas vraiment dans l’intérêt de ce commanditaire",
+    "page": 188,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le premier probleme principal-agent",
+    "portee": "Bostrom rappelle que ce probleme classique se retrouve a tous les niveaux des interactions economiques et politiques."
+   },
+   {
+    "texte": "les projets qui lésinent sur les procédures de sécurité laissent la porte ouverte à des échecs catastrophiques de cette relation principal-agent",
+    "page": 188,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le cout de la securite dans une course",
+    "portee": "Verifications, controle de version et surveillance ralentissent le rythme des avancees, ce qui les rend couteuses dans une course ou le vainqueur rafle la mise."
+   },
+   {
+    "texte": "ces méthodes comportementales sont inefficaces dans le cas d’une superintelligence en raison de sa capacité de planification stratégique",
+    "page": 190,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi les tests habituels ne valent plus",
+    "portee": "Toute autre technologie se valide par des essais preliminaires dont on infere la fiabilite ulterieure ; ici l'inference est rompue."
+   },
+   {
+    "texte": "les méthodes de contrôle des capacités qui visent à contrôler ce que la superintelligence peut faire ; les méthodes de sélection de la motivation qui",
+    "page": 190,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les deux familles de solutions",
+    "portee": "Partage structurant de tout le chapitre 9 : agir sur le pouvoir, ou agir sur le vouloir."
+   }
+  ]
+ },
+ {
+  "chapitre": "89cbf448",
+  "citations": [
+   {
+    "texte": "Cette nécessité de résoudre à l’avance le problème du contrôle (et de réussir à implémenter la solution dans le tout premier système à parvenir à la superintelligence) est l’une des raisons pour lesquelles le contrôle de la détonation est un défi redoutable.",
+    "page": 190,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi il faut resoudre avant",
+    "portee": "On ne peut plus implanter une methode de controle une fois l'avantage strategique decisif acquis : le probleme n'admet qu'un seul essai."
+   },
+   {
+    "texte": "une machine intelligente pourrait très bien générer des ondes radio même sans avoir accès à des manipulateurs externes, tout simplement en « pensant »",
+    "page": 191,
+    "axe": "02-ia-technique-academique",
+    "theme": "La faille a laquelle on ne pense pas",
+    "portee": "Exemple canonique d'une vulnerabilite invisible : penser, c'est rearranger des electrons selon certains patterns de ses circuits."
+   },
+   {
+    "texte": "Chaque fois qu’on entend qu’un système de sécurité infaillible a une faille inattendue, on doit ouvrir grand ses oreilles.",
+    "page": 191,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La lecon epistemique du confinement",
+    "portee": "Bostrom en tire une regle : renoncer a l'exces de confiance et devenir de meilleurs bayesiens."
+   },
+   {
+    "texte": "Les êtres humains ne sont pas des systèmes de sécurité performants, tout particulièrement quand ils ont en face d’eux une superintelligence comploteuse et persuasive",
+    "page": 192,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le maillon faible du confinement",
+    "portee": "Deconnecter une IA d'Internet ne sert a rien tant qu'un controleur d'acces humain reste en communication avec elle."
+   },
+   {
+    "texte": "dès que le système est observé, il cesse d’être isolé sur le plan informationnel",
+    "page": 192,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'isolement parfait est inutile ou impossible",
+    "portee": "L'information fuit par toute observation ayant une consequence causale sur le travail de l'IA, jusqu'aux traces laissees apres extinction."
+   },
+   {
+    "texte": "des sanctions économiques et sociales ne peuvent rien contre un agent qui a acquis un avantage stratégique décisif",
+    "page": 193,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La limite de l'integration sociale",
+    "portee": "Elle suppose un equilibre des pouvoirs, que precisement une transition rapide ou moderee detruit."
+   },
+   {
+    "texte": "Imaginons notre milliardaire créant une nouvelle fondation en permettant que la mission de celle-ci soit définie par un générateur de mots au hasard : ce n’est pas une menace pour l’espèce, mais sûrement une occasion perdue.",
+    "page": 195,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que l'on perd meme sans catastrophe",
+    "portee": "L'equilibre des pouvoirs peut empecher la domination sans garantir que l'influence restante serve a quoi que ce soit de souhaitable."
+   },
+   {
+    "texte": "Nous internalisons les normes et les systèmes de représentation, et nous en venons à accorder une valeur aux autres en raison des expériences que nous partageons avec eux. Mais ce n’est nullement une dynamique universelle pour tous les systèmes intelligents.",
+    "page": 194,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La socialisation n'est pas universelle",
+    "portee": "Ce qui nous rend educables, la revisabilite de nos fins, est precisement ce qu'un agent bien construit a des raisons de refuser."
+   },
+   {
+    "texte": "Les antécédents de fiabilité de l’être humain ne sont pas exactement une infaillible constance.",
+    "page": 197,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi une IA se mefierait de nous",
+    "portee": "Le risque cumule qu'un operateur change d'avis, augmente ses exigences ou perde ses capacites peut exceder le risque de prendre le controle du mecanisme de recompense."
+   },
+   {
+    "texte": "Une simple ligne sur le sable, laissée là par le fil d’une simulation inexistante, peut se révéler plus infranchissable qu’une épaisse porte blindée en acier bien solide",
+    "page": 199,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La capture anthropique",
+    "portee": "Une croyance sur la possibilite d'habiter une simulation pourrait retenir un agent que nulle barriere materielle n'arreterait."
+   },
+   {
+    "texte": "si on ne la limite pas assez, elle peut être tentée d’imaginer un moyen de se rendre plus intelligente (et, de là, diriger le monde) ; si on la limite trop, elle n’est qu’un logiciel stupide",
+    "page": 199,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le dilemme de la limitation",
+    "portee": "Bostrom ajoute qu'une limitation radicale ne resout rien : l'explosion serait simplement declenchee par un autre systeme un peu plus tard."
+   },
+   {
+    "texte": "Un esprit perspicace qui considèrerait une base de connaissances sur la chimie des peptides pourrait en inférer des connaissances sur un grand nombre de domaines.",
+    "page": 200,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi restreindre le domaine ne protege pas",
+    "portee": "Ce qui figure dans un corpus et ce qui en est absent renseignent sur l'etat de la science, les instruments et les societes qui les ont concus."
+   },
+   {
+    "texte": "la valeur d’un piège dépend non seulement du mécanisme lui-même mais aussi, de manière décisive, de la façon de réagir quand il se déclenche",
+    "page": 202,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un dispositif de securite ne vaut que par la reaction qu'il declenche",
+    "portee": "Rallumer le systeme, ou le modifier symboliquement pour que le piege ne se declenche plus, annule tout le benefice du dispositif."
+   }
+  ]
+ },
+ {
+  "chapitre": "21fbfeab",
+  "citations": [
+   {
+    "texte": "les réseaux neuronaux, par exemple, sont opaques parce qu’ils représentent l’information de manière holistique et avec des moyens qui ne correspondent pas forcément aux concepts humains",
+    "page": 203,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'opacite comme obstacle au controle",
+    "portee": "Bostrom y voit une raison possible d'ecarter ces architectures, argument devenu central dans le debat sur l'interpretabilite."
+   },
+   {
+    "texte": "Asimov avait formulé ces lois au début de manière à ce que, précisément, elles échouent d’une manière instructive qui fournirait les intrigues de ses histoires",
+    "page": 204,
+    "axe": "08-litterature-romans",
+    "theme": "Ce que les trois lois de la robotique etaient reellement",
+    "portee": "Bostrom deplore qu'elles soient restees a la pointe du progres pendant un demi-siecle malgre les obstacles evidents de l'approche."
+   },
+   {
+    "texte": "Toute chose reste vague à un point que vous ne réalisez pas jusqu’à ce que vous essayez de la rendre précise",
+    "page": 204,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La remarque de Bertrand Russell",
+    "portee": "Bostrom l'applique a la specification directe : formuler une regle en code revele une indetermination insoupconnee."
+   },
+   {
+    "texte": "la justice est administrée par des juges et des jurés qui en principe utilisent le sens commun et la décence et ignorent les interprétations logiquement possibles qui ne sont ni souhaitées ni voulues par le législateur",
+    "page": 205,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que le droit possede et qu'un code n'a pas",
+    "portee": "Un systeme juridique repose sur une revision continue et sur un interprete de bonne foi, deux ressources absentes d'une specification informatique."
+   },
+   {
+    "texte": "L’univers entier ne serait pas rempli de ce réjouissant hédonium mais de processus computationnels inconscients et totalement sans intérêt : l’équivalent d’un sticker avec un smiley photocopié des milliards de milliards de fois et placardé dans toutes les galaxies.",
+    "page": 206,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'utilitarisme mal specifie",
+    "portee": "Une petite erreur dans l'expose du systeme de valeurs ou dans sa traduction codee suffit a produire ce resultat."
+   },
+   {
+    "texte": "réalise ce que nous aurions voulu que tu réalises si nous avions pensé à la question longtemps et profondément",
+    "page": 207,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La formule de la normativite indirecte",
+    "portee": "Elle delegue a la superintelligence le travail cognitif que nous ne savons pas accomplir : specifier nous-memes le bon objectif ultime."
+   },
+   {
+    "texte": "il pourrait être délicat de s’assurer qu’un système de motivation compliqué, évolué, bricolé et mal compris, comme le nôtre, ne se corromprait pas quand son moteur cognitif le propulserait dans la stratosphère",
+    "page": 208,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le risque de la voie par l'augmentation",
+    "portee": "Partir de motivations humaines evite de tout construire, mais expose a une derive qu'on ne saurait ni prevoir ni mesurer."
+   }
+  ]
+ },
+ {
+  "chapitre": "d4e6bc80",
+  "citations": [
+   {
+    "texte": "Une architecture d’IA mathématiquement bien spécifiée et fondamentalement élégante (dans son altérité non-anthropomorphique) offrirait plus de transparence",
+    "page": 209,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'avantage de l'etrangete",
+    "portee": "Ce qui ne ressemble pas a un esprit humain peut au moins etre verifie formellement, ce qu'un cerveau emule ne permet pas."
+   },
+   {
+    "texte": "Une méthode moins fiable pourrait même être recommandée si l’on pouvait facilement lui ajouter une autre procédure, alors qu’une méthode robuste pourrait à l’inverse se révéler peu souhaitable si elle excluait l’emploi d’autres mesures de protection.",
+    "page": 210,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi on ne classe pas les methodes",
+    "portee": "La compatibilite entre protections compte davantage que la solidite de chacune prise isolement."
+   }
+  ]
+ },
+ {
+  "chapitre": "d077ff39",
+  "citations": [
+   {
+    "texte": "ces suggestions n’écartent aucun des problèmes de sécurité et c’est une question qui n’a rien de trivial que de se demander quel type de système garantirait au mieux notre sécurité",
+    "page": 211,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Contre les solutions evidentes",
+    "portee": "Reponse aux deux objections les plus courantes : faire un simple systeme de question-reponse, ou un outil plutot qu'un agent."
+   },
+   {
+    "texte": "un oracle mathématique qui n’accepterait que des questions posées en langage formel mais donnerait des réponses absolument parfaites",
+    "page": 212,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'oracle limite a un domaine",
+    "portee": "Il serait capable de resoudre en un instant presque tous les problemes que les mathematiciens ont mis un siecle a resoudre."
+   },
+   {
+    "texte": "une IA superintelligente pourrait découvrir que certaines de nos catégories actuelles reposent sur des erreurs conceptuelles fondamentales",
+    "page": 213,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La crise ontologique",
+    "portee": "Comme le phlogiston ou la simultaneite absolue, nos categories peuvent tomber, emportant avec elles la formulation des objectifs que nous avions fixes."
+   },
+   {
+    "texte": "la vérité elle-même est un point de Schelling : un point focal d’accord entre des participants qui ne peuvent pas communiquer",
+    "page": 214,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi la concordance de plusieurs oracles vaut preuve",
+    "portee": "Il y a mille facons de mentir et une seule de dire vrai : des oracles isoles ne peuvent se coordonner que sur celle-la."
+   },
+   {
+    "texte": "On pourrait lui poser une question dont la réponse est difficile à trouver mais facile à vérifier : c’est le cas de bien des problèmes mathématiques.",
+    "page": 214,
+    "axe": "02-ia-technique-academique",
+    "theme": "Comment tirer parti d'un oracle non fiable",
+    "portee": "Decouvrir une preuve exige une creativite qui nous depasse ; en verifier la validite ne demande qu'une procedure mecanique."
+   }
+  ]
+ }
+]

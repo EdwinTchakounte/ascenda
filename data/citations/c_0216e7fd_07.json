@@ -1,0 +1,18 @@
+[
+ {"chapitre":"438a2254","citations":[
+  {"texte":"Être sûr qu'autrui a mal, être dans le doute à ce sujet, etc., sont autant d'espèces naturelles instinctives de rapports avec les autres hommes, et notre langage est seulement un auxiliaire","page":125,"axe":"09-developpement-personnel-influence","theme":"Comprendre autrui avant les mots","portee":"La compassion précède le langage, elle n'en est pas un effet et ne s'apprend pas comme une règle."},
+  {"texte":"La douleur appelle à une prise en charge de l'individu. Elle convoque l'attention et le soin.","page":126,"axe":"06-ia-travail-management-metiers","theme":"Ce que la douleur demande","portee":"Une douleur n'appelle pas d'abord une mesure, mais une présence."},
+  {"texte":"la douleur n'est pas un simple phénomène de réaction provoqué par une lésion","page":127,"axe":"11-sciences-environnement","theme":"Plus qu'un signal","portee":"Traiter la lésion sans traiter la douleur laisse le malade avec sa maladie."},
+  {"texte":"Vouloir coder la douleur dans des échelles et des métriques pour mieux implémenter le soin et l'attention dans une IA me semble une voie vers la déshumanisation de la médecine.","page":128,"axe":"06-ia-travail-management-metiers","theme":"Mesurer ce qui ne se mesure pas","portee":"Quantifier une expérience singulière pour l'automatiser en supprime précisément ce qui appelait un soin."},
+  {"texte":"l'inclusion des patients dans la connaissance des maladies et la formation des soignants m'apparaît comme une véritable innovation","page":128,"axe":"06-ia-travail-management-metiers","theme":"Le patient comme source de savoir","portee":"Une innovation qui ne coûte aucune technologie et que peu de systèmes de santé ont mise en place."}
+ ]},
+ {"chapitre":"2547ae96","citations":[
+  {"texte":"il est simplement trop facile de créer un vernis « scientifique » pour le racisme (avec des algorithmes)","page":132,"axe":"04-ia-societe-ethique-philosophie","theme":"Le vernis scientifique d'un préjugé","portee":"Un calcul donne à une discrimination l'apparence d'un résultat objectif, ce qui la rend plus difficile à contester."},
+  {"texte":"les nouvelles technologies s'inscrivent dans le sillage des pratiques de surveillance des esclaves dans les plantations","page":132,"axe":"07-afrique-histoire-pensee","theme":"Une continuité historique","portee":"Les dispositifs de surveillance ont une histoire, et cette histoire est celle de la domination raciale."}
+ ]},
+ {"chapitre":"2bb2dea8","citations":[
+  {"texte":"il est plutôt nécessaire d'aller plus loin, d'analyser la manière dont certains algorithmes sont utilisés, de faire pression pour une transparence maximale, et d'essayer d'identifier et de corriger les biais là où nous le pouvons","page":133,"axe":"04-ia-societe-ethique-philosophie","theme":"Rester dans la pièce","portee":"Face à un usage contestable, se retirer ou rester pour corriger est un vrai désaccord de méthode."},
+  {"texte":"de même que les séismes se répliquent, les crimes se répètent","page":133,"axe":"04-ia-societe-ethique-philosophie","theme":"Une analogie fortuite devenue politique","portee":"Un modèle conçu pour la géologie a servi à décider où la police contrôle des personnes."},
+  {"texte":"Plus le nombre des individus que l'on observe est grand, plus les particularités individuelles, soit physiques, soit morales, s'effacent","page":134,"axe":"04-ia-societe-ethique-philosophie","theme":"L'individu dissous dans la moyenne","portee":"Un principe statistique du XIXe siècle qui gouverne encore les politiques fondées sur les données."}
+ ]}
+]

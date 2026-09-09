@@ -1,0 +1,344 @@
+[
+ {
+  "chapitre": "ec466b34",
+  "citations": [
+   {
+    "texte": "une organisation qui, pour porter la dénomination de marché, n’en est pas moins assimilable, dans son ensemble, à un nœud d’interactions bureaucratiques.",
+    "page": 219,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un marche qui n'en est plus un",
+    "portee": "Formule qui resume tout le chapitre : la denomination survit a la realite qu'elle designait."
+   },
+   {
+    "texte": "le titre euro-obligataire est indissociable de l’organisation qui le sous-tend : il existe, se développe, et se contrôle à travers elle.",
+    "page": 219,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le produit et son organisation",
+    "portee": "Un instrument financier n'est jamais neutre : il porte avec lui l'organisation qui le fait vivre."
+   },
+   {
+    "texte": "une organisation existe et perdure tant que ses membres peuvent percevoir de sa part un intérêt plus élevé que celui qui est exigé par l’organisation existante ou l’absence d’organisation.",
+    "page": 218,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Pourquoi une organisation dure",
+    "portee": "These de March et Simon, applicable a une association, une cooperative ou une entreprise."
+   },
+   {
+    "texte": "les intermédiaires financiers voient dans ce marché un moyen d’augmenter leur produit net bancaire grâce à une activité de courtage et de conseil sans pour autant encourir les risques propres à une activité classique de transformation bancaire.",
+    "page": 218,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le revenu sans le risque",
+    "portee": "Position enviable et decisive : encaisser des commissions sans porter le risque de credit."
+   },
+   {
+    "texte": "les individus ont rarement une compréhension identique du but commun dans une organisation.",
+    "page": 219,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le but commun n'est pas commun",
+    "portee": "Observation de Simon qui invalide beaucoup de discours sur la vision partagee."
+   },
+   {
+    "texte": "Une organisation-firme se met en place lorsqu’elle permet la réalisation d’une transaction entre ses membres à un coût inférieur à celui d’un pur mécanisme de marché.",
+    "page": 219,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Firme ou marche",
+    "portee": "Critere de Coase et Williamson pour trancher entre faire soi-meme et acheter dehors."
+   },
+   {
+    "texte": "Contrairement à ce que laisse penser sa dénomination « standard », le marché des euro-obligations s’est organisé autour de nœuds de relations qui dépassent largement celui de la transaction effectuée entre l’emprunteur et l’investisseur.",
+    "page": 220,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Au-dela de la transaction",
+    "portee": "Regarder ce qui entoure une transaction plutot que la transaction elle-meme : methode d'analyse feconde."
+   },
+   {
+    "texte": "il justifie l’existence de la firme par la présence de coûts spécifiques à la réalisation d’un échange sur un marché.",
+    "page": 220,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'intuition de Coase",
+    "portee": "Une idee de 1937 qui explique encore pourquoi les entreprises existent au lieu de tout acheter sur le marche."
+   },
+   {
+    "texte": "Coase précise que le mécanisme des prix mis en œuvre sur le marché engendre trois catégories de coûts : des coûts de détermination de prix, des coûts de négociation et de conclusion d’un contrat séparé et enfin des coûts inhérents à la multiplication des contrats à court terme.",
+    "page": 221,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Les trois couts du marche",
+    "portee": "Le prix n'est jamais gratuit a etablir : le determiner, le negocier et le contractualiser coute."
+   },
+   {
+    "texte": "qu’il existe un coût de fonctionnement d’un marché et qu’en créant une organisation et en permettant à une autorité (un entrepreneur) de répartir les ressources, certains coûts peuvent être évités",
+    "page": 222,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Pourquoi l'entrepreneur existe",
+    "portee": "Justification economique du role de l'entrepreneur : il economise des couts que le marche ferait payer."
+   },
+   {
+    "texte": "selon l’approche coasienne, la forme organisationnelle prise par le marché des euro-obligations relèverait plus de l’organisation-firme que de l’organisation-marché.",
+    "page": 222,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Une firme deguisee en marche",
+    "portee": "Conclusion de l'analyse : ce que l'on appelle marche fonctionne en realite comme une entreprise."
+   },
+   {
+    "texte": "Williamson, dans son ouvrage de 1975, montre comment s’opèrent le choix entre trois institutions économiques : le marché, des formes hybrides (dites contractuelles) et la hiérarchie.",
+    "page": 222,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Trois institutions economiques",
+    "portee": "Grille simple pour classer toute forme de coordination economique."
+   },
+   {
+    "texte": "Il ne s’agit donc pas d’évaluer par la mesure ces coûts mais plutôt de les qualifier par certains indicateurs.",
+    "page": 223,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Qualifier plutot que chiffrer",
+    "portee": "Precision methodologique de Williamson qui rend son cadre utilisable sans comptabilite exacte."
+   },
+   {
+    "texte": "Les attributs comportementaux reposent sur le degré d’opportunisme des acteurs de la transaction c’est-à-dire sur leur aptitude à tromper les autres intervenants en cachant de l’information.",
+    "page": 223,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'opportunisme comme donnee",
+    "portee": "L'economie des organisations integre la possibilite de la tromperie au lieu de la traiter comme une exception morale."
+   },
+   {
+    "texte": "La bureaucratie se mesure à travers la taille du management intermédiaire entre les dirigeants et le service client ou de production.",
+    "page": 224,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Mesurer la bureaucratie",
+    "portee": "Indicateur simple et verifiable : l'epaisseur des couches entre celui qui decide et celui qui sert le client."
+   },
+   {
+    "texte": "Les coûts de transaction liés au management sont faibles dans un mode de gouvernance-marché et très élevés dans une forme de gouvernance hiérarchique.",
+    "page": 224,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le prix de la hierarchie",
+    "portee": "Ce que coute une organisation hierarchique par rapport a une coordination par le marche."
+   },
+   {
+    "texte": "toute tentative de la part d’une eurobanque de tromper sur les caractéristiques du titre euro-obligataire sera tout d’abord sanctionnée par ses pairs puisque ce type de comportement porte atteinte à la réputation non seulement du marché dans son ensemble mais plus particulièrement à tous les membres du syndicat bancaire.",
+    "page": 224,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La sanction par les pairs",
+    "portee": "Mecanisme de regulation le plus efficace ici : la reputation partagee tient lieu de police."
+   },
+   {
+    "texte": "Les eurobanques renforcent en apparence la spécificité de produit sans être nécessairement suivies par les acteurs du marché.",
+    "page": 225,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'innovation en apparence",
+    "portee": "Multiplier les variantes d'un produit n'est pas innover : le marche fait le tri."
+   },
+   {
+    "texte": "La taille du management intermédiaire entre les dirigeants et les clients (emprunteurs et investisseurs) s’accroît tout au long du développement du marché du fait de l’intensification des procédures mises en œuvre.",
+    "page": 225,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'epaississement des procedures",
+    "portee": "Le developpement d'une organisation eloigne mecaniquement le decideur du client final."
+   },
+   {
+    "texte": "plus les attributs comportementaux et la spécificité de l’actif diminuent avec la croissance des attributs de management et plus le mode de gouvernance est susceptible de transiter d’une organisation marché à une organisation-contrat et enfin à une organisation-hiérarchie.",
+    "page": 226,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La trajectoire vers la hierarchie",
+    "portee": "Mecanique de la bureaucratisation : la maturite d'un marche l'eloigne du marche."
+   },
+   {
+    "texte": "le mode de domination dépend de la nature de leur légitimité dont il recense dans nos sociétés trois formes : une forme rationnelle dite forme légale, une forme traditionnelle, et une forme charismatique.",
+    "page": 227,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les trois legitimites de Weber",
+    "portee": "Grille classique pour analyser tout pouvoir : la loi, la coutume ou le charisme."
+   },
+   {
+    "texte": "La forme de domination se rapprochant de celle exercée par les intermédiaires financiers ne nous semble pas faire appel au charisme ni encore à la coutume mais relève plus de celle de la domination légale.",
+    "page": 227,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une domination par la regle",
+    "portee": "Le pouvoir financier ne se donne pas comme charismatique : il s'exerce par la procedure."
+   },
+   {
+    "texte": "Une hiérarchie est mise en place correspondant à la part de l’émission que chaque garant assure et plus cette part est élevée et plus le garant pourra prétendre dans le futur à des responsabilités supplémentaires.",
+    "page": 228,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'avancement par l'engagement",
+    "portee": "La carriere dans ce systeme se gagne par le volume garanti, non par la qualite du conseil."
+   },
+   {
+    "texte": "la domination bureaucratique exige une précision dans la transmission de l’information de manière à pouvoir exercer son emprise de manière rationnelle et rigoureuse.",
+    "page": 228,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'information au service du pouvoir",
+    "portee": "Weber avant l'informatique : la precision du flux d'information est une condition de la domination."
+   }
+  ]
+ },
+ {
+  "chapitre": "c861c669",
+  "citations": [
+   {
+    "texte": "Seuls les intermédiaires financiers spécialisés pour ce type de marché sont en mesure de garantir ce savoir spécialisé qui ne peut pas être internalisé par les emprunteurs.",
+    "page": 229,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le savoir qui ne s'internalise pas",
+    "portee": "La dependance nait de la competence : ne pas pouvoir apprendre soi-meme, c'est devoir payer un intermediaire."
+   },
+   {
+    "texte": "par delà l’énorme position de puissance que détermine le savoir spécialisé, la bureaucratie (ou le détenteur du pouvoir se servant de celle-ci) a tendance à accroître davantage encore sa puissance par le savoir du service",
+    "page": 229,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le savoir du service",
+    "portee": "Weber distingue la competence declaree et la connaissance accumulee dans les dossiers, plus puissante encore."
+   },
+   {
+    "texte": "En dépit des formes juridiques indépendantes qui le constituent, il semble bien que le marché des euro-obligations se soit aligné sur un modèle de fonctionnement bureaucratique.",
+    "page": 229,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'independance formelle",
+    "portee": "Des entites juridiquement independantes peuvent fonctionner comme une seule bureaucratie."
+   },
+   {
+    "texte": "Au terme d’une évolution progressive, les traits fondamentaux de la bureaucratie, tant au regard de sa légitimité qu’à celui de ses mécanismes, se retrouvent dans une structure originellement conçue comme un marché.",
+    "page": 229,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le paradoxe final",
+    "portee": "Rien n'a ete decrete : la bureaucratie s'est installee par evolution, ce qui la rend plus difficile a voir."
+   },
+   {
+    "texte": "Fréquemment annoncée, la fin bien avant l’heure de ce marché globalisé, n’a pas eu lieu car il a su transformer la nature de son organisation.",
+    "page": 230,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Survivre en se transformant",
+    "portee": "Une organisation dure non pas en se defendant mais en changeant de nature."
+   },
+   {
+    "texte": "Un marché globalisé affranchi du contrôle des Etats a pu perdurer depuis 1963 en se bureaucratisant sous l’impulsion des banques intervenantes, montrant qu’en l’absence de mode de régulation étatique direct, un groupe dominant d’acteurs se saisit de la légitimité légale wébérienne pour mener des processus de régulation et de contrôle.",
+    "page": 230,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le vide se remplit toujours",
+    "portee": "Quand l'Etat se retire, un groupe prend sa place et exerce la meme autorite sans le meme mandat."
+   },
+   {
+    "texte": "Le phénomène de globalisation actuellement mis en œuvre n’est-il pas en fait le reflet de la transmission d’une bureaucratie d’Etat à une bureaucratie d’acteurs dominants comme les grandes entreprises ?",
+    "page": 230,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "D'une bureaucratie a l'autre",
+    "portee": "Hypothese generale de l'ouvrage sur la mondialisation : elle deplace le pouvoir bureaucratique plutot qu'elle ne le supprime."
+   },
+   {
+    "texte": "la globalisation a pour avatar la bureaucratisation, du moins dans ce cas particulier.",
+    "page": 230,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'avatar de la globalisation",
+    "portee": "Titre du chapitre en une phrase, avec la prudence de la restriction finale."
+   }
+  ]
+ },
+ {
+  "chapitre": "13a4e784",
+  "citations": [
+   {
+    "texte": "Un marché financier globalisé est-il fatalement porteur des marques de la bureaucratie ?",
+    "page": 233,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une fatalite ou un cas",
+    "portee": "Question laissee ouverte : ce qui vaut pour un marche vaut-il pour tous."
+   },
+   {
+    "texte": "En étudiant l’évolution du marché des euro-obligations, nous montrons comment un marché globalisé avant l’heure est devenu porteur des marques de la bureaucratie.",
+    "page": 233,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le programme du chapitre",
+    "portee": "Resume qui donne la these en une phrase, utile pour situer l'ensemble de la demonstration."
+   }
+  ]
+ },
+ {
+  "chapitre": "4f7da5f7",
+  "citations": [
+   {
+    "texte": "Qu’elles soient cotées ou pas, les entreprises ne peuvent ignorer la nouvelle donne dans laquelle elles évoluent.",
+    "page": 237,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Nul n'est hors du jeu",
+    "portee": "Ouverture de la conclusion : la taille ou le statut ne mettent aucune entreprise a l'abri du contexte mondial."
+   },
+   {
+    "texte": "Cet univers fluctuant et donc plus aléatoire a pourtant le mérite essentiel d’obliger le dirigeant à plus de rigueur dans la gestion quotidienne de leur société.",
+    "page": 237,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'incertitude oblige a la rigueur",
+    "portee": "Lecture positive de l'instabilite : elle discipline celui qui doit y survivre."
+   },
+   {
+    "texte": "La mondialisation a engendré des désordres substantiels mettant en danger la pérennité de certaines d’entre elles",
+    "page": 238,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Les desordres de la mondialisation",
+    "portee": "Constat sans complaisance, appuye sur une liste de faillites retentissantes."
+   },
+   {
+    "texte": "elle a également eu le mérite de permettre une prise de conscience réelle de l’accroissement du niveau de risque au niveau global",
+    "page": 238,
+    "axe": "11-sciences-environnement",
+    "theme": "La conscience du risque global",
+    "portee": "L'interdependance des places financieres a rendu visible un risque qui existait deja."
+   },
+   {
+    "texte": "Jamais des concepts telles que l’économie solidaire et responsable, l’investissement socialement responsable, les placements éthiques n’ont fait l’objet de tant de débats et d’écrits.",
+    "page": 238,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'abondance des discours",
+    "portee": "L'abondance d'un discours n'est pas la preuve de son application : la suite du texte le rappelle."
+   },
+   {
+    "texte": "la profusion des éclairages nous amène à nous demander si ce phénomène n’est pas un phénomène de mode dans un monde particulièrement instable, un affichage pour certaines FMN réalisant d’énormes profits pouvant heurter dans un contexte où les inégalités se creusent de plus en plus et de manière criante.",
+    "page": 238,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Ethique ou affichage",
+    "portee": "Soupcon formule par des universitaires en finance : la responsabilite affichee peut couvrir des profits qui creusent les inegalites."
+   },
+   {
+    "texte": "Délocalisations, perte de souveraineté de nos Etats, émergence de nouveaux acteurs gouvernementaux ou pas sont les paramètres incontournables de notre univers quotidien.",
+    "page": 238,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les parametres incontournables",
+    "portee": "Trois donnees a integrer plutot qu'a deplorer, selon les auteurs de l'ouvrage."
+   },
+   {
+    "texte": "on pourrait se demander si compte tenu d’une vision traditionnellement plus empreinte d’équité, l’Europe ne sera pas la locomotive de ce processus.",
+    "page": 239,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qui menera le mouvement",
+    "portee": "Pari des auteurs sur une specificite europeenne en matiere d'equite, formule avec prudence."
+   },
+   {
+    "texte": "La première consiste à mettre en concordance les intérêts individuels et l’objectif collectif de pérennité de l’entreprise.",
+    "page": 239,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Accorder l'individuel et le collectif",
+    "portee": "Premiere voie proposee, qui suppose de restaurer la confiance et des regles claires entre partenaires."
+   },
+   {
+    "texte": "Un problème reste posé par l’indépendance du chef d’entreprise par rapport aux financiers. La question est alors la juste répartition de la valeur créée par la firme.",
+    "page": 239,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La question de fond",
+    "portee": "Sous les debats sur la gouvernance se cache la question du partage de la valeur creee."
+   },
+   {
+    "texte": "placement éthique, investissement socialement responsable, transparence ne seront réellement efficaces que s’ils sont capables de générer des profits comparables à des produits homologues classiques.",
+    "page": 240,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La condition de l'ethique",
+    "portee": "Realisme final de l'ouvrage : une pratique vertueuse ne se generalise que si elle est economiquement soutenable."
+   },
+   {
+    "texte": "A nous d’être capable de préciser les conditions d’une telle réalisation.",
+    "page": 240,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le dernier mot de l'ouvrage",
+    "portee": "Fin ouverte qui renvoie la responsabilite au lecteur plutot qu'a un acteur lointain."
+   }
+  ]
+ }
+]

@@ -1,0 +1,194 @@
+[
+ {
+  "chapitre": "d4280984",
+  "citations": [
+   {
+    "texte": "Toutefois, plus vous voulez que votre robot soit « intelligent », plus il est difficile de préciser manuellement ses règles de comportement. Et bien entendu, il est impossible de concevoir un ensemble de règles valides pour toutes les situations.",
+    "page": 132,
+    "axe": "02-ia-technique-academique",
+    "theme": "La limite des règles",
+    "portee": "Toute conduite un peu riche échappe à l'énumération de règles, ce qui vaut pour les machines comme pour les institutions."
+   },
+   {
+    "texte": "Chez les humains, ce type de comportement peut passer pour de la superstition – à savoir, croire à tort qu'une action particulière peut contribuer à générer une issue particulière, bonne ou mauvaise.",
+    "page": 136,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "D'où vient la superstition",
+    "portee": "Attribuer un succès à un geste qui n'y était pour rien est une erreur d'apprentissage que la machine reproduit aussi."
+   },
+   {
+    "texte": "Savoir jusqu'où explorer de nouvelles actions et jusqu'où exploiter les actions connues s'appelle rechercher l'équilibre entre exploration et exploitation.",
+    "page": 140,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Explorer ou exploiter",
+    "portee": "Arbitrage quotidien : refaire ce que l'on sait réussir, ou risquer du temps sur ce qui pourrait être meilleur."
+   },
+   {
+    "texte": "Trop apprendre à la fois peut être préjudiciable",
+    "page": 136,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre par petits pas",
+    "portee": "Tirer trop de conclusions d'un seul succès conduit à retenir des liens qui n'existent pas."
+   },
+   {
+    "texte": "Comme toujours, le monde réel abonde en situations insolites difficiles à prévoir.",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'imprévu comme règle",
+    "portee": "Ce qui distingue le laboratoire du terrain n'est pas la difficulté des tâches mais l'abondance des cas non prévus."
+   }
+  ]
+ },
+ {
+  "chapitre": "f4e0f671",
+  "citations": [
+   {
+    "texte": "il est impossible de définir un petit ensemble d'« états » susceptibles d'être énumérés dans un tableau",
+    "page": 141,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le monde ne se met pas en tableau",
+    "portee": "Dès qu'on sort du problème jouet, la situation cesse d'être descriptible par une liste finie de cas."
+   },
+   {
+    "texte": "Toutefois, plus l'environnement est complexe et imprédictible, moins les tentatives de transfert dans le monde réel de ce qui a été appris durant la simulation réussissent.",
+    "page": 141,
+    "axe": "02-ia-technique-academique",
+    "theme": "Du simulé au réel",
+    "portee": "L'entraînement en conditions simplifiées prépare mal aux situations dont la complexité fait précisément la difficulté."
+   }
+  ]
+ },
+ {
+  "chapitre": "5949c1c2",
+  "citations": [
+   {
+    "texte": "Selon Hassabis, les jeux vidéo sont « comme des microcosmes du monde réel, mais ... plus propres et plus contraints. »",
+    "page": 143,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le jeu comme laboratoire",
+    "portee": "On choisit un monde réduit et propre pour y étudier des mécanismes que le monde réel rendrait inobservables."
+   }
+  ]
+ },
+ {
+  "chapitre": "1dfc4c7f",
+  "citations": [
+   {
+    "texte": "Or dans l'apprentissage par renforcement, il n'y a pas d'étiquette. Une trame extraite du jeu ne porte pas d'étiquette indiquant quelle action doit être prise.",
+    "page": 146,
+    "axe": "02-ia-technique-academique",
+    "theme": "Apprendre sans correction",
+    "portee": "Sans réponse donnée d'avance, il faut inventer une manière de mesurer l'erreur, difficulté propre à toute action réelle."
+   },
+   {
+    "texte": "Richard Sutton, l'un des initiateurs de cette méthode, appelle cela « apprendre une estimation à partir d'une estimation. » Personnellement, je dirais plutôt « apprendre une estimation à partir d'une meilleure estimation. »",
+    "page": 147,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Corriger par l'avancement",
+    "portee": "À mesure qu'on approche du résultat, on juge mieux : c'est ce jugement tardif qui corrige les estimations initiales."
+   }
+  ]
+ },
+ {
+  "chapitre": "06ac3839",
+  "citations": [
+   {
+    "texte": "Autrement dit, les connaissances acquises par le système (les poids du réseau) lors d'une partie n'étaient pas transférées lorsque le système commençait à apprendre un nouveau jeu.",
+    "page": 148,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Aucun transfert",
+    "portee": "Le système repart de zéro pour chaque jeu, alors qu'un humain réutilise aussitôt ce qu'il vient d'apprendre ailleurs."
+   },
+   {
+    "texte": "Après examen, DeepMind a trouvé que ses programmes ont inventé des stratégies très intelligentes.",
+    "page": 149,
+    "axe": "02-ia-technique-academique",
+    "theme": "Des stratégies non enseignées",
+    "portee": "Par pur essai et erreur, le système découvre des tactiques que ses concepteurs ne lui avaient jamais indiquées."
+   }
+  ]
+ },
+ {
+  "chapitre": "8bf2d62e",
+  "citations": [
+   {
+    "texte": "Le jeu de dames informatique de Samuel fut l'un des tout premiers programmes d'apprentissage machine ; en fait, c'est Samuel qui a inventé le terme apprentissage machine.",
+    "page": 150,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Origine d'un terme",
+    "portee": "L'expression qui domine aujourd'hui le vocabulaire technique est née d'un programme de jeu de dames en 1949."
+   },
+   {
+    "texte": "La plupart des gens, y compris les meilleurs joueurs, n'envisagent que quelques coups d'avance avant de choisir le coup qu'ils vont jouer.",
+    "page": 151,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Anticiper peu mais bien",
+    "portee": "L'expert humain ne calcule pas plus loin que les autres : il évalue mieux les positions qu'il atteint."
+   },
+   {
+    "texte": "Dans la version la plus intéressante, le système apprit en jouant contre lui-même !",
+    "page": 153,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "S'entraîner contre soi",
+    "portee": "Idée féconde dès 1949 : un apprenant peut progresser en se donnant à lui-même un adversaire de son niveau."
+   }
+  ]
+ },
+ {
+  "chapitre": "677f21fc",
+  "citations": [
+   {
+    "texte": "Si l'on parvenait à construire un ordinateur jouant aux échecs à la perfection, on aurait alors le sentiment d'avoir pénétré au cœur même de l'intelligence humaine.",
+    "page": 154,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un espoir de 1958",
+    "portee": "Prédiction de deux pionniers, démentie par les faits : la machine a gagné sans rien nous apprendre sur l'esprit."
+   },
+   {
+    "texte": "une machine capable de surpasser les humains aux échecs « nous obligera soit à admettre la possibilité d'une pensée mécanisée, soit à restreindre davantage notre concept de pensée. »",
+    "page": 154,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'alternative de Shannon",
+    "portee": "Formulée en 1950, l'alternative que nous avons tranchée sans le dire : nous avons rétréci la définition de penser."
+   }
+  ]
+ },
+ {
+  "chapitre": "4f4bf365",
+  "citations": [
+   {
+    "texte": "Il ne sait rien faire d'autre que jouer aux échecs, et il n'a pas la moindre idée de ce que « jouer à un jeu » ou « gagner » signifie pour les humains.",
+    "page": 155,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Gagner sans savoir ce qu'est gagner",
+    "portee": "La machine exécute parfaitement une tâche dont elle ne possède aucun des concepts qui lui donnent son sens."
+   },
+   {
+    "texte": "En outre, les échecs ont survécu – et même prospéré – en tant qu'activité humaine exigeante.",
+    "page": 155,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La machine n'a pas tué le jeu",
+    "portee": "Une pratique humaine ne perd pas son intérêt parce qu'une machine y excelle : elle s'en sert pour progresser."
+   }
+  ]
+ },
+ {
+  "chapitre": "05f94388",
+  "citations": [
+   {
+    "texte": "Les meilleurs joueurs de go (humains) s'appuient sur leur talent en reconnaissance de formes et sur leur ineffable « intuition ». Les chercheurs en IA n'ont pas encore trouvé comment encoder l'intuition dans une fonction d'évaluation.",
+    "page": 156,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'intuition de l'expert",
+    "portee": "Ce que le maître voit d'un coup d'œil sans pouvoir le formuler résiste à toute mise en formule."
+   },
+   {
+    "texte": "Ce n'est pas un coup humain. Je n'ai jamais vu un humain le jouer",
+    "page": 157,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un coup non humain",
+    "portee": "Réaction d'un champion devant un jeu qui ne procède plus de la tradition accumulée par des générations de joueurs."
+   }
+  ]
+ }
+]

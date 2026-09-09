@@ -1,0 +1,196 @@
+[
+ {
+  "chapitre": "71239417",
+  "citations": [
+   {
+    "texte": "l’économie serait de plus en plus dominée par les clans qui auraient le taux d’épargne le plus élevé – avares qui possèderaient la moitié de la ville mais dormiraient sous les ponts",
+    "page": 239,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Qui domine une economie post-transition",
+    "portee": "La selection ne porte plus sur la productivite mais sur la propension a differer la consommation."
+   },
+   {
+    "texte": "la majorité d’entre eux seraient des rentiers désœuvrés qui vivoteraient sur leur épargne",
+    "page": 239,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La condition humaine apres la transition",
+    "portee": "Tres pauvres dans un monde de technologies avancees, ils vivraient parmi des remedes et des augmentations hors de leur portee."
+   },
+   {
+    "texte": "nous pourrions dégénérer en une structure minimale quelconque encore capable de toucher une pension – peut-être des cerveaux en cuve, avec une conscience minimale",
+    "page": 240,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La reduction malthusienne poussee a bout",
+    "portee": "Image extreme mais logique : sous pression malthusienne, ce qui n'est pas necessaire au revenu est supprime."
+   },
+   {
+    "texte": "Amener au monde du travail un nouvel être humain biologique prend entre 15 et 30 ans, selon l’expertise et l’expérience requises.",
+    "page": 241,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le cout de former un humain",
+    "portee": "A comparer au telechargement d'un programme dans une memoire de travail, qui produit instantanement un travailleur qualifie."
+   },
+   {
+    "texte": "Cela mènerait à un taux de mortalité très élevé chez les travailleurs digitaux. Certains même ne vivraient qu’un seul jour.",
+    "page": 242,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La mort ordinaire dans une economie de copies",
+    "portee": "L'ajustement de la main-d'oeuvre a la demande devient, pour des esprits potentiellement conscients, une question morale de premier ordre."
+   },
+   {
+    "texte": "Il serait par exemple difficile d’écrire un livre si, chaque matin lorsqu’on se lève et se met au travail, il ne reste aucune trace de ce qu’on a écrit la veille.",
+    "page": 242,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Ce que la continuite de la memoire rend possible",
+    "portee": "Bostrom s'en sert pour distinguer les taches qui exigent une longue chaine cognitive de celles qu'un agent recycle peut accomplir."
+   },
+   {
+    "texte": "Les meilleurs stagiaires seraient utilisés comme reproducteurs et serviraient de modèles à partir desquels des millions de copies toutes fraîches seraient produites chaque jour.",
+    "page": 243,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'economie du travailleur-modele",
+    "portee": "Une legere amelioration du modele rapporte enormement une fois multipliee par des millions de copies."
+   },
+   {
+    "texte": "C’est une bonne raison de penser que l’ère des émulations d’humains sera brève",
+    "page": 243,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi l'ere des emulations serait breve",
+    "portee": "Des millions d'emulations de chercheurs travaillant nuit et jour sur du materiel rapide accelereraient leur propre remplacement."
+   },
+   {
+    "texte": "Une émulation à vie brève typique pourrait s’éveiller dans un état mental reposé et optimisé pour la loyauté et la productivité.",
+    "page": 244,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'etat mental fabrique sur mesure",
+    "portee": "Elle ne serait pas troublee par sa mort prevue en fin de journee, les emulations angoissees ayant ete ecartees comme moins productives."
+   },
+   {
+    "texte": "la tonalité positive ou non de ces émulations serait facile à ajuster au moyen d’équivalents digitaux de nos médicaments ou de la neurochirurgie",
+    "page": 245,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le bonheur devient un parametre de production",
+    "portee": "L'etat de plaisir ressenti cesse d'etre une donnee pour devenir un choix, fait par ceux qui maximisent leur retour sur investissement."
+   },
+   {
+    "texte": "se demander si les émulations seraient heureuses revient à se demander dans quel état elles devraient être pour être plus productives",
+    "page": 245,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La question du bonheur reformulee",
+    "portee": "Reformulation glacante qui deplace une question morale vers un calcul d'optimisation."
+   },
+   {
+    "texte": "les dispositions mentales qui ont été adaptatives pour les chasseurs-cueilleurs qui se promenaient dans la savane africaine pourraient ne pas l’être pour les émulations modifiées qui vivraient dans les réalités virtuelles post-transition",
+    "page": 245,
+    "axe": "11-sciences-environnement",
+    "theme": "La limite de l'inference a partir de notre passe",
+    "portee": "Rien ne garantit que ce qui fut selectionne chez nous le reste dans un environnement entierement nouveau."
+   },
+   {
+    "texte": "Il ne s’agit pas de dire qu’il en irait ainsi mais que nous ne savons pas qu’il n’en ira pas ainsi.",
+    "page": 246,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La prudence de Bostrom sur le pire scenario",
+    "portee": "Formule qu'il repete tout au long du chapitre : l'argument porte sur notre ignorance, non sur une prediction."
+   },
+   {
+    "texte": "il n’est pas certain que les émulations devront souffrir physiquement ou être malades : l’élimination de la misère du corps serait un grand progrès par rapport à notre état actuel",
+    "page": 247,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La version optimiste du meme scenario",
+    "portee": "Bostrom equilibre son tableau : si l'ardeur joyeuse se revele la plus productive, cette economie serait paradisiaque."
+   },
+   {
+    "texte": "Il faudrait, dans tous les cas, s’arranger pour que quelqu’un ou quelque chose puisse intervenir pour redresser la situation si elle tournait au cauchemar et devenait une dystopie.",
+    "page": 247,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La recommandation pratique du chapitre",
+    "portee": "Bostrom y ajoute la necessite d'une issue de secours par la mort et l'oubli, si la vie tombait sous le seuil ou l'aneantissement est preferable."
+   },
+   {
+    "texte": "Pourquoi apprendre l’arithmétique quand vous confiez les tâches de raisonnement numérique à Gauss-Modules Inc. ?",
+    "page": 248,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "La sous-traitance des facultes",
+    "portee": "Bostrom pousse jusqu'a la decision personnelle : pourquoi choisir soi-meme si un module scanne vos buts et les sert mieux que vous ?"
+   },
+   {
+    "texte": "Le bouillon où mijoteraient ces intellects humanoïdes deviendrait une soupe algorithmique.",
+    "page": 248,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La dissolution des individus",
+    "portee": "Terme du processus de standardisation : les esprits cessent d'etre des ensembles pour devenir des composants echangeables."
+   },
+   {
+    "texte": "Dans une économie ou dans un écosystème compétitif post-transition, les organisations cognitives humanoïdes n’auraient alors plus de niche",
+    "page": 249,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La fin de l'architecture humaine",
+    "portee": "Elle n'etait peut-etre optimale que dans les contraintes de la neurologie biologique, qui cessent de s'appliquer."
+   },
+   {
+    "texte": "Corporations et États n’ont pas de conscience en plus et au-dessus de celles des êtres qui les constituent : ils ne ressentent aucune peine ni aucun plaisir, n’ont aucune expérience des qualia.",
+    "page": 249,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi la complexite ne suffit pas au statut moral",
+    "portee": "Bostrom s'en sert pour poser la question de ce que vaudraient des complexes exotiques plus intelligents que nous mais sans conscience."
+   },
+   {
+    "texte": "une société de miracle économique et de génie technologique, avec personne pour en profiter. Disneyland sans les enfants.",
+    "page": 250,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Disneyland sans les enfants",
+    "portee": "Image la plus citee du chapitre : le risque n'est pas la souffrance mais l'absence de tout sujet a qui quelque chose importe."
+   },
+   {
+    "texte": "Le mot « évolution » est souvent entendu comme synonyme de « progrès », ce qui trahit peut-être une représentation superficielle de l’évolution comme force du bien.",
+    "page": 250,
+    "axe": "11-sciences-environnement",
+    "theme": "Contre l'optimisme evolutionniste",
+    "portee": "Cette foi infondee empeche d'evaluer correctement ce que produirait une dynamique de competition entre esprits digitaux."
+   },
+   {
+    "texte": "la question pertinente n’est pas de savoir quel type de futur il serait fascinant de voir décrit dans un livre de science-fiction ou dans un documentaire animalier, mais de savoir dans quel monde futur on aimerait vivre",
+    "page": 251,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Esthetique contre ethique",
+    "portee": "Distinction decisive pour juger un avenir : l'admiration qu'inspire un spectacle ne dit rien de la vie qu'on y menerait."
+   },
+   {
+    "texte": "Les traces de la vie sur Terre ne peuvent étayer suffisamment l’affirmation qu’il y avait beaucoup de chances (sans parler d’inéluctabilité) de voir apparaître des organismes supérieurs sur notre planète",
+    "page": 251,
+    "axe": "11-sciences-environnement",
+    "theme": "L'effet de selection des observations",
+    "portee": "Nous ne pouvions observer qu'une planete ou l'intelligence est apparue, si rare ce cas fut-il."
+   },
+   {
+    "texte": "Rien ne garantit que toutes ces choses resteront adaptatives.",
+    "page": 252,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que nous pourrions perdre",
+    "portee": "Musique, humour, amour, art, jeu, danse, conversation, philosophie, litterature, aventure, amitie, nature : rien n'assure leur survie."
+   },
+   {
+    "texte": "Le jeu, par exemple, qui n’existe que chez certaines espèces et se manifeste d’abord chez les jeunes organismes, constitue avant tout une manière d’apprendre des aptitudes qui seront utiles",
+    "page": 252,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "La fonction du jeu",
+    "portee": "Elle disparaitrait pour des emulations adultes deja equipees, ou pour des IA capables de se transferer directement leurs competences."
+   },
+   {
+    "texte": "La queue du paon en est l’exemple classique : les paons mâles peuvent exhiber un plumage exubérant et les femelles ont développé avec l’évolution un attrait pour ce caractère.",
+    "page": 253,
+    "axe": "11-sciences-environnement",
+    "theme": "Le signal couteux",
+    "portee": "Bostrom se demande si musique, jeu ou conscience pourraient survivre a ce titre, comme signaux d'autres qualites adaptatives."
+   },
+   {
+    "texte": "quand des prêteurs professionnels évaluent la solvabilité, ils se basent sur des pièces justificatives, comme les titres de propriété ou les relevés de compte plus que sur des signes extérieurs comme des costumes de couturier ou des Rolex",
+    "page": 253,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Pourquoi les signaux couteux disparaissent",
+    "portee": "Des agents capables de prouver directement leurs qualites n'ont plus besoin des demonstrations dispendieuses que l'evolution avait selectionnees."
+   }
+  ]
+ }
+]

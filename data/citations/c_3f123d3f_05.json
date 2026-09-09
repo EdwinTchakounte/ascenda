@@ -1,0 +1,50 @@
+[
+ {
+  "chapitre": "9b4ae080",
+  "citations": [
+   {
+    "texte": "Tu crois que Tinder, Bumble ou Hinge te montrent des profils un peu au hasard, selon ta tranche d’âge et ton emplacement géographique ? Détrompe-toi.",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Rien n'est laisse au hasard",
+    "portee": "Ce que l'utilisateur prend pour un tirage aleatoire est une selection calculee."
+   }
+  ]
+ },
+ {
+  "chapitre": "1104edb7",
+  "citations": [
+   {
+    "texte": "des apps de coaching relationnel pilotées par l’IA existent déjà et promettent de t’aider à éviter, à gérer et même à régler tes conflits relationnels plus efficacement.",
+    "page": 142,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le coaching relationnel automatise",
+    "portee": "Categorie d'outils encore peu connue, distincte des applications de rencontre."
+   }
+  ]
+ },
+ {
+  "chapitre": "00e0c410",
+  "citations": [
+   {
+    "texte": "Aujourd’hui, des robots sexuels ultraréalistes, des jouets connectés pilotés par IA, et même des partenaires virtuels en réalité augmentée commencent déjà à faire partie de la vie sexuelle de nombreuses personnes.",
+    "page": 152,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une realite deja installee",
+    "portee": "Constat factuel qui deplace le sujet du registre de la science-fiction a celui du fait social."
+   }
+  ]
+ },
+ {
+  "chapitre": "8832b736",
+  "citations": [
+   {
+    "texte": "des jouets sexuels dotés d’une IA capable : d’analyser tes réactions corporelles en temps réel (rythme cardiaque, respiration, mouvements)",
+    "page": 153,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le corps mesure en continu",
+    "portee": "L'intimite devient un flux de donnees biometriques, avec les questions de confidentialite que cela souleve."
+   }
+  ]
+ }
+]

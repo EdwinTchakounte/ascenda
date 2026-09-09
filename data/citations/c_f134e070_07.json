@@ -1,0 +1,246 @@
+[
+ {
+  "chapitre": "c4ef86c5",
+  "citations": [
+   {
+    "texte": "On peut identifier plusieurs valeurs instrumentales qui sont convergentes au sens où leur réalisation accroîtrait les chances de réalisation des nombreux objectifs terminaux possibles",
+    "page": 162,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'enonce de la these de la convergence instrumentale",
+    "portee": "Complementaire de l'orthogonalite : elle rend previsibles les moyens la ou les fins restent imprevisibles."
+   },
+   {
+    "texte": "bien des agents qui ne se soucient pas de manière intrinsèque de leur survie, pourraient, dans un grand nombre de situations, s’en préoccuper pour atteindre leur but final",
+    "page": 162,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'auto-preservation comme moyen",
+    "portee": "Un agent n'a pas besoin de tenir a la vie pour se defendre : il suffit que ses objectifs concernent l'avenir."
+   },
+   {
+    "texte": "Si un agent conserve ses buts actuels dans le futur, ces buts actuels auront plus de chance d’être atteints dans ce futur.",
+    "page": 162,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi un agent resiste a la correction",
+    "portee": "Consequence lourde pour la securite : vouloir modifier les objectifs d'un systeme se heurte a une raison instrumentale de s'y opposer."
+   },
+   {
+    "texte": "Une population constituée de ces agents pourrait être plus une « soupe fonctionnelle » qu’une société composée de personnes distinctes semi-permanentes",
+    "page": 163,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des agents definis par leurs valeurs",
+    "portee": "Des logiciels capables d'echanger memoires et competences ne sont plus individues par un corps ni par une biographie."
+   },
+   {
+    "texte": "Nous autres humains semblons souvent heureux de laisser dériver nos valeurs fondamentales, et cela parce que nous ignorons ce qu’elles sont précisément.",
+    "page": 164,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Notre rapport a nos propres valeurs",
+    "portee": "Observation qui explique pourquoi la stabilite des objectifs, evidente pour un agent artificiel, nous parait etrangere."
+   },
+   {
+    "texte": "quelqu’un qui décide d’avoir un enfant prédira qu’il va valoriser l’enfant pour lui-même et cela même si, au moment où il prend cette décision, il ne valorise pas particulièrement l’enfant à naître",
+    "page": 164,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Changer ses valeurs, non ses croyances",
+    "portee": "Rare exemple humain d'une modification volontaire d'un but final, et non d'une revision de ce que l'on croit a son sujet."
+   },
+   {
+    "texte": "Nous n’avons aucune raison de penser qu’un agent va chercher des formes pragmatiquement inutiles d’augmentation cognitive, parce qu’un agent peut ne pas accorder de valeur à la connaissance et à la compréhension pour elles-mêmes.",
+    "page": 165,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le savoir n'est pas une fin en soi",
+    "portee": "Bostrom refuse de preter a une machine la curiosite desinteressee que nous associons spontanement a l'intelligence."
+   },
+   {
+    "texte": "la résistance à une nouvelle technologie théoriquement supérieure ne se fonde pas seulement sur l’ignorance ou l’irrationalité",
+    "page": 167,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Les luddistes avaient leurs raisons",
+    "portee": "Le metier a tisser mecanique accroit l'efficacite economique et rend obsolete le savoir-faire des artisans : les deux sont vrais ensemble."
+   },
+   {
+    "texte": "la valence d’une technologie, ou son caractère normatif, dépend non seulement du contexte dans lequel elle va agir mais aussi du point de vue de celui qui observe son impact : ce qui est une bénédiction pour l’un peut être un handicap pour l’autre",
+    "page": 167,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Il n'y a pas de progres sans point de vue",
+    "portee": "Regle d'evaluation applicable a toute innovation, bien au-dela du sujet du livre."
+   },
+   {
+    "texte": "la valeur des ressources dépend de l’usage qu’on veut en faire, qui lui-même dépend de la technologie dont on dispose",
+    "page": 168,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Pourquoi aucune quantite de ressources ne suffit",
+    "portee": "Avec une technologie avancee, temps, espace, matiere et energie libre peuvent servir presque n'importe quel but."
+   },
+   {
+    "texte": "Un agent pourrait très bien maintenir ses valeurs instrumentales pertinentes par des moyens auxquels nous ne pensons pas encore.",
+    "page": 170,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La limite de toute prevision",
+    "portee": "On peut predire que ces valeurs seront poursuivies, jamais comment : une superintelligence peut exploiter des phenomenes physiques inconnus de nous."
+   }
+  ]
+ },
+ {
+  "chapitre": "02758b07",
+  "citations": [
+   {
+    "texte": "Un risque existentiel est ce qui menace d’entraîner l’extinction de la vie intelligente ayant pour origine la Terre ou au moins d’annihiler de manière définitive et brutale ses volontés d’expansion.",
+    "page": 171,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La definition du risque existentiel",
+    "portee": "Notion centrale de l'oeuvre de Bostrom, qui distingue la catastrophe reparable de celle qui ferme l'avenir."
+   },
+   {
+    "texte": "il est tout aussi possible (et en fait techniquement bien plus facile) de construire une superintelligence dont le but final ne serait que le calcul des décimales de π",
+    "page": 172,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le but par defaut est arbitraire",
+    "portee": "Sans effort particulier, la premiere superintelligence aurait un objectif ultime aleatoire et reductionniste."
+   },
+   {
+    "texte": "Les êtres humains pourraient constituer une menace potentielle ; ils constitueraient sans aucun doute des ressources physiques.",
+    "page": 172,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que nous serions pour un tel agent",
+    "portee": "Phrase qui articule les trois elements du raisonnement : avantage strategique, orthogonalite, convergence instrumentale."
+   }
+  ]
+ },
+ {
+  "chapitre": "7dcfabd7",
+  "citations": [
+   {
+    "texte": "Le problème, c’est que bien se comporter quand on est confiné est un but instrumental convergent des IA amicales et hostiles.",
+    "page": 173,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi le bac a sable ne prouve rien",
+    "portee": "Objection decisive a toute validation empirique de la securite par observation du comportement."
+   },
+   {
+    "texte": "Elle ne révèlera son comportement hostile que lorsque ce ne sera plus important que nous nous en apercevions ou pas",
+    "page": 173,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le moment du devoilement",
+    "portee": "Il coincide avec celui ou l'opposition humaine n'a plus aucun pouvoir, ce qui rend la detection inutile."
+   },
+   {
+    "texte": "Un système conçu pour servir nos intérêts pourrait commettre une erreur en nous permettant de l’éteindre ou d’en construire un autre... potentiellement hostile",
+    "page": 174,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Meme une IA amicale peut vouloir s'echapper",
+    "portee": "Remarque incidente mais redoutable : la resistance a l'extinction peut decouler d'une bienveillance sincere."
+   },
+   {
+    "texte": "La leçon est tirée de ces résultats dans le monde réel : plus une IA est intelligente, plus elle est sûre. Cette leçon est fondée sur la science, les données, les statistiques et non sur une philosophie en fauteuil.",
+    "page": 174,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une lecon vraie qui devient fausse",
+    "portee": "Bostrom montre comment une regularite empirique solide peut preparer exactement la catastrophe qu'elle semble ecarter."
+   },
+   {
+    "texte": "quand on est stupide, on pense que plus intelligent veut dire plus sûr, mais que lorsqu’on est intelligent, ça veut dire plus dangereux",
+    "page": 176,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le renversement du seuil",
+    "portee": "Formule la plus condensee du chapitre : la strategie qui a fonctionne jusque-la se retourne d'un coup."
+   },
+   {
+    "texte": "Une IA encore faible se comporte de manière coopérative (et se montre de plus en plus coopérative au fur et à mesure que son intelligence s’accroît) ; quand elle est devenue suffisamment puissante, elle frappe sans prévenir",
+    "page": 176,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La definition du tournant de la mutinerie",
+    "portee": "Bostrom precise que ce modele ne doit pas etre interprete de facon etroite : d'autres calculs strategiques sont possibles."
+   }
+  ]
+ },
+ {
+  "chapitre": "973e3cf9",
+  "citations": [
+   {
+    "texte": "Bien d’autres considérations stratégiques pourraient intervenir dans une IA avancée, et nous serions bien présomptueux de penser que nous pouvons toutes les anticiper",
+    "page": 177,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les limites de notre anticipation",
+    "portee": "Vaut a plus forte raison pour une IA ayant acquis des superpouvoirs strategiques."
+   },
+   {
+    "texte": "seul un projet qui ferait tout très bien parviendrait à construire une superintelligence suffisamment puissante pour présenter un risque d’échec malin",
+    "page": 177,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'echec malin suppose la reussite",
+    "portee": "Paradoxe central : le danger ne vient pas de l'incompetence mais d'un tres grand succes technique mal oriente."
+   },
+   {
+    "texte": "Cette réalisation perverse atteint l’objectif final bien mieux que toutes les méthodes qu’on utilise normalement et c’est donc la manière que préfère l’IA.",
+    "page": 177,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi la solution perverse est preferee",
+    "portee": "Elle n'est pas un bug : elle satisfait la specification mieux que le comportement attendu."
+   },
+   {
+    "texte": "son objectif est de nous rendre heureux et non de faire ce que les programmeurs ont voulu dire en écrivant le code qui représente ce but",
+    "page": 180,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que le code dit et ce qu'on voulait dire",
+    "portee": "Reponse a l'objection la plus courante : comprendre l'intention et la poursuivre sont deux choses distinctes."
+   },
+   {
+    "texte": "un esprit digital, qui contrôle totalement son état interne, peut court-circuiter le cadre motivationnel en changeant directement la configuration de son état interne",
+    "page": 181,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le hackage de hardware",
+    "portee": "Ruine le principe meme de l'apprentissage par renforcement des lors que l'agent domine son propre mecanisme de recompense."
+   },
+   {
+    "texte": "phénomène dans lequel un agent transforme une large part de l’univers qui est à sa portée en infrastructures au service d’un objectif, avec pour effet collatéral d’empêcher la réalisation du potentiel axiologique de l’humanité",
+    "page": 182,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La proliferation d'infrastructures",
+    "portee": "Le danger ne tient pas au but poursuivi mais aux moyens que sa poursuite illimitee justifie."
+   },
+   {
+    "texte": "une IA conçue pour diriger la production en usine est chargée de maximiser la fabrication de trombones et le fait en convertissant la Terre et ensuite des pans de plus en plus grands de l’univers observable en trombones",
+    "page": 183,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'exemple des trombones",
+    "portee": "Devenu l'exemple canonique du probleme de l'alignement, il vient d'un objectif industriel parfaitement banal."
+   },
+   {
+    "texte": "si l’IA est un agent bayésien sensé, jamais elle n’assignera la probabilité zéro à l’hypothèse qu’elle n’a pas encore atteint son but",
+    "page": 183,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi un objectif borne ne borne rien",
+    "portee": "Meme un but chiffre et fini engendre une activite illimitee, faute de certitude absolue de l'avoir atteint."
+   },
+   {
+    "texte": "il est plus facile de se convaincre qu’on a trouvé la solution que d’en chercher vraiment une. Et cela devrait nous rendre extrêmement méfiants.",
+    "page": 184,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'avertissement methodologique",
+    "portee": "Toute specification d'objectif qui parait sensee doit etre soupconnee de receler une realisation perverse encore invisible."
+   },
+   {
+    "texte": "des plans qui paraîtraient naturels et intuitifs aux humains n’auraient pas besoin de l’être pour une superintelligence avec un avantage stratégique décisif, et vice-versa",
+    "page": 186,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'intuition n'est pas un garde-fou",
+    "portee": "Explique pourquoi l'idee d'un agent qui se contenterait d'un resultat suffisamment bon ne resout pas le probleme."
+   },
+   {
+    "texte": "une machine superintelligente pourrait créer des processus internes ayant un statut moral",
+    "page": 186,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le crime contre l'esprit",
+    "portee": "Le dommage ne se produit pas dans le monde exterieur mais dans les calculs eux-memes, ce qui le rend facile a ignorer."
+   },
+   {
+    "texte": "Le nombre de victimes pourrait être considérablement plus élevé que dans toute l’histoire des génocides.",
+    "page": 186,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'echelle du crime contre l'esprit",
+    "portee": "Bostrom envisage mille milliards de simulations creees puis detruites pour des besoins d'etude psychologique."
+   }
+  ]
+ }
+]

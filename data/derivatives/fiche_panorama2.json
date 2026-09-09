@@ -1,0 +1,121 @@
+{
+ "document_id": "3a0d459c-6329-4f74-89b4-2e5737bc842f",
+ "titre_normalise": "Panorama de l'intelligence artificielle. Volume 2 : algorithmes pour l'intelligence artificielle",
+ "auteurs": [
+  "Pierre Marquis (coord.)",
+  "Odile Papini (coord.)",
+  "Henri Prade (coord.)"
+ ],
+ "annee": 2014,
+ "type_ouvrage": "manuel",
+ "niveau": "avance",
+ "public_cible": "Ingénieurs, doctorants, enseignants du supérieur. Deuxième des trois volumes du traité publié par Cépaduès, onze chapitres consacrés aux algorithmes, chacun écrit par un spécialiste du domaine. Dépôt légal de mai 2014, pagination continue commençant à la page 639.",
+ "these_centrale": "Un état de l'art des algorithmes qui font réellement fonctionner l'intelligence artificielle symbolique : recherche heuristique, jeux, déduction automatique, programmation logique, satisfiabilité, contraintes. Les coordonnateurs justifient l'entreprise par un constat sévère qu'ils formulent d'emblée : alors que le champ n'a jamais connu autant de développements, ses résultats restent largement méconnus dans leur ensemble, y compris dans la communauté des chercheurs en informatique.",
+ "idees_force": [
+  {
+   "titre": "Le savoir accumulé d'un domaine peut rester inconnu de ceux qui y travaillent",
+   "explication": "La présentation de l'ouvrage énonce la raison d'être du traité : au delà des monographies introductives, il n'existait pas de vue d'ensemble approfondie et à jour des recherches du domaine. Le diagnostic vaut bien au delà de l'informatique. Une discipline peut produire des résultats solides pendant cinquante ans et voir ce savoir se disperser faute d'un ouvrage qui le rassemble.",
+   "page": 63
+  },
+  {
+   "titre": "Un algorithme optimal peut être inutilisable, et il faut savoir pourquoi",
+   "explication": "L'exemple est concret et parlant. Sur un problème dont la solution minimale compte neuf coups, l'algorithme de recherche heuristique classique effectue dix-huit développements et conserve en mémoire les quarante-cinq états qui en résultent. La correction de l'algorithme n'est pas en cause : c'est sa consommation mémoire qui le condamne. La variante bornée en mémoire libère l'espace occupé par les états les plus mal évalués tout en conservant de quoi reconstituer les branches élaguées si l'exploration l'exige.",
+   "page": 27
+  },
+  {
+   "titre": "Chercher des deux côtés à la fois demande de changer l'estimation",
+   "explication": "L'idée de faire travailler deux recherches en sens inverse, l'une depuis le départ et l'autre depuis le but, est ancienne. Le raffinement décisif tient dans un détail : l'estimation d'un état n'est pas la distance jusqu'au but, mais le minimum, sur tous les états du front adverse, de la distance estimée jusqu'à cet état augmentée du chemin déjà connu. Sans ce déplacement, la recherche bidirectionnelle s'arrête trop tard et perd son avantage.",
+   "page": 27
+  },
+  {
+   "titre": "Le hachage de Zobrist, ou comment identifier une position en un entier",
+   "explication": "À chaque valeur de propriété d'une position, on associe hors ligne un nombre aléatoire fixe, et l'identifiant de la position est le ou exclusif de tous ces nombres. Deux conséquences remarquables : lorsqu'un coup est joué, l'identifiant se met à jour de façon incrémentale sans recalcul complet, et la probabilité de collision peut être rendue arbitrairement faible. Ce mécanisme, employé dès les premiers programmes d'échecs, sert dans tout jeu à recherche arborescente.",
+   "page": 47
+  },
+  {
+   "titre": "Approfondir par paliers plutôt que d'aller au fond d'abord",
+   "explication": "Relancer la recherche à profondeur un, puis deux, puis trois tant qu'il reste du temps semble un gaspillage. C'est en réalité trois avantages en un : l'algorithme rend toujours un résultat si on l'interrompt, il trouve la solution optimale la plus courte, et surtout il mémorise à chaque palier le meilleur coup trouvé, qu'il explore en premier au palier suivant, ce qui produit des coupes et rend la recherche efficace.",
+   "page": 47
+  },
+  {
+   "titre": "Prolog n'est ni complet ni correct comme démonstrateur, et c'est délibéré",
+   "explication": "Le passage le plus instructif du volume. La complétude de la résolution exigerait un parcours en largeur d'abord, mécanisme trop coûteux pour être efficace : Prolog explore donc en profondeur d'abord et abandonne la complétude. La correction exigerait de vérifier qu'on n'unifie pas une variable avec un terme qui la contient : ce test impose de parcourir le terme, il est donc optionnel et désactivé par défaut, et Prolog abandonne la correction. Un outil pratique naît de deux renoncements théoriques assumés.",
+   "page": 104
+  },
+  {
+   "titre": "Programmer en décrivant le problème plutôt que la solution",
+   "explication": "La programmation par ensembles réponses consiste à écrire des règles qui engendrent tous les points de l'espace de recherche, puis à ajouter des contraintes qui éliminent ceux qui ne conviennent pas. On ne décrit pas comment trouver, on décrit ce qu'on cherche. Le volume montre que le raisonnement par défaut s'y code naturellement, et que la loi d'inertie du problème du cadre s'écrit en une ligne.",
+   "page": 121
+  },
+  {
+   "titre": "Trouver la cause d'un accident à partir de son récit",
+   "explication": "Application frappante du raisonnement par défaut. Un système part d'une description textuelle d'accident de la route et en exhibe automatiquement la cause. L'idée directrice est double : la sémantique de la langue naturelle repose sur des normes, et un accident étant un événement anormal, il résulte de la violation d'une norme. La modélisation théorique se fait en logique des défauts, l'implantation en programmation par ensembles réponses.",
+   "page": 121
+  },
+  {
+   "titre": "La règle de résolution est un syllogisme déguisé",
+   "explication": "Le volume rappelle que la règle fondamentale des solveurs de satisfiabilité est très proche du raisonnement commun : c'est une application directe de la règle de coupure, si l'on a que f implique g et que g implique h, alors on a que f implique h. Sa simplicité est précisément ce qui fait son efficacité pratique, et elle est complète pour la réfutation.",
+   "page": 140
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Recherche heuristiquement ordonnée",
+   "definition": "Exploration guidée par une estimation du coût restant. Elle garantit l'optimalité si l'estimation ne surévalue jamais le coût réel, propriété appelée admissibilité."
+  },
+  {
+   "terme": "Recherche bornée en mémoire",
+   "definition": "Variante qui libère l'espace occupé par les états les plus mal évalués tout en conservant de quoi les reconstituer. Elle ne bloque jamais, au prix d'un temps d'exécution qui peut devenir prohibitif."
+  },
+  {
+   "terme": "Table de transposition",
+   "definition": "Mémoire des positions déjà évaluées, indexée par un identifiant numérique de position. Elle évite de réexplorer une configuration atteinte par un autre chemin."
+  },
+  {
+   "terme": "Hachage de Zobrist",
+   "definition": "Codage d'une position par le ou exclusif de nombres aléatoires associés à chacune de ses propriétés. Il permet une mise à jour incrémentale et une probabilité de collision arbitrairement faible."
+  },
+  {
+   "terme": "Approfondissement itératif",
+   "definition": "Relance de la recherche à profondeur croissante. Fournit un résultat à tout moment, garantit la solution la plus courte, et améliore l'ordre d'exploration des paliers suivants."
+  },
+  {
+   "terme": "Tableau sémantique",
+   "definition": "Méthode de démonstration par arbre étiqueté de formules, distinguant celles qui prolongent une branche de celles qui la font se ramifier. Une formule est valide si et seulement s'il existe un tableau fermé pour sa négation."
+  },
+  {
+   "terme": "Résolution SLD",
+   "definition": "Restriction linéaire de la résolution aux clauses définies, avec fonction de sélection. C'est le mécanisme d'exécution de la programmation logique."
+  },
+  {
+   "terme": "Unificateur le plus général",
+   "definition": "Substitution rendant deux termes identiques en les instanciant le moins possible. Il est unique au renommage des variables près, et c'est l'unique mécanisme de passage de paramètres en programmation logique."
+  },
+  {
+   "terme": "Test d'occurrence",
+   "definition": "Vérification qu'une variable n'est pas unifiée avec un terme la contenant. Nécessaire à la correction, il est optionnel et désactivé par défaut dans Prolog pour des raisons de coût."
+  },
+  {
+   "terme": "Programmation par ensembles réponses",
+   "definition": "Paradigme déclaratif où l'on engendre l'espace de recherche par des règles, puis où l'on en retranche par des contraintes. Adapté au raisonnement non monotone et à la génération de plans."
+  },
+  {
+   "terme": "Clause résolvante",
+   "definition": "Clause obtenue en éliminant une variable présente positivement dans l'une et négativement dans l'autre de deux clauses. La saturation par résolution permet de démontrer l'insatisfiabilité."
+  }
+ ],
+ "a_lire_si": "Vous êtes ingénieur et vous voulez des algorithmes que vous pourrez implémenter, avec leurs propriétés démontrées et leurs coûts établis. C'est le volume le plus directement utilisable des trois. Les chapitres sur la recherche heuristique, les jeux et la satisfiabilité constituent une formation solide à des techniques qui servent chaque jour en optimisation, en ordonnancement et en vérification, bien au delà de l'intelligence artificielle.",
+ "a_eviter_si": "Vous cherchez l'apprentissage automatique. Ce volume traite du calcul symbolique : chercher, déduire, satisfaire des contraintes. Les réseaux de neurones et l'apprentissage statistique y tiennent une place marginale. Il suppose aussi une aisance réelle avec la notation logique et les preuves de correction.",
+ "prerequis": [
+  "Algorithmique et structures de données de niveau licence, notamment les parcours de graphes et d'arbres.",
+  "Logique propositionnelle et calcul des prédicats, que le volume utilise sans les réintroduire.",
+  "Le volume un, consacré à la représentation des connaissances, éclaire plusieurs chapitres mais n'est pas indispensable pour ceux qui portent sur la recherche et les jeux."
+ ],
+ "controverses": [
+  "Le volume un du traité, consacré aux fondements de la représentation des connaissances en vingt chapitres, ne figure pas dans cette bibliothèque. Le corpus ne contient que les volumes deux et trois d'un ensemble conçu comme un tout, avec des renvois croisés nombreux et un index global qui, lui, manque également.",
+  "L'exemplaire du corpus provient d'une numérisation dont les pages portent des étiquettes en cyrillique. Il s'agit d'un ouvrage universitaire commercial protégé par le droit d'auteur, et sa diffusion en ligne poserait un problème juridique qu'il faut trancher avant toute mise à disposition.",
+  "Publié en 2014, le traité a été composé juste avant que l'apprentissage profond ne redéfinisse les priorités du champ. Sa vision de l'intelligence artificielle comme discipline essentiellement symbolique était alors dominante dans la recherche francophone, elle ne l'est plus. Ce décalage fait la valeur documentaire du livre autant que sa limite.",
+  "La numérisation a supprimé la plupart des accents et altère systématiquement les symboles logiques et mathématiques. Le texte reste compréhensible, les formules doivent être vérifiées ailleurs."
+ ],
+ "confiance": 0.85
+}

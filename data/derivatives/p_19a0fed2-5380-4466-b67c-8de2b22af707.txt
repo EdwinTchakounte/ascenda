@@ -1,0 +1,642 @@
+OUVRAGE : L’Intelligence Artificielle va-t-elle aussi tuer la démocratie ?
+AUTEUR(S) : Laurent Alexandre & Jean-François Copé
+ANNÉE : inconnue
+PAGES : 180
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Couverture (p. 2-2)
+  Page de titre (p. 3-3)
+  Page de copyright (p. 4-4)
+  Préface (p. 5-6)
+  Laurent Alexandre (p. 7-7)
+  Le périlleux rodage d'Homo Deus (p. 8-10)
+  La révolution des révolutions (p. 11-11)
+  Une révolution inédite (p. 11-14)
+  Nous devenons transhumains (p. 15-19)
+  La nouvelle fabrique de l'homme (p. 20-26)
+  La guerre invisible (p. 27-27)
+  Des empires technologiques à la domination politique (p. 28-31)
+  La Chine s'est réveillée (p. 32-33)
+  L'Europe a oublié la guerre (p. 34-37)
+  L'Europe abandonnée sur le quai de l'histoire (p. 38-38)
+  L'Histoire n'est pas finie, et risque de continuer sans nous (p. 38-44)
+  L'Europe est neuro-conservatrice alors que nous entrons dans le capitalisme cognitif (p. 45-50)
+  Le capitalisme cognitif a dynamité l'économie mondiale (p. 51-55)
+  Nous entrons dans un brouillard civilisationnel (p. 56-56)
+  Les futurologues vont dire de plus en plus d'âneries (p. 56-57)
+  Intelligence Artificielle et biotechnologie : Is winter coming ? (p. 58-58)
+  Le travail va muter, mais comment ? (p. 59-68)
+  La principale tâche politique : réguler l'Homos Deus (p. 69-69)
+  Des démocraties gouvernées par l'impuissance publique (p. 69-77)
+  Qui gouvernera un monde de zombis drogués à la réalité virtuelle ? (p. 78-80)
+  Manuel express de neuropolitique (p. 81-88)
+  BILAN : comment l'IA creuse la tombe de la démocratie (p. 89-99)
+  Jean-François Copé (p. 100-100)
+  Homo politicus au pays de l'IA (p. 101-102)
+  D'abord, on commence par ne pas tout mélanger ! (p. 103-103)
+  Les politiques doivent en parler ! (p. 104-108)
+  Il est où le progrès ? (p. 109-109)
+  La complainte du progrès (p. 109-111)
+  L'IA fantasmée (p. 112-114)
+  La grande rupture (p. 115-116)
+  Les trois mantras de l'IA (p. 117-118)
+  Objectif : IA nation ! (p. 119-121)
+  Pour un Yalta de la souveraineté (p. 122-122)
+  Revue des troupes avant la bataille ! (p. 122-123)
+  À la conquête de l'IA ! (p. 124-132)
+  On fait comment pour faire le poids ? (p. 133-147)
+  Enrayer le risque inégalitaire : Karl Marx, réveille-toi ! (p. 148-148)
+  Gare au naufrage ! (p. 148-154)
+  La grande remise à niveau (p. 155-165)
+  L'humain doit rester le chef : the winner is l'affect ! (p. 166-166)
+  On va vivre ensemble (p. 166-170)
+  Homo Politicus n'est pas mort (p. 171-177)
+  Table (p. 178-180)
+
+[13/145 passages, 9545 tokens sur 117665]
+
+=== EXTRAITS ===
+
+[p. 4-4]
+Pour échanger avec le Dr Laurent Alexandre :
+Mail : Laurent.alexandre2@gmail.com
+Twitter : @dr_1_alexandre
+Pour échanger avec Jean-François Copé :
+Mail : ia.jeanfrançoiscope@gmail.com
+Maquette de couverture : Le Petit Atelier
+ISBN : 978-2-7096-6383-0
+© 2019, éditions Jean-Claude Lattès
+1 édition : février 2019
+www.editions-jclattes.fr
+Ce document numérique a été réalisé par PCA
+re
+
+---
+
+[p. 18-19]
+ique au progrès
+technologique ? Sans doute pas, mais tout porte à croire qu’elle ne sera pas
+de taille à arrêter l’adoption inconditionnelle et enthousiaste des nouvelles
+technologies.
+L’échiquier politique se reconfigure au XXI siècle selon un axe nouveau,
+substituant l’opposition entre bio-conservateurs et transhumanistes au
+e
+clivage gauche-droite. Des rapprochements inattendus apparaissent. Ainsi,
+José Bové était jusqu’à présent un militant d’extrême gauche. Dans le
+nouvel ordre bio-politique, il se retrouve, avec les catholiques ultra bio-
+conservateurs, résolument contre la fécondation in vitro (FIV). José Bové
+est plus conservateur que Ludovine de La Rochère, la présidente de La
+Manif pour tous, qui est favorable aux thérapies géniques pour le traitement
+des maladies génétiques. Les NBIC vont-elles faire imploser les partis
+politiques traditionnels ? On peut parier sur leur reconfiguration progressive
+et leur regroupement en fonction de ces nouvelles lignes de fracture, une
+partie de la gauche conservatrice se rapprochant de la droite traditionaliste
+dans leur combat commun contre les progressistes libéraux.
+Mais l’IA va devenir le principal facteur d’acceptation des fantasmes
+transhumanistes, le plus puissant parce que l’IA va challenger l’intelligence
+humaine. Elon Musk, le fondateur de Tesla, expliquait récemment : « Nous
+devons faire très attention avec les Intelligences Artificielles. Elles sont
+potentiellement plus dangereuses que les armes nucléaires. J’espère que
+nous ne sommes pas juste le disque de démarrage biologique pour une
+superintelligence numérique. Malheureusement, cela semble de plus en plus
+probable. »
+Il sera dès lors dangereux d’être trop inférieur aux machines, au risque de
+devenir leurs esclaves. « L’enhancement cérébral » sera-t-il l’ultime outil de
+l’humanité pour éviter sa vassalisation ? Pour être à la hauteur, Ray
+Kurzweil et Elon Musk proposent de nous hybrider avec l’IA ! Ray
+Kurzweil a déclaré que nous utiliserions des nanorobots branchés sur nos
+neurones pour nous augmenter dès 2035. Il invite les humains à se préparer
+à ce qu’il appelle l’« hybrid thinking », le mélange de notre pensée
+biologique et de celle issue de nos implants intracérébraux. Fusionner avec
+l’IA pour éviter d’être exterminés par elle revient bien à éliminer
+l’homme 1.0 biologique.
+En quelques décennies nous aurons radicalement modifié notre rapport
+aux technologies, à la mort, à l’intelligence, aux savoirs... Mais nous
+n’avons pas réfléchi à la civilisation d’après. C’est pour cela que Bill Gates
+a déclaré au sujet de l’Intelligence Artificielle : « Je ne comprends pas que
+les gens n’aient pas peur. » Qui est capable d’encadrer le pouvoir que les
+NBIC et l’IA vont donner aux transhumanistes ?
+
+---
+
+[p. 34-35]
+terrestres, maritimes et numériques et permettra à la Chine d’étendre son
+modèle politique et économique. Aujourd’hui, l’ancien patron de Google
+est convaincu que les forces centrifuges d’Internet produiront deux
+morceaux : « Je pense que le scénario le plus probable dans les dix à quinze
+prochaines années n’est pas un éclatement d’Internet mais une bifurcation
+entre un Internet dirigé par les Chinois et un Internet non chinois dirigé par
+les États-Unis. » Nous risquons de vivre la « version du XXI siècle » du
+rideau de fer soviétique, un cyber-rideau coupant l’Internet en deux.
+Cette partition de l’Internet serait facilitée par les immenses progrès de la
+Chine en IA : « Vous allez observer un leadership fantastique dans les
+produits et services en provenance de Chine. » Reprenant les déclarations
+du parti communiste chinois, Eric Schmidt s’alarme : « D’ici 2020, ils nous
+auront rattrapés, d’ici 2025, ils seront meilleurs. Et en 2030, ils domineront
+l’industrie de l’IA. » Cette évolution du web faciliterait le plan chinois pour
+que l’Afrique devienne la Chinafrique. Certains pays d’Afrique
+francophones apprécient déjà le Grand Firewall chinois, qui permet – grâce
+à l’IA – une censure très sophistiquée sans bloquer le business. La
+colonisation numérique de l’Afrique par les BATX chinois peut être
+foudroyante si le web éclate vraiment en deux entités séparées. Comme le
+dit Nicolas Miailhe, président du think tank The Future Society et expert de
+la gouvernance de l’IA : « si la France n’est pas dans le même continent
+web que l’Afrique francophone, celle-ci deviendra progressivement
+mandarinophone. Et nous ne pouvons pas véritablement compter sur l’effet
+de levier Européen car en matière linguistique nos intérêts ne sont pas
+alignés ».
+Les 
+bouleversements 
+géostratégiques 
+et 
+géo-économiques 
+de
+cette nouvelle route de la soie sont d’autant plus grands que le président
+chinois a annoncé un plan de 60 milliards de dollars pour former des
+savants africains et soutenir le développement technologique.
+Si nous ne réalisons pas la gravité de notre retard en IA, la francophonie
+en 2100, ce sera la France, la Wallonie, Genève, Lausanne et le nord du
+Québec.
+L’Europe a oublié la guerre
+e
+
+Merveilleuse maman, bienveillante, maternante et douce, l’Europe n’a
+pas l’arme du moment : l’Intelligence Artificielle. Dans cette guerre d’un
+nouveau genre, notre continent n’est pas loin d’un décrochage définitif. Le
+patron d’Accor, Sébastien Bazin, qui a jadis recherché l’autonomie par
+rapport aux GAFA, questionne : « Peut-être faut-il maintenant que nous
+nous rapprochions de Google, Amazon et Microsoft ? » Total a quant à lui
+annoncé qu’il allait confier son exploration pétrolière aux IA de Google...
+Sans les GAFA, nos entreprises dépériraient parce qu’il n’y a aucune
+alternative européenne.
+Ne nous y trompons pas : derrière l’échec de l’Europe sur l’IA, il y aura
+la vassalisation militaire. L’Europe sera un nain géopolitique, parce qu’elle
+devient un nain technologique. La France sera après le Brexit la seule
+puissance militaire numérique européenne et la Défense est le seul
+ministère français compétent en IA. À moyen terme, la France ne pourra
+seule assurer la cybersécurité européenne face au duopole américano-
+chinois sur l’IA : il faudrait investir des dizaines de milliards d’euros.
+Qui avouera à nos concitoyens que notre armée sera en 2030 impuissante
+en cas de vrai conflit ? Même s’ils ne sont pas branchés sur Internet, nos
+missiles ne décolleront pas, nos avions seront cloués au sol et nos généraux
+seront aveuglés par les IA américaines ou chinoises.
+Poutine a expliqué que les leaders de l’IA seront les futurs maîtres du
+monde. Le président chinois a annoncé que son pays deviendrait la
+première puissance militaire grâce à l’IA. Au moment où se lance cette
+course à « l’IA-rmement » selon l’expression de Thierry Berthier, personne
+à Bruxelles ne pense à la guerre et certains veulent bannir les robots
+militaires, effectivement horribles mais sans lesquels la guerre du futur sera
+perdue d’avance : même le plus courageux de nos fantassins fuira devant
+les robots. Les États-Unis eux-mêmes sont menacés par l’efficacité
+technologique chinoise. Michael Griffin, chef technologique du Pentagone,
+s’est alarmé dans le Financial Times du 17 novembre 2018 qu’il faille
+16 ans à l’armée américaine pour passer d’une idée technologique à une
+arme opérationnelle contre moins de 7 ans aux militaires chinois.
+Les dirigeants européens sont les Gamelin de l’IA. Derrière le général
+Gamelin qui conduisit la France à l’étrange défaite de 1940, il y eut Pétain.
+Il va se passer la même chose d’ici 2050 : puisque nous ne comprenons pas
+la guerre en cours, nous deviendrons une colonie numérique des géants de
+
+---
+
+[p. 48-49]
+rface terrestre, ce qui laisserait place
+à une Nature immaculée. Ainsi, le Mouvement pour l’extinction volontaire
+de l’humanité, ou VHEMT (Voluntary Human Extinction Movement), est un
+groupe écologiste qui appelle les humains à s’abstenir de se reproduire pour
+provoquer l’extinction de l’Humanité afin d’éviter la détérioration
+e
+environnementale. Le VHEMT a été fondé en 1991 par L.U. Knight, un
+militant écologiste américain qui s’est lui-même fait stériliser.
+À l’opposé, les transhumanistes veulent créer l’Homo Deus grâce aux
+NBIC. Elon Musk – l’industriel le plus médiatique – est le prototype du
+transhumaniste qui se veut tout-puissant. Le 6 février 2018, les images de sa
+Tesla rouge filant vers la ceinture d’astéroïdes sous l’air de la chanson
+« Space Oddity » de David Bowie ont enthousiasmé tous les technophiles.
+Jeff Bezos, le fondateur d’Amazon, vient lui d’annoncer son intention de
+développer dès 2020 le fret entre la Terre et la Lune, grâce à sa société Blue
+Origin. Contrairement aux collapsologues, les transhumanistes pensent que
+la limitation des naissances n’est pas souhaitable : la conquête du cosmos
+nécessitera énormément de colons ! Elon Musk veut envoyer 1 million
+d’humains sur Mars et Jeff Bezos, l’homme le plus riche du monde, a décrit
+un futur où des fusées récupérables comme son lanceur Blue Origin
+permettraient de coloniser le cosmos et d’y installer 1 000 milliards d’êtres
+humains. La limitation des naissances n’aurait évidemment plus lieu d’être.
+Bezos refuse l’idée que la conquête de l’espace est nécessaire à cause d’un
+collapsus futur de la terre. Il déteste cette idée qu’il juge démotivante. Jeff
+Bezos pense comme le savant russe Constantin Tsiolkovski que : « La Terre
+est le berceau de l’humanité mais qu’on ne passe pas sa vie entière dans un
+berceau. » Le patron d’Amazon est conquérant : « Nous pourrons exploiter
+des mines dans les astéroïdes et l’énergie solaire sur d’immenses surfaces.
+L’alternative serait la stagnation de la terre, le contrôle des naissances et la
+limitation de notre consommation d’énergie. Je ne crois pas que la
+stagnation soit compatible avec la liberté et je suis sûr que ce serait un
+monde ennuyeux. Je veux que mes petits-enfants vivent dans un monde de
+pionniers, 
+d’exploration 
+et 
+d’expansion 
+dans 
+le 
+cosmos. 
+Avec
+1 000 milliards de terriens, nous aurons des milliers d’Einstein et de
+Mozart. » Pour les transhumanistes, le travail ne mourra jamais, l’aventure
+humaine est illimitée et le champ de notre horizon va radicalement
+s’étendre.
+Aux visions d’un Elon Musk, nombreux sont ceux qui en France
+préfèrent les angoisses de la superstition. Les faux scoops et les
+informations fantaisistes prolifèrent. De nombreux blogs tenus par des
+organisations sectaires distillent des informations délirantes, ce qui perturbe
+gravement les politiques, notamment de santé publique : selon une étude
+IFOP pour la Fondation Jean Jaurès, 55 % des Français approuvent l’idée
+
+---
+
+[p. 62-63]
+nous empêche de travailler. Elle prend le pouvoir dans notre intérêt
+supposé, tel le dictateur numérique paternaliste du film I, Robot. Elle souhaite aider
+l’humanité contre ses mauvais démons, ses passions et son irrationalité. Une IA
+« verte » souhaiterait par exemple que nous diminuions au maximum notre
+empreinte écologique.
+Scénario 6 : L’IA centaure. C’est l’idée de Garry Kasparov. L’IA et l’Homme
+formeraient un être hybride et indissociable comme le Centaure de la mythologie :
+moitié cheval, moitié Homme. Selon lui, nous devons être plus résilients et planifier
+une collaboration fructueuse avec l’IA.
+Scénario 7 : L’IA nous transforme en nous faisant découvrir de nouvelles formes de
+pensée, ce qui révolutionne le travail. En juin 2017, un mois après sa défaite contre
+AlphaGo, l’IA de Google DeepMind, Ke Jie a admis avoir changé. « Après mon
+match contre AlphaGo, j’ai fondamentalement reconsidéré le jeu. J’espère que tous
+les joueurs de Go pourront contempler la compréhension d’AlphaGo et son mode de
+pensée, qui sont tous les deux lourds de sens. Bien qu’ayant perdu, j’ai découvert
+que les possibilités du jeu de Go sont immenses. » Le choc de cette défaite face à
+l’IA permet d’imaginer un scénario où l’IA nous obligerait à travailler sur nous-mêmes
+et à progresser plus vite. Ce ne serait pas la fin du travail mais, bien au contraire, le
+début d’une nouvelle ère : les machines spirituelles nous bouleverseraient et nous
+changeraient.
+Scénario 8 : La mort du travail. Pour certains experts pessimistes, aucune
+compétence ne serait inaccessible aux machines intelligentes qui rendront non
+compétitif le travail humain : le 24 juillet 2017, la Harvard Business Review affirmait
+que même les consultants de haut vol seraient bientôt remplaçables par l’IA. Nous
+pourrions alors être confrontés à d’immenses difficultés sociales.
+Beaucoup de scénarios donc. Mais comme le souligne avec raison Taleb Nassim,
+dans Le Cygne noir, les événements qui changent réellement l’histoire sont par
+définition imprévus.
+IA + Braudel  = Boum !
+Comment vont réagir nos structures sociales et religieuses, qui viennent
+de loin dans notre histoire, quand elles seront confrontées à ce tsunami
+technologique ? Nul ne le sait.
+Même les dirigeants de Google ont admis qu’ils avaient sous-estimé les
+conséquences de ces évolutions sur notre modèle économique et social.
+Pour préparer la société, les entreprises et l’école, il est nécessaire
+d’évaluer les conséquences de l’IA sur la dynamique économique et la
+demande de travail. Or, l’impact de l’IA est incroyablement difficile à
+modéliser. La conférence « The implications of Artificial Intelligence for
+the macroeconomy » qui s’est tenue début avril 2018 à Washington a mis en
+lumière la complexité du sujet. Le Prix Nobel Joseph Stiglitz et Anton
+Korinek y ont exposé les différents scénarios envisageables. De multiples
+2
+
+---
+
+[p. 77-77]
+a aider le citoyen à
+séparer le réel, la réalité virtuelle, la réalité filtrée par Google et Facebook,
+les idées et souvenirs implantés par voie chimique ou électronique. Les
+journalistes nous protégeront des neuromanipulateurs. Ils feront partie d’un
+ensemble de professions qui authentifieront le réel avec les neuroethiciens,
+e
+
+---
+
+[p. 93-95]
+les GAFA et les BATX ? Ou
+bien bloquer la neuroéducation, au risque de laisser des millions de
+gens sur le bord de la route ?
+∘ L’IA dévalorise à toute allure les savoir-faire existants. Le slogan
+« il faut, au XXI siècle, changer de métier tous les cinq à sept
+ans pour s’adapter aux changements économiques induits par l’IA »
+e
+est terriblement anxiogène pour les classes populaires et favorise les
+partis populistes et extrêmes.
+∘ Les classes moyennes risquent d’être impactées et déqualifiées par
+l’IA. Or, leur loyauté est un fondement essentiel de toute
+démocratie. Le grand expert de l’IA, Kai Fu Lee, décrit le médecin
+de 2030 : 1/3 assistante sociale, 1/3 infirmière et 1/3 technicien. Un
+avenir peu enthousiasmant pour des « Bac plus 10 ». Désemparées,
+les classes moyennes déchues deviendront violentes... au moins
+dans les urnes.
+∘ Le management et la régulation de l’IA exigent un nombre
+croissant de « cerveaux ». On estime qu’il manquera 85 millions de
+travailleurs « ultra-qualifiés » en 2035. Les écarts entre la petite élite
+de l’IA – très mobile géographiquement et que l’on s’arrachera sur
+le marché mondial des cerveaux – et le reste de la population seront
+un aiguillon supplémentaire du populisme.
+∘ Comme il est plus facile de développer une IA remplaçant un
+salarié du tertiaire qu’un ouvrier, les pays désindustrialisés comme
+la France ou les USA seront plus gravement touchés par la
+révolution technologique que l’Allemagne, la Corée du Sud ou la
+Chine. En effet, les robots seront incapables d’égaler la dextérité de
+la main d’un ouvrier dans les vingt prochaines années.
+∘ L’économie de la connaissance redistribue ainsi les cartes à
+l’avantage des quelques métropoles et pays qui ont investi dans la
+technologie au détriment de l’Europe et de l’Afrique.
+∘ En définitive, le management des inégalités intellectuelles sera le
+grand défi du XXI siècle.
+Ingénierie sociale contre élus imparfaits
+∘ Les politiques n’ont pas réfléchi aux dilemmes politiques de l’ère
+de l’IA. La volonté de créer des IA éthiques, explicables et
+e
+
+certifiables semble bienveillante : c’est en réalité naïf et suicidaire.
+Il existe des arbitrages complexes entre « privacy » et performance
+des IA, puissance et explicabilité des algorithmes. Si vous rendez
+une IA transparente et certifiable, vous en bridez profondément
+l’efficacité. Le Financial Times titrait récemment « Mark
+Zuckerberg, plus apprenti que sorcier ». Les grandes plateformes
+sont devenues des monstres qui reproduisent nos biais humains.
+Vouloir éviter que Facebook soit raciste alors que beaucoup de ses
+utilisateurs le sont, suppose de bidouiller ses Intelligences
+Artificielles, ce qui est loin d’être anodin .
+∘ Par ailleurs, rendre les IA transparentes faciliterait leur hacking.
+C’est particulièrement dangereux pour Google et Facebook. Yann
+Le Cun explique que Facebook ne pourrait plus fonctionner sans
+l’IA qui est omniprésente sur le réseau social. Rendre publics les
+détails techniques faciliterait les manipulations politiques.
+∘ L’IA étant une technologie jeune, les politiciens la comprennent
+mal. Ils souffrent du syndrome de Dunning-Kruger ou effet de
+surconfiance : plus un individu est ignorant d’un sujet, plus il en
+surestime sa compréhension. Cela explique les décisions en
+apparence bienveillantes et en réalité désastreuses qui sont prises – à
+Bruxelles et à Paris – dans le pilotage de la révolution
+technologique.
+∘ La classe politique européenne et particulièrement française est en
+retard d’une guerre en matière d’IA. Elle pense que le facteur clé de
+succès réside dans le nombre de chercheurs publics dont dispose un
+pays. En réalité, la phase actuelle du déploiement de l’IA repose
+beaucoup plus sur la capacité à accumuler des datas pour éduquer
+les IA de type deep learning et à favoriser des écosystèmes
+entrepreneuriaux autour de l’IA. Cette incompréhension, qui est la
+faille du Rapport Villani , accentue notre retard en IA et freinera le
+pouvoir d’achat des Français appartenant aux classes moyennes et
+populaires dans les prochaines décennies. Ce sera un puissant
+moteur de révolte populiste.
+5
+6
+
+---
+
+[p. 110-111]
+par la disparition des métaux précieux lors du passage à la monnaie
+scripturale et la révolte des luddites qui, au XIX siècle, détruisent les
+machines pour s’opposer à la révolution industrielle.
+Notre rapport au progrès a toujours été ambivalent, presque
+schizophrénique. Nous sommes en train de vivre la même chose avec l’IA.
+e
+Un bouleversement est en cours et tel Paul Fournier dans Hibernatus, nous
+ne reconnaîtrions sans doute pas, dans soixante-cinq ans, le monde dans
+lequel vivront nos petits-enfants.
+Tout cela est normal, mais il faut se préoccuper des résistances.
+Il y a un risque !
+Parce que notre crainte du progrès se double d’une forme de scepticisme
+quasi idéologique.
+Alors qu’une génération tout entière a été bercée par le mythe du progrès
+et l’idée que l’an 2000 allait tout changer et en mieux, jamais la méfiance à
+l’égard des sciences et des technologies n’a été aussi forte que depuis une
+dizaine d’années. Il y a loin du formidable engouement que suscitait, il y a
+cinquante ans à peine, la conquête de l’espace à l’angoisse et, pour tout
+dire, au rejet que génèrent aujourd’hui, dans le désordre, les vaccins, les
+OGM, le nucléaire ou les ondes des antennes relais. Tous les gamins nés
+dans les années 1960 ou 1970 rêvaient d’être astronautes ; les mêmes sont
+désormais convaincus que toute nouvelle avancée scientifique ou
+technologique est d’abord génératrice de risques.
+La preuve ? Le terme de progrès a quasiment disparu du discours
+politique. Pendant des décennies, dans nos démocraties, il a été synonyme
+d’un avenir désirable. Aujourd’hui on lui préfère le terme plus neutre, plus
+circonscrit, d’« innovation » parce qu’il fait moins peur. Est-ce à dire que
+nous n’avons plus confiance dans l’avenir ? Peut-être. On connaît la
+multitude de sondages sur le pessimisme dans les sociétés développées, et
+spécialement en France. Sans doute aussi, progrès scientifique et progrès
+social ont-ils été longtemps associés et le second étant à la peine, il a
+emporté le premier.
+Les Trente Glorieuses ont eu cette particularité de laisser penser que tout
+était possible : on n’aurait plus jamais de guerre puisque des organisations
+internationales garantissaient la paix, plus jamais faim puisque l’agriculture
+changeait radicalement et qu’on avait découvert les engrais et les pesticides
+qui préservaient des mauvaises récoltes, plus jamais froid puisque les
+ressources naturelles étaient considérées comme inépuisables... Et puis,
+d’un coup, tout s’est effondré et à la peur ancestrale s’est ajoutée celle du
+
+---
+
+[p. 123-123]
+BATX devaient décider de se
+mettre d’accord sur des aspects stratégiques, nul doute que cela créerait les
+conditions de nouveaux équilibres, voire de déséquilibres. Mais nous n’en
+sommes pas là : tout au contraire, ils se dévorent entre eux. Évidemment, il
+y a un axe États-Unis-GAFAM et Chine-BATX qui est en train de se créer.
+1
+
+---
+
+[p. 137-138]
+et ça stimulerait
+grandement leur capacité d’innovation sur les nouveaux services, en
+particulier s’ils laissent enfin aux startups qu’ils acquièrent une liberté
+d’action, au lieu de les intégrer entièrement pour les vider de leur
+substance . C’est essentiel, car sinon le bénéfice de ces intégrations est
+réduit à néant.
+3
+4
+5
+6
+Devenus des acteurs puissants, les opérateurs de télécom pourront
+participer activement à la construction d’une Europe de l’IA. Deux
+exemples pour l’illustrer.
+D’abord, ils pourraient développer, au niveau européen, un service de
+protection et de filtrage des données. C’est l’idée du nouveau cadre de
+confiance dont je vous ai parlé. Ils en ont les moyens technologiques.
+Par exemple, Telefonica, l’opérateur historique espagnol, a développé un
+assistant virtuel vocal nommé Aura. Sa mission : informer les utilisateurs
+sur le monde obscur des données. Ainsi, ils prennent leurs décisions en
+connaissance de cause et ils reprennent le contrôle de leur data, puisqu’on
+leur dit ce que les entreprises vont en faire en évitant le piège des
+« conditions générales d’utilisation » que jamais personne ne lit. En France,
+des startups ont des offres comparables. Si les opérateurs de
+télécommunication s’y mettaient, cela permettrait d’étendre le champ de
+protection des données puisqu’ils ont accès à un nombre beaucoup plus
+important d’utilisateurs. Il faut juste qu’ils acceptent de travailler ensemble
+et, aujourd’hui, ils le refusent alors que le cadre européen mis en place par
+le RGPD facilite les choses. La situation confine au ridicule, il suffit de
+penser, en France, à la décision stupide d’accorder une quatrième licence...
+Car en rajoutant un opérateur, on a enclenché une guerre des prix (en
+confondant consommateurs et électeurs) qui a conduit à une baisse des
+investissements alors que les technologies nécessitent beaucoup d’argent.
+Et, puisque les données sont le carburant de l’IA, on pourrait en même
+temps en ouvrir l’accès en mettant à la disposition des chercheurs et des
+entreprises européennes l’intégralité des données publiques disponibles
+dans l’Union d’ici 2020. Ça permettra à l’IA européenne de progresser.
+Autre piste : la Fintech. C’est la prochaine conquête du numérique. Les
+banques, Visa et autres champions de la finance d’aujourd’hui ont peu de
+chance face à Google, Amazon ou Tencent. Le but n’est pas de sauver les
+banques mais de garder des champions européens.
+La première bataille est celle du paiement. Aujourd’hui, en Occident, la
+majorité se fait par carte bancaire selon un principe simple : Visa ou
+Mastercard certifie au marchand que le consommateur a suffisamment sur
+son compte pour payer mais la transaction a lieu plus tard, lorsque la
+banque du consommateur aura effectivement envoyé l’argent sur le compte
+du marchand. Les nouvelles technologies – tel l’instant payment ou
+
+---
+
+[p. 150-151]
+our rétablir son compte
+Netflix. On ne dit pas à sa fille « on en reparlera quand tu auras ton bac »
+alors qu’on a besoin d’elle pour « refaire marcher » Internet. En d’autres
+termes, le pilier de l’autorité des parents – comme des professeurs – c’était
+le savoir. « Tais-toi, tu ne sais pas ! » Voire le célébrissime « Tu es trop
+jeune – ou pire, trop petit – pour comprendre ». Tout cela a volé en éclats
+avec la maîtrise du savoir numérique qui a modifié le rapport de forces !
+Et la génération née dans le numérique n’a pas le même rapport au
+monde que nous à leur âge.
+Avant, il fallait commencer par savoir lire pour apprendre ; le numérique
+a inventé un univers intuitif dans lequel on se déplace à l’instinct en
+touchant une image ou un symbole sur un écran. Avant, on écoutait
+religieusement son prof parce qu’il savait des choses ; maintenant, on
+vérifie en temps réel si ce qu’il dit est vrai. C’est le monde du fact-checking
+et, croyez-moi, quand on fait de la politique, on se rend compte au
+quotidien de ce que ça veut dire ! Avant, quand on était plus âgé, on avait la
+légitimité de l’expérience ; aujourd’hui, c’est presque devenu un handicap,
+parce qu’on raisonne selon d’anciens modèles.
+Je ne suis pas en train de vous dire que tout est foutu et que nous n’y
+survivrons pas. Simplement, il faut avoir ça à l’esprit pour comprendre ce
+qui se passe et ce qui nous attend demain.
+La génération Y n’a pas le même rapport à l’autorité, parce que ceux qui
+l’incarnent n’ont plus la même légitimité. Ça explique beaucoup de choses.
+Par exemple, que les jeunes diplômés soient davantage tentés par la création
+de leur propre entreprise, même toute petite, que par le salariat, parce qu’ils
+se sont persuadés qu’ils ne sont pas faits pour avoir un patron. Ils ne
+supportent pas l’idée d’avoir une hiérarchie et ne voient pas pourquoi un
+type plus âgé viendrait leur donner des ordres, qui plus est sans leur
+expliquer pourquoi. Et ils n’ont pas de temps à perdre, donc pas le temps
+d’attendre leur tour ! Même logique : acheter une voiture ou même passer
+son permis n’est plus un symbole d’indépendance et de liberté ! C’est
+tellement plus simple de comparer les moyens qui permettent de se déplacer
+et, si c’est la meilleure solution, de louer une voiture ou d’opter pour le
+covoiturage. Notre monde est devenu horizontal, c’est le propre des
+réseaux. Et du coup, toute verticalité est perçue comme de l’autoritarisme.
+J’avoue être incapable de mesurer si cette déconstruction de l’autorité est
+l’effet d’une mode que la génération suivante défera avec zèle ou si c’est
+une tendance irréversible. Mais on ne pourra pas réussir l’IA nation si on ne
+la prend pas en compte. C’est une formidable opportunité de faire les
+choses ensemble mais différemment.
+
+---
+
+[p. 162-163]
+gées et handicapées dans les centres hospitaliers et leur
+rappelle l’heure de la prise de leurs médicaments.
+Dans tous les cas, il s’agit d’une complémentarité entre l’homme et la
+machine. Et c’est de là que vont naître de nouveaux métiers et des emplois
+transformés. D’abord, dans le numérique et la robotique, pour assurer le
+11
+développement et la maintenance de l’IA, que ce soit chez ceux qui la font,
+ceux qui l’utiliseront – les entreprises –, ou ceux qui vont l’étudier – les
+chercheurs. Pour beaucoup ce seront de nouveaux métiers parce qu’ils
+porteront sur un nouvel objet ; ce seront en quelque sorte les cavaliers de
+l’IA. Ensuite, il y a les métiers qui vont se transformer du fait de l’irruption
+de l’IA dans leur secteur : moins de tâches répétitives, plus de compétences
+transversales, de la communication, du relationnel et la gestion des aléas ;
+ils seront les gardiens des robots, ceux qui les superviseront et les
+réajusteront en tant que de besoin. Et puis, il y a les métiers qui vont
+changer parce que l’IA aura des effets secondaires : on ne pilotera plus une
+équipe de la même façon, on accompagnera les clients différemment. Je
+vous l’avais annoncé, ça fait beaucoup de bouleversements.
+Le rapport que France Stratégie et le Conseil national du numérique ont
+publié en mars 2017 propose une série de critères permettant de mesurer la
+substituabilité des tâches, c’est-à-dire la possibilité de remplacer l’homme
+par la machine. Elle consiste en une série de questions : « la technologie
+est-elle suffisamment avancée pour que cette tâche soit automatisée ? la
+tâche nécessite-t-elle des capacités cognitives verticales (orientées sur une
+tâche très spécifique) ou horizontales ? l’automatisation de cette tâche est-
+elle acceptable socialement ? cette tâche nécessite-t-elle le recours à une
+intelligence émotionnelle ? cette tâche nécessite-t-elle une intervention
+manuelle complexe ? »
+De quoi faire une cure d’optimisme raisonnable. Ce n’est pas la
+destruction de l’emploi qui nous attend, mais l’automatisation des tâches.
+Un rapport du McKinsey Global Institute de juin 2017 le montre très bien .
+Pourtant, seuls 20 % des dirigeants d’entreprises en France font de l’IA une
+priorité stratégique alors qu’ils sont 40 % à se dire conscients des enjeux
+humains que cette transformation représente . Il y a encore du boulot !
+Mais, c’est l’essentiel, il y aura toujours du travail.
+Alors, une fois qu’on a cessé de se lamenter et admis que la manière de
+travailler va changer, c’est notre modèle social et sociétal du travail qu’il va
+falloir repenser. Et c’est un gigantesque chantier pour accompagner cette
+transformation.
+Par exemple, accompagner les entreprises, et en particulier les TPE et les
+PME qui vont moins facilement passer à l’IA et qui ne doivent pas devenir
+des « déserts de l’IA » . Accompagner les salariés qui peuvent avoir peur
+12
+13
+14
+15
+
+---
+
+[p. 177-180]
+Mallard, Disruption. Préparez-vous à changer de monde, Dunod, 2018.
+2. « L’intelligence Artificielle, nouvel atout des sites de rencontre », par Basile Dekonink, Les
+Échos, 3 juillet 2018.
+3. Yuval Noah Harari, Homo Deus. Une brève histoire de l’avenir, Albin Michel, 2017.
+4. Jean-François Copé, Le Sursaut français, Plon, 2016.
+Table
+Couverture
+Page de titre
+Page de copyright
+PRÉFACE
+Laurent Alexandre
+LE PÉRILLEUX RODAGE D'HOMO DEUS
+LA RÉVOLUTION DES RÉVOLUTIONS
+Une révolution inédite
+Nous devenons transhumains
+La nouvelle fabrique de l'homme
+LA GUERRE INVISIBLE
+Des empires technologiques à la domination politique
+La Chine s'est réveillée
+L'Europe a oublié la guerre
+L'EUROPE ABANDONNÉE SUR LE QUAI DE L'HISTOIRE
+L'Histoire n'est pas finie, et risque de continuer sans nous
+L'Europe est neuro-conservatrice alors que nous entrons dans le
+capitalisme cognitif
+
+Le capitalisme cognitif a dynamité l'économie mondiale
+NOUS ENTRONS DANS UN BROUILLARD CIVILISATIONNEL
+Les futurologues vont dire de plus en plus d'âneries
+Intelligence Artificielle et biotechnologie : Is winter coming ?
+Le travail va muter, mais comment ?
+LA PRINCIPALE TÂCHE POLITIQUE : RÉGULER L'HOMOS DEUS
+Des démocraties gouvernées par l'impuissance publique
+Qui gouvernera un monde de zombis drogués à la réalité virtuelle ?
+Manuel express de neuropolitique
+BILAN : COMMENT L'IA CREUSE LA TOMBE DE LA DÉMOCRATIE
+Jean-François Copé
+HOMO POLITICUS AU PAYS DE L'IA
+D'abord, on commence par ne pas tout mélanger !
+Les politiques doivent en parler !
+IL EST OÙ LE PROGRÈS ?
+La complainte du progrès
+L'IA fantasmée
+La grande rupture
+Les trois mantras de l'IA
+Objectif : IA nation !
+
+POUR UN YALTA DE LA SOUVERAINETÉ
+Revue des troupes avant la bataille !
+À la conquête de l'IA !
+On fait comment pour faire le poids ?
+ENRAYER LE RISQUE INÉGALITAIRE : KARL MARX, RÉVEILLE-TOI !
+Gare au naufrage !
+La grande remise à niveau
+L'HUMAIN DOIT RESTER LE CHEF : THE WINNER IS L'AFFECT !
+On va vivre ensemble
+Homo Politicus n'est pas mort

@@ -1,0 +1,1293 @@
+OUVRAGE : Panorama de lIntelligence Artificielle - Ses bases méthodologiques, ses développements - Volume 3, Lintelligence artificielle...
+AUTEUR(S) : Pierre MARQUIS, Odile PAPINI etc.
+ANNÉE : inconnue
+PAGES : 378
+AXE : IA Technique Academique
+SOMMAIRE :
+  PIA3_Страница_000001 (p. 1-1)
+  PIA3_Страница_001_1L (p. 2-2)
+  PIA3_Страница_001_2R (p. 3-3)
+  PIA3_Страница_002_1L (p. 4-4)
+  PIA3_Страница_002_2R (p. 5-5)
+  PIA3_Страница_003_1L (p. 6-6)
+  PIA3_Страница_003_2R (p. 7-7)
+  PIA3_Страница_004_1L (p. 8-8)
+  PIA3_Страница_004_2R (p. 9-9)
+  PIA3_Страница_005_1L (p. 10-10)
+  PIA3_Страница_005_2R (p. 11-11)
+  PIA3_Страница_006_1L (p. 12-12)
+  PIA3_Страница_006_2R (p. 13-13)
+  PIA3_Страница_007_1L (p. 14-14)
+  PIA3_Страница_007_2R (p. 15-15)
+  PIA3_Страница_008_1L (p. 16-16)
+  PIA3_Страница_008_2R (p. 17-17)
+  PIA3_Страница_009_1L (p. 18-18)
+  PIA3_Страница_009_2R (p. 19-19)
+  PIA3_Страница_010_1L (p. 20-20)
+  PIA3_Страница_010_2R (p. 21-21)
+  PIA3_Страница_011_1L (p. 22-22)
+  PIA3_Страница_011_2R (p. 23-23)
+  PIA3_Страница_012_1L (p. 24-24)
+  PIA3_Страница_012_2R (p. 25-25)
+  PIA3_Страница_013_1L (p. 26-26)
+  PIA3_Страница_013_2R (p. 27-27)
+  PIA3_Страница_014_1L (p. 28-28)
+  PIA3_Страница_014_2R (p. 29-29)
+  PIA3_Страница_015_1L (p. 30-30)
+  PIA3_Страница_015_2R (p. 31-31)
+  PIA3_Страница_016_1L (p. 32-32)
+  PIA3_Страница_016_2R (p. 33-33)
+  PIA3_Страница_017_1L (p. 34-34)
+  PIA3_Страница_017_2R (p. 35-35)
+  PIA3_Страница_018_1L (p. 36-36)
+  PIA3_Страница_018_2R (p. 37-37)
+  PIA3_Страница_019_1L (p. 38-38)
+  PIA3_Страница_019_2R (p. 39-39)
+  PIA3_Страница_020_1L (p. 40-40)
+  PIA3_Страница_020_2R (p. 41-41)
+  PIA3_Страница_021_1L (p. 42-42)
+  PIA3_Страница_021_2R (p. 43-43)
+  PIA3_Страница_022_1L (p. 44-44)
+  PIA3_Страница_022_2R (p. 45-45)
+  PIA3_Страница_023_1L (p. 46-46)
+  PIA3_Страница_023_2R (p. 47-47)
+  PIA3_Страница_024_1L (p. 48-48)
+  PIA3_Страница_024_2R (p. 49-49)
+  PIA3_Страница_025_1L (p. 50-50)
+  PIA3_Страница_025_2R (p. 51-51)
+  PIA3_Страница_026_1L (p. 52-52)
+  PIA3_Страница_026_2R (p. 53-53)
+  PIA3_Страница_027_1L (p. 54-54)
+  PIA3_Страница_027_2R (p. 55-55)
+  PIA3_Страница_028_1L (p. 56-56)
+  PIA3_Страница_028_2R (p. 57-57)
+  PIA3_Страница_029_1L (p. 58-58)
+  PIA3_Страница_029_2R (p. 59-59)
+  PIA3_Страница_030_1L (p. 60-60)
+
+[45/663 passages, 21292 tokens sur 361833]
+
+=== EXTRAITS ===
+
+[p. 1-1]
+PANORAMA DE L'INTELLIGENCE ARTIFICIELLE 
+ses bases méthodologiques, ses développements 
+L'intelligence artificielle : 
+frontières et applications 
+Cépaduès 
+ÉDITIONS 
+*** 
+Coordinateurs : 
+Pierre Marquis 
+Odile Papini 
+Henri Prade 
+Préface: 
+Paul Braffort
+
+---
+
+[p. 14-15]
+Management, 
+Université Catholique de Louvain - LiLab , Belgique) 
+jean. vanderdonckt@uclouvain.be 
+FRANCK VARENNE (Université de Rouen, GEMASS-CNRS) 
+fvarenne@wanadoo.fr 
+JEAN-PHILIPPE VERT (Mines ParisTech - Institut Curie) 
+jean-philippe.vert@mines.org 
+PIERRE ZWEIGENBAUM (Université Paris Sud, CNRS, LIMSI) 
+pz@limsi.fr 
+xii
+Préface 
+L'intelligence artificielle (IA) est un domaine encore assez jeune (à peine plus d'un 
+demi-siècle) mais dont la médiatisation a été considérable dès ses débuts, accompa
+gnée parfois de polémiques. Il n'y en a plus guère et les recherches se sont largement 
+diversifiées ainsi qu'en témoignent le trois volumes dont voici le dernier. Cette variété 
+rend nécessaire une mise en perspective historique : c'est ce que je propose dans cette 
+préface. 
+Dès 1946, l'éditeur français Hermann avait fait paraître Cybernetics or Control and 
+Communication in the Animal and the Machine, de Norbert Wiener, qui fut un grand 
+succès éditorial. Et en 1954, un Congrès International de Cybernétique (le premier) 
+se tint à Namur et auquel j'eus la chance de participer. L'intelligence artificielle n'a 
+commencé à être mentionnée comme un domaine à part entière - voire une discipline au
+tonome - qu'au milieu des années cinquante, dans le fameux « rapport de Dartmouth », 
+rédigé par John McCarthy, Marvin Minsky, Nathan Rochester et Claude Shannon, les 
+pères fondateurs, en 1955. Il sera suivi de nombreux autres ainsi que par des congrès et 
+colloques sur l'intelligence artificielle (dont le baptême est un peu postérieur). Les deux 
+domaines étaient évidemment voisins et furent souvent confondus, et d'ailleurs les fron
+tières interdisciplinaires avec d'autres domaines comme l'automatique, l'informatique, 
+les recherches cognitives, etc., demeurent, aujourd'hui encore, assez floues. Une vaste 
+arborescence de rubriques et sous-rubriques s'est finalement développée. Une mise au 
+point comme celle que présente cet ouvrage est donc la bienvenue. 
+J'ai eu le privilège d'être impliqué dans ces premiers développements. D'abord au 
+Commissariat à !'Energie Atomique où je dirigeais le laboratoire de Calcul Analo
+gique puis à Euratom où j'avais constitué un « Groupe de Recherches sur !'Information 
+Scientifique Automatique ». Les sujets que nous avons abordés à cette époque étaient, 
+principalement : 
+- la documentation automatique, 
+- la traduction automatique, 
+- la simulation des jeux, 
+- la démonstration automatique des théorèmes. 
+Pour d'évidentes raisons économiques et politiques, le thème de la traduction auto
+matique bénéficia d'investissements considérables mais qui se trouvèrent brutalement 
+réduits lorsqu'il apparut que nos connaissances en linguistique (en sémantique particu
+lièrement) demeuraient insuffisantes pour qu'on puisse aboutir à des résultats accep-
+Auteur : PAUL BRAFFORT.
+
+---
+
+[p. 23-23]
+us. Non seulement, l'activité de déduction est mécanisable - le calculus ratio
+cinator - mais elle est équivalente à l'activité de calcul ! Encore une fois, comparaison 
+n'est pas raison, mais quand même, cet isomorphisme de Curry-Howard est un fait 
+spectaculaire qui offre à réfléhir au-delà de sa seule expression mathématique.
+
+---
+
+[p. 31-31]
+1 . Informatique théorique : calculabilité, décidabilité et logique - 999 
+- la nature calcule-t-elle ? 
+- quels sont les liens entre non-déterminisme, chaos, non-prédictibilité, et aléatoire 
+[Longo et Paul, 2009] ? 
+1.2.8 Axiomatisation de la thèse de Church par Gandy 
+Robin Gandy propose dans [Gandy, 1980] de réduire la thèse physique de Church à 
+quatre principes (assez techniques). L'intérêt de cette axiomatisation est que l'on peut 
+alors prouver mathématiquement que ce qui est calculable par un dispositif physique 
+satisfaisant à ces quatre principes est calculable par machine de Turing. Autrement dit, 
+Gandy propose de remplacer la thèse physique de Church par la thèse qu'un système 
+mécanique physique déterministe discret satisfait à ces quatre principes. Gandy suppose 
+que l'espace physique est l'espace géométrique ordinaire à trois dimensions. Suivant 
+[Dowek, 2007], on peut dire que l'argumentation de Gandy traduit dans ces quatre 
+principes deux grandes hypothèses relatives à la nature physique : la finitude de la 
+vitesse de la transmission de l'information et la finitude de la densité de l'information. 
+La discussion de Gandy se limite aux systèmes discrets digitaux, et écarte explicitement 
+les systèmes analogiques dès son début. Développée pour les systèmes déterministes, 
+elle peut s'étendre aux systèmes non déterministes assez facilement. 
+Les principes de Gandy sont satisfaits par tous les modèles de calcul discrets usuels, 
+y compris ceux qui sont massivement parallèles comme le jeu de la vie (cf. §1.2.5) . En 
+revanche, les deux hypothèses physiques mentionnées plus haut, ne sont pas nécessai
+rement vraies dans toute théorie physique. Il peut donc être intéressant de comprendre 
+ce qui se passe par exemple en mécanique quantique, ou en physique relativiste. Pour la 
+physique quantique, nous renvoyons à [Nielsen, 1997] pour une discussion des sources 
+de non-calculabilité, et les conséquences à en tirer sur la thèse de Church ou sur nos 
+modèles physiques. L'article [Arrighi et Dowek, 2008] discute par ailleurs de principes 
+à la Gandy qui permettraient de capturer la théorie des calculs quantiques. 
+Mentionnons que l'axiomatisation de Gandy a été simplifiée et étendue ultérieure
+ment par différents travaux de Wilfried Sieg : voir par exemple [Sieg, 1999, 1994, 1997, 
+2008]. Une toute autre axiomatisation de la notion d'algorithme, due à Gurevich, sera 
+vue en §1.4. 
+1.3 Théorie de la calculabilité 
+Nous avons vu plus haut la diversité des modèles de calcul et le fait remarquable 
+que tous conduisent à la même classe de fonctions calculables. Fait qui conduit à la 
+thèse de Church-Kleene-Turing assurant que chacun d'eux est une formalisation de la 
+notion intuitive de calculabilité. 
+1.3.1 Calculs qui ne s'arrêtent pas 
+Un autre fait important est que, dans chacun de ces modèles, il y a des calculs 
+qui ne s'arrêtent pas. Comme chacun le sait, il n'y a pas non plus de langage de pro
+grammation des seules fonctions calculables. Il y a toujours des programmes qui ne
+
+---
+
+[p. 38-38]
+On dit aussi preuve « intuitionniste ». Nous préférons le qualificatif « constructive » car il met 
+l'accent sur le caractère opérationnel, algorithmique donc, alors que le qualificatif « intuitionniste » 
+relève du vocabulaire philosophique. 
+6. A(u/y) est la formule A dans laquelle la variable y est substituée par le terme u.
+
+---
+
+[p. 47-48]
+nnés si l'on permet de quantifier sur les prédicats. Ceci conduit à étendre donc 
+le langage des types et à définir des langages de programmation fonctionnel d'ordre 
+supérieur. C'est une approche qui a été étudiée par J.-Y. Girard [1971], Th. Coquand 
+& G. Huet [1988], D. Leivant (1983], J.-L. Krivine and M. Parigot [1990], ...
+1016 - Panorama de l'intelligence artificielle. Volume 3 
+Des règles de réécriture 
+Enfin, on peut aussi abandonner des axiomes si on permet d'identifier certains 
+termes et/ou certaines formules. Par exemple, on peut abandonner l'axiome \:/x (x+O = 
+x) si l'on identifie les termes x+O et x, on peut aussi abandonner l'axiome de récurrence 
+si l'on identifie les formules N(y) et Ve ((0 f c) =? \:/x (N(x) =? x f c =? S(x) f c) =? y f c). 
+Cette approche, qui vise à synthétiser et aller au-delà des trois autres approches 
+mentionnées plus haut, a été étudiée dans [Dowek et al., 2003 ; Dowek et Werner, 2003 ; 
+Cousineau et Dowek, 2007], ... 
+Dans toutes ces approches, la propriété de terminaison des réductions est conservée 
+pour certaines théories mais perdue pour d'autres. Lorsqu'elle est conservée, on obtient 
+alors un langage de programmation dont tous les programmes terminent et dans lequel 
+on peut programmer toutes les fonctions dont l'existence est prouvable dans la théorie 
+considérée. 
+1.5. 7 Autres extensions 
+A part le problème de l'incorporation d'axiomes, une autre question très importante 
+est celle d'étendre l'interprétation algorithmique des preuves à la logique classique (c'est 
+la logique obtenue en rajoutant n'importe laquelle des trois formules de la Remarque 
+à la fin du §1.5.3). Ici, la propriété du témoin doit être remplacée par le théorème de 
+Herbrand : 
+D'une preuve constructive d'une formule de la forme 3y A, il est possible 
+d'extraire une suite de termes u1, . . . , Un et une preuve de la formule 
+A(uify) V ... V A( un/Y) 
+De cette façon, les preuves classiques apparaissent comme des algorithmes non déter
+ministes. Voir, par exemple, [Parigot, 1992]. 
+Enfin, à part la déduction naturelle, d'autres calculs logiques ont été considérés, en 
+particulier le calcul des séquents. Voir, par exemple, [Curien et Herbelin, 2000 ; Urban, 
+2001]. 
+1.5.8 Elimination des coupures et résultats de cohérence 
+Bien avant l'isomorphisme de Curry-Howard, un lien remarquable entre déduction 
+et calculabilité était apparu avec l'un des résultats fondamentaux les plus inattendus 
+du vingtième siècle, à savoir le théorème d'incomplétude de Godel [1931] (voir [Davis, 
+1965]), dont la preuve est basée sur une notion (informelle) de déduction algorithmique. 
+Ce théorème affirme qu'aucun système de preuve ne peut capturer pleinement le rai
+sonnement mathématique : toute théorie suffisante pour capturer les raisonnements 
+arithmétiques est nécessairement incomplète, c'est-à-dire telle qu'il existe des énon
+cés qui ne sont pas démontrables et dont la négation n'est pas non plus démontrable. 
+En particulier, on peut exprimer la cohérence (c'est-à-dire la non contradiction) d'une 
+théorie mathématique par un énoncé, qui ne peut être ni démontré ni infirmé (du moins 
+si la théorie est cohérente).
+
+---
+
+[p. 55-55]
+mputable Functions. Raven Press. Reprinted by Dover 
+Publications, Incorporated in 2004. 
+DELORME, M. (1999). An introduction to cellular automata. In DELORME, M. et 
+MAZOYER, J., éditeurs : Cellular automata : a parallel model, pages 3-51. Kluwer. 
+DERSHOWITZ, N. et GUREVICH, Y. (2008). A natural axiomatization of computability
+
+---
+
+[p. 65-65]
+2. Informatique théorique : complexité, automates et au-delà - 1033 
+2.2 A l'intérieur de la calculabilité 
+la théorie de la 
+complexité 
+2.2.1 Limites des ressources physiques 
+Temps des Dieux, temps des hommes. Sur l'île de Calypso, Ulysse renonce à ce 
+paradis miniature, à l'éternité pour reprendre son identité d'homme adulte qui vieillit 
+et meurt. La mythologie grecque enseigne qu'il y a au moins deux sortes de temps. 
+Celui des dieux et de l'éternité où tout est immobile. Celui des hommes qui est un 
+temps linéaire. La calculabilité s'intéresse à savoir si un problème est décidable sans 
+relation au temps, où en quelque sorte tout est déjà là. Ce rapport éternel au temps 
+correspond à la différence entre la calculabilité et la complexité. Prendre le chemin de 
+la théorie de la complexité, c'est descendre de l'Olympe et réintégrer le temps linéaire 
+comme une donnée fondamentale à la notion de calcul. 
+Borne de temps (selon la physique) 
+: 1041• La durée la plus grande qui ait 
+un sens physique est l'âge A de l'univers qui est de l'ordre de 15 x 109 années, soit 
+15 x 109 x 365.25 x 24 x 3600 ,..., 4, 734 x 1017 secondes (ceci dans le cadre du modèle 
+cosmologique du Big Bang). La durée la plus courte r qui ait un sens physique est le 
+temps que met un photon pour parcourir, à la vitesse de la lumière c = 3 x 108 m/s, une 
+distance égale au diamètre d = 10-15 m du proton. Soit T = Î = j_^: rv 3, 333 X 10-24 
+seconde. 
+Le nombre N = 1 = 33'x1X01;4 ,..., 1041 représente alors le plus grand nombre d'unités 
+de temps ayant un sens physique. 
+Borne de matière (selon la physique) : :'.S 1080 particules. Dans le fil de la ré
+flexion précédente, il est raisonnable de considérer aussi les limites de notre univers : 
+il semble que le nombre de particules élémentaires soit borné par 1080(:'.S 2320). 
+La théorie de la complexité comme théorie de la calculabilité « raisonnable » . 
+Les chiffres que l'on vient de voir montrent qu'un algorithme en temps ou espace expo
+nentiel a une complexité rédhibitoire. La théorie de la complexité étudie les problèmes 
+qui peuvent être résolus avec des ressources de calcul limitées. Citons quelques livres 
+ouvrages de référence : le classique de Papadimitriou (1994], le livre de Jones (1997] 
+orienté théorie de la programmation, le livre de Savage (1998] orienté algorithmique et 
+calcul avec différents modèles de calcul, ainsi que les livres (Sipser, 2006 ; Goldreich, 
+2008 ; Arora et Barak, 2009]. 
+2.2.2 Complexité de quelques problèmes 
+Exemple 1 : Multiplication de deux entiers. Un même problème peut être résolu 
+par plusieurs algorithmes très différents. Prenons l'exemple de la multiplication de deux 
+entiers a et b ayant respectivement p et q chiffres. L'algorithme appris à l'école calcule 
+en effectuant O(p.q) opérations. Posant n = max(p, q), on dira que la complexité de 
+cet algorithme est en O(n2). Il y a d'autres algorithmes plus rapides mais, concep
+tuellement, plus difficiles (on échange donc du temps contre de la matière grise ... ).
+
+---
+
+[p. 72-72]
+gage de programmation choisi, la variation selon ce choix étant négligeable. 
+Comme on peut s'y attendre, cette complexité, parfaitement définie sur le plan 
+théorique, n'est cependant pas une fonction calculable ... Ceci peut sembler rédhibitoire 
+pour des applications mais il n'en est rien (cf. le livre [Li et Vitanyi, 2008]).
+
+---
+
+[p. 80-80]
+1048 - Panorama de l'intelligence artificielle. Volume 3 
+conséquence des résultats de la thèse de Plandowski [Plandowski, 1995]. Enfin, le résul
+tat de Sénizergues a été étendu aux transducteurs à piles déterministes [Sénizergues, 
+1998]. 
+2.4.3 Automates finis pour les structures discrètes 
+Automates d'arbres 
+La structure d'arbre est omniprésente en informatique : analyse de programmes, 
+arbres et-ou, arbres de classification, arbres et documents structurés, arbres phylogéné
+tiques, ... Les définitions d'arbres sont diverses selon le cadre choisi. Nous considérons 
+ici les arbres qui ont une racine, qui sont ordonnés (les fils d'un noeud sont ordonnés), 
+qui sont étiquetés (à chaque noeud est associé un symbole d'un alphabet fini) et qui 
+sont d'arité fixée (le nombre de fils d'un noeud est déterminé par le symbole en ce 
+noeud). Nous supposons donc l'existence d'un alphabet fini E où chaque symbole a 
+une arité fixée entière qui détermine le nombre de fils. L'ensemble des arbres sur E 
+peut être défini récursivement par : tout symbole d'arité 0 est un arbre, si ti, . . . , tn 
+sont des arbres et si f est un symbole d'arité n alors f(ti, . . . , tn) est un arbre. On 
+peut voir un arbre comme un graphe avec une racine, un arc entrant par noeud, un 
+nombre d'arcs sortants respectant l'arité du symbole du noeud et un ordre sur les arcs 
+sortants. On représente généralement un arbre avec la racine en haut et les feuilles (les 
+noeuds sans fils qui correspondent à des symboles d'arité 0) en bas. 
+Étant donné un alphabet fini E, un automate (ascendant) d'arbres M est défini par 
+un ensemble fini d'états Q, un sous-ensemble F de Q des états finaux, un ensemble de 
+transitions À de règles de la forme a -t q avec a lettre de E d'arité 0 et q état de Q 
+ou de la forme f(qi, . . . , qn) -t q avec avec f lettre de E d'arité n et qi, . . . , qn, q états 
+de Q. L'automate M est décrit par un triplet (Q, F, À). On peut noter qu'il n'y a pas 
+d'états initiaux car les règles de la forme a -t q servent à initier un calcul. En effet, 
+un calcul de M sur un arbre t est un arbre r qui a le même ensemble de noeuds que 
+t, qui est étiqueté par des symboles dans Q et cet étiquetage respecte les règles de M 
+sur t. Un automate est déterministe si pour tout symbole f d'arité n et tout n-uplet 
+d'états (q1, . . . , qn), il existe au plus une règle f(qi, . . . , qn) -t q dans À. Notons que 
+dans un automate déterministe, il existe toujours au plus un calcul pour tout arbre t. 
+Un arbre t est accepté par M s'il existe un calcul r de M sur t dont l'état à la racine 
+de r est final, un tel calcul est appelé calcul réussi. Le langage des mots acceptés par 
+M est noté L(M). Un langage L (un ensemble d'arbres) est reconnaissable si il existe 
+un automate fini M tel que L = L(M). 
+La plupart des propriétés s'étendent du cas des mots au cas des arbres : détermini
+sation, clôture par les opérations booléennes, lemme de pompage, décision du vide. La 
+notion de grammaire régulière d'arbres peut être définie. Des expressions rationnelles 
+peuvent être définies en introduisant une opération de concaténation pour les arbres 
+qui consiste à ajouter un arbre dans un contexte (un arbre avec une feuille particulière 
+autorisant l'ajout) et un théorème de Kleene peut être montré. Un théorème de Myhill
+Nerode et un algorithme de minimalisation peuvent être définis. La logique MSO peut 
+être étendue pour être interprétée sur des arbres finis, elle définit la classe des lan
+gages reconnaissables d'arbres et est donc décidable [Thatcher et Wright, 1968]. Ce
+
+---
+
+[p. 88-88]
+1056 - Panorama de l'intelligence artificielle. Volume 3 
+Il est clairement impossible d'unifier toutes les approches : par exemple toute fonc
+tion calculable en analyse récursive est nécessairement continue, alors que des fonctions 
+discontinues sont calculables dans le modèle initial de Blum Shub et Smale (1989]. Ce
+pendant, si l'on met de coté l'approche algébrique du modèle de Blum Shub et Smale, 
+certains résultats récents établissent l'équivalence entre différents modèles (voir par 
+exemple (Bournez et al., 2006, 2007 ; Graça et Costa, 2003]). Il n'est pas cependant 
+clair à ce jour qu'il puisse exister un concept unificateur pour les modèles continus 
+analogue à la thèse de Church pour les modèles discrets/digitaux : nous renvoyons au 
+survol [Bournez et Campagnolo, 2008] pour des discussions sur le sujet. 
+2.5. 7 Calculabilité au-delà de la thèse de Church ? 
+Il est intéressant de suivre (Ord, 2006], et de faire un rapide panorama (non exhaus
+tif) de différents moyens d'obtenir des systèmes ou des machines plus puissants que les 
+machines de Turing. 
+Calculabilité avec oracle. La première façon, proposée par Turing lui-même dans 
+(Turing, 1939] consiste à considérer des machines avec oracles, qui correspondent à des 
+boîtes noires capables de répondre à certaines questions. Cela permet classiquement de 
+« relativiser » nombre de résultats en calculabilité et complexité, mais aussi d'obtenir 
+des modèles plus puissants que les machines de Turing {dès que l'oracle n'est pas cal
+culable). 
+Il y a plusieurs types de machines ou de systèmes dans l'esprit des machines à oracles. 
+Cela inclut les machines de Turing couplées de [Copeland, 1997], qui sont des machines 
+de Turing connectées à un canal d'entrée, ou les réseaux de machines qui exploitent le 
+fait qu'un temps de synchronisation peut être irrationnel et non calculable (Copeland 
+et Sylvan, 1999], ou les machines couplées à des dispositifs physiques comme les scatter
+machines de (Beggs et al., 2008], ou utilisant des tirages aléatoires biaisés comme dans 
+(Ord et Kieu, 2004]. 
+Machines accélérantes. Une seconde approche consiste à considérer des machines 
+accélérantes, c'est-à-dire à considérer des machines qui effectuent leur première opéra
+tion en temps unitaire, et chaque opération ultérieure en un temps égal à la moitié de 
+l'opération précédente. Cette idée, ancienne, déjà présente dans (Blake, 1926 ; Russell, 
+1935 ; Weyl et Kirschmer, 1927], est aussi présente dans les machines à temps ordinal : 
+voir par exemple (Hamkins, 2002]. Il a été argumenté que différents systèmes physiques 
+pouvaient en réaliser des implémentations : voir par exemple (Calude et Pavlov, 2002] 
+à propos de la mécanique quantique, ou (Hogarth, 1994] à propos de calculs par trous 
+noirs. 
+Autres machines. Il est aussi possible de considérer différentes variantes des ma
+chines de Turing : des machines exploitant un non-déterminisme non borné [Spaan 
+et al., 1989], travaillant sur des entrées infinies (voir par exemple [Weihrauch, 2000] 
+pour une présentation des machines de Turing de type 2), des machines avec une infinité 
+d'états (Ord, 2002], des machines bruitées (Asarin et Collins, 2005], etc ...
+
+---
+
+[p. 95-95]
+utations, 
+pages 625-633. ACM Press/ Addison-Wesley Publishing Co. 
+RozENBERG, G. et SALOMAA, A., éditeurs (1997). Handbooks of Format Languages : vol 
+1. Ward, language, grammar; vol 2. Linear modeling; vol 3. Beyond words. Springer 
+Verlag. 
+RUBIN, S. (2008). Automata presenting structures : A survey of the finite string case.
+
+---
+
+[p. 105-105]
+3. Bases de données et intelligence artificielle - 1073 
+de ses colonnes (domaine des attributs). En revanche, la description des tables par 
+le modèle relationnel ne permet pas d'exclure certaines combinaisons de valeurs, pas 
+plus bien évidemment, qu'il ne permet, à l'inverse, de forcer l'occurrence de valeurs 
+sous certaines conditions, etc. De manière générale, le modèle relationnel ne permet 
+pas d'exprimer des propriétés complexes et des lois générales que les données sont 
+censées respecter si toutefois on souhaite que celles-ci soient conformes aux applications 
+modélisées. 
+Pour ce faire, le modèle relationnel comme les autres modèles de données, est en
+richi par un mécanisme permettant de compléter la spécification de la structure des 
+données par des propriétés liées au domaine d'application. Ces propriétés sont des 
+méta-données appelées des contraintes d'intégrité. La connaissance et le traitement 
+(maintenance) des contraintes d'intégrité sont fondamentaux à plusieurs égards : (1) 
+comme évoqué précédemment, l'objectif premier est d'assurer une forme de fiabilité des 
+données, c'est-à-dire leur conformité avec la « réalité » (2) comme le typage en pro
+grammation, les contraintes d'intégrité sont un véritable levier pour l'optimisation des 
+traitements (mises à jour et requêtes) tant au niveau logique qu'au niveau physique ; 
+les contraintes servent à la fois à structurer les données et à exécuter efficacement les 
+traitements sur les données, ceci pouvant aller jusqu'à se dispenser de l'évaluation d'une 
+requête dont on a pu détecter statiquement (à la compilation , grâce aux contraintes 
+d'intégrité, qu'elle ne retournerait aucune réponse. 
+L'évolution des applications, depuis l'apparition des systèmes de gestion de base 
+de données relationnels jusqu'à l'émergence plus récente des systèmes de gestion de 
+données XML, s'est accompagnée de la nécessité accrue de développer des techniques 
+garantissant la sûreté, la conformité des données manipulées et améliorant la rapidité 
+et la fiabilité des développements. 
+Cette section n'a pas pour prétention d'exposer de façon exhaustive les caractéris
+tiques des systèmes de contraintes d'intégrité [Abiteboul et al., 1995 ; Bidoit et Collet, 
+2001], encore moins de couvrir les méthodes proposées par les systèmes commerciaux. 
+L'objectif ici est de traiter de quelques problèmes liés à l'expression et à la gestion des 
+contraintes illustrant les liens entre le domaine des bases de données et celui de l'intelli
+gence artificielle. La première partie de cette section est consacrée aux concepts élémen
+taires et en particulier à la formalisation en logique du premier ordre des contraintes 
+d'intégrité. La deuxième partie est centrée sur les contraintes dynamiques et la logique 
+temporelle. Elle sera d'ailleurs l'occasion d'un détour sur les langages de requêtes tem
+porels, la distinction entre requête et contrainte étant somme toute assez ténue. 
+3.3.2 Contraintes d'intégrité et logique du premier ordre 
+Nous laissons pour l'instant de côté la discussion concernant les différents types de 
+contraintes pour nous focaliser sur les contraintes statiques. Une contrainte statique 
+est une propriété, aussi complexe soit-elle, qui peut être vérifiée par simple examen de 
+l'état courant de la base de données, comme par exemple : un employé ne peut être 
+affecté qu'à un seul département. 
+Classiquement, une contrainte est spécifiée par une formule close de la logique du
+
+---
+
+[p. 112-112]
+- est déterminée ; 
+3. cette requête est évaluée et le score global attaché à chaque élément du résultat 
+est calculé ; 
+4. si au moins k n-uplets possédant un score supérieur ou égal à a ont été obtenus, 
+les k meilleurs sont délivrés, sinon la procédure est relancée (à partir de l'étape 
+2) en utilisant un seuil a plus faible.
+
+---
+
+[p. 120-120]
+1088 - Panorama de l'intelligence artificielle. Volume 3 
+de chemin [Buneman et al., 2001] [Buneman et al., 2003] [Fan et Siméon, 2003]. Dans ce 
+cadre, par exemple, les logiques modales [Kripke, 1963] ont été explorées parce qu'elles 
+offrent une formalisation simple et directe de propriétés de graphes ainsi que des méca
+nismes de raisonnement puissants pour ces structures : les graphes (ou plus simplement 
+les arbres) étiquetés sont utilisés très communément pour représenter les données XML 
+[Calvanese et al., 1999] [Alechina et al., 2003] [Demri, 2003]. L'expression des schémas 
+et des contraintes a été étudiée dans (Bidoit et Colazzo, 2007] [Bidoit et de Arno, 1998]. 
+Concernant les requêtes à préférences, il est connu que les fonctions de score ne 
+peuvent modéliser toutes les préférences qui sont des ordres partiels stricts [Fishburn, 
+1999], pas même celles pouvant apparaître de façon naturelle dans des applications 
+de bases de données [Chomicki, 2003]. Par exemple, les fonctions de score ne peuvent 
+pas capturer les requêtes skyline (voir [Hadjali et al., 2011]). Notons aussi qu'il n'est 
+pas toujours simple de définir les fonctions de score. Puisque les relations binaires 
+utilisées dans les approches qualitatives peuvent être définies en termes de fonctions 
+de score, l'approche qualitative est plus générale que celle quantitative. Notons qu'il 
+est raisonnable d'imposer que les préférences qualitatives, même si elles ne sont pas 
+fondées sur une comparaison de scores globaux, aient un comportement monotone 
+par rapport aux scores partiels. Les aspects liés à l'implémentation de ces modèles, 
+notamment l'évaluation de requêtes, n'ont pu être abordés ici faute de place, mais sont 
+évidemment cruciaux dans un contexte de bases de données où le volume d'information 
+à traiter est en général très élevé. Dans cette synthèse, nous nous sommes limités aux 
+travaux les plus récents, mais le lecteur intéressé peut se référer à [Pivert et Bosc, 2012] 
+pour une étude plus complète. 
+On observe enfin que les ontologies sont maintenant au cœur du Web sémantique 
+[Berners-Lee et al., 2001]. Elles fournissent une vue conceptuelle des données et services 
+mis à disposition sur le Web, dans le but de faciliter leur manipulation. Répondre à 
+des requêtes conjonctives sur des ontologies est un problème central pour la mise en 
+œuvre du Web sémantique. La famille DL-Lite [Calvanese et al., 2007] a été spéciale
+ment définie pour garantir que répondre à une requête est polynomial dans la taille des 
+données interrogées. DL-Lite est un fragment du langage d'ontologies OWL 7 du W3C 
+et de son évolution à venir OWL2 8• De plus, DL-Lite étend RDFS 9, avec la possibilité 
+de déclarer des relations disjointes ou d'exprimer des restrictions de cardinalités. RDFS 
+est le standard du W3C pour décrire les méta-données des ressources du Web séman
+tique. Une étape de reformulation de la requête en fonction des axiomes et contraintes 
+déclarés dans l'ontologie est nécessaire pour garantir la complétude des réponses. Le 
+point important est que cette reformulation (comme la réécriture en termes de vues) 
+est indépendante des données. 
+Un résultat majeur de [Calvanese et al., 2007] est que DL-Lite est un des fragments 
+décidables maximaux de la logique du premier ordre pour lequel répondre à des requêtes 
+sur des grands volumes de données en présence de contraintes logiques sur le schéma 
+est traitable. Les travaux sur DL-Lite ont été généralisés à la réécriture de requêtes en 
+termes de vues en décentralisé dans [Abdallah et al., 2009]. Pour des raisons de passage 
+7. http : //www . w3 . org/2004/0WL/ 
+8. http : //www . w3 . org/TR/owl2- overview/ 
+9. http : //www . w3 . org/TR/rdf- schema/
+
+---
+
+[p. 127-129]
+future information systems. 
+IEEE Computers. 
+WoLPER, P. (1983). Temporal logic can be more expressive. In Information and 
+Control, volume 56(1-2), pages 72-99. 
+ZADEH, L. (1965). Fuzzy sets. Information and Control, 8 :338-353. 
+ZLOOF, M. (1977). Query-By -Example : a data base language. IBM Systems Journal, 
+16( 4) :324-343.
+4. Web sémantique - 1097 
+Chapitre 4 
+Web sémantique 
+Le Web sémantique ambitionne de rendre le contenu du Web accessible au calcul. 
+Il ne s'agit rien moins que de représenter de la connaissance à l'échelle du Web. Les 
+principales technologies utilisées dans ce cadre sont : la représentation de connaissance 
+assertionnelle à l'aide de graphes, la définition du vocabulaire de ces graphes à l'aide 
+d'ontologies, la connexion des représentations à travers le Web, et leur appréhension 
+pour interpréter la connaissance ainsi exprimée et répondre à des requêtes. Les tech
+niques d'intelligence artificielle (IA), et principalement de représentation de connais
+sances, y sont donc mises à contribution et à l'épreuve. En effet, elles sont confrontées 
+à des problèmes typiques du Web tels que l'échelle, l'hétérogénéité, l'incomplétude, 
+l'incohérence et la dynamique. Ce chapitre propose une courte présentation de l'état 
+du domaine et renvoie aux autres chapitres concernant les technologies mises en œuvre 
+dans le Web sémantique. 
+4.1 
+Introduction 
+L'idée d'utiliser la représentation de connaissances sur le worldwide Web a germé 
+assez rapidement après le développement du Web. Des systèmes tels qu'Ontobroker 
+[Fensel et al., 1998] et SHOE [Luke et al., 1997] ont intégré la représentation formelle 
+de la connaissance dans les pages Web alors qu'Ontoserver [Farquhar et al., 1995] et 
+HyTroeps [Euzenat, 1996] permettaient d'éditer la connaissance en utilisant le Web. 
+Mais c'est en 1998 que Tim Berners Lee a véritablement posé les principes, et 
+surtout proposé le nom, du « Web sémantique ». Il avait déjà introduit au sein du 
+W3C 1 le langage RDF dont le but initial était d'annoter les pages Web. A l'époque, il 
+écrivait « A Semantic Web is not Artificial Intelligence », mais a ajouté plus tard que 
+c'était « Knowledge Representation goes Global » [Berners-Lee, 1998]. 
+En 2000, cette notion de Web sémantique n'avait pas trouvé d'écho particulièrement 
+favorable ni donné lieu a des développements d'envergure. Mais la DARPA a lancé le 
+Auteurs : JÉRÔME EUZENAT et MARIE-CHRISTINE ROUSSET. 
+1. WorldWide Web Consortium : l'organisation qui recommande les technologies du Web.
+
+---
+
+[p. 136-136]
+le de rôle ; 
+- owl :minCardinality (resp. owl :maxCardinality) définit la classe des objets n'ay
+ant pas moins (resp. plus) d'un certain nombre d'objets distincts par une pro
+priété particulière. Une version qualifiée de ces constructeurs, introduite en OWL 
+2, impose en plus que les objets soient dans une classe particulière ;
+
+---
+
+[p. 144-144]
+elle approche est qu'elle permet de raisonner efficacement puisque 
+l'ensemble des conséquences utilisant le vocabulaire d'une ontologie particulière peut 
+être traité au sein de cette ontologie avant d'être propagé aux autres ontologies connec
+tées (ou, à l'inverse, recherchées uniquement dans cette ontologie). Malheureusement,
+
+---
+
+[p. 152-152]
+1 120 - Panorama de l'intelligence artificielle. Volume 3 
+ZIMMERMANN, A. et LE Duc, C. (2008). Reasoning on a network of aligned ontologies. 
+In Proc. 2nd International conference on web reasoning and rule systems {RR), 
+Karlsruhe (DE}, pages 43-57. 
+ZURAWSKI, M., SMAILL, A. et ROBERTSON, D. (2008). Bounded ontological consistency 
+for scalable dynamic knowledge infrastructures. In Proc. 3rd Asian Semantic Web 
+Conference {ASWC}, volume 5367 de Lecture notes in computer science, pages 212-
+226, Bangkok (TH).
+
+---
+
+[p. 160-160]
+mot un type approprié et en s'appuyant sur la structure syn
+taxique d'une phrase, les sémanticiens on pu construire la formule logique d'une phrase. 
+Le problème est que >.x chat(x) ne nous donne pas d'éléments pour faire des inférences à 
+base d'informations purement lexicales. Par exemple, si l'on veut inférer (5.6a) à partir
+
+---
+
+[p. 168-168]
+1 136 - Panorama de l'intelligence artificielle. Volume 3 
+ALLEN, J. F. (1983). Maintaining knowledge about temporal intervals. Communica
+tions of the ACM, 26(11) :832-843. 
+AsHER, N. (1992). A default, truth conditional semantics for the progressive. Linguis
+tics and Philosophy, 15 :463-508. 
+ASHER, N. (1993). Reference to Abstract Objects in Discourse. Kluwer Academic 
+Publishers. 
+AsHER, N. (2011). Lexical Meaning in Context. Cambridge University Press. 
+AsHER, N. et LASCARIDES, A. (2003). Logics of Conversation. Cambridge University 
+Press. 
+ASHER, N. et MORREAU, M. (1995). What some generic sentences mean. In CARLSON, 
+G. et PELLETIER, F., éditeurs : The Generic Book, pages 300-339. University of 
+Chicago Press, Chicago. 
+BARKER, C. et SHAN, K. (2006). Types as graphs : Continuations in type logical 
+grammar. Journal of Logic, Language and Information, 15(4). 
+BARNARD, K., JOHNSON, M. et FORSYTH, D. (2003). Word sense disambiguation with 
+pictures. In REGINA BARZILAY, E. R. et SISKIND, J. M., éditeurs : Proceedings of 
+the HLT-NAACL 2003 Workshop on Learning Word Meaning from Non-Linguistic 
+Data, pages 1-5. 
+BONZON, E. (2007). Modélisation des interactions entre agents rationnels : les jeux 
+booléens. Thèse de doctorat, Université Paul Sabatier, Toulouse. 
+BONZON, E., LAGASQUIE-SCHIEX, M. C., LANG, J. et ZANUTTINI, B. (2006). Boolean 
+games revisited. In et AL. , G. B., éditeur : ECAI 2006, pages 265-270. IOS Press. 
+BOUAUD, J., BACHIMONT, B. et ZWEIGENBAUM, P. (1996). Processing metonymy : a 
+domain-model heuristic graph traversa! approach. In TSUJII, J.-I., éditeur : Procee
+dings of the 16th COLING, pages 137-142, Copenhagen, Denmark. 
+BOUTILIER, C. (1999). Sequential optimality and coordination and multiagent sys
+tems. In Proceedings of the Sixteenth International Joint Conference on Artificial 
+Intelligence (IJCAI-99}, pages 527-534, Stokholm. 
+BRACHMAN, R. J. et SCHMOLZE, J. (1985). An overview of the KL-ONE knowledge 
+representation system. Cognitive Science, 9 : 171-216. 
+BRESNAN, J., éditeur (1982). The Mental Representation of Grammatical Relations. 
+MIT Press. 
+BRILL, E. (1995). Transformation-based error-driven learning and natural language 
+processing : A case study in part-of-speech tagging. Computational Linguistics, 
+21(4) :543-565. 
+BRUNI, E., TRAN, G. B. et BARONI, M. (2011). Distributional semantics from text 
+and images. In Proceedings of the GEMS 2011 Workshop on GEometrical Models of 
+Natural Language Semantics, pages 22-32, Edinburgh, UK. Association for Compu
+tational Linguistics. 
+BuRNARD, L. (1995). Users Reference Guide for the British National Corpus. Bri
+tish National Corpus Consortium, Oxford University Computing Services, Ox
+ford, UK, version 1.0 édition. http : / /homepages . abdn . ac . uk/k . vdeemter /pages/ 
+teaching/NLP/practicals/bnc-doc . pdf, 524p.
+
+---
+
+[p. 176-176]
+1 144 - Panorama de l'intelligence artificielle. Volume 3 
+le fruit d'une pression sélective liée au fait que la région assure une fonction biolo
+gique importante et porte sans doute un gène. On parle d'approche comparative. 
+L'approche ab initio s'est rapidement appuyée sur des modélisations classiques de 
+la segmentation utilisées en reconnaissance des formes et en traitement du signal et du 
+langage. Dans un premier temps, ce sont essentiellement des variantes des chaînes de 
+Markov qui ont été utilisées pour caractériser les gènes des organismes simples (bac
+téries). Le cas plus complexe des organismes eucaryotes, avec des gènes segmentés, a 
+été abordé en s'appuyant sur des modèles de type chaînes de Markov cachées (HMM) 
+[Rabiner, 1990] ou des variantes telles les semi-HMM, permettant de représenter ex
+plicitement les distributions de longueur des différentes régions, exons, introns, région 
+sans gène, etc... Pour identifier les signaux de ponctuations « flous » dans les gènes, 
+une très grande variétés de méthodes de classification de motifs textuels ont été uti
+lisées : réseaux de neurones, fonctions de discrimination linéaires ou non, séparateurs 
+à vaste marges (SVM) (voir chapitre I.9), modèles probabilistes (chaînes de Markov 
+non homogènes, réseaux bayésiens .... Voir chapitre II.8). Tous ces modèles, qu'ils soient 
+probabilistes ou non, sont généralement appliqués dans un cadre « supervisé » et néces
+sitent par conséquent la construction préalable de grands jeux d'apprentissage utilisés 
+pour estimer les paramètres des modèles. La construction du jeu d'apprentissage peut 
+être assez lourde, car elle nécessite généralement un travail expérimental délicat. Ces 
+méthodes sont toujours utilisées dans les prédicteurs de gènes ab initio [Lukashin et 
+Borodovsky, 1998 ; Stanke et al., 2006 ; Burge et Karlin, 1997]. Un travail algorith
+mique non négligeable a été nécessaire pour permettre de tirer parti des propriétés 
+spécifiques du problème de prédiction de gènes pour rendre praticable les approches 
+de type semi-HMM dont les algorithmes associés, de complexité quadratique, sont peu 
+compatibles avec la taille des données traitées. 
+Les approches extrinsèques et comparatives sont limitées par la connaissance d'un 
+existant avec lequel se comparer. La majorité des travaux ici ne proviennent pas de l'in
+telligence artificielle mais s'appuient sur des programmes issus du domaine de l'analyse 
+de séquences permettant la comparaison rapide de séquence à grande échelle tels que 
+BLAST [Altschul et al., 1990], qui est l'un des outils les plus utilisés de la bioinforma
+tique. Les régions similaires ainsi identifiées sont rarement complètes ou précises, mais 
+assez fiables. 
+Depuis les années 2000, l'essentiel des travaux a été consacré à la conception de pré
+dicteurs « consensuels » (ou intégratifs) permettant de prendre en compte simultané
+ment le plus possible d'informations pertinentes : propriétés statistiques, similarités de 
+séquence, conservation de séquence, prédictions issues d'autres sources (expérimentales 
+ou non). Le modèle HMM qui modélise la distribution de probabilité jointe des données 
+observées, c'est-à-dire la séquence d'ADN, et de sa segmentation en exons, introns ... qui 
+sont des données cachées, devient mal adapté. En effet, l'intégration d'une variété de 
+données de sources disparates dans un tel cadre est incompatible avec les hypothèses 
+d'indépendance sous-jacentes au formalisme. Les prédicteurs de gènes intégratifs uti
+lisent donc systématiquement des modèles discriminants, modélisant uniquement en 
+quoi les observations rendent plus ou moins vraisemblables différentes segmentations. 
+Ainsi, le formalisme des champs aléatoires conditionnels [Lafferty et al., 2001] est main
+tenant au cœur de nombreux prédicteurs de gènes car il permet de se libérer, dans une
+
+---
+
+[p. 183-183]
+pressivité, la pertinence, et la validité de la sémantique formelle 
+sont très variables. Leur représentation est généralement réduite à une arborescence 
+de concepts. L'ontologie la plus remarquable, Gene Ontology (GO) (Ashburner et al., 
+2000] est le résultat d'un effort collaboratif initié pour l'annotation manuelle de gènes.
+
+---
+
+[p. 191-191]
+6. Bioinformatique - 1 159 
+MITCHELL, A., MULDER, N., NATALE, D., ÜRENGO, c. , QUINN, A. F., SELENGUT, 
+J. D., SIGRIST, C. J., THIMMA, M., THOMAS, P. D., VALENTIN, F., WILSON, D., Wu, 
+C. H. et YEATS, C. (2009). InterPro : the integrative protein signature database. 
+Nucleic Acids Res, 37(Database issue) :D211-5. 
+JAAKKOLA, T., DIEKHANS, M. et HAUSSLER, D. (2000). A Discriminative Framework 
+for Detecting Remote Protein Homologies. J. Comput. Biol., 7(1,2) :95-114. 
+JANSEN, R., Yu, H., GREENBAUM, D., KLUGER, Y., KROGAN, N., CHUNG, S., Ervr1L1, 
+A., SNYDER, M., GREENBLATT, J. et GERSTEIN, M. (2003). A Bayesian networks 
+approach for predicting protein-protein interactions from genomic data. Science, 
+302(5644) :449-453. 
+JANSEN, R. C. et NAP, J. P. (2001). Genetical genomics : the added value from 
+segregation. Trends Genet, 17(7) :388-91. 
+JENSEN, L. J. J., SARIC, J. et BORK, P. (2006). Literature mining for the biologist : from 
+information retrieval to biological discovery. Nature reviews. Genetics, 7(2) :119-129. 
+JOHN, M., LHOUSSAINE, c., NIEHREN, J. et UHRMACHER, A. (2009). The attributed pi 
+calculus with priorities. Transactions on Computational Systems Biology, XII(594). 
+JONASSEN, I., COLLINS, J. F. et HIGGINS, D. G. (1995). Finding flexible patterns in 
+unaligned protein sequences. Protein Sei., 4 :1587-1595. 
+JUVAN, P., DEMSAR, J., SHAUNLSKY, G. et ZUPAN, B. (2005). Genepath : from mu
+tations to genetic networks and back. Nucleic Acids Research, 33(Web Server is
+sue) :W749-W752. 
+KALL, L., KROGH, A. et SoNNHAMMER, E. L. (2004). A combined transmembrane 
+topology and signal peptide prediction method. J. Mol. Biol., 338 :1027-1036. 
+KAUFFMAN, S. (1971). Gene regulation networks : a theory for their global structure 
+and behaviors. Curr Top Dev Biol, 6(6) :145-82. 
+KERBELLEC, G. (2008). Apprentissage d'automates modélisant des familles de sé
+quences protéiques. Thèse de doctorat, Université Rennes 1. 
+KHARCHENKO, P., VITKUP, D. et CHURCH, G. M. (2004). Filling gaps in a metabolic 
+network using expression information. Bioinformatics, 20 Suppl 1 :Il 78-I185. 
+KIM, J.-D., ÜHTA, T., TSURUOKA, Y., TATEISI, Y. et N., C. (2004). Introduction to the 
+bio-entity recognition task at jnlpba. In Proc. of NLPBA/Coling wshp. International 
+Conference on Computational Linguistics (COLING'04). 
+KING, R., ROWLAND, J., ÜLIVER, S., YOUNG, M., AUBREY, W., BYRNE, E., LIAKATA, 
+M., MARKHAM, M., Prn, P., SOLDATOVA, L., SPARKES, A., WHELAN, K. et CLARE, 
+A. (2009). The automation of science. Science, 324(5923) :85-9. 
+KLAMT, S., SAEZ-RODRIGUEZ, J., LINDQUIST, J. A., SIMEON!, L. et GILLES, E. D. 
+(2006). A methodology for the structural and functional analysis of signaling and 
+regulatory networks. BMC Bioinformatics, 7 :56. 
+KROGH, A., BROWN, M., MIAN, I. S., SJOLANDER, K. et HAUSSLER, D. (1994). Hidden 
+Markov models in computational biology. Applications to protein modeling. J. Mol. 
+Biol., 235 :1501-1531. 
+KUANG, R., LESLIE, C. S. et YANG, A.-8. (2004). Protein backbone angle prediction 
+with machine learning approaches. Bioinformatics, 20(10) :1612-1621.
+
+---
+
+[p. 200-200]
+ntent les 
+concepts et les objets, et les arcs représentent des relations. Les règles d'infé
+rence s'appuient sur des propriétés d'héritage lorsque l'on passe par des arcs 
+d'une classe à une classe plus spécifique. Leur représentation sous forme de 
+graphes relationnels attribués est souvent utilisée pour représenter l'informa-
+
+---
+
+[p. 209-209]
+ation par l'exemple, un but est formulé par l'intermédiaire d'une ou 
+plusieurs images de référence qui contiennent la représentation des résultats à obtenir 
+sur des images tests. Ces exemples sont utilisés par le système pour sélectionner un 
+algorithme prédéfini ou construire une chaîne d'algorithmes qui produit des résultats
+
+---
+
+[p. 218-218]
+priori [Vijayakumar et al., 2005], ce qui entre bien dans le 
+contexte d'utilisation plus ambitieux que nous avons décrit en introduction de cette 
+section. 
+L'apprentissage pour la robotique trouve son contexte d'application le plus convain
+cant dans l'interaction entre un robot et un humain. En effet, ce contexte requiert plus
+
+---
+
+[p. 226-226]
+1 194 - Panorama de l'intelligence artificielle. Volume 3 
+à partir d'un modèle structurel. Information - Interaction - Intelligence (13}, 10(1). 
+NEMPONT, O., ATIF, J. et BLOCH, 1. (2013). A constraint propagation approach to 
+structural model based image segmentation and recognition. Information Sciences, 
+246 :1-27. 
+NEUMANN, B. et MÜLLER, R. (2008). On Scene Interpretation with Description Logics. 
+Image and Vision Computing, 26(1) :82-110. 
+ÜUDEYER, P.-Y., KAPLAN, F. et HAFNER, V. (2007). Intrinsic motivation systems for 
+autonomous mental development. IEEE Transactions on Evolutionary Computation, 
+11(2) :265-286. 
+PASQUI, V., SAINT-BAUZEL, L. et SIGAUD, O. (2010). Characterization of a least effort 
+user-centered trajectory for sit-to-stand assistance user-centered trajectory for sit
+to-stand assistance. In IUTAM Symposium on Dynamics Modeling and Interaction 
+Control in Virtual and Real Environments. 
+PERCHANT, A. et BLOCH, 1. (2002). Fuzzy Morphisms between Graphs. Fuzzy Sets 
+and Systems, 128(2) :149-168. 
+PERNER, P., HOLT, A. et RICHTER, M. (2005). Image Processing in Case-Based Rea
+soning. The Knowledge Engineering Review, 20(3) :311-314. 
+PETERS, J., NAKANISHI, J. et IJSPEERT, A. J. (2003). Learning movement primitives. 
+In International Sysmposium on Robotics Research (ISRR). 
+PETERS, J. et SCHAAL, S. (2008). Natural actor-critic. Neurocomputing, 71(7-9) :1180-
+1190. 
+PROTIÈRE, A. et SAPIRO, G. (2007). Interactive Image Segmentation via Adaptive 
+Weighted Distances. IEEE Transactions on Image Processing, 16(4) :1046-1057. 
+QUILLIAN, M. (1967). Word concepts : A theory and simulation of some basic semantic 
+capabilities. Behavioral Science, 12(5) :410-430. 
+QUINTON, J.-C., BUISSON, J.-C. et PEROTTO, F. (2008). Anticipative coordinated 
+cognitive processes for interactivist and Piagetian theories. In 1st Conference on 
+Artificial General Intelligence (P. Wang, B. Goertzel, S. Franklin, Eds.), F'rontiers 
+in Artificial Intelligence and Applications 171, !OS Press, pages 287-298, Memphis, 
+USA. 
+RAO, A. et LOHSE, G. (1993). Towards a Texture Naming System : Identifying Relevant 
+Dimensions of Texture. In 4th IEEE Conference of Visualization, pages 220-227, San 
+Jose, CA. 
+RATLIFF, N., SILVER, D. et BAGNELL, J. (2009). Learning to search : Functional 
+gradient techniques for imitation learning. Autonomous Robots, 27(1) :25-53. 
+RENOUF, A., CLOUARD, R. et REVENU, M. (2007). How to formulate image processing 
+applications ? In International Conference on Computer Vision Systems (ICVS}, 
+pages 1-10, Bielefeld, Germany. 
+RosT, U. et MÜNKEL, H. (1998). Knowledge-Based Configuration of Image Proces
+sing Algorithms. In International Conference on Computational Intelligence and 
+Multimedia Applications (ICCIMA}, pages 9-11, Monash, Australia. 
+SAATHOFF, C. et STAAB, S. (2008). Exploiting spatial context in image region labelling 
+using fuzzy constraint reasoning. In Ninth International Workshop on Image Analysis
+
+---
+
+[p. 237-238]
+tant de relier une position initiale à une position but. Il s'agit 
+d'obtenir à la fois : {i} un chemin faisable, qui vérifie les contraintes cinématiques du 
+robot et les contraintes géométriques de l'environnement, et {ii} une loi de commande 
+le long de ce chemin, qui vérifie les contraintes dynamiques du mobile. Dans les cas
+1206 - Panorama de l'intelligence artificielle. Volume 3 
+simples (environnement statique, pas de contrainte dynamique, on ne cherche pas une 
+trajectoire optimale), on peut décomposer le problème de planification de mouvements 
+en la résolution successive des problèmes (i} puis (ii). Il est en effet possible dans ces 
+cas d'associer une loi de commande à un chemin faisable pour obtenir une trajectoire 
+faisable. La planification de mouvements en robotique se ramène alors à la planification 
+de chemins. 
+Un objet rigide, libre dans l'espace euclidien sans contrainte cinématique, est ca
+ractérisé par six paramètres de configuration (x, y, z, pour la position d'un point de 
+référence et trois angles pour l'orientation du solide dans l'espace). Mais un robot a 
+des contraintes cinématiques qui restreignent ses déplacements. Par exemple, un cha
+riot dans le plan a trois paramètres de configuration (x, y et l'orientation 0), lesquels 
+en général ne sont pas indépendants (une voiture ne peut pas avancer latéralement). 
+Le robot PR-2 (figure 8.7(b)) a 20 paramètres de configurations (3 pour la base, 1 pour 
+le tronc, 2 pour la tête, et 7 par bras). Le robot humanoïde HRP-4 (figure 8.6(a)) a 
+32 paramètres de configuration, auxquels se rajoutent les paramètres des mains à cinq 
+doigts. 
+Pour un robot à n paramètres de configuration dans un environnement donné, on 
+définit : 
+• q E §n, la configuration du robot, un vecteur de n valeurs réelles qui spécifie les n 
+paramètres caractérisant la position du robot dans un repère donné ; 
+• C, l'espace de configuration du robot, qui décrit l'ensemble des valeurs possibles de 
+q dans §n compte tenu des contraintes cinématiques, par exemple les contraintes 
+de débattement de chaque articulation (ou positions angulaires extrêmes que l'ar
+ticulation peut prendre) et de dépendances entre les paramètres de configuration ; 
+• Ci Ç C, l'espace de configuration libre qui donne l'ensemble des valeurs possibles 
+de q E C compte tenu des contraintes de l'environnement, i.e., les configurations q 
+pour lesquelles le robot n'est pas en collision avec des obstacles. 
+Ces notions sont illustrées en figure 8 pour un robot à deux degrés de liberté 2• 
+La planification d'un chemin entre une configuration origine q0 et une configura
+tion but qb, toutes deux dans Ci, consiste à trouver un chemin entre q0 et qb dans cet 
+espace continu à n dimensions. La difficulté majeure, ici comme pratiquement pour 
+tout autre problème de planification, est que l'espace de recherche Ci n'est pas connu 
+explicitement. La définition explicite de Ci à partir du modèle géométrique de l'en
+vironnement et des contraintes cinématiques du robot est un problème extrêmement 
+complexe, difficile à résoudre même pour des robots et des environnements très simples. 
+De nombreux travaux de géométrie algorithmique ont été consacrés à cette difficulté, cf. 
+par exemple [Schwartz et al., 1987]. Ils ont ouvert la voie à des approches qui ont permis 
+de la contourner, en s'appuyant en particulier sur la méthode des cartes probabilistes 
+[Kavraki et al., 1996] . 
+Cette méthode repose sur les deux opérations suivantes, facilement calculables : 
+2. Figure adaptée de http : //www . cs . cmu . edu/motionplanning/
+
+---
+
+[p. 247-247]
+es métriques de suivi d'une trajectoire planifiée, et entre les 
+sous-cartes avec des techniques moins précises de suivi d'un cap, de suivi d'un couloir 
+ou d'une voie naturelle perceptible jusqu'à la reconnaissance de la sous-carte suivante. 
+Les aspects sensoriels et de reconnaissance de lieux jouent un rôle important dans ces
+
+---
+
+[p. 255-255]
+, a). Cette propriété est très utile en apprentissage 
+par renforcement. 
+L'algorithme Value-Iteration a une complexité polynomiale en ISI et IAI. Malheu
+reusement, il est rare en planification que l'espace d'état S puisse être entièrement 
+explicité. S est généralement de taille exponentielle en les variables d'état du système.
+
+---
+
+[p. 263-263]
+e valeurs V ( s) que des fonctions Q( s, a). La mise à 
+jour pour un triplet (s, a, s') observé est similaire : V(s) +-- V(s) + a[r(s, a) + 'YV(s') -
+V(s)]. Cet algorithme, dit TD(O), est à combiner avec une règle de choix de l'action qui 
+permette l'exploration. Il fait partie de la famille d'algorithmes TD(.>..) qui effectuent
+
+---
+
+[p. 271-271]
+que ne le peuvent les techniques de type 
+« model checking ». 
+8.8 
+Conclusion 
+Nous avons présenté dans ce chapitre quelques modèles et techniques utilisés en 
+robotique pour traiter les problèmes de planification et de contrôle d'exécution de 
+mouvements et de tâches, les problèmes d'interaction, les problèmes d'apprentissage,
+
+---
+
+[p. 279-279]
+8. Intelligence artificielle et robotique - 1247 
+MINGUEZ, J., LAMIRAUX, F. et LAUMOND, J.-P. (2008). Motion planning and obstacle 
+avoidance. In [Siciliano et Khatib, 2008], pages 827-852. 
+MOMBAUR, K., TRUONG, A. et LAUMOND, J. (2010). From human to humanoid loco
+motion : an inverse optimal control approach. Autonomous Robots, 28(3). 
+MONTEMERLO, M., THRUN, S., KOLLER, D. et WEGBREIT, B. (2002). Fastslam : A 
+factored solution to the simultaneous localization and mapping problem. In National 
+Conference on Artificial Intelligence ( AAAI}, pages 593-598. 
+MONTEMERLO, M., THRUN, S., KOLLER, D. et WEGBREIT, B. (2003). Fastslam 2.0 : 
+An improved particle filtering algorithm for simultaneous localization and mapping 
+that provably converges. In International Joint Conference on Artificial intelligence 
+(IJCAI}, pages 1151-1156. 
+MORAVEC, H. P. (1983). The Stanford Cart and the CMU Rover. Rapport technique, 
+CMU. 
+MORISSET, B. et GHALLAB, M. (2008). Learning how to combine sensory-motor fonc
+tions into a robust behavior. Artificial Intelligence, 172(4-5) :392-412. 
+MuSCETTOLA, N. (1994). Hsts : Integrating planning and scheduling. In ZWEBEN, M. 
+et Fox, M., éditeurs : Intelligent scheduling. Morgan Kaufmann. 
+NEWCOMBE, R. A. et DAVISON, A. J. (2010). Live dense reconstruction with a single 
+moving camera. In Computer Vision and Pattern Recognition {CVPR}, pages 1498-
+1505. 
+NICOLESCU, M. N. et MATARIC, M. J. (2003). Natural methods for robot task learning : 
+instructive demonstrations, generalization and practice. In Autonomous Agents and 
+Multi-Agent Systems (AAMAS}, pages 241-248. 
+ÜUDEYER, P.-Y. (2010). On the impact of robotics in behavioral and cognitive sciences : 
+From insect navigation to human cognitive development. IEEE T. Autonomous 
+Mental Development, 2(1) :2-16. 
+ÜUDEYER, P.-Y. (2011). Developmental robotics. In SEEL, N., éditeur : Encyclopedia 
+of the Sciences of Learning. Springer. 
+PETERS, J. et NG, A. Y., éditeurs (2009). Autonomous Robots, Special issue on robot 
+learning, volume 27(1-2). Springer. 
+PINEAU, J. et GORDON, G. J. (2005). POMDP planning for robust robot control. In 
+International Symposium on Robotics Research {ISRR}, pages 69-82. 
+PINEAU, J., GORDON, G. J. et THRUN, S. (2003). Policy-contingent abstraction for 
+robust robot control. In Uncertainty in Artificial Intelligence, pages 477-484. 
+PRASSLER, E. et KOSUGE, K. (2008). Domestic robotics. In [Siciliano et Khatib, 2008], 
+pages 1253-1281. 
+PY, F. et INGRAND, F. (2004). Dependable execution control for autonomous robots. 
+In IEEE/RSJ International Conference on Intelligent Robots and Systems {!ROS}, 
+volume 2, pages 1136-1141. 
+PY, F., RAJAN, K. et McGANN, C. (2010). A systematic agent framework for situated 
+autonomous systems. In Autonomous Agents and Multi-Agent Systems {AAMAS}, 
+pages 583-590. 
+ROSEN, C. A. et NILSSON, N. J. (1966). Application of intelligent automata to recon-
+
+---
+
+[p. 288-288]
+5). 
+6. avoir des actions pertinentes. Ce défi a d'abord été posé dans les termes du 
+problème du cadre (quand une action est lancée, ne tenir compte que des change
+ments pertinents pour la tâche), du problème de la qualification (quand on doit 
+déterminer les qualités de la situation dans laquelle on va agir, ne retenir que les
+
+---
+
+[p. 296-296]
+1264 - Panorama de l'intelligence artificielle. Volume 3 
+dynamique. Mais pour ce faire on a dû découpler les éléments du rapport opérations 
+computationnelles / normalités fonctionnelles propre aux codages initiaux, et rien ne 
+dit qu'on va pouvoir trouver des relations claires entre le rapport initial et les norma
+lités fonctionnelles assurées par le nouveau codage. Le simple fait que des approches 
+soient évolutionnistes ou fondées sur des interactions dont la séquence est non expli
+citement programmée nous assure-t-il d'ailleurs vraiment que ces approches prennent 
+davantage en compte le contexte ? Ou, à tout le moins, qu'elles simulent correctement 
+l'effet de re-constitution d'une capacité que peut effectivement avoir le contexte sur 
+une intelligence humaine ? En quoi les interactions qu'elles mettent en œuvre sont-elles 
+réellement comparables à celles qui nous semblent constitutives de l'intelligence ? 
+On fait en réalité souvent l'hypothèse un peu rapide qu'il suffit qu'un système com
+putationnel soit évolutif et fasse preuve d'interactivité (y compris, via des robots, avec 
+le monde physique réel) pour que cette évolutivité et cette interactivité simulent correc
+tement celles mêmes que l'on prête à l'intelligence humaine. Or, la question ne semble 
+pas tranchée : toute interaction ne simule pas pertinemment une autre interaction, qui 
+peut être d'une autre nature. 
+L'IA semble avoir accepté cette situation. On y admet que la solution au problème 
+de la capacité dynamique exige un minimum de découplage entre des formes de repré
+sentations et de fonctionnalité différentes, que ce soit dans leur succession où dans leur 
+coexistence temporaire - qu'on veut pacifique. Le dispositif classique de l'informatique 
+peut s'appliquer ici : faire fonctionner de manière articulée des niveaux de fonction
+nalité qui ont des structures différentes (niveau électronique, niveaux de compilation, 
+niveau computationnel, niveau sémantique, niveau des normalités). 
+Une simulation sur ordinateur tend en effet à remplacer une déduction, ou un pro
+cessus de décision, par une phase de computation opérant sur un substrat d'éléments 
+qui assurent le fonctionnement d'opérations sur des signes, suivie d'une phase d'ob
+servation ou de mesure du résultat émergent. Un changement de niveaux d'opérations 
+sur des signes, un aller-retour entre les niveaux, relatifs les uns aux autres, est donc 
+toujours à l'œuvre. Les éléments interagissant dans une phase donnée peuvent être 
+traités comme des symboles (des éléments qui peuvent tous se composer entre eux et 
+se décomposer selon des règles) relativement à un niveau précédent dont ils résulte
+raient. Ils peuvent aussi être traités comme sous-symboliques (comme non strictement 
+décomposables, ou comme ne se composant pas tous entre eux, mais permettant des 
+compositions dont certaines pourront être traitées comme symboles) relativement au 
+fonctionnement symbolique résultant et observé dans une phase ultérieure. Par là se 
+relativise et se généralise en même temps la notion de sous-symbolicité. On observe 
+que les programmes enchevêtrant des modèles dont pour certains la formalisation n'est 
+que partielle, ou qui recourent à des formalisations différentes, procèdent par sous
+symbolisations préalables, et cela aussi bien pour les systèmes de multimodélisation 
+standardisés, comme DEYS [Zeigler, 1976], dont les tenants cherchent aujourd'hui à 
+simuler un modélisateur universel, que pour les modèles computationnels complexes de 
+certaines sciences empiriques. Ce qui est particulier aux formes produites par un mode 
+effectif et spécifique de fonctionnement (et que Varenne dénomme « iconique ») est 
+laissé tel quel dans sa spécificité et inversement ce qui est d'emblée symbolique (et donc 
+multiréalisable) est numérisé pour regagner un aspect fonctionnel iconique spécifique
+
+---
+
+[p. 304-304]
+1272 - Panorama de l'intelligence artificielle. Volume 3 
+un critère d'évaluation des théories formelles développées en IA ; en un mot, de donner 
+une confirmation descriptive aux théories normatives développées en IA. 
+Le nouveau logicisme, tout comme le nouveau psychologisme, sont des évolutions 
+prometteuses, ou à tout le moins intéressantes, dans leurs disciplines respectives. Tou
+tefois, un paradoxe naît de leur juxtaposition. Imaginons qu'une certaine théorie for
+melle du raisonnement soit développée en IA, alors qu'en parallèle sont obtenus un 
+certain nombre de résultats expérimentaux, cohérents avec cette théorie. Les tenants 
+du nouveau psychologisme pourront alors porter au crédit de la théorie ces résultats 
+expérimentaux, et lui conférer un statut de « bonne » théorie. Les tenants du nouveau 
+logicisme seront alors en mesure de conférer un statut normatif à cette théorie issue 
+de l'IA, et à conclure que les raisonneurs humains se comportent de façon rationnelle, 
+puisque conforme à ce qui est prédit par une théorie respectée en IA. La théorie formelle 
+et les résultats expérimentaux se procurent une garantie mutuelle de normativité, et le 
+comportement humain peut se voir qualifié de rationnel par pure circularité. 
+La question de la normativité n'est pas, bien sûr, la seule qui guide les interac
+tions entre IA et psychologie du raisonnement et de la décision. Les psychologues du 
+raisonnement et de la décision s'inspirent des travaux en IA pour ouvrir de nouveaux 
+domaines de recherche expérimentale, ou pour aborder des domaines classiques selon 
+une nouvelle perspective ; et les spécialistes en IA s'appuient parfois de leur côté sur 
+la psychologie pour spécifier les problèmes qu'ils tentent de résoudre, ou pour valider 
+certains de leurs postulats intuitifs. Ces divers modes d'interaction entre les deux dis
+ciplines vont être illustrés dans la section suivante à travers une série de domaines de 
+recherche. 
+10.3 Illustrations 
+10.3.1 
+Raisonnement plausible 
+Le raisonnement plausible consiste à tirer des conclusions à partir de généralisa
+tions abusives du type « Les oiseaux volent » ou « Les linguistes parlent plus de trois 
+langues ». La question se pose des règles permettant de manipuler correctement ce type 
+de généralisations afin de produire de nouvelles connaissances fiables. Dans un article 
+fondateur, Pelletier et Elio [Pelletier et Elio, 1997] ont argumenté avec force pour une 
+approche psychologiste de ce problème : la manipulation correcte de ces généralisations 
+ne peut être définie uniquement par l'intuition des chercheurs en IA, mais doit corres
+pondre à la manipulation que les raisonneurs humains en font. En d'autres termes, le 
+comportement formel du modèle développé en IA se doit de refléter le comportement 
+humain tel qu'il peut être établi par des protocoles expérimentaux. Les données com
+portementales obtenues par les psychologues sont le phénomène même que les modèles 
+formels se doivent de capturer. 
+Pour autant faut-il, bien entendu, que ces données comportementales soient dis
+ponibles, ce qui était loin d'être le cas au moment de l'appel de Pelletier et Elio, en 
+dehors de résultats préliminaires obtenus par ces mêmes auteurs [Elio et Pelletier, 1993]. 
+Depuis lors, toutefois, un nombre respectable de travaux empiriques ont été spécifique
+ment consacrés à obtenir des résultats directement pertinents pour la modélisation du
+
+---
+
+[p. 311-311]
+rpretation as computation 
+in nonmonotonic logic : the real meaning of the suppression task. Cognitive Science, 
+29 :919-960. 
+STENNING, K. et VAN LAMBALGEN, M. (2008). Human reasoning and cognitive science. 
+MIT Press, Cambridge, MA. 
+VAN BENTHEM, J. (2008). Logic and reasoning : do the facts matter ? Studia Logica, 
+88 :67-84.
+
+---
+
+[p. 320-320]
+1288 - Panorama de l'intelligence artificielle. Volume 3 
+aussi bien en Interaction personne-système qu'en intelligence artificielle, on peut souli
+gner que deux journaux leur sont dédiés : User Modeling and User-Adapted Interaction 
+(Springer) ; ACM Transactions on Interactive Intelligent Systems. 
+Il est possible de trouver de nombreuses approches contribuant aux interfaces uti
+lisateur intelligentes dans la littérature. Il n'est pas possible ici de toutes les citer ici, 
+le lecteur intéressé pouvant trouver dans différents ouvrages ou articles de synthèse de 
+plus amples détails à ce sujet [Chignell et Hancock, 1988 ; Kolski et Le Strugeon, 1998 ; 
+Hôôk, 2000 ; Jameson, 2007] : 
+- Les approches dites adaptatives sont celles ayant débouché sur le plus de propo
+sitions (cf. [Kolski et al., 1992 ; Schneider-Hufschmidt et al., 1993 ; Jameson et 
+Gajos, 2012]), l'adaptation se faisant le plus souvent relativement à différentes 
+caractéristiques utilisateur ou à la tâche. 
+- Dans le prolongement des travaux sur l'adaptation, on trouve ceux portant sur 
+une tendance actuelle qui est de fournir de plus en plus des services personnalisés 
+aux utilisateurs des systèmes d'information au sens large. Il s'agit dans ce cas 
+de s'adapter aux buts (besoins ou raisons ayant mené l'utilisateur à interroger le 
+système), habitudes/préférences (ensemble des critères qui permettent de distin
+guer une solution d'une autre pour une même requête), capacités de l'utilisateur 
+(englobant aussi bien les capacités matérielles et logicielles à la disposition de 
+l'utilisateur, que de ses propres capacités physiques ou cognitives, liées éven
+tuellement à des handicaps). Il est important que le système apprenne au fur et 
+à mesure des interactions avec l'utilisateur (et d'utilisateurs au profil proche), 
+afin d'affiner la personnalisation, en exploitant par exemple des algorithmes de 
+filtrage collaboratif [Su et Khoshgoftaar, 2009]. Les travaux sont nombreux dans 
+ce domaine (Abed et al., 2011 ; Brusilovsky et al., 2007 ; Peintner et al., 2008]. 
+- Les interfaces utilisateur intelligentes peuvent être aussi dites tolérantes aux 
+erreurs humaines (Rouse et Morris, 1987 ; Beka Be Nguema et al., 2000], l'adap
+tation exploitant une classification des erreurs humaines possibles et de leurs 
+conséquences pour corriger des erreurs humaines ou avertir l'utilisateur de pro
+blèmes à ce sujet. 
+- Une autre catégorie regroupe les assistants à l'utilisateur, au sens large. Ceux
+ci sont au service de l'utilisateur, à leur écoute, afin de les assister en cas de 
+problème (Lieberman, 1995] ; un exemple typique étant l'assistant intégré dans 
+différentes versions précédentes d'un environnement bureautique connu, l'assis
+tant étant mis à la disposition de l'utilisateur et le conseillant sur des procé
+dures adaptées (à la demande ou non de celui-ci, par exemple comment repa
+giner un document). Une telle approche avait été proposée initialement dans 
+le domaine aéronautique, sous la dénomination d'opérateur assistant intelligent 
+jouant le rôle de co-pilote dans un cockpit et raisonnant en parallèle à l'utilisa
+teur considéré comme le décideur final [Boy, 1991a]. Afin d'améliorer les inter
+actions personne-système, de les rendre plus naturelles, les choix de conception 
+peuvent porter sur une physionomie humaine de l'assistant, voir à ce sujet la 
+partie « Agents conversationnels animés affectifs » de ce chapitre. 
+- De nombreuses recherches portent sur le contexte de manière général, les défi
+nitions de (Abowd et al., 1999] et [Dey, 2001] à ce sujet étant les plus citées, et
+
+---
+
+[p. 328-328]
+activités cérébrales sont consacrées au traitement de signaux 
+visuels [Ware, 2000]. Le défi qui se pose est donc de proposer à l'utilisateur une carto
+graphie des données qui lui permettent, d'une part, de repérer visuellement les motifs 
+devenus « graphiques », et d'autre part de pouvoir agir sur la visualisation pour accéder
+
+---
+
+[p. 336-336]
+sdale, NJ. 
+ÜCHS, M., NIEWIADOMSKI, R., BRUNET, P. et PELACHAUD, c. (2012a). Smiling virtual 
+agent in social context. Cognitive Processing, 13(2) :519-532. 
+ÜCHS, M., SADEK, D. et PELACHAUD, C. (2012b). A formal model of emotions for 
+an empathie rational dialog agent. Autonomous Agents and Multi-Agent Systems, 
+24(3) :410-440.
+
+---
+
+[p. 344-344]
+n de science-fiction Terry Bisson a écrit une merveilleuse petite 
+nouvelle - à peine deux ou trois page - intitulée « Ils sont faits en viande ! » Des ex
+traterrestres sont sidérés de découvrir que les créatures habitant la planète Terre sont 
+entièrement composées de matière organique : bref, de « viande ». Comme matières pre-
+
+---
+
+[p. 353-353]
+eaucoup des résultats dont l'IA peut être légitimement fière {nous ne 
+tenterons pas d'en dresser une liste ici, ce qui serait long et fastidieux, préférant sim
+plement renvoyer le lecteur à la table des matières et à l'ensemble des chapitres de cet 
+ouvrage), sont d'abord des contributions au traitement avancé de l'information.
+
+---
+
+[p. 361-362]
+632 
+allocation de ressources, 462, 480, 487, 489 
+analogie, 240, 250 
+analyse 
+attribution de rôles sémantiques, 1133 
+désambiguïsation sémantique, 1133, 
+1135 
+distributionnelle, 1134 
+extraction d'information, 1124 
+rétrograde, 695 
+reconnaissance d'entités nommées, 
+1124 
+sémantique, 1122 
+statistique, 1133 
+syntaxique, 1133
+traduction automatique, 1133 
+étiquetage morphosyntaxique, 1133 
+annotation, 1098, 1145 
+apprentissage, 71, 90, 104, 265, 529, 1113-
+1115, 1185, 1228 
+avec requêtes, 272 
+de concepts, 271 
+de paramètres, 868 
+de règles, 271 
+de structure, 289, 869 
+en ligne, 275 
+langue naturelle, 1132-1135 
+méta-apprentissage, 942 
+multiagent, 289 
+non supervisé, 918, 1134 
+par analogie, 254 
+par démonstration, 1185, 1233 
+par renforcement, 284, 1185, 1228 
+relationnel, 288 
+semi-supervisé, 1134 
+statistique, 103, 280 
+supervisé, 269, 918, 919, 1133, 1186 
+sur-apprentissage, 270, 920, 925 
+approche 
+constructiviste, 623 
+particulaire, 1212 
+phénoménologique, 1252 
+approximation, 71, 86, 96 
+arbre 
+de décision, 271, 450, 938-1114 
+de jonction, 864 
+de recherche, 683, 789 
+architecture, 565, 573 
+hiérarchique, 1235 
+logicielle, 1234 
+réactive, 1234 
+teleo-réactive, 1235 
+argument, 300, 308-312 
+attaque entre arguments, 1273 
+argumentation, 301, 308-312, 603, 604, 
+1098, 1272 
+assistant de preuve, 734 
+ATMS, 797 
+atome, 741, 749, 751 
+attitude face au risque 
+attitude faible, 435 
+attitude forte, 435 
+automate, 568, 1041 
+à pile, 1046 
+applications, 1050 
+cellulaire, 995 
+d'arbre, 1048 
+de mot, 1041 
+transducteur, 1047 
+automatique, 387, 575 
+autonomie, 575, 1201 
+axiomatique 
+de Savage, 428 
+de von Neumann-Morgenstern, 426 
+axiomatisation, 999, 1273 
+axiome 
+d'indépendance, 427 
+de continuité, 427 
+backtmck chronologique, 814 
+bagging, 943 
+base, 298-303, 308-311 
+d'informations, 298-301, 308-312 
+de cas, 240, 243 
+de connaissances, 155, 156, 242, 247, 
+557, 593, 595 
+compilation, 793 
+CYC, 1129, 1130 
+FrameNet, 1124 
+interrogation, 157, 165, 175 
+Wikipédia, 1130 
+de croyances, 90, 324, 381 
+pondérées, 350 
+de données, 165, 176, 1067, 1099-
+1101, 1106, 1109 
+de Herbrand, 742 
+de règles, 593, 595, 601 
+belief expected utility, 446 
+bioinformatique, 782, 1141 
+biologie computationnelle, 1208 
+boosting, 943 
+but, 369, 510, 1268 
+cake-cutting, 485 
+calcul des situations, 373 
+calculabilité, 740, 992, 999
+
+---
+
+[p. 375-376]
+ques pour la conception et l'évaluation des systèmes interactifs . 
+.1292 
+11.6 Visualisation et fouille de données 
+.1296 
+11.7 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
+.1299 
+Postface 
+1307 
+Épilogue : pour une défense de la recherche en intelligence artificielle 1317 
+Index 
+Table des matières
+Si cet ouvrage fait l'objet d'un additif ou d'un erratum, l'information sera alors disponible sur le site 
+internet www.cepadues.com, à la fiche de l'ouvrage. L'accès direct se fait en tapant la référence de 
+l'ouvrage (1 043) dans le champ recherche. 
+Vous pouvez faire part de vos remarques, 
+critiques, suggestions 
+aux auteurs à cette adresse : 
+auteurs@cepadues.com 
+Achevé d'imprimer en France 
+en mai 201 4 chez Messages SAS 
+1 1 1 , rue Nicolas Vauquelin • 31 1 00 Toulouse 
+Tél . : 05 61 41 24 14 • Fax : 05 61 19 OO 43 
+imprimerie@messages.fr

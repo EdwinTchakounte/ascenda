@@ -1,0 +1,7 @@
+[
+ {"chapitre":"6eeff897","questions":[
+  {"q":"Sur quel principe fonctionnaient les assistants virtuels avant l'arrivee des modeles generatifs ?","choix":["Une recherche automatisee par mots cles, completee par la localisation, les achats passes et les preferences","Un dialogue par reseaux de neurones","Une base de reponses redigees par des humains","Une traduction automatique des requetes"],"reponse":0,"explication":"Siri, Alexa, Google Assistant et Cortana reposaient donc principalement sur des moteurs de recherche.","niveau":"restitution","page":166},
+  {"q":"Quelle evolution l'auteure decrit-elle pour ces assistants ?","choix":["Cortana passe par Bing desormais integre a ChatGPT, et ces assistants pourraient etre remplaces par de nouvelles generations","Ils disparaissent au profit des enceintes connectees","Ils deviennent payants","Ils se limitent aux taches domestiques"],"reponse":0,"explication":"Google Assistant, lie a Google Search, pouvait de meme beneficier de l'integration de Bard.","niveau":"comprehension","page":167},
+  {"q":"Quelle hypothese l'auteure formule-t-elle sur l'avenir de ChatGPT ?","choix":["Devenir une superapplication ayant absorbe de nombreux moteurs de recherche specialises","Devenir un systeme d'exploitation","Devenir un reseau social","Devenir un service reserve aux entreprises"],"reponse":0,"explication":"Elle ajoute que le modele saurait predire de meilleurs mots cles que l'utilisateur lui-meme.","niveau":"application","page":166}
+ ]}
+]

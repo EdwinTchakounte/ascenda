@@ -1,0 +1,881 @@
+OUVRAGE : ChatGPT pour les nuls
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 232
+AXE : IA Outils Pratique Prompting
+SOMMAIRE :
+  Page de titre (p. 2-2)
+  Droits d'auteur (p. 3-12)
+  Introduction (p. 13-13)
+  À propos de ce livre (p. 13-14)
+  Préjugés stupides (p. 15-15)
+  Icônes utilisées dans ce livre (p. 15-15)
+  Au-delà du livre (p. 16-16)
+  Où aller à partir de là (p. 16-17)
+  Chapitre 1: Présentation de ChatGPT (p. 18-18)
+  Configuration d'un compte (p. 19-20)
+  Comparaison entre ChatGPT, les moteurs de recherche et l'analyse (p. 21-23)
+  Comprendre ce qu'est ChatGPT et ce qu'il n'est pas (p. 24-29)
+  Redéfinir le Chatbot avec ChatGPT et ChatGPT Plus (p. 30-36)
+  Faire la une des journaux et perturber les entreprises (p. 37-41)
+  Ouvrir la porte à des produits d'IA plus importants (p. 42-44)
+  Chapitre 2 : Découverte de Comment ChatGPT Fonctionne (p. 45-45)
+  Qu'est-ce qui est Différent à Propos de ChatGPT (p. 45-46)
+  Jetons un Coup d'Œil à l'Architecture de ChatGPT (p. 47-58)
+  Augmenter le Nombre de Versions et d'Intégrations (p. 59-66)
+  Créer de Nouvelles Entreprises Basées sur ChatGPT (p. 67-69)
+  Chapitre 3 : Rédiger des Consignes pour ChatGPT (p. 70-70)
+  Principes Fondamentaux de la Consigne (p. 71-78)
+  Comprendre l'Ingénierie de la Consigne (p. 79-79)
+  Contourner les Limites des Jetons et les Problèmes de Stockage de l'Historique de l'Utilisateur (p. 80-83)
+  Penser en Termes de Threads (p. 84-84)
+  Enchaîner les Consignes et Autres Conseils et Stratégies (p. 85-87)
+  Chapitre 4 : Comprendre les Modèles GPT dans ChatGPT (p. 88-88)
+  Résumer les Progrès du Modèle (p. 88-89)
+  Comparer GPT-4 aux Modèles ChatGPT Antérieurs (p. 90-90)
+  Choisir des Modèles ChatGPT (p. 91-94)
+  En Savoir Plus sur les Avancées de GPT-4 (p. 95-96)
+  S'Adapter aux Limites de GPT-4 (p. 97-98)
+  Chapitre 5 : Avertissements, Éthique et IA Responsable (p. 99-99)
+  Créer une IA Responsable (p. 99-103)
+  Tenir Compte des Avertissements d'OpenAI (p. 104-105)
+  Considérer les Droits d'Auteur et les Protections de PI (p. 106-107)
+  Rechercher la Prévisibilité (p. 108-114)
+  Atténuer les Risques et la Responsabilité (p. 115-118)
+  Chapitre 6 : Sonder les Utilisations Professionnelles et Autres pour ChatGPT (p. 119-119)
+  Trouver ChatGPT Intégré dans des Logiciels (p. 120-139)
+  Coder avec ChatGPT et Copilot X (p. 140-142)
+  Apprendre Où Utiliser ChatGPT pour le Marketing (p. 143-143)
+  Obtenir des Réponses Intelligentes pour les RH (p. 143-143)
+  Exploiter ChatGPT dans le Domaine Juridique (p. 144-145)
+  Raconter des Histoires dans le Journalisme (p. 146-146)
+  Consulter ChatGPT dans le Domaine de la Santé (p. 147-147)
+  Tirer Profit de ChatGPT dans la Finance (p. 148-148)
+  Chapitre 7 : Travailler avec ChatGPT dans l'Éducation (p. 149-149)
+  Transformer la Pensée Critique en un Nouveau Modèle d'Apprentissage (p. 150-152)
+  Tirer Parti de ChatGPT pour Aider les Enseignants Surchargés (p. 153-155)
+  Changer la Façon dont les Sujets Sont Enseignés (p. 156-161)
+  Interdire ChatGPT Entrave l'Éducation (p. 162-162)
+  Chapitre 8 : Utiliser ChatGPT dans la vie quotidienne (p. 163-163)
+  Mots-clés en déclin (p. 163-165)
+  Passer de la recherche d'informations aux assistants de connaissances (p. 166-168)
+  Vivre avec la désinformation et la manipulation (p. 169-170)
+  Réduire les options (p. 171-172)
+  Chapitre 9 : Reconnaître les façons dont ChatGPT et l'IA générative changeront le monde (p. 173-173)
+  Comprendre ce qui est et ce qui n'est pas réellement préoccupant (p. 173-173)
+  Mesurer le bien et le mal de ChatGPT (p. 174-174)
+
+[18/143 passages, 11769 tokens sur 101497]
+
+=== EXTRAITS ===
+
+[p. 3-4]
+ChatGPTTM For Dummies®
+Publié par : John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ
+07030-5774, www.wiley.com
+Copyright © 2023 par John Wiley & Sons, Inc., Hoboken, New Jersey
+Publié simultanément au Canada
+Aucune partie de cette publication ne peut être reproduite, stockée dans
+un système de recherche documentaire ou transmise sous quelque forme
+ou par quelque moyen que ce soit, électronique, mécanique,
+photocopying, enregistrement, numérisation ou autre, sauf autorisation
+préalable de l'éditeur en vertu des sections 107 ou 108 de la loi
+américaine de 1976 sur le droit d'auteur. Les demandes d'autorisation
+doivent être adressées au service des autorisations, John Wiley & Sons,
+Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201)
+748-6008, ou en ligne sur http://www.wiley.com/go/permissions.
+Marques déposées :Wiley, Pour les Nuls, le logo de l'homme Pour les
+Nuls, Dummies.com, Rendre Tout Plus Facile, et la présentation
+commerciale associée sont des marques de commerce ou des marques
+déposées de John Wiley & Sons, Inc. et ne peuvent être utilisées sans
+permission écrite. ChatGPT est une marque déposée de OPENAI OPCO,
+LLC. Toutes les autres marques de commerce sont la propriété de leurs
+propriétaires respectifs. John Wiley & Sons, Inc. n'est associé à aucun
+produit ou fournisseur mentionné dans ce livre.
+LIMITATION DE RESPONSABILITÉ / DÉNI DE GARANTIE :
+BIEN QUE L'ÉDITEUR ET LES AUTEURS AIENT FAIT DE LEUR
+MIEUX POUR PRÉPARER CE TRAVAIL, ILS NE FONT AUCUNE
+REPRÉSENTATION OU GARANTIE CONCERNANT
+L'EXACTITUDE OU L'EXHAUSTIVITÉ DU CONTENU DE CE
+TRAVAIL ET REJETTENT SPÉCIFIQUEMENT TOUTES LES
+GARANTIES, Y COMPRIS, SANS LIMITATION, TOUTES LES
+GARANTIES IMPLICITES DE QUALITÉ MARCHANDE OU
+D'ADÉQUATION À UN USAGE PARTICULIER. AUCUNE
+GARANTIE NE PEUT ÊTRE CRÉÉE OU ÉTENDUE PAR LES
+REPRÉSENTANTS COMMERCIAUX, LES DOCUMENTS DE
+
+VENTE ÉCRITS OU LES DÉCLARATIONS PROMOTIONNELLES
+CONCERNANT CE TRAVAIL. LE FAIT QU'UNE ORGANISATION,
+UN SITE WEB OU UN PRODUIT SOIT MENTIONNÉ DANS CE
+TRAVAIL COMME CITATION ET/OU SOURCE POTENTIELLE
+D'INFORMATIONS SUPPLÉMENTAIRES NE SIGNIFIE PAS QUE
+L'ÉDITEUR ET LES AUTEURS APPROUVENT LES
+INFORMATIONS OU LES SERVICES FOURNIS PAR
+L'ORGANISATION, LE SITE WEB OU LE PRODUIT, OU LES
+RECOMMANDATIONS QU'ILS PEUVENT FAIRE. CE TRAVAIL
+EST VENDU AVEC L'ENTENDEMENT QUE L'ÉDITEUR NE
+FOURNIT PAS DE SERVICES PROFESSIONNELS. LES CONSEILS
+ET STRATÉGIES CONTENUS ICI PEUVENT NE PAS CONVENIR
+À VOTRE SITUATION. VOUS DEVRIEZ CONSULTER UN
+SPÉCIALISTE SI NÉCESSAIRE. EN OUTRE, LES LECTEURS
+DOIVENT SAVOIR QUE LES SITES WEB LISTÉS DANS CE
+TRAVAIL PEUVENT AVOIR CHANGÉ OU DISPARU ENTRE LE
+MOMENT OÙ CE TRAVAIL A ÉTÉ ÉCRIT ET LE MOMENT OÙ IL
+EST LU. NI L'ÉDITEUR NI LES AUTEURS NE SERONT
+RESPONSABLES DE LA PERTE DE PROFITS OU DE TOUT
+AUTRE DOMMAGE COMMERCIAL, Y COMPRIS, MAIS SANS
+S'Y LIMITER, LES DOMMAGES SPÉCIAUX, ACCESSOIRES,
+INDIRECTS OU AUTRES.
+Pour des informations générales sur nos autres produits et services,
+veuillez contacter notre service clientèle aux États-Unis au 877-762-
+2974, hors des États-Unis au 317-572-3993 ou par fax au 317-572-4002.
+Pour un support technique, veuillez visiter
+https://hub.wiley.com/community/support/dummies.
+Wiley publie dans une variété de formats imprimés et électroniques,
+ainsi que par impression à la demande. Certains éléments inclus dans les
+versions imprimées standard de ce livre peuvent ne pas être inclus dans
+les livres électroniques ou dans les versions imprimées à la demande. Si
+ce livre fait référence à un support tel qu'un CD ou un DVD qui n'est pas
+inclus dans la version que vous avez achetée, vous pouvez télécharger ce
+
+---
+
+[p. 15-17]
+s symboles indiquent :
+Cet icône renvoie à des astuces et des astuces que vous voudrez
+peut-être utiliser pour faciliter, accélérer, optimiser ou tout
+simplement rendre plus amusant votre travail avec ChatGPT.
+Cet icône met en évidence des informations particulièrement
+importantes pour comprendre ou utiliser ChatGPT avec succès.
+Cet icône vous met en garde contre un obstacle ou un danger qui
+ne vous semblera peut-être pas évident avant qu'il ne soit trop tard.
+Veuillez noter attentivement les avertissements.
+Au-delà du livre
+En plus des informations contenues dans le livre imprimé ou
+électronique que vous lisez actuellement, ce produit est également
+accompagné d'une fiche de triche accessible partout. Pour accéder à la
+fiche de triche, allez sur www.dummies.com et tapez Fiche de triche
+ChatGPT For Dummies dans la barre de recherche. Vous y trouverez
+des astuces utiles pour les utilisateurs, des informations sur les différents
+moyens d'accéder à ChatGPT, des conseils sur l'écriture de prompts et
+quelques conseils sur la manière de le faire produire exactement la sortie
+dont vous avez besoin.
+Où aller à partir de là
+Il s'agit d'un livre de référence, vous n'avez donc pas à le lire de bout en
+bout à moins que vous ne souhaitiez connaître ChatGPT en détail.
+N'hésitez également pas à lire les chapitres dans n'importe quel ordre.
+Chaque chapitre est conçu pour être autonome, ce qui signifie que vous
+n'avez pas besoin de connaître le contenu des chapitres précédents pour
+comprendre celui que vous êtes en train de lire. Commencez où vous le
+souhaitez et terminez lorsque vous estimez avoir toutes les informations
+dont vous avez besoin pour la tâche en cours.
+Cependant, si votre objectif est de démarrer rapidement avec ChatGPT,
+vous devriez lire le chapitre 3, qui porte sur les prompts d'écriture, pour
+vous guider dans le processus. Assurez-vous également de lire le
+chapitre 5, où vous êtes averti de plusieurs problèmes que vous devez
+absolument connaître avant de commencer à utiliser ChatGPT.
+
+Le chapitre 2 vous montre comment ChatGPT fonctionne, ce qui vous
+donne une meilleure compréhension de ce qu'il fait après avoir saisi une
+demande. Et si vous craignez que l'IA ne vous vole votre emploi ou
+n'affecte votre vie privée, il y a de bonnes nouvelles pour la plupart
+d'entre nous dans les chapitres 6 et 8.
+N'hésitez pas à ouvrir ChatGPT et à expérimenter avec chaque nouvelle
+chose que vous apprenez dans ce livre au fur et à mesure. Beaucoup
+trouvent qu'il est facile de suivre de cette manière. Mais quelle que soit
+la façon dont vous choisissez d'apprendre et d'expérimenter avec
+ChatGPT, vous vous rendrez probablement compte rapidement. C'est la
+beauté de cette classe d'IA - elle est très facile à utiliser. La partie la plus
+difficile est d'étirer votre propre imagination pour vous permettre d'aller
+plus loin avec chaque nouveau projet.
+
+---
+
+[p. 27-28]
+rer la réflexion, la
+compréhension, le travail et les efforts créatifs humains.
+Concurrence avec ChatGPT pour votre emploi
+Pour le moment, une grande partie de la peur que les gens éprouvent à
+l'égard de ChatGPT est causée par des inconnues qui frappent de plus
+près à la maison. Est-ce que ChatGPT va prendre mon emploi? Répandre
+la désinformation ou la propagande, entraînant la défaite de mon parti
+politique ou une augmentation de la criminalité ou des manifestations
+dans mon quartier? Est-ce qu'il mettra fin à ma vie privée et à ma
+dignité? Et en fin de compte, est-ce que je peux me défendre et défendre
+ma carrière contre une machine plus intelligente que moi?
+Nous avons ces craintes parce que ChatGPT semble être tout à fait
+familier: nous avons rencontré l'IA générative et elle est nous.
+Il ressemble tellement au comportement humain parce que l'éducation de
+ChatGPT provient en grande partie d'Internet, où les humains sont
+connus pour répandre les pensées les plus viles, les mensonges, les
+théories du complot, la propagande, les activités criminelles et la haine
+sous toutes ses formes. De plus, oui, des informations vraies et utiles.
+Au mieux, Internet est un amas d'ordures humaines, et les modèles d'IA
+ont déjà montré un goût pour les déchets. Vous vous souvenez peut-être
+du chatbot IA appelé Tay, que Microsoft a essayé de former sur les
+réseaux sociaux en 2016. Il est rapidement devenu incontrôlable sur
+Twitter et a publié des tweets racistes et inflammatoires remplis de
+grossièretés. Ses tentatives controversées et offensantes de socialiser
+comme les humains ont poussé Microsoft à le tuer seulement 16 heures
+après son lancement.
+Après cela et des résultats de formation à l'IA similaires, et parce que
+nous savons que nous les humains sommes effrayants, l'hypothèse
+prédominante est que l'IA agit et parle comme nous, elle doit donc être
+tout aussi effrayante et potentiellement plus terrifiante.
+En effet, tout ce qui ne va pas ou de mauvais chez les humains a
+tendance à être transféré à l'IA. Mais cela est aussi vrai pour tout ce qui
+est juste et bon ainsi que pour beaucoup de choses qui sont un peu des
+deux.
+ChatGPT peut aider au diagnostic des maladies et à la recherche de
+remèdes. Il peut aider les étudiants à apprendre davantage de manière
+hautement personnalisée, rendant leur éducation plus efficace et moins
+frustrante. Il peut aider les organismes à but non lucratif à trouver de
+nouvelles façons de collecter des fonds, réduire les coûts et promouvoir
+
+---
+
+[p. 40-41]
+s, mais cela ne correspond pas nécessairement à la
+connaissance. Développez votre connaissance au point de pouvoir
+l'appliquer de manière nouvelle et unique.
+Soyez attentif à la façon dont ChatGPT façonne et redéfinit les tâches,
+les actions, les emplois et les secteurs au fil du temps. Adaptez-vous en
+conséquence et rapidement.
+De cette manière, vous pouvez vous préparer vous-même et votre
+secteur à ce nouvel avenir en évolution.
+Rompre le sort des tyrans de la machine sans
+cœur
+ChatGPT se présente comme un programme logiciel trompeusement
+simple. Vous posez une question ; il répond. À première vue, il n'y a rien
+de plus à cela. Une fois que vous comprenez que ses performances
+dépendent de vos propres capacités, vous pouvez vous sentir un peu
+euphorique - mais également sous pression pour faire les choses
+correctement.
+Quand vous saisissez tout ce que ChatGPT peut potentiellement faire,
+vous vous sentirez probablement dépassé et plus qu'un peu menacé. C'est
+là que réside la première illusion effrayante.
+Beaucoup de personnes non initiées supposent que, puisque les humains
+doivent utiliser du code informatique pour commander les machines,
+celles-ci sont limitées dans leurs performances en vertu de cette structure
+de communication précise. Autrement dit, les gens supposent que les
+machines ne peuvent pas comprendre autre chose que ce qui leur est
+transmis dans leur langage spécifique. Aucune machine ne peut non plus
+accomplir une tâche autre que celle qui lui est spécifiquement assignée.
+En d'autres termes : on suppose que les machines ne peuvent pas nous
+comprendre, donc tout ce qui dépasse leur compréhension limitée est en
+sécurité hors de leur portée.
+Dans ce scénario, le langage est confondu avec l'intelligence, mais ces
+deux choses ne sont pas les mêmes. Selon cette façon de penser, les
+machines qui comprennent nos langues et conversent de manière fluide
+et sans faille semblent nous comprendre. Et par extension, cela signifie
+qu'il n'y a aucun endroit sûr où exister, penser ou parler que la machine
+ne puisse pas pénétrer.
+La prise de conscience déconcertante et latente s'installe que nous ne
+sommes pas aussi uniques de tant de façons que nous le pensions.
+Ensuite vient la peur de la subjugation par des machines plus
+intelligentes que nous : les seigneurs de l'IA de la science-fiction.
+
+---
+
+[p. 52-55]
+onse des humains sous forme d'un
+système de classement pouce levé ou pouce baissé. Les deux pouces
+apparaissent en haut de chaque réponse de ChatGPT, comme vous
+pouvez le voir dans la Figure 2-1. Le classement de la réponse que vous
+avez reçue contribue à entraîner davantage le modèle en renforçant
+l'apprentissage de la machine.
+FIGURE 2-1 : Une raison principale de la publication de ChatGPT en tant que modèle de
+recherche gratuit était d'obtenir l'aide du public pour son entraînement.
+Si vous n'aimez pas la réponse générée par ChatGPT, vous pouvez
+cliquer sur le bouton Regenerate Response (voir Figure 2-1) pour lui
+demander de réessayer. Assurez-vous d'évaluer chaque réponse afin que
+le modèle puisse apprendre à améliorer ses performances.
+De même, les formateurs AI choisissent au hasard des conversations
+antérieures qu'ils ont eues avec le modèle d'entraînement et classent les
+réponses. Les modèles de récompense, comme l'évaluation en pouce
+levé ou pouce baissé sur ChatGPT, peuvent ensuite être utilisés pour
+affiner le modèle dans un processus appelé optimisation de la politique
+proximale. L'article de blog OpenAI dans Figure 2-2 montre tout le
+processus d'entraînement sur un seul graphique.
+
+FIGURE 2-2 : Processus de formation du modèle ChatGPT par OpenAI.
+Comprendre l'importance du format dialogue
+ChatGPT fonctionne dans 95 langues, couvrant un large éventail de
+langues maternelles humaines et de dialectes régionaux, ainsi qu'une
+grande variété de langages informatiques et d'équations mathématiques.
+Vous pouvez également discuter en utilisant un mélange de langues
+prises en charge. Par exemple, vous pouvez inclure du code informatique
+ou un extrait dans une consigne avec des instructions pour ChatGPT afin
+qu'il fasse quelque chose avec ce code, comme le montre Figure 2-3.
+L'instruction peut consister à trouver des erreurs ou des vulnérabilités
+dans le code, à écrire un nouveau code ou à terminer l'écriture du
+programme.
+Le choix des langues rend l'utilisation de l'IA plus facile et plus
+confortable pour les utilisateurs. Les experts et les profanes oublient
+rapidement que ChatGPT est une merveille technologique et
+commencent souvent à discuter avec lui comme s'il était un ami ou un
+collègue.
+
+Je vous rappelle une fois de plus de ne pas considérer ChatGPT
+comme une personne. Tout ce que vous dites ou faites avec
+ChatGPT peut être utilisé dans les évaluations de performance de
+l'IA et dans les jeux de données d'entraînement pour les futurs
+modèles d'IA. Ce prétendu ami ne garde aucun secret. OpenAI a
+fourni cet avertissement, mais il vous incombe de vous en souvenir.
+Réflexion sur les limites de ChatGPT
+Ce qui permet à ChatGPT de créer des réponses est également ce qui le
+rend peu fiable. Pour les personnes ou les machines qui imaginent
+quelque chose qui n'existe pas, comme un monde fictif pour un roman
+ou un film, elles doivent d'abord être libérées des règles strictes basées
+sur la réalité.
+
+---
+
+[p. 67-68]
+votre clavier lorsque vous êtes dans la barre de commande ChatGPT
+et parlez.
+ChatGPT Export and Share: Exporte du texte de ChatGPT vers
+n'importe quelle application que vous utilisez. Vous pouvez
+également enregistrer les réponses de ChatGPT sous forme d'images
+ou de PDF et partager des liens vers eux.
+ Soyez prudent avec les extensions de tous types, liées à
+ChatGPT ou non, et pour n'importe quel navigateur, car les
+extensions peuvent être chargées avec des logiciels malveillants.
+Soyez très sûr de la sécurité d'une extension avant de l'activer.
+Notez que je n'ai pas vérifié les extensions pour m'assurer qu'elles
+sont sûres et exemptes de logiciels malveillants. Je les liste ici
+simplement comme des exemples.
+D'autres extensions ChatGPT sont disponibles à explorer. Consultez-les
+sur le magasin web de votre navigateur. Mais encore une fois, faites
+attention!
+Créer de nouvelles entreprises
+basées sur ChatGPT
+ChatGPT offre de nombreuses opportunités commerciales aux
+utilisateurs. Par exemple, il peut générer des idées d'entreprise avec des
+plans d'entreprise correspondants. Interrogé par un écrivain de
+Hackernoon, il a produit cinq idées d'entreprise, chacune valant
+potentiellement des millions de dollars: une nouvelle façon de générer de
+l'énergie renouvelable, une plateforme de travail à distance, une nouvelle
+forme de transport, une nouvelle façon de stocker des données et un
+moyen de rendre les soins de santé plus accessibles et abordables.
+ChatGPT peut également rédiger ou suggérer des améliorations aux
+plans d'entreprise. Calculer de meilleurs modèles de tarification.
+
+Optimiser stratégiquement les chaînes d'approvisionnement. Résumer les
+formulaires juridiques pour une lecture rapide et facile. Compléter les
+demandes de prêts bancaires et les cartes de crédit. Calculer les
+implications fiscales. Déterminer les taxes sur la masse salariale. Et
+répondre à d'autres questions d'affaires complexes.
+Il peut automatiser rapidement les communications commerciales, des
+réponses aux e-mails à la rédaction de copies marketing et de pages
+Web. Il peut écrire presque tous les types de textes commerciaux, y
+compris les déclarations de travail (SOW), les contrats, les accords de
+niveau de service (SLA), les garanties, les testaments et les politiques.
+ChatGPT CONTRE RECHERCHE
+ChatGPT
+Moteur de recherche
+Génère un récit unique
+Génère une liste d'informations potentiellement
+pertinentes
+Ne cite pas ses sources
+Révèle des sources
+Ne produit actuellement pas
+d'images
+Fournit un groupe d'images liées
+Prédit des réponses
+Correspond à des mots clés
+Peut halluciner
+N'halucine pas
+Peut fournir de la
+désinformation
+Peut fournir de la désinformation
+Incite à la performance
+Mots clés essentiels à la performance
+Et ChatGPT peut également être la base des activités d'écriture et de
+publication existantes. Les auteurs de fiction peuvent l'utiliser pour
+générer des idées d'histoires, des intrigues et des personnages. Les
+auteurs de non-fiction peuvent l'utiliser pour rédiger des premiers jets
+d'articles, de livres blancs, d'e-books, et plus encore - dans le style et le
+ton d'écriture personnels de l'auteur. Ensuite, l'auteur n'a qu'à vérifier les
+faits et peaufiner la sortie pour produire un brouillon rapide mais poli,
+adapté à la soumission. Ou les auteurs peuvent utiliser ChatGPT comme
+
+---
+
+[p. 79-81]
+es ingénieurs d'invitation peuvent être des
+professionnels formés à l'IA ou des personnes qui possèdent une
+intelligence intuitive suffisante ou des compétences transférables pour
+élaborer des invitations qui sollicitent les sorties souhaitées. Un exemple
+de compétence transférable est la capacité d'un journaliste à extraire les
+réponses qu'il cherche lors d'une interview en utilisant des méthodes
+directes ou indirectes.
+L'apprentissage basé sur des invitations est une stratégie utilisée par les
+ingénieurs en IA pour former de grands modèles de langage. Les
+ingénieurs rendent le modèle polyvalent pour éviter de devoir le re-
+entraîner pour chaque nouvelle tâche basée sur le langage.
+Actuellement, la demande de talents en écriture de prompts, ou
+ingénieurs prompts, est très élevée. Cependant, il y a un débat intense
+sur le fait que les employeurs devraient considérer cette compétence
+unique comme un rôle professionnel distinct, une nouvelle profession ou
+une compétence universelle à exiger de la plupart des travailleurs, tout
+comme les compétences en dactylographie le sont aujourd'hui.
+Pendant ce temps, les gens partagent leurs prompts avec d'autres
+utilisateurs de ChatGPT sur plusieurs forums. Vous pouvez en voir un
+exemple sur GitHub à l'adresse https://github.com/f/awesome-
+chatgpt-prompts.
+Dépassement des limites de jetons et
+problèmes de stockage de
+l'historique utilisateur
+ChatGPT garde automatiquement un enregistrement de chaque prompt
+que vous faites. Ces enregistrements sont utilisés pour affiner davantage
+le modèle et éventuellement pour former de futurs modèles OpenAI.
+L'utilisateur ne peut pas accéder à l'intégralité de cet enregistrement.
+Cependant, comme nous l'avons déjà mentionné, un nombre limité de
+chats (prompts et réponses) sont conservés dans une liste en cours sur le
+côté gauche de l'interface utilisateur de ChatGPT. Pour tirer le meilleur
+parti de l'espace limité disponible, vous pouvez supprimer les chats dont
+vous n'avez pas besoin de stocker, copier ou exporter les données vers un
+autre endroit de stockage, ou demander à ChatGPT de résumer le
+dialogue lorsque vous avez terminé, comme décrit à la Figure 3-6.
+
+FIGURE 3-6: ChatGPT vous indique comment résumer un chat précédent pour en
+conserver l'essentiel tout en libérant de l'espace de stockage dans votre historique de chat.
+ChatGPT se souvient de ce que vous avez demandé précédemment dans
+le même chat et construit là-dessus au fur et à mesure de la conversation,
+mais seulement jusqu'à un certain point. Plus précisément, le modèle se
+souvient des 3 000 premiers mots, soit 4 000 jetons, de la conversation.
+Il ne peut pas faire référence à d'autres conversations, que ces
+conversations antérieures se soient déroulées il y a des instants ou des
+semaines.
+Comme mentionné précédemment, ChatGPT découpe votre prompt en
+jetons. Mais les jetons ne sont pas nécessairement composés d'un mot
+entier car des espaces et d'autres informations peuvent également être
+incluses dans le jeton. OpenAI conseille aux développeurs de considérer
+les jetons comme des "morceaux de mots".
+L'anglais est plus concis que de nombreuses autres langues et nécessite
+donc généralement moins de jetons pour traiter les prompts. Voici
+quelques façons de comprendre les mesures de jetons en anglais :
+1 jeton équivaut à environ 4 caractères.
+100 jetons correspondent à environ 75 mots.
+Deux phrases équivalent à environ 30 jetons.
+
+---
+
+[p. 90-90]
+Comparaison de GPT-4 avec les
+modèles précédents de ChatGPT
+GPT-4, la dernière version alimentant ChatGPT, est un modèle
+multimodal,ce qui signifie que ce grand modèle de langage (LLM) peut
+travailler avec des images et du texte dans la demande, mais ses
+réponses sont rendues uniquement sous forme de texte. ChatGPT-3.5 ne
+peut utiliser que du texte dans les demandes et dans ses réponses.
+ChatGPT-4 utilise également plus de calculs sur des bases de données
+beaucoup plus grandes que ses prédécesseurs.uniquement en tant que
+texte. ChatGPT-3.5 ne peut utiliser que du texte dans les sollicitations et
+dans ses réponses. ChatGPT-4 utilise également plus de calculs sur des
+bases de données beaucoup plus grandes que ses prédécesseurs.
+L'interprétation d'image est une compétence IA unique souvent appelée
+vision par ordinateurou vision par machine,un signe de reconnaissance
+de la progression de l'IA vers des qualités plus humaines, en l'occurrence
+l'inclusion de la vision en tant que source d'entrée.
+Grâce à cette compétence, l'IA n'analyse pas seulement ou ne correspond
+pas seulement aux images, mais elle en extrait également des données
+comme le ferait un être humain. Par exemple, une personne peut
+regarder un reçu et comprendre immédiatement le coût exact de cette
+transaction ou calculer un pourboire approprié, voire les deux.
+De même, l'IA peut utiliser des entrées d'image pour extraire les données
+nécessaires à la reconnaissance faciale, lire le contenu de l'image,
+trouver des preuves d'une scène de crime dans l'image ou repérer une
+condition de santé sur un film radiographique.
+Ainsi, un modèle d'IA capable d'utiliser des images en tant qu'entrée est
+très important. Ce n'est pas une compétence que les formes antérieures
+de l'IA pouvaient généralement maîtriser. Même ainsi, vous pourriez
+vous demander pourquoi cela est notable maintenant, étant donné que
+des modèles multimodaux existent déjà. Après tout, le propre DALL-E 2
+d'OpenAI est multimodal, avec des demandes pouvant être composées
+
+---
+
+[p. 99-100]
+Chapitre 5
+Avertissements, Éthique et IA
+responsable
+DANS CE CHAPITRE
+Apprendre le mouvement de l'IA responsable
+Prêter attention aux avertissements d'OpenAI
+Perdre les protections du copyright et de la propriété
+intellectuelle
+Viser la fiabilité et la confiance
+Réduire vos risques
+Chaque amélioration du modèle vise à accroître la stabilité et les
+performances globales en termes de fiabilité, de précision et d'éthique.
+Dans ce chapitre, vous apprendrez ce que cela signifie et pourquoi cet
+effort est essentiel.
+Créer une IA responsable
+Presque tout le monde ressent un instinct de prudence ou un sentiment
+d'appréhension lorsqu'il s'agit d'IA. Un vaste effort industriel appelé IA
+responsable a été créé pour garantir que l'IA soit développée de manière
+responsable dès sa conception. Ce mouvement vise à s'assurer que les
+modèles d'IA sont construits selon des principes spécifiques dès le début,
+plutôt que d'ajouter des mesures morcelées après leur maturité ou leur
+déploiement, ou pire encore, de les ignorer complètement.
+De nombreux fournisseurs d'IA et communautés adhèrent aux principes
+de base promus par le mouvement de l'IA responsable, qui comprennent
+notamment :
+
+Responsabilité
+Évaluation des biais
+Fiabilité et sécurité
+Équité et accessibilité
+Transparence et explicabilité
+Confidentialité et sécurité
+OpenAI, le créateur de ChatGPT, a affirmé à plusieurs reprises son
+engagement envers les principes de l'IA responsable. Il a également
+contribué au mouvement de plusieurs façons, notamment en rendant
+Evals open source, sa plateforme d'évaluation des modèles OpenAI,
+ainsi qu'un registre open source de références, et en contribuant à des
+documents de recherche sur les politiques.
+Les partenaires et collaborateurs d'OpenAI travaillent également en
+faveur des principes de l'IA responsable, mais les pressions économiques
+actuelles mettent à l'épreuve les engagements des entreprises. Par
+exemple, en accord avec de nombreux licenciements récents dans
+l'industrie technologique, Microsoft a licencié en mars 2023 son équipe
+d'éthique et de société de l'IA, chargée de veiller à ce que les principes
+de l'IA responsable soient intégrés aux produits Microsoft avant leur
+lancement. Microsoft ne sera probablement pas le dernier des grands
+producteurs de produits et services en IA à le faire.
+Évolutions inquiétantes
+Jusqu'à récemment, l'IA était le domaine de quelques scientifiques
+érudits possédant des compétences très spécialisées. Mais l'arrivée
+explosive de ChatGPT sur la scène publique a suscité un vif intérêt dans
+tous les domaines. Il semble maintenant que tout le monde soit intéressé
+par l'utilisation de l'IA. Et nombreux sont ceux qui sont désireux de
+développer la leur ; les outils et les coûts sont tels que presque tout le
+monde peut le faire.
+Par exemple, des chercheurs de l'Université Stanford ont créé Alpaca AI
+pour effectuer des tâches similaires à celles de ChatGPT. Alpaca AI a été
+
+---
+
+[p. 107-107]
+t donné que des œuvres protégées par le droit d'auteur sont
+présentes dans la base de données d'entraînement de ChatGPT, il peut
+arriver qu'il reproduise parfois exactement des formulations de mots,
+c'est-à-dire qu'il commette du plagiat, ce qui pourrait poser des
+problèmes de responsabilité pour les utilisateurs qui en seraient
+
+---
+
+[p. 119-121]
+été publiés en une
+seule semaine, et le flux de sorties n'a pas ralenti. Cependant, il était clair
+dès le départ que ChatGPT d'OpenAI et les modèles GPT sous-jacents
+sont les références du domaine.
+Ce chapitre présente quelques-unes des nombreuses utilisations de
+ChatGPT pour les professionnels de tous horizons et dans plusieurs
+disciplines, dont les développeurs d'applications professionnelles et
+grand public. Parce que ChatGPT est également accessible aux débutants
+en programmation, il est difficile de distinguer ses utilisations
+professionnelles et grand public. De nouvelles utilisations apparaîtront
+avec le temps - et votre propre imagination peut également vous mener
+vers de nouvelles utilisations.
+Trouver ChatGPT intégré dans les
+logiciels
+Commençons par examiner où ChatGPT se trouve dans les logiciels, les
+outils et autres applications pour aider les personnes au travail. ChatGPT
+se présente sous la forme d'extensions et de plug-ins, ainsi que
+d'intégrations dans des applications de travail généralistes et des outils
+spécialisés. Bien que GPT soit un acronyme pour Generative Pre-trained
+Transformer, un modèle de langage AI large, certaines personnes
+plaisantent en disant que cela signifie "outil polyvalent" en raison de sa
+polyvalence. Vous allez bientôt voir à quel point il est polyvalent et
+répandu.
+Localiser ChatGPT dans les logiciels d'entreprise
+Étant donné que Microsoft et OpenAI ont un partenariat étroit, il n'est
+pas surprenant que les produits Microsoft aient été parmi les premiers à
+intégrer ChatGPT. Par exemple, Copilot de Microsoft, qui est maintenant
+enrichi de GPT-4 et appelé GitHub Copilot X, est essentiellement
+ChatGPT adapté aux développeurs. Bien que Copilot ait été conçu
+comme un outil pour les développeurs, sa polyvalence a rapidement été
+utilisée pour créer Copilot Microsoft 365 à usage plus généralisé et
+intégré à Word, Excel, PowerPoint, Outlook, Teams et d'autres
+applications Microsoft.
+Les utilisateurs trouveront que l'IA intégrée est un assistant compétent
+dans leur travail quotidien. Elle aide à rédiger tout, des documents aux e-
+mails, à créer des diapositives pour les présentations, et sélectionne et
+exécute des formules dans Excel, vous permettant de devenir un
+
+utilisateur avancé de ces applications avec peu d'efforts. L'objectif est de
+rendre tout le monde plus productif au travail, quelle que soit la nature
+de leur travail.
+Le service de discussion d'entreprise de Microsoft va plus loin en
+exploitant le modèle d'IA pour fonctionner avec les applications
+Microsoft 365 et vos données, y compris votre calendrier, vos e-mails et
+discussions, vos documents, vos transcriptions de réunions et votre liste
+de contacts. Le service de discussion d'entreprise peut également créer
+un modèle de connaissances pour votre organisation en rendant les
+données facilement accessibles et partageables avec d'autres personnes
+de l'organisation. Ce modèle de connaissances plus inclusif contribue à
+éviter la perte de la mémoire institutionnelle lorsque les employés
+quittent l'entreprise en emportant avec eux leurs connaissances et
+informations sur les clients, les transactions, l'état des projets,
+l'historique de l'entreprise et d'autres informations clés.
+Gardez toujours à l'esprit la confidentialité et la sécurité des
+données. La curation automatisée de vos données par un modèle
+d'IA peut exposer des données personnelles, des données
+propriétaires et des données de clients ou de clients qui nécessitent
+des protections PII (informations d'identification personnelles).
+Microsoft prend la confidentialité des données au sérieux, mais il
+ne peut pas vous protéger, vous ou votre organisation, de vos
+propres actions. Mettez en place des politiques strictes pour vous
+assurer que l'IA et les données sont utilisées de manière
+responsable.
+Microsoft a également introduit Dynamics 365 Copilot pour inclure
+ChatGPT dans ses logiciels CRM et ERP. Cette initiative apporte un
+soutien substantiel de l'IA aux rôles des ventes, du service, du marketing,
+des opérations et de la chaîne d'approvisionnement.
+Les applications Microsoft ne sont pas les seuls endroits où vous
+trouverez ChatGPT ou une assistance AI inspirée par ChatGPT. Loin de
+
+---
+
+[p. 139-139]
+rg/fr/firefox/addon/chatgpt-for-
+google/.
+Ce sont trois des navigateurs les plus couramment utilisés, donc je
+m'arrêterai ici. Cependant, compte tenu du taux de prolifération étonnant
+de ChatGPT, il est sûr de dire que tous les navigateurs auront
+éventuellement une fonctionnalité similaire à ChatGPT d'une manière ou
+d'une autre.
+
+---
+
+[p. 147-148]
+ers ingénieux trouveront plus de façons d'utiliser ChatGPT comme
+un outil utile dans un domaine épuisant où les mots et les faits comptent.
+Consultation de ChatGPT dans le
+domaine de la santé
+Bien que les cas d'utilisation dans le domaine de la santé émergent et
+évoluent encore, plusieurs sont déjà en cours dans le monde entier.
+En recherche médicale, ChatGPT peut analyser et résumer rapidement
+de grandes quantités de données provenant de dossiers de patients, de
+recherches médicales, d'imagerie médicale et d'autres sources cliniques
+et de recherche. Cette capacité permet de gagner du temps et permet aux
+chercheurs et aux cliniciens d'obtenir rapidement les informations dont
+ils ont besoin pour fournir des soins de qualité.
+ChatGPT peut également compiler et gérer les dossiers médicaux
+électroniques (EMR) des patients et les notes des médecins. L'auto-
+assistance en télémédecine pourrait être alimentée par ChatGPT pour
+fonctionner de la même manière que les lignes de conseil infirmier de
+l'assurance le font actuellement. Les patients pourraient indiquer au bot
+leurs symptômes, et le modèle d'IA pourrait ensuite classer le niveau de
+soins nécessaire et fournir des instructions lorsque des soins personnels
+sont nécessaires.
+ChatGPT fonctionne également bien pour l'éducation des patients, que
+ce soit pour générer du contenu informatif ou répondre à des questions.
+Profiter de ChatGPT dans le secteur
+financier
+Les principaux intérêts initiaux des banques et des institutions
+financières dans l'utilisation de ChatGPT se situent dans le service
+clientèle et la détection de fraudes. D'autres cas d'utilisation incluent la
+gestion des risques, l'analyse des investissements, la conformité et la
+réglementation, ainsi que des tableaux de bord d'application plus
+conviviaux pour les clients.
+Le secteur financier est l'un des plus lents à intégrer de nouvelles
+technologies - et ChatGPT et d'autres modèles d'IA générative ne font
+pas exception. Et pour de bonnes raisons. Si ChatGPT commet des
+erreurs dans les services bancaires, les pertes pour les institutions et les
+particuliers pourraient être considérables.
+
+---
+
+[p. 161-162]
+cateurs et les élèves dans presque tous les
+domaines.
+Je suis impatient de voir comment les éducateurs vont exploiter cet outil
+pour réformer l'éducation et mettre au maximum leurs compétences
+pédagogiques. Ce sont vraiment des moments excitants pour tous !
+
+FIGURE 7-7 : Une conversation de jeu de rôle Duolingo Max avec ChatGPT.
+Interdire ChatGPT entrave
+l'éducation
+Interdire ChatGPT dans les écoles et les programmes éducatifs est une
+erreur grave. L'IA est là pour rester et elle remodelle la nature du travail
+et, en effet, l'expérience humaine.
+Les éducateurs qui ne guident pas les élèves dans cette transition leur
+font une injustice. Naviguer et fonctionner dans le monde sans
+compétences en IA sera bientôt aussi difficile que se débrouiller sans
+compétences informatiques et accès à Internet.
+La meilleure voie à suivre est de reconnaître que le changement est
+vraiment la seule constante et que c'est le devoir des éducateurs d'aider
+les élèves à maîtriser chaque nouveau tournant. Enseignez en
+conséquence. Ce sont les éducateurs qui font avancer une société et lui
+permettent de s'adapter.
+
+---
+
+[p. 172-172]
+travail ou votre vie. Une source inconnue et une perspective unique,
+ainsi que la formulation répétitive et les réponses que ChatGPT a
+tendance à préférer, influencent votre façon de penser et d'agir. Êtes-
+vous d'accord avec cela ?
+Utilisez ChatGPT comme l'excellent outil qu'il est, mais ne le laissez pas
+penser à votre place !
+
+---
+
+[p. 180-181]
+aider à prévenir les problèmes de
+santé, dispenser des soins d'urgence et évaluer avec précision si
+l'attention d'un médecin est nécessaire.
+ChatGPT et l'IA générative changeront nos vies quotidiennes et notre
+expérience humaine future de bien plus de façons que cette liste déjà
+longue, bien que toutes ne puissent être prévues.
+Chapitre 10
+Dix autres outils d'IA générative
+à essayer
+DANS CE CHAPITRE
+ DALL-E et DALL-E 2
+ DeepL Write et DeepL
+ Cedille
+ Notion AI
+ YouChat
+ ChatSonic
+ Poe
+ Jasper
+ Durable
+ Mode divin
+ChatGPT est un phénomène mondial, mais il n'est pas sans égal. Dans ce
+chapitre, vous découvrirez dix autres outils d'IA générative qui
+contribuent à l'avancement de l'IA et du traitement du langage naturel.
+Chacun est unique en termes de forces et de faiblesses, ainsi que de
+fonctionnalités et de capacités. Vous pourriez constater qu'un autre
+modèle, créé par OpenAI ou une autre entreprise, serait plus utile pour
+un projet donné ou correspondrait mieux à vos préférences. Parce que de
+plus en plus d'alternatives arrivent, il est utile de regarder
+périodiquement autour de soi pour s'assurer d'utiliser le modèle d'IA
+générative qui convient le mieux à vos besoins.
+Les suggestions de ce chapitre ne sont pas destinées à minimiser la
+percée incroyable que représente ChatGPT, le pivot radical dans
+
+---
+
+[p. 190-190]
+nt avec les modèles d'IA de
+You.Com pour effectuer d'autres tâches telles que YouChat, YouCode,
+YouWrite et YouImagine, allez sur https://you.com/ et choisissez
+parmi ces options, comme indiqué dans la Figure 10-8. L'option Plus
+vous amène aux options de moteur de recherche si vous souhaitez
+effectuer une recherche sur Internet.
+
+---
+
+[p. 210-214]
+s, 99–100
+add-ins Microsoft, ChatGPT dans, 40–41
+Microsoft AppSource, 98
+Microsoft Bing, 38, 74, 97–98, 101, 123, 125
+Microsoft Office365, 74
+Microsoft Teams, 95–96
+Microsoft's Business Chat, 88–89
+Microsoft's Copilot, 88
+Microsoft's Turing NLG, 29
+Milo, 93
+désinformation, 126–127
+atténuation des risques et responsabilité, 83–85
+modèles
+à propos, 61
+s'adapter aux limites de GPT-4, 68–69
+choisir, 64–67
+comparer, 62–64
+avancées de GPT-4, 67–68
+résumer les progrès, 61–62
+formation, 32–34
+modèle multimodal, 62–63, 66
+Musk, Elon (chef d'entreprise), 25
+N
+réduire les options, 127–128
+réseau neuronal, 31
+Notion AI, 141
+Notta, 96
+Noty.ai, 96
+cartes graphiques NVIDIA V100, 31
+O
+Office 365 (Microsoft), 74
+OpenAI
+à propos, 7
+Rapport technique GPT-4, 65, 78
+Outil de tokenisation, 56
+avertissements de, 75–76
+API OpenAI, 92
+
+Evals OpenAI, 69
+OpenTable, 93
+outpaint, 137
+P
+Modèle d'apprentissage PaLM, 66
+paramètres, 29
+informations personnelles identifiables (PII), 89
+plug-ins, 93–95, 117–120
+Plugins Alpha, 118
+Poe, 144–145
+prévisibilité, recherche de, 78–83
+logiciel programmé, comparé à l'IA générative, 10
+progrès, des modèles, 61–62
+ingénierie de la prompte, 47, 54
+générateur de prompt, 60
+Promptheus, 43
+
+promptes
+à propos, 28, 47–50
+enchaînement, 58–60
+ingénierie, 54
+revoir l'historique des chats, 52–54
+démarrer des discussions, 50–52
+fils de discussion, 57–58
+conseils et stratégies pour, 58–60
+limites de jetons, 55–57
+problèmes de stockage de l'historique de l'utilisateur, 55–57
+écriture pour ChatGPT, 47–60
+optimisation de la politique proximale, 33
+confiance publique, érosion de, 132
+Q
+Q-Chat, 90–93
+"Principes de gouvernance de l'informatique quantique" (Forum
+économique mondial), 74
+Quora, 144
+R
+RACE (reformuler, répondre, citer des preuves, expliquer), 30
+systèmes de classement, 7–8
+Raspberry Pi, 73
+RBRMs (modèles de récompense basés sur des règles), 84
+s'efforcer, pour la fiabilité, 78–79
+benchmark ReCORD, 30
+
+apprentissage par renforcement à partir des commentaires humains
+(ARFH), 33, 78, 83
+fiabilité, tendre la main pour, 78–79
+Icône de rappel, 3
+répétabilité, confiance et, 79–81
+IA responsable, 71–75
+reformuler, répondre, citer des preuves, expliquer (RACE), 30
+revoir l'historique des discussions, 52–54
+risques, atténuation des, 83–85
+RLHF (apprentissage par renforcement à partir des commentaires
+humains), 33, 78, 83
+« Roadmap vers un écosystème d'assurance IA efficace » (Centre de
+l'éthique des données et de l'innovation), 74
+modèles de récompense basés sur des règles (RBRM), 84
+S
+Scribblers, 146
+optimisation pour les moteurs de recherche (SEO), 122, 132
+moteurs de recherche
+Comparaison de ChatGPT avec, 7–9, 27–28, 44
+ChatGPT dans, 101–103
+recherche
+pour ChatGPT dans les applications, 97–99
+pour la prévisibilité, 78–83
+auto-attention, 31
+serveur, 32
+Shopify, 93

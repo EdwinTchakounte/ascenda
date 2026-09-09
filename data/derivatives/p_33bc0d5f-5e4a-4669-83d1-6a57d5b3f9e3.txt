@@ -1,0 +1,1356 @@
+OUVRAGE : L'Intelligence artificielle et l'automatisation 4.0 ?: Par où comencer? (French Edition)
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 311
+AXE : IA Travail Management Metiers
+SOMMAIRE :
+  1 L’IA et l’Automatisation 4.0 (p. 16-16)
+  2 Dédicaces (p. 17-18)
+  3 Préface (p. 19-21)
+  4 À propos de l’auteur (p. 22-23)
+  5 Questions: (p. 24-24)
+  6 À qui ce livre est destiné ? (p. 25-28)
+  7 Comprendre l’Intelligence Artificielle (p. 29-31)
+  Contexte (p. 32-37)
+  Que pouvons-nous attendre du développement de l’in- (p. 38-41)
+  8 Partie 1 : Ce que nous réserve l’IA dans le futur. (p. 42-42)
+  2.Comment la nature des affaires a changé pendant ces (p. 42-43)
+  3.L’importance de l’agilité dans un monde en mutation rapide (p. 44-44)
+  4.L’importance de la digitalisation et de l’IA pour rester compétitif (p. 45-47)
+  9 Chapitre 1 : Éléments à Prendre en Considération Avant... (p. 48-48)
+  2. Analyse du Retour sur Investissement (ROI) (p. 49-49)
+  3. Capacité et Compétences de l’Équipe (p. 50-50)
+  4. Évaluation des Risques (p. 51-52)
+  10 Chapitre 2 : L’Écosystème des Données (p. 53-53)
+  3. Les Composants Clés d’un Écosystème de Données (p. 54-55)
+  Défis et Opportunités (p. 56-58)
+  11 Chapitre 3 : L’IA pour l’amélioration de l’Expérience des... (p. 59-59)
+  3. Ce que les Employés Espèrent Comme Expérience (p. 59-60)
+  4. Les Moyens pour Améliorer l’Expérience des Employés (p. 61-63)
+  12 Chapitre 4. Améliorer l’Expérience Client grâce à... (p. 64-64)
+  2. La Réactivité (p. 65-65)
+  4. Optimisation de l’Expérience Client grâce à l’IA (p. 66-67)
+  13 Chapitre 5. Éviter des Pertes grâce à l’Intelligence... (p. 68-68)
+  L’IA et la Blockchain pour la Transparence (p. 69-69)
+  2. Pertes dues aux Erreurs Humaines (p. 70-70)
+  3. Gains pour les Organisations et la Société (p. 71-73)
+  14 Chapitre 6 : L’IA au Service de la Santé : Sauver des... (p. 74-74)
+  2. Médecine Personnalisée (p. 75-75)
+  4. Accélération de la Recherche Médicale (p. 76-76)
+  6. Réduction des Erreurs Médicales (p. 77-80)
+  15 Résumé de la Partie 1 : Les Potentiels de l’Intelligence... (p. 81-84)
+  16 Partie 2 : Le coeur de la technologie de l’IA (p. 85-85)
+  17 Chapitre 1 : La Vision par Ordinateur (p. 86-86)
+  1.2 La Reconnaissance Intelligente des Caractères (ICR) (p. 87-87)
+  1.5 Le Traitement d’Image et Vidéo (p. 88-89)
+  18 Chapitre 2 : Le Langage et l’IA (p. 90-90)
+  2. Applications de l’IA dans le Langage humain (p. 90-93)
+  19 Chapitre 3 : La Pensée et l’Apprentissage de l’IA (p. 94-95)
+  2. L’Apprentissage Machine (Machine Learning) (p. 96-96)
+  2.2 Techniques de Machine Learning (p. 97-97)
+  3. Outils et Plateformes (p. 98-102)
+  20 Chapitre 4 : Autres aspects et choix d’implémentation de... (p. 103-104)
+  2. Choisir la Technologie Appropriée (p. 105-106)
+  3. Exécution et Implémentation dans les Entreprises (p. 107-108)
+  4. Exécution et Implémentation dans les Entreprises Publiques (p. 109-111)
+  21 Chapitre 5 : La Synergie de l’IA et d’autres Technologies (p. 112-311)
+
+[22/170 passages, 18320 tokens sur 140706]
+
+=== EXTRAITS ===
+
+[p. 3-7]
+ISMAHIL TCHAGBELE
+L’IA et l’Automatisation 4.0 : Par où
+commencer ?
+Copyright © 2025 par Ismahil TCHAGBELE
+Tous droits réservés. Aucune partie de cette
+publication ne peut être reproduite,
+stockée ou
+transmise sous quelque forme ou par
+quelque moyen que ce soit, électronique,
+mécanique, photocopie,
+enregistrement, sans l'autorisation écrite de
+l'éditeur. Il est illégal de copier ce livre,
+de
+l'afficher sur un site web ou de le
+distribuer par
+tout autre moyen sans autorisation.
+
+Pour télécharger la version numérique
+, veuillez
+scanner le QR Code :
+
+1
+2
+4
+4
+7
+9
+10
+13
+1
+4
+16
+22
+24
+25
+25
+26
+Contents
+1 L’IA et l’Automatisation 4.0
+2 Dédicaces
+3 Préface
+Pourquoi ce livre ?
+4 À propos de l’auteur
+5 Questions:
+6 À qui ce livre est destiné ?
+7 Comprendre l’Intelligence Artificielle
+Quelques définitions clés :
+Contexte
+Que pouvons-nous attendre du développement de l’in-
+telligence artificielle ?
+8 Partie 1 : Ce que nous réserve l’IA dans le futur.
+1.Le rôle croissant de l’IA dans les organisations
+2.Comment la nature des affaires a changé pendant ces
+dernières années ?
+3.L’importance de l’agilité dans un monde en mutation rapide
+
+27
+27
+28
+29
+2
+9
+3
+0
+3
+1
+3
+2
+33
+3
+3
+3
+4
+3
+5
+36
+38
+3
+8
+3
+9
+4
+0
+4
+0
+42
+4
+2
+4.L’importance de la digitalisation et de l’IA pour rester compétitif
+5.Augmenter l’efficience grâce à l’IA
+6.Devenir acteur de la transformation technologique
+9 Chapitre 1 : Éléments à Prendre en Considération Avant...
+1. Évaluation de l’État Actuel et du Type d’Activité
+2. Analyse du Retour sur Investissement (ROI)
+3. Capacité et Compétences de l’Équipe
+4. Évaluation des Risques
+10 Chapitre 2 : L’Écosystème des Données
+1. Les Bénéfices des Écosystèmes de données
+2. Études de Cas sur les écosystèmes de donnée
+3. Les Composants Clés d’un Écosystème de Données
+Défis et Opportunités
+11 Chapitre 3 : L’IA pour l’amélioration de l’Expérience des...
+1. L’Importance de l’Expérience des Employés
+2. La Situation Actuelle de l’Expérience des Employés
+3. Ce que les Employés Espèrent Comme Expérience
+4. Les Moyens pour Améliorer l’Expérience des Employés
+12 Chapitre 4. Améliorer l’Expérience Client grâce à...
+1. L’IA dans une Stratégie Omnicanale
+
+4
+3
+4
+4
+4
+4
+46
+4
+6
+47
+4
+8
+48
+4
+9
+51
+5
+1
+5
+2
+5
+3
+5
+3
+5
+4
+5
+4
+5
+5
+57
+60
+60
+2. La Réactivité
+3. Collecte et Analyse des Avis Clients
+4. Optimisation de l’Expérience Client grâce à l’IA
+13 Chapitre 5. Éviter des Pertes grâce à l’Intelligence...
+1. Pertes dues aux Fraudes
+L’IA et la Blockchain pour la Transparence
+2. Pertes dues aux Erreurs Humaines
+Réduction des Erreurs grâce à l’IA
+3. Gains pour les Organisations et la Société
+14 Chapitre 6 : L’IA au Service de la Santé : Sauver des...
+1. Diagnostic Précis et Précoce
+2. Médecine Personnalisée
+3. Surveillance et Gestion des Maladies Chroniques
+4. Accélération de la Recherche Médicale
+5. Amélioration de la Réponse aux Pandémies
+6. Réduction des Erreurs Médicales
+7. Accès aux Soins dans les Pays en Développement
+15 Résumé de la Partie 1 : Les Potentiels de
+l’Intelligence...
+16 Partie 2 : Le coeur de la technologie de l’IA
+Le Cadre de Travail pour Expliquer l’IA
+
+---
+
+[p. 21-23]
+lait pas
+suffir, j’aurais agi différemment. » Cette phrase résume bien l’essence de ce
+livre : l’IA n’est pas une solution miracle, mais un outil puissant, à
+condition de savoir l’utiliser correctement.
+Lire, c’est une chose. Appliquer ce qu’on apprend en est une autre. Mon
+objectif est de vous accompagner dans cette démarche.
+6
+I
+4
+À propos de l’auteur
+smahil Tchagbele est un entrepreneur dans le domaine de l’intelligence
+artificielle (IA) et en développement de logiciel. Fondateur de Triumva ,
+une entreprise spécialisée dans le développement de modèles d’IA,
+l’automatisation par l’IA, et la création de logiciels et d’applications
+mobiles, il se consacre à l’intégration des technologies avancées dans divers
+secteurs pour améliorer l’efficacité et la productivité des processus.
+Ismahil est titulaire d’un MBA en administration des affaires, d’un
+diplôme en ingénierie d’intelligence artificielle délivré par IBM, ainsi que
+des certifica-tions en développement fullstack et développement
+d’applications mobiles par Meta. Son expertise lui permet de naviguer avec
+aisance dans le domaine complexe des technologies émergentes et d’aider
+les entreprises à tirer parti du potentiel immense de l’IA.
+Il est également le fondateur de Triumva Healthcare, dont la mission est
+d’exploiter la puissance de la technologie pour améliorer les services de
+santé et contribuer à un monde meilleur.
+Ismahil participe souvent à des événements technologiques mondiaux
+dont VivaTech , Santé-Expo et Collision. Lors de ces conférences, il a la
+chance d’échanger avec des CEO, des gestionnaires et des développeurs sur
+les dernières innovations en IA et en automatisation.
+À travers son entreprise et ses initiatives, Ismahil Tchagbele se positionne
+comme une personne ressource dans l’implémentation des technologies IA,
+7
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+
+cherchant à maximiser leur impact dans des secteurs aussi variés que la
+santé et la gestion des ressources. Son engagement dans l’innovation et sa
+passion pour l’IA le motivent à partager ses connaissances à travers ce livre,
+destiné à guider les gestionnaires et entrepreneurs dans leur propre parcours
+vers l’adoption de l’IA et de l’automatisation.
+LinkedIn: https://www.linkedin.com/in/ismahil-doboya-tchagbele/
+8
+
+---
+
+[p. 34-36]
+enir un allié précieux dans cette
+mission. Imaginez avoir une conversation avec chaque membre de votre
+équipe pour identifier les tâches qu’ils n’aiment pas faire. Ensuite, imaginez
+que vous puissiez automatiser ces tâches grâce à l’IA. Le résultat ? Une
+équipe plus satisfaite et plus motivée, sachant qu’elle ne se concentre que
+sur des tâches à haute valeur ajoutée, ce qui non seulement augmente la
+productivité, mais
+17
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+améliore aussi l’ambiance générale de travail.2
+Un Gain de Productivité Incroyable
+L’intelligence artificielle a la capacité d’analyser des milliers de données
+en quelques secondes et d’exécuter des tâches rapidement et efficacement.
+Prenons un exemple simple : alors qu’une personne pourrait prendre
+plusieurs minutes pour lire un rapport ou analyser une situation, un
+programme d’IA pourrait faire la même tâche en quelques millisecondes.
+En combinant la puissance des capacités humaines et de l’intelligence
+artificielle, il est possible de créer des processus automatisés, agiles, et
+uniques, capables d’atteindre des objectifs avec une efficacité et une
+efficience accrues.
+L’efficience ( atteindre un objectif en utilisant moins de ressources) et
+l’efficacité (atteindre l’objectif avec succès sans se soucier de la quantité
+des ressources utilisées) sont deux éléments cruciaux pour les organisations
+modernes. Grâce à l’automatisation et à l’IA, les entreprises peuvent non
+seulement atteindre leurs objectifs plus rapidement, mais aussi avec moins
+de ressources, augmentant ainsi leur résilience et leur compétitivité dans un
+marché globalisé.
+Les compétences et limites de l’intelligence artificielle
+L’intelligence artificielle (IA) présente des compétences
+impressionnantes et polyvalentes qui ont transformé de nombreux secteurs,
+mais il est crucial de bien comprendre ses limites réelles. Voici un aperçu
+des capacités de l’IA ainsi que des défis et contraintes.
+Compétences de l’IA
+Polyvalence
+
+L’IA est utilisée dans de nombreux domaines :
+• Finance : Des banques comme JPMorgan utilisent l’IA pour détecter
+rapidement des fraudes en analysant des millions de transactions en
+temps réel.
+• Santé : L’IA aide à diagnostiquer des maladies en analysant des images
+médicales, comme les systèmes qui détectent le cancer avec une grande
+précision en exploitant des ensembles massifs de données médicales.
+• Sécurité : Des pays comme Singapour utilisent l’IA pour surveiller les
+18
+COMPRENDRE L’INTELLIGENCE ARTIFICIELLE
+espaces publics et détecter des comportements suspects, contribuant
+ainsi à améliorer la sécurité urbaine grâce à une surveillance en temps
+réel.
+• Éducation : Des plateformes comme Coursera ou Khan Academy
+adaptent
+les cours en fonction des progrès des étudiants grâce à l’IA.
+Disponibilité constante
+L’IA fonctionne 24h/24, sans pause. Les chatbots, tels que ceux utilisés
+par Amazon, offrent des services à toute heure, répondant à des millions de
+demandes clients sans interruption.
+Fiabilité
+Si elle est alimentée par des données fiables, l’IA peut être extrêmement
+précise. Par exemple, Google Translate s’est considérablement amélioré
+grâce à des millions d’exemples de traductions, réduisant les erreurs et
+rendant les traductions plus accessibles à travers le monde.
+
+---
+
+[p. 44-46]
+l’agilité dans un monde en
+mutation rapide
+Aujourd’hui, le monde change rapidement. Les nouvelles technologies
+comme l’IA et l’automatisation créent un environnement où les entreprises
+doivent non seulement suivre les tendances, mais aussi être prêtes à adopter
+des changements technologiques pour rester compétitives. Les grandes
+entreprises, comme Amazon et Tesla, utilisent déjà des robots et des
+systèmes d’IA pour améliorer leurs opérations.
+Pour les gestionnaires, il ne suffit plus d’avoir des compétences en
+gestion. Il est également nécessaire d’avoir une agilité technologique et de
+comprendre comment intégrer des technologies dans les processus pour
+réduire les coûts, améliorer la productivité, et renforcer leur position sur le
+marché.
+L’intelligence artificielle est non seulement une solution technologique,
+mais aussi un catalyseur pour transformer la structure même des entreprises,
+en leur permettant de devenir plus efficaces, productives, et profitable.
+S’adapter au rythme rapide du changement technologique
+Le monde évolue à une vitesse incroyable. Pour rester compétitives, les
+entreprises et les individus doivent constamment se mettre à jour sur les
+nouvelles technologies, en particulier l’intelligence artificielle (IA). Ceux
+qui négligent ces avancées risquent de subir le même sort que Blackberry
+lors de l’avènement des smartphones : être dépassés. Être agile dans l’ère
+numérique n’est plus un choix, c’est une nécessité. Si vous ne maîtrisez pas
+encore ces technologies, il est crucial de discuter régulièrement avec vos
+collègues pour
+26
+PARTIE 1 : CE QUE NOUS RÉSERVE L’IA DANS LE FUTUR.
+découvrir ce qu’ils ont appris à ce sujet et voir comment vous pouvez
+intégrer ces connaissances dans vos pratiques quotidiennes.
+4.L’importance de la digitalisation et de l’IA pour
+rester compétitif
+Aujourd’hui, la digitalisation est devenue un impératif pour toutes les
+grandes entreprises. Ce processus permet de créer des opportunités, mais il
+
+engendre également de l’incertitude. En effet, un concurrent mieux équipé
+en termes de technologies numériques et d’IA peut rapidement prendre des
+parts de marché. C’est pourquoi les entreprises qui intègrent des robots et
+des programmes d’intelligence artificielle dans leurs opérations réussissent
+à non seulement réduire leurs coûts, mais aussi à devenir plus agiles.
+Être gestionnaire ou responsable dans cette ère numérique demande des
+compétences bien au-delà des simples habiletés de gestion. Il faut
+développer une agilité technologique, savoir comment intégrer l’IA dans les
+processus métiers et avoir un leadership solide pour guider les équipes dans
+ce change-ment.
+5.Augmenter l’efficience grâce à l’IA
+Pour les dirigeants d’aujourd’hui, les priorités sont multiples. Parmi elles :
+trouver de nouveaux marchés, développer des produits innovants et adopter
+les nouvelles tendances. L’IA peut jouer un rôle clé en tant que copilote, en
+aidant à augmenter la productivité tout en réduisant les coûts. Par le passé,
+les initiatives comme les systèmes ERP ou les services partagés prenaient
+des mois à déployer, avec un retour sur investissement (ROI) visible
+seulement après plusieurs années. Aujourd’hui, l’IA et l’automatisation
+permettent de réduire ces délais et d’obtenir des ROI plus rapidement,
+parfois en moins de
+12 mois 19 .L’adoption de l’IA n’est pas seulement une tendance, elle
+devient une stratégie incontournable pour gagner en avantage concurrentiel
+et mieux se positionner sur le marché.
+27
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+6.Devenir acteur de la transformation technologique
+
+---
+
+[p. 53-55]
+t dû à la capacité de ces écosystèmes à améliorer la
+transparence, optimiser la gestion des ressources, et faciliter des collabo-
+rations plus efficaces entre plusieurs acteurs. L’étude souligne également
+l’importance de la stratégie de monétisation des données pour tirer parti des
+écosystèmes digitaux et optimiser les coûts.
+33
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+2. Études de Cas sur les écosystèmes de
+donnée
+Amazon : Un Écosystème de Données Omniprésent
+Amazon est un exemple emblématique d’un écosystème de données bien
+in-tégré. La société utilise les données de ses clients pour offrir des
+recommanda-tions personnalisées, améliorer la gestion des stocks et
+optimiser la logistique. Par exemple, les algorithmes d’Amazon analysent
+les historiques d’achat et les comportements de navigation pour suggérer
+des produits susceptibles d’intéresser les clients. Cette utilisation
+sophistiquée des données permet à Amazon d’augmenter ses ventes et
+d’améliorer l’expérience utilisateur.
+En outre, Amazon Web Services (AWS), la branche cloud de l’entreprise,
+offre une plateforme pour le stockage et l’analyse des données, facilitant
+ainsi la création de nouveaux écosystèmes par d’autres entreprises. AWS
+permet aux entreprises de développer et déployer rapidement des solutions
+basées sur les données, renforçant ainsi l’écosystème global d’Amazon.
+Siemens : L’Écosystème de Données dans l’Industrie
+Siemens, une entreprise leader dans le secteur industriel, a développé un
+écosystème de données robuste grâce à sa plateforme MindSphere. Mind-
+Sphere est un système d’exploitation IoT basé sur le cloud qui permet de
+connecter des machines et des infrastructures physiques au monde
+numérique. Les données collectées à partir de capteurs et d’équipements
+industriels sont analysées pour optimiser les processus de production,
+réduire les temps d’arrêt et améliorer l’efficacité énergétique.
+Cet écosystème de données permet à Siemens de fournir des services à
+valeur ajoutée à ses clients, comme la maintenance prédictive et
+l’optimisation des performances des équipements. En intégrant les données
+provenant de diverses sources, Siemens aide ses clients à prendre des
+décisions basées sur des informations précises et en temps réel.
+
+34
+CHAPITRE 2 : L’ÉCOSYSTÈME DES DONNÉES
+3. Les Composants Clés d’un Écosystème de
+Données
+Interconnexion des Services
+Les écosystèmes de données rassemblent divers services qui interagissent
+de manière transparente. Cette interconnexion permet une gestion efficace
+des données et offre aux utilisateurs une expérience cohérente.
+Partage de Données et Collaboration
+La collaboration entre différents acteurs au sein de l’écosystème permet
+le partage de données, favorisant l’innovation et la création de valeur. Les
+entreprises peuvent ainsi exploiter des données externes pour enrichir leurs
+offres et améliorer leurs services.
+Technologies de Support
+Les technologies comme l’intelligence artificielle, le machine learning et
+les plateformes cloud jouent un rôle crucial dans le fonctionnement des
+écosystèmes de données. Elles permettent de traiter et d’analyser de grandes
+quantités de données de manière efficace, fournissant des insights précieux
+pour la prise de décision.
+Sécurité et Conformité
+La sécurité des données et la conformité réglementaire sont des aspects
+essentiels de tout écosystème de données. Les entreprises doivent s’assurer
+que les données sont protégées contre les cybermenaces et que leur
+utilisation est conforme aux réglementations en vigueur.
+Monétisation des Données
+
+---
+
+[p. 63-64]
+et en créant un
+environnement de travail sain et stimulant, les gestionnaires peuvent
+transformer leur organisation et la positionner pour un succès durable. Il est
+crucial d’écouter les employés, de comprendre leurs besoins et de mettre en
+place des solutions innovantes pour améliorer leur expérience au sein de
+l’entreprise.
+41
+Q
+12
+Chapitre 4. Améliorer l’Expérience
+Client
+grâce à l’Intelligence Artificielle
+ue vous soyez gestionnaire d’une entreprise privée ou publique, vous
+avez des clients à satisfaire. Pour les services publics, les clients sont
+les citoyens, tandis que pour les entreprises privées, ce sont les personnes
+qui paient pour vos produits ou services. La satisfaction de vos clients doit
+être votre priorité absolue. Les entreprises qui réussissent à retenir leurs
+clients sont les plus prospères. Dans un monde technologique où tout va
+vite et où les transactions sont simplifiées, il est crucial de réduire les étapes
+entre vous et vos clients, et de faire en sorte que les délais soient les plus
+courts possible. L’idéal est de fournir des services qui peuvent être accédés
+en quelques clics, dans le confort de la maison du client.
+1. L’IA dans une Stratégie Omnicanale
+L’Importance de l’Omnicanal
+Une stratégie omnicanale implique plusieurs moyens de communication
+avec vos clients : application mobile, chat sur le site web, e-mails, appels
+téléphoniques, SMS, réseaux sociaux. Cependant, cette multiplicité de
+canaux peut devenir une source de frustration pour les clients si elle n’est
+pas bien gérée. Imaginez un client insatisfait des réponses d’un chatbot sur
+votre site
+
+---
+
+[p. 72-73]
+SATION 4.0 : PAR OÙ COMMENCER ?
+L’intelligence artificielle offre des solutions puissantes pour réduire les
+pertes dues aux fraudes et aux erreurs humaines. En détectant les fraudes de
+manière plus efficace, en automatisant les processus pour réduire les
+erreurs, et en utilisant des technologies avancées comme la blockchain pour
+assurer la transparence, les entreprises peuvent non seulement améliorer
+leur rentabilité mais aussi avoir un impact positif sur la société.
+50
+
+---
+
+[p. 84-84]
+technologiques de l’intelligence artificielle, fournissant une compréhension
+approfondie de cette révolution numérique.
+Avec une bonne adoption et une stratégie réfléchie, l’IA peut aider nos
+entreprises à devenir plus compétitives et profitables, tout en contribuant à
+une société plus évoluée et mieux préparée pour l’avenir.
+59
+
+---
+
+[p. 93-93]
+l’IA pour améliorer
+l’efficacité opérationnelle, enrichir l’expérience client, et prendre des
+décisions plus éclairées. Que ce soit à travers les chatbots, les agents d’IA,
+ou les technologies de NLP, l’intégration de l’IA dans les processus
+d’entreprise ouvre la voie à de nouvelles opportunités et à une compétitivité
+accrue.
+67
+
+---
+
+[p. 102-104]
+s, les gestionnaires peuvent tirer pleinement parti des capacités de
+l’IA pour transformer leurs opérations et obtenir un avantage concurrentiel
+significatif. En somme, l’IA représente une opportunité extraordinaire pour
+les entreprises modernes, et son intégration réussie repose sur une approche
+stratégique et bien informée.
+75
+L
+20
+Chapitre 4 : Autres aspects et choix
+d’implémentation de l’IA dans la Vie
+Réelle
+’exécution et l’implémentation de l’intelligence artificielle (IA) dans la
+vie réelle représentent des étapes cruciales pour toute entreprise
+cherchant à tirer parti des avancées technologiques pour améliorer ses
+opérations. Pour les gestionnaires d’entreprises publiques et privées, il est
+impératif de comprendre non seulement les différentes technologies
+disponibles mais aussi quand et comment les utiliser pour maximiser leur
+impact. Ce chapitre vise à explorer ces aspects de manière approfondie et à
+offrir des conseils pratiques pour une mise en œuvre réussie.
+1. Comprendre les Technologies Pratiques
+d’IA
+Avant de plonger dans l’exécution concrète de projets d’intelligence
+artificielle, il est essentiel de bien comprendre les technologies disponibles
+et leurs applications. Cette compréhension de base aide à évaluer les
+opportunités réelles que l’IA peut offrir, tout en prenant en compte les défis
+potentiels associés à chaque type de technologie. Explorons ces différentes
+formes d’IA et leurs utilisations pratiques.
+Logiciels d’IA
+
+Les logiciels d’IA sont des applications spécialement programmées pour
+76
+CHAPITRE 4 : AUTRES ASPECTS ET CHOIX D’IMPLÉMENTATION DE...
+accomplir des tâches spécifiques en utilisant des algorithmes
+d’apprentissage automatique (machine learning), de traitement du langage
+naturel ou de reconnaissance d’image. Ils peuvent analyser des données,
+identifier des modèles, et même prendre des décisions basées sur ces
+informations. Par exemple, un logiciel d’IA peut être utilisé dans le
+domaine médical pour détecter des anomalies dans des radiographies ou
+dans le secteur financier pour identifier des transactions suspectes.
+Ces logiciels, lorsqu’ils sont bien intégrés dans une entreprise, améliorent
+l’efficacité et automatisent des processus complexes. Leur flexibilité permet
+de les adapter à des contextes variés, offrant ainsi des solutions sur mesure
+pour des besoins précis. Cependant, ils nécessitent souvent des ressources
+pour leur développement initial, et un suivi constant est requis pour
+s’assurer qu’ils continuent de fonctionner correctement et de produire des
+résultats fiables.
+Intégration dans une Plateforme
+Plutôt que de créer de nouvelles applications d’IA, il est parfois
+préférable d’intégrer des fonctionnalités d’IA dans des systèmes déjà
+existants. Cette ap-proche permet aux entreprises de bénéficier des
+avantages de l’IA sans devoir reconstruire entièrement leur infrastructure
+technologique. Par exemple, un logiciel de gestion de la relation client
+(CRM) peut intégrer une fonctionnalité de recommandation de produits
+basée sur l’IA pour améliorer l’expérience utilisateur.
+L’intégration d’IA dans une plateforme existante est particulièrement
+utile pour les entreprises cherchant à moderniser leurs outils sans effectuer
+de changements drastiques. Cette solution peut être plus économique que le
+développement d’une solution IA personnalisée et permet souvent d’obtenir
+des résultats plus rapidement. De plus, cette intégration peut être ajustée en
+
+---
+
+[p. 111-113]
+dans une plateforme, les agents d’IA, le RPA, les smart workflows et les
+plateformes low-code doit être guidé par les besoins spécifiques de
+l’entreprise et les ressources disponibles. En fin de compte, une mise en
+œuvre réussie de l’IA peut transformer les opérations, réduire les coûts et
+préparer l’entreprise pour l’avenir.
+83
+L
+21
+Chapitre 5 : La Synergie de l’IA et
+d’autres
+Technologies
+’intelligence artificielle (IA) a été à l’avant-garde de nombreuses
+innovations technologiques ces dernières années. Cependant, c’est en
+combinant l’IA avec d’autres technologies avancées que l’on peut
+réellement libérer tout son potentiel et résoudre certains des problèmes les
+plus complexes et les plus pressants du monde. Dans ce chapitre, nous
+allons explorer comment la synergie entre l’IA et des technologies telles
+que la robotique, l’informatique quantique, la réalité virtuelle, et la
+chirurgie médicale peut mener à des solutions innovantes et efficaces.
+1. La Robotique et l’IA
+La robotique est l’un des domaines où la combinaison avec l’IA a montré
+des résultats remarquables. Les robots dotés d’IA sont capables de réaliser
+des tâches de manière autonome, d’apprendre de leurs interactions et de
+s’adapter à des environnements changeants. Un exemple frappant de cette
+combinaison est l’utilisation de robots dans l’industrie manufacturière.
+Tesla
+Tesla utilise des robots intelligents dans ses usines pour l’assemblage de
+véhicules. Ces robots, équipés de systèmes d’IA, peuvent effectuer des
+
+tâches
+84
+CHAPITRE 5 : LA SYNERGIE DE L’IA ET D’AUTRES TECHNOLOGIES
+complexes telles que le soudage, le montage de pièces, et le contrôle de la
+qual-ité. L’IA permet aux robots de détecter les défauts avec une précision
+inégalée et d’apprendre de chaque cycle de production pour améliorer
+constamment l’efficacité et la qualité. Grâce à cette synergie, Tesla a réussi
+à réduire les coûts de production tout en augmentant la précision et la
+vitesse de fabrication .
+2. L’Informatique Quantique et l’IA
+L’informatique quantique promet de révolutionner la manière dont nous
+traitons les données. En combinant l’IA avec l’informatique quantique, nous
+pouvons résoudre des problèmes qui étaient auparavant inaccessibles en
+raison de leur complexité.
+Google et le Quantum AI Lab
+Google, avec son Quantum AI Lab, explore comment l’informatique
+quan-tique peut améliorer les algorithmes d’IA. Par exemple, l’optimisation
+de routes pour la logistique, la modélisation de nouvelles molécules pour
+les médicaments, et la résolution de problèmes complexes en physique. En
+utilisant des ordinateurs quantiques, Google a démontré qu’il est possible de
+réaliser des calculs en quelques secondes, ce qui prendrait des milliers
+d’années avec des ordinateurs classiques .
+3. La Réalité Virtuelle (RV) et l’IA
+La réalité virtuelle, lorsqu’elle est combinée à l’IA, peut transformer des
+expériences immersives en interactions intelligentes. L’IA peut améliorer
+
+---
+
+[p. 129-131]
+cidé d’intégrer l’IA dans ses
+processus de maintenance prédictive pour ses turbines à gaz, le PDG de
+l’époque, Jeff Immelt, a joué un rôle actif dans le projet. Il a fréquemment
+communiqué sur les progrès et les avantages attendus de l’initiative, ce qui
+a renforcé l’engagement des employés à tous les niveaux de l’organisation .
+98
+CHAPITRE 2: SOUTIEN DE LA HAUTE DIRECTION, VISION,...
+2.La Vision
+Une vision claire est essentielle pour orienter les efforts et les ressources
+vers des objectifs précis. La vision doit définir ce que l’organisation veut
+accomplir avec l’IA et comment cette technologie s’intègre dans sa stratégie
+globale.
+Exemple de vision: “Notre objectif est d’augmenter la satisfaction client
+de 20% en un an grâce à l’intégration de l’IA. Nous allons commencer par
+déployer un chatbot personnalisé sur notre site web pour fournir des
+réponses instantanées 24/7, puis analyser les retours clients pour améliorer
+nos produits et services en temps réel.”
+3.Gouvernance
+La gouvernance d’entreprise joue un rôle clé dans la création d’un environ-
+nement favorable à l’innovation et à l’adoption de nouvelles technologies.
+Une gouvernance efficace garantit que les projets d’IA sont alignés avec les
+objectifs de l’organisation, qu’ils respectent les normes éthiques et qu’ils
+sont gérés de manière transparente.
+Par exemple,Google avait mis en place un comité d’éthique de l’IA pour
+superviser l’utilisation de cette technologie dans ses produits et services. Ce
+comité est chargé de s’assurer que les projets d’IA respectent les principes
+éthiques et de protéger les données des utilisateurs .(Actuellement ce comité
+est dissout à cause des plaintes des employés)
+4.Structure
+
+Une structure organisationnelle adéquate est nécessaire pour soutenir la
+mise en œuvre de l’IA. Cela inclut la formation d’équipes
+multidisciplinaires et la création de comités temporaires pour superviser les
+initiatives de transformation.
+Par exemple Microsoft a créé une équipe dédiée à l’IA, composée de
+chercheurs, d’ingénieurs et de spécialistes de la gestion du changement.
+Cette équipe travaille en étroite collaboration avec différents départements
+pour
+99
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+intégrer l’IA de manière cohérente dans l’ensemble de l’entreprise .
+5.Promouvoir un Environnement Sain et Propice à
+l’Innovation
+Un environnement de travail sain et propice à l’innovation est crucial pour
+le succès des projets d’IA. Cela inclut la promotion de la collaboration,
+l’encouragement à la créativité et la mise en place de politiques qui
+soutiennent le bien-être des employés.
+Adobe a mis en place des programmes de bien-être et des espaces de
+travail collaboratifs pour favoriser l’innovation. Ces initiatives ont conduit à
+une augmentation de la créativité et à l’adoption rapide de nouvelles
+technologies, y compris l’IA .
+Le soutien de la haute direction, une vision claire, une gouvernance solide
+et une structure organisationnelle adéquate sont essentiels pour réussir la
+transformation par l’IA. En suivant les conseils et les exemples présentés
+dans ce chapitre, les gestionnaires peuvent créer un environnement propice
+à l’innovation et maximiser les chances de succès de leurs projets d’IA.
+
+---
+
+[p. 147-149]
+ion de la
+chaîne d’approvisionnement.
+• Prioriser les Projets d’Automatisation : Une fois les besoins identifiés,
+classez les projets par leur potentiel de retour sur investissement (ROI).
+Par exemple, une analyse de rentabilité pourrait révéler que
+l’automatisation de la gestion des stocks offre des gains rapides et
+mesurables.
+1.2 Collecte de Données et Data Mining
+La qualité des données est cruciale pour tout projet d’IA, et cela
+s’applique également à l’AutoML. Assurez-vous que les données collectées
+sont com-plètes, pertinentes et organisées.
+• Préparation et Nettoyage des Données : Avant de lancer AutoML, les
+données doivent être nettoyées et formatées correctement. Cela
+implique de supprimer les valeurs manquantes, de transformer les
+variables caté-gorielles et de normaliser les données numériques.
+• Mining des Données pour Identifier les Patterns : Utilisez des outils
+de data mining pour extraire des informations pertinentes. Cela peut
+inclure l’analyse des comportements clients, l’optimisation des
+parcours utilisateurs, ou la prédiction des ventes futures.
+Amazon utilise des techniques de data mining pour améliorer son système
+de
+113
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+recommandation de produits, ce qui a permis d’augmenter les ventes et
+d’améliorer l’engagement client.
+1.3. Sélectionner les Outils AutoML Appropriés
+Une fois les besoins et les données en place, le choix des bons outils
+AutoML devient essentiel. Voici quelques options populaires et leur
+application pratique en entreprise.
+• Google Cloud AutoML : Outil de Google pour des projets nécessitant
+des
+modèles personnalisés dans les domaines de la vision, du langage
+naturel et des données structurées.
+
+• Application : Les détaillants peuvent l’utiliser pour analyser les images
+des
+rayons et gérer automatiquement les stocks en fonction des niveaux de
+produits.
+• DataRobot : Plateforme intuitive et performante pour les projets d’IA
+prédictive et l’analyse des risques.
+• Application : Les banques et compagnies d’assurance peuvent utiliser
+DataRobot pour analyser les données des clients et identifier les com-
+portements suspects pour la détection de fraude.
+• H2O.ai : Outil open-source qui offre des solutions robustes pour les
+entreprises avec une flexibilité accrue.
+• Application : Les entreprises de logistique peuvent utiliser H2O.ai pour
+optimiser les chaînes d’approvisionnement en analysant les données
+des expéditions et en identifiant les zones à améliorer.
+2. Mettre en Œuvre et Gérer les Modèles d’IA
+Après la création de modèles performants avec AutoML, la mise en œuvre
+et la gestion des modèles deviennent des étapes critiques.
+• Déploiement en Production : Les modèles doivent être intégrés dans
+les systèmes existants de l’organisation de manière transparente. Cela
+implique des tests rigoureux pour garantir la fiabilité.
+• Surveillance Continue : Les modèles d’IA doivent être surveillés pour
+114
+
+---
+
+[p. 164-166]
+ns l’accord de tous les nœuds, ce qui rend la
+blockchain extrêmement sécurisée.
+Avantages et Limitations
+La blockchain automatise la vérification et sécurise les transactions, ce
+qui peut réduire considérablement les coûts et les efforts liés à ces
+processus. Cependant, elle consomme beaucoup d’énergie, avec une
+consommation
+126
+CHAPITRE 5: AUTRES ÉLÉMENTS QUE LES GESTIONNAIRES DOIVENT...
+moyenne de 600 KWh par transaction, et est limitée en termes de nombre
+de transactions par seconde.
+Blockchain dans les Transactions Financières
+Les institutions financières utilisent la blockchain pour sécuriser les
+trans-actions et réduire les fraudes. Par exemple, IBM a développé une
+plateforme de blockchain pour les transactions bancaires internationales,
+permettant des transferts de fonds plus rapides et plus sécurisés.
+3. Swarm Robotics
+La swarm robotics (robotique en essaim) est une technologie émergente qui
+utilise des comportements collaboratifs pour accomplir des tâches
+complexes, souvent au-delà des capacités humaines individuelles. Cette
+approche s’in-spire des comportements collectifs observés chez les insectes
+sociaux, comme les fourmis ou les abeilles.
+M-Blocks du MIT
+En 2019, le MIT a développé un système appelé M-Blocks, composé de
+16 cubes robotiques capables de s’identifier, de communiquer entre eux, de
+créer des structures, de grimper, de basculer, de sauter et de rouler. Cette
+innovation marque une avancée significative dans des domaines tels que la
+construction, les jeux et le secourisme.
+Applications et Potentiel
+La swarm robotics peut être utilisée dans diverses applications, allant de
+la construction automatisée à la recherche et au sauvetage. En intégrant
+l’intelligence artificielle, la blockchain et d’autres technologies, ces
+systèmes collaboratifs peuvent offrir des solutions robustes et innovantes.
+Swarm Robotics en Agriculture
+
+Dans le domaine de l’agriculture, des robots en essaim(La robotique en
+essaim est une branche de la robotique appliquant les méthodes
+d’intelligence distribuée aux systèmes à plusieurs robots.Wikipedia)
+peuvent être utilisés pour surveiller les cultures, appliquer des pesticides et
+récolter les produits. Ces robots travaillent de manière coordonnée pour
+optimiser les rendements et réduire les coûts.
+127
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+Pour scaler efficacement les programmes d’IA , les gestionnaires doivent
+comprendre et intégrer des technologies émergentes comme le
+reinforcement learning, la blockchain et la swarm robotics. Ces
+technologies offrent des opportunités uniques pour améliorer l’efficacité, la
+sécurité et l’innovation dans diverses industries. En adoptant une approche
+proactive et en restant informés des dernières tendances, les gestionnaires
+peuvent positionner leurs organisations pour réussir dans un paysage
+technologique en constante évolution.
+128
+
+---
+
+[p. 182-184]
+ativité, en innovation et en utilisation
+des outils d’IA. Les compétences sociales et émotionnelles sont également
+cruciales dans cette nouvelle ère. En adoptant une approche proactive de la
+formation et de l’adaptation, les entreprises peuvent non seulement
+survivre, mais prospérer dans l’ère de l’intelligence artificielle.
+143
+I
+33
+Chapitre 3 : Repenser le Travail et
+Redistribuer les Richesses dans l’Ère
+de l’IA
+maginez une entreprise où, chaque matin, les employés arrivent avec le
+sourire, non pas parce qu’ils échappent aux tâches qu’ils détestent, mais
+parce qu’ils savent que celles-ci ont été confiées à des outils d’intelligence
+artificielle. Ils peuvent se concentrer sur ce qu’ils aiment : l’innovation, la
+créativité, et les décisions stratégiques. Dans cette ère de l’IA, le travail
+devient non seulement plus efficace, mais aussi plus épanouissant.
+Avec l’avènement de l’IA, nous assistons à une transformation sans
+précé-dent du monde professionnel. Ce changement nous invite à repenser
+notre conception du travail, non seulement pour gagner en productivité,
+mais aussi pour améliorer la qualité de vie des employés. Bien que de
+nombreux outils d’IA existent pour automatiser certaines tâches, tous ne
+sont pas adaptés à chaque entreprise. C’est pourquoi nous proposons une
+sélection d’outils qui se sont déjà montrés efficaces dans la gestion, les
+ventes, la logistique, le marketing, et même la comptabilité.
+144
+CHAPITRE 3 : REPENSER LE TRAVAIL ET REDISTRIBUER LES...
+1.Repenser le Travail à l’Ère de l’IA
+
+La majorité des gens n’apprécient pas vraiment leur travail. Une étude
+menée par Gallup révèle que 85 % des travailleurs dans le monde sont
+désengagés
+ou activement désengagés de leur emploi.41 Ce désengagement est souvent
+alimenté par le stress lié au travail, les tâches répétitives et peu valorisantes,
+ainsi que les maladies professionnelles. Ces dernières représentent un
+problème majeur dans le monde du travail. Selon l’Organisation
+Internationale du Travail (OIT), environ 2,8 millions de travailleurs meurent
+chaque année à cause de maladies ou d’accidents liés à leur emploi. Ce
+chiffre dépasse même les décès causés par certaines maladies infectieuses,
+telles que le SIDA ou la tuberculose, soulignant l’ampleur des dangers
+associés à certaines conditions
+de travail 42 .
+Dans ce contexte, l’IA pourrait bien être la solution qui permet de libérer
+les employés des tâches fastidieuses. Par exemple, dans de nombreux
+secteurs comme la banque ou la santé, des processus autrefois manuels et
+répétitifs sont désormais pris en charge par l’automatisation, permettant
+ainsi aux employés de se concentrer sur des tâches à plus forte valeur
+ajoutée.
+2.Le rôle de l’IA dans la Réduction des Tâches
+ennuyeuse.
+Dans l’industrie bancaire, les processus de vérification et de traitement des
+transactions, autrefois fastidieux et sujets aux erreurs humaines, sont
+maintenant automatisés grâce à l’IA. Cela libère les employés de la banque
+pour qu’ils puissent se concentrer sur des tâches plus intéressantes, telles
+que le conseil financier personnalisé et la gestion des relations clients.
+Dans le secteur de la santé, l’IA est également un atout. Des hôpitaux
+comme celui de Copenhague utilisent des outils d’IA pour trier et prioriser
+les dossiers médicaux, facilitant ainsi une prise en charge plus rapide des
+
+---
+
+[p. 198-200]
+0 : PAR OÙ COMMENCER ?
+impliquant directement dans les réussites opérationnelles de l’entreprise.
+Les employés reçoivent une compensation additionnelle lorsque les
+objectifs de productivité sont atteints, ce qui contribue à renforcer
+l’engagement et à
+réduire le turnover 61.
+6.Investissement dans le Développement des
+Compétences
+L’IA et l’automatisation créent une forte demande de requalification et d’ac-
+quisition de nouvelles compétences. Pour rester compétitives, les
+entreprises doivent investir dans le développement continu des compétences
+de leurs employés. Cela ne signifie pas seulement des formations
+techniques, mais aussi le développement des compétences en pensée
+critique, en résolution de problèmes, et en collaboration.
+Selon une étude récente menée par le cabinet de recherche Deloitte, les
+entreprises qui investissent dans la formation continue de leurs
+collaborateurs ont en moyenne une productivité supérieure de 15% par
+rapport à celles qui négligent cet aspect. En effet, des employés bien formés
+sont plus compétents et performants dans l’exécution de leurs tâches, ce qui
+se traduit par une plus
+grande efficacité et une réduction des erreurs62.
+L’IA et l’automatisation ne doivent pas simplement être des outils de
+produc-tivité ; ils peuvent et doivent être des moteurs de changement positif
+dans l’organisation. En adoptant des espaces de travail flexibles, en
+favorisant un équilibre sain entre vie professionnelle et personnelle, et en
+investissant dans le développement continu des compétences, les entreprises
+construisent des fondations pour une culture organisationnelle durable et
+dynamique.
+Investir dans les compétences, redistribuer les gains de productivité, et
+utiliser l’IA pour alléger les tâches répétitives ou administratives sont des
+stratégies qui transforment positivement l’expérience des employés. En se
+concentrant sur ces axes, les entreprises peuvent non seulement améliorer
+leur efficacité, mais aussi offrir un environnement de travail plus
+satisfaisant et motivant.
+158
+
+N
+36
+Résumé de la Partie 4 - Redéfinir le
+Travail
+et la Société à l’Ère de l’IA
+ous vivons une nouvelle ère où l’intelligence artificielle (IA), l’au-
+tomatisation, et les objets connectés redéfinissent les compétences et les
+méthodes de travail. En tant que gestionnaires, il est impératif de prendre
+cette évolution au sérieux. Avec des API(Application protocol Interface) de
+plus en plus sophistiquées, une seule personne assistée par des agents d’IA
+peut accomplir des tâches équivalentes à celles de centaines de personnes
+en une journée. Cette transformation radicale exige une adaptation
+proactive pour rester compétitif et tirer parti des opportunités offertes par
+ces technologies.
+L’Impact de l’IA et de l’Automatisation
+L’IA et l’automatisation ont la capacité de transformer les entreprises en
+augmentant considérablement leur efficacité et leur rentabilité. Par exemple,
+des entreprises comme Amazon utilisent l’automatisation pour gérer leurs
+entrepôts, réduisant les coûts et augmentant la vitesse de traitement des
+commandes . Un concurrent adoptant ces technologies peut réduire
+drastiquement ses prix, rendant difficile pour les entreprises traditionnelles
+de rivaliser.
+Les Répercussions Positives et Négatives
+
+---
+
+[p. 214-216]
+en générant des brouillons
+ou en structurant des idées en fonction de thèmes précis. Cela illustre
+comment le prompt engineering devient un allié indispensable dans le
+processus de production, permettant aux équipes de se concentrer sur des
+tâches plus stratégiques et moins répétitives.
+4-Comment Structurer des Prompts Efficaces
+A. Définir un Objectif Clair
+Avant de rédiger un prompt, posez-vous ces questions :
+• Quel est le but de ma requête ? (Obtenir une analyse, générer une liste,
+comparer des idées...)
+• Qui est concerné ? (Public cible, secteur d’activité, expertise...)
+• Sous quelle forme dois-je recevoir la réponse ? (Liste, paragraphe,
+tableau,
+résumé...)
+Par exemple dire “Explique-moi le deep learning.” est une mauvaise
+requête; alors que “Rédige une explication du deep learning en 200 mots,
+compréhensible par un étudiant en première année d’informatique.” est une
+bonne requête.
+171
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+B. Structurer la Requête avec Clarté
+Les prompts doivent être logiques et bien organisés. Il est utile d’indiquer
+:
+• Un verbe d’action (Expliquer, comparer, générer, synthétiser...).
+• Un cadre temporel (Tendances 2024, évolution sur les 10 dernières
+années...).
+• Un format attendu (Liste, tableau, guide étape par étape...).
+Par exemple dire “Donne-moi des exemples d’innovations en IA.”est une
+mau-vaise requête; alors que “Liste cinq innovations majeures en IA en
+
+2024 sous forme de tableau avec une colonne ‘Impact’ et une colonne
+‘Exemples concrets’.”est une bonne requête.
+C. Intégrer des Contraintes et Exemples
+Ajoutez des limites et des modèles pour guider l’IA vers une meilleure
+réponse.
+Par exemple dire “Fais-moi un résumé de cet article.”est une mauvaise
+requête;alors que“Rédige un résumé de 250 mots en français de cet article
+en mettant l’accent sur les impacts économiques de l’IA. Voici un exemple
+de résumé que je trouve pertinent : [Insérer exemple].”est une bonne
+requête.
+D. Découper les Demandes Complexes en Étapes
+Pour obtenir des réponses détaillées et précises, divisez votre prompt en
+plusieurs sous-questions.
+Par exemple au lieu de dire “Comment digitaliser une entreprise ?”, il
+est preferable de le faire en plusiaeurs étapes comme: “1. Liste les objectifs
+d’une digitalisation réussie.
+2. Décris les étapes clés du processus.
+3. Donne un exemple d’entreprise ayant réussi cette transformation.”
+Cette approche améliore la compréhension et facilite l’obtention de
+réponses précises.
+E. Affiner et Itérer les Réponses
+Un bon prompt est rarement parfait du premier coup. Il est souvent
+nécessaire d’affiner la question en fonction de la réponse obtenue.
+Voilà un exemple d’itération possible :
+
+---
+
+[p. 230-232]
+matif.
+»
+• « Imaginez que vous êtes un conseiller fiscal. Donnez-moi des conseils
+de base pour économiser des impôts cette année, d’une manière claire
+et concise. »
+• « Vous êtes mon planificateur financier. Aidez-moi à fixer des objectifs
+financiers réalistes en effectuant des contrôles d’étape sur un ton
+positif et motivant. »
+Créativité et écriture
+• « Supposons que vous soyez un coach en écriture créative. Aidez-moi à
+réfléchir à des idées d’articles de blog uniques pour [sujet], avec un ton
+inspirant et énergique. »
+• « Imaginez que vous êtes un art-thérapeute. Proposez-lui des activités
+créatives pour vous détendre et vous relaxer, avec un ton apaisant et
+encourageant. »
+• « Imaginez que vous êtes un expert en narration. Aidez-moi à esquisser
+une idée de nouvelle, en utilisant un ton créatif et immersif. »
+• « Vous êtes mon éditeur. Réécrivez ce paragraphe pour le rendre plus
+engageant, avec un ton professionnel mais pertinent. »
+• « Agir en tant que stratège de contenu. Donnez-moi des idées de
+publica-
+tions sur les réseaux sociaux pour engager mon public, en utilisant un
+ton amical et perspicace. »
+182
+CHAPITRE 2 : MAÎTRISER L’ART DU PROMPT ENGINEERING POUR...
+Planification et prise de décision
+• « Vous êtes mon agent de voyages. Planifiez un itinéraire de 3 jours
+vers [destination] qui mélange détente et aventure, en utilisant un ton
+enthousiaste et chaleureux. »
+• « Imaginez que vous êtes un assistant personnel. Créez un guide étape
+
+par étape pour organiser mon espace de travail, avec un 2ton calme et
+encourageant. »
+• « Imaginez que vous êtes un coach de carrière. Énumérez les avantages
+et les inconvénients de [votre décision de carrière] sur un ton objectif
+et encourageant. »
+• « Supposons que vous soyez un coach de vie. Aidez-moi à fixer trois
+objectifs personnels réalisables pour le mois prochain, avec un ton
+stimulant et motivant. »
+• « Agissez comme mon organisateur d’événements. Fournissez-moi une
+liste de contrôle pour l’organisation d’un petit rassemblement, avec des
+conseils sur un ton amusant et optimiste. »
+Intercom et l’Optimisation du Support Client
+Intercom, entreprise spécialisée dans le service client, a intégré l’IA pour
+assister ses agents dans la gestion des requêtes. En affinant ses prompts,
+l’équipe a réduit le temps de traitement des tickets de 30 %, augmentant
+ainsi la satisfaction client tout en optimisant l’efficacité opérationnelle.
+Jasper et la Création de Contenu
+Jasper aide les rédacteurs en leur proposant des modèles de prompts pour
+générer des idées de blog, des annonces publicitaires, et des e-mails
+marketing. Les équipes marketing utilisent cette solution pour créer
+rapidement du contenu pertinent, maximisant ainsi la productivité.
+Et si tout le monde maîtrisait le Prompt Engineering ?
+Tout le monde , en maîtrisant le prompt engineering, peut améliorer la
+communication avec l’IA pour obtenir des résultats plus précis et pertinents.
+Dans la prise de décision, par exemple, structurer les prompts pour que l’IA
+fournisse des analyses de risques, des prévisions ou des synthèses précises
+
+---
+
+[p. 247-249]
+sation, de compétences, d’évaluations, de
+sondages d’engagement, et des comportements, l’IA peut offrir des
+perspectives précieuses sur la gestion du capital humain. L’analyse
+prédictive permet de prévoir les besoins en personnel en fonction de la
+charge de travail, de la nature des projets et de la taille des clients. L’IA aide
+également à identifier les domaines de risque clés qui peuvent affecter la
+planification RH à court et long terme, en effectuant des analyses de
+scénarios pour mieux préparer l’entreprise aux futurs défis.
+Les analyses fournies par l’IA peuvent générer des informations
+précieuses sur la diversité, les besoins en requalification, la planification
+des retraites,
+196
+CAS D’UTILISATION DE L’IA DANS LA FONCTION DES RESSOURCES...
+et les compétences comportementales, aidant ainsi les décideurs à prendre
+des décisions éclairées. L’utilisation de l’IA pour ces tâches améliore non
+seulement la gestion du capital humain, mais contribue également à la
+création d’une main-d’œuvre plus dynamique et résiliente.
+4. Support aux analyses RH et génération de rapports
+L’IA facilite la capture et le nettoyage des données pour générer automa-
+tiquement des rapports, simplifiant ainsi les exigences complexes de
+reporting périodique. En consolidant les données provenant de diverses
+sources, l’IA permet de créer des rapports détaillés et de réaliser des
+analyses basées sur plusieurs facteurs, tels que la diversité de genre, le
+niveau des employés, ou la diversité régionale. Ces analyses permettent de
+mieux comprendre les comportements des employés, comme
+l’identification précoce des cas de démission ou les facteurs de réussite des
+meilleurs performants.
+L’IA peut également supporter l’analyse et la prédiction des
+comportements de sortie des employés, fournissant ainsi des informations
+critiques pour améliorer les politiques RH et minimiser les risques liés aux
+départs.
+5. Gestion de la formation et du développement
+La gestion de la formation des employés peut être optimisée par l’IA en
+examinant le statut des certifications des employés par rapport aux
+exigences du poste. Les employés et les managers sont notifiés des besoins
+
+en certification, garantissant ainsi que les employés restent conformes aux
+normes de l’entreprise. L’IA peut également prédire les besoins en
+formation des employés en fonction de divers facteurs, tels que le
+département, le rôle, la qualité, et les cours de formation disponibles. En
+personnalisant les pro-grammes de formation en fonction des intérêts, des
+lacunes en connaissances, des données démographiques et
+comportementales, l’IA améliore l’expérience d’apprentissage des
+employés.
+Les plateformes conversationnelles peuvent être utilisées pour gérer les
+demandes de formation, les rapports, et les inscriptions, tandis que l’IA
+détermine le retour sur investissement des initiatives de formation et évalue
+les opérations de formation et de développement en se basant sur des
+analyses approfondies.
+6. Gestion des déplacements professionnels et des dépenses
+197
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+L’IA peut simplifier la gestion des dépenses en permettant l’entrée des
+reçus dans le système de gestion des dépenses via des versions scannées des
+docu-ments. Le workflow d’approbation des dépenses est soutenu par une
+logique basée sur des règles, permettant l’approbation automatique des
+dépenses standard et récurrentes. De plus, l’IA peut prévoir les besoins en
+déplacements des employés de l’entreprise et établir un budget en
+conséquence, optimisant ainsi la gestion des ressources et des coûts.
+7. Gestion des requêtes des employés
+La gestion des requêtes des employés est facilitée par l’IA, qui peut
+envoyer des notifications par email concernant les mises à jour des
+politiques RH. Les chatbots intelligents peuvent comprendre, rechercher et
+formuler des réponses aux questions des employés concernant les politiques
+RH, les processus RH, ou les modifications des données maîtresses des
+employés. De plus, l’IA peut fournir des services personnalisés, comme la
+
+---
+
+[p. 265-268]
+lées, réduisant ainsi son taux de churn de manière
+significative.
+3. Optimiser le portefeuille de produits
+L’évaluation continue des produits et des marques est essentielle pour une
+gestion optimale du portefeuille. L’IA permet d’évaluer les performances
+des produits non seulement en termes de ventes, mais aussi en analysant les
+retours des clients, ce qui offre une vue d’ensemble des forces et des
+faiblesses des différentes gammes de produits.
+Un fabricant de produits alimentaires a utilisé l’IA pour analyser les com-
+mentaires après-vente de ses clients. Cela lui a permis d’identifier des
+défauts récurrents dans certains produits et de réagir rapidement pour
+améliorer la satisfaction client. De plus, l’IA a permis d’identifier de
+nouvelles opportunités de gamme en surveillant les innovations des
+concurrents et les lacunes du
+212
+CAS D’UTILISATION DE L’IA APPLIQUÉE À LA FONCTION MARKETING
+marché.
+4. Gérer les campagnes de communication
+Les campagnes de communication efficaces nécessitent une bonne com-
+préhension de la concurrence et une adaptation en temps réel. L’IA aide à
+surveiller les campagnes des concurrents en analysant leur mix média et en
+estimant les budgets publicitaires. Ces informations sont cruciales pour
+concevoir des stratégies de communication qui maximisent les retours sur
+investissement.
+Un cas notable est celui d’une entreprise de mode qui utilise l’IA pour
+analyser les performances de ses promotions et ajuster ses plans en fonction
+des tendances du marché et des retours en temps réel. Grâce à l’IA, elle a pu
+identifier les leviers de croissance des ventes et proposer des actions
+correctives, telles que des ajustements dans la distribution des ressources
+publicitaires.
+L’intelligence artificielle transforme profondément la manière dont les
+entreprises abordent le marketing. Que ce soit pour comprendre les
+marchés, cibler les clients, optimiser le portefeuille de produits ou gérer les
+campagnes de communication, l’IA offre des avantages significatifs en
+termes de réactiv-ité, de précision et d’efficacité. En adoptant ces
+technologies, les entreprises peuvent non seulement améliorer leurs
+
+performances à court terme, mais aussi se préparer à un avenir où l’agilité
+et l’innovation seront clés pour rester compétitives.
+213
+
+D
+48
+Cas d’utilisation de l’IA appliquée à
+la
+fonction des ventes
+ans l’économie actuelle, les ventes représentent bien plus que la simple
+transaction de produits ou services. Les processus de vente modernes
+nécessitent une analyse approfondie des données, une personnalisation
+accrue des interactions avec les clients et une gestion efficace des canaux de
+distribution. L’IA permet de révolutionner la fonction des ventes en
+automatisant et en optimisant chaque étape, de la gestion des commandes à
+l’identification des clients potentiels, en passant par la gestion des relations
+clients et la distribution. Cette étude de cas met en lumière plusieurs cas
+d’utilisation de l’IA dans les ventes et montre comment elle peut améliorer
+l’efficacité, la rentabilité et la satisfaction client.
+1. Traiter les commandes de vente
+L’automatisation des processus de traitement des commandes de vente est
+essentielle pour améliorer l’efficacité et réduire les erreurs. L’IA permet de
+collecter des informations historiques et actuelles sur les commandes de
+vente et de détecter des tendances pour générer des prévisions de ventes
+précises. Par exemple, une entreprise de biens électroniques a utilisé des
+algorithmes d’apprentissage automatique pour prévoir les périodes de forte
+demande et ajuster ses stocks en conséquence.
+Un autre aspect clé est la gestion en temps réel de la disponibilité des
+
+---
+
+[p. 283-286]
+euvent devenir plus
+transparentes, efficaces et mieux adaptées aux besoins de leurs citoyens. De
+la gestion des infrastructures à la lutte contre la fraude, en passant par
+l’optimisation des services sociaux, l’IA est en passe de devenir un levier
+incontournable pour les gouvernements cherchant à relever les défis
+du 21৭ siècle.
+227
+
+L
+52
+Cas d’utilisation de l’IA au service
+des
+Organisations Non Gouvernementales
+(ONG)
+es organisations non gouvernementales (ONG) jouent un rôle essentiel
+dans le développement social, la protection des droits humains, l’aide
+humanitaire et la défense de l’environnement. Face à des ressources souvent
+limitées, mais à des besoins croissants, l’intelligence artificielle (IA) peut
+apporter des solutions puissantes pour accroître l’efficacité des actions,
+améliorer la gestion des ressources et fournir des analyses plus précises sur
+le terrain. Cette étude de cas explore comment l’IA peut transformer les
+opérations des ONG, améliorer leur impact social et optimiser leurs
+initiatives globales.
+1. Optimisation de la gestion des ressources et des dons
+Les ONG dépendent souvent des dons pour financer leurs activités, ce
+qui rend crucial l’optimisation de la gestion des ressources et des
+campagnes de levée de fonds. L’IA permet d’analyser de vastes ensembles
+de données provenant de donateurs et de campagnes passées afin de prédire
+les meilleures stratégies pour maximiser les contributions.
+Par exemple, des plateformes de collecte de fonds alimentées par l’IA,
+telles que Hatch, fournissent des profils complets des donateurs et
+
+recommandent
+228
+CAS D’UTILISATION DE L’IA AU SERVICE DES ORGANISATIONS NON...
+des méthodes d’engagement personnalisées pour améliorer les taux de
+conversion 81.
+L’IA peut également être utilisée pour optimiser la répartition des
+ressources. En analysant les besoins sur le terrain, les coûts logistiques et
+les niveaux de financement disponibles, une ONG humanitaire peut mieux
+allouer ses fonds à des projets prioritaires.
+2. Suivi en temps réel et réponse aux crises humanitaires
+L’IA est également un outil puissant pour les ONG travaillant dans les
+zones de crise ou dans le cadre de réponses humanitaires rapides. Grâce à
+des technologies comme l’imagerie satellite et les systèmes d’analyse des
+réseaux sociaux, les ONG peuvent surveiller en temps réel l’évolution des
+catastrophes naturelles, des conflits ou des crises sanitaires, et ajuster leurs
+interventions en conséquence.
+Dans le domaine de la réponse aux catastrophes naturelles, l’IA est
+utilisée pour analyser des images satellites en temps réel, permettant aux
+organisa-tions humanitaires de mieux évaluer les dommages et de prioriser
+les zones
+nécessitant une assistance immédiate82. Cela a permis de sauver des vies en
+coordonnant les évacuations et l’envoi de secours plus rapidement.
+3. Analyse des impacts et évaluation des programmes
+Les ONG doivent souvent démontrer l’impact de leurs programmes pour
+obtenir des financements supplémentaires et garantir la pérennité de leurs
+projets. L’IA peut jouer un rôle clé dans l’analyse de ces impacts, en
+collectant et en traitant des données sur l’efficacité des interventions à
+grande échelle.
+
+---
+
+[p. 306-309]
+s Integration.” Wired.
+102. “IBM’s Quantum Computing and AI Solutions.” MIT Technology
+Review.
+103. “Siemens’ Predictive Maintenance with IoT and AI.” IndustryWeek.
+104. “MedRec: Blockchain for Healthcare.” MIT Media Lab. 105. “IBM
+Watson: Combining AI Capabilities.” IBM Research. 106. “Salesforce’s
+API Integrations.” Forrester.
+107. “How AI is Transforming Data Centers.” Google Blog.“Amazon’s Use
+of AI
+for Product Recommendations.” Harvard Business Review. :
+https://hbr.org
+108. “Google AutoML in Action.” Google Cloud Blog.
+109. “GE’s Predictive Maintenance with AI.” IndustryWeek.
+110. “OpenAI Codex: The Future of Coding.” OpenAI Blog.:
+https://openai.com/b
+log
+111. “The Role of IBM Watson in Healthcare.” IBM Blog.
+112. “Human-Machine Interaction: A Study by Sherry Turkle.” MIT
+Technology
+Review.: https://www.technologyreview.com
+113. “Amazon Alexa and the Future of Voice-Activated Assistants.”
+Harvard
+Business Review. : https://hbr.org
+114. “Automation in Amazon Warehouses.” The Verge.:
+https://www.theverge.c
+om
+115. “Neuralink and Brain-Machine Interfaces.” Neuralink Blog.
+116. “GDPR and AI Ethics.” European Commission. : https://ec.europa.eu
+117. “AlphaGo: The Story of Google DeepMind’s AI.” DeepMind Blog.
+118. “Self-Driving Cars: Reinforcement Learning and Its Applications.”
+MIT
+
+Technology Review.
+241
+L’IA ET L’AUTOMATISATION 4.0 : PAR OÙ COMMENCER ?
+119. “Understanding Blockchain Technology.” IBM Blockchain Blog.
+120. “IBM Blockchain: Transforming Financial Transactions.” IBM.
+121. “M-Blocks: Self-Assembling Robots from MIT.” MIT News. 122.
+“Swarm Robotics in Agriculture: Future Applications.” Journal of Agricul-
+tural and Food Chemistry.
+123. “LinkedIn Learning: Workplace Learning Report.” LinkedIn. :
+https://www.
+linkedin.com/learning
+124. “Google Data Analytics Professional Certificate.” Google. 125. “IBM
+SkillsBuild Reignite Program.” IBM.
+126. “Google’s 20% Time Policy.” Google. 127. “World Economic Forum:
+Future of Jobs Report.” World Economic Forum.
+128. “DHL Annual Report.” DHL.
+129. “Accenture Skilling for the Future Report.” Accenture. :
+130. “Microsoft Teams Case Study: Pfizer.” Microsoft.
+131. “Salesforce State of the Connected Customer Report.” Salesforce.
+132. “HireVue AI-Powered Recruitment.” HireVue.
+133. “PwC The Effectiveness of Virtual Reality for Training.” PwC.
+134. “Workday Predictive Performance Management.” Workday.
+
+135. “BMW Vision Systems in Manufacturing.” BMW.
+136. “General Electric Predictive Maintenance with AI.” General Electric.
+137. “Amazon Machine Learning for Supply Chain Optimization.” Amazon.
+138. “McKinsey The Future of Work: Automation and AI.” McKinsey.
+139. “Stanford The Productivity Benefits of Remote Work.” Stanford.
+140. “Amazon Employee Profit-Sharing Programs.” Amazon.
+141. “OECD Investing in Skills Development.” OECD.
+142. “Union Européenne AI Regulations and Policies.” European Union.
+143. “Gouvernement du Canada Incentives for AI Adoption.” Government
+of
+Canada.
+144. “New Report Shows Huge Rise in AI, Automation as Customer,
+Employee
+Expectations Shift (Newsroom,Salesforce,Salesforce).
+145. Blog RH : https://www.blog-rh.com/2024/03/10-ans-de-marque-
+employ
+eur/
+146. The Future of Jobs Report (2018)
+:https://www3.weforum.org/docs/WEF_
+242
+RÉFÉRENCES
+Future_of_Jobs_2018.pdf

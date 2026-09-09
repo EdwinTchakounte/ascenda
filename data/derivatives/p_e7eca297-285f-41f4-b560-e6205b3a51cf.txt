@@ -1,0 +1,437 @@
+OUVRAGE : Intelligence artificielle : TPE 2017
+AUTEUR(S) : Léa Duchemin & Baptiste Duvieu & Paul-Antoine Desrues
+ANNÉE : inconnue
+PAGES : 76
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Sommaire (p. 2-2)
+  Introduction (p. 3-4)
+  La commande nerveuse sensoriel du mouvement (p. 5-5)
+  I. Le cerveau (p. 5-7)
+  1. La perception du corps humain (p. 8-8)
+  2. Système nerveux et émotions (p. 8-8)
+  3. La transmission du message nerveux (p. 9-9)
+  4. Le cerveau, centre des émotions (p. 10-13)
+  II. Intelligence Artificielle (p. 14-14)
+  1. Chronologie (p. 15-15)
+  2. A partir de quel moment peut on parler d’intelligence artificielle? (p. 16-17)
+  3. Comment réaliser le support d’un tel algorithme? (p. 18-18)
+  4. Différents types d’intelligences artificielles (p. 19-19)
+  5. Quelles Utilisations? (p. 20-21)
+  6. Comment pourrait-elle être comme l’homme? Ethnique et danger? (p. 22-22)
+  7. Etude d’un cas dans un film (p. 22-23)
+  Les gestions électriques (p. 24-24)
+  1. Le système nerveux (p. 24-34)
+  2. Un circuit électrique (p. 35-41)
+  III. Les Organes Moteurs (p. 42-42)
+  1. Reproduire le réflexe (p. 42-54)
+  2. Membre Artificiel (p. 55-64)
+  Conclusion (p. 65-66)
+  Annexe (p. 67-69)
+  Références (p. 70-70)
+  Partie 1 (p. 70-70)
+  Partie 2 (p. 71-72)
+  Partie 3 (p. 73-75)
+  Page de copyright (p. 76-76)
+
+[12/47 passages, 6470 tokens sur 30695]
+
+=== EXTRAITS ===
+
+[p. 2-2]
+SOMMAIRE
+I. La commande nerveuse sensoriel du mouvement
+1. Le cerveau
+2. Intelligence artificielle
+II. Les gestions électriques
+1. Le système nerveux
+2. Un circuit électrique
+III. Les organes moteurs
+1. Reproduire le réflexe
+2. Reproduire un membre, exoprothèses bionique
+Conclusion
+
+---
+
+[p. 6-7]
+rs du mouvement, une organisation
+chronologique et somatotopique (une représentation dans le temps, et une
+représentation disproportionnée en fonction des fonctions par exemple). Le
+cervelet assure ainsi la régulation, la synchronisation et la coordination des
+différentes activités musculaire telles que; l'activité musculaire du
+mouvement volontaire global, l’activité musculaire toniques de la posture
+ainsi que l’activité musculaire des réflexes du maintien de l’équilibre.
+Le tronc cérébral est composé de plusieurs lobes:
+Situé devant le Lobe Pariétal et le Lobe Temporal, le lobe frontal est
+responsable de l’organisation de la contraction des différents muscles de
+l’organisme pour que des mouvements s'effectuent dans un but précis.
+Le lobe frontal intervient également dans les fonctions du langage et de la
+planification. Cette zone a donc sous son contrôle tous les mouvements
+conscients et volontaires du corps. L’encéphale comprend aussi le
+diencéphale; Il est recouvert des hémisphères cérébraux et se compose
+essentiellement de trois structures; le thalamus, l’hypothalamus et
+l’épithalamus.
+Le thalamus est un relai par où passe l'information sensorielle qui sera
+acheminée vers le cortex. Il contient plusieurs noyaux qui reçoivent certaines
+informations spécifiques et les retransmettent vers des régions corticales
+spécifiques. Il sert également de relais pour l'intégration de certaines
+informations motrices. Le noyau ventro latérale relayer de l'information en
+provenance du cervelet et le noyau ventral antérieur reçoit des noyaux
+basaux. Les noyaux antérieurs transmettent l'information en provenance de
+l'hypothalamus et participent à la régulation des émotions et plusieurs
+fonctions viscérales. Puis, le noyau réticulaire du thalamus, en agissant sur
+
+---
+
+[p. 12-13]
+le stress.
+L’hippocampe, est lié à la mémoire des stimuli, mais aussi le stockage des
+souvenirs.
+Et enfin le cortex préfrontal, est le siège de nos fonctions cognitives
+supérieurs, c’est cette partie qui nous permet l’apprentissage, et la
+planification volontaire. (mouvement qui implique la contraction d’un msucle
+par exemple).
+Le cerveau limbidique - http://www.neuromedia.ca/le-systeme-limbique/
+
+---
+
+[p. 17-17]
+être conscient de l’exercice, et mener des
+conversations complexes, dans le but de piéger la machine.
+Néanmoins, à ce jour, personne n’a abouti à ce résultat, et ce test est de
+plus en plus remis en cause. Certains scientifiques estiment que même si le
+test serait une réussite, il ne pourrait témoigner d’une réelle intelligence.
+
+---
+
+[p. 21-21]
+sation, date et heure..), et
+de l’autre côté le serveur qui va interpréter celles-ci, en séparant les mots
+clés. Il retournera par la suite l’action demandée par l’utilisateur s’il sait
+comment s’en servir. Il peut essentiellement réaliser des actions simples, et
+définit par ces systèmes. L’utilisateur ne peut pas les enrichire.
+
+---
+
+[p. 29-31]
+a
+fixation du neurotransmetteur, cela provoque ainsi la création d’un signal
+électrique qui par conséquent, déclenche une ouverture de canaux et donc de
+la dépolarisation membranaire.
+Le système nerveux central (ou SNC) est le lieu où est traité l’information.
+Les commandes motrices partent de ce système nerveux central vers les
+effecteurs c’est-à-dire les glandes ainsi que les muscles. Ce partage
+d’information permet la réaction de l’organisme à un stimulus, à une activité
+nerveuse, ou musculaire. Ce système nerveux central travail en opposition
+avec le système nerveux périphérique; il permet l'intégration des fonctions
+sensorielles et motrices du système nerveux périphérique.
+A propos de l’anatomie du système nerveux central, nous avons expliqué
+précédemment que le système nerveux central comprend l’encéphale, puis la
+moelle épinière qui a le rôle de relais entre le cerveau et les nerfs. C’est elle
+qui reçoit les informations du cerveau et des récepteurs périphériques et
+aussi des réflexes. Il y a notamment le tronc cérébral, il a pour fonction de
+maintenir la conscience, les cycles biologiques, le contrôle de la respiration,
+le rythme cardiaque et enfin le cervelet qui coordonne les mouvements.
+Représentation de l’encéphale - Google Images
+L’encéphale est entouré par des enveloppes conjonctives et par les trois
+méninges: la dure-mère, l'arachnoïde et la pie-mère. Ce sont des
+leptoméninges; elles se trouvent dans des crêtes neurales, représentée par les
+illustrations ci dessous.
+
+Représentation des méninges - http://recap-ide.blogspot.fr/2014/10/anatomie-du-systeme-
+nerveux.html?m=1
+Les méninges sont des membranes qui entourent le cerveau et la moelle
+épinière. Ce sont elles qui délimitent l’espace sous-arachnoÏdien, le lieu où
+circule le liquide céphalo-rachidien.
+Les cellules gliales sont beaucoup plus nombreuses que les neurones. Elles
+ont pour rôle d’assurer le bon fonctionnement des neurones du système
+nerveux central, elles ont donc plusieurs fonctions au niveau du système
+immunitaire, de la myéline ainsi que de l’étanchéité de la synapse. Elles
+existent 
+de 
+plusieurs 
+types 
+tels 
+que 
+l’astrocyte, 
+la 
+microglie,
+l’oligodendrocyte et les cellules de Schwann. La surface des hémisphères
+cérébraux est entièrement parcourue de circonvolutions qui sont séparées par
+des rainures. Les rainures profondes partagent le cortex ( qui correspond à la
+substance grise) en fissures tandis que les rainures superficielles séparent les
+circonvolutions et sont appelées sillons. Quelques sillons un peu plus
+profonds que les autres divisent la surface de chaque hémisphère en quatres
+différents lobes rappelons les: Le Lobe Frontal, le Lobe Pariétal, le Lobe
+Temporal puis le Lobe Occipital illustrée ci dessous.
+
+---
+
+[p. 36-38]
+ntiel électrique entre deux points d'un
+circuit électrique. Elle se note U=R×I son unité est en Volt (V) et son
+instrument de mesure est le voltmètre, branché en dérivation.
+La résistance; elle qualifie la capacité d'un corps à résister au passage du
+courant. Donc moins un corps est résistant, plus il est conducteur. Sa notation
+est R=U÷I et son unité est L'Ohm (Ω).
+La conductivité électrique; c’est la capacité d’un matériau à conduire le
+courant électrique, il laisse les charges électriques se déplacer librement,
+c'est l'inverse de la résistance. Sa notation est σ=1/R et son unité est le
+Siemens (SI).
+Un circuit est constitué au minimum:
+D’une pile soit le générateur, c’est elle qui produit le courant électrique,
+elle ordonne le mouvement des charges mobiles dans un circuit fermé.
+La lampe soit le récepteur, utilise l'énergie électrique produit par le
+générateur pour produire de l’énergie lumineuse.
+Lorsque le conducteur n'est soumis à aucun champ électrique, les porteurs
+de charge se déplacent de façon aléatoire, dans tous les sens, et l’on
+n'observe aucun courant électrique.
+En revanche, lorsqu'on lui applique un champ électrique (en le reliants aux
+bornes d'un générateur), le mouvement les porteurs de charges s'ordonne, et
+l'on observe un courant électrique.
+Par conséquent, un conducteur est un composant électrique de faible
+résistance, il véhicule le courant électrique d'un point à un autre, comme les
+câbles électriques.
+On distingue deux types de circuits électriques:
+
+Le circuit en série avec une pile et deux lampe - http://physique-chimie-college.fr/
+Un circuit en série, c’est lorsque des dipôles sont reliés les uns à la suite des
+autres, on dit qu’ils sont branchés en série. L'intensité est le même partout,
+puisque le flux de charges mobiles est aussi la même. Plus on ajoute de
+récepteurs qui utilisent l'énergie électrique, plus elle diminue. La tension en
+revanche est constante.
+Un circuit en dérivation peut être distingué d’un circuit en série car il
+comporte toujours au moins deux boucles. L'intensité du courant qui sort du
+générateur est égale à la somme des intensités dans les branches de circuit en
+dérivation.
+Lorsqu'on ajoute un récepteur en dérivation, l'intensité du courant qui sort du
+générateur augmente tandis que les intensités des courants restent les mêmes
+dans les branches en dérivation.
+Le circuit en dérivation avec une pile et deux lampes - http://physique-chimie-college.fr/cours-5eme-
+electricite/quest-ce-qu-un-circuit-en-derivation/
+Pour les câble électriques, un conducteur ou un câble comprend: Une âme
+conductrice qui peut être massive ou câblée (formée de plusieurs brins
+torsadés en cuivre ou en aluminium). Les matériaux conducteurs possèdent
+des électrons libres qui ont la capacité de générer le courant électrique par
+leur déplacement. Une enveloppe isolante assurant l'isolation de l'âme avec
+tout autre élément de l'installation.
+Un signal électrique peut servir aux transmissions d'informations, comme les
+systèmes informatisés. Pour construire un signal électrique, l’émetteur de
+
+---
+
+[p. 44-46]
+ien précis. Tout d’abord, une
+information, appelée stimulus, venant de l’extérieur du corps humain est
+captée par des récepteurs sensoriels puis conduite par des neurones sensitifs
+qui transcrivent l’information en message nerveux. De plus, cet arc réflexe
+met en jeu une voie afférente, aussi dite de voie sensitive, un centre et
+également une voie efférente, dite de voie motrice. Le message nerveux est
+alors adressé au système nerveux central, situé dans la moelle épinière.
+L’influx nerveux rejoint donc la moelle épinière, qui elle, renvoie une
+réponse motrice, sous forme d’information nerveuse par le biais de neurones
+moteurs. La réaction se fait alors sans aucune intervention du cerveau. Les
+effecteurs (c’est à dire les muscles) expriment alors la réponse venant du
+centre nerveux dans le but de déclencher une réaction.
+Schéma fonctionnel de l’arc réflexe - http://premieres.stormier.net/arc-reflexe.jpg
+Un exemple majeur de réflexe et donc d’arc réflexe est celui qui conduit à
+retirer instantanément sa main ou un membre au contact d’une surface
+brûlante. Effectivement, ce réflexe totalement involontaire vise à empêcher
+une détérioration de ce membre causée par la chaleur et donc empêcher toute
+éventuelle douleur de brûlure. De plus, l’arc réflexe d’un individu peut
+également être déclenché lorsqu’une personne se pique par exemple. En effet,
+la piqûre sera l’élément déclencheur, donc le stimulus. L’arc réflexe étant
+lancé, le récepteur sensoriel (ici, la peau), capte l’information causé par le
+
+stimulus. Le trajet continue avec la fibre nerveuse (voie afférente dans ce
+sens) du sujet puis atteint la moelle épinière. Le centre nerveux situé dans la
+moelle épinière réenvoie un message repassant par la fibre nerveuse (voie
+efférente dans ce sens) jusqu’à l'effecteur, qui va alors réagir. L’individu va
+alors avoir le réflexe de retirer son doigt. Tout ceci se passe dans un laps de
+temps très rapide, tellement rapide que c'en est un réflexe automatique et
+involontaire.
+Arc réflexe d’une piqûre - Google Images
+Nous pouvons alors à présent nous demander si la technologie et plus
+précisément, l’intelligence artificielle, permettrait à l’homme de reproduire
+ses réflexes. Bien évidemment, il n’est pas encore possible de recréer tous
+les réflexes humain, qu’ils soient automatique ou non. En revanche, il est
+quasiment possible de recréer chez un robot les réflexes tactils de l’Homme.
+Chez l’Homme, le toucher est un des cinq sens essentiels. Ce sens procure les
+notions acquises au contact des corps extérieurs et nous renseigne sur
+l’étendue, l’état de la surface touchée ou encore par exemple la température
+du corps etc. Parmis tous les sens du corps humain, celui du toucher exige les
+dispositions organiques les plus simples. Effectivement, il a pour organe
+principal la peau, munie de nombreux filaments nerveux. Nous comprenons
+
+---
+
+[p. 54-56]
+ir
+la capacité de reproduire le réflexe humain. La plateforme de robot
+majoritairement utilisée est alors le robot iCub grâce à son impressionnante
+intelligence dû à son cerveau artificiel, permettant au robot d'apprendre puis
+comprendre de nouvelles phrases contenant des structures grammaticales
+inédites par exemple.
+Robot iCub
+Nous comprenons à présent que modéliser les réflexes de protection de
+l’Homme et mettre en oeuvre des capacités similaires sur des robots
+humanoïdes serait réalisable, bien que cette tâche reste très rigoureuse et très
+complexe. A ce jour, cet enjeu n’a pas fini d’être étudié et demeure
+essentiellement des prototypes plutôt que de réelles intelligences artificielles
+dotées de réflexes humain. Mais la technologie ne cesse de progresser de
+jours en jours, alors, nul doute que ces prototypes puissent voir le jour très
+prochainement.
+2) Membre Artificiel
+
+Tout d’abord, il faut éviter la confusion entre la prothèse ayant un rôle de
+remplacement et les orthèses et exosquelettes ayant pour but d’accompagner
+le mouvement pour aider un muscle faible ou douloureux mais toujours
+existant. De plus, on distingue deux grandes catégories de prothèses, les
+endoprothèses, remplaçant un organe interne (tel que le coeur par exemple),
+ou une articulation (comme la prothèse de hanche), tandis que les
+exoprothèses remplacent une partie du corps en contact avec l’extérieur. Ces
+exoprothèses peuvent être regroupées dans différents groupes tels que les
+prothèses dentaires, mammaires, auditive ou encore articulaire sur lesquelles
+nous allons nous intéresser. Ces prothèses articulaires agissent sur
+l’ensemble des membres ayant subi une amputation ou une absence de ces
+membres à la naissance. L’exoprothèse articulaire, présente une
+communication de plus en plus importante avec le patient, par le biais de
+dispositifs et d’opérations chirurgicales différentes.
+L’évolution permanente de la technologie permet aujourd’hui de remplacer un
+membre humain étant hors d’usage. Bien différente des simples prothèses, il
+existe un tout autre type de prothèse reliant le cerveau, donc plus
+généralement, le système nerveux, au nouveau membre, également appelé,
+membre bionique. Cette nouvelle prothèse, dite myoélectrique, est un
+concepte révolutionnaire. En effet, la prothèse myoélectrique est destinée à
+l’appareillage des amputations d’avant-bras et de bras d’origine traumatique
+(le plus souvent, causé par un accident). Elle permet alors de garantir un
+meilleur contrôle des objets mais également d’assurer les fonctions
+essentielles de la vie courantes, telles que s’habiller ou même manger par
+exemple. La fixation de cette prothèse myoélectrique peut se faire de
+plusieurs manières différentes, notamment trois. La première manière vise à
+l’usage d’un manchon en silicone, permettant un plus grand maintien de la
+prothèse. La deuxième possibilité se fait par implantation d’une tige
+métallique, qui sera biocompatible avec l’os, intégrée directement dans l’os
+restant. Enfin, la dernière possibilité faisable, mais bien évidemment moins
+répandue, est la capacité de contrôler le bras articulé par la pensée. Bien que
+cette idée puisse paraître très futuriste, en 2013, un Suédois, a mis en avant
+cette technique qui n’était jusqu’à lors non réalisée, en greffant directement
+sur l’os la prothèse et en la connectant aux nerfs ainsi qu’aux muscles de
+façon à être contrôlée par la pensée. En effet, les électrodes ne sont pas
+posées sur la peau mais sur les nerfs, conduisant donc à des mouvements plus
+
+---
+
+[p. 63-64]
+imb demeure une extrême avancée
+technologique et permettra de venir en aide à de très nombreuses personnes.
+Bien que les prothèses “simples” soient déjà très utiles et fonctionnelles, la
+MPL les dépasse sur tous les points. Même si elle rappelle la prothèse
+myoélectrique, le but est de s’en éloigner afin de proposer un différent
+concepte, bien plus approfondie. Effectivement, ce nouveau type de bras
+articulé permettra à l’Homme de contrôler son corps différemment, si celui-ci
+s’est vu perdre un membre au cours de sa vie ou encore si la pose d’une
+prothèse est nécessaire afin de remplacer son bras naturel, pour cause de
+malformation ou de maladie dès la naissance. Ce membre articulé peut bien
+évidemment être caractérisé comme étant un membre artificiel, ce dernier
+réalise de manière époustouflante la jonction entre le système nerveux et le
+membre extérieur. Ce système permet alors d’aller nettement plus loin qu’une
+simple électromyographie, à la place, une ligne direct entre la pensée et
+l’action, jusqu’à même réparer l’expérience sensorielle du patient.
+
+---
+
+[p. 68-69]
+x. On
+est sur le point de créer un outil qui est beaucoup plus intelligent que nous,
+qui pourra jouer de nous sans qu’on le voit réellement ou du moins, trop tard.
+Est-ce que les intelligences fortes telles que le “ deep learning ”
+ont déjà changé votre métier, et comment l’évolution est-elle
+amenée à faire évoluer votre métier?
+Je suis développeur d’application pour mobile plus précisément. Cela a
+déjà changé mon travail, il y a quelques années de nombreuses applications
+étaient impossible à réaliser, notamment celle de reconnaissance, aussi bien
+visuel, que vocal. C’est déjà en train de changer la façon qu’on pense les
+logiciels, je pense que plus on va développer l’intelligence artificielle, plus
+mon travail sera différent. On peut remercier Google, qui nous fournit
+énormément d’algorithme pour simplifier ces intelligences. De plus leurs
+travaux sont publics en général, où l’utilisation est libre d’accès pour que les
+développeurs implémentes ces systèmes.
+Pour conclure, je pense que le jour où l’intelligence artificielle sera créée,
+qui produira ce boom technologie, celle-ci sera publique, comme beaucoup
+d’intelligence artificielle. De plus, chacun pourra disposer de sa version de
+cette intelligence artificielle, qui sera donc global, néanmoins on ne pourra
+pas l’arrêter à partir de ce moment, c’est pour cela qu’il faut bien la penser.
+
+---
+
+[p. 73-74]
+D'Histoire Naturelle De Marseille - France." Les Neurones Et Synapses
+Du Cerveau . Le Système Nerveux. Musée D'Histoire Naturelle De
+Marseille - France. N.p., n.d. Web. 19 Feb. 2017.
+Futura. "Mélatonine." Futura. N.p., n.d. Web. 18 Feb. 2017
+Cestpassorcierftv. "MOUCHES : Les Sorciers Prennent La
+Mouche - C'est Pas Sorcier."YouTube. YouTube, 04 Dec. 2015. Web.
+Jan.-Feb. 2017.
+"Le Système Nerveux - SVT / Biologie - Fiches De Cours Pour
+Lycée - KeepSchool."Keepschool - Organisme De Cours Particuliers
+Et De Soutien Scolaire, à Domicile. N.p., n.d. Web. 18 Feb. 2017
+2) Un circuit électrique
+"Le Système Nerveux Et Un Circuit Lectrique." Le Système Nerveux Et
+Un Circuit Lectrique. N.p., n.d. Web. 19 Feb. 2017.
+"Mobilité Des Porteurs De Charge." Wikipedia. Wikimedia Foundation,
+18 Feb. 2017. Web. 19 Feb. 2017.
+"Les Conducteurs électriques." Cours Gratuit De Physique Chimie
+Pour Le Collège. N.p., n.d. Web. 19 Feb. 2017.
+"Courant Alternatif." Wikipedia. Wikimedia Foundation, 13 Feb. 2017
+Chapitre 15 – Caractéristique Courant Tension D'un Générateur Et
+D'un Récepteur. (n.d.): n. pag. Web. 12 Nov. 2016.
+"Caractéristiques D'un Circuit électrique | Réviser | Concours
+Paramédicaux | Sanitaire Et Social | Cap Concours." Caractéristiques
+D'un Circuit électrique | Réviser | Concours Paramédicaux | Sanitaire
+Et Social | Cap Concours. N.p., n.d. Web. 20 Feb. 2017.
+"Conductivité électrique : Définition Simple Et Facile Du Dictionnaire."
+Conductivité électrique : Définition Simple Et Facile Du Dictionnaire.
+N.p., n.d. Web. 20 Feb. 2017.
+"Caractéristique (électricité)." Wikipedia. Wikimedia Foundation, 19
+Feb. 2017. Web. 20 Feb. 2017.
+CARPUAT, Steed. "Les Conducteurs Et Les Câbles électriques." Les
+Conducteurs Et Les Câbles électriques. N.p., n.d. Web. 20 Feb. 2017.
+Partie 3
+1) Reproduire le réflexe
+
+Tracey, Janey. "MIT Researchers Build Robot with 'Human Reflexes'."
+Where Science Meets Science Fiction. N.p., 11 Aug. 2015. Web. 18
+Feb. 2017.
+Jennifer Chu | MIT News Office. "A Bipedal Robot with Human
+Reflexes." MIT News. N.p., 10 Aug. 2015. Web. 18 Feb. 2017.
+D'Allodocteurs.fr, Par La Rédaction. "Les Réflexes : Action, Réaction."
+Allo Docteurs. N.p., 05 Apr. 2009. Web. 18 Feb. 2017.
+Dahl, Torbjørn S., Erick A.r. Swere, and Andrew Palmer. "Touch-
+triggered Withdrawal Reflexes for Safer Robots." Advances in
+Interaction Studies New Frontiers in Human–Robot Interaction
+(2011): 281-304. Web.
+"De La Volonté Au Mouvement - Réviser Le Cours - SVT - Terminale
+S." Assistance Scolaire Personnalisée Et Gratuite - ASP. N.p., n.d.
+Web. 18 Feb. 2017.
+"LE CERVEAU À TOUS LES NIVEAUX!" LE CERVEAU À TOUS LES
+NIVEAUX! N.p., n.d. Web. 18 Feb. 2017.
+"Apprentissage Du Langage Chez Le Robot ICub." Apprentissage Du
+Langage Chez Le Robot ICub. N.p., n.d. Web. 18 Feb. 2017.
+Tronic, Go. "Robotique Et Interfaces." Robotique, Interfaces Et
+Programmateurs - Go Tronic. N.p., n.d. Web. 18 Feb. 2017.
+"Motor Control." YARP: The YARP Motor Control Interfaces. N.p., n.d.
+Web. 18 Feb. 2017.
+"The University of Sydney - Science Undergraduate Handbook 2017."
+Physiology - Science - The University of Sydney. N.p., n.d. Web. 18
+Feb. 2017.
+2) Membre artificielle
+"Fonctionnement Du Bras Bionique." Fonctionnement Du Bras
+Bionique. N.p., n.d. Web. 29 Nov. 2016.
+Halley, Drew. "Mind-Controlled Artificial Arm Begins the First Human
+Testing." Singularity Hub. N.p., 16 Aug. 2010. Web. 18 Feb. 2017.
+"Modular Prosthetic Limb." Revolutionizing Prosthetics. N.p., n.d.
+Web. 18 Feb. 2017.
+"Les Prothèses Du Futur - Les Neuroprothèses." SiteW.com. N.p., n.d.
+Web. 18 Feb. 2017.
+"La Prothèse Bionique LUKE De La Darpa Arrive Enfin Dans Le

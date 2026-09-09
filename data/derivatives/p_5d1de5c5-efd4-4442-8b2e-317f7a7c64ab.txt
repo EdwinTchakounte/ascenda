@@ -1,0 +1,447 @@
+OUVRAGE : L IA est-elle une chance
+AUTEUR(S) : inconnu
+ANNÉE : 2024
+PAGES : 58
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Page de copyright (p. 2-2)
+  Page de titre (p. 3-3)
+  Table des matières (p. 4-4)
+  Introduction par Sophie Gherardi (p. 5-7)
+  L'IA ne peut donner que ce qu'elle a par Apolline Guillot (p. 8-26)
+  L'IA est-elle une chance ?, débat entre Miguel Benasayag et Gilles Dowek (p. 27-53)
+  Les auteurs (p. 54-58)
+
+[8/31 passages, 6993 tokens sur 30582]
+
+=== EXTRAITS ===
+
+[p. 2-2]
+Ce titre est le premier d’une série intitulée « Méditations sur le risque ».
+Éditrice : Julie Davidoux
+Sophie Gherardi a coordonné l’ouvrage
+Conception graphique – PAO : Nord Compo
+Couverture : Quintin Leeds
+© Philosophie Magazine Éditeur, 2024
+Tous droits réservés
+10, rue Ballu – 75009 Paris
+www.philomag.com
+contact@philomag.com
+ISBN : 978-2-900818-43-5
+Diffusion distribution : Harmonia Mundi Livre
+Le Code de la propriété intellectuelle interdit les copies ou reproductions
+destinées 
+à 
+une 
+utilisation 
+collective. 
+Toute 
+représentation 
+ou
+reproduction intégrale ou partielle faite par quelque procédé que ce soit,
+sans le consentement de l’auteur ou de ses ayants cause, est illicite et
+constitue une contrefaçon sanctionnée par les articles L. 335-2 et suivants
+du Code de la propriété intellectuelle.
+Ce document numérique a été réalisé par Nord Compo.
+
+---
+
+[p. 6-7]
+at, ce sont deux scientifiques et philosophes que nous
+avons invités à confronter leurs idées. Leurs récents livres laissaient
+augurer un échange tonique et argumenté : promesse tenue. Miguel
+Benasayag, argentin d’origine, est à la fois psychanalyste et chercheur
+en épistémologie. Il a notamment publié en 2023 Cerveaux augmentés
+(humanité diminuée ?), un essai graphique dessiné par Thierry Murat
+(La 
+Découverte/Delcourt). 
+Gilles 
+Dowek 
+est 
+chercheur 
+en
+informatique, mathématicien et logicien, il a coécrit avec Serge
+Abiteboul Le Temps des algorithmes (Le Pommier, 2017). Gilles Dowek
+part du principe que technique et politique sont deux faces d’une
+même pièce, qu’elles changent le monde et qu’on peut s’en réjouir.
+Charge à nous de veiller à ce que ce soit pour le bien plutôt que pour
+le mal. Miguel Benasayag, lui aussi, croit à la force de l’engagement
+éthique et politique, mais la digitalisation rapide du monde l’inquiète.
+Le risque de l’IA tel qu’il l’entrevoit, c’est un appauvrissement du
+cerveau humain, submergé par une nouveauté qui le décharge de ses
+fonctions cognitives. Plutôt que de s’acharner sur ce que nous
+risquons de perdre, regardons tout ce que nous risquons de gagner,
+lui répond Gilles Dowek. Et c’est parti pour une discussion
+flamboyante – où les deux débatteurs sont au moins d’accord sur une
+chose, l’intelligence artificielle est plutôt mal nommée. Bonne lecture
+et bonne découverte !
+Sophie Gherardi
+
+---
+
+[p. 13-15]
+tous les domaines purement intellectuels
+3 », déclarait
+Alan Turing, le père de l’informatique contemporaine, dans un
+célèbre article paru quelques années avant l’acte de naissance officiel
+de l’intelligence artificielle comme champ de recherche. À ses débuts,
+l’IA naît d’un rêve prométhéen : si elles ont considérablement évolué
+ces soixante-dix dernières années, ces ambitions continuent de hanter
+le débat contemporain.
+Le grand déplacement
+Quand il s’agit de pointer le fameux risque de « remplacement »
+de l’intelligence humaine par la machine, nous nous figurons une
+sorte de longue substitution progressive, quasiment darwinienne  :
+nous serions trop obsolètes, peu performants, face à des outils
+beaucoup plus puissants. C’est le cauchemar de Gunther Anders
+lorsqu’il parle dans L’Obsolescence de l’homme de la «  honte
+prométhéenne  », celle qui nous prend lorsque nous nous sentons
+indigents car «  nous seuls avons été créés obsolètes  » alors que les
+machines, elles, non seulement sont plus efficaces que nous, mais
+s’améliorent d’une génération à l’autre. Tandis que nous restons de
+bons vieux Homo sapiens, dotés d’un cerveau et de réflexes
+émotionnels datant du 
+paléolithique 
+tout en disposant de
+technologies presque divines  ! Mais pour qu’il y ait honte, encore
+faut-il que l’on reconnaisse dans la machine un analogue de nous-
+mêmes. Personne n’a honte devant une chaise ou un tournevis : si l’IA
+nous humilie, c’est qu’au cœur de son projet se niche une hypothèse
+fracassante, formulée pour la première fois dans les années 1950 par
+Herbert Simon et Allen Newell, deux pionniers du domaine. C’est ce
+qu’on appelle l’«  hypothèse des systèmes symboliques physiques  »  :
+« Un système physique symbolique détient les moyens nécessaires et
+suffisants de l’intelligence en général. » Traduction ? Un ordinateur
+assez puissant pourrait faire preuve d’une intelligence en théorie
+indiscernable de l’intelligence humaine. C’est cette équivalence, en
+puissance, entre la machine et notre propre fonctionnement qui nous
+effraie. Or, de quelle intelligence parle-t-on ? Ici, principalement de la
+
+faculté de résoudre des problèmes. Ainsi, les systèmes d’IA nous
+mettent face à un «  buffet d’intelligences spécialisées  », pour
+reprendre l’expression de Nils Nilsson, pionnier dans la recherche en
+IA. Certes, ce buffet présente des surprises  : des comportements
+émergents exhibés par ChatGPT n’avaient pas été programmés, ni
+même envisagés, par ses concepteurs. Mais rien ne nous permet de
+dire qu’en mettant bout à bout des morceaux d’intelligence séparés,
+on obtiendra autre chose qu’une «  projection de l’intelligence
+humaine sur le plan des problèmes
+4  », une «  décomposition
+spectrale  » qui la scinde en une myriade de compétences toutes
+basées sur la résolution de problèmes ou un calcul quelconque.
+L’intelligence démasquée
+Cette définition de l’intelligence comme une combinaison de
+compétences calculatrices remonte à très loin : déjà en 1661, Thomas
+Hobbes écrivait que « la raison n’est rien d’autre que l’addition et la
+soustraction des suites des noms généraux sur lesquels nous nous
+sommes mis d’accord pour marquer et signifier nos pensées
+5  ».
+Additions, soustractions  : l’intelligence est d’abord un calcul. Trois
+siècles plus tard, en 1955, John McCarthy, père de l’IA, déclare que
+l’intelligence artificielle comme champ transdisciplinaire « se fondera
+sur la conjecture que chaque aspect de l’apprentissage ou toute autre
+caractéristique de l’intelligence peut en principe être décrit avec une
+précision telle qu’une machine peut être fabriquée pour le simuler ».
+Mais là où pour Hobbes l’intelligence est marquée par sa finalité
+sociale, elle est sans finalité chez McCarthy. Ou plutôt : elle mime la
+finalité par la juxtaposition et l’entremêlement de différentes couches
+de calcul. L’habileté à résoudre des problèmes est chez l’homme un
+signe d’intelligence, là où pour l’intelligence artificielle elle est une fin
+
+---
+
+[p. 21-23]
+emple à Galilée de formuler la loi de la chute des corps, à partir
+d’une expérience de pensée : « Lorsqu’ils tombent dans le vide, tous
+les corps tombent à la même vitesse, quelle que soit leur masse. » Le
+vide, ici, n’existe pas ailleurs que dans la théorie physique. Nous
+sommes capables de former des concepts abstraits, qui ne
+correspondent à rien dans notre expérience mais qui permettent
+d’expliquer et de comprendre les phénomènes.
+Sans cette faculté contrefactuelle, cette imagination active, nulle
+appréciation esthétique, ni même politique. Pour un algorithme, un
+tableau de Vermeer est un tas de pixels, au même titre que l’image
+d’un 
+feu 
+de 
+circulation. 
+Spontanément, 
+nous 
+contemplons
+différemment le tableau car, comme l’écrit Sartre : « L’œuvre d’art est
+un irréel
+6.  » La Jeune Fille à la perle n’est pas sur le tableau, entre
+deux couches de peinture, entre les quatre bords du cadre. Elle n’est
+pas non plus cachée. Elle apparaîtra au regard «  au moment où la
+conscience, opérant une conversion radicale qui suppose la
+néantisation du monde, se constituera elle-même comme imageant ».
+« Néantiser », ici, ne veut pas dire « réduire à néant » ou « détruire »,
+mais bien «  effectuer un acte de conscience par lequel nous nous
+arrachons à la réalité présente pour nous en affranchir  ». Idem
+lorsque nous nous plongeons dans un livre, allons au cinéma,
+écoutons un morceau de musique. La conscience « imageante », par
+opposition à la conscience « réalisante », est capable de mettre entre
+parenthèses le monde tel qu’il nous apparaît normalement pour
+entrer dans un état de contemplation esthétique. Et, de ce fait, c’est
+elle qui nous donne la capacité d’évaluer si quelque chose est beau...
+ou laid. De même pour ce qui est du bien et du mal, de la vie
+politique, et de notre imaginaire social. Il n’existe pas de critères
+objectifs qui détermineraient à quel degré une situation humaine est
+insupportable ou révoltante, car ce n’est pas parce qu’une situation
+est insupportable qu’on envisage de la changer. Au contraire, c’est
+parce qu’on envisage de la changer que soudain la situation nous
+apparaît comme insupportable. « C’est à partir du jour où l’on peut
+concevoir un autre état de choses qu’une lumière neuve tombe sur
+nos peines et sur nos souffrances et que nous décidons qu’elles sont
+
+insupportables
+7. » L’irruption, à la surface du réel banal, d’une fissure
+de « possible », d’un irréel, d’un désir d’être ailleurs ou autrement...
+constitue bien une propriété centrale de notre rapport au monde. Et
+c’est à l’aune de cette évaluation que nous prenons, ou non, des
+risques  : le risque, s’il est réduit à un pur calcul de coût-bénéfice,
+n’est qu’une réalité statistique. Le risque vécu, au contraire, possède à
+la fois la saveur de ce qu’il met en jeu (ce qu’il a à perdre) et de ce
+qu’il vise (ce qu’il a à gagner).
+Se laisser bousculer
+Symétriquement, l’intelligence humaine est aussi caractérisée par
+sa capacité à se faire déranger, à admettre l’irruption de nouveau
+dans le flux de son quotidien. Le monde réel ne cesse de nous
+transformer, de nous faire vaciller. À  chaque friction, à chaque
+nouvelle expérience, c’est sa compréhension entière du monde qui se
+transforme, avec des échos infinis en nous-mêmes. «  Il est fatigant
+d’être une personne, comme il est très fatigant de rester droit et de
+marcher sur deux pieds
+8  », note Bergson, qui identifie là cet effort
+d’unification perpétuelle de la conscience par lequel nous tenons
+ensemble tout ce qui constitue une personnalité, «  un état d’esprit,
+puis un autre état d’esprit, puis un autre, et ainsi successivement, des
+idées, des sensations, des jugements ». Et ce n’est peut-être que parce
+que nous portons en nous-mêmes notre propre chaos intérieur que
+nous pouvons répondre au chaos du monde de manière harmonieuse,
+par l’improvisation. Plus tard, le philosophe notait l’écart entre la
+représentation qu’on se fait de l’évènement et l’évènement réel. « J’ai
+beau me représenter le détail de ce qui va m’arriver  : combien ma
+représentation est pauvre, abstraite, schématique, en comparaison de
+l’évènement qui se produit  ! La réalisation apporte avec elle un
+
+---
+
+[p. 28-30]
+recherche qui est le mien, consistant à faire des machines qui
+construisent des raisonnements logiques. Aujourd’hui on n’appelle
+plus cela l’«  intelligence artificielle  », mais la «  démonstration
+automatique  ». Dans les années 1980, elle a été employée par des
+informaticiens et des linguistes qui cherchaient à concevoir des
+systèmes utilisant une langue naturelle, par écrit ou par oral, ce qui
+demandait de modéliser les grammaires de ces langues. Puis ils ont
+abandonné l’expression «  intelligence artificielle  » en faveur de
+«  traitement automatique des langues  ». Et le mot est de nouveau
+tombé en désuétude, avant d’être repris par un troisième groupe de
+personnes, qui font quelque chose qui n’a rien à voir avec les deux
+précédents, c’est-à-dire des logiciels qui imitent des comportements,
+qui imitent des textes, qui imitent des images déjà existantes.
+Aujourd’hui, l’expression « intelligence artificielle » désigne ce que les
+informaticiens 
+appellent 
+« 
+apprentissage 
+automatique 
+»,
+« apprentissage statistique », « apprentissage machine » ou machine
+learning.
+Le risque de confusion est grand !
+GD : Et encore plus quand on utilise le mot « algorithme » comme
+synonyme d’IA. L’apprentissage machine est plutôt un recul de la
+notion d’algorithme, et une avancée de la notion de données. Les
+algorithmes sont des outils très anciens, qui permettent de résoudre
+un problème sans avoir besoin d’inventer à chaque fois une solution.
+Fort heureusement, nous n’avons pas besoin de réinventer la recette
+du pain chaque fois que nous faisons une baguette, ou l’algorithme de
+la multiplication chaque fois que nous faisons une multiplication.
+Longtemps, on a pensé que les algorithmes étaient importants et les
+données peu importantes  : l’algorithme était le concept roi de
+l’informatique. Puis le concept de données est devenu plus central
+avec l’apprentissage automatique. La démarche centrée sur les
+algorithmes a peu à voir avec celle centrée sur les données. Mettons
+que deux personnes veuillent apprendre une langue étrangère. L’une
+se met à apprendre la grammaire, les mécanismes de la langue. Elle a
+
+une démarche algorithmique. L’autre va au marché, s’immerge dans la
+langue qu’elle entend et capte peu à peu des mots, puis des phrases.
+Elle a une démarche par les données  : elle apprend la langue
+simplement en étant exposée à une grande quantité de données. Cet
+exemple nous montre que l’algorithmique et l’apprentissage
+automatique sont très différents.
+MB : C’est vrai que j’ai pu utiliser les termes sans entrer dans ces
+distinctions. Le but est de se faire comprendre grosso modo. Ce que je
+trouve dommage, c’est d’employer à la légère des expressions telles
+que des « vies artificielles » et des « intelligences artificielles ». Parce
+que ce dont il s’agit là, c’est d’une puissance fantastique, passionnante
+certes, mais qui produit des effets considérables sur mon travail, aussi
+bien comme clinicien, auprès de patients atteints de troubles
+psychologiques, que comme chercheur en neurophysiologie. Cette
+puissance a pour effet principal un estompement de l’altérité.
+Vous parlez dans vos livres de « numérisation du réel ».
+MB  : C’est l’hypothèse de beaucoup de mes collègues, qui
+adhèrent à l’idée que le monde est algorithmique. Il y a là pour moi,
+qui étudie la dimension épistémologique des choses, un changement
+fondamental. C’est comme si émergeait une nouvelle métaphysique
+dans laquelle on aurait trouvé le socle ultime, le plancher si vous
+préférez, consistant à penser que tout est algorithmique. Pour moi, il
+s’agit d’une croyance, irrationnelle comme n’importe quelle
+croyance : « tout est algorithmique », ou « tout est économique », ou
+« tout est biologique »... En revanche, j’en vois les conséquences dans
+mon travail. On voudrait avoir une approche de modélisation
+algorithmique de tout, et ça oui, ça a des effets très concrets dans la
+réalité. C’est-à-dire que l’énoncé, encore une fois, a des caractères
+
+---
+
+[p. 36-38]
+mon carnet d’adresses est absolument
+unique. Donc, on ne peut pas dire que tout est uniforme. Il faut
+vraiment essayer d’avoir une pensée complexe sur ce lien entre
+uniformité et multiculturalisme.
+MB : Quand je vois qu’un jeune à Zurich et un petit Indien dans la
+cordillère des Andes ont tous les deux la même interface avec le
+monde, je dis que c’est problématique. Le problème, ce n’est pas
+l’ordinateur, ce n’est pas le monde digital, c’est la rapidité de diffusion
+de cette technologie, qui n’a pas laissé à la culture, ni au vivant, le
+temps de l’apprivoiser. Comparons avec ce qui s’est passé dans
+l’histoire humaine. Il y a trois révolutions anthropologiques majeures.
+La première, c’est le langage, la deuxième, c’est l’écriture et la
+troisième, c’est la cybernétique. Quand les humains se sont mis à
+parler, tout à coup ils recevaient au moins 50 % de leur savoir par
+une voix en direct. Quelle force d’avoir l’information sans avoir
+besoin de faire l’expérience : plus besoin de tomber dans un trou pour
+savoir qu’il y a un trou ! Avec l’écriture, il y a cinq mille ans, la pensée
+peut être fixée. Quand on est alphabétisé, 70  % de l’information,
+grosso modo, vous arrive de façon indirecte. Là aussi, c’est une
+puissance énorme. Il y a des milliers de langues : la montagne parle à
+travers la langue, les fleuves parlent à travers la langue, un peuple du
+désert parle différemment d’un peuple de la forêt. On ne parle pas de
+la même façon à son enfant, à son amoureuse, à son collègue. De
+même, l’écriture n’est pas homogène. Nous avons là deux interfaces
+avec le monde qui ont été relativement apprivoisées. Et pourtant, que
+se passe-t-il dans la réalité  ? On estime que 50  % au moins des
+habitants des grandes villes qui ont appris à lire sont semi-alphabètes.
+Pourquoi sont-ils désalphabétisés  ? Parce que l’écriture qu’ils ont
+apprise ne reflète pas leur interface avec le monde. Alors, petit à
+petit, ils oublient l’écriture, ils oublient les tables de multiplication.
+Considérons maintenant les effets de la troisième révolution
+anthropologique, la cybernétique. En moins de quarante  ans, elle
+installe un langage unique, une interface unique qui conquièrent le
+monde entier. C’est une globalisation qui lime les aspérités du réel.
+En neurophysiologie, nous le voyons à travers l’imagerie cérébrale
+
+quand, par exemple, le cerveau d’un être humain est sculpté de la
+même façon à Zurich, en Afrique ou dans la cordillère.
+La société est à la fois inquiète et surexcitée par l’irruption des outils
+de masse de l’intelligence artificielle qui permettent de prescrire,
+de choisir, de déterminer des milliers de choses concernant notre
+vie, et même d’effectuer notre travail à notre place. Que dites-vous
+à des gens qui paniquent à l’idée d’être « remplacés » ?
+GD  : Une innovation technique ne peut jamais se faire sans
+réflexion éthique, et là-dessus je pense que nous sommes d’accord
+avec Miguel Benasayag. Je suis favorable à l’existence des comités
+d’éthique, mais aussi, au-delà, à ce que chacun de nous se saisisse de
+ces questions.
+MB : Le problème, c’est que tout ce que la technique rend possible
+devient rapidement obligatoire. Dans un monde en crise, la
+technologie est devenue une source de normativité. La carte de
+crédit, au départ, c’est une possibilité, à côté des chèques et des
+espèces, mais petit à petit il devient impossible de ne pas en avoir
+une. Personne ne l’a décidé, c’est ainsi.
+GD  : Je conteste cette idée que possible implique obligatoire.
+Google a essayé de nous vendre les Google Glass, dont personne n’a
+voulu. Eh bien, Google a arrêté de fabriquer ses lunettes connectées.
+Il existe des milliers d’exemples comme ça, de logiciels dont personne
+ne s’est jamais servi, j’en ai moi-même écrit beaucoup, d’innovations
+technologiques qui n’ont pas été adoptées par la population. Elles
+sont possibles, mais elles ne sont nullement obligatoires. La carte de
+crédit n’est pas devenue obligatoire parce que les banques l’ont
+décidé, mais parce que 99,9 % de la population a dit : « C’est mieux
+d’avoir une carte de crédit. »
+
+---
+
+[p. 44-46]
+ultat ?
+GD  : C’est un peu caricatural. Il y a différents degrés de
+connaissances. Tout seul, bien qu’informaticien, je ne saurais pas
+fabriquer un smartphone. La question n’est pas d’avoir une
+connaissance parfaite de l’objet, ni la capacité de le reproduire, c’est
+d’avoir une vision d’ensemble de la manière dont il fonctionne.
+À  chaque fois que nous écrivons un programme, nous cherchons à
+être surpris : nous savons ce que va faire le programme, mais nous ne
+savons pas quel résultat il va produire, car si nous le savions, nous ne
+nous fatiguerions pas à l’écrire. Je sais un peu comment fonctionne
+ChatGPT, pourtant ses réponses me surprennent tout le temps. Je lui
+ai demandé s’il était favorable à la peine de mort pour les kamikazes.
+Il a noyé le poisson comme un vrai politicien – « c’est une question
+très délicate... » – sans voir le paradoxe. J’ai été surpris. Néanmoins,
+je sais expliquer, en gros, pourquoi il a donné une telle réponse  :
+parce que les notions logiques, en particulier celle de paradoxe, lui
+sont étrangères, puisqu’il utilise une méthode purement statistique. Il
+faut comprendre comment fonctionne l’outil sans se perdre dans les
+détails, sans en avoir peur, sans trop en attendre. N’ayons pas
+l’objectif, comme Bouvard et Pécuchet, de tout savoir sur tout.
+Qu’est-ce qu’un citoyen éclairé à l’heure de l’IA ?
+GD : On ne peut pas répondre à la question en une minute, parce
+qu’on ne peut pas former un citoyen éclairé en une minute  !
+Heureusement, l’école dure vingt ans maintenant, ce qui donne le
+temps de transmettre quelques idées, quelques méthodes, quelques
+connaissances.
+MB  : Je dirais autre chose, de façon plus humble. Un citoyen
+éclairé doit avoir une certaine attitude vis-à-vis de la jeunesse. On ne
+peut pas laisser les jeunes dans une fascination absolue des possibles
+technologiques. Appliquons au moins une sorte de principe de
+précaution à la jeunesse, prenons le temps.
+GD  : Il y a eu une pétition, au printemps 2023, signée par des
+centaines de personnes, demandant que soit suspendue pour six mois
+la recherche en intelligence artificielle. C’était absurde. Je ne crois
+
+pas qu’on puisse appliquer un principe de précaution qui dirait  :
+« Attendons d’être sûrs pour agir. »
+MB : Non, ce que je veux dire, c’est de ne pas se laisser fasciner
+par les possibilités ouvertes par l’IA.
+GD  : Oui, mais on ne peut pas attendre d’avoir résolu tous les
+problèmes éthiques pour agir, en particulier parce qu’on découvre de
+nouveaux problèmes éthiques en agissant. Un grand apport de la
+cybernétique – de ces monstres de la cybernétique ! –, c’est la notion
+de rétroaction, de feedback, ce que les informaticiens appellent la
+« méthode agile ». Nous ne pouvons pas espérer comprendre d’abord
+ce que doit faire un programme puis l’écrire, car en l’écrivant, nous
+avons de nouvelles idées, ensuite des gens l’utilisent et ils proposent
+encore de nouvelles idées. Alors nous le transformons. C’est l’existant
+qui rétroagit sur le développement. C’est la même chose en éthique.
+On ne peut pas se poser la question abstraite : « Est-ce que c’est bien
+ou mal de cloner les êtres humains ? » C’est mal, mais il faut qu’on ait
+au moins une vision de ce que veut dire le mot «  cloner  » pour
+s’interroger. Voilà pourquoi la question n’a pas été posée par Aristote,
+mais par des philosophes contemporains. À chaque niveau, on se pose
+une question. Cette méthode présente un risque mais c’est la seule
+possible.
+MB  : À  chaque moment de l’évolution des connaissances
+techniques, les questions sont différentes, j’en conviens. Selon moi, le
+problème fondamental pour les vivants et la culture, c’est la
+possibilité d’une intégration organique de ce qui est nouveau.
+Organique et non agrégative comme des pièces qui s’emboîtent. C’est
+ça que j’ai nommé « apprivoiser ». J’entends par là les pratiques qui
+nous permettraient de garder l’altérité propre au vivant tout en
+cohabitant avec les techniques digitales, peut-être dans un rapport de
+conflictualité, mais pas d’affrontement.
+
+---
+
+[p. 52-53]
+bserver que réguler n’est pas vertueux en soi. Réguler est vertueux
+si on régule bien. Notre responsabilité collective est de faire en sorte
+que la technique et la politique, qui sont les deux faces d’une même
+pièce, aillent dans le sens du bien. Les mêmes techniques nous
+donnent accès au bien et au mal. L’imagerie par résonance
+magnétique nucléaire, essentielle dans la détection des tumeurs,
+relève des mêmes techniques que la bombe atomique. J’ai essayé de
+montrer, et je pense que c’est un point de vue partagé par la plupart
+des ingénieurs, qu’on ne peut pas séparer la technique de l’éthique.

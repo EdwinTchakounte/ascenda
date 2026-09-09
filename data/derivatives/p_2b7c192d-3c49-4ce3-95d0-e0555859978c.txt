@@ -1,0 +1,875 @@
+OUVRAGE : Le guide de l'intelligence artificielle au travail : Vos droits face aux algorithmes Ed. 1
+AUTEUR(S) : Salis-Madinier, Franca
+ANNÉE : inconnue
+PAGES : 221
+AXE : IA Travail Management Metiers
+SOMMAIRE :
+  Le guide de l’intelligence artificielle au travail (p. 1-6)
+  Sommaire (p. 7-14)
+  Préface (p. 15-15)
+  Qu’est- ce Que l’intelligence artificielle ? (p. 16-16)
+  Pourquoi former les salariés à l’intelligence artificielle ? (p. 16-16)
+  Quel est le rôle des Partenaires sociaux ? (p. 16-16)
+  Quels sont les opportunités et les risques de l’intelligence artificielle ? (p. 17-17)
+  En quoi une éthique de l’intelligence artificielle est- elle nécessaire ? (p. 17-18)
+  Introduction (p. 19-19)
+  À quand un débat sur l’utilisation de l’intelligence artificielle ? (p. 19-19)
+  Pourquoi un guide sur l’intelligence artificielle ? (p. 20-22)
+  Partie I - Le contexte international et les enjeux de l’intelligence artificielle (p. 23-24)
+  1. Un marché qui explose (p. 25-26)
+  2. Une compétition internationale très rude (p. 27-28)
+  3. Les enjeux des données (p. 29-29)
+  Le pillage des données personnelles (p. 29-32)
+  Combien valent nos données ? (p. 33-37)
+  Le lieu d’hébergement des données dans le collimateur européen (p. 38-39)
+  4. Les dessous de l’algorithme : les biais (p. 40-40)
+  Un besoin accru de comprendre les décisions prises par l’intelligence artificielle (p. 41-41)
+  Code de l’algorithme et droit de propriété intellectuelle (p. 42-44)
+  Partie II - Régulation de l’intelligence artificielle : l’Europe moteur entre la Chine et les États- Unis (p. 45-46)
+  5. L’humain aux commandes (p. 47-48)
+  6. Les sept exigences européennes pour une intelligence artificielle digne de confiance (p. 49-49)
+  Une IA contrôlée par l’humain (p. 49-49)
+  Une IA robuste et sécurisante (p. 49-49)
+  Une IA qui respecte la vie privée et dont les citoyens maîtrisent les données (p. 50-50)
+  Une IA transparente (p. 50-50)
+  Une IA non discriminante, équitable (p. 50-50)
+  Une IA apportant un bien- être sociétal et environnemental (p. 51-51)
+  Une IA qui a des comptes à rendre (p. 51-52)
+  7. Une charte éthique européenne pour l’utilisation de l’intelligence artificielle dans la sphère judiciaire (p. 53-54)
+  8. Vers une régulation de l’intelligence artificielle « à haut risque » (p. 55-57)
+  9. Une régulation, pour quand ? (p. 58-58)
+  10. Des références au monde du travail insuffisantes (p. 59-59)
+  11. Le travail des partenaires sociaux européens et l’intervention de la CFDT Cadres à Bruxelles (p. 60-62)
+  Partie III - Le contexte, le débat et les enjeux en France (p. 63-64)
+  12. La nécessité d’un dialogue social et sociétal (p. 65-65)
+  13. Une taxe GAFA pour accompagner les mutations numériques (p. 66-67)
+  14. Les dispositifs de contrôle de l’intelligence artificielle en France (p. 68-68)
+  Une loi qui protège les lanceurs d’alerte (p. 68-68)
+  Une instance indépendante pour juger : un dispositif toujours en attente (p. 69-70)
+  Des recours auprès de la Commission nationale de l’informatique et des libertés (Cnil) (p. 71-71)
+  Des audits pour les algorithmes (p. 72-73)
+  15. Le combat entre sécurité et respect des libertés fondamentales : la reconnaissance faciale de masse (p. 74-75)
+  16. La position des employeurs de l’industrie (p. 76-77)
+  17. Mettre l’intelligence artificielle au service de l’environnement (p. 78-79)
+  18. Le Conseil national du numérique (p. 80-80)
+  19. Le Conservatoire national des arts et métiers (Cnam) : vérifier ce que peut faire l’intelligence artificielle (p. 81-81)
+  20. Le Défenseur des droits : recruter sans discriminer (p. 82-82)
+  Partie IV - Les exigences de la CFDT Cadres (p. 83-84)
+  21. Organiser le dialogue social en amont des choix et de l’utilisation des technologies (p. 85-85)
+  22. Former les équipes syndicales et les travailleurs à l’intelligence artificielle (p. 86-87)
+  23. Évaluer et négocier les évolutions des emplois et leurs conséquences (p. 88-89)
+  24. Favoriser la mixité dans les filières numériques (p. 90-90)
+  25. Évaluer l’intelligence artificielle à l’aune de la qualité et de la santé au travail (p. 91-91)
+  26. S’assurer que l’humain reste aux commandes : surveillance, recrutement, biais et discriminations (p. 92-92)
+  Le contrôle des salariés en télétravail : des techniques très puissantes doivent relever d’un choix managérial (p. 92-93)
+  Passer d’une culture du contrôle et du présentéisme à une culture des résultats et de la confiance (p. 94-94)
+  L’utilisation de l’intelligence artificielle dans les recrutements (p. 95-95)
+
+[19/165 passages, 13125 tokens sur 112363]
+
+=== EXTRAITS ===
+
+[p. 1-4]
+Le  guide
+de l ́intelligence
+artificielle
+au  travail
+Franca Salis-Madinier
+Préface de Cécile Dejoux
+Vos droits face aux algorithmes 
+
+Un guide juridique pour mieux maîtriser
+l ́intelligence artificiellE
+dans votre environnement Professionnel
+L’intelligence artifi cielle (IA), avec sa batterie d’algorithmes, fait de plus en plus 
+irruption dans la sphère professionnelle et dans nos vies, regroupant nombre de 
+technologies que les travailleurs côtoient au quotidien sans forcément en avoir 
+conscience : la reconnaissance faciale, la reconnaissance de la parole et du langage, 
+parlé ou écrit, ou encore la robotisation et l’automatisation des processus. Elle aide 
+à la décision, recommande des choix et des solutions, et permet de prédire les 
+risques et les succès.
+Malgré les avantages indéniables de l’intelligence artifi cielle dans tous les secteurs 
+(justice, ressources humaines, santé, services publics, etc.), certains usages peuvent 
+menacer nos vies privées, nos droits et nos libertés. 
+Ainsi, si vous êtes confronté à :
+• la reconnaissance faciale lors d’un recrutement ;
+• l’exploitation de vos données personnelles à votre insu ;
+• une surveillance intrusive lors du télétravail ;
+• la seule décision d’un algorithme dans votre parcours de formation ou lors d’une
+promotion ;
+• ou toute autre atteinte à vos droits...  
+...   ce guide, enrichi des expertises de chercheurs, de représentants du personnel 
+dans les entreprises et administrations ainsi que de dirigeants confrontés à 
+l’introduction de l’intelligence artifi cielle dans leurs organisations, vous 
+apportera les outils juridiques pour défendre vos prérogatives face à cette 
+puissante technologie.
+FRANCA SALIS-MADINIER, salariée d’Orange, est membre pour la 
+CFDT du Comité économique et social européen (CESE) à 
+Bruxelles, où elle a été rapporteure de plusieurs avis concernant 
+les transitions numériques et l’intelligence artifi cielle. Elle est éga-
+lement membre de l’exécutif national de la CFDT Cadres, où elle 
+est en charge des questions relatives à l’intelligence artifi cielle, à la 
+numérisation, à l’Europe et aux lanceurs d’alerte.
+
+Le guide  
+de l’intelligence artificielle  
+au travail
+
+Éditions Eyrolles 
+61, bd Saint-Germain 
+75240 Paris Cedex 05 
+www.editions-eyrolles.com
+Propos recueillis par Florence Vielcanet
+En application de la loi du 11 mars 1957, il est interdit de reproduire intégralement ou 
+partiellement le présent ouvrage, sur quelque support que ce soit, sans autorisation de 
+l’éditeur ou du Centre français d’exploitation du droit de copie, 20, rue des Grands-
+Augustins, 75006 Paris.
+© Éditions Eyrolles, 2022
+ISBN : 978-2-416-00476-6
+
+---
+
+[p. 16-16]
+Le guide de l’intelligence artificielle au travail
+2
+Qu’est-ce que l’intelligence artificielle ?
+L’intelligence artificielle, ou IA, est un ensemble de briques technologiques 
+qui permettent à des machines de réaliser des tâches. Si on prend l’angle des 
+usages, il est possible de distinguer cinq domaines : la parole et le langage, 
+la reconnaissance visuelle, la robotique et l’automatisation des processus, et 
+l’optimisation des connaissances à travers l’analyse, les alertes et la prévision.
+Pourquoi former les salariés à l’intelligence artificielle ?
+Quel que soit le métier exercé, l’IA aura un impact. Aussi, une nouvelle 
+responsabilité sociétale s’impose à l’entreprise : acculturer, former et faire 
+participer les salariés à l’évolution de leur métier avec l’IA. Par exemple, 
+il s’agira aussi bien de faire prendre conscience des risques de l’IA liés 
+aux biais de data ou aux cyberattaques, qui peuvent piller des données de 
+l’entreprise, que d’expliquer comment un processus automatisé avec de 
+l’IA peut gérer des entrées d’e‐mails et les répartir aux bons interlocuteurs 
+afin de dégager du temps d’analyse et de traitement de dossiers complexes 
+pour le collaborateur. La formation à l’IA commence par l’apprentissage 
+du vocabulaire, puis par la montée en compétences sur les comportements 
+à avoir quand on est un expert métier pour travailler sur un projet IA. 
+Ainsi, réfléchir, collectivement, au sein d’une organisation, avec les parte-
+naires sociaux, à la transformation des métiers avec l’IA, c’est réfléchir aux 
+tâches qui pourront être réalisées par l’IA, celles où elle pourra assister 
+l’homme et celles que l’on ne pourra faire que grâce à elle.
+Quel est le rôle des partenaires sociaux ?
+Cette acculturation et cette formation à l’IA doivent être pensées de façon 
+holistique, à destination des clients, des collaborateurs et des partenaires 
+sociaux. Au sein de l’observatoire du futur du travail et du manage-
+ment, le Learning Lab Human Change du Cnam, nous avons rédigé en
+
+---
+
+[p. 27-28]
+2
+Une compétition internationale très rude
+Les principaux moteurs des développements de l’intelligence artificielle 
+proviennent de géants de la technologie comme Google, Alphabet, 
+Microsoft, Amazon, Intel, Facebook, Apple ou encore Baidu et Tencent 
+de l’autre côté du globe. Le principe « the biggest takes the all » (traduisez « le 
+plus gros remporte toute la mise ») implique que ces sociétés bénéficient 
+d’un positionnement, d’atouts technologiques ainsi que de fonds impor-
+tants pour développer leurs propres technologies ou pour acquérir ou 
+nouer des partenariats avec de jeunes pousses. Néanmoins, l’intelligence 
+artificielle n’est pas seulement réservée aux grandes entreprises technolo-
+giques américaines et chinoises. Aujourd’hui, en raison de facteurs comme 
+l’open source, le cloud ou la collaboration et la disponibilité des fonds, 
+de plus en plus de start‐up en France ou ailleurs, se créent sur des tech-
+nologies liées à l’intelligence artificielle.
+Ces efforts sont déployés dans un contexte où la France et, au-delà, 
+l’Europe, tentent de rattraper leur retard vis-à‐vis de leurs concurrents 
+asiatiques et américains, qui ont récolté des quantités astronomiques de 
+données, depuis plus d’une décennie, via les géants Amazon, Google et 
+autres Facebook ou Huawei et qui investissent massivement. Certes, les 
+investissements européens dans le domaine de l’intelligence artificielle 
+sont nettement inférieurs à ceux d’autres puissances mondiales. Selon une 
+étude de la Banque européenne d’investissement (BEI), les États-Unis et 
+la Chine représentent à eux deux plus de 80 % des 25 milliards d’euros 
+
+Le contexte international et les enjeux de l’intelligence artificielle
+14
+d’investissements annuels en actions dans l’IA et dans les technologies 
+blockchain, tandis que les 27 pays européens ne représentent que 7 % de 
+ce montant mondial. La BEI estime que le déficit d’investissement total 
+dans l’IA et les technologies blockchain dans l’Union européenne est 
+d’environ 5 à 10 milliards d’euros par an.
+Toutefois, grâce aux programmes Digital Europe et Horizon Europe, la 
+Commission européenne prévoit d’investir 1 milliard d’euros par an dans 
+l’IA et de mobiliser des investissements supplémentaires du secteur privé 
+et des États membres pour atteindre 20 milliards d’euros d’investissement 
+par an au cours de cette décennie.
+
+---
+
+[p. 37-37]
+res privés de systèmes d’intelligence artificielle puis-
+sants seraient tenus d’aligner leurs structures de développement 
+et de gouvernance de l’intelligence artificielle sur les intérêts des 
+personnes concernées par ces systèmes (comme les travailleurs, les 
+consommateurs, les clients, les citoyens, les décideurs politiques).
+
+---
+
+[p. 45-48]
+responsable et éthique 
+de l’intelligence artificielle. Exiger une « éthique » de l’intelligence 
+artificielle signifie questionner les systèmes d’IA sur le respect 
+des droits fondamentaux européens : le respect de la vie privée, 
+celui du droit à la dignité, du droit à l’égalité, 
+du droit à ne pas subir de discriminations...
+5
+L’humain aux commandes
+L’Europe ne veut ni laisser de puissantes entreprises technologiques 
+comme les GAFAM livrées à elles-mêmes comme aux États-Unis, ni 
+suivre l’exemple de la Chine, qui exploite l’intelligence artificielle pour 
+créer un État de surveillance et de notation sociale. Au lieu de cela, 
+elle souhaite une approche « centrée sur l’humain » qui stimule la tech-
+nologie tout en l’empêchant d’attenter à la vie privée de ses citoyens. 
+Dès 2018, un groupe d’experts, qui a associé des membres du Comité 
+économique et social européen (CESE), au sein de la Commission 
+européenne, a demandé que les organismes publics des pays européens 
+respectent sept exigences pour que l’intelligence artificielle devienne 
+« digne de confiance ». La Commission européenne a plaidé en faveur de 
+contrôles stricts de Bruxelles dans la mesure où l’intelligence artificielle 
+pouvait devenir dangereuse dans certains domaines. En février 2020, 
+elle a lancé une consultation sur un livre blanc, « Intelligence artificielle : 
+une approche européenne axée sur l’excellence et la confiance », dans 
+lequel elle a prôné une approche axée sur la régulation et l’investis-
+sement. Elle y a fait la promotion de l’intelligence artificielle tout 
+en soulignant les risques associés. Dans des domaines tels la santé, les 
+transports, la police et la justice, où certains usages de l’intelligence arti-
+ficielle sont jugés « à haut risque », elle a prévu que les systèmes devront 
+« être transparents, traçables et garantir un contrôle humain ». Parmi 
+les usages de l’IA, elle a distingué ceux qui ont des « effets juridiques » 
+
+Régulation de l’intelligence artificielle : l’Europe moteur entre la Chine et les États-Unis 
+34
+(comme lors de procédures de recrutement) de ceux qui présentent des 
+« dangers mortels » comme les armes et de ceux qui peuvent générer 
+« des dégâts et blessures ». Son livre blanc prévoit une étude des usages 
+au « cas par cas ».
+
+---
+
+[p. 58-59]
+ants et des universitaires, qui estiment qu’elle n’est 
+pas suffisante pour protéger les citoyens, car elle remet l’appréciation de 
+la conformité des systèmes d’intelligence artificielle entre les mains des 
+fournisseurs. Le bras de fer entre les deux parties déterminera la facilité 
+ou la difficulté de se conformer aux règles.
+10
+Des références au monde du travail 
+insuffisantes
+Hormis les questions sur la reconnaissance faciale ou l’interprétation des 
+émotions, les garanties de transparence ne bénéficient qu’aux « utilisa-
+teurs », les travailleurs en sont exclus. Seul un article du projet de ce 
+règlement prévoit un droit global à la transparence. Mais dans le reste 
+des documents publiés par la Commission européenne, la référence aux 
+travailleurs et aux représentants du personnel fait cruellement défaut. Ce 
+projet de texte admet de facto un large panel d’outils de surveillance des 
+salariés sans s’interroger ni sur leur bien-fondé ni sur leur compatibilité 
+avec les valeurs européennes. Le dialogue social aura un rôle important 
+à jouer pour étendre ces garanties d’information et de transparence vis-
+à‐vis des travailleurs.
+
+---
+
+[p. 69-70]
+nner un sens à l’intelligence artificielle1 », Cédric 
+Villani, député alors en mission parlementaire, proposait « une instance 
+pour émettre des avis sur l’éthique de l’intelligence artificielle, donner des 
+1. Cédric Villani, Donner un sens à l’intelligence artificielle : Pour une stratégie nationale 
+et européenne, mars 2018.
+Le contexte, le débat et les enjeux en France
+56
+jugements en toute indépendance, qui puisse être saisie par le gouverne-
+ment comme par les citoyens, et qui nous dise ce qui est acceptable ou non 
+acceptable ». Une suggestion restée sans suite. « Dans un monde marqué 
+par les inégalités, l’intelligence artificielle ne doit pas conduire à renforcer 
+les phénomènes d’exclusion et la concentration de la valeur, affirme-t‐il. 
+Plutôt que de fragiliser nos trajectoires individuelles et nos systèmes de soli-
+darités, l’intelligence artificielle doit prioritairement nous aider à activer nos 
+droits fondamentaux, augmenter le lien social et renforcer les solidarités. 
+La mixité doit être également au cœur des priorités. Il doit être possible 
+d’ouvrir les boîtes noires des algorithmes, mais également de réfléchir en 
+amont aux enjeux éthiques que les algorithmes d’intelligence artificielle 
+peuvent soulever. » Concernant le transfert de données hors de l’Union 
+européenne, il recommande que la France et l’Europe conservent « une 
+position ferme ». Cette instance reste toujours pertinente. Il serait grand 
+temps qu’elle voie le jour et que les syndicats puissent aussi la saisir.
+Former les citoyens : quatre autorités créent  
+un « kit pédagogique du citoyen numérique »
+La Cnil, le CSA, le Défenseur des droits et l’Hadopi ont lancé un « kit 
+pédagogique du citoyen numérique », accessible en ligne, qui rassemble 
+des documents éducatifs, des conseils juridiques et des guides pratiques 
+adressés à des internautes (parents et enfants) ainsi qu’à des éducateurs 
+et formateurs. Celui-ci comprend quatre grandes thématiques : les droits 
+sur Internet ; la protection de la vie privée ; le respect de la création ; 
+l’utilisation raisonnée et citoyenne des écrans. Il détaille ces institutions 
+dans un communiqué commun. Des thèmes qui englobent des questions 
+très concrètes : quel recours en cas de cyberharcèlement ? Peut-on faire 
+supprimer une vidéo publiée sans son consentement ? Pourquoi faut-il 
+rémunérer les créateurs ? Quel rôle les médias jouent-ils dans l’égalité 
+entre les hommes et les femmes ?
+Le Conservatoire national des arts et métiers (Cnam) a de son côté 
+produit un MOOC (cours en ligne ouvert), « L’Intelligence artificielle pour 
+tous », qui aborde les notions de base de l’IA et ses domaines d’applica-
+tion. Il traite aussi de la question des nouveaux modèles économiques 
+et les nouveaux rapports au travail, ainsi que le sujet des compétences 
+en IA du collaborateur.
+
+---
+
+[p. 79-80]
+ficative, notamment en termes de 
+consommation d’énergie.
+En mars 2021, 24 États membres, avec la Norvège et l’Islande, ont signé 
+une déclaration visant à accélérer l’utilisation de technologies numériques 
+vertes au profit de l’environnement, en encourageant le développement 
+et l’utilisation d’algorithmes économes en énergie.
+18
+Le Conseil national du numérique
+Dans son rapport intitulé « Anticiper les impacts économiques et sociaux 
+de l’intelligence numérique », le Conseil national du numérique propose 
+en mars 2017 de penser la complémentarité homme-machine à travers 
+ces questions :
+•	 La tâche nécessite-t‐elle des capacités cognitives verticales (orientées 
+sur une tâche très spécifique) ou horizontales ?
+•	 L’automatisation de cette tâche est-elle acceptable socialement ?
+•	 Cette tâche nécessite-t‐elle le recours à une intelligence émotionnelle ?
+•	 Cette tâche nécessite-t‐elle une intervention manuelle complexe ?
+•	 La technologie est-elle suffisamment avancée pour que cette tâche 
+soit automatisée ?
+Il demande une concertation sur les conséquences économiques et sociales 
+de l’IA.
+
+---
+
+[p. 90-91]
+IT. La Commission 
+européenne propose qu’elles soient 10 millions d’ici 2030 (« Objectifs 
+numériques 2030 »). En France, un plan pour décliner un objectif si ambi-
+tieux et la mobilisation de tous les acteurs dans une action coordonnée et 
+d’ampleur seront nécessaires. Le dialogue social à tous les niveaux pourra 
+y contribuer.
+25
+Évaluer l’intelligence artificielle à l’aune 
+de la qualité et de la santé au travail
+Certains travailleurs peuvent voir l’intelligence artificielle comme une 
+menace pour leurs méthodes de travail ou comme un risque de remise 
+en cause de leur place dans l’organisation ou encore comme un défi vis-
+à‐vis de leurs collègues plus technophiles. Tandis que d’autres travailleurs 
+peuvent se sentir plus productifs, plus puissants avec l’intelligence artifi-
+cielle. Bref, l’intelligence artificielle peut être la source pour certains de 
+problèmes psychiques.
+Le choix d’un contrôle illimité, par exemple, peut menacer le droit à des 
+conditions de travail justes, préservant la santé et la sécurité, la dignité sur 
+le lieu de travail ainsi que le droit d’organisation des travailleurs. Si les 
+travailleurs sont constamment surveillés par leurs employeurs, comment 
+peuvent-ils se syndiquer et s’organiser collectivement ? Le droit à l’éga-
+lité des chances et à un traitement sans discrimination fondée sur le sexe 
+en matière d’emploi et d’évolution professionnelle peut sortir fragilisé, 
+lorsque des systèmes véhiculent des préjugés à travers leurs données ou 
+du fait de leurs concepteurs.
+L’intelligence artificielle, si elle est mal ou pas accompagnée, peut être une 
+source de nouvelles formes de risques psychosociaux basés sur des paramé-
+trages de logiciels, liés à l’emploi. Les finalités et l’impact de l’IA sur la qualité 
+de travail doivent être centraux dans le dialogue social et professionnel.
+
+---
+
+[p. 101-101]
+29
+La métallurgie : 
+réfléchissons aux prochaines négociations 
+sur l’industrie 4.0
+La Fédération de la métallurgie CFDT a remporté un appel d’offres 
+de la DGEFP sur l’industrie 4.0 du futur concernant une démarche de 
+concertation sociale rendant les salariés acteurs du changement. Le projet 
+consiste à simuler les changements dans des entreprises tests avant qu’ils 
+n’arrivent et à constater comment ceux-ci s’adaptent aux nouvelles orga-
+nisations du travail pour choisir les organisations les plus favorables aux 
+travailleurs de même qu’à l’entreprise. Ce projet doit déboucher sur des 
+thèmes de négociation syndicats-employeurs quant à l’introduction des 
+technologies 4.0.
+
+---
+
+[p. 111-112]
+ociés (article L. 2312-77 du Code du travail).
+Si l’intelligence artificielle n’est pas évoquée en conseil d’administration, 
+que son introduction est passée sous silence, comme il arrive souvent, 
+d’autres voies d’intervention sont possibles, notamment par l’intermédiaire 
+du CSE, de la branche ou des instances administratives.
+Les textes qui permettent de négocier l’intelligence artificielle
+98
+Demander la création d’un comité d’éthique
+Un comité d’éthique peut mesurer et définir les limites qu’il faut donner 
+aux machines. C’est ainsi qu’en juin 2020, CNP Assurances a créé un 
+comité d’éthique de l’intelligence artificielle. La compagnie s’est dotée 
+d’une gouvernance dédiée et a nommé un responsable « éthique de l’IA ». 
+Ce comité a été placé sous la responsabilité du secrétariat général et de 
+la direction financière.
+Poser des questions sur l’intelligence artificielle
+Le conseil d’administration a l’obligation de désigner des administrateurs 
+représentant les salariés dans les sociétés non cotées dont le groupe emploie 
+au moins 1 000 salariés en France ou 5 000 en France et à l’étranger, et ces 
+administrateurs salariés devront être au moins deux, si le conseil a plus de 
+huit membres. Ces administrateurs salariés peuvent poser des questions sur 
+l’intelligence artificielle, si celle-ci fait partie de la stratégie de l’entreprise.
+Se former à l’intelligence artificielle
+Les administrateurs élus par les salariés ou désignés doivent bénéfi-
+cier d’une formation dont la durée ne peut être inférieure à 40 heures 
+(article L. 225-30‐2 du Code de commerce). Pour les « grandes entre-
+prises » et pour les sociétés cotées, un fragment de la formation devra 
+s’effectuer au sein même de l’entreprise. Cette mesure doit permettre aux 
+administrateurs élus par les salariés ou désignés d’apprendre les enjeux de 
+l’IA, sous l’angle du conseil d’administration.
+
+---
+
+[p. 124-126]
+et l’année en 
+cours, et intègrent des perspectives sur les trois années suivantes.
+Le contenu de ces informations ainsi que les modalités de fonctionnement 
+de la base sont déterminés par un décret en Conseil d’État, le contenu 
+pouvant varier selon que l’effectif de l’entreprise est inférieur ou au moins 
+égal à 300 salariés.
+Dans l’entreprise
+111
+Les membres de la délégation du personnel du comité social et écono-
+mique, du comité social et économique central d’entreprise et les délégués 
+syndicaux sont tenus à une obligation de discrétion à l’égard des informa-
+tions contenues dans la base de données revêtant un caractère confidentiel 
+et présentées comme telles par l’employeur.
+À noter, un employeur ne peut arguer que la BDES comporte des données 
+personnelles pour refuser de transmettre certains documents. Selon le 
+référentiel de la Cnil, sont destinataires de données RH « les instances 
+représentatives du personnel, pour les données strictement nécessaires à 
+leurs missions dans les conditions fixées par les textes applicables4 ».
+Lancer une alerte
+À la suite de la loi Blandin 2013 santé et environnement, voire aussi de 
+la loi Sapin II de décembre 2016, le Code du travail a prévu un droit 
+d’alerte éthique, dans des cas précis et une protection du lanceur d’alerte. 
+Pour que la protection du lanceur d’alerte s’applique, il faut que ces actes 
+soient constitutifs d’un délit ou d’un crime, d’une violation de la loi ou 
+d’une menace ou un préjudice grave pour l’intérêt général.
+L’article L. 4133‐1 du Code du travail sur le domaine d’action 
+des lanceurs d’alerte
+Le travailleur alerte immédiatement l’employeur s’il estime, de bonne 
+foi, que les produits ou procédés de fabrication utilisés ou mis en œuvre 
+par l’établissement font peser un risque grave sur la santé publique ou 
+l’environnement. L’alerte est consignée par écrit dans des conditions 
+déterminées par voie réglementaire. L’employeur informe le lanceur 
+d’alerte de la suite qu’il réserve à celle-ci.
+4. www.cnil.fr/sites/default/files/atoms/files/referentiel_grh_novembre_2019_0.pdf
+
+Les textes qui permettent de négocier l’intelligence artificielle
+112
+Les articles L. 1132‐3 et L. 1132-3‐3 du Code du travail  
+sur la protection du lanceur d’alerte
+Aucun salarié ne peut être sanctionné, licencié ou faire l’objet d’une 
+mesure discriminatoire pour avoir témoigné des agissements définis aux 
+articles L. 1132‐1, L. 1132‐2 et L. 1132-3‐3 ou pour les avoir relatés. 
+Le salarié aurait donc le statut et la protection de lanceur d’alerte s’il 
+témoigne par exemple sur les biais ou les effets discriminatoires résultant 
+d’algorithmes.
+Informer et signaler au délégué à la protection des données (DPO) 
+l’alerte si elle porte sur une intelligence artificielle et/ou  
+sur une violation du droit à la protection des données
+Pour toute problématique ayant trait à une IA ou aux données person-
+nelles des travailleurs, un salarié, via un syndicat ou directement, peut 
+contacter le délégué à la protection des données. En tant que « chef 
+d’orchestre » de la conformité en matière de protection des données au 
+sein de l’organisme qui l’a désigné, il est chargé de répondre à l’ensemble 
+de ces questions et le cas échéant, de les résoudre avec le responsable du 
+traitement (qui s’avère souvent l’employeur).
+Les travailleurs des plateformes
+Le droit à créer un syndicat pour négocier
+Le gouvernement français a adopté, le 21 avril 2021, une ordonnance 
+no 2021‐484 qui met en place une forme de représentation collective 
+des travailleurs des plateformes, mais uniquement pour les travailleurs 
+définis à l’article L. 7341-1 du Code du travail, c’est-à‐dire les chauffeurs 
+de voiture et les livreurs « au moyen d’un véhicule à deux ou trois roues, 
+motorisé ou non ». Ce texte prévoit l’organisation d’une élection des 
+représentants des travailleurs des plateformes en 2022.
+En attendant que ces travailleurs aient droit à une négociation collective, 
+le projet d’ordonnance présenté en mars 2021 prévoit une obligation de 
+négociation au moins une fois par cycle électoral de deux ans. Le contenu
+
+---
+
+[p. 135-136]
+, les représentants du personnel pourraient l’interpeller. Il serait 
+alors passible, en cas de méconnaissance du projet de règlement, d’une 
+amende administrative pouvant aller jusqu’à 20 millions d’euros, ou si le 
+contrevenant est une entreprise, d’un montant pouvant aller jusqu’à 4 % 
+de son chiffre d’affaires (art. 71 § 4).
+38
+À l’extérieur de l’entreprise
+Le recours au code de la consommation
+Les articles L. 224-42‐1 et L. 224-42‐4 pour récupérer 
+des données électroniques à la suite de contrats de services
+Le droit à la portabilité et le droit d’accès issus également du RGPD 
+offrent aux personnes la possibilité de récupérer une partie de leurs 
+données dans un format ouvert et lisible par machine. Elles peuvent ainsi 
+les stocker ou les transmettre facilement d’un système d’information à un 
+autre, en vue de leur réutilisation à des fins personnelles.
+Livre II : Formation et exécution des contrats
+... Titre II : Règles de formation et d’exécution 
+de certains contrats
+...... Chapitre IV : Règles spécifiques à des contrats 
+ayant un objet particulier
+......... Section 3 : Contrats de services de communications 
+électroniques
+............ Sous-section 4 : Récupération et portabilité 
+des données
+
+---
+
+[p. 148-149]
+C, alors qu’Orange ne dispose pas d’accord 
+GPEC valablement signé aujourd’hui.
+Quid de la charte Orange, qui vient d’être annoncée  
+par la direction dans la presse ?
+La charte inclusive est principalement un objet marketing. Il n’y 
+a pas de lien avec une mise en œuvre opérationnelle de l’IA, les 
+engagements sont très vagues.
+Interviews
+135
+N’allez-vous pas retenter un nouvel accord numérique ?
+On a aujourd’hui un problème de calendrier social du fait de la 
+Covid‐19 qui décale les négociations. Il est peu probable que l’on 
+entre en négociation sur ce thème avant le second semestre 2021.
+Nous souhaitons négocier, comme indiqué, autour de la transpa-
+rence du déploiement de l’IA dans l’entreprise. Il faut poser des 
+garde-fous à son déploiement. Les déploiements de l’IA concer-
+nant l’ensemble des filiales du groupe dans le monde, cela doit 
+être un accord monde.
+Si on n’explique pas l’IA, elle peut devenir une raison de crainte 
+importante et de rejet des salariés.
+On doit prendre en compte que l’IA peut avoir un rôle bénéfique 
+dans les réseaux fixes et mobiles, en dimensionnement, en opti-
+misation et donc en consommation. Néanmoins, ces déploiements 
+doivent se faire en transparence avec les IRP et les organisations 
+syndicales, et pas de manière unilatérale.
+
+---
+
+[p. 160-162]
+sera un sujet relativement important, par exemple. Et c’est pour 
+cela que la Confédération européenne des syndicats (CES) a un 
+comité technique qui travaille sur les normes d’IA. Si on n’a pas de 
+normes au niveau des pays, ce sont les entreprises qui prendront 
+le pouvoir avec leurs propres normes. Et là, tout est possible.
+FACE À L’INTELLIGENCE ARTIFICIELLE, 
+IL S’AGIT TOUJOURS  
+DE SE RENSEIGNER, DE QUESTIONNER 
+ET DE DONNER DU SENS
+Emmanuel Gaubert
+Emmanuel Gaubert est chef de projets, délégué syndical CFDT 
+SPEA-IDF à Orano Projets Saint-Quentin-en-Yvelines, filiale 
+experte dans l’ingénierie du cycle du combustible nucléaire, 
+qui met à disposition de ses clients internes et externes 
+une large gamme de solutions : conseil, études d’ingénierie, 
+construction et essais, projets clés en main ou encore 
+de démantèlement. Orano Projets est engagé dans un plan 
+de continuité numérique (au sens du partage de données entre 
+les logiciels et de perspectives de massification de l’utilisation 
+de ceux-ci), et la section locale d’établissement CFDT 
+y participe en se renseignant, en questionnant l’entreprise, 
+ou en donnant du sens à l’introduction de ce sujet.
+Comment l’IA est-elle reçue chez Orano Projets ?
+Que l’intelligence artificielle ou les techniques assimilées soient 
+présentes ou pas dans l’entreprise, les trois lois du syndicalisme 
+chez Orano Projets sont les mêmes dans la pratique. Il s’agit 
+toujours de se renseigner, de questionner, et de donner du sens. 
+La pratique de la CFDT montre qu’en matière d’intelligence arti-
+ficielle, les élus d’Orano Projets sont pertinents de la même façon 
+que sur les autres sujets au travail, avec les mêmes outils, et 
+majoritairement sur des sujets transverses classiques.
+Les militants et élus se renseignent sur le terrain. Salariés, 
+experts, preuves de concept, présentation des métiers, publi-
+cations sont les canaux classiques explorés. Cette première 
+phase correspond à un moment où la section syndicale d’Orano 
+
+Le guide de l’intelligence artificielle au travail
+148
+s’est mise à discuter d’IA et plus largement, de transforma-
+tion numérique, ce qui a assuré l’autoformation du groupe. La 
+section syndicale a conseillé à un salarié la manière de gérer sa 
+démarche de formation de plusieurs mois en matière d’intelli-
+gence artificielle. La formation a eu lieu alors que l’entreprise 
+avait par ailleurs investi dans de la formation en IA pour plusieurs 
+ingénieurs en sûreté ou génie civil, par exemple.
+Y a-t‐il des effets spécifiques à l’IA à Orano Projets  
+sur le travail ?
+La CFDT estime que l’intelligence artificielle entraîne chez Orano 
+Projets une mutation du travail comme une autre, mais profonde.
+Les élus questionnent en CSE sur la formation et le volume 
+d’heures prévues, et en CSE central, sur la stratégie de mana-
+gement du changement. La CFDT a suggéré de partir sur des 
+méthodes assises sur la nomination d’agents du changement et 
+de leaders référents locaux, et cette méthode a été adoptée.
+Enfin, les élus donnent du sens à l’intelligence artificielle via des 
+questions ou des analyses. En l’occurrence, en 2019, la CFDT 
+percevait un retard dans la mise en place de l’IA. La direction a 
+répondu avoir pris le temps de l’analyse pour décider qu’il n’y 
+aurait pas de département IA, mais que l’IA serait à la main de 
+chacun dans les métiers pour lesquels elle est pertinente. La CFDT 
+constate qu’il y a là un sens commercial, un sens orienté client 
+et un savoir-faire métier (d’autant que les outils d’IA deviennent 
+accessibles aux métiers directement). La CFDT et la direction 
+partagent la vision que la gestion/acquisition des données est 
+prioritaire, et que le rôle des métiers est primordial à ce niveau.
+Identifiez-vous des défis particuliers posés  
+par cette technologie à Orano Projets ?
+Quant à donner du sens à tout cela... Il existe des sujets éthiques 
+dans d’autres entreprises (la CFDT n’en voit pas dans les
+
+---
+
+[p. 174-176]
+niel 
+Kahneman et Amos Tversky pour décrire les tendances observées dans 
+les comportements humains apparaissant comme irrationnelles au plan 
+économique.
+12. Rapport d’information no 464 (2016-2017), C. de Gannay et D. Gillot, 
+Office parlementaire d’évaluation des choix scientifiques et technologiques, 
+déposé le 15 mars 2017.
+Interviews
+161
+sur les rouages de l’algorithme utilisé pour procéder au clas-
+sement et à l’affectation du candidat bachelier contrevenait à 
+l’article 39 de la loi de 1978 en ne lui permettant pas « de connaître 
+et de contester la logique qui sous-tend le traitement automatisé 
+en cas de décision prise sur le fondement de celui-ci et produisant 
+des effets juridiques à l’égard de l’intéressé ».
+Que peut-on faire pour lutter contre les biais ?
+« Accroître l’auditabilité des systèmes d’IA » est l’une des voies 
+préconisées par le rapport Villani13. À l’heure actuelle, trouver un 
+compromis optimal entre performance et interprétabilité selon le 
+contexte d’application reste du domaine de la recherche.
+Cependant, il serait vain de chercher une solution exclusivement 
+technique à un problème qui demeure avant tout politique. Ainsi, 
+l’accès au crédit bancaire est une figure classique des discrimina-
+tions de genre et d’origine. Aux États-Unis, encore actuellement, 
+l’accès au crédit logement est conditionné par votre lieu de rési-
+dence plutôt que par vos capacités de remboursement.
+Le rapport Villani propose « la constitution d’un corps d’experts 
+publics assermentés, en mesure de procéder à des audits d’al-
+gorithmes, des bases de données et de procéder à des tests par 
+tout moyen requis ». De fait, certaines institutions indépendantes 
+prennent déjà en charge dans leur champ de compétences cet 
+audit public et indépendant, à l’instar de la Cnil et de l’Opecst, 
+même s’il devient opportun de renforcer les capacités d’expertise 
+scientifique et technique sur lesquelles elles pourraient s’ap-
+puyer. Par exemple, une meilleure intégration des dispositions 
+législatives à l’arsenal réglementaire constitue l’une des voies de 
+progrès : en France, depuis 2010, pour intégrer les dispositions 
+de la loi du 27 mai 2008 relative à la lutte contre les discrimina-
+tions, la Cnil a modifié l’autorisation accordée aux banques pour 
+les traitements dits de « credit scoring » attribuant un risque de 
+défaillance et donc un taux différencié d’emprunt aux clients sur 
+13. Cédric Villani, op. cit.
+
+Le guide de l’intelligence artificielle au travail
+162
+la base de leurs profils individuels. En conséquence, les analystes 
+de risque en matière de crédits ne doivent plus prendre en compte 
+depuis cette date le sexe du demandeur de crédit, pratique 
+jusqu’alors courante mais aboutissant à discriminer les mères 
+de famille monoparentales dans l’accès au crédit.
+Il n’empêche : plusieurs fois alertée par certains de ses adminis-
+trés, la mairie de Villeurbanne, dans le Rhône, lance une opération 
+de « testing » pour objectiver les discriminations qui ont cours dans 
+le secteur bancaire pour l’accès au prêt immobilier et au crédit à 
+la création d’entreprise. Sur l’ensemble de l’agglomération lyon-
+naise, 90 tests ont été conduits dans 63 agences de 12 banques 
+différentes, d’avril à décembre 2016. Les résultats du testing 
+révèlent des discriminations à chacune des étapes du parcours 
+du demandeur de prêt : ainsi, ils montrent que le genre peut être 
+un critère discriminant dans l’accès au crédit bancaire, mais de 
+façon moins caractérisée que pour l’origine migratoire supposée.
+Il devient urgent d’ouvrir les « boîtes noires » de l’IA dans bien 
+d’autres secteurs : une enquête récente menée conjointement 
+par le CNRS et SOS Racisme montre que ces discriminations 
+s’étendent à des domaines qui demeurent insuffisamment 
+explorés en France : la formation professionnelle, l’assurance 
+automobile, l’accès aux complémentaires santé, le crédit à la 
+consommation, l’achat d’une voiture d’occasion, l’hébergement 
+touristique et la reprise d’entreprise.
+Signalons à cette occasion, la contribution originale sur l’enjeu 
+sociétal majeur des inégalités dans l’accès à l’emploi réalisée 
+par l’Observatoire des discriminations de l’université Panthéon-
+Sorbonne qui propose une plateforme internet de différents outils 
+avec un test d’autoévaluation14.
+La formation des professionnels à ces problématiques de discri-
+mination peut également jouer un rôle avec une sensibilisation 
+aux règles éthiques nécessaires pour encadrer les activités 
+basées sur l’IA.
+14. www.observatoiredesdiscriminations.fr/
+
+---
+
+[p. 189-190]
+maîtrise 
+par rapport à des risques susceptibles de survenir.
+25. Commission européenne, Technology Focus on Artificial Intelligence, Advanced 
+Technologies for Industry, AT Watch, juillet 2020.
+26. Becky Yerak et Tatyana Shumsky, « More Companies Flag a New Risk: 
+Artificial Intelligence », Wall Street Journal, 9 janvier 2019.
+Le guide de l’intelligence artificielle au travail
+176
+Les risques sont de plusieurs ordres. Concernant les bugs infor-
+matiques, ou même les biais reprochés à l’IA, il convient de 
+rappeler que les erreurs sont... humaines ! En effet, si Gérard 
+Berry27, professeur au Collège de France, se dit convaincu que 
+le bug est constitutif de l’informatique des systèmes complexes, 
+il précise toutefois que ce dernier résulte toujours initialement 
+d’une erreur humaine. De même, les algorithmes ne sont pas par 
+nature racistes ou sexistes, mais reproduisent les biais (humains) 
+constatés via les données. La complexité des systèmes informa-
+tiques entraîne une difficulté à en assurer la maîtrise.
+Les problèmes de sûreté et de sécurité revêtent une importance 
+cruciale, tant la portée des intrusions informatiques peut être 
+grave à mesure que le volume de données croît. En tout cas, 
+investir dans la sûreté et la sécurité des données permet d’agir 
+sur la confiance autour de l’IA, et pourrait même constituer un 
+gisement d’emplois. De plus, du point de vue des clients-citoyens, 
+l’incertitude par rapport à la gouvernance des données person-
+nelles doit être levée par plus de transparence et une éthique 
+claire. La captation et l’utilisation des données personnelles 
+doivent être explicitées et acceptées par l’ensemble des acteurs 
+économiques et sociaux. Le manque de compétences en IA au 
+sein des entreprises est aussi un frein dans la mesure où les 
+entreprises ne maîtrisent pas le déploiement de l’IA et recourent 
+à des prestataires extérieurs. Le nombre d’experts en IA serait 
+actuellement insuffisant pour répondre à la demande. Cédric 
+Villani28 affirmait que la recherche française se situait au premier 
+plan mondial en mathématiques et en intelligence artificielle, 
+en revanche, la transformation des avancées scientifiques en 
+applications industrielles économiques est plus délicate et la 
+France pâtit de la fuite de ses cerveaux... Rappelons que l’une 
+des figures les plus importantes de l’intelligence artificielle en 
+France travaille pour Facebook : il s’agit de Yann Lecun.
+27. Gérard Berry, « Pourquoi et comment le monde devient numérique », 
+leçon inaugurale au Collège de France, 2008.
+28. Cédric Villani, op. cit.
+
+---
+
+[p. 202-203]
+qui vont au-delà des questions économiques, 
+concernant plus largement la société. Les décisions stratégiques 
+de ceux qui les détiennent revêtent ainsi une dimension politique. 
+Elles doivent à ce titre s’inscrire dans un processus démocratique 
+auquel l’ensemble des parties prenantes, internes et externes, 
+doivent participer.
+Interviews
+189
+Dans l’entreprise, quelles sont les questions  
+à se poser ?
+À quoi sert l’entreprise ou plutôt, à qui devrait-elle servir ? La 
+finalité des entreprises doit être questionnée. La crise sanitaire 
+de la Covid‐19 a tristement mis en lumière en 2020 les limites de 
+la désindustrialisation française et notre dépendance aux impor-
+tations, y compris sur des productions stratégiques. En effet, les 
+logiques d’optimisation poussée ont conduit les entreprises, avec 
+des motivations plus financières qu’industrielles, à rechercher les 
+coûts d’approvisionnement les plus faibles, sans se préoccuper 
+des risques de rupture d’approvisionnement, de souveraineté, etc.
+L’industrie de demain pourrait être l’occasion, avec ses capteurs, 
+robots, fabrication 3D, d’utiliser concrètement l’IA pour répondre 
+à des besoins réels des citoyens comme la (re)localisation de 
+certaines usines, la réduction de notre empreinte carbone, la 
+reconquête de certains territoires, et le soutien à l’emploi40. La 
+question de l’IA renvoie aux finalités qui lui sont assignées et donc 
+aux priorités de l’entreprise qui doit agir pour le bien commun, et 
+non dans le seul intérêt des actionnaires. L’IA et les technologies 
+numériques sont donc un ensemble de moyens pour lesquels il 
+convient de définir une finalité acceptable socialement de tous.
+Cette question se pose d’autant plus que l’IA requiert des données 
+pour lesquelles les questions de propriété ne sont pas toujours 
+très claires. Si une entreprise utilise des données qui relèvent du 
+bien commun pour servir des intérêts privés, ou une surveillance 
+généralisée, l’acceptabilité sociale risque de s’en trouver tôt ou 
+tard égratignée.
+Certes, la loi Pacte permet des avancées puisque l’objet des 
+sociétés n’est plus limité au seul profit des actionnaires, mais les 
+enjeux sont tels que c’est hélas insuffisant. En effet, compte tenu 
+de l’importance prise par les grandes plateformes notamment, un 
+des modèles d’organisation de la vie économique d’aujourd’hui et 
+40. Pascal Laurin (Bosch France), « L’industrie 4.0 n’est-elle qu’une question 
+de technologie ? », La Tribune, 28 octobre 2020.
+
+---
+
+[p. 216-218]
+rennent les décisions. Il n’y a pas de décisions automatiques 
+issues de nos algorithmes. Nous veillons bien à ce que les colla-
+borateurs challengent les algorithmes dans la durée, notamment 
+dans nos comités de pilotage mensuels. En faisant appel à l’ex-
+pertise des collaborateurs, l’IA est plus une opportunité qu’une 
+menace.
+Postface
+L’introduction d’une technologie comme celle de l’intelligence artifi-
+cielle, permise par une évolution numérique rapide et sans précédent, a 
+des impacts profonds sur les citoyens et les travailleurs, et nécessite une 
+gouvernance qui doit associer tous les acteurs de la société civile. Pour 
+la CFDT, ces changements ne doivent laisser personne sur le bord de la 
+route.
+La CFDT mesure les opportunités que cette technologie offre, sans en 
+sous-estimer les risques. Des opportunités dans de nombreux domaines 
+– médical, celui des transports ou de l’agriculture –, qui peuvent contri-
+buer à sauver des vies, réduire les émissions de gaz à effet de serre, 
+optimiser la consommation des ressources, créer de nouveaux emplois, 
+pour n’en citer que quelques-unes...
+Dans l’organisation du travail, l’essor du télétravail pendant la crise sanitaire 
+a offert des opportunités de souplesse auxquelles beaucoup de travailleurs 
+sont désormais attachés.
+Des risques néanmoins, tels la destruction et le changement rapide des 
+emplois, la perte de savoir-faire professionnel, la précarisation des emplois 
+et la perte des protections sociales, des inégalités... Ces changements 
+nécessitent de nouvelles compétences et qualifications, de l’anticipation, 
+de l’accompagnement et de la formation. Les impacts sur les conditions 
+de travail, l’intensification du travail, la relation homme-machine doivent 
+être discutés et régulés.
+Cette technologie pose des défis sociétaux et éthiques inédits : la protec-
+tion de la vie privée et celle de la dignité humaine, la place de l’humain 
+dans la décision face à la machine, la question des discriminations. Elle 
+pose aussi des enjeux pour nos démocraties.
+Dans les lieux de travail, nous avons des outils en Europe et en France, 
+comme ce guide le souligne et nous devons les utiliser. Des législa-
+tions françaises et européennes prévoient que l’introduction de nouvelles 
+
+Le guide de l’intelligence artificielle au travail
+204
+technologies doit donner lieu à une information-consultation des repré-
+sentants des travailleurs.
+Le dialogue social, professionnel et sociétal doit permettre d’interroger la 
+finalité et le fonctionnement des systèmes d’intelligence artificielle, pour 
+choisir ceux qui sont bons pour l’humain et pour nos sociétés et éviter, 
+voire interdire, ceux qui sont néfastes.
+Comme le recommande ce livre, l’humain doit rester maître de la déci-
+sion. Voulons-nous confier à une machine la possibilité de décider du 
+recrutement d’un travailleur ou de son évolution professionnelle ou de 
+l’octroi d’un prêt à un citoyen, sur la base d’algorithmes opaques ? Je pense 
+que l’humain doit garder la main. Dans les entreprises et les administra-
+tions, les DRH doivent pouvoir s’opposer à une décision des algorithmes 
+et avoir le dernier mot sur ceux-ci. Les cadres et les managers doivent être 
+associés et formés sur l’IA, tous comme les syndicalistes et les travailleurs.
+Je salue ce livre qui participe à la prise de conscience, met en évidence 
+les enjeux à l’œuvre, et offre des outils et témoignages précieux pour 
+questionner cette technologie et poser les organisations syndicales et 
+les individus comme acteurs de ces évolutions et des orientations qui 
+s’imposent.
+Des syndicats aux États-Unis se créent dans les entreprises de la « tech » sur 
+des enjeux éthiques et sur la finalité de l’entreprise qui affiche des valeurs 
+pour lesquelles ils l’ont choisie et qu’elle ne respecte plus. En France et en 
+Europe, les syndicats ainsi que d’autres acteurs de la société civile seront 
+attendus sur ces défis. La CFDT est prête à les relever !
+Laurent Berger 
+Secrétaire général de la CFDT

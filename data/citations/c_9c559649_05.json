@@ -1,0 +1,123 @@
+[
+ {
+  "chapitre": "d146a588",
+  "citations": [
+   {
+    "texte": "Je définirais l'intelligence comme la capacité de casser les règles, d'innover, de s'intéresser à ce qui est différent, à ce que l'on ne connaît pas.",
+    "page": 106,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Une définition de l'intelligence",
+    "portee": "Définition qui commande tout le livre : si l'intelligence est de casser les règles, une machine qui suit des règles n'est pas intelligente. À discuter, pas à accepter."
+   },
+   {
+    "texte": "Peut-être que l'innovation prend sa source dans le doute, dans la remise en cause. La machine ne doute pas, elle fait ce qu'elle est censée faire.",
+    "page": 107,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le doute comme faculté",
+    "portee": "Deux phrases qui séparent l'humain de la machine par le doute et non par le calcul. Écho direct à la certitude sereine de S.A.R.R.A."
+   },
+   {
+    "texte": "Innover, c'est se mettre dans une situation d'inconfort, en parlant à des gens d'un domaine complètement différent du nôtre",
+    "page": 107,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'inconfort volontaire",
+    "portee": "Méthode de travail transposable à tout lecteur : chercher la conversation qui dérange ses habitudes de pensée."
+   }
+  ]
+ },
+ {
+  "chapitre": "43a5c989",
+  "citations": [
+   {
+    "texte": "notre rôle à nous, qui fabriquons des objets, des applications et des services, c'est d'utiliser la technologie pour la faire disparaître",
+    "page": 109,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Faire disparaître la technique",
+    "portee": "Critère de qualité d'un outil : plus il se fait oublier, mieux il est conçu. Applicable à toute interface de lecture."
+   },
+   {
+    "texte": "le robot ne prend pas d'initiatives. Il n'a pas d'idées propres, il fait ce qu'on lui dit de faire, il est programmé pour ça, il emmagasine, il recrache. Un point, c'est tout.",
+    "page": 112,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Réponse aux prophètes de la catastrophe",
+    "portee": "Adressée à Elon Musk. Le postulat de la machine qui prend le pouvoir est déclaré faux à sa racine, non discuté dans ses conséquences."
+   },
+   {
+    "texte": "le désir de dominer est bien plus lié à la testostérone qu'à l'intelligence. C'est un comportement animal gravé dans nos gènes",
+    "page": 114,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Intelligence et volonté de puissance",
+    "portee": "Argument rarement formulé : rien n'oblige une intelligence supérieure à vouloir dominer. Les deux facultés n'ont pas la même origine."
+   },
+   {
+    "texte": "Ce n'est pas parce qu'une personne âgée peut être fragile ou sénile qu'elle n'a pas le droit à l'information.",
+    "page": 117,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le consentement des plus fragiles",
+    "portee": "Sur les robots de soins japonais. Pose le consentement éclairé comme un droit qui ne se réduit pas avec la vulnérabilité."
+   }
+  ]
+ },
+ {
+  "chapitre": "ec7cd5d7",
+  "citations": [
+   {
+    "texte": "Les prophètes de l'inexplicabilité se servent de cette opacité pour faire peur aux gens et les infantiliser.",
+    "page": 124,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "À qui profite l'opacité",
+    "portee": "Accusation étayée par le témoignage de Yann LeCun, un des pères du Deep Learning, selon qui toutes les étapes sont explicables si on s'en donne la peine."
+   },
+   {
+    "texte": "L'explicabilité est importante parce qu'elle apporte la confiance. Si on est capable d'expliquer pourquoi et comment on fait les choses, ça enlève le côté magique.",
+    "page": 126,
+    "axe": "02-ia-technique-academique",
+    "theme": "Expliquer pour désenvoûter",
+    "portee": "Réponse d'ingénieur à la peur : ce n'est pas la puissance qui inquiète, c'est l'opacité. Comprendre annihile l'irrationnel."
+   }
+  ]
+ },
+ {
+  "chapitre": "e914ed6d",
+  "citations": [
+   {
+    "texte": "C'est la diversité et non l'uniformité qui crée de l'intelligence.",
+    "page": 130,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "D'où vient l'intelligence d'un système",
+    "portee": "Conclusion tirée d'un thermostat couplé à un podomètre, mais valable pour une équipe, une école ou un pays."
+   },
+   {
+    "texte": "il fallait qu'on arrête de se contenter d'être des spécialistes dans une discipline et qu'il était important d'écouter ce que les autres avaient à nous dire, les biologistes, les psychologues, les sociologues, les chats et les autres",
+    "page": 129,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "La leçon du chat",
+    "portee": "Un livre de physiologie ouvert par ennui dans une bibliothèque a divisé par mille le temps de calcul de sa thèse. Plaidoyer concret pour la lecture hors de sa spécialité."
+   }
+  ]
+ },
+ {
+  "chapitre": "222ae3f3",
+  "citations": [
+   {
+    "texte": "Cette tentative de langage universel a été un échec, car nous sommes beaucoup trop attachés à notre langue, à notre culture, et",
+    "page": 132,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Pourquoi l'espéranto a échoué",
+    "portee": "Mille locuteurs sur sept milliards et demi. L'attachement à la langue maternelle résiste à tout projet universel, y compris technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "47a21a1f",
+  "citations": [
+   {
+    "texte": "Si un objet connecté n'apporte rien à votre vie, ne vous rend pas un service supplémentaire, ce n'est qu'un gadget encombrant de plus.",
+    "page": 136,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le critère du service rendu",
+    "portee": "Test simple applicable à tout outil numérique avant de l'adopter. Quinze pour cent seulement des sondés veulent une habitation bardée de technologie."
+   }
+  ]
+ }
+]

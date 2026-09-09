@@ -1,0 +1,404 @@
+[
+ {
+  "chapitre": "6d6ce8b1",
+  "citations": [
+   {
+    "texte": "Objectif du livre : vulgariser, guider, inspirer à agir",
+    "page": 7,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Programme du livre",
+    "portee": "Trois verbes qui resument la posture du guide pratique : expliquer simplement, montrer comment faire, pousser a commencer."
+   }
+  ]
+ },
+ {
+  "chapitre": "ffc5850e",
+  "citations": [
+   {
+    "texte": "Ce livre est né d'une conviction simple : l'IA n'est pas réservée aux ingénieurs ni aux grandes entreprises.",
+    "page": 10,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Accessibilite de l'IA",
+    "portee": "Point de depart du livre. C'est aussi le message le plus utile pour un lecteur africain sans capital ni formation technique."
+   },
+   {
+    "texte": "La vraie question n'est plus “Quand est-ce que l'IA va changer le monde ?”",
+    "page": 10,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Changer de question",
+    "portee": "Deplacement qui fait passer le lecteur du statut de spectateur a celui d'acteur : la suite du livre en decoule."
+   },
+   {
+    "texte": "L'important n'est pas de tout savoir, mais de commencer.",
+    "page": 10,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Commencer",
+    "portee": "Formule courte, applicable bien au dela de l'IA. Elle vise l'obstacle reel : l'attente d'une maitrise complete avant d'agir."
+   }
+  ]
+ },
+ {
+  "chapitre": "1ade7e0d",
+  "citations": [
+   {
+    "texte": "Et surtout : elle démocratise la puissance intellectuelle.",
+    "page": 11,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Democratisation",
+    "portee": "These centrale de l'ouvrage : ce qui change n'est pas la performance de la machine, c'est qui peut y acceder."
+   },
+   {
+    "texte": "l'IA ne remplace pas les humains — elle augmente ceux qui savent s'en servir",
+    "page": 12,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Augmenter plutot que remplacer",
+    "portee": "Formule qui traverse tout le livre et deplace l'inquietude vers un objet sur lequel on peut agir : sa propre competence."
+   }
+  ]
+ },
+ {
+  "chapitre": "8c221a8f",
+  "citations": [
+   {
+    "texte": "Ce qui distingue l'IA des simples programmes informatiques, c'est sa capacité d'adaptation.",
+    "page": 13,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce qui fait une IA",
+    "portee": "Critere de distinction simple et exact, comprehensible sans aucun bagage technique."
+   },
+   {
+    "texte": "Quand vous lui posez une question, elle ne sait pas si ce qu'elle dit est vrai ou faux — elle vous donne la réponse la plus probable statistiquement, en fonction de ce qu'elle a appris.",
+    "page": 15,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Probable n'est pas vrai",
+    "portee": "Phrase la plus importante du chapitre : elle explique en une ligne pourquoi une IA peut se tromper avec assurance."
+   },
+   {
+    "texte": "n'importe qui peut utiliser l'IA pour créer, vendre, automatiser ou apprendre — sans être ingénieur ou codeur",
+    "page": 15,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Quatre usages a portee de main",
+    "portee": "Enumeration qui sert de sommaire implicite au reste du livre : creer, vendre, automatiser, apprendre."
+   }
+  ]
+ },
+ {
+  "chapitre": "6e452640",
+  "citations": [
+   {
+    "texte": "elle donne à chacun, même sans compétences techniques, le pouvoir de produire rapidement des textes, des images, des vidéos, du code ou de la musique",
+    "page": 16,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Pouvoir de produire",
+    "portee": "Explique pourquoi l'IA generative interesse d'abord les independants et les createurs : elle supprime la barriere de production."
+   },
+   {
+    "texte": "L'intelligence artificielle n'est pas une technologie unique.",
+    "page": 19,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Plusieurs familles d'IA",
+    "portee": "Mise en garde utile contre le mot IA employe au singulier : generative, analytique, conversationnelle et embarquee ne posent pas les memes questions."
+   }
+  ]
+ },
+ {
+  "chapitre": "971b35c6",
+  "citations": [
+   {
+    "texte": "Ce ne sont pas les humains qui seront remplacés, mais ceux qui ne sauront pas utiliser l'IA.",
+    "page": 20,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Reponse au mythe du remplacement",
+    "portee": "Reformulation nette et discutable, a confronter aux chapitres du guide syndical sur les emplois reellement supprimes."
+   },
+   {
+    "texte": "L'IA n'est pas neutre. Elle hérite de nos préjugés.",
+    "page": 21,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Heritage des prejuges",
+    "portee": "Deux phrases courtes qui disent l'essentiel du probleme des biais, sans aucun vocabulaire technique."
+   },
+   {
+    "texte": "Le vrai danger n'est pas une IA qui s'émancipe, mais des humains qui l'utilisent sans éthique, sans transparence ou sans contrôle.",
+    "page": 22,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ou est le danger",
+    "portee": "Deplace la crainte du fantasme hollywoodien vers un risque reel et actionnable."
+   },
+   {
+    "texte": "Ce n'est pas la technologie qu'il faut craindre — c'est l'ignorance.",
+    "page": 22,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Craindre l'ignorance",
+    "portee": "Phrase de cloture du chapitre sur les mythes. Elle relie directement la question technologique a la question de la lecture et de la formation."
+   }
+  ]
+ },
+ {
+  "chapitre": "19b2cf1d",
+  "citations": [
+   {
+    "texte": "Peux-tu me rédiger un mail poli pour relancer un client qui n'a pas répondu à ma proposition envoyée il y a 10 jours ?",
+    "page": 23,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Premier prompt utile",
+    "portee": "Modele de consigne reutilisable tel quel. Il montre la structure d'un bon prompt : le ton, l'objectif, le contexte et le delai."
+   },
+   {
+    "texte": "Aide-moi à structurer un plan d'action pour lancer une boutique en ligne en 3 mois.",
+    "page": 24,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Prompt de planification",
+    "portee": "Exemple de consigne qui produit une liste d'etapes, un ordre logique et des suggestions d'outils : utile pour tout projet, pas seulement le commerce."
+   },
+   {
+    "texte": "vous pouvez gagner 1 à 2 heures par jour",
+    "page": 26,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Gain de temps annonce",
+    "portee": "Chiffre a verifier soi-meme, mais qui donne un ordre de grandeur concret a l'idee vague de productivite."
+   }
+  ]
+ },
+ {
+  "chapitre": "7fb44449",
+  "citations": [
+   {
+    "texte": "Tu es mon assistant personnel. Résume-moi ce document et prépare une checklist à partir de son contenu.",
+    "page": 29,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Assigner un role",
+    "portee": "Illustre une technique de prompting essentielle : donner un role a l'IA avant de lui donner une tache."
+   },
+   {
+    "texte": "Ces plateformes permettent de relier des centaines d'applications entre elles sans écrire une ligne de code.",
+    "page": 29,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Automatisation sans code",
+    "portee": "Definit en une phrase ce que font Zapier, Make et IFTTT, et pourquoi ils comptent pour qui n'est pas developpeur."
+   },
+   {
+    "texte": "L'automatisation, c'est la vraie révolution silencieuse.",
+    "page": 29,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Revolution silencieuse",
+    "portee": "Souligne que le changement le plus profond n'est pas l'IA qui parle, mais les flux de travail qui tournent sans personne."
+   }
+  ]
+ },
+ {
+  "chapitre": "baf62508",
+  "citations": [
+   {
+    "texte": "Une ville futuriste au coucher du soleil, style cyberpunk, avec des voitures volantes.",
+    "page": 31,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Anatomie d'un prompt visuel",
+    "portee": "Exemple minimal mais complet : sujet, moment, style, detail distinctif. Modele a decalquer pour toute generation d'image."
+   },
+   {
+    "texte": "La créativité humaine ne disparaît pas avec l'IA. Elle est amplifiée.",
+    "page": 32,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Creativite amplifiee",
+    "portee": "Position de l'auteur sur la creation assistee, a mettre en debat avec les critiques du travail createur automatise."
+   }
+  ]
+ },
+ {
+  "chapitre": "72ca11cb",
+  "citations": [
+   {
+    "texte": "Voici mes compétences : marketing digital, design, rédaction. Peux-tu me proposer 10 idées de business rentables et réalisables en ligne, avec peu d'investissement initial ?",
+    "page": 33,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Prompt pour trouver une idee",
+    "portee": "Consigne directement reutilisable en remplacant les competences. Elle inclut les deux contraintes qui comptent : rentabilite et faible investissement."
+   },
+   {
+    "texte": "Fais-moi une étude de marché rapide sur les formations en ligne pour freelances. Qui sont les concurrents ? Quels sont les besoins non couverts ?",
+    "page": 34,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Prompt d'etude de marche",
+    "portee": "Montre comment obtenir une premiere analyse concurrentielle sans budget d'etude. Les resultats sont a verifier, mais le point de depart existe."
+   },
+   {
+    "texte": "Vous n'avez plus besoin d'être un expert pour bâtir une entreprise intelligente : vous avez juste besoin de l'IA comme alliée.",
+    "page": 35,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Entreprendre sans expertise",
+    "portee": "Affirmation forte, a temperer, mais qui leve le principal frein psychologique a la creation d'activite."
+   }
+  ]
+ },
+ {
+  "chapitre": "8e80c642",
+  "citations": [
+   {
+    "texte": "Un freelance copywriter peut passer de 2 articles/jour à 6 sans sacrifier la qualité, grâce à l'IA. Il augmente ainsi son revenu tout en réduisant son stress.",
+    "page": 37,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le freelance augmente",
+    "portee": "Exemple chiffre du gain de productivite individuelle. C'est le calcul qui interesse directement un independant."
+   },
+   {
+    "texte": "Vous n'avez pas besoin de créer des outils d'IA pour gagner de l'argent avec l'IA. Vous pouvez vendre des services automatisés autour d'outils déjà existants.",
+    "page": 38,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Monetiser sans developper",
+    "portee": "Point le plus actionnable du livre pour un lecteur sans capital ni competence technique : la valeur est dans le savoir-faire d'usage."
+   },
+   {
+    "texte": "Grâce à l'IA, vos compétences valent plus.",
+    "page": 38,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Valoriser ses competences",
+    "portee": "Renversement du discours de la menace : l'outil augmente la valeur de ce qu'on sait deja faire."
+   }
+  ]
+ },
+ {
+  "chapitre": "f3db7ccf",
+  "citations": [
+   {
+    "texte": "Vous pouvez passer de l'idée à la mise en ligne d'un produit en quelques heures.",
+    "page": 40,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Vitesse de mise en marche",
+    "portee": "A verifier dans les faits, mais l'ordre de grandeur change la maniere dont on evalue le risque de tester une idee."
+   },
+   {
+    "texte": "L'étape cruciale, après la création, c'est la distribution automatisée.",
+    "page": 41,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Vendre en continu",
+    "portee": "Rappelle que le produit ne suffit pas : c'est la chaine de vente automatisee qui transforme un contenu en revenu."
+   },
+   {
+    "texte": "Avec les bons prompts et une bonne stratégie, vous pouvez transformer vos connaissances, votre savoir-faire ou même vos idées en sources de revenus passifs.",
+    "page": 42,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Du savoir au revenu",
+    "portee": "Formule qui relie directement lecture, connaissance et revenu. C'est exactement le pont que ce corpus cherche a construire."
+   }
+  ]
+ },
+ {
+  "chapitre": "d224cab3",
+  "citations": [
+   {
+    "texte": "Pour rester compétitif dans ce nouveau monde du travail, il ne suffit pas d'éviter l'IA : il faut apprendre à travailler avec elle.",
+    "page": 43,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Travailler avec",
+    "portee": "Enonce la strategie professionnelle defendue par le livre, en trois mots : ni resistance, ni soumission, mais usage."
+   },
+   {
+    "texte": "Ce que vous créez doit refléter une identité humaine, une",
+    "page": 43,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Signature personnelle",
+    "portee": "Deuxieme cle pour devenir irremplacable : ce qu'aucune IA ne reproduit parfaitement est une sensibilite, un style."
+   },
+   {
+    "texte": "Vous n'êtes pas en compétition avec l'IA. Vous êtes en compétition avec ceux qui savent déjà s'en servir.",
+    "page": 44,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La vraie concurrence",
+    "portee": "Phrase de cloture du chapitre. Elle deplace l'inquietude vers un terrain ou l'action individuelle est possible."
+   }
+  ]
+ },
+ {
+  "chapitre": "039e4840",
+  "citations": [
+   {
+    "texte": "Les IA ne sont pas « objectives » par nature : elles apprennent à partir des données qu'on leur donne.",
+    "page": 45,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Origine des biais",
+    "portee": "Formulation la plus simple du probleme, comprehensible par un lecteur qui decouvre le sujet."
+   },
+   {
+    "texte": "Diversifier les datasets, Mettre en place des audits réguliers, Intégrer l'humain dans la boucle de décision.",
+    "page": 45,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Trois remedes aux biais",
+    "portee": "Liste courte et operationnelle. Le troisieme point est le seul directement applicable par un utilisateur individuel."
+   },
+   {
+    "texte": "L'IA est une révolution puissante, mais elle n'est pas neutre. C'est un miroir de l'humanité, avec ses forces et ses failles.",
+    "page": 47,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'IA comme miroir",
+    "portee": "Image juste et memorable : ce que la machine renvoie vient de nous, ce qui deplace la responsabilite du cote humain."
+   }
+  ]
+ },
+ {
+  "chapitre": "6bc752d7",
+  "citations": [
+   {
+    "texte": "L'une des plus grandes ironies (et forces) de l'intelligence artificielle, c'est qu'elle peut vous aider à apprendre... l'intelligence artificielle.",
+    "page": 49,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre avec l'outil",
+    "portee": "Idee decisive pour un lecteur sans acces a une formation : l'outil est lui-meme le professeur disponible."
+   },
+   {
+    "texte": "Choisissez un sujet par semaine (ex : \"les LLM\", \"Midjourney\", \"Zapier\").",
+    "page": 49,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Rythme d'auto-formation",
+    "portee": "Premiere etape d'une methode en trois temps : un sujet, un plan demande a l'IA, un projet concret pour pratiquer."
+   },
+   {
+    "texte": "La clé n'est pas d'apprendre beaucoup d'un coup, mais un peu chaque jour. C'est la régularité qui fait la différence à long terme.",
+    "page": 49,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Regularite",
+    "portee": "Principe pedagogique universel, ici applique a un domaine qui change vite : trente minutes par jour suffisent selon l'auteur."
+   },
+   {
+    "texte": "Apprendre à apprendre avec l'IA, c'est déjà prendre une longueur d'avance.",
+    "page": 50,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre a apprendre",
+    "portee": "Deplace l'objectif : ce n'est pas la maitrise d'un outil qui compte, c'est la capacite a en apprendre de nouveaux."
+   }
+  ]
+ },
+ {
+  "chapitre": "d1756db8",
+  "citations": [
+   {
+    "texte": "L'IA ne va pas remplacer les humains. Elle va remplacer ceux qui refusent de l'adopter.",
+    "page": 51,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Adopter ou subir",
+    "portee": "Version la plus tranchee de la these du livre. A discuter : elle fait porter sur l'individu une responsabilite qui est aussi collective."
+   },
+   {
+    "texte": "Commencez par automatiser une tâche. Testez un outil. Créez une image, un texte, un projet, avec l'aide de l'IA.",
+    "page": 51,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Premiere action",
+    "portee": "Consigne de depart la plus concrete du livre : une tache, un outil, une creation. Rien de plus n'est demande pour commencer."
+   },
+   {
+    "texte": "Ce sont des graines. À vous maintenant de les planter, de les nourrir, et d'en faire éclore un futur différent.",
+    "page": 51,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Semer",
+    "portee": "Image agricole qui parle directement au lecteur africain vise : le livre donne la semence, le travail reste a faire."
+   },
+   {
+    "texte": "Ceux qui apprennent à s'en servir deviendront les architectes du monde de demain.",
+    "page": 52,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Architectes de demain",
+    "portee": "Derniere promesse de l'ouvrage, adressee a des lecteurs souvent tenus a l'ecart des decisions technologiques."
+   }
+  ]
+ }
+]

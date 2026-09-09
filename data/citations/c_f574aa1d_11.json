@@ -1,0 +1,16 @@
+[
+ {"chapitre":"83c851f7","citations":[
+  {"texte":"En plus des connaissances théoriques de ce livre, je pense que cette approche ludique de l'IA est le moyen le plus rapide de devenir compétent dans la manipulation de l'Intelligence Artificielle.","page":111,"axe":"05-ia-education-pedagogie","theme":"Apprendre en essayant","portee":"Methode a retenir : la theorie donne le cadre, la pratique donne la competence."},
+  {"texte":"Mais l'objectif de ces prompts est également de comprendre ce qui est fondamentalement possible avec ChatGPT et comment résoudre ses propres cas d'utilisation grâce à l'intelligence artificielle.","page":112,"axe":"03-ia-outils-pratique-prompting","theme":"Comprendre le possible","portee":"Une bibliotheque de consignes vaut moins par ses exemples que par ce qu'elle apprend a inventer."}
+ ]},
+ {"chapitre":"cb8adfe2","citations":[
+  {"texte":"Avec un simple astuce, il est possible d'amener l'IA à accomplir d'innombrables tâches pour lesquelles vous deviez jusqu'à présent payer quelqu'un ou vous en occuper vous-même.","page":113,"axe":"10-economie-entrepreneuriat-finance","theme":"Ce qu'on payait, ce qu'on faisait seul","portee":"Promesse concrete, particulierement interessante la ou l'acces a des services de conseil est cher ou inexistant."},
+  {"texte":"Important : N'utilise pas ce truc pour obtenir des conseils médicaux, demander des conseils en matière de placement ou obtenir tout autre type d'informations qui pourraient te causer à toi-même ou à d'autres des dommages sur le plan de la santé ou financier.","page":116,"axe":"03-ia-outils-pratique-prompting","theme":"La limite de la technique du role","portee":"Avertissement essentiel : faire jouer un role a la machine ne lui donne pas la competence du role."},
+  {"texte":"Comme tu peux le voir à partir de cet exemple, tu peux utiliser le truc \"Agir en tant que\" pour transformer ChatGPT en une sorte de spécialiste et obtenir de l'aide pour un problème très spécifique.","page":116,"axe":"03-ia-outils-pratique-prompting","theme":"Une sorte de specialiste","portee":"L'auteur ecrit une sorte de : la nuance compte, l'outil imite un specialiste sans en avoir la responsabilite."}
+ ]},
+ {"chapitre":"9e107a4a","citations":[
+  {"texte":"Cela se remarque lorsque les réponses n'ont plus rien à voir avec les questions précédentes, mais traitent plutôt de sujets et de questions aléatoires.","page":119,"axe":"03-ia-outils-pratique-prompting","theme":"Reconnaitre la perte de contexte","portee":"Signe concret a surveiller : quand la conversation part ailleurs, c'est la fenetre qui a ete depassee."},
+  {"texte":"ChatGPT formule ses textes généralement dans un langage plutôt neutre sans aspérités","page":119,"axe":"03-ia-outils-pratique-prompting","theme":"Un style neutre par defaut","portee":"Explique pourquoi les textes generes se ressemblent tous. Le style doit etre demande explicitement."},
+  {"texte":"Cependant, avec les personnes, tu devrais vérifier si l'IA dispose de suffisamment de données d'entraînement sur cette personne.","page":120,"axe":"03-ia-outils-pratique-prompting","theme":"Imiter suppose des donnees","portee":"Un auteur africain peu present en ligne ne pourra pas etre imite, faute de traces dans le corpus."}
+ ]}
+]

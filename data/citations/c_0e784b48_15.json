@@ -1,0 +1,68 @@
+[
+ {"chapitre":"a9513992","citations":[
+  {"texte":"L'interaction personne-système et l'intelligence artificielle sont deux disciplines qui ont suivi des trajectoires parallèles au cours du temps tout en se rejoignant et se complétant naturellement","page":313,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Deux disciplines parallèles","portee":"L'utilité d'une machine intelligente dépend de la qualité du lien qu'elle établit avec celui qui s'en sert."}]},
+
+ {"chapitre":"3cf12751","citations":[
+  {"texte":"L'objet principal de l'IA est de créer et développer des systèmes intelligents, c'est-à-dire capables de percevoir, de raisonner, d'agir et d'apprendre par eux-mêmes.","page":314,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Définir l'IA en quatre verbes","portee":"Définition simple et complète, utile pour un lecteur qui découvre le domaine sans bagage technique."},
+  {"texte":"Il est utile de constater que l'IA et l'interaction personne-système ont en commun la prise en compte de l'humain comme modèle.","page":314,"axe":"04-ia-societe-ethique-philosophie","theme":"L'humain comme modèle","portee":"L'une imite l'humain, l'autre le comprend pour lui adapter les machines : deux usages du même modèle."},
+  {"texte":"Le succès d'une nouvelle technologie vient du fait qu'elle est le produit d'une intégration intelligente et pertinente de diverses méthodes, techniques et systèmes.","page":314,"axe":"06-ia-travail-management-metiers","theme":"Le succès par l'intégration","portee":"Ce n'est pas l'invention isolée qui réussit, c'est l'assemblage juste de moyens déjà disponibles."}]},
+
+ {"chapitre":"3f037a68","citations":[
+  {"texte":"Il est certainement plus intéressant de se tourner vers une approche plus globale de la conception de systèmes qui intègre à la fois l'intelligence et l'interaction","page":315,"axe":"06-ia-travail-management-metiers","theme":"Conception anthropocentrée","portee":"Concevoir pour l'usage suppose de traiter ensemble ce que la machine sait faire et ce que l'humain peut en faire."}]},
+
+ {"chapitre":"b35f6dc4","citations":[
+  {"texte":"L'intelligence était passée dans la machine sans que nous ne nous soyons préoccupés des questions d'interaction avec ce nouveau type de système.","page":316,"axe":"06-ia-travail-management-metiers","theme":"L'oubli de l'usage","portee":"Diagnostic durable : une automatisation réussie techniquement peut alourdir le travail de celui qui l'emploie."},
+  {"texte":"Bref, si l'automatisation était bonne, l'interaction entre elle et le pilote demandait beaucoup plus de travail.","page":316,"axe":"06-ia-travail-management-metiers","theme":"Le travail déplacé","portee":"Automatiser une tâche ne supprime pas le travail : cela le transforme, parfois en le rendant plus lourd."}]},
+
+ {"chapitre":"b53ccb29","citations":[
+  {"texte":"Le Web a réellement établi un changement des pratiques au sein de nos sociétés modernes.","page":317,"axe":"04-ia-societe-ethique-philosophie","theme":"Le Web change les usages","portee":"Une infrastructure technique ne se contente pas d'ajouter un outil : elle modifie la manière de vivre et de travailler."},
+  {"texte":"Les interactions personne-système sont aujourd'hui intrinsèquement sociales mais aussi émotionnelles, l'humain ressentant de nombreuses émotions tant positives que négatives face à un système interactif.","page":317,"axe":"04-ia-societe-ethique-philosophie","theme":"L'émotion dans l'usage","portee":"On n'utilise jamais un outil froidement : la relation à la machine engage aussi l'affect de l'utilisateur."}]},
+
+ {"chapitre":"315b4e17","citations":[
+  {"texte":"En effet, avant de résoudre un problème, il faut savoir bien le poser !","page":318,"axe":"09-developpement-personnel-influence","theme":"Poser avant de résoudre","portee":"Règle de méthode universelle : la plus grande part du travail intellectuel consiste à formuler correctement la question."},
+  {"texte":"Nous sommes en train de passer de la problématique du savoir faire à la problématique du savoir-être.","page":318,"axe":"09-developpement-personnel-influence","theme":"Du savoir-faire au savoir-être","portee":"Quand les techniques abondent, la question décisive devient celle du sens et de la manière d'être avec elles."},
+  {"texte":"L'approche design de la résolution de problèmes fait appel à la créativité et non plus à des procédures figées, bloquantes et finalement stériles.","page":318,"axe":"09-developpement-personnel-influence","theme":"Créer plutôt qu'appliquer","portee":"Appliquer une procédure figée devant un problème complexe conduit à l'impasse plus sûrement qu'à la solution."}]},
+
+ {"chapitre":"423f91e0","citations":[
+  {"texte":"Il est communément admis que le domaine des interfaces intelligentes représente plus simplement l'intersection entre l'interaction personne-système et l'intelligence artificielle","page":319,"axe":"03-ia-outils-pratique-prompting","theme":"Interfaces intelligentes","portee":"Situe précisément ce qu'est une interface intelligente, terme aujourd'hui employé sans définition."}]},
+
+ {"chapitre":"c1fecbb1","citations":[
+  {"texte":"Il est important que le système apprenne au fur et à mesure des interactions avec l'utilisateur (et d'utilisateurs au profil proche), afin d'affiner la personnalisation","page":320,"axe":"03-ia-outils-pratique-prompting","theme":"Apprendre de l'usage","portee":"La personnalisation moderne repose sur l'accumulation des traces d'usage, y compris celles d'autrui."}]},
+
+ {"chapitre":"c0de1301","citations":[
+  {"texte":"Nos ordinateurs incarnent ainsi de plus en plus des rôles typiquement attribués aux humains, tels que celui de professeur, de conseiller ou encore d'animateur.","page":321,"axe":"05-ia-education-pedagogie","theme":"La machine comme professeur","portee":"Écrit avant les assistants conversationnels actuels, ce constat annonce ce que nous vivons aujourd'hui."},
+  {"texte":"Lorsque ces systèmes interactifs sont dotés de caractéristiques de la communication humaine, les utilisateurs tendent à interagir avec ces derniers comme si ils étaient humains","page":321,"axe":"04-ia-societe-ethique-philosophie","theme":"Traiter la machine en humain","portee":"Il suffit de quelques traits de conversation humaine pour que nous appliquions à un programme nos réflexes sociaux."}]},
+
+ {"chapitre":"e0a3c549","citations":[
+  {"texte":"Cependant, la capacité expressive de l'agent n'est pas suffisante : une même émotion exprimée dans une situation inappropriée durant l'interaction peut avoir un effet néfaste sur la perception de l'utilisateur","page":322,"axe":"09-developpement-personnel-influence","theme":"L'émotion à propos","portee":"Exprimer une émotion ne vaut que si le moment s'y prête, règle valable pour la machine comme pour l'humain."}]},
+
+ {"chapitre":"8d5dd05d","citations":[
+  {"texte":"Le déclenchement d'une émotion étant étroitement liée à la réalisation ou l'échec d'un but","page":323,"axe":"09-developpement-personnel-influence","theme":"L'émotion et le but","portee":"Nos émotions se comprennent en regardant les buts qu'elles accompagnent, atteints ou manqués."}]},
+
+ {"chapitre":"4780d110","citations":[
+  {"texte":"Ces problématiques appliquées au phénomène complexe qu'est l'émotion visent à intégrer dans les systèmes interactifs une intelligence dite émotionnelle","page":324,"axe":"04-ia-societe-ethique-philosophie","theme":"Intelligence émotionnelle des machines","portee":"L'ambition dépasse la reconnaissance des visages : il s'agit de doter un système d'un comportement affectif juste."},
+  {"texte":"Ceci afin de sortir de l'empirisme dans lequel ces connaissances seraient appliquées de manière opportuniste avec des niveaux de rigueur variables.","page":324,"axe":"06-ia-travail-management-metiers","theme":"Sortir de l'empirisme","portee":"Formaliser un savoir-faire est le moyen de le rendre transmissible et vérifiable au lieu de le laisser au hasard."}]},
+
+ {"chapitre":"1ba56c64","citations":[
+  {"texte":"les connaissances ergonomiques ne sont pas formalisées, si elles le sont, elles le sont de manière variable, surtout en fonction d'interprétation et de méthodes différentes","page":325,"axe":"06-ia-travail-management-metiers","theme":"Savoir non formalisé","portee":"Deux outils appliquant les mêmes règles donnent des résultats différents dès que ces règles restent implicites."}]},
+
+ {"chapitre":"54b198b5","citations":[
+  {"texte":"Plus une connaissance ergonomique est largement applicable, plus elle requiert un effort d'interprétation ; plus elle est applicable de manière restreinte, moins elle requiert un effort d'interprétation.","page":326,"axe":"09-developpement-personnel-influence","theme":"Généralité et interprétation","portee":"Une règle générale ne dispense pas de juger : plus elle vaut partout, plus il faut de discernement pour l'appliquer."}]},
+
+ {"chapitre":"818419de","citations":[
+  {"texte":"Parce qu'on ne peut savoir a priori l'information qui s'y trouve et parce que le défi consiste à en tirer des connaissances.","page":328,"axe":"10-economie-entrepreneuriat-finance","theme":"Le défi des données massives","portee":"Posséder des données ne vaut rien : la valeur naît de la capacité à en extraire une connaissance actionnable."},
+  {"texte":"Si les données sont massives et complexes, les résultats de la fouille le sont souvent tout autant.","page":328,"axe":"10-economie-entrepreneuriat-finance","theme":"La fouille ne simplifie pas","portee":"Analyser produit à son tour une masse à trier : le travail de synthèse reste entier après le calcul."},
+  {"texte":"40% de nos activités cérébrales sont consacrées au traitement de signaux visuels","page":328,"axe":"11-sciences-environnement","theme":"Le cerveau visuel","portee":"Chiffre qui justifie pourquoi représenter graphiquement des données aide réellement à les comprendre."}]},
+
+ {"chapitre":"3ea036a7","citations":[
+  {"texte":"La complexité des données, leur caractère incertain et changeant impose de placer l'intelligence humaine au cœur du processus de fouille.","page":329,"axe":"10-economie-entrepreneuriat-finance","theme":"L'humain au centre","portee":"L'automatisation de l'analyse ne dispense pas du jugement humain, elle le rend au contraire indispensable."},
+  {"texte":"Plus que l'analyse de données ou le repérage de motifs, il s'agit de faire émerger de la connaissance.","page":329,"axe":"10-economie-entrepreneuriat-finance","theme":"Du motif à la connaissance","portee":"Détecter une régularité n'est pas comprendre : la connaissance suppose un pas de plus que le calcul."}]},
+
+ {"chapitre":"e505f125","citations":[
+  {"texte":"C'est seulement lorsque les motivations sont claires, et exprimées à l'aide de questions ancrées dans le domaine où seront formulées les hypothèses, que l'on doit chercher à cerner les données qui permettront d'y répondre","page":330,"axe":"10-economie-entrepreneuriat-finance","theme":"La question avant les données","portee":"Ordre de travail trop souvent inversé : on collecte avant de savoir à quelle question on veut répondre."},
+  {"texte":"Mais le processus de découverte est un processus cognitif de haut niveau.","page":330,"axe":"09-developpement-personnel-influence","theme":"Découvrir ne se mesure pas","portee":"Ce qui se chronomètre n'est pas ce qui compte : trouver du nouveau échappe aux mesures de performance."}]},
+
+ {"chapitre":"758cb115","citations":[
+  {"texte":"Enfin, l'adoption du système par une communauté d'utilisateurs reste la preuve la plus tangible d'une bonne conception, à tous les étages.","page":331,"axe":"06-ia-travail-management-metiers","theme":"L'usage comme preuve","portee":"Aucune validation formelle ne remplace le fait que des gens choisissent librement de se servir d'un outil."},
+  {"texte":"Elle peut aussi être un lieu de synergie avec l'intelligence artificielle précisément parce qu'elle engage par définition l'intelligence humaine.","page":331,"axe":"10-economie-entrepreneuriat-finance","theme":"Deux intelligences ensemble","portee":"La visualisation est le lieu où le calcul de la machine rencontre le regard et le jugement de l'humain."}]}
+]

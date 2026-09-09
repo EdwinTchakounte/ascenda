@@ -1,0 +1,115 @@
+[
+ {
+  "chapitre": "e1e95e06",
+  "citations": [
+   {
+    "texte": "le facteur majeur qui limite la dissémination de la technologie dans l'économie est proportionnel au temps que mettent les gens à apprendre à l'utiliser",
+    "page": 74,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le vrai frein n'est pas technique",
+    "portee": "Vingt ans ont séparé l'arrivée de l'informatique de son effet sur la productivité. La conclusion de l'auteur est directe : investir massivement dans l'éducation."
+   },
+   {
+    "texte": "Si vous n'échouez pas au moins une fois, vous n'apprenez rien.",
+    "page": 78,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'échec comme apprentissage",
+    "portee": "L'auteur a lancé quatre entreprises et n'en compte que deux comme des succès. Seules dix pour cent des start-up de la Silicon Valley réussissent."
+   }
+  ]
+ },
+ {
+  "chapitre": "7f913dc6",
+  "citations": [
+   {
+    "texte": "L'emploi du terme « intelligence » pour cette discipline est de fait une vaste fumisterie, car il est basé sur des vœux pieux qui sont bien loin de la réalité.",
+    "page": 81,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le malentendu de Dartmouth",
+    "portee": "Jugement porté sur la conférence de 1956 qui a baptisé la discipline. Tout le livre découle de cette phrase."
+   },
+   {
+    "texte": "tout ce que les fonctions font est de ressortir ce qu'on leur a appris, dans le domaine spécifique de cet apprentissage",
+    "page": 82,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que fait vraiment un réseau de neurones",
+    "portee": "Définition sobre et exacte, à opposer à toute description magique de l'apprentissage automatique."
+   },
+   {
+    "texte": "Le perceptron et les réseaux de neurones n'ont rien à voir avec notre cerveau. C'est une vue de l'esprit, une belle abstraction, mais nous ne savons même pas comment fonctionne notre cerveau aujourd'hui.",
+    "page": 82,
+    "axe": "02-ia-technique-academique",
+    "theme": "La métaphore neuronale",
+    "portee": "Une dizaine de neurones artificiels contre cent milliards dans le cerveau. La comparaison qui a fondé la discipline était biaisée dès le départ."
+   },
+   {
+    "texte": "les enfants, pour leur part, n'ont besoin que de deux instances d'images de chats pour les reconnaître à vie, dans n'importe quelles circonstances et de manière quasi infaillible",
+    "page": 84,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Deux images contre cent mille",
+    "portee": "Comparaison la plus parlante du livre : la machine procède par force brute là où l'enfant contextualise. Utilisable devant n'importe quel public."
+   }
+  ]
+ },
+ {
+  "chapitre": "eeec88d2",
+  "citations": [
+   {
+    "texte": "Je soutiens que l'intelligence artificielle n'existe pas. Si nous devons garder",
+    "page": 86,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La thèse du livre",
+    "portee": "Formulée au milieu de l'ouvrage, après cent pages de parcours personnel. L'auteur propose de conserver le sigle IA en lui donnant le sens d'intelligence augmentée."
+   },
+   {
+    "texte": "Il n'y a là aucune intelligence, mais une prouesse technologique qui permet de retrouver dans cette énorme base de données le bon coup au bon moment.",
+    "page": 92,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Comment Deep Blue a battu Kasparov",
+    "portee": "Démonte l'exemple le plus cité au monde pour prouver l'intelligence des machines. Il s'agissait de force brute, pas même d'apprentissage."
+   },
+   {
+    "texte": "il n'y a pas d'intelligence, de remise en question ou de sens critique des machines, et que toutes les responsabilités et les défaillances incombent à l'homme",
+    "page": 96,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Où loge la responsabilité",
+    "portee": "Tirée du cas du chatbot raciste de Microsoft. Coupe court à toute imputation de faute à la machine elle-même."
+   },
+   {
+    "texte": "la seule vraie façon de les combattre est d'être éduqué et informé, pour se forger un sens critique",
+    "page": 96,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'antidote aux fausses nouvelles",
+    "portee": "Réponse d'un ingénieur au problème des contenus biaisés : ni censure ni technologie, mais éducation. Justification directe d'un projet de lecture."
+   },
+   {
+    "texte": "Les pays les plus robotisés sont ceux dans lesquels il y a le moins de chômage",
+    "page": 91,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Robots et emploi",
+    "portee": "Fait vérifiable opposé à la peur du remplacement. L'auteur déplace la question vers la répartition des richesses produites."
+   },
+   {
+    "texte": "Ils exécutent les tâches pour lesquelles ils sont faits, c'est-à-dire des tâches programmées. Ils n'inventent rien, ils ne font que suivre des règles, des exemples et des codes, en utilisant les données que nous choisissons pour ces systèmes.",
+    "page": 103,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce que font tous ces systèmes",
+    "portee": "Ouverture de la synthèse finale : de Deep Blue à l'Autopilot, aucun de ces systèmes n'invente, tous suivent des règles et des données choisies par des humains."
+   },
+   {
+    "texte": "L'IA est là pour faciliter nos décisions, pas pour les prendre à notre place.",
+    "page": 104,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La ligne à ne pas franchir",
+    "portee": "Position de l'ingénieur, à confronter directement à S.A.R.R.A., où les hommes délèguent précisément la décision. Deux livres, deux réponses opposées."
+   },
+   {
+    "texte": "Nous avons toujours tendance à surestimer l'effet d'une technologie à court terme et à la sous-estimer à long terme.",
+    "page": 105,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'erreur de perspective",
+    "portee": "Règle de prudence applicable à toute annonce technologique, dans un sens comme dans l'autre."
+   }
+  ]
+ }
+]

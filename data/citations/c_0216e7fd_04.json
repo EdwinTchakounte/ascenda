@@ -1,0 +1,26 @@
+[
+ {"chapitre":"42f5417c","citations":[
+  {"texte":"une IA peut révéler des liens factuels restés inaperçus, mais ne peut pas les distinguer de fausses corrélations","page":81,"axe":"02-ia-technique-academique","theme":"Trouver sans pouvoir trier","portee":"Un système qui détecte tout ce qui coïncide ne sait pas ce qui, parmi ces coïncidences, veut dire quelque chose."},
+  {"texte":"dès lors que ça « matche » statistiquement, une IA ne fait pas la différence","page":82,"axe":"02-ia-technique-academique","theme":"La corrélation prise pour une cause","portee":"C'est l'erreur de raisonnement la plus répandue, et elle est ici mécanisée à grande échelle."},
+  {"texte":"Il leur est impossible d'avoir du bon sens. Car, dans la machine, il n'y a aucun sens ; rien qu'une combinatoire de signes a-signifiants.","page":82,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Le bon sens ne se code pas","portee":"Ce que nous appelons bon sens suppose un rapport au monde que ces systèmes n'ont pas."}
+ ]},
+ {"chapitre":"043a1d49","citations":[
+  {"texte":"pour apprendre, il faut être capable d'oublier et plus encore de généraliser","page":84,"axe":"05-ia-education-pedagogie","theme":"Oublier pour apprendre","portee":"Retenir davantage n'est pas apprendre davantage, et cela vaut pour l'élève comme pour la machine."},
+  {"texte":"Penser c'est oublier des différences, c'est généraliser, abstraire.","page":84,"axe":"05-ia-education-pedagogie","theme":"Ce que penser demande","portee":"Une définition en six mots que tout enseignant peut transmettre à ses élèves."},
+  {"texte":"un homme qui serait absolument dépourvu de la faculté d'oublier et qui serait condamné à voir, en toute chose, le devenir","page":84,"axe":"09-developpement-personnel-influence","theme":"L'oubli comme condition de vivre","portee":"Se souvenir de tout empêcherait de croire en soi-même, écrivait Nietzsche."}
+ ]},
+ {"chapitre":"23088d91","citations":[
+  {"texte":"La première s'aliène dans l'accumulation des connaissances au point de nier son existence dans le flux continu de signes, alors que la seconde affirme son existence dans l'oubli sélectif et la synthèse du monde.","page":85,"axe":"05-ia-education-pedagogie","theme":"Accumuler ou synthétiser","portee":"Le partage vaut aussi pour un lecteur : entasser des lectures ne construit rien sans travail de synthèse."},
+  {"texte":"L'accumulation de données confirmant une forme générale n'est pas suffisante pour prouver sa vérité et donc pour apprendre quelque chose de quelque chose.","page":85,"axe":"02-ia-technique-academique","theme":"Le nombre ne fait pas la preuve","portee":"Plus de données ne produit pas plus de vérité, ce que le débat public oublie régulièrement."},
+  {"texte":"On ne dispose pas du code de l'induction ; la loi des grands nombres n'est pas suffisante pour faire émerger des formes générales dans notre esprit.","page":85,"axe":"02-ia-technique-academique","theme":"Une opération que nul n'a formalisée","portee":"Nous généralisons sans cesse sans savoir comment, et cela reste hors de portée du calcul."}
+ ]},
+ {"chapitre":"4f145f50","citations":[
+  {"texte":"d'un point de vue strictement formel, les preuves qu'on collecte peuvent aussi bien confirmer l'hypothèse de l'existence que celle de la non-existence","page":87,"axe":"02-ia-technique-academique","theme":"Des preuves qui prouvent tout","portee":"Une méthode qui confirme une thèse et son contraire ne confirme rien du tout."},
+  {"texte":"ce qui nous distingue pour le moment des IA n'est autre que notre système inhibiteur métacognitif, capable d'établir des transitions entre l'intuition et la logique","page":88,"axe":"02-ia-technique-academique","theme":"Ce qui nous distingue encore","portee":"La faculté de bloquer une intuition pour activer un raisonnement est présentée comme le cœur de l'intelligence."},
+  {"texte":"les heuristiques approximatives, sources de biais cognitifs (système 1) – elles sont très nombreuses et ne disparaissent pas avec l'enfance –, les algorithmes logiques exacts (système 2) et le contrôle inhibiteur (système 3)","page":89,"axe":"05-ia-education-pedagogie","theme":"Trois circuits de l'intelligence","portee":"Enseigner à inhiber une réponse spontanée vaut mieux que d'espérer supprimer les biais eux-mêmes."}
+ ]},
+ {"chapitre":"7ae69645","citations":[
+  {"texte":"Sans aucune intervention extérieure, il se fixerait ses propres objectifs, explorerait son environnement et découvrirait progressivement des régularités dans ses entrées ainsi que dans son organisation interne","page":90,"axe":"02-ia-technique-academique","theme":"Le programme d'une machine autonome","portee":"Une description précise de ce qu'il faudrait obtenir, et que nul n'a obtenu à ce jour."},
+  {"texte":"L'IAG et les neurosciences cognitives semblent s'accorder pour nous dire que, en se complexifiant (en développant des règles et des métarègles), la machine tend vers l'autonomie de la conscience.","page":90,"axe":"04-ia-societe-ethique-philosophie","theme":"La thèse que l'auteur va contester","portee":"Un accord entre deux disciplines ne suffit pas à établir une thèse, surtout lorsqu'elles partagent le même présupposé."}
+ ]}
+]

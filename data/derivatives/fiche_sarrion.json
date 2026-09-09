@@ -1,0 +1,88 @@
+{
+ "document_id": "eb207675-e92c-4fc1-b293-9a7d6dd4b1a7",
+ "titre_normalise": "ChatGPT. Le guide du débutant",
+ "auteurs": [
+  "Éric Sarrion"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "manuel pratique",
+ "niveau": "debutant",
+ "public_cible": "Personne qui n'a jamais ouvert un outil conversationnel et veut être accompagnée écran par écran, de la création du compte à des usages professionnels précis. Éditions Eyrolles, 2024, deux cent quatre-vingt-six pages illustrées de captures d'écran. L'auteur est formateur et développeur indépendant depuis plus de trente ans. Deux parties : premiers pas, puis quinze chapitres d'usages.",
+ "these_centrale": "Un outil conversationnel ne produit pas de bons résultats parce qu'il est puissant, mais parce que la question est bien posée. Le livre installe d'abord l'accès matériel, compte, interface, gestion des conversations, puis consacre son chapitre décisif à la formulation des demandes, avant de dérouler une quinzaine de situations concrètes traitées de bout en bout : courrier administratif, courriel professionnel, texte commercial, traduction, apprentissage d'une langue, recrutement, candidature, discours, plan d'action.",
+ "idees_force": [
+  {
+   "titre": "Attribuer un rôle d'expert change la qualité de la réponse",
+   "explication": "Présenter le système comme spécialiste du domaine avant de poser sa question modifie le registre et la précision de ce qu'il produit. L'auteur précise aussitôt qu'il n'est pas nécessaire de le faire à chaque échange : c'est utile quand on a besoin d'informations plus pointues que d'ordinaire. La nuance est importante, beaucoup de guides transforment cette technique en rituel obligatoire.",
+   "page": 48
+  },
+  {
+   "titre": "Demander une reformulation est une compétence à part entière",
+   "explication": "La démonstration est faite sur place : une première réponse sur l'intelligence artificielle, technique et abstraite ; puis la même question reposée en demandant d'expliquer comme à un enfant de quinze ans ; la seconde réponse devient limpide. La leçon dépasse l'outil : savoir demander le niveau d'explication dont on a besoin est une compétence de lecteur, pas de technicien.",
+   "page": 53
+  },
+  {
+   "titre": "Sept règles pour poser une bonne question",
+   "explication": "Être précis sur le résultat attendu, découper en plusieurs phrases courtes plutôt qu'une longue, reposer une question si la réponse ne convient pas, attribuer un rôle d'expert quand le domaine l'exige, rester dans la même conversation pour conserver le contexte, demander une reformulation, demander un résumé. Ces règles n'ont pas vieilli et se transposent à tous les systèmes conversationnels.",
+   "page": 63
+  },
+  {
+   "titre": "Le contexte de la conversation est une ressource",
+   "explication": "Après avoir fait traduire plusieurs textes, il suffit de demander de traduire tous les textes précédents dans une autre langue : le système a gardé la trace de l'échange. Comprendre que la conversation elle-même constitue une mémoire de travail est ce qui sépare un usage naïf, une question isolée à la fois, d'un usage productif.",
+   "page": 107
+  },
+  {
+   "titre": "La traduction assistée vaut mieux qu'un traducteur automatique classique",
+   "explication": "L'argument de l'auteur est que l'on peut préciser le registre, le public visé, le domaine technique, et corriger par le dialogue, ce qu'un traducteur automatique traditionnel ne permet pas. Pour un lecteur travaillant entre plusieurs langues, c'est l'usage au rendement le plus immédiat.",
+   "page": 98
+  },
+  {
+   "titre": "L'apprentissage d'une langue par listes contextualisées",
+   "explication": "Le chapitre construit des listes de vocabulaire spécialisées et générales où chaque expression est accompagnée de sa traduction et d'une phrase d'exemple insérée dans un récit continu. Cette méthode, apprendre l'expression dans une phrase plutôt que seule, est validée par la pédagogie des langues, et l'outil la rend gratuite et illimitée. C'est probablement le chapitre le plus utile du livre pour un lecteur africain francophone qui veut consolider son anglais.",
+   "page": 109
+  },
+  {
+   "titre": "Simuler un entretien d'embauche avec retour immédiat",
+   "explication": "Le système pose les questions une par une, attend la réponse, puis commente. Le livre montre aussi comment reformuler un point faible : la timidité présentée comme écoute active et comme préparation minutieuse, avec des exemples de phrases. L'exercice est répétable autant de fois qu'on veut, sans témoin et sans coût, ce qui est exactement ce dont manque un candidat isolé.",
+   "page": 153
+  },
+  {
+   "titre": "L'auteur rappelle systématiquement la révision humaine",
+   "explication": "Chaque résumé de chapitre insiste : avec une utilisation judicieuse et une révision attentive. Sur le discours, il ajoute que le texte doit être ressenti par l'orateur et invite à réécrire avec ses propres termes. Cette discipline, produire vite puis reprendre à la main, est la seule qui protège de la platitude générique.",
+   "page": 161
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Requête",
+   "definition": "Question ou instruction adressée au système. Sa précision détermine la qualité de la réponse davantage que la puissance du modèle."
+  },
+  {
+   "terme": "Attribution de rôle",
+   "definition": "Technique consistant à présenter le système comme expert d'un domaine avant de l'interroger, pour élever le registre de la réponse."
+  },
+  {
+   "terme": "Instructions personnalisées",
+   "definition": "Consignes permanentes enregistrées une fois pour toutes, qui s'appliquent à toutes les conversations : qui vous êtes, quel style de réponse vous attendez."
+  },
+  {
+   "terme": "Contexte de conversation",
+   "definition": "Ensemble des échanges précédents, que le système conserve et peut réutiliser tant qu'on reste dans le même fil."
+  },
+  {
+   "terme": "Reformulation",
+   "definition": "Demande explicite de réécriture d'une réponse à un autre niveau de langue ou de technicité."
+  },
+  {
+   "terme": "Génération d'images associée",
+   "definition": "Production d'images à partir d'une description textuelle, intégrée à l'interface conversationnelle."
+  }
+ ],
+ "a_lire_si": "Vous devez former des personnes qui n'ont jamais utilisé ces outils, ou vous êtes vous-même dans ce cas. La progression est irréprochable et les captures d'écran lèvent l'obstacle réel, qui est l'inscription et la première prise en main. Les chapitres sur la formulation des questions, la traduction, l'apprentissage des langues et la préparation d'entretien gardent leur valeur indépendamment de l'interface décrite.",
+ "a_eviter_si": "Vous connaissez déjà l'outil : tout le début du livre vous sera inutile. Surtout, la partie descriptive est déjà périmée. Les menus, les libellés de boutons et l'organisation des réglages ont changé depuis 2024, et les captures d'écran ne correspondent plus à ce que verra le lecteur. Le livre n'aborde ni la fiabilité des réponses, ni la confidentialité de ce qu'on saisit, ni le coût des versions payantes au-delà d'un chapitre descriptif. Il ne traite que d'un seul outil.",
+ "prerequis": [],
+ "controverses": [
+  "Le livre reprend sans distance l'affirmation promotionnelle selon laquelle l'outil sait tout ou presque, alors qu'un chapitre entier est consacré à la question de savoir s'il a réponse à tout. Cette tension entre l'argumentaire de couverture et le contenu doit être signalée au lecteur débutant.",
+  "Aucun avertissement sur l'invention d'informations plausibles mais fausses, qui est pourtant le risque principal pour un débutant. Ce guide doit être accompagné d'un texte sur la fiabilité."
+ ],
+ "confiance": 0.85
+}

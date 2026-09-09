@@ -1,0 +1,10 @@
+[
+ {"chapitre":"19afdb70","citations":[
+  {"texte":"Si je n'avais pas utilisé le système moi-même, je n'aurais pas pensé à cette fonctionnalité.","page":138,"axe":"03-ia-outils-pratique-prompting","theme":"Concevoir en s'exposant","portee":"Enfermé dehors, l'auteur ouvre sa porte en criant la formule que n'importe qui aurait pu crier. La faille n'apparaît qu'à celui qui vit avec son produit."},
+  {"texte":"Vos objets sont autant d'instruments dans un orchestre dont vous êtes le chef.","page":143,"axe":"03-ia-outils-pratique-prompting","theme":"Qui dirige","portee":"Image qui résume la position de l'auteur sur les objets connectés : ils exécutent, l'usager décide, et il reste libre de les désactiver."},
+  {"texte":"il faut absolument travailler, car la technologie ne remplace toujours pas le cerveau","page":155,"axe":"05-ia-education-pedagogie","theme":"Ce que l'assistant ne fera pas à votre place","portee":"Précision glissée au milieu d'une école entièrement assistée. L'outil corrige et guide, il ne dispense pas de l'effort."},
+  {"texte":"On redécouvre qu'il est plus simple de se concentrer en écrivant à la main que sur un clavier.","page":147,"axe":"05-ia-education-pedagogie","theme":"Le retour de la main","portee":"Dans une école imaginée entièrement numérique, l'auteur maintient l'écriture manuscrite pour la concentration qu'elle exige. Argument à opposer au tout-clavier."},
+  {"texte":"La technologie permet là encore de rétablir ce que nous avions perdu : le contact humain.","page":167,"axe":"06-ia-travail-management-metiers","theme":"Rendre du temps au métier","portee":"Le médecin déchargé des tâches administratives revient à ses patients. Renversement de l'argument habituel sur la déshumanisation."},
+  {"texte":"c'est la récurrence de nos comportements qui favorise l'humanisation des machines","page":168,"axe":"01-ia-fondamentaux-vulgarisation","theme":"D'où vient l'impression d'intelligence","portee":"La machine ne devine pas, elle observe des habitudes. Le capteur de matelas dit à la cafetière que la nuit fut mauvaise, et le café est corsé."}
+ ]}
+]

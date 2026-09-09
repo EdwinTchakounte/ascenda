@@ -1,0 +1,95 @@
+{
+ "document_id": "e7eca297-285f-41f4-b560-e6205b3a51cf",
+ "titre_normalise": "Du réflexe nerveux au membre artificiel. Travail de recherche lycéen, 2017",
+ "auteurs": [
+  "Léa Duchemin",
+  "Baptiste Duvieu",
+  "Paul-Antoine Desrues"
+ ],
+ "annee": 2017,
+ "type_ouvrage": "travail scolaire",
+ "niveau": "debutant",
+ "public_cible": "Élèves et enseignants du secondaire, animateurs de clubs scientifiques. Travail personnel encadré de classe de première, réalisé par trois élèves en 2017, soixante-seize pages, croisant sciences de la vie, physique et informatique.",
+ "these_centrale": "Le mouvement humain suit une chaîne complète : un stimulus capté par un récepteur sensoriel, un message nerveux transmis par des neurones, un centre qui traite, une commande motrice envoyée aux muscles. Le travail décrit cette chaîne, puis pose la question de sa reproduction artificielle, en examinant d'un côté les circuits électriques et les signaux, de l'autre les robots et les prothèses. La conclusion est prudente : on sait reproduire le réflexe tactile sur des prototypes, on ne sait pas reproduire l'ensemble.",
+ "idees_force": [
+  {
+   "titre": "L'arc réflexe, chaîne complète décrite pas à pas",
+   "explication": "Le stimulus, la piqûre ou la brûlure, est capté par la peau ; le message remonte par la voie afférente jusqu'à la moelle épinière ; le centre nerveux médullaire renvoie immédiatement une commande par la voie efférente ; les muscles retirent le membre. La réaction se fait sans intervention du cerveau, ce qui explique sa rapidité. C'est le meilleur exposé du document et le modèle mental le plus utile : une boucle de commande locale, sans passage par le centre de décision, est plus rapide qu'une boucle centrale. Le principe vaut en ingénierie autant qu'en biologie.",
+   "page": 44
+  },
+  {
+   "titre": "Une division du travail cérébral clairement présentée",
+   "explication": "Le cervelet assure la régulation, la synchronisation et la coordination des activités musculaires, mouvement volontaire, posture, équilibre. Le lobe frontal organise la contraction musculaire vers un but et intervient dans le langage et la planification. Le thalamus est le relais des informations sensorielles vers le cortex. L'hippocampe est lié à la mémoire des stimuli et au stockage des souvenirs. Le cortex préfrontal est le siège des fonctions cognitives supérieures, apprentissage et planification volontaire.",
+   "page": 6
+  },
+  {
+   "titre": "Les grandeurs électriques rappelées avec leurs formules",
+   "explication": "La tension, différence de potentiel entre deux points, en volts, mesurée au voltmètre branché en dérivation. La résistance, capacité d'un corps à s'opposer au passage du courant, en ohms. La conductivité, son inverse, en siemens. Le circuit en série, où l'intensité est la même partout, et le circuit en dérivation, reconnaissable à ses au moins deux boucles, où l'intensité sortant du générateur est la somme des intensités des branches. Ces rappels sont exacts et directement réutilisables en classe.",
+   "page": 36
+  },
+  {
+   "titre": "Prothèse, orthèse, exosquelette : trois choses différentes",
+   "explication": "La prothèse remplace ; l'orthèse et l'exosquelette accompagnent le mouvement d'un membre affaibli mais toujours présent. Parmi les prothèses, les endoprothèses remplacent un organe interne ou une articulation, hanche ou cœur ; les exoprothèses remplacent une partie du corps en contact avec l'extérieur. Cette clarification terminologique est rarement faite et elle est nécessaire dès qu'on parle de réparation ou d'augmentation du corps.",
+   "page": 55
+  },
+  {
+   "titre": "Le test de Turing est déjà contesté par des lycéens",
+   "explication": "Le travail note que personne n'y est parvenu et que le test est de plus en plus remis en cause, certains scientifiques estimant que même réussi il ne témoignerait pas d'une intelligence réelle. Qu'une classe de première formule cette réserve montre qu'elle est accessible et qu'elle devrait figurer dans tout enseignement d'introduction.",
+   "page": 17
+  },
+  {
+   "titre": "Les assistants vocaux de 2017, décrits par leur architecture",
+   "explication": "Le terminal transmet la requête et son contexte, localisation, date, heure ; le serveur l'interprète en isolant des mots clés et renvoie l'action correspondante s'il sait l'exécuter. Les actions possibles sont simples et prédéfinies, et l'utilisateur ne peut pas les enrichir. Cette description exacte de l'état de l'art d'alors permet de mesurer précisément ce qui a changé depuis, et ce qui n'a pas changé.",
+   "page": 21
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Arc réflexe",
+   "definition": "Boucle stimulus, récepteur, voie afférente, centre médullaire, voie efférente, effecteur, qui produit une réponse sans passer par le cerveau."
+  },
+  {
+   "terme": "Voie afférente et voie efférente",
+   "definition": "Chemin sensitif montant vers le centre nerveux, chemin moteur descendant vers les muscles."
+  },
+  {
+   "terme": "Système nerveux central",
+   "definition": "Encéphale et moelle épinière, lieu de traitement de l'information et d'émission des commandes motrices."
+  },
+  {
+   "terme": "Effecteur",
+   "definition": "Muscle ou glande qui exécute la réponse commandée par le centre nerveux."
+  },
+  {
+   "terme": "Synapse",
+   "definition": "Zone de contact entre neurones, où la fixation d'un neurotransmetteur déclenche un signal électrique par dépolarisation membranaire."
+  },
+  {
+   "terme": "Cellules gliales",
+   "definition": "Cellules plus nombreuses que les neurones, assurant leur bon fonctionnement, la myéline, l'étanchéité de la synapse et des fonctions immunitaires."
+  },
+  {
+   "terme": "Somatotopie",
+   "definition": "Organisation du cortex où chaque partie du corps a une représentation, de taille proportionnelle non à sa masse mais à sa finesse fonctionnelle."
+  },
+  {
+   "terme": "Circuit en série et en dérivation",
+   "definition": "Dans le premier l'intensité est identique partout ; dans le second, l'intensité issue du générateur est la somme de celles des branches."
+  },
+  {
+   "terme": "Prothèse, orthèse, exosquelette",
+   "definition": "Remplacer un membre, soutenir un membre affaibli, augmenter un membre valide. Trois intentions distinctes."
+  },
+  {
+   "terme": "Endoprothèse et exoprothèse",
+   "definition": "Remplacement d'un organe ou d'une articulation interne, remplacement d'une partie du corps en contact avec l'extérieur."
+  }
+ ],
+ "a_lire_si": "Vous enseignez au secondaire et cherchez un modèle de travail interdisciplinaire réalisable par des élèves, ou vous préparez une séquence croisant biologie, électricité et robotique. La valeur du document tient autant à ce qu'il montre, une démarche complète menée par des lycéens, du problème à la conclusion prudente, qu'à ce qu'il dit. Pour un projet éducatif africain, c'est un format transposable : il ne demande que des sources accessibles et de la méthode.",
+ "a_eviter_si": "Vous cherchez une source fiable. C'est un travail d'élèves, non relu par un spécialiste : il contient des fautes d'orthographe et de syntaxe, quelques approximations anatomiques, et plusieurs illustrations sont créditées à un moteur de recherche plutôt qu'à leur auteur. La partie sur l'intelligence artificielle est très en retrait des deux autres et son état de l'art s'arrête en 2017.",
+ "prerequis": [],
+ "controverses": [
+  "Le document affirme que reproduire les réflexes de protection sur des robots humanoïdes est réalisable et proche. Huit ans plus tard, cela reste au stade du prototype, ce qui illustre le biais d'optimisme dont même un travail sérieux n'est pas exempt."
+ ],
+ "confiance": 0.55
+}

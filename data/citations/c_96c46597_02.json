@@ -1,0 +1,63 @@
+[
+ {"chapitre":"94c9d66f","citations":[
+  {"texte":"Minsky, en particulier, considérait que l'approche neurobiologique inspirée de Rosenblatt, non seulement était une approche sans lendemain, mais en outre détournait de l'argent qui aurait été mieux utilisé en finançant des recherches sur l'IA symbolique","page":32,"axe":"04-ia-societe-ethique-philosophie","theme":"Une querelle d'écoles","portee":"La voie qui triomphera cinquante ans plus tard fut d'abord étouffée par ceux qui contrôlaient les financements."}]},
+
+ {"chapitre":"9357c8ce","citations":[
+  {"texte":"Ces spéculations négatives expliquent en partie pourquoi le financement de la recherche sur les réseaux neuronaux s'est tari à la fin des années 1960","page":33,"axe":"04-ia-societe-ethique-philosophie","theme":"Le poids d'une opinion","portee":"Une simple conjecture pessimiste, énoncée par des autorités reconnues, a suffi à geler un champ de recherche entier."}]},
+
+ {"chapitre":"8a6d0578","citations":[
+  {"texte":"Ce fut l'un des premiers exemples d'un cycle répétitif de bulles et de krachs dans le domaine de l'IA.","page":34,"axe":"10-economie-entrepreneuriat-finance","theme":"Bulles et krachs","portee":"Le domaine alterne depuis soixante ans promesses excessives et retraits brutaux de financement, avec régularité."},
+  {"texte":"Marvin Minsky souligna qu'en fait, la recherche en IA a découvert un paradoxe : « Les choses faciles sont difficiles. »","page":34,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Le paradoxe de Minsky","portee":"Ce qu'un enfant fait sans effort résiste à la machine, alors que le calcul savant lui cède facilement."},
+  {"texte":"En général, nous avons moins conscience de ce que notre esprit fait le mieux.","page":34,"axe":"09-developpement-personnel-influence","theme":"L'aveuglement à ses forces","portee":"Nos compétences les plus profondes sont justement celles que nous n'avons jamais eu à expliciter."},
+  {"texte":"La tentative de créer une intelligence artificielle nous a au moins aidés à percevoir à quel point notre esprit est complexe et subtil.","page":34,"axe":"04-ia-societe-ethique-philosophie","theme":"Le bénéfice de l'échec","portee":"Même manqué, le projet a produit une connaissance : la mesure de ce que notre propre esprit accomplit."}]},
+
+ {"chapitre":"5752c8fb","citations":[
+  {"texte":"La « profondeur » d'un réseau est simplement son nombre de couches cachées.","page":37,"axe":"01-ia-fondamentaux-vulgarisation","theme":"D'où vient le mot profond","portee":"Le mot qui domine aujourd'hui le vocabulaire de l'IA a une définition d'une simplicité désarmante."},
+  {"texte":"Un nom plus heureux aurait peut-être été unité intérieure.","page":37,"axe":"05-ia-education-pedagogie","theme":"Le poids des mots techniques","portee":"Un vocabulaire mal choisi rend obscur ce qui est simple, obstacle constant dans l'enseignement des sciences."}]},
+
+ {"chapitre":"cb093954","citations":[
+  {"texte":"L'apprentissage dans les réseaux neuronaux consiste simplement à modifier progressivement les poids des connexions de sorte que chaque erreur de sortie soit le plus proche de 0 pour chacun des items d'apprentissage.","page":39,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce qu'apprendre veut dire","portee":"Toute la puissance des systèmes actuels repose sur cette opération élémentaire, répétée des milliards de fois."},
+  {"texte":"Mais qu'a exactement appris le réseau neuronal pour dépasser de si loin la performance du perceptron ? Je n'en sais rien.","page":39,"axe":"02-ia-technique-academique","theme":"L'honnêteté du chercheur","portee":"Une spécialiste du domaine reconnaît ignorer ce que son propre système a appris, aveu rare et instructif."},
+  {"texte":"en général, il n'est pas du tout facile de comprendre comment ces réseaux prennent leurs décisions","page":39,"axe":"04-ia-societe-ethique-philosophie","theme":"Des décisions opaques","portee":"Cette opacité devient un problème politique dès que ces systèmes décident du sort de personnes réelles."}]},
+
+ {"chapitre":"a41de3d0","citations":[
+  {"texte":"les chercheurs découvrirent à quel point les règles édictées par les experts humains dépendaient d'une connaissance subconsciente – d'une sorte de sens commun – afin d'agir intelligemment","page":40,"axe":"09-developpement-personnel-influence","theme":"Le savoir tacite de l'expert","portee":"Un expert ne peut pas dire tout ce qu'il sait : l'essentiel de sa compétence reste sous le seuil de la parole."}]},
+
+ {"chapitre":"a89861f0","citations":[
+  {"texte":"Il vous serait difficile d'écrire des règles pour identifier des chiffres manuscrits, attraper une balle de base-ball, ou reconnaître la voix de votre mère ; tout cela semble se faire automatiquement, sans pensée consciente.","page":41,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce qui échappe aux règles","portee":"Trois exemples ordinaires qui montrent pourquoi certaines compétences ne peuvent être transmises par instruction."}]},
+
+ {"chapitre":"d0505953","citations":[
+  {"texte":"Si quelques tentatives ont cherché à construire des systèmes hybrides intégrant à la fois des méthodes subsymboliques et symboliques, aucune ne s'est jusqu'à présent soldée par un véritable succès.","page":42,"axe":"02-ia-technique-academique","theme":"L'hybride manquant","portee":"Réunir raisonnement et perception dans un même système reste le problème ouvert le plus important du domaine."}]},
+
+ {"chapitre":"6939fdcf","citations":[
+  {"texte":"Cela semble être une réponse courante lorsque les ordinateurs surpassent les humains dans un domaine particulier ; nous concluons que le domaine en question ne fait pas véritablement appel à l'intelligence.","page":44,"axe":"04-ia-societe-ethique-philosophie","theme":"La cible qui recule","portee":"Nous redéfinissons l'intelligence à chaque défaite, ce qui rend la question impossible à trancher."},
+  {"texte":"Comme l'a regretté John McCarthy, « dès qu'elle fonctionne, plus personne ne l'appelle IA »","page":44,"axe":"01-ia-fondamentaux-vulgarisation","theme":"L'effet IA","portee":"Formule célèbre du fondateur du terme : le succès d'une technique la fait sortir du domaine qui l'a produite."}]},
+
+ {"chapitre":"4dab4c80","citations":[
+  {"texte":"AlphaGo est peut-être le meilleur joueur de go du monde, mais il ne sait rien faire d'autre","page":45,"axe":"01-ia-fondamentaux-vulgarisation","theme":"L'étroitesse des systèmes","portee":"La performance spectaculaire d'un système ne dit rien de ce qu'il saurait faire hors de son unique tâche."},
+  {"texte":"les plans de développement des 10 000 prochaines start-up sont faciles à prévoir : prenez X et ajouter IA.","page":45,"axe":"10-economie-entrepreneuriat-finance","theme":"La recette des start-up","portee":"Formule ironique qui décrit exactement la vague d'entreprises créées autour d'un mot plutôt que d'un problème."}]},
+
+ {"chapitre":"8f557398","citations":[
+  {"texte":"Une accumulation d'intelligences étroites ne mènera jamais à une intelligence générale. L'intelligence générale dépend non pas du nombre d'aptitudes, mais de l'intégration de ces aptitudes.","page":46,"axe":"04-ia-societe-ethique-philosophie","theme":"Additionner ne suffit pas","portee":"Ce n'est pas le nombre de compétences qui fait l'intelligence, c'est leur articulation en un tout cohérent."}]},
+
+ {"chapitre":"cda8253b","citations":[
+  {"texte":"si un ordinateur a un comportement suffisamment humain pour ne pouvoir être distingué d'un humain, excepté par son apparence physique ou par sa voix (ou par son odeur, son ressenti, etc.), pourquoi ne devrions-nous pas considérer qu'il pense réellement ?","page":49,"axe":"04-ia-societe-ethique-philosophie","theme":"L'argument de Turing","portee":"Turing déplace la question de la nature de la machine vers l'observation de son comportement."},
+  {"texte":"Le résultat semblait en dire plus sur les juges et le test lui-même que sur les machines.","page":51,"axe":"04-ia-societe-ethique-philosophie","theme":"Ce que mesure vraiment un test","portee":"Un test peut révéler les limites de l'évaluateur bien plus que les capacités de ce qu'il prétend évaluer."},
+  {"texte":"ces bots appuient sur la tendance très humaine à l'anthropomorphisation","page":51,"axe":"04-ia-societe-ethique-philosophie","theme":"Prêter un esprit","portee":"Notre penchant à voir de l'intention partout est exploité par les systèmes conversationnels, y compris malveillants."}]},
+
+ {"chapitre":"82932d0f","citations":[
+  {"texte":"C'est une période future pendant laquelle le rythme du changement technologique sera si rapide, son impact si important, que la vie humaine en sera transformée de façon irréversible.","page":52,"axe":"04-ia-societe-ethique-philosophie","theme":"Définir la Singularité","portee":"La définition de Kurzweil lui-même, à connaître avant de discuter d'une notion souvent invoquée de seconde main."}]},
+
+ {"chapitre":"3be70359","citations":[
+  {"texte":"Quelle que soit l'échelle du graphe, cette fonction possède un point caractéristique où la courbe semble passer d'une croissance lente à une croissance super-rapide.","page":55,"axe":"11-sciences-environnement","theme":"L'illusion du décollage","portee":"Une exponentielle paraît toujours plate puis brutale, quel que soit l'endroit où l'on regarde la courbe."}]},
+
+ {"chapitre":"ede2f84d","citations":[
+  {"texte":"la loi de Moore dit que le nombre de composants que l'on peut mettre sur une puce informatique double environ tous les un ou deux ans","page":56,"axe":"11-sciences-environnement","theme":"La loi de Moore","portee":"Une observation empirique de 1965 devenue le socle de toutes les extrapolations sur l'avenir technologique."}]},
+
+ {"chapitre":"a2f2c8db","citations":[
+  {"texte":"Après tout, un nouveau-né possède un cerveau, mais n'en a pas pour autant ce que nous appelons une intelligence de niveau humain.","page":57,"axe":"05-ia-education-pedagogie","theme":"Le cerveau ne suffit pas","portee":"Objection décisive : disposer de l'organe ne donne pas la compétence, il faut encore toute une éducation."},
+  {"texte":"La complexité [du cerveau] provient majoritairement de ses propres interactions avec un monde complexe.","page":57,"axe":"05-ia-education-pedagogie","theme":"L'esprit vient du monde","portee":"Ce n'est pas la machine qui fait l'intelligence mais son commerce prolongé avec un environnement riche."}]},
+
+ {"chapitre":"3ea48044","citations":[
+  {"texte":"La pensée de Kurzweil a particulièrement influencé l'industrie technologique, dont les acteurs voient souvent dans le progrès technologique exponentiel le moyen de résoudre tous les problèmes de la société.","page":58,"axe":"04-ia-societe-ethique-philosophie","theme":"Une croyance d'industrie","portee":"Une thèse contestée par les chercheurs peut devenir doctrine chez ceux qui financent et déploient les technologies."}]}
+]

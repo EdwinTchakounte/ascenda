@@ -1,0 +1,57 @@
+[
+ {"chapitre":"b459d936","citations":[
+  {"texte":"au-delà d'un certain niveau de finesse, ce qui fonde l'acceptabilité d'une phrase devient difficilement séparable d'un contexte, et repose la plupart du temps sur des considérations sémantiques ou pragmatiques","page":292,"axe":"02-ia-technique-academique","theme":"Limites de la syntaxe","portee":"On ne peut décider seul de la grammaire si une phrase est acceptable : le sens et la situation s'en mêlent."},
+  {"texte":"Ils ont tendance à passer directement de régularités dans les occurrences de symboles à des usages qui varient en fonction du réseau des usagers.","page":292,"axe":"02-ia-technique-academique","theme":"Du symbole à l'usage","portee":"Les modèles fondés sur les corpus court-circuitent la sémantique classique et décrivent des usages plutôt que des vérités."}]},
+
+ {"chapitre":"a94d6b33","citations":[
+  {"texte":"Nommons cela le problème de l'adaptabilité dynamique d'une capacité, ou plus brièvement, d'une capacité dynamique","page":293,"axe":"04-ia-societe-ethique-philosophie","theme":"Capacité dynamique","portee":"Nom donné au vrai défi contemporain : disposer d'opérations capables de modifier leurs propres fonctionnalités."},
+  {"texte":"Ces déviations constituent les éléments dont on avait cru pouvoir ne pas tenir compte (pour ne pas avoir à tout calculer), mais qui se sont révélés pertinents, et qu'il faut savoir réintégrer","page":293,"axe":"09-developpement-personnel-influence","theme":"Ce qu'on avait écarté","portee":"Simplifier est nécessaire pour agir, mais il faut savoir reprendre ce qu'on avait négligé quand cela se rappelle à nous."}]},
+
+ {"chapitre":"231c1cb5","citations":[
+  {"texte":"Ils n'indiquent pas comment trouver des processus opératoires qui les satisfassent.","page":294,"axe":"04-ia-societe-ethique-philosophie","theme":"Idéal et opératoire","portee":"Une exigence bien formulée ne dit pas comment l'atteindre, écart qui sépare la philosophie de l'ingénierie."}]},
+
+ {"chapitre":"9e70d267","citations":[
+  {"texte":"être conscient, c'est être capable d'intégrer des informations non catégorisées et particularisantes de pair avec des informations catégorisées et plus génériques","page":295,"axe":"04-ia-societe-ethique-philosophie","theme":"Définir la conscience","portee":"Tentative de définition opératoire de la conscience, tenant ensemble le singulier vécu et le général compris."},
+  {"texte":"Mais les humains eux-mêmes, quand on bouleverse trop leur environnement, donnent des réponses qui peuvent ne pas être optimalement pertinentes.","page":295,"axe":"04-ia-societe-ethique-philosophie","theme":"L'humain aussi déraille","portee":"On exige souvent des machines une robustesse dont nous-mêmes sommes incapables hors de nos repères."}]},
+
+ {"chapitre":"df6e3b80","citations":[
+  {"texte":"Or, la question ne semble pas tranchée : toute interaction ne simule pas pertinemment une autre interaction, qui peut être d'une autre nature.","page":296,"axe":"04-ia-societe-ethique-philosophie","theme":"Simuler n'est pas reproduire","portee":"Qu'un système interagisse ne prouve pas qu'il interagisse comme nous, mise en garde contre une analogie facile."},
+  {"texte":"On fait en réalité souvent l'hypothèse un peu rapide qu'il suffit qu'un système computationnel soit évolutif et fasse preuve d'interactivité","page":296,"axe":"04-ia-societe-ethique-philosophie","theme":"Hypothèse trop rapide","portee":"L'évolutivité et l'interactivité sont devenues des mots rassurants qui dispensent trop souvent de démonstration."}]},
+
+ {"chapitre":"94c269f8","citations":[
+  {"texte":"La sensibilité au contexte se manifestera alors d'abord par une panne de généricité, qui conduira à une recherche en particularité, laquelle redonnera, si tout se passe bien, une généricité réajustée, et donc une adaptation à de nouvelles normalités.","page":297,"axe":"09-developpement-personnel-influence","theme":"L'échec qui fait progresser","portee":"C'est quand la règle générale ne marche plus qu'on retourne au détail, et qu'on en revient avec une règle meilleure."}]},
+
+ {"chapitre":"1ed622a0","citations":[
+  {"texte":"à aucune étape les catégories utilisées ne sont censées résoudre le problème, mais leur succession et les transformations qu'elle implique en donnent des solutions temporaires - toujours ouvertes à des révisions","page":298,"axe":"09-developpement-personnel-influence","theme":"Solutions temporaires","portee":"Aucune grille de lecture ne clôt un problème : c'est leur succession révisable qui produit des réponses utilisables."}]},
+
+ {"chapitre":"f03cebe4","citations":[
+  {"texte":"Mais les développements de l'IA nous suggèrent que l'intelligence humaine elle-même ne dispose pas de toutes ces vertus à la fois, qu'elle doit parfois abandonner les unes pour disposer des autres, et réciproquement, ce qui garde sens seulement dans une dynamique.","page":299,"axe":"04-ia-societe-ethique-philosophie","theme":"Vertus non simultanées","portee":"L'intelligence n'est pas une somme de qualités possédées ensemble mais un arbitrage permanent entre elles."},
+  {"texte":"Certes elle utilise la stratégie du bootstrapping - utiliser ce qu'on sait déjà faire pour s'améliorer.","page":299,"axe":"09-developpement-personnel-influence","theme":"Partir de ce qu'on sait","portee":"On progresse en s'appuyant sur les compétences déjà acquises, non en attendant des moyens que l'on n'a pas."},
+  {"texte":"Mais elle se révèle aussi devoir compter sur ce qui lui résiste et lui pose problème, sur ce qui lui permet de repérer en quoi elle était défaillante","page":299,"axe":"09-developpement-personnel-influence","theme":"La valeur de l'obstacle","portee":"Ce qui résiste enseigne davantage que ce qui réussit, car seul l'échec montre où était la défaillance."}]},
+
+ {"chapitre":"7c0585bf","citations":[
+  {"texte":"L'intelligence est une caractéristique des organismes vivants supérieurs, et tout spécialement humains, dont l'étude est en principe du ressort de la psychologie.","page":301,"axe":"01-ia-fondamentaux-vulgarisation","theme":"À qui appartient l'intelligence","portee":"Rappel utile : l'intelligence était un objet de psychologie avant de devenir un objet d'ingénierie."}]},
+
+ {"chapitre":"da72d910","citations":[
+  {"texte":"En exploitant le sens commun, en usant d'introspection, et en sachant tirer profit de leurs échecs, ce sont les chercheurs en IA qui ont repéré les faits ou phénomènes qu'il est indispensable de prendre en compte","page":302,"axe":"04-ia-societe-ethique-philosophie","theme":"Découvrir par l'échec","portee":"Une discipline apprend souvent le plus des points où ses constructions se sont effondrées."}]},
+
+ {"chapitre":"d9f132ac","citations":[
+  {"texte":"avant de conclure à l'irrationalité des raisonneurs sous prétexte qu'ils ne se conforment pas aux prescriptions de la logique classique, il faut s'assurer que la logique classique constitue une norme appropriée, et non point trop étroite","page":303,"axe":"09-developpement-personnel-influence","theme":"Vérifier la norme","portee":"Avant de déclarer quelqu'un dans l'erreur, il faut examiner l'étalon avec lequel on le mesure."},
+  {"texte":"les spécialistes de l'IA ne peuvent toujours se satisfaire de leur intuition pour juger du « bon » comportement d'un modèle formel","page":303,"axe":"02-ia-technique-academique","theme":"Au-delà de l'intuition","portee":"Un modèle jugé correct parce qu'il paraît correct à son auteur reste sans validation extérieure."}]},
+
+ {"chapitre":"f5129795","citations":[
+  {"texte":"La théorie formelle et les résultats expérimentaux se procurent une garantie mutuelle de normativité, et le comportement humain peut se voir qualifié de rationnel par pure circularité.","page":304,"axe":"04-ia-societe-ethique-philosophie","theme":"Circularité de la preuve","portee":"Deux disciplines qui se valident l'une l'autre peuvent produire une certitude qui ne repose sur rien d'extérieur."}]},
+
+ {"chapitre":"7d9236cb","citations":[
+  {"texte":"Le choix du calcul probabiliste (bayésien ou non) comme modèle computationnel du raisonnement humain ne fait toutefois pas l'unanimité en psychologie","page":305,"axe":"04-ia-societe-ethique-philosophie","theme":"Le probabiliste contesté","portee":"Le cadre dominant pour modéliser l'incertitude reste un choix discuté, non une évidence démontrée."}]},
+
+ {"chapitre":"974bdc60","citations":[
+  {"texte":"Si les raisonneurs humains suivent un principe de changement minimal, c'est celui d'éviter de réviser les croyances qu'ils trouvent initialement les plus crédibles.","page":306,"axe":"09-developpement-personnel-influence","theme":"Ce qu'on refuse d'abandonner","portee":"Face à une information contraire, nous sacrifions d'abord ce à quoi nous tenions le moins, non ce qui est le plus faux."},
+  {"texte":"la révision des croyances chez les raisonneurs humains est une affaire de modification dans la force d'une croyance, plutôt que de rétractation pure et simple de cette croyance","page":306,"axe":"09-developpement-personnel-influence","theme":"Nuancer plutôt qu'abandonner","portee":"Changer d'avis se fait rarement d'un coup : on affaiblit une conviction bien avant d'y renoncer."}]},
+
+ {"chapitre":"e6368f03","citations":[
+  {"texte":"les raisonneurs perdent leur confiance en une conclusion x lorsqu'elle est attaquée par un argument y, mais la retrouvent lorsque l'argument y est lui-même attaqué par un argument z , sans toutefois retrouver leur niveau de confiance initial","page":307,"axe":"09-developpement-personnel-influence","theme":"La trace d'une objection","portee":"Une objection réfutée laisse une marque : la confiance ébranlée ne revient jamais tout à fait à son point de départ."}]},
+
+ {"chapitre":"24913256","citations":[
+  {"texte":"Leur rendez-vous, pourtant, a longtemps été manqué, et le dialogue entre les deux disciplines, pourrait-on penser, en est encore à ses balbutiements.","page":308,"axe":"04-ia-societe-ethique-philosophie","theme":"Un rendez-vous manqué","portee":"Deux disciplines qui étudient le même objet peuvent s'ignorer durablement faute d'un langage partagé."}]}
+]

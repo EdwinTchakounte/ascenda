@@ -1,0 +1,607 @@
+[
+ {
+  "chapitre": "b4cdd69a",
+  "citations": [
+   {
+    "texte": "Cette croissance a entraîné une augmentation substantielle des opportunités d'emploi, le secteur enregistrant un taux de croissance annuel de l'emploi de 43 % (avant COVID-19), en particulier dans la rédaction de contenu et l'optimisation du référencement.",
+    "page": 100,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un secteur qui embauche",
+    "portee": "Metier accessible sans capital ni diplome long, dont la demande croissait fortement avant l'arrivee des outils generatifs."
+   },
+   {
+    "texte": "Lorsqu'il est confronté à un sujet nouveau et inconnu, ChatGPT peut fournir un plan structuré des principales sections à couvrir, en s'appuyant sur les conversations précédentes avec l'utilisateur lors de la même session.",
+    "page": 100,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Commencer par le plan",
+    "portee": "Usage le plus sur de l'outil : lui demander la structure avant le texte."
+   },
+   {
+    "texte": "Fournir des clarifications supplémentaires peut grandement améliorer la qualité des sorties de ChatGPT, en veillant à ce qu'elles soient plus ciblées et précises.",
+    "page": 102,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Preciser pour obtenir",
+    "portee": "Regle pratique la plus rentable : la qualite de la reponse suit la precision de la demande."
+   },
+   {
+    "texte": "En produisant constamment du contenu précieux, les individus peuvent se positionner en tant qu'autorité de confiance et réputée dans leur domaine",
+    "page": 102,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'autorite se construit",
+    "portee": "L'autorite dans un domaine ne se declare pas, elle se depose par accumulation de contenu utile."
+   }
+  ]
+ },
+ {
+  "chapitre": "28ed7b07",
+  "citations": [
+   {
+    "texte": "chaque modèle est censé être conçu en fonction des besoins spécifiques tels que l'urgence de la cause, la personnalisation, le mode d'émotion, les segmentations selon les données démographiques.",
+    "page": 104,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Quatre variables d'un message",
+    "portee": "Grille utile pour tout message commercial : urgence, personnalisation, emotion, segment."
+   },
+   {
+    "texte": "Vous pouvez rédiger un premier brouillon complet de votre e-mail après avoir saisi votre demande en moins de dix secondes, ce qui vous fait gagner (ou à votre personnel marketing) des heures.",
+    "page": 104,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le brouillon en dix secondes",
+    "portee": "Le gain porte sur le premier jet, pas sur la version finale : c'est la ou l'outil vaut son prix."
+   }
+  ]
+ },
+ {
+  "chapitre": "75c90c21",
+  "citations": [
+   {
+    "texte": "ChatGPT a la capacité de produire de nombreuses copies du même e-mail, chacune ayant un sujet ou un contenu légèrement différent.",
+    "page": 105,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Tester plusieurs versions",
+    "portee": "Base du test comparatif : produire des variantes coute desormais presque rien, il reste a les mesurer."
+   },
+   {
+    "texte": "Un autre avantage majeur de ChatGPT est qu'il peut aider avec des contenus régionaux car il a été formé avec des ensembles de données multilingues.",
+    "page": 105,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Le contenu regional",
+    "portee": "Promesse a verifier langue par langue : le multilinguisme annonce n'est pas egal pour toutes les langues."
+   }
+  ]
+ },
+ {
+  "chapitre": "b02046e8",
+  "citations": [
+   {
+    "texte": "Se présenter en tant qu'autorité dans son domaine exige une planification minutieuse du contenu.",
+    "page": 106,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Planifier pour durer",
+    "portee": "Ce n'est pas la quantite publiee qui fait l'autorite mais la constance d'un plan."
+   }
+  ]
+ },
+ {
+  "chapitre": "7a01ec79",
+  "citations": [
+   {
+    "texte": "L'e-learning est un terme générique désignant toutes les formes d'apprentissage facilitées par le biais de dispositifs et de plateformes numériques.",
+    "page": 108,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Definir l'apprentissage en ligne",
+    "portee": "Definition large qui recouvre aussi bien un cours filme qu'un echange avec un assistant conversationnel."
+   },
+   {
+    "texte": "Il est devenu une partie intégrante des systèmes éducatifs du monde entier, offrant des opportunités d'apprentissage flexibles et accessibles aux étudiants de tous âges et de tous horizons.",
+    "page": 108,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Accessible a tous les ages",
+    "portee": "Argument decisif pour qui a quitte l'ecole tot : l'apprentissage cesse d'etre lie a un age et a un lieu."
+   },
+   {
+    "texte": "Le NLP permet aux systèmes d'e-learning de comprendre et de traiter le langage humain, ce qui facilite l'interaction des étudiants avec la plate-forme et la réception de commentaires.",
+    "page": 109,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Interagir en langue naturelle",
+    "portee": "Ce qui rend une plateforme utilisable sans formation prealable : on lui parle comme a une personne."
+   },
+   {
+    "texte": "les algorithmes de NLP peuvent analyser les interactions des étudiants avec la plate-forme d'e-learning pour identifier les domaines dans lesquels",
+    "page": 109,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Reperer les lacunes",
+    "portee": "Promesse d'un suivi individuel la ou un enseignant seul ne peut pas suivre chaque eleve."
+   }
+  ]
+ },
+ {
+  "chapitre": "0cb44a11",
+  "citations": [
+   {
+    "texte": "Cette fonctionnalité s'avère avantageuse pour les étudiants qui peuvent rencontrer des difficultés avec une matière particulière ou qui ont besoin de ressources supplémentaires pour compléter leurs études.",
+    "page": 110,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le soutien qui manquait",
+    "portee": "Pour un eleve sans repetiteur ni bibliotheque, c'est la premiere aide disponible a toute heure."
+   },
+   {
+    "texte": "ChatGPT peut créer des quiz et des questions qui évaluent les connaissances des étudiants sur un sujet donné, que les enseignants peuvent utiliser pour identifier les domaines où les élèves ont besoin d'un soutien supplémentaire.",
+    "page": 110,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Evaluer pour orienter",
+    "portee": "Le quiz n'est pas une sanction mais un instrument de diagnostic, c'est ainsi qu'il faut le construire."
+   },
+   {
+    "texte": "L'IA générative peut réellement effectuer la synthèse de vastes matériaux d'étude et de documents de recherche complexes de manière concise et brève.",
+    "page": 110,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Resumer pour entrer dans un sujet",
+    "portee": "Usage utile pour aborder un domaine inconnu, a condition de verifier ensuite sur la source."
+   }
+  ]
+ },
+ {
+  "chapitre": "8d6a18f0",
+  "citations": [
+   {
+    "texte": "En créant des informations adaptées aux besoins, préférences et préférences d'apprentissage des utilisateurs, ChatGPT peut aider à personnaliser les expériences d'apprentissage en ligne pour des utilisateurs spécifiques.",
+    "page": 111,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Un cours par eleve",
+    "portee": "Ce qu'aucun systeme scolaire de masse n'a jamais pu offrir : un parcours ajuste a chacun."
+   },
+   {
+    "texte": "Cela peut aider les apprenants à évaluer leurs progrès, à identifier les domaines dans lesquels ils doivent s'améliorer et à recevoir des commentaires instantanés sur leurs performances.",
+    "page": 111,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le retour immediat",
+    "portee": "C'est l'immediatete du retour, plus que sa finesse, qui fait progresser un apprenant seul."
+   }
+  ]
+ },
+ {
+  "chapitre": "b75784a9",
+  "citations": [
+   {
+    "texte": "ChatGPT peut aider à traduire les supports d'apprentissage en ligne dans de nombreuses langues, les rendant ainsi disponibles pour les étudiants du monde entier.",
+    "page": 112,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Traduire les supports",
+    "portee": "Levier direct pour les systemes educatifs dont la langue d'enseignement n'est pas celle des ressources disponibles."
+   },
+   {
+    "texte": "Elle permet également aux apprenants d'interagir directement avec le modèle pour améliorer leurs connaissances et leurs compétences.",
+    "page": 112,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'apprenant sans intermediaire",
+    "portee": "L'acces au savoir cesse de passer par une institution : c'est un deplacement de pouvoir autant qu'un progres technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "ee460753",
+  "citations": [
+   {
+    "texte": "Les entreprises de formation doivent collaborer avec un fournisseur de solutions qui propose des plateformes d'apprentissage intégrées, alimentées par l'IA générative et le GPT, afin de réaliser pleinement le potentiel de ces technologies.",
+    "page": 113,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Passer par un fournisseur",
+    "portee": "Recommandation a lire avec prudence : elle deplace la dependance des institutions vers des prestataires techniques."
+   }
+  ]
+ },
+ {
+  "chapitre": "96eb578e",
+  "citations": [
+   {
+    "texte": "il existe également des préoccupations concernant l'utilisation de l'IA dans le domaine du divertissement, notamment des problèmes liés à la protection des données, aux biais et à la perte potentielle de la créativité et du contrôle humains.",
+    "page": 114,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Perdre le controle creatif",
+    "portee": "Trois risques nommes ensemble : les donnees, les biais, et l'abandon de la decision creative."
+   },
+   {
+    "texte": "il est important de prendre en compte ces implications éthiques et de veiller à ce que l'IA soit utilisée de manière à bénéficier à la fois aux créateurs et au public.",
+    "page": 114,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les createurs et le public",
+    "portee": "Deux beneficiaires a distinguer : ce qui sert le public peut desservir celui qui cree."
+   }
+  ]
+ },
+ {
+  "chapitre": "8edf7519",
+  "citations": [
+   {
+    "texte": "Selon une analyse différente de PwC, la technologie de l'IA pourrait stimuler l'économie mondiale jusqu'à 15,7 billions de dollars d'ici 2030, le secteur des médias et du divertissement devant en profiter le plus.",
+    "page": 115,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'ordre de grandeur annonce",
+    "portee": "Chiffre a manier avec precaution : c'est une projection de cabinet, non une mesure."
+   },
+   {
+    "texte": "Une enquête de Salesforce a révélé que 61% des consommateurs s'attendent à ce que les entreprises proposent des expériences personnalisées en fonction de leurs préférences",
+    "page": 116,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'attente de personnalisation",
+    "portee": "La personnalisation est devenue une attente par defaut, ce qui redefinit le service minimal."
+   }
+  ]
+ },
+ {
+  "chapitre": "7cad0af5",
+  "citations": [
+   {
+    "texte": "les chatbots peuvent améliorer l'expérience de jeu globale en créant un environnement immersif qui donne l'impression de jouer contre un adversaire humain plutôt qu'une machine.",
+    "page": 117,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'illusion de l'adversaire humain",
+    "portee": "L'immersion recherchee repose sur une confusion volontaire entre la machine et la personne."
+   },
+   {
+    "texte": "Les normes du dialogue de jeu peuvent être enseignées au modèle à l'aide d'un ensemble de données de scripts de jeu déjà écrits, et le modèle peut ensuite utiliser ces informations pour générer de nouveaux dialogues ramifiés",
+    "page": 117,
+    "axe": "08-litterature-romans",
+    "theme": "Ecrire a partir de l'existant",
+    "portee": "Le modele ne cree pas depuis rien : il recombine des formes apprises dans un corpus d'oeuvres."
+   }
+  ]
+ },
+ {
+  "chapitre": "15939405",
+  "citations": [
+   {
+    "texte": "Les chatbots musicaux alimentés par ChatGPT peuvent analyser l'historique d'écoute des utilisateurs, ainsi que des facteurs tels que l'âge, le genre et la localisation de l'utilisateur, afin de générer des recommandations personnalisées pour les utilisateurs.",
+    "page": 117,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que la recommandation utilise",
+    "portee": "Age, genre et localisation entrent dans le calcul : la recommandation est aussi un profilage."
+   },
+   {
+    "texte": "ChatGPT peut être utilisé pour automatiser la production de sous-titres, de doublages et de traductions, améliorant ainsi l'accessibilité du contenu de divertissement pour les audiences mondiales.",
+    "page": 118,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Doubler et sous-titrer",
+    "portee": "Piste concrete pour diffuser une oeuvre africaine hors de sa zone linguistique a faible cout."
+   },
+   {
+    "texte": "Une collection de scripts réussis peut être utilisée pour entraîner le modèle, qui peut ensuite utiliser ces informations pour créer de nouveaux rebondissements d'histoire, des personnages et des décors.",
+    "page": 118,
+    "axe": "08-litterature-romans",
+    "theme": "Apprendre des scenarios qui ont marche",
+    "portee": "Entrainer sur ce qui a reussi produit ce qui ressemble a ce qui a reussi : la question de l'originalite reste entiere."
+   }
+  ]
+ },
+ {
+  "chapitre": "15bf4b6c",
+  "citations": [
+   {
+    "texte": "En utilisant un ensemble de données de chansons et de poèmes existants pour entraîner le modèle, ChatGPT peut également produire de la poésie ou des paroles de chansons.",
+    "page": 119,
+    "axe": "08-litterature-romans",
+    "theme": "La poesie generee",
+    "portee": "Question ouverte pour tout auteur : ce qui est produit a partir d'un corpus appartient a qui."
+   },
+   {
+    "texte": "Le domaine du divertissement dépasse les limites du cinéma, des médias et de la musique, englobant diverses activités de loisirs et de passe-temps.",
+    "page": 119,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Elargir le divertissement",
+    "portee": "Definition extensive qui prepare le glissement vers le conseil personnel et le bien-etre."
+   }
+  ]
+ },
+ {
+  "chapitre": "73df83b6",
+  "citations": [
+   {
+    "texte": "ChatGPT peut engager des conversations avec les utilisateurs, offrant un environnement de soutien et sans jugement pour discuter de problèmes de santé mentale.",
+    "page": 120,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un interlocuteur sans jugement",
+    "portee": "Ce que beaucoup cherchent et ne trouvent pas : parler sans etre juge. La machine y repond, sans comprendre."
+   },
+   {
+    "texte": "ChatGPT peut servir de compagnon virtuel, fournissant un soutien affectif et une compagnie à ceux qui ressentent des sentiments de solitude ou d'isolement.",
+    "page": 120,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le compagnon virtuel",
+    "portee": "Reponse a la solitude qui risque de l'entretenir : la compagnie d'une machine ne cree pas de lien social."
+   },
+   {
+    "texte": "Mais certainement, les auteurs ne recommandent pas aux gens de trop compter sur ChatGPT par rapport à la science médicale. Il peut ne pas être en mesure de diagnostiquer le bon problème de santé et il est toujours recommandé de consulter un spécialiste de la santé mentale",
+    "page": 120,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La limite posee par les auteurs",
+    "portee": "Mise en garde explicite, a retenir avant tout usage de ces outils pour la sante."
+   }
+  ]
+ },
+ {
+  "chapitre": "879dce72",
+  "citations": [
+   {
+    "texte": "ChatGPT a la capacité de comprendre et de répondre aux requêtes des utilisateurs, de générer des recommandations de contenu personnalisées, voire de fournir un support client personnalisé.",
+    "page": 121,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Trois fonctions de service",
+    "portee": "Repondre, recommander, assister : les trois taches par lesquelles l'outil entre dans une entreprise."
+   }
+  ]
+ },
+ {
+  "chapitre": "97a2a738",
+  "citations": [
+   {
+    "texte": "Écrire du code, généralement appelé instructions, dans un langage de programmation pour diriger un ordinateur sur quoi faire, comment le faire et quand le faire, c'est le principe du codage.",
+    "page": 123,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Ce qu'est coder",
+    "portee": "Definition sobre : dire a une machine quoi faire, comment et quand."
+   },
+   {
+    "texte": "La programmation, en revanche, est un terme plus large qui englobe l'ensemble du processus de création d'applications logicielles, y compris la conception, les tests et le débogage du code.",
+    "page": 123,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Coder n'est pas programmer",
+    "portee": "Distinction utile a qui envisage ce metier : ecrire du code n'est qu'une part du travail."
+   }
+  ]
+ },
+ {
+  "chapitre": "b7492e9e",
+  "citations": [
+   {
+    "texte": "Ces dernières années, le codage et la programmation sont devenus des compétences de plus en plus demandées, de nombreuses organisations cherchant des personnes ayant une expertise dans ces domaines pour favoriser l'innovation et la transformation numérique.",
+    "page": 124,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Une competence demandee",
+    "portee": "Constat de 2023, a reevaluer maintenant que la generation de code est devenue automatique."
+   },
+   {
+    "texte": "d'après les données de Statista, la tranche d'âge médiane pour l'apprentissage du codage et de la programmation se situe entre 5 et 9 ans.",
+    "page": 124,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Commencer tres tot",
+    "portee": "Chiffre a mettre en regard des systemes educatifs qui n'introduisent l'informatique qu'au lycee."
+   }
+  ]
+ },
+ {
+  "chapitre": "ba487c1f",
+  "citations": [
+   {
+    "texte": "Le codage peut être un travail mentalement exigeant et intense, et de nombreux codeurs travaillent de longues heures ou font face à des délais serrés. Cela peut entraîner un épuisement professionnel, un état d'épuisement physique, mental et émotionnel qui peut avoir un impact négatif sur les performances professionnelles et le bien-être personnel.",
+    "page": 125,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'epuisement des codeurs",
+    "portee": "Realite rarement dite dans les discours sur les metiers du numerique."
+   },
+   {
+    "texte": "Lorsque les codeurs utilisent des solutions rapides ou des astuces pour respecter les délais, ils peuvent créer une dette technique qui devra être remboursée ultérieurement par un travail et des ressources supplémentaires.",
+    "page": 125,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La dette technique",
+    "portee": "Notion transposable hors informatique : tout raccourci pris sous contrainte se paie plus tard."
+   }
+  ]
+ },
+ {
+  "chapitre": "8cfe5653",
+  "citations": [
+   {
+    "texte": "ChatGPT peut aider les programmeurs à créer des extraits de code ou même des programmes complets en se basant sur des descriptions en langage naturel de la fonctionnalité attendue",
+    "page": 126,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Decrire plutot qu'ecrire",
+    "portee": "Deplacement du travail : savoir decrire precisement ce qu'on veut devient la competence centrale."
+   },
+   {
+    "texte": "Cela peut rendre le codage plus accessible à des intervenants non techniques, tels que des analystes métier ou des chefs de projet, qui ne sont pas familiarisés avec un langage de programmation particulier.",
+    "page": 126,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Elargir l'acces au code",
+    "portee": "La barriere entre celui qui sait coder et celui qui ne sait pas s'abaisse, sans disparaitre."
+   }
+  ]
+ },
+ {
+  "chapitre": "3ed2f802",
+  "citations": [
+   {
+    "texte": "Grâce à sa capacité à comprendre vos objectifs et préférences, il peut suggérer des stratégies personnalisées pour l'apprentissage des langages de programmation.",
+    "page": 127,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Un plan d'apprentissage sur mesure",
+    "portee": "Pour un autodidacte, l'obstacle n'est pas la ressource mais l'ordre dans lequel l'aborder."
+   },
+   {
+    "texte": "ChatGPT peut créer du nouveau code adapté à des besoins spécifiques en recevant un modèle de code et un ensemble d'instructions.",
+    "page": 127,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le modele et l'instruction",
+    "portee": "Deux entrees a fournir : un exemple de la forme voulue et la consigne."
+   }
+  ]
+ },
+ {
+  "chapitre": "df2e9031",
+  "citations": [
+   {
+    "texte": "Il peut vous aider à résoudre en détail les problèmes de débogage et les problèmes avec le code, et il mentionnera également la raison des erreurs précédentes.",
+    "page": 128,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Comprendre l'erreur",
+    "portee": "Ce qui distingue un correcteur d'un professeur : expliquer pourquoi c'etait faux."
+   }
+  ]
+ },
+ {
+  "chapitre": "71d20bad",
+  "citations": [
+   {
+    "texte": "Des détails tels que l'objectif du code, le résultat souhaité et les éventuels détails de mise en œuvre pertinents peuvent être clarifiés avec soin en posant des questions.",
+    "page": 129,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Clarifier en questionnant",
+    "portee": "L'echange sur un code produit plus d'apprentissage que la reception d'une solution toute faite."
+   }
+  ]
+ },
+ {
+  "chapitre": "df18158d",
+  "citations": [
+   {
+    "texte": "En participant à ce débat interactif, les méthodes de programmation peuvent être plus approfondies et la confiance dans les compétences en programmation peut être renforcée.",
+    "page": 130,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre en discutant",
+    "portee": "La confiance dans une competence se construit par l'echange, non par la seule reussite d'un exercice."
+   },
+   {
+    "texte": "La probabilité d'introduire des défauts ou des erreurs est réduite car le code structuré est plus facile à travailler pour les développeurs et plus facile à lire et à comprendre.",
+    "page": 130,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'ordre reduit l'erreur",
+    "portee": "Principe applicable a toute production collective : ce qui se lit facilement se corrige facilement."
+   },
+   {
+    "texte": "La collaboration entre les développeurs est également facilitée en utilisant une structure uniforme et une approche de codage, car les modifications peuvent être intégrées de manière plus réussie.",
+    "page": 130,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La convention rend le travail commun possible",
+    "portee": "Adopter une convention commune coute peu et evite l'essentiel des conflits d'integration."
+   }
+  ]
+ },
+ {
+  "chapitre": "70fa0355",
+  "citations": [
+   {
+    "texte": "Le codage et la programmation ont transformé notre façon de vivre et de travailler, alimentant tout, des smartphones et des sites web aux voitures autonomes et aux dispositifs médicaux.",
+    "page": 132,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le code est partout",
+    "portee": "Rappel de l'etendue : ce qui semble un metier de specialiste conditionne desormais la vie ordinaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "78540ba4",
+  "citations": [
+   {
+    "texte": "L'un des principaux avantages d'une approche quantitative de la résolution de problèmes est qu'elle permet une évaluation plus objective et factuelle des problèmes.",
+    "page": 134,
+    "axe": "11-sciences-environnement",
+    "theme": "Mesurer avant de juger",
+    "portee": "Ce que la mesure apporte au debat : un terrain commun independant des impressions."
+   },
+   {
+    "texte": "Les résolveurs de problèmes quantitatifs peuvent repérer des modèles et des tendances en utilisant des données et des techniques statistiques qui ne seraient peut-être pas immédiatement évidentes par une observation subjective.",
+    "page": 134,
+    "axe": "11-sciences-environnement",
+    "theme": "Voir ce que l'oeil ne voit pas",
+    "portee": "Justification de la statistique : elle rend visible ce que l'observation directe manque."
+   },
+   {
+    "texte": "En décomposant les problèmes complexes en composantes plus petites et plus gérables et en utilisant des modèles mathématiques et des algorithmes, les solveurs de problèmes quantitatifs peuvent souvent trouver des solutions plus rapidement et plus efficacement.",
+    "page": 134,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Decomposer pour resoudre",
+    "portee": "Methode generale : un probleme insoluble en bloc devient traitable en parties."
+   }
+  ]
+ },
+ {
+  "chapitre": "2f8ee9d6",
+  "citations": [
+   {
+    "texte": "Les sciences de la décision sont un domaine interdisciplinaire qui combine des éléments de mathématiques, de statistiques, d'économie et de psychologie pour aider les individus et les organisations à prendre de meilleures décisions.",
+    "page": 134,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Les sciences de la decision",
+    "portee": "Discipline peu connue qui reunit le calcul et la psychologie autour d'un meme objet : decider."
+   },
+   {
+    "texte": "Elles peuvent contribuer à identifier et atténuer les biais dans la prise de décision.",
+    "page": 134,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Corriger ses propres biais",
+    "portee": "On ne supprime pas un biais en le connaissant, mais une methode rigoureuse en limite l'effet."
+   },
+   {
+    "texte": "Au niveau de l'industrie, les stratèges quantitatifs sont valorisés avec une rémunération de haut niveau, notamment dans les sociétés de trading et les sociétés très techniques.",
+    "page": 135,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un metier bien paye",
+    "portee": "Information de carriere concrete pour qui a des dispositions mathematiques."
+   },
+   {
+    "texte": "ChatGPT, bien qu'il ne soit pas encore pleinement capable de résoudre des problèmes quantitatifs complexes de premier ordre, possède la formation de base nécessaire pour traiter efficacement des problèmes de plus petite à moyenne envergure.",
+    "page": 135,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Jusqu'ou il calcule",
+    "portee": "Limite honnete a connaitre avant de confier un calcul serieux a l'outil."
+   }
+  ]
+ },
+ {
+  "chapitre": "cee8dccc",
+  "citations": [
+   {
+    "texte": "Ces notions de base de mathématiques et de statistiques sont très utiles dans l'apprentissage académique ainsi que dans les examens de concours, les entretiens d'embauche et les exercices quotidiens.",
+    "page": 136,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Ou servent les bases",
+    "portee": "Concours, entretiens, vie courante : trois lieux ou les bases quantitatives se paient."
+   },
+   {
+    "texte": "La logique quantitative et le raisonnement basé sur l'aptitude sont deux compétences essentielles souvent négligées dans la résolution moderne de problèmes.",
+    "page": 137,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Deux competences negligees",
+    "portee": "Ce qui n'est pas enseigne explicitement finit par separer ceux qui l'ont appris ailleurs des autres."
+   }
+  ]
+ },
+ {
+  "chapitre": "0f79fa6e",
+  "citations": [
+   {
+    "texte": "En développant leur compétence en logique quantitative et en raisonnement aptitude, les individus peuvent améliorer leur réflexion critique et leurs capacités de résolution de problèmes.",
+    "page": 138,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "S'entrainer a raisonner",
+    "portee": "La capacite de raisonnement se travaille comme une technique, elle n'est pas un don."
+   },
+   {
+    "texte": "Bien que ChatGPT ne soit pas entièrement bien formé à ces fins, il est tout de même capable de résoudre des logiques floues de base, des énigmes mathématiques, des problèmes d'aptitude moins qualitatifs et sans motif visuel.",
+    "page": 138,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Ce qu'il resout et ce qu'il ne resout pas",
+    "portee": "Delimitation utile : les enigmes simples oui, le raisonnement visuel non."
+   }
+  ]
+ },
+ {
+  "chapitre": "5ea37047",
+  "citations": [
+   {
+    "texte": "La résolution de problèmes qualitatifs est une approche qui consiste à\ncomprendre les principes sous-jacents et les concepts derrière un problème\navant de tenter de le résoudre.",
+    "page": 140,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Comprendre avant de resoudre",
+    "portee": "Renversement de l'ordre habituel : on cherche d'abord le mecanisme, la solution vient apres."
+   },
+   {
+    "texte": "L'un des principaux avantages de la résolution de\nproblèmes qualitatifs est qu'elle permet aux individus d'identifier et de traiter\nles causes profondes d'un problème plutôt que de simplement traiter ses\nsymptômes.",
+    "page": 140,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La cause plutot que le symptome",
+    "portee": "Distinction qui separe une reparation durable d'un rafistolage."
+   }
+  ]
+ }
+]

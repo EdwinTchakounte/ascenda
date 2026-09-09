@@ -1,0 +1,184 @@
+[
+ {
+  "chapitre": "a2171d09",
+  "citations": [
+   {
+    "texte": "Dans le cas du taquin, nous possédons une connaissance parfaite du jeu et de l'effet de chacune de nos actions, mais ce n'est pas toujours le cas de tous les problèmes que l'IA se doit d'affronter.",
+    "page": 33,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quand le modèle du monde manque",
+    "portee": "Critère de décision net : c'est l'ignorance de l'effet de ses actions qui rend l'apprentissage nécessaire."
+   },
+   {
+    "texte": "Doté d'une connaissance parfaite de l'état du monde et de l'effet des actions sur l'évolution de ces états, il n'est nul besoin de véritable apprentissage",
+    "page": 33,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quand l'apprentissage est superflu",
+    "portee": "Règle simple pour éviter de mobiliser une machinerie lourde là où une méthode classique suffit."
+   },
+   {
+    "texte": "Cette heuristique restant le seul élément de l'algorithme qui peut prêter à incertitude et jouant pourtant un rôle essentiel dans l'économie de calculs de l'algorithme, pourquoi ne pas l'apprendre par essais/erreurs ?",
+    "page": 33,
+    "axe": "02-ia-technique-academique",
+    "theme": "Apprendre l'heuristique",
+    "portee": "Exemple concret d'hybridation raisonnée entre recherche et apprentissage, plutôt que substitution de l'un à l'autre."
+   }
+  ]
+ },
+ {
+  "chapitre": "6e9a2980",
+  "citations": [
+   {
+    "texte": "Dans une population de solutions proposée, chacune de ces dernières est évaluée ; on préserve les meilleures et on génère une nouvelle population en recombinant et en mutant les solutions les plus prometteuses de la population précédente.",
+    "page": 36,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le principe de l'algorithme génétique",
+    "portee": "Description complète de la méthode en une phrase, sans aucun formalisme mathématique."
+   },
+   {
+    "texte": "Une bonne image mentale, comme la figure 1–8 extraite de Wikipédia l'illustre, est celle d'une chaîne montagneuse dans laquelle on progresse, étape par étape, en espérant les trajectoires les plus courtes pour atteindre le sommet le plus haut, avec le risque de rencontrer sur le parcours de nombreux sommets moins hauts et qui piègent toute la démarche.",
+    "page": 37,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le paysage des solutions",
+    "portee": "Image du relief qui explique en une fois ce qu'est un optimum local et pourquoi il piège les algorithmes."
+   },
+   {
+    "texte": "Les praticiens de l'IA, mais on devrait dire les informaticiens en général, adoptent de manière croissante des solutions de facilité d'écriture algorithmique, laissant à la puissance de calcul de nos ordinateurs le soin de compenser par cette dépense d'énergie leur absence de discernement a priori.",
+    "page": 38,
+    "axe": "11-sciences-environnement",
+    "theme": "La paresse compensée par le courant électrique",
+    "portee": "Critique de fond du livre : la puissance de calcul disponible dispense de réfléchir, et ce confort a un coût énergétique réel."
+   },
+   {
+    "texte": "Or, et pour le dire de but en blanc, le numérique aujourd'hui est un des plus importants consommateurs électriques de toutes les activités humaines ; cela ne devrait qu'augmenter avec le temps et la numérisation de nos processus productifs et de ces mêmes activités.",
+    "page": 39,
+    "axe": "11-sciences-environnement",
+    "theme": "Le poids énergétique du numérique",
+    "portee": "Argument rarement présent dans un manuel technique, et qui devrait peser dans tout choix d'architecture."
+   },
+   {
+    "texte": "Un compromis judicieux deviendra toujours plus d'actualité entre la mise en œuvre du génie humain, pour laborieuse qu'elle soit, en vue d'une écriture subtile d'algorithmes sobres et de faible consommation, et la compensation de notre laxisme intellectuel par la puissance de calcul de nos ordinateurs.",
+    "page": 39,
+    "axe": "11-sciences-environnement",
+    "theme": "Sobriété algorithmique",
+    "portee": "Perspective directement pertinente là où l'électricité est chère et intermittente : l'algorithme sobre y devient une nécessité, pas une élégance."
+   }
+  ]
+ },
+ {
+  "chapitre": "a174e110",
+  "citations": [
+   {
+    "texte": "Le GPS a mis fin à tout cela, à tel point que les psychologues se sont émus de la dégénérescence de certaines capacités cognitives, essentielles par exemple aux chauffeurs de taxi pour se repérer en ville.",
+    "page": 42,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que l'outil fait perdre",
+    "portee": "Premier exemple documenté d'une compétence humaine atrophiée par sa délégation à une machine."
+   },
+   {
+    "texte": "Si, en effet, les quelques secondes gagnées par l'exploitation éventuelle de cette heuristique sont malheureusement reperdues par le temps d'exécution nécessaire au calcul de cette même heuristique, autant parer au plus simple et ne plus en faire usage.",
+    "page": 44,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quand l'optimisation coûte plus qu'elle ne rapporte",
+    "portee": "Leçon d'ingénierie universelle : mesurer le gain net d'une optimisation avant de l'adopter."
+   },
+   {
+    "texte": "Aujourd'hui, et c'est un des derniers vestiges d'une véritable démocratie, tous les messages, les nôtres comme les tweets de Bill Gates, sont traités avec la même urgence.",
+    "page": 44,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'égalité du routage",
+    "portee": "Propriété technique devenue enjeu politique : le principe de neutralité du réseau tient dans cette phrase."
+   }
+  ]
+ },
+ {
+  "chapitre": "725e59e4",
+  "citations": [
+   {
+    "texte": "Elle vaut 24 pour 4, mais 265252859812191058636308480000000 pour 30.",
+    "page": 45,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'explosion factorielle",
+    "portee": "Chiffre qui rend tangible pourquoi certains problèmes sont hors de portée de tout ordinateur, présent ou futur."
+   },
+   {
+    "texte": "Et l'on retrouve l'importance de bien saisir la nature du problème afin d'effectuer le bon choix algorithmique, la recette du bon informaticien.",
+    "page": 45,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "La recette du bon informaticien",
+    "portee": "Thèse du livre répétée à chaque chapitre : comprendre le problème précède le choix de l'outil."
+   },
+   {
+    "texte": "Cette fois, la propriété de « plus court » entre ces deux chemins émerge du comportement de la colonie, car nulle fourmi, prise isolément, ne mesure la longueur des chemins et apprécie l'avantage qu'il y a à emprunter le plus court.",
+    "page": 46,
+    "axe": "11-sciences-environnement",
+    "theme": "Une intelligence sans individu intelligent",
+    "portee": "Modèle d'organisation où une propriété collective naît de règles individuelles élémentaires, sans chef ni plan."
+   },
+   {
+    "texte": "Le contraste est en effet saisissant entre la propriété de « plus court chemin » et les deux règles de comportement élémentaires suivies par les fourmis, sans rapport aucun avec cette même propriété : déposer ses phéromones et, entre deux chemins, choisir le plus odorant.",
+    "page": 46,
+    "axe": "11-sciences-environnement",
+    "theme": "Deux règles suffisent",
+    "portee": "Leçon de conception : des règles locales simples peuvent produire un résultat global qu'aucune ne vise."
+   }
+  ]
+ },
+ {
+  "chapitre": "a52bec8d",
+  "citations": [
+   {
+    "texte": "De plus, elle ne garantit pas de trouver la solution optimale, puisque la recherche s'arrête lorsque les deux chemins se croisent.",
+    "page": 50,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'honnêteté sur les limites",
+    "portee": "Les auteurs présentent une implémentation en signalant qu'elle n'apporte rien : rare et précieux dans un manuel."
+   }
+  ]
+ },
+ {
+  "chapitre": "99b0df3a",
+  "citations": [
+   {
+    "texte": "Cela marche mais après un temps infini, prouvant encore s'il le fallait que toute l'intelligence dans le choix de l'algorithme se loge dans la recherche du bon compromis entre la qualité de la solution, le temps mis pour l'obtenir et la complexité de l'algorithme qui y conduit.",
+    "page": 52,
+    "axe": "02-ia-technique-academique",
+    "theme": "Les trois termes du compromis",
+    "portee": "Formulation complète du critère de choix : qualité, temps, complexité. Aucun des trois ne se juge seul."
+   },
+   {
+    "texte": "Cette nouvelle hybridation (on se rappelle que ce type d'hybridation fait les beaux jours de l'IA) est un grand classique de l'optimisation : une recherche exploratoire globale jointe à une micro-recherche afin d'améliorer « localement » une solution.",
+    "page": 55,
+    "axe": "02-ia-technique-academique",
+    "theme": "Explorer largement, améliorer localement",
+    "portee": "Schéma d'hybridation réutilisable dans presque tout problème d'optimisation."
+   }
+  ]
+ },
+ {
+  "chapitre": "30b1dd16",
+  "citations": [
+   {
+    "texte": "On explore simplement le nœud le moins contraint afin de minimiser la taille de l'arbre à parcourir. Si on commence par les nœuds avec le moins de branches, on aura statistiquement moins de chance de se tromper dès le début.",
+    "page": 56,
+    "axe": "02-ia-technique-academique",
+    "theme": "Commencer par le plus contraint",
+    "portee": "Règle de bon sens transposable à toute résolution de problème : traiter d'abord ce qui laisse le moins de choix."
+   },
+   {
+    "texte": "Ici, une génération aléatoire avec une des contraintes déjà respectée est plus facile à mettre en œuvre et n'a qu'un faible coût algorithmique.",
+    "page": 58,
+    "axe": "02-ia-technique-academique",
+    "theme": "Injecter la contrainte dès le départ",
+    "portee": "Principe économique : ce que la structure du problème permet d'imposer gratuitement, l'algorithme n'a plus à le chercher."
+   },
+   {
+    "texte": "Le jeu du sudoku a ceci de particulier qu'une erreur dans un chiffre peut entraîner une refonte quasi totale de la grille.",
+    "page": 59,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi le sudoku résiste",
+    "portee": "Explique la présence de minima locaux très profonds, dont les opérateurs de mutation locale ne parviennent pas à sortir."
+   }
+  ]
+ }
+]

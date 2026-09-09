@@ -1,0 +1,1562 @@
+OUVRAGE : La Vie algorithmique Eric Sadin
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 284
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Couverture (p. 1-11)
+  Ouverture (p. 12-19)
+  Introduction : Le monde au prisme des données (p. 20-43)
+  I. La totalisation numérique (p. 44-45)
+  1. La puissance rationalisante des nombres (p. 46-51)
+  2. L'ère des capteurs (p. 52-56)
+  3. Interopérabilité universelle et perception intégrale (p. 57-59)
+  4. La datafication (p. 60-62)
+  5. Dimension performative des data (p. 63-67)
+  II. Puissance et usage des big data (p. 68-69)
+  1. Le data marketing ou la fin de la publicité (p. 70-75)
+  2. Une logique délivrée de la pesanteur (p. 76-80)
+  3. Smart cities: la ville au filtre algorithmique (p. 81-86)
+  4. Une médecine des données (p. 87-92)
+  5. Maison connectée / enseignements en ligne... (p. 93-99)
+  III. La quantification intégrale de la vie (p. 100-101)
+  1. Masse et corrélation : une appréhension étendue des phénomènes (p. 102-106)
+  2. Primauté du temps réel (p. 107-111)
+  3. La mesure "quanto-qualitative" de la vie (p. 112-118)
+  4. Généralisation du régime prédictif (p. 119-124)
+  5. Le "sublime computationnel" et l'exclusion du sensible (p. 125-131)
+  IV. La normativité algorithmique (p. 132-133)
+  1. De la libre individualisation à la recommandation personnalisée (p. 134-137)
+  2. L'ère du sur-mesure algorithmique (p. 138-144)
+  3. La quantified self ou la "libre" quantification de soi (p. 145-149)
+  4. Facebook, la machine à capter/monétiser l'attention (p. 150-155)
+  5. Google glass: la privatisation de l'attention (p. 156-163)
+  V. De la surveillance numérique au data-panoptisme (p. 164-165)
+  1. La vérité NSA du monde (p. 166-170)
+  2. Un témoignage intégral de la vie (p. 171-175)
+  3. La vie publicisée (p. 176-180)
+  4. La subjectivité partagée (p. 181-185)
+  5. Le suivi des mouvements anonymes du monde (p. 186-191)
+  VI. Le techno-pouvoir (p. 192-193)
+  1. L'open-data : la politique joystick (p. 194-199)
+  2. Ethos du techno-pouvoir (p. 200-204)
+  3. La classe des ingénieurs (p. 205-210)
+  4. L'invisibilité du computationnel (p. 211-215)
+  5. Techno-pouvoir et idéologie de l'innovation (p. 216-221)
+  VII. Politique et éthique de la raison numérique (p. 222-223)
+  1. Un parlement des données (p. 224-228)
+  2. De la responsabilité du pouvoir politique (p. 229-233)
+  3. "L'odyssée de la réappropriation" (p. 234-240)
+  4. Sciences humaines et raison numérique (p. 241-246)
+  5. Une éthique de la techne contemporaine (p. 247-253)
+  Conclusion : Une anthropologie de l'exponentiel (p. 254-263)
+  Notes (p. 264-280)
+  Sommaire (p. 281-283)
+  Couverture (p. 284-284)
+
+[26/155 passages, 24295 tokens sur 154087]
+
+=== EXTRAITS ===
+
+[p. 2-5]
+Collection 
+Pour en finir avec 
+
+Collection Pour en finir avec 
+Critique de la servitude volontaire, de l'aliénation quotidienne, de l'op-
+pression et des inégalités, la collection Pour en finir avec développe 
+des analyses radicales. Radicales au sens littéral du mot: «qui vise à 
+agir sur la cause profonde des effets qu'on veut modifier». Radicales car 
+elles prennent en compte toutes les dimensions d'un problème: éco-
+nomique, politique, psychologique et technologique. Radicales parce 
+que le capitalisme ne peut être réduit à un système d'exploitation écono-
+mique, il envahit toutes les sphères de notre existence et ne tient que sur 
+l'intériorisation d'un imaginaire surpuissant. Radicales parce que le 
+système se nourrit perpétuellement de sa critique et que seul ce qui le 
+sape dans son essence peut le détruire. 
+DANS LA M~ME COLLECTION (EXTRAIT) 
+_L'Emprise numérique. Comment Internet et les nouvelles 
+technologies ont colonisé nos vies 
+Cédric Biagini, 2012 
+_Construire l'autonomie. Se réapproprier le travail, 
+le commerce, la ruralité 
+Offensive, 2013 
+_L'Humanité augmentée. L'administration numérique 
+du monde 
+Éric Sadin, 2013 
+_La Face cachée du numérique. !.:impact environnemental 
+des nouvelles technologies 
+E Flipo, M. Dobré et M. Michot, 2013 
+_La Condition nucléaire. Réflexions sur la situation 
+atomique de l'humanité 
+Jean-Jacques Delfour, 2014 
+_L'Université en miettes. Servitude volontaire, 
+lutte des places et sorcellerie 
+Yves Dupont, 2014 
+_L'Idéologie sportive. Chiens de garde, courtisans 
+et idiots utiles du sport 
+Quel sport?, 2014 
+_L'usure du monde. Critique de la déraison touristique 
+Rodolphe Christin, 2014 
+_Seuls ensemble. De plus en plus de technologies, de moins en moins 
+de relations humaines 
+SherryTurkle, 2015 
+
+LA VIE 
+ALGORITHMIQUE 
+CRITIQUE DE 
+LA RAISON NUMÉRIQUE 
+ÉRIC SADIN 
+ÉDITIONS I:ÉCHAPPÉE 
+
+DU M:ËME AUTEUR 
+Deux-points, Pécuchette éditions, 1999. 
+72 , Les Impressions nouvelles, 2002. 
+Nihon no kigo, Signes du Japon, Onestar Press, 2003. 
+Poésie Atomique, éc/ artS essais, 2004. 
+Tokyo, P.O.L, 2005. 
+Times of the Signs, Birkhauser, 2007. 
+Surveillance Globale, Climats/Flammarion, 2009. 
+Globale Paranoïa, Les Petits Matins, 2009. 
+Les Quatre Couleurs de l'apocalypse, Inculte, 2011. 
+La Société de l'anticipation, Inculte, 2011. 
+L'Humanité augmentée, L'échappée, 2013. 
+Soft love, Galaade, 2014. 
+[ ericsadin.org] 
+ÉDITIONS L'ÉCHAPPÉE 
+23, rue Voltaire 
+75011 Paris 
+lechappee@no-log.org 
+www.lechappee.org 
+graphisme atelier 
+des grands pêchers 
+(atelierdgp@wanadoo.fr) 
+correction lionel 
+de La Fouchardière 
+dépôt légal 
+1er trimestre 2015 
+isbn 978-29158309-4-1 
+impression Corlet 
+No d'imprimeur : 170699 
+L'échappée, 2015
+
+---
+
+[p. 21-23]
+age pour tenter d'atténuer une forme de ver-
+tige. Le double vocable serait apparu en 2008 et aussitôt entré 
+dans le Oxford English Dictionary sous cette définition: «Volumes 
+de données trop massifs pour être manipulés ou interprétés par 
+des méthodes ou des moyens usuels)>. Énoncé à la forme négative 
+20- LA VIE ALGORITHMIQUE
+qui explicite non pas le principe, mais focalise sur les limites à 
+pouvoir gérer un mouvement qui se déroberait à notre maîtrise 
+ou excèderait nos facultés de représentation. C'est encore un 
+lexique technique utilisé au cours des dernières décennies qui 
+constitue un marqueur manifeste de la production indéfiniment 
+graduelle de données, par l'intégration successive d'unités de 
+mesure relatives à la puissance de stockage et à celle des 
+processeurs. 
+L'octet renvoie à l'échelon initial significatif des débuts de 
+l'informatique grand public. Le kilo-octet a représenté la valeur 
+emblématique de la capacité des premiers micro-ordinateurs ou 
+des fichiers de traitement de texte. Le mégaoctet a signalé l' émer-
+gence de données numériques extra textuelles, d'ordre musical 
+et iconique, capables d'être conservées sur des disques durs 
+personnels, autant que les mesures de téléchargement à l'œuvre 
+sur les réseaux à la fin des années 1990. Le gigaoctet témoigne 
+du tournant du millénaire, marqué par la numérisation de 
+l'image animée, l'accès à la vidéo en ligne et l'augmentation 
+substantielle des volumes circulant sur Internet. Le téraoctet 
+représenterait le nom exact de notre période, désignant la puis-
+sance de stockage désormais détenue par chacun, permettant 
+en théorie de conserver l'équivalent de fonds volumineux de 
+bibliothèques. 
+Le petaoctet atteste du franchissement d'un seuil, ne défi-
+nissant plus la puissance des équipements privés ou profession-
+nels, mais les masses entreposées dans des fermes de données 
+dont les contenances dépassent en quelque sorte les facultés de 
+représentation de l'entendement humain 1• L'exaoctet (soit un 
+milliard de gigaoctets) ne renvoie plus aux capacités détenues 
+par certains serveurs, mais aux volumes globaux administrés 
+par de grandes entités (à l'instar du CERN 2 par exemple), ou 
+circulant durant un laps de temps déterminé sur la Toile. Le zet-
+taoctet correspond à une mesure astronomique exclusivement 
+INTRODUCTION - 21 
+
+destinée à circonscrire la totalité du volume de données géné-
+rées ou stockées sur l'ensemble de la planète. ll aurait été produit 
+l'ordre de trois zettaoctets en 2014, et il est hypothétiquement 
+projeté une production de quarante zettaoctets en 2020. Le yot-
+taoctet enfin évoque une sorte de Terra Incognita, manifestant 
+sous un seul vocable autant la volonté de nommer un horizon 
+irrémédiablement annoncé, que l'impossibilité de se figurer les 
+quantités en jeu. Quant aux unités ultérieures éventuellement 
+appelées à se succéder au cours duXXIe siècle, elles relèvent d'un 
+ordre qui défie nos structures actuelles d'intelligibilité. 
+Ce sont plusieurs couches chronologiquement consécutives 
+désormais agglomérées les unes aux autres qui concourent à ins-
+taurer une réalité de toute part imprégnée de chiffres. D'abord, 
+le mouvement progressif de numérisation des différents champs 
+symboliques (écrit, son, images fixes et animées) engagé depuis 
+une trentaine d'années a contribué à l'archivage tendancielle-
+ment intégral des corpus historiques sous la forme de bits indexés 
+et accessibles, parallèlement à la production d'information 
+directement générée sous format numérique. Phénomène 
+contemporain de celui de l'universalisation de l'interconnexion 
+qui a engendré des masses sans cesse croissantes de données, 
+autant par le fait de la prolifération ininterrompue de sites que 
+par le nombre en constante augmentation d'internautes, géné-
+rant par leurs navigations toujours plus soutenues une infinité 
+de traces stockées au sein de myriades de serveurs. C'est encore 
+l'usage civil de la géolocalisation depuis le milieu des années 1990 
+qui constitue une autre strate informationnelle, celle-ci relative 
+aux positionnements des personnes, aux moyens de transport 
+ou à d'autres unités matérielles. C'est enfin le puissant mou-
+vement actuellement en cours d'implantation de capteurs à même 
+les objets, les surfaces physiques ou les organismes, qui est appelé 
+à représenter à terme la part majoritaire de la production de data. 
+22- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 33-35]
+peuvent plus se formuler avec la même certitude 
+inébranlable 8, mais sont devenus saugrenus au vu d'une autre 
+vérité, celle-ci non plus forgée par le sophisme du verbe, mais 
+s'imposant d'elle-même par l'évidence factuelle. Le souffle eni-
+vrant du mythe et de la foi n'aura guère duré, juste le temps 
+32- LA VIE ALGORITHMIQUE
+d'éprouver sur un laps de temps suffisant la puissance de 
+logiques à l'œuvre, établies sur l'opération processuelle insen-
+sible mais décisive de la réduction de pans de la réalité à des 
+chiffres analysables et manipulables. C'est un« retour du refoulé» 
+qui se manifeste aujourd'hui, découvrant à quel point au« fond» 
+même du procédé numérique, c'est une constante ambition de 
+maximisation qui aura déterminé la conception des protocoles, 
+mais dans une sorte de discrétion-mathématique ou abstraite-, 
+comme située à l'ombre des idéologies enthousiastes ou de l' ap-
+parence éminemment attrayante et ludique des interfaces et 
+des applications. 
+Ce n'est pas qu'il y aurait eu deux histoires ou plusieurs 
+histoires parallèles plus ou moins contradictoires, c'est plutôt 
+que le principe même qui se situe à leur fondement aura dès 
+l'origine été conçu en vue de répondre à un unique axiome : 
+celui d'accéder à un surcroît automatisé d'efficacité et d'opti-
+misation organisationnelles. Dimension qui aura dans les faits 
+contribué à soutenir la rationalisation sans cesse intensifiée des 
+sociétés, mais suivant des modalités qui purent longtemps 
+«avancer masquées)) en quelque sorte, comme dans un bal aux 
+allures insouciantes, dont la crudité des corps ne sera révélée 
+que plus tard dans l'implacable clarté du jour.« Le premier carac-
+tère évident du phénomène technique est celui de la rationalité. 
+Sous quelque aspect que l'on prenne la technique, dans quelque 
+domaine qu'on l'applique, on se trouve en présence d'un pro-
+cessus rationnel.[ ... ] Toute intervention de la technique est, en 
+effet, une réduction au schéma logique, des faits, des pulsions, 
+des phénomènes, des moyens, des instruments 1• )) C'est cette 
+vérité énoncée par Jacques Ellul il y a plus d'un demi-siècle qui 
+doit être revisitée à nouveaux frais, à la mesure de l'extrême 
+intensification de la tension liant processus techniques et rai-
+son implacable du calcul, sensible dans la dénomination même 
+INTRODUCTION -33 
+
+de la notion dont on n'a pas voulu voir la froideur sous le soleil 
+étincelant de la Californie: le numérique, soit l'instauration d'un 
+rapport au réel placé sous le sceau de la puissance objectivante 
+et non ambiguë des mathématiques et des nombres. 
+C'est encore la notion même de« révolution numérique» qui 
+doit aujourd'hui être réexaminée-expression empreinte d'une 
+dimension utopique inscrite dans toute aventure «révolution-
+naire»- et qui aurait été depuis une vingtaine d'années partout 
+reprise sans que son présupposé majeur n'ait été sérieusement 
+évalué ou déconstruit. Formation sournoise et prégnante d'un 
+« techno-imaginaire>>, pour reprendre la juste formule de Georges 
+Ballandier, qui aura concouru à affecter jusque dans la langue 
+une valeur jugée de facto positive à la numérisation progressive 
+des sociétés. Il faut entendre dans le double vocable de Big data 
+la défaite cinglante et définitive de tout imaginaire fictionnel ou 
+de toute entreprise délibérée de storytelling. Néanmoins, c'est 
+contre cet épuisement patent que voudrait s'opposer un récent 
+lexique entrepreneurial, entendant renouveler le registre d'une 
+« novlangue » censée annoncer de fructueuses promesses, par-
+ticulièrement manifeste dans une série de mots aux consonances 
+de quasi-slogans, qui fait se succéder les termes de vitesse, variété, 
+visibilité, valeur, véracité, soit les 5 «V» dorénavant associés aux 
+infinies virtualités en germe dans le« déluge de données». 
+Les Big data, au -delà de toutes les perspectives économiques 
+escomptées, doivent être comprises comme le passage d'un 
+seuil épistémologique et anthropologique, qui veut que nos 
+modes de perception et d'action sur le réel se constituent désor-
+mais au filtre majoritaire des données, résultats d'opérations 
+réduisant in fine tout fait à des lignes de code, supposant une 
+définition au chiffre près des situations. Car la virtuosité tech-
+nologique contemporaine ne se pare pas d'une forme outrageu-
+34- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 46-47]
+-1 
+LA PUISSANCE RATIONALISANTE 
+DES NOMBRES 
+Le principe de la numération témoigne dès son origine de la 
+volonté d'entretenir un rapport quantitatif au réel. De nom-
+breuses solutions abstraites ou matérielles se sont succédé au 
+cours de l'histoire destinées à comptabiliser les êtres et les 
+choses, parmi lesquelles le système à base de signes hiérogly-
+phiques mis au point dans l'Égypte ancienne, ou plus tard les 
+chiffres arabes, qui autorisèrent la schématisation des opérations 
+algébriques. Ce furent également les abaques, et surtout les bou-
+liers -contemporains des tablettes d'argile comme supports 
+d'écriture-, qui facilitèrent la levée des taxes et qui plus large-
+ment participèrent d'une administration plus efficace des cités. 
+Autant d'artefacts qui favorisèrent les échanges commerciaux 
+et contribuèrent aussi à l'apparition de la monnaie, qui relève 
+tout autant d'un procédé de mesure. L'invention des mathéma-
+tiques est indissociable de l'aspiration à percevoir les phéno-
+mènes sous la plus exacte précision grâce à une «raison pure>> 
+dénuée des contingences sensibles, permettant d'agir en toute 
+conscience sur le concret des choses d'après des grilles d'intel-
+ligibilité supposées rationnelles et fiables. 
+C'est conformément à cette exigence qu'auront été élaborés, 
+avec plus ou moins de succès ou d'efficacité au cours des siècles, 
+des dispositifs appelés à suppléer certaines des capacités cogni-
+tives humaines et à manipuler des masses volumineuses de 
+chiffres. Une longue histoire, lente et laborieuse, a vu des indi-
+vidus épars et souvent isolés chercher à mettre au point des 
+«machines de calcul» capables d'effectuer des opérations à l'aide 
+de processus pour partie automatisés. Ce sont principalement 
+LA TOTALISATION NUMÉRIQUE -45 
+
+Blaise Pascal et sa Pascaline et Leibniz et sa machine à cylindre 
+cannelé qui représentent les figures majeures qui s'engagèrent 
+activement au cours du XVIIe siècle dans la tentative d'élaborer 
+des systèmes artificiels dotés de fonctionnalités certes utilisables 
+mais limitées, et qui durent in fine se confronter à des obstacles 
+techniques à l'époque insurmontables. 
+Charles Babbage, lors du premier tiers du XIXe siècle, entendit 
+parachever ce long mouvement historique sinueux en s'efforçant 
+de réaliser une machine complexe pouvant procéder d'elle-
+même à des calculs, grâce à l'incorporation des cartes du métier 
+jacquard dont la lecture séquentielle commandait des instruc-
+tions au dispositif. Ada Lovelace, la fille de lord Byron, l'assista 
+dans son entreprise, accomplissant non seulement une descrip-
+tion annotée de l'appareil analytique, mais imagina aussi le 
+principe de l'algorithme destiné à être exécuté par un automate. 
+Figure aujourd'hui mythique, considérée comme le premier 
+programmeur -ou programmeuse- de l'histoire, qui ensuite 
+pressentit certaines des possibilités offertes par les calculateurs 
+universels qui dépassaient le seul cadre des fonctionnalités arith-
+métiques, constituant alors l'unique objet de recherche de 
+Babbage et d'autres de ses contemporains. Ambition visionnaire 
+pour Babbage ou intuition prophétique pour Lovelace, 
+néanmoins, l'un et l'autre durent se confronter aux limites alors 
+incontournables d'ordre tant technologique qu'épistémologique. 
+Il ne relève pas d'un hasard de l'histoire que ce soit Charles 
+Babbage, qui s'appliqua tout au long de son existence à conce-
+voir des instruments computationnels autonomes et fiables, qui 
+fut dans le même mouvement le concepteur initial du modèle 
+pré-fordiste de l'usine moderne, tendu vers sa plus haute opti-
+misation fonctionnelle et productive. Son fameux livre Économie 
+des machines et des manufactures1 expose sur des centaines de 
+pages des méthodes aptes à perfectionner sous diverses formes 
+46- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 55-56]
+horizon nanométrique qui pointe. Les nana-
+capteurs pourront recouvrir des surfaces sur leur totalité, sous 
+forme de peinture ou de pellicule apposées sur des machines-
+outils, véhicules, avions, immeubles, routes, ponts, et récolter 
+des indications relatives aux usages, à la fréquentation, à l'usure. 
+54- LA VIE ALGORITHMIQUE
+Rien ne limite en théorie la pose de puces sur chaque particule, 
+revivifiant ainsi la conception atomiste antique, mais l'érigeant 
+comme un principe viabilisé de connaissance intégrale, puisque 
+instituant dorénavant tout atome comme une unité élémentaire 
+apte à témoigner seule ou en réseau de l'état évolutif du monde: 
+«Il n'y a dans l'univers entier, aucun fond ni aucun lieu où 
+puissent s'arrêter les atomes, puisque l'espace sans limite ni 
+mesure est infini en tous sens 3• » 
+Large paradigme qui contribue non seulement à amplifier de 
+façon sans cesse croissante la production de données, mais qui 
+participe également d'une sorte de «technicisation achevée de la 
+nature» comme de part en part enveloppée ou infiltrée de dispo-
+sitifs de captation informationnelle. Il est tout autant possible 
+d'inverser la formule et de constater que c'est la technique qui 
+s'est comme naturalisée, revêtant désormais des formes proches 
+de celles à l'œuvre dans le vivant, se déployant suivant des schémas 
+et des processus biomorphiques. Une culture globale renoue ac-
+tuellement avec des traditions animistes immémoriales, qui envi-
+sagent le monde telle une surface partout sensible mue par une 
+rythmique énergétique ininterrompue. Un témoignage de pans 
+sans cesse plus étendus de la réalité s'instaure, supposant à terme 
+l'absence de trou dans notre perception des phénomènes, dotée 
+d'une puissance de pénétration virtuellement intégrale. L'ère 
+postsymbolique inaugure une nouvelle condition cognitive, ca-
+pable d'observer en surplomb les choses et de suivre localement ou 
+globalement leurs états indéfiniment évolutifs, formalisant l'am-
+bition scientifique ancestrale à vouloir soumettre le réel à l'emprise 
+totalisante et exclusive de la ratio humaine: «La fiction imaginée 
+par Laplace, d'un démon omniscient, capable de connaître, à l'ins-
+tant t, la position et la vitesse de chaque élément constitutif de la 
+nature physique, symbolisait le projet de cette science universelle, 
+objective, parfaitement déterminée et finalement close 4• » 
+LA TOTALISATION NUMÉRIQUE -55
+
+---
+
+[p. 64-66]
+qui enfin généreront divers cycles de 
+renseignements traités à diverses fins: mesure de l'état des 
+stocks, délai et qualité de la livraison, évaluation de performance 
+du personnel, commentaires des clients. Autant d'indications 
+qui définiront en retour l'organisation générale de la logistique 
+LA TOTALISATION NUMÉRIQUE - 63
+matérielle et humaine, à l'intérieur d'une large boucle où les 
+données et les gestes ne cessent de se répondre ou de s'engen-
+drer les uns les autres -mais avec un léger décalage temporel, 
+celui qui autorise le mouvement de l'action. 
+Ce sont de nombreux champs qui dorénavant s'inscrivent 
+suivant cette logique qui suppose d'étendre la notion de «data 
+driven » à l'ensemble de la société, soit la prise de la décision 
+déterminée par la vérité objective issue du traitement de masses 
+informationnelles, sans qu'il soit néanmoins possible d'identifier 
+un« sens temporel)). La distinction usuelle discriminant l'« avant)) 
+du« maintenant)) se défait, au profit d'un magma continuellement 
+en fusion qui mêle résultats, actions, résultats, comme autant 
+de 0 et de 1 indéfiniment séquencés qui interdisent de statuer 
+une délimitation dans la mesure où ces flux interagissent pour 
+partie à la vitesse de la lumière, et forment une couche 
+«bouillonnante)) ou «quantique)) qui désormais se substitue à 
+la définition historique et stabilisée du réel. Le processus de 
+numérisation symbolique induisait un nouveau rapport à la 
+représentation, caractérisé par la réduction au pixel de la 
+définition ainsi qu'un régime marqué par l'hybridation, et qui 
+engageait en retour des gestes inédits mais à l'intérieur de 
+champs délimités. La numérisation «post -symbolique)) opère 
+un recouvrement intégral qui ne redouble pas seulement les 
+choses, mais institue les données comme l'instance première 
+et primordiale de l'intelligibilité et de l'action, sur fond d'une 
+perpétuelle transformation. 
+Dans le film Elysium (Neill Blomkamp, 20 13), dont le récit se 
+situe en 2154, toutes les données d'une station spatiale éponyme 
+habitée par une caste de privilégiés qui ont délaissé une Terre 
+surpeuplée et insalubre, sont provisoirement transportées dans 
+le crâne d'un humain, dont l'accès permettra de réinitialiser les 
+conditions générales d'existence de la contrée artificielle. Méta-
+64- LA VIE ALGORITHMIQUE 
+
+phore hollywoodienne de la façon dont les flux de code ne se 
+situent plus seulement après les choses, mais structurent et 
+conditionnent de part en part notre rapport au réel. C'est cela 
+qu'aura produit in fine le mouvement historique de numérisa-
+ti on, non pas un strict équivalent chiffré, mais l'avènement d'une 
+nouvelle anthropologie déterminée, guidée, «drivée» par des 
+logiques littéralement binaires, qui ordonnent sans ambiguïté 
+ou sous une rationalité apodictique la marche de plus en plus 
+globale du monde. 
+LA TOTALISATION NUMÉRIQUE- 6S
+
+---
+
+[p. 76-77]
+-2 
+UNE LOGISTIQUE DÉLIVRÉE 
+DE LA PESANTEUR 
+Le projet moderne d'optimisation des processus de production 
+renvoie à une recherche constante et persévérante visant la 
+réduction maximale des coûts, la moindre inertie entre chacune 
+des étapes à l'œuvre et le plus rapide écoulement des stocks. 
+C'est toute une histoire de l'entreprise qui peut être retracée 
+sous l'aspiration plus ou moins contrariée à atteindre ces trois 
+objectifs. Principe général que Charles Babbage définira, que 
+Frederick Taylor conceptualisera et qu'Henry Ford formalisera. 
+Les grandes usines de la première partie du :xxe siècle, faites 
+d'impressionnantes infrastructures, imposaient des procédés 
+de fabrication standardisés qui favorisaient un ordre rationalisé 
+des espaces de travail, de la répartition des ouvriers et de lages-
+tion logistique: «La technique intègre la machine à la société, 
+la rend sociale et sociable. Elle lui construit également le monde 
+qui lui était indispensable, elle met de l'ordre là où le choc inco-
+hérent de bielles avait accumulé des ruines. Elle clarifie, range 
+et rationalise: elle fait dans les domaines abstraits ce que la 
+machine a fait dans le domaine du travail. Elle est efficace et 
+porte partout la loi de l'efficacité 4• )) 
+L'historien Arnold Toynbee (1852-1883) affirmait à la fin du 
+~ 
+siècle que l'histoire se divisait en trois périodes. La moder-
+nité aurait correspondu à l'ère de l'organisation, soit la concep-
+tion de méthodes élaborées catégorisant des secteurs spatiaux 
+et des séquences temporelles distinctives, aptes à maximiser 
+par leur juste ordonnancement les conditions générales de la 
+vie économique et sociale: «L'organisation est le processus qui 
+consiste à assigner des tâches à des individus ou à des groupes 
+PUISSANCE ET USAGES DES BIG DATA -75 
+
+afin d'atteindre d'une façon efficiente et économique, par la 
+coordination et la combinaison de toutes leurs activités, des 
+objectifs déterminés 5• »Constat plus tard prolongé par James 
+Burnham, qui analysa la bureaucratisation croissante des socié-
+tés soumises à des procédés d'organisation standardisée dans 
+son ouvrage The Managerial Revolution publié en 1941, qui 
+exerça une influence sur George Orwell et inspira son livre 1984. 
+L'usage de machines-outils toujours plus performantes, asso-
+cié à une disposition savante des personnes le long des diffé-
+rents postes de travail en vue d'atteindre la meilleure producti-
+vité caractérise l'industrie de l'après-guerre, suivant des logiques 
+de technicisation et de parcellisation des tâches qui ont peu à 
+peu gagné d'autres secteurs d'activité au cours des décennies 
+suivantes. L'informatisation et l'introduction de robots dans les 
+chaînes de production à partir des années 1980 ont rendu pos-
+sible la réalisation progressive de cette ambition à administrer 
+sous les meilleurs ratios la marche des entreprises, grâce à une 
+reprise automatisée et répétitive de certains processus. L'uni-
+versalisation de l'interconnexion et l'usage de protocoles élec-
+troniques de« gestion de projets» durant les années 1990 et 2000 
+ont contribué à harmoniser les liens entre les unités internes, 
+autant que les relations entre entreprises (business to business). 
+Architecture organisationnelle rendue davantage structurée et 
+réactive par l'intégration d'interfaces numériques autorisant un 
+contrôle suivi et précis des différentes opérations. 
+En cette deuxième décennie duXXIe siècle, l'implémentation 
+de« systèmes intelligents» permet de répondre suivant un nou-
+veau seuil d'efficacité à ces réquisits, de leur offrir une sorte 
+d'accomplissement parfaitement idoine. Si les quotients de pro-
+ductivité ont peu à peu atteint des seuils optimaux, c'est le 
+domaine de la logistique qui aujourd'hui profite prioritairement 
+de ce mouvement de fluidification, pouvant enfin se défaire de 
+76- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 86-86]
+le-même» les conditions 
+de son« meilleur développement». Avènement d'une organicité 
+de la technique et des modes d'action qui induit une naturali-
+sation collatérale et intériorisée des logiques qui peu à peu 
+règlent ou dictent les conditions générales et particulières de 
+nos existences. 
+PUISSANCE ET USAGES DES BIG DATA- 85
+
+---
+
+[p. 94-96]
+enir s'institue comme un ensemble qui 
+«exprime)) l'état de son fonctionnement et de ses usages, autant 
+à l'attention de ses membres qu'à celle de multiples instances 
+tierces. Historiquement, la maison en Occident -particulière-
+ment à partir de la modernité renaissante-fut envisagée comme 
+PUISSANCE ET USAGES DES BIG DATA- 93
+le foyer de l'intimité à laquelle tout citoyen avait droit, manifeste 
+dans l'habeas corpus qui affirmait au cours du XVIIe siècle anglais 
+que les forces royales ne pouvaient s'introduire à l'intérieur d'un 
+domicile sans l'autorisation d'un juge. Désormais, une myriade 
+d'acteurs le pénètrent, mais d'après une logique qui ne néces-
+site pas de se rendre en son sein, puisque transmettant- géné-
+ralement avec l'agrément de ses occupants- des informations 
+qui jusque-là relevaient du domaine privé (produits consommés, 
+programmes de télévision visionnés, musiques écoutées, sites 
+Internet visités, poids et physiologie des personnes, présence 
+ou non des habitants ... ). 
+La maison en émergence de la première partie du XXIe siècle 
+ne se dévoile pas dans sa pleine transparence au prisme de baies 
+vitrées, tels les appartements modernistes dont l'activité fami-
+liale était considérée de l'extérieur dans le Playtime de Jacques 
+Tati (1967), mais au biais de mécanismes de suivi qui déterminent 
+un nouveau type de «fondation» -plus immatériel ou impal-
+pable-, établi sur une interaction dynamique entre ses unités 
+physiques et organiques et une multitude d'entités de toute 
+nature. Vu la dimension foncièrement anthropologique de la mai-
+son, on saisit à quel point c'est la tension qui unit l'humain à son 
+milieu qui plus largement est redéfinie dans l'une de ses bases 
+fondamentales ou fondatrices. Le dissimulé s'estompe, l'abri de 
+l'intime se défait, les murs ne sont plus que de façade. La vie 
+depuis le «chez soi» se mue en une vie cartographiée, mesurée, 
+«partagée», dans la visée supposée de bénéficier d'un environ-
+nement domestique de partout fluidifié et optimisé, configuré 
+pour profiter in fine de toute occasion avantageuse. La « ména-
+gère» ne se laissait saisir dans sa cuisine fonctionnelle et confor-
+table que le temps d'une séance photographique; dorénavant 
+l'hôte de notre temps fait se confondre bon gré mal gré la signi-
+fication double et opposée du terme: personne qui réside dans 
+un endroit ou qui est accueillie au sein d'un domaine privé. 
+94- LA VIE ALGORITHMIQUE 
+
+C'est depuis cette même maison connectée qu'on peut désor-
+mais fréquenter une université à demeure. Ce qui est nommé 
+MOOC (massive open online course) permet de suivre à distance 
+un apprentissage sous la forme de cours filmés en direct ou 
+enregistrés. Modalité qui semble présenter de nombreux avan-
+tages, devant favoriser un désengorgement des amphithéâtres, 
+une plus large modularité et personnalisation des pratiques ainsi 
+qu'une flexibilité accrue des horaires. Le principe de cet ensei-
+gnement suppose certes que le professeur donne sa leçon, mais 
+en la soumettant à une sorte d'obligation d'animation destinée 
+à «soutenir l'attention)) en ligne, en !'«enrichissant» de gra-
+phiques, de documents textuels, sonores, photographiques, de 
+vidéos, de quiz, de forums ... Logique qui induit une relativisa-
+tion de la valeur de la parole au profit d'une hybridité relevant 
+dans les faits d'une spectacularisation ou d'un« edutainment», 
+qui voudrait répondre par une sur-sollicitation au déficit de 
+concentration généralement constaté sur les bancs de l'école. 
+Environnement qui stimule encore une« intervention dyna-
+mique)) par le biais d'interfaces spécifiées autorisant des com-
+mentaires de tous ordres, conformément à la récente idéologie 
+du «participatif» qui veut que chacun puisse donner son «Opi-
+nion» à tout moment. L'apprenant se mue en un causeur, voire 
+en un vérificateur, alors que l'enseignant s'expose comme une 
+figure soumise à des procédés standardisés d'évaluation et de 
+notation. Ce n'est pas tant la hiérarchie historique qui est bous-
+culée, que la structure temporelle qui est modifiée, par l'instau-
+ration d'un régime de l'immédiateté. Car la vocation de l'étu-
+diant ne consiste pas à être systématiquement expressif, mais 
+à acquérir progressivement un savoir, à s'exercer à la réflexion, 
+à se doter d'une faculté de mise à distance et de pouvoir critique, 
+mais qui ne se manifeste pas par une prise de parole spontanée 
+ou l'envoi de posts continus, mais par l'écoute autant que par 
+une nécessaire forme de repli qui favorise la juste maturation 19• 
+PUISSANCE ET USAGES DES BIG DATA- 95
+
+---
+
+[p. 106-108]
+ilité intégrale, le Panoptique, que la priorité accordée au 
+temps réel renforce et universalise, l'érigeant comme l'acmé 
+d'une relation continuellement fonctionnelle entretenue à un 
+environnement se manifestant sans point aveugle au fil de l'ex-
+périence individuelle et collective. 
+LA QUANTIFICATION INTÉGRALE DE LA VIE - 105
+-2 
+PRIMAUTÉ DU TEMPS RÉEL 
+La priorité historique accordée au raisonnement déductif ren-
+voie à un âge de la pérennité, celui d'une épistémè stable et pro-
+gressivement évolutive. L'interprétation inductive robotisée ins-
+taure un mode de connaissance fondé sur la dimension 
+continuellement mouvante des événements, s'appliquant à 
+suivre indéfiniment le fil de leur écoulement. Le raisonnement 
+déductif suppose une conclusion, le processus inductif ne s'in-
+terrompt pas, la vérité en quelque sorte est toujours à venir, 
+relevant d'un ordre quasi messianique. Principe heuristique qui 
+ne se limite pas à un cadre a priori défini, toujours attentif à 
+l'égard de faits plus ou moins connexes ou à ce qui apparaît sans 
+prévenir. D'une certaine façon, l'induction corrélative est à 
+l'image de notre temps, empreinte d'une dimension «néo-
+héraclitéenne )), imprimant du sceau d'une perpétuelle trans-
+formation et de l'imprévisibilité nos rapports au monde. 
+Davantage qu'un mode de temporalité, le temps réel témoigne 
+de l'avènement d'une condition qui réalise le rêve occidental 
+d'opérer une maîtrise totale du cours des choses, par la capacité 
+d'examiner à flux tendus leur état autant que leur perpétuelle 
+évolution, permettant d'agir sans délai et en conscience au plus 
+près de la substance de la réalité. 
+Le temps réel fait de l'expérience un état d'« immanence 
+transcendantale)) constamment éclairée par des techniques chro-
+nosensibles. Ce sont des événements sans cesse plus nombreux 
+et de toute nature qui peuvent désormais être« suivis à la trace)) 
+grâce à la célérité des processus de traitement: situation du tra-
+fic routier ou des réseaux de transport, communications télé-
+phoniques, navigations Internet, comportements des consom-
+mateurs, localisation des personnes, conversations sur les 
+106- LA VIE ALGORITHMIQUE 
+
+réseaux sociaux ... Il autorise également une profondeur de dis-
+cernement par sa capacité à immédiatement pénétrer sous des 
+strates jusque-là opaques la nature de notre environnement, à 
+l'instar des procédés de réalité augmentée qui affichent des 
+informations simultanément à notre perception naturelle des 
+choses. Ou de certains appareils, telle «scanner alimentaire» 
+de poche conçu par la société canadienne Tel1Spec4, qui décrit 
+la composition des aliments: nutriments, colorants, pesticides, 
+métaux lourds. Un galet muni d'un capteur transmet les don-
+nées sur un serveur, analysées par un logiciel qui renvoie aus-
+sitôt les résultats consultables sur l'application dédiée. Exemple 
+patent d'une «transparence instantanée» qui oriente en retour 
+positivement ou négativement la décision d'achat ou de consom-
+mati on, signalant l'émergence d'une condition anthropologique 
+pouvant désormais se déterminer« au fil de l'eau)) de façon hau-
+tement informée. 
+Le temps réel réduit des seuils d'incertitude au profit de l' éta-
+blissement de sortes de salles de contrôle partout distribuées et 
+personnalisées. Les sites de rencontres géolocalisés exemplifient 
+cette capacité à se déterminer sans délai et a priori 
+«pertinemment)) par la consultation des profils suggérés situés 
+à proximité, supposés répondre à un «niveau acceptable 
+d'adéquation)). Car le temps réel est désormais indissociable de 
+la géolocalisation, soit le fait de rapporter toute occurrence à ses 
+coordonnées spatiales immédiates. Les compagnies de distri-
+bution expresse de courriers ou de colis, telles UPS, FedEx, DHL, 
+taguent l'ensemble des maillons de la chaîne logistique : de l' em-
+hallage aux véhicules de transport, aux avions de fret, aux entre-
+pôts de correspondance, jusqu'à la livraison finale. Traçage lon-
+gitudinal de chacune des étapes, à la fois destiné à mesurer et à 
+optimiser l'infrastructure générale, à exercer auprès du person-
+nel une intériorisation relative à l'« impératif de performance)) 
+LA QUANTIFICATION INTÉGRALE DE LA VIE - 107
+
+---
+
+[p. 116-118]
+ents Kinect en vue d'inter-
+préter l'état émotionnel des personnes 11• Le dispositif compare 
+en temps réelles positions adoptées avec celles préenregistrées, 
+catégorisées par des études de psychologie comportementale. 
+L'objectif déclaré consiste prioritairement à aider des enseignes 
+lA QUANTIFICATION INTÉGRALE DE lA VIE -115
+commerciales à identifier précisément les attitudes ou les 
+attentes des clients. Appréhension quanta-qualitative et tou-
+jours plus intégrale du réel, qui ne revêt pas tant une dimension 
+« instituante >>telle celle produite par les statistiques par la force 
+de leur apparence de vérité. Ce n'est pas la vérité qui est en jeu 
+ici, c'est la profondeur de pénétration des phénomènes qui se 
+découvrent sous de multiples facettes et valeurs, et qui induit 
+quelques transformations aux contours assez insensibles mais 
+aux effets prégnants et décisifs. 
+C'est d'abord une intériorisation consentie ou inconsciente à 
+l'égard du principe de la mesure qui s'institue, emblématique 
+dans le cadre du travail, le Quanti fied Self, ou d'autres registres 
+du quotidien, qui conduit à discipliner de soi-même ses gestes 
+afin de répondre au mieux aux différents critères et normes exp li-
+citement ou tacitement définis. Ensuite, la codification en cours 
+d'universalisation reprise par le traitement computationnel auto-
+rise une évaluation menée d'après des échelles modulaires et 
+variables (par exemple, la qualité de telle crème solaire sur tel type 
+de peau, ou celle de tel quartier corrélé à telles préférences sin-
+gulières). Radicalisation subite et sans commune mesure du 
+benchmarkingrapportée à la vie entière dans toutes ses variations 
+et nuances, et qui est exploitée par les instances publiques ou 
+privées, et mise à la disposition des ·personnes, appelées en outre 
+à être dotées d'inédites modalités d'appréciation intersubjectives. 
+C'est une forme de régulation sociale s'exerçant par l'implication 
+délibérée ou subie des individus qui subrepticement s'impose, 
+et qui relève d'une nature impersonnelle ou dépersonnalisée, par 
+le fait de la chaîne indistincte des acteurs et de l'invisibilité des 
+procédures, qui interdit d'identifier quelques causes initiales ou 
+les lieux manifestes de leur effectuation. 
+Enfin, c'est l'obstruction de toute «ligne de fuite» qui s'an-
+nonce. La« société de consommation» correspondait à un mode 
+n6- LA VIE ALGORITHMIQUE 
+
+de vie partiel et découpé dans le temps; l'intelligibilité quanta-
+qualitative se déploie le long de pans de plus en plus étendus 
+du social, bientôt vouée à n'offrir plus d'échappatoire. Principe 
+qui réalise la mathesis universalis imaginée par le néo-plato-
+nisme, ou qui accomplit en actes la mathématisation intégrale 
+du monde telle qu'envisagée par Leibniz. C'est une clôture du 
+réel sur lui-même qui se trame, définissant les phénomènes au 
+chiffre près afin de permettre à chaque action de trouver sans 
+délai les conditions de son« meilleur accomplissement». Le réel 
+et son double, défini par Clément Rosset 11 comme ce qui imman-
+quablement trahit notre imaginaire, manifestant toujours au 
+bout de nos illusions sa cruelle vérité, c'est ce réel-là-inflexible-
+qui s'effrite au profit d'une mise en boucle des flux de la réalité, 
+indéfiniment récoltés et traités en vue de les plier aux exigences 
+cardinales d'optimisation, de fluidification et de sécurisa ti on 
+de nos sociétés. C'est aujourd'hui que le régime numérique et 
+son «bornage algorithmique>> manifestent pleinement leur 
+vérité, dans leur récente capacité à mesurer la nature composite 
+et transitoire de toute chose, et à les soumettre à des objectifs 
+utilitaires préétablis, faisant de cette disposition même une nou-
+velle condition d'existence. 
+LA QUANTIFICATION INTÉGRALE DE LA VIE -117
+
+---
+
+[p. 124-126]
+de soumettre l'ensemble des échelles, couches et 
+dimensions de l'espace et du temps à une visibilité et à une 
+maniabilité globales, auxquelles rien ne doit échapper et où tout 
+peut être programmé, afin de se délivrer définitivement du prin-
+cipe ontologique et stérile d'incertitude. 
+LA QUANTIFICATION INTÉGRALE DE LA VIE- 123
+-5 
+LE« SUBLIME COMPUTATIONNEL» 
+ET L'EXCLUSION DU SENSIBLE 
+«Au cours du Moyen Âge et de la Renaissance, un nouveau 
+modèle de réalité a surgi en Europe. Un modèle quantitatif a 
+commencé à remplacer l'ancien modèle qualitatif. Copernic et 
+Galilée, les artisans qui apprenaient à fabriquer de bons canons 
+avec régularité, les cartographes qui dessinaient les côtes des 
+terres nouvellement abordées, les bureaucrates et les 
+entrepreneurs qui dirigeaient leurs empires et les compagnies 
+des Indes orientales et occidentales, les banquiers qui recueillaient 
+et contrôlaient les flux de richesses nouvelles: toutes ces 
+personnes concevaient la réalité en termes quantitatifs avec plus 
+de cohérence que tous les autres membres de leur espèce 28• >>La 
+civilisation contemporaine aura atteint un stade qui instaure 
+des modes d'appréhension et d'agissement prioritairement 
+déterminés en fonction d'opérations computationnelles d'uni-
+tés abstraites et discrètes, qui achèvent le long processus histo-
+rique visant une pleine maîtrise grâce à l'idéalité découpante et 
+rationalisante des nombres et des mathématiques. 
+C'est autant la vision hégélienne selon laquelle «tout ce qui 
+est réel est rationnel et tout ce qui est rationnel est réel 27 >> qui 
+actuellement s'universalise, mais qui ne consiste pas à entretenir 
+une illusoire correspondance entre un supposé état de fait et la 
+réalité, mais à la réduire dans sa totalité à un continuum infini 
+de chiffres ordonnant le schème majoritaire de la perception et 
+de l'action humaines. Emmanuel Kant dans la Critique de la rai-
+son pure décrivait les conditions de possibilité de la con-
+naissance, nécessairement soumise à l'expérience, soit au cadre 
+incontournable de l'espace et du temps. C'est d'une autre 
+124- LA VIE ALGORITHMIQUE 
+
+modalité cognitive -additionnelle- dont nous sommes désor-
+mais dotés, qui ne cesse d'étendre et d'approfondir son champ 
+de discernement, atteignant une dimension suprasensible en 
+quelque sorte, qui contredit le postulat kantien, mais dont les 
+modes de constitution échappent de part en part à notre 
+perception sensible. Car c'est cela le prix inattendu d'une intel-
+lection subitement amplifiée des phénomènes, et qui se paie 
+par une double invisibilité. 
+D'abord, les processus techniques sont empreints d'une part 
+d'immatérialité qui interdit de facto toute perceptibilité soute-
+nue et exhaustive. Ensuite, malgré la sophistication croissante 
+des interfaces graphiques et de ce qui est nommé« datavisuali-
+sation >>, soit des procédés qui cherchent à exposer sensiblement 
+certaines des opérations ainsi qu'une synthèse des résultats, ils 
+se soustraient dans leur majorité au principe même de la repré-
+sentation. Dimension «fuyante» particulièrement embléma-
+tique dans le trading algorithmique, qui traite des données extrê-
+mement hétérogènes, et dont «l'activité des robots au sein de 
+leur environnement global» ne peut être rendue manifeste par 
+le fait de la multitude des sources, des paramètres décisionnels 
+hautement complexes et de la nature des systèmes qui se 
+déploient suivant des volumes et des vitesses qui dépassent nos 
+facultés d'entendement. Tout effort de cartographie procèdera 
+dans les faits d'une simplification qui jamais ne pourra rendre 
+compte de l'ampleur des mécanismes à l'œuvre. Une part de ce 
+qui a été conçu et établi par l'humain dépasse in fine notre capa-
+cité d'appréhension. La rationalité computationnelle et ses facul-
+tés« surhumaines» renvoient en quelque sorte au sublime kan-
+tien, soit le sentiment éprouvé devant l'impossibilité de nous 
+figurer certaines dimensions qui excèdent notre intellect, nous 
+rappelant paradoxalement à notre finitude au moment exact de 
+notre «plus grande puissance» supposée. 
+LA QUANTIFICATION INTÉGRALE DE LA VIE - 125
+
+---
+
+[p. 137-137]
+émer-
+gence d'une ère du SUR-MESUREALGORITHMIQUE qui agrège 
+de façon singulière la plus grande liberté apparente des indivi-
+dus à des systèmes complexes chargés de continuellement la 
+soutenir et de la capitaliser le plus intensément, sous toutes ses 
+dimensions et sous toutes les formes imaginables. 
+136- lA VIE ALGORITHMIQUE
+
+---
+
+[p. 146-148]
+ouent-mais là encadrés 
+par des algorithmes industriels- avec le «soi gnomique)) grec 
+pour qui <<la force de la vérité ne fait qu'un avec la forme de la 
+volonté 11)). 
+Car les canons objectivés et en partie individualisés décou-
+vrent des écarts qui appellent sans fin à être comblés. C'est pour-
+LA NORMATMTÉ ALGORITHMIQUE- 145
+quoi le Quantijied Self pousse à entretenir un rapport continû-
+ment performanciel ou sacrificiel à soi, à l'instar de certains 
+usages à l'œuvre dans le monde de l'entreprise ou celui de la 
+compétition sportive de haut niveau. Mais il renoue autant avec 
+la confession chrétienne, comparativement analysée par Fou-
+cault comme une coutume qui visait à témoigner de ses péchés, 
+à user de l'aveu afin d'expier par la parole ses pensées malsaines 
+ou ses actes coupables dérobés. Le «redressement assisté de 
+soi» vise également à se repentir de ses fautes (excès alimen-
+taires, manque d'exercice, mœurs fragilisant la santé) par une 
+sorte de lutte psychologique et physique contre soi-même, pou-
+vant tendre à la compulsion ou à l'expérience de la limite: «La 
+grande richesse des technologies chrétiennes de soi: pas de 
+vérité sur soi sans sacrifice de soi 12• » 
+Technologies de soi qui, sous couvert de l'expression de la 
+robustesse de corps recouverts de capteurs et de voyants lumi-
+neux -sensible dans la présence fuyante de joggers suréquipés 
+galopant dans les parcs ou sur l'asphalte des villes-, se cultivent 
+sur fond de vulnérabilité. Ici, c'est moins l'affirmation rayon-
+nan te propre au processus d'individualisation historique qui se 
+manifeste qu'une fragilité inquiète qui cherche à se prémunir 
+de ses déficiences, et à tendre vers la meilleure conservation de 
+soi. Systèmes enveloppant et régulant la conduite des êtres, qui 
+répondent comme par magie à l'angoisse humaine fondamen-
+tale qui aspire à garantir au mieux les conditions de la vie ou de 
+la survie, et qui confirment à l'excès le constat rousseauiste d'une 
+nudité anthropologique primitive devant nécessairement être 
+secondée par des instances de soutien ou des prothèses arté-
+factuelles: «Nous naissons faibles, nous avons besoin de force; 
+nous naissons dépourvus de tout, nous avons besoin d'assis-
+tance13. »C'est cela qui ne doit pas être avoué, raison pour la-
+quelle c'est un « enhancement» qui est affirmé être recherché, 
+146- LA VIE ALGORITHMIQUE 
+
+soit une augmentation de la puissance des corps grâce à une 
+«harmonieuse fusion)) établie avec la technique, non pas en 
+déformant ou en violentant la chair à l'instar de pratiques ou de 
+scènes à l'œuvre dans quelques fictions eugénistes, ni non plus 
+en l'infiltrant de partout de métal ou de silicone conformément 
+à l'imaginaire transhumaniste. Non, c'est un esprit qui corres-
+pond plutôt à une forme de «néo-humanisme technologisé )), 
+qui en appelle à la libre participation de tous, pour la bonne 
+cause déclarée de la santé individuelle et publique, autant que 
+pour la cause moins flagrante mais prépondérante de la bonne 
+santé d'entreprises impliquées dans la production de nouveaux 
+protocoles ou le développement de toutes sortes d'applications 
+sportives ou de santé dites mobiles. 
+Gestion algorithmisée de soi qui suppose encore que les per-
+sonnes elles-mêmes assurent un relais à l'égard de l'impératif 
+de la mesure généralisée, qui témoigne d'une intériorisation 
+consciente autant qu'inconsciente du primat contemporain de 
+la quantification, mais ici vécu sous un mode apparemment 
+autonome et cool. Elle pourrait même s'entendre comme la 
+forme paradigmatique d'une pleine liberté, permettant de tra-
+vailler de «soi à soi)) aux conditions optimisées de sa propre 
+existence. Ici, l'individualisation ne consiste plus à s'éloigner de 
+certains cadres normatifs du social, mais à prendre au sérieux 
+un registre de codes et de recommandations établi par des 
+instances plus ou moins identifiées, par des officines, par des 
+entreprises privées, et à les épouser, à les embrasser, jusqu'à 
+s'enivrer de toute amélioration ou challenge personnalisé, dans 
+le sentiment d'une réalisation sans contrainte et bienfaisante 
+de sa vie. Ethos qui induit cependant dans son aspiration à l'idéa-
+lité l'imperfection de toute performance, faisant de chaque 
+bataille provisoirement remportée le terreau de défaites inéluc-
+tablement annoncées. 
+LA NORMATIVITÉ ALGORITHMIQUE- 147
+
+---
+
+[p. 156-157]
+-5 
+GOOGLE GLASS: 
+LA PRIVATISATION DE L'ATTENTION 16 
+Les Google Glass et autres lunettes connectées ne s'inscrivent 
+pas dans une linéarité qui prolongerait comme« naturellement» 
+les ordinateurs personnels, les smartphones et les tablettes. Elles 
+témoignent du franchissement d'un seuil, ne se présentant plus 
+comme des technologies portables, consultables ou manipu-
+lables de temps à autre, mais comme des protocoles intégrés 
+appelés à s'adjoindre sans plus de rupture spatiotemporelle à 
+l'expérience. Car elles intensifient le rapprochement continu 
+opéré avec le corps par l'industrie informatique, ne se conten-
+tant plus d'offrir davantage de miniaturisation, ou un rapport 
+tactile intensifiant le «cadre de la relation», mais s'incorporent 
+avec légèreté au visage, exposant des textes et des images fon-
+dus à l'un des deux verres. 
+Dispositif qui parfait le principe de la réalité augmentée, qui 
+consiste à superposer des informations sur un écran simultané-
+ment à notre perception naturelle des choses, et qui était déjà à 
+l'œuvre depuis les années 1990 dans le cadre d'activités profes-
+sionnelles spécifiques, relevant principalement du domaine mi-
+litaire, de l'avionique, de la maintenance industrielle ou de la 
+chirurgie. Depuis la généralisation des smartphones, c'est au 
+biais de multiples applications qu'elle s'est massivement déployée, 
+permettant de découvrir nombre d'indications relatives à l'envi-
+ronnement immédiat via l'utilisation du viseur photographique. 
+Si la facilité d'usage a contribué à généraliser la pratique, elle res-
+tait néanmoins conditionnée à l'expression d'une volonté et d'un 
+geste délibérés. Le port maintenu entraîne le passage du stade 
+occasionnel à celui d'une condition constitutive du quotidien. 
+LA NORMATMTÉ ALGORITHMIQUE - 155 
+
+On peut tenir les lunettes connectées comme le parangon 
+de la sophistication technologique contemporaine, fondée sur 
+l'extrême puissance des processeurs, l'intégration nanométrique 
+de certains composants et un design industriel capable d'amal-
+gamer en une seule unité nombre d'éléments hétérogènes. N éan-
+moins, ce qui, à la différence d'autres modèles, spécifie les Google 
+Glass, c'est qu'elles bénéficient directement de la haute maîtrise 
+de la science de l'indexation développée par la maison-mère, 
+pouvant faire apparaître sans« perte de signal» toute indication 
+«pertinente» à l'attention de chaque individu. Mécanisme qui 
+suppose de percevoir sur l'un des deux yeux des informations 
+qui certes peuvent provenir de l'Internet par commande vocale 
+ou manuelle, mais qui ne correspond pas à sa fonctionnalité 
+majeure, qui consiste à afficher toutes sortes de renseignements 
+adaptés à chaque être sans intention préalable de sa part. Auto-
+matisation d'une partie du champ de la vision ne requérant pas 
+de décision initiale, qui représente l'acmé du processus de la 
+prise en charge robotisée de la conduite des personnes. 
+Le système n'expose pas un «surcroît de réalité>>, mais crée 
+des cadres de perception indéfiniment ajustés aux profils et 
+contextualisés aux différentes localisations. C'est toute l'histoire 
+du modèle économique de la «gratuité>> du Web fondé sur le 
+suivi individualisé des navigations à l'œuvre depuis la fin des 
+années 1990, et qui n'a cessé de s'affiner et de se perfectionner, 
+qui trouve son cadre parfait d'expression. Ici la dimension d'in-
+dividualisation «fait corps>> avec celle d'une subjectivité orien-
+tée, au prisme de critères qui visent à faire continuellement cor-
+respondre les personnes à leurs besoins ou désirs supposés, 
+induisant une privatisation de l'attention. Phénomène qui par-
+ticipe du processus de dissolution progressive de l'« espace pu-
+blic>> entamé depuis quelques décennies par la marchandisa-
+tion croissante des villes, et annonce la «fin de la publicité>>, 
+entendue comme la formulation d'un message clos indistinc-
+156- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 169-170]
+nelles, qui induisent en retour et indissociablement 
+des procédures de suivi et de mémorisation imperceptibles. 
+C'est un puissant mouvement indéfiniment expansif qui est à 
+l'œuvre, qui s'est instauré et universalisé en à peine deux décen-
+nies, et qui plutôt que d'être appelé à s'atténuer, notamment 
+168- LA VIE ALGORITHMIQUE
+par le fait de révélations, de digues juridiques partielles ou de 
+fortune, va au contraire s'amplifier et déterminer de part en part 
+la marche du monde ou les conditions de son« bon)) fonction-
+nement. Le fait majeur, qui à la fois prolonge cette séquence 
+historique et lui fait passer un seuil encore plus critique, renvoie 
+à l'implémentation en cours et tous azimuts de capteurs qui va 
+contribuer à intensifier sans commune mesure l'ampleur des 
+données produites et témoigner de la quasi-totalité des gestes 
+du quotidien autant que des mouvements de la société dans 
+leur ensemble. 
+C'est pourquoi nous passons actuellement du régime de la 
+surveillance numérique qui aura caractérisé les années 1995-
+20152, à un DATA-PANOPTISME, non pas détenu par quelques 
+figures omnipotentes, la NSA ou d'autres entités, mais entre-
+tenu et exploité de partout, avec pour objectif prioritaire d'offrir 
+des services et d'assurer le plus grand« confort de tous)). Dimen-
+sion qui confirme la formule proprement visionnaire énoncée 
+par Ivan Illich selon laquelle« au-delà de certains seuils, la pro-
+duction de services fera à la culture plus de mal que la produc-
+tion de marchandises a déjà fait à la nature)). Le principe de la 
+surveillance comme modalité de captation masquée et inévita-
+blement partielle des informations se marginalise, au sein d'un 
+contexte où la collecte tacite et ininterrompue de données est 
+appelée à déterminer l'usage même de fonctionnalités de tous 
+ordres. Désormais, nous entrons dans une ère où c'est 
+l'expérience même du monde qui va générer une dissémination 
+perpétuelle et exponentielle de traces, non plus traitées en vue 
+de savoir qui fait quoi, mais afin de permettre à chacun de vivre 
+«sans encombre)) à l'intérieur d'un environnement de part en 
+part interconnecté ou «sensible)), faisant de la connaissance 
+granulaire et évolutive de tous les phénomènes une condition 
+universelle et nécessaire de l'existence. 
+DE LA SURVEILLANCE NUMÉRIQUE -169
+
+---
+
+[p. 179-180]
+s qui se complètent les uns les autres, et 
+qui terrassent progressivement toute zone dissimulée ou rétive 
+à l'observation. Il découvre froidement le savoir toujours plus 
+totalisant dont nous nous sommes dotés, qui dissout peu à peu 
+toute séparation disjoignant les êtres ou les choses. Il n'est plus 
+178- LA VIE ALGORITHMIQUE
+pertinent ou légitime de pointer dans la bonne conscience et 
+d'un doigt accusateur quelques organismes malveillants ou dia-
+boliques. C'est une condition globale de transparence que nous 
+avons érigée, et dont l'assise autant que les conditions de sa 
+pérennité et de son expansion dépendent prioritairement de 
+nos modes de vie consentis et volontaires. «D'où a-t-il tant 
+d'yeux qui vous épient, si ce n'est de vous?» écrivait La Boétie 
+dans son Discours de la servitude volontaire. 
+DE LA SURVEILLANCE NUMÉRIQUE - 179
+
+---
+
+[p. 189-191]
+isibilité planétaire qui se sont perfection-
+nées et généralisées au cours des décennies suivantes, mais qui 
+dépendaient de sources d'émission uniques. Désormais c'est 
+une relativisation de la notion de «canal>> qui s'opère, au profit 
+d'un foisonnement in quantifiable de focales mises à la libre dis-
+188- LA VIE ALGORITHMIQUE
+position de tous, conformément à une logique à l'œuvre depuis 
+l'apparition des premières webcams au milieu des années 1990 
+qui captaient en continu les images de certains espaces publics 
+de partout accessibles. Dimension qui fut en quelque sorte ra di-
+calisée quelques années plus tard par la plateforme Google 
+Earth autorisant le «survol» de toutes les surfaces de la Terre 
+face à son écran. Le site flightradar24.com témoigne de cette 
+récente capacité à suivre en temps réel quantité de phénomènes, 
+telle la totalité des vols en cours des avions civils, et à s'enquérir 
+de leur référence, de leur provenance, de leur destination, 
+situant virtuellement chaque visiteur au cœur d'une tour de 
+contrôle glotiale et individualisée. C'est l'étendue de la 
+perception humaine qui franchit un seuil, dorénavant capable 
+d'observer à tout instant et de tout lieu une infinité d'événements 
+en cours de par le monde. 
+Ce qui s'édifie actuellement, c'est un système de captation 
+intégrale qui emboîte différents procédés couvrant ensemble et 
+de façon complémentaire un spectre allant du plus minuscule 
+au plus élargi, instituant une vision multi-sources, multi-
+échelles, multi-acteurs et multifonctionnelle des phénomènes. 
+J'avais moi-même relevé, dans mon ouvrage Surveillance glo-
+bale13 paru en 2009, les limites qui alors s'imposaient à la méca-
+nique générale de la surveillance, confrontée à nombre de 
+«trous» qui relativisaient l'étendue de la puissance technolo-
+gique ou celle des aspirations. C'était à la fin de la première 
+décennie du XXIe siècle, il y a une éternité; depuis, les «angles 
+morts» peu à peu disparaissent, sont colmatés par l'érection 
+d'un data-panoptisme maintenant capable de réduire chaque 
+fait à des séquences de code de toute part exploitées, et dispo-
+nibles à l'attention de myriades d'entités et d'individus. Big 
+Brother est mort, mais Dieu existe bien, non pas sous une figure 
+monothéiste, mais d'après une forme universalisée et diffuse 
+DE LA SURVEILLANCE NUMÉRIQUE - 189 
+
+d'esprit panthéiste, qui imprègne tous les atomes, connaît 
+toutes les substances ou se confond avec chacune d'elle. Cette 
+forme-là de divinité existe bien, elle renvoie à notre condition 
+contemporaine en devenir et en perpétuelle consolidation. 
+190- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 200-201]
+-2 
+ETHOS DU TECHNO-POUVOIR 
+«L'ordre lié aux conditions techniques et économiques de la 
+production mécanique et machiniste détermine, avec une force 
+irrésistible, le style de vie de l'ensemble des individus nés dans 
+ce mécanisme, et pas seulement de ceux que concerne 
+directement l'acquisition économique•. »Max Weber avait su 
+saisir à l'aube du xxe siècle les incidences de la production méca-
+nique et machiniste non pas sur les seules conditions du travail, 
+mais plus largement sur le style de vie de l'ensemble des indivi-
+dus nés dans ce mécanisme. Un siècle plus tard cette vérité s'est 
+affermie. Les technologies numériques ne déterminent pas 
+seulement le quotidien, jusqu'au «style de vie» même, mais 
+ordonnent le cadre de la perception et de l'action humaine via 
+les objets et les systèmes élaborés par le techno-pouvoir. 
+Le techno-pouvoir ne représente pas une instance qui déci-
+derait de la politique intérieure ou extérieure d'une nation, qui 
+gérerait des budgets publics, ou qui se soucierait de la meilleure 
+préservation de la société et des conditions de vie. Il est com-
+posé d'une foultitude d'acteurs épars, qui agissent toujours plus 
+profondément sur le cours des existences et des choses, produi-
+sant des effets de gouvernementalité: «Le pouvoir n'est pas une 
+substance. Il n'est pas non plus un mystérieux attribut. Le pou-
+voir n'est qu'un type particulier de relations entre individus. [ ... ] 
+Le trait distinctif du pouvoir, c'est que certains hommes peuvent 
+plus ou moins entièrement déterminer la conduite d'autres 
+hommes- mais jamais de manière exhaustive ou coercitive•. » 
+C'est exactement suivant cette orientation, mais de façon 
+imperceptible, sous des contours avenants et séduisants, que 
+se déploie la pleine puissance du techno-pouvoir. Nébuleuse 
+LE TECHNO-POUVOIR- 199 
+
+globalisée et hétérogène qui malgré la paradoxale discrétion 
+-quasi paranoïaque- qui la caractérise, est dotée de «visages» 
+et affublée de noms: Google, Microsoft, IBM, Oracle, Apple, 
+Amazon, Face book, Twitter, Netflix, Ali baba, Bai du, Samsung ... 
+Soit les industries des architectures réseau, des logiciels, de la 
+téléphonie, de l'indexation des données, de la diffusion des 
+productions culturelles, des plateformes relationnelles, qui 
+structurent massivement le fonctionnement des sociétés et 
+accompagnent le quotidien de milliards d'individus. 
+Le techno-pouvoir n'agit pas à l'abri depuis une zone retirée 
+et indistincte, paré de l'aura de la quasi-invisibilité du Prince de 
+Machiavel ou de celle plus absolue de l'empereur chinois 
+cloîtré dans sa Cité interdite. Sa constitution, ses modes de 
+fonctionnement et ses visées peuvent être précisément réper-
+toriés et analysés. 
+Le techno-pouvoir représente le vecteur majeur qui concourt 
+à l'« impermanence contemporaine des choses», ne cessant de 
+produire de nouveaux systèmes, objets, schémas d'organisa-
+tion, à des cadences sans cesse accélérées, érigeant la rupture 
+permanente comme le principe fondateur de sa« philosophie>>. 
+Chaque projet en cours cherche à rendre caduques les para-
+digmes préexistants, à l'instar de la mise sur le marché de 
+l'iPhone en 2007, de celle de l'iPad trois ans plus tard, ou de celle 
+des Google Glass. Il réalise la quête utopique d'une« révolution 
+permanente», bousculant perpétuellement les structures en 
+place pour en substituer d'autres qui elles-mêmes devront être 
+marginalisées dans les plus cours délais. Mais son unique objec-
+tif, malgré toutes les déclarations de bonne foi formulées par 
+ses tenants, ou les discours enthousiastes relayés par leurs thu-
+riféraires, ne vise que l'accroissement incessant du profit des 
+dirigeants et de celui des actionnaires. 
+200- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 210-210]
+irs:« Un 
+des caractères majeurs de la technique est de ne pas supporter 
+de jugement moral, d'en être résolument indépendante et d'éli-
+miner de son domaine tout jugement moral. Elle n'obéit jamais 
+à cette discrimination et tend au contraire à créer une morale 
+technique tout à fait indépendante 21• >> 
+LE TECHNO-POUVOIR - 209
+
+---
+
+[p. 219-221]
+e ni "autonome", langage parasitaire branché sur la 
+technique, contribuant à la diffuser ou, faute de mieux, à rendre 
+quasiment impossible (comme le fait une musique d'ambiance) 
+tout recul radical, toute remise en question du phénomène 
+technique contemporain en sa spécificité 31• )) Environnement à 
+218- LA VIE ALGORITHMIQUE
+la fois entretenu par une prose politico-économique reprise à 
+peu près à l'identique dans tous les pays du globe, par une 
+presse spécialisée, dont le magazine californien Wired serait le 
+héraut, et par la diffusion de termes affectés de valeurs a priori 
+entendues, tels ceux de «croissance>>, de «prospérité» ou de 
+«progrès», pourtant délégitimés depuis longtemps dans leur 
+fondement par nombre d'examens critiques. 
+Cette rhétorique de l'innovation est encore épaulée par un 
+rapport au futur empreint d'une dimension judéo-chrétienne, 
+hégélienne ou néo-moderniste, d'ordre téléologique, perçu 
+comme étant porteur d'un horizon inévitablement meilleur ou 
+radieux. Car la temporalité de la technique est principalement 
+conjuguée au futur, plus rarement au passé, dans l'analyse des 
+effets occasionnés, et jamais au présent, dans l'évaluation des 
+justes comportements individuels et collectifs à adopter. C'est 
+la réintroduction du temps long de l'histoire, autant qu'une 
+interrogation réflexive menée au moment même des évolu-
+tions, qui s'avèrent impératives, plutôt que de se soumettre à 
+une fascination oiseuse exercée par l'idée du futur. 
+Ce qu'aura institué le techno-capitalisme à échelle globale, 
+c'est un mode de rationalité fondé sur la définition chiffrée de 
+tout phénomène grâce à la puissance indéfiniment accrue du 
+computationnel. Aujourd'hui, il convient de répondre à un type 
+quasi exclusif d'innovation par d'autres gestes d'innovation, 
+envisagés comme autant de possibilités indéfiniment ouvertes 
+à dessiner de nouveaux schémas à l'écart de toute visée stricte-
+ment commerciale et utilitariste. C'est l'intérêt commun qui 
+devrait être prioritairement recherché et qui a été jusqu'ici mas-
+sivement méprisé. C'est à un renversement ou à une inversion 
+des valeurs auquel il faut procéder, visant à repousser la seule 
+quête de l'intérêt particulier pour travailler à l'épanouissement 
+collectif et individuel supposé caractériser en propre l' ethos 
+LE TECHNO-POUVOIR- 219 
+
+démocratique et civique. Entreprise majeure d'innovation qui 
+doit se manifester sous toutes les formes possibles, dans l'ob-
+jectif de détrôner la puissance de gouvernementalité outrageu-
+sement gagnée par le techno-pouvoir et d'édifier de nouvelles 
+modalités plus vertueuses. Face à la puissance d'inventivité de 
+l'industrie du numérique, à son génie même, c'est toute la puis-
+sance d'inventivité des individus et des sociétés, tout le génie 
+humain à pouvoir dessiner autrement les choses, qu'il faut 
+encourager. Jusqu'à quand et jusqu'où allons-nous accepter 
+que quelques milliers de personnes dans le monde, principale-
+ment des dirigeants de groupes économiques et des ingénieurs, 
+infléchissent le cours individuel et collectif de nos existences, 
+sans que des oppositions, des digues juridiques ou des contre-
+pouvoirs ne se dressent? Il s'agit là d'un enjeu politique, éthique 
+et civilisationnel majeur de notre temps. 
+220- LA VIE ALGORITHMIQUE
+
+---
+
+[p. 230-232]
+qui, parfois, protègent mal 
+leurs sources 1• » 
+C'est encore un nécessaire réexamen des politiques publiques 
+de création de pôles high-tech qui devrait être mené, dans la 
+mesure où elles soutiennent majoritairement les start-up qui 
+concourent à la« servicisation de l'existence>> par l'élaboration 
+POLITIQUE ET ÉTHIQUE - 229
+de projets possiblement tout aussi voraces que ceux menés par 
+leurs ainées qui de surcroît occupent aujourd'hui des positions 
+oligopolistiques. C'est enfin l'Europe, terre historique de l'hu-
+manisme et de l'esprit démocratique, qui devrait davantage se 
+faire entendre en maintenant d'impératifs rapports de force avec 
+les États-Unis, dont un des axes politiques majeurs consiste à 
+soutenir coûte que coûte leurs entreprises, particulièrement 
+celles de haute technologie et de traitement de données. 
+L'enseignement scolaire et universitaire devrait pouvoir favo-
+riser un rapport informé et critique entretenu à l'environnement 
+numérique. C'est toute une philosophie éducative fondée sur une 
+compréhension active des phénomènes qui doit être encouragée: 
+«Le fait d'être conscient de la manière dont les interfaces, les outils 
+et les programmes influencent notre comportement est si pré-
+cieux 7• » Exigence qui nécessite au préalable d'en finir avec le 
+réflexe fonctionnaliste consistant à suivre le cours supposé iné-
+luctable de l'histoire et à introduire de façon brusque et massive 
+des tablettes numériques à l'école primaire et au collège. Steve 
+Jobs, peu avant sa mort, avait recommandé à ses équipes mar-
+keting d'exercer une pression auprès des écoles afin que les élèves 
+apprennent directement à lire via des iPad en vue de marginaliser 
+l'usage des manuels imprimés. C'est cela la puissance ou l'arro-
+gance du techno-pouvoir, qui entend sans état d'âme déter-
+miner les modes d'apprentissage au nom d'intérêts privés. Car le 
+marché de l'éducation à échelle mondiale constitue un horizon 
+inépuisable et sans cesse renouvelé de profits. 
+Dans les faits, c'est un nouvel environnement cognitif qu'in-
+duirait l'introduction massive de tablettes, dans la mesure où 
+l'interconnexion entraîne notamment une dispersion de l'a tt en-
+tion, favorisée par la multiplicité de fonctionnalités intégrées à 
+un même terminal (traitement de texte, navigateur Internet, 
+messagerie ... ). C'est encore le temps passé devant les écrans 
+2 30- LA VIE ALGORITHMIQUE 
+
+qui devrait s'amplifier, dont l'impact sur la santé physique et 
+mentale est régulièrement confirmé par de nombreuses études 
+qui témoignent d'effets sur l'obésité, de troubles psychiques et 
+d'addiction, d'une réduction de l'espérance de vie. L'honneur 
+de l'école consiste à inscrire le champ de son action au sein de 
+son milieu contemporain tout en maintenant une salutaire forme 
+d'écart. C'est ce qu'offre le livre imprimé, objet physiquement 
+clos à lui-même mais ouvert à toutes les expériences de la 
+connaissance et de l'imaginaire. Il s'expose au regard dans une 
+altérité située à distance qui appelle la concentration, indispen-
+sable à la réflexion et à la maturation du savoir. Ses vertus éprou-
+vées depuis des siècles ne peuvent être méprisées ou balayées 
+d'un coup de main par quelques décisions hâtives. On voit à 
+quel point ces projets qui engagent des enjeux majeurs de société 
+devraient faire l'objet de débats et de controverses publics. Le 
+pouvoir politique subit une pression croissante exercée par le 
+lobbying numérico-industriel, lui faisant miroiter une fluidifi-
+cation et une optimisation de la vie grâce à ses systèmes de 
+rationalisation computationnelle, déjà à l'œuvre dans les pro-
+grammes de l'Open data ou des smart cities. 
+À ce titre, l'enseignement du code à l'école participerait d'une 
+compréhension des mécanismes internes, des logiques qui les 
+guident, de la façon dont les processus et les usages sont définis 
+ou conditionnés de manière algorithmique: «Il importe peu de 
+comprendre les détails du fonctionnement très complexe d'un 
+processeur ou d'une carte graphique. Il est par contre essentiel 
+de maîtriser les bases de l'algorithmique et de sa mécanique du 
+raisonnement.[ ... ] Surtout il est indispensable de comprendre 
+le sens d'une information, comment elle est représentée, com-
+ment elle est organisée 1• » Apprentissage qui autorise également 
+la conception individuelle de programmes, érigeant l'écriture 
+du code comme une modalité de subjectivation revêtant une 
+POLITIQUE ET ÉTHIQUE- 231
+
+---
+
+[p. 240-242]
+LA VIE ALGORITHMIQUE
+sensible. Notre période appelle à coup sûr de cultiver l'art de la 
+suspension ou de l'interruption (Hermann Hesse 21) et de ne pas 
+chercher sans fin à raccorder le cordon ombilical qui atteste 
+dans les faits selon le psychiatre Donald Winnicott d'un «déni 
+de la séparation 30 ». 
+POLITIQUE ET ÉTHIQUE- 239
+-4 
+SCIENCES HUMAINES 
+ET RAISON NUMÉRIQUE 
+Dans un article intitulé« The end of theory 31 »,l'ancien rédacteur 
+en chef du magazine Wired et entrepreneur Chris Anderson 
+affirmait que la puissance d'interprétation des phénomènes 
+offerte par le traitement des données rendait dorénavant 
+obsolète toute analyse scientifique et théorique des faits. Leur 
+compréhension serait désormais déduite de statistiques« agnos-
+tiques». Dimension froide et objective qui témoignerait pré-
+cisément de la valeur de l'« heuristique computationnelle >>: 
+«C'est un monde dans lequel des quantités massives de données 
+et les mathématiques appliquées remplacent tous les autres 
+outils qui pourraient être utilisés. Exit toutes les théories sur les 
+comportements humains, de la linguistique à la sociologie. 
+Oubliez la taxinomie, l'ontologie et la psychologie. Qui peut 
+savoir pourquoi les gens font ce qu'ils font? Le fait est qu'ils le 
+font, et que nous pouvons le tracer et mesurer avec une fidélité 
+sans précédent. Si l'on a assez de données, les chiffres parlent 
+d'eux-mêmes 32• >>Position éminemment réductrice et simplifi-
+catrice, emblématique d'une culture économique et techno-
+logique libertarienne californienne qui a cherché en quelques 
+lignes à congédier des siècles de tradition scientifique et épis-
+témologique. Allégation qui fut partout reprise et commentée, 
+alors que son inconséquence et son absurdité auraient dû la 
+cantonner à une juste indifférence. 
+Or, c'est précisément contre cette tentative d'alignement du 
+travail de la raison et de la pensée à la vérité de «chiffres qui 
+parlent d'eux-mêmes» qu'une partie des sciences humaines 
+doit se développer, en vue de s'opposer à ces assauts réduction-
+240- LA VIE ALGORITHMIQUE 
+
+nistes, d'analyser les conditions de production de tels discours, 
+autant que de celles qui participent sous de multiples formes 
+de l'instauration de modes de rationalité strictement utilitaristes. 
+Si de nombreux corpus ont été produits depuis une trentaine 
+d'années, ils ont dans leur grande majorité été déterminés par 
+des logiques partisanes. Ces enjeux qui font l'objet de puissantes 
+crispations conduisent généralement à se ranger à des «clans 
+d'appartenance», à des sortes de «chapelles», dont il est pos-
+sible de dresser les différentes typologies. 
+La première catégorie regarde les prospectivistes ou futuro-
+logues, qui ont bénéficié d'une large visibilité au cours des 
+dernières décennies. Leurs conjectures sont généralement carac-
+térisées par un paradoxe, qui veut qu'au moment où ils formulent 
+leurs théories, de nombreuses personnes ou organes de presse 
+leur accordent du crédit, voire de la« foi», et dont on s'aperçoit 
+quelques années plus tard, mais sans jamais y revenir sérieuse-
+ment, qu'elles relevaient d'affabulations. Propos qui sur le coup 
+peuvent susciter quelque intérêt, particulièrement par la force 
+de séduction exercée par l'idée du futur sur les esprits. Le 
+souhait non dit qui les anime est double. D'abord, celui de se 
+positionner en prophètes ou «voyants de l'avenir» les parant 
+d'une forme d'aura. Ensuite, celui de formuler des prophéties 
+possiblement autoréalisatrices répondant à leur propre intérêt. 
+Car ces personnes sont souvent liées à des groupes privés, 
+concourant par leurs paroles à légitimer de nouveaux horizons 
+industriels pouvant par ailleurs faire l'objet de scepticisme ou 
+d'inquiétude. On aura reconnu les deux hérauts emblématiques 
+de cette catégorie, le futurologue transhumaniste Ray Kurzweil, 
+membre actif de Google, qui inspire par ses visions nombre de 
+projets de l'entreprise, et le prospectiviste Jeremy Rifkin, qui a 
+notamment monnayé ses services de consultant auprès de 
+l'Union européenne relativement à des questions énergétiques, 
+POLITIQUE ET ÉTHIQUE - 241
+
+---
+
+[p. 250-252]
+ment publiée dans The 
+Independent41 que« la réussite dans la création de l'intelligence 
+artificielle serait le plus grand événement dans l'histoire 
+humaine. [ ... ] Malheureusement, ce pourrait aussi être le 
+dernier, sauf si nous apprenons comment éviter les risques 
+engendrés par cette création». 
+POLITIQUE ET ÉTHIQUE - 249
+C'est pourquoi les sociétés doivent s'attacher à déployer sous 
+de multiples formes ce nécessaire travail éthique, afin qu'elles 
+ne soient pas prises de court et qu'elles puissent peser en toute 
+responsabilité et conscience, non seulement sur le cours du 
+présent, mais également et autant que possible sur les contours 
+du futur. Exigence qu'avait précisément explicitée Hans Jonas, 
+appelant à ériger une« éthique du futur)): «Toute futurologie 
+sérieuse, telle que l'exige l'objectif de la responsabilité, devient 
+une branche de la recherche qu'il convient de cultiver en soi et 
+sans relâche, en suscitant la coopération de nombreux experts 
+dans les domaines les plus divers. [ ... ] La vision de l'avenir au 
+service de l'éthique du futur revêt une fonction intellectuelle et 
+une fonction émotionnelle; elle doit instruire la raison et ani-
+mer la volonté. Et le péril à éviter doit apparaître, l'effroi qu'il 
+inspire doit nous réveiller, la compréhension des causes qui s'est 
+exercée à le déduire doit servir à le détourner 42• » 
+Plus largement, toute capacité critique relève d'une 
+dimension éthique dans la mesure où elle refuse de coller aux 
+phénomènes et d'amender systématiquement les faits, étant 
+délibérément disposée à évaluer ce qui pose problème ou fait 
+violence. À cet égard, Dominique Lecourt avait à juste titre 
+exploré les liens complexes associant la rationalité scientifique 
+et les autres modalités de pensée -religieuses, juridiques, 
+morales et politiques-, appelant à marquer une dissociation à 
+l'égard des appartenances singulières, susceptible de participer 
+ainsi d'une« éthique pour la recherche qui rende toute sa place 
+à notre bien le plus précieux: l'esprit critique 43 )). Mener une 
+réflexion éthique à l'égard de l'innovation ininterrompue 
+consiste à affirmer, au moment de la gestion algorithmique de 
+tous les champs de la vie, la capacité humaine à agir, à ne pas 
+se laisser porter passivement par la surpuissance de systèmes 
+initialement conçus par quelques milliers d'individus en vue 
+250- LA VIE ALGORITHMIQUE 
+
+d'assouvir leurs intérêts particuliers. Tous les gestes qui affir-
+ment la dimension non inéluctable du présent et de l'avenir 
+recouvrent une portée éthique. C'est ici que l'éthique et le poli-
+tique se fondent dans leur essence, entendus l'une et l'autre 
+comme les manifestations proprement humaines à pouvoir 
+orienter lucidement et en fonction de valeurs partagées le cours 
+individuel et collectif de nos destins. Ce sont ces facultés que le 
+régime numérique aura affaiblies ou marginalisées, ce sont elles 
+qu'il convient d'opposer à sa raison qui doit être évaluée en droit 
+et en devoir grâce au plein exercice de notre inaliénable et irré-
+ductible liberté humaine. 
+POLITIQUE ET ÉTHIQUE -251
+
+---
+
+[p. 262-266]
+lance à maintenir à l'égard de systèmes 
+robotisés ordonnant toujours plus profondément la trame de 
+nos existences. En cela, soumettre la vie algorithmique contem-
+poraine à une critique en acte de la raison numérique qui 
+l'ordonne relève d'un combat politique, éthique et civilisation-
+ne! majeur notre temps. 
+CONCLUSION - 261
+INTRODUCTION 
+LE MONDE AU PRISME DES DONNÉES 
+1. 
+Un disque d'un pétaoctet permet par exemple de stocker l'équivalent 
+de vingt mille films en Blu-ray. 
+2. 
+Le CERN, dont les collisions provoquées par son accélérateur de 
+particules génèrent près de quinze millions de milliards d'octets de 
+données par an, soit l'équivalent de vingt millions de CD, représente 
+une des entités emblématiques de part en part structurées par la 
+production et le traitement de volumes vertigineux de données. 
+3. 
+La loi dite «de Moore)) énoncée en 1965 par Gordon Moore, qui avait 
+affirmé en substance le principe exponentiel du doublement tous les 
+dix-huit mois de la puissance, de la capacité et de la vitesse des 
+différentes composantes des systèmes informatiques. 
+4. On se souvient que le sommet européen de Lisbonne tenu en 2000 
+s'était donné comme objectif de situer l'Europe à l'horizon 2010 
+comme le territoire le plus avancé en termes d'« économie de la 
+connaissance)), Outre que l'expression était empreinte d'une extrême 
+confusion, plutôt qu'à une économie notamment fondée sur une 
+excellence de la formation universitaire, c'est un modèle établi sur le 
+suivi et la connaissance de faits de tous ordres à des fins commerciales 
+qui s'est rapidement consolidé au cours de la décennie qui a suivi. 
+5. 
+Dominique Janicaud, Puissance du rationnel, Gallimard, 1985, p. 81. 
+6. 
+Nicholas Negroponte, Being Digital [1995], Vintage Books, 2000, p. 37. 
+7. 
+Frontier, en anglais, ne signale pas une limite circonscrite mais un 
+horizon ouvert, à la différence de border qui nomme la frontière telle 
+qu'entendue en français. Sur l'esprit utopique qui accompagna l'ex-
+pansion du numérique au cours des deux dernières décennies du 
+xxe siècle, cf. Fred Turner, Aux sources de l'utopie numérique. De la 
+contre-culture à la cyberculture. Steward Brand un homme d'influence, 
+C&F éditions, 2012. 
+8. 
+Emblématique à cet égard la une de Wired de février 2014: «The Web 
+is under threat», magazine qui aura été aux avant-postes de tous les 
+discours enthousiastes, et qui n'a pu avec le temps que se ranger à 
+l'évidence: «Le Web est sous la menace)). 
+9. 
+Jacques Ellul, La Technique ou l'Enjeu du siècle, Armand Colin, 1954, 
+p. 73-74. 
+NOTES -265
+
+---
+
+[p. 275-276]
+eorges Elgozy, L'Esprit des mots ou l'Antidictionnaire, Denoël, 
+1981, p. 66. 
+1. Max Weber, L'Éthique protestante du capitalisme, Plon, 1964, p. 249. 
+1. 
+Michel Foucault, «"Omnes et singulatim'': Vers une critique de la raison 
+politique», Dits et Écrits, t. Il, Gallimard, «Quarto», 2001, p. 953-980. 
+274- LA VIE ALGORITHMIQUE
+10. Marx, «Introduction générale à la critique de l'économie politique» 
+[1857], Économie, Œuvres I, Gallimard, 1994, p. 264. 
+11. La Cour européenne de justice a estimé le 13 mai 2014 que Google 
+pouvait être saisi par un particulier réclamant la suppression de ses 
+résultats de recherche certaines informations sensibles le concernant. 
+12. Franck Leroy, Réseaux sociaux & ce, le commerce des données per-
+sonnelles, Actes Sud, 2013, p.34. 
+13. Michel Foucault, L'Origine de l'herméneutique de soi. Conférences 
+prononcées à Dartmouth College, 1980, Vrin, 2013, p 38-39. 
+14. Douglas Rushkoff, Les 10 Commandements de l'ère numérique, Fyp 
+Éditions, 2012, p. 8. 
+15. Robin Clarke, La Course à la mort ou la Technocratie de la guerre, Le 
+Seuil, 1972. 
+lB. Cf. lan Hacking, Concevoir et Expérimenter, Christian Bourgois, 1993. 
+17 
+Cf. Bruno Latour, Steve Woolgar, La Vie de laboratoire: la production 
+des faits scientifiques [1979], La Découverte, 1996. 
+18. George Orwell, Le Quai de Wigan [1937], 10/18, 2000, p. 215. 
+19. Auguste Comte, Cours de philosophie positive, 1842, chap. 2. 
+20. DennisGabor,LaSociétédematurité, Éditions France-Empire, 1973, p.145. 
+21. Jacques Ellul, La Technique ou l'Enjeu du siècle, op. cit., p. 90. 
+22. Bruno Latour, «La fin des moyens», Réseaux, no lOO, 2000, p. 45-46. 
+23. Cf. Stuart Firestein, Les Continents de l'ignorance, Odile Jacob, 2014. 
+24. Cf. Robert N. Proctor, Golden Holocaust. La conspiration des indus-
+triels du tabac, Équateurs, 2014. 
+25. François Partant, La Ligne d'horizon [1988], La Découverte, 2007, p. 30-31. 
+28. Joseph Schumpeter, Capitalisme, socialisme et démocratie [1942], 
+Payot, 1990, p. 57. 
+27. Ibid., p.82. 
+28. Sur le phénomène de la marchandisation indéfiniment étendue de la 
+vie depuis une trentaine d'années, cf. Michael J. Sandel, Ce que l'ar-
+gent ne saurait acheter. Les limites morales du marché, Le Seuil, 2014. 
+29. Cf. sur ce sujet le livre de l'ingénieur Philippe Bihouix, L'Âge des law-
+tech: Vers une civilisation techniquement soutenable, Le Seuil, 2014. 
+30. Cf. le documentaire français Foxconn: La face cachée d'Apple. 
+31. Dominique Janicaud, La Puissance du rationnel, op. cit., p. 100-101. 
+NOTES -275

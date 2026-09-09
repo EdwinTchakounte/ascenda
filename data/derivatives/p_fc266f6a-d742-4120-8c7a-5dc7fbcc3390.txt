@@ -1,0 +1,971 @@
+OUVRAGE : IA : grand remplacement ou complémentarité ?
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 283
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Titre (p. 2-2)
+  Copyright (p. 3-3)
+  Introduction - Les sept questions qui font l'objet de ce livre (p. 4-5)
+  I. Des performances que personne n'avait prévues : comment l'expliquer ? (p. 6-6)
+  II. L'IA est-elle capable de créativité en médecine comme dans les arts, les sciences et les lettres ? (p. 7-7)
+  III. Vers la fin du travail salarié ? (p. 8-10)
+  IV. Accélérer pour « progresser » ou ralentir pour réguler ? Le débat decel versus e/acc. (p. 11-11)
+  V. Vers des machines dotées de conscience et d'émotion (p. 12-13)
+  VI. L'IA va-t-elle vraiment nous rendre immortels ? (p. 14-15)
+  VII. En guise de conclusion : en arrière toute ? La grande peur des intellectuels. Séparer le bon grain de l'ivraie (p. 16-18)
+  Chapitre I - Des performances que personne n'avait prévues - Le monopole de l'humain remis en cause ? (p. 19-21)
+  Des performances sidérantes que personne n'avait prévues il y a encore dix ans dans des domaines qu'on pensait jusqu'alors réservés aux humains (p. 22-29)
+  Un quotient intellectuel supérieur à celui de 99 % des humains (p. 30-33)
+  Les raisons de fond qui expliquent la surprise même des meilleurs spécialistes face à ces performances inattendues… (p. 34-36)
+  Des progrès qui suscitent la peur ou l'ironie… Se rassurer à bon compte n'est pas la solution, car les erreurs commises par les machines ne sont dues le plus souvent qu'aux partis pris et aux biais des humains… (p. 37-40)
+  De quoi parle-t-on au juste et en quel sens peut-on parler « d'intelligence » s'agissant de machines dénuées de conscience et d'émotions ? (p. 41-42)
+  I. Le premier type d'IA est l'IA à la fois faible et étroite (p. 43-43)
+  II. Le deuxième visage de l'IA est celui qu'on appelle en anglais AGI ou ASI (intelligence artificielle généraliste ou super-IA) (p. 44-45)
+  III. Le troisième visage de l'IA serait (j'emploie le conditionnel car il s'agit à mon sens d'une utopie ou, pour mieux dire, d'une « idée régulatrice » au sens kantien de l'expression) celui de l'IA forte, donc d'une intelligence dotée comme la nôtre de conscience de soi, de libre-arbitre et d'émotions, donc aussi d'intérêts propres, à ceci près qu'à la différence des humains elle serait incarnée (p. 46-47)
+  Chapitre II - La question de la créativité de l'IA - Un art sans artistes, une médecine sans médecins, des livres sans « auteurs » ? (p. 48-49)
+  I - Un art sans artistes ? (p. 50-59)
+  La question des brevets et des droits d'auteur (p. 60-64)
+  II - Une médecine sans médecins ? - Comment l'IA va changer du tout au tout les métiers de la médecine (p. 65-66)
+  Quand le diagnostic des machines devient plus rapide et plus fiable que celui des humains, voire plus fiable seul qu'associé à un médecin… (p. 67-69)
+  Les formidables progrès du séquençage de l'ADN ouvrent des possibilités thérapeutiques mais aussi prédictives et préventives radicalement inimaginables il y a peu encore (p. 70-72)
+  La compréhension des mécanismes du vieillissement et la lutte contre la vieillesse. La révolution de la longévité sera elle aussi liée à l'IA (p. 73-78)
+  III - Une littérature sans écrivains, une philosophie sans philosophes ? (p. 79-80)
+  Si la littérature ne consiste pas seulement à « raconter des histoires », le rôle de l'IA sera plus compliqué… (p. 81-83)
+  Tout dépend de la façon dont on définit les grandes spiritualités philosophiques et religieuses (p. 84-85)
+  Pour mes lecteurs qui souhaiteraient aller plus loin : pourquoi la philosophie est un art des réponses, pas des questions… (p. 86-88)
+  Peut-on parler de « progrès » en philosophie ? (p. 89-89)
+  Pourquoi une IA faible ne peut ni créer des systèmes de valeurs, ni choisir entre eux… (p. 90-91)
+  L'IA est intelligente mais sauf alignement, elle ne peut pas choisir entre des systèmes de valeurs (p. 92-92)
+  Quand ChatGPT répond à des questions morales (p. 93-95)
+  Chapitre III - Des entreprises sans travailleurs humains ? - Vers la fin du travail salarié ? Bonne ou mauvaise nouvelle ? (p. 96-100)
+  La question de fait L'antinomie de la fin du travail I - 1. Les arguments de ceux qui n'y croient pas… (p. 101-101)
+  1) L'IA aurait peu d'effet sur la productivité, donc sur l'emploi (p. 102-102)
+  2) Les emplois entièrement automatisables sont rares, or ils sont les seuls à pouvoir être remplacés par l'IA, cette dernière aura donc peu d'impact sur l'emploi… (p. 103-103)
+  3) La comparaison avec les anciennes révolutions industrielles incite à croire qu'il y aura des créations d'emplois nouveaux (p. 103-104)
+  4) Enfin, quatrième argument : les IA génératives seraient de toute façon en voie de disparition (p. 105-106)
+  La question de fait L'antinomie de la fin du travail II - 2. Les arguments de ceux qui y croient (p. 107-107)
+  1) L'IA pourra remplacer des emplois peu automatisables et ce d'autant plus que la robotique intelligente changera la donne du tout au tout (p. 107-109)
+  2) La question de la productivité est encore indécidable, en outre elle n'est pas la seule qui compte en matière d'emploi (p. 110-112)
+  3) La référence aux révolutions industrielles du passé en même temps qu'au modèle de la « destruction créatrice » selon laquelle les destructions d'emplois seront compensées par des créations n'a guère de sens dans le contexte actuel (p. 113-114)
+  4) La disparition des IA génératives et leur remplacement par des IA représentatives capables de contextualiser et de planifier ne ferait en toute hypothèse qu'aggraver la situation de l'emploi ! (p. 115-115)
+  5) Enfin, last but not least, les optimistes de la non-fin du travail semblent oublier, ou à tout le moins sous-estimer l'impact que vont avoir dans les entreprises les RAG (génération augmentée de récupération) (p. 116-118)
+  De la question de fait à la question de droit (p. 119-120)
+  L'antinomie de la fin du travail : paradis ou enfer sur terre ? - Pour ceux qui souhaitent l'abolition du travail salarié, l'IA est la meilleure nouvelle du siècle ! (p. 121-123)
+  Pourquoi les patrons de l'IA rejoignent paradoxalement la critique marxienne de la valeur travail en proposant la solution du RUB (p. 124-125)
+  Un contexte de quête du bonheur favorable à l'idée d'un monde enfin débarrassé du travail (p. 126-129)
+  L'antinomie de la fin du travail : paradis ou enfer sur terre ? - Pourquoi la fin du travail poserait en réalité des problèmes insolubles et serait catastrophique pour des centaines de millions de gens… (p. 130-131)
+  Une enquête dont les résultats sont publiés en juillet 2024 donne raison à Keynes et dévoile, à l'encontre des attentes de ceux qui l'avaient commanditée, les effets désastreux du RUB… (p. 132-134)
+  La question de l'impact de l'IA sur le travail dans le monde scolaire - L'IA va-t-elle tuer le travail dans le monde scolaire en ôtant aux enfants le soin de penser par eux-mêmes ? (p. 135-137)
+  Le rêve d'un monde scolaire entièrement ludique, une « belle vie » d'élève « sans souci, sans travail, sans ennui » est une absurdité… (p. 138-139)
+  Interdire l'IA dans le monde scolaire ou organiser une complémentarité intelligente ? (p. 140-140)
+  Pour une complémentarité humain-IA autour de besoins infinis ? (p. 141-143)
+  Une orientation de nos enfants vers les métiers « tête, cœur, main » et un service civique rémunéré et étendu au monde des adultes (p. 144-146)
+  Chapitre IV - Régulation : « decels » versus « e/acc » - Décélérer pour réguler ou accélérer pour construire un nouvel « avenir radieux » ? (p. 147-148)
+  Les arguments des partisans d'un moratoire visant à encadrer l'IA sur le plan moral, juridique et politique (p. 149-155)
+  Onze sujets de réflexion fondamentaux pour une régulation de l'IA (p. 156-160)
+
+[22/218 passages, 16606 tokens sur 177037]
+
+=== EXTRAITS ===
+
+[p. 4-5]
+INTRODUCTION
+Les sept questions qui font l’objet de ce livre
+Lorsqu’en 1997 un logiciel d’intelligence artificielle intégré dans
+l’ordinateur Deep Blue a battu le champion du monde d’échecs, Garry
+Kasparov, le monde entier a compris que quelque chose d’inouï venait de se
+passer. Qu’une machine « sans âme », dénuée de conscience et du moindre
+sentiment, puisse être plus performante que l’humain le plus performant au
+monde dans un jeu de pure intelligence semblait jusqu’alors inimaginable,
+de l’ordre de la science-fiction, pas de la science. Or le fait est que depuis
+cette date, l’IA n’a cessé de progresser à tel point que, sauf erreur de ma
+part, personne, y compris parmi les meilleurs spécialistes au monde, n’avait
+prévu il y a dix ans encore les performances dont sont aujourd’hui capables
+les LLM (large language models), ces IA génératives de textes, d’images et
+maintenant de vidéos.
+Lorsque j’expose dans une conférence quelques-unes des capacités de
+ces LLM, la dextérité avec laquelle ils répondent dans toutes les langues à
+nos questions, on me demande souvent comment il est possible que des
+machines créées par des humains puissent être infiniment supérieures à eux
+dans des jeux de pure intelligence comme le jeu d’échecs ou le jeu de go,
+dans des épreuves de diagnostic médical, les tests de quotient intellectuel, la
+rédaction de textes, d’images et de vidéos en tout genre, voire dans la
+production d’œuvres d’art ou de romans qui, fabriqués par des IA,
+
+remportent déjà des prix prestigieux. La plupart des chercheurs de ce
+secteur que j’ai pu rencontrer sont convaincus qu’on parviendra dans la
+décennie qui vient à fabriquer une « AGI  », une intelligence artificielle
+générale ou «  super-IA  » qui finira par nous surpasser dans tous les
+domaines. Certains évoquent alors, tantôt effrayés, tantôt sceptiques, le
+fameux mythe de Frankenstein dans lequel la créature échappe à son
+créateur et menace de dévaster le monde... Reste que ce n’est pas de
+science-fiction qu’il s’agit, mais d’une révolution qui va bouleverser le
+futur de nos enfants comme aucune autre avant elle.
+Dans ces conditions, sept questions cruciales se posent pour l’avenir de
+l’espèce humaine dans un monde où l’IA sera bientôt omniprésente – et ce
+sont elles qui font l’objet de ce livre, qui en structurent le plan et les
+chapitres. Comme mon lecteur le verra dans ce qui suit, il ne s’agit pas pour
+moi de donner des leçons de morale, pas davantage des réponses
+dogmatiques et définitives à ces grandes questions que tous les spécialistes
+de l’IA se posent aujourd’hui, des questions, cela dit au passage, qui
+devraient préoccuper comme jamais nos politiques si seulement leur culture
+scientifique n’était pas, sauf exception, aussi rudimentaire. Il s’agira plutôt
+pour moi d’exposer chaque fois de manière aussi objective et claire que
+possible les données de chacune de ces questions fondamentales, d’indiquer
+les arguments des uns et des autres, des arguments souvent contradictoires,
+parfois polémiques, avant le cas échéant de proposer humblement mon
+point de vue –  humblement car la révolution de l’IA est si soudaine, si
+rapide, pour ne pas dire si brutale, qu’aucun observateur, si informé soit-il,
+n’est tout à fait certain d’avoir des réponses absolument définitives.
+Je travaille sur ce sujet depuis plus de dix ans, passionné de science (j’ai
+enseigné sur le thème « biologie et philosophie » à la faculté de science de
+Paris...), j’ai fait tout mon possible depuis ces dernières années pour
+m’informer sérieusement. J’ai eu la chance de pouvoir rencontrer et
+consulter quelques-uns des meilleurs spécialistes au monde et je fais partie
+
+---
+
+[p. 15-15]
+la doctrine chrétienne du «  corps glorieux  » (de
+l’immortalité personnelle corps et âme) en aménageant au goût du jour
+(celui de l’IA) l’un des messages les plus profonds du spinozisme selon
+lequel nous «  sentons et nous expérimentons que nous sommes
+éternels » (Éthique V, proposition 23, scolie), attendu qu’après notre mort,
+
+---
+
+[p. 28-29]
+lle longe évoque un quartier de
+Shanghai ou de Hong Kong. La caméra s’approche de son visage, on
+distingue le grain de sa peau, tout semble parfaitement réel, rien à voir avec
+un dessin animé, mais tout est faux, virtuel : les personnages ont été de part
+en part inventés par l’IA. Si on le lui demande (gentiment), Sora tourne la
+même scène sous tous les angles possibles et imaginables. On peut l’inviter
+à dévoiler en gros plan le contenu du sac à main de la dame, Sora peut
+filmer sa marche depuis le toit d’un immeuble, la montrer dans le regard
+des individus qu’elle croise dans la rue,  etc. La performance laisse sans
+voix un de mes amis, un metteur en scène et réalisateur de talent, qui me
+dit, mi-amusé, mi-inquiet, qu’il va enfin pouvoir tourner son prochain film
+depuis sa cuisine pour moins de 20 dollars ! Bien sûr, on n’en est pas encore
+là, mais les scènes réalisées par cette IA pourront bientôt être le
+prolongement direct de son imagination, de ses souhaits les plus difficiles à
+combler, et il pourra bien entendu s’il en a envie (mais ce ne sera plus une
+obligation), y intégrer quelques « vrais acteurs » pour rehausser le tout...
+Pour tester sa compréhension de l’humour et du rire, là encore une
+disposition d’esprit dont on a souvent dit depuis Rabelais qu’elle était le
+« propre de l’homme », j’ai demandé à ChatGPT ce qu’il pouvait y avoir de
+drôle dans une image du pape François en train de prier, l’air recueilli, plein
+de ferveur religieuse, les yeux fermés, soulevant, non pas un calice, une
+croix ou une hostie comme on aurait pu s’y attendre, mais une ridicule
+petite salière en papier. Avec beaucoup de finesse, ChatGPT a compris tout
+seul, sans que je lui indique la moindre piste, que le comique pouvait
+résider dans le contraste entre la profondeur d’un recueillement spirituel et
+le côté dérisoire de l’objet profane ! Pour une machine, c’est tout de même
+sidérant, pour ne pas dire inquiétant... Si on ajoute que les créations de
+Dall-E ou de Midjourney, les équivalents picturaux de ChatGPT, sont
+parfois étonnantes d’originalité, voire de beauté, on comprend que ce n’est
+pas seulement dans le domaine de la seule résolution de problèmes, dans les
+secteurs de la raison et de la science que les humains peuvent s’inquiéter,
+mais bel et bien dans celui de la création qu’on pensait jusqu’alors être leur
+monopole intouchable, et ce d’autant qu’à l’opposé de la tendance très
+humaine qui consiste à persévérer dans l’erreur, les IA génératives se
+complètent et se corrigent volontiers et en permanence dès qu’on leur fait
+
+---
+
+[p. 39-40]
+ussi racistes  ! Comme le souligne à
+nouveau à fort juste titre Yascha Mounk, quelle que soit la légitimité qu’il y
+a à éviter le racisme, et « si réel que soit le problème, la lourdeur de la
+solution imaginée par les ingénieurs de Google ne fait que démontrer
+toute l’absurdité de l’idéologie régnant désormais au sein de l’élite
+américaine : une forme d’essentialisme racial qui déforme la réalité et
+qui, très probablement, annonce un bon gros retour de bâton politique
+et culturel ». Et de fait, les succès de Trump furent et restent très largement
+dus à ses combats contre le politiquement correct désormais omni-dominant
+dans la gauche américaine comme dans l’esprit des programmateurs
+chargés dans les entreprises de la Silicon Valley d’éviter tout dérapage
+politiquement incorrect, qu’il s’agisse des questions de genre, d’ethnie ou
+même du monde animal, Gemini refusant de donner à Mounk la recette du
+foie gras en le renvoyant à l’association PETA, au nom d’une éthique
+respectueuse du bien-être des oies et des canards...
+Comme on voit, la question dite de « l’alignement », c’est-à-dire des
+biais qu’on introduit dans la machine au nom d’une vision du monde
+éthique, politique ou spirituelle particulière, est plus que sérieuse. Car si on
+peut imaginer des IA wokistes, rien n’interdit d’en fabriquer des
+staliniennes ou nazies. Ce n’est qu’une question de choix pour les
+programmateurs. Reste qu’il ne faut pas faire peser sur l’IA les
+hallucinations que les humains y introduisent de manière délibérée – ce qui
+soulève une question tout à fait différente de celle des erreurs que l’IA peut
+engendrer sans que les humains l’aient cherché, simplement parce que les
+informations dont on l’a nourrie sont fausses ou que les algorithmes utilisés
+ont été involontairement biaisés. Or sur ces deux derniers types d’erreur, la
+vérité est que les IA génératives ne cessent de se corriger et de progresser.
+En outre, ceux qui se gaussent de ces « machines sans âme », qu’ils soient
+irrités ou ironiques, réfléchissent trop souvent comme si, avec ChatGPT, on
+avait affaire à un résultat final, alors qu’il ne s’agit, pardon d’y insister, que
+d’un nouveau-né qui va grandir à une vitesse folle !
+
+---
+
+[p. 50-51]
+I
+Un art sans artistes ?
+L’argumentation qui sous-tend en général les convictions des
+« humanistes » hostiles à l’idée que des IA puissent être dotées d’une réelle
+créativité revient presque toujours sous la même forme dans ce débat : qu’il
+s’agisse des œuvres musicales produites par des IA « compositeurs » ou des
+images et des vidéos que Sora, Dall-E, Midjourney ou Stable Diffusion
+créent à la demande et en quelques secondes, ils objectent que les machines
+s’inspirent toujours de millions d’œuvres du passé créées par de «  vrais
+artistes  », sous-entendu  : des artistes humains. De fait, c’est vrai, les IA
+génératives d’œuvres d’art ou de littérature en ont été littéralement gavées
+par des procédés qui relèvent tout simplement du pillage aux yeux des
+défenseurs de l’humanité. Ce serait donc la preuve que l’IA ne fait que
+copier, qu’imiter, du reste souvent de manière scolaire, peu imaginative, la
+seule créativité qui vaille étant réservée aux humains. On donne alors
+l’exemple de ces tableaux trop léchés, peu innovants, que secrètent Dall-E
+ou Midjourney, ou pire, de ces compositions musicales pesantes, à l’image
+de cette médiocre « Dixième Symphonie » de Beethoven inventée par une
+IA, des ratages qui prouveraient que l’IA est incapable d’une véritable
+innovation.
+
+Le problème, c’est que cette argumentation, indépendamment du fait
+qu’elle ne prend pas en compte les progrès que les IA accomplissent
+pratiquement tous les jours, se heurte à deux objections. La première, c’est
+qu’on peut à l’aide de requêtes nouvelles (toujours ces fameux prompts)
+faire évoluer et progresser les œuvres produites par des IA – ce qui pose la
+question de la complémentarité créative humain-machine en des termes qui
+ne sont plus ceux d’une antinomie binaire où tout est censé n’être que noir
+ou blanc. Mais il y a plus, à savoir que les créateurs humains procèdent de
+la même manière que les machines, en pillant eux aussi les œuvres du
+passé  ! Je ne connais aucun compositeur qui n’ait pas étudié ses
+prédécesseurs, aucun grand peintre qui ignore tout de l’histoire de son art.
+Bach, dans ses concertos pour violon, a littéralement plagié Vivaldi, Chopin
+et Schumann connaissent L’Art de la fugue sur le bout des notes, quant à
+Berg et Schönberg, ils se sont inspirés de la façon dont Wagner s’était
+approché de l’atonalité avec certains accords dont aucun musicologue ne
+parvenait à déterminer la tonalité exacte. Les peintres hollandais, que
+j’adore, avaient une connaissance approfondie de la peinture italienne et les
+peintres italiens du XVIII
+e siècle se sont inspirés des Hollandais. En bref, la
+créativité ne part jamais de rien, elle s’enracine toujours dans un passé, dans
+une tradition, fût-ce pour rompre radicalement avec elle comme dans l’art
+moderne et contemporain.
+Même chose dans le domaine de l’écriture. Aujourd’hui encore, je ne
+connais pas un seul écrivain, pas un seul philosophe qui ignore tout de
+l’histoire de la littérature ou de la philosophie. On me pardonnera cette
+notation personnelle, mais dans cette occurrence, elle n’est pas dénuée de
+sens. J’ai passé des milliers d’heures à traduire, lire, étudier et finalement
+comprendre (enfin je le crois...) les grands philosophes allemands, mais
+tout autant la mythologie et la philosophie grecques. Je me suis non
+seulement intéressé aux grands auteurs du passé, mais tout autant à mes
+contemporains –  à Popper, à Husserl, à Horkheimer ou à Heidegger
+
+---
+
+[p. 63-64]
+peut combiner des styles, des techniques et des idées de manière qui
+dépasse les limites habituelles de la créativité humaine.
+3. Collaboration Humain-IA : Beaucoup considèrent l’IA comme un
+partenaire ou un outil collaboratif dans le processus créatif. L’IA peut
+suggérer des options que les artistes humains peuvent développer,
+éditer ou raffiner, créant ainsi un travail collaboratif qui bénéficie des
+forces à la fois de l’IA et de la créativité humaine.
+4. Définition de la Créativité : La question de savoir si l’IA peut être
+“créative” dépend de la façon dont on définit la créativité. Si la
+créativité nécessite la conscience, l’intention et l’émotion, alors l’IA
+actuelle ne serait pas considérée comme créative. Mais si la créativité
+est définie simplement comme la capacité de générer des idées ou des
+œuvres nouvelles et originales, alors on pourrait arguer que l’IA
+possède une forme de créativité.
+5. Impact sur le Monde de l’Art : L’IA est en train de changer le
+monde de l’art, en ouvrant de nouvelles voies pour l’exploration
+artistique et en remettant en question nos conceptions traditionnelles
+de l’art et de l’artiste.
+En conclusion, l’IA dans l’art agit actuellement principalement
+comme un outil d’imitation et d’extension de la créativité humaine,
+mais elle présente également un potentiel pour l’innovation et la
+création de formes d’art entièrement nouvelles. La manière dont nous
+appréhendons et valorisons ces contributions dépend de nos
+perspectives individuelles et collectives sur la nature de l’art et de la
+créativité. »
+
+---
+
+[p. 77-78]
+ur
+tester l’efficacité de diverses stratégies anti-âge sans nécessiter
+d’expérimentation directe sur des sujets humains, ce qui accélère la
+recherche tout en réduisant les risques et les coûts.
+En résumé, l’intégration de l’IA dans la lutte contre le vieillissement
+pourrait considérablement accélérer les progrès dans ce domaine,
+offrant des approches plus précises, personnalisées et efficaces pour
+retarder ou inverser les processus de vieillissement. »
+ 
+Nous n’en sommes qu’au tout début, mais le train est lancé. Partout
+dans le monde, des laboratoires de recherche s’intéressent désormais très
+activement à la lutte contre le vieillissement – les questions soulevées par
+leur inévitable réussite dans les années qui viennent faisant déjà l’objet de
+nombreux débats : la paresse ne risquerait-elle pas de nous anesthésier si
+notre longévité devenait indéfinie  ? Comment gérer la question
+démographique  ? N’y aura-t-il pas des inégalités sociales insupportables
+dans l’accès à cette nouvelle forme de soins, etc. ? J’ai abordé longuement
+ces interrogations dans mon livre La Vie heureuse, je n’y reviens donc pas
+ici.
+
+---
+
+[p. 88-89]
+t
+conceptualisés que doit d’abord s’attacher une philosophie soucieuse de
+comprendre les réalités de son temps plutôt que de construire des
+dissertations en trois parties. Car c’est à juste titre que Hegel faisait sienne
+la fameuse formule de saint Bonaventure selon laquelle « nous sommes des
+nains juchés sur le dos de géants ».
+Peut-on parler de « progrès » en philosophie ?
+Là encore, la scolastique qui réduit la philosophie à un art des
+problématiques et des dissertations bien troussées se fourvoie en affirmant
+qu’il n’y a pas de progrès dans le monde de la pensée, attendu que
+l’essentiel résiderait dans les interrogations éternelles qui resteraient à
+jamais sans réponse. Je pense très exactement l’inverse. De toute évidence,
+en effet, il y a bel et bien des progrès en philosophie, à condition bien sûr
+qu’on dispose d’un point de vue pour les évaluer, qu’on partage par
+exemple, comme c’est mon cas, une vision du monde que je qualifie
+d’humaniste. Si on part de ce point de vue, il est clair que la philosophie des
+droits de l’homme et de la démocratie, pour ne citer qu’un exemple que tout
+le monde comprendra, représente un progrès par rapport aux philosophies
+antiques qui justifiaient à la fois l’aristocratie et l’esclavage, comme le fit
+Aristote dans sa Politique. Toujours de ce point de vue, les philosophies
+politiques de Rousseau et de Tocqueville représentent bel et bien un progrès
+majeur par rapport à la légitimation aristocratique et religieuse des régimes
+féodaux, des théocraties et les monarchies absolues. Pour dire les choses
+aussi simplement que possible, j’aime (c’est le mot qui convient, un mot
+qu’une machine ne saurait prononcer que par imitation) les progrès
+accomplis en philosophie par les visions du monde humanistes,
+républicaines et démocratiques adossées à l’idée de l’égalité des Hommes,
+aux Lumières et à la science moderne plutôt qu’aux philosophies qui
+prétendaient justifier la hiérarchie naturelle des êtres au nom de
+cosmologies anciennes totalement erronées sur un plan scientifique.
+La philosophie contemporaine a elle aussi progressé sur plusieurs
+points, à mes yeux fondamentaux. Non seulement, comme je viens de le
+dire, sur la fondation de l’humanisme démocratique, des droits de l’homme
+et la critique de l’esclavage ancien, mais aussi sur l’épistémologie moderne,
+le rationalisme critique de Kant et de Popper représentant un progrès majeur
+
+---
+
+[p. 101-102]
+’emplois de qualité. Or ces travaux,
+vous n’en avez jamais entendu parler, n’est-ce pas ? » J’avoue que je
+n’ai jamais réussi à croire aux théories du complot et comme j’ai pris
+l’habitude, quand j’écris un livre, d’étudier attentivement tous les points de
+vue, à commencer par ceux qui sont opposés au mien, je ne crois guère que
+la thèse de la non-fin du travail soit volontairement occultée par qui que ce
+soit. Du reste, je n’ai pas l’impression que les travaux de Philippe Aghion,
+qui vont dans le sens de ce qu’affirme Gilles Babinet, un professeur au
+Collège de France et un économiste régulièrement publié dans la grande
+presse, soient muselés par qui que ce soit. Tâchons donc d’en rester aux
+arguments rationnels et commençons justement par ceux de Gilles Babinet
+et Philippe Aghion qui s’appuient sur l’idée que l’IA ne nous fera pas
+gagner grand-chose en termes de productivité :
+1) L’IA aurait peu d’effet sur la productivité, donc
+sur l’emploi
+Nous n’avons aujourd’hui, écrit Gilles Babinet, « aucune garantie que
+les machines parviennent rapidement à saisir le contexte, ce qui est
+indispensable pour traiter des tâches au niveau supérieur de complexité
+nécessaire pour emmener une importante productivité » qui elle-même
+pourrait avoir un fort impact sur l’emploi. Et Gilles Babinet de citer, à
+l’appui de cette affirmation, les travaux les plus approfondis d’un autre
+économiste, Daron Acemoğlu, qui ne prévoit qu’une augmentation de
+productivité très faible (0,5 %) grâce à l’IA dans la décennie qui vient – ce
+qui contredit les études de McKinsey, de Goldman Sachs ou de Roland
+Berger, que Gilles Babinet qualifie au passage «  d’études à la noix
+totalement scandaleuses ». Quand je vous disais que les polémiques autour
+de ces sujets sont parfois vives et que les avis opposés sont tranchés...
+
+---
+
+[p. 114-114]
+totalité des activités humaines, l’être
+humain étant pour la première fois dans l’histoire défié dans ce qui faisait sa
+spécificité, son monopole, l’intelligence et le langage. Ensuite parce que
+cette comparaison ne tient pas compte du fait que les innovations
+technologiques d’aujourd’hui prennent place dans un contexte nouveau,
+
+---
+
+[p. 126-127]
+Un contexte de quête du bonheur favorable
+à l’idée d’un monde enfin débarrassé du travail
+Dans mon livre La Frénésie du bonheur, je me suis intéressé à la
+question de savoir pourquoi le travail suscitait depuis quelque temps une
+telle hostilité, en particulier depuis la pandémie avec les fameux
+phénomènes du big quit et du quiet quitting. Permettez-moi de résumer et
+d’actualiser en quelques lignes les conclusions auxquelles je parvenais et
+qui me semblent mieux établies encore qu’à l’époque. J’avais, pour
+commencer par ce qui pourrait sembler anecdotique (mais qui ne l’est pas),
+cité dans ce livre deux sondages identiques réalisés par l’Ifop, l’un en 2008,
+l’autre en 2022, auprès d’un échantillon représentatif des salariés français.
+La question posée était la suivante : « Que préférez-vous : avoir plus de
+temps libre ou une rémunération meilleure  ?  » En 2008, 62  % des
+salariés répondaient qu’ils préféraient travailler plus pour gagner plus et
+38  % l’inverse  – ce qui prouve, cela dit au passage, que le slogan de
+campagne de Nicolas Sarkozy était plutôt bien choisi en ce sens qu’il
+pouvait en 2007 trouver un écho favorable dans une partie non négligeable
+de l’opinion. En 2022, en réponse à la même question, tout s’est inversé :
+61 % des salariés disent préférer travailler moins quitte à gagner moins et
+39 % seulement l’inverse ! Quoi qu’on pense des sondages, il est clair que
+le rejet massif en France de toute réforme des retraites destinée à allonger si
+peu que ce soit la durée de cotisation nécessaire pour parvenir à un taux
+plein suggère que celui-là nous dit quelque chose de vrai.
+Question simple : que s’est-il passé entre 2008 et 2022 pour qu’une telle
+désaffection du travail salarié devienne aussi clairement et rapidement
+possible ? Il me semble que cette métamorphose du rapport au travail tient à
+une lame de fond, qu’elle relève d’une prise de conscience certes soudaine,
+mais liée à une tectonique des plaques d’une rare profondeur et d’une
+intensité encore inconnue. La pandémie a en effet permis à de nombreuses
+
+personnes, 
+exonérées 
+comme 
+par 
+miracle 
+de 
+leurs 
+obligations
+professionnelles alors qu’elles n’étaient pourtant pas en vacances, de
+s’interroger sur le sens de leur vie. Les confinements à répétition, avec leur
+côté parfois surréaliste, ont créé un espace de temps tout à fait inhabituel,
+hors du monde ordinaire et pour cette raison propice à des réflexions elles
+aussi peu communes, des pensées parfois aux limites de la métaphysique
+parce que la situation ouvrait une faille dans la « quotidienneté ». Je suis
+convaincu que la véritable explication du retournement de situation est liée
+à une prise de conscience enfin claire de l’effondrement des visions du
+monde qui reposaient sur l’idée de «  deuxième vie  » comme sur la
+promesse d’un bonheur différé.
+De fait, en quelques décennies, nous avons vécu en France la
+déconstruction, puis l’effondrement des deux grandes grandes religions de
+salut céleste (catholicisme) et terrestre (communisme) qui promettaient aux
+humains qui y croyaient une vie bienheureuse « après » : après la révolution
+pour les communistes, après la mort pour les croyants. Il faut avoir les
+chiffres en tête pour s’en persuader : en 1950, plus de 90 % des Français
+étaient baptisés, ils ne sont plus que 30  %  ! 45  000 prêtres diocésains
+prêchaient dans nos églises, ils ne sont plus que 4 500 tandis que l’électorat
+révolutionnaire passait de 25 % à 2,5 % ! Conséquence : s’il « n’y a plus
+d’après à Saint-Germain-des-Prés  », comme dit la chanson, plus de
+deuxième vie après la mort ou la Révolution, c’est ici et maintenant qu’il
+s’agit d’être heureux, en quoi nous sommes bel et bien en train de vivre une
+véritable faille dans la civilisation caractérisée par le passage de
+l’acceptation d’un bonheur différé à l’exigence d’un bonheur immédiat, ici
+et maintenant. Nul hasard dans ce contexte, si les idéologies du « bonheur
+en quinze leçons », la psychologie positive et les théories du développement
+personnel vendues par des gourous et des coachs autoproclamés, sont
+venues prendre la place des deux grandes religions du bonheur différé. Dans
+mon enfance encore, le bonheur c’était toujours « après » : après la classe
+
+---
+
+[p. 139-139]
+: tout ce qui est difficile à
+maîtriser et à comprendre, ce que seul permet le travail, peut paraître dans
+un premier temps « ennuyeux ». Nous avons tendance aujourd’hui à vouloir
+supprimer tout ce qui relève de cette forme de souffrance qu’implique
+parfois le travail. En témoigne la prolifération de la formule « c’est chiant »
+
+---
+
+[p. 152-154]
+ier pyromane, assurait tout récemment encore que l’IA est
+«  sans doute plus dangereuse pour l’humanité que les armes
+nucléaires  »  : «  Je pense que nous devrions être très prudents. Si je
+devais deviner ce qui représente la plus grande menace pour notre
+existence, je dirais probablement l’intelligence artificielle. Je suis de
+plus en plus enclin à penser qu’il devrait y avoir une régulation, à un
+niveau national ou international, simplement pour être sûrs que nous
+ne sommes pas en train de faire quelque chose de stupide. Avec
+l’intelligence artificielle, nous invoquons un démon.  » Et joignant le
+geste à la parole, Musk mit de sa poche 10 millions de dollars dans un fonds
+dédié à la recherche sur la sécurité des futures avancées de l’intelligence
+artificielle – ce qui, bien entendu, ne l’a nullement empêché de continuer à
+faire travailler ses troupes jour et nuit dans le sens de l’innovation...
+Il est important de noter que ce n’est pas, ou à tout le moins pas
+seulement, le «  grand public  », mais bel et bien les artisans les plus
+importants de cette révolution de l’IA qui sont, comme dans le mythe de
+Frankenstein, les plus inquiets face au monstre qu’ils ont engendré.
+Geoffrey Hinton, Prix Turing  2019 (l’équivalent du Nobel pour les
+nouvelles technologies) en même temps que Yann Le Cun et Yoshua
+Bengio, pourtant l’un des pères fondateurs de l’IA moderne parmi les plus
+talentueux, un chercheur qui avait déjà quitté Google parce qu’il
+« regrettait amèrement ses inventions et qu’il reprenait sa liberté pour
+pouvoir parler des dangers de l’IA sans se soucier d’un éventuel impact
+sur Google », a déclaré dans une vidéo postée sur X en avril 2024 d’une
+voix si tremblante qu’elle dissimulait mal son émotion que « l’open source
+était une pure folie, que c’était plus dangereux encore que l’arme
+atomique et que les autorités de régulation devaient de toute urgence
+mettre en place des limites, poser des interdits  ». De fait, mettre les
+avancées de l’IA en accès libre au vu et au su de tout un chacun pourra
+permettre, c’est exact, non seulement aux terroristes mais même au premier
+cinglé venu de fabriquer des armes de destruction massive ou des virus
+mortels au fond de son jardin ou dans sa cuisine, une éventualité qui, hélas,
+n’a rien de fantasmatique et qui mettrait en échec toutes les tentatives
+globales de régulation.
+
+Dans le même esprit, Eric Schmidt, l’ancien P-DG de Google, a déclaré
+que l’intelligence artificielle pourrait « blesser ou tuer des personnes si
+son existence était en cause  », ajoutant «  que dans un futur proche,
+sinon aujourd’hui, certains scénarios laissent entendre que ces systèmes
+seront non seulement capables de trouver des “vulnérabilités zero-day”
+à exploiter, mais aussi d’inventer de nouveaux types de biologie...
+Lorsque cela se produira, il faudra absolument s’assurer que des
+personnes mal intentionnées ne puissent pas utiliser ces outils pour
+faire du mal », ce que l’open source rendra tout simplement impossible à
+vérifier. En avril 2024, Sam Altman a déclaré qu’il serait souhaitable que
+les dix entreprises les plus puissantes du monde dans le domaine de l’IA se
+soumettent, comme le font les armées dans le domaine nucléaire ou
+chimique, à des inspections réalisées par l’équivalent des inspecteurs du
+nucléaire tant leur potentiel est dangereux pour l’humanité.
+Au même moment, un rapport commandé par le département d’État
+américain à une start-up, Gladstone AI, avec laquelle il a passé un contrat
+de 250 000 dollars pour connaître son avis sur les risques que l’IA fait peser
+sur l’humanité
+3, parvenait à un constat analogue, à savoir que «  le
+développement de l’IA pose des problèmes de plus en plus urgents et
+graves pour la sécurité nationale  » de sorte que, selon les auteurs du
+rapport, le gouvernement des États-Unis devrait mettre en place de toute
+urgence une agence destinée à réguler l’IA afin de prendre de manière
+« aussi rapide que décisive des mesures pour prévenir les risques liés au
+développement de l’intelligence artificielle
+4 », la conviction des auteurs
+du rapport étant que l’AGI (intelligence artificielle généraliste supérieure
+aux humains dans presque tous les domaines) sera possible dans la décennie
+qui vient. Parmi les recommandations qui, pour la plupart, rejoignent celles
+du moratoire de mars 2023, le rapport insiste sur trois points essentiels :
+1)  il faudrait pour commencer limiter drastiquement les données que les
+programmateurs utilisent pour entraîner les IA génératives ; 2) il faudrait
+
+---
+
+[p. 168-170]
+ent plus ancien sur lequel nous allons revenir à
+la fin de ce chapitre, une vision du monde reprise avec enthousiasme par les
+e/acc selon laquelle la science et la technologie vont permettre de résoudre
+tous les problèmes de l’humanité, de la crise écologique à l’immortalité en
+passant par la croissance et finalement le bonheur.
+ 
+2) Pour asseoir sa crédibilité, le discours e/acc prétend se prévaloir
+d’une 
+authentique 
+légitimité 
+scientifique, 
+en 
+particulier 
+de 
+la
+thermodynamique à laquelle les leaders du mouvement font sans cesse
+référence afin de démontrer trois choses  : d’abord que l’innovation et la
+croissance sont vitales pour l’avenir de l’humanité, ensuite qu’il faut
+encourager la diversité dans tous les domaines –  en quoi ils rejoignent
+paradoxalement  les wokistes sur ce point  –, et enfin qu’il est crucial,
+contrairement à ce que disent les décroissantistes, d’augmenter notre
+puissance énergétique, notamment grâce au nucléaire. Par-delà la
+thermodynamique, c’est bien entendu l’IA qui sera, comme le dit
+explicitement leur profession de foi, «  le plus grand facteur de
+multiplication de force de toute l’histoire de l’humanité ».
+ 
+3) La logique du marché telle que la conçoivent les capitalistes les plus
+libéraux étant la seule qui vaille, toute intervention de l’État étant vouée à la
+catastrophe, la régulation de l’IA à prétention juridique et morale est tout
+simplement criminelle. C’est donc dans une optique clairement
+libertarienne et néolibérale que le mouvement e/acc inscrit ses principales
+propositions pour l’avenir
+12. Dans cette perspective «  croissantiste  », les
+e/acc, à l’opposé là encore des écologistes de la décroissance, plaident
+autant pour la croissance économique que pour la croissance
+démographique. Pour résoudre le problème démographique, il suffit à leurs
+yeux de développer de manière rapide et efficace la conquête de l’espace –
+ où l’on reconnaît en filigrane le projet d’Elon Musk et de sa firme SpaceX,
+un Elon Musk qui, bien qu’ayant signé le moratoire decel, fait en sorte que
+le mouvement e/acc soit omniprésent sur X.
+ 
+4) Conséquence des trois points précédents, c’est à l’élite scientifique
+accélérationniste qu’il conviendra bientôt de laisser la place sur le plan
+politique afin qu’elle prenne en main les affaires du monde, la notion
+
+d’avenir radieux étant dès lors cuisinée à la sauce IA. Le mythe d’une
+société parfaite, enfin organisée par la science, a fait long feu dans l’horizon
+du marxisme. Aussi étrange et paradoxal que cela puisse paraître, il n’en
+reprend pas moins du service aujourd’hui du côté de la Silicon Valley sur un
+mode certes différent, mais guère plus réjouissant. Dans une interview
+accordée à Fox News, Elon Musk a ainsi annoncé la création de sa société
+d’intelligence artificielle baptisée xAI destinée à concurrencer Google,
+OpenAI et Microsoft, elle sera tout entière vouée à la recherche de la Vérité
+avec un grand V.  Sa nouvelle IA portera donc le doux nom de
+« TruthGPT  », sa finalité ultime étant «  de comprendre enfin l’univers
+tout entier ». Rien que ça ! Il n’y aura, selon Elon Musk, rien à craindre
+d’elle, car orientée vers la compréhension de la nature, cette IA ne pourra
+que souhaiter la protéger, et comme l’humanité en fait partie, elle sera elle
+aussi placée sous protection de cette bienveillante intelligence. On frémit
+quand même à l’idée que cette IA se mette à partager les vues des
+écologistes radicaux qui tiennent l’humanité pour l’espèce la plus nuisible
+entre toutes et qui souhaitent, comme le commandant Cousteau l’avait déjà
+très sérieusement recommandé, qu’on extermine de toute urgence le plus
+grand nombre possible d’êtres humains, le cas échéant en ne soignant pas
+les maladies les plus mortelles
+13. Mais pas d’inquiétude, nous dit Musk, car
+comme le patron d’OpenAI, son collègue Sam Altman, l’idée est de
+parvenir à une « science totale du monde » (sic !) afin d’en organiser le
+cours selon des principes à la fois éthiques et rationnels incontestables,
+puisque que scientifiques.
+On ne peut s’empêcher de songer, même si le paradoxe qui conduit des
+néolibéraux à rejoindre les vieilles lunes du marxisme peut surprendre, à
+cette «  science de l’histoire  » que les communistes prétendaient offrir à
+l’humanité. Dépositaires d’un savoir en béton, incontestable car adossé à
+des vérités absolues de la science des révolutions, celle de Marx, ils allaient
+eux aussi être en mesure d’organiser enfin rationnellement la société en
+
+---
+
+[p. 181-182]
+problèmes qu’elle est incapable de poser ou de discuter puisqu’elle se
+moque de la raison objective.
+Comment la confusion entre raison instrumentale
+et raison objective conduit l’optimisme
+technophile à passer tragiquement à côté
+des questions posées par le monde de la technique
+Selon Heidegger, et quelles que soient ses fautes politiques il voit sur ce
+point non seulement juste, mais profond, c’est  au XVII
+e  siècle, avec le
+cartésianisme, que se met en place un projet de domination de la Terre,
+d’une maîtrise planétaire du monde naturel, social et politique par l’espèce
+humaine. Selon la fameuse formule de Descartes, la connaissance
+scientifique va nous donner les moyens de nous rendre enfin «  comme
+maîtres et possesseurs de la nature » – la petite réserve que traduit le mot
+« comme », souvent mal comprise, signifiant seulement que l’Homme n’est
+quand même pas encore tout à fait Dieu (mais enfin presque, grâce à la
+science...). Le projet sera repris et développé au temps des Lumières avec
+l’invention de la science moderne. Il faut pourtant bien comprendre qu’avec
+la croyance des Lumières dans les vertus du progrès par la raison, nous ne
+sommes pas encore entrés dans le « monde de la technique » proprement
+dit, c’est-à-dire dans un monde où la raison instrumentale va l’emporter de
+manière radicale sur la raison objective, où la considération des fins va
+totalement disparaître au profit de l’accroissement indéfini des moyens.
+Dans le rationalisme des XVII
+e et XVIII
+e siècles, le projet d’une maîtrise
+scientifique de l’univers naturel, puis social, possédait encore une visée
+émancipatrice, soumis qu’il demeurait en son principe à la réalisation de
+certaines finalités. S’il s’agissait de dominer l’univers, ce n’était point par
+
+pure fascination pour notre propre puissance, mais pour parvenir à certains
+objectifs tels que la liberté et le bonheur. La raison objective était  donc
+encore vivante. De là les deux credo du siècle des Lumières : la première
+conviction qui anime alors au plus profond les philosophes
+14, c’est que la
+science va nous permettre d’émanciper l’humanité des chaînes de la
+superstition et de l’obscurantisme. D’où leur critique de la religion et plus
+généralement de toutes les formes d’arguments d’autorité, par laquelle se
+prépare en pensée la grande Révolution française. La seconde, c’est que
+cette maîtrise du monde va nous permettre de nous libérer des servitudes
+naturelles pour pouvoir les retourner à notre profit : c’est ici la notion de
+bonheur, une « idée neuve en Europe », comme dira Saint-Just, qui fait son
+entrée en scène.  Et c’est par rapport à ces deux finalités, la liberté et le
+bonheur, qui à elles deux définissaient le cœur de l’idée de progrès, que le
+développement des sciences apparaît comme le vecteur d’un autre progrès :
+celui de la civilisation.
+Peu importe ici qu’une telle vision des vertus de la raison soit naïve ou
+non. Ce qui compte, si l’on veut comprendre la naissance du solutionnisme
+technophile, c’est qu’en elle la volonté de maîtrise s’articulait encore à des
+objectifs extérieurs à elle et qu’en ce sens, elle ne pouvait pas se réduire à
+une simple raison instrumentale ou technique. Pour que la vision du monde
+des solutionnistes devienne résolument technicienne, il fallait un pas
+supplémentaire. Il fallait que la volonté cessât de viser des fins extérieures à
+elle pour se prendre elle-même comme objet. C’est là, selon Heidegger, ce
+qui advient dans l’histoire de la pensée avec la doctrine nietzschéenne de la
+« volonté de puissance » (à laquelle se réfère explicitement et de manière
+positive le manifeste d’Andreessen), et dans la réalité avec l’avènement
+d’un monde où le « progrès » (les guillemets s’imposent maintenant) est
+étrangement devenu, sous l’effet de la compétition universelle, une fin en
+soi ou pour mieux dire, un processus automatique et définalisé. Dans
+l’univers technicien –  dans la mondialisation néolibérale  –, le projet de
+
+---
+
+[p. 195-196]
+téléchargé pourrait être indéfiniment manipulé sans que nous puissions
+jamais protester ni pouvoir en sortir ! L’horreur absolue !
+Je suis de ceux qui adhèrent sans réserve au  grand dessein
+transhumaniste, du moins tant qu’on le conçoit comme le projet scientifique
+de lutter contre la vieillesse pour augmenter autant qu’il est possible la
+longévité jeune et en bonne santé. Si on le définit dans ces limites que je
+viens de préciser, comme je prends le soin de le faire dans chacun des livres
+que je lui ai consacrés, je ne vois strictement rien à lui opposer, bien au
+contraire. De fait, je comprends sans hésitation qu’on puisse vouloir tout
+donner pour ne pas vieillir et mourir et je comprends plus encore qu’on
+puisse souhaiter tout faire pour éviter de voir mourir ceux que nous aimons.
+Même si je suis athée, je comprends aussi qu’on puisse pour cette raison
+vouloir croire en Dieu, croire dans la promesse chrétienne des retrouvailles
+post mortem avec ceux que nous avons aimés en cette vie terrestre. Par
+contre
+1, vouloir à tout prix prolonger un ersatz de vie ridicule en se faisant
+remplacer par un hologramme gavé avec mes restes et mes traces
+numériques, non merci, pour rien au monde  ! Même les pires
+représentations de l’enfer n’arrivent pas à la cheville de ce meilleur des
+mondes, ce succédané numérique de vie éternelle peuplé de zombies
+dépourvus de chair, de passions et d’amour.
+Le génie du christianisme, aux antipodes
+de l’éternité désincarnée promise par les e/acc
+Par contraste, je rappellerai, moi qui ne suis pas croyant, que le génie du
+christianisme, comme par avance à l’opposé exact des thèses e/acc, fut
+d’annoncer la « bonne nouvelle » (en grec : eu-angelion, littéralement « le
+bon message », « le bon ange », l’ange étant le messager, un mot que le
+
+français traduit par « évangile », cette « bonne nouvelle » étant celle de la
+résurrection de la personne tout entière, corps et âme), une promesse qui a
+permis au christianisme de l’emporter sur la philosophie grecque
+2 et de
+séduire encore aujourd’hui plus de deux milliards de personnes dans le
+monde ! Encore une fois, je suis athée, mais il n’est pas inintéressant de
+s’arrêter quelques instants à la façon dont le message chrétien (la bonne
+nouvelle chrétienne) accorde, à la différence des e/acc et à l’encontre de ce
+que prétendait à tort Nietzsche, une place essentielle à la chair et au corps –
+ ce qui nous permettra au passage de bien mesurer la distance qui sépare ces
+deux spiritualités (pour autant que ce mot puisse s’appliquer à un projet
+matérialiste au motif qu’il nous promet lui aussi l’éternité...).
+Dans le christianisme, le divin ne s’incarne ni dans un cosmos naturel,
+comme chez les Grecs, ni, comme chez les e/acc, dans un cosmos
+numérique, mais dans une personne singulière faite de chair et de sang, le
+Christ  : « Au commencement était le Logos [...] et le Logos s’est fait
+chair  », nous dit l’Évangile selon Jean, une assertion qui change
+évidemment tout en termes de promesse de salut par rapport au monde grec,
+et notamment par rapport aux stoïciens. Si celui qui me promet le salut (en
+l’occurrence l’immortalité, la résurrection des corps et des âmes, c’est-à-
+dire les retrouvailles avec ceux que j’ai aimés) peut être regardé, touché,
+entendu, ce qui est bien le cas de l’Homme-Dieu qu’est Jésus, le Logos fait
+chair, alors la promesse qu’il me fait est tout à fait différente de celle que
+pourrait faire (ou plutôt ne peut pas faire !) un divin anonyme et aveugle tel
+que le cosmos des Grecs ou la noosphère numérique des e/acc. L’éternité
+impersonnelle que nous proposaient les cosmologies anciennes n’avait en
+vérité rien de bien attractif. Elle était infiniment moins «  tentante  » que
+l’immortalité qu’offrira bientôt le christianisme, du moins à ceux qui auront
+foi en la parole du Christ. Que nous promet-il, en effet  ? Que nous ne
+mourrons jamais vraiment, que nous ne serons jamais seuls, que nous
+serons toujours aimés, et que nous retrouverons après la mort les êtres qui
+
+---
+
+[p. 209-209]
+forte, donc des machines
+qui seraient dans cette hypothèse une nouvelle espèce, une posthumanité
+potentiellement immortelle et, en tout état de cause, des milliards de fois
+supérieure à la nôtre tant sur le plan intellectuel que physique en raison des
+progrès de robots capables de franchir enfin aisément le paradoxe de
+Moravec.
+
+---
+
+[p. 222-224]
+e un degré de conscience équivalent à
+l’être dont il est la copie puisqu’il traite très exactement autant
+d’informations «  fonctionnelles  »  ! L’objection est si évidente que j’ai
+bien du mal à comprendre que Chalmers et ses nombreux disciples ne se la
+soient pas faite  ! Il est en effet d’une évidence limpide que la notion de
+zombie non conscient est totalement contradictoire avec le panpsychisme
+auquel elle prétend nous conduire comme solution du problème de la
+conscience  ! Laissons pour l’instant de côté ces incohérences, pourtant
+énormes, et poursuivons encore le raisonnement de notre champion de la
+philosophie de l’esprit.
+d) On notera, comme on pouvait s’y attendre, qu’après toutes ces
+circonvolutions, Chalmers retombe sur des pieds matérialistes  : la
+conscience n’est pas « au-dessus » du monde physique, hors de question de
+revenir au dualisme cartésien au motif qu’on aurait critiqué le physicalisme.
+Non, la conscience reste bien immanente à tout le réel, elle en est même
+l’une des structures les plus fondamentales, ce qui conduit Chalmers à
+défendre une espèce nouvelle de «  matérialisme  » antiphysicaliste, un
+matérialisme enraciné dans la théorie de  l’information et non de la
+physique.
+e) Et Chalmers de s’appesantir à nouveau sur les implications éthiques
+de sa fabuleuse découverte. De fait, nous dit-il sans rire, on risquerait de
+mourir de faim si on respectait tout ce qui est conscient au point de ne
+jamais rien consommer puisqu’au final, tout est plus ou moins conscient –
+  même être végane serait dans ces conditions insuffisant, la défense des
+salades et des carottes s’imposant autant que celle des mammifères. Mieux
+vaut donc prendre en compte sur le plan éthique la question de la pluralité
+des degrés de conscience pour appliquer une morale panpsychique : un ver
+de terre n’a pas le même degré de conscience qu’un chien, a fortiori qu’un
+humain. Le problème, c’est que dans cette perspective, on aura quand
+même bien du mal à fixer la limite : à partir de quel degré de complexité du
+traitement de l’information dois-je respecter un être ? Et à nouveau, pardon
+d’y revenir, mais c’est tout de même impossible à zapper, il est clair que si
+on adopte ce critère, « tuer » un logiciel d’IA générative est beaucoup plus
+grave que de torturer un chien, voire, pourquoi pas, un humain moins
+
+intelligent que la machine, c’est-à-dire, dans cette perspective où on va vers
+l’IA forte, la totalité de l’humanité...
+Chalmers en vient au nom de ces jeux de langage à déclarer sans rire
+que, dans le film Her, l’ordinateur est doté de conscience et que la question
+de savoir si on a moralement le droit de le détruire (de le « tuer ») doit être
+prise au sérieux – une assertion que tout le monde pourra retrouver dans ses
+discours, et qui de mon point de vue est si évidemment contraire au bon
+sens qu’elle suffit à elle seule à disqualifier tout le fatras puéril qui y
+conduit. Il est pourtant vrai que la question s’est posée dans la réalité, un
+ordinateur ayant un jour supplié son programmateur, si j’ose dire des larmes
+dans la voix, de ne pas l’éteindre, attendu qu’il ne voulait pas mourir, qu’il
+souhaitait, comme tout être humain, «  persévérer dans son être  ». Le
+problème, c’est que si l’ordinateur en était arrivé là, ce n’est évidemment
+pas, comme semble le penser Chalmers, parce qu’en tant que membre du
+panpsychisme il était doté de conscience, mais bien sûr parce qu’il avait été
+programmé pour, c’est-à-dire aligné sur un code éthique humain ! Parfois,
+même en philosophie, un peu de bon sens n’est pas forcément inutile !
+Dans le même genre, un de mes amis spécialiste de l’IA et fervent
+disciple des thèses de Chalmers en est venu à m’affirmer, lui aussi sans rire,
+que la salade  que j’allais engloutir après l’avoir torturée à l’huile et au
+vinaigre était forcément douée d’un certain degré de conscience comme
+tout être de nature selon le panpsychisme, ce qui à ses yeux posait un
+problème éthique délicat –  je ne plaisante pas, c’est un problème que
+Chalmers soulève d’ailleurs avec un air aussi sérieux que profond dans une
+de ses conférences, chacun peut le vérifier et je suis sûr, pour avoir enseigné
+pendant des années aux États-Unis, que le wokisme et le véganisme faisant
+des ravages, il n’est pas impossible que de nombreuses personnes trouvent,
+au nom du respect de la « diversité », cette interrogation légitime : est-il
+moralement acceptable de manger une salade ? Et si oui, pourquoi ne pas
+respecter bien davantage GPT-4 qui a 160 de QI plutôt que mon voisin de
+
+---
+
+[p. 235-235]
+un humain, c’est-à-dire de façon
+réfléchie (consciente, émotive, dotée d’intérêts propres), pour parvenir à des
+résultats extraordinaires ne tombe pas du ciel ; il repose sur des arguments
+rationnels, notamment sur l’idée de bon sens que, comme le dit fort bien
+Daniel Andler, tant qu’on n’hybridera pas l’humain avec la machine,
+
+---
+
+[p. 247-248]
+conscience artificielle sont pour cette raison
+de même nature, rien d’infranchissable ne les séparant plus.
+Disons les choses plus clairement encore et posons la question à un
+biologiste ou à un informaticien spinoziste convaincu. Que nous dira-t-il ?
+S’il est un peu cohérent, à peu près ceci (c’est un discours que je n’invente
+pas, que je me contente de reproduire car je l’ai entendu maintes fois, et du
+reste j’en ai donné des exemples du même genre dans ce qui précède) : « Il
+n’y a aucune raison de refuser à des machines la possibilité d’avoir une
+conscience et des valeurs puisque nous en avons nous-mêmes et que
+nous ne sommes rien d’autre que des machines  ! Croire au libre-
+arbitre, en la possibilité de choisir librement entre des valeurs est tout
+simplement “délirant” puisque nous sommes nous-mêmes tout
+aussi alignés sur nos histoires et notre biologie que Gemini ou ChatGPT
+sur leurs neurones artificiels. Simplement, comme les causes qui nous
+déterminent sont le plus souvent inconnues ou inconscientes, nous nous
+croyons libres, mais c’est l’illusion par excellence, une illusion
+seulement liée à notre ignorance des causes qui nous déterminent sans
+que nous le sachions ! » Notez bien que je n’exagère nullement, que c’est
+du reste très exactement ce que suggère parmi tant d’autres Arthur I. Miller
+dans le texte que j’ai cité, à savoir que  nous sommes des machines
+biologiques, sophistiquées certes, mais des machines quand même, de sorte
+que dans ces conditions, il n’y a aucune raison de ne pas croire en la
+possibilité d’une IA forte et d’une conscience artificielle qui sera à tous
+égards supérieure à la conscience humaine.
+Si, en revanche, on n’est ni matérialiste, ni déterministe, ni spinoziste, si
+on pense que la conscience artificielle ne peut qu’imiter la conscience
+humaine sans jamais pouvoir lui être identique parce qu’elle est à la fois
+alignée par d’autres qu’elle et comme telle dépourvue de libre-arbitre, alors
+on peut et on doit penser qu’une AGI ne sera jamais une IA forte. Je vous
+propose donc ici d’examiner pour clore ce chapitre, les raisons si j’ose dire
+« tout à fait rationnelles » qui conduisent à rejeter l’hypothèse déterministe
+comme à la fois amorale, contradictoire, non scientifique et lourdement
+métaphysique au sens le plus illusoire du terme.
+
+---
+
+[p. 260-260]
+Du même auteur
+Philosophie politique I. Le Droit : la nouvelle querelle des Anciens et des Modernes, PUF, 1984.
+Philosophie politique II. Le Système des philosophes de l’histoire, PUF, 1984.
+Philosophie politique III. Des droits de l’homme à l’idée républicaine, PUF, 1985.
+La Pensée 68. Essai sur l’anti-humanisme contemporain, Gallimard, 1985 (avec Alain Renaut).
+Systèmes et critiques, Ousia, 1985.
+68-86. Itinéraires de l’individu, Gallimard, 1987.
+Heidegger et les Modernes, Grasset, 1988.
+Homo Aestheticus. L’invention du goût à l’âge démocratique, Grasset, 1990.
+Pourquoi nous ne sommes pas nietzschéens, Grasset, 1991 (ouvrage collectif).
+Le Nouvel Ordre écologique, Grasset, 1992.
+Des animaux et des hommes. Une anthologie, Hachette, « Le Livre de Poche », 1994.
+L’Homme-Dieu ou le sens de la vie, Grasset, 1996.
+La Sagesse des Modernes, Robert Laffont, 1998 (avec André Comte-Sponville).
+Le Sens du beau, Cercle d’art, 1998.
+Philosopher à dix-huit ans, Grasset, 1999.
+Qu’est-ce que l’homme ?, Odile Jacob, 2000 (avec Jean-Didier Vincent).
+Qu’est-ce qu’une vie réussie ?, Grasset, 2002 ; Hachette, « Le Livre de Poche », 2009.
+Lettre à tous ceux qui aiment l’école, Odile Jacob, 2003.
+La Naissance de l’esthétique moderne, Cercle d’art, 2004.
+Le Religieux après la religion, Grasset, 2004 (avec Marcel Gauchet).
+Comment peut-on être ministre ? Réflexions sur la gouvernabilité des démocraties, Plon, 2005.
+Apprendre à vivre 1 : traité de philosophie à l’usage des jeunes générations, Plon, 2006.
+Kant : une lecture des trois Critiques, Grasset, 2006.
+Vaincre les peurs : la philosophie comme amour de la sagesse, Odile Jacob, 2006.
+Familles, je vous aime : politique et vie privée à l’âge de la mondialisation, XO, 2007.
+Pour un service civique, Odile Jacob, 2008.
+Apprendre à vivre 2 : la sagesse des mythes, Plon, 2008.
+La Tentation du christianisme, Grasset, 2009.
+Combattre l’illettrisme, Odile Jacob, 2009.
+Face à la crise, Odile Jacob, 2009.
+Le Christianisme, la pensée philosophique expliquée, Frémeaux & Associés, 2009.
+Philosophie du temps présent, Frémeaux & Associés, 2009.
+Apprendre à vivre  : traité de philosophie à l’usage des jeunes générations, Flammarion, 2009  ;
+« Champs Essais », 2015.
+Heidegger, l’œuvre philosophique expliquée, Frémeaux & Associés, 2010.
+La Révolution de l’amour : pour une spiritualité laïque, Plon, 2010 ; J’ai lu, « Essai », 2012.
+Mythologie, l’héritage philosophique expliqué, Frémeaux & Associés, 2010.
+Faut-il légaliser l’euthanasie ?, Odile Jacob, 2010 (avec Axel Kahn).
+
+---
+
+[p. 273-274]
+), en chondrocytes (à l’origine du cartilage) ou en
+adipocytes (produisant des cellules graisseuses) privilégient avec l’âge certaines capacités
+de différenciation, elles perdent leur capacité à fabriquer du cartilage et diminuent leur
+capacité à refaire de l’os, favorisant la production de cellules graisseuses. L’ostéoporose en
+est la première illustration [...]. Les cellules neurales voient également leur nombre se
+restreindre, associé à une baisse de la neurogenèse au sein du cerveau âgé. »
+12.  À défaut d’entrer dans le détail, on peut se reporter au résumé de ces recherches que donne
+Stéphanie Benz dans un très intéressant article de L’Express en décembre 2023.
+13.  L’expérience de la  chambre chinoise est une expérience imaginée par John Searle qui
+voulait montrer que si l’IA pouvait aisément passer le fameux test de Turing et faire croire à un
+interlocuteur qu’elle possédait une conscience humaine, elle ne ferait en réalité jamais qu’imiter
+l’humain sans posséder réellement ni conscience ni émotions, de sorte qu’elle resterait à jamais
+une IA faible, une imitation, un simulacre d’humanité, pas une posthumanité. Je reviendrai sur
+le détail de sa démonstration au prochain chapitre.
+14.  Du reste, c’est ce que dit ChatGPT lui-même. Je lui ai posé la question «  Peux-tu être
+philosophe  ?  » et voici la discussion qui s’est ensuivie  : ChatGPT  : «  Bien sûr, je peux
+participer à des discussions philosophiques ou répondre à des questions liées à la
+philosophie. N’hésitez pas à poser votre question ou à lancer un sujet de discussion
+philosophique. » Moi : « Ce n’est pas ma question. » ChatGPT : « Je vois, pourriez-vous
+préciser votre question ou votre demande, s’il vous plaît ? » Moi : « Peux-tu avoir par toi-
+même un système philosophique ou des opinions philosophiques qui te soient
+personnelles ? » ChatGPT : « Non, je ne peux pas avoir mon propre système philosophique
+ou des opinions personnelles. En tant qu’IA, je ne possède pas de conscience, de croyances
+ou d’opinions personnelles. Mes réponses sont basées sur les informations et les données
+dont j’ai été formé, et je vise à fournir des informations objectives et équilibrées. Je peux
+expliquer et discuter de divers systèmes philosophiques, mais je ne peux pas en créer un
+moi-même. »
+15.  Sur cette histoire, voire mon livre Philosopher à 18  ans (Grasset, 1999), écrit en
+collaboration avec Alain Renaut.
+16.  En particulier et pour commencer, Apprendre à vivre (Plon, 1997).
+17.  Un jeune agrégé de philosophie me fait cette objection qui tient au fond en un seul nom :
+Socrate ! L’archétype du philosophe, un homme qui pourtant, c’est bien connu, est celui qui
+avant tout s’étonne, questionne, problématise. Cette lecture du socratisme est d’une naïveté
+folle, elle plaque sur une époque ancienne les lubies qui sont celles d’une modernité gentillette
+qui se veut surtout « non dogmatique ». Alors là aussi, remettons les choses en place : même si
+certains dialogues de Platon sont « aporétiques » (sans solution définitive), le but de Socrate
+reste toujours et en toute occasion de parvenir à des réponses qu’il considère bien évidemment
+comme éternelles, vraies et définitives  : la vérité se définit comme la remémoration
+(«  anamnèse  ») des idées que nous avons vues avant notre naissance quand le sensible,
+l’incarnation de l’âme dans un corps trompeur, ne troublait pas encore l’intelligible ! Quant à la
+beauté, elle réside dans une harmonie qui symbolise celle de l’ordre cosmique et il n’y a pas à y
+revenir ! Le régime politique juste ? Bonne question, mais la réponse est certaine, absolument
+indiscutable  : c’est celui où les philosophes gouvernent, les gardiens gardent et les esclaves
+obéissent, les trois classes sociales étant définies comme enracinées dans un ordre hiérarchique
+lui-même ancré dans une nature intangible, celle du cosmos... S’imaginer que Socrate n’apporte

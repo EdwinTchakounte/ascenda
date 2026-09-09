@@ -1,0 +1,231 @@
+[
+ {
+  "chapitre": "36512d36",
+  "citations": [
+   {
+    "texte": "Elle vous permet de vous démarquer en exprimant votre intérêt, votre motivation et vos qualifications spécifiques pour le poste visé.",
+    "page": 65,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce que doit faire une lettre de motivation",
+    "portee": "Avant de rédiger, savoir à quoi sert le texte évite de produire un courrier générique."
+   },
+   {
+    "texte": "Cette lettre de candidature est un peu longue et n'insiste pas assez sur le diplôme, les stages effectués et la volonté de réussir.",
+    "page": 69,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Critiquer la première sortie",
+    "portee": "Le lecteur qui sait dire ce qui manque obtient un texte utile ; celui qui accepte la première version obtient un texte moyen."
+   },
+   {
+    "texte": "En effet, une lettre de candidature doit aller droit au but et être lue le plus rapidement possible.",
+    "page": 69,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La brièveté comme exigence",
+    "portee": "Un recruteur accorde quelques secondes à une lettre, ce qui commande sa longueur."
+   }
+  ]
+ },
+ {
+  "chapitre": "a4606ee1",
+  "citations": [
+   {
+    "texte": "N'hésitez pas à demander à ChatGPT d'apporter des améliorations aux réponses qu'il vous fournit.",
+    "page": 70,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Travailler par retouches successives",
+    "portee": "La valeur de l'outil se révèle dans l'échange, pas dans la première réponse."
+   },
+   {
+    "texte": "ChatGPT a tendance à trop écrire. Demandons-lui de rédiger une lettre de 10 lignes seulement.",
+    "page": 73,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Un défaut à corriger soi-même",
+    "portee": "Imposer une longueur dans la consigne est le remède le plus simple à cette inflation."
+   }
+  ]
+ },
+ {
+  "chapitre": "88ccc43f",
+  "citations": [
+   {
+    "texte": "Remarquez que l'on donne le maximum de précisions à ChatGPT afin qu'il puisse écrire la lettre avec les bons arguments",
+    "page": 74,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La précision du contexte fourni",
+    "portee": "Ce que la machine ignore, elle l'invente ou le laisse vide, d'où l'importance des détails donnés."
+   }
+  ]
+ },
+ {
+  "chapitre": "892d166d",
+  "citations": [
+   {
+    "texte": "Avec une utilisation judicieuse et une révision attentive, ChatGPT deviendra sans aucun doute un compagnon précieux pour améliorer vos compétences en rédaction",
+    "page": 76,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'usage suppose une relecture",
+    "portee": "La responsabilité du texte envoyé reste entière chez celui qui l'envoie."
+   }
+  ]
+ },
+ {
+  "chapitre": "558bd23c",
+  "citations": [
+   {
+    "texte": "Cet e-mail semble satisfaisant ainsi, mais un ajout est nécessaire afin de remercier les personnes de l'équipe commerciale.",
+    "page": 79,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le ton fait partie du message",
+    "portee": "Un message professionnel efficace tient autant à la considération exprimée qu'aux informations transmises."
+   }
+  ]
+ },
+ {
+  "chapitre": "4bfd904c",
+  "citations": [
+   {
+    "texte": "Vous devez donc le rassurer afin de le maintenir parmi vos clients fidèles.",
+    "page": 81,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Répondre au mécontentement",
+    "portee": "Un client insatisfait bien traité coûte moins cher qu'un client perdu à remplacer."
+   }
+  ]
+ },
+ {
+  "chapitre": "109adc83",
+  "citations": [
+   {
+    "texte": "ChatGPT a généré un texte publicitaire comme demandé mais il a également trouvé un nom original pour le parfum",
+    "page": 86,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Un apport au-delà de la commande",
+    "portee": "L'outil propose parfois ce qu'on ne lui a pas demandé, ce qui appelle un tri et non une adoption automatique."
+   },
+   {
+    "texte": "Toutefois, la création de ces textes peut s'avérer fastidieuse et chronophage.",
+    "page": 84,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le coût réel de la production de contenu",
+    "portee": "Pour une petite structure, le temps de rédaction est souvent le premier obstacle à la visibilité."
+   }
+  ]
+ },
+ {
+  "chapitre": "437b25e7",
+  "citations": [
+   {
+    "texte": "Le référencement rédactionnel de produits joue un rôle clé dans cette démarche, car il permet de capturer l'essence et les avantages des articles de manière attrayante et convaincante.",
+    "page": 88,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Décrire un produit pour être trouvé",
+    "portee": "Une bonne description sert à la fois le moteur de recherche et le lecteur qui hésite."
+   }
+  ]
+ },
+ {
+  "chapitre": "a9f24b25",
+  "citations": [
+   {
+    "texte": "Les clients potentiels sont souvent pressés et recherchent des informations rapides et percutantes.",
+    "page": 91,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Écrire pour un lecteur pressé",
+    "portee": "La synthèse n'est pas un appauvrissement du message mais la condition qu'il soit lu."
+   },
+   {
+    "texte": "Ainsi, la visibilité des produits s'améliore et les ventes sont stimulées, offrant un avantage concurrentiel sur le marché.",
+    "page": 89,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Décrire pour vendre",
+    "portee": "La qualité des descriptions de produits est un levier commercial accessible à toute entreprise."
+   }
+  ]
+ },
+ {
+  "chapitre": "dacf20f5",
+  "citations": [
+   {
+    "texte": "Trouver les mots appropriés pour que cette annonce soit percutante peut être un exercice difficile.",
+    "page": 94,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La difficulté d'écrire court et juste",
+    "portee": "Peu de gens savent présenter en dix lignes ce qu'ils vendent, et cela leur coûte des acheteurs."
+   }
+  ]
+ },
+ {
+  "chapitre": "59d92956",
+  "citations": [
+   {
+    "texte": "La description effectuée par ChatGPT est nettement plus attrayante que celle que nous lui avons fournie au départ.",
+    "page": 96,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "De la liste de faits au texte qui donne envie",
+    "portee": "L'apport principal se situe dans la mise en forme, à condition que les faits fournis soient exacts."
+   },
+   {
+    "texte": "Assurez-vous d'ajuster les détails tels que vos coordonnées personnelles, les informations sur l'état de la voiture et le prix en fonction de votre situation réelle.",
+    "page": 96,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Vérifier avant de publier",
+    "portee": "Un texte séduisant qui contient des données inexactes engage celui qui le publie, pas la machine."
+   }
+  ]
+ },
+ {
+  "chapitre": "d2bdd309",
+  "citations": [
+   {
+    "texte": "les entreprises doivent désormais être en mesure de communiquer efficacement avec leurs clients, partenaires et fournisseurs du monde entier",
+    "page": 97,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La contrainte linguistique du commerce",
+    "portee": "Pour un entrepreneur africain, la barrière de la langue conditionne l'accès aux marchés extérieurs."
+   }
+  ]
+ },
+ {
+  "chapitre": "f9c66f55",
+  "citations": [
+   {
+    "texte": "La comparaison est ici effectuée entre ChatGPT et des traducteurs automatiques et non des traducteurs humains, qui resteront toujours plus compétents qu'un programme de traduction, y compris ChatGPT.",
+    "page": 96,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Situer honnêtement une comparaison",
+    "portee": "Préciser à quoi l'on compare empêche de transformer un progrès relatif en supériorité absolue."
+   },
+   {
+    "texte": "Avec ChatGPT, les données utilisées pour la traduction ne sont pas stockées, ce qui garantit une plus grande confidentialité des informations.",
+    "page": 99,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une machine qui atteste d'elle-même",
+    "portee": "Cette affirmation sur la confidentialité vient du système lui-même et ne vaut pas vérification indépendante."
+   }
+  ]
+ },
+ {
+  "chapitre": "37d230cb",
+  "citations": [
+   {
+    "texte": "certaines langues peuvent être mieux représentées et mieux entraînées dans mon modèle en fonction des données disponibles.",
+    "page": 100,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'inégalité des langues dans les corpus",
+    "portee": "Les langues peu écrites en ligne sont moins bien servies, ce qui concerne directement les langues africaines."
+   }
+  ]
+ },
+ {
+  "chapitre": "f3998cfa",
+  "citations": [
+   {
+    "texte": "En outre, la cohérence est un élément clé dans la communication interculturelle.",
+    "page": 102,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La cohérence d'un texte traduit",
+    "portee": "Sur un document long, l'unité de vocabulaire compte autant que l'exactitude phrase par phrase."
+   }
+  ]
+ }
+]

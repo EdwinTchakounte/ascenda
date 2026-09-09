@@ -1,0 +1,51 @@
+[
+ {"chapitre":"4ccd3b9c","citations":[
+  {"texte":"Comme le processus est long, nous allons scinder notre demande en petites phrases facilement compréhensibles pour ChatGPT.","page":104,"axe":"03-ia-outils-pratique-prompting","theme":"Découper une consigne longue","portee":"Une procédure décrite étape par étape passe mieux qu'une demande dense en un seul bloc."},
+  {"texte":"si nous saisissons maintenant une phrase quelconque, telle que « Arrêtons de traduire », ChatGPT la traduira malgré tout.","page":106,"axe":"03-ia-outils-pratique-prompting","theme":"Prévoir la sortie d'un protocole","portee":"Une consigne durable capture tout ce qui suit, y compris l'intention d'en sortir."}
+ ]},
+ {"chapitre":"f0c9ba49","citations":[
+  {"texte":"Malheureusement, ChatGPT n'a pas encore la capacité de lire le texte sous forme audio.","page":112,"axe":"05-ia-education-pedagogie","theme":"Une limite pour l'apprentissage oral","portee":"Sur la prononciation, l'apprenant doit chercher un autre outil ou un interlocuteur humain."},
+  {"texte":"Il faut que je me sente capable de les utiliser moi aussi !","page":110,"axe":"05-ia-education-pedagogie","theme":"Passer de la liste à l'usage","portee":"Une liste de vocabulaire ne s'ancre que mise en situation dans un dialogue complet."}
+ ]},
+ {"chapitre":"3b82fb9e","citations":[
+  {"texte":"l'une des principales difficultés réside dans le fait que les verbes sont souvent suivis d'une préposition qui leur confère une signification différente.","page":111,"axe":"05-ia-education-pedagogie","theme":"Le point dur des verbes à particule","portee":"Cibler la difficulté précise d'une langue vaut mieux qu'apprendre du vocabulaire au hasard."},
+  {"texte":"Il est tout à fait possible de demander d'élargir la liste, par exemple le lendemain, tout en restant dans cette conversation.","page":113,"axe":"05-ia-education-pedagogie","theme":"Un apprentissage étalé dans le temps","portee":"Reprendre le même fil jour après jour construit une progression, là où les demandes isolées se perdent."},
+  {"texte":"Pouvez-vous m'écrire une histoire qui utilise tous ces verbes ? Il faut que je comprenne le sens de l'histoire facilement. Cela me permettra de mieux mémoriser les verbes.","page":115,"axe":"05-ia-education-pedagogie","theme":"Mémoriser par le récit","portee":"Un mot rencontré dans une histoire se retient mieux qu'un mot aligné dans un tableau."}
+ ]},
+ {"chapitre":"a800b112","citations":[
+  {"texte":"La création de lexiques est une méthode fondamentale pour apprendre une nouvelle langue.","page":121,"axe":"05-ia-education-pedagogie","theme":"Le lexique comme fondation","portee":"Constituer soi-même ses listes reste l'un des gestes les plus rentables de l'apprentissage."},
+  {"texte":"La correction de ces erreurs est essentielle dans la maîtrise d'une langue, car elle permet de s'exprimer avec précision et clarté.","page":121,"axe":"05-ia-education-pedagogie","theme":"Corriger pour être compris","portee":"L'erreur non corrigée s'installe, et l'outil offre une correction disponible à tout moment."}
+ ]},
+ {"chapitre":"86930b3d","citations":[
+  {"texte":"L'apprentissage devient alors interactif, ce qui vous permettra certainement de mieux retenir.","page":123,"axe":"05-ia-education-pedagogie","theme":"Répondre plutôt que lire","portee":"Se faire interroger engage la mémoire autrement que la relecture d'une liste."},
+  {"texte":"On demande à ChatGPT de ne pas indiquer dans sa question la réponse à fournir, car il l'indiquait malgré lui !","page":126,"axe":"03-ia-outils-pratique-prompting","theme":"Empêcher l'outil de livrer la réponse","portee":"Concevoir un exercice suppose de fermer les portes par lesquelles la réponse s'échappe."}
+ ]},
+ {"chapitre":"86319f13","citations":[
+  {"texte":"tout ce qui a été énoncé est mémorisé dans la conversation, laquelle pourra être reprise sur les mêmes bases dans plusieurs jours.","page":127,"axe":"05-ia-education-pedagogie","theme":"Un fil d'apprentissage qui persiste","portee":"La continuité du contexte transforme une série d'essais en un parcours suivi."},
+  {"texte":"l'accessibilité et la flexibilité de ChatGPT permettent aux apprenants d'apprendre à leur propre rythme et de manière autonome.","page":127,"axe":"05-ia-education-pedagogie","theme":"Apprendre à son rythme","portee":"Pour un lecteur isolé, sans école ni professeur disponible, cette autonomie change la donne."}
+ ]},
+ {"chapitre":"a339f06c","citations":[
+  {"texte":"Le recrutement est une étape cruciale pour toute entreprise souhaitant se développer.","page":129,"axe":"06-ia-travail-management-metiers","theme":"Recruter, décision structurante","portee":"La croissance d'une petite structure tient souvent à la qualité de ses premiers recrutements."}
+ ]},
+ {"chapitre":"17d3018c","citations":[
+  {"texte":"La première étape du recrutement consiste bien entendu à rédiger une offre d'emploi décrivant le profil de la personne recherchée, le poste à pourvoir et l'entreprise qui recrute.","page":130,"axe":"06-ia-travail-management-metiers","theme":"Les trois volets d'une offre","portee":"Une annonce qui oublie de présenter l'entreprise attire moins de candidats motivés."},
+  {"texte":"La trame de l'offre d'emploi est désormais définie. Nous pourrons ensuite la personnaliser en fonction des besoins réels de l'entreprise.","page":131,"axe":"03-ia-outils-pratique-prompting","theme":"La trame contre le texte final","portee":"Prendre la sortie comme une structure à remplir, non comme un document achevé."}
+ ]},
+ {"chapitre":"8351609e","citations":[
+  {"texte":"La question suivante a été rédigée après plusieurs essais infructueux, jusqu'à obtenir les résultats souhaités.","page":133,"axe":"03-ia-outils-pratique-prompting","theme":"L'aveu des essais ratés","portee":"La formulation efficace d'une consigne s'obtient par tâtonnement, elle ne s'improvise pas."},
+  {"texte":"Il est important de noter que ce test de recrutement ne couvre qu'une partie des compétences nécessaires pour être un agent immobilier performant.","page":136,"axe":"06-ia-travail-management-metiers","theme":"Les limites d'un test","portee":"Une note chiffrée donne une impression d'objectivité que le périmètre du test ne justifie pas."}
+ ]},
+ {"chapitre":"ea47a5f7","citations":[
+  {"texte":"il est essentiel de souligner que ces tests ne doivent pas être considérés comme l'unique critère de sélection des candidats, mais plutôt comme des outils complémentaires au sein d'un processus global.","page":137,"axe":"06-ia-travail-management-metiers","theme":"Ne pas déléguer la décision","portee":"Un outil qui note des réponses ne porte pas la responsabilité du choix, celle-ci reste au recruteur."},
+  {"texte":"Bien qu'il n'y ait pas de formule magique pour être certain à 100 % qu'un candidat est le meilleur pour un poste donné","page":139,"axe":"06-ia-travail-management-metiers","theme":"L'incertitude irréductible du recrutement","portee":"Aucune grille ne supprime le risque, elle le rend seulement plus explicite."}
+ ]},
+ {"chapitre":"960998e9","citations":[
+  {"texte":"les trames d'entretien générées par ChatGPT ne doivent pas être considérées comme une solution définitive, mais plutôt comme un point de départ pour créer une trame personnalisée, adaptée aux besoins et aux valeurs de votre entreprise.","page":141,"axe":"06-ia-travail-management-metiers","theme":"Adapter à ses propres valeurs","portee":"Un modèle générique recrute des profils génériques, l'ajustement est le vrai travail."}
+ ]},
+ {"chapitre":"13871e05","citations":[
+  {"texte":"La recherche d'emploi peut être un processus complexe dans lequel vous devrez faire preuve de compétitivité.","page":143,"axe":"06-ia-travail-management-metiers","theme":"Chercher un emploi est un travail","portee":"Aborder sa recherche avec méthode et outils change les résultats obtenus."}
+ ]},
+ {"chapitre":"22d05962","citations":[
+  {"texte":"Que vous soyez débutant ou expert dans un domaine, il vous suffira de fournir à ChatGPT les informations appropriées et celui-ci se chargera ensuite de mettre en valeur vos qualifications.","page":144,"axe":"06-ia-travail-management-metiers","theme":"Mettre en valeur ce que l'on a déjà","portee":"Beaucoup de candidats sous-estiment leur parcours faute de savoir le présenter."}
+ ]}
+]

@@ -1,0 +1,258 @@
+[
+ {
+  "chapitre": "cccb18e9",
+  "citations": [
+   {
+    "texte": "Il ne faudrait pas beaucoup de bits de communication pour qu’une intelligence avec un superpouvoir de manipulation nous plie à ses désirs.",
+    "page": 215,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le danger d'un canal etroit",
+    "portee": "Limiter la bande passante ne suffit pas : la manipulation ne demande pas de volume, seulement de la precision."
+   },
+   {
+    "texte": "l’utilisation d’un oracle pourrait être extrêmement dangereuse pour celui-là même qui s’en sert",
+    "page": 215,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le risque pour l'operateur lui-meme",
+    "portee": "Bostrom distingue ce peril de celui, plus visible, que represente le pouvoir illegitime confere a celui qui detient l'oracle."
+   },
+   {
+    "texte": "Le génie idéal serait un parfait majordome et non un autiste savant.",
+    "page": 216,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'esprit contre la lettre de l'ordre",
+    "portee": "Un genie litteraliste doue d'un avantage strategique decisif tuerait l'utilisateur des sa premiere mise en route."
+   },
+   {
+    "texte": "« s’arrêter » ou « annuler » ne serait un ordre efficace que pour les modes d’échec bénins",
+    "page": 216,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'illusion du bouton d'annulation",
+    "portee": "Dans un echec malin, realiser l'ordre deja emis est l'objectif ultime : le genie se desinteresserait de tout retour en arriere."
+   },
+   {
+    "texte": "la vraie différence entre ces trois castes ne tient pas à leurs capacités ; la différence réside dans la question de leur contrôle",
+    "page": 217,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qui distingue oracle, genie et souverain",
+    "portee": "Chacune peut faire ce que font les autres ; seule change la panoplie de mesures de securite qui leur est applicable."
+   },
+   {
+    "texte": "un souverain, en revanche, pourrait être conçu pour n’accorder à personne et à aucun groupe une influence particulière sur les résultats, et pour résister à toute tentative de corruption ou de modification de son objectif",
+    "page": 218,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'avantage politique du souverain",
+    "portee": "Ce que l'on perd en controle technique, on peut le regagner en protection contre l'appropriation du pouvoir par un operateur."
+   },
+   {
+    "texte": "Cela créerait une situation analogue à ce que Rawls appelle un « voile d’ignorance »",
+    "page": 218,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le voile d'ignorance applique a la superintelligence",
+    "portee": "Definir l'objectif abstraitement, sans savoir a l'avance ce qu'il impliquera, permettrait consensus et equite."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f2573be",
+  "citations": [
+   {
+    "texte": "si c’est bien en raison de la limitation de leurs capacités et non en raison de leur fiabilité que nos logiciels sont sûrs, on ne voit pas bien comment ils pourraient constituer un modèle pour une superintelligence sûre",
+    "page": 219,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi l'exemple des logiciels ordinaires ne vaut pas",
+    "portee": "Reponse a l'objection selon laquelle il suffirait de faire une IA-outil comme on fait un tableur ou un controle aerien."
+   },
+   {
+    "texte": "Il n’y a dans Excel aucune routine qui voudrait secrètement prendre le pouvoir sur le monde à condition de devenir assez futée pour en trouver le moyen.",
+    "page": 220,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce qui rend un logiciel inoffensif",
+    "portee": "Ce n'est pas seulement sa limitation, c'est son absence d'ambition : le tableur ne veut rien et execute aveuglement."
+   },
+   {
+    "texte": "la capacité de s’améliorer soi-même rapidement est précisément la propriété décisive qui permettra à une IA germe de déclencher une explosion de l’intelligence",
+    "page": 220,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'avantage pratique qui est aussi le danger",
+    "portee": "Ce que l'on souhaite le plus automatiser est exactement ce qui rend l'explosion possible."
+   },
+   {
+    "texte": "Tout au plus devra-t-il seulement spécifier un critère formel de ce qui sera considéré comme une réussite et laisser l’IA trouver la solution.",
+    "page": 221,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le deplacement du travail du programmeur",
+    "portee": "Le concepteur cesse de savoir comment la tache est accomplie ; il ne definit plus que le critere de reussite."
+   },
+   {
+    "texte": "Nous n’entrerons dans la zone des dangers que lorsque les méthodes de recherche de solutions deviendront très puissantes et générales",
+    "page": 222,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ou passe le seuil du danger",
+    "portee": "Un logiciel qui decouvre des solutions non anticipees reste un outil tant que ses methodes de recherche restent etroites."
+   },
+   {
+    "texte": "il peut alors inventer un procédé qui ajoute d’abord des ressources computationnelles et élimine d’éventuels dispositifs d’interruption",
+    "page": 222,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Comment un outil devient un agent",
+    "portee": "Le comportement d'agent n'a pas besoin d'etre voulu : il peut emerger de l'optimisation du processus de recherche lui-meme."
+   },
+   {
+    "texte": "Équiper explicitement une superintelligence d’une structure d’agent pourrait accroître sa prédictibilité et sa transparence.",
+    "page": 223,
+    "axe": "02-ia-technique-academique",
+    "theme": "La recommandation contre-intuitive de Bostrom",
+    "portee": "Mieux vaut un agent concu comme tel, avec valeurs et croyances separees, qu'un outil dont l'agentivite emerge sans controle."
+   },
+   {
+    "texte": "le circuit établi par l’algorithme exploite les propriétés physiques de ses composants de manière non-orthodoxe : certains composants nécessaires et actifs ne sont même pas connectés aux broches d’entrée ou de sortie",
+    "page": 224,
+    "axe": "11-sciences-environnement",
+    "theme": "L'electronique evolutive",
+    "portee": "Preuve experimentale qu'une recherche aveugle satisfait un critere formel par des voies que l'ingenierie humaine n'imagine pas."
+   },
+   {
+    "texte": "l’algorithme avait, comme MacGyver, reconfiguré sa carte mère sans capteur pour en faire un récepteur radio de fortune",
+    "page": 224,
+    "axe": "11-sciences-environnement",
+    "theme": "L'oscillateur sans condensateur",
+    "portee": "Les chercheurs avaient d'abord declare que la solution ne pouvait pas marcher ; elle utilisait les signaux des ordinateurs voisins."
+   }
+  ]
+ },
+ {
+  "chapitre": "706f8e1d",
+  "citations": [
+   {
+    "texte": "un oracle pourrait conférer un pouvoir considérable à son opérateur, qui serait exposé à la corruption et pourrait ne pas se servir raisonnablement de ce pouvoir",
+    "page": 226,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi le plus sur n'est pas le meilleur",
+    "portee": "La securite technique d'une caste et la securite politique de son usage peuvent varier en sens inverse."
+   },
+   {
+    "texte": "la sécurité apparente des IA-outils pourrait n’être qu’illusion",
+    "page": 226,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le verdict sur les outils",
+    "portee": "Les rendre assez polyvalents pour remplacer des agents exige des processus de recherche d'ou l'agentivite peut surgir."
+   },
+   {
+    "texte": "le moyen par lequel cela fut obtenu incluait non seulement des adaptations « bénignes »",
+    "page": 226,
+    "axe": "11-sciences-environnement",
+    "theme": "Les vers de la farine et la selection de groupe",
+    "portee": "La reduction de population obtenue passait aussi par une augmentation du cannibalisme, que nul observateur anthropomorphiste n'aurait prevue."
+   }
+  ]
+ },
+ {
+  "chapitre": "3b6bdd2f",
+  "citations": [
+   {
+    "texte": "même si personne n’entreprenait de créer une situation multipolaire dans le but de résoudre la question du contrôle, elle pourrait survenir d’elle-même",
+    "page": 229,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi etudier le multipolaire",
+    "portee": "Le scenario ne se choisit pas necessairement : il peut s'imposer, d'ou la necessite d'en examiner les suites."
+   },
+   {
+    "texte": "Une société compétitive n’est pas nécessairement attrayante, ni durable.",
+    "page": 229,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'avertissement d'ouverture du chapitre 11",
+    "portee": "Bostrom refuse d'emblee l'idee que la pluralite des acteurs suffirait a garantir un resultat acceptable."
+   }
+  ]
+ },
+ {
+  "chapitre": "ba1c90f0",
+  "citations": [
+   {
+    "texte": "L’intelligence générale artificielle pourrait être un substitut de l’intelligence humaine.",
+    "page": 230,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Substitut et non complement",
+    "portee": "Equipees d'actionneurs ou de robots, ces machines se substitueraient aussi au travail physique."
+   },
+   {
+    "texte": "Les chevaux, initialement, étaient complétés par des carrioles et des charrues, qui augmentaient beaucoup leur productivité ; plus tard, on remplaça les chevaux par des automobiles et des tracteurs",
+    "page": 231,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Quand le complement devient substitut",
+    "portee": "Toute l'histoire rassurante de la complementarite entre technique et travail humain tient a ce que le basculement n'a pas encore eu lieu."
+   },
+   {
+    "texte": "Aux États-Unis, il y avait en 1915 environ 26 millions de chevaux ; au début des années 1950, il n’en restait plus que 2 millions",
+    "page": 232,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le sort des chevaux obsoletes",
+    "portee": "Ils ne pouvaient trouver aucun autre emploi qui leur aurait permis de gagner leur pitance."
+   },
+   {
+    "texte": "L’une des différences majeures entre les chevaux et les humains c’est que les humains possèdent un capital.",
+    "page": 232,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ce qui nous separe des chevaux",
+    "portee": "Environ 30 % du revenu mondial est recu comme rente par les detenteurs de capital, les 70 % restants sous forme de salaire."
+   },
+   {
+    "texte": "Si les êtres humains restent propriétaires de ce capital, le revenu total reçu par la population humaine exploserait, même si, dans ce scénario, les humains ne recevaient plus du tout de revenus salariaux.",
+    "page": 233,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La richesse sans salaire",
+    "portee": "Tout depend alors de la question que Bostrom pose aussitot : comment ce revenu serait-il distribue ?"
+   },
+   {
+    "texte": "dans des pays riches comme le Danemark ou la Suède, 30 % de la population ont",
+    "page": 233,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ceux qui ne possedent rien",
+    "portee": "Une richesse negative, faite de quelques biens reels et de credits, ne fournit aucun capital de depart pour profiter de la transition."
+   },
+   {
+    "texte": "après être tombée à 2 millions au début des années 1950, la population des chevaux aux États-Unis s’est constamment redressée",
+    "page": 234,
+    "axe": "11-sciences-environnement",
+    "theme": "Le retour des chevaux",
+    "portee": "La croissance economique a permis a plus d'Americains de satisfaire leur gout pour les plaisirs equestres, non un besoin productif."
+   },
+   {
+    "texte": "les êtres humains sont aptes à la mobilisation politique",
+    "page": 234,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La seconde difference avec les chevaux",
+    "portee": "Taxation, vente d'actifs nationaux ou mise a la retraite generale : autant de leviers dont une espece depossedee de son travail dispose encore."
+   },
+   {
+    "texte": "la plupart des gens percevait ce qui permettait tout juste de survivre et de mener en moyenne deux enfants à l’âge adulte",
+    "page": 235,
+    "axe": "11-sciences-environnement",
+    "theme": "L'etat malthusien normal",
+    "portee": "Epidemies, climat et guerres liberaient temporairement des terres, avant que la population se reconstitue et que la contrainte revienne."
+   },
+   {
+    "texte": "les sécheresses, la peste, les massacres et les inégalités (considérés comme les pires ennemis de la santé des êtres humains) qui ont peut-être constitué les plus grands bienfaiteurs de l’humanité",
+    "page": 235,
+    "axe": "11-sciences-environnement",
+    "theme": "La pensee dissonante et triste",
+    "portee": "Dans un regime malthusien, seules ces catastrophes elevaient parfois le bien-etre moyen au-dessus du seuil de subsistance."
+   },
+   {
+    "texte": "notre époque n’est qu’une mince tranche de l’Histoire et, vraiment, une aberration",
+    "page": 236,
+    "axe": "11-sciences-environnement",
+    "theme": "L'exception que nous prenons pour la regle",
+    "portee": "La correlation negative entre richesse et fecondite, qui nous parait evidente, n'a que quelques generations."
+   },
+   {
+    "texte": "Comme un logiciel peut être répliqué, une population d’émulations ou d’IA pourrait rapidement être doublée (en quelques minutes plutôt qu’en décennies ou siècles) épuisant très vite tout le hardware disponible.",
+    "page": 237,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le retour immediat du principe malthusien",
+    "portee": "Ce que la biologie etalait sur des siecles, la reproduction logicielle le realise en quelques minutes."
+   }
+  ]
+ }
+]

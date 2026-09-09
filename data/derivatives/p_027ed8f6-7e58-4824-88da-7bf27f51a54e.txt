@@ -1,0 +1,484 @@
+OUVRAGE : Cheikh Anta Diop Philosophie, Science et Religion 66063
+AUTEUR(S) :  
+ANNÉE : inconnue
+PAGES : 29
+AXE : Afrique Histoire Pensee
+SOMMAIRE :
+  (non structuré)
+
+[6/23 passages, 7067 tokens sur 21774]
+
+=== EXTRAITS ===
+
+[p. 1-3]
+Cheikh Anta DIOP : extrait du manuscrit de Civilisation ou Barbarie traitant 
+des rapports entre sciences et philosophie (Cheikh Anta DIOP, Civilisation 
+ou Barbarie, Paris, Présence africaine, 1981, p. 472)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Recherche fondamentale sur la structure de la matière. Une vue de 
+l’accélérateur de particules LHC (Large Hadron Collisionner) au CERN 
+(Centre européen de recherche fondamentale situé à la frontière franco-
+suisse). 
+Un 
+objectif : 
+détecter 
+la 
+particule 
+de 
+HIGGS 
+(source : 
+http://www.web.cern.ch/public). 
+
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+163
+ 
+ 
+ 
+ 
+PHILOSOPHIE, SCIENCE  
+ET RELIGION 
+ 
+LES CRISES MAJEURES  
+DE LA  
+PHILOSOPHIE CONTEMPORAINE 
+ 
+ 
+C’est la communication par laquelle Cheikh Anta DIOP a conclu le colloque 
+Philosophie et Religion organisé par la Revue sénégalaise de Philosophie, à 
+l’Université de Dakar du 7 au 8 juin 1983. Elle a été publiée dans les Actes 
+de ce Colloque, Revue sénégalaise de Philosophie, n°5-6, janvier-décembre 
+1984, pp. 179-199. 
+ 
+À Son Excellence, Monseigneur THIANDOUM, qui nous a fait l'honneur de rehausser 
+de sa présence l'ouverture de ces « Journées », à laquelle les autorités religieuses 
+étaient invitées. 
+ 
+ 
+A - CRISE DE LA RAISON ET PERSPECTIVES D'UNE 
+NOUVELLE ÉPISTÉMOLOGIE DES SCIENCES EXACTES 
+ 
+On peut dire qu'il existe en science deux écoles de pensée 
+correspondant aux deux grands courants philosophiques matérialiste et 
+idéaliste, même si l'appartenance des scientifiques à ces écoles n'est 
+pas toujours explicitement avouée. 
+ 
+De NEWTON, LAPLACE, LAGRANGE, HAMILTON à EINSTEIN, 
+SCHRÖDINGER et Louis de BROGLIE, en passant par MARX, ENGELS, 
+LÉNINE, on peut ranger dans une même catégorie tous ceux qui 
+admettent l'existence du monde extérieur, indépendamment de la 
+conscience du sujet qui l'observe, la connaissabilité de la matière, 
+l'objectivité des lois physiques qui gouvernent son comportement, la 
+
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+164
+validité du principe de causalité. Définition, certes assez large pour 
+englober des penseurs qui, par ailleurs, seraient considérés comme des 
+idéalistes (EINSTEIN, Louis de BROGLIE...), mais suffisante pour 
+caractériser une attitude minimale commune devant la science, et pour 
+se démarquer aussi du positivisme, et du néo-positivisme 
+contemporain. 
+ 
+De BERKELEY, David HUME, MACH, AVENARIUS, CARNAP, 
+WITTGENSTEIN à POINCARÉ, RUSSELL, HEISENBERG, Niels BOHR, 
+etc., tous ceux qui nient la réalité du monde extérieur, l'objectivité des 
+lois de la nature qui ne seraient alors que le résultat de l'activité de 
+constitution de l'esprit humain, relèvent de l'idéalisme subjectif. 
+ 
+Pour tous ceux-ci et bien d'autres, en faisant abstraction des nuances 
+de pensée qui les différencient (qu'on nous en excuse), le monde 
+extérieur, les divers objets ne sont que des complexes de sensations, 
+des représentations de la conscience ; nous ne pouvons rien connaître 
+de la « réalité » qui excite nos sens. Les matérialistes qui postulent le 
+primat de la matière et sa connaissabilité font de la métaphysique. 
+L'idéalisme 
+subjectif 
+aboutit 
+souvent 
+au 
+solipsisme 
+ou 
+à 
+l'agnosticisme. Ce sont ces problèmes ontologiques et gnoséologiques 
+des rapports de l'esprit et de l'être, ou de la pensée et de la matière qui 
+revêtent une forme nouvelle à chaque étape du développement 
+scientifique, à chaque révolution dans les sciences exactes. 
+ 
+En ce siècle finissant, ils prennent un caractère aigu, voire critique, 
+provoqué par les conclusions de la mécanique quantique, les 
+découvertes fondamentales en astrophysique, et en biologie 
+moléculaire. C'est dans cette perspective que s'inscrit le débat 
+passionnant qui, depuis 1927, au Congrès Solvay de Bruxelles, avait 
+opposé EINSTEIN et Niels BOHR, autant dire un certain 
+«matérialisme» scientifique et le néo-positivisme, débat que 
+poursuivent les épigones, et qui a pris un tournant décisif depuis l'an 
+dernier (1983) avec les résultats des expériences d'Alain ASPECT à 
+l'Université d'Orsay. 
+ 
+De quoi s'agit-il ? Quelles sont l'importance et la nature de l'enjeu ?
+
+---
+
+[p. 6-7]
+on simultanée de ces deux éléments de réalité : la 
+communauté scientifique estima donc que EINSTEIN n'a pas réussi à 
+démontrer l'incomplétude de la mécanique quantique. 
+ 
+                                                 
+existe un élément de réalité physique (relatif à ce système), qui correspond à cette 
+quantité physique. »
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+168
+L'argument EPR semblait oublié. II est remarquable que ce soient des 
+philosophes qui l'ont remis en honneur : SHIMONDY, professeur de 
+physique et de philosophie à Boston, Max JAMMER, professeur de 
+physique et de philosophie des sciences et ses élèves CLAUSER et 
+autres ... 
+ 
+Pour réintroduire le déterminisme en physique quantique David BOHM 
+a bâti une théorie à « variables cachées » après Von NEUMANN avec 
+comme hypothèse supplémentaire: la possibilité de communications 
+instantanées, supra-lumineuses, alors que la relativité assigne aux 
+phénomènes de la nature une vitesse limite de propagation égale à 
+celle de la lumière. 
+ 
+Toutes les expériences proposées par EINSTEIN pour réfuter les 
+hypothèses de la mécanique quantique étaient des expériences de 
+pensée y compris l'argument EPR donc non encore réalisables en 
+laboratoire. 
+ 
+Max JAMMER note que la situation a changé depuis 1964 avec 
+l'introduction du théorème de J.S. BELL qui permet une vérification 
+expérimentale du paradoxe EPR d'autant plus intéressante que la 
+violation de « l'inégalité de BELL » implique l'existence effective 
+d'interactions supralumineuses, et la non-localité des phénomènes en 
+physique quantique. Compte tenu de tout ce qui précède si l'inégalité 
+de BELL est réellement violée, la mécanique quantique en déduit que 
+deux corpuscules ayant d'abord interagi, s'étant ensuite porté aux 
+extrémités de l'univers, séparés par 10 ou 20 milliards d'années 
+lumière, sont encore influencés, chacun par la mesure que l'on fait sur 
+l'autre. Cette hypothèse étant confirmée par les premières expériences 
+faites en Amérique par FREEDMAN et CLAUSER, Alain ASPECT s'est 
+attaché à réaliser une expérience plus affinée à l'Institut d'optique 
+d'Orsay à Paris, permettant d'éliminer toute influence possible par voie 
+lumineuse entre polariseurs (analyseurs). 
+ 
+Cette expérience était la dernière vérification avant d'admettre 
+l'existence, dans la nature d'interactions supra-lumineuses, et, partant, 
+la causalité non locale ou l'action à distance qu'EINSTEIN assimilait à 
+la télépathie. Les résultats devaient changer complètement notre 
+paradigme, notre vision de l'univers. Maintenant que le résultat est là,
+
+---
+
+[p. 10-12]
+temps T renversé. 
+ 
+L'auteur suppose l'existence d'un inconscient collectif qui s'étalerait 
+sur l'épaisseur du temps, sur le passé et le futur. Tout serait déjà inscrit 
+dans l'espace-temps, et la précognition serait ainsi rendue possible, 
+                                                 
+4 Cf. note à la fin du texte, p.187.
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+172
+mais on ne peut pas intervenir sur le futur pour modifier le destin, 
+comble de fatalité ! 
+ 
+En réalité, un seul cas vérifié, authentique, de précognition serait 
+tragique pour la liberté humaine, au sens le plus général. Si comme le 
+dit O.C. de BEAUREGARD, tout était déjà inscrit dans l'espace-temps, 
+le fatalisme le plus étouffant pèserait sur le destin de l'homme et 
+réduirait celui-ci à l'état d'un automate qui s'ignore. 
+ 
+II ne s'agirait pas seulement d'un déterminisme biologique sous-jacent 
+à nos états de conscience, mais d'une justification du fatalisme par une 
+nouvelle interprétation des propriétés de l'espace temps. Comment 
+fonder alors une morale sur la responsabilité humaine ? 
+ 
+La prémonition est semblable au « déjà vu »5 et devrait, en dernier 
+ressort, relever d'un type similaire de causes neurophysiologiques 
+touchant au mécanisme de formation de stockage, d'évocation, et de 
+transit des images mentales. 
+ 
+Ce qu'on croit être une anticipation pourrait être intériorisé, à notre 
+insu, dans le moi, sous forme d'images latentes..., tel serait le cas de 
+cet archéologue qui, sur le point de repartir « bredouille », a vu, en 
+rêve, les objets enfouis au seul endroit qu'il n'avait pas encore fouillé. 
+Le lendemain, il fouilla et trouva ceux-ci sous terre. II est certain que 
+son subconscient fut pendant toute la campagne de fouille le siège 
+d'une activité de sélection, de classification, de « rationalisation » et 
+d'interprétation des faits. 
+ 
+La prémonition n'était donc qu'apparente puisqu'elle pouvait être 
+déduite des faits passés. II faudrait éliminer tous les cas réductibles en 
+dernière analyse à celui-ci pour pouvoir parler de précognition. La 
+vraie précognition devrait concerner des faits indépendants de 
+l'histoire de notre conscience comme la chute d'une météorite par 
+exemple. 
+ 
+La télépathie n'est pas un phénomène aussi aberrant que le supposaient 
+EINSTEIN et SCHRÖDINGER. Les faits scientifiquement inexpliqués qui 
+                                                 
+5 Qui n'est qu'une illusion. 
+
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+173
+impliquent la simultanéité sont moins gênants. En effet, le cerveau 
+humain est sans aucun doute l'appareil émetteur et récepteur le plus 
+perfectionné qui existe dans la Nature. On ne pourra peut être 
+apprécier sa perfection que lorsque la technologie atteindra le stade de 
+la bioélectronique. Donc une communication physique par voie 
+électromagnétique, entre deux cerveaux de deux sujets séparés par une 
+grande distance n'est pas en soi un phénomène irrationnel, et le 
+deviendra moins encore dans l'avenir: le support physique est évident. 
+Les grandes puissances se livrent en ce moment à des expériences de 
+ce genre. 
+ 
+L'expérience d'Alain ASPECT et l'interprétation de l'auteur 
+ 
+Nous avons déjà dit que c'est un philosophe et physicien de Boston 
+SHIMONDY qui avec CLAUSER, HOME et HOLT ont déterré le paradoxe 
+EPR sur lequel régnait le black out depuis 1935, et ont conçu le 
+dispositif expérimental qui a permis d'obtenir les premiers résultats 
+qu'Alain ASPECT vient d'améliorer. Nous avons décrit cette expérience 
+dans Civilisation ou Barbarie6. II s'agit de la vérification 
+expérimentale du paradoxe EPR qui, somme toute, était une 
+expérience de pensée donc non réalisable avec les moyens techniques 
+de l'époque où elle fut conçue, en 1935. On change de source en 
+prenant maintenant des atomes (de calcium pour Alain ASPECT) qui, 
+excités fortement par un faisceau laser, retombent au niveau initial en 
+passant par un niveau intermédiaire de transition. Ils émettent ainsi 
+des photons corrélés et, parmi ceux-ci, on choisit une paire qui 
+parcourt un axe (x) dans des directions opposées, à partir de la source 
+S. Ils arrivent sur deux polariseurs linéaires qu'ils traversent 
+(supposons-le), et tombent ensuite sur deux photomultiplicateurs avant 
+d'être comptés dans une unité de coïncidences, ne décelant que les 
+événements simultanés. La nouveauté de l'expérience d'Alain ASPECT 
+par rapport aux précédentes, exécutées en Amérique, est que le 
+montage comprend deux voies de comptage identiques à partir de 
+deux commutateurs symétriques placés entre la source, et les 
+analyseurs (cf. fig. 77 dans Civilisation ou Barbarie). Le temps de 
+commutation est calculé de façon à être bien inférieur au temps que la 
+                                                 
+6 Cheikh Anta DIOP: Civilisation ou Barbarie, figure n° 77 ; l'on trouvera plus loin, 
+reproduit en annexe, le schéma de l'expérience d'Alain ASPECT.
+
+---
+
+[p. 16-17]
+iciens à réanimer la Nature en 
+ressuscitant en quelque sorte un « Dieu laïque ». 
+                                                 
+10 B. d'ESPAGNAT op. cit., p. 131. 
+11 Que le physicien cherche désespérément à atteindre. 
+12 Bemard d’ESPAGNAT : Un atome de sagesse. Propos d’un physicien sur le réel. 
+Seuil, Paris, 1982, p.70.
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+178
+La parcelle de psyche attribuée à l'électron par Jean CHARON, le 
+subconscient collectif d'O. COSTA de BEAUREGARD, l'animation de la 
+matière de Bemard d'ESPAGNAT ou de COCHRAN sont autant 
+d'interprétations personnelles, d'extrapolations des phénomènes de la 
+mécanique quantique : elles ne se trouvent pas dans celle-ci. C'est 
+l'esquisse d'une nouvelle métaphysique. L'interaction supralumineuse, 
+la non-séparabilité, et la non-localité des phénomènes, la causalité ou 
+l'action à distance sont les faits qu'il est légitime de déduire de la 
+violation des inégalités de BELL. En eux-mêmes, ils sont déjà 
+suffisamment révolutionnaires et transforment complètement notre 
+vision de l'univers. Point n'est besoin donc d'en ajouter d'autres sauf 
+ceux qui, dans l'ordre des mathématiques, viennent limiter, à leur tour, 
+les pouvoirs de l'esprit, comme les relations d'incertitude de 
+HEISENBERG. En effet, le théorème de Kurt GÖDEL affirme que si un 
+nombre d'axiomes fondant une théorie est assez riche pour permettre 
+la construction de l'arithmétique, on peut toujours formuler une 
+proposition non décidable dans cette théorie, c'est-à-dire ni vraie, ni 
+fausse. Seule une autre axiomatique différente de la première 
+permettrait de lever l'équivoque, et celle-là, à son tour, pourra être 
+associée à une nouvelle proposition non décidable, et ainsi de suite. 
+ 
+Ce théorème d'incomplétude de GÖDEL ruine les chances du projet de 
+HILBERT de bâtir, à partir d'un nombre fini d'axiomes, une 
+mathématique universelle dans laquelle toute proposition serait ou 
+vraie ou fausse et en se passant de la notion d'infini. Ainsi, on ne sait 
+même pas si on pourra jamais démontrer la cohérence de la théorie 
+des ensembles. Contiendrait-elle une tautologie non décelée jusqu'ici ? 
+ 
+Sur le plan épistémologique, c'est le problème du statut des 
+mathématiques qui est posé. Ont-elles une réalité objective reflétant la 
+structure du réel, et même de l'être (divin s'entend) comme le postulait 
+CANTOR lorsqu'il découvrit les nombres transfinis, et fonda la théorie 
+des ensembles, ou bien sont-elles le simple reflet de l'esprit du 
+mathématicien qui les crée ? 
+ 
+Dans le premier cas, le nombre serait l'hypostase de l'être, et nous 
+sommes en plein néo-platonisme, dans le second nous ne sortons pas 
+du cadre néo-positiviste, et le caractère arbitraire et la variété des 
+théories axiomatiques, leur incomplétude intrinsèque, s'expliqueraient
+
+---
+
+[p. 21-23]
+étique transcendantale dans 
+la Critique de la raison pure. 
+ 
+Les conditions a priori de la sensibilité de KANT « subsistent » 
+comme les archétypes de PLATON, tandis que les notions de l'espace 
+absolu, et de temps absolu de NEWTON qui leur servaient de support 
+sont rendues caduques par la théorie de la relativité d'EINSTEIN.
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+183
+Selon certains penseurs, la philosophie coupée des sciences est un 
+discours vide. Ce jugement est peut-être excessif, mais on peut 
+affirmer que la science a toujours été et reste la source principale 
+d'inspiration de la philosophie. Pour cette raison même la philosophie 
+existera toujours, mais peut-être deviendra-t-il de plus en plus difficile 
+de philosopher ? 
+ 
+Probablement, le grand renouvellement de la philosophie qu'on attend 
+viendra également des sciences de la nature comme la biologie 
+moléculaire, la génétique, etc. En effet, les découvertes faites pendant 
+les deux décennies écoulées ont déjà puissamment contribué à 
+renouveler la métaphysique de l'homme, et à rendre caduque une 
+bonne partie des travaux philosophiques antérieurs fondés sur de 
+simples spéculations. 
+ 
+On a réussi à hybrider, en laboratoire, une cellule animale et une 
+cellule végétale, et créer ainsi une nouvelle cellule autonome « zoo-
+végétale » qui s'est multipliée en culture pour former un tissu d'un 
+type nouveau à la fois animal et végétal. Cette réussite montre que 
+dans le processus typique de l'hybridation, la barrière « d'espèce » (ou 
+de règne) n'existe pas au niveau cellulaire ou en tout cas peut être 
+contournée. Que deviennent les archétypes de PLATON, les essences 
+éternelles des êtres ? On pourrait citer la création des chimères « 
+mouchèvre », une tête de mouton greffée sur un corps de chèvre, et 
+l'animal vit, ou un triton fabriqué avec trois parties différentes dont 
+deux provenant d'autres tritons de couleur différente. 
+ 
+Le clonage des cellules qui, à terme permettrait de créer un nombre 
+voulu d'êtres vivants identiques, donc peut être de consciences 
+humaines absolument identiques, pose des problèmes métaphysiques, 
+moraux et en un mot, philosophiques qui donnent le vertige. 
+ 
+À un certain égard, c'est une manière indirecte de vaincre la mort. 
+Bien sûr, le sentiment d'identité avec l'être initial n'est pas résolu pour 
+autant, du moins il faut le penser. 
+ 
+II en est de même de toutes les autres importantes découvertes : l'étude 
+
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+184
+du cerveau pour cerner de plus en plus le phénomène de conscience17 
+et nos représentations mentales, le fonctionnement dissymétrique des 
+deux hémisphères du cerveau, les similitudes entre le processus de 
+mémorisation et l'holographie, le fonctionnement du cerveau en temps 
+réel, la transformation de l'excitation, des sens en état de conscience 
+par le cerveau, les processus neuro-physiologiques sous-jacents a ces 
+états, les rapports entre le sentiment d'angoisse et la sécrétion d'un 
+enzyme du cerveau: l'augmentation de l'espérance de vie qui pourra 
+changer un jour l'attitude devant la mort, etc. La métaphysique de la 
+liberté, de l'angoisse et de l'action au sens sartrien change 
+complètement à la lumière des nouvelles données biologiques. 
+ 
+ 
+C - PHILOSOPHIE, SCIENCE ET RELIGION 
+ 
+On peut considérer que la source principale de la foi chez beaucoup de 
+penseurs réside dans la grande énigme de l'origine de l'Univers, de la 
+matière, qu'en toute rigueur la science actuelle est incapable de 
+résoudre. L'activité scientifique dans ses formes les plus avancées, et 
+les plus élaborées ne concerne que les transformations de la matière, 
+une fois que celle-ci est là comme une donnée, un existant brut. Elle 
+est donc, cette activité, entièrement située en deçà du grand mystère. 
+Et les deux attitudes concevables à cet égard sont, sur le plan 
+philosophique, des options de principe. 
+ 
+On a vu18 que l'Univers, la matière envisagée dans la perspective du 
+futur est probablement éternelle. On est en droit d'être armé de cette 
+conviction aussi longtemps que le principe de la conservation de 
+l'énergie ne sera pas violé dans un processus de la Nature. Partant 
+d'une symétrie de droit, on pourrait supposer qu'il en fut ainsi dans le 
+passé, et que l'Univers est éternel, il a toujours existé, il existera 
+toujours, le néant, l'absence absolue d'être est absurde, et au fur et à 
+mesure que notre sens logique se développera, se fortifiera par la 
+pratique scientifique, on découvrira cette absurdité du néant bien que 
+ce concept soit aujourd'hui aussi opératoire que celui de l'être; Lénine 
+parie de l'unité de l'être et du non-être. 
+                                                 
+17 Jean-Pierre CHANGEUX, L’Homme neuronal, Fayard, Paris, 1983. 
+18 Cf. note de la page 185 en fin de texte.
+
+---
+
+[p. 26-27]
+e prévoit justement la théorie de la grande unification SU(5), le 
+proton qui est composé de quarks (trois) se désintègrerait. Or, cette désintégration met 
+enjeu des particules X échangées virtuellement entre quarks u et d (up et down). 
+Ainsi, l'existence de ces particules serait mise en évidence. Ceci est d'un intérêt capital
+LES CRISES MAJEURES DE LA PHILOSOPHIE CONTEMPORAINE 
+ 
+188
+pour trois raisons. Ce serait une vérification indirecte de l'exactitude de la théorie de 
+grande unification un pas décisif serait accompli dans l'effort d'unification des champs 
+et d'interprétation du comportement de la matière à ses niveaux les plus profonds.  
+ 
+Deuxièmement, l'instabilité du proton, brique constitutive de l'univers matériel, veut 
+dire très clairement que c'est tout l'édifice de la matière universelle qui s'effondrera, ce 
+n'est qu'une question de temps. La durée de vie assignée au proton est de l'ordre de 
+1032 années. On savait déjà que le neutron, deuxième brique constitutive de la matière 
+est instable. Cela ne veut pas dire que la matière disparaît dans le néant au sens 
+conceptuel, philosophique. Elle se transforme en énergie. Tant que le principe de la 
+conservation de l'énergie n'est pas violé, on continuera à penser que l'univers existera 
+éternellement, ne serait-ce que sous une forme où l'énergie sera dégradée ; il ne peut 
+pas faire place au néant, il est éternel à l'égard du futur en tant que manifestation de la 
+matière ou de l'énergie. S'il existait une symétrie de droit, on pourrait extrapoler vers 
+le passé aussi, et affirmer son éternité dans le temps pour résoudre le problème 
+créationniste. Mais, n'est-ce pas dans ce dernier cas une manière de reculer la 
+difficulté à l'infini pour qu'elle finisse par s'estomper dans l'esprit ? Le phénomène de 
+matérialisation d'un photon (rayon lumineux, donc énergie) en une paire d'électrons 
+positif et négatif ou la transformation inverse ne conduisent jamais à une destruction 
+de la plus petite parcelle de matière ou d'énergie : il ne s'agit que de changement de 
+forme, le bilan reste constant. 
+ 
+Enfin, en troisième lieu, la désintégration du proton (2) et l'existence des particules X 
+nous amèneraient à remonter aux tous premiers instants de la « création » de l'Univers 
+après le « big-bang », ceci pour examiner le problème de l'existence de Galaxies 
+d'anti-matière. À la suite de Gamow, physiciens et astrophysiciens estiment qu'il y a 
+environ 15 milliards d'années, toute la matière formant l'univers avait constitué une 
+boule dense qui a explosé, et les morceaux ont volé en éclats dans toutes les directions 
+tout en se transformant par évolution interne de la matière constitutive. La réalité de 
+cet univers en élan est vérifiée par l'effet Doppler Fizeau. 
+  
+De même que la réalité du big-bang est attestée par l'existence jusqu'à présent d'un 
+rayonnement fossile isotrope caractéristique des premiers instants de l'univers - bien 
+que cette question ne manque pas de contradicteurs. Le big-bang, non plus, ne 
+correspond pas à une création absolue de 1'univers et de la matière. II n'est qu'un 
+moment crucial de l'évolution de cette matière sans qu'on sache si c'est la première ou 
+la nième explosion.                                               
+ 
+La nature, comme l'avait prédit la mécanique quantique relativiste avec DIRAC, crée 
+la matière par paire de particules et anti-particules. Dans ces conditions où est passée 
+l'anti-matière des origines ? Qu'est-ce qui a rompu la symétrie de droit, et de fait qui a 
+dû exister au début de l'univers. On suppose qu'à 10-35 seconde après la création de 
+l'univers, il y avait un nombre égal de particules X et d'anti-particules X. 
+ 
+À l'instant suivant, les protons et les anti-protons apparaissent avec une légère 
+prédominance des protons à cause de la violation de la symétrie C.P. : le produit de la 
+conjugaison de charge par la parité (3). Donc tous les protons et anti-protons appariés

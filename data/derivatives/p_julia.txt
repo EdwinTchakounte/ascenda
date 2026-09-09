@@ -1,0 +1,1082 @@
+OUVRAGE : L'intelligence artificielle n'existe pas
+AUTEUR(S) : Luc Julia & Khayat Ondine
+ANNÉE : inconnue
+PAGES : 206
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Préface (p. 3-4)
+  Introduction (p. 5-6)
+  Préambule (p. 7-10)
+  Un rêve de gosse (p. 11-19)
+  (Re)Born in the USA (p. 20-29)
+  Retour vers le futur (p. 30-39)
+  Business as usual… (p. 40-65)
+  Rencontres du troisième type (p. 66-72)
+  De nouvelles opportunités (p. 73-79)
+  Le Malentendu (p. 80-80)
+  La Conférence de Dartmouth (p. 80-85)
+  La réalité : petit rappel historique (p. 86-105)
+  Mais alors, c’est quoi « l’intelligence »? (p. 106-106)
+  Intelligence et apprentissage (p. 106-108)
+  Le futur (p. 109-109)
+  Les méchants robots (et les autres !) (p. 109-119)
+  L’explicabilité (p. 120-124)
+  Les limites du Deep Learning (p. 125-126)
+  La multidisciplinarité (p. 127-127)
+  Améliorer notre quotidien (p. 128-131)
+  Un langage universel (p. 132-132)
+  Esperanto ? Quesaco ? (p. 132-132)
+  La guerre des ego (p. 132-134)
+  L’interopérabilité (p. 135-137)
+  Dans le monde du futur (p. 138-169)
+  L’avenir de l’IA (p. 170-170)
+  Les aspects éthiques (p. 170-180)
+  La blockchain (p. 181-187)
+  Vers un monde meilleur ? (p. 188-192)
+  Conclusion (p. 193-203)
+  Remerciements (p. 204-204)
+  Biographie (p. 204-206)
+
+[21/122 passages, 17739 tokens sur 115140]
+
+=== EXTRAITS ===
+
+[p. 2-2]
+Ce  livre  numérique  est  une  création  originale  notamment  protégée  par
+les  dispositions  des lois sur le droit d’auteur. Il est identifié par un tatouage
+numérique permettant d’assurer sa traçabilité. La reprise du contenu de ce
+livre numérique ne peut intervenir que dans le cadre de courtes citations
+conformément à l’article L.122-5 du Code de la Propriété Intellectuelle.
+En cas d’utilisation contraire aux lois, sachez que vous vous exposez à des
+sanctions pénales et civiles.
+LUC JULIA
+(en collaboration avec Ondine Khayat)
+L’INTELLIGENCE ARTIFICIELLE
+N’EXISTE PAS
+Préface de Jean-Louis Gassée
+© Éditions First, un département d’Édi8, 2019.
+Cette œuvre est protégée par le droit d’auteur et strictement réservée à l’usage
+privé  du  client.  Toute  reproduction  ou  diffusion  au  profit  de  tiers,  à
+titre gratuit ou onéreux, de tout ou partie de cette œuvre est strictement
+interdite et constitue une contrefaçon prévue par les articles L 335-2 et
+suivants du Code
+de la propriété intellectuelle. L’éditeur se réserve le droit de poursuivre toute
+atteinte à ses droits de propriété intellectuelle devant les juridictions civiles
+ou pénales.
+ISBN : 978-2-412-04340-0
+ISBN numérique : 9782412046746
+
+---
+
+[p. 8-10]
+u  jour  près,  donc  pour  moi,  à  onze  ans,  les  choses  étaient
+claires  : j’allais  mourir  d’un  cancer  du  côlon  le  3  novembre  2013.  Ce
+postulat  allait rythmer ma vie, et dans mon esprit d’enfant perturbé par la
+mort de son père,
+j’étais  convaincu  que  moi  aussi,  j’allais  vivre  17  469  jours.  Je  me  suis
+dit
+qu’il fallait que je me dépêche, parce que je ne disposais que de peu de
+temps.
+17  469  jours,  c’est  court,  surtout  quand  vous  en  avez  déjà  utilisé  plus
+de 4 000. Il fallait que je vive vite, que je me donne à fond. C’est pour ça que
+j’ai fait autant de choses, ça a été mon moteur, et c’est sans doute aussi ce qui
+m’a
+sauvé  la  vie.  Par  deux  fois.  J’étais  tellement  sûr  de  mourir  le  3
+novembre 2013, que, quand j’ai eu un premier cancer en 2005, un lymphome
+découvert
+tardivement,  auquel,  selon  les  médecins,  je  n’avais  que  peu  de  chances
+de survivre, je savais que ce n’était pas le bon moment. C’était huit ans trop
+tôt,
+j’étais  encore  loin  des  17  469  jours.  C’était  mathématiquement
+impossible.
+Circulez,  Faucheuse,  y  a  rien  à  voir.  Pendant  ce  combat,  les
+mathématiques ont  toujours  été  là.  Pour  lutter  contre  les  effets  de  la
+chimiothérapie,  les médecins me donnaient des drogues qui me mettaient
+dans un état second, je
+me  sentais  euphorique.  Un  jour,  après  avoir  pris  ce  traitement,  j’ai
+passé quarante-huit heures à démontrer des formules mathématiques en
+italien, alors
+que je ne parle pas un mot d’italien... Une autre fois, toujours sous
+traitement,
+j’ai patiemment compté un milliard de grains de riz dans ma tête. J’étais dans
+un  état  de  concentration  absolu.  Je  n’avais  pas  peur  de  la  mort,  pour
+moi, c’était  tout  simplement  une  solution  impossible.  Après  avoir  livré
+bataille pendant plusieurs mois, je m’en suis sorti. Le 3 novembre 2013 était
+
+encore
+loin, ce n’était pas le moment, c’est tout. Cette date était en permanence dans
+ma tête, c’était un marqueur de tout ce que je faisais. Je savais qu’il me restait
+peu de temps. Je devais profiter jusqu’au bout de ces 17 469 jours, et rien ni
+personne ne pourrait m’en enlever un.
+Mais deux ans plus tard, quand j’ai eu l’autre cancer, celui que j’attendais,
+celui  qui  était  héréditaire  et  qui  devait  vraiment  m’emporter,  j’étais
+quand même  un  peu  moins  fier.  L’hérédité  avait  joué  son  rôle,  mais
+les  produits chimiques (preuve de modernité ?) utilisés dans les champs qui
+bordaient ma
+maison  à  Pibrac,  et  l’amiante  de  la  faculté  de  Jussieu,  avaient
+certainement accéléré  le  processus.  Pourtant,  lui  aussi,  arrivait  trop  tôt
+par  rapport  à  mes prévisions. Il y avait là une anomalie mathématique qui
+m’a donné foi dans le
+fait que j’allais à nouveau m’en tirer. C’est aussi à ce moment-là que j’ai vu à
+quel point la science avait évolué. Mon grand-père est mort de son cancer en
+1957, mon père, lui, y a succombé en quelques jours, en 1977. À l’époque on
+ne  savait  rien  ou  presque  du  syndrome  de  Lynch.  En  revanche,  en
+2007, quand ça a été mon tour d’être rattrapé par la maladie, il avait été bien
+étudié
+et  il  y  avait  une  solution  qui  m’a  permis  d’être  tiré  d’affaire  en
+quelques semaines à peine.
+Je  m’étais  toujours  juré  que  le  3  novembre  2013,  je  ne  ferai  rien.  Or,
+ce jour-là,  je  me  suis  retrouvé  dans  un  avion  entre  Paris  et  San
+Francisco.
+Pendant tout le vol, je me suis dit que 200 personnes allaient mourir à cause
+
+---
+
+[p. 18-19]
+voulait, envoyer  des  documents,  des  photos.  Ça  m’a  fasciné.  En
+1991,  un  truc  qui s’appelait Gopher est apparu, ça permettait d’accéder
+encore plus facilement à
+toute sortes de données. Rien n’était vraiment organisé, on allait un peu à la
+pêche,  mais  avec  un  peu  (beaucoup)  de  persévérance  on  arrivait  à  nos
+fins.
+C’était  fantastique  !  Je  passais  tout  mon  temps  là-dessus,  je  cherchais
+les infos,  je  les  recoupais.  C’est  à  ce  moment-là  que  j’ai  vraiment
+réalisé qu’Internet allait vite devenir la plus grande base de données du
+monde, qui
+allait  potentiellement  changer  la  vie  de  beaucoup  de  gens,  surtout  si  on
+en rendait  l’accès  facile  et  universel.  C’est  aussi  à  cette  période  que
+j’ai découvert  «   The  mother  of  all  Demos  »,  «  la  mère  de  toutes  les
+démos  », présentée  en  1968  par  Doug  Engelbart.  Son  système
+informatique,  appelé
+«  oN-Line  System  »  ou  NLS,  présentait  en  90  minutes  presque  tous
+les
+éléments  fondamentaux  de  l’informatique  personnelle  moderne    :
+fenêtres,
+hypertexte,  graphiques,  navigation,  saisie  de  commandes,
+vidéoconférence,
+souris  informatique,  traitement  de  texte,  hyperlinks,  gestionnaire  de
+version de  fichiers  et  éditeur  en  temps  réel  pour  travail  collaboratif.  La
+communication  entre  les  deux  ordinateurs  lors  de  la  démonstration  était
+assurée par une liaison micro-ondes dédiée grâce à un camion placé sur une
+montagne  surplombant  les  deux  sites.  C’était  le  maillon  faible  de  la
+démonstration,  mais  dès  1969  le  même  Engelbart  démontrait  son
+système
+entre  UCLA  et  SRI  utilisant  ARPANET,  justement  l’ancêtre  d’Internet.
+La
+vision  était  complète,  j’étais  fasciné,  et  j’étais  loin  d’imaginer  que,
+quand j’arriverai  à  Stanford  quelques  années  plus  tard,  Doug  Engelbart
+
+---
+
+[p. 29-29]
+passe  à  Paris
+dans  ce qu’on  appelle  le  Silicon  Sentier,  entre  Opéra  et  République,
+est  sans  aucun doute l’antithèse d’un projet sponsorisé par l’État. Parti de la
+base et profitant de la proximité des investisseurs, on y voit une certaine
+émulation proche de
+ce que je décrivais dans la Valley, à une moindre échelle.
+
+---
+
+[p. 39-39]
+vieux
+magicien qu’on voyait s’agiter sur l’écran, auquel on pouvait poser des
+questions sur le
+SRI et qui se servait du World Wide Web, comme on l’appelait encore, pour
+étayer  ses  réponses.  C’était  une  interface  anthropomorphique,  qui
+tendait  à recréer au mieux les interactions entre humains. Nous étions bien
+conscients
+
+---
+
+[p. 49-51]
+re
+encore
+aujourd’hui : Apple sait mieux que vous ce qui est bon pour vous. Même si
+on
+doit lui reconnaître d’immenses succès, cette arrogance aurait pu être quelque
+peu  atténuée  par  un  certain  nombre  d’échecs  cuisants,  mais  elle  ne
+semblait en rien entamée. Et Steve Jobs, en tant que fondateur, en était
+l’incarnation.
+Pour la petite histoire, j’avais rencontré Steve Jobs pour la première fois en
+2003, pour lui présenter un des produits développé par Orb. Pour les raisons
+que  j’évoquais  à  l’instant,  il  était  connu  dans  la  Silicon  Valley  pour
+être difficile, très égotique et cassant. Mais nous avons tout de même tenté
+notre
+chance.  Apple  ne  faisait  pratiquement  que  des  ordinateurs  à  l’époque  et
+commençait  juste  à  s’intéresser  au  média  avec  l’iPod.  Nous  pensions
+donc pouvoir leur apporter quelque chose dans ce domaine. Nous étions en
+avance
+pour  avoir  le  temps  d’installer  notre  démo,  qui  était  assez  technique.
+Steve Jobs  est  arrivé  avec  Philip  Schiller  et  Avie  Tenevian,
+respectivement  vice-président du marketing et CTO9 chez Apple. On a
+commencé notre démo et au  bout  d’un  quart  d’heure  à  peine,  Steve  Jobs
+s’est  levé,  en  nous  disant texto : « C’est de la merde » et il est parti.
+Schiller et Tenevian étaient un peu gênés,  ils  ont  essayé  d’arrondir  les
+angles  en  nous  disant  que  ce  n’était  pas grave,  qu’il  était  comme  ça,
+ils  ont  fait  semblant  d’être  intéressés  quelques minutes pendant que nous
+remballions nos affaires et c’était fini. Steve Jobs
+était certainement un génie du marketing, mais il était connu pour être infect,
+avec  ses  salariés  en  particulier,  et  avec  le  reste  de  l’humanité  en
+général.  Je peux le confirmer !
+Mais  je  suis  quand  même  allé  chez  Apple,  surtout  pour  retravailler
+avec Adam.  On  avait  une  mission  très  claire,  il  fallait  que  Siri
+fonctionne correctement sur l’iPhone 4S qui venait de sortir.
+Pendant  ses  années  start-up,  de  2007  à  2010,  Siri  n’avait  accumulé
+qu’environ 150 000 utilisateurs. Après avoir été initialement développée pour
+les PC, c’était devenu une application qui fonctionnait sur smartphones. Mais
+l’intégration  avec  les  autres  apps  était  difficile,  aussi  n’avait-elle  jamais
+
+décollée. Il a fallu un visionnaire comme Steve Jobs pour comprendre que la
+technologie  devait  être  intégrée  à  l’OS  ( Operating  System,  ou  système
+d’exploitation), pour faciliter ses relations avec toutes les autres applications.
+Le premier challenge que nous avions à surmonter était de passer de 150 000
+à  180  millions  d’utilisateurs  sur  l’IPhone  4S.  Il  faut  reconnaître
+qu’Apple nous avait donné  tous les moyens  nécessaires pour atteindre  cet
+objectif. Ce
+n’était certainement pas chose facile pour cette compagnie qui était habituée
+à
+tout faire toute seule. Les acquisitions n’étaient pas légion : depuis les années
+1980,  il  n’y  avait  eu  qu’une  trentaine  d’acquisitions  faites  par  Apple.
+Les choses  ont  l’air  de  changer  puisque  depuis  2010  ce  sont  plus  de
+soixante compagnies  qui  ont  été  rachetées  par  Apple.  La  pomme
+deviendrait-elle
+moins arrogante ?
+En  quelques  mois,  notre  équipe  est  passée  de  40  à  85  personnes.  Nous
+étions  un  groupe  isolé,  personne  ne  devait  savoir  ce  qu’on  faisait.
+Apple  a toujours  adoré  le  secret,  ce  n’est  pas  une  légende.  Pendant
+une  année
+complète, nos équipes étaient cachées à l’intérieur même de l’entreprise. Les
+employés de Siri avaient des accords de confidentialité encore plus drastiques
+que  les  autres  salariés  d’Apple.  Il  y  avait  des   war  rooms,  chacune
+avec  des badges spéciaux, et aucun signe extérieur ne donnait d’indices sur
+ce qu’il s’y
+passait.  Cet  isolement  avait  du  bon,  car  ça  nous  donnait  le  contrôle  sur
+tous les aspects de Siri, de l’interface utilisateur jusqu’aux serveurs.
+Personne dans l’équipe  dirigeante  ne  comprenait  vraiment  la  complexité
+
+---
+
+[p. 61-63]
+ociale, se
+divertir,  s’informer,  découvrir  des  choses  nouvelles.  Peut-être  comme
+lorsqu’il  est  chez  lui,  mais  peut-être  mieux  encore,  car  ce  véhicule
+bouge, change de décor. La voiture du futur sera-t-elle entièrement
+transparente pour
+profiter pleinement du paysage ? Imaginez-vous passer près de la tour Eiffel.
+Pendant que vous l’admirez, des informations intéressantes ou des anecdotes
+amusantes  à  son  sujet  s’inscrivent  sur  les  vitres  interactives.  Vous
+établissez un dialogue avec la voiture pour apprendre et découvrir le
+monde... Grâce à
+cette  réalité  augmentée  par  des  technologies  d’interactions  naturelles,
+vous communiquez avec votre environnement, ce qui est très différent de la
+réalité
+virtuelle,  qui  implique  une  déconnexion  totale  d’avec  le  monde  qui
+nous entoure.  Même  si  la  réalité  virtuelle  peut  être  très  utile  dans
+certains  cas, notamment  pour  les  pilotes  d’avion  qui  se  forment  sur  des
+simulateurs,  et pour  tout  ce  qui  est  entraînements  dans  des
+environnements  hostiles  en
+général,  je  n’aime  pas  ce  qui  n’est  pas  vrai,  ce  qui  est  artificiel...
+Dans  le futur, votre voiture va devenir votre deuxième maison, un lieu de
+confort plus
+qu’un  lieu  de  stress  permanent.  Vous  pourrez  être  assisté  pour  y
+disposer  de tout  ce  dont  vous  avez  besoin  quand  vous  en  avez  besoin.
+Au  lieu  de  vivre dans  des  environnements  séparés,  vous  aurez  tout
+loisir  de  les  harmoniser.
+Maison,  voiture,  bureau,  tout  va  devenir  configurable  à  souhait.  Tous
+les objets autour de vous seront là pour vous rendre service.
+Malheureusement,  l’Internet  des  objets  d’aujourd’hui,  l’IoT,  qui  vous
+oblige  à  aller  ouvrir  sur  votre  téléphone  mobile  une  application
+différente pour chaque service dont vous avez besoin, rend les choses très
+fastidieuses.
+Au final, vous perdez plus de temps qu’autre chose : pourquoi prendre votre
+mobile,  le  déverrouiller,  chercher  et  lancer  l’application  pour  y  trouver
+dans une longue liste de lumières celle à allumer, alors que l’interrupteur est
+
+juste
+là  ?  Ce  manque  d’interactivité  et  de  réactivité  est  la  raison  essentielle
+de l’adoption encore limitée des objets connectés.
+C’est  ce  constat  qui  nous  avait  poussé  chez  Samsung  à  redéfinir  l’IoT
+d’«   Internet  of  Things  »  à  «   Interoperability  of  Things  »,  ou
+Interopérabilité des  objets.  Comme  évoqué  précédemment,  le  système
+que  nous  avons
+développé  s’appuie  fortement  sur  le  cloud.  Comme  les  représentations
+des objets y interagissent facilement entre elles, il est maintenant possible
+d’avoir une  seule  application  représentant  le  cloud  lui-même,  voire
+même  plus
+d’application du tout si les objets, interopérant entre eux, effectuent le service
+attendu par l’utilisateur. C’était la première étape. La prochaine étape, ce que
+nous  allons  faire  maintenant  dans  notre  laboratoire,  est  de  donner  une
+troisième et ultime définition de l’IoT : « Intelligence of Things ». Ça revient,
+en quelque sorte, à appliquer au monde des objets ce que nous avions théorisé
+avec les agents il y a 20 ans : chaque objet possède une fonction simple, mais
+quand on les fait interagir avec d’autres objets, ils deviennent eux mêmes
+plus
+intelligents.  Leurs  capacités  sont  augmentées  grâce  aux  autres  objets,  et
+ils deviennent  quelque  chose  de  différent  de  ce  qu’ils  étaient  tout
+seuls.  Après tout,  les  objets  fonctionnent  sur  notre  modèle  humain  :
+l’addition  de  nos compétences  nous  rend  plus  performants  que  quand
+nous  faisons  les  choses tout seuls dans notre coin.
+Un autre sujet sur lequel nous allons travailler est celui de la santé. Pas la
+santé clinique, régulée, mais celle ayant trait au bien-être, aux décisions que
+
+---
+
+[p. 71-72]
+, Palm et HP. J’ai eu la
+chance
+de  travailler  étroitement  avec  lui  chez  Orb,  quand  nous  avons  mis  au
+point notre système de diffusion universel de media. Il avait un pied dans la
+Valley,
+l’autre à Hollywood, et en plus d’être incroyablement bien connecté, il avait
+toujours des anecdotes croustillantes à nous raconter.
+En  France,  j’ai  rencontré  Fleur  Pellerin  quand  elle  était  encore
+secrétaire d’État au Numérique. Elle a lancé et incarné la French Tech, et a
+fait en sorte
+que  la  France  revienne  parmi  les  leaders  mondiaux  dans  les  domaines
+de  la technologie.  C’est  grâce  à  elle,  avec  le  support  de  la  BPI
+(Banque  pour l’investissement), que des initiatives comme le Silicon Sentier
+ont vu le jour.
+C’est  un  pur  produit  des  hautes  études  françaises,  qui  a  pu  et  su
+quitter  le milieu  politique  lorsque  le  Président  Hollande  ne  l’a
+curieusement  pas
+reconduite dans ses fonctions dans son dernier gouvernement. Elle a rebondi
+dans le milieu qu’elle a aidé à créer et aujourd’hui, elle investit avec sa firme
+Korelya  Capital  dans  de  nombreux  projets  innovants.  J’ai  beaucoup
+d’admiration pour elle car pour moi elle est à l’initiative de ce renouveau que
+nous voyons actuellement. D’ailleurs, beaucoup de ceux qui gravitaient dans
+son  entourage  font  aujourd’hui  partie  de  l’administration  du  Président
+Macron.
+Comme je l’ai déjà dit, Emmanuel Macron nous a fortement encouragés à
+installer  notre  nouveau  centre  d’intelligence  artificielle  en  France.  Entre
+Samsung  et  lui,  c’est  une  vieille  histoire  puisque  nous  faisions  partie
+d’un groupe  régulièrement  invité  à  l’Élysée  pendant  les  cinq  années  de
+la
+présidence  de  François  Hollande.  Ces  réunions  de  responsables  de
+grosses compagnies  étrangères  étaient  à  l’époque  organisées  par  Muriel
+Pénicaud,
+présidente  de  Business  France,  et  avaient  pour  but  de  renforcer
+
+---
+
+[p. 81-83]
+urs fournies par des
+capteurs  et  de  définir  une  fonction  liant  tous  ces  paramètres  pour
+classer  les résultats.  Comme  il  s’agit  d’apprentissage  supervisé,  on  fait
+apprendre  au système  quelques  exemples  connus  qui  définissent  la
+fonction.  Une  fois  le système entraîné, le signal présenté à son entrée est
+interprété par la fonction
+qui donne, en sortie, la probabilité d’appartenance à une des classes définies.
+Pour  simplifier  à  l’extrême,  si  on  définit  un  paramètre  «  nombre  de
+pattes  »
+assumant qu’on ait dans le système un détecteur de pattes, et un autre « a des
+écailles  »  et  qu’on  ait  un  détecteur  d’écailles.  Pendant  la  phase
+d’apprentissage,  on  donne  alors  en  entrée  des  instances  de  chiens  et  de
+serpents,  définissant  les  classes  recherchées  en  sortie,  et  la  fonction
+convergera  alors  vers  ce  qu’on  appellera  un  modèle.  Lorsqu’on  présente
+ensuite  un  chien  au  système,  il  est  probable  qu’il  le  classifie
+correctement parmi  les  chiens,  même  chose  pour  les  reptiles.  Mais  si
+on  lui  présente  un crocodile,  les  probabilités  seront  plus  proches  du
+50/50.  Ce  cas  précis  étant trivial,  il  aurait  pu  être  traité  par  un
+système  à  base  de  règles,  aussi  appelé système  expert,  car  l’arbre  de
+décision  est  simple.  Mais  les  réseaux  de neurones  introduisent  les
+statistiques  qui  permettent  de  mieux  gérer  les ambiguïtés, faisant sortir la
+machine du monde vrai/faux, 0/1 dans laquelle on
+la  cantonnait  jusque-là.  En  revanche,  ça  ne  la  rend  toujours  pas
+intelligente, car tout ce que les fonctions font est de ressortir ce qu’on leur a
+appris, dans le domaine  spécifique  de  cet  apprentissage.  Avec  le
+perceptron,  on  parlait  en dizaine  de  neurones,  alors  qu’en  ce  qui
+concerne  le  cerveau,  on  parle  de 100  milliards  de  neurones.  Donc,  dès
+le  départ,  la  donne  était  biaisée.  Le perceptron  et  les  réseaux  de
+neurones  n’ont  rien  à  voir  avec  notre  cerveau.
+C’est  une  vue  de  l’esprit,  une  belle  abstraction,  mais  nous  ne  savons
+même pas comment fonctionne notre cerveau aujourd’hui. Cette
+simplification a fait
+croire  à  pas  mal  de  monde  qu’il  y  avait  une  sorte  d’équivalence  entre
+
+cette technologie  et  l’intelligence.  Les  gens  se  sont  excités  dans  tous
+les  sens  en espérant  le  grand  soir.  Le  problème,  c’est  que  tout  ça
+reposait  sur  des croyances, et que le soufflé est retombé d’un coup.
+Périodiquement,  les  gens  qui  travaillent  sur  l’intelligence  artificielle,
+mais surtout ceux qui en attendent des résultats, se découragent parce qu’ils
+peinent
+à  y  voir  des  avancées  significatives.  Et  c’est  à  ce  moment-là  qu’une
+mystérieuse  hibernation  se  produit  :  dans  sa  courte  histoire,
+l’intelligence artificielle a déjà connu deux hivers, phénomènes plus connus
+sous le nom de
+« AI Winter ». Le premier s’est produit au tout début des années 1970, après
+plus de dix ans d’échecs de l’IA à essayer de résoudre des problèmes liés au
+langage,  à  la  traduction  automatique  et  à  la  difficulté  de  représenter
+des problèmes complexes avec les réseaux de neurones simplistes de
+l’époque. Le
+second épisode a eu lieu à la fin des années 1980. L’IA est en effet revenue à
+la mode à cette époque grâce à l’essor des ordinateurs personnels. On s’est dit
+alors qu’on allait disposer d’une plus grande puissance de calcul, et du coup,
+on  s’est  de  nouveau  mis  à  croire  à  un  ordinateur  intelligent  grâce  à
+des réseaux  de  neurones  plus  complexes.  Plus  de  paramètres,  plus  de
+couches dans  les  réseaux,  tout  ça  permettait  d’affiner  les  résultats.
+C’est  aussi  avec l’avènement de l’ordinateur omniprésent qu’on a vu
+apparaître une initiative
+importante  au  Japon,  la  «   fifth  generation  of  computer  systems  »,
+censée fournir une nouvelle plateforme pour l’intelligence artificielle. Mais
+une fois
+de plus, les résultats ont tardé à arriver, et l’hiver s’est installé. Il manquait en
+effet  un  élément  crucial,  survenu  au  milieu  des  années  1990  :  Internet
+
+---
+
+[p. 91-93]
+lois.
+Ce
+chiffre me paraît aberrant, parce qu’en réalité, dans les années 1960, avec la
+robotisation  des  usines  Renault,  beaucoup  d’ouvriers  spécialisés
+remplacés par des machines ont été déplacés vers d’autres métiers. On peut
+améliorer la
+société  grâce  à  la  technologie,  mais  il  faut  la  comprendre,  la  connaître
+et savoir  à  quoi  elle  sert.  Elle  diminuera  sans  doute  le  temps  de
+travail  de certains postes, mais en contrepartie, elle nous permettra de nous
+consacrer à
+des  tâches  plus  intéressantes  et  plus  gratifiantes.  Les  vraies  questions
+qui  se posent,  en  matière  de  technologie  sont  d’une  part  politiques  et
+d’autre  part, liées  à  la  répartition  des  richesses.  Est-ce  que  ceux  qui
+travaillent  dans  la Silicon Valley et qui maîtrisent et créent la technologie
+vont s’enrichir et les
+autres  stagner,  ou  est-ce  que  ces  richesses  produites  vont  au  contraire
+être mieux  distribuées  ?  La  technologie  crée  des  métiers,  à  hauts
+revenus  en général, et la question est de savoir comment partager tout ça. La
+question du
+partage des richesses se pose depuis la nuit des temps, mais je crois que nous
+sommes  arrivés  à  un  point  où  celle-ci  ne  peut  plus  être  différée.  On
+entend souvent  dire  que  les  robots  vont  remplacer  nos  emplois,  mais  il
+faut  savoir que  les  pays  les  plus  robotisés  sont  ceux  dans  lesquels  il  y
+a  le  moins  de chômage.  Au  Japon,  il  y  a  des  centaines  de  milliers  de
+robots.  En  Europe, c’est en Allemagne qu’il y a le moins de chômage, et ce
+sont pourtant eux qui
+ont  le  plus  de  robots.  Dans  une  étude  récente15,  le  cabinet  de  conseil
+McKinsey  estime  que  d’ici  2030,  environ  15  %  des  tâches  seront
+automatisées, avec de fortes variations selon les pays, allant de 9 % en Inde à
+24  %  aux  États-Unis,  voire  29  %  au  Japon.  Plus  que  des  pertes
+d’emplois, cette  automatisation  entraînera  une  transformation  des
+métiers,  voire  des changements  de  postes  et  de  secteurs  pour  375
+millions  de  salariés  selon  un scénario d’automatisation rapide, soit 14 %
+de la population active mondiale.
+Une proportion qui atteindra un tiers de la population active aux États-Unis et
+en Allemagne, et près de 50 % au Japon. Taxer les robots présente un risque
+
+parce  que  ça  revient  à  taxer  l’innovation,  qu’il  est  préférable  de
+soutenir  et d’accompagner.  Dans  les  années  qui  viennent,  la  pénibilité
+va  diminuer,  de nouvelles  perspectives  vont  s’ouvrir  et  nous  aurons
+peut-être  même  plus  de temps pour faire autre chose que travailler.
+•  Deep  Blue  contre  Kasparov  :  Deep  Blue  était  un  ordinateur  spécialisé
+dans le jeu d’échecs, développé par IBM dans les années 1990, qui a battu le
+Champion  du  monde  des  échecs  en  titre,  Garry  Kasparov,  en  1997.  Le
+jeu d’échecs est compliqué, et les gens qui sont forts aux échecs sont réputés
+pour
+être performants, intelligents, dotés d’une capacité à prévoir plusieurs coups à
+l’avance. Selon la théorie des jeux, c’est un jeu de stratégie combinatoire sans
+cycle et à information complète et parfaite, ce qui signifie que les règles sont
+claires  et  définissent  une  fin.  Quel  que  soit  le  chemin  qu’on  emprunte,
+on arrive  toujours  à  un  résultat,  on  a  un  vainqueur  ou  un  match  nul.
+Le programme  de  Deep  Blue  n’était  en  réalité  qu’une  suite  de  règles
+qui  a  pu battre  Kasparov  non  pas  en  «  réfléchissant  »,  mais  en  ayant
+une  capacité  de mémoire  phénoménale  où  étaient  stockés  des  milliers
+de  parties  d’échecs, ainsi  que  les  différents  chemins  menant  à  la
+victoire  en  fonction  des
+différentes configurations. Il n’y a là aucune intelligence, mais une prouesse
+technologique qui permet de retrouver dans cette énorme base de données le
+bon coup au bon moment. Pour vous donner une idée, l’ensemble des coups
+légaux  possibles  aux  échecs  est  estimé  entre  1043  et  1050.  La  machine
+ne connaissait absolument pas tous les coups, mais avait la capacité d’en
+prévoir
+à  l’avance  bien  plus  que  Kasparov  ne  le  pouvait.  La  machine  a  donc
+battu Kasparov  grâce  au  «  big  data  »,  et  absolument  pas  grâce  au
+raisonnement.
+
+---
+
+[p. 103-105]
+s les cas, la voiture autonome provoquera beaucoup
+moins d’accidents que
+les  humains.  Il  faut  savoir  utiliser  la  technologie,  tout  en  reconnaissant
+ses limites.
+Les  exemples  que  nous  venons  de  citer,  aussi  complexes  soient-ils,
+sont tous fondés sur la connaissance ou la reconnaissance. Ils exécutent les
+tâches
+pour  lesquelles  ils  sont  faits,  c’est-à-dire  des  tâches  programmées.  Ils
+n’inventent rien, ils ne font que suivre des règles, des exemples et des codes,
+en  utilisant  les  données  que  nous  choisissons  pour  ces  systèmes.  Qu’on
+les
+appelle  systèmes  experts,  Machine  Learning  ou  Deep  Learning,  ils  ne
+sont rien d’autre que ce que nous, humains, avons décidé qu’ils soient.
+Toutes ces
+technologies  ont  pour  but  de  nous  assister  dans  des  tâches  ponctuelles,
+souvent répétitives et fortement codifiées. Elles nous fournissent une aide qui
+vient  amplifier  notre  humanité,  et  augmenter  nos  capacités  physiques  ou
+intellectuelles, mais elles ne peuvent en aucun cas les remplacer. Il n’y a pas
+d’intelligence  artificielle  qui  échappe  à  notre  contrôle  et  va  précipiter
+notre extinction,  il  y  a  une  intelligence  augmentée,  qui  doit  bénéficier
+d’une  juste régulation,  afin  qu’elle  puisse  appuyer  et  soutenir  notre
+propre  intelligence.
+Tous  les  services  qui  nous  sont  rendus  aujourd’hui  peuvent  être
+considérés comme  intelligents.  L’IA  est  là  pour  faciliter  nos  décisions,
+pas  pour  les prendre à notre place. Je préfère parler d’intelligence
+augmentée, qui aide les
+êtres  intelligents  à  avoir  plus  de  capacités  et  à  être  meilleurs  dans  des
+domaines spécifiques. Mais ce sont eux qui gardent le contrôle, l’empathie et
+le sens commun, car ce que nous apprenons aux machines ne sont rien
+d’autre
+que des règles et la connaissance du monde, ce qui n’est certainement qu’une
+infime partie de l’intelligence.
+L’intelligence augmentée est en train de transformer de fond en comble la
+
+science actuelle. De la physique à la cosmologie en passant par la génomique
+ou la chimie, toutes ces sciences utilisent aujourd’hui l’IA pour ses capacités
+d’analyse  ou  de  classification  automatique  et  il  faut  s’attendre  encore  à
+beaucoup de progrès dans ces domaines-là. Les technologies de l’information
+ont connecté le monde et du même coup, l’ont en quelque sorte « rapetissé ».
+Un  nombre  important  d’applications  a  permis  de  rendre  la  société  plus
+efficace,  en  réduisant  notamment  les  coûts  de  communication.  Certains
+économistes  qualifient  l’IA  de  «  GPT  »,  acronyme  anglais  de  «  
+General Purpose  Technology  »,  qui  désigne  des  technologies  d’intérêt
+général, susceptibles  d’affecter  tous  les  recoins  de  l’économie.  De  la
+même  manière que la machine à vapeur ou l’électricité ont bouleversé et
+changé le monde, il
+s’avère de plus en plus évident que l’IA aura ce type d’impact sur nos vies
+sur
+le long terme, et qu’il s’agit bien de la nouvelle « GPT ». Nous avons
+toujours
+tendance  à  surestimer  l’effet  d’une  technologie  à  court  terme  et  à  la
+sous-estimer  à  long  terme.  C’est  pour  ça  qu’il  est  d’autant  plus
+important  que  le pouvoir politique mette en place des règles qui favorisent
+son développement
+pour  le  plus  grand  nombre,  sachant  qu’elle  est  là  pour  démultiplier  et
+amplifier  notre  intelligence.  Grâce  à  cette  amplification,  nous  aurons  de
+meilleurs  moyens  de  transport,  une  meilleure  médecine,  un  meilleur
+environnement,  une  meilleure  santé...  bref  une  vie  meilleure  !  Qui
+nous
+apportera sans doute plus de satisfactions et nous permettra d’être plus en lien
+les uns avec les autres ainsi qu’avec notre environnement.
+
+---
+
+[p. 112-114]
+rt
+retentissement que je déplore, car le risque est que tout le monde se mette à
+avoir peur et que ça provoque un nouvel hiver de l’IA. Il a allumé un feu et
+ce
+serait  bien  d’éviter  que  tout  s’embrase.  Mark  Zuckerberg,  le  fondateur
+de Facebook,  s’oppose  lui  aussi  à  la  vision  apocalyptique  de  Musk  et
+le  trouve
+«  irresponsable  ».  Ce  dont  Musk  se  défend  en  rétorquant  que  la  vision
+du PDG de Facebook sur le sujet est limitée, et que sa plateforme fait partie
+du
+problème  en  affirmant  par  exemple  que  les  intelligences  artificielles
+pourraient commencer une guerre en envoyant des fausses informations et en
+falsifiant des e-mails. Nous savons tous malgré tout que si elles sont en effet
+relayées  et  amplifiées  sur  des  plateformes  comme  Twitter  ou  Facebook,
+les
+«  fake  news  »  ne  sont  certainement  pas  le  fait  de  quelque  robot  que
+ce  soit, mais  prennent  leurs  origines  dans  des  cerveaux  bien  humains,
+certains
+appartenant même à  des dirigeants importants  de notre planète.  Le vrai gros
+problème,  c’est  que  Musk  entraîne  d’autres  gens  de  renom  dans  sa
+vision, comme  par  exemple  Stephen  Hawking19,  qui  était  une  figure
+du  monde scientifique, mais qui, malgré tout le respect qui lui est dû, ne
+connaissait lui non  plus  rien  à  l’IA,  et  qui  disait  à  la  fin  de  sa  vie  que
+Musk  avait  raison.
+Voici  ce  que  déclarait  Hawking  dans  un  entretien  accordé  à  la  BBC  :
+«  Les formes  primitives  d’intelligence  artificielle  que  nous  avons  déjà
+se  sont montrées  très  utiles.  Mais  je  pense  que  le  développement  d’une
+intelligence artificielle complète pourrait mettre fin à la race humaine. » Ou
+encore : « J’ai peur  que  l’IA  puisse  remplacer  complètement  les  humains.
+Si  les  gens
+peuvent concevoir des virus informatiques, quelqu’un pourrait concevoir une
+IA qui peut s’améliorer et se reproduire. Ce serait une nouvelle forme de vie
+capable  de  surpasser  les  humains  »20.  Cette  dernière  déclaration,  en
+plus  de prouver  une  méconnaissance  affligeante  du  fonctionnement  des
+virus
+
+informatiques, montre le danger d’utiliser des métaphores biologiques dans le
+vocabulaire  du  monde  numérique.  La  comparaison  parle  au  gens,  leur
+fait peur, mais n’a aucun fondement scientifique. Bill Gates a lui aussi suivi
+Elon
+Musk pendant un temps et disait en 2015 :
+« Je suis dans le camp de ceux qui sont préoccupés par la super intelligence.
+Au début, les machines vont effectuer de nombreuses tâches et ne seront pas
+très  intelligentes.  Ça  devrait  être  positif,  si  nous  gérons  bien,  mais  dans
+quelques décennies, l’IA devrait être assez forte pour être une préoccupation.
+Je  suis  d’accord  avec  Elon  Musk  et  quelques  autres  sur  ce  point  et  je
+ne comprends pas ceux qui ne s’en inquiètent pas21 ».
+Il  semble  que  depuis,  Gates,  qui  est  considéré  comme  le  geek  par
+excellence et surtout comme un marketeur de génie, ait évolué sur la
+question.
+En février 2018, il a à nouveau été interrogé sur le sujet et a répondu que « le
+développement  de  l’intelligence  artificielle  signifiera  tout  simplement
+que  la société  sera  capable  d’être  plus  productive  en  fournissant  moins
+d’efforts  », ajoutant même que « l’IA peut être notre amie »22.
+Je déplore que de grandes figures se rangent du côté d’Elon Musk et parlent
+d’intelligence  artificielle  complète  ou  de  super  intelligence  parce  que  ça
+fait caisse  de  résonance.  Il  nous  raconte  des  histoires  fondées  sur  des
+fantasmes populaires  faisant  appel  à  des  images  de  science-fiction
+ancrées  dans  notre inconscient  collectif.  Au  fond,  Musk  nous  ressert  le
+mythe  de  Frankenstein revisité à la sauce geek. Il a récemment créé un
+laboratoire, baptisé Neuralink,
+dans le but de faire des recherches sur l’injection de cellules augmentées par
+
+---
+
+[p. 123-124]
+millions  de  façons  de  faire,  et  trouver  le  chemin  idéal  est  très
+stimulant.
+L’optimisation  des  ressources  est  un  enjeu,  mais  quelle  que  soit  la
+route empruntée, l’explicabilité de ce type de programmation est toujours
+complète.
+Avec  le  Machine  Learning,  en  particulier  quand  on  utilise  le  big  data,
+on introduit des notions statistiques sur des quantités massives de données.
+Si les
+systèmes  basés  uniquement  sur  les  statistiques  sont  relativement  faciles
+à expliquer  mathématiquement,  les  systèmes  à  base  de  réseaux  de
+neurones
+méritent quant à eux un peu plus d’explications. Pour simplifier à l’extrême,
+en ce qui concerne la reconnaissance des formes par exemple, on peut se les
+représenter  comme  un  réseau  malléable  de  points,  à  plusieurs
+dimensions.
+Lors  de  la  phase  d’apprentissage,  les  points  prennent  des  valeurs  de
+paramètres  représentatifs  des  objets  qu’on  cherche  à  reconnaître  et
+épousent une forme moyenne pour chaque classe d’objets. Lorsqu’on
+présente un objet
+au  réseau  entraîné,  un  calcul  de  distance  est  effectué  pour  chaque
+paramètre de l’objet avec ceux des différentes classes, la plus courte distance
+donnant la
+plus  forte  probabilité  d’appartenance  de  l’objet  à  l’une  des  classes.
+Aussi compliqué  que  cela  puisse  paraître,  tout  cela  relève  de  calculs
+géométriques relativement  simples  que  l’on  peut  mettre  sous  forme
+d’équations
+mathématiques totalement explicables.
+Pour le Deep Learning, qui utilise des réseaux de neurones, c’est le nombre
+de couches de neurones, le nombre de neurones par couches et les équations
+qui  régissent  les  relations  entre  les  couches  et  qui  en  augmentent  la
+complexité.  Les  paramètres  de  certaines  couches  devenant  des  attributs
+qui semblent  totalement  étrangers  aux  objets  qu’on  cherche  à
+
+---
+
+[p. 131-131]
+regarder,  mais  parce  qu’il  collabore  avec  mon  thermostat  et
+avec  d’autres objets  connectés  chez  moi.  Quand  je  rentre  d’un  footing
+par  exemple,  mon niveau  d’activité,  enregistré  par  mon  Fitbit,  dénote
+que  j’ai  chaud,  et  la température  de  ma  maison  s’ajuste
+automatiquement,  me  permettant  de  me
+
+---
+
+[p. 139-141]
+bien-être de
+toute  ma  famille.  Donc,  d’une  certaine  manière,  nous  vivons  déjà  dans
+le futur !
+Je  vous  propose  maintenant  de  me  suivre,  entre  la  réalité  de  2018  et
+l’anticipation de 2040, pendant une journée entière la vie de citoyens
+évoluant
+dans ce monde du futur. Des citoyens qui seront bientôt... vous !
+Le matin, vous ne connaissez plus le stress des alarmes agressives en plein
+milieu de votre cycle de sommeil profond. Vous vous réveillez au moment où
+c’est le plus approprié pour vous, en fonction de vos cycles de sommeil. Les
+capteurs qui se trouvent dans votre lit sont en mesure de savoir à quel
+moment
+de  votre  cycle  vous  vous  trouvez,  et  vont  donc  commencer  à  vous
+réveiller lorsque  c’est  le  moment  adéquat  pour  vous.  Votre  lit  effectue
+un  léger massage, en bougeant légèrement, de la musique douce ou le bruit
+du ressac
+de la mer se fait entendre, les murs, qui sont des écrans, simulent une lumière
+douce, imitant le lever du soleil que vous aviez tant aimé lors de votre dernier
+séjour en vacances aux Caraïbes, afin que votre cerveau reçoive l’information
+qu’il est temps de vous lever. Tout se passe en douceur. Des arômes que vous
+avez  choisis  se  diffusent  (odeur  de  café,  de  sable  chaud,  de  mer,  de
+fleurs, etc.).  Les  lumières  changent  de  couleur  et  d’intensité  tout  au
+long  de  la journée,  pour  que  vous  soyez  toujours  au  maximum  de  vos
+capacités
+intellectuelles  et  physiques.  Tout  est  harmonieux,  lent,  paisible.  Vous
+vous levez et vous allez dans la salle de bains. Votre miroir est plein de
+capteurs, il prend votre rythme cardiaque et mesure le taux d’hydratation de
+votre peau.
+Votre brosse à dent analyse votre salive, pour savoir quel est votre niveau de
+salinité. Le sol de la salle de bains est en dalles et joue le rôle d’une balance
+qui vérifie votre taux de graisse, de muscles, et d’eau. Aux toilettes, tout est
+analysé,  fournissant  des  données  pour  savoir  si  tout  va  bien,  éviter  des
+infections  ou  détecter  très  tôt  cancers  et  autres  cochonneries.  Pendant
+que vous effectuez ces gestes quotidiens, en coulisses, votre café, un
+
+smoothie et
+le  petit  déjeuner  dont  vous  avez  besoin  se  préparent  en  se  fondant  sur
+les données qui viennent d’être prises et en tenant compte de la journée qui
+vous
+attend.
+Votre  assistant  vous  suggère  de  faire  une  activité  sportive,  en  fonction
+de votre journée de la veille, de ce que vous avez mangé, de la journée que
+vous
+allez  passer,  et  vous  propose  des  exercices  en  vous  indiquant  combien
+de répétitions  effectuer.  Il  vous  crée  un  parcours  personnalisé.  En  vous
+rendant dans votre salle de sport, vous gagnez du temps, car tout est géré et
+optimisé
+par un système de flux entre les assistants des appareils, ceux des clients et de
+la  salle  de  sport  elle-même,  ce  qui  vous  permet  de  ne  jamais  faire  la
+queue pour  vous  entraîner  sur  une  machine.  Les  appareils  se  règlent
+automatiquement  lorsque  vous  commencez  votre  exercice.  Vos
+vêtements
+sont intelligents, eux aussi sont équipés de capteurs. Ils vous guident pour
+que
+vous  puissiez  atteindre  la  fréquence  cardiaque  optimale  pour  vous,  vous
+indiquant  si  vous  devez  ralentir  ou  accélérer,  et  ils  communiquent  avec
+les
+machines.  Votre  pratique  est  plus  sécurisée  et  vos  programmes
+parfaitement adaptés  à  votre  condition  physique.  Vos  vêtements  sont
+énergétiquement
+autonomes,  ils  se  réchauffent  ou  se  refroidissent  pour  vous  offrir  un
+confort maximal  à  tout  moment  de  la  journée.  Vos  chaussures  régulent
+leur
+
+---
+
+[p. 151-153]
+vie
+sociale en
+est  d’autant  plus  développée.  Les  réceptionnistes  sont  des  robots  qui
+vous reconnaissent  en  effectuant  un  scan  de  vos  rétines  ou  de  votre
+peau.  Ces robots  sont  capables  d’avoir  une  conversation  concernant  le
+travail,  et  de répondre  aux  personnes  qui  se  présentent  devant  eux  en
+leur  distribuant  des
+badges  d’accès.  Vous  disposez  d’espaces  mutualisés,  dans  lesquels  vous
+pouvez  partager  avec  d’autres  des  objets,  comme  par  exemple  des
+imprimantes 3D ou des équipements encore plus sophistiqués. Vous disposez
+de salles de réunion, comportant chacune un système multimodal, olfactif et
+sonore, équipés d’hologrammes. Même lorsque vous êtes seul dans une pièce,
+vous  pouvez  organiser  des  réunions  avec  des  gens  en  hologramme,  et
+leur envoyer  des  notes  prises  sur  votre  bureau  écran,  juste  en  faisant
+des  gestes.
+Un  embryon  de  cette  technologie  a  été  inventée  et  démontrée  au  SRI
+International  dans  les  années  1990,  aujourd’hui  elle  fonctionne
+parfaitement et permet à chacun d’avoir un emploi du temps beaucoup plus
+flexible. Vous
+avez  décidé  d’aller  dans  ce  bureau  partagé  car  vous  n’aimez  pas
+travailler chez  vous.  Vous  vous  préparez  pour  votre  vidéo  conférence,
+à  laquelle
+participent  certains  de  vos  collaborateurs,  ainsi  que  deux  ou  trois
+personnes que vous ne connaissez pas. La conférence démarre, vous êtes
+seul dans une
+salle  et  soudain,  tous  les  participants  à  la  réunion  apparaissent  en
+hologramme.  Vous  avez  immédiatement  accès  à  leurs  noms  et  à  leurs
+biographies  en  réalité  augmentée,  ce  qui  vous  permet  de  savoir  à  qui
+vous avez  affaire.  Il  vous  suffit  de  vous  tourner  vers  l’hologramme
+pour  voir  ces infos superposées à leur image, qui est plus vraie que nature.
+L’un des sujets
+de  la  réunion  concerne  un  problème  dans  l’un  des  bâtiments  de  votre
+
+entreprise. Vous avez la possibilité, par le biais de la réalité virtuelle, de vous
+immerger tous ensemble au cœur du problème pour mieux le comprendre, et
+vous  avez  tout  loisir  d’échanger  en  direct  tout  au  long  de  l’immersion,
+avec chacun  des  participants.  Vous  pouvez  sentir  et  même  toucher  les
+gens  dans ces  dispositifs,  mais  comme  ce  n’est  pas  socialement
+acceptable,  vous  ne  le faites pas. Mais vous savez bien qu’en d’autres
+circonstances vous avez déjà
+expérimenté  le  système  au  maximum  de  ces  capacités  tactiles.  Vous
+vous
+reconcentrez bien vite sur votre réunion, et lorsque l’un de vos collaborateurs
+vous  parle  d’un  objet  que  vous  avez  du  mal  à  vous  représenter,  il
+vous l’envoie sur une imprimante 3D, pour que vous l’ayez tout de suite
+entre les
+mains.
+À l’heure du déjeuner, vous pouvez commander votre repas, qui vous sera
+livré par un drone, ou vous pouvez choisir d’imprimer votre sandwich à
+l’aide
+de l’une des imprimantes 3D de votre bureau. L’imprimante 3D de nourriture
+comprend  des  ingrédients  de  base,  et  peut  imprimer  une  couche  de
+pain,  de mayonnaise,  de  tomate,  de  fromage,  de  poulet,  etc.  Le  tout  à
+l’aide
+d’ingrédients  de  très  grande  qualité,  car  votre  bureau  dispose  de  fermes
+et jardins  verticaux  qui  vous  permettent  d’avoir  des  produits  frais,
+irrigués  par
+de  l’eau  recyclée  afin  de  réduire  votre  empreinte  écologique.  Les
+robots chargés  de  la  récolte  sont  économes  en  énergie,  et  utilisent  celle
+produite localement. Comme la plupart des immeubles de votre ville, celui
+dans lequel
+
+---
+
+[p. 163-165]
+evoir tout
+lâcher.  Si  elle  se  trouve  dans  sa  chambre  au  moment  de  l’appel,  elle
+peut  le prendre  sur  un  objet  décoratif  comme  par  exemple  l’un  des
+tableaux  qui décorent  les  murs.  Le  frigo  est  certainement  l’appareil
+ménager  qui
+consomme  le  plus  d’énergie,  c’est  la  raison  pour  laquelle  votre
+assistant  est programmé pour prédire à quel moment vous allez l’ouvrir.
+Juste avant, il va
+lancer un petit boost préventif qui va permettre, une fois la porte ouverte, de
+maintenir la température idéale à l’intérieur et, au final, de consommer moins
+d’énergie.
+La  nuit  tombe  et  vos  enfants  s’endorment.  Vous  restez  un  moment
+avec
+votre femme dans le salon. Elle a envie de se détendre et décide de faire une
+partie  de  poker  grâce  au  dispositif  de  divertissement  qui  lui  est
+proposé  par son  assistant.  Une  dizaine  de  joueurs  prêts  à  en  découdre
+lui  sont  proposés, eux-mêmes tranquillement assis dans leurs salons
+respectifs, dans divers pays
+du globe. Elle choisit trois adversaires qui apparaissent en hologramme
+autour
+de la table de jeu virtuelle et entament une conversation animée, chacun dans
+sa  langue,  traduit  instantanément  dans  la  langue  de  chacun  des  autres
+participants pendant que l’assistant commence à distribuer les cartes. Que le
+meilleur gagne !
+Pendant ce temps-là, si vous avez envie d’être dans votre bulle et d’avoir la
+paix, vous pouvez utiliser un casque qui ressemble à des lunettes et qui vous
+permet  de  passer  en  mode  réalité  virtuelle  ou  tout  simplement  de
+visiter  des endroits familiers avec l’option de réalité augmentée. Vous
+pouvez voir votre
+jardin par exemple, et vous arrêter sur une fleur en particulier, dont vous avez
+
+oublié  le  nom.  Le  casque  vous  donne  immédiatement  l’information.
+Vous
+pouvez aussi projeter un film en immersion complète et totalement privée. Au
+moment où vous décidez d’aller vous coucher, votre environnement s’adapte,
+les lumières des pièces que vous quittez s’éteignent, les alarmes se remettent
+en marche et la température baisse. Votre chambre à coucher se met en mode
+coucher  de  soleil  et  l’intensité  des  lumières  baisse.  Le  système
+d’arrosage s’enclenche  avec  l’eau  recueillie  dans  la  journée  et  délivre
+le  taux
+d’hydratation exact dont chaque plante a besoin et votre maison s’endort peu
+à  peu,  favorisant  le  calme  nécessaire  à  une  bonne  nuit  de  sommeil.
+Votre  lit vous  fait  un  petit  massage  pour  vous  relaxer,  les  capteurs  de
+votre  matelas connaissent  vos  habitudes  de  sommeil  et  votre  assistant
+vous  suggère  la meilleure  position  pour  dormir.  Si  vous  ronflez  au
+cours  de  la  nuit,  votre assistant émet un sifflement pour stopper vos
+ronflements. La qualité de votre
+sommeil s’en trouve améliorée, vos cycles sont détectés et respectés. En cas
+de réveil nocturne, de petites lampes s’allument et balisent le chemin jusqu’à
+la salle de bains par exemple.
+Durant  le  week-end,  votre  femme  et  vos  enfants  décident  de  faire  une
+promenade  en  vélo,  mais  au  moment  de  partir,  ils  s’aperçoivent  qu’un
+morceau de pédale est abîmé et ne permet pas un bon fonctionnement du
+vélo.
+Votre femme demande immédiatement à l’assistant de commander le modèle
+
+---
+
+[p. 173-175]
+xions,  il  est  de  plus  en
+plus nécessaire d’expliquer aux gens comment se protéger. Les comptes en
+banque
+sont évidemment les plus visés, mais des services comme la Sécurité sociale
+sont  concernés  aussi,  parce  que  ses  numéros  permettent  d’ouvrir
+d’autres portes. Les spécialistes mondiaux reconnus du piratage sont les
+Russes, mais
+il y a une multitude de pirates. Certains hackers font ça juste pour s’amuser,
+parfois  pour  mettre  en  évidence  des  failles  de  sécurité  qu’ils  peuvent
+éventuellement  monnayer  ensuite,  d’autres  vont  vendre  leurs
+compétences  à des  compagnies  qui  cherchent  à  savoir  si  leurs  systèmes
+sont  assez  sûrs, d’autres encore font du chantage à ceux qu’ils ont piratés.
+Ceux-là s’attaquent
+à  des  organisations  en  sachant  que  ça  va  être  très  lucratif.  Pendant  les
+dernières  campagnes  présidentielles,  aussi  bien  américaine  que  française,
+il s’agissait d’infiltrer le système pour trouver des documents embarrassants
+sur
+Hillary Clinton ou Emmanuel Macron. Le gouvernement russe voulait mettre
+les  candidats  mal  à  l’aise.  Ils  ont  par  exemple  trouvé  et  exposé  des
+mails contenant des informations classées secret défense, que Clinton avait
+envoyé
+depuis son compte personnel alors qu’elle était secrétaire d’État, l’équivalent
+de  ministre  des  Affaires  étrangères.  Pour  Macron,  rien  de  vraiment
+compromettant n’a été découvert, mais des rumeurs sur sa vie intime ont été
+diffusées par des médias mal attentionnés, a priori liés aux pirates. L’équipe
+Macron s’est rendu compte qu’ils étaient piratés car ils avaient fait exprès de
+mettre en ligne de faux documents sans grande conséquence, qui une fois mis
+à  jour  ont  permis  de  prouver  le  piratage.  À  part  ces  cas  d’informations
+diffusées  sur  la  place  publique,  on  se  rend  souvent  compte  d’un
+piratage  à cause  du  nombre  de  connections  faites  sur  le  service
+concerné.  Les  pirates utilisant la force brute pour essayer de craquer le
+système, le nombre d’essais
+infructueux augmentent de façon irrationnelle, mettant la puce à l’oreille des
+
+administrateurs  de  ce  système.  Toutes  les  grandes  entreprises  subissent
+des tentatives de piratage. Google, qui possède un nombre très élevé de
+comptes
+Gmail, est une cible de choix, mais avec la prolifération des objets connectés,
+on voit aussi de plus en plus d’attaques chez les particuliers. Le plus fréquent,
+et sans doute le plus facile, est le piratage des webcams des ordinateurs, dont
+il  est  très  difficile  de  se  rendre  compte.  Il  y  a  aussi  parfois  des
+piratages insolites,  comme  par  exemple  ce  groupe  qui  a  récemment
+ciblé  des  frigos connectés pour utiliser des cycles de calculs au lieu de
+payer des serveurs sur
+Amazon ! Il y a tous les ans un salon à Las Vegas, appelé « Def Con », où les
+spécialistes viennent parler des dernières techniques de piratage et y exposent
+leurs  récents  exploits.  Lors  de  l’édition  2017,  des  Chinois  ont  montré
+le piratage d’une voiture Tesla dont ils avaient pris le contrôle à distance.
+Certes, les conditions de ce piratage étaient très particulières, mais cela
+montre bien
+les  dangers  potentiels  de  telles  attaques.  Les  grandes  entreprises
+prennent  le sujet  de  la  sécurité  très  au  sérieux  et  dorénavant,  des
+recruteurs  se  rendent même dans ce salon pour embaucher des pirates.
+Les  «  Panama  Papers  »  entrent  dans  une  autre  catégorie,  car  c’est  en
+quelque  sorte  un  piratage  pour  le  bien  de  l’humanité.  Il  s’agit  de  gens
+qui cherchent  à  dénoncer  des  crimes,  des  évasions  fiscales,  et  leur
+action  est censée bénéficier au plus grand nombre. Bien sûr, il peut toujours
+y avoir des
+dérives,  de  faux  documents  glissés  au  milieu  des  vrais,  pour  nuire  à
+quelqu’un,  à  une  institution,  à  un  pays,  comme  on  l’a  vu  avec  l’affaire
+Clearstream  au  début  des  années  2000.  Même  si  ces  affaires  sont
+beaucoup plus  souvent  l’œuvre  de  lanceurs  d’alerte  légitimes  que  celle
+
+---
+
+[p. 184-185]
+s  et  laisse  une marge d’erreur. Le grand livre de la blockchain
+réduit les erreurs en chiffrant les  enregistrements.  Dans  le  même  temps,  il
+simplifie  le  processus,  en
+annulant  le  besoin  d’intermédiaires.  Concernant  les  assurances,  le
+traitement des réclamations peut être une procédure frustrante et ingrate. La
+blockchain offre  un  système  parfait  pour  une  gestion  sans  risque  et
+transparente.  Ses propriétés  de  cryptage  permettent  aux  assureurs  de
+saisir  la  propriété  des actifs  à  assurer.  Dans  le  secteur  mondial  des
+paiements,  sujet  à  l’erreur, coûteux  et  vulnérable  au  blanchiment
+d’argent,  la   blockchain   fournit  des solutions  avec  des  sociétés  comme
+Abra,  Align  Commerce  et  Bitspark  qui
+offrent  des  services  de  transfert  de  bout  en  bout.  La   blockchain   joue
+également  un  rôle  dans  les  biens  matériels  ou  immatériels,  comme  les
+voitures,  les  maisons  ou  les  cuisinières,  d’une  part,  les  brevets,  les
+titres  de propriété  ou  les  actions  de  l’entreprise,  d’autre  part,  qui
+peuvent  être  dotés d’une  technologie  intelligente.  Un  tel  enregistrement
+peut  être  stocké  sur  le registre  avec  les  détails  contractuels  d’autres
+personnes  autorisées  à  être
+«  propriétaires  de  cette  propriété  ».  Des  clés  intelligentes  pourraient
+être utilisées  pour  faciliter  l’accès  à  la  partie  autorisée.  Le  registre
+stocke  et permet l’échange de ces clés intelligentes une fois le contrat
+vérifié. Il devient également un système d’enregistrement et de gestion des
+droits de propriété et
+permet  de  dupliquer  les  contrats  intelligents  en  cas  de  perte  des
+enregistrements  ou  de  la  clé  intelligente.  Rendre  la  propriété  intelligente
+diminue les risques de fraude, les frais de médiation et les situations
+d’affaires douteuses. En même temps, elle augmente la confiance et
+l’efficacité.
+Le  chiffrement  des  objets  connectés  sur  la   blockchain  peut  protéger  la
+propriété et permettre la transférabilité. À plus grande échelle, les villes et les
+gouvernements  pourront  utiliser  l’Internet  des  objets  pour  développer
+des environnements  plus  sains,  avec  une  utilisation  plus  efficace  de
+l’énergie  et des  «  villes  intelligentes  »  qui  amélioreront  notre  mode  de
+vie.  Avec  des milliards  de  dispositifs  reliés  entre  eux,  les  experts  en
+cybersécurité
+s’inquiètent  de  savoir  comment  s’assurer  que  les  informations
+
+---
+
+[p. 192-194]
+sûr  toujours  à  financer  des  projets  rentables,  mais  à  des
+échelles moindres  et  surtout  en  investissant  pour  le  bien  commun.  Ils
+sont  là  pour pousser  et  soutenir  des  projets  qui  ont  un  impact  social
+tournant
+essentiellement  autour  des  énergies  renouvelables,  de  la  nourriture  ou
+de  la santé.
+L’intelligence  augmentée  a  un  avenir  particulièrement  prometteur  dans
+le
+domaine  de  la  santé.  Le  Machine  Learning  se  prête  très  bien  à
+l’analyse  de notre génome, qui, en soit, est du big data, et permet déjà de
+mettre au point
+des  médicaments  très  ciblés  et  personnalisés  et  de  développer  la
+médecine prédictive.  Pour  l’imagerie  médicale,  des  bases  de  données  de
+plus  en  plus importantes permettent de répertorier les cas les plus rares et
+permettent ainsi
+un meilleur dépistage.
+Fondamentalement l’intelligence augmentée va nous apporter du bien-être
+et du confort, aussi bien matériel que spirituel.
+CONCLUSION
+Ma plus grande crainte est que les gens croient tout ce qu’on leur raconte sur
+l’IA, tout simplement parce qu’ils n’ont pas assez d’informations sur le sujet.
+Tout  l’enjeu  d’une  bonne  éducation  consiste  à  acquérir  assez  de
+connaissances pour se forger un esprit critique. L’idée n’est évidemment pas
+que tout le monde devienne un spécialiste de l’IA, mais que nous ayons une
+approche  suffisamment  documentée  pour  savoir  de  quoi  on  parle.
+J’espère
+que cet ouvrage y a contribué.
+Quand  j’étais  jeune,  on  nous  apprenait  à  l’école  que  l’énergie  atomique
+était  très  positive,  même  si  la  bombe  sur  Hiroshima  avait  tué  140  000
+personnes et que Marie Curie était morte d’un cancer dû aux radiations. Dans
+
+les années 1970, c’était le tout nucléaire en France, on nous répétait qu’il était
+propre, efficace et formidable. Il y avait de la désinformation et beaucoup de
+malhonnêteté  dans  la  façon  de  présenter  les  choses  et  il  a  fallu
+attendre  les catastrophes  de  Tchernobyl  en  1986  puis  de  Fukushima  en
+2011,  avec  leurs dizaines  de  milliers  de  victimes,  pour  comprendre
+enfin  les  dangers  liés  à l’atome.
+Même  si  je  ne  pense  pas  que  la  désinformation  sur  l’IA  puisse
+provoquer des  catastrophes  d’une  telle  ampleur,  je  crois  que  le  nouvel
+hiver  que  cette science  risque  de  traverser  nous  priverait  de  progrès
+dans  de  nombreuses disciplines  qui  amélioreraient  substantiellement  nos
+vies  dans  un  futur
+relativement proche, tant au niveau d’un individu que d’une ville, d’un pays
+ou du monde. Il ne faut pas se voiler la face, il y aura des bugs. Oui, on
+pourra programmer  une  machine  avec  des  sources  biaisées,  et  oui,  on
+pourra
+fabriquer  un  robot  à  des  fins  destructrices.  Il  faut  le  comprendre  et  le
+reconnaître,  pour  prendre  conscience  des  limites  et  des  dangers  de  ces
+technologies.  Nous  devons  combattre  les  délires  véhiculés  par  certains
+en argumentant  avec  les  simples  faits.  Nous  ne  sommes  pas  dans  un
+film  de science-fiction hollywoodien. Les robots et autres machines «
+intelligentes »
+ne  feront  jamais  que  ce  que  nous  leur  demandons  et  apprenons  à  faire.
+En matière  d’éducation,  nous  avons  un  énorme  travail  à  accomplir,
+pour  rendre les  gens  conscients  des  enjeux  de  la  technologie.  Elle  nous
+entoure,  elle  est omniprésente  et  nous  ne  pouvons  plus  y  échapper.
+Mais  elle  n’a  rien  de
+magique.  Les  machines  ont  une  logique,  elles  sont  programmées  dans
+des buts  précis.  La  meilleure  façon  d’apprendre  est  de  douter  afin  de
+pouvoir ensuite se poser des questions, chercher et trouver les informations
+qui nous
+
+---
+
+[p. 203-205]
+des solutions pour
+réduire son impact écologique qui est une réelle menace aujourd’hui.
+L’intelligence  artificielle  n’existe  pas,  mais  l’intelligence  augmentée,
+elle, est en marche. Je fais le pari qu’elle nous ouvrira, dans les années à
+venir, de
+nouvelles perspectives, qui vont encore beaucoup nous surprendre, dans bien
+des domaines.
+REMERCIEMENTS
+Ce livre n’aurait pas été possible sans le soutien et les encouragements de ma
+femme,  Ellen,  et  de  mes  enfants,  Mélanie  et  Nicolas,  que  j’ai  négligés
+pendant tout le temps de son écriture.
+Je tiens aussi à remercier vivement Jean-Louis Gassée qui m’a fait l’amitié
+d’en écrire la préface, Ondine Khayat pour son aide précieuse dans la mise en
+forme de mes idées, et mon éditeur First, ainsi que toutes ses équipes, pour le
+travail nécessaire à sa publication.
+Toute ma gratitude va également à Philippe Héraclès et à Frédéric Koskas
+pour  leurs  conseils  de  grands  professionnels,  sans  lesquels  je  ne  me
+serais jamais  lancé  dans  cette  aventure  dont  l’idée  me  trottait  pourtant
+depuis longtemps dans la tête.
+BIOGRAPHIE
+En tant que vice-président de l’innovation chez Samsung Electronics, Luc
+JULIA  a  dirigé  la  vision  et  la  stratégie  de  l’entreprise  pour  l’Internet
+des objets  de  2012  à  2017.  Aujourd’hui  Senior  Vice-président  et
+directeur
+technique  de  la  compagnie,  il  se  concentre  sur  la  définition  d’une
+nouvelle génération de produits.
+Auparavant, il a dirigé les équipes de développement de Siri chez Apple, a
+été  directeur  technique  chez  Hewlett-Packard  et  a  cofondé  plusieurs
+start-up dans la Silicon Valley. Il a commencé sa carrière au SRI
+International, où il a
+
+créé  le  Computer  Human  Interaction  Center  et  a  participé  au  démarrage
+de Nuance  Communications,  aujourd’hui  leader  mondial  de  la
+reconnaissance
+vocale.
+Luc est diplômé en mathématiques et en informatique de l’université Pierre
+et  Marie  Curie  de  Paris  et  a  obtenu  un  doctorat  en  informatique  à
+l’École nationale supérieure des télécommunications de Paris (Télécom
+ParisTech). Il
+est  également  reconnu  comme  l’un  des  développeurs  français  les  plus
+influents dans le monde numérique.
+5 % des bénéfices des ventes de cet ouvrage seront reversés au Fonds de
+Dotation Pour un Monde Meilleur qui réunit 15 ONG, associations et
+fondations, représentant toutes les solidarités.
+Tous les fonds recueillis sont répartis équitablement entre chacune d’elles.
+D’un seul geste, aidons toutes les causes !
+www.pourunmondemeilleur.eu

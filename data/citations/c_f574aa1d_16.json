@@ -1,0 +1,24 @@
+[
+ {"chapitre":"a1a1fa23","citations":[
+  {"texte":"La plupart des gens comprennent la créativité comme la capacité à développer de nouvelles idées, solutions et perspectives originales.","page":165,"axe":"09-developpement-personnel-influence","theme":"Definir la creativite","portee":"Definition de depart, volontairement commune. Elle permet ensuite de tester si la machine y repond."},
+  {"texte":"Car ils pourraient ne pas comprendre ou accepter que tu utilises l'intelligence artificielle pour créer tes textes.","page":165,"axe":"06-ia-travail-management-metiers","theme":"Justifier son usage devant autrui","portee":"Probleme professionnel concret : savoir expliquer pourquoi et comment on emploie ces outils."}
+ ]},
+ {"chapitre":"d6aaf893","citations":[
+  {"texte":"C'est probablement aussi la raison pour laquelle nous avons les meilleures idées et les inspirations les plus créatives sous la douche, en faisant la vaisselle, lors d'une promenade ou juste avant de nous endormir.","page":166,"axe":"09-developpement-personnel-influence","theme":"Les idees viennent au repos","portee":"Argument scientifique en faveur des temps morts. Contre l'idee que l'on cree en se forcant."},
+  {"texte":"La créativité n'est donc pas un super pouvoir réservé à quelques personnes, elle est plutôt le résultat d'une combinaison de relaxation, de changement de perspective et de génération d'idées dans un réseau complexe de neurones.","page":166,"axe":"09-developpement-personnel-influence","theme":"La creativite se cultive","portee":"Phrase encourageante et fondee : la creativite releve de conditions, non d'un don reserve."},
+  {"texte":"Dans une certaine mesure, le GPT est donc plutôt un imitateur qu'un véritable créateur.","page":167,"axe":"04-ia-societe-ethique-philosophie","theme":"Imitateur plutot que createur","portee":"Position mesuree, apres avoir expose les arguments contraires. A opposer aux discours sur l'IA artiste."}
+ ]},
+ {"chapitre":"2bb558be","citations":[
+  {"texte":"Mais l'inspiration n'est que le début. Ce qui suit, c'est le véritable travail créatif : l'expérimentation, l'essai et l'élimination des idées jusqu'à ce que quelque chose de nouveau émerge de l'inspiration.","page":168,"axe":"09-developpement-personnel-influence","theme":"Le travail apres l'idee","portee":"Rappelle que l'idee ne vaut rien sans le tri et le travail qui suivent. Vrai avec ou sans machine."},
+  {"texte":"Les meilleurs résultats sont obtenus lorsque vous considérez l'intelligence artificielle comme un partenaire d'entraînement au tennis et que vous vous échangez les idées créatives comme des balles de tennis jusqu'à ce que quelque chose de grand se produise.","page":168,"axe":"03-ia-outils-pratique-prompting","theme":"Un partenaire d'entrainement","portee":"Bonne image de travail : l'echange repete plutot que la commande unique."}
+ ]},
+ {"chapitre":"1c528bb3","citations":[
+  {"texte":"L'art de la création se situe donc entre l'inspiration, la citation et la déconstruction, car comme vous l'avez peut-être déjà remarqué, rien ne se crée dans le vide.","page":169,"axe":"08-litterature-romans","theme":"Rien ne se cree dans le vide","portee":"Formule qui deplace la question de l'originalite : creer, c'est reprendre et transformer."},
+  {"texte":"Il est préférable de fournir à l'IA quelques exemples dans vos instructions, afin qu'elle puisse les décomposer en éléments constitutifs et appliquer les motifs qui en résultent au nouveau texte.","page":169,"axe":"03-ia-outils-pratique-prompting","theme":"Donner des exemples","portee":"Technique concrete et efficace : montrer plutot que decrire ce que l'on attend."}
+ ]},
+ {"chapitre":"fd7a7dc9","citations":[
+  {"texte":"L'IA a utilisé une série de mouvements totalement nouveaux qui n'avaient jamais été joués par un être humain et a ainsi battu le meilleur joueur de Go du monde.","page":170,"axe":"02-ia-technique-academique","theme":"Le coup jamais joue","portee":"Fait historique de mars 2016. C'est l'argument le plus fort en faveur d'une creativite machinique."},
+  {"texte":"AlphaGo se comporte désormais différemment dans certaines situations par rapport à ses créateurs et enseignants humains - et pourtant il gagne.","page":170,"axe":"02-ia-technique-academique","theme":"Depasser ses maitres","portee":"Un systeme entraine sur des parties humaines finit par s'en ecarter. Cas rare et documente."},
+  {"texte":"Même si l'IA écrit parfois des absurdités complètes, j'ai immédiatement l'impulsion de les corriger et je sais enfin ce que je peux écrire.","page":171,"axe":"09-developpement-personnel-influence","theme":"Le mauvais texte qui debloque","portee":"Usage astucieux : contredire un texte mediocre est plus facile que partir d'une page blanche."}
+ ]}
+]

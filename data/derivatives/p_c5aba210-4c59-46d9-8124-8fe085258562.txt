@@ -1,0 +1,411 @@
+OUVRAGE : Chapitre 6 - Le Money Management
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 55
+AXE : Economie Entrepreneuriat Finance
+SOMMAIRE :
+  (non structuré)
+
+[6/12 passages, 5406 tokens sur 9907]
+
+=== EXTRAITS ===
+
+[p. 1-7]
+CHAPITRE 6 
+
+LE MONEY- 
+MANAGEMENT 
+Centre National du Trading
+
+  1 GÉNÉRALITÉS ET PRINCIPES 
+DE BASE 
+VI. LE MONEY-MANAGEMENT 
+Les généralités 
+
+ü  C’est	  la	  par+e	  la	  plus	  complexe	  du	  trading	  car	  elle	  inclut	  la	  par+e	  
+«	  ges+on	  »	  du	  capital,	  du	  risque,	  de	  la	  récompense	  sur	  le	  risque	  
+pris,	  de	  l’exposi+on	  du	  compte,	  etc.	  
+ü  Complexe	  également	  sur	  le	  plan	  psychologique	  :	  il	  faut	  être	  assidu,	  
+être	   réac+f,	   avoir	   un	   bon	   rapport	   avec	   son	   capital	   pour	   vivre	  
+sereinement	  chaque	  séance	  de	  trading	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Introduction 
+
+ü  Le	  Money	  Management,	  c’est	  aussi	  une	  assurance	  pour	  durer	  dans	  
+le	  temps	  :	  c’est	  obligatoire	  !	  
+ü  Sans	   MM,	   la	   durée	   dans	   le	   temps	   ne	   dépendra	   que	   d’un	   seul	  
+facteur	  :	  la	  chance.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Introduction 
+
+§  Il	  permet	  de	  calculer	  la	  taille	  d’un	  trade	  par	  rapport	  au	  capital.	  
+	  
+§  Exemple	  :	  sur	  un	  compte	  de	  5000€,	  acheter	  1	  contrat	  CAC40	  (donc	  
+à	   1€	   le	   point)	   au	   prix	   de	   4900	   revient	   à	   une	   exposi+on	   de	  
+4900/5000	  =	  98%	  
+§  Exemple	   2	   :	   sur	   un	   compte	   de	   25000€,	   acheter	   1	   lot	   de	   DAX30	  
+(donc	  à	  25€	  le	  point)	  au	  prix	  de	  10800	  revient	  à	  une	  exposi+on	  de	  
+(10800x25)	  /	  25000	  =	  1080%	  !	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’exposition en % d’un trade 
+
+•  L’exposi+on	  en	  %	  de	  marge	  met	  en	  rela+on	  le	  capital	  et	  la	  marge	  
+u+lisée	  pour	  l’engagement	  des	  trades.	  	  
+	  
+•  Pour	   un	   compte	   de	   trading	   de	   capital	   10.000€	   et	   de	   levier	   100,	  
+voici	  2	  exemple	  :	  
+	  
+o  Exemple	  1	  :	  j’achète	  du	  CAC40	  à	  1€	  le	  point	  à	  4900,0.	  La	  valeur	  
+faciale	  est	  de	  4900,	  la	  marge	  u+lisée	  est	  de	  49€	  (4900/100),	  le	  
+niveau	  de	  marge	  en	  %	  est	  donc	  de	  20408%	  (soit	  10.000€	  de	  
+capital	  /	  49€	  de	  marge)	  	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’exposition en % de marge
+
+---
+
+[p. 11-15]
+veau	  
+de	  marge	  
+Idéal	  
+10%	  
+100%	  
+Exposi+on	  classique	  
+100%	  
+10%	  
+Téméraire	  
+100	  à	  500%	  
+2%	  
+Risqué	  (scalpeur)	  
+500	  à	  1100%	  
+2000%	  à	  909%	  
+Très	  risqué	  
+1100%	  à	  2500%	  
+909%	  à	  400%	  
+Dangereux	  
+2500%	  ou	  plus	  
+400%	  ou	  moins
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+La règle d’or du CNT 
+➥ Ne	  pas	  dépasser	  une	  exposi3on	  de	  1%	  /	  jour	  
+	  
+➥ Ainsi,	  la	  perte	  maximale	  par	  jour	  ne	  peut	  pas	  excéder	  1%	  du	  capital	  
+de	  votre	  compte	  de	  trading.	  	  
+➥ L’effet	  de	  levier	  est	  donc	  proscrit	  !	  	  
+
+•  Pour	  techniquement	  arriver	  à	  ne	  pas	  perdre	  plus	  d’1%	  par	  jour,	  il	  
+faut	  une	  exposi+on	  de	  moins	  de	  50%	  du	  capital	  par	  trade	  (ce	  qui	  
+revient	  à	  trader	  le	  Dax	  à	  1€	  le	  point	  sur	  un	  compte	  de	  25k€),	  ce	  qui	  
+signifie	  que	  pour	  1%	  de	  baisse	  de	  l’ac+f,	  votre	  capital	  se	  réduit	  de	  
+0,5%.	  
+ü  Plus	   l’exposi'on	   est	   faible,	   moins	   la	   baisse	   de	   l’ac'f	   affectera	  
+votre	  capital	  exprimé	  en	  %.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+
+•  Perte	  d’une	  trop	  grosse	  par+e	  de	  son	  capital	  :	  
+o  pensez	   que	   plus	   la	   perte	   est	   grosse	   en	   %,	   plus	   il	   faudra	  
+redoubler	  d’efforts	  pour	  revenir	  au	  point	  mort	  :	  une	  baisse	  de	  
+50%	  du	  capital	  signifie	  que	  nous	  devons	  faire	  une	  performance	  
+de	  100%	  pour	  juste	  récupérer	  ses	  pertes	  J	  
+	  
+•  Compte	  de	  trading	  cramé	  :	  zéro	  capital,	  retour	  au	  chômage	  
+•  Sur	   le	   plan	   physique	   à	   long	   terme	   :	   cancers,	   mauvais	   sommeil,	  
+troubles	   de	   la	   personnalité,	   maladies	   mentales	   ou	   douleurs	  
+chroniques	  (dus	  notamment	  au	  stress	  subi	  par	  le	  corps)	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Risqués liés à la sur-exposition 
+
+•  Connaître	   la	   taille	   des	   lots	   est	   primordial,	   cela	   implique	   de	  
+connaître	  la	  plateforme	  et	  ses	  condi+ons	  de	  trading.	  
+•  Une	  taille	  de	  lot	  se	  mesure	  en	  EUR/pt	  ou	  USD/pt	  
+•  Il	  existe	  des	  tailles	  de	  lots	  régulés	  (eurex,	  futures,	  etc).	  
+	  
+	  
+➮  Certains	   brokers	   ont	   des	   tailles	   de	   lots	   différentes	   des	  
+standards	  (IG	  ou	  FXCM	  par	  exemple),	  bien	  lire	  les	  condi'ons	  
+de	  chaque	  instrument	  !	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+La taille des lots
+
+---
+
+[p. 20-25]
+double	  tranchant,	  si	  on	  peut	  éviter,	  
+on	  le	  fait.	  
+	  
+ü  L’idéal	  étant	  d’avoir	  un	  portefeuille	  garni,	  sans	  levier,	  cela	  
+implique	  d’avoir	  un	  gros	  capital.	  
+	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les erreurs à éviter
+Ne	  rien	  calculer,	  se	  laisser	  aller	  
+	  
+§  Une	  posi+on	  bien	  gérée,	  c’est	  avant	  tout	  une	  posi+on	  calculée.	  
+§  Le	  trading	  n’est	  pas	  une	  ac+vité	  où	  on	  s’amuse,	  mais	  un	  mé+er	  à	  
+part	  en+ère	  :	  en	  plus	  du	  trade,	  il	  faut	  gérer	  le	  risque	  lié	  à	  ce	  trade	  :	  	  
+o  c’est	   ce	   que	   les	   ins+tu+onnels	   font	   avec	   le	   front	   office	   qui	  
+s’occupe	  des	  trades	  dans	  une	  banque,	  	  
+o  et	  le	  back	  office	  qui	  s’occupe	  de	  gérer	  le	  risque.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les erreurs à éviter 
+
+Ne	  rien	  calculer,	  se	  laisser	  aller	  
+	  
+§  En	  tant	  que	  trader	  «	  seul	  »,	  vous	  devez	  donc	  faire	  les	  deux	  !	  
+	  
+	  
+ü  Une	  posi'on	  dont	  le	  risque	  est	  bien	  géré,	  c’est	  une	  assurance	  
+pour	  durer	  !	  
+	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les erreurs à éviter 
+
+Prendre	  trop	  de	  risque	  par	  trade	  
+	  
+•  Par	   exemple,	   augmenter	   le	   risque	   par	   trade	   à	   5%	   de	   perte	   de	  
+capital	  par	  trade...	  
+•  Autant	   dire	   que	   pour	   les	   suites	   perdantes,	   votre	   capital	   se	  
+retrouvera	  vite	  à	  nu	  
+	  
+Ø  Un	  money	  management	  impliquant	  une	  perte	  maxi	  de	  1%	  par	  jour,	  
+vous	   permepra	   de	   vous	   relever	   surtout	   après	   une	   période	   de	  
+journées	  perdantes	  (car	  oui,	  elles	  existent)	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les erreurs à éviter 
+
+  2 
+LES STRATÉGIES DE MONEY-
+MANANGEMENT 
+VI. LE MONEY-MANAGEMENT 
+Les stratégies 
+
+Il	   existe	   plusieurs	   paramètres	   à	   prendre	   en	   compte	   pour	   avoir	   une	  
+stratégie	  complète	  de	  money	  management	  :	  
+	  
+§  LE	  RISK/REWARD	  RATIO	  
+§  L’EFFET	  DE	  LEVIER	  
+	  
+§  LES	  STOPS	  AVEC	  LE	  MONEY	  MANAGEMENT	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les stratégies
+
+---
+
+[p. 30-35]
+Ø  Si	  vous	  n’avez	  pas	  un	  taux	  de	  réussite	  supérieur	  à	  75%	  (soit	  plus	  de	  
+3	  trades	  gagnants	  sur	  4)	  vous	  courrez	  à	  la	  perte	  sur	  le	  long	  terme.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le ratio risk-reward
+•  Ce	  trade	  vaut-‐il	  le	  coup	  ?	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le ratio risk-reward 
+Risk/reward	  par	  trade	  
+%	  de	  réussité	  nécessaire	  pour	  gagner	  
+sur	  le	  long	  terme	  
+3	  
+75%	  
+2	  
+66%	  
+1	  
+50%	  
+0,80	  
+44%	  
+0,70	  
+41%	  
+0,40	  
+28%	  
+
+v Plus	   le	   risk/reward	   est	   faible,	   moins	   vous	   prenez	   de	   risque	   pour	  
+gagner,	  moins	  il	  est	  nécessaire	  d’avoir	  un	  taux	  de	  réussite	  élevé	  pour	  
+gagner	  sur	  le	  long	  terme	  !	  
+	  
+v Vous	  pouvez	  faire	  80%	  de	  trades	  gagnants,	  si	  vous	  risquez	  10	  points	  
+pour	  n’en	  gagner	  qu’un	  seul,	  vous	  courrez	  à	  la	  perte	  !	  
+	  
+v A	   l’inverse,	   si	   vous	   avez	   un	   faible	   taux	   de	   réussite	   mais	   que	   votre	  
+risque	  est	  op3mal,	  alors	  vous	  gagnerez	  sur	  la	  durée	  !	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le ratio risk-reward 
+
+§  L’effet	  de	  levier	  permet	  de	  pouvoir	  trader	  des	  ac+fs	  dont	  la	  taille	  
+peut	  excéder	  le	  capital	  du	  compte	  de	  trading.	  
+	  
+ü  Exemple	  :	  ouvrir	  un	  contrat	  CAC40	  d’une	  valeur	  faciale	  de	  4900€	  
+est	  possible	  sur	  un	  compte	  de	  250€.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’effet de levier 
+
+ü  Suite	   de	   l’exemple	   :	   Théoriquement,	   en	   contrepar+e	   de	   votre	  
+trade,	   le	   broker	   requiert	   une	   marge.	   Sans	   levier,	   la	   marge	   est	  
+équivalente	   à	   la	   valeur	   nominale	   de	   la	   posi+on,	   pour	   4900€	   de	  
+CAC40	  la	  marge	  normale	  devrait	  être	  de	  4900€	  sans	  levier.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’effet de levier 
+
+•  Les	   brokers	   vous	   offrent	   la	   possibilité	   de	   trader	   avec	   un	   levier	  
+allant	  jusqu’à	  100,	  cela	  veut	  dire	  qu’à	  chaque	  fois	  que	  vous	  ini+ez	  
+une	  posi+on,	  le	  broker	  vous	  demande	  de	  mepre	  1%	  de	  la	  valeur	  
+nominale	  en	  marge.	  
+•  Pour	   un	   CAC40,	   de	   valeur	   nominale	   4900€	   pour	   un	   contrat,	   la	  
+marge	   demandée	   par	   le	   broker	   est	   de	   49€,	   le	   broker	   prend	   en	  
+charge	  le	  restant	  des	  99%	  en	  vous	  «	  prêtant	  »	  cet	  argent.	  	  
+	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’effet de levier
+
+---
+
+[p. 40-46]
+re	  analyse	  graphique:	  
+	  
+Ø  il	  vous	  faudra	  calculer	  la	  taille	  de	  posi+on	  pour	  que	  votre	  
+stop	   touche	   pile	   poil	   la	   perte	   maximale	   autorisée	   par	  
+trade.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les stops avec le MM
+•  La	  2ème	  approche	  :	  
+	  
+o  Soit	  vous	  placez	  votre	  stop	  en	  fonc+on	  de	  la	  perte	  maximale	  
+autorisée	   :	   plus	   le	   trade	   sera	   important,	   plus	   le	   stop	   serra	  
+serré.	  
+	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Les stops avec le MM 
+
+  3 
+ÉTABLIR UN PLAN DE 
+TRADING 
+VI. LE MONEY-MANAGEMENT 
+Le plan de trading 
+
+Ø  Un	  plan	  de	  trading,	  ce	  n’est	  pas	  qu’une	  entrée,	  une	  sor+e,	  un	  TP	  et	  
+un	  SL,	  c’est	  surtout	  une	  bonne	  ges+on	  du	  risque	  et	  du	  money	  
+management	  !	  
+	  
+	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le plan de trading 
+
+Le	  plan	  de	  trading	  comporte	  deux	  phases	  :	  
+	  
+• 	  L’entrée	  :	  	  
+o  on	  regarde	  peu	  le	  bénéfice,	  on	  calcule	  plutôt	  le	  risque	  et	  on	  
+place	  son	  SL	  en	  fonc+on	  de	  ce	  risque.	  	  
+	  
+o  Le	  TP	  se	  place	  lui	  aussi	  en	  fonc+on	  du	  ra+o	  risk/reward	  que	  
+vous	  voulez	  obtenir	  :	  en	  théorie	  les	  stratégies	  où	  les	  TP	  sont	  
+plus	  loins	  que	  les	  SL	  sont	  gagnantes	  si	  on	  se	  place	  bien	  dès	  le	  
+départ.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le plan de trading 
+
+Le	  plan	  de	  trading	  comporte	  deux	  phases	  :	  
+	  
+• 	  La	  sor+e	  :	  	  
+o  on	  sécurisé	  le	  bénéfice;	  
+	  
+o  on	  réduit	  le	  risque	  voire	  on	  l’annihile	  :	  stop	  zéro,	  trailing	  stops,...	  
+	  
+o  tout	  est	  bon	  pour	  que	  la	  perte	  maximale	  sur	  le	  trade	  en	  cours	  
+soit	  réduite	  à	  zéro	  et	  ne	  devienne	  que	  du	  gain	  !	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le plan de trading 
+
+§  Limiter	  sa	  perte	  de	  capital	  à	  1%	  par	  jour	  maximum.	  
+	  
+§  Pour	  mener	  à	  bien	  son	  plan	  de	  trading,	  il	  faut	  se	  fixer	  des	  objec+fs	  de	  
+gains	  et	  de	  perte	  maximum	  par	  jour/semaine	  ou	  par	  mois.	  
+§  Les	   bonnes	   stratégies	   sont	   celles	   dont	   les	   pertes	   poten+elles	  
+n’excèdent	  pas	  une	  infime	  par+e	  de	  son	  capital	  :	  de	  0,25%	  à	  1,00%	  
+par	  jour	  est	  par	  défaut	  l’idéal	  pour	  se	  remepre	  des	  coups	  durs	  (car	  il	  
+arrive	  d’accumuler	  les	  journées	  en	  perte).	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+Le plan de trading
+
+---
+
+[p. 50-55]
+ures,	  il	  ne	  doit	  pas	  être	  surpris	  par	  des	  
+brou+lles	  du	  genre	  marge	  bloquée	  trop	  importante,	  CFD	  indices	  
+qui	  cotent	  même	  la	  nuit	  pour	  IG	  par	  exemple.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’état d’esprit gagnant
+•  Un	  atout	  à	  avoir	  pour	  ouvrir	  toutes	  les	  portes	  :	  la	  persévérance.	  
+Ø  Car	  s’il	  s’agit	  d’abandonner	  au	  moindre	  problème,	  de	  ne	  pas	  se	  
+remepre	   en	   ques+on	   après	   avoir	   fait	   une	   énorme	   erreur,	   ce	  
+n’est	   même	   pas	   la	   peine	   de	   con+nuer	   à	   regarder	   des	  
+graphiques	  :	  vous	  pouvez	  faire	  autre	  chose...	  	  
+	  
+Ø  Comme	  le	  dit	  un	  proverbe,	  «	  la	  rivière	  perce	  le	  rocher	  non	  pas	  
+par	  sa	  force,	  mais	  par	  sa	  persévérance	  ».	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’état d’esprit gagnant 
+
+•  «	  L’échec	  est	  une	  chose,	  c’est	  l’abandon	  qui	  est	  inacceptable	  ».	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’état d’esprit gagnant 
+
+Rigueur	  est	  maître	  mot	  dans	  le	  monde	  du	  trading	  :	  
+Ø  Toujours	  respecter	  son	  plan	  de	  trading	  à	  la	  lepre;	  
+	  
+Ø  Souvent	  les	  erreurs	  de	  rigueur	  mènent	  le	  trader	  à	  sa	  perte:	  
+Ø  S’automa+ser,	  comme	  un	  robot;	  
+Ø  Prendre	  le	  trading	  au	  sérieux,	  c’est	  un	  mé'er,	  pas	  un	  jeu	  !	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’état d’esprit gagnant 
+
+Discipline	  :	  cela	  rejoint	  la	  rigueur	  
+Ø  Discipline	  notamment	  au	  niveau	  du	  money	  management	  ;	  
+	  
+Ø  Savoir	  s’arrêter	  de	  trader	  quand	  on	  a	  subi	  une	  perte	  ;	  
+	  
+Ø  Eviter	  l’overtrading	  ou	  le	  trading	  d’ennui	  /	  d’euphorie	  ;	  
+	  
+Ø  Savoir	  gérer	  son	  stress,	  ne	  pas	  le	  communiquer	  dans	  ses	  trades	  
+ou	  aux	  autres	  pour	  le	  trading	  en	  groupe	  ou	  dans	  une	  structure	  
+comme	  une	  banque	  /	  hedgefund.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+L’état d’esprit gagnant 
+
+v Le	  money	  management	  est	  la	  clé	  du	  succès	  !	  
+v Peu	  importe	  le	  taux	  de	  réussite,	  c’est	  le	  ra+o	  risk/reward	  qui	  fait	  que	  
+vous	  soyez	  performant	  dans	  le	  temps	  !	  
+v L’effet	   de	   levier	   doit	   être	   considéré	   comme	   un	   ou+l,	   non	   pas	   une	  
+nécessité	  d’assouvir	  des	  objec+fs	  farfelus.	  
+v Le	  money	  management	  s’inclut	  dans	  un	  plan	  de	  trading	  et	  ne	  doit	  
+pas	  être	  bâclé.	  
+v Rigueur,	  Discipline,	  Pa+ence	  	  et	  Persévérance	  sont	  les	  4	  maîtres	  mots	  
+du	  trader	  gagnant.	  
+	  ©	  Centre	  National	  du	  Trading	  
+VI. LE MONEY-MANAGEMENT 
+En résumé

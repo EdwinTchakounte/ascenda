@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   ASCENDA, jetons de design
+   Palette tirée du logo : un « A » doré sur bleu nuit. L'or est un rehaut, il
+   ne couvre jamais une surface entière. L'ivoire remplace le blanc pur : on lit
+   dessus.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --color-nuit-profond: #050d22;
+  --color-nuit: #0b1435;
+  --color-ardoise: #223454;
+  --color-or: #d4a23f;
+  --color-or-clair: #e8c070;
+  --color-or-sombre: #9a7118; /* l'or lisible en texte sur ivoire (contraste AA) */
+  --color-ivoire: #faf8f4;
+  --color-ivoire-creuse: #f2eee6;
+  --color-encre: #1a1f2e;
+  --color-gris-chaud: #6b7280;
+  --color-sauge: #7c9a82;
+  --color-terracotta: #c4704f;
+
+  --font-titre: var(--police-titre), Georgia, "Times New Roman", serif;
+  --font-corps: var(--police-corps), system-ui, -apple-system, sans-serif;
+
+  --radius-douce: 12px;
+  --radius-carte: 20px;
+
+  --shadow-douce: 0 1px 2px rgba(11, 20, 53, 0.04), 0 8px 24px rgba(11, 20, 53, 0.06);
+  --shadow-flottante: 0 2px 4px rgba(11, 20, 53, 0.06), 0 24px 48px rgba(11, 20, 53, 0.12);
+}
+
+/* Surfaces : définies en clair d'abord, redéfinies pour le mode sombre.
+   Trois états à couvrir : choix explicite clair, choix explicite sombre, et le
+   réglage « système » qui ne pose aucun attribut. */
+:root {
+  --fond: #faf8f4;
+  --fond-creux: #f2eee6;
+  --surface: #ffffff;
+  --texte: #1a1f2e;
+  --texte-doux: #6b7280;
+  --titre: #0b1435;
+  --trait: rgba(11, 20, 53, 0.08);
+  --accent-texte: #9a7118;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fond: #050d22;
+    --fond-creux: #0b1435;
+    --surface: #101c3d;
+    --texte: #e6e9f2;
+    --texte-doux: #9aa3ba;
+    --titre: #f4f1e8;
+    --trait: rgba(232, 192, 112, 0.14);
+    --accent-texte: #e8c070;
+  }
+}
+
+:root[data-theme="dark"] {
+  --fond: #050d22;
+  --fond-creux: #0b1435;
+  --surface: #101c3d;
+  --texte: #e6e9f2;
+  --texte-doux: #9aa3ba;
+  --titre: #f4f1e8;
+  --trait: rgba(232, 192, 112, 0.14);
+  --accent-texte: #e8c070;
+}
+
+/* Les règles de base vont dans @layer base. Sans cela elles sont « hors couche »,
+   et une déclaration hors couche l'emporte sur toute utilitaire Tailwind : le
+   `color` posé sur h1 écrasait alors chaque `text-…` du site. */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--fond);
+    color: var(--texte);
+    font-family: var(--font-corps);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-titre);
+    color: var(--titre);
+    text-wrap: balance;
+    letter-spacing: -0.015em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-or);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+/* Utilitaires nommés en français, employés par plusieurs sections. */
+.cadre {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.surface {
+  background: var(--surface);
+  border-radius: var(--radius-carte);
+  box-shadow: var(--shadow-douce);
+}
+
+.oeil {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-texte);
+}
+
+.lien-sourd {
+  color: var(--texte-doux);
+  transition: color 0.18s ease;
+}
+.lien-sourd:hover {
+  color: var(--accent-texte);
+}
+
+/* Hors couche et volontairement : le respect d'un réglage d'accessibilité ne
+   doit être écrasé par aucune utilitaire. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Les pages de texte : mentions légales, droits, confidentialité. Une colonne
+   étroite et un interlignage large, parce qu'on les lit jusqu'au bout ou pas
+   du tout. */
+.prose-ascenda p {
+  margin-bottom: 1.1rem;
+  line-height: 1.78;
+  color: var(--texte);
+}
+.prose-ascenda ul,
+.prose-ascenda ol {
+  margin: 0 0 1.3rem 1.2rem;
+  padding-left: 0.4rem;
+}
+.prose-ascenda li {
+  margin-bottom: 0.6rem;
+  line-height: 1.72;
+  padding-left: 0.3rem;
+}
+.prose-ascenda ul li { list-style: disc; }
+.prose-ascenda ol li { list-style: decimal; }
+.prose-ascenda h3 {
+  margin: 1.8rem 0 0.7rem;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--titre);
+}
+.prose-ascenda a {
+  color: var(--accent-texte);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose-ascenda strong { font-weight: 600; color: var(--titre); }
+.prose-ascenda table {
+  width: 100%;
+  margin-bottom: 1.4rem;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+.prose-ascenda th,
+.prose-ascenda td {
+  border-bottom: 1px solid var(--trait);
+  padding: 0.6rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+.prose-ascenda th { font-weight: 600; color: var(--titre); }

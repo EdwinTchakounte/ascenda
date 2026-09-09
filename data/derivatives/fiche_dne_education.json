@@ -1,0 +1,124 @@
+{
+ "document_id": "1a827792-faca-402f-a8c6-e5663609ec95",
+ "titre_normalise": "Intelligence artificielle et éducation. Apports de la recherche et enjeux pour les politiques publiques",
+ "auteurs": [
+  "Direction du numérique pour l'éducation"
+ ],
+ "annee": 2023,
+ "type_ouvrage": "rapport institutionnel",
+ "niveau": "intermediaire",
+ "public_cible": "Décideurs de l'éducation, inspecteurs, formateurs d'enseignants, chercheurs, toute personne chargée d'élaborer une politique publique en la matière. Publication d'avril 2023 de la Direction du numérique pour l'éducation du ministère français de l'Éducation nationale, diffusée dans le carnet de recherche Éducation, numérique et recherche. Quarante pages, six sections, résumé trilingue français, anglais, espagnol, et une bibliographie de plusieurs pages entièrement référencée avec liens.",
+ "these_centrale": "Avant de décider quoi que ce soit sur l'intelligence artificielle à l'école, il faut savoir ce que la recherche établit et ce que les institutions internationales recommandent. Le document ne prescrit pas, il fait l'état des lieux : diversité des définitions, enjeux de politique publique, enjeux éthiques, taxonomie des domaines d'application, pistes pour former et enseigner, puis analyse du tournant que constituent les modèles génératifs. Sa valeur tient à sa méthode : chaque affirmation est attribuée à une source datée et accessible.",
+ "idees_force": [
+  {
+   "titre": "Encourager les innovations locales, septième recommandation de l'UNESCO",
+   "explication": "Parmi les orientations reprises de l'UNESCO figure explicitement : encourager les innovations locales en matière d'intelligence artificielle pour l'éducation, promouvoir le développement local des technologies de l'information dans le champ éducatif. C'est la formulation institutionnelle exacte du principe qui doit guider un projet éducatif africain : ne pas importer une solution conçue ailleurs pour un autre système scolaire, mais construire sur place.",
+   "page": 12
+  },
+  {
+   "titre": "Une définition qui refuse l'opposition homme et machine",
+   "explication": "Le rapport retient une définition permettant de dépasser l'opposition entre intelligence humaine et intelligence artificielle et d'envisager des interactions complexes entre les deux. Ce choix n'est pas neutre : il oriente toute la suite vers la question de la complémentarité plutôt que du remplacement, et il évite le débat stérile sur l'authenticité de l'intelligence des machines.",
+   "page": 7
+  },
+  {
+   "titre": "Trois familles techniques, dont une hybride",
+   "explication": "Une intelligence artificielle fondée sur les données, l'apprentissage automatique ; une fondée sur les connaissances, l'approche symbolique ; et un troisième modèle conceptuel, l'intelligence artificielle hybride, qui combine données, connaissances et cognition humaine. Cette troisième voie est rarement mentionnée dans les ouvrages de vulgarisation alors qu'elle est la plus prometteuse pour l'éducation, où l'on veut à la fois de la performance et de l'explicabilité.",
+   "page": 8
+  },
+  {
+   "titre": "L'ingénierie des connaissances, coûteuse mais explicable",
+   "explication": "Les systèmes experts reposent sur l'obtention et la modélisation des savoirs de spécialistes d'un domaine, tâche exigeante en ressources et non exempte de complications. C'est précisément le travail qu'un projet éducatif doit assumer s'il veut un système qui explique ses réponses. Le rapport rappelle que cette approche a servi au diagnostic médical, à la notation de crédit et à la production industrielle.",
+   "page": 8
+  },
+  {
+   "titre": "La taxonomie du Conseil de l'Europe, en trois destinataires",
+   "explication": "Au service des élèves : tutorat intelligent, applications assistées, simulations, aide aux besoins éducatifs particuliers, rédaction automatique, agents conversationnels, évaluation formative automatique, environnements d'apprentissage exploratoire, assistant d'apprentissage tout au long de la vie. Au service de l'enseignant : détection de plagiat, sélection intelligente de matériel, surveillance de classe, évaluation sommative automatique, orchestration de la salle. Au service des institutions : admissions, planification, sécurité, identification précoce des décrocheurs, surveillance des examens à distance. Classer ainsi révèle immédiatement qui bénéficie de quoi, et que la troisième catégorie sert d'abord l'institution.",
+   "page": 20
+  },
+  {
+   "titre": "L'explicabilité doit être prise en compte dès la conception",
+   "explication": "Position de l'Association française pour l'intelligence artificielle reprise dans le rapport : rendre compte du fonctionnement d'un système exige une représentation explicite des connaissances et des processus de décision, et cette exigence ne peut pas être satisfaite après coup. C'est une contrainte d'architecture, non une fonctionnalité à ajouter.",
+   "page": 18
+  },
+  {
+   "titre": "Une poignée d'humains décide pour des millions",
+   "explication": "Citation de Laurence Devillers reprise par le rapport : le pouvoir génératif de ces systèmes est amplifié par des filtres qui censurent certains sujets et par des modules de vérification ; une poignée d'humains, ingénieurs, transcripteurs, évaluateurs, ont créé ces systèmes utilisés par des millions de personnes. Elle pointe aussi les questions décisives : quelles données pour entraîner, quelle répartition des langues dans un système multilingue, quelle propriété des contenus produits.",
+   "page": 30
+  },
+  {
+   "titre": "Quatre potentialités pédagogiques, dont l'esprit critique",
+   "explication": "Soutien à la créativité par une première base de rédaction ; soutien à l'apprentissage du français et des langues étrangères par le suivi conversationnel ; assistance pour amorcer ou optimiser une tâche d'écriture ; et surtout, nouveau cadre pour l'éducation aux médias et à l'information, qui oblige enseignants et élèves à vérifier systématiquement le contenu et la pertinence des réponses. La quatrième est la plus importante : l'outil devient le support de l'enseignement de la vérification.",
+   "page": 31
+  },
+  {
+   "titre": "Les modèles de langue au service des apprenants en situation de handicap",
+   "explication": "Combinés à la conversion de la parole en texte ou du texte en parole, ils aident les personnes en situation de déficience visuelle ; associés au tutorat à distance, ils permettent l'écriture adaptative, la traduction, la mise en évidence de contenus importants dans différents formats. Le rapport pose immédiatement la condition : ces usages doivent être accompagnés par des professionnels, orthophonistes, éducateurs, spécialistes, capables d'adapter la technologie au besoin réel.",
+   "page": 31
+  },
+  {
+   "titre": "Une stratégie nationale chiffrée et datée",
+   "explication": "Rapport Villani en mars 2018, première phase de 2018 à 2022 dotée d'un milliard et demi d'euros, création de quatre instituts spécialisés, quarante-huit chaires et vingt-deux programmes doctoraux, un supercalculateur national ; seconde phase de 2022 à 2025, un milliard et demi de plus, avec un plan massif de formation. Le rapport pose aussi le principe directeur : la stratégie doit aider aux apprentissages et aux décisions sans jamais se substituer aux personnes. La chronologie donne une échelle de référence à quiconque veut bâtir une politique publique en la matière.",
+   "page": 13
+  },
+  {
+   "titre": "L'humanisme post-IA",
+   "explication": "Cinquième piste de formation proposée : les progrès de ces technologies nous conduisent à reconsidérer, en tant qu'êtres humains, certaines vérités de base. La formation à l'IA n'est donc pas seulement technique, elle est philosophique, et elle suppose de reposer la question de ce que nous sommes.",
+   "page": 24
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "IA hybride",
+   "definition": "Approche combinant apprentissage sur données, connaissances explicites et cognition humaine. Compromis entre performance et explicabilité."
+  },
+  {
+   "terme": "Ingénierie des connaissances",
+   "definition": "Obtention et modélisation formelle du savoir de spécialistes d'un domaine, base des systèmes experts. Exigeante en ressources."
+  },
+  {
+   "terme": "Système de tutorat intelligent",
+   "definition": "Système adaptant le parcours, les exercices et les explications au niveau et aux erreurs de chaque apprenant."
+  },
+  {
+   "terme": "Environnement d'apprentissage exploratoire",
+   "definition": "Dispositif où l'apprenant découvre par manipulation plutôt que par exposé, avec assistance automatique."
+  },
+  {
+   "terme": "Évaluation formative et évaluation sommative",
+   "definition": "L'une accompagne l'apprentissage en cours de route, l'autre le sanctionne à son terme. Leur automatisation ne pose pas les mêmes questions."
+  },
+  {
+   "terme": "Orchestration de la classe",
+   "definition": "Assistance à la conduite simultanée de plusieurs activités et groupes dans une même séance."
+  },
+  {
+   "terme": "Surveillance des examens à distance",
+   "definition": "Contrôle automatisé du candidat pendant une épreuve à distance. Classé par le rapport parmi les usages au service de l'institution, non de l'apprenant."
+  },
+  {
+   "terme": "Explicabilité par conception",
+   "definition": "Exigence de représenter explicitement connaissances et décisions dès l'architecture du système, faute de quoi aucune justification n'est possible ensuite."
+  },
+  {
+   "terme": "Éducation aux médias et à l'information",
+   "definition": "Enseignement de la vérification des sources et de l'évaluation de l'information, que les systèmes génératifs rendent à la fois plus difficile et plus nécessaire."
+  },
+  {
+   "terme": "Humanisme post-IA",
+   "definition": "Idée que les progrès de ces technologies obligent à reconsidérer des vérités de base sur ce qu'est un être humain."
+  },
+  {
+   "terme": "Décrochage scolaire prédictif",
+   "definition": "Identification précoce des élèves à risque d'abandon à partir de leurs traces d'activité. Usage puissant et éthiquement délicat."
+  }
+ ],
+ "a_lire_si": "Vous préparez une politique, un projet ou une thèse et vous avez besoin de sources solides. C'est le meilleur point d'entrée bibliographique du fonds sur l'éducation : chaque affirmation renvoie à une référence datée et accessible en ligne, UNESCO, Conseil de l'Europe, Commission européenne, OCDE, revues de littérature académiques, cours en ligne d'introduction. La taxonomie en trois destinataires et la septième recommandation de l'UNESCO sur les innovations locales sont directement exploitables.",
+ "a_eviter_si": "Vous cherchez des réponses ou des méthodes de classe. Le rapport recense, cite et cartographie mais ne tranche presque jamais, ce qui est sa fonction et sa limite. Il est arrêté à avril 2023, donc antérieur à l'essentiel du déploiement des outils génératifs dans les établissements, et son cadre institutionnel est français et européen.",
+ "prerequis": [],
+ "controverses": [
+  "Faut-il centraliser la stratégie ou encourager les innovations locales ? Le rapport reprend les deux orientations, celle de l'UNESCO en faveur du développement local et celle d'une stratégie nationale coordonnée, sans expliciter leur tension.",
+  "La surveillance automatisée des examens à distance et la prédiction du décrochage sont recensées parmi les applications sans que leurs implications en matière de libertés soient discutées à la mesure de leur portée.",
+  "Le rapport pose la question de la répartition des langues dans un système multilingue sans y répondre. C'est pourtant le point décisif pour tout système éducatif non anglophone."
+ ],
+ "confiance": 0.9
+}

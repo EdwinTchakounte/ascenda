@@ -1,0 +1,203 @@
+[
+ {
+  "chapitre": "93378ee3",
+  "citations": [
+   {
+    "texte": "Pour ainsi dire, le principe même du test de Turing repose sur l'illusion.",
+    "page": 37,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un test fondé sur la tromperie",
+    "portee": "Ce que mesure ce test célèbre n'est pas l'intelligence de la machine mais notre capacité à être trompés."
+   },
+   {
+    "texte": "L'incertitude étant au cœur de la pensée humaine, la machine doit feindre, voire délibérément tromper, pour simuler la pensée.",
+    "page": 37,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Feindre l'hésitation",
+    "portee": "Une machine trop rapide et trop correcte se trahit, d'où l'ajout délibéré de lenteurs et d'erreurs."
+   },
+   {
+    "texte": "je crois qu'à la fin du siècle l'usage, les mots et l'éducation de l'opinion générale auront tant changé, que l'on pourra parler de machines pensantes sans s'attendre à être contredit",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qui change n'est pas la machine",
+    "portee": "Turing prévoyait un déplacement du langage et de l'opinion, non une preuve de la pensée des machines."
+   }
+  ]
+ },
+ {
+  "chapitre": "696fa4c9",
+  "citations": [
+   {
+    "texte": "il ne révèle pourtant en aucune manière une forme de pensée dans la machine, mais simplement la puissance de l'illusion",
+    "page": 40,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce qu'un test réussi démontre",
+    "portee": "Tromper des experts prouve l'efficacité du dispositif, non l'existence d'une pensée."
+   },
+   {
+    "texte": "Tous les aspects de l'apprentissage ou toute autre caractéristique de l'intelligence peuvent en principe être décrits d'une manière si précise qu'une machine peut être fabriquée pour les simuler",
+    "page": 40,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'acte de naissance de la discipline",
+    "portee": "Une conjecture posée en 1956 et jamais démontrée, mais qui a orienté soixante-dix ans de recherche."
+   },
+   {
+    "texte": "ces chatbots parviennent à pousser leurs interlocuteurs à projeter du sens sur un discours creux",
+    "page": 41,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le vrai exploit des premiers agents",
+    "portee": "Le résultat obtenu ne concerne pas la machine mais ce qu'elle déclenche chez son interlocuteur."
+   }
+  ]
+ },
+ {
+  "chapitre": "9e4182f3",
+  "citations": [
+   {
+    "texte": "ce qui est formellement difficile pour un humain, tel que des calculs complexes, est facile pour une IA, alors que ce qui est facile et informel pour un humain, tel que désirer ou compatir, est ce qu'il y a de plus difficile, voire d'impossible à réaliser, pour une IA",
+    "page": 42,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le partage inversé des difficultés",
+    "portee": "Désirer et compatir, que nul n'apprend à l'école, restent hors de portée de ces systèmes."
+   },
+   {
+    "texte": "En dialoguant avec des IA, on oublie parfois qu'il n'y a rien d'autre derrière l'écran qu'une combinatoire.",
+    "page": 42,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce qu'il y a derrière l'écran",
+    "portee": "Se rappeler ce fait au moment même de l'échange est l'exercice le plus difficile et le plus nécessaire."
+   },
+   {
+    "texte": "L'ordre émerge ainsi du désordre. Autrement dit, le hasard corrige le hasard.",
+    "page": 43,
+    "axe": "02-ia-technique-academique",
+    "theme": "Comment un ordre émerge du désordre",
+    "portee": "L'apprentissage automatique ne suit pas de règles écrites, il stabilise statistiquement du bruit."
+   }
+  ]
+ },
+ {
+  "chapitre": "608d0a62",
+  "citations": [
+   {
+    "texte": "nous entretenons un système de captation de données intimes (les connaissances non formelles numérisées) devenues l'or noir du capitalisme cognitif",
+    "page": 44,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'intime comme matière première",
+    "portee": "Ce qui est extrait n'est plus une ressource du sol mais ce que nous confions de nous-mêmes."
+   },
+   {
+    "texte": "Des données comportementales et d'images de soi sont accumulées en grand nombre, sans que quiconque sache réellement quoi en faire, dans un stock sur lequel le marché spécule.",
+    "page": 44,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Spéculer sur un stock sans usage",
+    "portee": "La valeur de ces données tient à leur accumulation, non à un usage identifié."
+   },
+   {
+    "texte": "La captation des données issues des quelque 87 millions de comptes utilisateurs Facebook spoliées par Cambridge Analytica",
+    "page": 45,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le précédent de Cambridge Analytica",
+    "portee": "Un exemple documenté de ce que l'exploitation de données personnelles permet en politique."
+   }
+  ]
+ },
+ {
+  "chapitre": "f8cf20fd",
+  "citations": [
+   {
+    "texte": "Les frontières de mon langage sont les frontières de mon monde.",
+    "page": 49,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le langage borne le monde",
+    "portee": "Enrichir sa langue, c'est élargir ce que l'on peut penser et donc ce que l'on peut vivre."
+   },
+   {
+    "texte": "Ils n'ont pas d'empathie, ni de compréhension de la langue qu'ils produisent, ni de compréhension de la situation dans laquelle ils se trouvent. Mais le texte qu'ils produisent semble plausible et les gens sont donc susceptibles de lui donner un sens.",
+    "page": 50,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Plausible n'est pas compris",
+    "portee": "La plausibilité d'un texte est précisément ce qui rend son absence de compréhension indétectable."
+   },
+   {
+    "texte": "Lancer quelque chose comme cela dans des situations sensibles, c'est prendre des risques inconnus",
+    "page": 50,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des risques non mesurés",
+    "portee": "Déployer ces outils auprès de personnes fragiles engage une responsabilité que nul n'a évaluée."
+   }
+  ]
+ },
+ {
+  "chapitre": "3a1a06af",
+  "citations": [
+   {
+    "texte": "Il aurait été préférable d'étudier ce qui a conduit le jury à l'erreur.",
+    "page": 52,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Examiner son erreur au lieu de l'effacer",
+    "portee": "Une erreur dissimulée ne rend personne plus lucide, contrairement à une erreur étudiée."
+   },
+   {
+    "texte": "Nos IA ne produisent que des images aveugles sans référence au réel, c'est-à-dire sans lien factuel avec le monde.",
+    "page": 53,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des images sans référence",
+    "portee": "Une image qui ne renvoie à rien de réel ne peut être ni vraie ni fausse, seulement crue ou non."
+   },
+   {
+    "texte": "Alors que notre cognition s'établit toujours en référence au monde, celle des IA est donc aveugle au monde.",
+    "page": 53,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Penser suppose un monde",
+    "portee": "Nos représentations se corrigent au contact des choses, ce que ces systèmes ne peuvent pas faire."
+   }
+  ]
+ },
+ {
+  "chapitre": "5869d013",
+  "citations": [
+   {
+    "texte": "Il ne s'agit pas d'un désordre purement interne au sujet, mais bien d'un processus de communication paradoxal entre humains et IA tendant vers l'entropie.",
+    "page": 55,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La folie comme fait de relation",
+    "portee": "Déplacer la cause du trouble vers la relation change ce qu'on peut prévenir et corriger."
+   },
+   {
+    "texte": "même si logiquement le message est dénué de sens, il possède une réalité pragmatique : on ne peut pas ne pas y réagir",
+    "page": 56,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Un message auquel on ne peut échapper",
+    "portee": "Un énoncé absurde reste opérant dès lors qu'il engage une personne dans une relation."
+   }
+  ]
+ },
+ {
+  "chapitre": "7b28b99b",
+  "citations": [
+   {
+    "texte": "il n'y a pas de problème si on considère les IA pour ce qu'elles sont, c'est-à-dire pour des machines qui modulent, déplacent, hiérarchisent, ordonnent la position de signes a-signifiants",
+    "page": 57,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La bonne distance",
+    "portee": "L'usage sain de ces outils tient à la représentation qu'on s'en fait, plus qu'à la façon de les manier."
+   },
+   {
+    "texte": "c'est une argumentation qui part de prémisses correctes (de formules qu'on considère comme vraies) et qui suit une déduction logique pour en arriver à une contradiction",
+    "page": 57,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qu'est un paradoxe",
+    "portee": "Un paradoxe n'est pas une erreur de raisonnement mais une limite du raisonnement lui-même."
+   },
+   {
+    "texte": "s'il ment, comme il l'affirme, alors il ne ment pas. Mais, s'il ne ment pas, contrairement à ce qu'il affirme, alors il ment.",
+    "page": 58,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le paradoxe du menteur",
+    "portee": "Le plus ancien des paradoxes montre que certaines questions n'ont pas de réponse décidable."
+   }
+  ]
+ }
+]

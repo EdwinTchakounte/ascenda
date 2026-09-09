@@ -1,0 +1,49 @@
+[
+ {"chapitre":"338531c6","citations":[
+  {"texte":"on continue à s'interroger sur ce en quoi pourrait bien consister la « copie » d'une réalité qui par définition n'est pas identique au copié attendu qu'une équivalence n'est pas une identité","page":230,"axe":"04-ia-societe-ethique-philosophie","theme":"Équivalence n'est pas identité","portee":"Le mot équivalent règle verbalement une difficulté qu'il laisse entière."},
+  {"texte":"la machine s'en fiche, elle n'est pas engagée dans ce qui se passe. On peut lui communiquer un simulacre d'émotion ou d'empathie, mais ces qualités appartiennent en propre aux animaux humains et non humains qui cherchent à survivre","page":232,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Être engagé dans ce qui arrive","portee":"L'enjeu vécu, et non la performance, sépare l'émotion réelle de son imitation."},
+  {"texte":"une IA ne jubile pas quand elle résout un problème, même très complexe, elle n'a pas le cœur qui bat parce qu'elle n'a pas de cœur du tout","page":232,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Réussir sans rien éprouver","portee":"Une image simple pour expliquer à quiconque ce qui manque à ces systèmes."},
+  {"texte":"ce qui est sidérant, bluffant, et qui nous épate quand on joue avec elles, c'est qu'elles nous imitent à la perfection, qu'elles nous dépassent dans mille domaines, mais en restant des IA faibles purement statistiques","page":233,"axe":"01-ia-fondamentaux-vulgarisation","theme":"L'étonnement bien placé","portee":"Le fait remarquable n'est pas qu'elles pensent, c'est qu'elles produisent tout cela sans penser."}
+ ]},
+ {"chapitre":"16c9a3bb","citations":[
+  {"texte":"On croit ainsi pouvoir trouver une explication dans ce qui est en réalité plus inexplicable encore","page":234,"axe":"04-ia-societe-ethique-philosophie","theme":"La mécanique de la superstition","portee":"Expliquer l'obscur par plus obscur encore donne l'impression d'avoir compris sans rien avoir compris."},
+  {"texte":"les nouveaux systèmes d'IA génératives réfutent l'idée que l'IA doit « penser » pour résoudre des tâches qui requièrent de la « créativité » et du « jugement »","page":235,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce que ces systèmes ont démontré","portee":"Leur succès prouve moins la puissance de la machine que la surestimation de ce que nos tâches exigeaient."}
+ ]},
+ {"chapitre":"5494a244","citations":[
+  {"texte":"ces systèmes représentent en fait la probabilité simplement statistique qu'un mot en suive un autre","page":236,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce qui se passe réellement","portee":"Une description que tout utilisateur devrait connaître avant de prêter une intention à ces outils."},
+  {"texte":"Il n'y a donc rien de magique dedans, ce sont des mathématiques pures.","page":236,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Rien de magique","portee":"Comprendre le fonctionnement d'un outil est la meilleure protection contre la fascination qu'il exerce."},
+  {"texte":"Même si je suis consciente qu'un robot ne pourra jamais ressentir une émotion, viser ce point de singularité aide les scientifiques à avancer dans la recherche pour simuler au mieux une émotion","page":237,"axe":"02-ia-technique-academique","theme":"Viser l'impossible pour avancer","portee":"Un objectif inatteignable peut orienter utilement un travail, à condition de savoir qu'il l'est."},
+  {"texte":"On est davantage, à mon sens, sur plein d'IA faibles, les unes à côté des autres, mais faites par un seul modèle","page":238,"axe":"02-ia-technique-academique","theme":"Une addition, non une unité","portee":"Ce qui paraît une intelligence unifiée est la juxtaposition de compétences séparées."}
+ ]},
+ {"chapitre":"11668cea","citations":[
+  {"texte":"le prisonnier, prenant son manuel, répond parfaitement, mais bien évidemment sans rien comprendre pour autant à ce qu'il dit","page":239,"axe":"01-ia-fondamentaux-vulgarisation","theme":"La chambre chinoise","portee":"L'image la plus efficace pour expliquer la différence entre produire des réponses justes et comprendre."}
+ ]},
+ {"chapitre":"4115356b","citations":[
+  {"texte":"L'interlocuteur chinois sera convaincu qu'il a affaire à un humain qui parle et comprend le chinois !","page":240,"axe":"04-ia-societe-ethique-philosophie","theme":"La conviction de l'observateur","portee":"L'impression produite sur celui qui observe ne renseigne en rien sur ce qui se passe à l'intérieur."}
+ ]},
+ {"chapitre":"e6fd5172","citations":[
+  {"texte":"l'illusion du libre-arbitre, comme le dit déjà Spinoza, n'est due qu'à l'ignorance de ces causes qui nous déterminent","page":246,"axe":"04-ia-societe-ethique-philosophie","theme":"La thèse déterministe en une phrase","portee":"De cette thèse dépend tout le débat sur la différence entre une conscience humaine et une machine."},
+  {"texte":"si l'on est matérialiste et déterministe, alors il n'y a de ce point de vue aucune différence essentielle entre AGI et IA forte","page":247,"axe":"04-ia-societe-ethique-philosophie","theme":"D'où vient le désaccord","portee":"Deux personnes qui divergent sur la conscience des machines divergent d'abord sur la liberté humaine."}
+ ]},
+ {"chapitre":"611f9747","citations":[
+  {"texte":"si tout est déterminé, il n'y a plus ni bien ni mal au sens moral du terme","page":249,"axe":"04-ia-societe-ethique-philosophie","theme":"Le prix moral du déterminisme","portee":"Une doctrine se juge aussi à ce qu'elle rend impossible de dire sur la responsabilité."},
+  {"texte":"le but de la science n'est pas de vérifier des hypothèses, mais au contraire à tenter de les réfuter, de les « falsifier »","page":250,"axe":"02-ia-technique-academique","theme":"Le critère de Popper","portee":"Un outil intellectuel décisif : demander ce qui, s'il était observé, montrerait qu'une thèse est fausse."},
+  {"texte":"le matérialisme ne parvient jamais à s'accomplir pleinement sans retomber lourdement dans les ornières de la métaphysique auxquelles il se faisait pourtant un devoir d'échapper","page":251,"axe":"04-ia-societe-ethique-philosophie","theme":"Le matérialisme rattrapé par la métaphysique","portee":"Chercher une cause dernière est un geste religieux, quelle que soit la nature qu'on lui prête."}
+ ]},
+ {"chapitre":"f247b3c4","citations":[
+  {"texte":"il faut prendre au sérieux l'idée qu'il n'y a pas de science achevée, pas de savoir absolu","page":252,"axe":"02-ia-technique-academique","theme":"Renoncer au savoir total","portee":"L'inachèvement du savoir est ce qui rend possibles à la fois la recherche et la liberté."},
+  {"texte":"croire que parce que nous ne comprenons pas ce qui se passe relève d'une propriété émergente relève très exactement de la logique de la superstition qui consiste à confondre un mystère pour nous avec un mystère en soi !","page":252,"axe":"02-ia-technique-academique","theme":"Notre ignorance n'est pas un mystère","portee":"L'opacité d'un système dit quelque chose de nos limites, non d'une profondeur cachée en lui."},
+  {"texte":"La posthumanité, s'il elle advient, ne sera pas mathématico-mécanique, mais hybride, une espèce d'animat d'un genre inédit...","page":253,"axe":"04-ia-societe-ethique-philosophie","theme":"La seule voie que l'auteur laisse ouverte","portee":"S'il doit y avoir un jour une machine sensible, ce sera par le vivant, non par le calcul."}
+ ]},
+ {"chapitre":"42d3d10c","citations":[
+  {"texte":"urgence à repenser le rôle de notre éducation nationale dans ce nouveau monde de l'IA et des réseaux sociaux","page":254,"axe":"05-ia-education-pedagogie","theme":"L'école au premier rang des urgences","portee":"Aucune réponse collective à ces bouleversements ne tiendra sans une refonte de ce qu'on enseigne."},
+  {"texte":"dans le dernier classement des quinze leaders mondiaux de la « tech », inutile de se voiler la face, il n'y a pas une seule entreprise européenne","page":255,"axe":"07-afrique-histoire-pensee","theme":"Absent de la carte","portee":"Ne produire aucune de ces technologies revient à subir les choix de ceux qui les produisent."},
+  {"texte":"il n'est pas seulement question d'économie et d'argent, mais de l'avenir, voire de la survie d'une civilisation","page":255,"axe":"07-afrique-histoire-pensee","theme":"Un enjeu de civilisation","portee":"La maîtrise technologique engage la capacité d'un peuple à décider de son propre avenir."}
+ ]},
+ {"chapitre":"8d75d0bb","citations":[
+  {"texte":"la peur, qui conduit toujours à la colère, puis à la haine, semble être encore aujourd'hui la principale réaction face au progrès technologique","page":256,"axe":"09-developpement-personnel-influence","theme":"L'enchaînement de la peur","portee":"Reconnaître ce mécanisme en soi est la condition pour examiner une nouveauté au lieu de la subir."},
+  {"texte":"J'ai pourtant quelque peine à regretter l'invention du livre et de la presse, des innovations sans lesquelles, cela dit au passage, les diatribes d'Harari contre l'IA passeraient tout simplement inaperçues.","page":257,"axe":"05-ia-education-pedagogie","theme":"Ce que l'imprimerie a rendu possible","portee":"L'accès de milliards de personnes à la lecture est l'exemple même d'une technique qui a émancipé."},
+  {"texte":"Le bon sens nous invite donc à séparer le bon grain de l'ivraie.","page":259,"axe":"09-developpement-personnel-influence","theme":"Trier plutôt que trancher","portee":"Ni acceptation ni rejet global : la seule attitude tenable est l'examen cas par cas."},
+  {"texte":"Ce livre n'a pas d'autre objet que d'aider à comprendre ces bouleversements du monde afin que chacun puisse se faire une opinion éclairée.","page":259,"axe":"05-ia-education-pedagogie","theme":"Former des jugements, pas des adhésions","portee":"Le but d'un livre d'idées se mesure à la capacité de juger qu'il laisse à son lecteur."}
+ ]}
+]

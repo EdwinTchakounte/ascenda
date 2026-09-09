@@ -1,0 +1,46 @@
+[
+ {"chapitre":"b978927d","citations":[
+  {"texte":"Nous avons bien fait de poser cette question car nous pensions à tort que la géographie ne concernait que les domaines physique et humain.","page":242,"axe":"05-ia-education-pedagogie","theme":"Demander l'étendue d'un domaine","portee":"Interroger d'abord le champ d'un sujet corrige des idées reçues avant même d'apprendre quoi que ce soit."},
+  {"texte":"Ainsi, nous ne maîtrisons pas la question qui sera posée, ce qui constitue une façon ludique d'apprendre !","page":242,"axe":"05-ia-education-pedagogie","theme":"Se laisser interroger","portee":"On n'apprend rien de nouveau tant qu'on ne pose que les questions dont on a déjà l'idée."},
+  {"texte":"Elles font référence aux déplacements de populations contraintes de quitter leur lieu de résidence en raison de facteurs environnementaux","page":243,"axe":"11-sciences-environnement","theme":"Les migrations environnementales","portee":"Dégradation des terres et sécheresse déplacent déjà des populations entières, en Afrique notamment."},
+  {"texte":"Il convient de noter que les enjeux géopolitiques liés à la montée en puissance de la Chine sont complexes et évolutifs.","page":246,"axe":"07-afrique-histoire-pensee","theme":"Un équilibre mondial en recomposition","portee":"Les recompositions de puissance décident des conditions de coopération offertes aux pays du Sud."}
+ ]},
+ {"chapitre":"227c4777","citations":[
+  {"texte":"On voit que la réponse de ChatGPT concerne des sujets technologiques assez pointus, tels que l'intelligence artificielle, la programmation. etc. Ces sujets sont évidemment intéressants, mais risquent de ne pas parler à tout le monde !","page":248,"axe":"05-ia-education-pedagogie","theme":"Ramener un sujet au niveau du lecteur","portee":"Demander explicitement des exemples accessibles vaut mieux que renoncer devant un vocabulaire technique."},
+  {"texte":"Fragmentation : en raison de la multitude de fabricants et de modèles, Android peut souffrir de fragmentation, ce qui signifie que les mises à jour du système d'exploitation peuvent être retardées ou indisponibles pour certains appareils.","page":250,"axe":"03-ia-outils-pratique-prompting","theme":"Le revers de la diversité des appareils","portee":"Un téléphone bon marché reste souvent sans mise à jour, ce qui pèse sur sa sécurité dans la durée."}
+ ]},
+ {"chapitre":"26701e2c","citations":[
+  {"texte":"Il est important de noter que les préférences en matière de système d'exploitation peuvent varier en fonction des besoins et des préférences individuelles.","page":253,"axe":"03-ia-outils-pratique-prompting","theme":"Choisir selon ses besoins réels","portee":"Une comparaison honnête aide à décider, elle ne désigne pas un vainqueur pour tout le monde."}
+ ]},
+ {"chapitre":"556abab8","citations":[
+  {"texte":"Ce que nous avons vu dans les précédents chapitres de ce livre correspond à l'utilisation gratuite de ChatGPT. Cela est considérable et permet de réaliser beaucoup de choses.","page":255,"axe":"03-ia-outils-pratique-prompting","theme":"Ce que permet déjà la version gratuite","portee":"Pour un lecteur au budget contraint, l'essentiel des usages décrits reste accessible sans payer."}
+ ]},
+ {"chapitre":"16af5568","citations":[
+  {"texte":"Un débit immédiat de 20 USD (converti en EUR) sera effectué sur le compte, ainsi que tous les mois suivants à la même date sauf si on interrompt ce plan.","page":255,"axe":"10-economie-entrepreneuriat-finance","theme":"Un abonnement se reconduit seul","portee":"Un prélèvement mensuel automatique continue tant qu'on ne l'a pas explicitement arrêté."}
+ ]},
+ {"chapitre":"40217cc3","citations":[
+  {"texte":"Remarquez que, par mesure de protection d'identité, l'analyse d'images ne peut pas se faire sur des représentations de personnes, qu'elles soient connues ou non.","page":262,"axe":"04-ia-societe-ethique-philosophie","theme":"Une limite posée pour protéger les personnes","portee":"Refuser d'analyser des visages est une décision de conception, pas une incapacité technique."},
+  {"texte":"Si vous attachez un fichier au format PDF, ChatGPT aura des difficultés à lire son contenu (du moins au moment où ce livre est écrit).","page":263,"axe":"03-ia-outils-pratique-prompting","theme":"Une limite datée","portee":"Les manuels d'outils numériques vieillissent vite, il faut vérifier ce qui a changé depuis leur parution."}
+ ]},
+ {"chapitre":"7ad71920","citations":[
+  {"texte":"À travers ces exemples, on voit que les possibilités de création d'images par ChatGPT sont infinies. Il ne reste plus qu'à faire marcher notre imagination !","page":268,"axe":"03-ia-outils-pratique-prompting","theme":"La contrainte se déplace vers l'idée","portee":"Quand produire une image ne coûte plus rien, c'est le fait d'avoir quelque chose à montrer qui devient rare."}
+ ]},
+ {"chapitre":"870dadc7","citations":[
+  {"texte":"Les plugins sont des programmes externes qui s'intègrent avec ChatGPT pour lui fournir de nouvelles possibilités.","page":269,"axe":"03-ia-outils-pratique-prompting","theme":"Étendre un outil par des modules","portee":"Un outil extensible se transforme selon les besoins, ce qui rend tout inventaire de ses usages provisoire."}
+ ]},
+ {"chapitre":"2e1e3e3e","citations":[
+  {"texte":"Une fois que le plugin est installé, son utilisation par ChatGPT est effectuée automatiquement, sans demande particulière de l'utilisateur.","page":271,"axe":"04-ia-societe-ethique-philosophie","theme":"Des actions déclenchées sans qu'on le demande","portee":"Un système qui décide seul de recourir à un service extérieur mérite qu'on sache lesquels sont installés."}
+ ]},
+ {"chapitre":"b18a7edb","citations":[
+  {"texte":"Lors de la présentation, il est également important de maintenir l'engagement de votre auditoire en posant des questions, en partageant des anecdotes ou des études de cas, et en encourageant la discussion.","page":278,"axe":"09-developpement-personnel-influence","theme":"Tenir une salle","portee":"Le fichier de présentation ne fait pas l'exposé, c'est la relation avec l'auditoire qui le porte."},
+  {"texte":"Assurez-vous également de bien connaître votre sujet pour répondre aux questions qui pourraient vous être posées.","page":278,"axe":"09-developpement-personnel-influence","theme":"Aucune diapositive ne remplace la maîtrise","portee":"Un support généré en quelques minutes n'a pas transmis le savoir qu'il faut pour répondre aux questions."}
+ ]},
+ {"chapitre":"275cf132","citations":[
+  {"texte":"Pour les particuliers, l'utilisation payante est cependant moins évidente, sauf pour effectuer des tâches ponctuelles","page":281,"axe":"10-economie-entrepreneuriat-finance","theme":"Payer seulement quand c'est utile","portee":"Souscrire un mois pour un besoin précis, puis résilier, reste une pratique légitime et économe."},
+  {"texte":"Que ce soit en version gratuite ou en version payante, l'utilisation de ChatGPT va bouleverser nos habitudes et nous permettre l'accès à une nouvelle source de connaissances.","page":281,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Un accès nouveau au savoir","portee":"Là où bibliothèques et formations manquent, cet accès change réellement les possibilités d'apprendre."}
+ ]},
+ {"chapitre":"374a11b4","citations":[
+  {"texte":"Maintenant, c'est à vous de prendre le relais ! Utilisez les exemples et les astuces que vous avez découverts ici pour libérer tout le potentiel de ChatGPT dans votre vie personnelle et professionnelle.","page":283,"axe":"09-developpement-personnel-influence","theme":"Le livre ne fait que commencer le travail","portee":"Un manuel ne vaut que par la mise en pratique qui lui succède."},
+  {"texte":"N'oubliez pas que, chaque jour, de nouvelles fonctionnalités et applications apparaissent, ouvrant des horizons encore plus vastes.","page":283,"axe":"03-ia-outils-pratique-prompting","theme":"Un domaine qui bouge sans cesse","portee":"Apprendre la méthode importe plus que retenir des menus qui auront changé dans six mois."}
+ ]}
+]

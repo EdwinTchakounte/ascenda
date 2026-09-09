@@ -1,0 +1,126 @@
+{
+ "document_id": "c599fa8a-6f5e-4584-9bc8-acfd2e3c77f5",
+ "titre_normalise": "Forest Management and Planning. Aménagement et planification forestiers",
+ "auteurs": [
+  "Pete Bettinger",
+  "Kevin Boston",
+  "Jacek P. Siry",
+  "Donald L. Grebner"
+ ],
+ "annee": 2009,
+ "type_ouvrage": "manuel universitaire",
+ "niveau": "avance",
+ "public_cible": "Étudiants et professionnels de la foresterie, ingénieurs des eaux et forêts, agents d'administrations forestières, gestionnaires de concessions. Academic Press, marque d'Elsevier, 2009, ISBN 978-0-12-374304-6. Les quatre auteurs enseignent dans des écoles de foresterie américaines. Ouvrage disponible uniquement en anglais, avec des unités impériales, pouces, acres, pieds carrés.",
+ "these_centrale": "Aménager une forêt consiste à décider, pour chaque parcelle et pour chaque période, ce que l'on prélève et ce que l'on laisse, de manière que la ressource se maintienne indéfiniment. Le manuel enchaîne les trois moments de cette décision : mesurer et caractériser l'état d'un peuplement, projeter sa croissance dans le temps, puis construire un calendrier d'interventions au moyen de méthodes d'optimisation. Il traite ensuite des dispositifs qui contrôlent cette décision de l'extérieur, certification et séquestration du carbone.",
+ "idees_force": [
+  {
+   "titre": "On ne gère que ce que l'on a mesuré",
+   "explication": "Le manuel commence par les mesures fondamentales d'un peuplement : la surface terrière, exprimée en pieds carrés par acre et calculée à partir du diamètre des arbres à hauteur d'homme ; le diamètre moyen quadratique, qui se déduit de la surface terrière moyenne par arbre ; la hauteur moyenne ; l'indice de fertilité de station, calculé à partir des seules hauteurs des arbres dominants et codominants ; le volume de bois. Les auteurs signalent que la mesure des hauteurs sur le terrain est l'une des tâches les plus coûteuses d'un inventaire, ce qui conduit souvent à les estimer par des équations fondées sur le diamètre. Ces choix de méthode déterminent tout ce qui suit.",
+   "page": 29
+  },
+  {
+   "titre": "La courbe en J inversé",
+   "explication": "Un peuplement irrégulier, où coexistent tous les âges, présente une distribution des diamètres en J inversé : beaucoup de très petites tiges, de moins en moins d'arbres à mesure que le diamètre augmente. Le manuel donne un exemple réel, une forêt jardinée d'épicéas, sapins et hêtres en Suisse, où l'on compte environ cent dix tiges par acre dans la classe d'un pouce contre moins d'une demi-tige dans la classe de vingt-cinq pouces. Cette forme de distribution est le signe d'une forêt qui se renouvelle en permanence, et sa disparition est le premier indice d'un prélèvement excessif.",
+   "page": 94
+  },
+  {
+   "titre": "Quatre manières d'inscrire la durabilité dans un plan",
+   "explication": "Premièrement, un flux de production exactement constant d'une période à l'autre, que les auteurs déclarent presque impossible dès lors que les parcelles ont des tailles différentes et sont traitées entièrement ou pas du tout. Deuxièmement, une production comprise chaque année dans une fourchette, ce qui laisse la souplesse nécessaire pour s'adapter aux prix et aux coûts. Troisièmement, une production non décroissante, principe inscrit dans la loi forestière fédérale américaine, où la vente de produits ligneux est limitée à ce qui peut être prélevé à perpétuité. Quatrièmement, la règle classique de l'aménagement, où le prélèvement égale l'accroissement. Ces quatre définitions ne sont pas équivalentes, et le choix entre elles est un choix politique, non technique.",
+   "page": 204
+  },
+  {
+   "titre": "La non-décroissance permet de prélever moins aujourd'hui pour prélever plus demain",
+   "explication": "Les auteurs expliquent le cas concret : si l'état actuel d'une forêt ne permet pas un prélèvement élevé à court terme, mais que la croissance et les travaux d'amélioration en autoriseront un plus élevé plus tard, la règle de non-décroissance est le cadre approprié. Elle valide les résultats immédiats parce que les résultats ultérieurs seront supérieurs. C'est le raisonnement dont a besoin tout gestionnaire qui hérite d'une forêt appauvrie.",
+   "page": 205
+  },
+  {
+   "titre": "Le taux de prélèvement ne doit pas excéder ce qui peut être soutenu indéfiniment",
+   "explication": "Cette phrase, tirée d'un référentiel de certification, est la formulation la plus simple du principe. Le manuel montre ce qu'elle implique en pratique : disposer d'un plan d'aménagement écrit, l'appliquer, l'actualiser périodiquement, et pouvoir le démontrer à un tiers. La certification transforme ainsi une bonne intention en obligation documentée et vérifiable.",
+   "page": 297
+  },
+  {
+   "titre": "Deux systèmes de certification, deux logiques",
+   "explication": "L'un applique un jeu de normes unique à toutes les forêts, l'autre fait élaborer par des comités régionaux des normes adaptées à chaque territoire. Le second compte dix principes, cinquante-six critères et, pour les seules lignes directrices américaines, cent trente-huit indicateurs nationaux. Il exige de maintenir ou de restaurer les forêts dans un état naturel autant que possible, et d'assurer la productivité du site ainsi que la diversité génétique, spécifique et communautaire. La distinction entre norme unique et norme régionalisée est la question centrale pour tout pays qui veut faire certifier ses forêts.",
+   "page": 297
+  },
+  {
+   "titre": "Les plantations peuvent être certifiées, sous condition",
+   "explication": "Une plantation commerciale est définie comme un peuplement établi par régénération artificielle pour la production commerciale, généralement à la rotation la plus courte possible, en une seule espèce et à espacement régulier en lignes. Le référentiel l'admet à condition qu'elle soit compatible avec les zones d'habitat de la faune et les zones riveraines, et surtout qu'elle ne résulte pas de la conversion récente de forêts naturellement régénérées. C'est le point sur lequel se joue la crédibilité de toute certification dans les pays forestiers tropicaux.",
+   "page": 297
+  },
+  {
+   "titre": "L'industrie a boycotté l'élaboration de la norme",
+   "explication": "Les auteurs notent que le référentiel régional du sud-est des États-Unis a été élaboré par des organisations non gouvernementales, des responsables publics, des universitaires et des forestiers consultants, mais que l'industrie forestière a délibérément refusé d'assister à toute réunion de préparation, probablement en raison du biais environnemental qu'elle prêtait au système. Cette remarque, faite en passant dans un manuel technique, explique une part de la guerre des labels et mérite d'être connue avant de choisir un système.",
+   "page": 297
+  },
+  {
+   "titre": "Treize engagements dont trois sont politiques",
+   "explication": "Parmi les obligations énumérées par l'un des systèmes figurent l'amélioration des pratiques des forestiers, exploitants et sous-traitants par la formation, le respect des lois nationales et locales, l'encouragement de la participation du public, et l'amélioration continue avec suivi, mesure et publication des progrès. La participation du public et la publication des résultats ne sont pas des exigences techniques : ce sont des mécanismes de contrôle démocratique inscrits dans une norme privée.",
+   "page": 297
+  },
+  {
+   "titre": "La planification est hiérarchisée et adaptative",
+   "explication": "Le premier chapitre distingue plusieurs niveaux de planification au sein d'une organisation forestière, du stratégique à l'opérationnel, et introduit deux notions décisives : la planification communautaire ou coopérative, où les usagers participent aux décisions, et la gestion adaptative, où le plan est révisé à mesure que l'on observe ses effets. Ces deux notions sont exactement celles dont a besoin la gestion des forêts communautaires en Afrique centrale.",
+   "page": 8
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Surface terrière",
+   "definition": "Somme des sections des troncs à hauteur de poitrine par unité de surface. Mesure fondamentale de la densité d'un peuplement."
+  },
+  {
+   "terme": "Diamètre moyen quadratique",
+   "definition": "Diamètre de l'arbre moyen au sens de la surface terrière, obtenu à partir de la surface terrière moyenne par arbre. Plus représentatif que la moyenne arithmétique des diamètres."
+  },
+  {
+   "terme": "Indice de fertilité de station",
+   "definition": "Mesure de la productivité d'un terrain, calculée à partir de la hauteur des arbres dominants et codominants à un âge de référence."
+  },
+  {
+   "terme": "Peuplement régulier et irrégulier",
+   "definition": "Le premier est composé d'arbres de même âge, le second de toutes les classes d'âge. Le second présente une distribution des diamètres en J inversé."
+  },
+  {
+   "terme": "Rendement soutenu non décroissant",
+   "definition": "Règle limitant le prélèvement à une quantité qui ne diminuera pas au fil des périodes, principe inscrit dans le droit forestier fédéral américain."
+  },
+  {
+   "terme": "Prélèvement égal à l'accroissement",
+   "definition": "Règle classique de l'aménagement, selon laquelle on ne récolte que ce que la forêt a produit dans la période."
+  },
+  {
+   "terme": "Programmation linéaire et en nombres entiers",
+   "definition": "Méthodes d'optimisation employées pour construire un calendrier d'interventions. La seconde impose de traiter une parcelle entièrement ou pas du tout, ce qui rend le flux constant presque inatteignable."
+  },
+  {
+   "terme": "Certification forestière",
+   "definition": "Attestation par un tiers que la gestion d'une forêt respecte un référentiel de principes, critères et indicateurs vérifiables."
+  },
+  {
+   "terme": "Plantation commerciale",
+   "definition": "Peuplement artificiel d'une seule espèce, à espacement régulier et rotation courte, destiné à la production. Sa certification dépend de l'absence de conversion de forêt naturelle."
+  },
+  {
+   "terme": "Séquestration du carbone",
+   "definition": "Fixation du carbone atmosphérique dans la biomasse et les sols forestiers, objet du dernier chapitre et fondement des mécanismes de rémunération climatique."
+  },
+  {
+   "terme": "Gestion adaptative",
+   "definition": "Approche où le plan est révisé au vu des effets observés, plutôt qu'appliqué tel quel jusqu'à son terme."
+  }
+ ],
+ "a_lire_si": "Vous travaillez dans le secteur forestier, vous formez des techniciens ou vous participez à l'élaboration d'une politique forestière. C'est le seul ouvrage scientifique du fonds sur ce sujet, et il est solide : chaque notion est définie, calculée sur un exemple chiffré et référencée. Pour un pays du bassin du Congo, quatre chapitres sont directement utiles, la caractérisation des peuplements, la projection de la croissance, les quatre définitions concurrentes de la durabilité, et la certification. Le passage sur la conversion des forêts naturelles en plantations et celui sur le refus de l'industrie de participer à l'élaboration des normes sont à connaître avant toute négociation.",
+ "a_eviter_si": "Vous ne lisez pas l'anglais technique. L'ouvrage suppose en outre des mathématiques, notamment la programmation linéaire et en nombres entiers, et emploie exclusivement les unités impériales, pouces, acres et pieds carrés, qu'il faut convertir. Les exemples proviennent des forêts tempérées et boréales d'Amérique du Nord et d'Europe, et les essences comme les rotations n'ont pas d'équivalent en forêt tropicale humide. Le cadre juridique cité est américain.",
+ "prerequis": [
+  "Lecture de l'anglais technique",
+  "Mathématiques appliquées et notions d'optimisation"
+ ],
+ "controverses": [
+  "Les quatre définitions de la durabilité proposées ne mènent pas aux mêmes décisions. Un flux constant, une fourchette, un rendement non décroissant et un prélèvement égal à l'accroissement peuvent produire des volumes très différents sur le même massif. Présenter la durabilité comme un objectif unique masque ce choix.",
+  "La transposition à la forêt tropicale n'est pas discutée. Les modèles de croissance, les rotations et les distributions de diamètres présentés concernent des forêts à faible diversité spécifique. En forêt dense humide, où plusieurs centaines d'espèces coexistent et où les données de croissance manquent, la plupart des outils du manuel demandent à être refondés.",
+  "La certification est présentée comme un progrès, mais le manuel signale lui-même que les normes sont élaborées dans des rapports de force où l'industrie choisit de participer ou non. La question de savoir qui écrit la norme et qui la contrôle est plus déterminante que son contenu.",
+  "La séquestration du carbone est traitée comme une opportunité de valorisation. Les mécanismes de compensation qui en découlent font aujourd'hui l'objet de critiques sérieuses quant à leur additionnalité réelle et aux droits des populations vivant sur les terres concernées, questions absentes de l'ouvrage."
+ ],
+ "confiance": 0.85
+}

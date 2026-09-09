@@ -1,0 +1,10 @@
+pymupdf
+psycopg[binary]
+minio
+python-dotenv
+ebooklib
+beautifulsoup4
+lxml
+ocrmypdf
+anthropic
+pillow

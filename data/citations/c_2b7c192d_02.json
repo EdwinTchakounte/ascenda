@@ -1,0 +1,95 @@
+[
+{"chapitre":"5ed4fd64","citations":[
+{"texte":"Les systèmes qui utilisent l'apparence physique comme un substitut de la personnalité ou des états intérieurs sont profondément suspects","page":51,"axe":"04-ia-societe-ethique-philosophie","theme":"Physionomie automatisee","portee":"Enonce le principe qui condamne d'un coup la prediction de criminalite par le visage et l'evaluation des competences par micro-expressions."},
+{"texte":"La grande question qui se pose autour de l'intelligence artificielle est celle des inégalités, qui n'est normalement pas incluse dans le débat sur l'éthique de l'intelligence artificielle.","page":51,"axe":"04-ia-societe-ethique-philosophie","theme":"L'angle mort de l'ethique","portee":"Remarque du Parlement europeen a garder en tete : le debat ethique se concentre sur la vie privee et les biais, et laisse de cote la repartition des benefices."},
+{"texte":"Dans la plupart des cas, ces préjugés reflètent et reproduisent les structures d'inégalité existantes dans la société.","page":52,"axe":"04-ia-societe-ethique-philosophie","theme":"Le miroir social","portee":"Conclusion de l'etude AI Now de 2019. Le biais n'est pas une panne du systeme, c'est le systeme fonctionnant sur un monde inegal."}
+]},
+{"chapitre":"24765ee0","citations":[
+{"texte":"bannir une approche prescriptive et permettre à l'usager d'être un acteur éclairé et maître de ses choix","page":54,"axe":"04-ia-societe-ethique-philosophie","theme":"Maitrise par l'utilisateur","portee":"Principe de la charte europeenne pour la justice. Il vise a empecher qu'une recommandation algorithmique devienne une decision de fait."}
+]},
+{"chapitre":"5e876514","citations":[
+{"texte":"Le « tout est permis » n'est plus la norme, et les règles établies à l'échelle de l'UE auront certainement des répercussions dans le monde entier.","page":55,"axe":"04-ia-societe-ethique-philosophie","theme":"Effet Bruxelles","portee":"Pari du guide sur la portee extraterritoriale de la norme europeenne, deja verifie avec le RGPD."},
+{"texte":"Ces systèmes d'intelligence artificielle peuvent avoir une incidence sensible sur les perspectives de carrière et les moyens de subsistance futurs de ces personnes.","page":56,"axe":"06-ia-travail-management-metiers","theme":"Pourquoi le haut risque","portee":"Justification du classement en haut risque des IA de recrutement, de promotion et d'evaluation. Le critere est l'effet sur la vie, pas la complexite technique."}
+]},
+{"chapitre":"55a23a52","citations":[
+{"texte":"Le degré d'autorégulation du dispositif européen sera déterminant à cet égard.","page":58,"axe":"04-ia-societe-ethique-philosophie","theme":"Autoregulation","portee":"Point de bascule du reglement europeen : selon la place laissee a l'autoevaluation, le texte protege reellement ou seulement en apparence."}
+]},
+{"chapitre":"4362b143","citations":[
+{"texte":"les garanties de transparence ne bénéficient qu'aux « utilisateurs », les travailleurs en sont exclus","page":59,"axe":"06-ia-travail-management-metiers","theme":"Les travailleurs oublies","portee":"Critique syndicale centrale du projet de reglement europeen : le mot utilisateur designe l'employeur qui deploie le systeme, pas le salarie qui le subit."},
+{"texte":"Ce projet de texte admet de facto un large panel d'outils de surveillance des salariés sans s'interroger ni sur leur bien-fondé ni sur leur compatibilité avec les valeurs européennes.","page":59,"axe":"06-ia-travail-management-metiers","theme":"Silence sur la surveillance","portee":"Ce qu'un texte ne dit pas produit du droit : l'absence d'interdiction vaut autorisation tacite."}
+]},
+{"chapitre":"9a84fcd8","citations":[
+{"texte":"Il ne produit pas une pluie de nouveaux droits, tant les législations et les producteurs de normes sont différents d'un pays à l'autre.","page":60,"axe":"06-ia-travail-management-metiers","theme":"Portee reelle d'un accord europeen","portee":"Honnetete rare dans un document syndical sur son propre resultat : l'accord de 2020 engage un processus, il ne cree pas de droits opposables."}
+]},
+{"chapitre":"56aab5f6","citations":[
+{"texte":"Le dialogue social est le moyen qui permet d'interroger la finalité et le fonctionnement des systèmes d'intelligence artificielle utilisés dans les ressources humaines","page":65,"axe":"06-ia-travail-management-metiers","theme":"Interroger la finalite","portee":"L'ordre des mots compte : la finalite avant le fonctionnement. La premiere question a poser n'est pas comment marche ce systeme, mais a quoi sert-il."}
+]},
+{"chapitre":"b4c496a1","citations":[
+{"texte":"Les entreprises du numérique seraient taxées en partie là où elles font leurs ventes, et non pas comme aujourd'hui, là où elles souhaitent installer leur siège, justement dans les paradis fiscaux.","page":67,"axe":"10-economie-entrepreneuriat-finance","theme":"Taxer la ou l'on vend","portee":"Enonce en une phrase le changement de principe fiscal de l'accord de 2021, et pourquoi neuf pays l'ont refuse."}
+]},
+{"chapitre":"8588446a","citations":[
+{"texte":"Cette directive permet aux lanceurs d'alerte de passer par une autorité externe pour dénoncer les faits","page":68,"axe":"06-ia-travail-management-metiers","theme":"Alerte externe","portee":"Changement decisif par rapport au droit francais anterieur, qui imposait de saisir d'abord sa hierarchie sauf danger grave et imminent."}
+]},
+{"chapitre":"841821a9","citations":[
+{"texte":"Dans un monde marqué par les inégalités, l'intelligence artificielle ne doit pas conduire à renforcer les phénomènes d'exclusion et la concentration de la valeur","page":70,"axe":"04-ia-societe-ethique-philosophie","theme":"IA et inegalites","portee":"Cedric Villani, rapport de mars 2018. Formule utilisable pour ouvrir tout debat sur l'IA dans un pays a fortes inegalites."},
+{"texte":"l'intelligence artificielle doit prioritairement nous aider à activer nos droits fondamentaux, augmenter le lien social et renforcer les solidarités","page":70,"axe":"04-ia-societe-ethique-philosophie","theme":"Finalite assignee a l'IA","portee":"Propose un critere positif d'evaluation d'un projet d'IA, la ou la plupart des chartes se contentent d'interdits."}
+]},
+{"chapitre":"fc7d1f44","citations":[
+{"texte":"les employés pourraient, par exemple, hésiter à se plaindre auprès du DPD si la confidentialité de leurs communications n'était pas garantie","page":71,"axe":"06-ia-travail-management-metiers","theme":"Confidentialite du signalement","portee":"Rappelle qu'un droit n'existe que si son exercice est sans risque. C'est ce qui rend le secret professionnel du delegue essentiel."}
+]},
+{"chapitre":"028a53a0","citations":[
+{"texte":"Des dérapages peuvent se produire parce que le machine learning est piloté par des hommes blancs, issus souvent du même milieu.","page":72,"axe":"02-ia-technique-academique","theme":"Homogeneite des concepteurs","portee":"Relie directement la composition des equipes a la qualite des systemes produits. Argument fort pour la diversite en ingenierie."},
+{"texte":"la Cnil recommande de former à l'éthique tous les maillons de la « chaîne algorithmique » (concepteurs, professionnels, citoyens)","page":73,"axe":"05-ia-education-pedagogie","theme":"Chaine algorithmique","portee":"Inclure le citoyen dans la chaine est notable : l'utilisateur final devient un maillon responsable et non un simple destinataire."}
+]},
+{"chapitre":"b0d08213","citations":[
+{"texte":"la Cour européenne a considéré que ces utilisations n'étaient pas suffisamment encadrées par des garanties","page":74,"axe":"04-ia-societe-ethique-philosophie","theme":"Surveillance et terrorisme","portee":"Meme deployes contre le terrorisme, les dispositifs de surveillance de masse restent soumis a une exigence de garanties. Le motif ne suffit pas."}
+]},
+{"chapitre":"8cc32ec5","citations":[
+{"texte":"les salariés expérimentés seront remplacés par des tutoriels qui permettront une embauche rapide pour former de jeunes intérimaires peu qualifiés","page":76,"axe":"06-ia-travail-management-metiers","theme":"Fin de la transmission","portee":"Aveu remarquable dans un document patronal : il decrit la substitution de la transmission humaine par un contenu standardise."},
+{"texte":"Ils y voient un risque dans la perte d'autonomie et des compétences, ainsi que la surveillance généralisée et illimitée au travail que cette technologie rend possible.","page":77,"axe":"06-ia-travail-management-metiers","theme":"Inquietude patronale","portee":"Utile a citer : ce sont les employeurs eux-memes qui identifient le risque de surveillance illimitee, pas seulement les syndicats."}
+]},
+{"chapitre":"53bbbf0e","citations":[
+{"texte":"si rien n'est fait, d'ici 2040, le secteur numérique sera plus polluant que le transport aérien","page":78,"axe":"11-sciences-environnement","theme":"Empreinte du numerique","portee":"Comparaison choisie parce qu'elle rend concret un secteur percu comme immateriel. A citer avec sa date."},
+{"texte":"la technologie elle-même a une empreinte environnementale significative, notamment en termes de consommation d'énergie","page":79,"axe":"11-sciences-environnement","theme":"Le double visage de l'IA","portee":"Le Conseil Environnement europeen pose les deux termes ensemble : l'IA peut servir le climat et lui nuire. L'un ne compense pas automatiquement l'autre."},
+{"texte":"en encourageant le développement et l'utilisation d'algorithmes économes en énergie","page":79,"axe":"11-sciences-environnement","theme":"Algorithmes frugaux","portee":"Deplace la sobriete numerique de l'infrastructure vers la conception logicielle elle-meme. Declaration signee en mars 2021 par 24 Etats membres."}
+]},
+{"chapitre":"43ce2ce6","citations":[
+{"texte":"L'automatisation de cette tâche est-elle acceptable socialement ?","page":80,"axe":"04-ia-societe-ethique-philosophie","theme":"Critere de legitimite","portee":"Seule question de la grille du Conseil national du numerique qui ne porte pas sur la faisabilite : ce qui est possible n'est pas toujours souhaitable."}
+]},
+{"chapitre":"670b4251","citations":[
+{"texte":"il devient indispensable de comprendre ce que peut faire l'intelligence artificielle, mais aussi ce qu'elle ne peut pas faire","page":81,"axe":"05-ia-education-pedagogie","theme":"Connaitre les limites","portee":"Cecile Dejoux. Savoir ce que la machine ne sait pas faire est ce qui permet de deleguer sans abdiquer la decision."},
+{"texte":"développer de nouvelles compétences, centrées sur les spécificités de l'intelligence humaine","page":81,"axe":"05-ia-education-pedagogie","theme":"Se former par complementarite","portee":"Strategie de formation a contre-courant : developper ce que la machine ne fait pas, plutot que d'imiter ce qu'elle fait bien."}
+]},
+{"chapitre":"015ee42a","citations":[
+{"texte":"seuls trois métiers peuvent être expressément réservés à des femmes ou à des hommes : mannequin, modèle et comédien","page":82,"axe":"06-ia-travail-management-metiers","theme":"Filtrage par sexe interdit","portee":"Regle precise et immediatement opposable a tout logiciel de presel ection, sans avoir besoin d'acceder a son code."}
+]},
+{"chapitre":"05de83ed","citations":[
+{"texte":"L'outil informatique doit être placé au service d'un projet humain efficace et non l'inverse.","page":85,"axe":"06-ia-travail-management-metiers","theme":"Ordre des priorites","portee":"Phrase de synthese de la position CFDT Cadres, utilisable comme premiere ligne d'un cahier de revendications."},
+{"texte":"les choix des technologies et leur utilisation sont entourés d'intérêts contradictoires et que les travailleurs ont leur mot à dire","page":85,"axe":"06-ia-travail-management-metiers","theme":"Le choix technique est politique","portee":"Conteste l'idee d'une neutralite du choix d'outil : derriere chaque parametrage il y a un arbitrage entre interets."}
+]},
+{"chapitre":"a8eebfbe","citations":[
+{"texte":"La formation des équipes syndicales et des travailleurs aux enjeux de l'intelligence artificielle est d'autant plus nécessaire que l'intelligence artificielle entre souvent dans les entreprises ou les administrations sans discussion.","page":86,"axe":"05-ia-education-pedagogie","theme":"Se former pour pouvoir discuter","portee":"Etablit le lien entre ignorance et impuissance : on ne peut pas negocier sur un objet dont on ne maitrise pas le vocabulaire."}
+]},
+{"chapitre":"c625a36b","citations":[
+{"texte":"il est crucial de négocier l'anticipation et l'accompagnement de la transformation des emplois et des activités, la mise en place de formations pour doter les travailleurs de bonnes compétences et éviter de laisser sur le bord de la route les personnes moins qualifiées, les plus vulnérables, les jeunes, les femmes, et les personnes porteuses de handicap.","page":89,"axe":"06-ia-travail-management-metiers","theme":"Ne laisser personne au bord de la route","portee":"Programme d'action complet en une phrase, avec la liste explicite de ceux que la transition risque d'exclure."}
+]},
+{"chapitre":"1edd0d1d","citations":[
+{"texte":"Si les travailleurs sont constamment surveillés par leurs employeurs, comment peuvent-ils se syndiquer et s'organiser collectivement ?","page":91,"axe":"06-ia-travail-management-metiers","theme":"Surveillance et libertes collectives","portee":"Deplace la surveillance du terrain de la vie privee a celui des libertes collectives. C'est le droit d'organisation qui est en jeu."},
+{"texte":"L'intelligence artificielle, si elle est mal ou pas accompagnée, peut être une source de nouvelles formes de risques psychosociaux basés sur des paramétrages de logiciels, liés à l'emploi.","page":91,"axe":"06-ia-travail-management-metiers","theme":"Le parametrage comme risque professionnel","portee":"Idee neuve et precise : le reglage d'un logiciel devient un facteur de risque au travail, au meme titre qu'une cadence de production."}
+]},
+{"chapitre":"4ab7a0bb","citations":[
+{"texte":"des moyens de contrôle intrusifs et puissants sur le travail ont été mis en place sans que cela ait fait l'objet d'une concertation collective, et parfois même à l'insu des directions","page":92,"axe":"06-ia-travail-management-metiers","theme":"Surveillance sans decision","portee":"La mention a l'insu des directions est frappante : ces outils ont pu etre deployes par des echelons intermediaires, sans arbitrage explicite."},
+{"texte":"Parmi les choix de management qui se dissimulent derrière l'IA, il peut être tentant d'utiliser parfois les systèmes d'IA de surveillance et de traçage des travailleurs","page":93,"axe":"06-ia-travail-management-metiers","theme":"La technique comme paravent","portee":"Nomme le mecanisme : la technologie sert a rendre invisible et impersonnelle une decision d'organisation qui reste humaine."}
+]},
+{"chapitre":"f725d04a","citations":[
+{"texte":"la plupart de ces logiciels de traçage de l'activité sont invisibles pour les salariés qui sont sujets à une surveillance de plus en plus intrusive, ce qui pose logiquement la question de leur légalité","page":94,"axe":"06-ia-travail-management-metiers","theme":"Surveillance invisible","portee":"L'invisibilite n'est pas un detail technique : elle est en soi le probleme juridique, car elle prive le salarie de tout recours."},
+{"texte":"Dans le cas où les formalités déclaratives ne sont pas remplies, le dispositif de surveillance ou de contrôle est illicite.","page":94,"axe":"06-ia-travail-management-metiers","theme":"Formalite et licite","portee":"Argument le plus immediatement operationnel du guide : a defaut de declaration prealable a la Cnil, le dispositif tombe."}
+]},
+{"chapitre":"f4cbde07","citations":[
+{"texte":"l'analyse des facteurs de l'intelligence artificielle ne présume pas forcément de la compétence du candidat. Cette utilisation et ses résultats ne s'appuient pas sur des fondements scientifiques et devraient être interdits.","page":95,"axe":"06-ia-travail-management-metiers","theme":"Entretien video automatise","portee":"Critique epistemologique avant d'etre juridique : mesurer le vocabulaire, la prosodie et les expressions ne mesure pas la competence."}
+]},
+{"chapitre":"32a4f251","citations":[
+{"texte":"Toutes les décisions basées sur des algorithmes et qui impactent les travailleurs devraient être explicables, interprétables, concises, compréhensibles, accessibles et conformes au RGPD.","page":96,"axe":"06-ia-travail-management-metiers","theme":"Six qualites d'une decision algorithmique","portee":"L'accumulation n'est pas rhetorique : une decision peut etre techniquement explicable sans etre comprehensible par la personne concernee."},
+{"texte":"les algorithmes utilisés par les systèmes d'IA doivent, en préalable, être audités par des organismes indépendants.","page":96,"axe":"06-ia-travail-management-metiers","theme":"Audit independant","portee":"Derniere revendication du guide, et point de desaccord direct avec l'auto-certification retenue par le projet de reglement europeen."}
+]}
+]

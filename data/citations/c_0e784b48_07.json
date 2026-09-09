@@ -1,0 +1,320 @@
+[
+ {
+  "chapitre": "3b4c54e0",
+  "citations": [
+   {
+    "texte": "En ce qui concerne les langages de règles, la situation est moins claire que pour les autres langages du Web sémantique.",
+    "page": 140,
+    "axe": "02-ia-technique-academique",
+    "theme": "Normalisation inachevée",
+    "portee": "Aveu d'un chantier ouvert : là où RDF et OWL ont convergé, les règles restent partagées entre deux traditions."
+   },
+   {
+    "texte": "Malheureusement, la connexion entre la partie ontologique et la partie règle reste à spécifier.",
+    "page": 140,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ontologies et règles",
+    "portee": "Deux modes de raisonnement coexistent sans articulation formelle établie, ce qui limite leur usage conjoint."
+   }
+  ]
+ },
+ {
+  "chapitre": "0f2de59a",
+  "citations": [
+   {
+    "texte": "Une propriété typique du Web est la quantité d'information que l'on y trouve. Malheureusement, il s'y trouve beaucoup d'information erronée, périmée, redondante ou incomplète.",
+    "page": 141,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qualité de l'information",
+    "portee": "Le raisonnement automatique hérite des défauts du corpus sur lequel il opère, sans le discernement humain."
+   },
+   {
+    "texte": "En un mot, il faut des moteurs d'inférence robustes.",
+    "page": 141,
+    "axe": "02-ia-technique-academique",
+    "theme": "Robustesse du raisonnement",
+    "portee": "Exigence rarement formulée aussi nettement : rester fidèle aux spécifications sans se laisser dérouter par les erreurs."
+   },
+   {
+    "texte": "On se trouve à la croisée des activités de bases de données, où la quantité de données prime, et de représentation de connaissance, où l'expressivité des ontologies prime.",
+    "page": 141,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux traditions",
+    "portee": "Situe précisément la tension qui structure tout le domaine : volume contre expressivité."
+   }
+  ]
+ },
+ {
+  "chapitre": "72c34cad",
+  "citations": [
+   {
+    "texte": "En effet, le Web sémantique étant fondé sur les mêmes règles d'autonomie et d'indépendance que le Web, les ontologies utilisées par les diverses sources de connaissance peuvent être différentes.",
+    "page": 142,
+    "axe": "02-ia-technique-academique",
+    "theme": "Hétérogénéité assumée",
+    "portee": "L'autonomie qui a fait le succès du Web est aussi ce qui rend la réconciliation des vocabulaires nécessaire."
+   },
+   {
+    "texte": "Le problème de l'utilisation de OWL dans ce cadre est qu'il contraint à fusionner les sources de données pour pouvoir les exploiter.",
+    "page": 142,
+    "axe": "02-ia-technique-academique",
+    "theme": "Fusion contre localité",
+    "portee": "Exploiter des sources en les fusionnant leur fait perdre leur identité et leur indépendance."
+   }
+  ]
+ },
+ {
+  "chapitre": "f93ab931",
+  "citations": [
+   {
+    "texte": "L'originalité de C-OWL est d'envisager les réseaux d'ontologies en tant que tels et de proposer une sémantique spécifique qui préserve la localité des ontologies",
+    "page": 143,
+    "axe": "02-ia-technique-academique",
+    "theme": "Réseaux d'ontologies",
+    "portee": "Reconnaître qu'un ensemble de sources liées est un objet en soi, et non un simple agrégat à fondre."
+   },
+   {
+    "texte": "C'est un champ de recherche encore très largement ouvert qui a trouvé très peu de développements concrets et encore moins d'applications.",
+    "page": 143,
+    "axe": "02-ia-technique-academique",
+    "theme": "Écart entre théorie et usage",
+    "portee": "Un domaine formellement riche peut rester longtemps sans application, faute de passage à l'échelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "be97a5eb",
+  "citations": [
+   {
+    "texte": "Un des aspects importants de ces trois raisonneurs est qu'ils agissent de manière décentralisée : chaque pair ou agent est livré à lui-même et doit communiquer avec les autres.",
+    "page": 144,
+    "axe": "02-ia-technique-academique",
+    "theme": "Raisonnement décentralisé",
+    "portee": "Modèle utile partout où aucune autorité centrale ne peut rassembler les connaissances de tous."
+   },
+   {
+    "texte": "Elle permet, en principe, de s'assurer que ce que l'on peut déduire de l'extension d'une théorie était déjà déductible de la théorie initiale.",
+    "page": 144,
+    "axe": "02-ia-technique-academique",
+    "theme": "Extension conservative",
+    "portee": "Garantir qu'une connexion à d'autres sources n'altère pas ce que l'on savait déjà de son propre domaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "ea44fb62",
+  "citations": [
+   {
+    "texte": "L'alignement d'ontologies est typiquement une tâche inductive plutôt que déductive : il n'y a pas de règles qui permettent d'inférer des alignements, seulement des heuristiques permettant de les trouver.",
+    "page": 145,
+    "axe": "02-ia-technique-academique",
+    "theme": "Induction contre déduction",
+    "portee": "Explique pourquoi l'apprentissage automatique s'est imposé là où la logique seule ne suffisait pas."
+   },
+   {
+    "texte": "la sémantique des ontologies est quant à elle plutôt utilisée pour expanser les alignements déjà obtenus ou tester la cohérence d'un alignement",
+    "page": 145,
+    "axe": "02-ia-technique-academique",
+    "theme": "Rôle de la sémantique",
+    "portee": "La logique intervient en aval, pour contrôler et étendre ce que les heuristiques ont proposé."
+   }
+  ]
+ },
+ {
+  "chapitre": "95123989",
+  "citations": [
+   {
+    "texte": "l'apprentissage à partir d'exemples est le moins fréquent car il n'y a pas de technique d'alignement facilement généralisable",
+    "page": 146,
+    "axe": "02-ia-technique-academique",
+    "theme": "Limites de la généralisation",
+    "portee": "Toutes les tâches ne se prêtent pas également à l'apprentissage par l'exemple."
+   },
+   {
+    "texte": "L'alignement d'ontologies, comparé aux autres aspects mis en œuvre dans le Web sémantique, n'en est qu'à ses balbutiements.",
+    "page": 146,
+    "axe": "02-ia-technique-academique",
+    "theme": "Maillon essentiel",
+    "portee": "Le point faible de la chaîne est aussi celui dont dépend l'interopérabilité de l'ensemble."
+   }
+  ]
+ },
+ {
+  "chapitre": "aecbe764",
+  "citations": [
+   {
+    "texte": "Le Web sémantique est un écosystème fondé sur ces technologies. Comme tel, se demander s'il est enfin disponible n'est pas pertinent. La bonne question est : sera-t-il capable d'évoluer et de perdurer ?",
+    "page": 147,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Écosystème contre produit",
+    "portee": "Déplacement de question qui vaut pour toute infrastructure numérique : la durée compte plus que le lancement."
+   },
+   {
+    "texte": "C'est aussi un terrain d'application prometteur : chaque technique qui trouvera sa place au sein des technologies du Web sémantique aura des millions d'utilisateurs.",
+    "page": 147,
+    "axe": "02-ia-technique-academique",
+    "theme": "Effet d'échelle",
+    "portee": "Une recherche théorique peut trouver là un débouché immédiat et massif."
+   }
+  ]
+ },
+ {
+  "chapitre": "0b4ca265",
+  "citations": [
+   {
+    "texte": "L'intelligence artificielle (IA) a pour but de comprendre et de modéliser par des moyens informatiques l'intelligence humaine.",
+    "page": 153,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Définition de l'IA",
+    "portee": "Formulation classique et sobre, utile pour poser les bases avant toute discussion technique."
+   },
+   {
+    "texte": "Mais les principales interactions et contributions de l'IA à la linguistique ont eu lieu dans le domaine de la sémantique et de la pragmatique, c'est-à-dire dans la modélisation du contenu d'une phrase, d'un texte ou d'un dialogue.",
+    "page": 153,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "IA et langage",
+    "portee": "Situe l'apport réel de l'IA au traitement des langues : le contenu, plus que la forme."
+   }
+  ]
+ },
+ {
+  "chapitre": "012f0c5c",
+  "citations": [
+   {
+    "texte": "En gros la compositionnalité nous dit que le contenu d'une expression complexe doit être une fonction des contenus des expressions qui la composent, de leur structure syntaxique",
+    "page": 154,
+    "axe": "02-ia-technique-academique",
+    "theme": "Compositionnalité",
+    "portee": "Principe fondateur de la sémantique formelle, que la dépendance au contexte viendra ensuite compliquer."
+   },
+   {
+    "texte": "l'unité de l'analyse conceptuelle du contenu doit être au moins le discours",
+    "page": 154,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le discours comme unité",
+    "portee": "Thèse forte : isoler une phrase de son contexte fait perdre l'essentiel de son sens."
+   },
+   {
+    "texte": "Le grand problème est que très peu de ces modèles sont opératoires pour plus qu'un sous ensemble jouet d'une langue naturelle.",
+    "page": 154,
+    "axe": "02-ia-technique-academique",
+    "theme": "Modèles et effectivité",
+    "portee": "Un formalisme élégant peut rester impraticable sur une langue réelle, écart que l'IA a dû combler autrement."
+   }
+  ]
+ },
+ {
+  "chapitre": "9d31e599",
+  "citations": [
+   {
+    "texte": "Les faiblesses de ces propos ont été évidentes dès le début. Les représentations sémantiques étaient fragiles. Pour presque chaque nouveau texte, il fallait introduire un nouveau script dans la bibliothèque.",
+    "page": 155,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Fragilité des scripts",
+    "portee": "Une méthode qui exige d'être réécrite pour chaque cas nouveau ne peut pas passer à l'échelle."
+   },
+   {
+    "texte": "Avec un choix judicieux de phrases dans la bibliothèque, ELIZA faisait croire à certains de ses interlocuteurs qu'elle était une machine pensante et langagière.",
+    "page": 155,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Illusion conversationnelle",
+    "portee": "Dès 1966, un procédé rudimentaire suffisait à produire l'impression de comprendre, leçon toujours actuelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "2665e013",
+  "citations": [
+   {
+    "texte": "On peut dire qu'un ordinateur ou un humain comprend un message avec un sens s si le comportement du système change d'une manière particulière et prédictible en vertu de s et pas d'un autre sens non équivalent s'.",
+    "page": 156,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Critère de compréhension",
+    "portee": "Une définition opératoire de comprendre, qui permet de trancher au lieu de discuter indéfiniment."
+   },
+   {
+    "texte": "Néanmoins, il y a maintenant un consensus pour dire que les techniques à base de patrons et de reconnaissance de formes ne peuvent donner que des informations sémantiques de surface",
+    "page": 156,
+    "axe": "02-ia-technique-academique",
+    "theme": "Sémantique de surface",
+    "portee": "Reconnaître des formes n'est pas comprendre, distinction utile pour juger les systèmes contemporains."
+   }
+  ]
+ },
+ {
+  "chapitre": "ea02f701",
+  "citations": [
+   {
+    "texte": "Ce projet lexical est moins ambitieux que l'approche de Schank ; il ne prétend pas construire un système qui saisit les sens de mots.",
+    "page": 157,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ambition mesurée",
+    "portee": "Réduire la prétention d'un projet est parfois la condition pour qu'il devienne une ressource durable."
+   },
+   {
+    "texte": "Le besoin d'exploiter les représentations du contenu plus en profondeur avait bien été perçu.",
+    "page": 157,
+    "axe": "02-ia-technique-academique",
+    "theme": "Basculement vers la logique",
+    "portee": "Marque le tournant qui conduit du remplissage de cases à la modélisation logique du sens."
+   }
+  ]
+ },
+ {
+  "chapitre": "66bae2f2",
+  "citations": [
+   {
+    "texte": "Au vu de la complétude de la logique du premier ordre, on pouvait espérer raisonner de façon automatisée sur le contenu pour au moins une fraction importante de la langue.",
+    "page": 158,
+    "axe": "02-ia-technique-academique",
+    "theme": "Espoir logique",
+    "portee": "Un résultat mathématique fonde ici un programme de recherche entier sur le sens des textes."
+   },
+   {
+    "texte": "Par contre la première étape consistant à donner des représentations adéquates aux mots posait et pose encore beaucoup de problèmes",
+    "page": 158,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le mot, difficulté persistante",
+    "portee": "Combiner les sens est mieux maîtrisé que définir le sens élémentaire de chaque mot."
+   }
+  ]
+ },
+ {
+  "chapitre": "259b9069",
+  "citations": [
+   {
+    "texte": "En construisant diverses méthodes de sémantique dynamique, les linguistes avaient découvert ou réinventé les ressources de l'informatique théorique qui sont utilisées pour la sémantique des langages de programmation",
+    "page": 159,
+    "axe": "02-ia-technique-academique",
+    "theme": "Convergence inattendue",
+    "portee": "Deux disciplines séparées aboutissent aux mêmes outils, signe qu'un même problème structurel était en jeu."
+   },
+   {
+    "texte": "Plus tard, des recherches en psychologie et psycholinguistique ont confirmé expérimentalement que la résolution des anaphores dépend de la structure discursive du texte",
+    "page": 159,
+    "axe": "02-ia-technique-academique",
+    "theme": "Validation expérimentale",
+    "portee": "Une hypothèse formelle sur le discours trouve confirmation dans l'étude du lecteur réel."
+   }
+  ]
+ },
+ {
+  "chapitre": "c41ee7e4",
+  "citations": [
+   {
+    "texte": "Le problème était qu'il fallait inférer les intentions des locuteurs à partir de ce qui avait été dit, et que ces inférences sont souvent incertaines et même fausses.",
+    "page": 160,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Inférer les intentions",
+    "portee": "Difficulté centrale de tout système conversationnel : deviner ce que veut vraiment celui qui parle."
+   },
+   {
+    "texte": "Avec des analyseurs discursifs plus performants, il devient envisageable d'avoir des systèmes sophistiqués exploitant la structure discursive pour la fouille d'informations ou d'opinions.",
+    "page": 160,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Fouille d'opinions",
+    "portee": "Une avancée théorique sur le discours ouvre directement des usages économiques d'analyse de textes."
+   }
+  ]
+ }
+]

@@ -1,0 +1,96 @@
+{
+ "document_id": "79813761-44ad-43a7-a04f-99520ae0caac",
+ "titre_normalise": "La Chute",
+ "auteurs": [
+  "Albert Camus"
+ ],
+ "annee": 1956,
+ "type_ouvrage": "roman",
+ "niveau": "avance",
+ "public_cible": "Lecteur adulte, étudiant en lettres ou en philosophie, toute personne prête à se laisser mettre en cause par un livre. Récit publié en 1956, quatre ans avant la mort de l'auteur. Le fichier disponible provient d'une bibliothèque numérique universitaire québécoise animée par des bénévoles, dont la politique interdit la rediffusion des fichiers eux-mêmes.",
+ "these_centrale": "Un ancien avocat parisien, réfugié dans un bar d'Amsterdam, se présente à un inconnu comme juge-pénitent et lui raconte sa vie pendant cinq soirées. Sa confession n'en est pas une : en s'accusant lui-même sans réserve, il acquiert le droit de juger tout le monde. Le livre démonte le mécanisme par lequel l'aveu devient une arme, et il place le lecteur dans la position de l'interlocuteur muet, jusqu'à ce que le dernier mot lui soit adressé.",
+ "idees_force": [
+  {
+   "titre": "Le juge-pénitent",
+   "explication": "Le narrateur invente ce métier et il lui faut tout le livre pour en donner la définition. Le principe est le suivant : plus je m'accuse, plus j'ai le droit de vous juger ; en me chargeant de tous les crimes, j'oblige mon interlocuteur à se reconnaître dans le portrait et je reprends l'ascendant. La confession devient un procédé de domination. Une fois que l'on a vu ce mécanisme, on le reconnaît partout, dans la vie politique comme dans les relations ordinaires.",
+   "page": 2
+  },
+  {
+   "titre": "La phrase qui contient tout le livre",
+   "explication": "« Si les souteneurs et les voleurs étaient toujours et partout condamnés, les honnêtes gens se croiraient tous et sans cesse innocents, cher monsieur. Et selon moi, c'est surtout cela qu'il faut éviter. » L'avocat des nobles causes révèle ainsi la vraie fonction de son métier : il ne défendait pas les coupables par générosité, il empêchait les honnêtes gens de dormir tranquilles. C'est une des plus fortes attaques jamais écrites contre la bonne conscience.",
+   "page": 3
+  },
+  {
+   "titre": "Le rire sur le pont",
+   "explication": "Un soir, sur un pont de Paris, le narrateur entend un rire derrière lui. Il n'y a personne. Il dit y avoir pensé quelques jours puis l'avoir oublié, et ajoute aussitôt qu'il n'a plus jamais remis les pieds sur les quais, qu'un silence se faisait en lui lorsqu'il y passait en voiture, et qu'il attendait. Camus montre en trois phrases comment une conscience se ment à elle-même : la dénégation et le symptôme sont donnés dans la même respiration.",
+   "page": 3
+  },
+  {
+   "titre": "L'eau est si froide",
+   "explication": "Le récit se termine sur l'aveu d'un refus. Une femme s'est jetée d'un pont, il a entendu le corps, il n'a pas bougé. À l'inconnu qui souhaiterait une seconde chance de les sauver tous les deux, il répond : « Une seconde fois, hein, quelle imprudence ! Supposez, cher maître, qu'on nous prenne au mot ? Il faudrait s'exécuter. L'eau est si froide ! Mais rassurons-nous ! Il est trop tard, maintenant, il sera toujours trop tard. Heureusement ! » Ce dernier mot, heureusement, est l'un des plus terribles de la littérature française.",
+   "page": 12
+  },
+  {
+   "titre": "Amsterdam contre la Grèce, deux régimes de lumière",
+   "explication": "Le Zuyderzee est une mer morte aux bords plats perdus dans la brume : on ne sait où elle commence ni où elle finit, on avance sans repère, on ne peut pas évaluer sa vitesse, rien ne change, ce n'est pas de la navigation mais du rêve. Dans l'archipel grec, à l'inverse, chaque île découpait nettement le ciel, dans une lumière précise où tout était repère. Les deux paysages figurent deux états de la conscience : celui qui a des repères moraux et celui qui les a perdus. Camus fait porter au décor la démonstration morale.",
+   "page": 5
+  },
+  {
+   "titre": "Les trois sortes d'hommes",
+   "explication": "« Une personne de mon entourage divisait les êtres en trois catégories : ceux qui préfèrent n'avoir rien à cacher plutôt que d'être obligés de mentir, ceux qui préfèrent mentir plutôt que de n'avoir rien à cacher, et ceux enfin qui aiment en même temps le mensonge et le secret. Je vous laisse choisir la case qui me convient le mieux. » La classification est offerte au lecteur comme un piège : en choisissant pour le narrateur, il se situe lui-même.",
+   "page": 6
+  },
+  {
+   "titre": "Le mensonge peut être un chemin vers la vérité",
+   "explication": "« Les mensonges ne mettent-ils pas finalement sur la voie de la vérité ? Et mes histoires, vraies ou fausses, ne tendent-elles pas toutes à la même fin ? Alors, qu'importe qu'elles soient vraies ou fausses si, dans les deux cas, elles sont significatives de ce que j'ai été et de ce que je suis. On voit parfois plus clair dans celui qui ment que dans celui qui dit vrai. » Ce passage est une leçon de lecture applicable bien au-delà du roman : ce qu'un homme choisit d'inventer sur lui-même le décrit aussi sûrement que ce qu'il a fait.",
+   "page": 6
+  },
+  {
+   "titre": "Le monologue qui n'en est pas un",
+   "explication": "Tout le livre est adressé. Le narrateur interpelle, répond à des questions qu'on n'entend pas, s'inquiète d'ennuyer, propose de se taire, remercie de la curiosité, s'excuse de recevoir couché. L'interlocuteur ne parle jamais, et pourtant sa présence est constante. Ce dispositif fait du lecteur l'auditeur, puis l'accusé. La dernière page lui est adressée directement, et c'est là que le piège se referme.",
+   "page": 5
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Juge-pénitent",
+   "definition": "Personnage inventé par Camus qui s'accuse publiquement pour acquérir le droit de juger autrui. Figure de la mauvaise foi contemporaine."
+  },
+  {
+   "terme": "Bonne conscience",
+   "definition": "Certitude d'être innocent que l'honnête homme tire de la condamnation des coupables. Cible principale du livre."
+  },
+  {
+   "terme": "Confession",
+   "definition": "Acte d'aveu, ici détourné de sa fonction : elle n'expie pas, elle établit une supériorité."
+  },
+  {
+   "terme": "Mauvaise foi",
+   "definition": "Mensonge à soi-même, mécanisme par lequel une conscience s'arrange avec ce qu'elle sait."
+  },
+  {
+   "terme": "Récit adressé",
+   "definition": "Forme narrative où un narrateur parle à un interlocuteur muet dont les réponses sont seulement suggérées. Le lecteur occupe cette place vide."
+  },
+  {
+   "terme": "Malconfort",
+   "definition": "Cachot médiéval trop bas pour se tenir debout et trop étroit pour s'allonger. Image de la condition que le narrateur se reconnaît."
+  },
+  {
+   "terme": "Chute",
+   "definition": "Titre à triple sens : la chute du corps dans l'eau, la chute morale du narrateur, et la chute originelle dont il fait sa théologie sans Dieu."
+  }
+ ],
+ "a_lire_si": "Vous voulez comprendre comment un homme se justifie à ses propres yeux, et vous êtes prêt à ce que la démonstration vous atteigne. C'est un livre court, écrit dans une langue d'une netteté rare, qui se relit et qui change à chaque lecture. Pour un lecteur africain, la charge contre la bonne conscience des honnêtes gens et contre les métiers de belles causes vaut d'être méditée : elle vise exactement le discours humanitaire et le sentiment de supériorité morale qui l'accompagne. Camus est né en Algérie, dans un milieu pauvre, et cette question ne lui était pas extérieure.",
+ "a_eviter_si": "Vous débutez en lecture littéraire. Il n'y a ni intrigue, ni chapitres, ni dialogue apparent : un seul homme parle pendant cent pages, avec ironie, digressions et fausses pistes. Le sens n'est jamais donné, il se construit par accumulation. Mieux vaut avoir lu L'Étranger d'abord, et disposer d'une édition annotée.",
+ "prerequis": [
+  "Habitude de la lecture littéraire",
+  "Lecture préalable de L'Étranger conseillée"
+ ],
+ "controverses": [
+  "Le livre a été lu comme une réponse indirecte à Sartre après leur rupture, comme un examen de conscience personnel après les polémiques sur la guerre d'Algérie, ou comme une méditation morale autonome. Les trois lectures se défendent et aucune ne l'épuise.",
+  "Le narrateur est-il l'auteur ? Camus a toujours refusé cette identification, et le texte lui-même prévient que l'on ne peut démêler le vrai du faux dans ce que raconte le personnage.",
+  "Statut juridique : l'œuvre est dans le domaine public dans les pays dont la protection s'arrête cinquante ans après la mort de l'auteur, ce qui est le cas du Cameroun, et elle ne l'est pas dans ceux qui appliquent soixante-dix ans, dont la France. Le fichier numérique utilisé ici relève par ailleurs de la politique propre de la bibliothèque qui l'a produit, laquelle interdit la rediffusion. Distinguer l'œuvre du fichier est indispensable avant tout usage."
+ ],
+ "confiance": 0.9
+}

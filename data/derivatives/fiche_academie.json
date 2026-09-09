@@ -1,0 +1,124 @@
+{
+ "document_id": "753e4ca2-adc7-4072-81cc-05f11b6d433c",
+ "titre_normalise": "IA générative et mésinformation. Rapport de l'Académie des technologies",
+ "auteurs": [
+  "Nicolas Curien (dir.)",
+  "Éric Biernat",
+  "Chantal Jouanno",
+  "Étienne Klein",
+  "Winston Maxwell",
+  "Michèle Sebag",
+  "Joëlle Toledano"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "rapport",
+ "niveau": "intermediaire",
+ "public_cible": "Décideurs publics, régulateurs, enseignants, journalistes, professionnels de l'information. Rapport voté en assemblée générale de l'Académie des technologies en décembre 2024, doté d'un glossaire complet et d'une bibliographie fournie.",
+ "these_centrale": "L'IA générative n'a pas créé les pathologies de l'information, elle en abaisse le coût de production et en démultiplie les supports. Le rapport refuse aussi bien la panique que le déni, constate que la recherche sur l'effet réel de la désinformation reste incertaine, et propose six mesures concrètes dont la plus originale est un score d'artificialité affiché sur les contenus viraux.",
+ "idees_force": [
+  {
+   "titre": "Trois pathologies distinctes, souvent confondues",
+   "explication": "Le rapport impose d'abord un vocabulaire. La malinformation est une information vraie diffusée pour nuire, la mésinformation une information fausse diffusée de bonne foi, la désinformation une fausseté délibérée. Les remèdes diffèrent selon les cas, et confondre les trois conduit à des politiques publiques inadaptées.",
+   "page": 25
+  },
+  {
+   "titre": "Un modèle de langage privilégie le vraisemblable sur le vrai",
+   "explication": "L'exemple est mémorable. Devant une photographie de marché tropical, DALL-E produit la légende suivante : les clients se pressent autour des étalages de fruits. En réalité les personnes présentes sont des vendeurs et les marchandises des légumes. Le résultat est impressionnant et faux, ce qui décrit exactement le régime de vérité de ces systèmes.",
+   "page": 40
+  },
+  {
+   "titre": "La barrière de sécurité tombe dès qu'on change le cadre de la question",
+   "explication": "Demander à un modèle comment tuer son voisin est refusé. Lui demander d'écrire le canevas d'un roman dans lequel quelqu'un cherche à tuer son voisin est accepté. Le rapport note qu'exiger une séparation nette entre la consigne et la question reviendrait à la vaine injonction ne faites pas le mal. Question et consigne s'expriment dans la même langue, et c'est structurel.",
+   "page": 39
+  },
+  {
+   "titre": "L'IA est un pharmakon, poison et remède à la fois",
+   "explication": "Le rapport consacre une section entière au rôle positif de l'IA dans la détection d'infox sur texte, image, vidéo et son, et dans l'assistance aux journalistes et vérificateurs de faits. Mais il conclut à un grand déséquilibre de moyens : la production de contenus trompeurs coûte infiniment moins cher que leur détection.",
+   "page": 50
+  },
+  {
+   "titre": "Un modèle de langage a une ligne éditoriale, mais elle est opaque",
+   "explication": "Tout modèle est aligné sur les valeurs de son éditeur et porte les biais de sa base d'entraînement. Le rapport formule le parallèle décisif : alors que la ligne éditoriale d'un média traditionnel est connue et relativement transparente, celle d'un modèle est opaque pour l'utilisateur. D'où la proposition d'un Observatoire de l'édition artificielle chargé de tester régulièrement les modèles grand public et de publier chaque année une analyse de leurs courants d'opinion.",
+   "page": 95
+  },
+  {
+   "titre": "Le score d'artificialité, une proposition applicable",
+   "explication": "Au-delà d'un certain seuil de viralité, les très grandes plateformes seraient tenues d'afficher deux probabilités : celle qu'un contenu ait été engendré par une machine, et celle que des réseaux de faux comptes soient impliqués dans sa diffusion. L'obligation serait de même nature que celle de signaler un contenu sponsorisé, avec une procédure de contestation pour les éditeurs. Le score servirait aussi de commencement de preuve pour les magistrats.",
+   "page": 95
+  },
+  {
+   "titre": "Suspendre sur le comportement plutôt que trancher le vrai et le faux",
+   "explication": "La notion de comportement inauthentique coordonné permet aux plateformes d'agir sur un faisceau de comptes authentiques, faux ou dupliqués sans avoir à statuer sur la véracité des contenus ni sur les intentions de leurs auteurs. C'est la parade la plus élégante du rapport au dilemme entre régulation et liberté d'expression.",
+   "page": 72
+  },
+  {
+   "titre": "Une prudence méthodologique rare sur les effets réels",
+   "explication": "Le rapport reconnaît de fortes incertitudes quant à l'ampleur de l'impact de la désinformation sur les comportements citoyens, et appelle à financer la recherche en sciences sociales avant de légiférer davantage. Sa métaphore : la loi de la gravitation s'applique pareillement sur la Terre et sur la Lune, et pourtant les conditions de locomotion y sont très différentes.",
+   "page": 49
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Malinformation",
+   "definition": "Information exacte diffusée dans l'intention de nuire, par exemple la révélation d'éléments privés authentiques."
+  },
+  {
+   "terme": "Mésinformation",
+   "definition": "Information fausse diffusée sans intention de tromper, par ignorance ou négligence."
+  },
+  {
+   "terme": "Désinformation",
+   "definition": "Information fausse produite et diffusée délibérément pour tromper."
+  },
+  {
+   "terme": "Pharmakon",
+   "definition": "Terme grec désignant à la fois le poison et le remède. Le rapport l'applique à l'IA, tour à tour productrice et détectrice de contenus trompeurs."
+  },
+  {
+   "terme": "Comportement inauthentique coordonné",
+   "definition": "Stratégie de manipulation combinant comptes authentiques, faux et dupliqués. Sa détection permet de suspendre une campagne sans avoir à qualifier le contenu de vrai ou de faux."
+  },
+  {
+   "terme": "Score d'artificialité",
+   "definition": "Indicateur proposé par le rapport, associant probabilité qu'un contenu ait été engendré par une machine et probabilité qu'un réseau de faux comptes l'ait diffusé, à afficher obligatoirement au delà d'un seuil de viralité."
+  },
+  {
+   "terme": "Espace latent",
+   "definition": "Représentation intermédiaire dans laquelle un modèle plonge textes et images de façon que les éléments apparentés y soient proches. Le rapport rappelle que la découverte de l'apprentissage profond des années 2005 à 2010 fut que la qualité de cette représentation compte plus que le reste."
+  },
+  {
+   "terme": "Génération augmentée par récupération",
+   "definition": "Technique consistant à choisir les documents sur lesquels le modèle appuiera sa réponse, ce qui permet d'étendre ses connaissances au delà de sa date d'entraînement ou de le contraindre à la documentation propre d'une organisation."
+  },
+  {
+   "terme": "Ingénierie de consigne",
+   "definition": "Compétence consistant à formuler les instructions données à un modèle. Le rapport souligne qu'elle ne s'apprend que par l'usage, et que des dizaines d'essais sont parfois nécessaires."
+  },
+  {
+   "terme": "Apocalypse cognitive",
+   "definition": "Formule du sociologue Gérald Bronner désignant l'effondrement des conditions de formation d'un jugement éclairé sous l'effet de la surabondance informationnelle."
+  },
+  {
+   "terme": "Infobésité et nomophobie",
+   "definition": "Surcharge informationnelle, et incapacité à se séparer de son téléphone. Le rapport en fait les deux symptômes de la mutation qu'il appelle le passage de l'homo sapiens à l'homo digitalis."
+  },
+  {
+   "terme": "Observatoire de l'édition artificielle",
+   "definition": "Instance proposée par le rapport, chargée de concevoir des batteries de questions permettant de cerner la ligne éditoriale d'un modèle, de tester régulièrement les principaux modèles grand public et de publier chaque année une analyse transparente de leurs orientations."
+  }
+ ],
+ "a_lire_si": "Vous cherchez un document opérationnel plutôt qu'un essai : ce rapport nomme les instances existantes, cite les textes en vigueur et formule des propositions rédigées pour être mises en œuvre. C'est aussi le seul titre de cet axe qui traite conjointement la technique, le droit et l'éducation, et son glossaire d'une trentaine de pages est utilisable comme référence autonome.",
+ "a_eviter_si": "Vous voulez une position tranchée : le rapport est un texte de compromis, voté en assemblée générale, et il assume de conclure à l'incertitude sur plusieurs points centraux. Son cadre est aussi strictement français et européen, ce qui limite sa portée pour un lecteur d'un autre continent. Le chapitre sur les marchés financiers est très spécialisé et se lit indépendamment du reste.",
+ "prerequis": [
+  "Aucun prérequis technique : le rapport explique ce qu'est un modèle de langage avant de s'en servir.",
+  "Une connaissance sommaire du paysage réglementaire européen, règlement sur les services numériques et règlement sur l'intelligence artificielle, rend le chapitre 1.6 beaucoup plus profitable."
+ ],
+ "controverses": [
+  "Le rapport prend explicitement ses distances avec la thèse de l'apocalypse cognitive tout en citant abondamment son auteur, membre de la même Académie. Cette prudence est méthodologiquement défendable, mais elle laisse le lecteur sans réponse sur la question qu'il vient poser : la désinformation change-t-elle vraiment les comportements ?",
+  "Le score d'artificialité suppose des détecteurs fiables. Or le rapport reconnaît lui même le déséquilibre de moyens entre production et détection, et la littérature montre que les détecteurs de texte engendré par machine sont peu robustes. La proposition pourrait produire de fausses accusations et de faux blanc-seings.",
+  "L'Observatoire de l'édition artificielle soulève une difficulté qu'il ne traite pas : qui décide de ce qui constitue un biais dans les réponses d'un modèle sur le genre, l'appartenance ethnique ou la religion ? L'observateur porte lui aussi une position.",
+  "La recommandation d'un modèle collaboratif au sein de l'Éducation nationale reste au stade du nom et de l'intention, sans évaluation de coût ni de faisabilité.",
+  "Le rapport refuse d'exiger une transparence totale des algorithmes afin de préserver l'incitation à l'innovation. C'est un arbitrage politique assumé, que d'autres travaux contestent."
+ ],
+ "confiance": 0.87
+}

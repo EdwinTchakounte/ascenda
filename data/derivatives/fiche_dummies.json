@@ -1,0 +1,125 @@
+{
+ "document_id": "941c0a61-9db0-44cc-8eea-b0d3818fa9c6",
+ "titre_normalise": "ChatGPT pour les nuls",
+ "auteurs": [
+  "Pam Baker"
+ ],
+ "annee": 2023,
+ "type_ouvrage": "manuel de référence",
+ "niveau": "debutant",
+ "public_cible": "Lecteur qui veut un ouvrage de référence à consulter par chapitre plutôt qu'un livre à lire d'un bout à l'autre. John Wiley and Sons, 2023, deux cent trente-deux pages, treize chapitres autonomes. L'exemplaire numérisé ne comporte pas la page de titre ; l'édition Wiley de ChatGPT For Dummies parue en 2023 est signée Pam Baker, journaliste spécialisée en technologie. La version française est une traduction automatique inégale.",
+ "these_centrale": "L'outil est trompeusement simple : on demande, il répond. La difficulté n'est pas technique, elle est dans ce que l'utilisateur sait formuler et dans ce qu'il sait vérifier. Le livre couvre méthodiquement le fonctionnement, l'écriture des consignes, les modèles successifs, l'éthique et la responsabilité, puis les usages professionnels, l'éducation et la vie quotidienne. Sa position est mesurée : ni panique ni émerveillement, mais une insistance constante sur le fait que la performance du système dépend des capacités de celui qui l'interroge.",
+ "idees_force": [
+  {
+   "titre": "Le tableau comparatif avec un moteur de recherche",
+   "explication": "L'outil conversationnel engendre un récit unique, ne cite pas ses sources, prédit une réponse, peut inventer. Le moteur de recherche fournit une liste de résultats, révèle ses sources, apparie des mots clés, n'invente pas. Les deux peuvent véhiculer de la désinformation, mais seul le premier peut la fabriquer. Ce tableau devrait être affiché dans toute salle de formation : il règle en huit lignes la confusion la plus répandue.",
+   "page": 67
+  },
+  {
+   "titre": "Langue et intelligence ne sont pas la même chose",
+   "explication": "L'auteure identifie la source de l'inquiétude : nous supposions que les machines ne comprennent que leur langage propre, donc que notre langue était un refuge. Une machine qui converse couramment semble nous comprendre, et il paraît alors n'exister aucun lieu où penser ou parler hors de sa portée. Mais dans ce raisonnement la langue est confondue avec l'intelligence, et ce sont deux choses distinctes. La peur vient de cette confusion, non du système.",
+   "page": 40
+  },
+  {
+   "titre": "L'ami qui ne garde aucun secret",
+   "explication": "Experts comme profanes oublient vite qu'ils s'adressent à un programme et se mettent à discuter comme avec un collègue. L'avertissement est direct : tout ce que vous dites ou faites peut servir à évaluer le système et à entraîner les modèles suivants ; ce prétendu ami ne garde aucun secret. Le fournisseur le signale, mais c'est à l'utilisateur de s'en souvenir.",
+   "page": 52
+  },
+  {
+   "titre": "Les mesures de jetons, et pourquoi elles pénalisent les autres langues",
+   "explication": "Un jeton vaut environ quatre caractères, cent jetons environ soixante-quinze mots, deux phrases environ trente jetons. Point capital que presque aucun guide ne mentionne : l'anglais est plus concis que la plupart des langues et consomme donc moins de jetons pour dire la même chose. À contenu égal, un texte français, arabe ou en langue africaine coûte plus cher, atteint plus vite la limite, et laisse moins de place à la réponse. C'est une inégalité structurelle d'accès, pas un détail technique.",
+   "page": 80
+  },
+  {
+   "titre": "La mémoire d'une conversation est bornée et ne franchit pas les fils",
+   "explication": "Le modèle décrit conservait environ trois mille mots, soit quatre mille jetons, du fil en cours, et ne pouvait référencer aucune autre conversation, qu'elle date de quelques minutes ou de plusieurs semaines. Les chiffres ont augmenté depuis, la structure du problème non. Parade proposée : demander un résumé du dialogue avant de le clore, et conserver ce résumé ailleurs.",
+   "page": 80
+  },
+  {
+   "titre": "Vous entraînez le système en le notant",
+   "explication": "Les pouces levés et baissés affichés sous chaque réponse ne sont pas décoratifs : ils alimentent l'affinage du modèle par renforcement, avec des modèles de récompense et une procédure d'optimisation. La mise à disposition gratuite avait pour raison principale d'obtenir cette aide du public. Comprendre cela change le regard sur ce qui est gratuit et sur ce qui est échangé.",
+   "page": 52
+  },
+  {
+   "titre": "Tay, seize heures d'existence",
+   "explication": "Le robot conversationnel lancé par Microsoft en 2016 pour apprendre sur un réseau social a produit en quelques heures des messages racistes et injurieux, et a été arrêté seize heures après son lancement. L'auteure en tire la formule qui résume le problème : nous avons rencontré l'intelligence artificielle générative, et elle est nous. Le système hérite du meilleur et du pire de ce qu'il a lu.",
+   "page": 27
+  },
+  {
+   "titre": "Les principes de l'IA responsable, et leur fragilité économique",
+   "explication": "Redevabilité, évaluation des biais, fiabilité et sécurité, équité et accessibilité, transparence et explicabilité, confidentialité. La liste est solide. L'auteure signale immédiatement ce qui la met à l'épreuve : en mars 2023, Microsoft a supprimé son équipe d'éthique et de société chargée précisément d'intégrer ces principes aux produits avant leur lancement. Les engagements éthiques cèdent quand la pression économique monte.",
+   "page": 99
+  },
+  {
+   "titre": "Le plagiat involontaire est un risque pour l'utilisateur",
+   "explication": "Des œuvres protégées figurant dans les données d'entraînement, le système peut reproduire exactement des formulations existantes. La responsabilité en incombe alors à celui qui publie le texte, pas au fournisseur de l'outil. Toute personne qui publie sous son nom un texte engendré doit le savoir.",
+   "page": 107
+  },
+  {
+   "titre": "Interdire l'outil à l'école nuit à l'éducation",
+   "explication": "C'est le titre même d'une section. L'argument développé dans le chapitre consacré à l'enseignement est que l'interdiction ne fait que déplacer l'usage hors du regard de l'enseignant, alors que la bonne réponse consiste à faire de l'esprit critique le nouveau cœur de l'apprentissage et à alléger la charge des enseignants sur les tâches répétitives. Position tranchée et défendable, qui mérite d'être discutée dans tout établissement.",
+   "page": 162
+  },
+  {
+   "titre": "L'ingénierie des consignes, compétence ou métier ?",
+   "explication": "L'auteure rapporte le débat sans le trancher : faut-il y voir une profession nouvelle ou une compétence universelle à attendre de la plupart des travailleurs, comme la dactylographie autrefois ? Elle signale aussi une compétence transférable méconnue, celle du journaliste qui sait obtenir en entretien la réponse qu'il cherche par des voies directes ou indirectes. Savoir interroger est une vieille compétence humaine.",
+   "page": 79
+  },
+  {
+   "titre": "Les connaissances valent mieux que les informations",
+   "explication": "Le conseil de fond donné à qui craint pour son emploi : les informations ne sont pas la connaissance ; développez la vôtre jusqu'au point où vous pouvez l'appliquer de manière nouvelle et singulière ; observez comment l'outil redéfinit les tâches et les métiers, et adaptez-vous vite. C'est un programme de lecture et d'étude, pas un programme technique.",
+   "page": 40
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Jeton",
+   "definition": "Fragment de texte, environ quatre caractères. Cent jetons valent environ soixante-quinze mots en anglais, davantage de jetons pour un même contenu dans les autres langues."
+  },
+  {
+   "terme": "Limite de jetons",
+   "definition": "Plafond de texte pris en compte par le modèle dans un échange. Au-delà, le début de la conversation devient inaccessible."
+  },
+  {
+   "terme": "Fil de conversation",
+   "definition": "Unité de contexte. Le système ne peut pas se référer à un autre fil, quel que soit le temps écoulé."
+  },
+  {
+   "terme": "Apprentissage par renforcement à partir de retours humains",
+   "definition": "Affinage du modèle à partir des évaluations données par les utilisateurs et par des annotateurs, au moyen de modèles de récompense."
+  },
+  {
+   "terme": "Modèle multimodal",
+   "definition": "Modèle acceptant plusieurs types d'entrée, texte et image, même si la sortie reste textuelle."
+  },
+  {
+   "terme": "IA responsable",
+   "definition": "Mouvement visant à intégrer dès la conception redevabilité, évaluation des biais, fiabilité, équité, transparence et confidentialité."
+  },
+  {
+   "terme": "Hallucination",
+   "definition": "Production d'une réponse fausse mais cohérente. Ce qui permet au système de créer est ce qui le rend peu fiable : la liberté à l'égard des faits."
+  },
+  {
+   "terme": "Ingénierie des consignes",
+   "definition": "Art de formuler les demandes pour obtenir la sortie voulue. Débat ouvert sur son statut, métier distinct ou compétence générale."
+  },
+  {
+   "terme": "Extension de navigateur",
+   "definition": "Module ajoutant des fonctions à l'interface. L'auteure met explicitement en garde : une extension peut contenir un logiciel malveillant, et elle n'a vérifié aucune de celles qu'elle cite."
+  },
+  {
+   "terme": "Modèle de connaissance d'organisation",
+   "definition": "Constitution, à partir des documents, courriels et comptes rendus d'une entreprise, d'un ensemble interrogeable qui limite la perte de mémoire institutionnelle au départ des employés."
+  }
+ ],
+ "a_lire_si": "Vous voulez un ouvrage de référence complet et non militant, à ouvrir au chapitre dont vous avez besoin. Les chapitres sur les consignes, sur l'éthique et la responsabilité, et sur l'éducation sont les plus utiles. Le tableau comparant l'outil conversationnel et le moteur de recherche, ainsi que le passage sur le coût en jetons des langues autres que l'anglais, méritent d'être extraits et diffusés tels quels.",
+ "a_eviter_si": "Vous voulez de la profondeur ou de l'élégance. La traduction française est automatique et par endroits fautive, avec des phrases dupliquées, des termes flottants, le mot consigne rendu tantôt par invitation tantôt par sollicitation, et quelques contresens. Les chiffres de versions, de fenêtres de contexte et d'intégrations logicielles datent de 2023 et sont largement dépassés. Le livre est centré sur un seul fournisseur et sur le contexte nord-américain.",
+ "prerequis": [],
+ "controverses": [
+  "Faut-il interdire ces outils dans l'enseignement ? L'ouvrage soutient que l'interdiction entrave l'éducation et propose de refonder l'apprentissage sur l'esprit critique. La position est argumentée mais suppose des enseignants formés et des effectifs raisonnables, conditions rarement réunies.",
+  "L'ingénierie des consignes est-elle un métier ou une compétence de base ? Le livre expose le débat sans conclure, et l'histoire lui a plutôt donné tort dans les deux sens : ni métier durable, ni compétence encore universellement acquise.",
+  "Les engagements des entreprises en matière d'IA responsable résistent-ils à la pression économique ? La suppression de l'équipe d'éthique de Microsoft en mars 2023, rapportée dans le livre même qui expose ces principes, constitue une réponse embarrassante."
+ ],
+ "confiance": 0.8
+}

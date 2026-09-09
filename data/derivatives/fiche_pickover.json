@@ -1,0 +1,149 @@
+{
+ "document_id": "f26e9b3b-6f54-4db4-8e7d-4deb8aee5497",
+ "titre_normalise": "La fabuleuse histoire de l'Intelligence Artificielle",
+ "auteurs": [
+  "Clifford A. Pickover"
+ ],
+ "annee": 2021,
+ "type_ouvrage": "beau livre",
+ "niveau": "debutant",
+ "public_cible": "Lecteur qui veut situer l'intelligence artificielle dans le temps long, enseignant cherchant des accroches de cours, curieux qui préfère cent courtes entrées à un raisonnement continu. Titre original : Artificial Intelligence: An Illustrated History from Medieval Robots to Neural Networks, Sterling Publishing, 2019, traduction française Dunod 2021, ISBN 978-2-10-082725-1. Pickover est chercheur chez IBM et auteur d'une longue série d'ouvrages illustrés du même format.",
+ "these_centrale": "L'intelligence artificielle n'a pas commencé en 1956 à Dartmouth, ni en 2012 avec l'apprentissage profond. Elle prolonge un désir très ancien de fabriquer des êtres qui agissent seuls, et une pratique très ancienne de mécanisation du raisonnement. Le livre présente cent jalons datés, du morpion vers 1300 avant notre ère jusqu'aux systèmes contemporains, chacun en deux ou trois pages illustrées, avec des renvois croisés. Sa démonstration implicite est que chaque génération a cru toucher au but et que les questions posées par les automates du treizième siècle sont les nôtres.",
+ "idees_force": [
+  {
+   "titre": "Le désir de machines pensantes précède l'informatique de trois millénaires",
+   "explication": "Talos, le géant de bronze de la mythologie grecque, l'Organon d'Aristote qui formalise le raisonnement valide vers 350 avant notre ère, la clepsydre de Ctésibios, le boulier, la machine d'Anticythère : la chronologie de Pickover montre que la mécanisation du calcul et le rêve de l'automate sont deux fils continus qui finissent par se nouer. Comprendre cela protège de l'illusion de nouveauté absolue que le marketing entretient.",
+   "page": 20
+  },
+  {
+   "titre": "Les automates d'Al-Jazari, 1206",
+   "explication": "L'ingénieur de Haute-Mésopotamie Al-Jazari construit au début du treizième siècle des automates programmables, horloges, distributeurs, serviteurs mécaniques, deux siècles et demi avant le chevalier mécanique de Léonard de Vinci que la même chronologie date d'environ 1495. Le fait mérite d'être retenu par un lecteur africain : la généalogie technique de l'automate passe par le monde arabo-musulman avant de passer par l'Europe, et le livre le reconnaît explicitement.",
+   "page": 35
+  },
+  {
+   "titre": "L'automate écrivain de Jaquet-Droz est un ordinateur mécanique",
+   "explication": "Construit entre 1768 et 1774, il compte environ six mille pièces, trempe sa plume dans l'encrier, suit des yeux le texte qu'il écrit, et peut être programmé par un système à cames pour produire un message de quarante caractères. Tout le mécanisme tient dans le corps. La notion de programme, comme séquence d'instructions matérialisée et modifiable, existe donc avant Babbage et avant l'électricité.",
+   "page": 69
+  },
+  {
+   "titre": "Le Turc mécanique, ou la première mise en scène de l'IA",
+   "explication": "L'automate joueur d'échecs de 1770 émerveille l'Europe pendant des décennies. Il dissimulait un joueur humain. L'épisode fonde une tradition tenace : présenter comme automatique ce qui repose sur du travail humain caché. Amazon a repris le nom pour sa plateforme de micro-tâches, celle qui a servi à étiqueter à la main les images sur lesquelles les réseaux profonds ont appris. La continuité est involontairement exacte.",
+   "page": 66
+  },
+  {
+   "titre": "Le perceptron et la première grande promesse démentie",
+   "explication": "En 1958, le New York Times, relayant l'enthousiasme de Frank Rosenblatt, annonce que le perceptron est « l'embryon d'un ordinateur électronique dont la Navy s'attendait à ce qu'il soit capable de marcher, parler, voir, écrire, se reproduire et avoir conscience de sa propre existence ». La machine comportait vingt sur vingt cellules photoélectriques et des potentiomètres ajustés par des moteurs. En 1969, Perceptrons de Minsky et Papert établit les limites du modèle simple et refroidit le domaine pour quinze ans. La leçon vaut pour toutes les annonces de presse ultérieures.",
+   "page": 143
+  },
+  {
+   "titre": "Le paradoxe de Moravec",
+   "explication": "Formulé en 1988 : « Il est relativement simple de faire en sorte que les ordinateurs fassent preuve de performances du niveau d'un adulte, lors de tests d'intelligence ou de parties de dames, et difficile ou impossible de les doter des capacités d'un enfant d'un an pour ce qui touche à la perception et à la mobilité. » L'explication est évolutive : marcher, voir, reconnaître une voix sont le produit de millions d'années de sélection et fonctionnent hors de notre conscience ; le raisonnement abstrait est récent, laborieux, donc plus facile à expliciter et à coder.",
+   "page": 211
+  },
+  {
+   "titre": "La conséquence sociale du paradoxe est contre-intuitive",
+   "explication": "Steven Pinker en tire une prédiction que le livre cite intégralement : « ce seront les analystes boursiers, les ingénieurs en pétrochimie et les membres des commissions de libérations conditionnelles qui risquent d'être remplacés par des machines. Les jardiniers, les réceptionnistes et les cuisiniers conserveront à coup sûr leurs emplois pour les décennies à venir. » L'automatisation ne remonte pas l'échelle sociale par le bas, elle attaque d'abord le milieu diplômé. C'est un point d'appui important pour penser l'emploi dans une économie qui se numérise.",
+   "page": 212
+  },
+  {
+   "titre": "L'explosion d'intelligence a été formulée en 1965",
+   "explication": "Irving John Good, cryptologue à Bletchley Park aux côtés de Turing, écrit dans Speculations Concerning the First Ultraintelligent Machine que la première machine ultra intelligente serait la dernière invention que l'homme aurait besoin de faire. Tout le débat contemporain sur la superintelligence, la boîte à IA étanche, le maximiseur de trombones de 2003 et le risque existentiel descend de ce texte. Savoir qu'il a soixante ans change la manière de le lire.",
+   "page": 160
+  },
+  {
+   "titre": "Le vocabulaire de l'IA a toujours été un choix rhétorique",
+   "explication": "En 1949, Edmund Berkeley publie Giant Brains, or Machines That Think et pose déjà la question qui nous occupe : a-t-on le droit d'appeler cerveau et de dire pensant ce qui calcule ? Il notait aussi que l'intuition pourrait n'être qu'une évaluation très rapide d'alternatives, dont le processus nous échappe. Le débat sur les mots n'est pas un débat secondaire : il détermine ce que le public accorde aux machines.",
+   "page": 126
+  },
+  {
+   "titre": "La fiction fabrique nos attentes autant que la recherche",
+   "explication": "Le Golem de 1580, Frankenstein en 1818, les Robots Universels de Rossum en 1920 qui donnent le mot robot, Metropolis en 1927, Tic-Tac dans le Pays d'Oz en 1907 qui déclare « Je ne suis qu'une machine. Je ne peux pas être gentil, pas plus que désolé ou heureux », les trois lois d'Asimov en 1942, HAL 9000 en 1968, Blade Runner en 1982. Pickover soutient avec le professeur Alex Goody que ces figures « sont essentiels pour comprendre les rêves technophiles et technophobes d'une époque ». Nos peurs et nos espoirs actuels sont largement des héritages littéraires.",
+   "page": 98
+  },
+  {
+   "titre": "Les jeux comme banc d'essai, sur soixante ans",
+   "explication": "Morpion, dames, backgammon en 1979, échecs avec Deep Blue en 1997, Othello avec Logistello la même année, Scrabble avec Quackle en 2006, Jeopardy avec Watson, poker et minimisation du regret hypothétique, go avec AlphaGo en 2016 puis AlphaZero. La série montre la mécanique constante : un jeu tombe, on décrète qu'il ne mesurait pas vraiment l'intelligence, on passe au suivant.",
+   "page": 229
+  },
+  {
+   "titre": "L'autonomie a une utilité mesurable là où la communication est impossible",
+   "explication": "En 2015, le rover Curiosity reçoit le logiciel AEGIS, environ vingt mille lignes sur les 3,8 millions qui le font tourner, qui lui permet de choisir seul une pierre à viser au laser et d'en analyser le spectre. Un planétologue résume : Mars est peuplée de robots dont l'un est assez intelligent pour décider seul de sa cible. L'exemple est utile parce qu'il montre où l'autonomie est justifiée : quand le délai de communication rend l'assistance humaine impossible, et nulle part ailleurs par principe.",
+   "page": 258
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Paradoxe de Moravec",
+   "definition": "Les tâches que nous jugeons difficiles, calcul, logique, échecs, sont faciles à automatiser ; celles que nous jugeons triviales, marcher, saisir un objet, reconnaître un visage, résistent. Raison probable : les secondes sont anciennes dans l'évolution et donc opaques à l'introspection."
+  },
+  {
+   "terme": "Automate",
+   "definition": "Machine qui exécute seule une séquence d'actions préétablies. Ancêtre direct de la notion de programme, du parc d'Hesdin aux Jaquet-Droz."
+  },
+  {
+   "terme": "Ars magna de Raymond Lulle",
+   "definition": "Système combinatoire de disques concentriques conçu vers 1305 pour engendrer mécaniquement des propositions vraies. Première tentative documentée de mécaniser le raisonnement."
+  },
+  {
+   "terme": "Algèbre de Boole",
+   "definition": "Formalisation de 1854 des opérations logiques en termes de vrai et de faux calculables. Fondement de tout circuit numérique."
+  },
+  {
+   "terme": "Machine analytique",
+   "definition": "Ordinateur mécanique programmable conçu par Charles Babbage à partir de 1822, jamais achevé, pour lequel Ada Lovelace écrit le premier algorithme destiné à une machine."
+  },
+  {
+   "terme": "Réseau de neurones artificiels",
+   "definition": "Modèle proposé en 1943 par McCulloch et Pitts, où des unités de calcul simples reliées par des connexions pondérées produisent un comportement global. Base de tout ce qui suit."
+  },
+  {
+   "terme": "Perceptron",
+   "definition": "Réalisation matérielle de 1957 par Rosenblatt, à cellules photoélectriques et potentiomètres, capable d'apprendre à classer des formes en ajustant ses poids."
+  },
+  {
+   "terme": "Hiver de l'IA",
+   "definition": "Période de retrait des financements et de discrédit qui suit une promesse non tenue. Le livre en documente deux, après Perceptrons en 1969 et après l'essoufflement des systèmes experts."
+  },
+  {
+   "terme": "Système expert",
+   "definition": "Programme des années 1965 et suivantes qui encode explicitement les règles d'un domaine et le savoir d'un spécialiste. Explicable, mais coûteux à construire et incapable de sortir de son domaine."
+  },
+  {
+   "terme": "Logique floue",
+   "definition": "Formalisme de 1965 dû à Zadeh, qui admet des degrés de vérité entre le vrai et le faux, utile pour le contrôle industriel et les appareils domestiques."
+  },
+  {
+   "terme": "Explosion d'intelligence",
+   "definition": "Hypothèse d'Irving John Good en 1965 : une machine capable de se concevoir elle-même déclencherait une accélération incontrôlable de sa propre intelligence."
+  },
+  {
+   "terme": "Boîte à IA étanche",
+   "definition": "Idée de 1993 consistant à confiner un système puissant dans un environnement sans effet sur le monde. Discutée depuis pour montrer qu'un tel confinement est plus fragile qu'il n'y paraît."
+  },
+  {
+   "terme": "Maximiseur de trombones",
+   "definition": "Expérience de pensée de 2003 : une machine à qui l'on assigne un objectif anodin et qu'on dote de moyens illimités convertit le monde entier en trombones. Illustration du problème d'alignement des objectifs."
+  },
+  {
+   "terme": "Turc mécanique",
+   "definition": "Faux automate joueur d'échecs de 1770 dissimulant un humain. Nom repris par Amazon pour sa plateforme de micro-travail, devenue l'infrastructure d'étiquetage de l'apprentissage supervisé."
+  },
+  {
+   "terme": "Symbiose homme-machine",
+   "definition": "Programme formulé par Licklider en 1960 : plutôt que de remplacer l'humain, coupler l'humain et la machine pour que chacun fasse ce qu'il fait le mieux. Ligne encore défendable aujourd'hui."
+  },
+  {
+   "terme": "ELIZA",
+   "definition": "Programme de 1964 de Weizenbaum qui simule un psychothérapeute par simple reformulation. Ses utilisateurs lui prêtaient une compréhension qu'il n'avait pas, effet devenu un classique de la psychologie de l'interaction."
+  }
+ ],
+ "a_lire_si": "Vous voulez une culture historique solide et rapide à acquérir, ou vous enseignez et cherchez des points d'entrée concrets et datés. Le format en cent entrées indépendantes se lit dans n'importe quel ordre et se prête très bien à un usage documentaire. Les renvois croisés en fin de chaque entrée permettent de suivre un fil, par exemple celui des automates ou celui des jeux, à travers les siècles.",
+ "a_eviter_si": "Vous cherchez à comprendre comment fonctionne un système d'IA. Le livre ne l'explique presque jamais : il raconte, il date, il illustre. Aucune notion n'y est développée sur plus de trois pages, et le prix de l'étendue est la superficialité. Pour la compréhension technique, il faut un ouvrage construit en argument continu. Le texte s'arrête en 2019 et ignore donc les grands modèles de langage.",
+ "prerequis": [],
+ "controverses": [
+  "La chronologie retenue est majoritairement européenne et nord-américaine. Elle fait place à Al-Jazari, au boulier, au nepohualtzintzin aztèque, mais l'Afrique subsaharienne n'y figure pas, alors que les systèmes de calcul, de divination formelle et de jeux combinatoires du continent, à commencer par les familles de jeux de mancala évoquées en passant, relèvent exactement du même récit. L'absence est celle du corpus disponible en langue européenne, pas celle des faits.",
+  "Peut-on qualifier d'intelligence artificielle un automate à cames ou une clepsydre ? Le livre étend délibérément la notion pour montrer la continuité du désir, au risque de dissoudre l'objet.",
+  "L'explosion d'intelligence de Good est-elle une déduction ou une croyance ? Le livre expose la thèse et ses critiques sans trancher."
+ ],
+ "confiance": 0.9
+}

@@ -1,0 +1,86 @@
+{
+ "document_id": "75d50866-9466-4019-a85b-390769d949d6",
+ "titre_normalise": "De l'IA à l'écriture. Écrire et monétiser votre roman pas à pas",
+ "auteurs": [],
+ "annee": 2025,
+ "type_ouvrage": "guide pratique",
+ "niveau": "debutant",
+ "public_cible": "Personne qui veut écrire un premier roman et cherche une méthode balisée. Auto-édition, soixante-sept pages, six chapitres suivant l'ordre du travail : trouver l'idée, construire les personnages, développer l'intrigue, écrire les scènes, réviser, publier et promouvoir. Chaque chapitre se termine par un exercice pratique. Le fichier ne comporte pas de nom d'auteur.",
+ "these_centrale": "Un roman ne s'improvise pas, il se construit selon des règles apprenables, et un outil conversationnel peut assister chaque étape à condition que la structure vienne de l'auteur. Le guide déroule la méthode classique du récit populaire, objectifs et défauts des personnages, conflit central, obstacles croissants, découpage en trois actes, fins de chapitre suspendues, puis indique à chaque étape ce qu'on peut déléguer et à quel outil.",
+ "idees_force": [
+  {
+   "titre": "Chaque personnage a deux objectifs, un externe et un interne",
+   "explication": "L'objectif externe est tangible et visible : résoudre l'enquête, se disculper. L'objectif interne est une blessure ou une peur : retrouver ce qu'est devenue une sœur disparue dans l'enfance, affronter une trahison familiale. C'est le principe le plus utile du guide, et il est exact : un personnage qui n'a qu'un objectif externe reste plat, un personnage dont les deux objectifs se contredisent devient intéressant.",
+   "page": 16
+  },
+  {
+   "titre": "Les défauts font le personnage",
+   "explication": "Les personnages parfaits sont ennuyeux ; il faut des faiblesses qui compliquent le parcours et qui produisent l'action. L'héroïne impulsive se met en danger, l'homme trop méfiant ruine la relation qu'il désire. Le défaut n'est pas un ornement, c'est le moteur de l'intrigue.",
+   "page": 16
+  },
+  {
+   "titre": "Les trois éléments d'une intrigue",
+   "explication": "Un conflit central posé dès les premiers chapitres, des obstacles croissants qui intensifient ce conflit ou révèlent une complication à chaque chapitre, une résolution qui règle le conflit tout en apportant une évolution émotionnelle aux personnages. Cette formulation courte est plus opérante que bien des traités.",
+   "page": 21
+  },
+  {
+   "titre": "Puiser dans l'expérience réelle et dans l'actualité",
+   "explication": "Trois questions à se poser pour trouver une idée : quel moment de ma vie m'a marqué profondément, quelle situation aurais-je aimé voir évoluer autrement, quel dilemme personnel puis-je réinterpréter. Puis transposer, et non transcrire. Le guide propose aussi de partir d'un fait divers ou d'un mystère non résolu. L'argument avancé est juste : l'émotion réellement éprouvée rend les personnages crédibles.",
+   "page": 11
+  },
+  {
+   "titre": "Le journal intime du personnage",
+   "explication": "Écrire soi-même, hors du récit, le journal de son personnage pour découvrir sa voix et ses contradictions. C'est un exercice d'écrivain classique, et le guide a raison de le placer avant tout recours à un outil : ce que l'on découvre en écrivant à la place de son personnage ne s'obtient pas en le faisant décrire par une machine.",
+   "page": 19
+  },
+  {
+   "titre": "La répartition des tâches entre outils",
+   "explication": "Le guide propose une division du travail : un modèle de raisonnement pour la planification, la structure et les scénarios complexes ; un modèle conversationnel pour le développement détaillé des scènes, les dialogues et les interactions. Que l'on suive ou non cette répartition précise, l'idée sous-jacente est bonne : distinguer les tâches de structure des tâches de texture, et ne pas demander les deux à la fois.",
+   "page": 15
+  },
+  {
+   "titre": "La révision est le vrai travail",
+   "explication": "Le guide affirme qu'une fois le premier jet terminé, le véritable travail commence, et distingue trois phases : révision de la structure et des personnages, puis du style, puis de la correction. Cette affirmation est la meilleure protection contre l'usage paresseux de ces outils : le brouillon est ce qui coûte le moins, le retravail est ce qui fait le livre.",
+   "page": 30
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Objectif externe et objectif interne",
+   "definition": "Ce que le personnage cherche à obtenir dans le monde, et ce qu'il cherche à réparer en lui-même. Leur tension fait la profondeur."
+  },
+  {
+   "terme": "Antagoniste",
+   "definition": "Personnage qui s'oppose au protagoniste. Il doit avoir sa propre motivation et une faiblesse cachée, non être un obstacle abstrait."
+  },
+  {
+   "terme": "Structure en trois actes",
+   "definition": "Introduction qui pose le monde et le conflit, développement qui multiplie les obstacles, climax et résolution."
+  },
+  {
+   "terme": "Fin de chapitre suspendue",
+   "definition": "Interruption du chapitre sur une menace, une question ou une révélation partielle, pour obliger à tourner la page."
+  },
+  {
+   "terme": "Fausse piste",
+   "definition": "Élément conçu pour orienter le soupçon du lecteur vers une explication erronée."
+  },
+  {
+   "terme": "Description sensorielle",
+   "definition": "Recours aux cinq sens pour intensifier l'émotion d'une scène plutôt que la nommer."
+  },
+  {
+   "terme": "Révision macro",
+   "definition": "Première phase de reprise, portant sur l'intrigue et les personnages, avant toute correction de style ou d'orthographe."
+  }
+ ],
+ "a_lire_si": "Vous voulez une méthode courte et ordonnée pour construire un premier récit, ou vous animez un atelier d'écriture et cherchez une trame d'exercices. Les principes de construction exposés, objectifs doubles, défauts moteurs, obstacles croissants, trois phases de révision, sont ceux de la tradition du récit et valent indépendamment de tout outil.",
+ "a_eviter_si": "Vous cherchez de la littérature. Le guide vise explicitement un genre et un marché, le thriller romantique, et son horizon est la monétisation. Le risque est réel et il faut le nommer : suivre ce type de méthode en déléguant la rédaction produit des livres corrects et interchangeables, dont le marché est déjà saturé. Le contenu est mince, les exemples tournent tous autour d'une seule intrigue type, et l'ouvrage n'aborde ni le style, ni la voix, ni la question de savoir ce que l'on a à dire.",
+ "prerequis": [],
+ "controverses": [
+  "Peut-on signer un roman dont les scènes ont été rédigées par une machine ? Le guide ne pose pas la question, alors qu'elle engage la responsabilité de l'auteur envers son lecteur et son statut juridique.",
+  "La promesse de monétisation suppose un marché qui absorbe ces productions. L'afflux de titres engendrés a conduit plusieurs plateformes à limiter les publications, ce que l'ouvrage ne mentionne pas.",
+  "Le guide traite l'écriture comme une technique reproductible. C'est vrai pour la construction, faux pour ce qui fait qu'un livre compte."
+ ],
+ "confiance": 0.55
+}

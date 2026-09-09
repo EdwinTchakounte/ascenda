@@ -1,0 +1,78 @@
+[
+ {"chapitre":"d8ca61b8","citations":[
+  {"texte":"En vision et en interprétation d'images, où l'on opère dans des environnements incomplètement spécifiés et seulement partiellement connus","page":201,"axe":"02-ia-technique-academique","theme":"Environnements mal spécifiés","portee":"La vision artificielle travaille par nature sur un monde qu'elle ne connaît jamais entièrement."},
+  {"texte":"Les informations manipulées en interprétation d'images et en vision par ordinateur sont le plus souvent imparfaites.","page":201,"axe":"02-ia-technique-academique","theme":"Imperfection des données","portee":"Le défaut n'est pas l'exception mais la règle, ce qui oblige à l'inscrire dans le modèle lui-même."}]},
+
+ {"chapitre":"fed13b48","citations":[
+  {"texte":"Il est particulièrement important d'inclure ces imperfections dans les représentations et dans les modes de raisonnement.","page":202,"axe":"02-ia-technique-academique","theme":"Représenter le défaut","portee":"Un système honnête ne cache pas son incertitude, il la porte dans sa manière même de raisonner."},
+  {"texte":"Il permet de représenter des informations qualitatives, imprécises, vagues.","page":202,"axe":"02-ia-technique-academique","theme":"Le vague formalisé","portee":"La logique floue donne un statut mathématique à ce que le langage ordinaire exprime sans précision."}]},
+
+ {"chapitre":"c982b93a","citations":[
+  {"texte":"L'interprétation automatique de scènes complexes telles que le cerveau requiert l'utilisation d'un modèle comportant des connaissances sur les structures composant la scène.","page":203,"axe":"02-ia-technique-academique","theme":"Voir suppose savoir","portee":"On ne reconnaît dans une image que ce dont on possède déjà une représentation."},
+  {"texte":"L'ensemble de ces relations spatiales forme ainsi une représentation compacte de l'anatomie (même si cette représentation est incomplète) permettant de s'affranchir partiellement de la variabilité anatomique normale.","page":203,"axe":"11-sciences-environnement","theme":"Structure contre apparence","portee":"Décrire les rapports entre les parties résiste mieux à la variabilité individuelle que décrire les parties."}]},
+
+ {"chapitre":"0067db93","citations":[
+  {"texte":"Plus le processus progresse, plus le nombre de structures segmentées est important et plus l'espace de solutions des structures restant à extraire est contraint.","page":204,"axe":"02-ia-technique-academique","theme":"Résoudre du facile au difficile","portee":"Stratégie transposable bien au-delà de l'image : chaque problème résolu réduit l'espace des suivants."},
+  {"texte":"L'espace de solutions est progressivement réduit par l'exclusion des affectations incohérentes avec le modèle structurel.","page":204,"axe":"02-ia-technique-academique","theme":"Éliminer l'incohérent","portee":"Chercher n'est pas toujours produire des réponses : c'est souvent écarter méthodiquement l'impossible."}]},
+
+ {"chapitre":"e74c2621","citations":[
+  {"texte":"Le besoin en logiciels d'analyse automatique d'images se fait de plus en plus pressant à mesure que l'image numérique s'impose comme une source d'information privilégiée.","page":206,"axe":"06-ia-travail-management-metiers","theme":"L'image comme information","portee":"Produire des images ne sert à rien si personne ne peut les exploiter, d'où une demande économique croissante."},
+  {"texte":"De ce fait, il n'existe pas d'algorithme universel.","page":206,"axe":"02-ia-technique-academique","theme":"Pas d'outil universel","portee":"Chaque algorithme suppose un modèle de ce qu'il traite, ce qui borne d'avance son domaine de validité."},
+  {"texte":"Cependant, l'utilisation d'une bibliothèque d'algorithmes de traitement d'images relève d'une expertise hautement spécialisée pour savoir quand et comment employer les algorithmes.","page":206,"axe":"06-ia-travail-management-metiers","theme":"Barrière de compétence","portee":"Disposer des outils ne suffit pas : savoir lequel employer et quand reste le vrai savoir rare."}]},
+
+ {"chapitre":"3513fdf0","citations":[
+  {"texte":"Les utilisateurs n'ont plus besoin d'être des experts de traitement d'images ; leur rôle est centré sur la formulation des objectifs de traitement.","page":207,"axe":"06-ia-travail-management-metiers","theme":"Déplacement du travail","portee":"L'automatisation déplace la compétence de l'exécution vers l'énoncé clair de ce que l'on veut obtenir."},
+  {"texte":"La formulation des objectifs de l'application revêt une importance primordiale puisqu'elle est utilisée par le système pour orienter le choix, le paramétrage et l'enchaînement des codes.","page":207,"axe":"03-ia-outils-pratique-prompting","theme":"Bien formuler la demande","portee":"La qualité du résultat dépend d'abord de la précision avec laquelle l'objectif a été énoncé au système."}]},
+
+ {"chapitre":"61b8a71d","citations":[
+  {"texte":"L'intérêt d'une définition par extension est de limiter la charge cognitive des utilisateurs du système puisque la formulation ne nécessite aucun langage de représentation.","page":208,"axe":"03-ia-outils-pratique-prompting","theme":"Montrer plutôt que décrire","portee":"Donner des exemples coûte moins d'effort à l'utilisateur que maîtriser un vocabulaire formel."},
+  {"texte":"L'intérêt de cette définition est de mieux profiter de l'expertise de l'utilisateur sur la scène.","page":208,"axe":"03-ia-outils-pratique-prompting","theme":"Décrire pour transmettre","portee":"Le langage permet de verser dans le système ce que l'utilisateur sait et que l'exemple seul ne dit pas."}]},
+
+ {"chapitre":"7ca9f06a","citations":[
+  {"texte":"la définition intensionnelle doit aborder le problème de l'ancrage des symboles dans le but de connecter les symboles linguistiques aux valeurs des données image","page":209,"axe":"02-ia-technique-academique","theme":"Ancrage des symboles","portee":"Entre le mot rose et une valeur mesurée dans une image, il faut construire un pont que rien ne donne d'avance."}]},
+
+ {"chapitre":"5a443d9f","citations":[
+  {"texte":"L'avantage de cette spécification est qu'elle est par nature quantitative puisqu'elle prend ses valeurs directement dans les données image.","page":210,"axe":"03-ia-outils-pratique-prompting","theme":"Force de l'exemple","portee":"Un exemple porte des valeurs concrètes qu'aucune description verbale ne fournit d'elle-même."},
+  {"texte":"Mais, l'inconvénient de cette approche est qu'une image de référence n'est pas suffisante pour formuler toutes les formes d'objectifs.","page":210,"axe":"03-ia-outils-pratique-prompting","theme":"Limite de l'exemple","portee":"Montrer un résultat attendu ne dit rien des préférences ni des compromis que l'on souhaite voir respectés."}]},
+
+ {"chapitre":"298be4e9","citations":[
+  {"texte":"De plus, la spécification par tâche présente l'avantage de couvrir tous les objectifs de traitement d'images : il suffit pour cela de définir le nom d'une tâche.","page":211,"axe":"03-ia-outils-pratique-prompting","theme":"Nommer la tâche","portee":"Nommer ce qu'on attend est général et souple, mais reste détaché des données concrètes."}]},
+
+ {"chapitre":"dc262ad9","citations":[
+  {"texte":"L'intérêt de cette approche est qu'elle ne requiert pas de modélisation explicite d'une expertise.","page":212,"axe":"02-ia-technique-academique","theme":"Se passer de l'expert","portee":"Mettre des solutions en concurrence évite d'avoir à formaliser un savoir-faire difficile à expliciter."}]},
+
+ {"chapitre":"f8f51912","citations":[
+  {"texte":"Le raisonnement à partir de cas s'appuie sur la mémorisation de chaînes de traitement construites avec succès dans le passé","page":213,"axe":"02-ia-technique-academique","theme":"Raisonner par cas","portee":"Réutiliser une solution qui a déjà marché est une forme d'intelligence pratique, humaine avant d'être machinale."},
+  {"texte":"En revanche, elle nécessite de savoir identifier et représenter des expertises de résolution pour chaque type de problème possible.","page":213,"axe":"02-ia-technique-academique","theme":"Coût de l'expertise formalisée","portee":"Plus un système est adaptable, plus il exige en amont un savoir explicité, patiemment recueilli."}]},
+
+ {"chapitre":"5537b59f","citations":[
+  {"texte":"L'approche par planification permet de créer des chaînes originales pour chaque application.","page":214,"axe":"02-ia-technique-academique","theme":"Construire au lieu de choisir","portee":"Planifier libère du catalogue de solutions préétablies, au prix d'une modélisation plus exigeante."}]},
+
+ {"chapitre":"81762c1b","citations":[
+  {"texte":"Mais le contrôle décentralisé facilite l'acquisition de ces connaissances, puisqu'il n'est pas nécessaire pour l'ingénieur de la connaissance d'expliciter des stratégies de résolution.","page":215,"axe":"02-ia-technique-academique","theme":"Vertu du décentralisé","portee":"Renoncer à un plan d'ensemble allège la conception, mais reporte la difficulté sur le contrôle."},
+  {"texte":"la convergence vers une solution n'est garantie que par l'action de règles ou d'agents qui n'ont qu'une vision très locale de leurs effets","page":215,"axe":"02-ia-technique-academique","theme":"Vision locale","portee":"Un collectif d'agents myopes peut réussir, mais nul ne maîtrise plus la marche générale du processus."}]},
+
+ {"chapitre":"f6b7eafc","citations":[
+  {"texte":"La plupart des robots industriels du siècle dernier étaient utilisés dans des environnements extrêmement structurés et maîtrisés tels que des chaînes de montage.","page":216,"axe":"06-ia-travail-management-metiers","theme":"Le robot d'atelier","portee":"Le robot classique ne fonctionnait qu'en supprimant l'incertitude autour de lui, et l'humain avec."},
+  {"texte":"La seule alternative raisonnable est de doter ces robots polyvalents de capacités d'apprentissage et d'adaptation à leur environnement.","page":216,"axe":"06-ia-travail-management-metiers","theme":"Pourquoi apprendre","portee":"Dès que le monde cesse d'être prévisible, programmer ne suffit plus, il faut savoir apprendre."},
+  {"texte":"Mais ces méthodes statistiques restent insuffisantes dans le cas de scènes complexes ou pour des problèmes autres que la détection.","page":216,"axe":"02-ia-technique-academique","theme":"Limites du statistique","portee":"Repérer un visage n'est pas comprendre une scène, distinction que le succès des méthodes récentes fait oublier."}]},
+
+ {"chapitre":"084f2406","citations":[
+  {"texte":"Par conséquent, aucun cadre théorique fédérateur ne s'est encore imposé pour formaliser les problèmes d'apprentissage en robotique de façon définitive","page":217,"axe":"02-ia-technique-academique","theme":"Domaine sans doctrine","portee":"Un champ jeune se reconnaît à ce qu'il multiplie les approches sans qu'aucune ne fasse encore autorité."},
+  {"texte":"Que ce soit avec l'une ou l'autre des approches, se pose aussi un problème de généralisation : les circonstances n'étant jamais exactement les mêmes, le mouvement enregistré n'est jamais parfaitement adéquat et il faut savoir l'adapter à ces variations.","page":217,"axe":"09-developpement-personnel-influence","theme":"Imiter ne suffit pas","portee":"Reproduire un geste appris ne vaut que si l'on sait l'ajuster, car la situation n'est jamais deux fois la même."}]},
+
+ {"chapitre":"1cb6224c","citations":[
+  {"texte":"Pour aller plus loin, il faut que le robot soit capable d'adapter son comportement à des situations non prévues par le concepteur.","page":218,"axe":"06-ia-travail-management-metiers","theme":"Au-delà du prévu","portee":"L'autonomie commence exactement là où s'arrête l'anticipation de celui qui a conçu la machine."},
+  {"texte":"D'une part, ces méthodes n'ont besoin d'aucune hypothèse a priori sur la forme des modèles.","page":218,"axe":"02-ia-technique-academique","theme":"Apprendre sans présupposé","portee":"Ne rien supposer de la forme du modèle est la liberté qui distingue l'apprentissage de l'identification classique."}]},
+
+ {"chapitre":"949a68f7","citations":[
+  {"texte":"L'interaction peut enfin être totalement implicite, lorsque l'homme et le robot adaptent leur comportement l'un à l'autre sans aucune communication, juste par ajustement de leur comportement au comportement observé chez l'autre.","page":219,"axe":"04-ia-societe-ethique-philosophie","theme":"Coopérer sans se parler","portee":"L'ajustement mutuel silencieux est une forme d'entente que la machine peut désormais partager avec nous."},
+  {"texte":"Une telle démarche est susceptible d'apporter des progrès dans la mise au point des mécanismes adaptatifs pour les robots, ceux des êtres vivants étant les meilleurs exemples à notre disposition.","page":219,"axe":"11-sciences-environnement","theme":"S'inspirer du vivant","portee":"Le vivant reste le seul système adaptatif éprouvé, et donc la meilleure école de conception disponible."}]},
+
+ {"chapitre":"eaa6d6d5","citations":[
+  {"texte":"Du coup, le robot, en tant qu'instrument de validation, s'avère un outil extrêmement précieux pour faire progresser la connaissance sur le vivant en offrant un cadre expérimental exigeant dans lequel différentes théories peuvent être analysées ou comparées.","page":220,"axe":"11-sciences-environnement","theme":"Le robot comme instrument","portee":"Construire une machine sur une théorie est une manière rigoureuse de mettre cette théorie à l'épreuve."},
+  {"texte":"Il résulte de cet essor rapide un développement foisonnant dans lequel de nombreuses approches se développent en parallèle dans des directions parfois très différentes","page":220,"axe":"02-ia-technique-academique","theme":"Foisonnement et structuration","portee":"Une discipline en croissance rapide produit d'abord de la dispersion avant de produire de la synthèse."}]},
+
+ {"chapitre":"867b3b0e","citations":[
+  {"texte":"Enfin, la multiplication des méthodes et des modèles incite à en combiner les avantages.","page":221,"axe":"02-ia-technique-academique","theme":"Combiner plutôt que trancher","portee":"Devant l'abondance des méthodes, le progrès vient moins du choix exclusif que de l'assemblage réfléchi."}]}
+]

@@ -1,0 +1,108 @@
+{
+ "document_id": "19a0fed2-5380-4466-b67c-8de2b22af707",
+ "titre_normalise": "L'intelligence artificielle va-t-elle aussi tuer la démocratie ?",
+ "auteurs": [
+  "Laurent Alexandre",
+  "Jean-François Copé"
+ ],
+ "annee": 2019,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Grand public politisé, élus, cadres de l'administration, étudiants en science politique. Le livre est construit en deux moitiés autonomes : Laurent Alexandre expose le diagnostic, Jean-François Copé répond en homme politique en exercice.",
+ "these_centrale": "L'intelligence artificielle déplace le clivage politique et affaiblit les conditions mêmes de la délibération démocratique : elle creuse les écarts cognitifs, déqualifie les classes moyennes dont la loyauté fonde la démocratie, et confère à des acteurs privés extra-européens un pouvoir que les États ne savent plus encadrer. Alexandre en conclut que la démocratie est menacée ; Copé, sans le contester, soutient qu'une réponse politique reste possible à condition de la vouloir.",
+ "idees_force": [
+  {
+   "titre": "Le clivage gauche droite cède devant l'opposition bio-conservateurs et transhumanistes",
+   "explication": "Alexandre observe des recompositions inattendues : José Bové, militant d'extrême gauche, se retrouve avec les catholiques les plus conservateurs contre la fécondation in vitro, et se révèle plus conservateur que la présidente de La Manif pour tous, favorable aux thérapies géniques. Il en tire que les technologies convergentes vont reconfigurer les partis selon une ligne de fracture nouvelle.",
+   "page": 18
+  },
+  {
+   "titre": "Un cyber-rideau va couper Internet en deux, et l'Afrique francophone est en jeu",
+   "explication": "Alexandre reprend le pronostic d'Eric Schmidt sur une bifurcation entre un Internet dirigé par les Chinois et un Internet dirigé par les États-Unis, puis cite Nicolas Miailhe : si la France n'est pas dans le même continent web que l'Afrique francophone, celle-ci deviendra progressivement mandarinophone. Il note que plusieurs pays africains francophones apprécient déjà le grand pare-feu chinois, qui permet une censure sophistiquée sans bloquer les affaires.",
+   "page": 34
+  },
+  {
+   "titre": "L'Europe sera un nain géopolitique parce qu'elle devient un nain technologique",
+   "explication": "La formule la plus dure du livre : les dirigeants européens sont les Gamelin de l'intelligence artificielle. Alexandre soutient qu'en 2030 une armée européenne serait aveuglée par les systèmes américains ou chinois même sans être connectée, et il relève que le chef technologique du Pentagone s'alarme lui même de mettre seize ans à passer d'une idée à une arme opérationnelle contre moins de sept ans aux militaires chinois.",
+   "page": 34
+  },
+  {
+   "titre": "Huit scénarios pour le travail, dont aucun n'est prévisible",
+   "explication": "Alexandre expose une série de futurs possibles qui vont de la mort du travail à l'intelligence centaure de Kasparov, où homme et machine forment un être hybride indissociable. Il retient surtout le cas de Ke Jie, qui déclare un mois après sa défaite contre AlphaGo avoir fondamentalement reconsidéré le jeu. Puis il cite Taleb : les événements qui changent réellement l'histoire sont par définition imprévus.",
+   "page": 62
+  },
+  {
+   "titre": "Exiger des systèmes transparents et certifiables serait, selon lui, suicidaire",
+   "explication": "C'est la thèse la plus contestable et la plus argumentée du livre. Alexandre soutient qu'il existe des arbitrages réels entre protection de la vie privée et performance, entre puissance et explicabilité, et qu'un système rendu transparent devient plus facile à manipuler. Il ajoute que vouloir empêcher une plateforme d'être raciste alors que beaucoup de ses utilisateurs le sont suppose d'intervenir dans ses mécanismes, ce qui est loin d'être anodin.",
+   "page": 93
+  },
+  {
+   "titre": "Le mot progrès a quitté le discours politique",
+   "explication": "Copé fait un constat lexical qui vaut diagnostic : pendant des décennies, le progrès désignait un avenir désirable ; on lui préfère aujourd'hui le terme plus neutre d'innovation, parce qu'il fait moins peur. Il rappelle que les enfants des années 1960 rêvaient d'être astronautes et que les mêmes tiennent désormais toute avancée pour d'abord génératrice de risques.",
+   "page": 110
+  },
+  {
+   "titre": "Le savoir n'est plus le socle de l'autorité",
+   "explication": "Analyse fine de Copé sur ce que le numérique a fait à la transmission. On ne dit plus à un adolescent qu'il est trop jeune pour comprendre quand on a besoin de lui pour rétablir la connexion. On écoutait un professeur parce qu'il savait ; on vérifie désormais en temps réel. Notre monde est devenu horizontal, et toute verticalité est perçue comme de l'autoritarisme.",
+   "page": 150
+  },
+  {
+   "titre": "Ce n'est pas l'emploi qui disparaît, ce sont les tâches qui s'automatisent",
+   "explication": "Copé s'appuie sur les cinq critères de substituabilité proposés par France Stratégie et le Conseil national du numérique en 2017 : maturité technique, capacités cognitives verticales ou horizontales, acceptabilité sociale, intelligence émotionnelle, dextérité manuelle. Il relève que seuls vingt pour cent des dirigeants français font de l'intelligence artificielle une priorité stratégique alors que quarante pour cent se disent conscients des enjeux humains.",
+   "page": 162
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Bio-conservateurs et transhumanistes",
+   "definition": "Nouvel axe politique proposé par Alexandre, qui recompose les alliances selon le rapport aux technologies de modification du vivant plutôt que selon le clivage économique traditionnel."
+  },
+  {
+   "terme": "Cyber-rideau",
+   "definition": "Séparation prévisible d'Internet en deux ensembles techniques et normatifs, l'un piloté depuis la Chine, l'autre depuis les États-Unis, avec pour enjeu l'alignement des pays tiers."
+  },
+  {
+   "terme": "Capitalisme cognitif",
+   "definition": "Régime économique où la valeur provient du traitement de l'information et des capacités cognitives plutôt que du capital physique. Alexandre reproche à l'Europe d'y entrer avec des réflexes néo-conservateurs."
+  },
+  {
+   "terme": "Intelligence centaure",
+   "definition": "Idée de Garry Kasparov d'un attelage homme machine indissociable, où la performance vient de la combinaison et non de la substitution."
+  },
+  {
+   "terme": "Substituabilité des tâches",
+   "definition": "Mesure de la possibilité de remplacer un humain par une machine sur une tâche donnée, évaluée par cinq critères plutôt que par métier entier."
+  },
+  {
+   "terme": "Effet Dunning-Kruger",
+   "definition": "Biais de surconfiance selon lequel plus un individu ignore un sujet, plus il surestime sa compréhension. Alexandre l'applique à la classe politique face à l'intelligence artificielle."
+  },
+  {
+   "terme": "Neuropolitique",
+   "definition": "Ensemble des questions politiques nouvelles posées par la capacité d'agir sur les états cérébraux : manipulation, augmentation, authentification du réel."
+  },
+  {
+   "terme": "Nation de l'intelligence artificielle",
+   "definition": "Objectif que Copé assigne à la France, articulé autour de la souveraineté des données, du financement et de la formation."
+  },
+  {
+   "terme": "Cadre de confiance",
+   "definition": "Proposition de Copé confiant aux opérateurs de télécommunications européens un service de protection et de filtrage des données, sur le modèle de l'assistant Aura de Telefonica, pour sortir du piège des conditions générales que personne ne lit."
+  }
+ ],
+ "a_lire_si": "Vous vous intéressez à la dimension géopolitique et institutionnelle de l'intelligence artificielle plutôt qu'à sa technique. La construction en deux voix est le principal intérêt du livre : un essayiste qui alarme, un praticien du pouvoir qui doit répondre. La partie de Copé sur l'autorité et sur la disparition du mot progrès est la plus originale de l'ensemble.",
+ "a_eviter_si": "Vous avez déjà lu La guerre des intelligences du même Laurent Alexandre : sa moitié du livre en reprend l'essentiel des thèses, parfois mot pour mot. Le livre date aussi de février 2019, avant les grands modèles de langage, et son horizon technique s'arrête à la reconnaissance de formes et aux systèmes de recommandation.",
+ "prerequis": [
+  "Aucun prérequis technique.",
+  "Une lecture préalable d'un ouvrage descriptif sur l'intelligence artificielle aide à distinguer ce qui relève du constat de ce qui relève de la thèse, car les deux auteurs argumentent sans jamais décrire les systèmes.",
+  "La seconde moitié suppose une familiarité minimale avec le vocabulaire des politiques publiques françaises et européennes."
+ ],
+ "controverses": [
+  "⚠️ Le passage sur l'Afrique mérite d'être lu avec attention par un lecteur africain. Le risque décrit, celui d'une bascule linguistique et technique de l'Afrique francophone vers l'écosystème chinois, est réel et documenté. Mais il est formulé du seul point de vue de l'intérêt français : l'Afrique y apparaît comme un enjeu entre puissances, non comme un acteur qui déciderait pour lui même. Les ouvrages de Cheikh Anta Diop et de Kwame Nkrumah présents dans cette bibliothèque proposent précisément la grille qui manque ici.",
+  "La thèse selon laquelle exiger des systèmes explicables serait naïf et suicidaire va frontalement contre le règlement européen sur l'intelligence artificielle et contre les recommandations de l'Académie des technologies, également présentes dans ce corpus. L'argument sur les arbitrages techniques est sérieux ; la conclusion politique qu'il en tire ne s'impose pas.",
+  "Alexandre reprend ici les thèses sur le quotient intellectuel et la neuroaugmentation développées dans La guerre des intelligences, avec les mêmes objections : confusion entre héritabilité statistique et détermination des inégalités sociales.",
+  "La critique du rapport Villani porte sur un point discutable mais réel, la surestimation du nombre de chercheurs publics par rapport à l'accès aux données et aux écosystèmes entrepreneuriaux. Elle est formulée comme une évidence alors qu'elle est une hypothèse.",
+  "Les deux auteurs partagent le même cadre libéral et la même urgence compétitive. Le livre annonce un dialogue mais ne comporte aucune contradiction réelle entre ses deux moitiés."
+ ],
+ "confiance": 0.86
+}

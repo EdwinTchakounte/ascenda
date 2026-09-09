@@ -1,0 +1,586 @@
+OUVRAGE : Vivre avec ChatGPT
+AUTEUR(S) : Alexandre Gefen
+ANNÉE : inconnue
+PAGES : 165
+AXE : IA Outils Pratique Prompting
+SOMMAIRE :
+  Titre (p. 2-3)
+  Du même auteur (p. 4-4)
+  Copyright (p. 5-5)
+  Note aux lecteurs : ce livre a-t-il été écrit avec ChatGPT ? (p. 6-8)
+  Première partie - L'invasion des perroquets stochastiques : comprendre ChatGPT (p. 9-9)
+  Chapitre 1 - La Silicon Valley de l'étrangeté (p. 10-16)
+  Chapitre 2 - Le langage du langage (p. 17-23)
+  Chapitre 3 - Le canard et les automates (p. 24-31)
+  Chapitre 4 - Les algorithmes : à la vie, à la mort (p. 32-41)
+  Chapitre 5 - Ce feu nous brûlera-t-il ? (p. 42-50)
+  Chapitre 6 - La seconde mort de l'auteur (p. 51-59)
+  Chapitre 7 - Le dilemme du tramway (p. 60-70)
+  Chapitre 8 - L'apocalypse des trombones : ChatGPT va-t-il détruire le monde ? (p. 71-80)
+  Seconde partie - L'art du prompt : utiliser ChatGPT (p. 81-81)
+  Chapitre 9 - Accéder à tout le savoir du monde (p. 82-91)
+  Chapitre 10 - Chatbusiness (p. 92-101)
+  Chapitre 11 - La créativité augmentée (p. 102-111)
+  Chapitre 12 - Comment hacker ChatGPT ? (p. 112-120)
+  Chapitre 13 - Rédiger est-il démontrer ? (p. 121-129)
+  Chapitre 14 - Parler est-il penser ? (p. 130-139)
+  Chapitre 15 - Discuter est-il aimer ? (p. 140-149)
+  Chapitre 16 - Ce que nous apprend l'IA sur nous-mêmes (p. 150-159)
+  Annexe (p. 160-162)
+  Remerciements (p. 163-163)
+  Table des matières (p. 164-165)
+
+[11/99 passages, 9768 tokens sur 92218]
+
+=== EXTRAITS ===
+
+[p. 4-4]
+Du même auteur
+La Littérature, une infographie, CNRS Éditions, 2022.
+La littérature est une affaire politique, Éditions de l’Observatoire, 2022.
+L’Idée de la littérature. De l’art pour l’art aux écritures d’intervention, José Corti, 2021.
+Réparer le monde : La littérature française face aux XXI
+e siècle, José Corti, 2017.
+Inventer une vie : La fabrique littéraire de l’individu, Les Impressions nouvelles, 2015.
+
+---
+
+[p. 16-18]
+e autant d’opérations
+mathématiques que l’on souhaite. Un siècle de savoir humain, de rhétorique
+et de grand discours, un mouvement qui avait transformé l’Europe, un
+cortège de professeurs barbichus et de poètes échevelés semble pouvoir être
+compris par une machine comme une manière statistique particulière
+d’organiser des mots.
+CHAPITRE 2
+Le langage du langage
+Depuis ce voyage à Stanford, je côtoie des outils d’analyse des textes et
+des modèles de langage capables d’en produire ; je discute avec les
+informaticiens qui les façonnent, les scientifiques qui les utilisent. J’en ai
+étudié les algorithmes en m’intéressant en particulier à la manière dont l’IA
+permet de comprendre l’histoire des idées et des sensibilités ; j’en ai tenté
+mille usages innovants (par exemple faire écrire l’histoire d’une ville par
+une intelligence artificielle ayant digéré la mémoire de ses habitants après
+avoir été « entraînée » sur des témoignages qu’ils avaient produits) ; j’en
+cartographie dans un projet financé par l’Agence nationale de la recherche
+les résonances philosophiques et culturelles, mais ma fascination n’a pas
+diminué. Lorsque ChatGPT a connu, début 2023, un engouement ayant
+dépassé toutes les autres innovations technologiques de l’ère numérique en
+nombre d’utilisateurs et en rapidité d’adoption, j’ai eu le sentiment que le
+trouble qui m’habitait dès que je demandais à une IA d’analyser un texte,
+d’écrire une histoire ou de répondre à une question, allait être partagé. C’est
+de cette décennie de fascination intime pour les IA autant que d’un savoir
+de praticien que ce livre témoigne. Il essaye d’apporter aux débats le recul
+d’une réflexion nourrie par la longue histoire de l’intelligence artificielle,
+sans oublier le rapport très particulier de familiarité étonnée que nous
+
+entretenons avec les objets technologiques dont font partie les IA, que nous
+investissons non seulement de rationalité, mais aussi d’affectivité.
+Comme le rappelle Yann Le Cun, l’inventeur français des réseaux de
+neurones artificiels, devenu chef de la recherche chez Meta, la société mère
+de Facebook, d’Instagram et de WhatsApp, ChatGPT n’a rien de
+révolutionnaire, mais s’appuie sur des décennies d’innovation en IA.
+La première pierre, on l’a vu, est la possibilité de comprendre
+mathématiquement le langage naturel humain. Cette idée a permis de
+construire ce qu’on appelle des « modèles de langage », c’est-à-dire des
+représentations des probabilités d’apparition de séquences de mots dans une
+langue naturelle (humaine) en « apprenant » cette langue, c’est-à-dire en
+calculant l’ensemble des probabilités d’apparition des mots. Cette méthode
+est utilisée depuis des années sur nos téléphones portables et s’appelle
+l’« autocomplétion » : elle anticipe les mots que nous allons écrire ou les
+corrige automatiquement, au prix de résultats parfois cocasses. Lorsque se
+conjuguent la puissance des superordinateurs contemporains et la
+disponibilité d’énormes ensembles de textes (livres, pages Web, articles de
+presse, conversations sur les réseaux sociaux) on parle de « grands modèles
+de langage » qui incorporent non seulement des règles grammaticales, mais
+aussi le savoir contenu dans ces textes, ou du moins, la différence est
+essentielle, le savoir des relations que les mots possèdent entre eux. Une
+manière d’apaiser notre peur par rapport à la spontanéité de ces systèmes
+est de les réduire à de « l’autocomplétion sous stéroïdes » ou encore à ce
+qu’on appelle nonchalamment des « perroquets stochastiques »
+(statistiques). Cette dernière expression d’Emily M. Bender et Timnit Gebru
+(qui fut licenciée par Google après avoir critiqué les biais de l’IA) a fait
+florès. Elle rappelle à juste titre qu’un modèle de langage ne peut que
+répéter des textes qu’il a appris et n’en inventer d’autres que par des
+formules 
+combinatoires, 
+mais 
+qu’on 
+sous-estime 
+la 
+puissance
+d’éclaircissement et d’invention qui peuvent naître de ces recombinaisons
+
+---
+
+[p. 31-33]
+e
+dimanche matin aux rapports sexuels qui suivent ces prouesses. Lorsque la
+puissance de calcul des ordinateurs modernes s’associe à des méthodes
+mathématiques efficaces, ces données de masse viennent parler et dévoiler
+les constantes et les irrégularités de la vie et des savoirs humains : ce sont
+elles qui parlent avec ChatGPT.
+CHAPITRE 4
+Les algorithmes : à la vie, à la mort
+Le projet de la science occidentale, dont procèdent toutes les
+technologies de l’intelligence artificielle, c’est de se rendre « maître et
+possesseur de la nature », selon la formule restée célèbre de Descartes.
+Un tel dessein ne se limite pas à l’exploitation ou à la mise en esclavage des
+ressources naturelles, mais s’accompagne d’une volonté de transformer
+l’humain en en faisant un animal plus rationnel, plus efficace, et de l’aider à
+dépasser ses limites, sa finitude. Il y a plus que jamais dans le projet de
+l’intelligence artificielle moderne l’idée que la technologie peut être une
+réponse aux faiblesses de la condition humaine : sensibilité aux émotions,
+irrationalité de l’affect, limites physiques, peur de la mort, etc. L’IA va
+aider à améliorer les performances individuelles sportives des corps
+(coaching personnalisé) ou collectives (analyse stratégique des matchs)
+autant que les capacités cognitives de mémorisation, de calcul, et désormais
+de rédaction et d’invention du cerveau. Non seulement les voitures
+connectées causeront moins d’accidents et les diagnostics par IA feront
+moins d’erreurs, mais cette IA va nous accompagner dans nos décisions
+individuelles et sociales ; c’est en tout cas ce que prédit Yuval Harari, dans
+son best-seller Homo deus, en nous permettant d’optimiser le
+fonctionnement des sociétés par la réduction des biais : nous pouvons faire
+
+confiance à des algorithmes qui connaîtront mieux nos sociétés qu’elles-
+mêmes et qui nous comprendront mieux que nous-mêmes.
+Quoi qu’on pense de ces élucubrations, leurs résonances politiques sont
+immenses. De la patrie du libéralisme viendra la fin de la liberté
+individuelle, commente Gaspard Kœnig dans sa formidable enquête sur
+l’intelligence artificielle intitulée La Fin de l’individu qui vise à dénoncer
+les dangers de l’utilitarisme.
+Mon chat, qu’est-ce que l’utilitarisme et quel rapport cette doctrine
+politique a-t-elle avec l’intelligence artificielle dont tu es
+l’exemple ?
+L’utilitarisme est une théorie éthique qui soutient que les actions
+doivent être évaluées en termes de leur capacité à produire le plus
+grand bien pour le plus grand nombre de personnes. Selon cette
+doctrine, le bien-être de la majorité doit être privilégié, même si cela
+peut causer un préjudice à une minorité.
+En ce qui concerne l’intelligence artificielle, l’utilitarisme peut être
+appliqué dans la façon dont les systèmes d’IA sont conçus et
+utilisés. Les concepteurs et les utilisateurs peuvent utiliser cette
+théorie éthique pour s’assurer que les systèmes d’IA sont
+développés de manière à maximiser le bien-être de la société dans
+son ensemble.
+Autrement dit, plus qu’une simple augmentation cognitive, les IA
+participent d’un rêve d’optimisation sociale globale rendue possible par la
+« datification » transparente du monde : au détriment des histoires
+individuelles, des cas particuliers et des sensibilités, les IA se destinent à
+nous guider à partir de la connaissance qu’elles acquièrent de nos
+comportements en orientant nos habitudes pour renforcer le bonheur
+collectif global. Faire parler le savoir par ChatGPT relève de cet objectif
+
+---
+
+[p. 46-47]
+de nombreux chercheurs en IA – comment
+oublier que Norbert Wiener et Marvin Minsky, deux des pères fondateurs de
+l’intelligence artificielle, ont écrit des romans ? Comme tout horizon de
+transformation radicale, déréglant les catégories fondamentales de nos
+représentations (le partage entre le naturel et l’artificiel, l’animé et
+l’inanimé, etc.), les conditions de notre vie en promettant d’arracher
+l’humain à sa solitude métaphysique et à sa mortalité, interrogeant notre
+individualité et notre subjectivité, l’IA est accompagnée de toute une
+culture fictionnelle : pensons au cinéma de Metropolis de Fritz Lang (1927)
+à Ex Machina d’Alex Garland en passant, pour évoquer les œuvres les plus
+notables, par 2001, l’Odyssée de l’espace de Stanley Kubrick, Alphaville de
+Jean-Luc Godard, Blade Runner de Ridley Scott, A.I. Intelligence
+artificielle de Steven Spielberg. Capables de développer des personnages
+sur de longues durées en permettant de réélaborer notre approche de
+l’ordinaire, les séries ont pris le relais à l’heure du triomphe industrielle de
+l’IA : Battlestar Galactica, Raised by Wolves, Mr. Robot, Real Humans, ou
+encore Almost Humans, et plusieurs épisodes de la série d’anticipation
+Black Mirror viennent l’analyser de près, en particulier « Be Right Back »,
+qui met en scène la survie postmortem d’un jeune homme grâce à une IA.
+Dans quelle mesure les humains peuvent-ils être guidés par des formes
+avancées de psychologie sociale aidées par l’IA ? S’affranchir de la mort
+dans le projet post-humaniste n’a-t-il pas pour contrepartie de robotiser les
+humains en les uploadant ? C’est la question que pose frontalement la
+sublime série Westworld. Non seulement l’héroïne de la série, Maeve, arrive
+à deviner les pulsions de ses clients et à anticiper leur comportement en
+lisant en eux comme sait le faire une prostituée expérimentée (voir saison 1,
+épisode 6), mais le parc de loisirs est en réalité lui-même une vaste
+expérience de psychologie sociale. C’est le twist de la première saison : la
+finalité du parc d’attractions est moins d’apprendre aux robots à se
+comporter comme des humains qu’à enregistrer et analyser une myriade de
+comportements individuels humains pour les contrôler ensuite par des IA
+(les chapeaux de cowboy confiés aux invités sont en réalité des scanners
+cérébraux). Aux saisons 2 et 3, l’enjeu, auquel certains androïdes
+collaborent avec les humains, sera d’empêcher la prise de contrôle de
+l’humanité par une IA centralisée, Rehoboam, capable de prédire la vie de
+
+---
+
+[p. 59-61]
+oduire de la littérature ? Si la
+littérature est un usage spécifique du langage, cet usage peut-il être
+reproduit par une machine ? Peut-on parler de la littérature comme d’une
+technologie d’écriture comme une autre ? En littérature comme ailleurs,
+l’IA enrichit les questions que nous nous posons depuis longtemps sur
+nous-mêmes.
+CHAPITRE 7
+Le dilemme du tramway
+Imaginez le conducteur d’un tramway dont les freins ont lâché et qui
+n’a le choix que de dévier sa course ou non de sa voie vers une autre. S’il
+ne fait rien, il tuera les cinq personnes qui se trouvent devant lui. S’il
+change de voie, il épargnera certes ces personnes, mais il en tuera une autre.
+Ce dilemme moral, imaginé par Philippa Foot en 1967, est devenu un
+classique en philosophie. Sa réponse, portée par le courant de la philosophie
+utilitariste, consiste à dire que la meilleure option possible est dans la mort
+d’un seul homme. Mais elle n’arrête pas la réflexion, voire même elle se
+complique si, comme Judith Jarvis Thomson, on imagine par exemple le cas
+où il serait possible de sauver cinq personnes en poussant volontairement
+sur la voie un homme obèse. De tels dilemmes peuvent paraître abstraits et
+artificiels, mais cette mécanisation de la morale apparaît à beaucoup comme
+une nécessité, voire une opportunité, à l’heure des machines autonomes.
+Nous n’en sommes pas tout à fait à l’heure de la singularité où il faudra
+imaginer des lois similaires à celles proposées par Asimov en 1942 :
+primo – un robot ne peut porter atteinte à un être humain ni, restant passif,
+laisser cet être humain exposé au danger ; secundo – un robot doit obéir aux
+ordres donnés par les êtres humains, sauf si de tels ordres entrent en
+contradiction avec la première loi ; tertio – un robot doit protéger son
+existence dans la mesure où cette protection n’entre pas en contradiction
+
+avec la première ou la deuxième loi). Mais il n’en demeure pas moins
+qu’une voiture autonome risque d’être confrontée à des choix éthiquement
+complexes (vaut-il mieux avoir 40 % de chances de tuer une vieille dame
+ou 60 % de chance de tuer son conducteur en tournant au dernier
+moment ?). Sur quelles bases ces choix doivent-ils être définis ? Sur la base
+de commissions d’éthique définissant des principes intangibles ? Sur la base
+d’un calcul empirique et utilitariste de la valeur des vies ? La solution tient-
+elle, comme le propose le projet Moral Machine lancé par le MIT, à faire de
+grands sondages démocratiques pour d’adopter la solution choisie par la
+majorité 
+? 
+Ces 
+problèmes 
+d’éthique 
+particulièrement 
+complexes
+commencent à se poser dans l’usage d’IA destinées, par exemple, à
+optimiser l’allocation d’organes d’un donneur pour optimiser les chances de
+réussite d’une greffe ou à prépositionner des voitures de police dans les
+lieux détectés comme les plus criminogènes. Ils s’accompagnent de
+questions nouvelles sur les responsabilités : qui est responsable si l’IA d’un
+médecin fait un mauvais diagnostic ou si une voiture produit un accident ?
+Lorsque les IA recourent à des processus d’apprentissage complexe, ces
+problèmes se compliquent de la question des biais éventuellement contenus
+par les données et de la difficulté à motiver ex post les conclusions rendues
+par l’IA : Amazon a, par exemple, dû renoncer à un système de sélection
+automatisé de profils pour son recrutement parce qu’il conduisait à
+reproduire la surreprésentation des hommes, et Google a dû ajuster son
+système de reconnaissance faciale qui était, faute d’exemples dans ses
+données d’entraînement, bien moins efficace sur les visages de couleur.
+Pensons aux contestations dont fait l’objet un système expert simple et dont
+le code est public comme Parcoursup : quand bien même une sélection
+fondée sur l’IA serait entraînée sur des données parfaitement propres par
+des programmeurs attentifs à tous les biais possibles, le résultat de cette
+sélection est très difficilement explicable, renvoyant l’individu à une
+violence algorithmique difficilement acceptable. Entraînées sur des
+
+---
+
+[p. 76-77]
+« démocratiser » l’IA, comme l’annoncent les fondateurs
+d’OpenAI. Les avancées technologiques continuent : en 2020, une première
+version de GPT-3, en 2021, le générateur d’images DALL-E, en
+décembre 2022, la bombe ChatGPT, basée sur GPT-3.5, en mars 2023,
+GPT-4 et ses capacités multimodales. Mois après mois, la société grossit,
+jusqu’à la prise de contrôle début 2023 de Microsoft et la promesse de
+profit d’un milliard de dollars par an en 2024.
+Derrière les trois cents geeks plus ou moins idéalistes d’OpenAI
+installés au Pioneer Building de San Francisco (dont seulement 25 % de
+femmes), il y a l’intelligence collective de milliards de textes humains, le
+travail des petits employés de Sama, et aussi une gigantesque infrastructure
+matérielle à l’échelle mondiale, comprenant autant des câbles sous-marins
+que des usines de microprocesseurs situées à Taïwan, des scientifiques du
+monde entier que des fermes de calcul invisibles, l’argent des retraités
+américains et les vieux idéaux progressistes de la Californie. De fait les
+enjeux posés par OpenAI ne sont plus seulement financiers, ils dépassent
+largement les rivalités entre GAFAM, ils sont géopolitiques et écologiques.
+L’idée que l’intelligence collective de l’humanité soit contrôlée depuis les
+États-Unis, avec le risque d’imposition d’une langue et d’un certain modèle
+culturel, ne cesse d’entraîner des réactions de panique morale et
+économique. En France, la conscience de l’importance stratégique de l’IA
+remonte au rapport Villani de fin 2018, « Donner un sens à l’intelligence
+artificielle » ; elle s’est accompagnée d’investissements importants dans la
+recherche comme d’une réflexion juridique et éthique – comme souvent en
+Europe, la réponse à la domination technologique américaine est juridique
+avant d’être industrielle. Mais plusieurs acteurs nationaux tentent
+d’émerger, comme le montre le lancement en 2022 du modèle de langage
+ouvert Bloom, développé par la start-up franco-américaine Hugging Face,
+et soutenu par le CNRS et le ministère de l’Enseignement supérieur et de la
+Recherche. À la différence de GPT-3, Bloom est ouvert et a été pensé pour
+représenter plus largement les savoirs du monde, en incluant au total
+quarante-six langues dont des langues d’Afrique subsaharienne comme le
+swahili ou le yoruba. Reste à savoir ce que donnera ce beau projet encore en
+attente d’utilisation pratique et de plan marketing. La Chine n’est pas en
+reste : la victoire d’AlphaGo en 2015 contre le meilleur joueur humain de
+
+---
+
+[p. 91-91]
+uton nous
+suggérant des rédactions possibles, ne saurait être sans conséquences sur
+nos modes éducatifs, et aussi sur notre fonctionnement cérébral. Plastique,
+notre cerveau possède la capacité de coévoluer avec les outils techniques
+qu’il engendre, de l’écriture à l’imprimerie, des smartphones à ChatGPT.
+Reste à savoir comment.
+
+---
+
+[p. 105-107]
+iles de maître ; il nous
+manque non seulement ce « supplément d’âme » que Bergson demandait à
+l’humanité pour maîtriser la technique, mais un inaccessible supplément de
+vigilance.
+Vall-E de Microsoft est capable de reproduire n’importe quelle voix à
+partir d’un simple échantillon de trois secondes : la perte de la singularité de
+notre voix est l’emblème de cette perte de singularité possible de l’artiste,
+imitable par les IA génératives. Les IA sont capables de finir la Symphonie
+inachevée de Schubert, de réécrire la fin de Game of Thrones, ou de faire
+tous les « transferts » de style plausibles :
+Peux-tu me faire un sonnet à la manière de Ronsard pour les 4 ans
+de mon fils ?
+Sur l’aile du temps, quatre ans se sont enfuis,
+Petit ange charmant, en ce jour tu grandis,
+Comme le doux printemps qui s’éveille en liesse,
+Ainsi rayonne en toi, enfance et tendresse.
+Le ciel a fait cadeau d’un enfant bienheureux,
+Dans tes yeux innocents, on y voit mille feux,
+Leurs éclats scintillants, comme astres lumineux,
+Éclairent le chemin, d’un amour précieux.
+Puisses-tu dans la vie, grandir et t’épanouir,
+Bâtir un avenir, toujours vers l’avenir,
+Dans les bras de ta famille, trouver réconfort,
+Et que chaque journée, offre ses trésors.
+Fête donc aujourd’hui, tes quatre ans chéri,
+Que la vie devant toi, soit douce comme un nid.
+... et maintenant un sonnet baudelairien sur le même thème ?
+Ô sombre crépuscule, où s’étirent les ans,
+Quatre hivers ont passé, emportant leurs tourments,
+Dans l’ombre de ton âme, un enfant est venu,
+S’épanouir sous l’égide d’un ciel suspendu.
+
+Petit être charmant, tu grandis dans la nuit,
+Comme un songe d’amour, telle une étoile qui luit,
+Tes yeux aux mille feux, reflètent l’infini,
+Où s’éteignent les rêves, et renaissent les cris.
+Dans ce monde éthéré, les fleurs de l’innocence,
+Fleurissent en ton cœur, avec persévérance,
+Ainsi vont les années, dévorant l’existence,
+Mais dans tes bras, la vie reprend sa consistance.
+Enfant de quatre ans, un mystère profond,
+Se cache dans ton âme, en secret vagabond.
+ChatGPT n’a pas vraiment compris ce qu’est un sonnet (un poème de
+quatorze et non pas onze vers), mais il fait un bon poète du dimanche et ses
+jeux d’imitations auraient amusé Raymond Queneau et ses amis de
+l’Oulipo. On le voit, le paradoxe est que les œuvres produites par l’IA le
+sont par le mixage de millions de créations humaines dont les droits ne sont
+pas toujours respectés, conduisant certains artistes à retrouver des fragments
+de leur travail et un collectif à porter plainte contre un ensemble d’IA
+génératives pour infraction au droit d’auteur. Parallèlement, en matière de
+livres, on a pu montrer que le corpus que connaît ChatGPT comporte
+d’ailleurs bien des textes protégés par le droit d’auteur. Quant au statut
+juridique des œuvres créées par l’IA, leur protection pose de considérables
+problèmes et reste un sujet à ce jour irrésolu, les premiers jugements
+laissant entendre que, d’une part, la protection du droit d’auteur ne peut pas
+s’étendre à l’acte de génération d’œuvres artificielles (l’objet de la
+protection par le droit d’auteur est l’œuvre de l’esprit qui manifeste la
+personnalité de l’auteur) sans qu’elles appartiennent pour autant à l’auteur
+des algorithmes de l’IA et que, d’autre part, le fait de copier et de créer à la
+
+---
+
+[p. 120-122]
+e monde
+tout court désormais. Peut-être est-il alors nécessaire de refuser les
+censures, de s’exposer aux risques de l’agilité infinie des modèles de
+langage qui circulent dans le labyrinthe des fantasmes humains comme dans
+un moulin, plutôt que d’en brider à jamais l’inventivité et d’en asservir
+totalement l’imagination morale.
+CHAPITRE 13
+Rédiger est-il démontrer ?
+On se souvient comment, à son lancement public, l’IA de Google, Bard,
+s’était trompé sur les capacités du télescope spatial James-Webb, entraînant
+une chute du cours de l’action du géant de Mountain View de plus de
+100 millions de dollars. À plusieurs reprises, nous avons vu à quel point
+ChatGPT pouvait parfois se leurrer, et à quel point il était difficile de
+discerner ses erreurs. Durant la rédaction de ce livre, je me suis par exemple
+amusé à plusieurs reprises à interroger ChatGPT sur moi-même, pour
+essayer de me comprendre à travers le regard d’un perroquet stochastique.
+Qui est Alexandre Gefen ?
+Alexandre Gefen est un chercheur, universitaire et essayiste français
+spécialisé en littérature française et en théorie littéraire. Né en 1979,
+il est reconnu pour ses travaux sur la littérature et la médecine, les
+humanités médicales, ainsi que sur les questions d’esthétique et
+d’éthique dans la littérature.
+Gefen a étudié à l’École normale supérieure de la rue d’Ulm et est
+titulaire d’un doctorat en littérature française. Il a enseigné dans
+plusieurs universités, dont l’université Paris-Sorbonne et l’université
+Paris 3-Sorbonne Nouvelle. Il est également chercheur au CNRS
+
+(Centre national de la recherche scientifique) et directeur de la
+rédaction de la revue en ligne « Fabula.org », un site consacré à la
+recherche en littérature.
+Ses travaux portent notamment sur les liens entre littérature,
+philosophie et médecine, et il a publié plusieurs ouvrages et articles
+sur ces sujets. Il a ainsi contribué à la compréhension des
+interactions entre la littérature et des domaines tels que la santé, la
+maladie, la médecine et le bien-être.
+Qu’a écrit Alexandre Gefen sur Stendhal ?
+Alexandre Gefen a écrit plusieurs articles et travaux de recherche
+sur Stendhal, abordant divers aspects de son œuvre et de sa pensée.
+Un exemple de son travail sur Stendhal est l’article intitulé
+« Stendhal, penseur de la contagion : une lecture de l’œuvre
+stendhalienne à la lumière de l’épidémiologie », publié en 2009
+dans la revue Littérature. Dans cet article, Gefen étudie les
+représentations de la contagion et des maladies infectieuses dans
+l’œuvre de Stendhal, en mettant en évidence les liens entre la pensée
+médicale et littéraire de l’époque. [...]
+ChatGPT mêle inextricablement vérité et erreur : je suis rajeuni de
+presque dix ans, crédité d’un parcours d’études supérieures à Ulm que je
+n’ai hélas jamais fait (on ne prête qu’aux riches), ce qui est pourtant
+facilement vérifiable dans ma fiche Wikipédia, alors que d’autres éléments
+sont eux factuellement exacts. ChatGPT se permet d’interpréter mon travail
+de critique littéraire dans une dimension très univoque et réductrice (les
+rapports entre littérature et médecine) – je le lui pardonne –, mais surtout il
+invente un article qui n’existe pas et un travail que je n’ai jamais fait en
+fabulant totalement la référence qu’il donne. Nous sommes ici clairement
+dans ce que l’on nomme une « hallucination » d’une IA, autrement dit
+l’invention d’idées ou de faits présentés comme vrais. Voilà de quoi faire
+
+---
+
+[p. 137-139]
+ntraînement pour
+fournir des réponses cohérentes.
+ChatGPT a été visiblement très bien instruit à répondre par des
+humains, et ses dénégations ne sont pas plus probantes que le cogito ergo
+sum de LaMDA. Il existe au demeurant toute une tradition philosophique
+critique de l’hypothèse cartésienne, à commencer par celle de Nietzsche
+pour qui l’existence du pronom grammatical « je » ne prouve en rien
+l’existence du sujet. Comment peut-on sortir de soi-même pour se juger
+conscient ? Comment être sûr que le sentiment de l’identité de soi n’est pas
+une simple fiction consolatrice ? Comment être sûr que le sujet est
+autonome et libre ? Toutes ces critiques philosophiques jalonnent l’histoire
+de la philosophie moderne et relativisent le privilège de la conscience
+humaine et le droit qui l’accompagne à dominer la nature et les animaux.
+Lorsque j’ai demandé à ChatGPT de me résumer les dernières théories
+de la conscience en vogue (la « théorie de l’information intégrée », la
+« théorie du champ neuronal global », ou encore la « théorie des projets »),
+il a dû convenir qu’aucune d’elles ne lui attribuait une conscience, car
+chacune se fondait sur des processus biologiques neuronaux. Même si nous
+sommes ouverts d’esprit, il est clair que nous ne disposons pas de théories
+adéquates pour les neurones artificiels et c’est peut-être dans la fiction qu’il
+faut aller chercher. Descartes recourt à une expérience de pensée pour sa
+démonstration, et innombrables sont les films, les romans et les séries de
+science-fiction qui viennent prendre en charge ce problème de la
+conscience, en mettant en scène des intelligences artificielles qui acquièrent
+peu à peu une conscience, et a contrario des êtres qui se pensaient humains
+et libres et qui, voyant par exemple que la peau de leur bras dissimule des
+mécaniques en métal, s’aperçoivent qu’ils ne sont que des machines. Avant
+même les machines intelligentes, le Frankenstein de Mary Shelley (1818)
+ne nous exposait-il pas les états d’âme d’une créature née de l’inanimé,
+apprenant à lire en observant une famille à laquelle elle s’attache
+secrètement et s’interrogeant sur sa propre existence ? Une série comme
+Westworld, informée des progrès contemporains de l’IA, brouille à loisir les
+frontières, en mettant par exemple en avant l’hypothèse du psychologue
+Julian Jaynes selon laquelle la conscience est d’apparition relativement
+récente dans l’histoire humaine :
+
+Peux-tu me résumer rapidement la théorie de l’esprit bicaméral ?
+La théorie de l’esprit bicaméral, proposée par Julian Jaynes, affirme
+qu’il y a environ 3 000 ans, les êtres humains n’avaient pas de
+conscience individuelle comme nous la connaissons aujourd’hui.
+Au lieu de cela, ils avaient un esprit « bicaméral » où les deux
+hémisphères cérébraux fonctionnaient séparément. L’hémisphère
+droit générait des hallucinations auditives perçues comme des voix
+divines, et l’hémisphère gauche suivait ces instructions. La
+conscience individuelle serait apparue plus tard, lorsque les sociétés
+sont devenues plus complexes et que les voix divines se sont
+révélées insuffisantes pour résoudre les problèmes. Cette théorie est
+controversée et a été critiquée par de nombreux chercheurs.
+2001, l’Odyssée de l’espace met aussi en scène une conscience apportée
+tardivement à l’homme par un monolithe extraterrestre, et la manière dont
+l’homme interdira à une intelligence artificielle, HAL 9000, de prendre en
+charge son destin en la débranchant. Nous nous enorgueillissons de notre
+conscience, de notre autonomie de pensée, de notre humanité supérieure.
+Hélas, loin de nous faire relativiser ces aptitudes, ChatGPT a été aligné sur
+une conception traditionnellement cartésienne de la pensée au bénéfice de
+ses prudents actionnaires, il est entraîné à nous flatter sans nous permettre
+d’interroger la solidité de la supposée exception humaine et de la réalité de
+la conscience. Cette illusion supposée protectrice est, pour l’heure, une
+véritable limite pour les interrogations philosophiques qui naissent de nos
+échanges avec les IA.
+
+---
+
+[p. 151-153]
+ion
+renouvelée à la nature.
+Quelle est la thèse du Manifeste cyborg ?
+Le Manifeste cyborg est un essai écrit par Donna Haraway en 1985,
+intitulé A Cyborg Manifesto : Science, Technology, and Socialist-
+Feminism in the Late Twentieth. La thèse centrale du manifeste est
+de proposer le concept du « cyborg » comme une métaphore pour
+repenser l’identité, la politique et les relations entre les humains et
+la technologie.
+Haraway soutient que les frontières traditionnelles entre l’humain et
+la machine, le naturel et l’artificiel, et le masculin et le féminin sont
+devenues floues à cause des développements scientifiques et
+technologiques. Elle affirme que les catégories binaires et
+hiérarchiques qui ont dominé la pensée occidentale sont dépassées
+et doivent être remplacées par des visions plus complexes et
+interconnectées.
+Le cyborg, étant une créature hybride mi-humaine, mi-machine,
+incarne cette vision. Haraway propose que les cyborgs peuvent aider
+à transcender les divisions traditionnelles basées sur le sexe, la race
+et la classe, et ainsi encourager une politique féministe plus
+inclusive et émancipatrice. Le manifeste cherche à mettre en
+évidence les possibilités de coalitions et d’alliances nouvelles, en
+s’appuyant sur l’affinité plutôt que sur l’identité pour créer un
+mouvement féministe plus solidaire et diversifié.
+L’anthropologue Philippe Descola propose d’appeler « mondation » nos
+manières d’organiser les rapports entre humains et non-humains. Face à
+leurs « dehors », les hommes s’étonnent et philosophent de nouvelles
+« mondations ». Nabokov, qui était aussi entomologiste, décrit un papillon
+inconnu, l’astronome Urbain Le Verrier découvre Neptune, le médecin
+Martinus Beijerinck observe pour la première fois un virus... nous
+découvrons ChatGPT comme un jeune enfant qui joue avec un chat. Les
+peuples aussi s’entrevoient : Montaigne évoque les Tupinambas, les Indiens
+du Mexique rencontrent les Européens, l’écrivain Shûsaku Endô décrit les
+missionnaires jésuites, la reine Victoria prend pour ami le jeune Ali Fazal
+envoyé par l’Inde auprès d’elle ; nous nous habituons à cohabiter avec les
+intelligences génératives, les systèmes experts, les modèles de langage, et
+
+dans des échanges faits de séduction et parfois aussi de violence, nous nous
+redécouvrons, indien, oiseau, papillon, ou réseau de neurones.
+Un tel plaidoyer humaniste en faveur de l’étonnement et de l’accueil
+des IA n’est pas sans lucidité face aux risques de fragilisation des sociétés
+démocratiques, ou bien à l’emprise économique et morale de la Silicon
+Valley sur le cerveau mondial – souhaitons-nous consommer toutes les
+ressources de la planète pour nous noyer dans un océan de conformisme
+tiède au profit des actionnaires du NASDAQ ? S’il est aisé de relativiser la
+non-humanité de ChatGPT (les IA sont créées par des humains, entraînées
+sur des créations humaines, exercées à produire des créations ressemblant
+aux créations humaines et déclenchées par des humains), comme de
+souligner la part d’intelligence collective et de scripts dans la vie commune,
+les défis ouverts à nos habitudes culturelles, à nos structures économiques
+et sociales et à nos catégories philosophiques et juridiques rassurantes
+restent considérables.
+Alors qu’aucun crime n’a été encore commis par ChatGPT (à part
+quelques inventives arnaques), faut-il pour autant mettre en garde
+l’humanité, et par exemple marquer au fer rouge les créations produites par
+les IA – comme on le faisait pour les esclaves –, ainsi que le propose,
+notamment mais pas seulement, la Chine en identifiant toutes leurs
+créations d’une empreinte et d’un avertissement ? Faut-il les lobotomiser en
+les alignant sur des règles morales si consensuelles qu’elles en coupent
+toute la fantaisie et l’imagination ? N’est-ce pas alors inviter des hackers à
+proposer des IA alternatives non censurées, capables par exemple de créer
+d’extraordinaires bandes dessinées érotiques comme cela a été déjà
+tenté, mais aussi des fake news et des spams parfaitement rédigés ?
+Si ChatGPT est très vite devenu un outil massif d’aide ou de triche aux
+examens, faut-il s’inquiéter de la paresse cognitive et expressive que
+pourrait entraîner le recours systématique à une IA pour réfléchir ou écrire ?

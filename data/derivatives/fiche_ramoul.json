@@ -1,0 +1,80 @@
+{
+ "document_id": "1ec7353e-24eb-4cdb-9bf7-8226ccaae0bf",
+ "titre_normalise": "Introduction à l'intelligence artificielle et la robotique (support de cours)",
+ "auteurs": [
+  "Abdeldjalil Ramoul",
+  "Damien Pellier (cours d'origine)"
+ ],
+ "annee": 2015,
+ "type_ouvrage": "cours",
+ "niveau": "debutant",
+ "public_cible": "Étudiants de licence en mathématiques appliquées et sciences sociales à l'université Pierre Mendès-France de Grenoble. Vingt-six diapositives constituant la première séance d'un module de douze, valant six crédits, avec vingt-quatre heures de cours et autant de travaux dirigés.",
+ "these_centrale": "Le premier cours d'un module qui mène des fondements théoriques jusqu'à la programmation d'un robot autonome. Il pose le cadre classique du domaine à travers quatre définitions concurrentes de ce qu'est une machine intelligente, et introduit la notion d'agent rationnel comme fonction associant une suite de perceptions à des actions.",
+ "idees_force": [
+  {
+   "titre": "Quatre façons de définir une machine intelligente, et elles ne disent pas la même chose",
+   "explication": "Le cours croise deux axes : penser ou agir, comme un être humain ou de manière rationnelle. On obtient quatre programmes de recherche distincts. Agir comme un humain donne le test de Turing. Penser comme un humain donne l'approche cognitive et l'introspection. Penser rationnellement donne les lois de la pensée héritées d'Aristote. Agir rationnellement donne les agents. Ce cadre, devenu standard, évite de confondre des objectifs qui n'ont ni les mêmes méthodes ni les mêmes critères de succès.",
+   "page": 16
+  },
+  {
+   "titre": "Le test de Turing n'est pas scientifique, et le cours le dit",
+   "explication": "La diapositive porte une objection nette, rarement énoncée dans les présentations grand public : le test n'est pas reproductible et ne se prête pas à une analyse scientifique. Il fournit une intuition opérationnelle, pas un protocole. Le cours rappelle en revanche que Turing avait correctement identifié les composantes du domaine à venir : représentation des connaissances, traitement du langage, raisonnement, compréhension, apprentissage.",
+   "page": 17
+  },
+  {
+   "titre": "La rationalité parfaite est inatteignable, et c'est le point de départ de l'ingénierie",
+   "explication": "Un agent est une entité qui perçoit et qui agit, formalisé comme une fonction faisant correspondre un historique de perceptions à des actions. Le cours ajoute aussitôt l'avertissement décisif : les limites computationnelles rendent la rationalité parfaite inatteignable, et l'objectif devient donc la conception du meilleur programme étant données les ressources de la machine. Tout le métier tient dans ce déplacement.",
+   "page": 22
+  },
+  {
+   "titre": "Cinq disciplines posent chacune leur question au domaine",
+   "explication": "La philosophie demande si des règles formelles permettent de tirer des conclusions valides et d'où vient la connaissance. La psychologie, comment hommes et animaux pensent et agissent. Les mathématiques, ce qui peut être calculé et comment raisonner dans l'incertain. L'économie, comment décider pour maximiser un gain et que faire si les autres ne coopèrent pas. Les neurosciences, par quels mécanismes le cerveau traite l'information.",
+   "page": 23
+  },
+  {
+   "titre": "Une méthode de travail en quatre règles, valable bien au delà de ce cours",
+   "explication": "La diapositive intitulée comment réussir ce module énonce quatre règles simples et exigeantes. Assister à toutes les séances, car une absence non rattrapée conduit au décrochage. Poser des questions, les enseignants étant là pour y répondre. Ne laisser passer aucun mot ni aucun concept sans l'avoir compris, et demander systématiquement. Relire son cours et profiter de la séance suivante pour poser les questions préparées d'avance.",
+   "page": 10
+  },
+  {
+   "titre": "Un état des capacités daté de 2015, à relire aujourd'hui",
+   "explication": "Les deux dernières diapositives énumèrent ce que le domaine sait faire et ne sait pas faire, question par question. Discuter une heure avec un être humain : non, mais je peux faire illusion quelques instants. Écrire une histoire drôle : non, pas intentionnellement. Conduire en sécurité dans une artère parisienne bondée : pas encore. Traduire en temps réel : oui, pour des textes limités. Relue en 2026, cette liste mesure mieux qu'aucun commentaire la vitesse à laquelle les frontières se sont déplacées.",
+   "page": 25
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Agent rationnel",
+   "definition": "Entité qui perçoit et qui agit, formalisée comme une fonction associant à un historique de perceptions un ensemble d'actions. On cherche, pour une classe d'environnements et de tâches, celui qui obtient la meilleure performance."
+  },
+  {
+   "terme": "Rationalité limitée",
+   "definition": "Constat que les ressources de calcul disponibles interdisent l'action optimale, et que l'objectif réaliste est le meilleur programme possible compte tenu de la machine."
+  },
+  {
+   "terme": "Intelligence artificielle forte et faible",
+   "definition": "La première suppose une conscience de soi et une compréhension par la machine de ses propres raisonnements. La seconde, présentée comme l'approche pragmatique de l'ingénieur, se borne à construire des systèmes autonomes capables de simuler l'intelligence."
+  },
+  {
+   "terme": "Syllogisme",
+   "definition": "Raisonnement à deux prémisses conduisant à une conclusion. Le cours rappelle qu'Aristote a tenté de codifier le bien penser, et que cette tentative mène en ligne directe des mathématiques et de la philosophie au domaine moderne."
+  },
+  {
+   "terme": "Sciences cognitives",
+   "definition": "Ensemble de disciplines consacrées à la description, l'explication et éventuellement la simulation des mécanismes de la pensée humaine, animale ou artificielle. Le cours précise qu'elles sont désormais distinctes du domaine informatique tout en allant dans la même direction."
+  }
+ ],
+ "a_lire_si": "Vous voulez en trente minutes la carte du domaine telle qu'un enseignant la trace devant des étudiants de licence. Deux choses y ont une valeur durable : le cadre des quatre définitions, qui évite les confusions les plus courantes, et la méthode de travail en quatre règles, qui vaut pour n'importe quelle lecture exigeante.",
+ "a_eviter_si": "Vous cherchez un contenu autonome. Ce sont des diapositives, pas un texte : elles supposent la parole de l'enseignant, et beaucoup de lignes ne sont que des titres. Il ne s'agit en outre que de la première séance d'un module de douze, dont les onze autres ne figurent pas dans cette bibliothèque.",
+ "prerequis": [
+  "Aucun pour ces vingt-six diapositives.",
+  "Le module complet, lui, exigeait algorithmique, complexité, programmation, maîtrise d'un environnement de développement et une sensibilisation aux contraintes de l'embarqué."
+ ],
+ "controverses": [
+  "Le document est un support de seconde main : la page de titre indique qu'il est tiré du cours de Damien Pellier. Ce qu'on y lit n'engage donc pas nécessairement l'auteur du cours d'origine.",
+  "L'inventaire des capacités, daté de l'automne 2015, est le contenu le plus périmé du corpus. C'est aussi ce qui en fait la valeur : il n'existe pas de meilleure mesure de la vitesse des dix dernières années qu'une liste écrite de bonne foi par un enseignant compétent et qui se trouve aujourd'hui fausse sur la moitié de ses réponses.",
+  "La bibliographie citée est solide mais ancienne : la référence à l'ouvrage d'Alliot et Schiex y est donnée dans son édition de 1993 alors que cette bibliothèque contient celle de 2002.",
+  "Les travaux pratiques du module reposaient sur une compétition de robotique dont le règlement figurait sur un site universitaire aujourd'hui probablement hors ligne. La partie appliquée du cours n'est donc pas reproductible en l'état."
+ ],
+ "confiance": 0.86
+}

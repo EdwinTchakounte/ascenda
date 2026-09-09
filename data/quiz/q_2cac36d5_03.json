@@ -1,0 +1,27 @@
+[
+ {"chapitre":"64fbb72f","questions":[
+  {"q":"Où se trouvait finalement le trésor de Santiago ?",
+   "choix":["Sous une pierre du temple de Fayoum, dans l'oasis",
+            "Au pied du sycomore de l'église abandonnée où il avait fait son rêve, en Andalousie",
+            "Dans une chambre creusée sous la plus grande des Pyramides",
+            "Dans la boutique du marchand de cristaux de Tanger"],
+   "reponse":1,
+   "explication":"Le coffre contient de vieilles pièces d'or espagnoles, des pierres précieuses et des masques d'or, vestiges d'une conquête oubliée. Le lieu du trésor était donc son point de départ, mais il fallait tout le voyage pour l'apprendre.",
+   "niveau":"restitution","page":124},
+  {"q":"Pourquoi, selon la voix du vent, l'Alchimiste n'a-t-il pas dit à Santiago où se trouvait le trésor ?",
+   "choix":["Parce qu'il l'ignorait lui-même jusqu'au dernier moment",
+            "Parce que la révélation aurait annulé la protection des signes",
+            "Parce que Santiago, prévenu, n'aurait pas vu les Pyramides",
+            "Parce que le trésor n'aurait pas été là s'il n'avait pas voyagé"],
+   "reponse":2,
+   "explication":"Santiago reproche à l'Alchimiste de lui avoir laissé faire le chemin du retour en haillons. La réponse du vent tient en une phrase : s'il avait su, il n'aurait pas vu les Pyramides. Le trajet est le contenu de la quête, non son coût.",
+   "niveau":"comprehension","page":124},
+  {"q":"Que fait Santiago d'Ourim et Toumim une fois le coffre ouvert, et pourquoi ?",
+   "choix":["Il les vend pour financer son retour à l'oasis",
+            "Il les rend à la gitane avec le dixième promis",
+            "Il les range dans le coffre, car elles font partie du trésor en tant que souvenir du vieux roi",
+            "Il les enterre à nouveau, n'ayant plus besoin de deviner"],
+   "reponse":2,
+   "explication":"Il ne s'en était servi qu'une seule fois, un matin sur un marché, sa route ayant toujours été peuplée de signes. Il se souvient ensuite qu'il doit aller à Tarifa remettre la dixième partie à la gitane, comme il l'avait juré.",
+   "niveau":"comprehension","page":125}]}
+]

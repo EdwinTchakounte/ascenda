@@ -1,0 +1,655 @@
+[
+ {
+  "chapitre": "8d400f81",
+  "citations": [
+   {
+    "texte": "L’IA est probablement déjà dans ton entraînement – que tu le saches ou non.",
+    "page": 206,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Deja presente sans qu'on le sache",
+    "portee": "Constat qui vaut pour la plupart des domaines abordes dans l'ouvrage."
+   }
+  ]
+ },
+ {
+  "chapitre": "9a71b298",
+  "citations": [
+   {
+    "texte": "Tu entres tes infos (âge, sexe, forme, objectifs), et l’IA ajuste en temps réel : « T’as trouvé les squats trop durs hier ? OK, on baisse la charge aujourd’hui. »",
+    "page": 206,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'ajustement en temps reel",
+    "portee": "Ce que l'IA apporte vraiment ici : l'adaptation continue plutot que le programme fige."
+   }
+  ]
+ },
+ {
+  "chapitre": "b52b1fd6",
+  "citations": [
+   {
+    "texte": "ton application, aussi bonne soit-elle, va pas tenir la position du scorpion pour toi pendant cinq minutes. C’est toi qui dois faire l’effort pour obtenir les résultats !",
+    "page": 208,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'effort ne se delegue pas",
+    "portee": "Rappel constant de l'auteur : l'outil prepare, il ne remplace pas l'action."
+   },
+   {
+    "texte": "Ces apps sont déjà utilisées par des athlètes semi-pros et pros... et sont recommandées par le Comité international olympique !",
+    "page": 208,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Un usage valide au plus haut niveau",
+    "portee": "Signe que l'analyse technique par IA a depasse le stade du gadget."
+   }
+  ]
+ },
+ {
+  "chapitre": "5fc39bba",
+  "citations": [
+   {
+    "texte": "l’intuition d’un vrai coach (qui voit que t’es fatigué même si t’essaies de faire bonne figure)",
+    "page": 209,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ce que voit un coach",
+    "portee": "Exemple precis d'une perception humaine qu'aucun capteur ne remplace."
+   }
+  ]
+ },
+ {
+  "chapitre": "54d55df2",
+  "citations": [
+   {
+    "texte": "Un robot peut te dire ce que tu devrais faire, et même comment le faire de la bonne façon. Mais c’est ton corps qui travaille. Et ton seul mental qui te pousse à continuer quand ça devient difficile.",
+    "page": 210,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le corps et le mental",
+    "portee": "Delimite ce qu'un outil peut prendre en charge et ce qui reste entierement personnel."
+   },
+   {
+    "texte": "l’algorithme remplacera jamais ton élan intérieur.",
+    "page": 210,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'elan interieur",
+    "portee": "Ce qui declenche l'action ne se telecharge pas : la motivation reste hors de portee de l'outil."
+   }
+  ]
+ },
+ {
+  "chapitre": "af606d57",
+  "citations": [
+   {
+    "texte": "elle promet, entre autres, de te redonner ce que tu as de plus précieux : du temps libre.",
+    "page": 211,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La promesse du temps rendu",
+    "portee": "Enonce le benefice attendu de l'automatisation domestique, a confronter aux faits."
+   }
+  ]
+ },
+ {
+  "chapitre": "0c8f4d5c",
+  "citations": [
+   {
+    "texte": "L’un des plus gros défis des robots ménagers, c’est le pliage de linge. Pourquoi ? Parce que c’est une tâche étonnamment complexe : chaque vêtement est distinct, chaque tissu plie différemment",
+    "page": 212,
+    "axe": "02-ia-technique-academique",
+    "theme": "La tache simple qui resiste",
+    "portee": "Illustration domestique du paradoxe de Moravec : le geste banal est le plus dur a automatiser."
+   }
+  ]
+ },
+ {
+  "chapitre": "58091b3f",
+  "citations": [
+   {
+    "texte": "à 300 000 $ le robot, c’est encore réservé aux millionnaires fatigués de leur traiteur.",
+    "page": 213,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le prix de l'automatisation",
+    "portee": "Rappel utile : une prouesse technique n'est pas une solution tant qu'elle reste inaccessible."
+   }
+  ]
+ },
+ {
+  "chapitre": "e9caf5e0",
+  "citations": [
+   {
+    "texte": "le temps libéré est souvent perdu ensuite en partie par le manque de synchronisation entre tous ces outils. C’est que l’on appelle l’interopérabilité.",
+    "page": 214,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'interoperabilite manquante",
+    "portee": "Explique pourquoi l'accumulation d'appareils intelligents ne libere pas autant qu'annonce."
+   }
+  ]
+ },
+ {
+  "chapitre": "0931d665",
+  "citations": [
+   {
+    "texte": "« Je veux que l’IA fasse mon lavage et ma vaisselle pour que je puisse faire de l’art et écrire – pas que l’IA fasse mon art et mon écriture pour que je puisse faire mon lavage et ma vaisselle. »",
+    "page": 215,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La phrase de Joanna Maciejewska",
+    "portee": "Formule qui pose en une phrase la question du partage des taches entre l'homme et la machine."
+   },
+   {
+    "texte": "La vraie promesse de l’IA, c’est pas qu’elle mène ta vie à ta place. C’est qu’elle puisse te redonner du temps... pour que tu vives ta vie un peu plus comme tu le veux.",
+    "page": 216,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La vraie promesse",
+    "portee": "Critere pour juger tout outil : rend-il du temps, ou prend-il des decisions a votre place ?"
+   }
+  ]
+ },
+ {
+  "chapitre": "163aaad7",
+  "citations": [
+   {
+    "texte": "c’est pas tant le candidat qui te parle, mais une IA qui a compris comment te faire cliquer.",
+    "page": 218,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qui vous parle vraiment",
+    "portee": "Deplace la question du contenu du discours politique vers le dispositif qui le distribue."
+   },
+   {
+    "texte": "des millions de données personnelles récoltées illégalement ont été utilisées pour créer des profils psychologiques et envoyer des messages politiques hyperciblés à chaque type d’électeur",
+    "page": 219,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'affaire Cambridge Analytica",
+    "portee": "Precedent fondateur du debat public sur le microciblage electoral."
+   }
+  ]
+ },
+ {
+  "chapitre": "3846b52c",
+  "citations": [
+   {
+    "texte": "ils finissent par te montrer seulement du contenu qui confirme ce que tu penses déjà. C’est ce qu’on appelle une bulle informationnelle. Et à long terme, ça polarise.",
+    "page": 220,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La bulle informationnelle",
+    "portee": "Mecanisme central de la polarisation politique contemporaine."
+   },
+   {
+    "texte": "on t’envoie pas un message pour t’informer. On te pousse une émotion pour te faire agir : voter, partager, commenter, t’indigner.",
+    "page": 220,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pousser une emotion",
+    "portee": "Distingue nettement la communication politique de l'information."
+   }
+  ]
+ },
+ {
+  "chapitre": "62970657",
+  "citations": [
+   {
+    "texte": "Ces manipulations deviennent de plus en plus réalistes... et de plus en plus difficiles à détecter rapidement.",
+    "page": 221,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La detection qui recule",
+    "portee": "L'ecart se creuse entre la qualite des faux et notre capacite a les reperer."
+   },
+   {
+    "texte": "Le but ? Pas nécessairement de faire élire quelqu’un. Mais plutôt semer la confusion, la division, le cynisme.",
+    "page": 221,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'objectif de la desinformation",
+    "portee": "Precision essentielle : l'ingerence vise la confiance, pas un resultat electoral precis."
+   }
+  ]
+ },
+ {
+  "chapitre": "92839611",
+  "citations": [
+   {
+    "texte": "un bot peut générer des commentaires crédibles, des messages personnalisés, et même créer des vidéos réfléchies et réalistes à partir de rien.",
+    "page": 222,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Fabriquer une opinion de toutes pieces",
+    "portee": "L'IA generative abaisse radicalement le cout d'une campagne de manipulation."
+   },
+   {
+    "texte": "en parler autour de toi : la manipulation fonctionne mieux quand on en parle pas.",
+    "page": 222,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Parler pour desamorcer",
+    "portee": "La discussion collective est presentee comme une defense efficace et accessible."
+   }
+  ]
+ },
+ {
+  "chapitre": "9c9fe3c0",
+  "citations": [
+   {
+    "texte": "Les algorithmes n’ont pas d’opinion politique. Mais ils peuvent être utilisés par n’importe quel parti pour te séduire, te convaincre ou te faire peur.",
+    "page": 223,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des outils sans camp",
+    "portee": "Ecarte le soupcon de partialite technique pour ramener la question a l'usage."
+   },
+   {
+    "texte": "pas parce qu’un politicien te parle... mais parce qu’un robot te dit exactement ce que tu veux entendre.",
+    "page": 223,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le danger de l'accord parfait",
+    "portee": "Ce qui menace n'est pas le desaccord mais l'adhesion trop facile."
+   }
+  ]
+ },
+ {
+  "chapitre": "fa708360",
+  "citations": [
+   {
+    "texte": "les technologies de reconnaissance faciale, aussi impressionnantes soient-elles, commettent des erreurs. Pis parfois, elles détruisent des vies.",
+    "page": 224,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des erreurs aux consequences reelles",
+    "portee": "Rappelle que le taux d'erreur d'un systeme se traduit en destins individuels."
+   }
+  ]
+ },
+ {
+  "chapitre": "fdf7963c",
+  "citations": [
+   {
+    "texte": "au moins six personnes noires ont été arrêtées à tort aux États-Unis à cause de systèmes de reconnaissance faciale.",
+    "page": 225,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Arretes a tort",
+    "portee": "Cas documentes qui donnent une mesure concrete du biais algorithmique."
+   },
+   {
+    "texte": "Leur seul crime ? Ressembler à quelqu’un d’autre.",
+    "page": 225,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ressembler a quelqu'un",
+    "portee": "Formule qui resume l'injustice d'une identification statistique traitee comme une preuve."
+   }
+  ]
+ },
+ {
+  "chapitre": "2b7baa42",
+  "citations": [
+   {
+    "texte": "Une étude du Massachusetts Institute of Technology (MIT) a montré que certains systèmes affichaient un taux d’erreur de : 1 % pour les hommes blancs ; 35 % pour les femmes noires.",
+    "page": 226,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un ecart de trente-cinq points",
+    "portee": "Chiffres qui rendent le biais indiscutable et mesurable."
+   },
+   {
+    "texte": "l’IA est loin d’être neutre. Elle hérite des biais de ses créateurs... et peut les amplifier.",
+    "page": 226,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Heriter et amplifier",
+    "portee": "Le systeme ne se contente pas de reproduire l'injustice : il la systematise a grande echelle."
+   },
+   {
+    "texte": "En Chine, le système est utilisé pour identifier des Ouïghours dans la rue, dans un but de surveillance ethnique.",
+    "page": 226,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La surveillance ethnique",
+    "portee": "Cas limite qui montre a quoi la technologie peut servir quand rien ne l'encadre."
+   }
+  ]
+ },
+ {
+  "chapitre": "7623690f",
+  "citations": [
+   {
+    "texte": "« C’est pas moi qui t’accuse, c’est le système. Garde tes arguments pour le juge ! »",
+    "page": 227,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le systeme accuse",
+    "portee": "Phrase qui illustre la dilution de la responsabilite derriere l'outil technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "ad4f1aa8",
+  "citations": [
+   {
+    "texte": "C’est qu’on lui fasse plus confiance qu’à toi pour dire la vérité.",
+    "page": 228,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La parole contre la machine",
+    "portee": "Le probleme n'est pas l'erreur technique mais le credit accorde a la machine face a une personne."
+   },
+   {
+    "texte": "l’erreur est humaine. Mais l’erreur algorithmique, elle, peut être beaucoup plus difficile à démasquer... et à pardonner !",
+    "page": 228,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'erreur algorithmique",
+    "portee": "Formule qui distingue deux regimes d'erreur et leurs consequences."
+   },
+   {
+    "texte": "parce que l’énergie la plus propre est celle qu’on consomme pas",
+    "page": 230,
+    "axe": "11-sciences-environnement",
+    "theme": "L'energie la plus propre",
+    "portee": "Principe de sobriete rappele au moment ou l'on vante les gains d'efficacite."
+   }
+  ]
+ },
+ {
+  "chapitre": "fb4d8f7d",
+  "citations": [
+   {
+    "texte": "Lors des inondations de 2024, au Bangladesh, Flood Hub a permis d’alerter la population à l’avance afin qu’elle puisse se mettre à l’abri, évitant une catastrophe humanitaire bien pire.",
+    "page": 231,
+    "axe": "11-sciences-environnement",
+    "theme": "Alerter a temps",
+    "portee": "Cas ou l'IA sauve des vies dans un pays vulnerable, hors des usages commerciaux habituels."
+   },
+   {
+    "texte": "entraîner une IA, ça consomme ÉNORMÉMENT d’énergie.",
+    "page": 231,
+    "axe": "11-sciences-environnement",
+    "theme": "Le cout energetique de l'entrainement",
+    "portee": "Contrepoint indispensable a tout discours sur l'IA au service de l'environnement."
+   }
+  ]
+ },
+ {
+  "chapitre": "aeadcae1",
+  "citations": [
+   {
+    "texte": "ces centres, souvent situés aux États-Unis, consomment pour la plupart plus d’électricité qu’une petite ville.",
+    "page": 231,
+    "axe": "11-sciences-environnement",
+    "theme": "Un centre de donnees, une ville",
+    "portee": "Ordre de grandeur qui rend tangible la consommation invisible de nos usages en ligne."
+   }
+  ]
+ },
+ {
+  "chapitre": "10e2f239",
+  "citations": [
+   {
+    "texte": "même la meilleure IA du monde invente rien à partir de rien. Elle extrapole, elle optimise, elle combine. Mais l’intuition créative humaine, l’audace de penser complètement autrement, ça, c’est encore notre job.",
+    "page": 233,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Extrapoler n'est pas inventer",
+    "portee": "Reponse mesuree a l'espoir d'une solution miracle trouvee par la machine."
+   },
+   {
+    "texte": "il faudra encore du génie humain pour poser les bonnes questions, interpréter les résultats... et surtout, avoir le courage de les mettre en œuvre.",
+    "page": 233,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Poser les bonnes questions",
+    "portee": "Rappelle que le probleme du climat est politique autant que technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "481b3e86",
+  "citations": [
+   {
+    "texte": "remplacer les décisions collectives par de la technomagie. Il faut encore miser sur des politiques, des lois et des choix humains.",
+    "page": 234,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Contre la technomagie",
+    "portee": "Met en garde contre l'attente d'une solution technique a un probleme de decision collective."
+   },
+   {
+    "texte": "c’est pas l’intelligence de la machine qui va déterminer l’avenir... C’est notre intelligence collective.",
+    "page": 235,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'intelligence collective",
+    "portee": "Conclusion du chapitre environnemental, qui replace la responsabilite du cote humain."
+   }
+  ]
+ },
+ {
+  "chapitre": "77249106",
+  "citations": [
+   {
+    "texte": "Avant, les fraudeurs devaient écrire leurs courriels et textos douteux eux-mêmes.",
+    "page": 236,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Avant l'IA generative",
+    "portee": "Rappelle l'epoque ou les fautes grossieres suffisaient a reperer une arnaque."
+   }
+  ]
+ },
+ {
+  "chapitre": "7e49d3c4",
+  "citations": [
+   {
+    "texte": "C’était sa voix exacte, obtenue à partir d’une vidéo TikTok.",
+    "page": 237,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une voix clonee depuis une video publique",
+    "portee": "Montre que quelques secondes publiees en ligne suffisent a fabriquer une preuve fausse."
+   }
+  ]
+ },
+ {
+  "chapitre": "ff0f93d0",
+  "citations": [
+   {
+    "texte": "On appelle même ça du spear phishing – parce que ça vise avec la précision d’une lance ou d’un harpon.",
+    "page": 238,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le hameconnage cible",
+    "portee": "La fraude de masse cede la place a l'attaque individualisee."
+   },
+   {
+    "texte": "les arnaques par voix clonée sont « en forte augmentation » depuis la fin de 2023. Des familles se sont fait soutirer des milliers de dollars, croyant aider un proche en détresse.",
+    "page": 238,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'affection comme faille",
+    "portee": "L'attaque exploite le reflexe le plus legitime : venir en aide a un proche."
+   },
+   {
+    "texte": "vérifier par un autre canal (appel, texto, FaceTime) l’origine de ce que tu reçois.",
+    "page": 238,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Verifier par un autre canal",
+    "portee": "Regle simple et decisive, applicable par tous et dans toutes les situations."
+   }
+  ]
+ },
+ {
+  "chapitre": "0f914d83",
+  "citations": [
+   {
+    "texte": "te fier à la voix ou au visage de quelqu’un comme preuve d’identité.",
+    "page": 239,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La voix n'est plus une preuve",
+    "portee": "Bascule majeure : deux siecles de confiance dans la voix et le visage s'effondrent."
+   },
+   {
+    "texte": "Le meilleur rempart ? C’est pas ton antivirus. C’est ta vigilance.",
+    "page": 239,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La vigilance comme protection",
+    "portee": "Deplace la securite du plan technique vers le plan des habitudes personnelles."
+   }
+  ]
+ },
+ {
+  "chapitre": "983a0b96",
+  "citations": [
+   {
+    "texte": "On entend souvent parler de smart cities, mais c’est pas juste du Wi- Fi gratuit au parc.",
+    "page": 240,
+    "axe": "11-sciences-environnement",
+    "theme": "Ce que n'est pas une ville intelligente",
+    "portee": "Mise au point contre un terme employe le plus souvent sans contenu precis."
+   }
+  ]
+ },
+ {
+  "chapitre": "100737a3",
+  "citations": [
+   {
+    "texte": "l’adoption est lente à cause de la complexité du réseau et du froid hivernal, qui affecte apparemment certains capteurs.",
+    "page": 241,
+    "axe": "11-sciences-environnement",
+    "theme": "Le climat comme frein technique",
+    "portee": "Rappelle que les conditions locales conditionnent le deploiement de toute technologie."
+   }
+  ]
+ },
+ {
+  "chapitre": "ba29bc49",
+  "citations": [
+   {
+    "texte": "San Francisco a implanté le projet SFpark, qui ajuste en temps réel le prix du stationnement selon la demande",
+    "page": 241,
+    "axe": "11-sciences-environnement",
+    "theme": "Le prix comme regulateur",
+    "portee": "Exemple ou la tarification dynamique sert une politique publique et non un profit prive."
+   },
+   {
+    "texte": "une IA identifie que des enfants ou des personnes âgées approchent ; elle restera allumée plus longtemps et plus fort que pour un joggeur ou un vélo.",
+    "page": 242,
+    "axe": "11-sciences-environnement",
+    "theme": "Un eclairage qui distingue",
+    "portee": "Cas ou l'adaptation algorithmique sert directement la securite des plus vulnerables."
+   }
+  ]
+ },
+ {
+  "chapitre": "1a87e126",
+  "citations": [
+   {
+    "texte": "Stockholm, par exemple, a réduit sa consommation énergétique de 25 % dans les bâtiments municipaux grâce à des systèmes IA de gestion intelligente de l’énergie.",
+    "page": 243,
+    "axe": "11-sciences-environnement",
+    "theme": "Vingt-cinq pour cent d'economie",
+    "portee": "Resultat mesure qui donne la mesure du potentiel reel dans le patrimoine public."
+   }
+  ]
+ },
+ {
+  "chapitre": "5347e9b0",
+  "citations": [
+   {
+    "texte": "Au lieu d’attendre qu’un tuyau explose un lundi soir de février (par -25 °C), sur recommandation de son IA, la Ville peut intervenir avant que ça pète, en planifiant la réparation, en réduisant les coûts et en évitant les fermetures de rues de dernière minute.",
+    "page": 244,
+    "axe": "11-sciences-environnement",
+    "theme": "La maintenance predictive",
+    "portee": "Application concrete ou l'anticipation vaut mieux que la reparation d'urgence."
+   }
+  ]
+ },
+ {
+  "chapitre": "e52a3253",
+  "citations": [
+   {
+    "texte": "À Chicago, certains arrêts de bus affichent des pubs différentes selon la foule présente. Et oui, c’est parfois un peu creepy, mais ça finance les transports...",
+    "page": 245,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le financement par le ciblage",
+    "portee": "Compromis explicite entre service public et exploitation publicitaire de l'espace commun."
+   }
+  ]
+ },
+ {
+  "chapitre": "d68c2963",
+  "citations": [
+   {
+    "texte": "une ville vraiment intelligente... c’est une ville qui sait quand utiliser l’IA – et quand c’est encore mieux qu’il y ait un vrai humain au bout du fil",
+    "page": 247,
+    "axe": "11-sciences-environnement",
+    "theme": "Savoir quand ne pas automatiser",
+    "portee": "Critere de jugement applicable a toute organisation, publique ou privee."
+   }
+  ]
+ },
+ {
+  "chapitre": "fbd1c633",
+  "citations": [
+   {
+    "texte": "L’IA, c’est pas une voyante. Elle « voit » pas l’avenir comme un prophète illuminé. Elle analyse les données du passé pour déduire ce qui risque fort d’arriver ensuite.",
+    "page": 248,
+    "axe": "02-ia-technique-academique",
+    "theme": "Predire, c'est lire le passe",
+    "portee": "Definition qui dissipe le malentendu le plus repandu sur la prediction algorithmique."
+   }
+  ]
+ },
+ {
+  "chapitre": "0c325ae7",
+  "citations": [
+   {
+    "texte": "C’est comme Minority Report, mais pour vrai. Le problème ? C’est souvent truffé de biais raciaux et sociaux.",
+    "page": 249,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La police predictive",
+    "portee": "Ce qui relevait de la fiction est deja teste, avec les biais que la fiction n'avait pas prevus."
+   }
+  ]
+ },
+ {
+  "chapitre": "4fd59760",
+  "citations": [
+   {
+    "texte": "l’IA prédit des probabilités, pas des certitudes.",
+    "page": 250,
+    "axe": "02-ia-technique-academique",
+    "theme": "Probabilite et certitude",
+    "portee": "Distinction fondamentale, systematiquement effacee dans la communication publique."
+   },
+   {
+    "texte": "si on prédit les crimes... mais seulement avec des données de quartiers déjà trop surveillés",
+    "page": 250,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La boucle de la surveillance",
+    "portee": "Exemple parfait d'un biais qui s'auto-entretient : on trouve la ou l'on cherche."
+   }
+  ]
+ },
+ {
+  "chapitre": "2187d7c7",
+  "citations": [
+   {
+    "texte": "Un génie humain peut dire : « Attends... on a peut-être mal posé la question. » L’IA, elle, remet pas le problème en question. Elle se contente de calculer la solution... au problème qu’on lui a soumis.",
+    "page": 251,
+    "axe": "02-ia-technique-academique",
+    "theme": "Remettre la question en cause",
+    "portee": "Capacite proprement humaine : douter de l'enonce plutot que de chercher la reponse."
+   }
+  ]
+ },
+ {
+  "chapitre": "6948707b",
+  "citations": [
+   {
+    "texte": "éviter d’être influencé par les prédictions (si on te dit que tu vas échouer, ça peut devenir une prophétie autoréalisatrice).",
+    "page": 252,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La prophetie autorealisatrice",
+    "portee": "Une prediction communiquee modifie le comportement qu'elle pretendait seulement decrire."
+   },
+   {
+    "texte": "elle comprend pas ce qu’elle prédit. Elle sait pas que ça concerne ta vie, ta santé, ton avenir, ton quartier. L’IA prédit froidement, mathématiquement. Toi, tu ressens, tu ajustes, tu décides.",
+    "page": 252,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Predire sans comprendre",
+    "portee": "Distingue le calcul de la comprehension, et rend la decision a celui qu'elle concerne."
+   }
+  ]
+ },
+ {
+  "chapitre": "1dcfce48",
+  "citations": [
+   {
+    "texte": "L’IA, c’est ni un ange ni un démon. C’est une technologie, un outil – et comme tous les outils, c’est la manière dont on l’utilise qui fait toute la différence.",
+    "page": 253,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ni ange ni demon",
+    "portee": "Position d'ensemble de l'ouvrage, tenue de la premiere a la derniere page."
+   },
+   {
+    "texte": "au bout du compte, le choix de comment t’agis avec tout ça, c’est encore à toi de le faire.",
+    "page": 253,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le choix reste le votre",
+    "portee": "Conclusion qui rend au lecteur la responsabilite que le livre a passe trois cents pages a documenter."
+   }
+  ]
+ }
+]

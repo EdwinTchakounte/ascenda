@@ -1,0 +1,83 @@
+{
+ "document_id": "b00725f8-1ca4-435f-a164-74b88dab0d0b",
+ "titre_normalise": "DeepSeek. Guide pour maîtriser l'IA et gagner de l'argent en ligne",
+ "auteurs": [
+  "Léo Raphaël Pineda"
+ ],
+ "annee": 2025,
+ "type_ouvrage": "guide pratique",
+ "niveau": "debutant",
+ "public_cible": "Lecteur cherchant une alternative gratuite ou peu coûteuse aux services propriétaires, et attiré par la promesse de revenus en ligne. Auto-édition, 2025, quarante-sept pages, six chapitres : découvrir l'outil, le comparer au concurrent dominant, l'utiliser au quotidien, écrire des requêtes, monétiser, perspectives.",
+ "these_centrale": "Un modèle chinois à poids ouverts atteint des performances comparables à celles des modèles propriétaires les plus coûteux, pour une fraction du prix, ce qui déplace la question de l'accès à l'intelligence artificielle. Le livre décrit l'architecture qui rend cette efficacité possible, compare les deux offres point par point, donne les tarifs, puis propose des pistes de revenus fondées sur cet écart de coût.",
+ "idees_force": [
+  {
+   "titre": "Le mélange d'experts, ou pourquoi ce modèle coûte moins cher",
+   "explication": "L'architecture consiste à diviser le modèle en sous-modèles spécialisés, chacun entraîné pour exceller dans un domaine, et à n'activer que les experts pertinents pour une demande donnée. Le calcul mobilisé par requête est donc très inférieur à celui d'un modèle dense de taille équivalente. C'est la raison technique de l'écart de coût, et c'est l'information la plus utile du livre.",
+   "page": 14
+  },
+  {
+   "titre": "Les tarifs, seule donnée réellement actionnable",
+   "explication": "Le service conversationnel en ligne et l'application mobile sont gratuits, avec un mode de raisonnement approfondi activable. L'interface de programmation du modèle de raisonnement était facturée environ 0,55 dollar par million de jetons en entrée non mise en cache, 0,14 dollar si l'entrée avait déjà été traitée, et 2,19 dollars par million de jetons en sortie. Pour un projet à budget contraint, ces ordres de grandeur changent ce qui est faisable : ils placent le traitement automatisé d'un corpus entier dans le domaine du possible.",
+   "page": 11
+  },
+  {
+   "titre": "Poids ouverts et personnalisation",
+   "explication": "Le modèle étant publiquement disponible, il peut être examiné, modifié, adapté à un besoin particulier, et hébergé ailleurs que chez son éditeur. Pour une institution qui ne peut ni ne veut envoyer ses données à un service étranger, c'est une différence de nature, pas de degré. L'auteur signale honnêtement la contrepartie : un projet récent offre moins de maturité et moins de soutien qu'une solution établie.",
+   "page": 9
+  },
+  {
+   "titre": "La fenêtre de contexte de cent vingt-huit mille jetons",
+   "explication": "Le modèle spécialisé dans le code disposait d'une fenêtre de cent vingt-huit mille jetons, soit la quantité de texte traitable en une seule fois. Une fenêtre large permet de comprendre, résumer ou analyser des documents longs, des livres, des dialogues complexes, sans les découper. C'est exactement la contrainte qui limite le traitement d'un ouvrage entier.",
+   "page": 13
+  },
+  {
+   "titre": "L'apprentissage par renforcement plutôt que l'annotation massive",
+   "explication": "L'auteur souligne que l'entraînement s'est appuyé davantage sur l'essai et l'erreur récompensés que sur d'immenses volumes de données étiquetées à la main. Si le point est présenté sommairement, il touche à l'essentiel : c'est l'annotation humaine qui coûte le plus cher, et s'en affranchir partiellement change l'économie du domaine.",
+   "page": 11
+  },
+  {
+   "titre": "Le choc boursier de janvier 2025",
+   "explication": "L'annonce a fait chuter l'action du principal fabricant de processeurs graphiques d'environ dix-sept pour cent, lui faisant perdre quelque six cents milliards de dollars de valorisation et le faisant passer de la première à la troisième capitalisation mondiale, entraînant l'indice technologique dans sa chute. L'épisode a une portée qui dépasse la finance : il a montré que la course à l'échelle n'était pas le seul chemin, et que l'avance des acteurs dominants était moins solide qu'annoncé.",
+   "page": 18
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Mélange d'experts",
+   "definition": "Architecture où le modèle est divisé en sous-modèles spécialisés dont seuls quelques-uns sont activés par requête, ce qui réduit fortement le calcul nécessaire."
+  },
+  {
+   "terme": "Modèle à poids ouverts",
+   "definition": "Modèle dont les paramètres sont publiquement disponibles, donc examinables, modifiables et hébergeables par un tiers."
+  },
+  {
+   "terme": "Fenêtre de contexte",
+   "definition": "Quantité maximale de texte que le modèle traite en une seule fois. Cent vingt-huit mille jetons permettent de traiter un document long sans le découper."
+  },
+  {
+   "terme": "Jeton",
+   "definition": "Unité de découpage du texte, souvent un fragment de mot. Unité de facturation des interfaces de programmation."
+  },
+  {
+   "terme": "Mise en cache des entrées",
+   "definition": "Réutilisation d'un contenu déjà traité, facturée à un tarif très réduit. Levier d'économie majeur quand on interroge plusieurs fois le même document."
+  },
+  {
+   "terme": "Modèle de raisonnement",
+   "definition": "Modèle qui produit une chaîne de raisonnement avant de répondre, plus lent et plus coûteux, mais nettement meilleur en mathématiques, en code et en logique."
+  },
+  {
+   "terme": "Itération",
+   "definition": "Reprise successive d'une requête à partir des résultats obtenus, présentée comme la principale technique d'amélioration."
+  }
+ ],
+ "a_lire_si": "Vous devez arbitrer entre plusieurs services pour un projet à budget serré, et vous voulez les ordres de grandeur de coût ainsi que l'explication de l'architecture qui les rend possibles. Les deux premiers chapitres suffisent. Pour un projet africain, l'existence d'un modèle performant à poids ouverts et à coût très bas est une donnée stratégique, indépendamment de la qualité de ce livre.",
+ "a_eviter_si": "Vous voulez des informations fiables dans le détail. Le texte contient des erreurs manifestes, notamment un nombre de paramètres donné en milliers là où il s'agit de milliards, et un exemple de découpage en jetons devenu incohérent à la traduction, où les mots cités ne correspondent pas à la phrase donnée. La rédaction est celle d'une compilation rapide, sans sources vérifiables. Le chapitre sur la monétisation relève de la promesse commerciale. Les tarifs et les versions changent vite : vérifier systématiquement auprès de la source avant toute décision.",
+ "prerequis": [],
+ "controverses": [
+  "Le titre affirme que ce modèle surpasse son concurrent. Les comparaisons données ne s'appuient sur aucun protocole d'évaluation cité et doivent être tenues pour un argument de vente.",
+  "Le livre ne traite ni de la localisation des serveurs, ni du régime juridique applicable aux données saisies, ni de la censure appliquée à certains sujets par les services chinois. Ce sont pourtant les questions décisives pour une institution qui envisage d'adopter cet outil.",
+  "L'ouverture des poids est présentée comme une garantie de transparence. Elle en est une pour l'inspection et l'hébergement, mais les données d'entraînement, elles, ne sont pas publiées."
+ ],
+ "confiance": 0.5
+}

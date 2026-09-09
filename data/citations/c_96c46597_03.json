@@ -1,0 +1,218 @@
+[
+ {
+  "chapitre": "94857be6",
+  "citations": [
+   {
+    "texte": "En tant que choix de carrière, « futuriste » est un métier agréable. Vous écrivez des livres qui font des prédictions que l'on ne peut vérifier pendant des décennies et dont la validité, en définitive, n'affecte pas dans l'immédiat votre réputation",
+    "page": 59,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le confort de la prédiction",
+    "portee": "Remarque salutaire sur un métier où l'on est rarement tenu de rendre des comptes."
+   },
+   {
+    "texte": "J'affirme que le mode fondamental d'apprentissage des êtres humains est l'expérience.",
+    "page": 61,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Apprendre par l'expérience",
+    "portee": "L'argument de Kapor : le livre vient après, et ne remplace jamais ce que le corps a éprouvé."
+   },
+   {
+    "texte": "Ce n'est pas dans ce que l'ordinateur sait, mais plutôt dans ce qu'il ne sait pas et ne peut savoir que réside le problème",
+    "page": 61,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le savoir qui manque",
+    "portee": "Une machine se juge moins à l'étendue de ses connaissances qu'à la nature de ce qui lui échappe."
+   },
+   {
+    "texte": "les logiciels informatiques n'ont pas fait preuve d'un même progrès exponentiel ; on pourrait difficilement affirmer que les logiciels actuels soient exponentiellement plus sophistiqués, plus cérébraux, que les logiciels d'il y a cinquante ans",
+    "page": 62,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La faille de l'exponentielle",
+    "portee": "Le matériel a bien suivi une courbe exponentielle ; les idées qui le pilotent, beaucoup moins."
+   }
+  ]
+ },
+ {
+  "chapitre": "fa2910da",
+  "citations": [
+   {
+    "texte": "D'une manière ou d'une autre, vos yeux et votre cerveau prennent cette information brute et la transforment en quelques secondes en un récit détaillé impliquant des êtres vivants, des objets, des relations, des lieux, des émotions, des motivations et des actes passés et futurs.",
+    "page": 66,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Voir, c'est raconter",
+    "portee": "Ce que nous appelons voir est en réalité la construction immédiate d'une histoire à partir de points lumineux."
+   },
+   {
+    "texte": "Point capital, nous savons quoi ignorer.",
+    "page": 66,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Savoir ignorer",
+    "portee": "L'intelligence tient autant à ce qu'on écarte qu'à ce qu'on retient, chez le lecteur comme dans la perception."
+   },
+   {
+    "texte": "Nous autres humains effectuons le traitement de cette vaste quantité d'information en moins de temps qu'il n'en faut pour le dire, et nous avons très peu, voire aucune, conscience de ce que nous faisons ou de la manière dont nous le faisons.",
+    "page": 66,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'exploit invisible",
+    "portee": "Nos compétences les plus prodigieuses sont celles dont nous ne soupçonnons même pas l'existence."
+   }
+  ]
+ },
+ {
+  "chapitre": "448cddf7",
+  "citations": [
+   {
+    "texte": "La vision – regarder et voir – s'avère être l'une des plus difficiles de toutes les choses « faciles ».",
+    "page": 67,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Voir est difficile",
+    "portee": "Un étudiant devait résoudre le problème en un été : cinquante ans plus tard, il reste largement ouvert."
+   },
+   {
+    "texte": "La reconnaissance d'objets nous étant habituellement, à nous humains, si immédiate et naturelle, elle ne semblait pas devoir poser de problèmes particuliers aux ordinateurs... jusqu'au jour où les chercheurs en IA tentèrent réellement d'amener ces machines à la pratiquer.",
+    "page": 67,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'épreuve de la mise en œuvre",
+    "portee": "On ne mesure la difficulté d'une tâche qu'en essayant de la faire faire à autre chose que soi."
+   }
+  ]
+ },
+ {
+  "chapitre": "dfd609b3",
+  "citations": [
+   {
+    "texte": "Insistons bien sur cette définition : le profond, dans apprentissage profond, ne renvoie pas à la sophistication de ce qui est appris ; il fait uniquement référence à la profondeur en couches du réseau qui apprend.",
+    "page": 68,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un mot mal compris",
+    "portee": "Le terme le plus employé du domaine ne dit rien de la profondeur de ce que la machine comprend."
+   }
+  ]
+ },
+ {
+  "chapitre": "c90c88ae",
+  "citations": [
+   {
+    "texte": "Bien qu'ils aient généralement été annoncés comme étant la prochaine grande nouveauté en IA, ils ne sont en fait pas très nouveaux : ils furent pour la première fois proposés dans les années 1980",
+    "page": 69,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Une nouveauté ancienne",
+    "portee": "La technique qui domine la vision par ordinateur a attendu trente ans les données et la puissance de calcul."
+   },
+   {
+    "texte": "bien qu'il soit solidement établi que nos connaissances et attentes, vraisemblablement stockées dans les couches supérieures du cerveau, influent fortement sur ce que nous percevons",
+    "page": 70,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "On voit ce qu'on attend",
+    "portee": "La perception n'est jamais neutre : ce que nous savons déjà oriente ce que nos yeux nous donnent à voir."
+   }
+  ]
+ },
+ {
+  "chapitre": "78c24c1e",
+  "citations": [
+   {
+    "texte": "Un ConvNet (comme le cerveau) présente la scène visuelle comme une collection de cartes reflétant les spécialités spécifiques d'un ensemble de détecteurs.",
+    "page": 75,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une scène en cartes",
+    "portee": "Le monde visuel n'est pas saisi d'un bloc mais décomposé en couches de traits élémentaires superposés."
+   },
+   {
+    "texte": "dans les ConvNets, le réseau lui-même apprend ce que devraient être ses spécialités-détecteurs ; celles-ci dépendent de la tâche spécifique pour laquelle il est formé",
+    "page": 75,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le réseau choisit ses traits",
+    "portee": "Ce qui distingue ces systèmes est qu'on ne leur dit pas quoi regarder : ils le déterminent d'après la tâche."
+   }
+  ]
+ },
+ {
+  "chapitre": "f5854df0",
+  "citations": [
+   {
+    "texte": "Pour l'instant, amener les ConvNets à faire proprement leur travail exige énormément d'ingéniosité humaine.",
+    "page": 76,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le travail humain caché",
+    "portee": "Derrière chaque système qui semble apprendre seul se tient une somme considérable de décisions humaines."
+   }
+  ]
+ },
+ {
+  "chapitre": "3be984f5",
+  "citations": [
+   {
+    "texte": "Mais nous ne saurons pas si ses compétences ont une portée universelle tant que nous n'aurons pas vu s'il peut appliquer ce qu'il a appris à l'identification d'images autres que celles de l'ensemble d'apprentissage.",
+    "page": 78,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'épreuve du nouveau",
+    "portee": "Réussir sur ce qu'on a travaillé ne prouve rien : la compétence se mesure sur ce qu'on n'a jamais vu."
+   },
+   {
+    "texte": "lorsqu'ils sont entraînés à partir de grands ensembles de photos du monde réel, ils semblent effectivement découvrir une hiérarchie de détecteurs similaire à ce que Hubel et Wiesel ont découvert dans le système visuel du cerveau",
+    "page": 78,
+    "axe": "11-sciences-environnement",
+    "theme": "Une convergence inattendue",
+    "portee": "Sans qu'on le leur impose, ces réseaux retrouvent l'organisation que l'évolution a produite dans le cerveau."
+   }
+  ]
+ },
+ {
+  "chapitre": "f7b350db",
+  "citations": [
+   {
+    "texte": "Il a en quelque sorte porté le flambeau durant la traversée des ténèbres.",
+    "page": 79,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Tenir contre son époque",
+    "portee": "Hommage de Hinton à LeCun, qui poursuivit vingt ans une voie que toute sa discipline avait abandonnée."
+   },
+   {
+    "texte": "Au milieu des années 1990, les réseaux neuronaux commencèrent à tomber en défaveur au sein de la communauté de l'IA, et d'autres méthodes en vinrent à dominer ce champ de recherche.",
+    "page": 79,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La mode en science",
+    "portee": "Une méthode peut être délaissée par toute une communauté sans avoir été réfutée, simplement par changement de mode."
+   }
+  ]
+ },
+ {
+  "chapitre": "a5d0a73b",
+  "citations": [
+   {
+    "texte": "En se concentrant trop sur les vingt catégories d'objets du PASCAL, les participants ne construisaient pas de système susceptible de traiter la multitude de catégories d'objets reconnues par les humains.",
+    "page": 81,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'effet du critère d'évaluation",
+    "portee": "On finit par optimiser exactement ce que le test mesure, au détriment de ce qu'on voulait réellement obtenir."
+   },
+   {
+    "texte": "Fei-Fei Li a eu une idée nouvelle : créer une base de données images structurée par les noms de WordNet, dans laquelle chaque nom est lié à un grand nombre d'images contenant des exemples de ce nom.",
+    "page": 81,
+    "axe": "02-ia-technique-academique",
+    "theme": "Naissance d'ImageNet",
+    "portee": "Le progrès est venu ici d'une ressource patiemment constituée, non d'un algorithme nouveau."
+   }
+  ]
+ },
+ {
+  "chapitre": "33811c1d",
+  "citations": [
+   {
+    "texte": "Le Turc mécanique est l'incarnation du dicton de Marvin Minsky « les choses faciles sont difficiles » : des travailleurs humains sont recrutés pour effectuer des tâches « faciles » qui sont actuellement trop difficiles pour les ordinateurs.",
+    "page": 82,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le travail humain derrière la machine",
+    "portee": "Des centaines de milliers de personnes sont payées à la tâche pour fournir ce que les systèmes ne savent pas faire."
+   },
+   {
+    "texte": "le problème de décider si une photo est une instance d'un nom particulier est la tâche même de la reconnaissance d'objet",
+    "page": 82,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le cercle du démarrage",
+    "portee": "Pour entraîner un système, il faut déjà savoir faire ce qu'on veut lui apprendre, difficulté propre à tout commencement."
+   }
+  ]
+ }
+]

@@ -1,0 +1,1704 @@
+OUVRAGE : Vous pouvez (presque) tout demander à ChatGPT
+AUTEUR(S) : inconnu
+ANNÉE : 2024
+PAGES : 264
+AXE : IA Outils Pratique Prompting
+SOMMAIRE :
+  Couverture (p. 2-2)
+  Vous pouvez (presque) tout demander à ChatGPT (p. 3-3)
+  Préambule. Mes premiers pas avec ChatGPT (p. 4-6)
+  Introduction. Embarquement immédiat vers l’intelligence artificielle (p. 7-7)
+  IA générative : de quoi parle-t-on ? (p. 8-10)
+  Les acteurs du marché (p. 11-12)
+  Quelle IA choisir ? (p. 13-16)
+  Le potentiel et les limites de l’IA générative (p. 17-19)
+  Comment l’IA bouleverse-t-elle la manière de travailler et de penser ? (p. 20-21)
+  L’IA va-t-elle nous rendre paresseux.ses ? (p. 22-22)
+  Les enjeux de sécurité, d’éthique et de responsabilité (p. 23-23)
+  L’enjeu majeur de l’IA : la protection des données sensibles (p. 23-23)
+  Astuce 1 : modifier les réglages (p. 24-26)
+  Astuce 2 : utiliser la fonction « Chat éphémère » sur ChatGPT (p. 27-27)
+  L’AI ACT : le règlement européen pour encadrer l’usage de l’intelligence artificielle (p. 28-29)
+  Zoom sur les enjeux environnementaux (p. 30-30)
+  Des données à relativiser (p. 30-32)
+  Partie I. Comprendre et utiliser. ChatGPT (p. 33-33)
+  Une vue d’ensemble de ChatGPT et de son fonctionnement (p. 34-34)
+  Les bases de ChatGPT : comment fonctionne-t-il ? (p. 34-39)
+  L’application pour smartphone (p. 40-41)
+  La fonction mémoire (p. 42-42)
+  La version gratuite ou la version payante ? (p. 43-43)
+  Pourquoi passer à la version payante ? (p. 43-44)
+  Comment passer à la version payante ? (p. 45-45)
+  La génération d’image et la fonction retouche avec DALL-E (p. 45-47)
+  Comment avoir accès à DALL-E ? (p. 48-48)
+  Les limites (p. 49-49)
+  Guide d’utilisation de DALL-E (p. 50-51)
+  La fonction retouche d’image (p. 52-54)
+  Les GPT (p. 55-58)
+  Savoir prompter (p. 59-59)
+  Ma méthode pas à pas (p. 59-59)
+  Pourquoi ChatGPT ne s’utilise pas comme Google ? (p. 60-60)
+  Comprendre ce qu’est un prompt (p. 61-61)
+  Pourquoi apprendre à prompter ? (p. 61-61)
+  Les 6 étapes (p. 62-64)
+  10 exemples (p. 65-65)
+  Exemple 1 : Prompt pour préparer un entretien d’embauche (p. 65-65)
+  Exemple 2 : Prompt pour de l’aide aux devoirs (p. 65-65)
+  Exemple 3 : Prompt pour trouver des idées de contenu pour un blog (p. 66-66)
+  Exemple 4 : Prompt pour résoudre des formules complexes dans Excel (p. 67-67)
+  Exemple 5 : Prompt pour apprendre une nouvelle langue (p. 67-67)
+  Exemple 6 : Prompt pour l’extraction des données d’un texte (p. 68-68)
+  Exemple 7 : Prompt pour faire un brainstorming et trouver un nom de société (p. 69-69)
+  Exemple 8 : Prompt pour constituer une foire aux questions (p. 69-69)
+  Exemple 9 : Prompt pour traduire un document (p. 70-70)
+  Exemple 10 : Prompt pour créer une histoire pour des enfants (p. 70-70)
+  7 astuces pour améliorer vos prompts (p. 71-71)
+  Structurez vos prompts (p. 71-72)
+  Utilisez le bouton pause (p. 73-73)
+  Modifiez votre prompt (p. 73-73)
+  Utilisez les guillemets (p. 73-73)
+  Soyez spécifique (p. 74-74)
+  Utilisez des questions fermées (p. 75-75)
+  Utilisez un langage simple et direct (p. 75-75)
+  Les 5 erreurs de débutants (p. 75-75)
+  Écrire des prompts trop vagues (p. 76-76)
+  Supposer que ChatGPT devine le contexte tout seul (p. 76-76)
+  Ignorer les limites de ChatGPT (p. 76-76)
+
+[39/153 passages, 15492 tokens sur 66248]
+
+=== EXTRAITS ===
+
+[p. 4-5]
+Préambule
+Mes premiers pas avec ChatGPT
+Vous voulez savoir comment je suis devenue formatrice et créatrice
+de contenu sur l’intelligence artificielle (IA) générative  ? Voici en
+guise de préambule comment je suis tombée dans la marmite de
+l’IA !
+ 
+En avril  2022, après  15  ans d’expérience marketing, je me lance
+dans l’entrepreneuriat et je crée une société (de produits éco-
+responsables  : en-mieux.fr) et, souhaitant faire connaître mon site
+Internet sans dépenser toutes mes économies dans des publicités
+payantes, je mise beaucoup sur le contenu pour alimenter mon blog
+et émerger sur Google dans les premiers résultats de recherche (ce
+que l’on appelle le SEO).
+ 
+Janvier  2023  : ChatGPT est arrivé il y a quelques semaines et je
+commence à m’y intéresser. Rapidement, je comprends que je peux
+produire quatre fois plus de contenu sans y passer quatre fois plus de
+temps. Je me passionne alors pour le sujet et je passe des heures à
+discuter avec cet agent conversationnel !
+ 
+
+Dès lors, je croise beaucoup de personnes qui utilisent ChatGPT de
+la même façon que Google, en posant une simple question  : leurs
+requêtes (« prompts ») font à peine une ligne. C’est alors que je crée
+mon compte @les_prompts_de_pauline sur TikTok et sur
+Instagram dans le but de partager mes meilleurs conseils pour aider
+un maximum de personnes à appréhender l’IA et à être
+autonomes dans leur utilisation au quotidien.
+ 
+Mon objectif était également de montrer que la tech n’est pas
+réservée à une élite, à un genre ou à une classe sociale, que tout
+le monde peut y arriver, quel que soit son métier. Pour ma part, je
+l’utilise TOUS les jours !
+ 
+Depuis novembre  2023, je suis consultante IA générative chez
+Cegid pour implémenter l’IA générative dans les processus de vente.
+Et en parallèle je suis formatrice en entreprise pour aider les
+collaborateurs et managers à augmenter leur productivité avec l’IA.
+Mon souhait à travers ce livre est de vous faire profiter de mon
+expérience, nourrie par les feedbacks de ma communauté et des
+personnes que j’ai formées et de vous encourager à utiliser l’IA au
+quotidien, que ce soit à la maison ou au travail, de manière efficace,
+responsable et sécurisée. Ainsi, vous allez gagner du temps, c’est
+certain, mais vous allez aussi augmenter votre valeur et celle de
+votre travail.
+ 
+Ce livre parlera essentiellement de méthode. L’IA est en pleine
+expansion et de nouvelles fonctionnalités voient le jour très
+régulièrement. Je partage d’ailleurs sur mes réseaux sociaux toutes
+les avancées en la matière. Il est fort possible que de nouvelles
+
+---
+
+[p. 9-9]
+’agit de déclinaisons orientées de ces contenus. Les résultats
+obtenus ne sont donc jamais parfaitement originaux.
+Toutefois, ces résultats sont surprenants  ! L’IA est capable de
+générer des images uniques, décalées ou réalistes pour interpeller
+votre audience, illustrer vos publications et communications... Tout
+est possible !
+
+---
+
+[p. 16-19]
+e vous conseille de démarrer avec la version gratuite de l’IA
+générative que vous aurez choisie, à moins que vous ayez besoin de
+la version payante pour une intégration directe dans vos outils de
+travail. Dès lors que vous l’utilisez de manière quotidienne, vous
+ressentirez instinctivement le besoin de passer en version payante.
+Le potentiel et les limites de l’IA
+générative
+C’est simple, on peut tout faire (ou presque) avec l’IA générative.
+Voici quelques exemples :
+●Rédaction et contenu  : blog, e-mail, scripts pour vidéos,
+podcasts, fiches de poste, lettres de motivations, process
+internes...
+●Assistance personnalisée  : gestion des tâches quotidiennes,
+support client automatisé et personnalisé...
+●Éducation et formation : tutorat personnalisé et aide aux devoirs,
+création de matériel pédagogique, apprentissage des langues...
+●Développement et programmation : génération de code et aide à
+la programmation, débogage, aide pour la création de formules
+Excel...
+ 
+●Créativité et divertissement  : poésies, histoires, blagues, jeux,
+chansons...
+ 
+●Analyse de données  : synthèse de documents, résumé,
+génération de rapports...
+
+●Applications professionnelles : gestion de projet et planification,
+analyse de tendances du marché, stratégies de marketing et de
+vente...
+ 
+La liste est infinie ! Tout au long de sa journée on peut l’utiliser pour
+gagner du temps et gagner en efficacité.
+Toutefois, il y a des limites. La principale concerne les
+«  hallucinations  ». Qu’est-ce que c’est  ? Imaginez l’IA générative
+comme un chapeau dans lequel les sociétés sont venues injecter des
+données – ce que l’on appelle les données d’entraînement. C’est à
+partir de ces dernières que les IA telles que ChatGPT travaillent.
+Elles puisent leurs connaissances dans cette base pour pouvoir vous
+fournir une réponse.
+Le problème ? Si les données injectées sont fausses, alors l’IA va
+fournir des réponses fausses. Et ce n’est pas tout. Plus les données
+d’entraînement sont anciennes, plus les réponses risquent d’être
+fausses si des éléments plus récents contredisent le passé.
+ 
+C’est la raison pour laquelle vous pouvez lire ce message sur la
+fenêtre de conversation :
+
+Traduction : « ChatGPT peut faire des erreurs. Envisagez de vérifier
+les informations importantes. »
+Il est donc capital de vérifier les réponses de ChatGPT et des autres
+IA génératives, surtout des données chiffrées.
+Pour cela, je vous livre deux astuces :
+●Demander à l’IA de citer ses sources, ainsi vous pourrez vérifier
+par vous-même non seulement les données elles-mêmes mais
+aussi la date de ces dernières.
+ 
+●Faites le choix d’une IA telle que Perplexity si vous avez besoin de
+chercher des informations sur le web. Vous aurez ainsi des
+informations beaucoup plus fiables et des sources cliquables.
+
+---
+
+[p. 22-23]
+ses ?
+Oui et non. On va pouvoir l’utiliser pour des tâches longues et
+répétitives qu’on n’aura plus envie de faire soi-même. Mais il faut
+considérer que l’IA ne va pas tout faire à notre place. Nous allons
+l’utiliser en complément de nos compétences et savoirs et c’est le
+cumul des deux qui va produire des résultats incroyables.
+Les enjeux de sécurité, d’éthique
+et de responsabilité
+L’enjeu majeur de l’IA : la protection des
+données sensibles
+ 
+ChatGPT enregistre vos conversations, qui peuvent être consultées
+par les développeurs d’OpenAI et être partagées. C’est ce qui s’est
+passé 
+chez 
+Samsung 
+lorsque 
+trois 
+employés 
+ont 
+dévoilé
+involontairement des informations confidentielles sur l’entreprise.
+C’est la raison pour laquelle Samsung a interdit l’utilisation de
+ChatGPT à une partie de ses employés.
+Ne transmettez pas d’informations sensibles (données internes) ni
+privées. Ou sinon, pensez à anonymiser le contenu. Il existe deux
+moyens de faire en sorte que les sociétés n’utilisent pas vos données
+dans leur modèle d’entraînement.
+
+---
+
+[p. 29-32]
+et utilisateurs de systèmes d’IA selon le niveau de
+risque.
+L’AI Act s’appliquera à tous les opérateurs de systèmes d’IA, qu’ils
+soient basés dans l’Union européenne ou en dehors, mais opérant
+sur le marché européen. Les sanctions pour non-conformité peuvent
+aller jusqu’à 30 millions d’euros ou 7 % du chiffre d’affaires annuel.
+Zoom sur les enjeux
+environnementaux
+ChatGPT, tout comme d’autres services numériques, a un impact
+environnemental. 
+L’entraînement 
+de 
+GPT-3 
+aurait
+consommé  700  000  litres d’eau. Et une requête sur ChatGPT
+génère environ un total de 1,54 g de Co2 :
+●Environ 0,14 g de Co2 pour l’apprentissage ;
+●
+ 
+1 g de Co2 pour l’énergie des serveurs ;
+●
+ 
+0,42 g de Co2 (pour la fabrication des serveurs).
+Des données à relativiser
+ 
+Lorsqu’on compare ces chiffres à d’autres, on constate que l’impact
+carbone de ChatGPT est relativement faible par rapport à des
+
+activités quotidiennes telles que la consommation de viande ou
+l’usage de véhicules personnels, qui sont beaucoup plus énergivores
+et polluants.
+À titre d’exemple, réaliser  100  requêtes sur ChatGPT (ce qui est
+assez rare en une journée) génère cent fois moins de CO2  que
+manger 100 grammes de viande de bœuf.
+ 
+Source  : https://blog.ekip.app/quelle-est-lempreinte-carbone-
+de-chatgpt/.
+
+Par ailleurs, une étude rigoureuse menée par Bill Tomlinson de
+l’université de Californie à Irvine et son équipe interdisciplinaire a
+comparé l’empreinte carbone de l’intelligence artificielle à celle des
+humains dans des tâches spécifiques. Publiée sur arXiv, l’étude
+révèle que l’IA émet entre  130  et 1  500  fois moins de
+éqCO2 (équivalent en dioxyde de carbone) pour l’écriture d’une page
+de texte et entre  310  et  2  900  fois moins pour la création d’une
+image.
+
+---
+
+[p. 40-41]
+5. Vous avez la possibilité d’émettre un avis négatif quant à la qualité
+de la réponse de ChatGPT. Lui faire un retour est important pour
+qu’il comprenne la manière dont vous voulez qu’il vous parle.
+6. Vous pouvez choisir avec quelle version de ChatGPT vous
+souhaitez obtenir une réponse. C’est un bouton que j’utilise assez
+peu.
+7. Vous pouvez partager votre conversation en cliquant sur ce
+bouton. Vous communiquerez alors la conversation dans son
+intégralité, c’est-à-dire non seulement le résultat, mais aussi le
+travail pour y parvenir.
+L’application pour smartphone
+ 
+ChatGPT n’est pas seulement disponible depuis un ordinateur, mais
+il l’est également depuis un smartphone ou une tablette avec
+l’application dédiée. Pour cela, rendez-vous dans le store de votre
+appareil.
+
+Une fois connecté·e sur l’application, en haut à gauche, vous avez
+deux traits qui permettent d’accéder à l’historique des conversations
+et aux paramètres.
+Voici trois bonnes raisons d’utiliser ChatGPT sur son téléphone :
+1. Pour la retranscription de notes. Vous avez pris des notes sur
+papier, un paperboard, un tableau, des Post-it ? Prenez ces notes
+en photo et demandez à ChatGPT d’écrire le texte. Gain de temps
+assuré !
+
+---
+
+[p. 46-48]
+ées.
+ 
+●ChatGPT Entreprise s’adresse, comme son nom l’indique, aux
+entreprises. Elle est décrite comme la « version la plus puissante
+de ChatGPT » et sécurise également les données.
+La génération d’image et la fonction
+
+retouche avec DALL-E
+ 
+Avec ChatGPT vous avez la possibilité de créer des images pour
+illustrer vos créations.
+C’est idéal pour :
+●éviter de perdre des heures sur les banques d’image ;
+●éviter d’avoir une image vue et revue ;
+●créer l’image que l’on souhaite, avec des contraintes tout de
+même.
+ Et du côté de la propriété intellectuelle ?
+Depuis peu, DALL-E est conçu pour refuser les
+demandes qui demandent une image dans le style d’un
+artiste vivant. Les créateurs peuvent désormais également
+exclure leurs images de l’entraînement des futurs modèles
+de génération d’images d’OpenAI en remplissant un simple
+formulaire.
+Comment avoir accès à DALL-E ?
+ 
+DALL-E est accessible :
+ 
+●depuis son ordinateur sur le site ChatGPT ;
+●sur l’application ChatGPT ;
+●avec Copilot, l’intelligence artificielle de Microsoft :
+–  dans sa version gratuite avec une limite de 15 images/jour ;
+
+---
+
+[p. 52-54]
+La fonction retouche d’image
+Prenons par exemple cette image d’une pie mangeant une pomme.
+
+Une fois que l’image est réalisée, on peut choisir soit de la
+télécharger pour pouvoir l’utiliser, soit de la modifier.
+Si on souhaite que la pie ne mange plus une pomme mais un citron,
+alors il suffit de cliquer sur l’image, puis sur le bouton « Select » en
+haut à droite.
+
+Sélectionnez la zone que vous souhaitez modifier, ici la pomme.
+Dans la conversation en bas à droite, indiquez simplement « la même
+image avec un citron au lieu de la pomme ».
+Et nous voici avec la même pie mangeant son citron !
+
+---
+
+[p. 60-61]
+professionnel, vous allez pouvoir, à partir d’un
+document, l’utiliser de différentes façons. Prenons par exemple un
+compte rendu de réunion. Vous allez pouvoir demander à ChatGPT
+de :
+●faire un résumé de la réunion ;
+●préparer le contenu d’un e-mail avec le résumé de la réunion en
+listant le récapitulatif des tâches de chacun ;
+●éventuellement traduire cet e-mail dans l’une des  26  langues
+disponibles ;
+●préparer une note interne...
+ChatGPT ne se contente pas de délivrer du contenu sur une
+problématique donnée mais permet de rédiger, analyser, traduire,
+compiler, évaluer, optimiser, comparer... Bref, il est multitâche.
+Pour pouvoir exploiter tout son potentiel, l’art du prompt entre en jeu.
+Comprendre ce qu’est un prompt
+Un prompt est simplement la série d’instructions que vous donnez à
+ChatGPT pour qu’il puisse travailler et fournir une réponse. Plus un
+prompt sera bien formulé, plus vous aurez une réponse de
+qualité.
+Dans le cadre de mes formations, je croise beaucoup de personnes
+qui sont déçues du résultat et qui trouvent que ChatGPT fournit des
+réponses trop génériques. Cela est dû aux instructions données. Un
+prompt trop vague donne des résultats trop vagues.
+Il faut donc penser à être précis. Pour cela, il faut lui parler comme on
+parlerait à un enfant, avec des mots simples et une explication claire.
+Pourquoi apprendre à prompter ?
+Imaginez que vous ne savez pas du tout cuisiner et qu’on vous
+demande de réaliser une tarte au citron. Vous aurez beau avoir le
+meilleur des fours, les meilleurs ustensiles et les meilleurs citrons, si
+
+---
+
+[p. 65-66]
+tes.
+Tâche :
+ 
+Peux-tu me fournir des conseils sur les questions
+fréquentes d’entretien et m’aider à formuler des
+réponses ?
+Ton :
+Je 
+souhaite 
+un 
+ton 
+encourageant 
+et
+professionnel.
+Format :
+ 
+Je voudrais avoir un dialogue interactif avec des
+exemples de questions et de réponses.
+Exemple 2 : Prompt pour de l’aide aux devoirs
+Identité :
+Positionne-toi comme un tuteur.
+Contexte
+:
+ 
+Je 
+me 
+débats 
+avec 
+mes 
+devoirs 
+de
+mathématiques sur les fonctions algébriques et
+j’ai besoin d’explications pour mieux comprendre
+comment résoudre ces problèmes.
+Objectif :
+ 
+Je veux que tu m’aides à comprendre les
+concepts mathématiques difficiles et à effectuer
+les exercices de mes devoirs.
+Tâche :
+ 
+Peux-tu expliquer les fonctions algébriques et me
+montrer comment résoudre des problèmes
+spécifiques avec des exemples clairs ?
+Ton :
+Je souhaite un ton pédagogique et patient.
+Format :
+ 
+J’aimerais 
+une 
+explication 
+détaillée 
+suivie
+d’exemples pratiques.
+Exemple 3 : Prompt pour trouver des idées de contenu pour un
+blog
+ 
+Identité :
+Positionne-toi comme un rédacteur web créatif.
+Contexte
+:
+ 
+Je dois créer des articles de blog captivants pour
+promouvoir une nouvelle ligne de produits
+cosmétiques éco-responsables.
+Objectif :
+ 
+Je veux que tu m’aides à rédiger des articles qui
+attirent et engagent le public cible tout en mettant
+en avant les avantages des produits.
+
+---
+
+[p. 69-70]
+s explications
+sur les raisons pour lesquelles elles seraient
+efficaces.
+Exemple 8 : Prompt pour constituer une foire aux questions
+Identité :
+Positionne-toi comme un agent de service client.
+Contexte
+:
+Je travaille pour une entreprise qui vend des
+appareils électroniques et je dois répondre aux
+questions fréquentes des clients.
+Objectif :
+Je veux que tu m’aides à fournir des réponses
+claires et utiles aux clients.
+Tâche :
+Peux-tu me donner des exemples de réponses
+aux questions courantes ?
+Ton :
+Je souhaite un ton poli et serviable.
+Format :
+J’aimerais un guide de réponses prédéfinies
+adaptées à différentes situations.
+Exemple 9 : Prompt pour traduire un document
+ 
+Identité :
+Positionne-toi comme un traducteur.
+Contexte
+:
+ 
+J’ai besoin de traduire un document de l’anglais
+vers le français pour une présentation à des
+partenaires internationaux.
+Objectif :
+ 
+Je veux que tu m’aides à obtenir une traduction
+précise et professionnelle.
+Tâche :
+ 
+Peux-tu traduire ce document et m’assurer que le
+ton est approprié pour un contexte professionnel
+?
+Ton :
+Je souhaite un ton formel et précis.
+Format :
+ 
+J’aimerais que la traduction soit présentée sous
+une forme claire et bien organisée.
+Exemple 10 : Prompt pour créer une histoire pour des enfants
+
+---
+
+[p. 74-75]
+un discours structuré avec une introduction, un
+développement et une conclusion.
+Soyez spécifique
+Au lieu de dire « rédige un article », dites « rédige un article détaillé
+sur les dernières tendances en IA générative, ciblant des
+professionnels du secteur technologique, avec des exemples
+concrets et des statistiques récentes ».
+Utilisez des questions fermées
+Par exemple, au lieu de demander « parle-moi de l’énergie solaire »,
+posez cette question : « Quelles sont les trois principales innovations
+en technologie solaire en 2024 ? »
+Utilisez un langage simple et direct
+Évitez le jargon complexe à moins qu’il ne soit nécessaire. Un
+langage clair et concis est plus facilement compréhensible pour le
+modèle.
+Par exemple, pour décrire une activité qui stagne : au lieu d’écrire « je
+suis à iso vs n-1 », écrivez plutôt « mon chiffre d’affaires annuel est
+identique à celui de l’année précédente ».
+Autre exemple concernant le recrutement. Si vous commencez votre
+prompt par « tu es le meilleur des chasseurs », au lieu de préciser
+« tu es le meilleur des chasseurs de têtes », le résultat risque d’être
+quelque peu... surprenant !
+Les 5 erreurs de débutants
+ 
+Lorsque vous utilisez ChatGPT pour des interactions ou pour obtenir
+des informations, certaines erreurs peuvent compromettre la qualité
+et la pertinence des réponses obtenues. En prenant conscience de
+
+---
+
+[p. 80-80]
+les
+segments des produits technologiques. Nous avons également
+constaté une augmentation de  10  % des ventes en ligne par
+rapport au mois précédent.
+Rappelle-lui notre réunion du  15  avril dernier où nous avons
+discuté des sections à inclure.
+Joins la version préliminaire du rapport et un lien vers les
+données mises à jour. »
+
+---
+
+[p. 86-87]
+plus simples et les plus répétitives, puis élargissez
+progressivement le champ d’application à des tâches plus complexes
+à mesure que vous gagnez en confiance et en expertise dans
+l’utilisation de l’IA. Cette approche méthodique garantit que l’IA est
+utilisée de manière efficace et bénéfique pour un gain de productivité
+certain.
+Partie II
+ 
+Utiliser
+ChatGPT
+au
+quotidien
+
+---
+
+[p. 92-94]
+ent : suggère des hôtels ou des
+locations qui correspondent à mon budget moyen
+de [x €] par nuit, avec des critères spécifiques
+comme Wi-Fi gratuit, proximité de la plage, et
+piscine [ou préciser].
+– Donne des détails sur les activités à ne pas
+manquer, comme des [cours de surf, randonnées
+guidées, visites de temples ou autres].
+– Recommande des restaurants et des plats
+locaux à essayer, en tenant compte de mes
+restrictions alimentaires (s’il y en a).
+– Liste ce que je dois emporter en fonction du
+climat, des activités prévues et des exigences
+locales (comme des vêtements appropriés pour
+visiter des lieux religieux).
+ 
+– Fournis des informations sur la monnaie, les
+normes de pourboire, les applications utiles, et
+des conseils de sécurité.
+– Fais la check-list de tout de ce que je dois
+mettre dans ma valise compte tenu de la saison
+et de la destination.
+– 
+Rappelle-moi 
+de 
+vérifier 
+les 
+options
+d’assurance voyage et les précautions de santé,
+comme les vaccins ou les médicaments à
+emporter.
+Rédiger des courriers
+ 
+Écrire une lettre de résiliation pour un abonnement téléphonique, un
+site de streaming, une salle de sport, ou encore pour clôturer un
+compte bancaire, n’a rien de compliqué. Mais encore faut-il ne rien
+oublier dans sa demande et trouver la bonne formulation !
+
+ 
+Pour gagner du temps, copiez ce prompt et adaptez-le à vos
+besoins :
+ 
+Identité :
+ 
+Positionne-toi comme un rédacteur professionnel
+maîtrisant la correspondance administrative.
+Contexte
+:
+ 
+Je souhaite résilier mon abonnement Canal+ car
+je n’utilise plus suffisamment ses services pour
+justifier le coût mensuel.
+Objectif :
+ 
+Rédiger 
+une 
+lettre 
+formelle 
+de 
+résiliation
+d’abonnement à l’attention du service client de
+Canal+.
+Tâche :
+ 
+Peux-tu m’aider à structurer et rédiger cette lettre
+de résiliation ?
+Ton :
+ 
+Un ton poli et ferme, sans agressivité. Le but est
+d’exprimer clairement ma demande de résiliation.
+Format :
+Respecte les normes de la correspondance
+administrative.
+
+---
+
+[p. 97-98]
+lair et rassurant.
+Format :
+ 
+1. Décrire les étapes principales du processus de
+prêt immobilier.
+ 
+2. 
+Fournir 
+une 
+check-list 
+complète 
+des
+documents à préparer pour chaque étape.
+Composer une chanson
+ 
+ChatGPT peut se montrer créatif et vous composer une chanson à
+partir d’une idée. Ou même, adapter les paroles d’une chanson
+connue avec des éléments de votre environnement.
+ 
+Voici le prompt :
+ 
+identité :
+Positionne-toi comme un auteur-compositeur.
+Contexte
+:
+Je dois composer une chanson pour un
+événement familial.
+Objectif :
+ 
+Je veux que tu m’aides à écrire les paroles et la
+mélodie de la chanson.
+Tâche :
+ 
+Peux-tu m’aider à créer les paroles et proposer
+une structure pour la mélodie ?
+Ton :
+Je souhaite un ton joyeux et entraînant.
+Format :
+ 
+J’aimerais voir les paroles complètes de la
+chanson et des suggestions pour la mélodie.
+Pose-moi autant de questions que nécessaire
+avant de démarrer.
+Coach sportif : créer un plan
+d’entraînement
+
+---
+
+[p. 101-102]
+mat :
+ 
+J’aimerais voir un programme de méditation
+complet, avec des instructions détaillées pour
+chaque session.
+Organiser des activités pour un
+anniversaire
+ 
+« Au secours » : si c’est le mot qui vous vient en tête lorsqu’il s’agit
+d’organiser un anniversaire pour dix enfants âgés de 8 ans, alors ce
+prompt est fait pour vous !
+ 
+Identité :
+ 
+Positionne-toi comme un expert en organisation
+d’événements pour enfants.
+Contexte
+:
+ 
+Je dois organiser une fête d’anniversaire
+déguisée pour mon enfant de 8 ans.
+Objectif :
+ 
+Je veux que tu m’aides à planifier les activités de
+la fête et à me proposer des idées de
+déguisement.
+Tâche :
+ 
+Peux-tu m’aider à créer une liste d’activités
+amusantes et interactives pour les enfants,
+adaptées au thème de la fête ?
+Ton :
+Je souhaite un ton ludique et créatif.
+Format :
+ 
+J’aimerais voir un programme d’activités détaillé,
+incluant des idées de jeux, des suggestions de
+déguisements, 
+et 
+des 
+conseils 
+pour 
+la
+décoration.
+ChatGPT, on mange quoi ce soir ?
+ 
+Si comme moi il vous arrive d’être en manque d’inspiration pour votre
+repas du soir, et qu’en plus on vous a déjà posé trois fois en moins
+de dix minutes la fameuse question « on mange quoi ce soir ? », l’IA
+
+---
+
+[p. 107-108]
+classer cette liste d’ingrédients par rayons du
+supermarché. Vous ne courrez ainsi plus comme un poulet sans
+
+tête dans les rayons !
+●Demandez-lui de faire un menu de la semaine.
+ 
+●N’oubliez pas de préciser les spécificités de chacun : bébé, enfant,
+végétarien, allergies... Il saura s’adapter et proposer des menus
+sur mesure !
+Partie III
+ 
+Utiliser
+ChatGPT
+au travail
+
+---
+
+[p. 114-115]
+nnaissance et de
+récompenses motivant.
+ 
+Je voudrais un plan d’action structuré en 4
+phases 
+principales 
+(culture, 
+formation,
+fidélisation, reconnaissance). Et pour chacune
+d’entre elles, des actions concrètes, des livrables
+attendus, ainsi que des indicateurs clés de
+performance (KPIs) mesurables pour en évaluer
+l’efficacité.
+ Le saviez-vous ?
+Chez Unilever, l’utilisation de l’IA a contribué à une
+augmentation de 16  % de la diversité des nouveaux
+employés et à une réduction de 90  % du temps de
+recrutement.
+Le géant Unilever utilise la reconnaissance faciale pour
+présélectionner des candidats et évaluer les compétences
+des candidats de manière objective et efficace.
+Les candidats doivent répondre en vidéo face caméra à des
+questions du type : « Décrivez une situation dans laquelle
+vous avez utilisé efficacement vos compétences de
+raisonnement pour gérer quelque chose de nouveau ou
+d’inconnu.  » Leurs réponses sont analysées par les
+algorithmes de reconnaissance faciale, qui vont distinguer
+la position des yeux, le sourire, les mouvements de tête, et
+ainsi tenter de déceler l’enthousiasme d’un candidat. L’idée
+étant qu’un candidat qui semble enthousiaste par sa
+gestuelle devrait être à l’aise dans des relations avec la
+clientèle.
+Une fois ces analyses réalisées, l’intelligence artificielle
+note les candidats avec un système d’étoiles. Une étoile :
+peut mieux faire. Cinq étoiles : au top. Le recruteur ne se
+donnera pas la peine de regarder le dossier d’un potentiel
+nouveau salarié si l’intelligence artificielle l’a mal noté.
+Si leurs résultats correspondent au profil requis, ils peuvent
+passer par l’étape de sélection suivante.
+
+---
+
+[p. 120-122]
+s 
+et 
+les
+compétences clés de l’employé.
+– Les domaines nécessitant des améliorations,
+en particulier en ce qui concerne le respect des
+délais : quels sont les principaux défis rencontrés
+par l’employé ?
+– Les objectifs spécifiques et mesurables pour le
+prochain trimestre : quels objectifs concrets
+l’employé doit-il atteindre ?
+– Les actions et les ressources proposées pour
+aider l’employé à atteindre ces objectifs : quelles
+formations ou quels outils pourraient être utiles ?
+– Les méthodes de suivi et d’évaluation des
+progrès de l’employé : comment allez-vous
+mesurer les progrès ?
+– Un plan de développement professionnel pour
+renforcer les compétences de l’employé.
+Administratif
+ 
+Si vous travaillez dans l’administratif, cet exemple va sûrement vous
+parler.
+Imaginons que vous devez, chaque mois, préparer un rapport sur les
+dépenses pour une réunion de gestion. Vous devez non seulement
+analyser des factures, mais aussi les classer par dépenses, et enfin,
+rédiger un rapport avec vos analyses. Toutes ces tâches prennent un
+temps considérable. Mais heureusement maintenant vous allez
+pouvoir demander de l’aide à ChatGPT.
+
+ 
+Identité :
+Agis comme un consultant en analyse financière.
+Contexte
+:
+ 
+Je 
+suis 
+l’assistant·e 
+administratif·ve 
+d’une
+entreprise dans le secteur des technologies.
+Chaque mois, je dois préparer un rapport sur les
+dépenses pour notre réunion de gestion. J’ai déjà
+rassemblé toutes les factures et les ai classées
+par catégories (fournitures, services, etc.).
+Objectif :
+ 
+L’objectif est de fournir une analyse claire des
+dépenses mensuelles de l’entreprise pour aider à
+la prise de décision budgétaire.
+Tâche :
+ 
+Je voudrais que tu m’aides à rédiger un rapport
+qui présente les coûts totaux par catégories, met
+en évidence les principales augmentations ou
+diminutions des dépenses et propose une brève
+analyse de ce que ces changements pourraient
+signifier pour l’entreprise.
+Ton :
+Le ton doit être professionnel mais accessible.
+Format :
+Le format doit être celui d’un rapport écrit, facile à
+lire lors de notre réunion.
+
+---
+
+[p. 127-128]
+alogue ?
+Ton :
+Professionnel, assertif et conciliant.
+Format :
+ 
+Tu joues le rôle du client potentiel. À la fin de la
+conversation, tu devras :
+– Analyser la conversation.
+– Me donner des suggestions pour m’améliorer.
+– Me fournir des conseils pratiques pour
+maintenir une attitude positive et constructive
+pendant la négociation.
+Optimisation de la proposition de valeur
+ 
+Il est parfois difficile de résumer son activité en insistant sur ce qui
+fait la différence avec la concurrence.
+ 
+Par sa capacité de synthèse et d’analyse, ChatGPT va pointer du
+doigt votre avantage concurrentiel en quelques secondes !
+ 
+Identité :
+Agis comme un directeur marketing.
+Contexte
+:
+ 
+Ma plateforme de e-commerce a connu une
+croissance 
+stable, 
+mais 
+je 
+constate 
+une
+stagnation dans le taux de conversion des
+visiteurs en acheteurs.
+Objectif :
+ 
+Je souhaite optimiser ma proposition de valeur
+pour mieux convaincre les visiteurs de devenir
+clients.
+Tâche :
+ 
+Formule une proposition de valeur claire,
+convaincante et différenciée, qui résonne avec
+mon public cible.
+Ton :
+Persuasif, clair et orienté client.
+Format :
+ 
+Document structuré avec des sections pour
+chaque élément de la proposition de valeur. Fais-
+moi plusieurs propositions.
+
+---
+
+[p. 131-133]
+informées et
+basées sur des données concrètes plutôt que sur des intuitions ou
+des expériences passées.
+Identité :
+Agis comme directeur de la stratégie.
+Contexte
+:
+ 
+Mon entreprise envisage de s’étendre sur un
+nouveau marché international, mais je dois
+évaluer les risques et les opportunités avant de
+prendre une décision finale.
+Objectif :
+ 
+Fournir 
+une 
+recommandation 
+éclairée 
+sur
+l’expansion internationale basée sur une analyse
+rigoureuse.
+Tâche :
+ 
+Peux-tu me préparer un rapport structuré pour
+m’aider à prendre la décision ?
+Ton :
+Stratégique, analytique et équilibré.
+Format :
+ 
+Ton rapport doit inclure :
+– 
+Une 
+analyse 
+du 
+marché 
+cible 
+(taille,
+croissance, compétition).
+– Une évaluation des risques (réglementations,
+barrières culturelles, coûts).
+– L’identification des opportunités (partenariats,
+demande du marché).
+– La comparaison des avantages et des
+inconvénients de l’expansion.
+– Une recommandation basée sur l’analyse.
+Créer un arbre de décision
+ 
+L’IA peut schématiser des arbres de décision en minimisant les biais.
+Elle peut aussi les optimiser en continu en s’adaptant aux nouvelles
+données.
+
+ 
+Identité :
+ 
+Tu es reconnu pour la clarté de ton raisonnement
+et ton esprit d’analyse.
+Contexte
+:
+ 
+Je suis responsable des achats. Mon entreprise
+doit choisir un nouveau fournisseur pour une
+matière première critique. Plusieurs options sont
+disponibles, 
+chacune 
+avec 
+ses 
+propres
+avantages et inconvénients.
+Objectif :
+ 
+Faciliter la prise de décision en visualisant les
+options et leurs conséquences.
+Tâche :
+ 
+Construire un arbre de décision structuré avec
+des branches pour chaque option et sous-option.
+Ton :
+Analytique, clair et logique.
+Format :
+ 
+L’arbre doit créer des branches pour chaque
+fournisseur en fonction des critères de sélection.
+ 
+Tu dois évaluer chaque option en termes de
+coûts et de bénéfices sous forme d’un tableau en
+deux colonnes.
+ 
+Et recommander le meilleur fournisseur selon
+l’arbre de décision.
+
+---
+
+[p. 138-139]
+diger des questions
+pertinentes et variées pour le QCM.
+Tâche :
+ 
+Peux-tu m’aider à formuler les questions et les
+réponses possibles pour le QCM, en assurant
+une couverture complète du sujet ?
+Ton :
+Je souhaite un ton clair et précis.
+Format :
+ 
+J’aimerais voir une liste complète de questions
+avec leurs réponses et explications.
+Compte rendu de réunion
+ 
+Si vous avez besoin d’un compte rendu de réunion clair et structuré
+pour garder une trace des discussions et décisions, alors ce prompt
+est parfaitement adapté !
+ 
+Identité :
+Positionne-toi comme un assistant administratif
+compétent.
+Contexte
+:
+ 
+Je dois rédiger un compte rendu pour une
+réunion importante.
+Objectif :
+ 
+Je veux que tu m’aides à structurer et rédiger le
+compte rendu de manière claire et concise.
+Tâche :
+Peux-tu m’aider à créer le compte rendu ?
+Ton :
+Je souhaite un ton professionnel et objectif.
+Format :
+ 
+Je voudrais que tu inclues les points principaux
+discutés sous forme de liste à puces, les
+décisions prises et les actions à suivre avec le
+nom de la personne désignée pour chaque
+tâche.
+
+---
+
+[p. 142-143]
+Ton :
+Je souhaite un ton rigoureux et analytique.
+Format :
+ 
+J’aimerais voir un rapport détaillé avec les
+jurisprudences trouvées, leurs résumés et un
+taux de pertinence pour le dossier.
+Team building
+ 
+Et si vous deviez organiser une session de team building pour
+renforcer la cohésion de votre équipe ?
+Voici comment procéder :
+Identité :
+ 
+Positionne-toi comme un spécialiste en gestion
+d’équipe et événements.
+Contexte
+:
+ 
+Je dois organiser une activité de team building
+pour mon équipe.
+Objectif :
+ 
+Je veux que tu m’aides à planifier une activité
+engageante et bénéfique pour la cohésion
+d’équipe.
+Tâche :
+ 
+Peux-tu m’aider à choisir et organiser cette
+activité, en tenant compte des intérêts des
+membres de l’équipe ?
+Ton
+Je souhaite un ton dynamique et engageant.
+Format :
+ 
+J’aimerais voir un plan détaillé de l’activité,
+incluant les objectifs, les étapes, et les
+ressources nécessaires.
+Onboarding d’un·e employé·e
+ 
+Une étude menée par Deloitte montre que 82 % des entreprises ne
+se sentent pas prêtes le jour de l’arrivée d’un·e nouveau·elle
+collaborateur·rice. Or, un onboarding raté ou négligé peut avoir de
+lourdes conséquences. En effet, 45  % des démissions ont lieu la
+première année (source : Workelo).
+
+---
+
+[p. 150-151]
+Attention, 
+il 
+faut 
+bien 
+lui 
+demander 
+d’écrire 
+le 
+code
+« VBA »2 correspondant :
+ 
+« Maintenant écris les slides. Pour chaque slide, écris un titre,
+un sous-titre et le contenu en 5 bullet points. Pour cela il me faut
+le code VBA. »
+ 
+Cliquez sur « Copy code » pour sélectionner et copier tout le code
+VBA en une seule fois.
+Étape 4 : Allez dans PowerPoint
+Depuis un PC  : allez dans le menu «  Affichage  » et cliquez sur
+« Macros ».
+Depuis un Mac : cliquez sur le menu « Outils » puis sur « Macros »
+puis sur « Visual Basic Editor ».
+Étape 5 : Nommez la macro
+Tout de suite une fenêtre s’ouvre, vous demandant de nommer cette
+macro.
+
+---
+
+[p. 156-158]
+e la liste
+de 10 citations
+avec leurs auteur·ice·s
+ 
+Voici le prompt :
+ 
+
+«  Donne-moi  10  citations inspirantes qui mettent en valeur les
+femmes avec leurs auteur·ice·s. Présente le résultat sous forme
+de tableau, en colonne 1 la citation et en colonne 2 le nom de
+l’auteur·ice. »
+Sélectionnez et copiez le tableau ainsi généré.
+Étape 2 : Rendez-vous sur canva.com et
+choisissez un design
+Dans la barre de recherche, tapez «  publication Instagram avec
+citation » et faites votre choix parmi tous les modèles proposés. Après
+quoi, sélectionnez et cliquez sur « Personnaliser ce modèle ».
+Une fois satisfait·e de vos ajustements, passez à l’étape suivante.
+Étape 3 : Insérez les citations
+Rendez-vous dans la barre latérale à gauche et dans « Appli » tapez
+« Bloc » et sélectionnez l’appli appelée « Créer en bloc ».
+
+Cliquez sur «  Saisir des données manuellement  », puis effacez les
+données déjà existantes dans le tableau.
+
+---
+
+[p. 163-166]
+t
+appelés « GPT ».
+ Astuce
+Tous les utilisateurs peuvent exploiter les GPT, mais seuls
+les abonnés payants peuvent en créer pour leur propre
+usage ou les rendre disponibles pour tous les utilisateurs.
+Étape 1 : Accédez au GPT Store
+Pour cela, rendez-vous dans la barre latérale dans «  Explorer les
+GPT » et cliquez sur « Créer ».
+Étape 2 : Créez votre prompt
+Remplissez les champs demandés.
+À titre d’exemple, voici comment j’ai construit mon GPT « Correcteur
+orthographe + conjugaison 
+ ». Il me permet de coller un texte et
+ChatGPT me corrige toutes les fautes, sans que j’aie besoin de rien
+lui demander !
+Dans la partie gauche, vous avez accès à la configuration, et dans la
+partie droite, vous avez une fenêtre qui vous donne un aperçu. Cela
+permet de tester et de le corriger si besoin avant de l’enregistrer.
+
+Regardons de plus près la partie configuration maintenant.
+1. Icône : cliquez sur le « + » pour donner une image à votre GPT en
+chargeant une image existante ou en utilisant DALL-E pour en
+
+créer une.
+ 
+2. Le nom : il s’agit du nom de votre chatbot, tel qu’il apparaîtra dans
+votre fenêtre de conversation (ou dans le GPT Store) si vous
+décidez de le rendre public.
+3. La description apparaîtra comme sous-titre sous le nom de votre
+chatbot, et permettra de décrire à quoi il sert.
+4. Instructions : c’est là qu’il faut rentrer son prompt. C’est la partie la
+plus importante que ChatGPT doit faire. On peut aussi lui
+demander de poser des questions avant de répondre.
+5. Amorces de conversation  : ce sont les phrases proposées à
+l’utilisateur. Elles permettent de créer des variantes.
+6. Base de connaissances  : vous pouvez charger un fichier si
+ChatGPT doit chercher les infos à l’intérieur chaque fois que vous
+utilisez ce GPT. Attention à ne pas mettre de données
+confidentielles !
+7. Fonctionnalités : choisissez les fonctionnalités à mettre en place
+selon vos besoins.
+ 
+Une fois terminé, cliquez sur le bouton Créer. Vous aurez alors la
+possibilité de le garder pour un usage privé ou de le partager via un
+lien, ou encore de le rendre disponible sur le GPT store.
+Modifier  : une fois votre GPT créé, vous pouvez le modifier à tout
+moment en cliquant sur la flèche déroulante.
+
+---
+
+[p. 169-170]
+ail], et propose
+une rencontre virtuelle ou un échange d’idées. »
+Stratégie de mots-clés
+ 
+«  Identifie les mots-clés les plus efficaces pour mon profil
+LinkedIn dans le secteur de [votre secteur]. Analyse les profils
+des leaders dans mon domaine pour découvrir les termes
+fréquemment utilisés qui pourraient améliorer mon SEO sur
+LinkedIn, et propose une stratégie pour les intégrer dans les
+sections de mon profil. »
+La méthode par étapes pour rédiger vos posts
+Si vous pensez que ChatGPT va rédiger des posts de folie pour vous
+en quelques secondes, vous allez sûrement être déçu·e.
+Le rôle de l’IA est de fournir une réponse, pas nécessairement celle
+que vous attendez... sauf si vous prenez le temps de la façonner, à la
+manière d’une pâte à modeler. Il va falloir donner à ChatGPT un
+certain nombre d’éléments pour le faire travailler.
+Étape 1 : Donnez-lui du contexte
+Dites-lui qui vous êtes, quel est votre objectif, décrivez votre marché
+et votre environnement. Bref, donnez-lui de la matière.
+Une des erreurs les plus fréquentes est de considérer que l’IA devine
+le contexte toute seule.
+Étape 2 : Définissez votre objectif
+Si vous voulez générer des leads, votre post n’aura pas le même
+aspect que si vous avez l’intention de partager un témoignage.
+Étape 3 : Donnez-lui une méthode
+Vous pouvez faire appel à un référentiel connu. Il y a tellement de
+données dans ChatGPT qu’il saura trouver n’importe quelle
+technique et l’adapter à votre demande.
+ 
+Par exemple, imaginons que vous vouliez utiliser la méthode AIDA
+qui matérialise les étapes du processus d’achat  : Attention, Intérêt,
+Désir, Action. Ces quatre étapes sont suivies dans les contenus
+
+---
+
+[p. 175-176]
+ir un fichier
+PowerPoint, vous allez lui demander de traduire son contenu dans ce
+code informatique. Le code VBA va alors prendre les informations
+que vous voulez (comme le texte, les images ou les graphiques) et
+les insérer directement dans un fichier PowerPoint, créant les
+diapositives sans que vous ayez à les faire vous-même.
+Partie IV
+25 astuce
+s pour
+booster
+votre
+productiv
+ité au
+quotidien
+
+---
+
+[p. 180-183]
+ent·e. Par exemple : « Ce n’est pas ce que j’ai
+demandé, je voulais le résultat sous forme de tableau. »
+ 
+C’est très important non seulement de lui indiquer votre niveau de
+satisfaction, mais surtout de lui expliquer les raisons de cette
+insatisfaction. Ainsi, au fil du temps, il va s’améliorer en prenant en
+compte vos retours.
+La phrase « game changer »
+Vous l’avez désormais compris, le contexte est l’élément le plus
+important pour formuler un prompt efficace. Cependant, le contexte
+fourni n’est pas toujours suffisant. Soit parce que nous oublions que
+ChatGPT n’est pas dans notre tête et qu’il ne peut pas deviner ce que
+nous savons déjà ou que nous supposons acquis, soit parce que
+nous ne savons pas quoi lui donner comme information.
+ 
+Ainsi, pour lui permettre d’accéder à un maximum de contexte avant
+de commencer à travailler, il y a une phrase qui change tout. La
+voici :
+ 
+«  Pose-moi autant de questions que nécessaire pour t’assurer
+que tu as bien compris. »
+ 
+Vous pouvez la glisser à la fin de tous vos prompts.
+Exemple :
+ 
+« Positionne-toi comme un expert de l’algorithme LinkedIn.
+
+Je veux annoncer mon arrivée au sein de [nom de la nouvelle
+entreprise] en tant que [nom du nouveau poste].
+Pour cela je souhaite écrire un post engageant sur LinkedIn.
+Je veux que tu me rédiges ce post avec un ton décontracté.
+Mais avant de commencer, pose-moi autant de questions que
+nécessaire. »
+ 
+La réponse de ChatGPT :
+ 
+«  Pour vous aider à rédiger un post engageant sur LinkedIn
+annonçant votre arrivée dans votre nouvelle entreprise, j’ai
+besoin de quelques informations supplémentaires. Voici
+quelques questions pour mieux comprendre votre situation et
+vos attentes :
+1. Questions sur votre nouvelle entreprise et poste
+• Nom de la nouvelle entreprise  : Quel est le nom de la
+nouvelle entreprise où vous allez travailler ?
+• Nom du nouveau poste  : Quel est le titre exact de votre
+nouveau poste ?
+• Description de l’entreprise  : Pouvez-vous me donner une
+brève description de l’entreprise (secteur, taille, mission) ?
+• Rôle et responsabilités  : Quelles seront vos principales
+responsabilités dans ce nouveau poste ?
+2. Questions sur votre parcours et motivation
+
+• Motivation : Qu’est-ce qui vous a attiré dans ce nouveau poste
+et cette entreprise ?
+• Expériences pertinentes  : Quelles sont les expériences ou
+compétences spécifiques que vous apportez à ce poste ?
+• Objectifs  : Quels sont vos objectifs à court et à long terme
+dans ce nouveau rôle ?
+3. Questions sur le ton et le style du post
+• Ton décontracté : Pouvez-vous me donner des exemples de
+ce
+que vous considérez comme un ton décontracté (humour,
+anecdotes personnelles, etc.) ?
+• Messages clés  : Y a-t-il des messages spécifiques ou des
+points clés que vous souhaitez absolument inclure dans le
+post ?
+4. Appel à l’action : Souhaitez-vous inclure un appel à l’action
+dans
+votre post (par exemple, encourager les gens à se connecter, à
+suivre l’entreprise, etc.) ?
+Avec ces informations, je pourrai rédiger un post LinkedIn qui
+reflète parfaitement votre personnalité et qui engage votre
+réseau. »
+
+---
+
+[p. 189-190]
+uton bleu « ajouter à chrome ».
+Une fois cet outil installé, vous le retrouvez en haut à droite de tous
+les posts de votre fil (les vôtres, ceux des autres, «  tous  » je vous
+dis !)
+
+En cliquant sur « AI Comment », vous pouvez choisir le ton :
+Et voilà :
+
+C’est sûr qu’avec cette astuce vous ne serez plus en panne
+d’inspiration.
+Revenir à la ligne
+Pour rédiger un prompt de qualité, il faut que ce dernier soit bien
+structuré avec un retour à la ligne entre chacune des six étapes  :
+identité, contexte, objectif, tâche, tonalité et format.
+Vous avez déjà essayé de revenir à la ligne, mais zut, le prompt est
+envoyé alors que vous n’avez pas fini d’écrire tout son énoncé !
+Voici l’astuce pour revenir à la ligne  : utilisez simultanément les
+touches Shift (⬆) et Entrée.
+Avec cette astuce, vos prompts seront beaucoup plus clairs.
+N’hésitez pas aussi à faire des sauts de ligne.
+
+---
+
+[p. 201-202]
+crivez comment
+elle fonctionne chez les plantes, mentionnez un scientifique clé
+associé à sa découverte ou son étude, donnez des exemples
+pratiques de son importance dans la nature, et expliquez
+pourquoi elle est essentielle à la vie sur Terre. Adoptez un ton
+pédagogique et engageant pour rendre le concept facile à
+comprendre. »
+ 
+Vous n’avez plus qu’à lui demander de rédiger cet article.
+Voici le concept de la photosynthèse expliqué par ChatGPT de
+manière très simple :
+ 
+«  La photosynthèse est un processus naturel par lequel les
+plantes convertissent la lumière du soleil en énergie chimique.
+Sur Terre, elle permet aux plantes de produire de l’oxygène et
+de la nourriture, ce qui est essentiel pour la vie. Découverte et
+étudiée par des scientifiques comme Jan Ingenhousz, la
+photosynthèse explique pourquoi les plantes sont des
+producteurs 
+primaires 
+dans 
+les 
+écosystèmes. 
+Sans
+photosynthèse, la vie telle que nous la connaissons serait
+impossible, car elle fournit l’oxygène que nous respirons et
+soutient les chaînes alimentaires. »
+
+---
+
+[p. 209-212]
+SEO - Planning éditorial ». Ce
+GPT est parfait pour une stratégie éditoriale. En plus, avant de
+démarrer, il vous pose des questions sur votre cible pour trouver du
+contenu 100 % adapté aux besoins de vos clients.
+ 
+Par exemple, je cherche à créer du contenu sur des canapés :
+Voici un aperçu de toutes les idées qu’il me donne :
+Maintenant, à vous de jouer avec le produit ou service de votre
+choix !
+Le GPT qui construit votre prompt à votre
+place
+ 
+Celui-ci se nomme Magicprompt. Parfait pour ceux qui ne sont pas
+vraiment à l’aise dans l’art du prompt, ce GPT transforme n’importe
+quel prompt basique ou n’importe quelle requête en prompt optimisé.
+
+Il procède en deux étapes :
+1. Il vous pose des questions pour que vous lui transmettiez un
+maximum de contexte.
+ 
+2. Une fois les réponses obtenues, il construit un prompt optimisé et
+personnalisé.
+Ensuite vous n’avez plus qu’à lui demander de travailler sur votre
+demande.
+Voici un exemple pour une newsletter sur des stages langue et tennis
+pour des adolescents :
+Voici ma réponse :
+
+ 
+1. Du  7  au  12  juillet pour les débutants et du  21  au  26  pour les
+confirmés. Lieu : Dordogne.
+2. Favoriser les inscriptions.
+3. Décontracté.
+4. Faire un sommaire et trouver 3 idées d’accroche.
+5. Format libre.
+Instantanément, il me formule le prompt optimisé pour ma newsletter :
+
+---
+
+[p. 216-219]
+Il suffit d’ouvrir
+l’application et de suivre les étapes indiquées.
+●Ensuite, ouvrez l’application Messages. Vous verrez une petite
+icône de clavier dans le coin inférieur de l’écran chaque fois qu’un
+clavier est actif. Vous pouvez basculer entre les différents claviers
+installés en appuyant sur l’icône de changement de clavier.
+Rédiger avec ChatGPT sans se
+faire griller
+Il y a des indices évidents que votre contenu (e-mail, post LinkedIn,
+article de blog...) a été rédigé par l’intelligence artificielle.
+Aujourd’hui encore certaines personnes sont réfractaires à l’usage de
+l’IA dans la rédaction. C’est pourquoi, si elles voient qu’un contenu a
+été rédigé avec l’aide de l’IA, elles vont passer leur chemin.
+Voici quelques-uns de ces signes évidents :
+●Les majuscules au début de chaque mot dans les titres et sous-
+titres.
+Exemple :
+●L’utilisation excessive des mots ou expressions tels que « crucial »,
+«  dans un monde en constante évolution  », «  explore  », «  en
+conclusion », « imaginez », « dans le monde fascinant de », « dans
+l’ère »...
+
+●L’emploi de doubles emojis.
+
+---
+
+[p. 224-226]
+Ou si vous souhaitez que les titres commencent par
+une majuscule mais n’en portent pas à tous les mots.
+●Testez et affinez : mettez à jour et peaufinez régulièrement vos
+instructions en fonction de vos expériences.
+N’oubliez pas de cocher le petit bouton pour vous assurer qu’elles
+s’appliquent à toutes les interactions futures.
+Que faire s’il dit qu’il ne peut
+pas ?
+Parfois, ChatGPT dit ne pas pouvoir répondre à votre demande :
+●soit parce qu’il n’a pas accès à des informations sensibles,
+personnelles ;
+●soit parce qu’il n’a pas bien compris la demande.
+Dans ce cas, vous pouvez :
+1. Reformuler votre question. Essayez de poser votre question
+différemment ou de la reformuler pour voir si cela aide le modèle à
+comprendre et à répondre.
+2. Fournir plus de contexte. Ajouter des détails ou des informations
+dans votre question peut aider ChatGPT à apporter une réponse
+plus précise. N’hésitez pas à lui donner des exemples.
+3. Diviser la question. Si votre question est complexe ou contient
+plusieurs parties, essayez de la diviser en questions plus simples
+et posez-les séparément.
+4. Demander des clarifications. Si vous ne comprenez pas pourquoi
+ChatGPT ne peut pas répondre, demandez des explications
+supplémentaires : « De quoi as-tu besoin pour me répondre ? »
+
+---
+
+[p. 233-235]
+retranscrit en simultané le contenu de la vidéo avec un
+indicateur temporel.
+
+Mais ce n’est pas tout ! Le bouton « Copy » permet de copier le script
+directement.
+Et le bouton «  ChatGPT  » permet d’ouvrir ChatGPT qui vous
+résumera automatiquement le contenu de la vidéo en cinq points clés
+même si vous ne lui avez rien demandé !
+L’outil IA pour faire des mèmes
+Un mème est une image, une vidéo qui va être détournée et parodiée
+au gré de l’imagination et de l’humour des internautes. Certains
+clichés s’y prêtent plus que d’autres, et finissent par être connus de
+tous avec la viralité que l’on connaît d’Internet.
+ 
+Voici un outil génial utilisant l’intelligence artificielle pour les créer. Il
+s’agit de Supermeme.ai (https://app.supermeme.ai).
+Il vous suffit d’écrire l’idée voulue ou une émotion, et l’outil vous
+génère une image adaptée et vous permet même de modifier le texte
+et la mise en page.
+À vous de jouer !
+
+---
+
+[p. 242-244]
+mande d’analyser des
+graphiques ou des tableaux sous format image, voire de me créer
+un tableau Excel à partir d’un graphique en images.
+3. Pour traduire du texte. Pratique quand on voyage dans un pays
+avec une langue étrangère. Il peut lire le texte sur un panneau de
+signalisation et nous donner sa traduction dans notre langue.
+Les raccourcis clavier pour
+gagner du temps
+Utilisez les raccourcis clavier pour accélérer votre utilisation de
+ChatGPT :
+ 
+Action
+Raccourci Mac Raccourci PC
+Ouvrir un nouveau chat
+Cmd + Shift +
+O
+Ctrl + Shift +
+O
+Définir 
+des 
+instructions
+personnalisées
+Cmd + Shift +
+I
+ 
+Ctrl + Shift +
+I
+ 
+Focus sur la saisie dans le chat
+Shift + Esc
+ 
+Shift + Esc
+ 
+Activer/désactiver 
+la 
+barre
+latérale
+Cmd + Shift +
+S
+ 
+Ctrl + Shift +
+S
+ 
+Copier le dernier bloc de code
+Cmd + Shift +
+;
+ 
+Ctrl + Shift +
+;
+ 
+Supprimer le chat
+Shift + Delete
+Shift 
++
+Delete
+
+Action
+Raccourci Mac Raccourci PC
+Copier la dernière réponse
+Cmd + Shift +
+C
+Ctrl + Shift +
+C
+Afficher les raccourcis
+Cmd + /
+Ctrl + /
+
+---
+
+[p. 250-252]
+e
+Language Models, ou « grands modèles de langage » en français. Ce
+sont les moteurs des chatbots textuels d’IA, ceux qui apprennent et
+qui « comprennent » ce qu’on leur dit. ChatGPT est le LLM d’OpenAI.
+Machine learning (Apprentissage automatique) : sous-domaine de
+l’IA qui consiste à permettre aux ordinateurs d’apprendre et de
+s’améliorer automatiquement à partir de l’expérience sans être
+explicitement programmés.
+ 
+Prompt engineer  : un prompt engineer est un professionnel
+spécialisé dans la création et l’optimisation des prompts pour les
+modèles d’IA. Il est en capacité de trouver la meilleure manière de
+parler avec l’IA. Ce rôle combine des compétences en langage
+naturel, en compréhension de l’IA et en créativité pour améliorer les
+interactions et les résultats produits par les modèles d’IA.
+ 
+Prompt engineering  : le prompt engineering est la pratique
+consistant à concevoir et affiner les prompts pour obtenir les
+meilleures réponses possible d’un modèle d’IA. Cela implique de
+comprendre comment le modèle réagit à différents types de
+demandes et de structurer les prompts en conséquence pour
+maximiser la qualité des sorties.
+ 
+Prompt : un prompt est une liste des toutes les instructions fournies à
+un modèle d’IA (comme GPT) pour générer une réponse.
+ 
+Prompter : formuler des prompts.
+ 
+RAG (Retrieval-Augmented Generation) : le RAG est une technique
+qui combine la récupération d’informations et la génération de texte
+pour améliorer la pertinence et la précision des réponses d’un modèle
+d’IA. Le rôle de l’IA est de donner une réponse, qui n’est pas toujours
+la bonne. Le RAG permet de récupérer des informations
+
+additionnelles pour enrichir ou corriger la première réponse de l’IA et
+fournir ainsi une réponse fiable.
+ 
+Tokens  : les tokens sont des unités de texte utilisées par les
+modèles de traitement du langage naturel. Ce peut être un mot, une
+partie de mot ou un caractère, selon la façon dont le modèle est
+conçu. Les modèles d’IA, comme GPT, traitent le texte en le
+décomposant en tokens pour l’analyse et la génération.
+
+---
+
+[p. 262-264]
+en
+Que faire si ChatGPT n’a pas compris ma demande ?
+Maximiser la pertinence des réponses
+Le pouvoir du feedback : ChatGPT s’enrichit de vos retours !
+La phrase « game changer »
+L’extension LinkedIn qui change tout
+Revenir à la ligne
+La fonction vocale : dicter ses prompts
+La fonction Voice
+Demander à ChatGPT d’écrire son prompt
+Mes 5 GPT favoris
+Le GPT pour la correction des fautes d’orthographe
+Le GPT pour organiser ses voyages
+Le GPT pour générer 30 idées de contenus à partir d’un simple mot-
+clé
+Le GPT qui construit votre prompt à votre place
+Le GPT pour effectuer des recherches académiques
+Faut-il être poli avec ChatGPT ?
+ChatGPT sur le téléphone
+Comment ça marche ?
+Rédiger avec ChatGPT sans se faire griller
+Détecter un texte écrit par une IA
+Personnalisation avancée : ajuster les paramètres pour des
+réponses plus ciblées
+Comment créer des instructions personnalisées efficaces pour
+ChatGPT
+Que faire s’il dit qu’il ne peut pas ?
+Parler à ChatGPT dans une langue et répondre dans une autre
+Organiser ses conversations ChatGPT par dossiers
+
+Générer des résumés de vidéos YouTube
+L’outil IA pour faire des mèmes
+30 tonalités pour ChatGPT
+60 verbes d’action pour ChatGPT
+3 façons d’utiliser l’analyse d’image
+Les raccourcis clavier pour gagner du temps
+Un résumé de réunion Teams
+Conclusion
+Glossaire
+Copyright

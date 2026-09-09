@@ -1,0 +1,534 @@
+[
+ {
+  "chapitre": "c74ed79b",
+  "citations": [
+   {
+    "texte": "Dans les années 2000 et 2010, le NLP a réalisé des avancées significatives avec le développement d'algorithmes d'apprentissage profond et la disponibilité de vastes ensembles de données, tels que Wikipédia et les données des médias sociaux.",
+    "page": 57,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux decennies decisives",
+    "portee": "Deux ingredients : de nouveaux algorithmes et des corpus geants deja constitues par les internautes."
+   },
+   {
+    "texte": "Cela comprend le développement de méthodes pour détecter et atténuer les biais dans les données et les modèles de langage, et pour s'assurer que les applications de NLP sont accessibles aux personnes de différents milieux linguistiques et culturels.",
+    "page": 58,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "L'accessibilite culturelle",
+    "portee": "Objectif declare qui reste largement a atteindre pour les langues et cultures peu representees."
+   }
+  ]
+ },
+ {
+  "chapitre": "413040ac",
+  "citations": [
+   {
+    "texte": "Dans le but de réduire les paramètres de longueur inutiles dans les grands modèles NLP et de briser la loi de Moore dans la construction des modèles NLP, ALBERT est introduit avec des mécanismes de réduction de paramètres",
+    "page": 60,
+    "axe": "02-ia-technique-academique",
+    "theme": "Reduire plutot que grossir",
+    "portee": "Contre-courant utile : tous les progres ne viennent pas de l'augmentation de la taille."
+   },
+   {
+    "texte": "PaLM dépasse le Codex 12B amélioré malgré le fait qu'il nécessite 50 fois moins de code Python pour l'entraînement, démontrant que les grands modèles de langage sont plus efficaces pour transférer des connaissances d'autres langages informatiques et de données en langage naturel.",
+    "page": 60,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le transfert entre langages",
+    "portee": "Un modele entraine sur du langage humain transfere ce qu'il a appris vers le code informatique."
+   }
+  ]
+ },
+ {
+  "chapitre": "a1f7d1c3",
+  "citations": [
+   {
+    "texte": "Les modèles transformateurs pré-entraînés génératifs (GPT) font partie des modèles de traitement du langage naturel les plus populaires utilisés aujourd'hui.",
+    "page": 62,
+    "axe": "02-ia-technique-academique",
+    "theme": "La famille GPT",
+    "portee": "Situer la famille de modeles dont tout le reste de l'ouvrage traite."
+   },
+   {
+    "texte": "Comprendre le fonctionnement de ces modèles est essentiel pour toute personne intéressée par le traitement du langage naturel et l'apprentissage automatique.",
+    "page": 62,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Comprendre avant d'utiliser",
+    "portee": "Invitation a ne pas se contenter d'utiliser l'outil mais a savoir ce qu'il fait."
+   }
+  ]
+ },
+ {
+  "chapitre": "364e7ab3",
+  "citations": [
+   {
+    "texte": "Il a été entraîné à l'aide de données de l'ensemble de données BookCorpus, qui contenait plus de 7000 livres non publiés, afin de comprendre le fonctionnement de ce modèle avec des données non reconnues et non vues, avec des contextes plus longs et améliorés.",
+    "page": 63,
+    "axe": "02-ia-technique-academique",
+    "theme": "Sept mille livres",
+    "portee": "Le premier modele GPT a appris sur des livres, ce qui explique sa capacite a tenir un contexte long."
+   }
+  ]
+ },
+ {
+  "chapitre": "9302a1c1",
+  "citations": [
+   {
+    "texte": "Le modèle a été entraîné pendant 100 époques sur des mini-lots de taille 64 et une longueur de séquence de 512. Le modèle comptait au total 117M de paramètres.",
+    "page": 64,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'echelle de depart",
+    "portee": "Point de comparaison a garder : 117 millions de parametres en 2018, 175 milliards deux ans plus tard."
+   }
+  ]
+ },
+ {
+  "chapitre": "f20f3a81",
+  "citations": [
+   {
+    "texte": "L'architecture était capable d'effectuer une gamme de tâches de traitement du langage naturel avec relativement peu de fine-tuning et permettait l'apprentissage par transfert.",
+    "page": 65,
+    "axe": "02-ia-technique-academique",
+    "theme": "Un modele, plusieurs taches",
+    "portee": "Rupture avec l'usage anterieur d'un modele specialise par tache."
+   },
+   {
+    "texte": "GPT-1 s'est montré plus performant que les modèles étatiques spécifiquement entraînés de pointe dans 9 des 12 tâches sur lesquelles les modèles ont été comparés.",
+    "page": 65,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le generaliste bat les specialistes",
+    "portee": "Resultat fondateur : un modele general depasse des modeles concus pour chaque tache."
+   }
+  ]
+ },
+ {
+  "chapitre": "6106b0ab",
+  "citations": [
+   {
+    "texte": "Pour les modèles linguistiques, la tâche, l'entrée et la sortie sont tous des strophes linguistiques. Par conséquent, la condition de tâche pour les modèles linguistiques est réalisée en donnant au modèle des exemples ou des instructions en langage naturel.",
+    "page": 66,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'instruction est du texte",
+    "portee": "Fondement du prompt : on ne programme pas ces modeles, on leur ecrit ce qu'on attend."
+   },
+   {
+    "texte": "on parle d'apprentissage zéro-shot lorsque aucun exemple n'est donné et que le modèle est instruit pour effectuer la tâche.",
+    "page": 66,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Sans exemple",
+    "portee": "Definition du mode le plus courant d'utilisation quotidienne d'un assistant conversationnel."
+   },
+   {
+    "texte": "Le produit final, appelé WebText, comptait 40 Go de données textuelles provenant de plus de 8 millions de publications.",
+    "page": 66,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un corpus fait de publications",
+    "portee": "Le modele a appris sur ce que les internautes ont juge digne d'etre partage, avec les biais que cela suppose."
+   }
+  ]
+ },
+ {
+  "chapitre": "a8c14df2",
+  "citations": [
+   {
+    "texte": "Cela montre que plus le nombre de paramètres augmente, plus la complexité des modèles de langage sur le même jeu de données diminue.",
+    "page": 67,
+    "axe": "02-ia-technique-academique",
+    "theme": "La taille reduit la perplexite",
+    "portee": "Observation qui a lance la course a la taille des modeles pendant cinq ans."
+   },
+   {
+    "texte": "L'essai affirme que lorsque la capacité du modèle augmentait, les performances augmentaient de manière logarithmique.",
+    "page": 69,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une progression logarithmique",
+    "portee": "Nuance essentielle : doubler la taille ne double pas la performance."
+   }
+  ]
+ },
+ {
+  "chapitre": "5665894b",
+  "citations": [
+   {
+    "texte": "OpenAI a créé le modèle GPT-3 avec 175 milliards de paramètres dans le but de créer des modèles de langage extrêmement robustes et puissants qui nécessiteraient peu d'entraînement et seulement quelques démonstrations pour comprendre les tâches et les exécuter.",
+    "page": 70,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'ambition de GPT-3",
+    "portee": "Objectif affiche : reduire l'entrainement necessaire a quelques exemples donnes dans la question."
+   }
+  ]
+ },
+ {
+  "chapitre": "b3bc4819",
+  "citations": [
+   {
+    "texte": "Grâce à sa capacité et à sa vaste base de données, il peut rédiger des articles difficiles à différencier de ceux produits par des personnes.",
+    "page": 71,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Indiscernable d'un texte humain",
+    "portee": "Enonce des 2020, bien avant les debats publics sur l'authenticite des textes."
+   },
+   {
+    "texte": "Les modèles de langage commencent à reconnaître des motifs dans les données lorsqu'ils apprennent la tâche principale de prédire le mot suivant en fonction des mots de contexte",
+    "page": 71,
+    "axe": "02-ia-technique-academique",
+    "theme": "Tout vient du mot suivant",
+    "portee": "Toutes les capacites observees emergent d'une seule tache : predire le mot qui vient."
+   },
+   {
+    "texte": "Dans une configuration few-shot, la description de la tâche et autant d'exemples que possible qui rentrent dans la fenêtre de contexte du modèle lui sont donnés.",
+    "page": 71,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Donner des exemples",
+    "portee": "Technique la plus simple pour ameliorer une reponse : joindre des exemples a la demande."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f34882f",
+  "citations": [
+   {
+    "texte": "Common Crawl, WebText2, Books1, Books2 et Wikipedia sont les cinq ensembles de données utilisés, qui comprenaient la plupart des modèles d'utilisation des données textuelles et contextuelles.",
+    "page": 72,
+    "axe": "02-ia-technique-academique",
+    "theme": "Cinq corpus",
+    "portee": "Savoir sur quoi un modele a ete entraine permet d'anticiper ce qu'il sait et ce qu'il ignore."
+   }
+  ]
+ },
+ {
+  "chapitre": "5de43bcc",
+  "citations": [
+   {
+    "texte": "Le modèle s'est mieux comporté dans les configurations few-shot que dans les configurations one-shot et zero-shot pour la majorité des tâches.",
+    "page": 74,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Plus d'exemples, meilleur resultat",
+    "portee": "Regle pratique verifiee experimentalement : donner des exemples ameliore la reponse."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f5003b2",
+  "citations": [
+   {
+    "texte": "En juin 2020, OpenAI a lancé son API qui offre une interface \"texte en entrée, texte en sortie\" générale, permettant aux utilisateurs de l'essayer sur pratiquement n'importe quel travail en langue anglaise, contrairement à la plupart des systèmes d'IA qui sont développés pour un seul cas d'utilisation.",
+    "page": 75,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Texte en entree, texte en sortie",
+    "portee": "Simplicite de l'interface qui explique l'appropriation rapide par des non-informaticiens."
+   },
+   {
+    "texte": "Il peut être \"programmé\" en lui donnant quelques exemples de ce que vous souhaitez qu'il accomplisse ; le degré de réussite varie généralement en fonction de la difficulté de la tâche.",
+    "page": 75,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Programmer par l'exemple",
+    "portee": "Nouvelle forme de programmation accessible sans savoir coder : montrer plutot qu'instruire."
+   }
+  ]
+ },
+ {
+  "chapitre": "e6ff17df",
+  "citations": [
+   {
+    "texte": "En septembre 2020, GPT-3 a été intégré à Microsoft avec une licence exclusive",
+    "page": 76,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Une licence exclusive",
+    "portee": "Date cle de la concentration industrielle autour de ces modeles."
+   },
+   {
+    "texte": "Codex, un nouveau modèle qui traduit le langage naturel en code.",
+    "page": 76,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Du langage au code",
+    "portee": "Premiere passerelle entre l'intention exprimee en francais et le programme executable."
+   }
+  ]
+ },
+ {
+  "chapitre": "ee8991e7",
+  "citations": [
+   {
+    "texte": "L'un des principaux problèmes auxquels les grands modèles linguistiques étaient confrontés était la production de contenus et de réponses générés par une IA non filtrée qui pouvaient sembler mensongers, toxiques et sans rapport avec les utilisateurs.",
+    "page": 76,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le probleme du contenu non filtre",
+    "portee": "Rappel que la qualite des reponses actuelles resulte d'un travail de filtrage, non de la seule technique."
+   },
+   {
+    "texte": "Ce modèle supervisé fines-tuné est entraîné avec un apprentissage par renforcement à partir des retours humains, et on les appelle InstructGPT.",
+    "page": 76,
+    "axe": "02-ia-technique-academique",
+    "theme": "Apprendre des retours humains",
+    "portee": "Methode qui a rendu ces modeles utilisables par le grand public."
+   },
+   {
+    "texte": "Près de 40 contractants ont contribué aux retours humains et environ 73% des annotationneurs d'entraînement ont synergisé les uns avec les autres.",
+    "page": 77,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le travail invisible des annotateurs",
+    "portee": "Derriere le modele, un travail humain de classement des reponses, rarement mentionne."
+   }
+  ]
+ },
+ {
+  "chapitre": "7a689c83",
+  "citations": [
+   {
+    "texte": "La méthode de l'équipe pour transformer les données d'entraînement est incroyablement simple : elles transfèrent simplement une section aléatoire de texte du centre à la fin d'une page.",
+    "page": 78,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une astuce simple",
+    "portee": "Exemple d'une avancee obtenue par une transformation triviale des donnees, non par un nouveau modele."
+   },
+   {
+    "texte": "le modèle InstructGPT est préféré à GPT-3 plus de 85% du temps et plus de 71% du temps par les indications des humains, même après que GPT-3 ait été conditionné à bien faire la tâche en question.",
+    "page": 78,
+    "axe": "02-ia-technique-academique",
+    "theme": "La preference humaine mesuree",
+    "portee": "Chiffre qui justifie le passage generalise a l'entrainement par retours humains."
+   }
+  ]
+ },
+ {
+  "chapitre": "371fcd3d",
+  "citations": [
+   {
+    "texte": "Même une bonne ingénierie de requêtes n'est pas suffisante pour battre InstructGPT.",
+    "page": 79,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Les limites du prompt",
+    "portee": "Bien formuler sa demande ne compense pas un modele mal aligne : le probleme se regle en amont."
+   },
+   {
+    "texte": "le modèle d'abonnement de chatGPT a également connu une réduction de prix dans la série GPT-3, en particulier dans les modèles Da-Vinci et Curie, avec une réduction de 66%",
+    "page": 79,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La baisse des prix",
+    "portee": "L'efficacite technique se traduit en baisse tarifaire, ce qui elargit l'acces."
+   }
+  ]
+ },
+ {
+  "chapitre": "b0b5347c",
+  "citations": [
+   {
+    "texte": "L'équipe OpenAI continue de progresser et de rendre le modèle plus efficace et durable, ce qui entraîne une réduction des prix.",
+    "page": 80,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Efficacite et prix",
+    "portee": "Le progres technique se traduit ici directement en accessibilite economique."
+   },
+   {
+    "texte": "La partie multilingue contient 98 données de langues différentes à des fins de formation.",
+    "page": 80,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Quatre-vingt-dix-huit langues",
+    "portee": "Nombre a mettre en regard des milliers de langues parlees dans le monde, dont la plupart des langues africaines."
+   },
+   {
+    "texte": "il est beaucoup plus fiable et commet 50% moins d'erreurs que les modèles comparables lorsque nous comparons ses performances sans entraînement sur une large gamme de différents ensembles de données.",
+    "page": 81,
+    "axe": "02-ia-technique-academique",
+    "theme": "La robustesse plutot que le record",
+    "portee": "Un modele moins bon sur un test unique peut etre bien meilleur dans la realite variee."
+   },
+   {
+    "texte": "Les performances de Whisper sont proches de celles des transcripteurs humains professionnels.",
+    "page": 81,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Au niveau du professionnel",
+    "portee": "Metier de la transcription directement concerne, avec les consequences d'emploi que cela suppose."
+   }
+  ]
+ },
+ {
+  "chapitre": "6fa20744",
+  "citations": [
+   {
+    "texte": "Davinci coûte plus cher pour chaque demande d'API et est plus lent que les autres modèles en raison de ces capacités étendues, qui demandent plus de ressources de calcul.",
+    "page": 83,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Choisir son modele",
+    "portee": "Arbitrage concret a poser dans tout projet : la puissance se paie en cout et en temps."
+   },
+   {
+    "texte": "Davinci excelle à déduire des solutions à diverses énigmes logiques et à éclairer les motivations des personnages.",
+    "page": 83,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Ou le modele le plus puissant se distingue",
+    "portee": "Le raisonnement en chaine et l'interpretation d'intentions demandent le modele le plus capable."
+   }
+  ]
+ },
+ {
+  "chapitre": "61cbc521",
+  "citations": [
+   {
+    "texte": "Les performances d'Ada peuvent souvent être améliorées en ajoutant du contexte supplémentaire.",
+    "page": 84,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Compenser par le contexte",
+    "portee": "Un modele modeste bien renseigne vaut parfois un modele puissant mal informe."
+   },
+   {
+    "texte": "La version de base de ChatGPT utilise l'API GPT 3.5 - turbo comme modèle backend, ce qui est beaucoup moins cher que de nombreux autres modèles de la série GPT 3.5 pour le rendre plus abordable pour les utilisateurs.",
+    "page": 84,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'accessibilite par le cout",
+    "portee": "Le choix d'un modele moins couteux a conditionne la diffusion massive de l'outil."
+   }
+  ]
+ },
+ {
+  "chapitre": "1207da66",
+  "citations": [
+   {
+    "texte": "1er février 2023 ChatGPT atteint 100 millions d'utilisateurs actifs par mois (selon le rapport UBS).",
+    "page": 85,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Cent millions en deux mois",
+    "portee": "Rythme d'adoption sans precedent pour un service numerique, a garder comme reference."
+   }
+  ]
+ },
+ {
+  "chapitre": "ef1ce463",
+  "citations": [
+   {
+    "texte": "Parfois, ChatGPT fournit des réponses qui sont précises mais totalement erronées ou illogiques.",
+    "page": 87,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Precis et pourtant faux",
+    "portee": "Formulation la plus nette du danger principal : l'assurance du ton ne garantit rien."
+   },
+   {
+    "texte": "il n'y a actuellement aucune source de vérité pendant l'entraînement RL",
+    "page": 87,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pas de source de verite",
+    "portee": "Raison technique de fond : le modele apprend ce que des humains preferent, pas ce qui est vrai."
+   },
+   {
+    "texte": "rendre le modèle plus prudent fait qu'il refuse des questions auxquelles il pourrait répondre correctement",
+    "page": 87,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'arbitrage de la prudence",
+    "portee": "Toute reduction des erreurs se paie en refus injustifies : il n'y a pas de reglage parfait."
+   }
+  ]
+ },
+ {
+  "chapitre": "d31eb4a4",
+  "citations": [
+   {
+    "texte": "le modèle pourrait prétendre ne pas connaître la réponse si la question est formulée d'une certaine manière, mais avec une simple reformulation, il pourrait être en mesure de répondre avec précision.",
+    "page": 88,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Reformuler pour obtenir",
+    "portee": "Conseil pratique immediat : un refus n'est pas une absence de reponse, c'est souvent une question mal posee."
+   },
+   {
+    "texte": "Ces problèmes sont causés par des biais dans les données d'entraînement (les formateurs privilégiant des réponses plus longues qui semblent plus détaillées) et des problèmes de sur-optimisation bien connus.",
+    "page": 88,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Pourquoi les reponses sont longues",
+    "portee": "La verbosite n'est pas une qualite du modele mais une preference des annotateurs qui l'ont entraine."
+   },
+   {
+    "texte": "Lorsque l'utilisateur fournit une requête incertaine, le modèle devrait idéalement poser des questions de clarification. Au lieu de cela, nos modèles actuels font généralement des hypothèses sur ce que l'utilisateur voulait dire.",
+    "page": 88,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Il devine au lieu de demander",
+    "portee": "D'ou la necessite de preciser soi-meme le contexte plutot que d'attendre une question en retour."
+   }
+  ]
+ },
+ {
+  "chapitre": "48ea6f4b",
+  "citations": [
+   {
+    "texte": "Le client pose une question ou lance une conversation avec ChatGPT en saisissant une requête ou en utilisant une commande vocale.",
+    "page": 92,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le point de depart",
+    "portee": "L'entree du parcours est une question posee en langue naturelle, sans apprentissage prealable."
+   }
+  ]
+ },
+ {
+  "chapitre": "e196f10c",
+  "citations": [
+   {
+    "texte": "Dans l'ensemble, le parcours client de ChatGPT est axé sur la fourniture d'un service client personnalisé, efficace et de haute qualité grâce aux technologies avancées de NLP et de ML.",
+    "page": 93,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un parcours pense comme un service",
+    "portee": "Lecture de l'outil comme un service client, avec ses etapes de decouverte, de resolution et de suivi."
+   }
+  ]
+ },
+ {
+  "chapitre": "9670fae5",
+  "citations": [
+   {
+    "texte": "Precedence Research prévoit que le marché mondial de l'IA atteindra 1600 milliards de dollars d'ici 2030, ce qui représente une augmentation substantielle par rapport à la taille actuelle du marché de 119,78 milliards de dollars à la fin de 2022.",
+    "page": 95,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Un marche multiplie par treize",
+    "portee": "Ordre de grandeur a garder pour situer les enjeux economiques de la decennie."
+   },
+   {
+    "texte": "La région Asie-Pacifique devrait connaître un taux de croissance annuel composé (TCAC) de 42% entre 2022 et 2030.",
+    "page": 96,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ou la croissance se joue",
+    "portee": "La zone la plus dynamique n'est ni l'Amerique du Nord ni l'Europe."
+   },
+   {
+    "texte": "Même les industries non techniques peuvent maintenant exploiter l'IA pour améliorer leurs produits et leurs stratégies commerciales.",
+    "page": 95,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Pas reserve aux entreprises techniques",
+    "portee": "Point d'entree pour un entrepreneur d'un secteur traditionnel."
+   }
+  ]
+ },
+ {
+  "chapitre": "2bc19395",
+  "citations": [
+   {
+    "texte": "L'impact majeur que ChatGPT a apporté concerne la génération de texte et les alternatives aux moteurs de recherche.",
+    "page": 97,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Deux usages dominants",
+    "portee": "Ecrire et chercher : les deux usages qui ont fait basculer les habitudes du public."
+   },
+   {
+    "texte": "Il a presque atteint une base d'utilisateurs de 1 à 100 millions en seulement 3 mois.",
+    "page": 97,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Trois mois",
+    "portee": "Reference d'adoption a laquelle toute innovation numerique se compare desormais."
+   }
+  ]
+ },
+ {
+  "chapitre": "d9e0e2a1",
+  "citations": [
+   {
+    "texte": "L'industrie a\négalement donné naissance à de nouvelles professions, telles que les\nspécialistes du marketing de contenu et les influenceurs, qui utilisent leurs\nconnaissances pour promouvoir des produits et des marques.",
+    "page": 99,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Des metiers nes du numerique",
+    "portee": "Rappel que les technologies detruisent des metiers mais en creent aussi de nouveaux."
+   },
+   {
+    "texte": "le marché de la création de contenu devrait connaître un taux de croissance annuel composé (TCAC) de\n12,2 %, avec une taille de marché prévue de 23,2 milliards de dollars\naméricains d'ici 2026.",
+    "page": 99,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le marche du contenu",
+    "portee": "Chiffre utile pour qui envisage de vivre de la creation de contenu."
+   }
+  ]
+ }
+]

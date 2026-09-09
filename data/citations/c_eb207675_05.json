@@ -1,0 +1,32 @@
+[
+ {"chapitre":"44a4460c","citations":[
+  {"texte":"Rédiger un article de blog est une formidable opportunité pour partager vos connaissances, votre passion et vos idées avec un large public en ligne.","page":181,"axe":"09-developpement-personnel-influence","theme":"Écrire pour être lu au-delà de son cercle","portee":"Publier régulièrement construit une audience et une crédibilité que nul diplôme ne remplace."},
+  {"texte":"Ces résumés condensent les principaux points de l'article sur l'établissement d'une relation sereine dans le couple, adaptés pour tenir dans la limite de caractères sur Twitter et pour être concis et percutant sur Instagram.","page":182,"axe":"03-ia-outils-pratique-prompting","theme":"Adapter un texte à chaque support","portee":"Un même contenu se décline selon les contraintes du canal, ce qui multiplie sa portée sans le réécrire."},
+  {"texte":"Si nous souhaitons publier un nouvel article sur notre blog, nous pourrons revenir à cette conversation et demander à ChatGPT d'écrire l'un des articles correspondant aux idées proposées.","page":184,"axe":"03-ia-outils-pratique-prompting","theme":"Constituer une réserve de sujets","portee":"Une liste de sujets préparée d'avance protège de la page blanche au moment de publier."}
+ ]},
+ {"chapitre":"c41c2554","citations":[
+  {"texte":"Dans cette section, nous allons voir comment ChatGPT peut créer des histoires à partir de consignes simples.","page":187,"axe":"08-litterature-romans","theme":"Du canevas au récit","portee":"Quelques contraintes bien posées suffisent à faire naître une trame narrative complète."},
+  {"texte":"En lisant le texte généré par ChatGPT, des idées supplémentaires peuvent nous venir en tête.","page":189,"axe":"08-litterature-romans","theme":"Lire pour relancer son imagination","portee":"Le texte produit sert d'amorce à la réflexion de l'auteur plutôt que de version définitive."},
+  {"texte":"On commence à avoir une trame intéressante pour notre histoire. Nous souhaitons à présent la structurer en différents chapitres.","page":190,"axe":"08-litterature-romans","theme":"Structurer avant d'écrire","portee":"Découper un récit en chapitres transforme une intuition en projet réalisable."}
+ ]},
+ {"chapitre":"9f236829","citations":[
+  {"texte":"En combinant notre propre expertise et notre sensibilité artistique avec les suggestions et les idées de ChatGPT, nous serons capables de repousser les limites de notre créativité et de réaliser des œuvres uniques.","page":194,"axe":"08-litterature-romans","theme":"L'outil augmente, il ne remplace pas","portee":"Ce qui rend une oeuvre singulière vient de l'auteur, l'outil élargit seulement le champ des essais."}
+ ]},
+ {"chapitre":"6c653ea1","citations":[
+  {"texte":"Dans les sections suivantes, nous explorerons chaque domaine spécifique, en fournissant des conseils et des exemples concrets pour vous aider à prendre les meilleures décisions et à atteindre vos objectifs.","page":195,"axe":"10-economie-entrepreneuriat-finance","theme":"Passer du projet au plan","portee":"Un objectif sans plan d'action reste une intention, la décomposition en étapes le rend exécutable."}
+ ]},
+ {"chapitre":"b29eb91b","citations":[
+  {"texte":"Planifier un voyage est une étape passionnante et cruciale pour s'assurer de vivre une expérience mémorable.","page":196,"axe":"10-economie-entrepreneuriat-finance","theme":"Préparer plutôt que subir","portee":"Une préparation sérieuse optimise le temps et le budget, deux ressources toujours limitées."},
+  {"texte":"Il est important de noter que les prix des activités peuvent varier en fonction de vos choix personnels, de votre style de voyage et de la saison.","page":197,"axe":"03-ia-outils-pratique-prompting","theme":"Des chiffres à vérifier soi-même","portee":"Un budget produit par un modèle est un ordre de grandeur, jamais un devis."},
+  {"texte":"Ceci est une suggestion de parcours et de répartition budgétaire. Il est recommandé de faire des recherches supplémentaires, de consulter des sites de voyage fiables","page":197,"axe":"04-ia-societe-ethique-philosophie","theme":"Recouper avant d'engager de l'argent","portee":"Plus la décision engage des ressources, plus la vérification indépendante s'impose."}
+ ]},
+ {"chapitre":"c75acbbf","citations":[
+  {"texte":"Organiser un événement, qu'il s'agisse d'une conférence, d'un séminaire, d'une réunion ou d'une célébration spéciale, nécessite une planification minutieuse et une attention particulière apportée aux détails.","page":200,"axe":"06-ia-travail-management-metiers","theme":"Le détail fait l'événement","portee":"La réussite d'un rassemblement se joue sur des points pratiques que l'enthousiasme fait oublier."},
+  {"texte":"Si nous ne sommes pas habitués à gérer ce genre d'événements (dans notre exemple, il s'agit du premier en dix ans), ces conseils seront plus que précieux.","page":201,"axe":"06-ia-travail-management-metiers","theme":"Combler un manque d'expérience","portee":"Une liste de points à anticiper vaut beaucoup pour qui organise pour la première fois."},
+  {"texte":"un client ou un fournisseur satisfait peut encourager les personnes qui l'écoutent, souvent de manière plus efficace que les membres de l'entreprise.","page":203,"axe":"10-economie-entrepreneuriat-finance","theme":"La parole du client convainc mieux","portee":"Faire parler ceux qui ont acheté porte plus loin que le meilleur argumentaire maison."}
+ ]},
+ {"chapitre":"de1215f0","citations":[
+  {"texte":"Lorsque vous vous apprêtez à lancer un nouveau produit ou service, il est essentiel de mettre en place une stratégie de lancement efficace.","page":208,"axe":"10-economie-entrepreneuriat-finance","theme":"Le lancement se prépare","portee":"Un bon produit lancé sans stratégie reste invisible pour ceux à qui il était destiné."},
+  {"texte":"N'oubliez pas d'ajuster les budgets en fonction de vos ressources et de vos objectifs spécifiques. Il est également recommandé de mesurer et d'analyser les résultats de chaque étape pour optimiser vos investissements en marketing.","page":208,"axe":"10-economie-entrepreneuriat-finance","theme":"Mesurer ce que l'on dépense","portee":"Sans mesure des résultats, un budget marketing se consomme sans qu'on sache ce qui a fonctionné."}
+ ]}
+]

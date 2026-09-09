@@ -1,0 +1,551 @@
+[
+ {
+  "chapitre": "f46b6425",
+  "citations": [
+   {
+    "texte": "C’est pas une pub choisie au hasard : c’est plus comme un missile dirigé précisément vers toi.",
+    "page": 159,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Une publicite dirigee",
+    "portee": "Image qui rend sensible la difference entre diffusion de masse et ciblage individuel."
+   },
+   {
+    "texte": "C’est basé sur un biais cognitif bien connu, l’effet de simple exposition : plus tu es exposé à un objet, plus tu développes un sentiment de familiarité, et souvent... d’affection face à cet objet.",
+    "page": 159,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'effet de simple exposition",
+    "portee": "Mecanisme psychologique documente, exploite systematiquement par le reciblage publicitaire."
+   },
+   {
+    "texte": "Les pubs sont pas juste adaptées à qui tu es... mais aussi à ce que tu fais, quand tu le fais et où tu le fais. Autrement dit : ce n’est plus juste ton profil qui compte, c’est ton moment.",
+    "page": 160,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le ciblage par le moment",
+    "portee": "Etape supplementaire du ciblage : ce n'est plus l'identite qui compte mais la situation."
+   }
+  ]
+ },
+ {
+  "chapitre": "d8cd2165",
+  "citations": [
+   {
+    "texte": "Et les lois sont souvent en retard sur la technologie.",
+    "page": 161,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le droit en retard",
+    "portee": "Constat qui explique pourquoi tant de pratiques restent legales sans etre acceptees."
+   }
+  ]
+ },
+ {
+  "chapitre": "b24bed26",
+  "citations": [
+   {
+    "texte": "La publicité, aujourd’hui, ne vend plus des produits. Elle vend des prédictions. Des prédictions sur toi. Sur ce que tu veux. Sur ce que tu ressens. Sur ce que tu vas faire demain.",
+    "page": 162,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Vendre des predictions",
+    "portee": "Definition la plus juste de l'economie publicitaire contemporaine."
+   },
+   {
+    "texte": "quand une app ou un site Web est gratuit, c’est parce que c’est toi, le produit... un produit sous forme de données, vendu à des annonceurs qui sont prêts à payer le gros prix pour te parler !",
+    "page": 162,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le prix du gratuit",
+    "portee": "Regle a garder en tete devant tout service en ligne sans contrepartie apparente."
+   }
+  ]
+ },
+ {
+  "chapitre": "54b0a964",
+  "citations": [
+   {
+    "texte": "Amazon, c’est plus qu’un site de magasinage. C’est une machine à prédire ce que tu vas vouloir. Et souvent, avant même que tu le saches toi-même.",
+    "page": 163,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Une machine a predire",
+    "portee": "Requalifie un commerce en systeme d'anticipation du desir."
+   }
+  ]
+ },
+ {
+  "chapitre": "5dc3d276",
+  "citations": [
+   {
+    "texte": "Parce qu’Amazon sépare pas ses services. Ton profil vidéo influence ton profil de consommateur. Tout est lié",
+    "page": 164,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Un profil unique pour tous les services",
+    "portee": "Le decloisonnement des services est ce qui donne sa puissance au profilage."
+   }
+  ]
+ },
+ {
+  "chapitre": "bf9dfeb0",
+  "citations": [
+   {
+    "texte": "Amazon devine pas. Il calcule. C’est pratique... mais est-ce que c’est sain ?",
+    "page": 165,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Deviner ou calculer",
+    "portee": "Distinction entre l'intuition supposee et le traitement statistique, suivie de la question qui compte."
+   },
+   {
+    "texte": "Tu n’achètes plus consciemment, tu réagis à des suggestions.",
+    "page": 165,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Reagir plutot que choisir",
+    "portee": "Nomme precisement ce que la personnalisation retire au consommateur."
+   }
+  ]
+ },
+ {
+  "chapitre": "5d077bbe",
+  "citations": [
+   {
+    "texte": "tes données personnelles deviennent de l’argent pour Amazon. Ton historique, tes habitudes, ton humeur... tout ça alimente une machine qui vend de la prédiction comportementale à prix fort.",
+    "page": 166,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La prediction comme marchandise",
+    "portee": "Rend visible le produit reel de ces entreprises : non des biens, mais des previsions."
+   }
+  ]
+ },
+ {
+  "chapitre": "faf0a474",
+  "citations": [
+   {
+    "texte": "Amazon a accumulé des décennies de données, ce que les détaillants québécois ont tout simplement pas encore réussi à faire à grande échelle.",
+    "page": 167,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'avance par les donnees",
+    "portee": "L'avantage concurrentiel decisif n'est pas technique mais historique : le temps accumule."
+   }
+  ]
+ },
+ {
+  "chapitre": "7b8a3fe8",
+  "citations": [
+   {
+    "texte": "diversifier tes achats. Magasine pas seulement chez Amazon. Utilise des détaillants québécois ou canadiens quand c’est possible. Non seulement tu réduis la collecte centralisée de tes données, mais tu soutiens aussi l’économie locale.",
+    "page": 169,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Diversifier pour deux raisons",
+    "portee": "Conseil qui relie protection des donnees et soutien a l'economie de proximite."
+   },
+   {
+    "texte": "croire que l’IA d’Amazon sera moins intrusive avec le temps.",
+    "page": 169,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une illusion a ecarter",
+    "portee": "Le perfectionnement continu de ces systemes rend l'attente d'un adoucissement vaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "4aa17174",
+  "citations": [
+   {
+    "texte": "est-ce encore toi qui magasines... ou c’est une machine qui achète pour toi, en utilisant ta propre personnalité comme levier ?",
+    "page": 170,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Votre personnalite comme levier",
+    "portee": "Le profil n'est pas seulement observe : il est retourne contre celui qui l'a produit."
+   }
+  ]
+ },
+ {
+  "chapitre": "61fbced0",
+  "citations": [
+   {
+    "texte": "Tu penses que t’as trouvé ton chandail parfait tout seul ? En réalité, l’IA a peut-être cultivé ton désir pendant des jours à travers des pubs, des images ciblées, des produits mis de l’avant « juste pour toi ».",
+    "page": 172,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le desir cultive",
+    "portee": "Le choix percu comme spontane peut avoir ete prepare pendant des jours."
+   }
+  ]
+ },
+ {
+  "chapitre": "0c244847",
+  "citations": [
+   {
+    "texte": "plus tu interagis avec un algorithme, plus il apprend. Il devient ton styliste silencieux – discret, mais super influent.",
+    "page": 172,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le styliste silencieux",
+    "portee": "L'influence la plus efficace est celle que l'on ne percoit pas comme telle."
+   },
+   {
+    "texte": "l’intelligence artificielle se contente pas de te proposer des vêtements. Elle influence désormais directement les tendances mondiales.",
+    "page": 173,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "De la suggestion a la tendance",
+    "portee": "L'algorithme ne suit pas la mode : il contribue a la decider en amont."
+   }
+  ]
+ },
+ {
+  "chapitre": "bbd4ba4d",
+  "citations": [
+   {
+    "texte": "Quand tu crois choisir librement une robe lilas ou un jeans taille haute, tu es peut-être simplement en train de suivre une tendance choisie par une intelligence artificielle qui a décidé six mois à l’avance que ce serait à la mode.",
+    "page": 174,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Choisir six mois apres l'algorithme",
+    "portee": "La liberte de choix s'exerce dans un ensemble d'options deja restreint en amont."
+   },
+   {
+    "texte": "En d’autres mots, l’influenceur que tu suis, lui aussi, est influencé par l’IA.",
+    "page": 174,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'influenceur influence",
+    "portee": "La chaine d'influence remonte plus haut que la personne que l'on croit suivre."
+   }
+  ]
+ },
+ {
+  "chapitre": "80c52df7",
+  "citations": [
+   {
+    "texte": "c’est comme si ta garde-robe devenait un écho de ce que t’étais hier – pas un reflet de ce que tu pourrais être demain.",
+    "page": 175,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'echo d'hier",
+    "portee": "Le systeme de recommandation fige l'identite au lieu de l'accompagner dans son evolution."
+   }
+  ]
+ },
+ {
+  "chapitre": "5028dd3c",
+  "citations": [
+   {
+    "texte": "C’est ça, l’alimentation à l’ère de l’intelligence artificielle : tu manges encore, mais ce n’est plus toi qui choisis.",
+    "page": 177,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Manger sans choisir",
+    "portee": "Formule qui resume le glissement de la decision domestique vers le systeme technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "4f1e8887",
+  "citations": [
+   {
+    "texte": "On appelle ça une intégration verticale complète.",
+    "page": 178,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'integration verticale",
+    "portee": "Notion economique classique appliquee ici a la chaine alimentaire d'un menage."
+   }
+  ]
+ },
+ {
+  "chapitre": "ec28e530",
+  "citations": [
+   {
+    "texte": "Résultat : tu ne planifies plus – tu valides. T’es rendu gestionnaire d’un processus algorithmique automatisé.",
+    "page": 179,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "De decideur a validateur",
+    "portee": "Decrit un changement de role discret mais profond dans les gestes du quotidien."
+   },
+   {
+    "texte": "Parce que l’algorithme, lui, il rêve pas. Il répète ce qui a marché. Il prévoit selon ton passé.",
+    "page": 179,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'algorithme ne reve pas",
+    "portee": "Explique pourquoi un systeme predictif enferme dans les habitudes plutot qu'il n'ouvre."
+   }
+  ]
+ },
+ {
+  "chapitre": "efb1979d",
+  "citations": [
+   {
+    "texte": "Parce qu’à force de te simplifier la vie, l’IA commence aussi à la gérer.",
+    "page": 180,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Simplifier puis gerer",
+    "portee": "Le glissement de l'assistance a la gestion se fait sans decision explicite."
+   }
+  ]
+ },
+ {
+  "chapitre": "deb91e16",
+  "citations": [
+   {
+    "texte": "faut comprendre qu’on est pas tous pareils quand on entre dans un magasin. Les spécialistes parlent de deux types de clients",
+    "page": 181,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Deux facons de magasiner",
+    "portee": "Distinction utile pour comprendre ou l'automatisation sert et ou elle appauvrit."
+   }
+  ]
+ },
+ {
+  "chapitre": "38cfd736",
+  "citations": [
+   {
+    "texte": "une IA, aussi intelligente soit-elle, remplace pas la magie d’une bonne conversation humaine, d’un conseil inattendu ou d’un coup de cœur provoqué par un vendeur qui te comprend.",
+    "page": 181,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce que le vendeur apporte",
+    "portee": "Rappelle une valeur du commerce que les indicateurs de performance ne mesurent pas."
+   },
+   {
+    "texte": "te pousser des promos ciblées en direct, sur ton téléphone ou sur des écrans interactifs ; suivre ton parcours en magasin, rayon par rayon, pour savoir ce qui attire ton attention. Et tout ça sans que t’ouvres la bouche.",
+    "page": 182,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Reconnu sans avoir parle",
+    "portee": "L'identification silencieuse en magasin transforme la nature de l'anonymat public."
+   }
+  ]
+ },
+ {
+  "chapitre": "3a945567",
+  "citations": [
+   {
+    "texte": "le vendeur humain reste important... mais il est souvent piloté par une interface algorithmique.",
+    "page": 184,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Pilote par l'interface",
+    "portee": "Le metier subsiste mais son initiative se deplace vers le systeme qui l'oriente."
+   }
+  ]
+ },
+ {
+  "chapitre": "0be58e9d",
+  "citations": [
+   {
+    "texte": "Parce que magasiner, c’est pas juste consommer. C’est aussi vivre une expérience.",
+    "page": 185,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Magasiner comme experience",
+    "portee": "Rappelle une dimension du commerce que l'optimisation tend a eliminer."
+   }
+  ]
+ },
+ {
+  "chapitre": "443a72cf",
+  "citations": [
+   {
+    "texte": "Bienvenue dans l’ère des contenus personnalisés à l’extrême, pilotés par l’intelligence artificielle !",
+    "page": 187,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La personnalisation extreme",
+    "portee": "Nomme un regime de diffusion ou chacun recoit un catalogue different."
+   }
+  ]
+ },
+ {
+  "chapitre": "4c868c10",
+  "citations": [
+   {
+    "texte": "Netflix a même admis utiliser des centaines de variantes pour chaque vignette, adaptées selon tes préférences.",
+    "page": 187,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des centaines de vignettes",
+    "portee": "L'image meme d'une oeuvre est adaptee au spectateur, ce qui modifie ce qu'il croit voir."
+   },
+   {
+    "texte": "70 % du temps de visionnement sur YouTube provient directement de ces recommandations automatiques",
+    "page": 188,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Sept minutes sur dix choisies par l'algorithme",
+    "portee": "Chiffre qui mesure l'ampleur reelle de la delegation du choix culturel."
+   }
+  ]
+ },
+ {
+  "chapitre": "85a387c9",
+  "citations": [
+   {
+    "texte": "Le côté « dernier village gaulois » du Québec télévisuel a beau les protéger encore, ces plateformes ont quand même tout intérêt à développer leur volet d’IA si elles veulent conserver leurs abonnés face aux géants mondiaux.",
+    "page": 188,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La protection culturelle ne suffira pas",
+    "portee": "Un contenu local ne protege durablement que s'il s'accompagne d'une capacite technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "c83fe6e8",
+  "citations": [
+   {
+    "texte": "cette hyperpersonnalisation pourrait même créer des films entièrement sur mesure, ce qui pose des questions importantes sur notre rapport à la culture commune",
+    "page": 190,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La fin de la culture commune",
+    "portee": "Enjeu decisif : sans oeuvres partagees, il n'y a plus de reference collective."
+   },
+   {
+    "texte": "derrière chaque vignette, chaque recommandation et bientôt chaque scène, il y a un algorithme qui travaille pour maximiser ton temps passé devant l’écran.",
+    "page": 190,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'objectif reel de la plateforme",
+    "portee": "Ce qui est optimise n'est pas votre satisfaction mais votre duree de presence."
+   }
+  ]
+ },
+ {
+  "chapitre": "e7983610",
+  "citations": [
+   {
+    "texte": "la voiture entièrement autonome, celle où tu dors tranquillement pendant que ton véhicule négocie tout seul les virages de l’autoroute 15, est pas vraiment là. Pas encore.",
+    "page": 191,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'ecart entre promesse et realite",
+    "portee": "Mise au point necessaire face a une annonce repetee depuis plus d'une decennie."
+   }
+  ]
+ },
+ {
+  "chapitre": "8204b5a4",
+  "citations": [
+   {
+    "texte": "aucun véhicule vendu au grand public offre une autonomie complète.",
+    "page": 191,
+    "axe": "02-ia-technique-academique",
+    "theme": "Aucun vehicule pleinement autonome",
+    "portee": "Fait a opposer aux appellations commerciales suggerant le contraire."
+   },
+   {
+    "texte": "ces véhicules circulent sur des routes très précises, bien cartographiées, dans des conditions météo relativement idéales.",
+    "page": 192,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'autonomie sous conditions",
+    "portee": "Rappelle que les demonstrations reussies reposent sur un environnement prepare."
+   }
+  ]
+ },
+ {
+  "chapitre": "7ce7818c",
+  "citations": [
+   {
+    "texte": "Elon Musk a admis que la neige était « l’un des problèmes les plus difficiles à résoudre » pour l’autonomie complète.",
+    "page": 193,
+    "axe": "02-ia-technique-academique",
+    "theme": "La neige comme obstacle",
+    "portee": "Un phenomene ordinaire suffit a bloquer une technologie presentee comme aboutie."
+   }
+  ]
+ },
+ {
+  "chapitre": "63e0e1b2",
+  "citations": [
+   {
+    "texte": "pour l’instant, l’intelligence artificielle peut t’aider à conduire... mais elle te remplace pas encore tout à fait.",
+    "page": 194,
+    "axe": "02-ia-technique-academique",
+    "theme": "Aider sans remplacer",
+    "portee": "Position realiste sur l'etat actuel de la conduite automatisee."
+   }
+  ]
+ },
+ {
+  "chapitre": "1d2f48ad",
+  "citations": [
+   {
+    "texte": "Des IA comme Suno, Aiva et Amper Music sont capables de composer des morceaux complets – paroles, musique, mélodie, voix, arrangements – sans intervention humaine, ou presque.",
+    "page": 195,
+    "axe": "08-litterature-romans",
+    "theme": "La composition sans compositeur",
+    "portee": "Etat des lieux d'une capacite qui bouleverse l'economie de la creation musicale."
+   }
+  ]
+ },
+ {
+  "chapitre": "f1c5a4b0",
+  "citations": [
+   {
+    "texte": "Des chansons qui ont étonnamment du groove... et du cœur. Mais qui soulèvent aussi de grosses questions : C’est de l’art ? C’est du pastiche ? Ou c’est juste le début d’un nouveau genre musical ?",
+    "page": 196,
+    "axe": "08-litterature-romans",
+    "theme": "Art ou pastiche",
+    "portee": "Trois questions que tout auditeur devra se poser devant une oeuvre generee."
+   }
+  ]
+ },
+ {
+  "chapitre": "53fd2541",
+  "citations": [
+   {
+    "texte": "Elle interpole : elle prend des styles, des structures, des tendances passées, puis elle les recombine intelligemment pour générer quelque chose qui a l’air nouveau... mais qui l’est pas vraiment.",
+    "page": 198,
+    "axe": "08-litterature-romans",
+    "theme": "Interpoler n'est pas inventer",
+    "portee": "Description precise de ce que produit un modele generatif, et de ce qu'il ne produit pas."
+   },
+   {
+    "texte": "Elle « pense » pas outside the box. Pourquoi ? Parce que l’IA a pas de « box ». Elle a pas de vécu, pas de rébellion, pas de trauma à transformer en art, pas d’élan de transgression.",
+    "page": 198,
+    "axe": "08-litterature-romans",
+    "theme": "Pas de cadre, donc pas de rupture",
+    "portee": "Explique pourquoi la nouveaute radicale suppose une experience vecue."
+   },
+   {
+    "texte": "L’IA est forte en style, faible en substance.",
+    "page": 198,
+    "axe": "08-litterature-romans",
+    "theme": "Style contre substance",
+    "portee": "Formule ramassee qui permet de juger sereinement une production generee."
+   }
+  ]
+ },
+ {
+  "chapitre": "84d43849",
+  "citations": [
+   {
+    "texte": "Mais la vraie question, c’est pas : « Est-ce que c’est possible ? » C’est : « Est-ce que ça te touche ? »",
+    "page": 200,
+    "axe": "08-litterature-romans",
+    "theme": "La bonne question devant une oeuvre",
+    "portee": "Deplace le debat de la prouesse technique vers l'effet sur le lecteur ou l'auditeur."
+   },
+   {
+    "texte": "un bon roman, une bonne chanson ou un bon show d’humour, c’est pas juste un agencement efficace de mots ou de notes. C’est une connexion.",
+    "page": 200,
+    "axe": "08-litterature-romans",
+    "theme": "L'oeuvre comme connexion",
+    "portee": "Definition qui explique pourquoi la maitrise formelle ne suffit jamais."
+   }
+  ]
+ },
+ {
+  "chapitre": "91e8de2f",
+  "citations": [
+   {
+    "texte": "Tu peux modifier l’angle voulu de ton voyage : culturel, détente, festif, nature ou même « instagrammable ».",
+    "page": 201,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Preciser l'angle de sa demande",
+    "portee": "Exemple concret de la maniere dont une consigne oriente entierement un resultat."
+   }
+  ]
+ },
+ {
+  "chapitre": "809f05b1",
+  "citations": [
+   {
+    "texte": "Elle se base sur des données existantes – elle invente pas, elle recopie. Donc, elle te proposera pas les petites perles secrètes découvertes dans un village reculé par un agent chevronné... parce qu’elle y est jamais allée pour vrai.",
+    "page": 203,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Elle n'y est jamais allee",
+    "portee": "Limite fondamentale : un modele ne connait que ce qui a ete ecrit, pas ce qui a ete vecu."
+   }
+  ]
+ },
+ {
+  "chapitre": "21e3ec15",
+  "citations": [
+   {
+    "texte": "elles insistent pour dire que l’expertise humaine reste essentielle – surtout pour des destinations nichées ou complexes",
+    "page": 204,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ou l'expertise resiste",
+    "portee": "Le savoir specialise et local est ce qui echappe le plus longtemps a l'automatisation."
+   }
+  ]
+ }
+]

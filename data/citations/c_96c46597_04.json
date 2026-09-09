@@ -1,0 +1,222 @@
+[
+ {
+  "chapitre": "c93e79c0",
+  "citations": [
+   {
+    "texte": "Une règle cardinale en matière d'apprentissage machine est « Pas d'apprentissage sur les données de test ». Cela semble évident : si vous incluez les données de test dans l'apprentissage de votre programme, vous n'obtiendrez pas une bonne évaluation de ses aptitudes à la généralisation.",
+    "page": 85,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Ne pas s'évaluer sur ce qu'on a révisé",
+    "portee": "L'autrice compare cette faute à donner aux étudiants les questions de l'examen avant qu'ils ne le passent."
+   },
+   {
+    "texte": "Ce n'est pas une bonne mesure du niveau de connaissance que les étudiants ont de leur sujet ; ce n'est qu'une mesure de l'adaptation de leurs réponses à des questions d'examen.",
+    "page": 86,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "S'adapter au test",
+    "portee": "Répéter un examen jusqu'à obtenir la bonne note mesure l'ajustement au test, non la maîtrise du sujet."
+   },
+   {
+    "texte": "Il s'avère que le récent succès de l'apprentissage profond résulte moins d'innovations en IA que de la disponibilité d'énormes quantités de données (merci Internet !) et d'un matériel informatique hyperrapide pour le traitement des données en parallèle.",
+    "page": 88,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "D'où vient la révolution",
+    "portee": "La technique était là depuis vingt-cinq ans : ce sont les données et les machines qui ont changé, pas les idées."
+   }
+  ]
+ },
+ {
+  "chapitre": "fcb08a30",
+  "citations": [
+   {
+    "texte": "Comme c'est souvent le cas pour les déclarations très médiatisées concernant l'IA, celle-ci est à prendre avec des pincettes.",
+    "page": 90,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Lire les annonces avec prudence",
+    "portee": "Derrière un titre annonçant que la machine surpasse l'homme se cache presque toujours une métrique très particulière."
+   },
+   {
+    "texte": "En fait, « humains » n'est pas tout à fait juste ; cette affirmation résulte d'une expérience impliquant un seul humain",
+    "page": 90,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un seul humain de référence",
+    "portee": "Le chiffre le plus cité sur la performance humaine en reconnaissance d'images vient d'un unique étudiant volontaire."
+   },
+   {
+    "texte": "Mais si un ConvNet dit « chien », comment savons-nous qu'il fonde sa classification sur le chien de la photo ?",
+    "page": 91,
+    "axe": "02-ia-technique-academique",
+    "theme": "Bonne réponse, mauvaise raison",
+    "portee": "Un système peut avoir raison pour des motifs sans rapport avec ce qu'on croit lui avoir appris à voir."
+   },
+   {
+    "texte": "L'intelligence artificielle reste loin d'avoir « résolu » le problème de la reconnaissance d'objets.",
+    "page": 92,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un problème non résolu",
+    "portee": "Jugement d'une spécialiste au moment même où la presse annonçait la victoire des machines sur ce terrain."
+   }
+  ]
+ },
+ {
+  "chapitre": "9f7566ed",
+  "citations": [
+   {
+    "texte": "Il semble que l'intelligence visuelle ne puisse être facilement dissociée du reste de l'intelligence, en particulier de la connaissance générale, de l'abstraction et du langage",
+    "page": 93,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'intelligence ne se découpe pas",
+    "portee": "On ne peut isoler une faculté et la résoudre à part : voir suppose déjà comprendre et savoir nommer."
+   },
+   {
+    "texte": "ne puisse s'acquérir à partir de millions de photos téléchargées sur le Web et doive, d'une manière ou d'une autre, être vécue dans le monde réel",
+    "page": 93,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Il faut avoir vécu",
+    "portee": "Certaines connaissances ne se transmettent pas par la documentation, si abondante soit-elle : elles s'éprouvent."
+   }
+  ]
+ },
+ {
+  "chapitre": "160de210",
+  "citations": [
+   {
+    "texte": "En outre, les enfants n'apprennent pas passivement : ils posent des questions, demandent des informations sur les choses qui les intéressent, déduisent des abstractions des concepts et des liens entre ces concepts, et surtout, ils explorent activement le monde.",
+    "page": 95,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'apprentissage actif",
+    "portee": "Description exacte de ce qui distingue apprendre de recevoir : questionner, abstraire et explorer par soi-même."
+   },
+   {
+    "texte": "Il est faux de dire qu'aujourd'hui, les ConvNets performants apprennent « tout seuls ».",
+    "page": 95,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'autonomie apparente",
+    "portee": "Derrière chaque système présenté comme autodidacte se cache une somme considérable de décisions humaines."
+   }
+  ]
+ },
+ {
+  "chapitre": "40ca354f",
+  "citations": [
+   {
+    "texte": "À l'heure actuelle, ce que nous faisons n'est pas de la science, mais une sorte d'alchimie.",
+    "page": 96,
+    "axe": "02-ia-technique-academique",
+    "theme": "Alchimie plutôt que science",
+    "portee": "Aveu d'un directeur de laboratoire : les réglages qui font marcher ces systèmes relèvent encore du tour de main."
+   },
+   {
+    "texte": "quand nous utilisons les services proposés par des entreprises technologiques telles que Google, Amazon et Facebook, nous leur fournissons directement des données – sous forme de photos, vidéos, paroles ou textes personnels – qu'elles peuvent utiliser pour mieux entraîner leurs programmes d'IA",
+    "page": 97,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que nous payons vraiment",
+    "portee": "Au-delà de la publicité, l'usage quotidien de ces services fournit gratuitement la matière première de leurs systèmes."
+   }
+  ]
+ },
+ {
+  "chapitre": "5a024565",
+  "citations": [
+   {
+    "texte": "Concrètement parlant, nous ne pouvons étiqueter tout ce que contient le monde et en expliquer minutieusement le moindre détail à l'ordinateur.",
+    "page": 98,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'impossible exhaustivité",
+    "portee": "L'apprentissage supervisé bute sur une limite de principe : le monde ne peut pas être entièrement annoté."
+   },
+   {
+    "texte": "les événements du monde réel sont pour la plupart prédictibles, mais il reste une longue traîne d'occurrences imprévues, à faible probabilité",
+    "page": 100,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La longue traîne",
+    "portee": "Notion précieuse pour penser le risque : chaque cas rare est improbable, mais leur ensemble ne l'est pas du tout."
+   },
+   {
+    "texte": "il est impossible d'entraîner ou de coder un système pour toutes les situations qu'il pourrait éventuellement rencontrer",
+    "page": 100,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Prévoir a une limite",
+    "portee": "Aucune préparation ne couvre l'imprévu : c'est la capacité à y répondre qui doit être construite."
+   },
+   {
+    "texte": "l'apprentissage non supervisé est la matière sombre de l'IA.",
+    "page": 101,
+    "axe": "02-ia-technique-academique",
+    "theme": "La matière sombre",
+    "portee": "Formule de LeCun : l'essentiel de ce qu'il faudrait savoir faire reste invisible et hors d'atteinte."
+   }
+  ]
+ },
+ {
+  "chapitre": "1cc6eb7c",
+  "citations": [
+   {
+    "texte": "Mais les humains possèdent aussi une compétence fondamentale qui fait défaut à tous les systèmes d'IA actuels : le sens commun ou le bon sens.",
+    "page": 101,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le bon sens manquant",
+    "portee": "Ce que nous mobilisons sans y penser dans chaque situation est précisément ce qu'aucune machine ne possède."
+   },
+   {
+    "texte": "La machine apprend ce qu'elle observe dans les données plutôt que ce que vous (l'humain) voyez dans ces mêmes données.",
+    "page": 103,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que la machine retient",
+    "portee": "Elle saisit toute régularité disponible, y compris celles qui n'ont rien à voir avec ce qu'on voulait lui enseigner."
+   }
+  ]
+ },
+ {
+  "chapitre": "5e8280e5",
+  "citations": [
+   {
+    "texte": "Bien sûr, la présence de ces préjugés dans les données d'apprentissage de l'IA est à l'image des préjugés de notre société, mais la diffusion dans le monde réel de systèmes d'IA entraînés sur ces données biaisées peut renforcer ces préjugés et causer des dommages réels.",
+    "page": 105,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le biais amplifié",
+    "portee": "Un système entraîné sur nos inégalités ne les reflète pas seulement : il les inscrit dans des décisions automatiques."
+   },
+   {
+    "texte": "Un écart de précision, même infime, entre groupes raciaux peut avoir de graves répercussions en ce qui concerne les droits civils et l'accès aux services vitaux.",
+    "page": 106,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Quand un pourcentage devient un droit",
+    "portee": "Ce qui n'est qu'une décimale dans un rapport technique devient une exclusion concrète pour des personnes réelles."
+   }
+  ]
+ },
+ {
+  "chapitre": "82b53427",
+  "citations": [
+   {
+    "texte": "En général, ce type de biais subtil n'est perceptible qu'a posteriori et est difficile à anticiper.",
+    "page": 107,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des biais invisibles d'avance",
+    "portee": "On ne repère la plupart des biais qu'après les dégâts, ce qui impose la vigilance plutôt que la confiance."
+   },
+   {
+    "texte": "en montrant comment j'avais trouvé ma solution, je montrais que j'avais réellement compris ce que je faisais, que j'avais saisi les bonnes abstractions, et que j'étais parvenue à la solution pour de bonnes raisons",
+    "page": 107,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Montrer ses calculs",
+    "portee": "L'exigence scolaire de justifier sa démarche est ce qui distingue la compréhension du résultat obtenu par hasard."
+   },
+   {
+    "texte": "Une liste d'un milliard d'opérations n'est pas une explication susceptible d'être comprise par un humain.",
+    "page": 108,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Transparence n'est pas explication",
+    "portee": "Publier tous les calculs d'un système ne le rend pas plus compréhensible : expliquer suppose autre chose."
+   },
+   {
+    "texte": "Il est à craindre que si nous ne comprenons pas le fonctionnement des systèmes d'IA, nous ne puissions leur faire confiance ou prédire les circonstances dans lesquelles ils font des erreurs.",
+    "page": 108,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Comprendre pour se fier",
+    "portee": "La confiance suppose de pouvoir anticiper où et comment l'autre se trompera, ce que ces systèmes ne permettent pas."
+   }
+  ]
+ }
+]

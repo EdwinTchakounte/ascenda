@@ -1,0 +1,278 @@
+[
+ {
+  "chapitre": "3d9babe5",
+  "citations": [
+   {
+    "texte": "L'humain doit avoir le dernier mot et il est crucial que la décision humaine soit préservée face à la machine dans toutes les situations.",
+    "page": 141,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le dernier mot",
+    "portee": "Formule de cloture du guide. Elle traduit en langage syndical le principe europeen de controle humain."
+   },
+   {
+    "texte": "Pour que ces transformations soient justes et profitent à l'ensemble de la société, elles doivent être anticipées, négociées et débattues.",
+    "page": 141,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Trois conditions d'une transition juste",
+    "portee": "Anticiper, negocier, debattre : trois verbes qui resument la methode defendue par tout l'ouvrage."
+   },
+   {
+    "texte": "la CFDT Cadres insiste pour que l'humain ne devienne jamais l'exécutant de la machine",
+    "page": 142,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ne pas executer la machine",
+    "portee": "Renversement precis du rapport habituel : le danger n'est pas que la machine remplace l'humain, c'est qu'elle lui donne des ordres."
+   }
+  ]
+ },
+ {
+  "chapitre": "b8f4e630",
+  "citations": [
+   {
+    "texte": "L'entreprise a la responsabilité de dire au client s'il parle avec un être humain ou une machine.",
+    "page": 146,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Savoir a qui l'on parle",
+    "portee": "Exigence simple et deja difficile a tenir, alors que les moteurs de dialogue naturel rendent la distinction impossible a l'oreille."
+   },
+   {
+    "texte": "On ne déploie pas une IA dans un service ou un processus, sans savoir, pour qui, comment, avec qui, pourquoi, et avoir anticipé l'accompagnement des salariés.",
+    "page": 147,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Cinq questions avant tout deploiement",
+    "portee": "Liste operationnelle a poser en reunion : elle transforme une opposition de principe en exigence de methode."
+   },
+   {
+    "texte": "L'entreprise, ces derniers temps, a trop focalisé sur le savoir-être et l'adaptabilité des salariés. La mise en œuvre de l'IA montre",
+    "page": 148,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Retour du savoir-faire",
+    "portee": "Observation a contre-courant : c'est l'entrainement des IA et le reglage operationnel qui redonnent leur valeur aux savoir-faire metier."
+   },
+   {
+    "texte": "Si on n'explique pas l'IA, elle peut devenir une raison de crainte importante et de rejet des salariés.",
+    "page": 149,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Expliquer pour faire accepter",
+    "portee": "Argument utilisable aupres d'une direction : l'opacite n'est pas seulement injuste, elle est contre-productive."
+   }
+  ]
+ },
+ {
+  "chapitre": "7bfddd80",
+  "citations": [
+   {
+    "texte": "il est donc essentiel pour les travailleurs de savoir comment la loi leur permet de récupérer leurs propres données personnelles",
+    "page": 150,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Recuperer ses donnees",
+    "portee": "Renversement du rapport de force probatoire : les traces numeriques laissees par le salarie peuvent servir sa defense autant que l'accuser."
+   },
+   {
+    "texte": "celui à bénéficier d'une intervention humaine lorsqu'un traitement automatisé (tel qu'une IA) génère des conséquences importantes ou juridiques pour eux",
+    "page": 151,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Droit a l'intervention humaine",
+    "portee": "Droit peu connu et decisif : il permet de contester une decision algorithmique en se referant a une personne identifiee."
+   },
+   {
+    "texte": "il y a une méconnaissance flagrante du droit d'accès par les juristes en droit du travail",
+    "page": 151,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un droit inutilise",
+    "portee": "Constat instructif : l'obstacle principal a l'exercice d'un droit n'est pas toujours juridique, il est parfois seulement culturel."
+   },
+   {
+    "texte": "le salarié peut aussi demander toutes les informations générées ou produites à partir de ses données, que des algorithmes auraient utilisées",
+    "page": 152,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Acceder a ce que la machine a deduit",
+    "portee": "Point le plus fort de l'entretien : le droit d'acces porte sur le profilage et les decisions predictives, pas seulement sur les donnees brutes."
+   }
+  ]
+ },
+ {
+  "chapitre": "f2d54915",
+  "citations": [
+   {
+    "texte": "Les personnes chargées de la maintenance peuvent avoir accès à des données sensibles et les divulguer.",
+    "page": 156,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Angle mort de la maintenance",
+    "portee": "Rappel utile : les droits d'acces techniques echappent souvent aux procedures pensees pour les seuls utilisateurs metier."
+   },
+   {
+    "texte": "l'anonymisation des données pourrait être utile à la Cnam, dans une démarche de santé publique, pour mieux cerner, par exemple, l'explosion de l'obésité et du diabète",
+    "page": 157,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Usage collectif des donnees de sante",
+    "portee": "Contrepoint necessaire aux chapitres sur la surveillance : bien encadrees, les memes donnees servent la sante publique."
+   }
+  ]
+ },
+ {
+  "chapitre": "22fbd75f",
+  "citations": [
+   {
+    "texte": "Si on n'a pas de normes au niveau des pays, ce sont les entreprises qui prendront le pouvoir avec leurs propres normes. Et là, tout est possible.",
+    "page": 160,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qui ecrit les normes",
+    "portee": "Enonce l'enjeu politique cache derriere un sujet apparemment technique : la normalisation est un pouvoir, et il ne reste jamais vacant."
+   },
+   {
+    "texte": "Ces deux organismes s'occupent aussi bien des yaourts que de la taille des camemberts, de l'écartement des rails de chemin de fer que de l'intelligence artificielle.",
+    "page": 158,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qu'est la normalisation",
+    "portee": "Image efficace pour desacraliser la normalisation et faire comprendre qu'il s'agit d'un travail ordinaire, donc contestable et negociable."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f7a8fbf",
+  "citations": [
+   {
+    "texte": "Il s'agit toujours de se renseigner, de questionner, et de donner du sens.",
+    "page": 161,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Trois lois du syndicalisme",
+    "portee": "Methode sobre et transposable : elle montre qu'on peut aborder un sujet technique sans dispositif d'exception ni expertise prealable."
+   },
+   {
+    "texte": "l'IA et la transformation numérique renforcent surtout le besoin de dialogue avec les élus dans les entreprises",
+    "page": 163,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Plus de technique, plus de dialogue",
+    "portee": "Conclusion contre-intuitive : plus la technologie devient complexe, plus la discussion humaine devient necessaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "786bca7b",
+  "citations": [
+   {
+    "texte": "l'IA est comme un enfant avec un QI de 140, malgré son potentiel, si on ne lui apprend rien, rien n'en sortira ; au pire des jugements irréfléchis",
+    "page": 164,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Metaphore de l'enfant doue",
+    "portee": "Image tres efficace pour expliquer a un public non technique la dependance totale d'un modele a ses donnees d'apprentissage."
+   },
+   {
+    "texte": "Comment juger un dossier sur un sujet qu'on ne connaît pas ? Les représentants des salariés ne peuvent pas donner des avis motivés s'ils n'ont pas été formés.",
+    "page": 164,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Former pour pouvoir juger",
+    "portee": "Relie la formation a un acte juridique precis : l'avis motive. Sans connaissance, la consultation devient une formalite vide."
+   },
+   {
+    "texte": "il est regrettable que certains employeurs ne voient l'IA que comme une occasion de réduire les coûts",
+    "page": 165,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Deux usages possibles",
+    "portee": "Le meme outil peut servir a supprimer des postes ou a alleger le travail. Ce n'est pas la technologie qui tranche, c'est l'intention."
+   },
+   {
+    "texte": "Il y a dix ans, 80 % du temps des salariés étaient dévolus au commercial et 20 % à l'administratif. Aujourd'hui, ces proportions sont inversées.",
+    "page": 165,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Inversion du temps de travail",
+    "portee": "Chiffre saisissant sur la banque : la charge de conformite a mange le cœur de metier. L'IA est presentee comme un moyen de le reconquerir."
+   },
+   {
+    "texte": "une grande partie des tâches de back-office, du contrôle et de l'analyse du risque pourrait disparaître",
+    "page": 169,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Metiers exposes",
+    "portee": "Designe precisement les fonctions bancaires les plus automatisables : 80 % des operations de back-office le sont selon le meme entretien."
+   },
+   {
+    "texte": "elle estime qu'un ingénieur recruté à l'extérieur de l'IA coûte très cher, et autant utiliser le potentiel de ses 270 000 salariés",
+    "page": 169,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Former plutot que recruter",
+    "portee": "Argument economique en faveur de la formation interne, plus convaincant aupres d'une direction qu'un argument de justice sociale."
+   }
+  ]
+ },
+ {
+  "chapitre": "9781c5fd",
+  "citations": [
+   {
+    "texte": "sous le même vocable, s'agrègent des problématiques très diverses et des techniques très différentes",
+    "page": 170,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'IA n'est pas une discipline",
+    "portee": "Met en garde contre le mot IA lui-meme, qui laisse croire a une unite disciplinaire inexistante."
+   },
+   {
+    "texte": "cette tour de Babel numérique qui s'étend des mathématiques théoriques à l'électronique industrielle, s'organise autour de tâches fondamentales qui fédèrent les différentes approches : représenter l'information, raisonner, résoudre et in fine apprendre",
+    "page": 171,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quatre taches fondamentales",
+    "portee": "Grille de lecture sobre et durable, valable quelles que soient les techniques a la mode."
+   },
+   {
+    "texte": "la technologie d'IA mobilisée n'est pas neutre, car certaines méthodes tendent à renforcer les biais inscrits dans la base d'apprentissage",
+    "page": 174,
+    "axe": "02-ia-technique-academique",
+    "theme": "La methode n'est pas neutre",
+    "portee": "Va plus loin que la critique habituelle des donnees : le choix de l'algorithme lui-meme peut amplifier une inegalite presente dans le jeu d'entrainement."
+   },
+   {
+    "texte": "la détection de genre affichait un taux de réussite à 100 % pour les hommes à la peau claire alors que ce score tombait à 81 % pour les femmes, voire à 69 % pour les femmes à la peau sombre",
+    "page": 174,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Biais mesure",
+    "portee": "Chiffres du MIT Media Lab en 2018. Un concurrent atteignait 98,5 % sur le meme groupe : l'ecart prouve que le defaut n'etait pas inevitable."
+   },
+   {
+    "texte": "il serait vain de chercher une solution exclusivement technique à un problème qui demeure avant tout politique",
+    "page": 175,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un probleme politique",
+    "portee": "Phrase decisive du guide entier : elle interdit de renvoyer la discrimination algorithmique aux seuls ingenieurs."
+   },
+   {
+    "texte": "les analystes de risque en matière de crédits ne doivent plus prendre en compte depuis cette date le sexe du demandeur de crédit, pratique jusqu'alors courante mais aboutissant à discriminer les mères de famille monoparentales dans l'accès au crédit.",
+    "page": 176,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Credit scoring et discrimination",
+    "portee": "Cas rare ou une regle simple a corrige un biais mesurable dans l'acces au credit. A citer comme preuve que la regulation peut fonctionner."
+   },
+   {
+    "texte": "le meilleur moyen de se protéger contre ces biais cognitifs est de contraindre les opérateurs de l'IA à ouvrir leurs « boîtes noires » à une expertise publique et indépendante",
+    "page": 177,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ouvrir les boites noires",
+    "portee": "Position claire sur le partage : ce n'est pas la transparence totale qui est demandee, c'est l'acces d'un tiers independant."
+   }
+  ]
+ },
+ {
+  "chapitre": "1e9f8fdf",
+  "citations": [
+   {
+    "texte": "l'intelligence artificielle est un outil qui démultiplie les capacités humaines, celles de l'individu et celles d'une communauté",
+    "page": 180,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un outil de demultiplication",
+    "portee": "Definition volontairement banale, aussitot mise en perspective avec la bombe atomique et les organismes genetiquement modifies."
+   },
+   {
+    "texte": "Elle peut faire de nous des êtres prévisibles par le calcul algorithmique. Elle peut nous faire douter de notre capacité à bifurquer, de notre liberté à aller hors des sentiers battus.",
+    "page": 181,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Determinisme algorithmique",
+    "portee": "Formule le risque le plus profond du livre : non pas que la machine decide a notre place, mais que nous cessions de croire que nous pouvons devier."
+   },
+   {
+    "texte": "Collectivement, nous devrions être en mesure de définir les aspects de notre vie où l'IA ne doit pas être utilisée du tout, et des domaines où l'on peut l'utiliser mais avec prudence.",
+    "page": 181,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Zones interdites et zones lentes",
+    "portee": "Reprend la distinction de la biologiste Anne McLaren entre No go areas et Slow go areas. Cadre de decision simple et transposable."
+   }
+  ]
+ }
+]

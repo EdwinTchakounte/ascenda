@@ -1,0 +1,51 @@
+[
+ {"chapitre":"7dbdd5eb","citations":[
+  {"texte":"Il faut noter que cette technique de calcul d'invariants sur les composants et sur leurs interactions permet de prendre en compte des espaces d'états bien plus grands que ne le peuvent les techniques de type « model checking ».","page":271,"axe":"02-ia-technique-academique","theme":"Vérifier à grande échelle","portee":"Raisonner sur des propriétés invariantes plutôt qu'énumérer les cas permet de prouver ce qui échappait au calcul."}]},
+
+ {"chapitre":"eeb488ac","citations":[
+  {"texte":"Mais l'autonomie de la machine, face à la variabilité et à la diversité des environnements et des tâches, nécessite de progresser dans la maîtrise intégrée de la boucle perception décision-action.","page":272,"axe":"02-ia-technique-academique","theme":"Boucle perception décision action","portee":"L'autonomie ne s'obtient pas en perfectionnant des briques séparées mais en maîtrisant leur enchaînement."},
+  {"texte":"en robotique, « représentations des connaissances » se décline nécessairement au pluriel","page":272,"axe":"02-ia-technique-academique","theme":"Pluralité des représentations","portee":"Aucun formalisme unique ne couvre le continu et le discret, le géométrique et le symbolique, le certain et l'aléatoire."}]},
+
+ {"chapitre":"e354f9d1","citations":[
+  {"texte":"Mais la quête de la discipline, à savoir comprendre, modéliser et implémenter l'intelligence, passe pour beaucoup de chercheurs via ce lien perception-décision-action.","page":273,"axe":"04-ia-societe-ethique-philosophie","theme":"Quête de la discipline","portee":"Énoncé sobre de ce que cherche l'intelligence artificielle, loin des promesses et des craintes ordinaires."},
+  {"texte":"les techniques statistiques et hybrides ont donné lieu à des avancées spectaculaires en apprentissage automatique ou en traitement automatique du langage naturel","page":273,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Avancées statistiques","portee":"Constat écrit en 2014, à la veille de la vague qui allait produire les systèmes de langage actuels."}]},
+
+ {"chapitre":"bc8e22b4","citations":[
+  {"texte":"Les travaux en intelligence artificielle (IA) ont conduit tout aussi bien à réviser les défis du programme initial de l'IA qu'à nous rendre attentifs à des particularités et limitations de la cognition humaine.","page":283,"axe":"04-ia-societe-ethique-philosophie","theme":"Un miroir pour l'humain","portee":"Tenter de fabriquer l'intelligence apprend surtout ce que notre propre intelligence a de particulier."},
+  {"texte":"La construction des premiers ordinateurs, dans la décennie 1940, a soudainement donné une nouvelle actualité à des questions fondamentales","page":283,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Une technique réveille la philosophie","portee":"Une invention matérielle peut rendre brûlantes des questions que la pensée seule laissait dormir."}]},
+
+ {"chapitre":"8b2045c4","citations":[
+  {"texte":"S'il est hasardeux de parler de progrès sur ces questions, l'IA aide à les formuler différemment, ce qui est souvent une façon d'avancer vers une résolution.","page":284,"axe":"04-ia-societe-ethique-philosophie","theme":"Reformuler pour avancer","portee":"Devant une question qui résiste, la reformuler est souvent le seul progrès disponible, et il est réel."},
+  {"texte":"Il semble que pour des conversations ordinaires sur des sujets d'un domaine précis - sans recourir à des métaphores et associations trop libres - les programmes actuels d'IA soient capables de passer le test, et ceci en partie en raison des limitations des capacités de discrimination de l'observateur humain dans une interaction ordinaire.","page":284,"axe":"04-ia-societe-ethique-philosophie","theme":"Le test et son juge","portee":"Une machine passe le test autant par nos limites d'observateurs que par ses propres capacités."}]},
+
+ {"chapitre":"41b6f4a2","citations":[
+  {"texte":"par définition, nous, humains, ne connaissons pas les limites de la créativité humaine, si bien que nous sommes dans l'incapacité de démontrer qu'aucune machine possible ne peut les atteindre","page":285,"axe":"04-ia-societe-ethique-philosophie","theme":"Limites inconnues","portee":"On ne peut prouver qu'une machine ne fera jamais ce que l'homme fait, car on ignore ce dont l'homme est capable."},
+  {"texte":"Le test de Turing a l'avantage de ne pas exiger de telles démonstrations impossibles, mais son résultat est forcément vague, puisqu'il est lié aux approximations de notre cognition humaine.","page":285,"axe":"04-ia-societe-ethique-philosophie","theme":"Force et faiblesse du test","portee":"Un critère praticable se paie d'un résultat approximatif, arbitrage que toute évaluation doit assumer."}]},
+
+ {"chapitre":"f3318a48","citations":[
+  {"texte":"Parce qu'il surcharge la notion de sémantique, en exigeant qu'elle implique tous les rapports au monde qu'un humain peut avoir.","page":286,"axe":"04-ia-societe-ethique-philosophie","theme":"Critique de Searle","portee":"Une objection célèbre peut reposer sur une exigence si haute qu'elle disqualifierait presque toute compréhension."},
+  {"texte":"Comme la sémantique humaine comporte des relations avec le monde extérieur, elle n'est sûrement pas réductible à des opérations syntaxiques internes sur des symboles sans relation avec ce monde.","page":286,"axe":"04-ia-societe-ethique-philosophie","theme":"Le sens vient du monde","portee":"Comprendre suppose un rapport au monde, non seulement des règles de manipulation de signes."}]},
+
+ {"chapitre":"1afaff31","citations":[
+  {"texte":"Finalement il n'a plus à chercher la bonne décision, ce qu'il faut faire lui apparaît avec évidence - mais il n'est pas capable alors de vraiment expliquer comment il s'y prend.","page":287,"axe":"09-developpement-personnel-influence","theme":"L'évidence de l'expert","portee":"Le sommet de la compétence est de voir immédiatement ce qu'il faut faire, sans pouvoir le justifier."},
+  {"texte":"il faut être celui dans lequel s'incorpore peu à peu, à la suite d'une multitude d'expériences, une sensibilité à des indices qui ne prennent sens qu'en situation","page":287,"axe":"09-developpement-personnel-influence","theme":"L'expérience s'incorpore","portee":"On ne devient expert par aucun raccourci : il faut le temps et le nombre des situations vécues."},
+  {"texte":"Les limitations de l'IA tiendraient donc à nos propres limitations cognitives et au fait que nous ne créons des machines qu'en complément de ces capacités.","page":287,"axe":"04-ia-societe-ethique-philosophie","theme":"Nos limites dans nos machines","portee":"Ce que la machine ne sait pas faire dit d'abord quelque chose de ce que nous savons concevoir."}]},
+
+ {"chapitre":"8850894b","citations":[
+  {"texte":"Il est plus réaliste d'une part de comparer les résultats de l'IA avec les défis qu'elle s'était elle-même adressés","page":288,"axe":"04-ia-societe-ethique-philosophie","theme":"Juger sur ses propres promesses","portee":"Évaluer une entreprise à l'aune de ce qu'elle s'était fixé vaut mieux que la mesurer à un absolu."},
+  {"texte":"la pertinence des raisonnements change en fonction du contexte, et que la définition du contexte n'est pas réductible à des représentations prédéterminées","page":288,"axe":"04-ia-societe-ethique-philosophie","theme":"Le contexte fuyant","portee":"Ce qui vaut ici ne vaut plus là, et l'on ne peut fixer d'avance ce qui compte comme le contexte."}]},
+
+ {"chapitre":"efc95800","citations":[
+  {"texte":"elle doit être conceptualisée comme une constante interaction avec l'environnement, interaction orientée vers un but","page":289,"axe":"04-ia-societe-ethique-philosophie","theme":"Percevoir, c'est agir","portee":"La perception n'enregistre pas passivement : elle cherche, guidée par ce que l'on veut obtenir."},
+  {"texte":"On a donc besoin de savoir intégrer des résultats partiels, incertains et imprécis","page":289,"axe":"09-developpement-personnel-influence","theme":"Décider sur du partiel","portee":"Attendre des informations complètes et sûres est un luxe que ni l'homme ni la machine ne peuvent s'offrir."}]},
+
+ {"chapitre":"e5480753","citations":[
+  {"texte":"L'intelligence (humaine) ne consiste pas à tout exprimer pour pouvoir tout calculer. Elle a une dimension pragmatique, puisqu'il faut aussi décider à temps.","page":290,"axe":"09-developpement-personnel-influence","theme":"Décider à temps","portee":"Être intelligent, c'est aussi savoir s'arrêter de réfléchir avant qu'il ne soit trop tard pour agir."},
+  {"texte":"L'IA a eu comme premier effet de mettre en évidence tous ces compromis faits par l'intelligence humaine.","page":290,"axe":"04-ia-societe-ethique-philosophie","theme":"Nos compromis révélés","portee":"En tentant de programmer la pensée, on découvre tous les raccourcis que la pensée humaine s'autorise."},
+  {"texte":"Les développements de l'IA ont montré le rôle crucial de la méta cognition dans le domaine de la résolution de problèmes.","page":290,"axe":"09-developpement-personnel-influence","theme":"Penser sa pensée","portee":"Savoir où en est son propre raisonnement, et quand en changer, compte autant que le raisonnement lui-même."}]},
+
+ {"chapitre":"1ccc53f5","citations":[
+  {"texte":"Si l'on veut généraliser, on va devoir prendre plus de risques, et passer de la vérité, via la validité, à la simple normalité.","page":291,"axe":"04-ia-societe-ethique-philosophie","theme":"De la vérité à la normalité","portee":"Élargir la portée d'un savoir oblige à relâcher son exigence : on gagne en étendue ce qu'on perd en certitude."},
+  {"texte":"pour décider d'une action, on compare ce qui s'ensuivra normalement si on l'accomplit avec ce qui se produira normalement si on ne l'accomplit pas","page":291,"axe":"09-developpement-personnel-influence","theme":"Comparer deux futurs","portee":"Toute décision revient à mettre en regard ce qui arrivera si l'on agit et ce qui arrivera si l'on s'abstient."},
+  {"texte":"nous avons tendance à être d'abord sensibles à ce qui nous semble anormal par rapport à ce que nous souhaitons","page":291,"axe":"09-developpement-personnel-influence","theme":"L'attention à l'écart","portee":"Notre attention est captée par la déception de nos attentes, non par ce qui se déroule comme prévu."}]}
+]

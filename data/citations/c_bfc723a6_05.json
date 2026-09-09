@@ -1,0 +1,109 @@
+[
+ {"chapitre":"e297f5cb","citations":[
+  {"texte":"En général, planifier correctement l'architecture et entraîner le réseau sur un jeu de données varié et étendu d'images étiquetées est essentiel pour créer un réseau neuronal performant pour la classification d'images.","page":179,"axe":"02-ia-technique-academique","theme":"Conditions d'un réseau performant","portee":"Rappelle que la qualité du jeu de données étiqueté pèse autant que l'architecture choisie."}
+ ]},
+ {"chapitre":"888310b5","citations":[
+  {"texte":"Tout au long du défi, nous avons observé les progrès de ChatGPT et évalué ses performances pour en apprendre davantage sur sa capacité à résoudre des problèmes.","page":180,"axe":"02-ia-technique-academique","theme":"Protocole d'évaluation","portee":"Les auteurs décrivent une démarche d'observation, pas une mesure standardisée."}
+ ]},
+ {"chapitre":"2f3ef64d","citations":[
+  {"texte":"Il n'est pas possible pour un novice d'utiliser ChatGPT pour résoudre immédiatement des problèmes. Cependant, ChatGPT peut être utilisé comme un outil pour vous aider à apprendre et développer vos compétences en résolution de problèmes.","page":182,"axe":"05-ia-education-pedagogie","theme":"L'outil comme moyen d'apprentissage","portee":"Distingue nettement le raccourci et l'apprentissage, distinction décisive pour un étudiant."},
+  {"texte":"Essayez de comprendre comment ChatGPT est parvenu à la réponse ou à la recommandation, et tirez-en quelque chose.","page":182,"axe":"05-ia-education-pedagogie","theme":"Remonter au raisonnement","portee":"Consigne simple qui sépare l'usage formateur de la simple recopie."}
+ ]},
+ {"chapitre":"be23c1c9","citations":[
+  {"texte":"Néanmoins, il est important de travailler seul et de pratiquer la résolution de problèmes en utilisant les stratégies et les idées que vous avez acquises grâce à ChatGPT.","page":183,"axe":"09-developpement-personnel-influence","theme":"Le travail personnel reste nécessaire","portee":"Pose la pratique solitaire comme condition de l'acquisition réelle d'une compétence."},
+  {"texte":"Il analyse de vastes quantités de texte provenant de nombreux sites web et construit un modèle des mots les plus susceptibles de venir les uns après les autres dans une phrase.","page":183,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce qu'est un modèle de langage","portee":"Explication simple du mécanisme, utile pour comprendre pourquoi le modèle se trompe en calcul."},
+  {"texte":"Il répond avec des nombres incorrects tant grammaticalement que mathématiquement, mais avec un ton autoritaire.","page":183,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Assurance et erreur","portee":"Nomme le piège principal pour l'utilisateur, à savoir la confiance que produit le ton."}
+ ]},
+ {"chapitre":"3c831bd4","citations":[
+  {"texte":"le modèle ne cherche qu'à exprimer la solution la plus probable plutôt que d'essayer de raisonner à travers la logique formelle","page":184,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Probable et non démontré","portee":"Formule la différence de nature entre une réponse plausible et une réponse démontrée."}
+ ]},
+ {"chapitre":"a3c01084","citations":[
+  {"texte":"Le ChatGPT créé par OpenAI a atteint 100 millions d'utilisateurs actifs en seulement deux mois, établissant un nouveau record pour l'application grand public à la croissance la plus rapide de l'histoire.","page":186,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Vitesse d'adoption","portee":"Repère chiffré pour mesurer la rapidité avec laquelle un usage nouveau s'est imposé."},
+  {"texte":"L'épidémie de COVID-19 a entraîné une augmentation de 600 % de la cybercriminalité.","page":186,"axe":"11-sciences-environnement","theme":"Crise sanitaire et cybercriminalité","portee":"Rappelle que la numérisation forcée a élargi la surface d'attaque partout."}
+ ]},
+ {"chapitre":"53386869","citations":[
+  {"texte":"D'ici 2025, la cybercriminalité coûtera à l'économie mondiale 10,5 billions de dollars chaque année.","page":187,"axe":"10-economie-entrepreneuriat-finance","theme":"Coût mondial de la cybercriminalité","portee":"Ordre de grandeur à opposer aux budgets de sécurité informatique réellement engagés."},
+  {"texte":"Les attaquants ont eu l'opportunité d'automatiser la communication avec plusieurs victimes potentielles alors qu'elles cherchaient à échapper au piège des ransomwares, ainsi que de transformer rapidement du matériel de phishing simple et souvent enfantin en structures plus professionnelles.","page":187,"axe":"04-ia-societe-ethique-philosophie","theme":"Professionnalisation de l'hameçonnage","portee":"Explique pourquoi les repères habituels, fautes et maladresses de langue, ne suffisent plus à détecter une fraude."}
+ ]},
+ {"chapitre":"54a9aa34","citations":[
+  {"texte":"Étant donné que ChatGPT apprend en permanence de ses interactions avec les gens, il peut être facilement trompé pour divulguer des informations privées ou être incité à adopter un comportement douteux, y compris cliquer sur des liens dangereux ou installer des logiciels malveillants.","page":188,"axe":"04-ia-societe-ethique-philosophie","theme":"Vulnérabilité du modèle lui même","portee":"L'outil n'est pas seulement un instrument d'attaque, il est aussi une cible."},
+  {"texte":"Comme toute autre technologie, ChatGPT a le potentiel de mettre en danger la sécurité nationale s'il est utilisé de manière abusive par des acteurs de menace tels que des terroristes, des pirates informatiques ou des pirates sponsorisés par des États.","page":188,"axe":"04-ia-societe-ethique-philosophie","theme":"Usage abusif et sécurité nationale","portee":"Situe le risque au niveau des États, pas seulement des particuliers."}
+ ]},
+ {"chapitre":"aec71cbc","citations":[
+  {"texte":"Cela montre que les cybercriminels peuvent utiliser ChatGPT pour générer un contenu nuisible en déformant la question.","page":189,"axe":"04-ia-societe-ethique-philosophie","theme":"Contournement par reformulation","portee":"Montre la fragilité des garde fous fondés sur la formulation apparente de la demande."},
+  {"texte":"Afin d'éviter toute répercussion négative sur la sécurité nationale, il est crucial de trouver un équilibre entre l'utilisation des avantages des technologies émergentes et de s'assurer qu'elles sont gérées de manière éthique et responsable.","page":189,"axe":"04-ia-societe-ethique-philosophie","theme":"Équilibre entre bénéfice et risque","portee":"Position d'ensemble des auteurs, qui refusent aussi bien l'interdiction que l'adoption sans cadre."}
+ ]},
+ {"chapitre":"839eaa1e","citations":[
+  {"texte":"Les cybercriminels qui ne sont pas doués en programmation seront soutenus par ChatGPT.","page":191,"axe":"04-ia-societe-ethique-philosophie","theme":"Abaissement de la barrière technique","portee":"Le risque nouveau tient moins à la puissance qu'à l'élargissement du nombre d'acteurs capables."}
+ ]},
+ {"chapitre":"e5a7cc42","citations":[
+  {"texte":"Ils peuvent créer des messages plus susceptibles d'être ouverts et cliqués, ce qui peut entraîner des violations de données ou des infections par des logiciels malveillants, en utilisant l'IA pour étudier l'activité en ligne et les intérêts de la cible.","page":192,"axe":"04-ia-societe-ethique-philosophie","theme":"Hameçonnage ciblé","portee":"La personnalisation du message est ce qui rend l'attaque efficace, et l'IA la rend industrielle."},
+  {"texte":"les deepfakes sont des photos ou des vidéos modifiées qui passent de manière convaincante pour la réalité.","page":192,"axe":"04-ia-societe-ethique-philosophie","theme":"Définition des hypertrucages","portee":"Définition minimale, à retenir avant toute discussion sur la désinformation visuelle."}
+ ]},
+ {"chapitre":"d09c7f7c","citations":[
+  {"texte":"les cybercriminels peuvent lancer des attaques étendues avec peu d'efforts en utilisant l'IA pour automatiser les attaques sur des systèmes ou des réseaux faibles","page":193,"axe":"04-ia-societe-ethique-philosophie","theme":"Automatisation des attaques","portee":"Le déséquilibre tient au rapport entre l'effort de l'attaquant et l'étendue de l'attaque."},
+  {"texte":"ChatGPT peut être utilisé pour évaluer de vastes quantités d'informations sur les cybermenaces et les vulnérabilités, aidant les experts en cybersécurité à identifier les tendances et les indicateurs potentiels d'attaque.","page":195,"axe":"06-ia-travail-management-metiers","theme":"Renseignement sur les menaces","portee":"Usage défensif symétrique de l'usage offensif décrit plus haut."}
+ ]},
+ {"chapitre":"e65cd27f","citations":[
+  {"texte":"Mais il est important de comprendre que la technologie n'est qu'un outil.","page":196,"axe":"04-ia-societe-ethique-philosophie","theme":"La technologie comme outil","portee":"Phrase courte qui déplace la question du dispositif vers l'intention de celui qui l'emploie."},
+  {"texte":"Alors que certains utiliseront la technologie à des fins bonnes et d'autres à des fins mauvaises, cela reflète davantage la nature humaine que celle des robots, des chatbots ou de l'IA.","page":196,"axe":"04-ia-societe-ethique-philosophie","theme":"Responsabilité humaine","portee":"Argument classique, à discuter, car il tend à exonérer les concepteurs de leurs choix."},
+  {"texte":"La manière dont ChatGPT est créé, utilisé et géré définira finalement son impact sur le paysage des menaces.","page":196,"axe":"04-ia-societe-ethique-philosophie","theme":"Conception, usage et gouvernance","portee":"Nuance la phrase précédente en réintroduisant la conception et la gestion, donc les concepteurs."},
+  {"texte":"ChatGPT a le pouvoir de transformer la façon dont les gouvernements interagissent avec leurs citoyens et améliorent leurs opérations internes.","page":197,"axe":"06-ia-travail-management-metiers","theme":"Administration publique","portee":"Piste concrète pour des administrations où le service au public est le point de friction principal."}
+ ]},
+ {"chapitre":"143de114","citations":[
+  {"texte":"La police et les forces de défense peuvent améliorer leur connaissance de la situation et être plus réactives aux menaces éventuelles en utilisant l'IA pour repérer automatiquement les tendances ou les anomalies dans les données.","page":198,"axe":"06-ia-travail-management-metiers","theme":"Connaissance de la situation","portee":"Usage régalien de l'IA, qui suppose un encadrement juridique explicite pour ne pas déborder."}
+ ]},
+ {"chapitre":"cdcacf41","citations":[
+  {"texte":"ChatGPT peut aider à rédiger des scripts ou du code et à expliquer étape par étape les étapes d'analyse de données volumineuses pour les enquêteurs non spécialisés en programmation.","page":199,"axe":"06-ia-travail-management-metiers","theme":"Accès à l'analyse sans programmation","portee":"Élargit une compétence technique à des professionnels qui ne l'ont jamais apprise."}
+ ]},
+ {"chapitre":"77440faa","citations":[
+  {"texte":"Pour garantir que les choix juridiques et politiques sont faits de manière équitable, éthique et responsable, l'IA peut être un outil bénéfique pour les avocats et les décideurs politiques en général. Cependant, elle doit être utilisée en conjonction avec les compétences et le jugement humain.","page":200,"axe":"04-ia-societe-ethique-philosophie","theme":"Décision juridique assistée","portee":"Pose la condition du jugement humain là où la décision engage les droits des personnes."}
+ ]},
+ {"chapitre":"926a75c1","citations":[
+  {"texte":"Un large éventail de publics peut bénéficier de ressources pédagogiques accessibles et faciles à comprendre, en partie grâce à ChatGPT.","page":201,"axe":"05-ia-education-pedagogie","theme":"Vulgarisation de la sécurité","portee":"La sensibilisation du grand public reste le maillon faible de toute politique de cybersécurité."},
+  {"texte":"Les limites de ChatGPT ou de l'IA générative pour la cybersécurité nationale se limitent à l'offre d'informations et de conseils généraux sur le sujet.","page":201,"axe":"04-ia-societe-ethique-philosophie","theme":"Portée réelle de l'outil","portee":"Ramène l'outil à ce qu'il fait effectivement, après plusieurs pages d'usages annoncés."}
+ ]},
+ {"chapitre":"c86accd7","citations":[
+  {"texte":"Le sujet de la cybersécurité est complexe et en évolution constante, ce qui nécessite une approche multidimensionnelle comprenant non seulement des solutions technologiques, mais aussi la sensibilisation, l'éducation et la formation des individus.","page":202,"axe":"05-ia-education-pedagogie","theme":"La sécurité n'est pas que technique","portee":"Point central pour des pays où l'équipement précède souvent la formation des utilisateurs."},
+  {"texte":"Les conseils et les suggestions de ChatGPT ou de l'IA générative ne doivent pas être considérés comme un substitut aux conseils ou aux consultations professionnels d'experts en cybersécurité qualifiés.","page":202,"axe":"04-ia-societe-ethique-philosophie","theme":"Pas un substitut à l'expertise","portee":"Même réserve que celle formulée plus tôt pour la médecine, appliquée à la sécurité."}
+ ]},
+ {"chapitre":"60258bc4","citations":[
+  {"texte":"Cependant, il est essentiel de garder à l'esprit que les modèles de langage pour l'intelligence artificielle ne sont aussi bons que les données et les algorithmes sur lesquels ils sont formés.","page":203,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Qualité des données d'entraînement","portee":"Principe qui commande tout jugement sur la fiabilité d'un modèle."},
+  {"texte":"Ils ne peuvent pas prendre des décisions importantes ou tenir compte de toutes les implications éthiques, légales et politiques liées à l'élaboration d'une stratégie nationale de cybersécurité.","page":203,"axe":"04-ia-societe-ethique-philosophie","theme":"Frontière de la décision","portee":"Trace la limite entre l'analyse assistée et la décision politique, qui reste humaine."}
+ ]},
+ {"chapitre":"f20a1e98","citations":[
+  {"texte":"L'industrie de l'EdTech utilise déjà des chatbots dans ses produits pour offrir aux enseignants et aux étudiants une meilleure expérience utilisateur.","page":205,"axe":"05-ia-education-pedagogie","theme":"Chatbots déjà en place","portee":"Rappelle que l'arrivée de ChatGPT prolonge un usage existant plutôt qu'elle ne l'invente."},
+  {"texte":"Cependant, les enseignants s'inquiètent également du fait que les étudiants puissent utiliser cet outil pour se fier à leurs compétences en rédaction.","page":205,"axe":"05-ia-education-pedagogie","theme":"Inquiétude des enseignants","portee":"Formule la tension centrale de tout usage scolaire de ces outils."}
+ ]},
+ {"chapitre":"e5171e9c","citations":[
+  {"texte":"Le problème est qu'elles sont difficiles à contrôler, organiser et trier. ChatGPT vient à la rescousse car il peut convertir les données non structurées en données structurées.","page":206,"axe":"03-ia-outils-pratique-prompting","theme":"Structurer les données brutes","portee":"Usage sous estimé mais très concret pour toute organisation qui accumule des documents."},
+  {"texte":"ChatGPT illustre parfaitement la rapidité avec laquelle les avancées technologiques sont faites et à quelle vitesse les systèmes éducatifs doivent s'adapter pour suivre le futur en constante évolution.","page":206,"axe":"05-ia-education-pedagogie","theme":"Vitesse d'adaptation des systèmes éducatifs","portee":"Enjeu majeur pour des systèmes dont les programmes se révisent sur plusieurs années."}
+ ]},
+ {"chapitre":"fce621a9","citations":[
+  {"texte":"Les élèves des classes de sciences et de mathématiques peuvent demander à ChatGPT de clarifier une idée cruciale avant de se lancer dans un exercice d'investigation en ligne pour essayer d'identifier les textes originaux que ChatGPT a utilisés pour produire sa réponse.","page":207,"axe":"05-ia-education-pedagogie","theme":"Remonter aux sources","portee":"Transforme l'usage de l'outil en exercice de recherche documentaire."},
+  {"texte":"Il peut également adapter la difficulté en fonction du niveau d'apprentissage et des besoins des étudiants.","page":207,"axe":"05-ia-education-pedagogie","theme":"Difficulté adaptative","portee":"Réponse possible à l'hétérogénéité des niveaux dans une même classe."}
+ ]},
+ {"chapitre":"463209ba","citations":[
+  {"texte":"Les adultes et les étudiants devraient découvrir ensemble les outils d'écriture IA et apprendre comment ils fonctionnent plutôt que de les interdire.","page":210,"axe":"05-ia-education-pedagogie","theme":"Découvrir plutôt qu'interdire","portee":"Position pédagogique claire, qui suppose que l'enseignant se forme lui aussi."},
+  {"texte":"En offrant aux étudiants des expériences d'apprentissage personnalisées, en améliorant les résultats d'apprentissage et en augmentant l'accessibilité à l'éducation pour tous, l'IA a le potentiel de changer complètement l'industrie Edtech.","page":210,"axe":"05-ia-education-pedagogie","theme":"Trois promesses éducatives","portee":"La troisième, l'accessibilité pour tous, est celle qui compte le plus là où l'offre scolaire manque."}
+ ]},
+ {"chapitre":"a54bea98","citations":[
+  {"texte":"Les enseignants peuvent se concentrer sur d'autres responsabilités plus cruciales telles que la préparation des cours et l'engagement des étudiants en automatisant des processus tels que la notation et les commentaires sur le travail des étudiants avec ChatGPT.","page":211,"axe":"05-ia-education-pedagogie","theme":"Redéploiement du temps enseignant","portee":"Le gain se mesure au temps rendu à la préparation et à la relation avec les élèves."}
+ ]},
+ {"chapitre":"dc0d8ac4","citations":[
+  {"texte":"ChatGPT ne parvient pas à comprendre les émotions humaines complexes et les dynamiques de discussion complexes.","page":212,"axe":"04-ia-societe-ethique-philosophie","theme":"Limite relationnelle","portee":"Ce qui manque à l'outil est précisément ce qui fait le métier d'enseignant."},
+  {"texte":"Il est également essentiel de garder à l'esprit que ChatGPT n'est aussi bon que les données sur lesquelles il a été formé et peut ne pas être en mesure de fournir des informations précises ou objectives sur certains sujets.","page":212,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Fiabilité inégale selon les sujets","portee":"Avertissement décisif pour les sujets peu représentés dans les corpus d'entraînement."},
+  {"texte":"Avant de chuter à 10,6 milliards de dollars en 2022, les investissements privés dans l'edtech ont augmenté pour atteindre 16,1 milliards de dollars en 2020 et 20,8 milliards de dollars en 2021.","page":212,"axe":"10-economie-entrepreneuriat-finance","theme":"Retournement du financement","portee":"Rappelle qu'un secteur en croissance technologique peut voir son financement se retourner brutalement."}
+ ]},
+ {"chapitre":"d481c9d8","citations":[
+  {"texte":"Les enseignants peuvent fournir aux élèves le soutien personnalisé dont ils ont besoin pour réussir en surveillant leur progression et en identifiant les domaines où ils rencontrent des difficultés.","page":213,"axe":"05-ia-education-pedagogie","theme":"Repérage des difficultés","portee":"L'apport est d'abord un outil de diagnostic pour l'enseignant, pas un substitut au cours."},
+  {"texte":"L'IA peut également être utilisée pour développer des tests adaptatifs qui s'adaptent au niveau de compétence de chaque élève afin de mesurer plus précisément leurs connaissances.","page":213,"axe":"05-ia-education-pedagogie","theme":"Évaluation adaptative","portee":"Change la nature même de l'évaluation, qui cesse d'être identique pour toute une classe."}
+ ]},
+ {"chapitre":"7537f7ab","citations":[
+  {"texte":"En fournissant aux étudiants des informations rapides et précises, il a augmenté l'efficacité et l'efficience des plateformes d'apprentissage en ligne et des cours virtuels.","page":214,"axe":"05-ia-education-pedagogie","theme":"Apprentissage en ligne","portee":"Effet mesurable sur des dispositifs qui souffraient d'un fort taux d'abandon."}
+ ]},
+ {"chapitre":"d7bbd5f3","citations":[
+  {"texte":"Les étudiants et les chercheurs comprennent à quel point il est crucial d'avoir accès aux outils appropriés pour leurs recherches.","page":216,"axe":"05-ia-education-pedagogie","theme":"Accès aux outils de recherche","portee":"L'inégalité d'accès aux outils est une inégalité de recherche, particulièrement sensible au Sud."},
+  {"texte":"Le fait que ChatGPT ait été formé sur un volume incroyable de données, créant une énorme bibliothèque d'informations, est l'un de ses plus grands avantages.","page":216,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Étendue du corpus","portee":"Cette étendue est aussi ce qui rend difficile de savoir d'où vient une réponse donnée."}
+ ]}
+]

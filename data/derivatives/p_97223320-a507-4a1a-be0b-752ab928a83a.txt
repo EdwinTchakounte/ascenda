@@ -1,0 +1,484 @@
+OUVRAGE : L'IA et nous
+AUTEUR(S) : Olivier Guilhem
+ANNÉE : inconnue
+PAGES : 138
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Couverture (p. 2-2)
+  Copyright (p. 3-3)
+  Page de titre (p. 4-4)
+  Dédicace (p. 5-5)
+  Introduction (p. 6-10)
+  1. L’évolution de l’IA (et ses limitations actuelles) (p. 11-30)
+  2. L’intelligence artificielle deviendra-t-elle surhumaine ? (p. 31-51)
+  3. Av(i)ons-nous vraiment besoin d’IA ? (p. 52-68)
+  4. Ces IA qui nous dérangent (p. 69-84)
+  5. Une intelligence artificielle raisonnée et bénéfique (p. 85-104)
+  6. L’IA et le droit (p. 105-127)
+  Conclusion (p. 128-134)
+  Bibliographie (p. 135-135)
+  Notes (p. 136-138)
+
+[10/126 passages, 8265 tokens sur 107952]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+Couverture : Bianca Gumbrecht/Luna Park
+Mise en pages : IGS-CP (16)
+Préparation de copie : Guillaume Müller-Labé
+ 
+© Éditions Le Pommier/Humensis, 2019 
+170 bis, boulevard du Montparnasse – 75014 Paris
+ 
+ISBN : 978-2-7465-1915-2
+Dépôt légal : octobre 2019
+No d’édition : 74651913-01
+
+---
+
+[p. 20-21]
+isées. Les géants du numérique ont même trouvé
+des idées pour faire labelliser gratuitement des images, par exemple en
+proposant aux utilisateurs de mettre des indications sur les photos qu’ils
+publient 
+(« 
+Mariage 
+de 
+Julie 
+» 
+« 
+Coucher 
+de 
+soleil 
+à
+Maubeuge  »  «  Nouvelle voiture de Raymond  »...). Officiellement, c’est
+pour commenter ou retrouver des images mais, techniquement, c’est de la
+labellisation gratuite.
+ 
+Une fois que ces données sont annotées, différents types d’algorithmes
+peuvent être utilisés pour les exploiter et être capables de répondre à une
+requête nouvelle en s’appuyant sur les exemples disponibles. Nous n’en
+évoquerons que deux qui nous permettront d’identifier la spécificité du
+fameux deep learning dont on entend tant parler.
+ 
+La première famille est ce que nous pourrons appeler l’apprentissage
+classique. Elle est en fait très proche de méthodes statistiques assez
+anciennes. En s’appuyant sur des informations ciblées disponibles dans les
+données, le système va déterminer une corrélation entre la valeur de ces
+informations et la réponse à en tirer. Par exemple, dans le domaine médical,
+les données concerneront l’âge du patient, son sexe, le résultat de ses
+analyses de sang, ses constantes (pouls, tension) et, en analysant ces
+données sur tous les exemples disponibles, il sera possible de dire que,
+compte tenu de son état actuel, les risques pour que cette personne fasse un
+accident vasculaire cérébral ou ait un cancer sont plus ou moins élevés.
+Cela pourrait se faire avec un système à base de règles, comme décrit plus
+haut, mais les méthodes statistiques peuvent mettre à jour des règles que les
+experts n’avaient pas encore identifiées. Et la quantité de données fournies
+par les exemples permettra sans doute d’avoir beaucoup plus de finesse
+dans la description des corrélations entre les informations sur le patient et
+ses risques de développer une maladie. Au passage, on remarque que cette
+idée de règle permettant de tirer des conclusions à partir d’informations
+disponibles disparaît. C’est un calcul statistique qui donne la réponse, pas
+une règle. De façon un peu ironique, les spécialistes de l’IA appellent
+« modèle » la base statistique qu’ils ont construite à partir des exemples et
+qui permet au logiciel de tirer une conclusion. Certes, ce logiciel permet de
+simuler le vivant (au moins une partie) en prévoyant l’évolution d’un état
+de santé, mais sans vraiment expliquer les rapports de cause à effet qui
+relient la condition du patient à l’évolution de sa santé. Pour prendre un
+autre exemple, si on entraînait un tel système à prévoir la vitesse à laquelle
+tombe une balle en lui montrant des tas de films de balles qui tombent, le
+système pourrait prévoir, avec une grande précision, l’évolution de la
+vitesse de la balle au fur et à mesure de sa chute. Mais le système n’aura
+
+---
+
+[p. 34-35]
+aurait pas prêté attention.
+S’appuyant sur des détails minuscules et sur leur intuition, ils reconstruisent
+des faits d’une très grande complexité, qui s’avèrent, à la fin de l’histoire,
+parfaitement exacts. L’intuition leur permet d’émettre une hypothèse
+concernant l’identité ou le mode opératoire du meurtrier – c’est un peu le
+Deus ex machina de ce genre d’histoire. Le détective va ensuite repérer les
+moindres détails qui pourraient nourrir cette hypothèse. Ces détails sont
+généralement des objets qui ne sont pas à leur place ou des comportements
+eux aussi déplacés. Cette capacité à repérer des événements qui sortent de la
+normalité est très compliquée à reproduire dans un ordinateur dont
+l’apprentissage va, au contraire, attirer l’attention vers des situations
+similaires plutôt que de détecter ce qu’il n’a jamais vu et qui ne peut donc
+lui être d’aucune utilité pour reproduire une expérience passée. Au mieux,
+certains systèmes pourront détecter une saillance (un élément qui n’est pas
+« comme d’habitude ») mais ils ne pourront rien en déduire puisqu’ils ne
+savent raisonner que sur des cas déjà vus. Même en ayant visionné tous les
+épisodes de toutes les séries policières, l’intelligence artificielle ne pourrait
+pas débrouiller une nouvelle affaire puisque les criminels (bien aidés par les
+scénaristes) inventent, à chaque épisode, de nouvelles façons de perpétrer
+leurs forfaits et abandonnent, à chaque fois, de nouveaux types d’indices.
+De façon plus circonscrite, l’intuition de Patrick Jane, dans la série
+Mentalist, ou du Dr  Cal Lightman, dans Lie to Me, s’ancre dans le
+décryptage des comportements, voire des microcomportements, des
+protagonistes de l’affaire. En observant leur langage corporel, leurs
+microexpressions faciales, ils sont capables de distinguer une volonté de
+dissimuler quelque chose, une crainte particulière, une relation anormale
+entre deux personnes. Cette capacité à détecter et interpréter les émotions
+est souvent relevée comme une des limitations possibles de l’intelligence
+artificielle  : parmi les formes d’intelligence qui échapperaient à
+l’intelligence artificielle, l’intelligence dite émotionnelle fournirait un
+exemple probant. Ce sujet fait pourtant l’objet d’un domaine de recherche à
+part entière, l’informatique affective (affective computing), qui s’est
+développée récemment pour accompagner l’arrivée des avatars sur les
+écrans et des robots compagnons dans notre environnement. Sans être
+identifiée à proprement parler comme un des éléments de l’intelligence
+artificielle, cette informatique en utilise les outils : la reconnaissance des
+émotions sur un visage, dans le ton de la voix, dans la gestuelle corporelle
+est une application classique des systèmes de deep learning. Cependant,
+une des difficultés dans la mise en œuvre de ces techniques est l’acquisition
+d’un corpus représentatif dans lequel de nombreux exemples de voix, de
+visages et de gestes expriment toutes les émotions qu’il faudra que le
+système reconnaisse. Pour que la détection soit suffisamment robuste, il
+
+---
+
+[p. 47-48]
+nstater que la porte est bien fermée. Le
+robot vérifie qu’il a bien fait la tâche qui lui avait été demandée. Nous
+sommes là dans une vision bien prosaïque de la conscience : le robot est
+juste consciencieux. Mais là encore, cette conscience n’est pas celle du
+robot mais celle du programmeur, c’est lui qui a été consciencieux en
+écrivant, dans son programme, un autre programme qui vérifie ce qu’a fait
+le premier.
+Un autre type d’autosurveillance, qui pourrait être assimilé à une forme
+simple de conscience, peut être implémenté sur les robots. Il s’agit de la
+saturation des commandes articulaires. Un robot est fait de différentes
+articulations qui le mettent en mouvement. Pour un bras robotisé, il est
+facile de prendre l’analogie avec le bras humain et ses deux articulations de
+l’épaule, son articulation unique du coude et ses trois articulations du
+poignet. Quand le « cerveau » du robot (son ordinateur central) veut que la
+main du robot atteigne un objet, il va envoyer un ordre de mouvement à
+chacune des articulations du bras (c’est la commande articulaire) : le coude
+doit se mettre, dans les 20 ms à venir, à 88°, les articulations de l’épaule à
+63° et à 18° et celles du poignet à 13°, 27° et 138°. C’est alors le rôle d’un
+autre programme, appelé l’asservissement, de faire tourner les moteurs
+correspondants pour atteindre ces positions articulaires. En général, tout se
+passe bien ; l’articulation atteint la position demandée et la main du robot
+atteint son but. Mais des problèmes peuvent survenir  : par exemple, la
+batterie du robot peut être à plat ; ou bien le robot peut, en se déplaçant,
+entrer en collision avec quelque chose ; ou encore, la position demandée
+peut s’avérer trop éloignée pour être atteinte dans le temps imparti compte
+tenu de la puissance des moteurs. L’asservissement ne va pas pouvoir faire
+ce qui lui est demandé et va envoyer un message d’erreur au cerveau du
+robot pour avouer son impuissance. Le «  corps  » refuse l’ordre du
+« cerveau ». Cela peut aussi être mis en parallèle avec une douleur dans un
+muscle humain qui empêche le corps de faire ce qui lui est demandé par le
+cerveau ou un réflexe (suite à une collision ou une brûlure) qui nous fait
+effectuer un geste contraire à celui demandé. La programmation robotique a
+simulé deux niveaux de conscience, le réfléchi et le réflexe.
+Il est donc possible de simuler la conscience, mais elle doit être écrite par
+le concepteur du logiciel du robot, elle n’est donc pas d’une nature
+différente que la tâche qu’elle est censée vérifier. En ce sens, elle n’est pas
+vraiment une conscience qui fait que, comme Descartes, l’ordinateur
+s’interroge spontanément sur ce qu’il fait.
+ 
+Ces derniers exemples ne relèvent pas formellement de ce qu’il est
+convenu d’appeler aujourd’hui de l’intelligence artificielle mais, par le fait
+qu’ils illustrent un comportement assez proche du comportement du vivant,
+
+---
+
+[p. 61-62]
+égler ne concernait pas
+vraiment un voyageur de commerce (enfin je l’espère pour la vie de famille
+de ce voyageur) mais cette anecdote illustre bien le fait que les technologies
+de l’IA sont nombreuses et qu’il ne faut pas toujours céder aux sirènes de la
+dernière mode : en informatique aussi, ce sont parfois dans les vieux pots
+qu’on fait les meilleures soupes. On pourra nous objecter que, dans cet
+exemple encore, il s’agit davantage de confort que de résolution de
+problème existentiel.
+Certes, mais au passage notre voyageur va consommer moins d’essence,
+donc moins polluer la planète et livrera ses produits plus vite. Et pour peu
+que ses produits soient des poches de sang ou des organes à transplanter, les
+enjeux prennent un peu de hauteur... De façon un peu moins caricaturale, la
+start-up Bayes Impact de Paul Duan, sous statut d’association à but non
+lucratif, propose ses services à des flottes d’ambulances ou de pompiers
+pour optimiser le trajet des véhicules dans des centres-villes congestionnés.
+Mais ce n’est qu’un début. Une fois que le logiciel est capable de
+déterminer les routes par lesquelles le véhicule doit passer pour atteindre
+son but, pourquoi ne prendrait-il pas directement les commandes pour le
+piloter automatiquement jusqu’à destination  ? C’est la promesse du
+véhicule autonome dans lequel nous ne serions que passagers et non plus
+conducteurs, pouvant ainsi vaquer à d’autres occupations, professionnelles
+ou de loisir, pendant la durée de nos trajets. Là encore, cela peut être vu
+comme une simple source de confort pour le voyageur – ou d’exploitation
+du travailleur qui pourra faire autre chose qu’écouter sa radio favorite
+pendant ses déplacements –, mais ce sera aussi une source de sécurité bien
+plus grande. Les véhicules autonomes seront – c’est une condition sine qua
+non à leur existence – plus sûrs que des véhicules conduits par des humains
+fatigués, distraits, énervés, maladroits. La communication entre les
+véhicules mais aussi avec l’infrastructure permettra des déplacements
+beaucoup mieux synchronisés, limitant non seulement le risque d’accident
+mais aussi très probablement la consommation énergétique. En outre,
+l’existence de véhicules autonomes pourrait permettre un changement
+majeur dans les usages des véhicules individuels. Au lieu de rester
+immobile 95 % de son temps, une voiture inoccupée pourrait se mettre à
+disposition d’un autre voyageur. À  la différence des trottinettes en libre-
+service qui traînent au milieu des trottoirs en attendant que quelqu’un en ait
+besoin, les voitures autonomes pourraient se garer proprement quand elles
+sont inutilisées ou venir chercher son voyageur suivant. À  terme, cela
+pourrait représenter une diminution drastique du nombre de véhicules en
+circulation, et donc à fabriquer. Si ce n’est pas, a priori, une bonne nouvelle
+pour les constructeurs automobiles, c’en est une pour la planète qui puisera
+moins dans ses ressources.
+
+---
+
+[p. 74-75]
+ons d’utilisateurs de Facebook lors de la
+campagne présidentielle américaine de  2016. L’utilisation de données
+personnelles est un sujet d’importance. Bien qu’exacerbée par les
+possibilités offertes par l’intelligence artificielle, cette problématique n’est
+en rien nouvelle et fait l’objet d’une réglementation robuste notamment
+depuis l’entrée en vigueur en Europe, en mai 2018, du règlement général
+sur la protection des données (RGPD). Ce qui est plus novateur et qui n’a
+fait couler que peu d’encre, ce sont les logiciels développés par cette société
+britannique dans le but d’influer sur les opinions politiques des électeurs.
+Comme le proclamait encore la page d’accueil du site en septembre 2018
+«  Data drives all we do  »  («  Les données déterminent tout ce que nous
+faisons »). Des officines en « marketing politique » ont ainsi vu le jour. Ces
+influenceurs de l’ombre utilisent l’intelligence artificielle et dévoient des
+outils marketing à des fins de manipulation et d’influence. À titre
+d’illustration, il peut être utile de se rappeler que, dans une autre affaire, la
+société russe The  Internet Research Agency fut explicitement pointée du
+doigt pour avoir créé des centaines de faux profils sur les réseaux sociaux
+afin d’influencer et d’exacerber les tensions politiques aux États-Unis avant
+et après l’élection présidentielle de 2016. Ces faux comptes hébergeaient,
+en sus, des publicités ciblées visant spécifiquement certaines communautés
+d’intérêts profilées grâce aux algorithmes de ciblage publicitaire de ces
+plates-formes.
+Bulles filtrantes
+Le traitement des informations récupérées sur les réseaux sociaux peut
+avoir une autre forme d’influence sur les comportements. Il s’agit alors non
+pas de faire évoluer l’opinion de sa victime, mais au contraire de la figer
+dans ses certitudes. Selon un phénomène psychologique nommé
+« homophilie », les êtres humains sont naturellement attirés par ce qui leur
+ressemble. Cela peut être la couleur de la peau, la religion, l’âge, le niveau
+social mais aussi les idées. Avec l’arrivée des algorithmes de
+recommandation, les réseaux sociaux et sites cherchent par tous les moyens
+à satisfaire aux désirs et aux attentes de ses visiteurs. Il ne sert
+effectivement à rien de présenter des produits charcutiers à un végane pas
+plus que de présenter les dernières avancées en matière de fission à un
+antinucléaire. Bien que cela ne soit que bon sens, cela peut produire de
+pernicieux effets, décrits notamment en 2011 par Eli Pariser dans son
+ouvrage au nom explicite, The Filter Bubble.
+ 
+L’algorithme de personnalisation va créer autour de l’internaute une
+bulle, une bulle filtrante. Mais, à la différence des filtres que toute
+
+---
+
+[p. 88-89]
+ulièrement utile en cas notamment de
+contestation de certaines décisions automatisées, par exemple lorsqu’un
+candidat à un poste est refusé ou une demande de location rejetée. Elle
+permettrait de vérifier si la décision de rejet n’a pas été fondée sur la
+reproduction de stéréotypes liés à une base de données biaisée. L’IA serait
+dotée d’une espèce de boîte noire (pour reprendre la terminologie de
+l’aéronautique) logique qui garderait, en cas de litige, toutes les traces de
+son histoire et de son fonctionnement. Cette boîte noire rendrait le principe
+de transparence auditable, concret, utilisable par l’éditeur pour corriger son
+produit ou par la justice en cas de faute manifeste.
+ 
+C’est donc dès la phase de conception que les développeurs d’une
+intelligence artificielle devraient intégrer les notions de transparence et de
+responsabilité, que nous allons bientôt aborder, en y implémentant notre
+boîte noire logique. Pour reprendre une terminologie anglo-saxonne à la
+mode, l’intelligence artificielle devrait être dans l’avenir transparente « by
+design  », c’est-à-dire par conception. C’est en effet dès cette phase de
+conception et afin de lutter contre les biais et les possibilités d’influencer
+l’intelligence artificielle que celle-ci devrait être entraînée sur des jeux de
+données qualifiés et suffisamment variés. Mais la qualification d’un corpus
+reste un problème non résolu. Hormis la réutilisation d’un corpus ayant fait
+les preuves de sa neutralité lors d’expériences précédentes, il n’y a pas
+aujourd’hui de moyen d’assurer qu’un corpus est toujours représentatif de
+la situation qu’il doit permettre de modéliser. Et comme l’innovation en IA
+consiste souvent à aller chercher de nouveaux types de données pour
+modéliser de nouveaux systèmes, l’exercice est beaucoup plus compliqué
+que de trouver, en statistique, un «  échantillon représentatif de la
+population ». Quand on connaît la répartition de la population totale d’un
+pays en matière de sexe, d’âge ou encore de catégorie socioprofessionnelle,
+il est possible d’évaluer si un échantillon est représentatif et de le rectifier
+s’il ne l’est pas. Les concepteurs d’IA doivent donc trouver un échantillon
+représentatif d’une population dont ils ne savent, potentiellement,
+absolument rien.
+C’est la raison pour laquelle une intelligence doit être très largement
+testée. La méthodologie classique consiste à découper le corpus annoté de
+la vérité du terrain (10  millions de photos, annotées par le fait qu’elles
+contiennent un chien, un chat, un cheval ou un gibbon) en deux parties. Une
+première grosse partie (7,5 millions) est utilisée pour entraîner le système.
+Quand le réseau de neurones s’est adapté pour reconnaître correctement les
+animaux dans chacune des 7,5  millions de photos d’entraînement, on lui
+soumet les 2,5 millions qui restent et il va pouvoir tester lui-même si ce
+qu’il reconnaît sur ces photos est bien ce que l’annotation indiquait. Si ce
+
+---
+
+[p. 101-102]
+d elles sont utilisées pour
+entraîner des systèmes apprenants capables d’anticiper les notations que
+nous pourrions mettre à tel ou tel service, elles deviennent le carburant d’un
+moteur d’intelligence artificielle qui pourra nous suggérer des produits
+auxquels nous n’aurions pas pensé, éveiller des envies, bref, nous influencer
+de façon plus subtile qu’en nous disant qu’un produit qui nous intéresse a
+été apprécié par 83 % des gens qui l’ont acheté. Ce sont nos utilisations de
+ces diverses applications et services qui influencent le modèle, celui-ci
+apprend de nous et nous influence en retour.
+Dans ce modèle de société, où la liberté individuelle et la liberté
+d’entreprendre sont des valeurs importantes, chaque entreprise, chaque
+personne va développer son modèle de notation. Il est donc décentralisé car
+vous pouvez être évalué comme un piètre utilisateur d’Uber (la seule fois
+où vous en avez utilisé un, vous y avez été malade après avoir testé un
+restaurant indien sans en avoir consulté les évaluations) mais comme un très
+bon locataire (puisque vous dînez au restaurant tous les soirs, votre
+propriétaire est ravi de constater, lors de l’état des lieux, que vous lui rendez
+une cuisine impeccable). Dans ce modèle, en outre, vous pouvez être aussi
+bien du côté des évalués que des évaluateurs, en donnant votre avis sur
+votre chauffeur Uber, le propriétaire du meublé que vous louez et le
+restaurant où vous dînez tous les soirs.
+ 
+À l’autre bout du spectre des modèles sociétaux, la Chine est sans doute
+le meilleur exemple d’une approche coordonnée et d’une notation
+centralisée. À l’opposé des États-Unis, l’appareil d’État est très présent et
+n’hésite pas à intervenir. La Chine ne cache nullement ses ambitions en
+matière d’IA. Le 20 juillet 2017, elle dévoilait son projet, inspiré nomment
+du plan américain d’octobre 2016, afin de devenir le leader mondial en la
+matière à l’horizon  2030. La Chine s’est dotée d’une vision stratégique
+claire, d’un plan et des financements nécessaires pour espérer y parvenir. Le
+gouvernement central a prévu d’y allouer un budget annuel de plus de
+23  milliards de dollars d’ici à 2020. Les investissements chinois en
+recherche et développement en matière d’intelligence artificielle devraient
+dépasser ceux des États-Unis dès 2019. C’est ce qui ressort d’un rapport de
+septembre  2018 rédigé par les membres du Congrès Will Hurd et Robin
+Kelly intitulé : « L’avènement des machines : L’intelligence artificielle et
+son impact grandissant sur la politique américaine  ». Si les États-Unis
+comptent essentiellement sur le secteur privé et les GAFAM pour garder le
+leadership en matière d’IA, la Chine n’est pas en reste et ne s’appuie pas
+uniquement sur ses politiques publiques. Elle dispose aussi de ses
+4  fantastiques, ses champions nationaux du numérique que sont Baidu,
+Alibaba, Tencent et Xiaomi (BATX). Centrés principalement (pour le
+
+---
+
+[p. 114-115]
+ue. Fort de ce satisfécit, il
+serait possible d’attendre et de ne rien faire. D’autant plus qu’il faut bien
+admettre que l’exercice ne serait pas aisé. L’intelligence artificielle se
+heurte à une absence de définition qui en rend les pourtours difficilement
+appréhendables pour le législateur. Les constantes évolutions et progrès
+réalisés peuvent forcer à l’attentisme. Il serait donc urgent de ne pas se hâter
+de légiférer au risque de brider une industrie naissante. En conséquence,
+une législation patchwork élaborée au gré des sujets levés par les usages de
+l’IA serait suffisante. Ce serait juste une approche curative visant en priorité
+à traiter les maux lorsqu’ils surviennent. Et, pour l’instant, c’est ce qui se
+passe. Nous avons déjà mentionné le fameux RGPD, qui gère la façon dont
+sont exploitées les données collectées pour alimenter l’IA. Mais nous
+pouvons 
+aussi 
+citer 
+l’ordonnance 
+du 
+3 
+août 
+2016, 
+autorisant
+l’expérimentation de véhicules à délégation de conduite sur les voies
+publiques ou encore la loi du 22 décembre 2018 relative à la lutte contre la
+manipulation de l’information (dite loi anti-fake news)... En l’état actuel du
+droit on constate donc un net penchant pour une approche éclatée de
+l’encadrement législatif de l’intelligence artificielle.
+Mais d’autres pourront arguer que l’absence de législation globale n’a
+nullement favorisé l’éclosion de champions européens propres à rivaliser
+avec les GAFAM américains ou les BATX chinois. Ils pensent, en revanche,
+qu’une telle législation pourrait être l’occasion d’insuffler une vision,
+d’assurer le respect de certaines de nos valeurs, de prévenir certains risques
+et pourrait, justement, aider des entreprises européennes à concurrencer les
+géants américains et chinois. Cette approche préventive permettrait non
+seulement d’éviter les errements possibles de l’IA mais aussi d’en favoriser
+les aspects positifs.
+ 
+Ces deux tendances s’affrontent aussi bien au niveau national qu’au
+niveau européen mais des lignes de force commencent à se dessiner au
+travers des mesures ponctuelles et une approche plus globale peut être
+envisagée. L’Europe a ainsi entrepris un véritable travail de refondation
+complète depuis sa communication du 25 avril 2018 pour une « intelligence
+artificielle pour l’Europe  ». Cette approche, soutenue par la France, est
+particulièrement louable et souhaitable. Parmi ces lignes de force apparaît
+une tendance qui consiste à réguler indirectement l’IA en encadrant les
+données qu’elle manipule. Autre question cruciale à régler  : celle de la
+responsabilité –  qui est responsable d’une IA qui ne fait pas ce qu’on
+attendait d’elle ?
+Vers un encadrement indirect de l’IA
+
+---
+
+[p. 127-129]
+prenne en considération
+les caractéristiques et la nature particulière de ce bien qu’est l’IA. C’est en
+effet un bien actif et réactif. Elle interagit et réagit à son environnement.
+Comme toutes les substances actives, elle mériterait peut-être que soit
+respecté un certain protocole avant d’être inoculée dans la sphère publique.
+CONCLUSION
+IA DE L’ESPOIR
+À l’issue de cette promenade dans le vaste paysage de l’intelligence
+artificielle, nous espérons vous avoir mieux fait comprendre ce qu’elle était,
+comment elle fonctionnait, les services qu’elle pouvait rendre, les
+promesses (et les risques) qu’elle laissait entrevoir et l’environnement dans
+lequel elle allait se développer. Il ne vient plus à l’esprit de qui que ce soit
+de nier que l’IA va devenir incontournable dans presque tous les domaines
+de notre vie, mais cela ne veut pas dire qu’elle va nous submerger et nous
+dépasser.
+ 
+Certains auteurs relativisent pourtant la portée de ce nouveau monde
+numérique et se demandent même s’il s’agit d’une réelle révolution. Dans
+leur livre intitulé Remède contre l’hystérie numérique, Jobic de  Calan et
+Jérôme Cauchard avancent que le numérique n’a pas fondamentalement
+modifié notre économie ni notre société. Notre monde évoluerait sans
+véritable rupture et réinvention : à la différence des révolutions précédentes,
+la révolution numérique que nous sommes supposés vivre ne s’est pas
+traduite par un accroissement conséquent de gain de productivité. Il y aurait
+selon eux plus un déplacement de valeurs lié aux outils numériques qu’un
+
+réel accroissement de richesse. Leur thèse ne doit pas être balayée d’un
+simple revers de main. Leur effort d’analyse ainsi que leur volonté de
+s’interroger et de ne pas suivre aveuglément la doctrine majoritaire,
+convaincue de la puissance de la révolution en marche, impose le respect.
+Un des intérêts de leur propos est de battre en brèche la notion de
+singularité technologique  : si l’accélération technologique n’est pas
+exponentielle, l’homme aura un peu plus de temps avant de se voir dépassé
+par la machine.
+ 
+Cela dit, si l’on veut bien admettre qu’il y a eu un déplacement de
+richesse, il est difficile de ne pas reconnaître qu’il s’est accompagné d’un
+changement d’échelle de la productivité non seulement d’un point de vue
+économique, quantifiable par des indicateurs, mais aussi en matière de
+culture et de loisirs. Les changements ne touchent pas que le monde de
+l’entreprise mais aussi chaque individu pris dans toutes ses dimensions
+(citoyen, parent, militant, salarié, consommateur, etc.). À temps égal,
+l’homme peut aujourd’hui effectuer nombre de tâches, de fonctions ou
+d’actions (utiles ou inutiles) incroyablement plus nombreuses qu’il y a
+seulement quelques décennies. La somme des savoirs, des expériences et
+des liens entre personnes est devenue tout aussi accessible que colossale. En
+moins de dix  années, l’intelligence artificielle est passée de l’ombre à la
+lumière et est présente partout. La première révolution industrielle s’était
+déroulée sur le seul continent européen durant environ un siècle  ; la
+révolution numérique portée par l’intelligence artificielle est mondiale et
+n’en est très certainement qu’à ses débuts. Dans leur rapport intitulé No
+Ordinary Disruption  : The Four Forces Breaking All the Trend, Richard
+Dobbs, James Manyika et Jonathan Woetzel du McKinsey Global Institute
+donnent des chiffres qui contredisent assez brutalement MM.  Calan et
+Cochard. Selon leur étude, l’accélération technologique serait dix fois plus
+rapide et à une échelle trois cents fois plus importante quant aux domaines
+touchés, soit approximativement d’un impact trois mille fois supérieur à
+celui de la révolution industrielle. Ils rappellent que pour atteindre
+50  millions d’utilisateurs suivant son lancement, il fallut attendre trente-
+huit ans pour la radio, treize ans pour la télévision, trois ans pour Internet et
+moins d’une année pour Twitter. Ces exemples sont certainement
+savamment choisis par les auteurs, mais ils aident à comprendre la portée

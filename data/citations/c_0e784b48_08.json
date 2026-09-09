@@ -1,0 +1,60 @@
+[
+ {"chapitre":"b7b9e1f8","citations":[
+  {"texte":"L'idée clef de cette approche est de simplifier l'encodage des connaissances lexicales en utilisant un langage beaucoup moins expressif que la logique du premier ordre.","page":161,"axe":"02-ia-technique-academique","theme":"Simplifier pour rendre praticable","portee":"Renoncer volontairement à de l'expressivité est souvent ce qui rend un formalisme utilisable à grande échelle."},
+  {"texte":"Cependant ces approches ont eu du mal à se faire accepter dans la sémantique formelle.","page":161,"axe":"02-ia-technique-academique","theme":"Résistance disciplinaire","portee":"Une technique efficace peut rester marginale faute de fondements reconnus par la communauté visée."}]},
+
+ {"chapitre":"0447012d","citations":[
+  {"texte":"Les inférences défaisables sont omniprésentes dans la langue et leur maîtrise constitue une partie importante de la compétence linguistique.","page":162,"axe":"02-ia-technique-academique","theme":"Inférences défaisables","portee":"Comprendre une phrase suppose de tirer des conclusions que le locuteur peut ensuite annuler sans se contredire."},
+  {"texte":"la description exhaustive pour une langue des représentations lexicales nécessaires demande soit un effort humain colossal, comme l'a entrepris CYC, soit des méthodes d'acquisition automatique de connaissances à partir de corpus textuels","page":162,"axe":"02-ia-technique-academique","theme":"Deux voies pour le lexique","portee":"L'alternative entre la main-d'œuvre humaine et l'extraction automatique traverse toute l'histoire du domaine."}]},
+
+ {"chapitre":"5965aafc","citations":[
+  {"texte":"C'est l'IA qui a fourni aux linguistes et aux philosophes des formalisations précises du raisonnement défaisable en développant la logique non monotone.","page":163,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Dette de la linguistique envers l'IA","portee":"Rappel utile : l'informatique a rendu à la philosophie du langage des outils qu'elle n'avait pas."},
+  {"texte":"Elles se montraient néanmoins encore trop fragiles pour traiter des textes arbitraires et donner une véritable validation empirique des théories sous-jacentes.","page":163,"axe":"02-ia-technique-academique","theme":"Fragilité des systèmes logiques","portee":"Une théorie qui ne tient pas devant un texte quelconque reste invalidée dans les faits."}]},
+
+ {"chapitre":"28a6cd7c","citations":[
+  {"texte":"Le locuteur souvent choisit de dire ce qu'il dit en fonction de son calcul de l'effet du message sur son interlocuteur.","page":164,"axe":"09-developpement-personnel-influence","theme":"Parler, c'est calculer","portee":"Description sobre de ce que fait tout locuteur habile : anticiper la réaction avant de choisir ses mots."},
+  {"texte":"De plus, les croyances et les préférences des interlocuteurs ne sont révélées que partiellement, à travers ce qu'ils disent et font. Donc ce système de raisonnement doit être qualitatif.","page":164,"axe":"02-ia-technique-academique","theme":"Information partielle","portee":"On ne connaît jamais entièrement son interlocuteur, ce qui interdit les modèles purement numériques."}]},
+
+ {"chapitre":"b01eaa5c","citations":[
+  {"texte":"Les très grands corpus de textes atteignent une taille comparable à celle de l'ensemble des productions langagières auxquelles est exposé un humain","page":165,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Corpus et expérience humaine","portee":"Comparaison frappante qui donne la mesure de ce qu'une machine peut désormais lire."},
+  {"texte":"Les techniques statistiques ont envahi le domaine du TAL à partir du milieu des années 1990","page":165,"axe":"02-ia-technique-academique","theme":"Basculement statistique","portee":"Date le tournant méthodologique dont procèdent les systèmes de langage actuels."},
+  {"texte":"Le décalage dans la construction de tels corpus dans des langues autres que l'anglais a induit un décalage équivalent dans l'invasion de ces méthodes pour ces autres langues, dont le français.","page":165,"axe":"05-ia-education-pedagogie","theme":"Inégalité entre les langues","portee":"Sans corpus dans sa langue, une communauté reste en retard sur les outils, constat décisif pour les langues africaines."}]},
+
+ {"chapitre":"25798fa6","citations":[
+  {"texte":"Mais pour la sémantique des textes et la pragmatique du discours, l'apprentissage supervisé se heurte à des problèmes fondamentaux.","page":166,"axe":"02-ia-technique-academique","theme":"Limites du supervisé","portee":"Là où le sens devient contextuel, l'annotation humaine cesse d'être une ressource fiable."},
+  {"texte":"Finalement, la complexité de la tâche d'annotation rend l'annotation humaine longue et coûteuse ; les chercheurs sont alors confrontés à un manque de données qui sont de plus souvent bruitées.","page":166,"axe":"02-ia-technique-academique","theme":"Coût de l'annotation","portee":"Le goulot d'étranglement de l'apprentissage n'est pas le calcul mais le travail humain de préparation."},
+  {"texte":"l'un des défis contemporains est de trouver comment marier les approches statistiques et analytiques de manière optimale","page":166,"axe":"02-ia-technique-academique","theme":"Marier deux traditions","portee":"Ni la règle seule ni la statistique seule ne suffisent, formulation encore valable aujourd'hui."}]},
+
+ {"chapitre":"03dcbb1c","citations":[
+  {"texte":"Un enjeu est maintenant de faire entrer cette représentation du sens dans un calcul compositionnel","page":167,"axe":"02-ia-technique-academique","theme":"Vecteurs et composition","portee":"Question ouverte alors, et qui commande encore la façon dont les modèles de langue construisent le sens d'une phrase."},
+  {"texte":"Le traitement automatique des langues a fourni à l'intelligence artificielle des problématiques et applications nouvelles et stimulantes pendant presque toute l'histoire de ces deux jeunes disciplines.","page":167,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Fécondité croisée","portee":"Le langage n'est pas une application de l'IA parmi d'autres, il en a nourri les problèmes fondateurs."}]},
+
+ {"chapitre":"44c04c0a","citations":[
+  {"texte":"La bioinformatique s'intéresse à toutes les applications de l'informatique et des technologies de l'information à la biologie moléculaire.","page":173,"axe":"11-sciences-environnement","theme":"Définition de la bioinformatique","portee":"Définition claire d'une discipline née de la rencontre entre calcul et biologie du vivant."},
+  {"texte":"Elle s'étend maintenant à toutes les approches informatiques visant à améliorer la compréhension des processus biologiques, à toutes les échelles du vivant","page":173,"axe":"11-sciences-environnement","theme":"Toutes les échelles du vivant","portee":"Mesure l'élargissement d'un domaine parti de l'analyse de séquences d'ADN."}]},
+
+ {"chapitre":"d55817c1","citations":[
+  {"texte":"L'efficacité des algorithmes est souvent décisive en bioinformatique, compte tenu de la taille des données manipulées","page":174,"axe":"11-sciences-environnement","theme":"Contrainte de calcul","portee":"En biologie du génome, la performance algorithmique n'est pas un raffinement mais une condition d'existence."},
+  {"texte":"L'ADN contient donc l'essentiel de l'information nécessaire à l'exécution du programme de travail de la cellule, que la biologie vise à analyser et comprendre.","page":174,"axe":"11-sciences-environnement","theme":"L'ADN comme information","portee":"Formulation qui explique pourquoi les outils de l'informatique s'appliquent si naturellement au vivant."},
+  {"texte":"Ces évolutions technologiques rapides sont fréquentes. Elles peuvent rapidement transformer un problème de bioinformatique crucial en un problème obsolète.","page":174,"axe":"11-sciences-environnement","theme":"Obsolescence des problèmes","portee":"Avertissement précieux pour tout chercheur : le progrès instrumental peut effacer une question entière."}]},
+
+ {"chapitre":"51a8badf","citations":[
+  {"texte":"Une fois ce catalogue construit, il faut encore identifier les fonctions biochimiques de chaque molécule, les conditions dans lesquelles leur synthèse est déclenchée et les acteurs avec lesquels elle peut réagir ou interagir.","page":175,"axe":"11-sciences-environnement","theme":"Du catalogue à la fonction","portee":"Lister les pièces ne dit rien de leur rôle, distinction qui vaut bien au-delà de la biologie."},
+  {"texte":"La prédiction des gènes de protéines peut être d'une difficulté très variable selon le type d'organisme et en particulier la compacité de son génome.","page":175,"axe":"11-sciences-environnement","theme":"Difficulté variable","portee":"Un même problème formel change de nature selon l'organisme étudié, ce qui interdit toute méthode unique."}]},
+
+ {"chapitre":"af8a76fe","citations":[
+  {"texte":"Tous ces modèles, qu'ils soient probabilistes ou non, sont généralement appliqués dans un cadre « supervisé » et nécessitent par conséquent la construction préalable de grands jeux d'apprentissage utilisés pour estimer les paramètres des modèles.","page":176,"axe":"11-sciences-environnement","theme":"Dépendance aux jeux d'apprentissage","portee":"Même en biologie, la performance des modèles repose d'abord sur un travail expérimental délicat en amont."},
+  {"texte":"Les approches extrinsèques et comparatives sont limitées par la connaissance d'un existant avec lequel se comparer.","page":176,"axe":"11-sciences-environnement","theme":"Limite de la comparaison","portee":"Toute méthode par analogie plafonne à ce qui est déjà connu, et manque par nature le vraiment nouveau."}]},
+
+ {"chapitre":"f52213ab","citations":[
+  {"texte":"L'identification de gènes dans un génome ne fournit qu'un catalogue des constituants de la machinerie cellulaire : l'annotation fonctionnelle de ces constituants vise à élucider leur fonction biologique.","page":177,"axe":"11-sciences-environnement","theme":"Annotation fonctionnelle","portee":"Séquencer n'est que la première marche, comprendre à quoi sert chaque pièce est le vrai travail."},
+  {"texte":"Les signatures sont généralement définies par la recherche de régions conservées au cours de l'évolution dans l'ensemble de la famille, par alignement multiple de séquence ou par découverte de motifs.","page":177,"axe":"11-sciences-environnement","theme":"Signatures de familles","portee":"Ce que l'évolution a conservé signale ce qui est fonctionnellement indispensable."}]},
+
+ {"chapitre":"009a85ef","citations":[
+  {"texte":"L'inférence automatique de la structure de HMMs reste un problème difficile et relativement ouvert","page":178,"axe":"11-sciences-environnement","theme":"Apprendre la structure du modèle","portee":"Estimer des paramètres est une chose, découvrir la forme même du modèle en est une autre, bien plus dure."},
+  {"texte":"La fonction biologique d'une protéine étant largement déterminée par sa structure tridimensionnelle","page":178,"axe":"11-sciences-environnement","theme":"La forme fait la fonction","portee":"Principe qui fonde l'un des grands défis scientifiques auxquels l'apprentissage automatique s'attaque."}]},
+
+ {"chapitre":"fd119af7","citations":[
+  {"texte":"Une problématique centrale dans ce contexte est donc l'intégration de données, visant à combiner ces différents types de données hétérogènes dans des modèles de classification supervisés ou non.","page":179,"axe":"11-sciences-environnement","theme":"Intégration de données","portee":"Croiser des sources de nature différente est le problème commun à la biologie moderne et à toute science des données."},
+  {"texte":"Depuis plusieurs années, le rôle crucial de la molécule d'ARN dans le fonctionnement cellulaire a été largement confirmé","page":179,"axe":"11-sciences-environnement","theme":"Réhabilitation de l'ARN","portee":"Une molécule tenue pour simple intermédiaire s'est révélée un acteur central, leçon d'humilité scientifique."}]}
+]

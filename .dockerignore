@@ -1,0 +1,50 @@
+# Ce qui ne doit pas partir dans le contexte de construction.
+#
+# Sans ce fichier, `docker build` envoyait les quatre gigaoctets et demi du
+# dépôt au démon avant même de lire la première instruction : le .venv, les
+# node_modules, les 975 Mo d'artefacts Android. Chaque construction payait ce
+# transfert, sur une machine où la mémoire est déjà comptée.
+
+# Environnements et dépendances, reconstruits dans l'image
+.venv/
+venv/
+node_modules/
+**/node_modules/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Artefacts de construction
+**/.next/
+**/build/
+**/dist/
+apps/mobile/.dart_tool/
+apps/mobile/android/.gradle/
+
+# Historique et outillage
+.git/
+.github/
+.idea/
+.vscode/
+
+# Secrets et journaux : un .env copié dans une image y reste, en clair, pour
+# quiconque sait faire `docker history`.
+.env
+.env.*
+!.env.example
+*.log
+
+# Le corpus source : 889 Mo de PDF. L'API lit la base, pas les fichiers.
+livres/
+livres-connaissances/
+
+# Ce qui ne sert pas à l'exécution
+docs/
+wireframes/
+marque/
+mail+paiement/
+tests/
+data/
+pipeline/
+*.md
+!apps/web-vitrine/public/telechargements/LISEZMOI.md

@@ -1,0 +1,1224 @@
+OUVRAGE : La fabuleuse histoire de l'Intelligence Artificielle
+AUTEUR(S) : Clifford A. Pickover
+ANNÉE : inconnue
+PAGES : 305
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Page de copyright (p. 3-3)
+  Page de titre (p. 2-2)
+  Sommaire (p. 4-10)
+  Prologue (p. 11-16)
+  Env. 1300 av. J.-C. - Le morpion (p. 17-19)
+  Env. 400 av. J.-C. - Talos (p. 20-22)
+  Env. 350 av. J.-C. - L’Organon d’Aristote (p. 23-25)
+  Env. 250 av. J.-C. - La clepsydre de Ctésibios (p. 26-28)
+  Env. 190 av. J.-C. - Le boulier (p. 29-31)
+  Env. 125 av. J.-C. - La machine d’Anticythère (p. 32-34)
+  1206 - Les automates d’Al-Jazari (p. 35-37)
+  Env. 1220 - Lancelot et les chevaliers de cuivre (p. 38-40)
+  Env. 1300 - Le parc mécanique d’Hesdin (p. 41-43)
+  Env. 1305 - L’ars magna de Raymond Lulle (p. 44-46)
+  1352 - Les automates religieux (p. 47-49)
+  Env. 1495 - Le chevalier mécanique (ou robot) de Léonard de Vinci (p. 50-52)
+  1580 - Golem (p. 53-54)
+  1651 - Le Léviathan de Hobbes (p. 55-57)
+  1714 - Le moulin de la conscience (p. 58-59)
+  1726 - La machine à écrire de Lagado (p. 60-62)
+  1738 - Le canard automate de Vaucanson (p. 63-65)
+  1770 - Le Turc mécanique (p. 66-68)
+  1774 - Les automates Jaquet-Droz (p. 69-71)
+  1818 - Frankenstein (p. 72-74)
+  1821 - La créativité computationnelle (p. 75-76)
+  1822 - La machine analytique de Charles Babbage (p. 77-79)
+  1844 - L’Artiste du Beau (p. 80-81)
+  1854 - L’algèbre de Boole (p. 82-83)
+  1863 - Darwin parmi les machines (p. 84-85)
+  1868 - The Steam Man of the Prairies (p. 86-88)
+  1883 - La tour de Hanoï (p. 89-91)
+  1893 - La grande autruche noire d’Electric Bob (p. 92-94)
+  1898 - Les « esprits d’emprunt » de Tesla (p. 95-97)
+  1907 - Tic-Tac (p. 98-100)
+  1907 - Les quêtes de l’âme (p. 101-102)
+  1913 - La reconnaissance optique de caractères (OCR) (p. 103-104)
+  1920 - Les Robots Universels de Rossum (p. 105-107)
+  1927 - Metropolis (p. 108-110)
+  1939 - Elektro, le Moto-Man (p. 111-113)
+  1939 - La synthèse vocale (p. 114-116)
+  1942 - Les trois lois de la robotique d’Asimov (p. 117-118)
+  1942 - Les robots militaires meurtriers (p. 119-120)
+  1943 - Les réseaux de neurones artificiels (p. 121-122)
+  1946 - L’ENIAC (p. 123-125)
+  1949 - Giant Brains, or Machines That Think (p. 126-128)
+  1950 - Le test de Turing (p. 129-130)
+  1950 - L’usage humain des êtres humains (p. 131-132)
+  1951 - L’apprentissage par renforcement (p. 133-134)
+  1952 - La reconnaissance vocale (p. 135-137)
+  1954 - Le traitement automatique du langage naturel (p. 138-140)
+  1956 - La conférence de Dartmouth sur l’IA (p. 141-142)
+  1957 - Le perceptron (p. 143-145)
+  1957 - Le transhumanisme (p. 146-147)
+  1959 - Le machine learning (p. 148-150)
+  1959 - Représentation et raisonnement des connaissances (p. 151-152)
+  1960 - La symbiose Homme-Machine de Licklider (p. 153-154)
+  1964 - ELIZA le psychothérapeute (p. 155-157)
+  1964 - La reconnaissance faciale (p. 158-159)
+  1965 - L’explosion d’intelligence (p. 160-161)
+  1965 - Les systèmes experts (p. 162-163)
+
+[31/214 passages, 15056 tokens sur 111477]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+ARTIFICIAL INTELLIGENCE, AN ILLUSTRATED HISTORY
+by Clifford Pickover
+Text copyright © Clifford Pickover, 2019
+ 
+Originally published in 2019 by Sterling Publishing Co., Inc. under the title
+ARTIFICIAL INTELLIGENCE: An Illustrated History from Medieval
+Robots to Neural Networks
+This edition published by permission of Sterling Publishing Co., Inc., New
+York. All Rights Reserved.
+ 
+L’édition originale de cette ouvrage a été publiée en 2019 par Sterling
+Publishing Co., Inc. sous le titre ARTIFICIAL INTELLIGENCE:
+An Illustrated History from Medieval Robots to Neural Networks.
+Cette édition est publiée avec l’autorisation de Sterling Publishing Co., Inc.,
+New York. Tous droits réservés.
+ 
+Responsable d’édition : Anne Pompon
+Édition : Sarah Forveille
+Fabrication : Gaëlle Cerisier
+ 
+Direction artistique : Élisabeth Hébert
+Maquette intérieure : Hokus Pokus
+Composition : Soft Office
+© Dunod, 2021 pour la traduction française
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ISBN 978-2-10-082725-1
+
+---
+
+[p. 15-16]
+i à la façon dont les humains
+s’intégreront à un paysage où l’intelligence et la créativité nous entoureront
+de plus en plus. Que voudra dire être « humain » dans un siècle ? À quoi
+ressemblera la société, avec l’utilisation croissante d’IA intermédiaires ?
+Quel sera l’impact sur les emplois ? Tomberons-nous amoureux de robots ?
+Si les méthodes et les modélisations de l’IA sont déjà utilisées pour nous
+aider à décider qui embaucher, qui fréquenter, qui libérer, qui est susceptible
+de développer des troubles d’ordre psychiatrique, et comment rendre
+autonome la conduite des voitures et des drones, quelle part de contrôle sur
+nos vies céderons-nous aux IA du futur ? Alors qu’elles prennent de plus en
+plus de décisions pour nous, les IA pourront-elles se laisser abuser et faire
+des erreurs graves ? Comment les chercheurs en IA peuvent-ils mieux
+comprendre pourquoi certains algorithmes de machine learning et certaines
+architectures sont plus efficaces que d’autres, tout en facilitant la tâche des
+chercheurs en IA pour reproduire leurs résultats et expériences ?
+D’ailleurs, comment être sûrs que les appareils pilotés par une IA se
+comportent de façon éthique ? Les machines n’auront-elles jamais d’états
+d’âme et de sentiments à la manière des humains ? Ces dernières nous
+aideront sans aucun doute à imaginer de nouvelles façons de penser, faisant
+office de prothèses pour nos faibles cerveaux. Pour moi, l’IA entretient un
+état d’émerveillement perpétuel quant aux limites de la pensée, au futur de
+l’humanité et à notre place dans l’immense espace-temps que nous
+occupons.
+
+---
+
+[p. 28-28]
+mouvements rotatifs de galets (des roues non-circulaires capables de
+convertir des mouvements circulaires en mouvements linéaires) peut-être
+déclenchés par le mouvement d’un char.
+☛VOIR AUSSI
+Les automates d’Al-Jazari (1206)
+Le parc mécanique d’Hesdin (env. 1300)
+Le chevalier mécanique (ou robot) de Léonard de Vinci (env. 1495)
+
+---
+
+[p. 38-40]
+ENV. 1220
+LANCELOT
+ET LES CHEVALIERS
+DE CUIVRE
+En Europe, au Moyen Âge, les exemples simples d’IA, sous forme
+d’hommes et de créatures mécaniques, devinrent assez courants. Comme
+l’écrit l’historien Elly Truitt, c’était l’époque où « l’on épatait et effrayait
+ses invités avec des oiseaux et des monstres dorés, des fontaines musicales
+et des serviteurs automatisés. (...) Les automates se situaient à la frontière
+de la philosophie (voire de la magie) et de la technologie. Ils étaient des
+passerelles troublantes entre l’art et la nature. » Dans la littérature de
+l’époque, les mécanismes tant réels que fictionnels nous donnent un aperçu
+fascinant de « l’interdépendance entre la science, la technologie et
+l’imagination. »
+Le roman de chevalerie Lancelot en prose (vers 1220) offre un célèbre
+exemple de fiction avec des robots médiévaux : cette ancienne légende celte
+en prose raconte les aventures du roi Arthur et de ses chevaliers de la Table
+Ronde, notamment la liaison secrète entre Lancelot et la femme d’Arthur,
+Guenièvre. Alors qu’il s’apprête à pénétrer dans le château maléfique de la
+Douloureuse Garde, Lancelot doit faire face à une petite armée de
+chevaliers de cuivre. Après avoir réussi à entrer, il lui faut en affronter deux
+autres qui brandissent leurs épées pour défendre la pièce où une jeune
+femme de cuivre détient les clés du sortilège. À l’aide des clés, il ouvre une
+boîte qui contient trente tubes de cuivre dont s’échappent des cris
+effrayants, puis il s’endort en quelques instants. À son réveil, il découvre
+que la femme de cuivre est tombée à terre et que les chevaliers se sont
+brisés.
+
+Le combat de Lancelot et des chevaliers de cuivre pour pénétrer 
+dans le château de la Douloureuse Garde. Les chevaliers humanoïdes 
+sont souvent représentés dévêtus (Extrait de Lancelot du lac, 
+France XVe siècle. Paris, BnF, Ms Fr. 118, fol. 200v.).
+L’historienne Jessica Riskin écrit : « Les chevaliers et damoiselles
+automates des légendes arthuriennes étaient accompagnés d’enfants faits
+d’or, d’argent ou de cuivre, de satyres, d’archers, de musiciens, d’oracles et
+de géants. Ces êtres de fiction avaient de multiples incarnations dans le
+monde réel. L’Europe de la fin du Moyen Âge et du début des Temps
+modernes regorgeait d’êtres ou animaux mécanisés. » À titre d’exemple, à
+peu près à l’époque de la légende de Lancelot, l’artiste et ingénieur français
+
+Villard de Honnecourt (env. 1225-env. 1250) créa un aigle articulé dont la
+tête se tournait vers le diacre qui lisait l’Évangile. Jessica Riskin indique
+que ces automates réalistes servirent de contexte à l’émergence, au
+XVIIe siècle, de modèles scientifiques et philosophiques où le vivant était
+comparable à une machine.
+☛VOIR AUSSI
+Le morpion (env. 1300 av. J.-C.)
+Talos (env. 400 av. J.-C.)
+Le parc mécanique d’Hesdin (env. 1300)
+Le chevalier mécanique (ou robot) de Léonard de Vinci (env. 1495)
+Golem (1580)
+
+---
+
+[p. 49-49]
+on d’artefacts qui
+expliquaient et faisaient l’éloge de l’univers chrétien. (...) [Ils] présageaient
+le moment où les compétences scientifiques et artisanales se mettraient au
+service des besoins réels des gens. »
+☛VOIR AUSSI
+Les automates d’Al-Jazari (1206)
+Le parc mécanique d’Hesdin (env. 1300)
+Les automates Jaquet-Droz (1774)
+
+---
+
+[p. 59-59]
+d’un kilomètre et reliés par un corps
+calleux artificiel. Vous seriez toujours la même personne, n’est-ce pas ?
+☛VOIR AUSSI
+Le morpion (env. 1300 av. J.-C.)
+Le Léviathan de Hobbes (1651)
+Le canard automate de Vaucanson (1738)
+Les quêtes de l’âme (1907)
+Giant Brains, or Machines That Think (1949)
+Vivre dans une simulation (1967)
+
+---
+
+[p. 69-71]
+1774
+LES AUTOMATES JAQUET-
+DROZ
+« On aurait dit d’immenses marionnettes, ou de grandes poupées, qu’on
+aurait oubliées derrière soi dans un départ précipité – car j’imaginais
+quelque épidémie (... ) qui aurait dévasté la ville et l’aurait vidée de ses
+habitants. J’étais seul avec ces simulacres d’amour (...) fasciné par les yeux
+fixes et vernis de tous ces automates » écrit le romancier Jean Lorrain
+(1845-1906).
+Ces étranges propos au sujet d’automates si réalistes nous rappellent notre
+longue fascination pour les créatures robotiques ; ils évoquent notamment
+un ensemble d’automates du XVIIIe siècle qui pourraient faire figure de
+lointains ancêtres des ordinateurs du fait de leur complexité et de leur
+programmation. Créés par l’horloger Pierre Jaquet-Droz (1721-1790)
+entre 1768 et 1774, ces trois automates ont attiré des foules d’admirateurs :
+un écrivain (composé d’environ six mille pièces), une musicienne (deux
+mille cinq cents pièces) et un dessinateur (deux mille cinq cents pièces).
+L’écrivain androïde trempait sa plume dans son encrier et pouvait être
+programmé par un système à cames pour écrire des messages d’une
+longueur allant jusqu’à quarante caractères. Il rechargeait régulièrement sa
+plume et ses yeux suivaient le texte au fur et à mesure qu’il l’écrivait.
+
+L’automate écrivain de Jaquet-Droz, conservé 
+au Musée d’Art et d’Histoire de Neuchâtel, en Suisse.
+La musicienne jouait de l’orgue en enfonçant réellement les touches du
+clavier avec ses doigts. Elle semblait prendre vie, avec des mouvements du
+corps et de la tête naturels, suivant ses doigts des yeux. Elle était conçue
+pour continuer à « respirer » avant et après sa performance et son corps
+bougeait en rythme avec la musique, comme porté par l’émotion. Le
+dessinateur pouvait représenter quatre dessins : un chien, un portrait de
+Louis XV, un Cupidon conduisant un char et un couple royal.
+Ces automates sont remarquables du fait que tous leurs mécanismes soient
+contenus dans leur corps (et non, par exemple, dans un meuble attenant), ce
+qui rend d’autant plus impressionnants leur programmation, leur
+miniaturisation et leur inoubliable caractère réaliste.
+Henri-Louis, son fils, et Jean-Frédéric Leschot, mécanicien et son fils
+adoptif, aidèrent Jaquet-Droz. On dit que, plus tard, il construisit deux
+mains artificielles pour un homme atteint de déformation congénitale. Elles
+auraient été gantées de blanc et suffisamment agiles pour permettre à leur
+utilisateur d’écrire et de dessiner.
+☛VOIR AUSSI
+Les automates d’Al-Jazari (1206)
+Le parc mécanique d’Hesdin (env. 1300)
+Les automates religieux (1352)
+Le canard automate de Vaucanson (1738)
+
+---
+
+[p. 79-79]
+eues la concrétisation des
+ordinateurs mécaniques de Babbage sur la société victorienne. De fait, la fin
+du roman se situe dans une version imaginaire de l’année 1991 où un
+ordinateur conscient a évolué et s’avère être le narrateur de l’histoire.
+☛VOIR AUSSI
+Le boulier (env. 190 av. J.-C.)
+Le Turc mécanique (1770)
+L’ENIAC (1946)
+
+---
+
+[p. 86-88]
+1868
+THE STEAM MAN
+OF THE PRAIRIES
+L’une des premières descriptions d’un humain mécanisé dans un dime novel
+américain (roman bon marché) apparaît dans The Steam Man of the Prairies
+d’Edward S. Ellis (1840-1916), originaire de l’Ohio. Ce livre de poche,
+qu’on pourrait traduire par L’homme à vapeur des Prairies, a été réimprimé
+à de nombreuses reprises entre 1868 et 1904. Dans le roman d’Ellis, un
+adolescent du nom de Johnny Brainerd invente un robot haut de trente
+mètres et le montre dans le Midwest américain. L’homme à vapeur porte un
+chapeau haut-de-forme et tire un attelage en marchant ou en courant. Ses
+jambes 
+habilement 
+usinées 
+lui 
+permettent 
+d’atteindre 
+près 
+de
+cent kilomètres par heure. En compagnie de ses amis et de son robot,
+Johnny part à l’aventure dans les prairies : ils poursuivent les bisons,
+effraient des Indiens et donnent un coup de main dans les mines d’or.
+Ellis décrit l’homme à vapeur comme « extrêmement corpulent, avec son
+énorme bedaine qui, finalement, contrastait un peu avec sa taille
+immense. » Le gros ventre du robot permettait d’y cacher tout son
+mécanisme. De plus, il avait un « visage de fer (...), des yeux apeurés et un
+grand sourire aux lèvres. (...) Sa démarche avait l’air naturel, sauf quand il
+courait : son extrême droiture le différenciait alors d’un humain. »
+
+Couverture de The Steam Man of the Prairies d’Edward S. Ellis (1868).
+The Steam Man s’inspirait d’un véritable robot humanoïde à vapeur, breveté
+en 1868 par les inventeurs américains Zadoc P. Dederick et Isaac Grass. La
+fascinante histoire d’Ellis est aussi l’un des tout premiers exemples des
+« Edisonades », des histoires mettant le plus souvent en scène un jeune
+inventeur qui échappe aux dangers grâce à son inventivité. Comme le
+remarque l’historien Andrew Liptak : « Avec ses aventures situées à la
+frontière américaine, Ellis explorait les vies de ceux qui touchaient du doigt
+l’inconnu, comme c’est aussi le cas avec les histoires modernes qui se
+passent dans l’espace. (...) Le travail d’Ellis nous offre un bon aperçu des
+mœurs de l’époque, de la manière dont on envisageait le futur et des
+changements qui s’opéraient. »
+☛VOIR AUSSI
+La grande autruche noire d’Electric Bob (1893)
+Tic-Tac (1907)
+Elektro, le Moto-Man (1939)
+
+---
+
+[p. 98-100]
+1907
+TIC-TAC
+Le travail de recherche sur l’intelligence artificielle « nous confronte
+d’emblée aux questions les plus fondamentales sur la nature de la vie, de la
+mort, du sexe, du travail et des mécanismes de l’esprit », ont écrit Paul
+Abrahm et Stuart Kenter, « (...) un vaste spectre qui nécessite
+d’innombrables plongées dans la littérature, la philosophie et dans un
+nombre incroyable de domaines scientifiques et techniques. »
+Tic-Tac est l’une des premières machines pensantes apparue dans la
+littérature à avoir soulevé des interrogations sur la frontière entre les
+hommes et les machines. Ce robot de cuivre doté d’intelligence apparaît en
+1907 dans Ozma du Pays d’Oz, le roman de l’écrivain américain Frank
+Baum (1856-1919). Pour le mettre en marche, il faut régulièrement
+remonter ses trois mécanismes qui activent chacun ses pensées, ses actions
+ou sa parole. Ainsi, en activant ses pensées mais pas ses actions ni sa
+parole, on crée une « boîte à IA » isolée, c’est-à-dire une intelligence
+artificielle confinée dans une « prison virtuelle ». Ou, en activant sa parole,
+mais pas ses pensées, on lui donne la possibilité de créer une production
+sonore rudimentaire sans capacité de traitement du langage. Mais même en
+l’activant complètement, ses unités de traitement de langage ne sonnent pas
+tout à fait vrai : son ton est monotone et beaucoup de questions ou d’ordres
+sont pris au pied de la lettre. Pour Baum, Tic-Tac est « tout sauf vivant » et
+ne ressent rien. Quand on le punit à coups de fouet, Tic-Tac n’a pas mal, le
+fouet ne fait que rendre son corps de cuivre encore « plus brillant ».
+
+Couverture de Tic-Tac du Pays d’Oz de Frank Baum, 1914, 
+illustrée par John R. Neill (1877-1943).
+Tic-Tac a conscience de sa place dans l’univers. Par exemple, si on le
+remercie pour sa gentillesse, il répond « Je ne suis qu’une machine. Je ne
+peux pas être gentil, pas plus que désolé ou heureux. » Bien que le roman
+semble plutôt destiné à un jeune public, Baum nous fait nous interroger sur
+l’avenir de l’IA. L’émotion est-elle la différence majeure entre les humains
+et les machines ? Dans quelle mesure nos visions de l’IA et de ses limites
+sont-elles influencées par la littérature et le cinéma ?
+Le professeur Alex Goody écrit : « Les cyborgs, les robots et autres êtres
+mécanisés sont essentiels pour comprendre les rêves technophiles et
+technophobes d’une époque ; ils incarnent nos craintes face à une emprise
+technologique, font miroiter à certains une transcendance technologique et
+bousculent l’idée d’un être humain en tant qu’individu différencié. »
+☛VOIR AUSSI
+Lancelot et les chevaliers de cuivre (env. 1220)
+The Steam Man of the Prairies (1868)
+Les trois lois de la robotique d’Asimov (1942)
+Le traitement automatique du langage naturel (1954)
+La « boîte à IA » étanche (1993)
+
+---
+
+[p. 107-107]
+angues. La première
+représentation américaine eut lieu à New York en 1922, suivie de plus d’une
+centaine d’autres. En France, la pièce fut créée le 26 mars 1924 à la
+Comédie des Champs-Élysées.
+☛VOIR AUSSI
+Metropolis (1927)
+L’usage humain des êtres humains (1950)
+L’explosion d’intelligence (1965)
+La « boîte à IA » étanche (1993)
+
+---
+
+[p. 118-118]
+r. Et pour finir, un robot pourrait-il vraiment décider du sens de
+l’expression « faire du mal à l’humanité », sachant que les conséquences de
+ses interactions pourraient s’étendre sur des générations ?
+☛VOIR AUSSI
+Les robots militaires meurtriers (1942)
+L’éthique de l’IA (1976)
+Blade Runner (1982)
+Les véhicules autonomes (1984)
+
+---
+
+[p. 126-128]
+1949
+GIANT BRAINS, OR MACHINES
+THAT THINK
+En 1949, l’informaticien américain Edmund Berkeley (1909-1988) publia
+ce qui est peut-être le premier livre à succès sur les ordinateurs à destination
+du grand public. Intitulé Giant Brains, or Machines That Think (Les
+cerveaux géants, ou les machines qui pensent), il était intéressant par les
+questions qu’il soulevait sur la pertinence de l’utilisation du terme cerveau
+et du mot pensant pour les ordinateurs. Beaucoup de ces questions
+résonnent encore aujourd’hui. Dans ce livre, il écrit : « Récemment, on a
+beaucoup parlé d’étranges machines géantes capables de traiter
+l’information très rapidement et habilement. Elles calculent et raisonnent.
+Certaines sont plus intelligentes que d’autres – capables de traiter plus de
+sortes de problèmes (...) elles peuvent résoudre des problèmes alors qu’une
+vie n’y suffirait pas. (...) Ces machines ressemblent à ce que serait un
+cerveau s’il était fait de fer et de câbles plutôt que de chair et de nerfs. Il est
+donc normal de nommer ces machines des cerveaux mécaniques. »
+
+Un « cerveau géant ». Ici, nous pouvons distinguer les indicateurs de séquences et les commutateurs
+de l’IBM Automatic Sequence Controlled Calculator (ASCC) ou de l’ordinateur Harvard Mark I,
+exposés à l’université Harvard.
+Ce qui est fascinant, c’est de réaliser que, lorsque ce livre a été écrit, les
+ordinateurs électroniques étaient quasiment inconnus du grand public. Seul
+un petit nombre de ces « cerveaux géants » existaient et Berkeley en
+mentionne certains, notamment l’Analyseur Différentiel Numéro 2 du MIT,
+le Mark 1 de l’université d’Harvard (aussi connu sous le nom d’Automatic
+Sequence Controlled Calculator ou ASCC d’IBM), l’ENIAC de l’école
+Moore, le General-Purpose Relay Calculator des Laboratoires Bell et le
+
+calculateur de vérités logiques de Kalin et Burkhart, construit par des
+étudiants de Harvard – pour n’en citer que quelques-uns. Dans ses notes de
+fin d’ouvrage, ajoutées en 1961, Berkeley remarque que même « la pensée
+intuitive » pourrait un jour être à la portée des machines : « Il se pourrait
+que la pensée intuitive soit le fait de passer en revue très rapidement et en
+pensée des alternatives possibles, couplé avec le fait de les évaluer très vite,
+de manière à aboutir à une conclusion sans avoir presque aucune conscience
+de la façon dont cette conclusion a été obtenue. Si c’est le cas, alors il est
+bien entendu possible de programmer des ordinateurs de telle manière
+qu’ils fassent preuve de ce que nous appelons la pensée intuitive, sauf que
+la méthode pour atteindre les conclusions n’est pas inconnue. »
+☛VOIR AUSSI
+Le Léviathan de Hobbes (1651)
+Le moulin de la conscience (1714)
+L’ENIAC (1946)
+Le Cerveau d’acier (1970)
+« Appelez-les des extraterrestres artificiels » (2015)
+
+---
+
+[p. 134-134]
+à grande échelle de l’apprentissage par renforcement tient au fait qu’il
+nécessite une somme de données et de simulations concrètes conséquente.
+☛VOIR AUSSI
+Le morpion (env. 1300 av. J.-C.)
+Les réseaux de neurones artificiels (1943)
+Le machine learning (1959)
+La défaite du champion de backgammon (1979)
+Jeu de dames et IA (1994)
+
+---
+
+[p. 143-145]
+1957
+LE PERCEPTRON
+Aujourd’hui, les réseaux de neurones artificiels (ou ANN en anglais)
+trouvent une multitude d’applications, notamment la reconnaissance des
+formes (comme la reconnaissance faciale), la prédiction de séries
+chronologiques (telle que prévoir la hausse d’un titre coté en bourse), le
+traitement des signaux (par exemple filtrer le bruit), et bien d’autres encore.
+Les bases des systèmes neuronaux sont présentées page 120, et l’une des
+avancées historiques du chemin vers des ANN pleinement fonctionnels a
+été les perceptrons, développés en 1957 par le psychologue Frank
+Rosenblatt (1928-1971). En 1958, le New York Times proclamait, en partie
+influencé par l’enthousiasme de Rosenblatt, que le perceptron était
+« l’embryon d’un ordinateur électronique dont [la Navy] s’attendait à ce
+qu’il soit capable de marcher, parler, voir, écrire, se reproduire et avoir
+conscience de sa propre existence. »
+Le perceptron comportait à l’origine trois niveaux de « neurones »
+connectés (c’est-à-dire des unités de calcul simples). Le premier niveau
+était un ensemble de 20 cellules photoélectriques sur 20 correspondant à la
+rétine de l’œil. Le deuxième niveau comportait des connecteurs cellulaires
+qui recevaient des données des cellules photoélectriques, dont les
+connexions initiales étaient le fruit du hasard. Le troisième niveau consistait
+en des cellules de sortie qui étiquetaient l’objet placé devant la machine
+(par exemple « triangle »). Selon que le perceptron devinait correctement
+ou non, les chercheurs renforçaient (ou diminuaient) les connexions
+électriques entre les cellules aboutissant à l’étiquetage.
+
+La première version du perceptron fut implantée dans un logiciel 
+de l’ordinateur IBM 704 qui apparaît ici sur une photo de 1957. 
+L’IBM 704 fut parmi les premiers ordinateurs de série dotés 
+de capacités d’arithmétique en virgule flottante.
+La 
+première 
+version 
+fut 
+implantée 
+dans 
+un 
+logiciel 
+sur 
+un
+ordinateur IBM 704. Une seconde version fut utilisée sur une machine créée
+spécialement, capable de s’entraîner et d’apprendre à classifier certaines
+formes en modifiant la puissance des connexions entre les neurones. Des
+fonctions poids étaient en fait encodées dans les potentiomètres et des
+moteurs électriques effectuaient les variations de poids pendant le processus
+d’apprentissage. On espérait que la machine puisse effectuer une large
+gamme de reconnaissance de formes ; mais, hélas, l’engouement et l’espoir
+suscités dépassaient les limites d’un modèle aussi simple. D’ailleurs, le
+livre Perceptrons, publié en 1969 par Marvin Minsky (1927-2016) et
+Seymour Papert (1928-2016) du MIT, démontra explicitement les limites
+des perceptrons simples et tempéra l’intérêt pour ce champ naissant du
+machine learning (apprentissage automatique). Plus tard, cependant, il
+devint beaucoup plus évident que des configurations de neurones avec plus
+de 
+couches 
+pourraient 
+avoir 
+une 
+valeur 
+et 
+des 
+applications
+incommensurables.
+☛VOIR AUSSI
+Les réseaux de neurones artificiels (1943)
+Le machine learning (1959)
+Le deep learning (1965)
+
+---
+
+[p. 152-152]
+terrogent aussi sur la façon dont l’incertitude
+et l’approximation peuvent être traitées au mieux dans les systèmes de
+représentation des connaissances.
+☛VOIR AUSSI
+L’Organon d’Aristote (env. 350 av. J.-C.)
+La tour de Hanoï (1883)
+Le perceptron (1957)
+Le machine learning (1959)
+Les systèmes experts (1965)
+La logique floue (1965)
+
+---
+
+[p. 160-161]
+1965
+L’EXPLOSION
+D’INTELLIGENCE
+En 1965, le mathématicien britannique Irving J. Good (1916-2009) – qui
+travaillait en tant que cryptologue avec son collègue informaticien Alan
+Turing – exprima des inquiétudes au sujet d’une potentielle « explosion
+d’intelligence » surhumaine dans un article intitulé Spéculations au sujet de
+la première machine ultra intelligente (Speculations Concerning the First
+Ultraintelligent Machine). Dans l’article, il écrit : « Disons qu’une machine
+ultra intelligente puisse être définie comme une machine capable de
+dépasser de loin toutes les activités intellectuelles de n’importe quel
+humain, aussi intelligent soit-il. Dans la mesure où le design des machines
+est l’une de ces activités intellectuelles, une machine très intelligente
+pourrait encore mieux designer des machines ; il y aurait sans aucun doute
+une explosion d’intelligence, et l’intelligence de l’homme serait loin
+derrière. Par conséquent, la première machine ultra intelligente est la
+dernière invention que l’homme ait jamais besoin de réaliser, sous réserve
+que la machine soit suffisamment docile pour nous dire comment la garder
+sous contrôle. »
+Autrement dit, si les hommes construisaient une IAG (c’est-à-dire une
+intelligence artificielle générale qui ne soit pas limitée à un champ restreint
+de connaissances et de capacités), celle-ci pourrait s’améliorer d’elle-même
+grâce à des capacités d’ingénierie qui lui permettraient de redesigner son
+matériel et son logiciel de manière récursive. À titre d’exemple de
+configuration, de telles IAG pourraient peut-être utiliser des réseaux
+neuronaux et des algorithmes évolutifs pour construire des centaines de
+modules séparés qui communiqueraient et collaboreraient de façon de plus
+en plus sophistiquée, rapide et efficace. Les tentatives de confinement ou
+d’isolement d’IA potentiellement dangereuses du reste d’Internet pourraient
+échouer. Même programmées pour des buts et des tâches bénéfiques,
+comme produire de meilleures ampoules, que se passerait-il si elles
+
+décidaient de transformer tout le continent nord-américain en usine de
+production d’ampoules ?
+Bien sûr, les raisons pour lesquelles une telle superintelligence serait
+improbable sont nombreuses, comme la nécessité de s’appuyer sur des
+réseaux humains et matériels lents. D’un autre côté, il est aussi possible
+qu’une explosion d’intelligence soit largement favorable à l’humanité dans
+sa course contre les maladies et les problèmes environnementaux. Mais
+quels seraient les effets sociologiques d’armes superintelligentes – ou même
+de compagnons artificiels qui feraient preuve d’un intellect et d’une
+empathie (simulée) supérieurs à ceux de nos conjoints humains ?
+☛VOIR AUSSI
+Darwin parmi les machines (1863)
+Les robots militaires meurtriers (1942)
+L’usage humain des êtres humains (1950)
+La « boîte à IA » étanche (1993)
+Le désastre du maximiseur de trombones (2003)
+« Appelez-les des extraterrestres artificiels » (2015)
+
+---
+
+[p. 168-168]
+nne
+désormais vie au futur sous la forme d’ordinateurs qui peuvent voir,
+entendre et jouer à toutes sortes de jeux. »
+☛VOIR AUSSI
+Les réseaux de neurones artificiels (1943)
+L’apprentissage par renforcement (1951)
+Le perceptron (1957)
+Le machine learning (1959)
+L’art numérique et DeepDream (2015)
+Les images contradictoires (2018)
+
+---
+
+[p. 176-178]
+1968
+HAL 9000
+« 
+Les 
+responsabilités 
+de 
+ma 
+mission 
+couvrent 
+l’ensemble 
+du
+fonctionnement du vaisseau, je suis donc constamment occupé » explique
+HAL 9000 (Carl 500 dans la version française), l’intelligence artificielle
+fictionnelle du célèbre film réalisé par Stanley Kubrick 2001 : l’Odyssée de
+l’espace. « Je me rends aussi utile que possible, ce que toute entité
+consciente devrait, je crois, toujours espérer faire. » Malheureusement pour
+l’équipage, HAL se transforme ensuite en un tueur qu’il faut éliminer.
+HAL est important notamment parce qu’un certain nombre d’éminents
+chercheurs en IA ont expliqué avoir eu envie d’explorer le domaine de
+l’intelligence artificielle après avoir vu le film, dont le scénario a été écrit
+par Stanley Kubrick (1928-1999) et Arthur C. Clarke (1917-2008). Il est
+intéressant de voir qu’HAL incarne beaucoup de ce que nous attendons
+aujourd’hui des futures intelligences artificielles générales (IAG) qui
+peuvent se comporter de façon intelligente sur un large spectre de buts et
+d’environnements. Cette machine sensible est douée de vision par
+ordinateur, de reconnaissance vocale et faciale, de sortie vocale, de
+traitement automatique du langage naturel, elle peut jouer aux échecs et
+mener différentes formes avancées de raisonnement, planifier et résoudre
+des problèmes. HAL peut même lire sur les lèvres, il est amateur d’art,
+exprime des émotions, lutte pour se protéger et interprète les émotions des
+humains.
+
+Vue d’artiste d’HAL 9000 (Carl 500), le célèbre œil rouge 
+qui voit tout dans 2001 : l’Odyssée de l’espace.
+Dans les années 1960, lorsque le film fut tourné, les experts prédisaient que
+des intelligences artificielles comme HAL pourraient exister d’ici 2001.
+Bien que le chercheur en IA Marvin Minsky (1927-2016) ait fait office de
+conseiller sur le tournage, il n’y a aujourd’hui aucun doute : il faudra encore
+de nombreuses années pour créer une entité comme HAL, dotée de toutes
+ses capacités.
+Dans une scène inoubliable du film, après que HAL soit devenu dangereux
+et doive être démantelé, on voit un astronaute retirer peu à peu les modules
+informatiques alors que HAL se dégrade progressivement tout en chantant
+lentement. L’un des enseignements est peut-être que nous n’avons peut-être
+pas totalement conscience des effets d’une utilisation omniprésente de
+l’intelligence artificielle tout au long de la vie. Ces entités deviennent de
+plus en plus puissantes et nous nous appuyons sur elles pour
+d’innombrables formes de prises de décisions : nous serions bien avisés de
+peser les pour et les contre d’une IA omniprésente dans le futur.
+☛VOIR AUSSI
+Le traitement automatique du langage naturel (1954)
+Le Cerveau d’acier (1970)
+Terminator (1984)
+
+---
+
+[p. 187-187]
+ler de nouveaux objets il fallait que le
+dessus des objets soit libre. Cependant, malgré sa manière remarquablement
+naturelle d’opérer, SHRDLU était limité dans le sens où il ne pouvait pas
+apprendre de ses erreurs.
+☛VOIR AUSSI
+Le traitement automatique du langage naturel (1954)
+Les systèmes experts (1965)
+Shakey le Robot (1966)
+
+---
+
+[p. 195-196]
+1979
+LA DÉFAITE DU CHAMPION DE
+BACKGAMMON
+« Comme la plupart des jeux de société, le backgammon est une version
+sublimée des guerres humaines, » écrit l’expert en IA Daniel Crevier, « son
+nom vient des mots gallois bac et gamen, qui signifient petit et guerre. »
+En dépit de son nom, personne ne sait vraiment d’où vient l’antique jeu de
+backgammon ; mais on le connaît depuis près de cinq mille ans. Dans ce
+jeu, deux joueurs commandent des petits « soldats », représentés par un
+ensemble de quinze pièces qui se déplacent entre vingt-quatre triangles. À
+chaque fois qu’ils lancent les deux dés, les joueurs choisissent parmi les
+mouvements qu’ils peuvent effectuer ; ils jouent chacun leur tour et leur but
+est de retirer tous leurs pions du tablier.
+En 1979, le programme de backgammon BKG 9.8 affronta et battit le
+champion du monde en titre, Luigi Villa, faisant probablement de lui le
+premier champion du monde d’un jeu de société à perdre face à un
+programme informatique. Certes, BKG 9.8 profita de bons coups de dés,
+mais il faut une certaine habileté pour choisir les meilleurs mouvements en
+fonction des résultats des jets de dés. Parmi d’autres techniques
+mathématiques, BKG 9.8 se servit de la logique floue.
+TD-Gammon, développé en 1992 par le chercheur d’IBM Gerald Tesauro,
+utilisa un réseau de neurones artificiels et atteint un haut niveau d’expertise
+au jeu de backgammon en jouant des parties contre lui-même. Le
+programme étudiait les mouvements autorisés à chaque tour et mettait à
+jour le poids des réseaux neuronaux. Parce qu’il ne nécessitait aucun
+entraînement humain, TD-Gammon explora des stratégies intéressantes, qui
+n’avaient pas été envisagées par les humains et qui, en retour améliorèrent
+leur jeu. Aujourd’hui, plusieurs programmes de backgammon utilisent les
+réseaux neuronaux et proposent des analyses aux humains.
+
+Parce que le backgammon a un processus aléatoire lié aux dés, l’espace de
+recherche pour « l’arbre de jeu » est extrêmement vaste, ce qui a rendu
+difficiles les premières tentatives de création de logiciels joueurs experts.
+Quand on utilise des réseaux de neurones, les poids initiaux du réseau sont
+aléatoires et le réseau s’exerce grâce à l’apprentissage par renforcement.
+Pour devenir compétent, le premier TD-Gammon s’appuyait sur quarante
+nœuds de réseaux cachés à l’intérieur du réseau neuronal, ainsi que sur trois
+cent mille parties d’entraînement. Pour jouer au niveau des humains, les
+versions ultérieures montèrent jusqu’à cent soixante nœuds et plus d’un
+million de parties.
+☛VOIR AUSSI
+Les réseaux de neurones artificiels (1943)
+L’apprentissage par renforcement (1951)
+La logique floue (1965)
+Jeu de dames et IA (1994)
+Deep Blue bat le champion d’échecs (1997)
+
+---
+
+[p. 203-203]
+ates informatiques altéreront-ils le système
+de navigation, provoquant ainsi des accidents ?
+☛VOIR AUSSI
+Les « esprits d’emprunt » de Tesla (1898)
+Les robots militaires meurtriers (1942)
+L’éthique de l’IA (1976)
+ASIMO et ses amis (2000)
+L’IA sur Mars (2015)
+La chirurgie robotique autonome (2016)
+Les images contradictoires (2018)
+
+---
+
+[p. 211-212]
+1988
+LE PARADOXE DE MORAVEC
+« Pour battre Magnus Carlsen, le champion du monde des échecs, prenez un
+ordinateur, » écrit le journaliste Larry Elliott. « Pour nettoyer les pièces du
+jeu d’échecs après la partie, prenez un être humain. » Telle est l’essence du
+paradoxe de Moravec, mis en relief par plusieurs chercheurs en intelligence
+artificielle dans les années 1980 : ils ont remarqué que, paradoxalement, les
+tâches a priori difficiles nécessitant un haut niveau de raisonnement étaient
+de plus en plus facilement exécutées par les ordinateurs. En même temps,
+des tâches a priori simples nécessitant des compétences humaines
+sensorimotrices (par exemple, marcher et retirer une écharde d’une
+chaussure) 
+peuvent 
+s’avérer 
+assez 
+difficiles 
+pour 
+des 
+systèmes
+informatiques. Le paradoxe porte le nom du roboticien Hans Moravec qui,
+dans son ouvrage Mind Children (Les Enfants de l’esprit, 1988) écrit : « Il
+est relativement simple de faire en sorte que les ordinateurs fassent preuve
+de performances du niveau d’un adulte, lors de tests d’intelligence ou de
+parties de dames, et difficile ou impossible de les doter des capacités d’un
+enfant d’un an pour ce qui touche à la perception et à la mobilité. »
+Moravec remarquait que des millions d’années d’évolution ont contribué à
+nous rendre capables d’effectuer certaines tâches de façon presque
+inconsciente, comme marcher et reconnaître des visages et des voix ; des
+tâches absolument nécessaires à notre survie. Cependant, la pensée abstraite
+– par exemple le raisonnement qui implique des mathématiques et de la
+logique, comme les échecs – est plus récente et plus difficile pour les
+humains. Pourtant, ce type de cognition est finalement moins difficile à
+concevoir dans les systèmes d’IA. Pour bien des tâches, celles-ci doivent
+encore évoluer, encore plus pour les commandes tactiles et de contrôle dans
+des fonctions de soin des patients, de services de restauration et de
+plomberie. Comme le résume avec tact le spécialiste en sciences cognitives
+Steven Pinker (né en 1954), le paradoxe de Moravec signifie qu’il ne restera
+peut-être plus aux futurs travailleurs humains que les emplois les moins
+
+rémunérateurs qui existent depuis des siècles, voire des millénaires : « La
+principale leçon de trente-cinq ans de recherche en IA est que les problèmes
+difficiles sont simples et que les problèmes simples sont difficiles. Les
+capacités mentales d’un enfant de quatre ans qui nous semblent aller de soi
+– reconnaître un visage, prendre un crayon, traverser une pièce, répondre à
+une question – apportent en fait des réponses à certains des problèmes
+d’ingénierie les plus complexes jamais imaginés. (...) Alors qu’apparaît la
+nouvelle génération d’appareils intelligents, ce seront les analystes
+boursiers, les ingénieurs en pétrochimie et les membres des commissions de
+libérations conditionnelles qui risquent d’être remplacés par des machines.
+Les jardiniers, les réceptionnistes et les cuisiniers conserveront à coup sûr
+leurs emplois pour les décennies à venir. »
+☛VOIR AUSSI
+Darwin parmi les machines (1863)
+Le test de Turing (1950)
+La symbiose Homme-Machine de Licklider (1960)
+« Les éléphants ne jouent pas aux échecs » (1990)
+
+---
+
+[p. 219-219]
+votre temps) vous finissiez
+par trouver une idée qui vous permettrait de vous libérer. »
+☛VOIR AUSSI
+Darwin parmi les machines (1863)
+Les Robots Universels de Rossum (1920)
+Giant Brains, or Machines That Think (1949)
+L’explosion d’intelligence (1965)
+Vivre dans une simulation (1967)
+Le désastre du maximiseur de trombones (2003)
+
+---
+
+[p. 229-231]
+1997
+OTHELLO
+Du fait de leurs règles précises et de la possibilité de déterminer un gagnant
+dans leur processus, les jeux ont été un domaine d’étude apprécié des
+chercheurs en IA. Par ailleurs, le système d’IA peut souvent jouer des
+millions de parties contre lui-même ou contre d’autres joueurs d’IA pour
+s’améliorer et gagner en compréhension. Parmi les jeux intéressants pour
+lesquels l’IA a été appliquée avec succès, on compte l’Othello ; aussi appelé
+Reversi, il est mentionné dans une parution de 1886 du magazine américain
+The Saturday Review et remonte à bien plus loin encore.
+Le jeu Othello se joue sur un tablier de 8 × 8, avec des pions en forme de
+disques, blancs d’un côté et noirs de l’autre. Les joueurs, le noir et le blanc,
+posent l’un après l’autre un pion avec leur couleur, face visible.
+Imaginez que vous ayez les noirs et que vous placiez votre pion au bout
+d’une ligne de pions blancs, terminée par un autre pion noir. Dans ce cas,
+les disques blancs encadrés sont retournés pour devenir noirs. Autrement
+dit, quand ils sont pris en sandwich par des pions de l’autre couleur, les
+pions sont retournés ; celui qui a le plus de pions de sa couleur en fin de
+partie l’emporte.
+
+Gros plan sur des pièces du jeu d’Othello. On voit que, comme l’indique 
+le règlement, les pions peuvent être retournés pour passer 
+de noirs à blancs, et vice versa.
+L’une des raisons pour lesquelles le jeu est si difficile à visualiser pour les
+humains est le fait que, contrairement aux dames ou aux échecs, les
+couleurs des pièces d’Othello peuvent continuellement changer. Depuis les
+années 1980 environ, des programmes informatiques d’Othello ont
+facilement vaincu des joueurs professionnels. En 1997, Logistello, un
+programme informatique créé par l’informaticien Michael Buro, battit le
+champion Takeshi Murakami sur le score de six parties à zéro. À l’époque,
+Murakami, un professeur d’anglais de trente-deux ans vivant à Tokyo,
+s’étonna de sa défaite : il dit qu’au moins l’un des coups de Logistello était
+« inimaginable » tellement il différait d’un coup qu’aurait fait un humain.
+Le nombre de positions possibles d’Othello est au maximum de 1028.
+Encore aujourd’hui, Othello est considéré comme un « jeu irrésolu » dans la
+mesure où personne n’a démontré quelle serait l’issue d’une partie où les
+deux joueurs joueraient parfaitement.
+☛VOIR AUSSI
+Le morpion (env. 1300 av. J.-C.)
+Mastermind (1970)
+Jeu de dames et IA (1994)
+Deep Blue bat le champion d’échecs (1997)
+AlphaGo devient champion (2016)
+
+---
+
+[p. 240-240]
+otisons, nos créations ne deviennent de plus en plus humaines et
+finissent par nous surpasser ou nous remplacer. (...) Un robot s’est
+humanisé en devenant capable de rêver, et pourtant les rêves des humains
+sont tout ce qu’il reste de l’humanité. »
+☛VOIR AUSSI
+L’Artiste du Beau (1844)
+Le transhumanisme (1957)
+Blade Runner (1982)
+
+---
+
+[p. 249-250]
+2006
+LA VICTOIRE DE QUACKLE
+AU SCRABBLE
+« Les échecs ont eu Deep Blue », écrit le journaliste en technologie
+informatique Mark Andersonn, « Jeopardy ! a eu Watson. Le baseball a la
+sabermétrie, comme décrit dans le livre à succès et le film Le Stratège
+(Moneyball). Pour chaque jeu, le terrain de jeu a été bouleversé par
+l’exploration de données. » Une évolution passionnante de l’IA appliquée
+aux jeux de lettres a eu lieu en 2006 quand le programme informatique
+Quackle l’a emporté sur l’ancien champion du monde de Scrabble®
+David Boys à l’occasion d’un tournoi qui se tint à Toronto, au Canada.
+Après avoir perdu trois parties sur cinq, Boys affirma : « Mieux vaut encore
+être un humain qu’un ordinateur. »
+Le jeu de Scrabble fut inventé en 1938 par l’architecte américain Alfred
+Butts (1899-1993). Pour jouer, les adversaires placent leurs jetons sur un
+plateau formé par une grille de carrés de 15 × 15. Chaque jeton comporte
+une lettre, dont la valeur de 1 à 10 est annotée, en fonction de sa fréquence
+d’usage dans la langue jouée. Par exemple, dans la version française, les
+voyelles valent un point, alors que le K et le Z en valent 10. Les joueurs
+jouent à tour de rôle et doivent placer des lettres sur le plateau de façon à ce
+que chaque ligne ou colonne de lettres forme toujours un mot.
+Le jeu est finalement assez complexe, il implique plus que simplement
+connaître les mots d’une langue. Par exemple, la stratégie peut impliquer
+d’anticiper les lettres qui restent dans la pioche ou d’évaluer l’intérêt de
+placer les jetons sur certains carrés spéciaux du plateau qui peuvent en
+augmenter la valeur. Le Scrabble, comme le poker, est considéré comme un
+jeu à information imparfaite : nous ne voyons pas les jetons de l’adversaire.
+Quackle détermine quels jetons jouer sur la base de simulations qui
+analysent le plateau grâce à une fonction d’évaluation. Il a été créé par une
+équipe dont faisait partie Jason Katz-Brown, classé parmi les meilleurs
+
+joueurs de Scrabble au monde. Dans leur fascinant travail de recherche, les
+développeurs ont fait jouer Quackle un grand nombre de fois pour mieux
+comprendre l’intérêt de jouer certains mots par rapport à d’autres qu’un
+joueur pourrait utiliser, ou en prenant en compte les mots qu’un joueur
+pourrait jouer au tour suivant.
+☛VOIR AUSSI
+Puissance 4 (1988)
+Deep Blue bat le champion d’échecs (1997)
+Othello (1997)
+AlphaGo devient champion (2016)
+Poker et IA (2017)
+
+---
+
+[p. 258-261]
+2015
+L’IA SUR MARS
+L’intelligence artificielle et l’autonomie joueront des rôles de plus en plus
+importants dans l’exploration spatiale, au moment où les vaisseaux
+robotisés et les véhicules lunaires doivent prendre des décisions rapides et
+intelligentes, en particulier lorsqu’ils ne sont pas en communication
+constante avec la Terre. Alors que nous avançons dans le Système solaire, et
+que nous envoyons même des astromobiles sur les terres de lunes lointaines
+comme sur l’Europe de Jupiter, les retards de communication peuvent être
+particulièrement problématiques.
+Le rover de la NASA, Curiosity, est un exemple récent d’utilisation, limitée
+mais fascinante, de l’IA dans l’espace : elle patrouille Mars pour nous aider
+à déterminer si cette planète a un jour accueilli de la vie, à comprendre la
+géologie, le climat et les diagrammes de rayonnement martiens. En 2015,
+pour l’aider dans ses missions, Curiosity a bénéficié d’une mise à jour
+logicielle d’IA appelée AEGIS (Autonomous Exploration for Gathering
+Increased Science).
+« À l’heure actuelle, Mars est entièrement peuplée de robots », dit le
+planétologue Raymond Francis, « et l’un d’eux est suffisamment intelligent
+pour décider par lui-même quoi viser avec son laser. » Si Curiosity repère
+un élément d’une surface qui semble intéressant, il peut le vaporiser
+légèrement avec un laser et examiner le résultat du spectre pour évaluer la
+composition de la pierre. Si besoin, il peut aussi utiliser son long bras, son
+microscope et son spectromètre à rayons X pour une étude plus
+approfondie. AEGIS permet notamment à Curiosity de choisir de façon
+autonome une pierre cible et de la viser de façon précise avec son laser – en
+se servant de la vision par ordinateur pour étudier des images numériques,
+rechercher des arêtes, des formes, des tailles, de la luminosité, etc. La
+journaliste Marina Koren remarque : « Le logiciel – seulement environ
+vingt mille lignes de code parmi les 3,8 millions qui font tourner Curiosity
+
+– a transformé un robot à propulsion nucléaire à six roues, de la taille d’une
+voiture, en un scientifique de terrain. »
+
+Selfie de Curiosity au pied du Mont Sharp sur Mars, le 6 octobre 2015.
+Les recherches de Curiosity ouvriront peut-être un jour la voie à
+l’exploration humaine, et des systèmes comme AEGIS faciliteront ce
+processus en utilisant le machine learning et d’autres approches
+d’intelligence artificielle pour détecter des anomalies. Étant donné que
+Curiosity est par moments à l’autre bout de Mars sans pouvoir
+communiquer, ni recevoir d’instructions de la Terre, et sachant que les
+communications puisent dans sa réserve d’énergie, l’IA peut s’avérer
+particulièrement utile en cas de communications restreintes ou impossibles.
+☛VOIR AUSSI
+Shakey le Robot (1966)
+Les véhicules autonomes (1984)
+Roomba (2002)
+
+---
+
+[p. 269-269]
+iveau variable existent depuis des années, mais en général leur
+utilisation n’est pas autorisée pour assister les joueurs dans les jeux en ligne
+entre humains.
+☛VOIR AUSSI
+Les réseaux de neurones artificiels (1943)
+Deep Blue bat le champion d’échecs (1997)
+La victoire de Quackle au Scrabble (2006)
+AlphaGo devient champion (2016)
+
+---
+
+[p. 278-279]
+NOTES ET RÉFÉRENCES
+« L’intelligence artificielle est la prochaine étape 
+de l’évolution, mais c’est une étape différente. (...) 
+Un appareil intelligent de manière artificielle peut dire 
+à un autre tout ce qu’il sait, dans le sens où un professeur peut dire à un étudiant une partie de ce
+qu’il sait, 
+mais il peut tout dire à un autre appareil sur sa propre conception. (...) Fondamentalement, l’esprit
+humain 
+n’est pas plus proche d’un dieu que d’un ordinateur. 
+Il est plus proche de celui d’un chimpanzé et [conçu] pour se sentir à son aise dans la jungle ou dans
+les champs. »
+Edward Fredkin, cité par Pamela McCorduck 
+dans Machines Who Think
+ 
+ 
+J’ai dressé la liste de références suivante qui identifie une partie des
+ressources dont je me suis servi pour mener mes recherches et écrire cet
+ouvrage ; elle donne également des détails sur les sources citées. Comme
+beaucoup de lecteurs le savent, les sites Internet vont et viennent. Il leur
+arrive de changer d’adresse ou de disparaître. Les adresses de sites Internet
+listées ici ont été des sources valables d’information au moment de
+l’écriture de ce livre. Les ressources en ligne telles que Wikipédia sont un
+bon point de départ pour une quête comme celle-ci : j’ai parfois utilisé ce
+site comme une première base, avec d’autres sites, livres et articles de
+recherche.
+Si j’ai omis un moment intéressant ou décisif en lien avec l’IA dont vous
+pensez qu’il mérite d’être approfondi, merci de me le faire savoir. Rendez-
+vous sur mon site (pickover.com) et envoyez-moi un email expliquant l’idée
+en question et la manière dont vous pensez qu’elle a impacté le monde. De
+futures éditions de cet ouvrage inclueront peut-être des chapitres entiers sur
+des merveilles de l’IA telles que : le Basilic de Roko, les réseaux adverses
+génératifs, le calcul neuromorphique, les réseaux bayésiens, la série
+télévisée Westworld, le film de 1983 WarGames, les réseaux de longue
+mémoire à court terme (LSTM), et d’autres encore. Enfin, je remercie mes
+éditeurs Meredith Hale et John Meils – avec Dennis Gordon, Tom Erickson,
+
+Michael Perrone, Teja Krasek, et Paul Moskowitz – pour leurs
+commentaires et suggestions.
+OUVRAGES DE RÉFÉRENCE
+Crevier D., À la recherche de l’intelligence artificielle, Flammarion, 1999.
+Dormehl L., Thinking Machines, Tarcher, 2017.
+McCorduck P., Machines Who Think, A. K. Peters, 2004.
+Nilsson N., The Quest for Artificial Intelligence, Cambridge University Press, 2010.
+Riskin J., The Restless Clock, University of Chicago Press, 2016.
+Truitt E., Medieval Robots, University of Pennsylvania Press, 2015.
+Walsh T., Machines That Think, Hurst & Co., 2017.
+PROLOGUE
+Hambling D., « Lethal logic », New Scientist, vol. 236, n° 3151, p. 22, 2017.
+Reese M., « Aliens, Very Strange Universes and Brexit—Martin Rees Q&A », The Conversation,
+2017.
+Truitt E., Medieval Robots, University of Pennsylvania Press, 2015.
+Beall A., « Visual trick fools AI into thinking a turtle is really a rifle », New Scientist, vol. 236,
+n° 3151, p. 19, 2017.
+TALOS (ENV. 400 AV. J.-C.)
+Haughton B., Hidden History: Lost Civilizations, Secret Knowledge, and Ancient Mysteries, New
+Page Books, 2007.
+LA CLEPSYDRE DE CTÉSIBIOS (ENV. 250 AV. J.-C.)
+Dormehl L., Thinking Machines, Tarcher, 2017.
+LE BOULIER (ENV. 190 AV. J.-C.)
+Ewalt D., « No. 2 The Abacus », Forbes, 2005.
+Krimmel J., « Artificial Intelligence Started with the Calendar and Abacus », 2017.
+LA MACHINE D’ANTICYTHÈRE (ENV. 125 AV. J.-C.)
+Garnham A., Artificial Intelligence: An Introduction, Routledge, 1988.
+Marchant J., « The Antikythera Mechanism: Quest to Decode the Secret of the 2,000-Year-Old
+Computer », Neotorama, 2009.
+LES AUTOMATES D’AL-JAZARI (1206)
+Hill D., Studies in Medieval Islamic Technology, ed. D. A. King, Ashgate, 1998.
+
+---
+
+[p. 294-298]
+lle 217
+reconnaissance faciale 119
+simuler des comportements réalistes 171
+Logic theorist 141
+logique
+floue 163-165, 194
+symbolique 141
+Logistello 228-230
+lois des mouvements planétaires 33
+Lombardo, Thomas 107
+Lorrain, Jean 68
+Lovelace, Ada 78
+Lucas, Edouard 88
+M
+MacDougall, Duncan 100
+machine
+à différences 76, 78
+analytique 76
+d’Anticythère 11, 31, 33
+machine learning 14, 121, 132, 137, 144, 147, 149-150, 166, 205, 227, 249,
+259, 268, 270, 275
+Madej, Krystina 45
+Maita, Aki 222
+Mamdani, Ebrahim 165
+mancala 239
+Mark 1 125
+Mars 259
+Mastermind 178, 180
+Mauchly, John 122
+maximiseur de trombones 245
+McCarthy, John 12, 140
+McCulloch, Warren 120
+Meirowitz, Mordecai 178
+MENACE 18
+Menon, Mani 265
+Metropolis 107
+minimisation du regret hypothétique 267
+Minsky, Marvin 116, 132, 140, 144, 175, 246
+Modèles de Markov Cachés (MMC) 134, 158
+mondes virtuels 172
+Moravec, Hans 58, 210-211
+Mordvintsev, Alexander 252
+More, Max 145
+morpion 16, 18, 57, 132, 212, 221, 239
+Morse, Samuel 91
+Morton, Ella 67
+moutons électriques 198
+Murakami, Takeshi 230
+Musée d’Alexandrie 25
+Musk, Elon 119
+N
+NASA 189, 191, 257
+Natural Computing 216
+
+nepohualtzintzin 28
+neurones artificiels 194
+réseau de 9, 74, 103, 120, 139, 142, 252-253, 266
+Newell, Allen 140, 151
+Nilsson, Nils 43, 150
+Noll, A. Michael 252
+O
+OCR. Voir reconnaissance faciale.
+optimum
+global 191
+local 191
+optophone 102
+ordinateur(s) 152
+Atanasoff-Berry Computer 124
+Aztèque 28
+Babbage 65, 76
+boulier 28
+Colossus 124
+ENIAC 11
+en simulation 171
+pensants 125
+Préhistoire 76
+Tinkertoy 18
+Z3 124
+Organon 22
+Othello 228-230
+p
+paons 34
+Papert, Seymour 144
+parc d’Hesdin 40, 42
+PARRY 187-188
+perceptrons 120, 142-166
+Pinker, Steven 211
+Pinocchio 237
+
+Pitts, Walter 120
+poker 248, 266-267
+pokerbots 267
+Politique 22
+posthumains 145
+prix Loebner 128
+programme de backgammon BKG 9.8 194
+programme informatique
+AARON 252
+AlphaGo 260, 262
+AlphaZero 227
+BKG 9.8 194
+ELIZA 188
+IA, risques potentiels 217
+Logistello 228, 230
+PARRY 187-188
+Quackle 247-248
+Racter 61
+SHRDLU 137, 184, 186
+Watson 247, 249, 251
+projet Cyc 151
+Prolog 162
+Puissance 4 212, 214, 241
+Q
+Quackle 247-248
+quêtes de l’âme 100
+R
+Racter 61
+reconnaissance faciale 157, 175
+eigenfaces 158
+logiciel 119
+systèmes 157
+techniques 158
+reconnaissance optique de caractères (OCR) 102
+
+reconnaissance vocale 134, 137, 139, 147, 166, 175, 270
+Rees, Martin 9, 171
+Reichardt, Jasia 13, 173
+réseau sémantique 150
+réseaux antagonistes génératifs 13, 74
+réseaux de neurones
+artificiels (ANN) 9, 74, 103, 120-121, 139, 142, 252, 254, 266
+logique floue et 163
+profonds (DNN) 166
+rétropropagation 120, 166
+Reversi 228
+Reynolds, Craig 208
+robotique
+Asimov 116
+chirurgie autonome 263
+Trois lois de la 116
+robots 97, 107
+Aibo 231
+ASIMO 234, 236
+définition 104
+devenant humains 238
+humanoïde 110
+Julie 134
+militaires 118-119
+Nadine 96
+représentations populaires 198
+R.U.R 104
+Shakey 168
+Sophia 96
+STAR 263
+Tic-Tac 97
+tueurs 205
+Romein, John W. 241
+Roomba 242
+Rosenblatt, Frank 120, 142
+Rossum 104

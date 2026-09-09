@@ -1,0 +1,351 @@
+[
+ {
+  "chapitre": "9d9ed49e",
+  "citations": [
+   {
+    "texte": "Les recherches en bases de données et les recherches en intelligence artificielle entretiennent des liens depuis plus de trente ans",
+    "page": 99,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une parenté ancienne",
+    "portee": "Rappelle que le rapprochement entre données et raisonnement ne date pas de la vague actuelle."
+   },
+   {
+    "texte": "Si cette démarche a mis quelque temps avant d'être acceptée à une époque où les concepts utilisés dans les bases de données n'étaient pas toujours clairement dissociés des considérations technologiques, son intérêt a peu à peu été reconnu dans la communauté scientifique.",
+    "page": 99,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le temps de l'acceptation",
+    "portee": "Une idée juste peut mettre des années à s'imposer, faute de concepts assez dégagés de la technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "8bbaabd0",
+  "citations": [
+   {
+    "texte": "Parmi les formalismes utilisés dans ces travaux, la logique sous toutes ses formes reste majeure",
+    "page": 100,
+    "axe": "02-ia-technique-academique",
+    "theme": "La logique comme langue commune",
+    "portee": "Malgré la montée des approches statistiques, la logique reste le socle de ce domaine."
+   },
+   {
+    "texte": "L'utilisation de la logique était motivée par le fait que cet outil formel permet d'exprimer des phrases, les formules, et de raisonner avec ces phrases.",
+    "page": 100,
+    "axe": "02-ia-technique-academique",
+    "theme": "Exprimer et raisonner",
+    "portee": "Deux fonctions qu'on retrouve dans toute base de données, ce qui fonde le rapprochement."
+   }
+  ]
+ },
+ {
+  "chapitre": "e4e625b7",
+  "citations": [
+   {
+    "texte": "On remarquera que, vu les simplifications supposées sur le choix des symboles, l'interprétation D1 est en fait une interprétation de Herbrand.",
+    "page": 101,
+    "axe": "02-ia-technique-academique",
+    "theme": "Interprétation de Herbrand",
+    "portee": "Le contenu d'une base coïncide avec l'univers syntaxique de son propre langage."
+   },
+   {
+    "texte": "Dans ces travaux, seules les contraintes d'intégrité que l'on peut exprimer en logique du premier ordre sont considérées.",
+    "page": 101,
+    "axe": "02-ia-technique-academique",
+    "theme": "Périmètre de la formalisation",
+    "portee": "Une restriction qu'il faut connaître avant de conclure sur ce que le modèle capture."
+   }
+  ]
+ },
+ {
+  "chapitre": "7dd0be79",
+  "citations": [
+   {
+    "texte": "Le langage de la logique du premier ordre est donc un langage plus puissant que l'algèbre pour exprimer des requêtes sur les bases de données.",
+    "page": 102,
+    "axe": "02-ia-technique-academique",
+    "theme": "Logique et algèbre relationnelle",
+    "portee": "Situe l'écart d'expressivité entre le langage théorique et le langage effectivement implémenté."
+   },
+   {
+    "texte": "Dans la section suivante, nous verrons que c'est un langage trop puissant puisqu'il autorise l'expression de formules qui n'ont pas de sens dans le cadre de la modélisation et des bases de données en particulier.",
+    "page": 102,
+    "axe": "02-ia-technique-academique",
+    "theme": "Trop puissant pour être sûr",
+    "portee": "Un excès d'expressivité est un défaut quand il autorise des énoncés dépourvus de sens."
+   }
+  ]
+ },
+ {
+  "chapitre": "bc00745b",
+  "citations": [
+   {
+    "texte": "Les seules formules qu'il convient d'écrire dans une activité de modélisation de bases de données sont des formules indépendantes du domaine.",
+    "page": 103,
+    "axe": "02-ia-technique-academique",
+    "theme": "Règle de bonne modélisation",
+    "portee": "Critère simple à énoncer, dont le chapitre montre aussitôt qu'il est indécidable."
+   },
+   {
+    "texte": "Malheureusement, la classe des formules indépendantes du domaine n'est pas décidable.",
+    "page": 103,
+    "axe": "02-ia-technique-academique",
+    "theme": "Un bon critère non vérifiable",
+    "portee": "Cas typique où l'on doit se rabattre sur des sous-classes plus étroites mais décidables."
+   }
+  ]
+ },
+ {
+  "chapitre": "fa41bb69",
+  "citations": [
+   {
+    "texte": "Cette équivalence consolide chacune des « recettes » ayant permis de contourner le problème initial et permet, en fonction du contexte, l'usage de l'une d'entre elles sans perte de généralité.",
+    "page": 104,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quatre chemins, un même résultat",
+    "portee": "Quand plusieurs solutions ad hoc se révèlent équivalentes, chacune devient légitime."
+   },
+   {
+    "texte": "Identifier que la formule que l'on écrit est dépendante du domaine permet de garantir une erreur de modélisation, même si malheureusement, repérer que la formule que l'on écrit est indépendante du domaine n'exclut pas une erreur de modélisation.",
+    "page": 104,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ce qu'un test peut et ne peut pas dire",
+    "portee": "Un critère qui détecte l'erreur sans garantir la justesse, situation courante bien au-delà de l'informatique."
+   }
+  ]
+ },
+ {
+  "chapitre": "304e8b29",
+  "citations": [
+   {
+    "texte": "De manière générale, le modèle relationnel ne permet pas d'exprimer des propriétés complexes et des lois générales que les données sont censées respecter si toutefois on souhaite que celles-ci soient conformes aux applications modélisées.",
+    "page": 105,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pauvreté sémantique du modèle",
+    "portee": "La structure seule ne dit rien de ce que les données doivent respecter."
+   },
+   {
+    "texte": "comme le typage en programmation, les contraintes d'intégrité sont un véritable levier pour l'optimisation des traitements",
+    "page": 105,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La contrainte comme levier",
+    "portee": "Ce qui semble limiter le système est en réalité ce qui permet de l'accélérer."
+   },
+   {
+    "texte": "Une contrainte statique est une propriété, aussi complexe soit-elle, qui peut être vérifiée par simple examen de l'état courant de la base de données",
+    "page": 105,
+    "axe": "02-ia-technique-academique",
+    "theme": "Contrainte statique",
+    "portee": "Définition par le moyen de vérification, non par la complexité de l'énoncé."
+   }
+  ]
+ },
+ {
+  "chapitre": "9565ac93",
+  "citations": [
+   {
+    "texte": "Le système d'inférence le plus connu est certainement celui d'Armstrong pour les dépendances fonctionnelles.",
+    "page": 106,
+    "axe": "02-ia-technique-academique",
+    "theme": "Axiomatiser les dépendances",
+    "portee": "Un petit jeu de règles suffit à dériver toutes les dépendances fonctionnelles impliquées."
+   },
+   {
+    "texte": "un ensemble de formules est dit satisfaisable dès lors qu'il a un modèle, celui-ci pouvant fort bien être vide, alors qu'en base de données, un ensemble de contraintes est cohérent si il admet au moins un modèle non vide",
+    "page": 106,
+    "axe": "02-ia-technique-academique",
+    "theme": "Cohérence et satisfaisabilité",
+    "portee": "Une nuance mince en logique, décisive en pratique : un schéma qu'aucune donnée ne peut peupler est inutile."
+   }
+  ]
+ },
+ {
+  "chapitre": "bda8e662",
+  "citations": [
+   {
+    "texte": "Dans des cas extrêmes, l'optimisation sémantique peut se substituer à l'évaluation de la requête et produire la réponse sans accès aux données.",
+    "page": 107,
+    "axe": "02-ia-technique-academique",
+    "theme": "Répondre sans lire les données",
+    "portee": "Le raisonnement sur le modèle remplace parfois entièrement le calcul sur les faits."
+   },
+   {
+    "texte": "Les contraintes d'intégrité permettent de contrôler l'évolution de la base de données et donc le processus de vérification de la cohérence intervient lors des mises à jour.",
+    "page": 107,
+    "axe": "02-ia-technique-academique",
+    "theme": "Contrôler l'évolution",
+    "portee": "La contrainte agit au moment du changement, ce qui décide de toute la stratégie de vérification."
+   }
+  ]
+ },
+ {
+  "chapitre": "c71abeac",
+  "citations": [
+   {
+    "texte": "Une contrainte de transition, pour être vérifiée, nécessite l'accès aux états de la base de données avant et après modification.",
+    "page": 108,
+    "axe": "02-ia-technique-academique",
+    "theme": "Contrainte de transition",
+    "portee": "Certains engagements ne se vérifient qu'en comparant deux instants."
+   },
+   {
+    "texte": "Une contrainte dynamique nécessite a priori l'historique entier de la base de données, i.e. les états de la base successifs depuis leur création.",
+    "page": 108,
+    "axe": "02-ia-technique-academique",
+    "theme": "Contrainte dynamique",
+    "portee": "Vérifier certaines règles suppose de conserver toute la mémoire du système."
+   }
+  ]
+ },
+ {
+  "chapitre": "4100f96a",
+  "citations": [
+   {
+    "texte": "Si le choix entre représentation implicite et représentation explicite n'a pas d'impact au niveau de la représentation des données, il n'en est absolument pas de même pour les langages de requêtes du point de vue de leur expressivité.",
+    "page": 109,
+    "axe": "02-ia-technique-academique",
+    "theme": "Représenter et interroger",
+    "portee": "Un choix de représentation neutre pour les données peut être décisif pour ce qu'on pourra demander."
+   },
+   {
+    "texte": "les travaux de [Toman, 2003] montrent qu'aucune extension des opérateurs temporels ne permettra d'atteindre ce but",
+    "page": 109,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une impasse démontrée",
+    "portee": "Résultat négatif qui évite à toute une communauté de poursuivre une voie sans issue."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f7d8d6f",
+  "citations": [
+   {
+    "texte": "Le gain de telles méthodes réside dans le stockage des seules informations pertinentes à la vérification des contraintes.",
+    "page": 110,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ne garder que le nécessaire",
+    "portee": "Principe d'économie applicable à tout système qui doit se souvenir pour vérifier."
+   },
+   {
+    "texte": "Enfin, a contrario, lorsqu'une requête classique produit une réponse vide, une version relaxée (et donc moins restrictive) de la requête a plus de chances d'être satisfaite par certains des objets de la base.",
+    "page": 110,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Relaxer plutôt que renoncer",
+    "portee": "Face à une réponse vide, assouplir la question vaut mieux que la répéter."
+   }
+  ]
+ },
+ {
+  "chapitre": "119cb9ab",
+  "citations": [
+   {
+    "texte": "Généralement, les prédicats flous élémentaires correspondent à des adjectifs du langage naturel tels que jeune, grand, rapide.",
+    "page": 111,
+    "axe": "02-ia-technique-academique",
+    "theme": "Prédicats graduels",
+    "portee": "Formalise ce que le langage courant exprime sans frontière nette."
+   },
+   {
+    "texte": "Il est possible d'altérer la sémantique d'un prédicat au moyen d'un modificateur, qui est généralement associé à un adverbe du langage naturel.",
+    "page": 111,
+    "axe": "02-ia-technique-academique",
+    "theme": "Les adverbes comme opérateurs",
+    "portee": "Montre qu'une nuance de langue ordinaire peut recevoir une définition mathématique."
+   }
+  ]
+ },
+ {
+  "chapitre": "b6a0e772",
+  "citations": [
+   {
+    "texte": "Notons que l'approche floue fournit un cadre d'interrogation compositionnel, contrairement à la plupart des autres approches de requêtes à préférences (quantitatives et qualitatives).",
+    "page": 112,
+    "axe": "02-ia-technique-academique",
+    "theme": "Compositionnalité",
+    "portee": "Pouvoir composer les opérations est un avantage structurel que peu d'approches conservent."
+   },
+   {
+    "texte": "Le langage SQLf décrit dans [Bosc et Pivert, 1995 ; Pivert et Bosc, 2012] étend quant à lui la norme SQL de façon à pouvoir gérer des requêtes floues.",
+    "page": 112,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Étendre un standard existant",
+    "portee": "Une théorie s'impose plus vite quand elle s'ajoute à l'outil déjà en usage."
+   }
+  ]
+ },
+ {
+  "chapitre": "358fdebd",
+  "citations": [
+   {
+    "texte": "Clairement, l'approche fondée sur l'ordre de Pareto ne requiert aucune hypothèse de commensurabilité entre les degrés de satisfaction associés aux diverses préférences élémentaires, contrairement à l'approche floue par exemple.",
+    "page": 113,
+    "axe": "02-ia-technique-academique",
+    "theme": "Comparer sans commune mesure",
+    "portee": "On peut ordonner des choix sans jamais avoir à mettre les critères sur une même échelle."
+   },
+   {
+    "texte": "Dans ce type d'approche, quand les préférences concernent de multiples attributs, le risque d'obtenir beaucoup de n-uplets incomparables est important.",
+    "page": 113,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le prix de l'incomparabilité",
+    "portee": "Refuser de tout ramener à une échelle unique laisse des choix qu'aucune règle ne départage."
+   }
+  ]
+ },
+ {
+  "chapitre": "ee588b45",
+  "citations": [
+   {
+    "texte": "A l'aide d'un CP-net, un utilisateur peut décrire comment ses préférences sur les valeurs d'une variable dépendent des valeurs d'autres variables.",
+    "page": 114,
+    "axe": "02-ia-technique-academique",
+    "theme": "Préférences conditionnelles",
+    "portee": "Formalise le fait qu'on ne préfère pas la même chose selon le contexte."
+   },
+   {
+    "texte": "De toute évidence, avec la sémantique ceteris paribus, le nombre de n-uplets incomparables est en général beaucoup plus élevé qu'avec la sémantique totalitaire.",
+    "page": 114,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux lectures d'une préférence",
+    "portee": "Le sens qu'on donne à toutes choses égales par ailleurs change la forme du résultat."
+   }
+  ]
+ },
+ {
+  "chapitre": "9a861dfc",
+  "citations": [
+   {
+    "texte": "Le premier bloc contient les éléments les plus préférés, et dans tout autre bloc, pour chaque élément, il existe un élément plus préféré dans le bloc précédent.",
+    "page": 115,
+    "axe": "02-ia-technique-academique",
+    "theme": "Réponse par blocs ordonnés",
+    "portee": "Compromis entre l'ordre total, souvent artificiel, et l'ordre partiel, souvent inexploitable."
+   },
+   {
+    "texte": "Ceci permet de distinguer la notion de « n-uplets également préférés » de celle de « n-uplets incomparables ».",
+    "page": 115,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Égal n'est pas incomparable",
+    "portee": "Distinction fine mais décisive : ne pas savoir départager n'est pas juger équivalent."
+   }
+  ]
+ },
+ {
+  "chapitre": "4cd76061",
+  "citations": [
+   {
+    "texte": "La construction de médiateurs [Wiederhold, 2002] au-dessus de bases de données multiples et hétérogènes a pour but de donner l'illusion aux utilisateurs qu'ils interrogent un système de gestion de données centralisé et homogène en leur offrant comme interface de requêtes un schéma global unique (appelé aussi schéma médiateur).",
+    "page": 116,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le médiateur",
+    "portee": "Unifier l'accès sans centraliser les données, réponse concrète à l'hétérogénéité des sources."
+   },
+   {
+    "texte": "Formellement, une vue est une requête (i.e., une formule logique) définie sur les relations du schéma médiateur et identifiée par un nom.",
+    "page": 116,
+    "axe": "02-ia-technique-academique",
+    "theme": "La vue comme requête nommée",
+    "portee": "Définition minimale qui suffit à poser tout le problème du calcul des réponses."
+   }
+  ]
+ }
+]

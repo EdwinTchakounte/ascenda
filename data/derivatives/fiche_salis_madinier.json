@@ -1,0 +1,137 @@
+{
+ "document_id": "2b7c192d-3c49-4ce3-95d0-e0555859978c",
+ "titre_normalise": "Le guide de l'intelligence artificielle au travail. Vos droits face aux algorithmes",
+ "auteurs": [
+  "Franca Salis-Madinier"
+ ],
+ "annee": 2022,
+ "type_ouvrage": "guide juridique",
+ "niveau": "intermediaire",
+ "public_cible": "Représentants du personnel, délégués syndicaux, responsables des ressources humaines, salariés confrontés à une décision automatisée. Éditions Eyrolles, 2022, deux cent vingt et une pages, ISBN 978-2-416-00476-6, préface de Cécile Dejoux, propos recueillis par Florence Vielcanet. L'autrice siège au Comité économique et social européen à Bruxelles, où elle a été rapporteure de plusieurs avis sur les transitions numériques. Quatre parties : contexte international, régulation européenne, débat français, exigences syndicales, suivies d'entretiens de terrain.",
+ "these_centrale": "Les systèmes automatisés entrent dans les entreprises sans être discutés, et les travailleurs sont les grands absents des textes qui les encadrent. Le guide établit d'abord ce fait, puis renverse la perspective : le droit du travail existant offre déjà des leviers concrets pour poser des questions, obtenir des informations, exiger une formation et négocier, à condition de savoir lesquels et de les activer avant l'introduction de la technologie et non après.",
+ "idees_force": [
+  {
+   "titre": "Les travailleurs sont exclus des garanties de transparence",
+   "explication": "C'est le constat central et le plus grave. Dans les textes européens en préparation, hormis sur la reconnaissance faciale et l'interprétation des émotions, les garanties de transparence ne bénéficient qu'aux utilisateurs, catégorie dont les travailleurs sont exclus. Le projet admet de fait un large éventail d'outils de surveillance des salariés sans s'interroger sur leur bien-fondé ni sur leur compatibilité avec les valeurs affichées. L'autrice en tire la conséquence pratique : ce qui n'est pas garanti par la loi devra être obtenu par la négociation.",
+   "page": 59
+  },
+  {
+   "titre": "Cinq domaines suffisent à décrire les usages",
+   "explication": "La parole et le langage, la reconnaissance visuelle, la robotique, l'automatisation des processus, et l'optimisation des connaissances par l'analyse, l'alerte et la prévision. Cette classification par l'usage, et non par la technique, permet à un représentant du personnel de reconnaître ce qui arrive dans son entreprise sans rien savoir des algorithmes.",
+   "page": 16
+  },
+  {
+   "titre": "Trois catégories de tâches à distinguer collectivement",
+   "explication": "Réfléchir à la transformation d'un métier consiste à séparer les tâches qui pourront être faites par la machine, celles où elle assistera l'humain, et celles que l'on ne pourra faire que grâce à elle. Cette troisième catégorie est celle que les discussions oublient, et c'est celle qui justifie l'investissement. Le tri doit être fait collectivement, avec les représentants du personnel, avant le choix de l'outil.",
+   "page": 16
+  },
+  {
+   "titre": "Le déséquilibre des investissements, en chiffres",
+   "explication": "Selon la Banque européenne d'investissement, les États-Unis et la Chine représentent à eux deux plus de quatre-vingts pour cent des vingt-cinq milliards d'euros investis annuellement en fonds propres dans l'intelligence artificielle et les technologies de registre distribué, tandis que les vingt-sept pays européens n'en représentent que sept pour cent, avec un déficit d'investissement estimé entre cinq et dix milliards d'euros par an. Le principe qui gouverne ce marché est résumé par la formule le plus gros remporte toute la mise. Pour un pays africain, ces ordres de grandeur situent d'emblée le rapport de force.",
+   "page": 27
+  },
+  {
+   "titre": "Sans normes publiques, les entreprises feront les leurs",
+   "explication": "Formulation reprise d'un responsable syndical européen : si l'on n'a pas de normes au niveau des pays, ce sont les entreprises qui prendront le pouvoir avec leurs propres normes, et alors tout est possible. C'est l'argument le plus fort en faveur d'une régulation, et il ne repose pas sur la méfiance envers la technologie mais sur l'analyse du vide.",
+   "page": 160
+  },
+  {
+   "titre": "Trois catégories de risque, trois traitements",
+   "explication": "L'approche européenne distingue les usages produisant des effets juridiques, comme une procédure de recrutement, ceux présentant des dangers mortels, comme les armes, et ceux pouvant causer des dégâts et des blessures. Dans les domaines jugés à haut risque, santé, transports, police, justice, les systèmes devront être transparents, traçables et garantir un contrôle humain. Cette grille est reprenable telle quelle par toute administration qui doit encadrer ses propres usages.",
+   "page": 55
+  },
+  {
+   "titre": "L'objection de fond à la régulation européenne",
+   "explication": "Des militants et des universitaires estiment le texte insuffisant parce qu'il remet l'appréciation de la conformité entre les mains des fournisseurs eux-mêmes. Autrement dit, celui qui vend le système déclare qu'il est conforme. C'est la faiblesse structurelle de tout dispositif fondé sur l'autoévaluation, et elle vaut d'être connue avant de transposer ce modèle ailleurs.",
+   "page": 58
+  },
+  {
+   "titre": "Les leviers juridiques concrets, énumérés et référencés",
+   "explication": "Interroger le comité social et économique ; exiger l'inscription du sujet dans la base de données économiques et sociales, dont le contenu est fixé par décret et couvre l'année écoulée, l'année en cours et trois années de perspectives ; passer par les administrateurs représentant les salariés, obligatoires dans les groupes d'au moins mille salariés en France ou cinq mille dans le monde, au moins deux si le conseil dépasse huit membres ; exiger la formation d'au moins quarante heures à laquelle ces administrateurs ont droit ; saisir l'autorité de protection des données ; demander un audit d'algorithme ; déclencher une alerte protégée si un procédé fait peser un risque grave sur la santé publique ou l'environnement. L'autrice précise qu'un employeur ne peut pas invoquer la présence de données personnelles pour refuser de transmettre des documents aux représentants du personnel.",
+   "page": 111
+  },
+  {
+   "titre": "Demander la création d'un comité d'éthique interne",
+   "explication": "L'exemple donné est celui d'un assureur qui, en juin 2020, s'est doté d'un comité d'éthique de l'intelligence artificielle, d'une gouvernance dédiée et d'un responsable identifié, rattachés au secrétariat général et à la direction financière. Un comité d'éthique interne sert à mesurer et à définir les limites à donner aux machines. C'est une revendication accessible, qui ne coûte rien et qui crée un lieu où les questions peuvent être posées.",
+   "page": 111
+  },
+  {
+   "titre": "Le refus de communiquer la logique d'un algorithme a été jugé illégal",
+   "explication": "Dans le cas d'un dispositif national d'affectation des bacheliers, le refus de communiquer les rouages de l'algorithme de classement a été jugé contraire au droit, faute de permettre à l'intéressé de connaître et de contester la logique sous-tendant un traitement automatisé produisant des effets juridiques à son égard. Ce précédent vaut argument dans toute contestation d'une décision automatisée.",
+   "page": 174
+  },
+  {
+   "titre": "Trois lois du travail syndical, valables ici comme ailleurs",
+   "explication": "Un délégué d'une entreprise d'ingénierie nucléaire résume sa pratique : se renseigner, questionner, donner du sens. Se renseigner sur le terrain auprès des salariés, des experts, des démonstrations et des publications, ce qui produit l'autoformation du groupe. Questionner en instance sur le volume d'heures de formation prévu et sur la stratégie de conduite du changement. Donner du sens par des analyses. Dans son cas, l'entreprise a finalement décidé de ne pas créer de service dédié mais de mettre l'outil entre les mains de chaque métier, et de traiter l'acquisition des données comme la priorité.",
+   "page": 160
+  },
+  {
+   "titre": "Simuler le changement avant qu'il arrive",
+   "explication": "Une fédération professionnelle a obtenu le financement d'un projet consistant à simuler les changements dans des entreprises tests avant leur introduction réelle, afin d'observer comment les organisations s'y adaptent et de retenir les formes les plus favorables aux travailleurs comme à l'entreprise. Cette méthode, qui transforme la négociation en expérimentation documentée, est la proposition la plus originale du livre.",
+   "page": 101
+  },
+  {
+   "titre": "Du contrôle à la confiance",
+   "explication": "Sur la surveillance des salariés à distance, l'autrice pose que des techniques très puissantes existent et que leur emploi relève d'un choix de management, non d'une fatalité technique. Elle appelle à passer d'une culture du contrôle et du présentéisme à une culture des résultats et de la confiance. La disponibilité d'un outil n'oblige personne à s'en servir.",
+   "page": 92
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Comité social et économique",
+   "definition": "Instance représentative du personnel, lieu principal où l'introduction d'une technologie peut être interrogée et documentée."
+  },
+  {
+   "terme": "Base de données économiques et sociales",
+   "definition": "Ensemble d'informations que l'employeur doit mettre à disposition des représentants du personnel, couvrant l'année écoulée, l'année en cours et trois années de perspectives."
+  },
+  {
+   "terme": "Administrateur représentant les salariés",
+   "definition": "Membre du conseil d'administration élu ou désigné par les salariés, obligatoire au-delà de certains seuils, disposant d'un droit à formation d'au moins quarante heures."
+  },
+  {
+   "terme": "Droit d'alerte éthique",
+   "definition": "Faculté pour un travailleur de signaler de bonne foi un procédé faisant peser un risque grave sur la santé publique ou l'environnement, assortie d'une protection."
+  },
+  {
+   "terme": "Audit d'algorithme",
+   "definition": "Examen indépendant du fonctionnement et des effets d'un système automatisé, revendication centrale du guide."
+  },
+  {
+   "terme": "IA à haut risque",
+   "definition": "Catégorie réglementaire couvrant les usages en santé, transports, police et justice, soumis à transparence, traçabilité et contrôle humain."
+  },
+  {
+   "terme": "Approche centrée sur l'humain",
+   "definition": "Position européenne se voulant distincte à la fois du laisser-faire et de la surveillance d'État, et fondée sur sept exigences pour une IA digne de confiance."
+  },
+  {
+   "terme": "Décision entièrement automatisée",
+   "definition": "Décision produisant des effets juridiques prise sans intervention humaine, dont la logique doit pouvoir être connue et contestée par la personne concernée."
+  },
+  {
+   "terme": "Dialogue social en amont",
+   "definition": "Principe consistant à discuter du choix des technologies avant leur acquisition, et non de leurs conséquences après leur déploiement."
+  },
+  {
+   "terme": "Biais de données",
+   "definition": "Distorsion héritée des données d'apprentissage, qui se traduit en discrimination lors du recrutement, de la promotion ou de l'accès à la formation."
+  },
+  {
+   "terme": "Normes techniques",
+   "definition": "Spécifications par lesquelles se décide en pratique ce qu'un système a le droit de faire. Faute de normes publiques, ce sont les entreprises qui les écrivent."
+  }
+ ],
+ "a_lire_si": "Vous représentez des travailleurs, vous conseillez une organisation syndicale ou une administration, ou vous voulez comprendre ce qu'un salarié peut opposer à une décision automatisée. C'est le seul ouvrage du fonds écrit du point de vue de celui qui subit ces systèmes plutôt que de celui qui les achète, et il est entièrement construit sur des textes et des cas vérifiables. Les entretiens de terrain avec des délégués de plusieurs secteurs sont sa partie la plus instructive : ils montrent ce qui a effectivement fonctionné.",
+ "a_eviter_si": "Vous cherchez de la technique ou des usages. Le guide ne dit presque rien du fonctionnement des systèmes et ne cherche pas à l'expliquer. Surtout, tout l'appareil juridique est français et européen : articles du code du travail, du code de commerce, autorité de protection des données, instances représentatives. Les mécanismes sociaux décrits, dialogue en amont, formation, audit, transparence, sont transposables ; les fondements juridiques ne le sont pas et doivent être remplacés par les textes du pays concerné. Le livre est arrêté en 2022, avant l'adoption définitive du règlement européen.",
+ "prerequis": [
+  "Notions de droit du travail"
+ ],
+ "controverses": [
+  "La conformité des systèmes doit-elle être appréciée par leurs fournisseurs ou par un tiers indépendant ? Le guide expose la critique syndicale et universitaire du choix européen sans que le débat soit tranché.",
+  "Une instance indépendante capable de dire ce qui est acceptable, saisissable par le gouvernement comme par les citoyens, avait été proposée en 2018 dans un rapport parlementaire français. Cette suggestion est restée sans suite, ce que l'autrice constate sans en analyser les raisons.",
+  "La reconnaissance faciale de masse est présentée comme un affrontement entre sécurité et libertés fondamentales, sans que le guide propose de critère de partage.",
+  "La position des employeurs de l'industrie est exposée dans un chapitre distinct, mais le livre reste un plaidoyer syndical : il faut le lire comme tel et chercher ailleurs la contradiction."
+ ],
+ "confiance": 0.9
+}

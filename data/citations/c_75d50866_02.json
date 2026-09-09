@@ -1,0 +1,37 @@
+[
+ {"chapitre":"fc747100","citations":[
+  {"texte":"DeepSeek excelle dans la création de profils psychologiques complexes.","page":19,"axe":"03-ia-outils-pratique-prompting","theme":"Une specialisation affirmee","portee":"Repetee sans demonstration tout au long du livre. Le lecteur doit verifier lui-meme par comparaison."}
+ ]},
+ {"chapitre":"462d8c93","citations":[
+  {"texte":"Une intrigue captivante est le moteur de votre roman. Elle pousse vos lecteurs à tourner les pages, impatients de découvrir ce qui se passe ensuite.","page":21,"axe":"08-litterature-romans","theme":"L'intrigue comme moteur","portee":"Definition fonctionnelle : ce qui compte n'est pas ce qui arrive mais ce qui donne envie de continuer."},
+  {"texte":"Un conflit central : Il doit être clair et présent dès les premiers chapitres.","page":21,"axe":"08-litterature-romans","theme":"Poser le conflit tot","portee":"Erreur frequente des debutants : retarder le conflit en croyant installer le decor."}
+ ]},
+ {"chapitre":"40480089","citations":[
+  {"texte":"Point clé : Terminez l’Acte 1 par un événement déclencheur qui bouleverse l’équilibre initial.","page":22,"axe":"08-litterature-romans","theme":"Le declencheur","portee":"Repere structurel precis, verifiable dans presque tout recit populaire."},
+  {"texte":"Twists et surprises : Faites des révélations inattendues qui changent la perception des événements.","page":22,"axe":"08-litterature-romans","theme":"Le retournement","portee":"La revelation ne doit pas seulement surprendre : elle doit relire ce qui precede."}
+ ]},
+ {"chapitre":"117a0903","citations":[
+  {"texte":"Un cliffhanger est un événement ou une révélation qui pousse le lecteur à continuer.","page":23,"axe":"08-litterature-romans","theme":"Le suspens de fin de chapitre","portee":"Technique simple et efficace, heritee du feuilleton. Elle explique le decoupage des romans populaires."},
+  {"texte":"Introduisez des indices qui mènent le lecteur dans la mauvaise direction.","page":23,"axe":"08-litterature-romans","theme":"La fausse piste","portee":"Le lecteur doit pouvoir se tromper de bonne foi : c'est la condition d'une surprise honnete."}
+ ]},
+ {"chapitre":"8945ecc6","citations":[
+  {"texte":"Après une scène intense, offrez une pause pour approfondir les émotions des personnages.","page":24,"axe":"08-litterature-romans","theme":"Alterner tension et repos","portee":"Regle de rythme. Une tension continue cesse d'etre percue comme une tension."},
+  {"texte":"Évitez que les personnages tombent amoureux trop rapidement. Faites grandir leur relation au fil des épreuves.","page":24,"axe":"08-litterature-romans","theme":"Laisser la relation grandir","portee":"La lenteur est ici une technique, non un defaut. Elle produit l'attachement du lecteur."},
+  {"texte":"La romance est plus intéressante lorsqu’elle est compliquée par des malentendus ou des obstacles.","page":24,"axe":"08-litterature-romans","theme":"L'obstacle nourrit la relation","portee":"Principe ancien du recit amoureux, du roman courtois au feuilleton contemporain."}
+ ]},
+ {"chapitre":"93e69729","citations":[
+  {"texte":"ChatGPT excelle dans l’écriture des interactions et des moments de suspense.","page":24,"axe":"03-ia-outils-pratique-prompting","theme":"L'outil pour les scenes","portee":"Affirmation d'usage. Le lecteur gagnera a soumettre la meme consigne aux deux outils pour juger lui-meme."}
+ ]},
+ {"chapitre":"27604824","citations":[
+  {"texte":"Les scènes marquantes sont le cœur de votre roman. Elles captivent vos lecteurs, déclenchent des émotions fortes et restent gravées dans leur esprit.","page":26,"axe":"08-litterature-romans","theme":"Ce dont on se souvient","portee":"Un roman se retient par quelques scenes, non par son intrigue complete."},
+  {"texte":"Un objectif clair : Chaque scène doit avoir une raison d’être et faire avancer l’histoire.","page":26,"axe":"08-litterature-romans","theme":"Toute scene doit servir","portee":"Critere de coupe a la revision : une scene sans objectif est une scene a supprimer."}
+ ]},
+ {"chapitre":"a69108da","citations":[
+  {"texte":"Une scène doit commencer de manière à capter immédiatement l’attention du lecteur.","page":27,"axe":"08-litterature-romans","theme":"L'entree en scene","portee":"Vaut aussi pour un article ou un discours : les premieres lignes decident de la suite."},
+  {"texte":"Utilisez les cinq sens pour plonger le lecteur dans l’action.","page":27,"axe":"08-litterature-romans","theme":"Ecrire par les sens","portee":"Technique concrete et immediatement applicable, qui distingue une scene vecue d'un resume."}
+ ]},
+ {"chapitre":"660d5d12","citations":[
+  {"texte":"Une bonne scène de suspense repose sur une menace palpable qui met les personnages en danger.","page":28,"axe":"08-litterature-romans","theme":"Une menace perceptible","portee":"Le danger abstrait ne produit pas de tension : il faut qu'il soit sensible dans la scene."},
+  {"texte":"Une scène de suspense devient plus captivante si les choses ne se passent pas comme prévu.","page":28,"axe":"08-litterature-romans","theme":"Contrarier le plan","portee":"L'echec relance le recit la ou la reussite le termine."}
+ ]}
+]

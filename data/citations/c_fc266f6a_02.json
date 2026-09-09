@@ -1,0 +1,243 @@
+[
+ {
+  "chapitre": "120309df",
+  "citations": [
+   {
+    "texte": "il s'agit bien de suites finies d'instructions non ambiguës qu'on donne, non pas à un humain, mais à la machine en langage codé pour lui indiquer les opérations à accomplir pour parvenir à résoudre un problème.",
+    "page": 37,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce qu'est un algorithme",
+    "portee": "Une définition simple qui démystifie un mot devenu synonyme de pouvoir occulte."
+   },
+   {
+    "texte": "je me rends compte qu'à peine 15 % du public à qui je m'adresse a expérimenté par lui-même les dernières réalisations des IA génératives.",
+    "page": 38,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Juger sans avoir essayé",
+    "portee": "Beaucoup d'opinions tranchées sur ces outils viennent de gens qui ne les ont jamais utilisés."
+   },
+   {
+    "texte": "la question dite de « l'alignement », c'est-à-dire des biais qu'on introduit dans la machine au nom d'une vision du monde éthique, politique ou spirituelle particulière, est plus que sérieuse.",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les valeurs inscrites dans la machine",
+    "portee": "Derrière un outil qui paraît neutre se trouvent toujours des choix moraux faits par quelqu'un."
+   },
+   {
+    "texte": "Car si on peut imaginer des IA wokistes, rien n'interdit d'en fabriquer des staliniennes ou nazies. Ce n'est qu'une question de choix pour les programmateurs.",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qui vaut dans un sens vaut dans l'autre",
+    "portee": "Le pouvoir d'orienter un système vers des valeurs le rend orientable vers n'importe lesquelles."
+   },
+   {
+    "texte": "il ne faut pas faire peser sur l'IA les hallucinations que les humains y introduisent de manière délibérée",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Distinguer la faute de l'outil et celle de l'auteur",
+    "portee": "Confondre les défauts imposés et les défauts intrinsèques empêche de corriger l'un comme l'autre."
+   }
+  ]
+ },
+ {
+  "chapitre": "f17a40cf",
+  "citations": [
+   {
+    "texte": "la machine s'auto-éduque de telle sorte qu'elle dépasse les prévisions des humains qui l'ont créée.",
+    "page": 41,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une créature imprévisible à son créateur",
+    "portee": "Le concepteur d'un système apprenant ne peut plus garantir à l'avance ce que celui-ci fera."
+   },
+   {
+    "texte": "on ne sait ni comment ni pourquoi elle a répondu de telle façon et pas de telle autre aux questions qu'on lui pose.",
+    "page": 41,
+    "axe": "02-ia-technique-academique",
+    "theme": "La boîte noire",
+    "portee": "L'impossibilité d'expliquer une décision pose problème dès qu'elle engage la santé, l'emploi ou la liberté."
+   },
+   {
+    "texte": "elles « raisonnent » de manière admirable au sens « computationnel » du terme, c'est-à-dire au sens où elles résolvent des problèmes, répondent à des questions, mais elles ne « pensent » pas au sens où la pensée humaine est inséparable de la conscience de soi",
+    "page": 42,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Raisonner n'est pas penser",
+    "portee": "La distinction permet de reconnaître la performance sans lui attribuer une vie intérieure."
+   },
+   {
+    "texte": "l'imitant et l'imité, la copie et le copié n'étant pas identiques, à vrai dire pas du même ordre, même si la ressemblance est parfois bluffante.",
+    "page": 42,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La copie et l'original",
+    "portee": "Une ressemblance parfaite ne fait pas une identité, et le débat sur l'IA forte tient tout entier là."
+   }
+  ]
+ },
+ {
+  "chapitre": "e5e3cda3",
+  "citations": [
+   {
+    "texte": "elle est dite « étroite » au sens où, comme un nageur dans le couloir de sa piscine, elle ne sort pas du chemin qu'on lui a tracé.",
+    "page": 43,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Une puissance sans largeur",
+    "portee": "Une image qui rend immédiatement compréhensible la limite des systèmes spécialisés."
+   }
+  ]
+ },
+ {
+  "chapitre": "1439cee5",
+  "citations": [
+   {
+    "texte": "L'IA faible peut aujourd'hui séquencer le génome d'une cellule cancéreuse en quelques minutes là où le cerveau humain mettrait quarante ans",
+    "page": 44,
+    "axe": "11-sciences-environnement",
+    "theme": "Ce que change la vitesse",
+    "portee": "Certains résultats médicaux ne sont pas seulement plus rapides, ils étaient auparavant impossibles."
+   },
+   {
+    "texte": "il lui faut parfois des efforts considérables pour trouver la solution d'un problème qu'un enfant de 5 ans résout mieux qu'elle.",
+    "page": 45,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le facile qui reste difficile",
+    "portee": "Un système peut être surhumain sur une tâche et démuni devant une situation ordinaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "77cdd186",
+  "citations": [
+   {
+    "texte": "la conscience de soi, la faculté de prendre des décisions et les émotions",
+    "page": 46,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les trois marques d'une IA forte",
+    "portee": "Trois critères précis pour évaluer les annonces qui prêtent une conscience aux machines."
+   },
+   {
+    "texte": "le problème n'est pas de savoir s'il est possible que des machines deviennent humaines, mais de comprendre enfin que nous sommes, nous, déjà de part en part des machines !",
+    "page": 47,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le renversement matérialiste",
+    "portee": "Le débat sur l'IA forte porte moins sur les machines que sur l'idée que l'on se fait de l'humain."
+   }
+  ]
+ },
+ {
+  "chapitre": "4f55369e",
+  "citations": [
+   {
+    "texte": "les créateurs humains procèdent de la même manière que les machines, en pillant eux aussi les œuvres du passé !",
+    "page": 51,
+    "axe": "08-litterature-romans",
+    "theme": "Nul ne crée à partir de rien",
+    "portee": "L'argument du pillage se retourne : toute création humaine se nourrit de ce qui l'a précédée."
+   },
+   {
+    "texte": "En bref, la créativité ne part jamais de rien, elle s'enracine toujours dans un passé, dans une tradition, fût-ce pour rompre radicalement avec elle comme dans l'art moderne et contemporain.",
+    "page": 51,
+    "axe": "08-litterature-romans",
+    "theme": "Créer suppose d'avoir reçu",
+    "portee": "Se former à une tradition n'est pas l'ennemi de l'originalité, c'en est la condition."
+   },
+   {
+    "texte": "le mépris, souvent lié à l'ignorance de la langue anglaise et de la culture anglo-saxonne, bafoue les principes les plus élémentaires d'une éthique de la discussion et de l'argumentation",
+    "page": 52,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Discuter avant de mépriser",
+    "portee": "Rejeter une thèse sans l'avoir comprise n'est pas de l'exigence intellectuelle mais son contraire."
+   },
+   {
+    "texte": "Notre cerveau, écrit Miller, est un système de traitement de l'information.",
+    "page": 52,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La thèse computationnelle en une phrase",
+    "portee": "De cette prémisse découle toute la conviction qu'une machine pourra un jour être créatrice et consciente."
+   },
+   {
+    "texte": "ce qui est le plus facile pour un humain (lacer ses chaussures, casser un œuf pour faire une omelette, changer une ampoule, etc.) est souvent ce qui sera le plus difficile pour un robot, et réciproquement.",
+    "page": 55,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le paradoxe de Moravec",
+    "portee": "Nos savoir-faire corporels les plus banals sont les plus difficiles à reproduire."
+   },
+   {
+    "texte": "l'IA n'est qu'un outil, un instrument, comme peut l'être un pinceau pour un peintre, et qu'en tout état de cause, il faut transmettre à la machine son inspiration créatrice pour que l'outil se mette en marche",
+    "page": 57,
+    "axe": "08-litterature-romans",
+    "theme": "L'outil et l'intention",
+    "portee": "Défense possible de l'artiste qui compose avec la machine, à condition d'assumer le travail réellement fourni."
+   }
+  ]
+ },
+ {
+  "chapitre": "032b393c",
+  "citations": [
+   {
+    "texte": "faut-il rémunérer (et si oui comment ?) les œuvres dont l'IA s'est servie pour s'éduquer et qui sont encore sous droit",
+    "page": 60,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Payer ce qui a servi à apprendre",
+    "portee": "La question décide de la survie économique des auteurs dont le travail nourrit ces systèmes."
+   },
+   {
+    "texte": "La cour a estimé que les œuvres produites « de manière autonome et aléatoire » par une IA ne pouvaient en aucun cas être brevetées et que seules les œuvres créées par une personne humaine physique pouvaient l'être.",
+    "page": 61,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le droit maintient l'auteur humain",
+    "portee": "Une décision de justice qui ancre la propriété intellectuelle dans la personne, non dans le procédé."
+   },
+   {
+    "texte": "vont devoir évoluer pour tenir compte de cette situation inédite afin de devenir non pas victimes, mais complémentaires de l'IA.",
+    "page": 60,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Évoluer plutôt que subir",
+    "portee": "Pour les métiers exposés, la question pratique est de savoir quelle place occuper à côté de l'outil."
+   }
+  ]
+ },
+ {
+  "chapitre": "5ff1fa6a",
+  "citations": [
+   {
+    "texte": "la médecine n'est pas seulement une science, c'est aussi un art qui applique un savoir théorique à des cas concrets",
+    "page": 65,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Science et art du soin",
+    "portee": "Ce qui résiste à l'automatisation, c'est l'application d'un savoir général à une situation singulière."
+   },
+   {
+    "texte": "l'intelligence artificielle ne remplacera jamais le diagnostic humain. Son objectif n'a jamais été de se substituer aux professionnels de santé, mais de travailler de concert avec eux",
+    "page": 66,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La réponse rassurante des spécialistes",
+    "portee": "L'auteur cite cette position pour la confronter aussitôt aux résultats des études disponibles."
+   }
+  ]
+ },
+ {
+  "chapitre": "b0a6b36f",
+  "citations": [
+   {
+    "texte": "le diagnostic qu'elle parvient à établir est plus juste quand elle est seule que quand elle est assistée et corrigée par un médecin.",
+    "page": 67,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Quand l'humain dégrade le résultat",
+    "portee": "Le résultat oblige à repenser la répartition des rôles plutôt qu'à supposer l'humain toujours correcteur."
+   },
+   {
+    "texte": "le médecin ne fait pas toujours confiance à l'IA. Quand elle arrive au même résultat que lui, le praticien a tendance à changer son diagnostic...",
+    "page": 67,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La défiance qui produit l'erreur",
+    "portee": "Travailler avec un outil suppose d'apprendre quand le suivre, ce qui ne va pas de soi."
+   },
+   {
+    "texte": "il est à proprement parler vital, pour les malades comme pour eux, d'organiser la complémentarité IA-humain",
+    "page": 68,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Organiser la complémentarité",
+    "portee": "La complémentarité ne s'installe pas d'elle-même, elle se conçoit et se met en place délibérément."
+   }
+  ]
+ }
+]

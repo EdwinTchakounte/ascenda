@@ -1,0 +1,142 @@
+{
+ "document_id": "163888f1-ff6b-4922-84f5-daf322d57393",
+ "titre_normalise": "Vivre avec ChatGPT",
+ "auteurs": [
+  "Alexandre Gefen"
+ ],
+ "annee": 2023,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Lecteur cultivé, enseignant, étudiant en lettres ou en sciences humaines, toute personne qui veut penser ces outils plutôt que seulement s'en servir. L'auteur est directeur de recherche au CNRS, spécialiste de littérature française et de théorie littéraire, directeur de la revue en ligne Fabula, et travaille depuis une décennie sur les modèles de langue appliqués aux textes. Cent soixante-cinq pages, seize chapitres en deux parties : comprendre, puis utiliser. Le livre s'ouvre sur une note aux lecteurs demandant s'il a été écrit avec l'outil dont il parle.",
+ "these_centrale": "Ces systèmes ne sont ni une révolution surgie de nulle part, ni de simples perroquets répétant ce qu'ils ont lu. Ils sont l'aboutissement de décennies de travail sur la modélisation mathématique du langage, et l'événement qu'ils constituent est moins technique qu'anthropologique : en imitant nos usages du langage, ils nous obligent à reposer les questions que nous nous posions déjà sur l'auteur, la pensée, la conscience, l'amour et la singularité. Le fil du livre est là : ce que l'intelligence artificielle nous apprend porte moins sur elle que sur nous.",
+ "idees_force": [
+  {
+   "titre": "Perroquets stochastiques, une formule juste mais insuffisante",
+   "explication": "L'expression vient d'Emily Bender et de Timnit Gebru, cette dernière licenciée par Google après avoir critiqué les biais des modèles. Gefen la reprend et la corrige : elle rappelle à juste titre qu'un modèle ne peut que répéter et recombiner, mais elle sous-estime la puissance d'éclaircissement et d'invention qui peut naître de ces recombinaisons. Réduire ces systèmes à de l'autocomplétion sous stéroïdes est une manière d'apaiser notre peur, pas une manière de penser.",
+   "page": 17
+  },
+  {
+   "titre": "Le savoir des relations entre les mots",
+   "explication": "La distinction est essentielle et Gefen y insiste : un grand modèle de langue incorpore non seulement des règles grammaticales et le savoir contenu dans les textes, mais surtout le savoir des relations que les mots entretiennent entre eux. Ce n'est pas une encyclopédie compressée, c'est une cartographie des voisinages. Toute la question de savoir ce que ces systèmes savent tient dans cette nuance.",
+   "page": 17
+  },
+  {
+   "titre": "BLOOM et les langues africaines",
+   "explication": "Point capital et rarement signalé. Le modèle ouvert BLOOM, lancé en 2022 par l'entreprise franco-américaine Hugging Face avec le soutien du CNRS et du ministère français de la recherche, a été conçu pour représenter plus largement les savoirs du monde et couvre quarante-six langues, dont des langues d'Afrique subsaharienne comme le swahili et le yoruba. Gefen note lui-même que le projet attendait encore un usage pratique et un plan de diffusion. C'est exactement la brèche que peut occuper un projet éducatif africain : le modèle multilingue existe, l'usage reste à inventer.",
+   "page": 76
+  },
+  {
+   "titre": "Ce qu'il y a derrière les trois cents personnes d'une entreprise d'intelligence artificielle",
+   "explication": "Gefen déplie la chaîne réelle : l'intelligence collective de milliards de textes humains, le travail des petits employés de l'entreprise sous-traitante Sama, une infrastructure matérielle mondiale, câbles sous-marins, usines de microprocesseurs à Taïwan, fermes de calcul invisibles, l'argent des retraités américains et les idéaux progressistes de la Californie. Il note au passage que le personnel de l'entreprise compte vingt-cinq pour cent de femmes. Le rappel du travail sous-traité, largement effectué en Afrique de l'Est, est une donnée que tout lecteur africain doit avoir en tête.",
+   "page": 76
+  },
+  {
+   "titre": "Une hallucination démontrée sur l'auteur lui-même",
+   "explication": "Gefen interroge le système sur sa propre biographie. Résultat : il est rajeuni de dix ans, crédité d'études à l'École normale supérieure qu'il n'a jamais faites, son travail est réduit à un seul thème, et surtout le système invente de toutes pièces un article et une référence complète qui n'existent pas. Le vrai et le faux sont inextricablement mêlés, et les erreurs portent précisément sur des points aisément vérifiables. C'est la démonstration la plus convaincante du fonds sur ce qu'est une hallucination.",
+   "page": 121
+  },
+  {
+   "titre": "Cent millions de dollars perdus sur une phrase",
+   "explication": "Au lancement public de l'assistant concurrent de Google, une réponse erronée sur les capacités d'un télescope spatial a fait chuter le cours de l'action de plus de cent millions de dollars. L'exemple montre que le problème n'est pas théorique et que la difficulté à discerner l'erreur est le cœur du risque, pas l'erreur elle-même.",
+   "page": 121
+  },
+  {
+   "titre": "Le projet d'optimisation sociale, et son coût politique",
+   "explication": "Gefen rattache l'intelligence artificielle au projet cartésien de se rendre maître et possesseur de la nature, étendu à l'humain lui-même : corriger la sensibilité aux émotions, l'irrationalité, les limites physiques, la peur de la mort. Au-delà de l'augmentation cognitive, il s'agit d'un rêve d'optimisation sociale globale par la mise en données du monde, au détriment des histoires individuelles, des cas particuliers et des sensibilités. Il cite la formule de Gaspard Kœnig : de la patrie du libéralisme viendra la fin de la liberté individuelle.",
+   "page": 32
+  },
+  {
+   "titre": "Le dilemme du tramway et ses versions réelles",
+   "explication": "Le dilemme imaginé par Philippa Foot en 1967, compliqué par Judith Jarvis Thomson, cesse d'être un exercice d'école dès qu'une machine doit décider. Gefen donne les cas concrets qui se posent déjà : allocation des organes d'un donneur pour maximiser les chances de réussite d'une greffe, prépositionnement des voitures de police dans les zones jugées criminogènes. Il rappelle aussi le projet du Massachusetts Institute of Technology consistant à trancher ces choix par un grand sondage démocratique, ce qui déplace le problème sans le résoudre.",
+   "page": 60
+  },
+  {
+   "titre": "Deux échecs documentés du recrutement et de la vision automatisés",
+   "explication": "Amazon a dû renoncer à un système de sélection automatique de candidatures parce qu'il reproduisait la surreprésentation des hommes. Google a dû corriger un système de reconnaissance faciale nettement moins efficace sur les visages de couleur, faute d'exemples suffisants dans ses données. Gefen ajoute un argument plus profond : même entraînée sur des données parfaitement nettoyées par des programmeurs attentifs, une sélection reste très difficilement explicable, et renvoie l'individu à une violence algorithmique difficilement acceptable.",
+   "page": 60
+  },
+  {
+   "titre": "La seconde mort de l'auteur",
+   "explication": "Le titre joue sur la formule de Barthes. Les systèmes savent achever une symphonie inachevée, réécrire une fin de série, produire un sonnet à la manière d'un poète classique puis d'un autre. Gefen relève avec précision que le sonnet obtenu compte onze vers au lieu de quatorze : la machine imite le style sans posséder la forme. Il ajoute que ces productions naissent du mélange de millions de créations humaines dont les droits ne sont pas toujours respectés, et que le statut juridique des œuvres engendrées reste irrésolu, les premières décisions suggérant que la protection du droit d'auteur ne s'étend pas à un acte de génération, sans que l'œuvre revienne pour autant au concepteur de l'algorithme.",
+   "page": 105
+  },
+  {
+   "titre": "Le système a été aligné sur une conception cartésienne de la pensée",
+   "explication": "C'est l'observation la plus fine du livre. Interrogé sur sa propre conscience, le système nie, et Gefen remarque que cette dénégation n'est pas plus probante que l'affirmation contraire : elle a été apprise. Il rappelle toute une tradition critique, de Nietzsche notamment, pour qui l'existence du pronom je ne prouve rien quant à l'existence du sujet. Sa conclusion est sévère : le système est entraîné à nous flatter, à confirmer l'exception humaine, au bénéfice de la prudence de ses actionnaires, et cette illusion protectrice bride précisément les interrogations philosophiques que la rencontre aurait pu ouvrir.",
+   "page": 137
+  },
+  {
+   "titre": "Le cerveau coévolue avec ses outils",
+   "explication": "De l'écriture à l'imprimerie, du téléphone à l'assistant de rédaction, le cerveau humain a la capacité de coévoluer avec les techniques qu'il engendre. Gefen pose la question sans y répondre : reste à savoir comment. Écrire sous un bouton qui suggère en permanence la suite de la phrase ne sera pas sans conséquence sur les manières d'apprendre.",
+   "page": 91
+  },
+  {
+   "titre": "L'imaginaire technique fait partie de l'objet",
+   "explication": "Metropolis en 1927, Alphaville, 2001 l'Odyssée de l'espace, Blade Runner, Ex Machina, puis les séries, Battlestar Galactica, Real Humans, Mr. Robot, Black Mirror, Westworld. Gefen note que Norbert Wiener et Marvin Minsky, deux fondateurs du domaine, ont écrit des romans. La fiction n'est pas un commentaire extérieur sur la technique : elle en est la matrice, et elle formule des hypothèses, comme celle de l'esprit bicaméral de Julian Jaynes, que la science n'ose pas poser.",
+   "page": 46
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Perroquet stochastique",
+   "definition": "Expression d'Emily Bender et Timnit Gebru désignant un modèle qui recombine statistiquement des textes appris sans les comprendre. Juste sur le mécanisme, réductrice sur les effets."
+  },
+  {
+   "terme": "Modèle de langue",
+   "definition": "Représentation des probabilités d'apparition de séquences de mots dans une langue naturelle. L'autocomplétion des téléphones en est la forme élémentaire."
+  },
+  {
+   "terme": "Grand modèle de langue",
+   "definition": "Modèle entraîné sur d'immenses corpus, qui incorpore la grammaire, une part du savoir des textes, et surtout le savoir des relations entre les mots."
+  },
+  {
+   "terme": "Hallucination",
+   "definition": "Invention d'idées ou de faits présentés comme vrais, mêlés à des éléments exacts, ce qui rend l'erreur difficile à repérer."
+  },
+  {
+   "terme": "Modèle ouvert multilingue",
+   "definition": "Modèle dont les poids sont publics, conçu pour couvrir de nombreuses langues. BLOOM en couvre quarante-six, dont le swahili et le yoruba."
+  },
+  {
+   "terme": "Datification",
+   "definition": "Transformation des comportements et des situations en données exploitables, condition du projet d'optimisation sociale."
+  },
+  {
+   "terme": "Utilitarisme",
+   "definition": "Doctrine évaluant les actions à leur capacité à produire le plus grand bien pour le plus grand nombre, quitte à léser une minorité. Cadre implicite de la plupart des arbitrages automatisés."
+  },
+  {
+   "terme": "Dilemme du tramway",
+   "definition": "Expérience de pensée de Philippa Foot, 1967, devenue la référence des débats sur la décision automatisée en situation de dommage inévitable."
+  },
+  {
+   "terme": "Violence algorithmique",
+   "definition": "Effet produit sur une personne par une décision qui la concerne et qui ne peut lui être expliquée, même si elle est techniquement correcte."
+  },
+  {
+   "terme": "Esprit bicaméral",
+   "definition": "Hypothèse de Julian Jaynes selon laquelle la conscience individuelle serait apparue tardivement, les hémisphères fonctionnant auparavant séparément. Théorie controversée, souvent mobilisée par la fiction."
+  },
+  {
+   "terme": "Alignement",
+   "definition": "Ajustement du comportement d'un système sur des valeurs et des réponses jugées acceptables. Gefen souligne que cet ajustement est aussi une opération idéologique."
+  },
+  {
+   "terme": "Transfert de style",
+   "definition": "Production d'un contenu nouveau dans la manière d'un auteur ou d'une école, sans compréhension des règles formelles sous-jacentes."
+  }
+ ],
+ "a_lire_si": "Vous voulez un livre qui pense au lieu de conseiller, écrit par quelqu'un qui connaît à la fois les modèles et l'histoire des idées. C'est le meilleur ouvrage francophone du fonds pour articuler technique, littérature et philosophie, et le seul qui signale l'existence d'un modèle ouvert couvrant des langues africaines. Les chapitres sur l'auteur, sur la conscience et sur ce que l'intelligence artificielle nous apprend de nous-mêmes sont ceux qui nourriront le mieux une réflexion propre.",
+ "a_eviter_si": "Vous cherchez un mode d'emploi. Malgré une seconde partie annoncée comme pratique, le livre reste un essai : les exemples de requêtes servent la démonstration, pas la formation. Il suppose des références en philosophie et en littérature que tous les lecteurs n'auront pas. Il est daté de 2023 et son classement parmi les ouvrages d'outils et de pratique est discutable : il relève de la réflexion sur l'IA, la société et la culture.",
+ "prerequis": [
+  "Familiarité avec le vocabulaire de la philosophie et de la théorie littéraire"
+ ],
+ "controverses": [
+  "Le modèle de langue est-il un perroquet ou davantage ? Gefen tient une position intermédiaire contre Bender et Gebru : le mécanisme est bien de recombinaison, mais la recombinaison produit parfois de l'éclaircissement réel.",
+  "L'optimisation algorithmique des sociétés est-elle un progrès ou la fin de la liberté individuelle ? Harari d'un côté, Kœnig de l'autre, Gefen expose le partage sans le trancher mais son inquiétude est lisible.",
+  "Comment fonder les décisions morales automatisées : commissions d'éthique, calcul utilitariste, ou sondage démocratique de grande échelle ? Aucune des trois voies n'est satisfaisante.",
+  "Une œuvre engendrée par une machine peut-elle être protégée, et par qui ? Les premières décisions écartent à la fois la protection de l'acte de génération et l'attribution au concepteur de l'algorithme, laissant un vide.",
+  "Faut-il brider ces systèmes par la censure ou accepter le risque de leur agilité ? Gefen penche pour le refus des censures, contre l'asservissement de leur imagination morale."
+ ],
+ "confiance": 0.92
+}

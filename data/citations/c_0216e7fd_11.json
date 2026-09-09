@@ -1,0 +1,87 @@
+[
+ {
+  "chapitre": "fc3236db",
+  "citations": [
+   {
+    "texte": "alors que la technologie aurait pu nous permettre de réduire le temps dévolu au travail fastidieux et répétitif pour le consacrer à des dimensions plus créatives, elle a au contraire accru la part des activités a-signifiantes",
+    "page": 175,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La promesse inversée",
+    "portee": "Chaque vague technique a promis de libérer du temps et a produit davantage de tâches vides."
+   },
+   {
+    "texte": "le travail semble à celui qui l'effectue de plus en plus inutile, voire néfaste",
+    "page": 175,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le sentiment d'inutilité au travail",
+    "portee": "Ce sentiment n'est pas une faiblesse personnelle mais un effet d'organisation du travail."
+   },
+   {
+    "texte": "le traitement syntaxique de symboles, propre aux ordinateurs digitaux, ne peut aucunement produire de signification d'ordre sémantique",
+    "page": 176,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La syntaxe ne produit pas le sens",
+    "portee": "L'argument de Searle en une phrase, applicable à toute machine manipulant des symboles."
+   }
+  ]
+ },
+ {
+  "chapitre": "4b619cf1",
+  "citations": [
+   {
+    "texte": "cela ne changera jamais rien au fait qu'il ne comprend rien à ce qu'il fait",
+    "page": 177,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Exécuter sans comprendre",
+    "portee": "On peut devenir très habile à une tâche dont on ignore entièrement la finalité."
+   },
+   {
+    "texte": "Quelqu'un qui comprend le chinois perçoit la différence sémantique, tout comme quelqu'un qui connaît la stratégie de l'entreprise perçoit le sens de chaque action engagée par les employés.",
+    "page": 177,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Qui détient le sens du travail",
+    "portee": "Le sens d'une tâche dépend de l'accès à la vue d'ensemble, que l'organisation distribue ou refuse."
+   },
+   {
+    "texte": "le modèle descriptif en réseau de neurones implémenté sur un autre support que le cerveau humain ne fait pas émerger une intelligence de second ordre",
+    "page": 180,
+    "axe": "02-ia-technique-academique",
+    "theme": "Décrire n'est pas produire",
+    "portee": "Reproduire la structure fonctionnelle d'un esprit ne fait pas apparaître ce que cet esprit éprouve."
+   }
+  ]
+ },
+ {
+  "chapitre": "0f4add7f",
+  "citations": [
+   {
+    "texte": "il y a entre 500 et 5 000 fois plus d'activités cognitives produisant des externalités positives pour notre économie dans nos activités non rémunérées que dans le travail salarié",
+    "page": 181,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La richesse produite hors salaire",
+    "portee": "L'essentiel de ce qui rend une société vivable ne figure dans aucune comptabilité."
+   },
+   {
+    "texte": "En compensant la réduction de la masse salariale, la baisse des salaires, le revenu universel déplacerait la pauvreté sans la résoudre.",
+    "page": 181,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Déplacer la pauvreté",
+    "portee": "Un revenu qui compense une baisse de salaire subventionne l'employeur autant qu'il aide le salarié."
+   },
+   {
+    "texte": "il faut probablement y voir un subterfuge libertarien pour continuer à exproprier les individus de leur force cognitive et favoriser leur substitution par l'IA",
+    "page": 182,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Lire l'intérêt derrière la proposition",
+    "portee": "Une mesure sociale portée par ceux qui en profiteraient mérite d'être examinée sur ses effets, non sur ses intentions."
+   },
+   {
+    "texte": "Il s'agit de valoriser les externalités positives qui ne sont pas rémunérées par le capitalisme, telles que le soin porté aux plus démunis, la préservation des terres en repos et du vivant ou encore l'accompagnement dans la vieillesse et la fin de vie de nos aïeuls.",
+    "page": 182,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Reconnaître ce qui compte vraiment",
+    "portee": "Rémunérer le soin et la préservation reviendrait à compter comme travail ce qui fait tenir une société."
+   }
+  ]
+ }
+]

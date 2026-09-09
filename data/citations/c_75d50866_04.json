@@ -1,0 +1,36 @@
+[
+ {"chapitre":"1bf04844","citations":[
+  {"texte":"Exemple sur Amazon KDP : Vous vendez un eBook à 4,99 €. Amazon offre une redevance de 70 %. Si vous vendez 100 exemplaires par mois, vous gagnez environ 350 €.","page":38,"axe":"10-economie-entrepreneuriat-finance","theme":"Un calcul de revenus a verifier","portee":"Le taux de redevance est reel, mais le chiffre de cent ventes mensuelles est une hypothese sans source. La plupart des livres autoedites en vendent bien moins."},
+  {"texte":"Astuce : Offrez une réduction ou une période de gratuité pour attirer les premiers lecteurs et générer des critiques.","page":38,"axe":"10-economie-entrepreneuriat-finance","theme":"Amorcer par la gratuite","portee":"Technique reelle du marche numerique : les premiers avis conditionnent toute la visibilite ulterieure."}
+ ]},
+ {"chapitre":"10f92683","citations":[
+  {"texte":"C’est l’option la plus accessible et rentable pour les auteurs indépendants. Vous contrôlez tout : la couverture, le prix, et le contenu.","page":39,"axe":"10-economie-entrepreneuriat-finance","theme":"Le controle de l'autoedition","portee":"Vrai sur le principe. Reste a verifier l'acces effectif aux plateformes et au versement des droits depuis son pays."},
+  {"texte":"Cette option est plus compétitive, mais elle offre une validation professionnelle et un accès à un large réseau de distribution.","page":39,"axe":"10-economie-entrepreneuriat-finance","theme":"Ce qu'apporte un editeur","portee":"Presentation equilibree des deux voies. Le choix depend de l'objectif fixe au depart."}
+ ]},
+ {"chapitre":"8a2f17ab","citations":[
+  {"texte":"Publiez les premiers chapitres gratuitement pour attirer une communauté. Interagissez avec vos lecteurs pour construire un engagement.","page":40,"axe":"10-economie-entrepreneuriat-finance","theme":"Construire son public avant le livre","portee":"Strategie accessible sans capital : elle ne demande que du temps et de la regularite."},
+  {"texte":"Demandez à des lecteurs bêta ou des influenceurs littéraires de laisser des avis sur Amazon ou Goodreads.","page":40,"axe":"10-economie-entrepreneuriat-finance","theme":"Les premiers avis","portee":"Levier decisif sur ces plateformes. A distinguer nettement des faux avis, qui exposent a la suppression du compte."}
+ ]},
+ {"chapitre":"10f689f5","citations":[
+  {"texte":"Collectez les e-mails de vos lecteurs via une landing page ou un bonus gratuit (comme une nouvelle exclusive).","page":41,"axe":"10-economie-entrepreneuriat-finance","theme":"La liste de lecteurs","portee":"Seul canal que l'auteur possede reellement : il ne depend d'aucun algorithme ni d'aucune plateforme."},
+  {"texte":"Répondez aux commentaires, participez à des discussions sur les forums littéraires, et remerciez vos lecteurs pour leurs critiques.","page":41,"axe":"09-developpement-personnel-influence","theme":"Entretenir la relation","portee":"Travail lent et gratuit, souvent plus efficace que la publicite payante pour un auteur debutant."}
+ ]},
+ {"chapitre":"a15114c1","citations":[
+  {"texte":"Elle enquête sur des disparitions. Il cache des secrets. Ensemble, ils sont entraînés dans une spirale de danger, de passion et de trahison.","page":42,"axe":"10-economie-entrepreneuriat-finance","theme":"Une description commerciale","portee":"Modele de texte de vente : trois phrases breves, un enjeu, aucune explication. La forme se copie facilement."},
+  {"texte":"Répondez aux critiques sur Amazon et Goodreads. Demandez des retours pour préparer une suite.","page":42,"axe":"10-economie-entrepreneuriat-finance","theme":"Preparer la suite","portee":"Les lecteurs du premier livre constituent le public du second. La fidelisation vaut mieux que la conquete."}
+ ]},
+ {"chapitre":"e943c526","citations":[
+  {"texte":"Nous allons examiner une étude de cas complète qui illustre le processus d’écriture, de révision, et de monétisation d’un roman thriller romantique.","page":42,"axe":"08-litterature-romans","theme":"Un exemple suivi de bout en bout","portee":"Choix pedagogique efficace : le meme cas traverse tout l'ouvrage, ce qui rend la methode reproductible."}
+ ]},
+ {"chapitre":"4c09dc0e","citations":[
+  {"texte":"Arc narratif : Elle apprend à équilibrer sa quête de justice avec sa vie personnelle.","page":44,"axe":"08-litterature-romans","theme":"Formuler l'arc en une phrase","portee":"Exercice utile : si l'arc d'un personnage ne tient pas en une phrase, il n'est pas encore clair."}
+ ]},
+ {"chapitre":"5019e04f","citations":[
+  {"texte":"L’ouverture doit capter immédiatement l’attention du lecteur.","page":45,"axe":"08-litterature-romans","theme":"Les premieres lignes","portee":"Regle valable pour un roman comme pour un article ou une candidature."},
+  {"texte":"Les confrontations ajoutent du suspense et révèlent des informations importantes.","page":45,"axe":"08-litterature-romans","theme":"La double fonction du conflit","portee":"Une scene doit toujours faire deux choses a la fois : tenir le lecteur et faire avancer le recit."}
+ ]},
+ {"chapitre":"346930fb","citations":[
+  {"texte":"Relisez chaque chapitre en vous demandant : Est-ce que cette scène fait avancer l’intrigue ? Les rebondissements sont-ils crédibles ?","page":45,"axe":"08-litterature-romans","theme":"Deux questions a la relecture","portee":"Grille de coupe simple. Elle evite de garder une scene par attachement plutot que par necessite."},
+  {"texte":"Partagez vos chapitres avec des lecteurs bêta pour identifier les points faibles.","page":46,"axe":"08-litterature-romans","theme":"Le regard exterieur reste necessaire","portee":"Aucun outil ne remplace un lecteur reel : lui seul dit ou il s'est ennuye."}
+ ]}
+]

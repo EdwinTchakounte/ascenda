@@ -1,0 +1,708 @@
+OUVRAGE : Intelligence artificielle: promesses et menaces; The UNESCO courier; Vol.:3; 2018
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 72
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Sommaire (p. 4-72)
+
+[6/56 passages, 7787 tokens sur 72718]
+
+=== EXTRAITS ===
+
+[p. 1-2]
+Courrier
+DE L’UNESCO
+LE
+juillet-septembre 2018
+2UJDQLVDWLRQ
+GHV1DWLRQV8QLHV
+SRXUO¶pGXFDWLRQ
+ODVFLHQFHHWODFXOWXUH
+Intelligence 
+artiicielle
+Promesses 
+et menaces
+
+Découvrez
+et faites
+découvrir le 
+Courrier 
+de l’UNESCO !
+Publié en 9 langues
+Anglais, arabe, chinois, 
+espagnol, esperanto, français, 
+portugais, russe et sarde.
+Devenez un partenaire actif en 
+proposant de nouvelles éditions 
+linguistiques du Courrier de l’UNESCO.
+Contact : i.denison@unesco.org
+Abonnez-vous à la version papier
+• 1 an (4 numéros) : 27 €
+• 2 ans (8 numéros) : 54 €
+La publication ne poursuivant aucun 
+but lucratif, ce prix couvre les coûts réels 
+d’impression et d’expédition.
+Tarif préférentiel pour les abonnements 
+groupés : 10% de remise à partir  
+de cinq abonnements.
+Plus de détails sur : http://publishing.unesco.org
+DL Services – C/O Michot Entrepôts 
+Chaussée de Mons 77, 
+B 1600 Sint Pieters Leeuw, Belgique 
+Tél.: (+ 32) 477 455 329  E-mail: jean.de.lannoy@dl-servi.com
+Jouez un rôle 
+majeur !
+Participez activement  
+à la réussite du Courrier de l’UNESCO 
+en encourageant sa diffusion et son 
+utilisation selon la politique de libre accès 
+de l’Organisation. 
+http://fr.unesco.org/open-access
+Abonnez-vous  
+à la version numérique
+http://fr.unesco.org/courier/subscribe
+100% 
+GRATUIT
+2018 • n° 3 • Publié depuis 1948
+Le Courrier de l’UNESCO est un trimestriel publié 
+par l’Organisation des Nations Unies pour 
+l’éducation, la science et la culture. Il promeut 
+les idéaux de l’Organisation, en difusant des 
+échanges d’idées sur des thèmes de portée 
+internationale en lien avec son mandat. 
+Le Courrier de l’UNESCO est publié grâce au 
+généreux soutien de la République populaire 
+de Chine. 
+Directeur : Vincent Defourny
+Directrice éditoriale : Jasmina Šopova 
+Directeur de la production et 
+de la promotion : Ian Denison
+Secrétaire de rédaction : Katerina Markelova 
+Rédactrice : Chen Xiaorong 
+Rédactrice numérique : Malahat Ibrahimova
+Iconographe : Danica Bijeljac
+Production numérique : Denis Pitzalis
+Relations médias : Laetitia Kaci
+Assistante administrative et éditoriale : 
+Carolina Rollán Ortega
+Rédacteurs : 
+Anglais : Shiraz Sidhva
+Arabe : Anissa Barrak
+Chinois :  Sun Min et China Translation & 
+Publishing House
+Espagnol : Beatriz Juez
+Français : Régis Meyran
+Russe : Marina Yartseva  
+Traduction :  Françoise Arnaud-Demir, 
+Marina Colson, Xavier Perret 
+Maquette : Corinne Hayworth   
+Illustration de la couverture : © Francesc Roig
+Impression : UNESCO 
+Co-éditions :   Portugais : Ana Lúcia Guimarães 
+ Esperanto : Trezoro Huang Yinbao 
+Sarde : Diegu Corràine
+Renseignements et droits de reproduction : 
+courier@unesco.org 
+7, place de Fontenoy, 75352 Paris 07 SP, France
+© UNESCO 2018  
+ISSN 2220-2269 • e-ISSN 2220-2277
+Périodique publié en libre accès sous la licence 
+Attribution-ShareAlike 3.0 IGO (CC-BY-SA 3.0 IGO) 
+(http://creativecommons.org/licenses/by-sa/3.0/igo/). 
+Les utilisateurs du contenu de la présente publication 
+acceptent les termes d’utilisation de l’Archive ouverte 
+de libre accès UNESCO (https://fr.unesco.org/open-
+access/terms-use-ccbysa-fr).
+La présente licence s’applique exclusivement aux 
+textes. L’utilisation d’images devra faire l’objet d’une 
+demande préalable d’autorisation. 
+Les désignations employées dans cette publication et 
+la présentation des données qui y igurent n’impliquent 
+de la part de l’UNESCO aucune prise de position 
+quant au statut juridique des pays, territoires, villes 
+ou zones, ou de leurs autorités, ni quant au tracé de 
+leurs frontières ou limites. Les idées et les opinions 
+exprimées dans cette publication sont celles des 
+auteurs ; elles ne relètent pas nécessairement les 
+points de vue de l’UNESCO et n’engagent en aucune 
+façon l’Organisation.
+
+---
+
+[p. 13-14]
+e en chef à 
+l’International Journal of Social Robotics et 
+rédactrice associée au Journal of Human-
+Robot Interaction. 
+Les robots, une main-d’œuvre nouvelle 
+génération, remédient à la pénurie de 
+personnel soignant dans les hôpitaux au 
+Japon. Riba, inventé par Toshiharu Mukai, 
+est capable de porter des patients de 80 kilos.
+Grand angle
+14   |   Le Courrier de l’UNESCO • juillet-septembre 2018
+Il a été baptisé en l’honneur de Giuseppe 
+Arcimboldo (1527-1593), le peintre italien 
+dont les portraits à base de leurs, de 
+fruits, de plantes et d’animaux ont fait la 
+renommée. « Ses tableaux nous disent qu’on 
+peut tout résoudre avec de l’intelligence, du 
+talent et beaucoup de fruits et de légumes », 
+explique Pablo Zamora, biochimiste, docteur 
+en biotechnologie et cofondateur, avec 
+Matías Muchnick et Karim Pichara, de NotCo. 
+La passion de notre Giuseppe n’est pas la 
+peinture, mais la cuisine. Pour trouver la 
+bonne recette, ce chef intelligent fouille une 
+base de données de plantes et d’aliments 
+et détecte les plantes qui doivent être 
+combinées et les proportions nécessaires 
+pour produire le goût et la texture désirés.  
+« Il trouve des liens insolites entre des plantes 
+qu’il a préalablement caractérisées au niveau 
+moléculaire, nutritionnel, sensoriel et physico-
+chimique », explique Pablo Zamora, qui 
+était présent au Forum 2018 de Netexplo, 
+observatoire indépendant qui étudie les 
+tendances du numérique et leur impact sur 
+la société et les entreprises. Le Forum était 
+organisé en février au Siège de l’UNESCO 
+à Paris (France).
+Mais Giuseppe n’est pas seul aux 
+fourneaux. Il est soutenu par une équipe de 
+scientiiques et de chefs cuisiniers chargés 
+de perfectionner la recette. « Il fait parfois 
+des erreurs », reconnaît le  biochimiste. 
+« Il est capable de nous fabriquer un lait 
+parfait... mais rose ! L’équipe informe alors 
+Giuseppe du problème et celui-ci recalcule 
+l’algorithme de la recette du lait, qui retrouve 
+sa couleur habituelle ». 
+Le chef Giuseppe annonce une
+nouvelle ère culinaire
+Karim Pichara, Matías Muchnick 
+et Pablo Zamora, fondateurs de 
+The Not Company.
+Beatriz Juez 
+Giuseppe peut changer 
+fondamentalement nos habitudes 
+alimentaires. Ce grand chef 
+cuisinier futuriste n’est autre 
+qu’un algorithme ! Il a été créé 
+par l’entreprise chilienne The Not 
+Company (NotCo), une start-up 
+fondée à Santiago du Chili en 
+2015 par trois jeunes Chiliens. 
+Grâce à l’intelligence artiicielle, 
+ils produisent des substituts 
+alimentaires à partir d’ingrédients 
+végétaux, reconstituant avec 
+précision non seulement le goût 
+mais aussi la couleur, la texture 
+et les nutriments des aliments 
+d’origine animale. Tout cela fait de 
+Giuseppe l’un de dix lauréats de 
+Netexplo Innovation 2018.
+Giuseppe ne cesse de surprendre par ses 
+mélanges d’ingrédients, auxquels nul être 
+humain n’aurait pensé. « Pour la mayonnaise, 
+nous utilisons le lupin, qui, mélangé à certains 
+composants du pois chiche, donne une 
+émulsion très proche de celle de l’œuf. Nous 
+avons utilisé des champignons pour rehausser 
+la sensation de sucré dans un chocolat et des 
+graines d’alpiste pour modiier la densité de 
+certains laits », révèle le cofondateur. 
+NotCo veut révolutionner l’industrie 
+alimentaire en lançant sur le marché des 
+aliments sains et goûteux obtenus à partir 
+de plantes, d’un prix abordable et dont la 
+production ne nuise pas à l’environnement. 
+Pour l’instant, il n’est présent que sur le 
+marché chilien, mais NotCo espère bientôt 
+s’étendre à l’Argentine, au Brésil et à 
+la Colombie. 
+Mayonnaise végétale
+Au Chili, l’entreprise commercialise déjà 
+« NotMayo », un assaisonnement végétalien 
+proche de la mayonnaise, sans OGM, ni lactose, 
+ni gluten, ni œufs, ni soja. Tout dans l’aspect 
+et le goût rappelle la célèbre sauce, sauf que, 
+comme le dit l’étiquette, elle est « préparée à 
+partir d’ingrédients végétaux, et rien d’autre ». 
+D’autres produits seront lancés bientôt : yaourt, 
+lait, fromage, chocolat et céréales.
+Pablo Zamora assure que 85 % de leurs 
+clients ne sont ni véganes ni végétariens, et 
+qu’ils achètent ses produits parce qu’ils les 
+apprécient et qu’ils savent qu’ils sont bons 
+pour la santé et pour l’environnement. Chez 
+NotCo, on est persuadé que c’est le début 
+d’une nouvelle ère culinaire. Leur devise : 
+« Changeons sans changer ! », autrement dit, 
+mangeons mieux et autrement, sans nous 
+rendre compte que c’est diférent. 
+L’industrie alimentaire doit elle aussi 
+modiier ses modes de production, estime 
+le biochimiste, qui rappelle que, selon 
+l’Organisation des Nations Unies pour 
+l’alimentation et l’agriculture (FAO), il faut 
+1 500 litres d’eau pour produire un kilo de blé 
+et dix fois plus pour produire un kilo de viande. 
+Il en est convaincu : appliquée aux aliments, 
+l’intelligence artiicielle nous permettra de 
+contribuer au développement durable. 
+© Cristhian Guzmán / Paula Magazine
+
+---
+
+[p. 24-25]
+de la machine à vapeur a permis à certains 
+pays de se développer plus rapidement que 
+d’autres lors de la révolution industrielle.
+Chants d’ANAGURA, une exposition 
+interactive présentant un champ de 
+recherche étudiant la collecte, le traitement 
+et l'utilisation de données relatives à la 
+position et au comportement humain.
+Grand angle
+Le Courrier de l’UNESCO • juillet-septembre 2018   |   25 
+De nombreuses entreprises, dans le monde 
+entier, mènent d’importantes recherches 
+scientiiques dans le domaine de l’intelligence 
+artiicielle (IA). Les résultats obtenus à ce jour 
+sont excellents : l’IA a déjà appris à prédire le 
+risque de développer un diabète au moyen 
+d’une montre « intelligente » ou à distinguer, 
+de par leur apparence, les nævus de certains 
+types de cancers. Ce puissant outil, qui 
+surpasse l’intelligence humaine par l’une de 
+ses caractéristiques les plus importantes – 
+la vitesse – intéresse également les militaires. 
+La menace des
+robots tueurs
+Vasily Sychev
+L’intelligence artiicielle (IA) connaît de nombreuses applications dans la 
+sécurité et le domaine militaire. Sur le terrain, elle facilite les manoeuvres 
+et permet de sauver des vies en cas d’avaries. Elle accroît la performance 
+des armées, en fournissant des alliés robots aux combattants. Selon 
+certains experts, les armes létales automatiques (SALA) sont en train 
+de créer la troisième révolution de la guerre, après la poudre à canon et 
+l’arme nucléaire. On ne peut manquer de s’inquiéter du jour où seront 
+opérationnelles des armées de robots capables de mener les hostilités 
+de façon complètement autonome.
+Grâce au développement des technologies 
+informatiques, les systèmes de combat 
+du futur deviendront plus autonomes 
+que les systèmes actuels. D’une part, 
+cette autonomisation constituera sans 
+aucun doute une aide précieuse pour les 
+combattants. D’autre part, elle apportera 
+son lot de déis et de risques : course aux 
+armements entre pays, absence de règles 
+et de lois dans les zones de combat et 
+irresponsabilité dans la prise de décisions. 
+Aujourd’hui, de nombreux entrepreneurs, 
+décideurs et scientiiques cherchent à 
+interdire l’emploi de systèmes de combat 
+autonomes, alors que les militaires assurent 
+qu’au combat, la décision inale – tuer ou 
+non – sera prise par un humain.
+Nous voulons y croire mais, faut-il le 
+rappeler, l’arme nucléaire – cette arme qui 
+n’aurait jamais dû voir le jour et qui s’était 
+heurtée, dès la phase embryonnaire de sa 
+conception, à de nombreux opposants – 
+a pourtant bel et bien été utilisée. 
+L’opinion publique se mobilise de 
+plus en plus contre le développement 
+des armes létales autonomes.
+© RYGER / Shutterstock
+
+---
+
+[p. 34-35]
+des leaders mondiaux 
+des sphères économique, technologique 
+et académique, ce qui a conduit à la 
+publication, en novembre 2017, de 
+Future Frontiers: Education for an AI World 
+(Chantiers de demain : éduquer pour un 
+monde d’IA), ouvrage qui interroge l’avenir 
+de l’éducation dans un monde dominé 
+par l’IA. 
+© Vincent Fournier
+Grand angle
+Le Courrier de l’UNESCO • juillet-septembre 2018   |   35 
+Photo de l'artiste français Vincent Fournier, 
+prise à Barcelone (Espagne), en 2010, 
+appartenant à la série L'Homme machine 
+(The Man Machine), qui montre des 
+« ictions spéculatives » dans lesquelles 
+des créatures artiicielles interagissent 
+avec des humains. 
+Fin 2017, un symposium international 
+a réuni plusieurs de ses auteurs, ainsi 
+que des spécialistes de l’éducation, des 
+organisations non gouvernementales 
+(ONG) et des responsables politiques, en 
+vue d’étudier les moyens d’améliorer le 
+soutien aux enseignants et les résultats 
+des élèves grâce aux nouveaux outils, 
+notamment technologiques. Cet apport 
+d’idées nouvelles a suscité un engagement 
+uniié en faveur de la réforme. 
+Les nouveaux piliers
+Trois piliers – lire, écrire, compter – forment 
+le socle de tout apprentissage, mais les 
+élèves d’aujourd’hui ont besoin d’autres 
+compétences de base et d’importantes 
+compétences non cognitives, comme le 
+sentiment d’eicacité personnelle, une 
+meilleure compréhension des concepts 
+et de bonnes capacités de résilience, 
+d’adaptabilité et de lexibilité. 
+Les compétences spéciiquement humaines 
+seront plus que jamais importantes dans 
+ce monde nouveau qui se forme sous 
+nos yeux : la pensée critique sera l’une 
+des premières compétences que devront 
+transmettre les systèmes éducatifs.
+Pour l’heure, ces compétences essentielles 
+peuvent être acquises dans les activités 
+extrascolaires où l’on apprend ce que sont 
+la coopération, la mise en place d’objectifs et 
+la planiication, par exemple. On développe 
+la discipline et l’esprit d’équipe en faisant du 
+sport ; la créativité, en faisant du théâtre ; 
+la pensée critique en organisant des débats ; 
+l’empathie, en faisant du bénévolat au sein 
+d’une association.
+Le déi consiste à structurer ce large éventail 
+de compétences que les jeunes doivent 
+acquérir, à le légitimer au sein du système 
+éducatif et l’intégrer dans les programmes 
+scolaires, à déinir la façon d’évaluer les 
+résultats des élèves dans ces domaines qui 
+n’étaient pas jusque-là considérés comme 
+faisant partie de l’éducation scolaire et qui 
+devront désormais occuper une place de 
+premier ordre. 
+Une chose est incontestable, plus que 
+jamais l’avenir exigera que les enfants 
+tissent des liens mutuels et renforcent un 
+sens de la communauté, de la citoyenneté 
+et de la collaboration basé sur l’empathie, 
+que certains considèrent comme l’une des 
+compétences clés pour le XXIe siècle.
+Les compétences interpersonnelles sont de 
+plus en plus reconnues comme un élément 
+crucial pour les systèmes éducatifs dans le 
+monde. Des organisations comme l’UNESCO 
+et l’OCDE élaborent des cadres, normes et 
+évaluations dans ce domaine, et notamment 
+le concept de « compétences mondiales » 
+destiné à favoriser la coopération 
+interculturelle. En Australie, une série 
+d’aptitudes générales, comme la pensée 
+critique, créative et la compréhension 
+interculturelle, ont été inscrites en 2009 dans 
+l’agenda de l’Éducation nationale, exemple 
+suivi depuis par de nombreux États du pays. 
+Le projet Éduquer pour un monde qui change 
+a souligné la nécessité d’encourager des 
+pratiques pédagogiques innovantes, 
+pouvant procurer des bénéices dans 
+l’ensemble du système. 
+On voit déjà surgir au sein de la communauté 
+éducative les pratiques novatrices, visant à 
+motiver les élèves et à exploiter le potentiel 
+des technologies de pointe pour augmenter 
+leur performance. Certaines reposant sur 
+des preuves scientiiques plus solides que 
+d’autres, il est diicile, pour l’heure, de 
+distinguer les plus eicaces. 
+L’IA dans la salle de classe 
+Reprenant à son compte les innovations 
+nationales et internationales les plus 
+eicientes des secteurs privé et public, le 
+ministère de l’Éducation des NGS étudie le 
+meilleur soutien à apporter aux spécialistes 
+de l’éducation pour concevoir et accélérer 
+ces idées novatrices. Le but est de trouver de 
+nouvelles méthodes durables et évolutives 
+permettant d’améliorer l’apprentissage, les 
+capacités et la réussite de nos élèves. 
+L’IA a un potentiel fort en matière 
+d’éducation, à condition d’être utilisée 
+à bon escient et conformément aux 
+besoins des éducateurs. Il existe déjà des 
+systèmes à base d’IA capables de favoriser 
+un apprentissage personnalisé qui libère 
+les enseignants de certaines tâches, leur 
+permettant ainsi de se concentrer sur les 
+besoins individuels des élèves et sur les 
+objectifs pédagogiques. Ces systèmes 
+sont capables de suivre l’implication et les 
+progrès des élèves, et, potentiellement, de 
+proposer des ajustements de contenu. 
+Il est crucial que les éducateurs gardent 
+la main en matière de conception et de 
+développement de ces systèmes. C’est aux 
+enseignants et aux chefs d’établissement, 
+qui seront formés à cette in, qu’il revient au 
+premier chef de déinir clairement la place 
+de l’IA dans la salle de classe. Les élèves 
+doivent aussi participer aux décisions dans 
+ce domaine, et donc être éduqués sur ses 
+aspects éthiques. Leur avenir dépendra 
+des politiques et des approches que nous 
+adopterons aujourd’hui. 
+Secrétaire adjointe au ministère de 
+l’Éducation des Nouvelles-Galles du Sud, 
+Leslie Loble (Australie) a piloté pendant 
+près de vingt ans la stratégie, la réforme 
+et l’innovation dans ce système éducatif 
+qui est le plus vaste et le plus diversifié 
+d’Australie. Elle a été classée en 2013 parmi 
+les 100 femmes d’influence de l’Australian 
+Financial Review/Westpac pour son rôle 
+dans les affaires publiques australiennes et 
+la réforme de l’éducation.
+
+---
+
+[p. 53-54]
+moire 
+résiduelle de l’histoire de l’esclavage : 
+un matériau pour l’artiste qui souhaite 
+s’y colleter.
+Ce qu’il va produire de son travail est ce 
+qu’Aristote appelle entelecheia (ce qui 
+séjourne dans sa in). Une inalité de forme, 
+en quelque sorte, produite par l’énergie-
+forme de l’artiste qui ofre à l’œuvre 
+son autonomie.
+54   |   Le Courrier de l’UNESCO • juillet-septembre 2018
+Idées
+Mais cette œuvre qui n’est pas lui, sortie de 
+lui-même, demeure une question, une forme 
+questionnant l’énigme même de l’histoire, 
+questionnant aussi ce présent dans lequel 
+subsiste cette mémoire. Alors cette œuvre, 
+celle « qui séjourne dans sa in », n’est-elle 
+pas inalement l’acte de cet énergumène qui 
+cherche à en inir avec cette mémoire en lui, 
+clore cette histoire par une forme nouvelle 
+qui éclaire le passé en le laissant à sa place, 
+en le dépassant littéralement ?
+Une ruse de 
+l’intelligence artistique
+Ainsi l’artiste choisit son inluence en 
+exerçant sa liberté d’artiste pour précisément 
+ne pas rester sous l’inluence du passé et 
+pour produire du présent. Lorsqu’on parle 
+par exemple de l’inluence de l’art africain 
+ou de l’art dit nègre sur l’art moderne, 
+chez Picasso, Braque, Derain, Matisse, voire 
+Apollinaire et les surréalistes, il s’agit de 
+l’appréhender non pas comme l’inluence 
+mécanique d’un objet sur un sujet, mais 
+comme un dialogue relationnel. Cette 
+inluence survient, parce que ces derniers 
+étaient dans une phase critique remettant 
+en cause les formes héritées de leur passé 
+et étaient à la recherche de nouveaux 
+matériaux expressifs. Ainsi le tableau Les 
+Demoiselles d’Avignon de Picasso est le fruit 
+d’un dialogue entre une question esthétique 
+de l’Occident sur lui-même à un moment 
+donné, et l’art africain dont on découvre alors 
+qu’il n’est pas, comme on disait, « primitif », 
+mais porteur de création et de pensée. Ce qui 
+fera dire à Maillol que « L’art nègre renferme 
+plus d’idées que l’art grec ». Ainsi cette 
+rencontre produira tout à la fois de nouvelles 
+formes d’expression et un nouveau regard 
+sur l’objet qui instaure un nouveau dialogue 
+esthétique : en l’occurrence, l’art africain.
+Ce qu’on appelle inluence est bien en réalité 
+un choix dicté par un besoin d’expression. Et 
+dans cette expression, il y a chevauchement 
+entre le sujet et l’objet, il y a possession. 
+On peut dire en ce sens que Les Demoiselles 
+d’Avignon sont possédées par l’art africain. 
+L’œuvre est le produit de la recherche 
+d’un nouveau regard, d’une mutation du 
+goût, ou comme dirait Nietzsche à propos 
+de la musique « d’une renaissance de l’art 
+d’écouter ». Il est séduit par la Carmen de 
+Bizet, œuvre dans laquelle il trouve une 
+dimension africaine. Il en est séduit parce 
+qu’il y a rencontre entre cette œuvre 
+et le philosophe qui, s’étant séparé du 
+romantisme et de Wagner, recherchait une 
+nouvelle forme esthétique qui fasse sens et 
+ouvre un nouvel horizon.
+Parler d’inluence, c’est en fait parler d’une 
+recherche de nouvelles formes, de nouveaux 
+contenus formels, aptes à transformer la 
+manière de voir, d’entendre, d’apprécier. Il 
+s’agit là d’un combat. La création artistique 
+est plus que résistance, un « sport de 
+combat » contre des modes, sédimentées 
+et imposées par une culture dominante, de 
+la perception du monde et de ses objets. 
+Lorsque Martin Luther King disait que 
+« la musique est notre arme de guerre », il ne 
+voulait pas dire autre chose. Cette arme 
+agit dans la mesure où non seulement elle 
+rassemble des forces autour d’elle, mais 
+aussi parce qu’elle est en mesure d’entrer 
+dans la sensibilité de l’adversaire et de le 
+posséder. Elle lui parle et, par la sensibilité, 
+lui ouvre un horizon. Cela est possible parce 
+que le gospel et le blues aux États-Unis font 
+partie d’un socle commun, qui permet aux 
+Noirs de parler aux Blancs par une forme 
+sonore ouvrant l’esprit au contenu de leur 
+discours. Les discours mêmes du leader des 
+droits civiques étaient scandés à la façon des 
+chants de gospel – ce qui leur permettait 
+une plus forte pénétration, ce qui les portait 
+vers un universel. Il était bien sûr question 
+dans ses discours de la mémoire commune 
+de l’esclavage, mais dans une forme qui s’en 
+distanciait pour parler à ses contemporains.
+Lorsqu’en danse, Katherine Dunham et, à sa 
+suite, Lester Horton ou Alvin Ailey, puisent 
+dans les traditions africaines ou indiennes et 
+dans la mémoire de l’esclavage des éléments 
+qui deviennent constitutifs de leur création, 
+c’est dans le cadre d’une recherche de 
+nouvelles formes permettant à la fois d’éclairer 
+le passé et de produire un nouveau regard. Le 
+jazz est né de Congo square, lieu de rencontre 
+et de danse des esclaves de la Nouvelle-
+Orléans aux États-Unis, pour intégrer dans 
+une forme musicale nouvelle des éléments 
+constitutifs de sa mémoire, mais une 
+mémoire distanciée par la forme 
+même et créant une aire de partage 
+sensible entre plusieurs formes de 
+culture, plusieurs horizons.
+On peut parler alors d’une ruse de 
+l’intelligence artistique qui intègre l’ancien 
+dans le nouveau, en dépassant le passé, 
+et permet d’inluer sur sa perception. 
+C’est sans doute ça, le métissage : 
+un mouvement vers le nouveau 
+permettant de créer une 
+inluence nouvelle. La déesse 
+Métis, première femme de 
+Zeus dont le nom signiie 
+littéralement « le conseil, 
+la ruse », celle dont Hésiode 
+disait « qu’elle sait plus de 
+choses que tout dieu ou tout 
+homme mortel », était capable 
+d’inluencer Zeus lui-même, 
+de lui faire changer d’opinion.
+Ainsi l’intégration de la mémoire, 
+qu’elle soit de l’esclavage ou de toute 
+autre mémoire dans un corps nouveau 
+et une forme nouvelle, est une ruse 
+de l’intelligence artistique permettant 
+d’inluencer le présent.
+Hexadécimal (techniques mixtes), 
+2015, œuvre de Chichi Reyes 
+(République Dominicaine).
+© Chichi Reyes
+
+---
+
+[p. 66-67]
+tte portion du continent américain. 
+Vue colorisée de la pyramide Akapana. 
+Les lignes rouges correspondent aux 
+canaux déjà connus grâce aux fouilles 
+archéologiques. Les lignes noires indiquent 
+des canaux possibles, dont la dégradation 
+aurait provoqué de très grandes 
+issures dans le bâtiment.
+© José Ignacio Gallego / UNESCO
+Le Courrier de l’UNESCO • juillet-septembre 2018   |   67 
+Nelson Mandela, Président du Congrès 
+national africain, et Federico Mayor, 
+Directeur général de l’UNESCO 
+(1987-1999), au siège de l’Organisation, 
+le 14 octobre 1993.
+Les détenus étaient cependant autorisés 
+à poursuivre des études secondaires et 
+supérieures et donc à recevoir les ouvrages 
+nécessaires. C’est ainsi qu’un abonnement 
+en anglais au Courrier de l’UNESCO, expédié 
+de Paris, s’est un temps glissé parmi les 
+manuels de comptabilité et d’économie 
+commandés par les détenus. 
+Il est clair qu’aux yeux des autorités 
+pénitentiaires, qui ne parlaient 
+généralement que l’afrikaans, la revue 
+semblait une lecture inofensive pour cette 
+catégorie de prisonniers qu’on laissait, après 
+une journée à casser des cailloux dans la 
+carrière de chaux, lire ces contenus « sans 
+importance » dans leur cellule. 
+En 1964, Nelson Mandela et ses 
+compagnons de lutte sont condamnés à la 
+perpétuité, et l’administration pénitentiaire 
+veillera à ce que leurs premières années de 
+détention soient, sur les plans intellectuel et 
+spirituel, aussi arides que la terre de Robben 
+Island : pas de journaux, même locaux. 
+Comme il l’écrira dans son autobiographie, 
+Un long chemin vers la liberté (1994) : 
+« les autorités essayaient de nous imposer 
+un blackout total ; elles ne voulaient pas 
+qu’on apprenne quelque chose qui puisse 
+nous redonner le moral, ni qu’on sache qu’on 
+pensait encore à nous à l’extérieur ».
+Annar Cassam
+« L’apartheid n’est pas, comme on 
+le croit parfois encore, un efort 
+sincère pour assurer à tous les 
+groupes ethniques des possibilités 
+égales, mais dans des cadres 
+séparés. Il s’agit bel et bien d’une 
+ségrégation, établie par des 
+hommes dont la peau est blanche, à 
+leur seul avantage, et au détriment 
+des populations noires ou de 
+couleur ». Voici ce que le détenu 
+n°466/64, Nelson Mandela, lisait 
+dans le Courrier, à Robben Island, 
+au nez et à la barbe des vigiles de 
+l’État policier qu’était l’Afrique du 
+Sud à cette époque.
+Avec cet article, Le Courrier marque 
+le 100e anniversaire de la naissance de 
+Nelson Mandela, né le 18 juillet 1918.
+U
+N
+E
+S
+C
+O
+C
+O
+U
+R
+I
+E
+R
+Le Courrier de l'UNESCO a
+70 ans !
+Le seul journal que Nelson Mandela 
+lisait à Robben Island
+© UNESCO / Michel Claude

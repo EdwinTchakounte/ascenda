@@ -1,0 +1,215 @@
+[
+ {
+  "chapitre": "35402a78",
+  "citations": [
+   {
+    "texte": "À la suite de ces nombreuses questions, le banquier m'informa qu'il lui était impossible de m'accorder cet emprunt. L'ordinateur en avait décidé ainsi.",
+    "page": 124,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'ordinateur en avait décidé ainsi",
+    "portee": "Récit personnel d'un chercheur refusé par un logiciel que son propre laboratoire avait écrit : la boucle est instructive."
+   },
+   {
+    "texte": "Aujourd'hui, alors qu'il n'y a plus grand-chose à en dire car ils tournent et s'exécutent un peu partout, ils ont jauni et sont relégués dans les oubliettes de l'histoire des technologies.",
+    "page": 124,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Le sort des techniques qui réussissent",
+    "portee": "Une technologie qui fonctionne cesse d'être appelée intelligence artificielle et devient un logiciel ordinaire."
+   },
+   {
+    "texte": "Leur fonctionnement censé reproduire la réflexion menant à la décision d'un expert humain est d'une simplicité déconcertante, car ils doivent tout à Aristote et à ses fameuses règles d'inférence logique de la forme « si A alors B ».",
+    "page": 124,
+    "axe": "02-ia-technique-academique",
+    "theme": "Aristote dans les banques",
+    "portee": "Filiation directe entre la logique antique et les systèmes qui décident aujourd'hui de l'accès au crédit."
+   }
+  ]
+ },
+ {
+  "chapitre": "1f8732d2",
+  "citations": [
+   {
+    "texte": "En effet, parmi les problèmes rencontrés par ces systèmes experts, figure en bonne place leur trop grande dépendance par rapport à des humains qui, souvent, n'ont pas une connaissance parfaite de leurs processus décisionnels",
+    "page": 125,
+    "axe": "02-ia-technique-academique",
+    "theme": "Nous ignorons comment nous décidons",
+    "portee": "Limite fondamentale de toute tentative de codifier une expertise : l'expert lui-même ne sait pas tout ce qu'il fait."
+   },
+   {
+    "texte": "Nous sommes de piètres statisticiens, car nos cerveaux sont calibrés pour affronter le vrai et non pas la nuance.",
+    "page": 125,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le vrai plutôt que la nuance",
+    "portee": "Explication concise de nos erreurs de jugement face aux probabilités, et de l'utilité réelle des outils statistiques."
+   },
+   {
+    "texte": "C'est une pratique que l'on pourrait résumer par le précepte : « in data veritas » ou mieux encore « la vérité se cache au fond du puits des données ».",
+    "page": 125,
+    "axe": "02-ia-technique-academique",
+    "theme": "La vérité au fond du puits",
+    "portee": "Formule qui dit la promesse de l'apprentissage machine, et implicitement sa condition : il faut que le puits soit bien rempli."
+   }
+  ]
+ },
+ {
+  "chapitre": "83f81883",
+  "citations": [
+   {
+    "texte": "Ce prédicteur doit fonctionner au mieux, non plus sur les clients d'hier (ceux-là, on sait comment cela s'est terminé), mais bien sur les clients de demain, présentant leur visage inquiet devant le guichet.",
+    "page": 126,
+    "axe": "02-ia-technique-academique",
+    "theme": "Prédire demain, pas hier",
+    "portee": "Formulation vivante de ce que mesure vraiment un ensemble de validation, et de pourquoi il est indispensable."
+   },
+   {
+    "texte": "Ceci explique le succès fulgurant ces dernières années des algorithmes d'apprentissage machine qui cherchent, chaque jour un peu plus, à se débarrasser de l'expertise humaine dans la mise au point d'outils décisionnels.",
+    "page": 126,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Se passer de l'expert",
+    "portee": "Mouvement de fond : l'expertise humaine passe du statut de source à celui d'obstacle, avec ce que cela implique pour les métiers."
+   },
+   {
+    "texte": "On rappellera une dernière fois que cette technologie toujours très populaire dans la communauté d'apprentissage machine doit son succès à sa facilité d'usage, à la possibilité de mélanger différentes catégories d'attributs (quantitatifs et qualitatifs) et, surtout, au résultat présentable sous forme de règles de décision qui sont, jusqu'à un certain niveau de complexité, lisibles et compréhensibles par l'utilisateur.",
+    "page": 130,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi les arbres durent",
+    "portee": "La lisibilité du résultat, et non la performance brute, explique la longévité des arbres dans les secteurs régulés."
+   }
+  ]
+ },
+ {
+  "chapitre": "50cb48f1",
+  "citations": [
+   {
+    "texte": "Mieux vaut une forêt d'arbres un tant soit peu dégarnis qu'un seul à l'effeuillage imposant.",
+    "page": 131,
+    "axe": "02-ia-technique-academique",
+    "theme": "La force du collectif imparfait",
+    "portee": "Principe profond : des jugements partiels et peu corrélés valent mieux qu'un seul jugement prétendument complet."
+   },
+   {
+    "texte": "En substance, la difficulté d'accès au crédit pour les plus démunis ne peut qu'empirer en présence d'un prédicteur froid et rationnel, alors qu'un banquier peut se montrer compréhensif ou se tromper, permettant ainsi à des clients que tout destinait au refus de crédit, d'en bénéficier malgré tout.",
+    "page": 131,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'erreur humaine comme chance",
+    "portee": "Argument rarement formulé : la faillibilité du décideur humain laissait passer des exceptions que la machine supprime."
+   },
+   {
+    "texte": "En substance, on se trouve en présence d'une opposition de principe entre la qualité des résultats (en termes de nombre d'erreurs) et le souci d'équité de traitement pour la clientèle de la banque.",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Performance contre équité",
+    "portee": "Arbitrage qu'aucune technique ne résout : il relève d'une décision politique, pas d'un réglage d'algorithme."
+   },
+   {
+    "texte": "Les praticiens de l'apprentissage machine n'ont généralement comme seule obsession que de minimiser les erreurs de prédiction commises sur les données d'apprentissage et, pour y parvenir, ils s'efforcent de minimiser ces erreurs pour la catégorie majoritaire au détriment de l'autre. Les minorités s'en trouvent affectées",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Comment naît le biais",
+    "portee": "Le biais n'est pas une malveillance mais la conséquence mathématique de l'objectif poursuivi : minimiser l'erreur totale."
+   },
+   {
+    "texte": "La question essentielle que l'on doit se poser est : « La base de données et sa composition catégorielle est-elle fidèle à la réalité sociale ? ».",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La bonne question à poser",
+    "portee": "Question préalable à toute évaluation d'un système décidant sur des personnes : d'où viennent les données et qui y figure."
+   }
+  ]
+ },
+ {
+  "chapitre": "3fdc7a6e",
+  "citations": [
+   {
+    "texte": "Il faut éviter la confusion actuelle entre deux attributions de l'adjectif « mauvais », soit au modèle prédictif soit à la société que ce modèle cherche à décrire et à réguler.",
+    "page": 133,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le modèle ou la société",
+    "portee": "Distinction essentielle pour tenir un débat clair sur les algorithmes appliqués à des populations."
+   },
+   {
+    "texte": "Ce modèle est juste un miroir présenté devant la société, aussi cruellement fidèle et précis qu'il soit. Il appartient aux décideurs d'en faire le meilleur usage pour que ses prédictions en matière de criminalité ou autre, ne se stabilisent pas, pire encore, ne s'améliorent pas avec le temps.",
+    "page": 133,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le miroir et le décideur",
+    "portee": "La responsabilité reste humaine : un modèle décrit un état de fait, il n'a pas mission de le corriger."
+   },
+   {
+    "texte": "Cette étape de nettoyage est très importante et risque d'affecter considérablement la qualité d'un modèle de prédiction.",
+    "page": 133,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le nettoyage des données",
+    "portee": "Étape la moins visible et la plus déterminante de tout projet de science des données."
+   }
+  ]
+ },
+ {
+  "chapitre": "e413d96f",
+  "citations": [
+   {
+    "texte": "Cette stratégie est dite « gloutonne » et ne garantit pas la convergence vers une solution optimale pour la structure de l'arbre.",
+    "page": 138,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une méthode gloutonne",
+    "portee": "Choisir le meilleur coup immédiat à chaque étape ne conduit pas au meilleur résultat d'ensemble."
+   }
+  ]
+ },
+ {
+  "chapitre": "1a4e2c2a",
+  "citations": [
+   {
+    "texte": "En général, non seulement la classification supervisée s'avère plus simple que celle que nous abordons dans ce chapitre mais, de surcroît, il est assez facile de valider la qualité de l'algorithme obtenu à partir d'un ensemble de données à part.",
+    "page": 142,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi le supervisé domine",
+    "portee": "On peut mesurer la qualité d'un modèle supervisé et l'annoncer au commanditaire : le non supervisé n'offre pas cette garantie."
+   }
+  ]
+ },
+ {
+  "chapitre": "47a9f0dd",
+  "citations": [
+   {
+    "texte": "On procède bien davantage à l'aveugle, l'appréciation du résultat final devenant souvent l'objet d'un regard subjectif du connaisseur du domaine.",
+    "page": 143,
+    "axe": "02-ia-technique-academique",
+    "theme": "Évaluer sans mesure",
+    "portee": "En classification non supervisée, l'expertise humaine du domaine redevient le seul juge : elle n'est jamais totalement remplaçable."
+   },
+   {
+    "texte": "Il découvre donc cet ensemble de sujets dissimulés jusqu'à présent de manière « latente » dans les documents.",
+    "page": 143,
+    "axe": "02-ia-technique-academique",
+    "theme": "Faire émerger les thèmes",
+    "portee": "Application directement utile pour dépouiller de grands corpus, courriers de citoyens, plaintes, avis, sans catégories préétablies."
+   },
+   {
+    "texte": "Un mot est d'autant plus représentatif d'un sujet que, à la fois, il est important pour ce dernier (deuxième probabilité) et ce sujet est important pour le document dont est issu le mot (première probabilité).",
+    "page": 144,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le double critère du LDA",
+    "portee": "Formulation intuitive du mécanisme itératif qui fait converger l'algorithme vers des thèmes cohérents."
+   }
+  ]
+ },
+ {
+  "chapitre": "3626bc02",
+  "citations": [
+   {
+    "texte": "La signification des mots se ramène dès lors à l'étude statistique de leur voisinage.",
+    "page": 145,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le sens réduit au voisinage",
+    "portee": "Postulat qui fonde tout le traitement moderne du langage, et que les linguistes contestent à bon droit."
+   },
+   {
+    "texte": "« Roi » - « Homme » + « Femme » = « Reine »",
+    "page": 145,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'arithmétique du sens",
+    "portee": "Le résultat qui a rendu les plongements lexicaux célèbres, et qui rend le sens manipulable par le calcul."
+   }
+  ]
+ }
+]

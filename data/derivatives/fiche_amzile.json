@@ -1,0 +1,75 @@
+{
+ "document_id": "2b0359c3-ed2f-431a-b0a0-b5bd3ca9d0de",
+ "titre_normalise": "Intelligence artificielle et modélisation du risque de crédit (extrait promotionnel)",
+ "auteurs": [
+  "Karim Amzile"
+ ],
+ "annee": null,
+ "type_ouvrage": "rapport",
+ "niveau": "avance",
+ "public_cible": "Étudiants et praticiens en finance bancaire, en gestion des risques et en science des données appliquée au crédit. Ouvrage issu d'un travail doctoral, publié dans la collection L'Esprit économique, série Cours principaux.",
+ "these_centrale": "Modéliser le risque de crédit consiste à assigner chaque client à l'un de deux groupes, solvable ou non solvable, dans le but de maximiser le rendement ajusté du risque tout en maintenant l'exposition dans des limites acceptables. L'ouvrage compare pour cela les méthodes statistiques classiques et les techniques de fouille de données, et se donne pour objet d'établir laquelle prédit le mieux le défaut de paiement.",
+ "idees_force": [
+  {
+   "titre": "La banque prête l'argent qu'elle ne possède pas",
+   "explication": "Le point de départ est un chiffre qui explique tout le reste : plus de quatre-vingts pour cent du passif d'une banque sont des dépôts de clients. C'est avec cet argent qu'elle accorde des crédits, activité qui constitue sa principale source de revenus. Une banque exposée à un risque de défaut élevé met donc directement en danger les déposants, ce qui explique pourquoi la question relève de la réglementation et non de la seule prudence commerciale.",
+   "page": 19
+  },
+  {
+   "titre": "La cause des crises bancaires est identifiée et elle est humaine",
+   "explication": "L'introduction nomme les trois causes principales des problèmes bancaires graves : le laxisme des normes de crédit accordées aux emprunteurs et aux contreparties, la mauvaise gestion du risque de portefeuille, et le manque d'attention à l'évolution des circonstances économiques qui dégradent la qualité des contreparties. Aucune de ces trois causes n'est technique.",
+   "page": 27
+  },
+  {
+   "titre": "Le risque de crédit n'est qu'un des six risques d'un établissement",
+   "explication": "L'ouvrage énumère les familles de risque auxquelles un établissement de crédit est exposé : le risque de crédit, le risque de marché qui comprend les taux, le change et le modèle lui même, le risque opérationnel qui comprend le désastre, la fraude, le traitement et la technologie, le risque de liquidité et le risque stratégique. Il souligne que le risque de crédit reste le majeur, et qu'il est la forme la plus ancienne du risque sur le marché des capitaux.",
+   "page": 27
+  },
+  {
+   "titre": "Le crédit ne se limite pas au prêt",
+   "explication": "Précision utile pour qui croit que modéliser le risque de crédit revient à noter des emprunteurs. Le risque de contrepartie existe dans les transactions interbancaires, le financement du commerce, les opérations de change, les contrats à terme, les échanges financiers, les obligations, les actions, les options, ainsi que dans les engagements, les garanties et le règlement des transactions.",
+   "page": 27
+  },
+  {
+   "titre": "Une recherche doit d'abord établir sa position épistémologique",
+   "explication": "Le premier chapitre, seul dont le début soit accessible, consacre une section entière aux fondements de la recherche scientifique avant d'aborder le sujet. Il distingue étude exploratoire, descriptive et analytique, cette dernière se subdivisant en explicative et confirmative. Il rappelle que la portée des conclusions dépend des choix de conception, d'instrumentation et de validation, et que la condition d'un travail de recherche est d'apporter une valeur ajoutée à l'édifice de la connaissance.",
+   "page": 29
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Risque de crédit",
+   "definition": "Possibilité qu'un emprunteur, particulier ou professionnel, ne remplisse pas ses obligations conformément aux modalités convenues lors de la conclusion du contrat."
+  },
+  {
+   "terme": "Rendement ajusté du risque",
+   "definition": "Critère que la modélisation cherche à maximiser : non pas le profit brut, mais le profit rapporté à l'exposition acceptée pour l'obtenir."
+  },
+  {
+   "terme": "Classement binaire de solvabilité",
+   "definition": "Réduction du problème à l'assignation de chaque client à l'un de deux groupes. Cette simplification est ce qui rend le problème traitable par les méthodes de classification automatique."
+  },
+  {
+   "terme": "Risque de modèle",
+   "definition": "Risque que le modèle lui même soit faux, rangé par l'auteur parmi les risques de marché. Le distinguer explicitement est une précaution que beaucoup d'exposés omettent."
+  },
+  {
+   "terme": "Engagement de prêt",
+   "definition": "Restriction que le prêteur impose à l'emprunteur en contrepartie du crédit accordé, en plus de l'intérêt."
+  }
+ ],
+ "a_lire_si": "Le sujet vous concerne professionnellement et vous envisagez d'acquérir l'ouvrage complet. Sa table des matières, entièrement lisible dans cet extrait, montre une progression sérieuse : fondements théoriques et réglementaires, méthodes statistiques classiques, puis fouille de données, avec une méthodologie explicitée. Elle permet de juger si le livre répond à votre besoin.",
+ "a_eviter_si": "Vous attendez un contenu exploitable. Voir l'avertissement ci-dessous : ce document ne contient pas le livre.",
+ "prerequis": [
+  "Des bases en statistique et en finance bancaire pour l'ouvrage complet.",
+  "Aucun pour cet extrait, qui ne présente que l'introduction générale."
+ ],
+ "controverses": [
+  "⚠️ Ce document n'est pas un livre, c'est un extrait promotionnel de six pages. Chaque page porte un filigrane répété indiquant que l'ouvrage est en vente et invitant à cliquer pour le payer. Ce filigrane occupe une part importante du texte extrait et perturbe la lecture automatique. Le contenu réellement disponible se limite à la page de titre, à la table des matières, à l'introduction générale et aux premières lignes du premier chapitre.",
+  "La table des matières indique un ouvrage dont le corps dépasse largement les cent soixante-dix pages. Autrement dit, plus de quatre-vingt-quinze pour cent du contenu annoncé est absent de cette bibliothèque. Aucune des méthodes de modélisation, aucun résultat, aucune comparaison n'est accessible.",
+  "En conséquence, ce document ne doit pas être proposé dans un parcours de lecture et l'agent ne doit pas s'appuyer dessus pour répondre à une question de fond. Il n'a de valeur que comme notice bibliographique permettant de décider d'acheter l'ouvrage.",
+  "L'année de publication n'est pas indiquée dans l'extrait.",
+  "Le sujet recoupe directement le chapitre consacré aux règles d'accès au crédit dans l'ouvrage pratique de Bersini et Hasselmann, également présent dans cette bibliothèque, lequel est intégralement disponible et traite la même question avec du code exécutable et une discussion de l'équité algorithmique."
+ ],
+ "confiance": 0.9
+}

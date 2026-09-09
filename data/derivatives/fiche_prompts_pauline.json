@@ -1,0 +1,119 @@
+{
+ "document_id": "0a415b98-92f9-42ae-b2e6-404cfb233057",
+ "titre_normalise": "Vous pouvez (presque) tout demander à ChatGPT",
+ "auteurs": [
+  "Pauline"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "manuel pratique",
+ "niveau": "debutant",
+ "public_cible": "Professionnel non technicien, indépendant, salarié, parent, qui veut une méthode reproductible plutôt qu'une liste d'astuces. L'autrice, ancienne responsable marketing devenue entrepreneuse puis consultante et formatrice en IA générative, s'est fait connaître sous le nom de compte les prompts de Pauline. Le fichier disponible ne comporte pas la page de titre complète, seul ce nom d'usage est attesté dans le texte. Deux cent soixante-quatre pages, une introduction cadrant les enjeux, une partie méthode et une partie recueil de requêtes prêtes à l'emploi.",
+ "these_centrale": "La déception face à ces outils vient presque toujours de la demande, jamais de l'outil. Une requête vague produit un résultat vague. L'ouvrage propose une structure en six champs à remplir systématiquement, la démontre sur une dizaine de situations, énumère les sept réglages qui améliorent une requête et les cinq erreurs de débutant, puis fournit un recueil de requêtes prêtes pour la vie professionnelle et domestique. Le tout encadré par un exposé honnête des limites : inventions, fuite de données, impact environnemental, cadre réglementaire.",
+ "idees_force": [
+  {
+   "titre": "La structure en six champs, cœur du livre",
+   "explication": "Identité, à savoir le rôle que doit adopter le système. Contexte, c'est-à-dire votre situation réelle. Objectif, ce que vous voulez obtenir. Tâche, ce que vous lui demandez concrètement de faire. Ton, le registre attendu. Format, la forme de la réponse. Cette grille est la contribution durable de l'ouvrage : elle survivra aux changements d'interface et de modèle, parce qu'elle décrit ce qu'il faut avoir en tête avant d'écrire, pas où cliquer.",
+   "page": 62
+  },
+  {
+   "titre": "Un système conversationnel ne s'utilise pas comme un moteur de recherche",
+   "explication": "L'erreur d'origine, observée par l'autrice chez la plupart des personnes qu'elle forme, est de taper une requête d'une ligne comme dans une barre de recherche. Un moteur de recherche cherche un document existant ; un système génératif construit une réponse à partir de ce que vous lui donnez. Moins vous lui donnez, plus il produit du générique. La comparaison qu'elle emploie est juste : le meilleur four et les meilleurs citrons ne font pas la tarte si l'on ne sait pas cuisiner.",
+   "page": 60
+  },
+  {
+   "titre": "Les inventions, expliquées par le mécanisme et non par le mystère",
+   "explication": "Le système puise dans les données sur lesquelles il a été entraîné. Si ces données sont fausses, la réponse sera fausse. Si elles sont anciennes, la réponse sera périmée dès qu'un fait récent la contredit. D'où l'avertissement affiché par l'interface elle-même, invitant à vérifier les informations importantes. L'autrice donne deux parades concrètes : exiger les sources afin de pouvoir vérifier la donnée et sa date, et employer un outil de recherche assistée qui rend des liens cliquables quand on a besoin d'informations récentes. La consigne vaut surtout pour les chiffres.",
+   "page": 17
+  },
+  {
+   "titre": "L'affaire Samsung, argument décisif sur la confidentialité",
+   "explication": "Trois employés ont divulgué involontairement des informations internes en les saisissant dans une interface conversationnelle, ce qui a conduit l'entreprise à interdire l'outil à une partie de son personnel. La règle qui en découle est simple et applicable partout : ne jamais saisir de données internes ou personnelles sensibles, ou les anonymiser d'abord. Le livre indique aussi les deux réglages qui empêchent l'exploitation des échanges pour l'entraînement, ainsi que la conversation éphémère.",
+   "page": 23
+  },
+  {
+   "titre": "Le règlement européen sur l'intelligence artificielle et son extraterritorialité",
+   "explication": "Le texte classe les systèmes par niveau de risque et s'applique à tout opérateur intervenant sur le marché européen, qu'il y soit établi ou non, avec des sanctions pouvant atteindre trente millions d'euros ou sept pour cent du chiffre d'affaires annuel. Cette portée extraterritoriale intéresse directement toute entreprise africaine qui vend ou opère en direction de l'Europe.",
+   "page": 28
+  },
+  {
+   "titre": "Les chiffres environnementaux, cités puis relativisés",
+   "explication": "L'entraînement d'un grand modèle aurait consommé sept cent mille litres d'eau ; une requête émettrait environ 1,54 gramme de dioxyde de carbone, réparti entre l'apprentissage, l'énergie des serveurs et leur fabrication. L'autrice met ces valeurs en regard d'autres activités et cite une étude comparant l'empreinte d'une production humaine et d'une production automatisée pour une même tâche, avec des rapports de cent trente à mille cinq cents fois pour une page de texte. Le procédé est honnête, mais la comparaison choisie, celle de la viande de bœuf, oriente la conclusion et mérite d'être discutée plutôt que reprise.",
+   "page": 30
+  },
+  {
+   "titre": "Sept réglages qui améliorent immédiatement une demande",
+   "explication": "Structurer la requête en blocs. Interrompre une réponse qui part dans la mauvaise direction plutôt que de la laisser finir. Modifier sa demande plutôt que d'en écrire une nouvelle. Encadrer de guillemets le texte à traiter pour le distinguer de la consigne. Être spécifique, rédiger un article détaillé sur tel sujet, pour tel public, avec tels exemples, plutôt que rédige un article. Préférer une question fermée à une invitation ouverte. Employer une langue simple et éviter le jargon professionnel, en écrivant que le chiffre d'affaires est identique à celui de l'an dernier plutôt qu'une abréviation de métier.",
+   "page": 71
+  },
+  {
+   "titre": "L'abréviation ambiguë produit des résultats absurdes",
+   "explication": "L'exemple donné est parlant : commencer par tu es le meilleur des chasseurs au lieu de tu es le meilleur des chasseurs de têtes conduit à une réponse d'un tout autre genre. Le système ne devine pas le métier de celui qui écrit. Cette observation vaut avertissement général : tout ce qui va de soi pour vous doit être écrit.",
+   "page": 75
+  },
+  {
+   "titre": "Un document devient plusieurs livrables",
+   "explication": "À partir d'un simple compte rendu de réunion, on peut obtenir un résumé, un courriel récapitulant les tâches de chacun, une traduction de ce courriel, une note interne. L'autrice insiste : ces systèmes ne se contentent pas de produire du texte sur un sujet, ils rédigent, analysent, traduisent, compilent, évaluent, optimisent, comparent. C'est le changement de perspective qui rend l'outil réellement productif.",
+   "page": 60
+  },
+  {
+   "titre": "Commencer par les tâches les plus simples et les plus répétitives",
+   "explication": "La méthode d'adoption recommandée est graduelle : automatiser d'abord ce qui est ennuyeux et sans enjeu, puis élargir à mesure que la confiance et la compétence viennent. C'est le conseil qui manque à la plupart des guides, qui commencent par les usages les plus spectaculaires et découragent.",
+   "page": 86
+  },
+  {
+   "titre": "Le téléphone comme outil de saisie",
+   "explication": "Photographier des notes manuscrites, un tableau ou un paperboard et demander la transcription est l'un des usages les plus rentables et les moins connus. Pour un contexte où le papier reste dominant et où la saisie coûte du temps, c'est un gain immédiat.",
+   "page": 40
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Requête structurée",
+   "definition": "Demande organisée en six champs, identité, contexte, objectif, tâche, ton, format, plutôt qu'en une phrase."
+  },
+  {
+   "terme": "Hallucination",
+   "definition": "Production d'une information fausse énoncée avec assurance, provenant des données d'entraînement ou de leur ancienneté."
+  },
+  {
+   "terme": "Données d'entraînement",
+   "definition": "Corpus à partir duquel le système a appris. Sa qualité et sa date de coupure conditionnent celles des réponses."
+  },
+  {
+   "terme": "Fonction mémoire",
+   "definition": "Conservation d'informations sur l'utilisateur d'une conversation à l'autre, à distinguer du contexte d'un seul fil."
+  },
+  {
+   "terme": "Conversation éphémère",
+   "definition": "Mode dans lequel l'échange n'est pas conservé ni utilisé pour l'entraînement."
+  },
+  {
+   "terme": "Assistant spécialisé",
+   "definition": "Version préconfigurée d'un modèle pour un usage particulier, que l'on peut créer ou réutiliser."
+  },
+  {
+   "terme": "Recherche assistée avec sources",
+   "definition": "Outil qui interroge le web en direct et rend des liens vérifiables, à préférer quand on a besoin d'informations récentes ou chiffrées."
+  },
+  {
+   "terme": "Règlement européen sur l'intelligence artificielle",
+   "definition": "Texte classant les systèmes par niveau de risque, applicable à tout opérateur présent sur le marché européen où qu'il soit établi."
+  },
+  {
+   "terme": "Anonymisation",
+   "definition": "Retrait des éléments identifiants d'un document avant de le soumettre à un service extérieur."
+  },
+  {
+   "terme": "Question fermée",
+   "definition": "Demande délimitée, portant sur un nombre défini d'éléments, qui produit une réponse exploitable plutôt qu'un exposé général."
+  }
+ ],
+ "a_lire_si": "Vous voulez une méthode transmissible plutôt qu'une collection de trucs, et vous formez d'autres personnes. La grille en six champs se retient en cinq minutes, s'affiche au mur d'une salle de formation et fonctionne avec n'importe quel système conversationnel. Le recueil de requêtes de la seconde partie couvre des situations concrètes, résiliation d'abonnement, préparation d'un dossier de prêt, organisation d'un événement, plan d'entraînement, aide aux devoirs, et sert de modèle à adapter.",
+ "a_eviter_si": "Vous cherchez à comprendre le fonctionnement des modèles : l'explication reste à l'image du chapeau dans lequel on a versé des données. Le catalogue de fonctionnalités, versions, tarifs, limites quotidiennes, se périme en quelques mois. Le livre est centré sur un seul fournisseur, et son ton, marqué par l'expérience de formation et de réseaux sociaux de l'autrice, promet du gain de temps plus qu'il n'interroge ce que l'on perd.",
+ "prerequis": [],
+ "controverses": [
+  "La relativisation de l'impact environnemental repose sur une comparaison choisie, cent requêtes contre cent grammes de viande de bœuf, et sur une étude de préimpression. La question du coût énergétique de l'entraînement et de l'eau consommée par les centres de données reste ouverte et ne se règle pas par ce type de mise en regard.",
+  "L'ouvrage soutient que l'outil ne rendra pas paresseux parce qu'il complète les compétences existantes. C'est vrai pour celui qui en a déjà ; la question de ce qu'il advient de celui qui apprend encore, et qui délègue avant d'avoir acquis, n'est pas traitée."
+ ],
+ "confiance": 0.85
+}

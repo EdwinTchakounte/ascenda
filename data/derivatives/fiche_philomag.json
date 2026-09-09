@@ -1,0 +1,114 @@
+{
+ "document_id": "5d1de5c5-efd4-4442-8b2e-317f7a7c64ab",
+ "titre_normalise": "L'IA est-elle une chance ?",
+ "auteurs": [
+  "Sophie Gherardi (coord.)",
+  "Apolline Guillot",
+  "Miguel Benasayag",
+  "Gilles Dowek"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Lecteurs curieux de philosophie, enseignants, animateurs de débats, étudiants. Publié par Philosophie Magazine Éditeur, premier titre d'une série intitulée Méditations sur le risque. Cinquante huit pages : un essai suivi d'un débat.",
+ "these_centrale": "Le livre ne défend pas de thèse, il en organise l'affrontement. Un essai d'Apolline Guillot montre d'abord que ce que nous appelons intelligence artificielle est une décomposition de l'intelligence humaine en compétences de calcul, qui laisse hors d'elle la faculté d'imaginer autrement. Puis un débat oppose Miguel Benasayag, qui redoute un appauvrissement du vivant par une technique diffusée trop vite pour être apprivoisée, à Gilles Dowek, pour qui technique et politique sont deux faces d'une même pièce et pour qui l'éthique se découvre en agissant.",
+ "idees_force": [
+  {
+   "titre": "Ce qui nous effraie, c'est une hypothèse formulée en 1950, pas une machine",
+   "explication": "Apolline Guillot remonte à l'hypothèse des systèmes symboliques physiques de Herbert Simon et Allen Newell : un système physique symbolique détiendrait les moyens nécessaires et suffisants de l'intelligence en général. C'est cette équivalence supposée entre la machine et notre fonctionnement qui inquiète, pas la performance des outils. Elle ajoute une remarque décisive sur la honte prométhéenne de Günther Anders : pour avoir honte, il faut reconnaître dans la machine un analogue de soi, or personne n'a honte devant une chaise ou un tournevis.",
+   "page": 13
+  },
+  {
+   "titre": "Un buffet d'intelligences spécialisées ne fait pas une intelligence",
+   "explication": "Reprenant Nils Nilsson, l'essai soutient que rien ne permet d'affirmer qu'en mettant bout à bout des morceaux d'intelligence séparés on obtienne autre chose qu'une décomposition spectrale de la nôtre, scindée en une myriade de compétences toutes fondées sur la résolution de problèmes. L'auteure reconnaît pourtant que certains comportements des modèles récents n'avaient été ni programmés ni envisagés.",
+   "page": 14
+  },
+  {
+   "titre": "Chez Hobbes, l'intelligence a une finalité sociale ; chez McCarthy, elle n'en a plus",
+   "explication": "La définition calculatoire est ancienne : dès 1661, Hobbes écrit que la raison n'est rien d'autre que l'addition et la soustraction de suites de noms. Mais Guillot relève un déplacement décisif. Pour Hobbes, ces noms sont ceux sur lesquels nous nous sommes mis d'accord, donc l'intelligence vise le lien. Pour McCarthy en 1955, elle est sans finalité, ou plutôt elle mime la finalité par l'entremêlement de couches de calcul. Résoudre un problème est chez l'homme un signe d'intelligence ; pour la machine, c'est une fin.",
+   "page": 14
+  },
+  {
+   "titre": "L'intelligence humaine est d'abord la faculté de concevoir ce qui n'existe pas",
+   "explication": "Galilée formule la loi de la chute des corps à partir du vide, qui n'existe nulle part ailleurs que dans la théorie. Sartre écrit que l'œuvre d'art est un irréel : La Jeune Fille à la perle n'est ni entre deux couches de peinture ni cachée, elle apparaît quand la conscience se fait imageante. Guillot en tire une conséquence politique, la phrase la plus forte du livre : ce n'est pas parce qu'une situation est insupportable qu'on envisage de la changer, c'est parce qu'on envisage de la changer qu'elle nous apparaît soudain comme insupportable.",
+   "page": 21
+  },
+  {
+   "titre": "Trois choses différentes ont porté le même nom",
+   "explication": "Gilles Dowek fait l'histoire du terme et dissipe une confusion majeure. L'expression a d'abord désigné la construction de raisonnements logiques, aujourd'hui appelée démonstration automatique. Puis, dans les années 1980, la modélisation des grammaires, devenue traitement automatique des langues. Elle est ensuite tombée en désuétude avant d'être reprise par un troisième groupe qui fait quelque chose sans rapport avec les deux précédents : des logiciels qui imitent des textes et des images existants.",
+   "page": 28
+  },
+  {
+   "titre": "L'apprentissage machine est un recul de l'algorithme et une avancée de la donnée",
+   "explication": "Dowek renverse une idée reçue avec une image. Deux personnes veulent apprendre une langue. L'une étudie la grammaire et les mécanismes : démarche algorithmique. L'autre va au marché, s'immerge, capte des mots puis des phrases : démarche par les données. Longtemps l'algorithme fut le concept roi de l'informatique ; c'est la donnée qui l'a détrôné. Employer algorithme comme synonyme d'intelligence artificielle est donc doublement fautif.",
+   "page": 28
+  },
+  {
+   "titre": "Trois révolutions anthropologiques, et une qui n'a pas été apprivoisée",
+   "explication": "Benasayag propose une périodisation : le langage, l'écriture, puis la cybernétique. Les deux premières ont été relativement apprivoisées, et elles restent plurielles, car un peuple du désert ne parle pas comme un peuple de la forêt. La troisième installe en moins de quarante ans une interface unique qui conquiert le monde entier, ce qu'il appelle une globalisation qui lime les aspérités du réel. Son observation clinique : le cerveau d'un être humain est sculpté de la même façon à Zurich, en Afrique ou dans la cordillère.",
+   "page": 36
+  },
+  {
+   "titre": "Le désaccord central : le possible devient-il obligatoire ?",
+   "explication": "Benasayag soutient que tout ce que la technique rend possible devient rapidement obligatoire, et cite la carte bancaire, d'abord une option à côté du chèque, puis une nécessité que personne n'a décidée. Dowek conteste : les lunettes connectées de Google, dont personne n'a voulu, ont été abandonnées, et des milliers de logiciels n'ont jamais trouvé d'usagers. Pour lui, la carte s'est imposée non parce que les banques l'ont décidé mais parce que la population l'a préférée. Le livre n'arbitre pas.",
+   "page": 36
+  },
+  {
+   "titre": "L'éthique se découvre en agissant, comme un programme s'écrit",
+   "explication": "Dowek transpose la méthode agile à la morale : on ne peut pas comprendre d'abord ce qu'un programme doit faire puis l'écrire, car en l'écrivant on a de nouvelles idées, et ceux qui l'utilisent en proposent d'autres. Il en va de même en éthique. La question du clonage n'a pas été posée par Aristote parce qu'il faut disposer d'une idée de ce que le mot signifie pour pouvoir s'interroger. Il conclut que cette méthode présente un risque mais qu'elle est la seule possible.",
+   "page": 44
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Hypothèse des systèmes symboliques physiques",
+   "definition": "Formulée par Simon et Newell : un système manipulant des symboles détiendrait les moyens nécessaires et suffisants de l'intelligence en général. C'est le postulat fondateur du champ, et il n'a jamais été démontré."
+  },
+  {
+   "terme": "Honte prométhéenne",
+   "definition": "Concept de Günther Anders désignant le sentiment d'indignité éprouvé devant des objets que nous avons fabriqués et qui, contrairement à nous, s'améliorent d'une génération à l'autre."
+  },
+  {
+   "terme": "Décomposition spectrale de l'intelligence",
+   "definition": "Image proposée dans l'essai : les systèmes actuels ne reconstituent pas l'intelligence, ils en projettent le spectre sur le plan des problèmes solubles."
+  },
+  {
+   "terme": "Faculté contrefactuelle",
+   "definition": "Capacité de former des concepts qui ne correspondent à rien dans l'expérience, comme le vide de Galilée, et sans laquelle il n'y a ni appréciation esthétique ni jugement politique."
+  },
+  {
+   "terme": "Conscience imageante",
+   "definition": "Chez Sartre, l'acte par lequel la conscience met entre parenthèses le monde tel qu'il apparaît pour entrer en contemplation, par opposition à la conscience réalisante."
+  },
+  {
+   "terme": "Démonstration automatique",
+   "definition": "Construction mécanique de raisonnements logiques. Premier sens historique de l'expression intelligence artificielle, aujourd'hui désigné par son nom propre."
+  },
+  {
+   "terme": "Estompement de l'altérité",
+   "definition": "Effet que Benasayag observe dans sa pratique clinique et de recherche : la réduction progressive de ce qui, dans l'autre et dans le vivant, résiste à la modélisation."
+  },
+  {
+   "terme": "Apprivoiser",
+   "definition": "Terme central de Benasayag : intégrer une technique de façon organique et non agrégative, en conservant l'altérité propre au vivant, éventuellement dans un rapport de conflictualité mais non d'affrontement."
+  },
+  {
+   "terme": "Rétroaction appliquée à l'éthique",
+   "definition": "Position de Dowek : les problèmes moraux se découvrent dans l'action, ce qui interdit d'attendre de les avoir tous résolus pour agir, et interdit aussi de prétendre les résoudre par avance."
+  }
+ ],
+ "a_lire_si": "C'est le meilleur point d'entrée de tout cet axe, et de loin. Cinquante huit pages, deux voix qui se contredisent réellement et poliment, un vocabulaire philosophique introduit au fur et à mesure, et aucune des deux positions ne l'emporte artificiellement. Si vous ne devez lire qu'un titre avant les gros ouvrages, lisez celui là : il vous donnera la carte du débat.",
+ "a_eviter_si": "Vous cherchez un exposé technique ou un état de l'art : le livre est philosophique de bout en bout. Sa brièveté fait aussi qu'il ouvre plus de questions qu'il n'en referme, ce qui est son intention mais peut frustrer.",
+ "prerequis": [
+  "Aucun prérequis technique.",
+  "L'essai d'Apolline Guillot convoque Anders, Hobbes, Sartre et Bergson, mais il cite les passages nécessaires et les explique. Un lecteur sans formation philosophique peut le suivre en acceptant de relire quelques pages."
+ ],
+ "controverses": [
+  "Le désaccord est ici la matière du livre et non son défaut. Les deux positions résistent : ni Benasayag ni Dowek ne cède, et le lecteur repart avec deux façons cohérentes de penser la même situation. C'est exactement ce que les ouvrages à thèse de cet axe ne permettent pas.",
+  "Le point non tranché du débat, celui de savoir si le possible devient obligatoire, repose de part et d'autre sur des exemples fragiles. Les lunettes connectées ont échoué, mais le téléphone mobile s'est imposé au point de rendre coûteux le fait de s'en passer. Aucun des deux ne discute cette asymétrie.",
+  "L'observation de Benasayag selon laquelle un jeune à Zurich et un enfant des Andes ont désormais la même interface avec le monde est la plus lourde de conséquences du livre pour un lecteur non occidental. Elle rejoint la question de la souveraineté technologique traitée ailleurs dans cette bibliothèque, mais Benasayag la pose en termes anthropologiques et non politiques.",
+  "Dowek qualifie d'absurde la pétition de 2023 demandant une suspension de six mois de la recherche. L'argument qu'il oppose, l'impossibilité d'attendre d'être sûr pour agir, ne répond pas exactement à ce que demandaient les signataires, qui visaient l'entraînement des plus grands modèles et non la recherche en général.",
+  "Sa formule finale, réguler n'est pas vertueux en soi, réguler est vertueux si on régule bien, est juste et un peu commode : elle laisse entière la question de savoir qui décide de ce qui est bien."
+ ],
+ "confiance": 0.9
+}

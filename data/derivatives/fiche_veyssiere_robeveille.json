@@ -1,0 +1,126 @@
+{
+ "document_id": "216dd890-d095-4a27-b72e-70751e559f1b",
+ "titre_normalise": "Manager l'intelligence artificielle. S'adapter aux transformations profondes de l'environnement professionnel",
+ "auteurs": [
+  "Michelle Veyssière",
+  "Roland Robeveille"
+ ],
+ "annee": 2019,
+ "type_ouvrage": "manuel professionnel",
+ "niveau": "intermediaire",
+ "public_cible": "Managers de proximité, dirigeants, responsables des ressources humaines, consultants en conduite du changement. GERESO Édition, collection développement personnel et efficacité professionnelle, deuxième édition, janvier 2019, deux cent treize pages, ISBN 978-2-37890-081-6. Cinq chapitres : la transformation de la société, les métiers supprimés et créés, les jeunes, les actifs et les seniors, le passage du management au leadership, et un recueil de fiches pratiques.",
+ "these_centrale": "L'intelligence artificielle changera les tâches plus que les métiers. Les emplois qui disparaîtront ne seront pas supprimés directement par la technologie mais par les réorganisations et les transferts de tâches qu'elle rendra possibles. La conséquence pour le management est radicale : un responsable dont l'autorité reposait sur son expérience et son ressenti se trouvera face à des systèmes capables d'appuyer leurs recommandations sur des faits établis. Il ne pourra plus être un chef, il devra devenir un fédérateur, ou disparaître.",
+ "idees_force": [
+  {
+   "titre": "La capacité d'apprendre vaudra plus que le savoir acquis",
+   "explication": "Les auteurs reprennent une formule issue d'ateliers prospectifs tenus à Palo Alto en 2017 et la traduisent par l'opposition classique de Montaigne : une tête bien faite plutôt qu'une tête bien pleine. C'est la conclusion pratique de tout le livre, et elle place la lecture, l'étude et la formation continue au centre de la stratégie personnelle de chacun, quel que soit son métier.",
+   "page": 18
+  },
+  {
+   "titre": "L'automatisation pourrait rapatrier les activités délocalisées",
+   "explication": "Avertissement capital et rarement formulé : les métiers déjà externalisés vers des pays à coûts plus faibles, banques, compagnies d'assurance, centres d'appels, pourraient être internalisés de nouveau parce que pris en charge par des systèmes automatisés. Cela ne créerait pas d'emplois là où l'activité revient, mais cela en supprimerait là où elle était partie. Toute économie dont une part du tertiaire repose sur la sous-traitance de services à distance doit lire cette phrase avec attention.",
+   "page": 19
+  },
+  {
+   "titre": "Six hypothèses de travail, énoncées d'emblée",
+   "explication": "Les tâches prises en charge créeront une nouvelle répartition des responsabilités ; l'organisation du travail sera plus affectée que l'emploi lui-même ; l'usage des méthodes de psychologie sociale par ces systèmes pourrait transformer profondément le management, voire produire une manipulation de masse ou un chaos organisé ; tous les acteurs ne pourront pas s'adapter à des systèmes qui pensent à leur place et leur donnent des instructions ; les managers devront changer de posture face à des machines dotées de connaissances managériales plus fiables que les leurs ; la fonction ressources humaines devra se réinventer en fonction de conseil ou disparaître. Annoncer ses hypothèses avant de les traiter est une méthode que peu d'ouvrages de management adoptent.",
+   "page": 17
+  },
+  {
+   "titre": "Sept pour cent des managers peuvent devenir des leaders",
+   "explication": "S'appuyant sur une étude de cabinet, les auteurs affirment qu'on estime à sept pour cent la proportion de managers ayant le potentiel de devenir des leaders. Ils en tirent une conséquence lucide : la transformation ne peut pas venir de personnes qui essaimeraient de nouveaux comportements autour d'elles, elle ne peut être portée que par le dirigeant, appuyé par la fonction ressources humaines et l'encadrement supérieur. Autrement dit, une transformation managériale sans engagement du sommet est vouée à l'échec.",
+   "page": 142
+  },
+  {
+   "titre": "La décision humaine est émotionnelle, et ce n'est pas un défaut à corriger",
+   "explication": "Les auteurs rappellent, études d'imagerie cérébrale à l'appui, que juger, décider et éprouver une émotion sont liés, que l'émotion intervient avant, pendant et après la décision, et que nos jugements reposent sur des heuristiques souvent fausses du point de vue logique. Ils posent ensuite la question honnêtement : nul n'a prouvé qu'un système automatisé éprouve des émotions, ni qu'il n'en éprouve pas. Si l'absence d'émotion était établie, ce serait un avantage considérable, mais elle remettrait aussi en cause l'idée que décider suppose de ressentir.",
+   "page": 44
+  },
+  {
+   "titre": "Les pathologies de la décision en milieu professionnel",
+   "explication": "Le stress engendre la panique devant une décision à prendre ; la dépression, l'anxiété et les troubles compulsifs altèrent gravement la capacité de décider ; l'intuition perd sa force lorsque l'émotion liée à la pression l'emporte sur l'analyse. Un management autoritaire ou au contraire démissionnaire produit indirectement les mêmes effets sur les décisions des collaborateurs. Les auteurs en déduisent l'usage le plus défendable de l'assistance automatisée : proposer des solutions hors des biais du décideur, sans se substituer à lui.",
+   "page": 155
+  },
+  {
+   "titre": "L'effet paradoxal de l'assistance sur les compétences",
+   "explication": "Un système qui sécurise les décisions et dissuade les écarts de procédure diminue en même temps les capacités cognitives de ceux qui travaillent avec lui. Les auteurs le rangent parmi les opportunités tout en reconnaissant qu'ils auraient pu le classer parmi les risques : la limite sera atteinte quand les opérateurs ne sauront plus inventer de solutions nouvelles. C'est la formulation la plus nette du fonds sur ce que l'on perd en déléguant.",
+   "page": 75
+  },
+  {
+   "titre": "Prévoir des espaces où l'on parle sans la machine",
+   "explication": "Recommandation concrète et originale : aménager des lieux de réunion permettant les échanges d'information et les retours d'expérience indépendamment du système, de préférence hors de sa présence pour éviter les interférences. Les auteurs anticipent aussi que les entreprises favoriseront le travail collaboratif pour compenser ce qui manque dans la relation à la machine.",
+   "page": 75
+  },
+  {
+   "titre": "Le paradoxe des enquêtes d'opinion",
+   "explication": "Les personnes interrogées perçoivent l'importance du changement mais ne s'y estiment pas préparées : une large majorité reconnaît une transformation sans précédent du monde professionnel, moins d'un tiers se sent suffisamment armé pour y faire face. Côté entreprises, une écrasante majorité juge la technologie bientôt incontournable, et plus de sept sur dix n'envisagent pourtant pas de s'y engager à court ou moyen terme. Conscience des enjeux et immobilisme coexistent, ce qui est exactement la situation de la plupart des organisations.",
+   "page": 58
+  },
+  {
+   "titre": "Le diplôme reste le paramètre que la machine sait lire",
+   "explication": "Les auteurs soutiennent que l'automatisation croissante du recrutement continuera de s'appuyer sur le diplôme et sur l'établissement d'origine, parce que ce sont des références numérisables et normées, alors même qu'un diplôme ne prouve pas la compétence. Ils opposent à cela le centre d'évaluation, exercice objectif qui vérifie la présence d'une compétence sans considération de diplôme, et qui est lui aussi de plus en plus automatisé, la décision finale restant humaine. Pour un candidat africain confronté à un tri automatique, savoir sur quoi la machine s'appuie est décisif.",
+   "page": 102
+  },
+  {
+   "titre": "La responsabilité de se former est devenue individuelle",
+   "explication": "Constat sévère et daté du droit français : les évolutions législatives récentes ont accru la responsabilité individuelle, les entreprises étant largement dégagées de leurs obligations en matière de formation et de développement des compétences ; elles achèteront désormais du savoir-faire. Les auteurs appellent cela une forme de mercenariat. Le cadre juridique cité est français, mais la tendance décrite, un marché du travail où chacun finance sa propre montée en compétence, est déjà la règle dans beaucoup de pays.",
+   "page": 128
+  },
+  {
+   "titre": "Des humains qui se font passer pour des machines",
+   "explication": "Les auteurs soupçonnent, puis trouvent confirmation dans un article, que certaines entreprises font passer des humains pour des systèmes automatisés afin d'attirer le client. L'inversion du Turc mécanique est instructive : ce n'est plus seulement la machine qui cache un homme, c'est l'homme qui se déguise en machine parce que le mot intelligence artificielle fait vendre.",
+   "page": 168
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Transfert de tâches",
+   "definition": "Redistribution des activités entre humains et systèmes, qui modifie l'organisation avant de modifier l'emploi."
+  },
+  {
+   "terme": "Compétences transversales",
+   "definition": "Aptitudes cognitives, sociales et situationnelles réutilisables d'un métier à l'autre, appelées à remplacer les seules capacités techniques."
+  },
+  {
+   "terme": "Gestion prévisionnelle des compétences",
+   "definition": "Anticipation des besoins futurs en qualifications et organisation des transitions avant que les postes ne disparaissent."
+  },
+  {
+   "terme": "Centre d'évaluation",
+   "definition": "Dispositif d'exercices standardisés vérifiant la présence effective d'une compétence, indépendamment du diplôme, et positionnant la personne par rapport à une population de référence."
+  },
+  {
+   "terme": "Heuristique",
+   "definition": "Raccourci mental fondé sur des éléments qui paraissent rationnels, souvent faux logiquement parce que gouverné par l'émotion."
+  },
+  {
+   "terme": "Pathologie de la décision",
+   "definition": "Altération de la capacité à décider par le stress, l'anxiété ou un style de management inadapté."
+  },
+  {
+   "terme": "Manager et leader",
+   "definition": "Le premier gère des ressources et des procédures, le second fédère et donne du sens. Le passage de l'un à l'autre n'est possible que pour une minorité."
+  },
+  {
+   "terme": "Psychologie sociale appliquée au changement",
+   "definition": "Emploi des mécanismes d'influence collective pour conduire une transformation, dont les auteurs soulignent le potentiel de manipulation de masse."
+  },
+  {
+   "terme": "Relocalisation par automatisation",
+   "definition": "Retour dans le pays d'origine d'activités précédemment délocalisées, non par choix social mais parce que la machine coûte moins cher que la main-d'œuvre lointaine."
+  },
+  {
+   "terme": "Charge mentale",
+   "definition": "Coût cognitif du travail, que l'intensification des rythmes et la coexistence avec les systèmes automatisés accroissent."
+  }
+ ],
+ "a_lire_si": "Vous encadrez des équipes ou vous conseillez des organisations sur la conduite du changement. Le livre est ancré dans la psychologie du travail et la sociologie des organisations plutôt que dans la technique, ce qui en fait un complément utile aux ouvrages d'implantation. Les fiches pratiques finales, sur le management, la gestion prévisionnelle des compétences, la dynamique de groupe et la conduite d'un projet de changement, sont utilisables indépendamment du sujet de l'intelligence artificielle. L'avertissement sur la relocalisation des activités délocalisées mérite d'être lu par tout responsable de politique économique africaine.",
+ "a_eviter_si": "Vous cherchez de la technique ou de l'actualité. L'ouvrage date de janvier 2019, antérieur aux modèles génératifs, et sa description des systèmes est sommaire. Le cadre juridique, les sondages, les lois sur la formation et les seuils de retraite cités sont exclusivement français et déjà périmés. Le ton est parfois pessimiste jusqu'à la dureté, notamment sur le sort des jeunes sans qualification et des seniors, et certaines projections sont avancées sans appui suffisant.",
+ "prerequis": [],
+ "controverses": [
+  "Les auteurs posent comme problématique le délai dans lequel ces systèmes acquerront assez d'autonomie pour échapper au contrôle humain. Cette formulation, courante en 2019, confond autonomie opérationnelle et volonté propre, et n'est pas soutenue par l'état de la recherche.",
+  "L'affirmation selon laquelle des machines posséderaient des connaissances managériales plus fiables que celles des managers, parce que fondées sur des faits établis, suppose que la décision managériale soit réductible à des faits. C'est précisément ce que le chapitre sur l'émotion et la décision met en doute.",
+  "L'emploi des méthodes de psychologie sociale par des systèmes automatisés est présenté comme pouvant profiter à tous ou produire un chaos organisé. Les auteurs n'indiquent pas ce qui déterminerait l'issue."
+ ],
+ "confiance": 0.8
+}

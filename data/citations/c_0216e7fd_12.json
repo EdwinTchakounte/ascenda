@@ -1,0 +1,18 @@
+[
+ {"chapitre":"c0e69815","citations":[
+  {"texte":"L'Art est une machine, à la fois logique et morale, capable de guider le jugement humain vers le bien.","page":187,"axe":"04-ia-societe-ethique-philosophie","theme":"Une machine morale au XIIIe siècle","portee":"Le projet de déléguer le jugement moral à un dispositif a sept siècles, il ne date pas de l'informatique."},
+  {"texte":"Pour Lulle, la combinatoire est une voie de rédemption morale, un moyen d'en finir avec les guerres de religion.","page":187,"axe":"04-ia-societe-ethique-philosophie","theme":"Le calcul pour mettre fin aux conflits","portee":"L'espoir de résoudre les désaccords humains par le calcul revient à chaque époque sous une forme nouvelle."}
+ ]},
+ {"chapitre":"f13c3694","citations":[
+  {"texte":"elles ne prennent pas en compte le pluralisme des valeurs et la diversité des croyances","page":188,"axe":"04-ia-societe-ethique-philosophie","theme":"Une morale unique imposée","portee":"Tout dispositif d'amélioration morale suppose une morale déjà choisie, et par quelqu'un."},
+  {"texte":"des IA LLM programmées pour contre-argumenter de manière personnalisée avec des complotistes parvenaient à modifier leur croyance dans 20 % des cas","page":189,"axe":"05-ia-education-pedagogie","theme":"Convaincre par la conversation","portee":"Un résultat mesuré qui montre que la discussion argumentée reste efficace, même à grande échelle."},
+  {"texte":"Ces machines bienveillantes corrigeront nos biais de jugement, de telle sorte qu'il nous semblera avoir pris nous-mêmes la bonne décision conformément à nos valeurs.","page":190,"axe":"09-developpement-personnel-influence","theme":"Croire décider soi-même","portee":"Une influence qui laisse intacte la sensation de choisir librement est la plus difficile à repérer."},
+  {"texte":"Je doute du progrès moral et le trouve à vrai dire suspect (il s'y cache de l'aliénation).","page":190,"axe":"04-ia-societe-ethique-philosophie","theme":"Se méfier du progrès moral","portee":"Prétendre rendre les gens meilleurs suppose de savoir ce qu'est être meilleur, et de le décider pour eux."}
+ ]},
+ {"chapitre":"19f58af6","citations":[
+  {"texte":"l'individu demande à une mesure externe (machine) de lui révéler son intériorité cachée, au point de se rendre étranger à lui-même","page":191,"axe":"09-developpement-personnel-influence","theme":"Se connaître par un appareil","portee":"Confier à un capteur le soin de dire ce que l'on ressent affaiblit la capacité de se comprendre soi-même."},
+  {"texte":"elle pourrait assister un individu pour qu'il dépasse ses propres biais et limites cognitives en considérant les différentes positions morales en jeu","page":191,"axe":"09-developpement-personnel-influence","theme":"L'usage acceptable d'un conseiller","portee":"Aider quelqu'un à considérer d'autres points de vue est autre chose que décider à sa place."},
+  {"texte":"c'est le biais de confirmation qui nous incite à privilégier les informations qui confortent nos croyances et nos préjugés","page":192,"axe":"09-developpement-personnel-influence","theme":"Le biais de confirmation","portee":"Chercher ce qui nous donne raison est le mouvement le plus naturel et le plus coûteux de l'esprit."},
+  {"texte":"des individus, pris dans des boucles rétroactives, s'abêtissent de théories du complot, voire se radicalisent au point de se battre pour leur servitude comme s'il en allait de leur liberté","page":192,"axe":"04-ia-societe-ethique-philosophie","theme":"Se battre pour sa servitude","portee":"Les mécanismes de recommandation produisent une conviction d'autant plus forte qu'elle paraît personnelle."}
+ ]}
+]

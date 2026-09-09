@@ -1,0 +1,618 @@
+[
+ {
+  "chapitre": "15fc9df6",
+  "citations": [
+   {
+    "texte": "Commencez par identifier les tâches répétitives qui consomment beaucoup de temps et d’énergie, telles que l’envoi d’e-mails de suivi ou la mise à jour des bases de données CRM (gestion de la relation client). En automatisant des tâches simples, vous pourrez vous libérer du temps pour des activités plus stratégiques.",
+    "page": 85,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Par ou commencer",
+    "portee": "Regle de tri qui evite de se lancer dans des chantiers d'automatisation trop ambitieux."
+   },
+   {
+    "texte": "C’est en commençant avec des choses faciles à déléguer que vous prendrez le réflexe d’utiliser l’IA dans votre quotidien.",
+    "page": 85,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Prendre le reflexe",
+    "portee": "L'adoption d'un outil tient a l'habitude acquise, pas a la prouesse technique."
+   },
+   {
+    "texte": "Certaines nécessitent une intervention humaine pour garantir la qualité ou la créativité, tandis que d’autres peuvent être entièrement automatisées sans perte de qualité.",
+    "page": 86,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce qui reste humain",
+    "portee": "Critere de partage entre ce qu'on delegue entierement et ce qu'on ne fait que preparer."
+   }
+  ]
+ },
+ {
+  "chapitre": "a82a637b",
+  "citations": [
+   {
+    "texte": "Utiliser ChatGPT est un excellent moyen de le faire rentrer dans son quotidien et de se faire la main sur cette outil.",
+    "page": 88,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "S'entrainer sur des cas domestiques",
+    "portee": "Justifie le detour par la vie quotidienne avant les usages professionnels."
+   }
+  ]
+ },
+ {
+  "chapitre": "ff952c20",
+  "citations": [
+   {
+    "texte": "Je veux que tu m’aides à trouver des idées de recettes qui impressionneront mes invités tout en étant simples à réaliser. Attention, l’un d’entre eux est allergique aux arachides.",
+    "page": 89,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La contrainte dans l'objectif",
+    "portee": "Montre comment une contrainte vitale se glisse dans la formulation de l'objectif."
+   },
+   {
+    "texte": "Mon fils a judo le lundi soir à 17 heures pendant 45 minutes. Ma fille a un cours de danse le jeudi soir à 17 h 15 pendant 1 heure.",
+    "page": 90,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le contexte au niveau du detail",
+    "portee": "Illustre le degre de precision qu'exige une demande de planification reelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "077dad5b",
+  "citations": [
+   {
+    "texte": "Bien sûr, vous pouvez utiliser ce modèle pour élaborer tout type de planning : planning de garde alternée, planning pour planifier ses déplacements ou ses vacances, ou encore au travail pour organiser les présences de votre équipe en fonction des congés de chacun.",
+    "page": 90,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Transposer un prompt",
+    "portee": "Un prompt bien construit devient un modele reutilisable dans d'autres contextes."
+   },
+   {
+    "texte": "Adoptez le réflexe de demander à ChatGPT de vous préparer la liste des sites à visiter, des restaurants à découvrir, des hôtels qui correspondent à votre budget.",
+    "page": 91,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Preparer un voyage",
+    "portee": "Cas d'usage domestique ou l'IA remplace des heures de recherche dispersee."
+   }
+  ]
+ },
+ {
+  "chapitre": "d0942ec6",
+  "citations": [
+   {
+    "texte": "Écrire une lettre de résiliation pour un abonnement téléphonique, un site de streaming, une salle de sport, ou encore pour clôturer un compte bancaire, n’a rien de compliqué. Mais encore faut-il ne rien oublier dans sa demande et trouver la bonne formulation !",
+    "page": 93,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Les courriers administratifs",
+    "portee": "Usage qui rend service a qui n'a pas la pratique des formulations administratives."
+   }
+  ]
+ },
+ {
+  "chapitre": "9093f7ae",
+  "citations": [
+   {
+    "texte": "ChatGPT a été alimenté avec plus de 570 gigaoctets de données textuelles. C’est une bibliothèque gigantesque ! Avec lui, vous pouvez tout apprendre sur n’importe quel sujet pour enrichir vos connaissances.",
+    "page": 95,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Une bibliotheque disponible",
+    "portee": "Argument central pour l'autoformation, particulierement la ou l'acces aux livres est limite."
+   }
+  ]
+ },
+ {
+  "chapitre": "f3faf82e",
+  "citations": [
+   {
+    "texte": "Utilisez ChatGPT pour dresser la liste des étapes du processus d’achat avec les banques et de tous les documents qu’il va falloir fournir pour être sûr·e de ne rater aucune échéance !",
+    "page": 96,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Se reperer dans une demarche inconnue",
+    "portee": "L'IA comme guide de procedure pour qui aborde un parcours administratif complexe."
+   }
+  ]
+ },
+ {
+  "chapitre": "85052514",
+  "citations": [
+   {
+    "texte": "Je veux que tu me guides à travers chaque étape du processus de prêt immobilier (de la préparation des documents à la finalisation de l’achat) et que tu me fournisses une check-list complète des documents à préparer.",
+    "page": 97,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Demander une liste de controle",
+    "portee": "Formulation de tache qui produit un livrable verifiable plutot qu'un expose."
+   }
+  ]
+ },
+ {
+  "chapitre": "9573bc54",
+  "citations": [
+   {
+    "texte": "Pose-moi autant de questions que nécessaire avant de démarrer.",
+    "page": 98,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Faire questionner le modele",
+    "portee": "Consigne breve qui transforme une commande en dialogue et ameliore le resultat."
+   }
+  ]
+ },
+ {
+  "chapitre": "305e0432",
+  "citations": [
+   {
+    "texte": "Peux-tu m’aider à créer un rétroplanning détaillé pour le mariage, incluant le choix du lieu, le menu, la décoration, et les animations ?",
+    "page": 99,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le retroplanning d'evenement",
+    "portee": "Modele transposable a tout projet a date fixe, professionnel ou familial."
+   }
+  ]
+ },
+ {
+  "chapitre": "cdcf5bcc",
+  "citations": [
+   {
+    "texte": "Je veux intégrer des pratiques de méditation dans ma routine quotidienne pour mieux gérer le stress.",
+    "page": 100,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'IA au service d'une routine personnelle",
+    "portee": "Exemple d'un accompagnement de developpement personnel construit par soi-meme."
+   }
+  ]
+ },
+ {
+  "chapitre": "87979bc0",
+  "citations": [
+   {
+    "texte": "Peux-tu m’aider à créer une liste d’activités amusantes et interactives pour les enfants, adaptées au thème de la fête ?",
+    "page": 102,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Organiser une fete d'enfants",
+    "portee": "Cas domestique ou la valeur ajoutee de l'IA tient a la production rapide d'idees."
+   }
+  ]
+ },
+ {
+  "chapitre": "22d6f707",
+  "citations": [
+   {
+    "texte": "Neuf entreprises sur dix affirment que l’intelligence artificielle leur permet d’avoir un avantage compétitif sur leurs concurrents",
+    "page": 109,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'IA comme avantage competitif",
+    "portee": "Donnee du MIT Sloan Management Review qui situe l'enjeu au niveau de la concurrence entre entreprises."
+   },
+   {
+    "texte": "utiliser ChatGPT ne veut pas nécessairement dire que nous allons lui demander de faire notre travail à notre place, il peut aussi jouer le rôle d’un conseiller",
+    "page": 110,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'IA comme conseiller",
+    "portee": "Deplace l'usage de l'execution vers l'aide a la reflexion strategique."
+   }
+  ]
+ },
+ {
+  "chapitre": "cd75e650",
+  "citations": [
+   {
+    "texte": "Bon à savoir : la préparation représente 90 % de la réussite d’une vente !",
+    "page": 111,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le poids de la preparation",
+    "portee": "Justifie l'investissement de temps dans la collecte d'informations avant un rendez-vous."
+   },
+   {
+    "texte": "une entreprise augmente de 50 % ses leads lorsqu’elle utilise des outils d’IA dans son processus de vente",
+    "page": 111,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "IA et generation de prospects",
+    "portee": "Donnee Ringover 2023 sur l'effet commercial mesurable des outils d'IA."
+   }
+  ]
+ },
+ {
+  "chapitre": "8c297d9f",
+  "citations": [
+   {
+    "texte": "Chez Unilever, l’utilisation de l’IA a contribué à une augmentation de 16 % de la diversité des nouveaux employés et à une réduction de 90 % du temps de recrutement.",
+    "page": 114,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'IA dans le recrutement",
+    "portee": "Cas d'entreprise ou l'automatisation produit des gains mesurables sur la diversite et les delais."
+   },
+   {
+    "texte": "Leurs réponses sont analysées par les algorithmes de reconnaissance faciale, qui vont distinguer la position des yeux, le sourire, les mouvements de tête, et ainsi tenter de déceler l’enthousiasme d’un candidat.",
+    "page": 115,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La lecture algorithmique des visages",
+    "portee": "Pratique a interroger : l'enthousiasme suppose se deduit ici d'indices gestuels."
+   },
+   {
+    "texte": "Le recruteur ne se donnera pas la peine de regarder le dossier d’un potentiel nouveau salarié si l’intelligence artificielle l’a mal noté.",
+    "page": 115,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La decision deleguee",
+    "portee": "Point critique : la note algorithmique devient un filtre que l'humain ne revoit plus."
+   }
+  ]
+ },
+ {
+  "chapitre": "d18d4b88",
+  "citations": [
+   {
+    "texte": "L’analyse est une des vraies valeurs ajoutées de l’IA. ChatGPT peut analyser des grands ensembles de données Excel et les synthétiser sous forme de rapports, de tableaux de bord ou de résumés exécutifs.",
+    "page": 117,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'analyse de donnees",
+    "portee": "Situe la valeur de l'outil du cote du traitement des donnees plutot que de la seule redaction."
+   }
+  ]
+ },
+ {
+  "chapitre": "d9509b96",
+  "citations": [
+   {
+    "texte": "L’IA transforme en profondeur le métier des managers en leur faisant gagner du temps. En automatisant des tâches répétitives et chronophages, telles que la gestion des plannings, le traitement des e-mails et la saisie de données, les managers peuvent alors se concentrer sur des tâches à plus forte valeur ajoutée.",
+    "page": 119,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le manager libere de l'administratif",
+    "portee": "Decrit le deplacement du travail d'encadrement vers l'accompagnement des personnes."
+   }
+  ]
+ },
+ {
+  "chapitre": "451a439c",
+  "citations": [
+   {
+    "texte": "Vous devez non seulement analyser des factures, mais aussi les classer par dépenses, et enfin, rédiger un rapport avec vos analyses. Toutes ces tâches prennent un temps considérable.",
+    "page": 121,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le poids des taches administratives",
+    "portee": "Decrit precisement le type de charge que l'IA permet de reduire."
+   }
+  ]
+ },
+ {
+  "chapitre": "cbb7512d",
+  "citations": [
+   {
+    "texte": "Prenez toujours bien garde à vos documents confidentiels et ne soumettez aucune donnée sensible à moins d’avoir veillé à ce qu’OpenAI n’intègre pas vos données dans le modèle d’entraînement.",
+    "page": 123,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Rappel de securite en contexte professionnel",
+    "portee": "Avertissement place juste apres un cas d'usage manipulant des donnees d'entreprise."
+   },
+   {
+    "texte": "l’intelligence artificielle va être d’une aide précieuse pour gagner du temps en rassemblant un maximum d’éléments. Vous pourrez alors finaliser l’analyse avec votre connaissance du marché et du métier.",
+    "page": 123,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'IA rassemble, l'humain tranche",
+    "portee": "Repartition claire des roles dans un travail d'analyse strategique."
+   }
+  ]
+ },
+ {
+  "chapitre": "ff355f1d",
+  "citations": [
+   {
+    "texte": "Tout porteur de projet doit savoir présenter brièvement son idée. Cela vaut pour quiconque souhaite parler de son entreprise, de son métier, de son projet associatif, etc. Un bon pitch permet de susciter l’intérêt et de communiquer les points clés de manière claire et concise.",
+    "page": 124,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'exercice du pitch",
+    "portee": "Competence transversale a l'entrepreneuriat, au monde associatif et a la recherche d'emploi."
+   }
+  ]
+ },
+ {
+  "chapitre": "5928d134",
+  "citations": [
+   {
+    "texte": "La négociation n’est pas un exercice facile. Qu’il s’agisse de négocier des prix avec un fournisseur, négocier le prix de vente de sa maison, demander une augmentation... La préparation est essentielle pour réussir sa transaction.",
+    "page": 126,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Se preparer a negocier",
+    "portee": "Rappelle que la negociation est une competence qui s'entraine et non un talent inne."
+   },
+   {
+    "texte": "Tu joues le rôle du client potentiel. À la fin de la conversation, tu devras : – Analyser la conversation. – Me donner des suggestions pour m’améliorer.",
+    "page": 127,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'IA comme partenaire d'entrainement",
+    "portee": "Dispositif de simulation ou le modele joue l'adversaire puis devient formateur."
+   }
+  ]
+ },
+ {
+  "chapitre": "b4088cbd",
+  "citations": [
+   {
+    "texte": "Il est parfois difficile de résumer son activité en insistant sur ce qui fait la différence avec la concurrence.",
+    "page": 128,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Formuler sa difference",
+    "portee": "Difficulte courante des entrepreneurs, que le regard exterieur d'un outil peut aider a lever."
+   }
+  ]
+ },
+ {
+  "chapitre": "65568c04",
+  "citations": [
+   {
+    "texte": "ce prompt peut servir dans une multitude de situations : analyse d’une campagne publicitaire, analyse de vente, analyse du trafic dans un point de vente, de la ponctualité des employés, d’un cycle de vie d’un produit, évaluation de la santé financière d’une entreprise...",
+    "page": 129,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Un modele d'analyse polyvalent",
+    "portee": "Montre qu'une structure de prompt vaut pour toute une famille de problemes."
+   }
+  ]
+ },
+ {
+  "chapitre": "ca75b964",
+  "citations": [
+   {
+    "texte": "Et si vous pouviez comprendre rapidement l’essentiel d’un document sans avoir à passer des heures à lire l’intégralité du texte ?",
+    "page": 130,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le resume de document",
+    "portee": "Promesse a manier avec discernement : le resume prepare la lecture, il ne la remplace pas."
+   }
+  ]
+ },
+ {
+  "chapitre": "41142896",
+  "citations": [
+   {
+    "texte": "ChatGPT permet d’analyser des quantités massives de données en temps réel, et ainsi de prendre des décisions plus informées et basées sur des données concrètes plutôt que sur des intuitions ou des expériences passées.",
+    "page": 131,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Decider sur des donnees",
+    "portee": "Argument en faveur d'une decision documentee, sous reserve de verifier les donnees produites."
+   }
+  ]
+ },
+ {
+  "chapitre": "8717f6fc",
+  "citations": [
+   {
+    "texte": "L’IA peut schématiser des arbres de décision en minimisant les biais. Elle peut aussi les optimiser en continu en s’adaptant aux nouvelles données.",
+    "page": 132,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'arbre de decision assiste",
+    "portee": "Presente l'IA comme aide a la structuration du choix, non comme decideur."
+   }
+  ]
+ },
+ {
+  "chapitre": "345eec85",
+  "citations": [
+   {
+    "texte": "On aurait tort de réduire un podcast à son épisode que l’on écoute. Pour son hôte, l’audio n’est que la face émergée de l’iceberg.",
+    "page": 136,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le travail invisible du createur",
+    "portee": "Rappelle que la production de contenu est faite en majorite de taches annexes."
+   }
+  ]
+ },
+ {
+  "chapitre": "8c97a078",
+  "citations": [
+   {
+    "texte": "Pour valider des connaissances, pour rendre dynamique une présentation, pour créer un jeu, le QCM est un outil efficace et engageant.",
+    "page": 138,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le QCM comme outil pedagogique",
+    "portee": "Justifie l'usage du questionnaire a choix multiple bien au-dela de l'examen."
+   }
+  ]
+ },
+ {
+  "chapitre": "eb5d32c3",
+  "citations": [
+   {
+    "texte": "Je voudrais que tu inclues les points principaux discutés sous forme de liste à puces, les décisions prises et les actions à suivre avec le nom de la personne désignée pour chaque tâche.",
+    "page": 139,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le compte rendu actionnable",
+    "portee": "Un format qui transforme le compte rendu en outil de suivi plutot qu'en archive."
+   }
+  ]
+ },
+ {
+  "chapitre": "c5c0c462",
+  "citations": [
+   {
+    "texte": "Le cold emailing ou « e-mail à froid » est une méthode de prospection qui consiste à envoyer un e-mail à un client potentiel avec lequel l’entreprise n’a eu aucun contact au préalable.",
+    "page": 140,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Definition du courriel a froid",
+    "portee": "Technique de prospection accessible a toute petite structure sans budget publicitaire."
+   },
+   {
+    "texte": "Seules 8,5 % des stratégies de cold e-mails reçoivent une réponse !",
+    "page": 140,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le faible rendement de la prospection a froid",
+    "portee": "Chiffre qui explique pourquoi la qualite de redaction du message est decisive."
+   }
+  ]
+ },
+ {
+  "chapitre": "69db2006",
+  "citations": [
+   {
+    "texte": "Le message respecte la règle du 2 : 1 (parle deux fois plus du client potentiel que de moi), contient un appel à l’action fort, ne me dévalorise pas",
+    "page": 141,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La regle du deux pour un",
+    "portee": "Principe de redaction commerciale : centrer le message sur l'interlocuteur."
+   }
+  ]
+ },
+ {
+  "chapitre": "0bf5d4a2",
+  "citations": [
+   {
+    "texte": "L’IA sera d’une grande aide en faisant de la recherche documentaire à votre place.",
+    "page": 141,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La recherche documentaire deleguee",
+    "portee": "Usage a encadrer par une verification, particulierement en matiere juridique."
+   }
+  ]
+ },
+ {
+  "chapitre": "6d67b4d1",
+  "citations": [
+   {
+    "texte": "Une étude menée par Deloitte montre que 82 % des entreprises ne se sentent pas prêtes le jour de l’arrivée d’un·e nouveau·elle collaborateur·rice.",
+    "page": 143,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'accueil rate des nouveaux",
+    "portee": "Constat qui justifie de structurer l'integration comme un processus a part entiere."
+   }
+  ]
+ },
+ {
+  "chapitre": "3744bc96",
+  "citations": [
+   {
+    "texte": "45 % des démissions ont lieu la première année",
+    "page": 143,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le cout d'une integration manquee",
+    "portee": "Chiffre Workelo qui donne la mesure de l'enjeu de l'accueil des nouveaux salaries."
+   },
+   {
+    "texte": "Mais attention, cela ne remplace pas une stratégie approfondie de contenu. Pour cela, il vous faudra définir votre champ lexical, déterminer quel est votre client idéal, quelles sont ses problématiques, ses craintes, etc.",
+    "page": 145,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Les limites de la redaction assistee",
+    "portee": "L'outil comble la page blanche mais ne dispense pas du travail strategique."
+   }
+  ]
+ },
+ {
+  "chapitre": "ceac5aaf",
+  "citations": [
+   {
+    "texte": "Instructions : c’est là qu’il faut rentrer son prompt. C’est la partie la plus importante que ChatGPT doit faire. On peut aussi lui demander de poser des questions avant de répondre.",
+    "page": 165,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le coeur d'un GPT personnalise",
+    "portee": "Le prompt permanent devient le programme du chatbot que l'on construit."
+   },
+   {
+    "texte": "Base de connaissances : vous pouvez charger un fichier si ChatGPT doit chercher les infos à l’intérieur chaque fois que vous utilisez ce GPT. Attention à ne pas mettre de données confidentielles !",
+    "page": 166,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Alimenter et proteger",
+    "portee": "La base de connaissances augmente la pertinence mais deplace le risque sur les fichiers charges."
+   }
+  ]
+ },
+ {
+  "chapitre": "7bc0eea0",
+  "citations": [
+   {
+    "texte": "En rendant votre GPT accessible à tous les utilisateurs, vous le rendez monétisable ! Le calcul se fera en fonction du nombre d’utilisateurs",
+    "page": 167,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Monetiser un assistant",
+    "portee": "Ouvre une piste de revenu accessible sans competence en programmation."
+   }
+  ]
+ },
+ {
+  "chapitre": "13241c78",
+  "citations": [
+   {
+    "texte": "Décris mes expériences professionnelles en utilisant des verbes d’action et en incluant des réalisations quantifiables basées sur mon CV",
+    "page": 168,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ecrire son parcours",
+    "portee": "Consigne de redaction valable bien au-dela du profil en ligne : chiffrer ses realisations."
+   }
+  ]
+ },
+ {
+  "chapitre": "bd733225",
+  "citations": [
+   {
+    "texte": "Le rôle de l’IA est de fournir une réponse, pas nécessairement celle que vous attendez... sauf si vous prenez le temps de la façonner, à la manière d’une pâte à modeler.",
+    "page": 170,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Faconner la reponse",
+    "portee": "Image qui resume la posture de travail attendue face a un modele generatif."
+   },
+   {
+    "texte": "Une des erreurs les plus fréquentes est de considérer que l’IA devine le contexte toute seule.",
+    "page": 170,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'erreur du contexte implicite",
+    "portee": "Reprend, au moment de passer a la pratique, la faute la plus couteuse du debutant."
+   }
+  ]
+ },
+ {
+  "chapitre": "6555bf24",
+  "citations": [
+   {
+    "texte": "Pour expliquer un concept, une idée à quelqu’un, le mieux est de donner des exemples. Il en va de même pour faire comprendre votre idée à l’IA.",
+    "page": 171,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Enseigner par l'exemple",
+    "portee": "Rapproche la conduite d'un modele de la pedagogie ordinaire entre humains."
+   },
+   {
+    "texte": "Même si vous pensez que cela prend du temps, c’est ce qui va donner un résultat de qualité.",
+    "page": 171,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le temps investi dans la consigne",
+    "portee": "Reponse a l'objection de rapidite qui pousse a bacler ses demandes."
+   }
+  ]
+ },
+ {
+  "chapitre": "e38ec061",
+  "citations": [
+   {
+    "texte": "Problème : posez une affirmation simple, clivante. Choquez, percutez, surprenez, donnez clairement votre opinion sur un sujet.",
+    "page": 173,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'accroche selon le framework PAS",
+    "portee": "Technique d'ecriture persuasive a manier avec discernement pour ne pas verser dans la manipulation."
+   },
+   {
+    "texte": "Une bonne accroche doit : ●Donner un aperçu de ce qui va être dans le post sans trop en dire. ●Susciter une émotion. ●Suivre la logique du framework PAS : Problème, Agitation, Solution.",
+    "page": 172,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Les criteres d'une accroche",
+    "portee": "Introduit les trois exigences retenues par l'auteure : annoncer sans tout dire, emouvoir, structurer."
+   }
+  ]
+ },
+ {
+  "chapitre": "39142e49",
+  "citations": [
+   {
+    "texte": "Reformulez votre prompt : dites les choses différemment. Si vous utilisez un autre vocabulaire, votre demande peut être mieux comprise.",
+    "page": 177,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Reformuler pour se faire comprendre",
+    "portee": "Premier reflexe a adopter avant de conclure que l'outil est defaillant."
+   }
+  ]
+ },
+ {
+  "chapitre": "67a54ea8",
+  "citations": [
+   {
+    "texte": "C’est très important non seulement de lui indiquer votre niveau de satisfaction, mais surtout de lui expliquer les raisons de cette insatisfaction. Ainsi, au fil du temps, il va s’améliorer en prenant en compte vos retours.",
+    "page": 180,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le pouvoir du retour motive",
+    "portee": "Un retour argumente vaut mieux qu'un jugement : principe valable pour l'IA comme pour les personnes."
+   }
+  ]
+ }
+]

@@ -1,0 +1,1782 @@
+OUVRAGE : Forest Management and Planning
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 342
+AXE : Sciences Environnement
+SOMMAIRE :
+  (non structuré)
+
+[15/307 passages, 18586 tokens sur 418216]
+
+=== EXTRAITS ===
+
+[p. 2-6]
+FOREST MANAGEMENT
+AND PLANNING
+
+This page intentionally left blank
+
+FOREST
+MANAGEMENT
+AND PLANNING
+PETE BETTINGER
+Warnell School of Forestry and Natural Resources
+University of Georgia
+Athens, GA
+KEVIN BOSTON
+Department of Forest Engineering Resources and Management College of Forestry
+Oregon State University
+Corvallis, OR
+JACEK P. SIRY
+Warnell School of Forestry and Natural Resources
+University of Georgia
+Athens, GA
+DONALD L. GREBNER
+Department of Forestry College of Forest Resources
+Mississippi State University
+Mississippi State, MS
+
+Academic Press is an imprint of Elsevier
+30 Corporate Drive, Suite 400, Burlington, MA 01803, USA
+525 B Street, Suite 1900, San Diego, California 92101-4495, USA
+84 Theobald’s Road, London WC1X 8RR, UK
+Copyright # 2009, Elsevier Inc. All rights reserved.
+No part of this publication may be reproduced or transmitted in any form or by any means, electronic
+or mechanical, including photocopy, recording, or any information storage and retrieval system,
+without permission in writing from the publisher.
+Permissions may be sought directly from Elsevier’s Science & Technology Rights Department in
+Oxford, UK: phone: (þ44) 1865 843830, fax: (þ44) 1865 853333, E-mail: permissions@elsevier.com. You
+may also complete your request online via the Elsevier homepage (http://elsevier.com), by selecting
+“Support & Contact” then “Copyright and Permission” and then “Obtaining Permissions.”
+Library of Congress Cataloging-in-Publication Data
+Application Submitted
+British Library Cataloguing-in-Publication Data
+A catalogue record for this book is available from the British Library.
+ISBN: 978-0-12-374304-6
+For information on all Academic Press publications
+visit our Web site at www.elsevierdirect.com
+Printed in the United States of America
+08
+09
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+
+Contents
+Preface
+ix
+Chapter 1. Management of Forests and Other
+Natural Resources
+I. Management of Forests and Other Natural
+Resources
+2
+II. Challenges Related to the Management of
+Forests
+2
+III. Planning for the Management of Natural
+Resources
+3
+IV. Characterizing Decision-Making Processes
+4
+A. The View from the Management Sciences
+5
+B. A Broad View on Planning within Natural
+Resource Management Organizations
+6
+C. A Hierarchy of Planning within Natural
+Resource Management Organizations
+8
+D. Community or Cooperative Planning
+of Forests
+9
+E. Adaptive Management and Planning
+of Forests
+9
+V. Challenges Related to Forest Planning
+10
+VI. Information Movement within a Typical Natural
+Resources Management Organization
+10
+VII. Summary
+11
+Chapter 2. Valuing and Characterizing
+Forest Conditions
+I. The Need to Evaluate Resources for Natural
+Resource Planning
+16
+II. Structural Evaluation of Natural Resources
+16
+A. Trees per Unit Area
+16
+B. Average Diameter of Trees
+16
+C. Diameter Distribution of Trees
+17
+D. Basal Area
+17
+E. Quadratic Mean Diameter of Trees
+18
+F. Average Height
+19
+G. Timber Volume
+19
+H. Mean Annual Increment, Periodic
+Annual Increment
+20
+I. Snags
+22
+J. Down Woody Debris
+22
+K. Crown or Canopy Cover
+22
+L. Age
+23
+M. Biomass and Carbon
+24
+N. Pine Straw
+25
+O. Other Nontimber Forest Products
+25
+P. Site Quality
+26
+Q. Stocking and Density
+28
+III. Economic Evaluation of Natural Resources
+29
+A. Basic Concepts: Present and Future Values
+30
+B. Net Present Value
+38
+C. Internal Rate of Return
+39
+D. Benefit/Cost Ratio
+39
+E. Equal Annual Equivalent
+40
+F. Soil Expectation Value
+40
+G. Other Mixed-Method Economic
+Assessments
+42
+H. Selecting Discount Rates
+43
+I. Forest Taxation
+44
+IV. Environmental and Social Evaluation of
+Natural Resources
+46
+A. Habitat Suitability
+46
+B. Recreation Values
+46
+C. Water Resources
+47
+D. Stream Habitat Values
+48
+E. Air Quality
+49
+F. Employment and Income
+51
+V. Summary
+51
+v
+
+---
+
+[p. 29-30]
+6 inches. As a check on this work, the basal area
+of a 11.26 inch tree is 0.69 ft2 (0.005454  11.262). If
+there are 217 of these trees per acre, the stand’s basal
+area is (217  0.69 ft2), or 150 ft2 per acre.
+FIGURE 2.2
+Uneven-aged stand reverse-J shaped diameter distribution.
+18
+2. VALUING AND CHARACTERIZING FOREST CONDITIONS
+Example
+The QMD of the western stand described in Appen-
+dix A can be determined by first computing the aver-
+age basal area per tree. This can be accomplished
+by dividing the average basal area per acre (50.1 ft2)
+by the number of trees per acre (465.5). Using the equa-
+tion provided earlier, the QMD at age 15 is:
+QMD ðinchesÞ 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+ð50:1 ft2=465:5 TPAÞ
+0:005454
+r
+1⁄4 4:4 inches
+F. Average Height
+The average height of trees in a stand lets us visua-
+lize the size of the trees relative to other stands in the
+nearby vicinity. The average height is also closely
+related to the site index of the stand (described in
+Section II.P). To arrive at the average height, estimates
+(either from field measurements or through height
+calculations) of all sizes of trees are necessary. Field
+measurements of tree heights are the one of the
+most expensive tasks in field inventories. As a result,
+sometimes tree heights are estimated using equations
+that are based on the diameter of each tree. Site index
+computations utilize only the heights of the domi-
+nant and codominant trees; therefore, the intermedi-
+ate and suppressed tree heights would need to be
+removed or ignored to facilitate site index estimation.
+Field-measured heights provide a static metric of the
+height of a stand. Projected heights for even-aged
+stands should increase with age (Figure 2.3), even as
+trees per unit area decline. Projected heights for
+uneven-aged stands should be relatively constant once
+the uneven-aged stand has matured.
+G. Timber Volume
+Timber volumes are common measures of inven-
+tory and of output used in a forest management plan.
+Timber volumes are directly related to revenue, and
+thus are intimately tied to the economic evaluation
+of activities. Timber volumes can also be generated
+through habitat improvement activities, particularly
+those that involve reducing the density of a stand of
+trees so that it is more suitable for certain species of
+wildlife. The maximum basal area for good quality
+red-cockaded woodpecker (Picoides borealis) habitat,
+for example, is suggested to be 80 ft2 per acre in pine
+stands (preferably less), according to the recovery
+standard developed by the U.S. Department of the
+Interior, Fish and Wildlife Service [2]. Since stands
+of trees tend to grow in size and density over
+time, maintaining good habitat for the woodpecker
+may require periodic removals of trees, which could
+generate timber volume.
+Timber volume can be expressed as a solid wood
+unit (m3, ft3, cunit, cord); as a manufactured wood
+unit
+(board
+foot,
+thousand
+board
+foot
+[MBF])
+expressed by either a Doyle, Scribner, or International
+log rule; or as a weight (ton, or metric ton). In today’s
+global economy, it would be advantageous for you to
+understand how to convert between metric and
+English units. A cord is a solid area of wood that is
+4 feet wide, 4 feet tall, and 8 feet long, or 128 ft3. Since
+air pockets are present in cut, stacked wood, a cord
+FIGURE
+2.3
+Height
+development
+over time in an even-aged coastal Doug-
+las-fir stand.
+19
+II. STRUCTURAL EVALUATION OF NATURAL RESOURCES
+
+---
+
+[p. 50-51]
+and the IRR would equal
+the discount rate that was assumed. If the BCR were
+greater than 1, the net present value of the investment
+would be positive, and the IRR would be greater than
+the hurdle rate assumed by an organization (the dis-
+count
+rate
+assumed
+in
+the
+net
+present
+value
+39
+III. ECONOMIC EVALUATION OF NATURAL RESOURCES
+calculation). Of course, if the BCR were less than 1,
+the present value of the benefits do not cover the
+present value of the costs, therefore the net present
+value of the investment would be negative, and the
+IRR would be less than the hurdle rate assumed.
+Obviously, when considering alternative investments,
+you would want to choose those with higher BCR
+values. The basic benefit/cost ratio equation is:
+BCR 1⁄4
+present value of benefits
+present value of costs
+
+
+In contrast to other economics analyses, one advan-
+tage of this method for evaluating investments is that
+the benefit/cost ratio can be applied to values that are
+not necessarily expressed monetarily. Therefore, a
+benefit/cost analysis may be applicable to natural
+resource management analyses involving noncommod-
+ity resources. The only assumption is that the values in
+both the numerator (benefits) and denominator (costs)
+have the same units, therefore the units will cancel each
+other out, and we would arrive at a unitless ratio.
+E. Equal Annual Equivalent
+As an alternative to making decisions based on a
+net present value analysis, the equal annual equiva-
+lent (EAE) can be developed for each potential invest-
+ment. EAE is the net revenue (or cost) that you can
+obtain (or will incur) annually, over the life of an
+investment, given the discount rate that was applied.
+Conceptually, EAE is similar to the payments asso-
+ciated with a loan, and also is referred to as equal
+annual income and equivalent annual cash flow. The ini-
+tial computation for EAE analysis is the NPV of one
+rotation of a forest investment. The remainder of the
+EAE calculation determines the extent of the annual
+payments that would be required to equal the NPV
+using the discount rate that is assumed. The advan-
+tage of using EAE is that we can evaluate investments
+that have different time horizons. As a decision tool,
+we would possibly accept or invest in projects that
+yield a positive EAE. If several investments are being
+considered, then the ones with the higher EAE values
+would be more economically attractive than the
+others with lower (yet positive) EAE values.
+The EAE is simply the NPV converted to an annual
+value paid at the end of each year (or time period) for
+the life of the investment. It is calculated at the appro-
+priate discount rate using this formula:
+EAE 1⁄4 NPV
+ið1 þ iÞt
+ð1 þ iÞt  1
+ 
+!
+Example
+Assume we have 200 acres of bare ground near
+Greenwood, Mississippi, and feel that there are two
+options to using this property productively. The first
+would be to afforest the site with oak trees that can
+be harvested in 50 years. It will cost $250 per acre to
+prepare the site, purchase the seedlings, and plant the
+oak seedlings. When the harvest occurs in year 50, we
+can expect to earn $7,116 per acre. The second option
+would be to grow soybeans, which can be planted and
+harvested once every year. Our expected annual total
+cost is $228 per acre and your expected annual revenue
+is $234 per acre. The net return for option two is $6 per
+acre per year. Option one does not have a yearly cost
+or revenue stream and each investment occurs at differ-
+ent time periods. To reconcile the cost and revenue for
+option one, we need to discount the harvest revenue
+back in time to period zero. To do this we must assume
+an interest rate. In this case, assume an interest rate of 5.5
+percent.
+Present value 1⁄4
+$7, 116
+ð1:055Þ50
+"
+#
+ 250 1⁄4 $239:34 per acre
+Now, to effectively compare option one and option
+two we need to convert the NPV for option one into
+an EAE. First, substitute the relevant values into the
+EAE formula just mentioned.
+EAE 1⁄4 $239:34 0:055ð1 þ 0:055Þ50
+ð1 þ 0:055Þ50  1
+ 
+!
+1⁄4 $14:14 per acre
+Second, now that we have calculated the EAE for
+option one, we can compare it to our annual net
+return for option two. As we can see, option one
+yields a yearly return per acre that is $8.14 greater
+than option two. Therefore, we would decide to affor-
+est the 200 acres with oak seedlings.
+F. Soil Expectation Value
+The soil expectation value (SEV) represents the net
+present value of an investment in an even-aged stand
+from the time of planting (when the land is bare of
+trees), through infinite rotations of the same manage-
+ment regime. SEV is the same as bare land value
+(BLV) and land expectation value (LEV); however,
+the purchase price of the land and the revenue gener-
+ated from ultimately selling the land are not included
+in the calculation. If the even-aged rotation lengths
+are the same, SEV and NPV assessments will produce
+the same ranking of potential investments.
+40
+2. VALUING AND CHARACTERIZING FOREST CONDITIONS
+
+---
+
+[p. 71-72]
+d registered to a coordinate system.
+These can be viewed in GIS in a corrected format
+where most of the topographic displacement and
+distortion have been removed, thus highly accurate
+FIGURE 3.1
+A digital orthophotograph of land in western
+Oregon.
+60
+3. GEOGRAPHIC INFORMATION AND LAND CLASSIFICATION IN SUPPORT OF FOREST PLANNING
+aerial and linear measurements can be made from the
+photography. One drawback is that viewing the land-
+scape in three dimensions is not as straightforward as
+with typical vertical air photographs, and requires the
+use of a digital stereo mate. Digital raster graphics
+(DRGs) are scanned versions of topographic maps,
+and though the resolution is somewhat coarse, they
+can be used in GIS to facilitate management and
+planning efforts. Other types of raster GIS databases
+can be created in GIS using various spatial analysis
+and manipulation functions. Vector data, in fact, can
+be converted to raster data rather easily.
+2. Vector Data
+Vector GIS databases are compilations of points,
+lines, or polygons, all of which may vary considerably
+across a landscape and likely not cover a landscape
+completely. As a result, this type of data sometimes
+is referred to as an irregular data structure. Almost
+any landscape feature can be represented by either a
+point, a line, or a polygon. The vertices and nodes
+related to these features are represented in geo-
+graphic space by X (east-west) and Y (north-south)
+coordinates, and each feature could have associated
+with it a large number of attributes. Some common
+vector GIS databases used in natural resource man-
+agement include roads, streams, timber stands, own-
+ership boundaries, wildlife habitat, home sites, and
+fire initiation points. Many of the GIS databases
+related to the hypothetical forests used in this book
+are vector GIS databases (Figure 3.2). One exception
+is the raster digital orthophotograph associated with
+each forest. Vector GIS databases typically are created
+using traditional or heads-up digitizing processes, or
+based on hand-drawn maps or interpreted aerial
+photographs. In the case of heads-up digitizing, the
+interpretation of digital aerial photographs and digi-
+tizing of features may be simultaneously performed.
+Vector GIS databases can also be created through the
+multitude of GIS processes available within most GIS
+software, some of which are described in Section I.D.
+As we mentioned earlier, vector data can be con-
+verted to raster data. Raster data can be converted
+to vector data as well, although the grid cell size to
+which the vector data becomes should be considered
+carefully—larger grid cells can affect significantly
+the shape of landscape features once described by
+lines or polygons.
+FIGURE 3.2
+A map illustrating vector GIS databases for roads, streams, home sites, timber stands, and hiking trails.
+61
+I. GEOGRAPHIC INFORMATION SYSTEMS
+
+---
+
+[p. 94-96]
+cre for Tract 38, a Spruce-Fir-Beech
+Selection Forest in Emmenthal, Switzerland (from [5])
+Diameter class (inches)
+Trees per acre
+1
+109.835
+2
+88.057
+3
+70.597
+4
+56.598
+5
+45.376
+6
+36.379
+7
+29.165
+8
+23.382
+9
+18.746
+10
+15.029
+11
+12.049
+12
+9.660
+. . . .
+25
+0.546
+26
+0.438
+27
+0.351
+28
+0.281
+29
+0.226
+30
+0.181
+83
+I. THE GROWTH OF FORESTS
+(a continuous cover of trees) and the maintenance of
+higher levels of wildlife habitat for some species.
+D. Growth Transition through Time
+At the heart of discussions about the sustainabil-
+ity of forest values is the issue of forest growth and
+the ability maintain it through time [8]. An under-
+standing of the changes in the structural condition
+of stands is important for land managers and deci-
+sion-makers. How forests transition through time is
+important
+in
+understanding
+whether
+goals
+and
+objectives can be met, sustained, or lost through the
+management actions suggested in a forest plan.
+Several concepts are central in understanding forest
+transitions. First, there is survivor growth, or the
+growth of trees that were alive both at the beginning
+of a measurement period and at the end. If individ-
+ual trees in a stand were not cut, nor did they
+die, then they likely grew in size (e.g., diameter
+and height, which relates to volume). From the per-
+spective of a stand’s diameter distribution, there
+will likely be a shift in the diameter distribution to
+the right as a result of survivor growth (Figure 4.9)
+FIGURE 4.9
+Change in diameter distribution of an uneven-aged stand of oaks in Missouri, assuming that the trees grew, on average, 1 inch
+between beginning and ending measurement periods.
+84
+4. ESTIMATION AND PROJECTION OF STAND AND FOREST CONDITIONS
+
+from the beginning to the end of the measure-
+ment period. To be more realistic about the tran-
+sition of a stand of trees, however, three other
+factors must be incorporated into the assessment:
+ingrowth of seedlings into the smallest diameter
+class, death of trees (mortality), and harvest (cutting)
+of trees from logging operations (Figure 4.10). When
+these transitions are considered at the stand-level,
+ingrowth is the entry of trees into the smallest
+diameter class that is recognized. As we inferred
+earlier, ingrowth may include seedlings that were
+below a minimum merchantable size prior to the
+first measurement, or may include seedlings that
+had not begun their life at the time of the first
+measurement.
+1. Stand-Level Volume Estimates
+When considering the growth dynamics of individ-
+ual stands of trees, we could use the concepts of
+increment,
+ingrowth,
+mortality,
+and
+harvest
+to
+FIGURE 4.10
+Change in diameter distribution of an uneven-aged stand of oaks in Missouri, assuming ingrowth, mortality, and harvest.
+85
+I. THE GROWTH OF FORESTS
+
+---
+
+[p. 116-117]
+ts rate of growth is
+about 0.5 inches in diameter per year. You estimate
+that it currently contains 614 board feet of wood,
+and that in two years it should contain 671 board feet
+of wood. If you have selected an alternative rate of
+return of 5 percent, then should you harvest the tree
+now or wait?
+105
+II. TREE-LEVEL OPTIMIZATION
+The present value of the tree is (0.614 thousand
+board feet)  ($285 per thousand board feet), or
+$174.99. In two years the future value of the tree will
+be (0.671 thousand board feet)  ($285 per thousand
+board feet), or $191.24, assuming that the tree remains
+in good health and that the markets have not changed
+much. The rate of growth of the value of the tree is then:
+Rate of growth 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+$191:24
+$174:99
+
+
+2
+s
+1 1⁄4 0:045, or 4:5%
+What we find is that the value growth of the tree
+over a two-year period is 4.5 percent. Given your
+alternative rate of return of 5 percent, your decision
+would be to harvest the tree now.
+Example
+Assume in this same stand of hardwoods, you also
+are considering the options for a 90-foot tall yellow-
+poplar tree that is currently 14 inches in diameter.
+Again, current prices for average grade yellow poplar
+logs in your area are about $285 per thousand board
+feet. You measured the growth of the tree by extract-
+ing an increment core, and note that its rate of growth
+is about the same as the larger tree (0.5 inches per
+year). You estimate that it currently contains 174
+board feet of wood, and that in two years it should
+contain 208 board feet of wood. If your alternative
+rate of return is 5 percent, then should you harvest
+the tree now or wait?
+The present value of the tree is (0.174 thousand
+board feet)  ($285 per thousand board feet), or
+$49.59. In two years the future value of the tree will be
+(0.208 thousand board feet)  ($285 per thousand
+board feet), or $59.28, again assuming that the tree
+remains in good health and that the markets have not
+changed much. The rate of growth of the value of the
+tree is then:
+Rate of growth 1⁄4
+ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi
+$59:28
+$49:59
+
+
+2
+s
+1 1⁄4 0:093, or 9:3%
+What we find with this tree is that the value
+growth of the tree over a two-year period is about
+9.3 percent. Given your alternative rate of return of
+5 percent, your decision would be to let the tree grow
+a few more years.
+As we suggested, the value of a tree for aesthetics,
+recreation, or wildlife may be subjectively assigned
+by the analyst or the landowner. Another way to
+approach the valuation problem is to assess the poten-
+tial economic value of these trees, assume that the
+opportunity cost of reserving a tree for other uses is
+equal to the potential economic value. In a rational
+decision-making environment, this type of analysis
+may make sense; however you should recognize some
+people do not agree with this type of comparison (eco-
+nomic vs. ecological or social value), and may subse-
+quently assign a value to trees at a level higher (or
+lower) than the current market price.
+III. STAND-LEVEL OPTIMIZATION
+The next level up from tree-level optimization is
+stand-level optimization, which involves developing
+the very best management plan for a stand of trees.
+The planning process may involve analyzing a num-
+ber of intermediate treatments as well as final harvest
+decisions, all scheduled to achieve one or more objec-
+tives of the landowner. Constraints may also need to
+be considered, such as those related to the timing of
+activities, or related to the structure of the stand that
+should remain after an activity has been implemen-
+ted. Objectives and constraints for stands within for-
+ests will vary according to the desires and needs of
+a landowner, the condition of each stand, and the
+larger socioeconomic and geographic context within
+which the stand resides and the landowner operates.
+Objectives and constraints can be associated with eco-
+nomic values (cash flow, net present value), commod-
+ities (timber volume), ecological values (habitat), or
+social concerns (aesthetics, jobs). It is difficult, but
+not impossible, to accommodate multiple goals or ser-
+vices within individual stands of trees. The challenges
+facing the production of multiple services from a sin-
+gle stand or property were recognized over seventy
+years ago, as von Ciriacy-Wantrup [6] noted:
+On a single unit of land some uses are complementary or
+supplementary under certain economic conditions, but more
+often they are competitive.
+As a result, many of the potential uses of a stand of
+trees may compete with the main use(s), as suggested
+by the landowner. Therefore, optimizing the use(s) of
+the land can lead to (1) simply managing the land
+with respect to the main use, (2) managing the land
+with respect to the main use, yet accommodating
+other uses as long as they do not interfere with the
+attainment of the main use, or (3) managing the land
+with respect to several uses of high importance.
+Two problems have captured the attention of forest
+managers over the last 40 years: the problem of the
+optimal timber rotation for even-aged stands, and
+the problem of optimal timing of intermediate treat-
+ments for both even-aged and uneven-aged stands.
+106
+5. OPTIMIZATION OF TREE- AND STAND-LEVEL OBJECTIVES
+
+---
+
+[p. 138-139]
+ucted next year. One obvious constraint relates to
+the road construction budget:
+30, 000 WR þ 50, 000 RR  300, 000
+Here, we will multiply the miles of each type of
+road to be built by the cost coefficient associated with
+each type of road. As you can see, the total cost of
+127
+II. EXAMPLE PROBLEMS IN NATURAL RESOURCE MANAGEMENT
+building both types of road must be less than or equal
+to your budget. Based on your preliminary analysis,
+you determined that at least 1.5 miles of rocked roads
+are needed, therefore another relatively simple con-
+straint to the problem is:
+RR  1:5
+In addition, you determined that at most, four
+miles of rocked road are needed, thus a subsequent
+constraint to the problem is:
+RR  4
+Given the contractual obligation to a road con-
+struction company, you must build 2.5 miles of
+woods road. As a result, a fourth constraint on the
+management problem is:
+WR  2:5
+Finally, you determined that, at most, six miles of
+woods road are needed. Therefore the final constraint
+to the problem is:
+WR  6
+Solve the Problem and Check the Solution
+To visualize this two-variable problem, we can
+develop a graph with two axes that represent the
+amount of woods and rocked roads to be built, and label
+them WR and RR (Figure 6.1). The extent of the scale on
+each axis can be limited to 10 units (miles of road) or so,
+which is slightly more the maximum number of miles of
+road that we already know can be scheduled for con-
+struction. On this graph we will draw lines representing
+the constraints. To begin the graphing of this two-vari-
+able linear model, we will first consider the budget con-
+straint. Our goal is to draw a straight (linear) line that
+represents this constraint, and to do so we can deter-
+mine the point where the budget constraint line will
+pass through each axis. For example, if the extent
+of rocked roads constructed was assumed to be 0 miles,
+the maximum length of woods roads that could be con-
+structed would be 10 miles ($300,000 budget/$30,000
+per mile of woods road). This indicates that one end of
+the budget constraint line is where WR 1⁄4 10 and RR 1⁄4 0.
+Conversely, if the number of woods road miles
+constructed was assumed to be 0 miles, the maximum
+length of rocked roads that could be constructed
+would be six miles. This tells us that the other end
+of the budget constraint line can be plotted where
+WR 1⁄4 0 and RR 1⁄4 6. We then draw a straight line
+(Figure 6.2) to connect the two X-Y (WR-RR) pairs
+(10, 0 and 0, 6). One interpretation of the resulting
+graph is that every point on or below the budget con-
+straint line is considered feasible (i.e., does not violate
+the budget constraint). Another interpretation is that
+every point above the line is considered infeasible.
+As an easy check on this assertion, a feasible solution
+is one where the length of rocked roads to be built is
+0 miles (RR 1⁄4 0) and the length of woods roads to be
+built is 0 miles (WR 1⁄4 0). The resulting point that
+represents this combination of choices is below the
+budget constraint line, therefore all points below
+the budget constraint line are feasible.
+RR (miles)
+WR (miles)
+0
+2
+4
+6
+8
+10
+0
+2
+4
+6
+8
+10
+FIGURE 6.1
+Initial development of a two-variable graph for the
+road construction problem, with the miles of rocked roads to be
+built on the Y-axis, and the amount of woods roads to be built on
+the X-axis.
+RR (miles)
+WR (miles)
+0
+2
+4
+6
+8
+10
+0
+2
+4
+6
+8
+10
+30,000 WR + 50,000 RR ≤ 300,000
+Feasible region
+FIGURE 6.2
+The budget constraint for the road construction
+problem.
+128
+6. GRAPHICAL SOLUTION TECHNIQUES FOR TWO-VARIABLE LINEAR PROBLEMS
+
+---
+
+[p. 160-161]
+harvested in each time period.
+We could use these variables (OF1, OF2, and OF3) to
+regulate how much of the older forest is scheduled
+for harvest during each time period. Constraints such
+as the following could be developed to accomplish
+this task:
+OF1  100
+OF2  100
+OF3  100
+149
+V. CONSTRAINTS FOR LINEAR PROGRAMMING PROBLEMS
+2. Constraints on Harvested Volume
+The volume scheduled for harvest also commonly
+is constrained in many natural resource management
+plans. Examples include minimum and maximum
+levels of harvest volume for various forest products,
+nonmarket goods, or rangeland resources. As these
+pertain to the management problem we have been
+building in this chapter, we could define minimum
+and maximum harvest levels:
+HV1  30, 000
+HV1  40, 000
+Alternatively, we could ensure that an even-flow
+of timber harvest volume is scheduled. What this
+implies is that the scheduled harvest volume is the
+same from one time period to the next.
+HV1  HV2 1⁄4 0
+HV2  HV3 1⁄4 0
+Example
+A short-term harvest schedule was illustrated by
+Macmillan and Fairweather [8] for an industrial forest
+ownership in northwestern Pennsylvania. The forest
+types included black cherry (Prunus serotina), red
+maple (Acer rubrum), sugar maple (Acer saccharum),
+and red oak (Quercus rubra). The time horizon was
+very short (5 years) and the objective was to maxi-
+mize the net present value of the harvest over this
+time frame. Stumpage values, an estimate of the per-
+cent growth of stands, and depletion values were
+used to determine the potential net present value of
+harvesting each stand during each of the five years.
+The decision variables were assumed to represent
+the amount of acres in each stand that could be sched-
+uled for harvest during each year, and as a result,
+they were defined as continuous numbers. The
+annual demand of a local mill was used as a policy
+constraint on the minimum and maximum volume
+to be harvested each year. A set of resource con-
+straints limited the amount of area scheduled for har-
+vest in each stand to the size of each stand. The
+problem formulation consisted of the following:
+Maximize Net value per acreX;Y
+ð1 þ iÞY1
+ 
+!
+where:
+X 1⁄4 a stand
+Y 1⁄4 a year
+subject to:
+1. Resource constraints:
+X
+5
+Y1⁄41
+Scheduled areaX;Y  AreaX;Y
+2. Wood flow constraints:
+X
+N
+X1⁄41
+Scheduled areaX;Y Harvest volumeX;Y
+ Minimum harvest target 8Y
+X
+N
+X1⁄41
+Scheduled areaX;Y Harvest volumeX;Y
+ Maximum harvest target 8Y
+The notation 8Y simply means for each year, thus
+the minimum and maximum harvest volume con-
+straints were in effect each year. Several sensitivity
+analyses were performed by adjusting the costs and
+growth rate assumed. These alternative plans helped
+to understand how the plan might change if eco-
+nomic or ecological conditions in the future change.
+When stand-level growth rates were assumed to
+increase, for example, some stands were scheduled
+later in the time horizon rather than earlier under
+the initial assumptions, because the value growth
+rate of certain stands had become greater than the
+alternative rate of return. Further, when prices
+changed, the product mix scheduled for harvest over
+time changed. An increase in one product price cre-
+ated conditions that allowed the scheduled harvests
+of stands earlier than when they normally would
+have been scheduled.
+3. Constraints on Habitat Availability
+Wildlife habitat that is developed for any species
+of interest could be used to control the development
+of a plan of action. For example, using the example
+we have been building upon in this chapter, our
+wildlife biologist could indicate that one policy
+might be to maintain HSI levels above 0.600 for the
+entire 1,062.5 acre forest. Since we developed vari-
+ables earlier to represent the overall HSI during each
+time period (HSI1, HSI2, and HSI3), these can be
+incorporated into constraints to guide the develop-
+ment of a plan.
+HSI1  0:600
+HSI2  0:600
+HSI3  0:600
+150
+7. LINEAR PROGRAMMING
+
+---
+
+[p. 182-183]
+period. This new target is the
+mid-point of the shrinking range of feasible solutions
+(now 12,400 cords to 12,650 cords). This process con-
+tinues until the increment is very small, and we
+decide to stop. The best schedule, using fractional
+stands, involves a harvest target of 12,509 cords per
+time period.
+171
+II. BINARY SEARCH
+When we use whole stands to develop the harvest
+schedule, we find that a target of 12,400 cords
+results in a volume scheduled for time period 3 that
+falls short of our target (Table 8.3). After reducing
+the target volume to 11,900 cords, we find that the
+target volume is less than what can be produced
+from the Putnam Tract, so the increment begins to
+be divided by one-half with each subsequent itera-
+tion, no matter whether the target can be achieved
+or not. As the increment gets smaller and smaller,
+the scheduled volumes change very little, and the
+results are not too exciting (Table 8.4), since schedul-
+ing an entire stand during a single time period
+results in a significant shift in volumes. The location
+of the activities scheduled for time period 1 are illus-
+trated in Figure 8.4, which represents a plan some-
+what
+different
+than
+when
+using
+the
+other
+scheduling techniques.
+In practice, either whole stands are scheduled for
+harvest or fractional parts of stands, as in the case of
+linear programming. With the scheduling fractional
+parts of stands, you will find that one stand will have
+its schedule split between each adjacent time period
+(time periods 1 and 2, and time periods 2 and 3 in
+our previous examples). This splitting of stands is
+necessary to meet the target volume exactly in each
+time period. Our rule of scheduling the oldest stand
+first could be modified so that the highest volume
+per unit area stands were harvested first, or so that
+the lowest value growth percent stands were har-
+vested first. Our sub-rule determining which stands
+to schedule in the event of a tie also could have been
+modified to use the highest volume per unit area
+stands or the lowest value growth percent stands.
+Undoubtedly, a different plan of action would be
+generated using these alternatives.
+III. HEURISTIC METHODS
+Heuristic solution methods use logic and rules of
+thumb to arrive at feasible and efficient solutions to
+complex planning problems. There are generally
+two reasons why people would select a heuristic as
+their planning tool: (1) they desire to incorporate
+into the planning process quantitative relationships
+that are not easily described through linear equa-
+tions, and (2) they want a solution to a complex
+problem to be generated very quickly. Heuristic
+methods have some unique qualities that sometimes
+draw the ire of pure mathematicians. First and fore-
+most, there is no guarantee that the optimal solution
+to a problem will be located with a heuristic. In fact,
+an evaluation of the quality of results generated
+from any one heuristic generally requires a com-
+parison to results generated from linear, mixed inte-
+ger,
+or
+integer
+programming
+methods.
+Second,
+many of the relationships that can be quantified and
+recognized in a heuristic are difficult to describe with
+linear or even nonlinear equations. For example, the
+stream sediment evaluation rules that have been used
+in the intermountain United States [4] involve a num-
+ber of relationships that are best represented using
+computer programming logic (e.g., if-then-else state-
+ments, for-next loops, etc.) rather than equations.
+These and other types of complex natural resource
+evaluations can easily be incorporated into heuristics,
+but cannot easily be incorporated directly into linear
+programming models nor its extensions without
+simplifying the quantitative relationships.
+A number of heuristic methods have been demon-
+strated for use in natural resource management,
+including Monte Carlo simulation, simulated anneal-
+ing, threshold accepting, tabu search, and genetic
+TABLE 8.2
+Binary Search Results for the Putnam Tract Using Fractional Portions of Stands
+Attempt
+Target (cords)
+Scheduled volume (cords)
+Time period 1
+Time period 2
+Time period 3
+Target met?
+Increment
+1
+12,400
+12,400
+12,400
+12,400
+Yes
+500
+2
+12,900
+12,900
+12,900
+11,595
+No
+250
+3
+12,650
+12,650
+12,650
+12,155
+No
+125
+4
+12,525
+12,525
+12,525
+12,483
+No
+64
+5
+12,461
+12,461
+12,461
+12,461
+Yes
+32
+6
+12,493
+12,493
+12,493
+12,493
+Yes
+16
+7
+12,509
+12,509
+12,509
+12,509
+Yes
+8
+8
+12,517
+12,517
+12,517
+12,499
+No
+–
+172
+8. ADVANCED PLANNING TECHNIQUES
+
+---
+
+[p. 204-205]
+hen using
+integer or mixed integer programming, and
+since land units (stands) are of varying sizes,
+developing a plan with exactly the same
+Year
+Timber volume scheduled
+Harvest level
+FIGURE 9.3
+An exact, even output of timber products over time
+from a forest plan.
+193
+V. INCORPORATING MEASURES OF SUSTAINABILITY INTO FOREST PLANS
+output from one period to the next is nearly
+impossible. This is because it is assumed in
+these situations that stands are considered to be
+treated entirely, or not at all. Examples include
+planning for the harvest of an entire timber
+stand or for the building of an entire road.
+2. Develop a schedule of activities that provides
+outputs within some range (or bound) in each
+year of the plan (Figure 9.4). This type of
+management plan allows deviations in outputs
+from one period to the next, and provides us
+with flexibility that may be needed, given the
+type of variables assumed. Alternatively, if the
+decision variables were, as in the case of linear
+programming, assigned continuous numbers,
+then we could use this measure of sustainability
+to allow some deviation in output that responds
+to predicted changes in technical parameters
+(such as prices or costs), or to adjust outcomes
+given problems with the initial age class
+distribution of a forest.
+3. Develop a schedule of activities that provides a
+nondeclining output of certain natural resource
+products (Figure 9.5). This is one of the tenets of
+the National Forest Management Act (16 U.S.C.
+1600 } 13(a)) that is applied to National Forest
+land in the United States, although it can be
+applied to any type of land ownership, where the
+sale of wood products is limited to quantities less
+than or equal to the quantity that can be removed
+into perpetuity [2]. If, for example, the current
+state of a private forest will not provide a very
+high harvest level in the near-term, but due to
+expected growth and management action could
+provide a higher harvest level later in the time
+horizon of the management plan, then we might
+adopt this method. This indicates that near-term
+outcomes are sustainable, since longer-term
+outcomes can be realized at higher levels.
+4. Develop a schedule of activities where harvest
+equals growth. In classical methods of forest
+regulation, foresters adopted a policy of harvest
+equaling growth. However, given the practical
+nature of land management, this policy could be
+modified to indicate that outcomes are equal
+to, or less than, the growth of the product
+(Figure 9.6). Weather conditions, irregular age
+class distributions, damage to products during
+harvest, and other factors may all contribute,
+however, to harvests not equaling growth.
+The California Forest Practices Rules (14 CCR
+} 913.11, 933.11, 953.11) are one example of this
+policy [37]. These rules govern all management
+actions on privately and state managed
+timberlands within the state, and are considered
+by many to be the most restrictive in the western
+United States. The rules define as the primary
+goal for timberlands the maximum sustained
+production of high quality timber products, and
+call for a balance between growth and harvest
+such that harvest not exceed the growth over a
+10-year period. In addition, the rules call for the
+protection of soil, water, air, fish, and other
+Year
+Bounds
+Timber volume scheduled
+FIGURE 9.4
+An output of timber products over time that is
+within some pre-defined bounds.
+Year
+Growth
+Timber volume scheduled
+FIGURE 9.6
+Output of timber products where harvest is less
+than or equal to the growth of a forest.
+Year
+Baseline
+Timber volume scheduled
+FIGURE 9.5
+Output of timber products over time that is non-
+declining.
+194
+9. FOREST AND NATURAL RESOURCE SUSTAINABILITY
+
+---
+
+[p. 227-228]
+at the rotation age is one where mean annual
+increment is maximized, and removals (harvests)
+would equal the increment of the forest (the growth)
+in each time period. However, when a forest age class
+distribution is not normal or regulated, or has a site
+216
+11. CONTROL TECHNIQUES FOR COMMODITY PRODUCTION AND WILDLIFE OBJECTIVES
+productivity that is variable across the forest, this
+policy could lead to inefficient or ineffective manage-
+ment. For example, assume at one end of the spec-
+trum a forest is composed mainly of stands of old-
+growth timber, where the annual growth rate is rela-
+tively low. No matter what the desired rotation age,
+under this policy only an amount equal to the growth
+can be removed during each time period, and conse-
+quently, the forest will likely remain older (for better
+or worse). On the other end of the spectrum, assume
+that a forest is composed mainly of younger stands
+of trees, with relatively high annual growth rates.
+Using a policy of harvest equaling growth, the
+implied harvest volume may be so high relative to
+the current growing stock (standing volume) that
+the suggested harvest volume could not be sustained
+over the long-run. As a consequence, the landowner
+would eventually deplete the merchantable harvest
+volume.
+The “best judgement” policy may be commonly
+practiced today, but may also leave a landowner with
+a level of uncertainty that may be unacceptable.
+When making a best judgement periodic harvest vol-
+ume recommendation to a landowner, what would
+you base it on? Would the recommended harvest
+level be, in turn, defensible? Some best judgment
+policies may be palatable to a landowner when the
+objective of forest management is not necessarily con-
+tingent on commodity production or economic goals.
+Conservative harvest policies may in fact be consis-
+tent with a landowner’s objectives, and as a result
+the selection of a harvest policy may be better made
+using the best judgement of the forest manager. Reck-
+nagel [1] described a method of volume control (the
+Hufnagl method) similar to this that is based solely
+on the increment of a forest, and can be applied to
+even-aged forests as well as uneven-aged forests. At
+its root, the Hufnagl method suggests that harvest
+equals growth, and that the age-class distribution of
+the forest must approach a regulated state for the
+method to work effectively. However, where it differs
+from other methods is in the loose adjustments sug-
+gested to the sustained harvest level. If, for example,
+the growing stock within a forest seems excessive,
+then the Hufnagl method suggests a harvest greater
+than the increment can be scheduled. Alternatively,
+if the growing stock is deficient, then the method sug-
+gests a harvest less than the increment can be sched-
+uled. The upward or downward adjustment to the
+harvest level is left to the forest manager to deter-
+mine. This is a very basic method for determin-
+ing the sustained annual harvest; therefore, the best
+use of it may be for comparison against other meth-
+ods. The Hufnagl method is similar to the Austrian
+formula (described later), except that the Austrian
+formula contains a rational and quantifiable approach
+for adjusting the harvest when basing it on the incre-
+ment, whereas the Hufnagl method suggests a sub-
+jective adjustment upward or downward at the
+discretion of the forest manager. As with other meth-
+ods that are based on the growth rate of a stand or
+forest, the increment (growth rate) of a forest needs
+to be reassessed every few years for these methods
+to work effectively [1].
+Trial-and-error policies for determining the sus-
+tainable harvest level suggest the use of techniques
+such as binary search. Binary search, in fact is
+one form of volume control. As we mentioned in
+Chapter 8, it is a technique for meeting the objectives
+of a landowner by repeated simulations of harvest
+levels until a feasible maximum or minimum harvest
+volume is located. The approach is usually specific to
+the landowner, the forest conditions, and the assump-
+tions regarding the selection of harvest areas. How-
+ever, binary search is an efficient trial-and-error
+method for identifying upper and lower bounds on
+sustainable harvest volumes within a specific time
+horizon.
+Other classic methods for determining the appro-
+priate harvest volume are described next. These
+include the Hanzlik formula, the Austrian formula,
+and others. As with area control, volume control tech-
+niques could be used to develop a regulated forest.
+Volume control techniques use forest growth and
+age class distributions to determine the conversion
+period allowable harvest levels. When using volume
+control methods, the scheduled volumes should be
+stable throughout the conversion period, yet the area
+harvested may fluctuate widely.
+A. The Hanzlik Formula for Volume Control
+A graduate of the University of Washington forestry
+program, Edward Hanzlik worked as a forester for
+many years in the Pacific Northwest of the United
+States. He is best known for his method of determining
+the sustainable annual harvest level from virgin for-
+ests [3]. The Hanzlik formula, as it has come to be
+known, was used extensively in the northwestern
+United States and British Columbia in the middle part
+of the twentieth century, in an effort to ensure that the
+supply of wood would meet the demands of society
+at that time as well as demands assumed to occur in
+the future. The Hanzlik formula for determining the
+sustained annual yield centered on the concern over
+transitioning virgin forests to normal forests (which
+was described in Chapter 10). The calculation of the
+near-term sustained annual yield is for even-aged
+217
+II. CONTROLLING THE VOLUME SCHEDULED
+
+---
+
+[p. 252-253]
+dinated such that (1) adjacent patches are not clear-
+cut harvested within a certain time window, creating
+openings larger than what was desired, and (2) other
+patches that are not clearcut harvested are applied a
+simultaneous management action, such as a thinning.
+241
+II. ADJACENCY AND GREEN-UP OF GROUP-SELECTION PATCH HARVESTS
+Additionally, the order that patches are harvested may
+be restricted to prevent logging through the advanced
+regeneration, which can cause unacceptable damage.
+This suggests that the timing of treatments (clearcuts
+and thinnings) might be synchronized to facilitate an
+efficient harvesting operation.
+Example
+Bettinger et al. [21] describe a management situation
+where the objective function for the forest planning
+problem was to maximize the net revenue from timber
+harvests, subject to a number of constraints related to
+group selection harvests. First, the land managers
+required a minimum net revenue from each entry into
+a stand to make the system operationally feasible. Sec-
+ond, the age of the trees in the group selection patches
+that were clearcut harvested needed to be above a mini-
+mum harvest age. Third, the timing of clearcuts in the
+group selection patches needed to be synchronized with
+the timing of the thinnings in other group selection
+patches within the stand. Fourth, unit restriction adja-
+cency constraints needed to be used to disallow the
+placement of group selection clearcut patches next to
+other group selection clearcut patches during the appro-
+priate green-up time period. To further complicate the
+problem, as you can see in Figure 12.4, the patches
+may be made up of several smaller pieces of stands.
+For patches within stands designed for group selection
+harvesting activities, the green-up time period could
+have been as long as 30 years. To control the level of
+group selection harvest activities within a stand, only a
+certain percentage of patches in a stand should be clear-
+cut in each entry period. For example, the assumption
+that only 20 percent of the potential group selection
+patches within a stand could be clearcut during an entry
+was used in this work. When the reentry interval is
+assumed to be 10 years, this implies a 50-year rotation,
+where after 50 years, all the patches would have been
+clearcut harvested, and a second round of patch clearcut
+harvests would have begun.
+III. HABITAT QUALITY
+CONSIDERATIONS
+In many cases, planning for the development and
+maintenance of habitat patches requires that we view
+a planning problem with a spatial perspective. Simply
+assuring that a suitable amount of land of a certain
+type of habitat will be available throughout the life-
+span of a forest plan can be relatively straightforward
+and can be accommodated using linear programming
+methods. However, assuring that patches of a certain
+size are available through time is not as easy to
+accommodate, nor is the ability to assure managers
+and landowners that patches of a certain size will be
+positioned next to other types of habitat, or within
+some distance of other types of habitat. These goals
+generally require the use of binary integer decision
+variables that will enable the use of constraints that
+are similar to the adjacency constraints described
+FIGURE 12.4
+Group selection patch harvests where only 20% of a stand is entered, and patches do not share an edge.
+242
+12. SPATIAL RESTRICTIONS AND CONSIDERATIONS IN FOREST PLANNING
+
+---
+
+[p. 273-274]
+onal
+plan
+Management
+activities
+Forest
+response
+Forest
+monitoring
+Analysis
+Operational
+level adjustments
+Strategic level
+adjustments
+FIGURE 13.2
+Adaptive management planning process used by
+Weyerhaeuser [12] for land managed in Drayton Valley, Alberta.
+262
+13. HIERARCHICAL SYSTEM FOR PLANNING AND SCHEDULING MANAGEMENT ACTIVITIES
+you would fit into the natural resource planning
+processes. As a relatively new natural resource
+manager you will likely be involved with the
+development of operational plans for the land that
+you manage. If you do not directly develop these
+plans, perhaps you will do so indirectly under the
+guidance of other seasoned professionals. As time
+goes by, you will likely be afforded the oppor-
+tunity to develop these plans yourself and imple-
+ment them as well. As you will find, in many
+situations the annual goals of a property and some
+of the means for achieving them typically are
+defined by the landowner or the upper-level man-
+agers. These include annual harvest and budget
+levels,
+silvicultural
+options,
+and
+ecological
+and
+social concerns, all of which may be passed down
+to the field level through a strategic plan. How-
+ever,
+the
+data
+and
+knowledge
+that
+would
+be
+required to develop a strategic plan will likely
+arise from the field offices (Figure 13.3). As a result,
+you should be aware of how the management
+activities that you implement support the goals
+recommended in the strategic plan. Not only will
+you and your colleagues in the field offices be
+the most familiar with the current condition of the
+natural resources being managed, but also you will
+be relied on to inform the planners and man-
+agers of the management prescriptions that are
+most likely to be implemented, and their associated
+costs. Although a set of optimal prescriptions for
+timber stands may be generated during one or more
+of the planning processes, understanding the cur-
+rent actual management implementation process is
+essential so that suggested courses of action are
+not outside the bounds of reasonable courses of
+action. At some point in your career as a natural
+resource manager, you will either be consulted on
+these types of issues during the planning process,
+or perhaps you will become the person responsible
+for developing the plan itself. Understanding the
+hierarchy of planning processes within your organi-
+zation is therefore an important learning process
+and one that will allow you to work effectively with
+your peers.
+VII. SUMMARY
+Land managers and landowners want plans of
+action that provide guidance and assessments of
+the goals and objectives of a property. Some want
+an evaluation of strategies or general directions
+for managing resources and achieving long-term
+goals. Some want tactical plans to determine where
+activities should be planned over the next year or
+two. Others require operational plans to facili-
+tate implementation of daily, weekly, or monthly
+management activities. Ideally, a plan of action
+would include a geographic perspective that allows
+land managers and landowners to understand the
+extent
+of
+activities
+planned,
+the
+relationship
+between planned activities and the broader set of
+natural resources contained within the property
+(or landscape), and the potential courses of action
+for
+implementing
+the
+management
+activities.
+Through these plans, managers and landowners
+should be able to develop a sense for the short-
+term, intermediate, and long-term goals associated
+with the property. Further, an analysis of alterna-
+tives at each level allows the decision-makers to
+understand
+the
+trade-offs
+involved
+in
+selecting
+fine-scale
+and
+broader-scale
+courses
+of
+action.
+Understanding how you might contribute to each
+planning process may be one of the keys to a
+successful career.
+Develop updated
+databases and
+knowledge
+Assess the
+quality of data
+Incorporate
+data into
+databases
+Develop
+strategic and
+tactical
+plans
+Analyze and
+select
+plan(s)
+Implement
+plans/create
+operational plan
+Field office
+District or Regional
+office
+FIGURE 13.3
+Flow of information in a typical timber company
+over the course of a year.
+263
+VII. SUMMARY
+
+---
+
+[p. 297-298]
+ience, and technology
+10
+Improve practice by foresters, loggers, and contractors
+with training and education
+11
+Comply with federal, state, and local laws and
+regulations
+12
+Encourage public participation
+13
+Promote continual improvement; monitor, measure,
+and report progress
+286
+15. FOREST CERTIFICATION AND CARBON SEQUESTRATION
+economically viable, management of forests. Although
+the Sustainable Forestry Initiative uses one set of stan-
+dards for all forests, regional Forest Stewardship
+Council committees develop the standards appropri-
+ate for forests in those areas. These standards include
+demonstrating that a forest management plan has been
+developed, is being implemented, and is periodically
+updated. The management plan can include the devel-
+opment of forest plantations as long as they are consis-
+tent with areas designated for wildlife habitat and
+riparian zones, and as long as they have not been
+recently developed through conversion of naturally
+regenerated forests.
+The Forest Stewardship Council certification pro-
+gram has 10 principles and 56 criteria, and 138 national
+indicators in the United States guidelines [13]. The For-
+est Stewardship Council southeastern United States
+standards were developed by a group of nongovern-
+mental organizations, government officials, academic
+professionals, and consulting foresters, but the forest
+industry purposefully declined to attend any forma-
+tive meetings, probably due to the perceived environ-
+mental bias of the system. Subsequent regional Forest
+Stewardship Council regional standards have been
+developed, such as the one related to the southeastern
+United States [14]. In this particular regional standard,
+we find language suggesting that the rate of harvest
+of forest products shall not exceed levels that can
+be permanently sustained (Standard 5.6). In addition,
+a number of standards refer to reforestation and
+succession and address the context of plantations in
+the certification process. The southeastern United
+States certification standard [14] defines commercial
+plantations as
+A stand established through artificial regeneration for the
+commercial production of forest products, usually at the
+shortest practical rotation, with a single species, and at regu-
+lar spacing in rows. Although commercial plantations may
+assume the characteristics of a semi-natural forest. . . .
+The Forest Stewardship Council standards require
+certified forest landowners to maintain or restore
+forests to natural conditions to the extent possible,
+and address other means for retaining and managing
+natural forests. In addition, forest management prac-
+tices should be designed to maintain site productivity
+as well as genetic, species, and community diversity
+of the forest. More importantly for the southern United
+States, the Forest Stewardship Council standards [14]
+indicate that
+Forest conversion to plantations or non-forest land uses
+shall not occur, except in circumstances where conversion:
+a) entails a very limited portion of the forest management
+unit; and b) does not occur on high conservation value forest
+areas; and c) will enable clear, substantial, additional, secure,
+long term conservation benefits across the forest manage-
+ment unit. (Standard 6.10)
+Many people have the impression that the forest
+industry manages most of the land in the southern
+United States, but in fact most of the forest land is owned
+by private, nonindustrial landowners. It is likely that a
+good percentage of industrial plantations were con-
+verted from naturally regenerated stands of trees, even
+though much of the southern United States has been
+harvested four or five times since the Colonial Era.
+However, many forest industry plantations today were
+(and still are) regenerated on old farm fields that are
+not considered “natural,” so this standard may not be
+daunting as it appears. In addition, plantations devel-
+oped from naturally regenerated stands between 1994
+and 2001 may be considered for certification under this
+program if a restoration plan covering all such stands
+is being implemented. Thus in practice, plantations
+may still be planted in most areas of the southern United
+States where agricultural practices once occurred. But
+the language in the standards may still prevent certifica-
+tion of forests where natural stands of trees are con-
+verted to plantations. As with the other certification
+programs, land managers must agree to protect soil
+resources, minimize forest pests, diseases, and fire,
+and minimize the use of pesticides. In addition, land-
+owners must assess on- and off-site ecological and social
+impacts of forest management activities.
+TABLE 15.4.
+Summary of Forest Certification Systems
+American Tree
+Farm System
+Forest Stewardship
+Council
+Sustainable
+Forestry Nitiative
+Canadian Standards
+Association
+ISO 14001
+Programme for the
+Endorsement of
+Forest Certification
+Scope
+USA
+Worldwide
+USA /Canada
+Canada
+Worldwide
+Europe
+Established
+1941
+1993
+1995
+1996
+1994
+1999
+Eco-label?
+No
+Yes
+Yes
+Yes
+No
+Yes
+Chain of custody?
+Yes
+Yes
+Yes
+Yes
+No
+Yes
+287
+II. FOREST CERTIFICATION PROGRAMS
+
+---
+
+[p. 328-329]
+umber
+The “key number” is the value of the cell in the
+matrix that is located at the intersection of the pivot
+column and pivot row.
+H. Step 8: Calculate the Transformation Ratio
+Each constraint that is not identified as the pivot
+row needs to be transformed. The transformation
+317
+II. TEN STEPS THAT REPRESENT THE SIMPLEX METHOD
+ratio assists us with these computations. It is simply
+the value of the cell in the pivot column of the non-
+pivot row divided by the key number.
+TR 1⁄4 ðvalue of cell in pivot column of
+non-pivot row=key numberÞ
+I. Step 9: Transform the Pivot Row
+In this step we transform the matrix, starting with
+the pivot row, to represent that the Simplex Method
+is moving to another corner of the solution space by
+allowing a variable currently not in the solution, to
+enter the solution.
+New pivot row value
+1⁄4 ðOld pivot row value=Key numberÞ
+J. Step 10: Transform the Nonpivot Row(s)
+For all the cells in the nonpivot rows, we need to
+remember one thing: the value of the cell in the pivot
+row for each column in question (the value before we
+transformed the pivot row in Step 9). Given this,
+along with the current value of each cell in the nonpi-
+vot rows, and the transformation ratio associated
+with each nonpivot row, we can transform the cells
+of the nonpivot rows using the equation:
+New non-pivot row value
+1⁄4 ðOld nonpivot row cell valueÞ
+ ðOld pivot row cell value for the column
+in questionÞ  ðTRÞ
+Assuming that TR 1⁄4 4, and the old pivot row cell
+value for the column is 1, the value for column 1, con-
+straint 1, will change from 15 to 11:
+New nonpivot row value 1⁄4 ð15Þ  ð1  4Þ 1⁄4 11
+III. A TWO-VARIABLE,
+TWO-CONSTRAINT PROBLEM SOLVED
+WITH THE SIMPLEX METHOD
+Assume that recently you have been hired as a for-
+ester for a medium-sized company in southern
+Mississippi. One of your responsibilities is to manage
+a site preparation and planting budget of $500,000 per
+year. Based on some preliminary discussions with the
+company’s
+preferred
+site
+preparation
+contractor,
+there are two main reforestation options. You have
+determined that it will cost the company about $178
+per acre to use a 3-in-1 plow in conjunction with
+machine planting to reforest a cutover area. It will
+cost about $203 per acre to shear the residual stems
+and apply a chemical site preparation treatment, then
+hand plant cutover areas. This data is consistent with
+what is reported in Smidt et al. [3] for the United
+States southern Coastal Plain.
+The contractor has indicated that given their cur-
+rent machinery and personnel, on average they can
+site prepare 12 acres per day using the 3-in-1 plow.
+On average, they can site prepare 15 acres per day
+using the other system. These figures are yearly
+averages, and in any given year there are about 200
+work days. You have decided that you want to maxi-
+mize the number of acres site prepared over the next
+year.
+The set of linear equations that are needed to solve
+this problem are:
+Maximize SPM1 þ SPM2
+Subject to:
+178 SPM1 þ 203 SPM2  500, 000
+0:0833 SPM1 þ 0:0667 SPM2  200
+The objective function (SPM1 þ SPM2) simply
+implies that you need to maximize the number of acres
+assigned to site preparation method 1 (SPM1) or site
+preparation method 2 (SPM2). The first constraint is
+the budget constraint, and the second constraint is an
+operational constraint. The values in the second con-
+straint are days per acre, or the inverse of the acres
+per day suggested earlier for each type of treatment.
+First, we convert the constraints from inequalities to
+equalities by adding slack variables to each.
+178 SPM1 þ 203 SPM2 þ S1 1⁄4 500, 000
+0:0833 SPM1 þ 0:0667 SPM2 þ S2 1⁄4 200
+Next, we begin one or more iterations of the Sim-
+plex Method.
+A. Iteration 1 of the Simplex Method
+Iteration 1, Step 1. The initial detached coefficient
+matrix, or tableau, is created (Figure B.3). As you
+can see, since this is the initial formulation of the
+problem, the slack variables are “in the solution,”
+and the variables related to the site preparation
+methods are not. This is an initial feasible solution.
+In other words, no acres have been assigned to
+each of the site preparation methods yet.
+318
+APPENDIX B. THE SIMPLEX METHOD FOR SOLVING LINEAR PLANNING PROBLEMS

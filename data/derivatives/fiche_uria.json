@@ -1,0 +1,107 @@
+{
+ "document_id": "13097598-bab7-48d1-b42c-6fff79b044a8",
+ "titre_normalise": "Comment l'IA transformera notre avenir",
+ "auteurs": [
+  "Pedro Uria-Recio"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Lecteurs non techniciens prêts à parcourir six cents pages, formateurs cherchant un socle historique complet, dirigeants souhaitant une vue d'ensemble. L'auteur est mathématicien de formation, ingénieur spécialisé en données, titulaire d'un diplôme de gestion de l'université de Chicago et ancien consultant chez McKinsey. Publication indépendante, traduite en français par l'auteur lui même.",
+ "these_centrale": "L'intelligence artificielle, la robotique, les technologies de cyborg et la biologie synthétique convergent vers un même point : l'entrelacement de l'humain et de la machine, qui produira une espèce hybride pensant, agissant et ressentant autrement. L'auteur en donne une mesure saisissante à partir de Gilgamesh : si nous devenions immortels par entrelacement avec un système qui l'est, nous cesserions de comprendre la quête d'immortalité qui fonde la plus ancienne œuvre littéraire connue, et donc de nous reconnaître dans quatre mille ans d'humanité.",
+ "idees_force": [
+  {
+   "titre": "Le test de Gilgamesh",
+   "explication": "L'argument le plus original du livre, et il tient en un paragraphe. L'auteur raconte avoir lu l'épopée mésopotamienne et s'être senti proche des anciens Sumériens, partageant leurs ambitions et leurs chagrins. C'est cette continuité de quatre mille ans que les transformations à venir rompraient. La question n'est donc pas de savoir si nous survivrons, mais si nous resterions capables de lire nos propres textes fondateurs.",
+   "page": 32
+  },
+  {
+   "titre": "Trois hivers, et non deux",
+   "explication": "Là où la plupart des ouvrages du corpus recensent deux périodes de désaffection, l'auteur en identifie trois : après les échecs des années 1970, après l'effondrement des systèmes experts à la fin des années 1980, et un troisième après l'éclatement de la bulle Internet. Il montre au passage que le second boom a déplacé le financement de la recherche publique vers l'entreprise, ce qui a renforcé sa résilience mais a aussi commencé à en orienter la direction.",
+   "page": 92
+  },
+  {
+   "titre": "Une généalogie technique qui remonte à Boole",
+   "explication": "C'est l'apport le plus solide de l'ouvrage. L'algèbre binaire de George Boole en 1847, les Principia Mathematica de Russell et Whitehead en 1913 qui fournissent la notation dont se serviront les premiers systèmes, puis la thèse de Turing et Church selon laquelle tout raisonnement mathématique peut être mécanisé, et la machine abstraite de 1936. Chaque étape est reliée à la suivante, ce qui rend intelligible pourquoi la logique symbolique reste centrale aujourd'hui.",
+   "page": 71
+  },
+  {
+   "titre": "L'apprentissage auto-supervisé expliqué en une phrase à trous",
+   "explication": "Le chat a poursuivi le blanc dans la cour. Un modèle entraîné par masquage de mots doit prédire le terme manquant à partir du contexte, et déduit qu'il s'agit probablement d'un écureuil ou d'une souris. L'auteur montre que ce déplacement, qui dispense d'annoter manuellement les données, est ce qui a rendu possible le passage à l'échelle. C'est la meilleure vulgarisation de ce mécanisme dans tout le corpus.",
+   "page": 147
+  },
+  {
+   "titre": "Donner la bonne réponse sans comprendre la démonstration",
+   "explication": "L'auteur pointe précisément la limite actuelle. Confronté à un problème logique ou mathématique, un modèle peut fournir la réponse correcte en reproduisant des motifs vus à l'entraînement, sans saisir la preuve sous jacente. Comprendre pourquoi une réponse est correcte, plutôt que prédire le caractère suivant, reste selon lui le verrou. Il note que plus de soixante ans après le General Problem Solver de Newell et Simon, les machines peinent encore sur le raisonnement.",
+   "page": 166
+  },
+  {
+   "titre": "Une histoire des automates qui ne commence pas en Occident",
+   "explication": "Le chapitre sur les automates mécaniques accorde une place réelle à la tour de Su Song, construite à Kaifeng en 1088, et surtout à Ismaïl al-Jazari, polymathe du douzième siècle du nord de la Mésopotamie, dont le Livre de la connaissance des dispositifs mécaniques ingénieux décrit en 1206 plus de cinquante machines, dont un bateau à quatre musiciens automatiques synchronisés par un système de poids et d'eau, et un automate de lavage des mains dont le mécanisme de chasse précède la plomberie moderne.",
+   "page": 187
+  },
+  {
+   "titre": "Le dilemme japonais : immigration ou humanoïdes",
+   "explication": "L'auteur consacre un chapitre entier à une hypothèse qu'il documente. Le Japon vieillit et refuse durablement l'immigration ; l'automatisation humanoïde y devient donc une solution de substitution, y compris dans les services. Il cite qu'en 2020 près de quatre vingts pour cent des banques japonaises avaient engagé ou recherchaient des technologies d'automatisation. Il relève honnêtement la tension avec une culture du service qui valorise l'interaction humaine.",
+   "page": 281
+  },
+  {
+   "titre": "Utopie et dystopie traitées symétriquement",
+   "explication": "Deux chapitres se font face. Le premier expose une trajectoire de redistribution, de durabilité et d'équité. Le second décrit l'autoritarisme, le chômage de masse et ce qu'il appelle une politique des castes. L'auteur ne prétend pas trancher, mais il conclut sur une exigence civique nette : que les électeurs des sociétés occidentales réclament de leurs dirigeants une position explicite sur la gouvernance de ces technologies tant que l'orientation peut encore être définie.",
+   "page": 320
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Entrelacement",
+   "definition": "Terme central de l'ouvrage : fusion progressive de l'humain et des systèmes artificiels par les interfaces, les implants et la biologie synthétique, aboutissant selon l'auteur à une espèce hybride."
+  },
+  {
+   "terme": "Logique symbolique et logique analogique",
+   "definition": "Les deux voies historiques : représenter le monde par des symboles manipulables selon des règles, ou reproduire des processus par ajustement continu. Le livre soutient que les systèmes actuels combinent les deux plutôt qu'ils n'ont tranché."
+  },
+  {
+   "terme": "Réseau récurrent et mémoire à long terme",
+   "definition": "Architectures traitant des séquences, où l'information circule vers l'avant et vers l'arrière dans le temps. Elles ont porté la traduction automatique et les assistants vocaux avant d'être supplantées."
+  },
+  {
+   "terme": "Réseau convolutif",
+   "definition": "Architecture spécialisée dans l'image, décrite par l'auteur comme un détective numérique qui examine méthodiquement une image à la recherche de bords, de formes et de caractéristiques."
+  },
+  {
+   "terme": "Apprentissage auto-supervisé",
+   "definition": "Méthode par laquelle un modèle extrait la structure des données sans étiquetage humain, notamment par masquage de mots dans un texte. C'est le changement qui a rendu l'annotation manuelle superflue et l'échelle atteignable."
+  },
+  {
+   "terme": "Chaîne de pensée",
+   "definition": "Technique consistant à guider un modèle pour qu'il expose son raisonnement par étapes, présentée par l'auteur à partir des travaux de Stanford et Google publiés en 2022."
+  },
+  {
+   "terme": "Interface cerveau-ordinateur",
+   "definition": "Connexion entre les signaux électriques du cerveau et un dispositif externe. Le livre en fait remonter la première démonstration à une pièce musicale de 1965 d'Alvin Lucier synchronisant des percussions sur des ondes alpha, le terme étant forgé en 1973 par Jacques Vidal."
+  },
+  {
+   "terme": "Biologie synthétique",
+   "definition": "Conception d'organismes non naturels à des fins industrielles, médicales ou environnementales. L'auteur la range parmi les technologies convergentes plutôt que parmi les disciplines voisines."
+  },
+  {
+   "terme": "Politique des castes",
+   "definition": "Scénario dystopique où les capacités augmentées deviennent héréditaires et cessent d'être accessibles, figeant une hiérarchie que la mobilité sociale ne corrige plus."
+  }
+ ],
+ "a_lire_si": "Vous cherchez la référence historique et technique du corpus. C'est le seul ouvrage qui relie Boole, Turing, Dartmouth, les systèmes experts, les réseaux récurrents, les transformeurs et l'apprentissage auto-supervisé dans un récit continu et lisible sans formation technique. Sa bibliographie occupe vingt sept pages et son glossaire est utilisable seul. Il se consulte très bien par chapitres.",
+ "a_eviter_si": "Vous voulez un livre bref ou une thèse serrée. Six cents pages, trente et un chapitres, et une ambition qui va de l'épopée de Gilgamesh à l'informatique quantique : l'étendue est le principal défaut. La cinquième partie, sur la superintelligence, le téléchargement de l'esprit et la divinisation de la machine, quitte le terrain documenté pour la spéculation, et gagne à être lue après Bostrom plutôt qu'à sa place.",
+ "prerequis": [
+  "Aucun prérequis technique : l'auteur explique chaque notion avant de s'en servir.",
+  "Le livre est conçu pour une lecture non linéaire. Les parties deux et trois, historiques, se suffisent à elles mêmes et constituent le meilleur usage qu'on puisse en faire.",
+  "La cinquième partie suppose d'avoir déjà rencontré les arguments sur le risque existentiel, faute de quoi elle se lira comme de la science-fiction."
+ ],
+ "controverses": [
+  "Publication indépendante, sans éditeur ni relecture éditoriale apparente, et traduite en français par l'auteur lui même. Il en résulte des maladresses de langue et plusieurs noms propres altérés, dont ceux de pionniers cités dans le texte. Le fond reste solide, la forme demande de la vigilance.",
+  "L'auteur emploie un nous éditorial constant alors qu'il signe seul. Le procédé donne au texte une autorité collective qu'il n'a pas.",
+  "Le livre s'achève sur une demande d'avis en ligne accompagnée d'un code à scanner. Ce n'est pas anodin dans une bibliothèque de référence : le régime de production et de diffusion de cet ouvrage n'est pas celui des autres titres de l'axe, et son évaluation par des pairs n'a pas eu lieu.",
+  "Le chapitre sur l'utopie, qui promet redistribution et équité, est écrit par un ancien consultant en stratégie et ne décrit aucun mécanisme de redistribution concret. C'est le chapitre le plus faible d'un livre par ailleurs très documenté.",
+  "La thèse de l'entrelacement conduisant à une nouvelle espèce est présentée comme une trajectoire probable plutôt que comme une hypothèse. Elle recoupe le transhumanisme sans que l'auteur situe explicitement sa position par rapport à ce courant."
+ ],
+ "confiance": 0.86
+}

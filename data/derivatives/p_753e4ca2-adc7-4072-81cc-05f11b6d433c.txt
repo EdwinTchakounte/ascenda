@@ -1,0 +1,581 @@
+OUVRAGE : IA mesinformation
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 126
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Résumé exécutif (p. 7-11)
+  Executive summary (p. 12-15)
+  Avertissement (p. 16-16)
+  Genèse et positionnement du rapport (p. 17-20)
+  Chapitre 1 (p. 21-21)
+  Analyse (p. 21-21)
+  Introduction (p. 21-22)
+  1.1.	Les pathologies de l’information, leurs racines, leurs mécanismes (p. 23-23)
+  1.1.1.	Du rêve à la désillusion (p. 23-24)
+  1.1.2.	Malinformation, mésinformation et désinformation (p. 25-25)
+  1.1.3.	Le virus infox (p. 26-27)
+  1.1.4.	Une modération sur les réseaux sociaux, mais insuffisante (p. 28-28)
+  1.1.5.	La dictature des algorithmes (p. 29-30)
+  1.1.6.	La notion même de vérité remise en question (p. 31-31)
+  1.1.7.	Le sens critique et la distanciation cognitive (p. 32-32)
+  1.2.	L’IA générative est-elle par nature une poche de mésinformation ? (p. 33-33)
+  1.2.1.	Le test de Turing n’est pas une garantie (p. 33-33)
+  1.2.2.	Comment fonctionne un LLM ? (p. 34-35)
+  1.2.3.	Les biais des LLMs (p. 36-36)
+  1.2.4.	L’évolution des LLMs (p. 37-37)
+  1.2.5.	Le contrôle d’un LLM : par-delà le bien et le mal (p. 38-38)
+  1.2.6.	L’extension du domaine des IA génératives (p. 39-40)
+  1.3.	Les effets des technologies numériques et de l’IA sur la mésinformation (p. 41-41)
+  1.3.1.	Une littérature foisonnante et évolutive (p. 41-42)
+  1.3.2.	Vers une perception raisonnée (p. 43-44)
+  1.3.3.	Les progrès de l’IA changent-ils la donne ? (p. 45-47)
+  1.3.4.	Une réflexion encore en chantier (p. 48-49)
+  1.4.	Le rôle positif de l’IA dans la lutte contre la mésinformation (p. 50-50)
+  1.4.1.	L’IA phármakon (p. 50-51)
+  1.4.2.	La détection de l’infox sur différents supports (p. 52-55)
+  1.4.3.	Aider les professionnels de l’information (p. 56-57)
+  1.4.4.	Un grand déséquilibre de moyens (p. 58-58)
+  1.5.	Un secteur sensible : les marchés financiers (p. 59-59)
+  1.5.1.	Le trading algorithmique (p. 59-60)
+  1.5.2.	Les promesses de l’IA financière (p. 61-61)
+  1.5.3.	La manipulation artificielle de l’information sur les marchés financiers (p. 61-62)
+  1.5.4.	Les attaques et les outils d’IA au service de l’intégrité des marchés financiers (p. 63-63)
+  1.5.5.	Les récentes initiatives de la Commission européenne (p. 64-65)
+  1.6.	La réglementation de la désinformation et de l’IA générative (p. 66-66)
+  1.6.1.	Réguler la désinformation, sans attenter à la liberté d’expression (p. 66-68)
+  1.6.2.	La régulation de la désinformation passe par la régulation des plateformes (p. 69-70)
+  1.6.3.	Un code de bonnes pratiques pour traiter la mésinformation (p. 71-72)
+  1.6.4.	La lutte contre les ingérences étrangères (p. 73-73)
+  1.6.5.	Les inquiétudes liées à l’IA générative conduisent à de nouvelles obligations réglementaires. (p. 74-78)
+  1.6.6.	Le dispositif réglementaire actuel pourrait utilement être renforcé sur deux points (p. 79-79)
+  Chapitre 2 (p. 80-80)
+  Lignes d’action (p. 80-80)
+  2.1.	Quatre champs d’initiatives (p. 81-81)
+  2.1.1.	L’éducation (p. 81-82)
+  2.1.2.	La recherche (p. 83-83)
+  2.1.3.	Les médias (p. 84-86)
+  2.1.4.	La sécurité (p. 87-88)
+  2.2.	Six propositions spécifiques (p. 89-89)
+  2.2.1.	Faire émerger un ChatPedia au sein de l’Éducation nationale (p. 89-89)
+  2.2.2.	Créer un socle statistique du numérique et de ses impacts (p. 90-91)
+  2.2.3.	Instaurer auprès de l’Arcom un Comité consultatif de l’information scientifique et technique (p. 92-94)
+  2.2.4.	Bâtir un Observatoire de l’édition artificielle (p. 95-95)
+  2.2.5.	Contraindre les plateformes à afficher un score d’artificialité (p. 95-96)
+  2.2.6.	Sanctionner les opérations de désinformation au bénéfice d’acteurs étrangers (p. 97-97)
+  Le mot philosophique de la fin (p. 98-99)
+
+[10/109 passages, 6653 tokens sur 77632]
+
+=== EXTRAITS ===
+
+[p. 1-5]
+ACADÉMIE
+DES TECHNOLOGIES
+POUR UN PROGRÈS RAISONNÉ, CHOISI ET PARTAGÉ
+
+Académie des technologies
+Le Ponant — Bâtiment A
+19, rue Leblanc
+75015 PARIS
++33(0)1 53 85 44 44
+secretariat@academie-technologies.fr
+www.academie-technologies.fr
+© Académie des technologies
+ISBN : 979-10-97579-55-5
+Couverture : Noé - Adobe stock / Image générée avec l'aide d'une IA
+
+ACADÉMIE
+DES TECHNOLOGIES
+POUR UN PROGRÈS RAISONNÉ, CHOISI ET PARTAGÉ
+[A GENERATIVE
+& MESINFORMATION
+Rapport de l'Académie
+Ce rapport a été rédigé sous la direction de Nicolas CURIEN, avec les
+contributions de Eric BIERNAT, Chantal JOUANNO, Etienne KLEIN,
+Winston MAXWELL, Michèle SEBAG et Joëlle TOLEDANO.
+Il est le produit d’un groupe de travail dont la composition complete est
+précisée en annexe. Il répond à un processus rigoureux au sein de
+l'Académie des technologies garantissant son 
+indépendance et
+objectivité ; il a été approuvé et voté lors de l'assemblée générale des
+académiciens,
+Décembre 2024
+
+SOMMAIRE
+Résumé exécutif
+Executive summary
+Avertissement
+Genèse et positionnement du rapport
+Chapitre 1
+Analyse
+Introduction
+1.1. 
+Les pathologies de l'information, leurs racines, leurs mécanismes
+[HAE
+11.2,
+11,3,
+11,4,
+11,5,
+1.1.6,
+11,7,
+Du rêve à la désillusion
+Malinformation, mésinformation et désinformation
+Le virus infox
+Une modération sur les réseaux sociaux, mais insuffisante
+La dictature des algorithmes
+La notion même de vérité remise en question
+Le sens critique et la distanciation cognitive
+1.2, 
+L'IA générative est-elle par nature une poche de mésinformation ?
+12.1,
+1.2.2,
+1.2.3,
+1.2.4,
+1.2.5,
+1.2.6,
+Le test de Turing n'est pas une garantie
+Comment fonctionne un LLM ?
+Les biais des LLMs
+L'évolution des LLMs
+Le contrôle d'un LLM: par-dela le bien et le mal
+L'extension du domaine des IA génératives
+12
+16
+17
+21
+21
+23
+23
+25
+26
+28
+29
+31
+32
+33
+33
+34
+36
+37
+38
+39
+
+1,3,
+Les effets des technologies numériques et de l'IA sur la mésinformation
+131, 
+Une littérature foisonnante et évolutive
+1.3.2. 
+Vers une perception raisonnée
+1.3.3, 
+Les progrès de l'IA changent-ils la donne ?
+1.3.4, 
+Une réflexion encore en chantier
+Le rôle positif de l'A dans la lutte contre la mésinformation
+141, 
+LIA pharmakon
+14,2, 
+La détection de l'infox sur différents supports
+14,3, 
+Aider les professionnels de l'information
+1.4.4. 
+Un grand déséquilibre de moyens
+Un secteur sensible : les marchés financiers
+1.5.1, 
+Le trading algorithmique
+1.5.2, 
+Les promesses de l'IA financière
+1.5.3, 
+La manipulation artificielle de l'information
+sur les marchés financiers
+15,4, 
+Les attaques et les outils d'IA au service de l'intégrité
+des marchés financiers
+1.5.5. 
+Les récentes initiatives de la Commission européenne
+La réglementation de la désinformation et de l'IA générative
+1.6.1, 
+Réguler la désinformation, sans attenter à la liberté d'expression
+1.6.2, 
+La régulation de la désinformation passe par la régulation
+des plateformes
+1.6.3, 
+Un code de bonnes pratiques pour traiter la mésinformation
+16,4, 
+La lutte contre les ingérences étrangères
+1.6.5, 
+Les inquiétudes liées à l'IA générative conduisent
+à de nouvelles obligations réglementaires.
+1.6.6. 
+Le dispositif réglementaire actuel pourrait utilement
+être renforcé sur deux points
+A1
+4}
+43
+45
+48
+50
+50
+52
+56
+58
+59
+59
+61
+61
+63
+64
+66
+66
+69
+71
+73
+74
+79
+
+---
+
+[p. 20-22]
+itre, «Lignes d'action», sont
+identifiés quatre grands champs d'initiatives - l'éducation, la recherche,
+les médias, la sécurité - et formulées six propositions spécifiques en vue
+d'assainir l'espace informationnel.
+Compte tenu de la haute évolutivité de la matière abordée, des mises à jour
+régulières du rapport sont envisagées.
+IA GENERATIVE & MESINFORMATION
+Chapitre 1
+ANALYSE
+INTRODUCTION
+La mutation de l'homo sapiens en homo digitalis, autrement dit la révolution
+numérique, ne comporte pas que des effets sociétaux bénéfiques. Il n'est qu'à
+comparer, sur ce dessin, l'Atlas moderne à l'Atlas classique : lourdement frappé
+« d'infobésité », ou surcharge en information, et atteint de « nomophobie », ou
+incapacité à se séparer de son smartphone, il porte d'un bras désinvolte une
+Terre qu'il croit et voudrait nous faire croire plate!
+De l'Atlas classique à l'Atlas moderne
+Face au «tsuNumi*», ou tsunami des flots numériques, comment séparer
+le vrai du faux, comment se protéger contre l'intoxication informationnelle
+(Chavalarias, 2022) ? L'intelligence artificielle* est-elle un facteur aggravant ?
+Connaitrons-nous une apocalypse cognitive, selon la formule percutante
+du sociologue français Gérald Bronner (2021), membre de l'Académie des
+technologies et auteur d'un important rapport intitulé Les lumières à l'ère
+numérique (Bronner, 2022) ?
+21
+
+[A GENERATIVE & MÉSINFORMATION
+Pour éclairer ces questions, notre analyse s’articule en six étapes.
+22
+Quelles sont les pathologies de l'information, quelles en sont les racines,
+comment se manifestaient-elles avant l'émergence de l'IA générative* ?
+. Qu'est-ce que l'IA générative et quels en sont les développements récents,
+quelles facilités nouvelles ces évolutions offrent-elles aux auteurs et aux
+diffuseurs de fake news*?
+. Quel est l'impact de la circulation des fake news sur les opinions et les
+comportements des citoyens et avec quelles conséquences pour la
+démocratie et le débat public. Lenvol de l'IA générative change-t-il la
+donne 
+?
+. Quelle est, en sens inverse, l'utilité de différents outils d'IA pour détecter
+les contenus de synthèse - textes, images, vidéos ou enregistrements
+sonores - et pour aider les professionnels de l'information, journalistes et
+fact checkers* ?
+. Dans un domaine particulièrement sensible, celui des marchés financiers,
+quelles sont les promesses de l'IA générative, quels en sont les dangers,
+quels sont les moyens de protection pour éviter les phénomènes de
+déstabilisation ?
+. Quel est l'encadrement juridique national et européen, actuellement
+existant ou en gestation, quelles sont les éventuelles faiblesses ou lacunes
+des dispositifs de régulation mis en place 
+?
+
+---
+
+[p. 30-30]
+x, plus éthiques, les algorithmes doivent varier davantage
+leurs données d'entrée et leurs critères de sélection. Mais comment parvenir
+à ce résultat, sachant qu'une transparence totale n'est pas exigible, afin de
+préserver l'incitation à l'innovation dans les domaines stratégiques du big
+data et de l'intelligence artificielle ?
+
+---
+
+[p. 39-40]
+IA GENERATIVE & MESINFORMATION
+essentielle permet de choisir les documents utilisés pour construire la
+réponse (Retrieval Augmented Generation, RAG*). On acquiert ainsi la
+possibilité d'étendre le périmètre des connaissances du LLM considéré, ce
+qui peut s'avérer précieux: soit, parce que son entrainement s'est arrêté a une
+certaine date et qu'il ne dispose pas d'informations très récentes"; soit, parce
+que l'on souhaite que ses réponses s'appuient sur la documentation ou les
+règlements propres de l'entreprise.
+En dépit, ou plutôt à cause de cette richesse, il faut essayer et réessayer!
+Telle est la recommandation fondamentale à destination des concepteurs
+souhaitant développer un LLM pour leurs besoins propres. Et des douzaines
+d'essais sont parfois nécessaires pour parvenir à susciter le type de réponse
+voulu. Bien qu'avec un LLM, l'art de la programmation soit désormais devenu
+accessible à tous et que le ticket d'entrée se soit significativement abaissé
+par rapport à l'informatique classique, une expertise approfondie reste
+néanmoins indispensable, à savoir le prompt engineering*, qui ne s'apprend
+qu'avec l'usage.
+Attention! Que la question posée et le prompt s'expriment tous les deux en
+langue naturelle ouvre la porte aux usages toxiques! Il est ainsi possible
+de leurrer un LLM en mêlant éléments de question et éléments de prompt,
+comme dans l'exemple cité plus haut: si vous demandez comment tuer votre
+voisin, le LLM refuse de répondre; mais si vous lui demandez d'écrire le
+canevas d'un roman dans lequel quelqu'un cherche à tuer son voisin, alors
+il vous aide! Bien sûr, on pourrait exiger une séparation nette, isolant la
+question du prompt: «attention, ceci fait partie du prompt!»; mais, comme
+le notent les experts, cela équivaudrait à la vaine injonction «ne faites pas le
+mal!»,
+1.2.6. L'EXTENSION DU DOMAINE DES IA GÉNÉRATIVES
+Tout comme ChatGPT*, le système DALL-E* d'OpenAI, dont la première
+version a été mise à la disposition du public en 2021, est accessible à tout un
+chacun pour engendrer des images à partir d'énoncés en langage naturel,
+14. 
+Notons que certains LLMs disposent d'un accès direct au Web.
+39
+
+[A GENERATIVE & MÉSINFORMATION
+Au coeur de DALL-E, comme pour un LLM* ou, plus généralement, un
+modèle d'apprentissage profond* (deep learning), il existe un espace de
+représentation intermédiaire ou latente (cf1.2.2.). Tel était d'ailleurs le
+message révolutionnaire de l'apprentissage profond dans les années 2005-
+2010: la recherche d'une bonne représentation constitue la première étape,
+et la plus importante, pour construire un bon modèle, C'est à travers le
+plongement des données vers la représentation latente (embedding*) que le
+système sait tirer parti des connaissances disponibles.
+Ainsi, pour DALL-E, le système ingère des millions de paires image-titre.
+La méthode consiste à faire en sorte que la représentation de l'image et celle
+de son titre dans l'espace latent soient proches l'une de l'autre et éloignées
+des représentations des autres images et des autres titres. Partons d'une
+demande telle que: ‘Dessine-moi un cosmonaute sur un cheval blanc
+galopant dans la lande”. Le plongement de ce texte dans l'espace latent est
+calculé puis utilisé pour guider la sélection, dans cet espace, d'une image la
+plus proche possible de la requête.
+Peut-on inversement produire en sortie la légende d'une image donnée en
+entrée, ce qui serait bien sûr fort utile ? La réponse est affirmative, mais dans
+la limite inhérente aux LLMs qui, entrainés à partir de données massives,
+privilégient le vraisemblable par rapport au vrai. Un exemple souvent donné
+est celui d'une photographie d'un marché tropical, que DALL-E légende ainsi:
+‘les clients se pressent autour des étalages de fruits dans un marché tropical,
+Très impressionnant ! Mais, en réalité, les gens présents sur la photo sont des
+vendeurs, et non pas des clients, tandis que les marchandises posées sur les
+étals sont des légumes, et non pas des fruits! Un résultat impressionnant,
+certes. toutefois très approximatif !
+L'extension des IA génératives* aux images, à la voix, aux vidéos, démultiplie
+leurs possibilités d'utilisation bénéfique... aussi bien que leurs usages
+toxiques (Ferrara et alli, 2024).
+
+---
+
+[p. 49-49]
+de certains paramètres n'aura pas d'effets notables: filant une
+métaphore physique, la loi de la gravitation universelle s'applique pareillement
+sur la Terre et sur la Lune... et pourtant, l'intensité de la pesanteur n'y étant
+pas du tout la même, les conditions de locomotion sont très différentes sur
+chacun des deux astres!
+49
+
+---
+
+[p. 60-60]
+cutif à l'ordre de vente massif de 75000
+titres « E-mini». Il n'est donc pas imputable au trading algorithmique, comme
+on a pu le penser, même si celui-ci a pu ensuite contribuer à amplifier la chute
+de l'indice.
+32. 
+https://fr.m.wikipedia.org/wiki/Knight_Capital_Group
+33. 
+https://fr.m.wikipedia.org/wiki/Flash_Crash_de 2010
+60
+
+---
+
+[p. 72-72]
+c Behavior ou CIB*),
+Quand un comportement artificiel est détecté, la plateforme est fondée a
+suspendre l'activité immédiatement, sans entrer dans une discussion sur le
+caractére vrai ou faux des contenus diffusés, ainsi que sur les motivations des
+personnes qui diffusent ces contenus. Cette technique évite aussi la question,
+72
+
+---
+
+[p. 83-83]
+[A GENERATIVE & MÉSINFORMATION
+On ne peut qu'encourager une pareille entreprise citoyenne et souhaiter
+qu'elle transforme l'essai de la preuve de concept pour tendre à un plein
+déploiement, la phase la plus difficile étant ce « passage à l'échelle » !
+Au-delà des enjeux d'éducation, le développement 
+des systèmes d'intelligence
+artificielle soulève de nombreux enjeux d'éthique, examinés dans l'avis n°33
+du Groupe européen d'éthique des sciences et des nouvelles technologies
+(2023) de la Commission européenne. En France, le Comité national pilote
+d'éthique du numérique (CNPEN*), mis en place en décembre 2019, s'est
+penché sur ces questions dans son avis n°7 (CNPEN, 2023), évoquant
+notamment le rapport à la vérité, la projection de qualités humaines, le
+maintien des distinctions, la diversité culturelle, l'écologie, etc. Par décret du
+23 mai 2024, ce comité pilote a été transformé en un comité permanent, le
+Comité consultatif national d'éthique du numérique (CCNE du numérique*),
+dont un des 26 membres doit être proposé par l'Académie des technologies.
+I nous apparaît souhaitable que le thème « IA générative et mésinformation »
+soit inscrit comme une priorité au sein du programme de travail de cette
+nouvelle instance.
+2.1.2. LA RECHERCHE
+Comme nous l'avons constaté et signalé supra (cf. 1.3.), un effort de recherche
+soutenu doit être poursuivi, en partie financé sur fonds publics, afin que
+nous soyons a la fois mieux éclairés et mieux armés contre les dangers de
+la manipulation de l'information. Deux directions apparaissent essentielles,
+l'une en sciences sociales, l'autre en sciences numériques.
+Tout d'abord, compte tenu des fortes incertitudes quant aux modalités et à
+l'ampleur de l'impact la désinformation* sur les comportements citoyens, il
+est impératif de parvenir à une meilleure compréhension des mécanismes de
+formation des opinions et de manipulation de l'information en ligne, et surtout
+de leurs effets. Les études sociométriques menées en la matière, jusqu'ici
+très contraintes par le manque de données disponibles, doivent désormais
+bénéficier d'un socle de données statistiques élargies et diversifiées.
+
+---
+
+[p. 94-96]
+crédible, telles que décrites dans le rapport de France Stratégie
+Expertise et démocratie, faire avec la défiance (Agacinski et alii, 2018)°°: quels
+experts ont été sollicités, d'où parlent-ils, qu'ont-ils considéré, comment ont-
+ils procédé?
+50. 
+https://www.strategie.gouv.fr/publications/expertise-democratie-faire-defiance
+94
+[A GENERATIVE & MÉSINFORMATION
+2.2.4, BATIR UN OBSERVATOIRE DE L’EDITION ARTIFICIELLE
+Un LLM* est nécessairement «aligné» sur les valeurs de son éditeur et
+présente des biais spécifiques, dus au choix de sa base d'entraînement* et
+aux modalités de son apprentissage*. Cet alignement lui confère l'équivalent
+d'une «ligne éditoriale» et il en résulte des asymétries entre LLMs, dans
+le traitement de certaines questions sociétales et éthiques. Mais alors
+que la ligne éditoriale d'un média traditionnel est le plus souvent connue
+et relativement transparente, celle d'un LLM est à ce stade opaque pour
+l'utilisateur.
+Nous recommandons en conséquence que soit constitué, par exemple à
+l'initiative du Secrétariat d'Etat au numérique et à l'intelligence artificielle, un
+Observatoire de l'édition artificielle, OEA*, investi d'une triple mission.
+— Mettre au point des outils, par exemple sous la forme de batteries de
+questions-réponses, permettant de cerner la ligne éditoriale et le champ
+d'influence d'un LLM. Deux registres au moins devraient être scrutés:
+d'une part, les postures prises sur des sujets touchant au genre, à
+l'appartenance ethnique ou à la religion; d'autre part, les positions mises
+en avant lors de controverses et débats politiques.
+— Tester régulièrement, à l'aide des outils précédents, les principaux LLMs
+mis à la disposition du grand public.
+— Publier annuellement une analyse transparente des «courants d'opinion »
+des LLMs.
+Dans le domaine de la sécurité...
+2,2,5, CONTRAINDRE 
+LES PLATEFORMES À AFFICHER UN SCORE D'ARTIFICIALITÉ
+Les grandes plateformes numériques* interdisent les comportements
+artificiels, notamment les faux comptes, dont beaucoup sont suspendus
+par leurs soins chaque année (cf.1.1.5.). En outre, certaines campagnes de
+désinformation sont détectées par Viginum*, qui informe le service Pharos*,
+qui prévient ensuite les grandes plateformes, ce qui conduit à la suspension
+des comptes et contenus impliqués. Mais, en dépit de ces efforts, un grand
+
+[A GENERATIVE & MÉSINFORMATION
+nombre d’actions coordonnées de désinformation persistent en ligne, la
+liberté d'expression devant avant tout être protégée en cas de doute sur leur
+caractère illicite. L'A/ Act* exige certes le signalement de contenus créés par
+des IA génératives, mais certains acteurs malveillants savent contourner ce
+dispositif.
+Pour en augmenter l'efficacité, nous formulons la proposition suivante,
+portée à l'attention des autorités en charge de la mise en œuvre du DSA
+et de I'A/ Act (Commission européenne, Al Office*, Arcom*), mais aussi
+de la cybersécurité* et de la défense contre les ingérences étrangères
+(Anssi*, Viginum*). Il s'agirait d'imposer, en application du DSA*, un score
+dvartificialité*: il afficherait, d'une part une estimation de la probabilité
+d'inauthenticité d'un contenu - dans quelle mesure a-t-il été engendré par
+une machine? - et, d'autre part la probabilité d'implication de réseaux de
+faux comptes dans sa diffusion. Le calcul et l'affichage du score devraient
+être rendus obligatoires pour les très grandes plateformes, des lors qu'un
+contenu dépasse un certain seuil de viralité.
+Dans sa nature, l'obligation envisagée est assez semblable à celle de
+porter à la connaissance des internautes qu'un contenu est présenté par
+une plateforme en raison de ses liens financiers ou capitalistiques avec
+l'annonceur, Pour respecter les droits des éditeurs des contenus visés, une
+procédure serait prévue, conformément au DSA, afin de leur permettre de
+contester le score d'artificialité.
+Outre l'information du citoyen, le score aiderait les magistrats et les
+régulateurs, en cas de demande de suspension du contenu, à évaluer le
+niveau de protection à accorder au titre de la liberté d'expression. Le score
+serait un élément de preuve, parmi d'autres, que le contenu a été créé et
+diffusé «de mauvaise foi» et relève ainsi de l'une des interdictions prévues
+par la loi.
+
+---
+
+[p. 109-111]
+l un internaute fréquente de
+manière privilégiée, voire exclusive, des internautes partageant les mêmes
+centres d'intérêt et les mêmes opinions qu'elle ou lui.
+Chatbot. Bot conversationnel, dialoguant avec un utilisateur.
+ChatGPT. Premier LLM ayant été mis à la disposition du grand public en
+novembre 2022, par la société OpenAl.
+[A GENERATIVE & MÉSINFORMATION
+ChatPedia (prospectif). Proposition de susciter l'émergence d'un LLM
+collaboratif au sein de l'Éducation nationale, en vue d'y promouvoir un usage
+«intelligent» de l'IA par les élèves et les professeurs.
+CIB. Coordinated Inauthentic Behavior. Le comportement inauthentique
+coordonné est une stratégie de communication manipulatrice sur les réseaux
+sociaux, s'appuyant sur un mix de comptes authentiques, faux ou dupliqués.
+CLEMI. Centre pour l'éducation aux médias et à l'information. Ce service
+de Réseau Canopé, opérateur public placé sous la tutelle de l'Éducation
+nationale, est chargé de l'éducation aux médias et à l'information (EMI) dans
+l'ensemble du système éducatif français jusqu'à la fin du cycle secondaire.
+CNIL. Commission nationale de l'informatique et des libertés. Autorité
+administrative indépendante française, chargée de veiller 
+à 
+ce que
+l'informatique soit mise au service du citoyen et qu'elle ne porte atteinte, ni à
+l'identité humaine, ni aux droits de l'homme, ni à la vie privée, ni aux libertés
+individuelles et publiques.
+CNN. Conseil national du numérique. Commission consultative française
+créée le 29 avril 2011, chargée d'étudier les questions relatives à l'univers
+numérique, en particulier les enjeux et les perspectives de la transition
+numérique de la société, de l'économie, des organisations, de l'action
+publique et des territoires,
+CNPEN. Comité national pilote d'éthique du numérique, créé par le Premier
+ministre en décembre 2019 et provisoirement placé sous l'égide du Comité
+consultatif national d'éthique (CCNE).
+CSNP. Commision supérieure du numérique et des postes. Commission
+extra-parlementaire, composée de sept sénateurs, sept députés et trois
+personnalités qualifiées, chargée d'émettre des avis sur les projets de textes
+législatifs et réglementaires concernant ses deux domaines de compétence,
+Cognitive warfare. Voir Guerre cognitive.
+
+[A GENERATIVE & MÉSINFORMATION
+Commandement Allié Transformation. Commandement interallié de
+l'OTAN, chargé des questions doctrinales et de transformation. Avec le
+Commandement Allié Opérations, il est l'un des deux commandements
+militaires stratégiques de l'OTAN.
+Commission de l'intelligence artificielle. Instituée par la Première ministre
+Élisabeth Borne en septembre 2023, cette commission a remis son rapport
+au Président de la république en mars 2024, formulant 25 propositions pour
+faire de la France un acteur majeur de l'IA.
+Comportement inauthentique coordonné. Voir CIB,
+Cryptomonnaie. Monnaie électronique émise de pair à pair, sans nécessité
+d'une banque, d'une banque centrale ni d'aucun intermédiaire, utilisable
+au moyen d'un réseau informatique décentralisé. Elle est basée sur une
+blockchain intégrant des technologies de cryptographie, pour les processus
+d'émission et de règlement des transactions. Les cryptomonnaies les plus
+utilisées sont le Bitcoin et l'Ethereum,
+CSE. Conseil supérieur de l'éducation, au Québec,
+Cybersécurité. Ensemble des moyens utilisés pour veiller à la sécurité des
+systèmes et des données informatiques d'un Etat, d'une entreprise et, plus
+généralement, de toute forme d'organisation.
+DALLE-E. Programme d'intelligence artificielle générative développé par la
+société OpenAl, capable d’engendrer des images à partir de descriptions
+textuelles.
+Data science. Science des données, en français, elle constitue un vaste
+domaine interdisciplinaire à la croisée des mathématiques, de la statistique,
+du calcul scientifique et de l'informatique, ayant pour objet d'extraire et
+d'extrapoler des connaissances à partir de grandes quantités de données,
+structurées ou non.
+Deep fake. Désigne une forme sophistiquée de fake news, engendrée au
+moyen de l'intelligence artificielle,

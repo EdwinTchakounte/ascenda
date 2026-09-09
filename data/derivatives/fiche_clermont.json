@@ -1,0 +1,56 @@
+{
+ "document_id": "0d3e5cf7-2929-4283-a655-3af522129ab7",
+ "titre_normalise": "Comprendre l'IA en 15 minutes. Guide essentiel sur l'intelligence artificielle",
+ "auteurs": [
+  "Thomas Clermont"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "opuscule",
+ "niveau": "debutant",
+ "public_cible": "Lecteur pressé qui veut une première orientation avant d'ouvrir un vrai livre. Dix-neuf pages, dix chapitres d'une page chacun : introduction, fondements, applications quotidiennes, domaines d'application, défis et risques, éthique et responsabilité, avenir, éducation et formation, coopération internationale, l'IA au service de l'humanité.",
+ "these_centrale": "L'intelligence artificielle est le domaine de l'informatique consacré à la création de systèmes imitant des fonctions cognitives humaines. Le texte en présente les fondements, l'apprentissage automatique et les réseaux de neurones, les trois régimes d'apprentissage, les applications courantes, puis les risques et les principes éthiques, sur le mode du survol.",
+ "idees_force": [
+  {
+   "titre": "Les trois régimes d'apprentissage, correctement distingués",
+   "explication": "Supervisé, quand chaque exemple est accompagné de la réponse correcte. Non supervisé, quand le système doit découvrir seul des structures dans des données sans étiquette. Par renforcement, quand il ajuste son comportement à partir de récompenses et de punitions pour maximiser un gain. C'est la distinction la plus utile du document et elle est exacte.",
+   "page": 5
+  },
+  {
+   "titre": "Les cycles d'engouement et de désillusion",
+   "explication": "Le texte rappelle que le terme date des années 1950 et que le domaine a traversé plusieurs hivers, périodes de déception après des promesses excessives, en soutenant que ces cycles ont contribué à sa maturation. Le rappel est juste et utile pour tempérer l'enthousiasme du moment présent.",
+   "page": 4
+  },
+  {
+   "titre": "L'orientation générale place l'éducation et la coopération au centre",
+   "explication": "Deux des dix chapitres portent sur la formation et sur la coopération internationale, ce qui est une hiérarchie de priorités défendable : la question décisive n'est pas ce que la technologie peut faire mais qui saura s'en servir et selon quelles règles communes.",
+   "page": 16
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Apprentissage supervisé",
+   "definition": "Entraînement sur des données étiquetées, chaque exemple étant associé à la réponse correcte."
+  },
+  {
+   "terme": "Apprentissage non supervisé",
+   "definition": "Découverte autonome de structures et de régularités dans des données sans étiquette."
+  },
+  {
+   "terme": "Apprentissage par renforcement",
+   "definition": "Ajustement du comportement à partir de récompenses et de punitions, pour maximiser un gain."
+  },
+  {
+   "terme": "Réseau de neurones artificiels",
+   "definition": "Modèle inspiré du cerveau, capable d'apprendre à reconnaître des régularités complexes dans des données."
+  },
+  {
+   "terme": "Hiver de l'IA",
+   "definition": "Période de désaffection consécutive à des promesses non tenues."
+  }
+ ],
+ "a_lire_si": "Vous avez quinze minutes et aucune notion, et vous voulez seulement savoir de quoi il est question avant d'engager une vraie lecture. À ce titre précis, le format remplit son office.",
+ "a_eviter_si": "Vous cherchez quoi que ce soit au-delà. Le texte est générique, sans exemple précis, sans chiffre, sans source, sans auteur identifiable au-delà d'un nom, et les mêmes formulations reviennent d'un chapitre à l'autre. Sa structure et son style sont ceux d'une production automatisée. Il ne doit servir à aucune affirmation factuelle et ne peut pas être cité.",
+ "prerequis": [],
+ "controverses": [],
+ "confiance": 0.35
+}

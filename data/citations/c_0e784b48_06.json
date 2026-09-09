@@ -1,0 +1,61 @@
+[
+ {"chapitre":"ebb261a3","citations":[
+  {"texte":"Le calcul des réponses ne peut alors se faire que par réécriture de la requête en termes de vues.","page":117,"axe":"02-ia-technique-academique","theme":"Interrogation de sources réparties","portee":"Quand les données restent chez leurs propriétaires, on ne raisonne plus sur les données mais sur leur description."},
+  {"texte":"Cela consiste à reformuler la requête initiale en une union de requêtes exprimées uniquement à l'aide des noms des vues, appelées réécritures de la requête en fonction des vues.","page":117,"axe":"02-ia-technique-academique","theme":"Réécriture de requêtes","portee":"Définition précise du mécanisme qui permet à un médiateur d'interroger des bases qu'il ne détient pas."}]},
+
+ {"chapitre":"054916a8","citations":[
+  {"texte":"Une extension de vue est complète si on peut supposer qu'elle contient bien toutes les réponses à la requête qu'elle définit.","page":118,"axe":"02-ia-technique-academique","theme":"Complétude des données","portee":"Distinguer ce qu'une source contient de ce qu'elle prétend couvrir conditionne la confiance dans une réponse."},
+  {"texte":"Cette hypothèse est souvent trop forte en intégration d'informations où l'on ne peut que supposer la correction mais pas la complétude d'une extension de vue.","page":118,"axe":"02-ia-technique-academique","theme":"Correction contre complétude","portee":"Une absence de réponse ne prouve rien : la source peut être juste sans être exhaustive."}]},
+
+ {"chapitre":"0eb5215a","citations":[
+  {"texte":"Autrement dit, on obtient une nouvelle cause possible de l'incomplétude des réponses, principalement due aux limites du pouvoir d'expression du langage de réécriture.","page":119,"axe":"02-ia-technique-academique","theme":"Limites d'expressivité","portee":"Le langage dans lequel on formule la question borne ce que l'on peut apprendre."},
+  {"texte":"DL-Lite fournit un cadre de formalisation d'ontologies garantissant une interrogation efficace de données définies et interrogées via des ontologies.","page":119,"axe":"02-ia-technique-academique","theme":"Ontologies interrogeables","portee":"Un exemple de langage conçu à partir d'une exigence de complexité plutôt que d'expressivité maximale."}]},
+
+ {"chapitre":"a629ebdd","citations":[
+  {"texte":"Puisque les relations binaires utilisées dans les approches qualitatives peuvent être définies en termes de fonctions de score, l'approche qualitative est plus générale que celle quantitative.","page":120,"axe":"02-ia-technique-academique","theme":"Préférences qualitatives","portee":"Toute préférence humaine ne se ramène pas à une note chiffrée, et le formalisme doit en tenir compte."},
+  {"texte":"Le point important est que cette reformulation (comme la réécriture en termes de vues) est indépendante des données.","page":120,"axe":"02-ia-technique-academique","theme":"Indépendance aux données","portee":"Le travail logique se fait une fois pour toutes sur le schéma, ce qui rend le passage à l'échelle possible."}]},
+
+ {"chapitre":"79e1b23e","citations":[
+  {"texte":"Le Web sémantique ambitionne de rendre le contenu du Web accessible au calcul.","page":129,"axe":"02-ia-technique-academique","theme":"Ambition du Web sémantique","portee":"Formulation la plus ramassée du projet : rendre lisible par la machine ce qui n'était écrit que pour les yeux."},
+  {"texte":"En effet, elles sont confrontées à des problèmes typiques du Web tels que l'échelle, l'hétérogénéité, l'incomplétude, l'incohérence et la dynamique.","page":129,"axe":"02-ia-technique-academique","theme":"Épreuve du réel","portee":"Les cinq obstacles qui séparent une représentation de connaissances de laboratoire d'un déploiement mondial."}]},
+
+ {"chapitre":"9ed20361","citations":[
+  {"texte":"Le Web sémantique est souvent présenté comme un « Web pour les machines » : il s'agit d'utiliser, pour représenter la connaissance sur le Web, des langages formels qui soient susceptibles de traitement par les machines.","page":130,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Web pour les machines","portee":"Une définition accessible qui explique pourquoi les techniques d'intelligence artificielle y trouvent naturellement leur place."},
+  {"texte":"Le Web sémantique s'est donc largement étendu au-delà des espérances initiales.","page":130,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Diffusion des technologies sémantiques","portee":"Constat d'une technologie qui a débordé son projet d'origine pour irriguer services, réseaux sociaux et données ouvertes."}]},
+
+ {"chapitre":"91967f85","citations":[
+  {"texte":"Un graphe RDF est un ensemble de triplets de la forme (sujet, prédicat, objet).","page":131,"axe":"02-ia-technique-academique","theme":"Structure de RDF","portee":"La brique élémentaire de toute la connaissance publiée sur le Web des données tient en trois éléments."},
+  {"texte":"Ainsi, un graphe RDF peut faire usage de vocabulaires de provenances différentes sans risque d'ambiguïté ou de conflit.","page":131,"axe":"02-ia-technique-academique","theme":"Espaces de noms","portee":"La condition technique qui permet à des connaissances produites par des acteurs indépendants de cohabiter."}]},
+
+ {"chapitre":"d4a13c3b","citations":[
+  {"texte":"Cette sémantique « intuitive » ne suffisant pas à un traitement automatique, il faut munir RDF d'une sémantique formelle.","page":132,"axe":"02-ia-technique-academique","theme":"Sémantique formelle","portee":"Ce qu'un humain comprend d'un graphe ne suffit pas : la machine exige une définition mathématique du sens."},
+  {"texte":"C'est la particularité principale de la sémantique de RDF par rapport à celle du calcul des prédicats.","page":132,"axe":"02-ia-technique-academique","theme":"Prédicats comme objets","portee":"RDF autorise qu'une relation soit elle-même sujet de discours, ce que la logique classique ne permet pas directement."}]},
+
+ {"chapitre":"891562e0","citations":[
+  {"texte":"Une forme de raisonnement privilégiée est la réponse à des requêtes structurées (par opposition à tester si une formule est conséquence).","page":133,"axe":"02-ia-technique-academique","theme":"Raisonner en interrogeant","portee":"Sur le Web, le raisonnement utile prend surtout la forme d'une requête à laquelle on veut des réponses."},
+  {"texte":"SPARQL est donc un hybride entre les graphes conceptuels et les bases de données.","page":133,"axe":"02-ia-technique-academique","theme":"Double filiation de SPARQL","portee":"Le langage de requêtes du Web sémantique hérite à la fois de l'intelligence artificielle et du monde des SGBD."}]},
+
+ {"chapitre":"e4d4088c","citations":[
+  {"texte":"Le Web des données constitue ainsi un immense graphe RDF accessible par le protocole HTTP comme le Web.","page":134,"axe":"02-ia-technique-academique","theme":"Web des données","portee":"Une méthode de publication simple a fait naître un graphe de connaissances à l'échelle planétaire."},
+  {"texte":"Une demande croissante est donc de pouvoir explicitement nommer et manipuler des graphes RDF (on parle de « named graphs », graphes nommés).","page":134,"axe":"02-ia-technique-academique","theme":"Graphes nommés","portee":"Sans moyen de désigner un sous ensemble de faits, on ne peut ni tracer une origine ni doser sa confiance."}]},
+
+ {"chapitre":"f4a102a4","citations":[
+  {"texte":"Cependant, RDFS ne fournit que des mécanismes primitifs pour spécifier ces classes. Son expressivité correspond à celle d'un langage de « frames ».","page":135,"axe":"02-ia-technique-academique","theme":"Limites de RDFS","portee":"Le vocabulaire minimal du Web sémantique reste volontairement pauvre, ce qui justifie l'existence de OWL."},
+  {"texte":"Ainsi, tout graphe RDF utilisant ce vocabulaire ne constitue pas nécessairement une ontologie OWL valide.","page":135,"axe":"02-ia-technique-academique","theme":"Validité des ontologies","portee":"Employer les bons mots ne suffit pas, il faut les agencer selon des formes précises pour être compris."}]},
+
+ {"chapitre":"e36406e1","citations":[
+  {"texte":"OWL introduit une autre contrainte assez forte dans la sémantique des ontologies : elle est construite sur des ensembles d'entités exclusifs.","page":136,"axe":"02-ia-technique-academique","theme":"Séparation des entités","portee":"Le prix de la décidabilité est une discipline stricte sur ce qu'un même identifiant a le droit de désigner."},
+  {"texte":"La contrainte de séparation des domaines d'interprétation est relâchée artificiellement dans OWL 2 en introduisant des entités distinctes associées à un même URI.","page":136,"axe":"02-ia-technique-academique","theme":"Compromis de OWL 2","portee":"Exemple d'un standard qui contourne sa propre rigidité pour rejoindre les usages du terrain."}]},
+
+ {"chapitre":"82361baa","citations":[
+  {"texte":"OWL propose aussi des constructeurs de types de données que nous n'abordons pas ici. Ils sont toutefois importants car ils conduisent facilement à des incohérences.","page":137,"axe":"02-ia-technique-academique","theme":"Types de données et incohérence","portee":"Ce sont souvent les détails les plus ordinaires d'un modèle qui font basculer un raisonnement dans l'absurde."},
+  {"texte":"owl : hasKey indique qu'un ensemble de propriétés est une clé pour une classe, c'est-à-dire que deux individus distincts ne peuvent pas partager le même tuples de valeurs pour ces propriétés","page":137,"axe":"02-ia-technique-academique","theme":"Clés d'identification","portee":"La notion de clé, héritée des bases de données, sert ici à décider si deux descriptions parlent de la même personne."}]},
+
+ {"chapitre":"0e634b44","citations":[
+  {"texte":"Le compromis expressivité/efficacité a toujours été présent dans les travaux sur les logiques de descriptions.","page":138,"axe":"02-ia-technique-academique","theme":"Expressivité contre efficacité","portee":"Toute la conception des langages de connaissance se joue dans cet arbitrage, jamais dans la seule puissance."},
+  {"texte":"Pour en bénéficier, il aurait fallu développer une approche plus modulaire des langages du Web sémantique.","page":138,"axe":"02-ia-technique-academique","theme":"Modularité manquante","portee":"Une critique de normalisation : les découpages retenus par un comité ne recouvrent pas tous les besoins réels."}]},
+
+ {"chapitre":"9839c3fa","citations":[
+  {"texte":"Le développement d'outils efficaces pour raisonner dans le Web sémantique sera un critère décisif pour l'adoption d'un langage particulier.","page":139,"axe":"02-ia-technique-academique","theme":"Adoption par l'outillage","portee":"Un formalisme ne s'impose pas par son élégance mais par l'existence de moteurs capables de le faire tourner."},
+  {"texte":"On parlait, en 2011, de dizaines de milliards de triplets dans le « linked open data cloud » seulement.","page":139,"axe":"02-ia-technique-academique","theme":"Échelle du raisonnement","portee":"Chiffre qui mesure l'écart entre le raisonnement logique de laboratoire et celui exigé à l'échelle du Web."}]}
+]

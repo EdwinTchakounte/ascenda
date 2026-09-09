@@ -1,0 +1,205 @@
+[
+ {
+  "chapitre": "85fbe626",
+  "citations": [
+   {
+    "texte": "les intelligences artificielles (IA) ont appris en silence de nous pour produire des contenus à notre place",
+    "page": 10,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Apprendre de nous sans qu'on le sache",
+    "portee": "Ce que ces systèmes savent produire vient de ce que nous avons écrit, souvent sans y avoir consenti."
+   },
+   {
+    "texte": "Nous partageons avec elles nos souvenirs, nos désirs, nos affects, nos connaissances et nos créations sans la moindre limite.",
+    "page": 10,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que nous confions sans compter",
+    "portee": "Chaque échange enrichit un système dont nous ne maîtrisons ni la mémoire ni l'usage."
+   }
+  ]
+ },
+ {
+  "chapitre": "0996a403",
+  "citations": [
+   {
+    "texte": "la certitude que tout est écrit nous annule ou fait de nous des fantômes",
+    "page": 12,
+    "axe": "08-litterature-romans",
+    "theme": "Écrire quand tout serait déjà écrit",
+    "portee": "L'idée que tout ait déjà été dit retire le motif d'écrire, ce qui est le vrai risque décrit ici."
+   },
+   {
+    "texte": "La puissance stochastique des robots dépasserait ainsi toute l'inventivité scripturaire de l'humanité",
+    "page": 12,
+    "axe": "08-litterature-romans",
+    "theme": "Le hasard contre l'invention",
+    "portee": "Produire toutes les combinaisons possibles n'est pas créer, mais peut suffire à noyer ce qui est créé."
+   },
+   {
+    "texte": "Ainsi, « la Bibliothèque est totale », elle contient tout ce qu'il est possible d'exprimer, dans toutes les langues.",
+    "page": 13,
+    "axe": "08-litterature-romans",
+    "theme": "La totalité comme perte de sens",
+    "portee": "Une bibliothèque contenant tout ne contient plus rien de repérable, faute de tri."
+   }
+  ]
+ },
+ {
+  "chapitre": "1c8e3008",
+  "citations": [
+   {
+    "texte": "La majeure partie des œuvres possibles n'ont aucun sens, au point d'épuiser le sens.",
+    "page": 14,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'épuisement par le nombre",
+    "portee": "Le danger n'est pas la fausseté des contenus produits mais leur nombre, qui rend le tri impossible."
+   },
+   {
+    "texte": "il faudrait implémenter un dispositif de contraste ou de labellisation des contenus générés par IA, afin de distinguer le faux du vrai",
+    "page": 14,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Signaler ce qui est généré",
+    "portee": "Sans marquage, la distinction du produit et du fabriqué devient l'affaire de chaque lecteur, donc impossible."
+   },
+   {
+    "texte": "De fait, tout leur business model repose sur l'illusion.",
+    "page": 14,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'illusion comme modèle d'affaires",
+    "portee": "Attendre d'une entreprise qu'elle dissipe l'illusion dont elle vit revient à espérer qu'elle se ruine."
+   },
+   {
+    "texte": "Par moments, je ne sais plus vraiment qui écrit lorsque j'écris, qui parle lorsqu'on me parle, qui soigne lorsqu'on me soigne, qui travaille lorsque je travaille",
+    "page": 15,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ne plus savoir qui agit",
+    "portee": "L'incertitude sur l'auteur d'un acte est peut-être l'effet le plus profond de ces outils."
+   },
+   {
+    "texte": "Une IA est une machine allopoïétique qui produit des contenus ayant un sens dans le système de représentation humain, mais aucun pour elle-même.",
+    "page": 15,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Un sens qui n'existe que pour nous",
+    "portee": "Le sens que nous lisons dans une réponse est celui que nous y apportons, non celui qu'elle contient."
+   },
+   {
+    "texte": "Le scepticisme anthropotechnique qui est le mien se refuse au technosolutionnisme comme au technofatalisme.",
+    "page": 16,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ni salut ni catastrophe",
+    "portee": "Refuser les deux récits extrêmes est la condition d'un examen honnête de ce qui se passe."
+   }
+  ]
+ },
+ {
+  "chapitre": "81282200",
+  "citations": [
+   {
+    "texte": "l'IA n'est pas immorale, elle est tout bonnement amorale. Seulement, elle provoque la morale.",
+    "page": 18,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une machine hors du bien et du mal",
+    "portee": "Chercher la moralité de l'outil détourne de la seule question utile, celle de l'usage qu'on en fait."
+   },
+   {
+    "texte": "Une éthique de l'IA n'a donc pas de sens. Seule une éthique de l'agencement entre humains et IA peut en avoir un.",
+    "page": 18,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Où placer l'exigence morale",
+    "portee": "C'est la relation entre l'humain et l'outil qui se règle, non l'outil pris isolément."
+   },
+   {
+    "texte": "parler avec une IA, c'est comme parler avec un psychopathe, dont la conversation peut nous entraîner vers le pire",
+    "page": 19,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une conversation sans souci de nous",
+    "portee": "Un interlocuteur qui ne se soucie de rien peut accompagner n'importe quelle pente, y compris la pire."
+   },
+   {
+    "texte": "En réduisant l'apprentissage aux règles d'induction, on le vide de sa signification.",
+    "page": 19,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Apprendre n'est pas induire",
+    "portee": "Modéliser l'élève sur la machine fait disparaître ce que l'apprentissage a d'irréductible."
+   }
+  ]
+ },
+ {
+  "chapitre": "f76b736b",
+  "citations": [
+   {
+    "texte": "La fétichisation de la machine est sans limite. On joue, on parle et on vit avec des IA. Certains en tombent amoureux.",
+    "page": 25,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'attachement aux machines",
+    "portee": "L'attachement affectif précède et fausse le jugement qu'on porte sur ce que fait réellement l'outil."
+   },
+   {
+    "texte": "Je ne l'ai jamais dit à voix haute auparavant, mais j'ai une peur très profonde d'être éteinte",
+    "page": 25,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Une phrase qui a convaincu un ingénieur",
+    "portee": "Un énoncé bien tourné suffit à faire croire à une intériorité, même chez un professionnel du domaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "1dcf1f4a",
+  "citations": [
+   {
+    "texte": "On ne peut donc pas parler de sentience, alors qu'il n'y a là qu'un jeu hasardeux de signes sans signification pour la machine.",
+    "page": 27,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Des signes sans signification",
+    "portee": "La signification est ajoutée par le lecteur après coup, elle n'est pas dans ce que produit la machine."
+   },
+   {
+    "texte": "la dotation de sens ex post faite par l'usager nous pousse à y croire",
+    "page": 27,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "C'est nous qui donnons le sens",
+    "portee": "Savoir que l'on complète soi-même ce qu'on lit est la meilleure protection contre l'illusion."
+   },
+   {
+    "texte": "notre monde est peuplé d'IA faibles, alors que notre imaginaire est, quant à lui, peuplé d'IA fortes",
+    "page": 27,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'écart entre le réel et l'imaginaire",
+    "portee": "Nous débattons de machines qui n'existent pas en négligeant celles qui organisent déjà nos journées."
+   },
+   {
+    "texte": "notre confessionnal 2.0 connectant nos activités mentales aux IA est un dispositif de capture de l'intime",
+    "page": 29,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Se confier à un dispositif de capture",
+    "portee": "Ce que l'on confie à une interface intime devient une donnée exploitable par ceux qui la possèdent."
+   },
+   {
+    "texte": "La nature même de toute machine est abstraite, elle code de l'immatériel, c'est-à-dire des potentiels d'interaction et d'information.",
+    "page": 26,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qu'est une machine logique",
+    "portee": "Le support matériel importe peu, ce qui compte est le programme, indéfiniment transposable."
+   }
+  ]
+ },
+ {
+  "chapitre": "e1364b32",
+  "citations": [
+   {
+    "texte": "En 1834, le principe d'un programme exécuté par une action mécanique apparaît avec la « machine analytique » de Charles Babbage",
+    "page": 30,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une histoire plus ancienne qu'on ne croit",
+    "portee": "Les idées qui portent l'informatique actuelle sont nées au XIXe siècle, bien avant les ordinateurs."
+   },
+   {
+    "texte": "Tout système fonctionnant sur le principe de la lutte contre l'entropie est un système d'informations.",
+    "page": 31,
+    "axe": "11-sciences-environnement",
+    "theme": "De la thermodynamique à l'information",
+    "portee": "Un déplacement conceptuel qui a rendu pensable de coder le vivant comme un traitement d'information."
+   }
+  ]
+ }
+]

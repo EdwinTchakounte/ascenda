@@ -1,0 +1,54 @@
+[
+ {"chapitre":"c0e5769d","citations":[
+  {"texte":"plus enclins à déclarer vraies les idées qu'ils aiment qu'à aimer les idées vraies si celles-ci leur déplaisent","page":41,"axe":"09-developpement-personnel-influence","theme":"Le biais de confirmation en une phrase","portee":"Formule à retenir et à s'appliquer d'abord à soi-même. Aimer les idées vraies plutôt que déclarer vraies les idées aimées : c'est tout le programme d'une lecture critique."}
+ ]},
+ {"chapitre":"e6f9c0a6","citations":[
+  {"texte":"Et l'absence de preuves, que certains dénoncent, ne vaut pas preuve d'absence","page":43,"axe":"11-sciences-environnement","theme":"Règle de raisonnement","portee":"Vaut bien au-delà du sujet du rapport. Ne pas avoir démontré un effet n'est pas avoir démontré qu'il n'existe pas. À manier dans les deux sens, sans quoi la règle devient une excuse."},
+  {"texte":"une attitude «mésinfo-sceptique», à l'instar de la posture «climato-sceptique », n'est pas de mise","page":44,"axe":"04-ia-societe-ethique-philosophie","theme":"Prudence n'est pas négation","portee":"Le rapport tient les deux bouts : reconnaître que les mécanismes sont mal connus, sans en conclure que le phénomène est imaginaire. C'est la posture intellectuelle la plus exigeante des deux."}
+ ]},
+ {"chapitre":"85fcef31","citations":[
+  {"texte":"cette rumeur a d'abord été orchestrée par le Président Donald Trump lui-même, par la galaxie Fox News et par des membres du parti républicain, avant d'être relayée par les réseaux sociaux","page":45,"axe":"04-ia-societe-ethique-philosophie","theme":"La source n'est pas le réseau social","portee":"Renversement décisif : les médias classiques et les acteurs politiques sont à la source, les plateformes amplifient. S'en prendre aux seules plateformes reviendrait à traiter le symptôme."},
+  {"texte":"consistant à faire passer pour un authentique mouvement spontané d'opinion ce qui n'est, en réalité masquée, qu'une désinformation organisée","page":47,"axe":"04-ia-societe-ethique-philosophie","theme":"L'astroturfing, ou gazonnage artificiel","portee":"Notion à connaître pour lire les réseaux : un mouvement qui paraît spontané peut être fabriqué. Les faux comptes savent rester dormants pour nouer des liens de confiance avant d'agir."}
+ ]},
+ {"chapitre":"3a034cc5","citations":[
+  {"texte":"la loi de la gravitation universelle s'applique pareillement sur la Terre et sur la Lune... et pourtant, l'intensité de la pesanteur n'y étant pas du tout la même, les conditions de locomotion sont très différentes sur chacun des deux astres!","page":49,"axe":"04-ia-societe-ethique-philosophie","theme":"Le principe est invariant, l'ordre de grandeur change tout","portee":"Réponse élégante à ceux qui minimisent l'IA au motif que la désinformation existait déjà. Le mécanisme est ancien, son intensité ne l'est pas."}
+ ]},
+ {"chapitre":"6b557c95","citations":[
+  {"texte":"l'IA*, telle le phadrmakon* des Grecs anciens, est à la fois poison et remède, venin et antidote: si elle peut être falsificatrice, elle sait aussi se faire réparatrice","page":50,"axe":"04-ia-societe-ethique-philosophie","theme":"L'IA pharmakon","portee":"Le pharmakon désignait indistinctement le remède et le poison. La technique ne vaut ni ne nuit par elle-même : ce qui décide, c'est l'usage et le rapport de force entre ceux qui l'emploient."},
+  {"texte":"facile d'échapper a ces démarches volontaires et, plus aisé encore, d'ajouter de faux watermarks à d'authentiques images","page":51,"axe":"04-ia-societe-ethique-philosophie","theme":"Les limites du marquage volontaire","portee":"Critique juste du dispositif adopté par Adobe, Google, Microsoft et Meta : un marquage volontaire ne contraint que ceux qui acceptent d'être contraints, et peut même servir à discréditer du vrai."}
+ ]},
+ {"chapitre":"98fa35a3","citations":[
+  {"texte":"II est par conséquent à craindre que les pays dont les langues sont les moins parlées, pour lesquels les bases de données sont les moins fournies, soient les plus ciblés par des manœuvres de désinformation","page":55,"axe":"07-afrique-histoire-pensee","theme":"Les langues peu outillées sont les plus exposées","portee":"Passage capital pour un lecteur africain. Les outils de détection sont entraînés en anglais. Une langue sans corpus est une langue sans défense : constituer des bases de données dans les langues du continent est un enjeu de sécurité, pas de patrimoine."},
+  {"texte":"la détection automatique appliquée a des textes courts est défaillante","page":55,"axe":"02-ia-technique-academique","theme":"Le point aveugle de la détection","portee":"Or c'est précisément le format que multiplient les robots sur les réseaux. La stylométrie a besoin de matière pour reconnaître un style ; un message de deux lignes n'en offre pas."},
+  {"texte":"distinguer le vrai du faux ne peut pour autant être entièrement automatisé et réclame une expertise humaine en dernier ressort","page":55,"axe":"04-ia-societe-ethique-philosophie","theme":"L'humain dans la boucle","portee":"Principe inscrit au coeur du Règlement européen sur l'IA. Le rapport ajoute aussitôt les questions qu'il soulève : que doit-on vérifier, à quelles fins, quand et par qui ?"}
+ ]},
+ {"chapitre":"8f060e5b","citations":[
+  {"texte":"ils ne peuvent que très imparfaitement, du moins à ce stade, saisir les subtilités de l'intentionnalité humaine","page":56,"axe":"02-ia-technique-academique","theme":"Ce que la détection ne sait pas voir","portee":"La désinformation se définit par une intention. Un même contenu peut être innocent ou manipulateur selon qui l'émet et pourquoi : aucun détecteur de forme ne lit cela."}
+ ]},
+ {"chapitre":"d19b1f0f","citations":[
+  {"texte":"les freins sont moins technologiques que budgétaires","page":58,"axe":"10-economie-entrepreneuriat-finance","theme":"Le déséquilibre des moyens","portee":"Des milliards investis dans les modèles de langage, quelques dizaines de millions d'euros pour lutter contre la désinformation. Le retard de l'IA curative est un choix d'allocation, non une fatalité technique."}
+ ]},
+ {"chapitre":"9c5eca2a","citations":[
+  {"texte":"une machine ne «s’affole pas », contrairement à un être humain","page":60,"axe":"10-economie-entrepreneuriat-finance","theme":"L'effet du trading automatisé reste incertain","portee":"Le rapport refuse de trancher : certains travaux concluent à une volatilité accrue, d'autres à l'inverse. La même discipline qu'il s'impose sur la désinformation."}
+ ]},
+ {"chapitre":"ef21398d","citations":[
+  {"texte":"seuls ceux ayant accès à ces fonctionnalités avancées peuvent en tirer bénéfice sur les marchés, ce qui interpelle l'éthique","page":61,"axe":"10-economie-entrepreneuriat-finance","theme":"L'IA financière creuse l'asymétrie","portee":"Enjeu direct pour les places financières africaines : un outil qui améliore la performance de ceux qui l'ont déjà creuse l'écart avec ceux qui n'y ont pas accès. L'égalité d'accès à l'information est une condition du marché, pas un supplément d'âme."}
+ ]},
+ {"chapitre":"9a3c65d3","citations":[
+  {"texte":"ils attirent des investisseurs crédules et font monter artificiellement les prix avant de vendre très rapidement et ainsi provoquer une chute du cours infligeant à ces investisseurs de lourdes pertes","page":63,"axe":"10-economie-entrepreneuriat-finance","theme":"Le pump and dump sur les cryptomonnaies","portee":"Mécanisme à connaître avant tout placement dans une cryptomonnaie peu liquide : le gain de l'organisateur est exactement la perte de celui qui achète en dernier. Rien n'est créé, tout est transféré."}
+ ]},
+ {"chapitre":"c3853d44","citations":[
+  {"texte":"la Commission européenne souhaite aujourd'hui recueillir des avis et des retours d'expérience de la part des acteurs des marchés financiers qui déploient ou utilisent des systèmes d'intelligence artificielle","page":64,"axe":"10-economie-entrepreneuriat-finance","theme":"Réguler en consultant les praticiens","portee":"Méthode intéressante à observer : avant de réglementer davantage, on organise ateliers et consultation publique, ouverte jusqu'aux associations de consommateurs."}
+ ]},
+ {"chapitre":"71f969f4","citations":[
+  {"texte":"En réduisant la liberté d'expression au nom de la lutte contre la désinformation, on risque donc d'affaiblir l'objet même que l'on souhaite sauvegarder","page":67,"axe":"04-ia-societe-ethique-philosophie","theme":"Le paradoxe de la régulation","portee":"Argument que tout citoyen devrait avoir en tête quand un pouvoir invoque la lutte contre les fausses nouvelles pour restreindre la parole. La finalité affichée peut détruire ce qu'elle prétend défendre."},
+  {"texte":"La réglementation doit nécessairement cibler les acteurs, les méthodes et les effets d'une campagne de désinformation, plutôt que de se concentrer uniquement sur le caractère des informations","page":67,"axe":"04-ia-societe-ethique-philosophie","theme":"Réguler les campagnes, non les idées","portee":"Solution technique au paradoxe précédent. Le rapport l'illustre : une thèse complotiste tolérée chez un citoyen ordinaire devient condamnable diffusée par un réseau organisé pour manipuler l'opinion."}
+ ]},
+ {"chapitre":"0baf2bdf","citations":[
+  {"texte":"Compte tenu de l'agilité des campagnes de désinformation et de la relative lenteur des procédures judiciaires, la solution la plus efficace pour lutter contre la désinformation consiste à s'appuyer sur les moyens techniques et humains des plateformes","page":69,"axe":"04-ia-societe-ethique-philosophie","theme":"Pourquoi le juge arrive trop tard","portee":"Constat de vitesse, non de principe. Il justifie de déléguer l'action aux plateformes, à condition, comme le rapport le dit ailleurs, d'assortir cette délégation d'un contrôle et de sanctions."}
+ ]},
+ {"chapitre":"a952b0c5","citations":[
+  {"texte":"l'intérêt économique de la plateforme n'est généralement pas aligné avec l'intérêt public","page":71,"axe":"10-economie-entrepreneuriat-finance","theme":"Pourquoi la régulation reste nécessaire","portee":"La diffusion de fausses informations procure des recettes publicitaires. Sans contrainte, le laxisme est le comportement rationnel. Le problème est d'incitations, pas de moralité."},
+  {"texte":"la plateforme est fondée a suspendre l'activité immédiatement, sans entrer dans une discussion sur le caractére vrai ou faux des contenus diffusés","page":72,"axe":"04-ia-societe-ethique-philosophie","theme":"Sanctionner le procédé, non le contenu","portee":"Voie de sortie élégante : l'usage de faux comptes et de robots est interdit par les conditions d'utilisation. On agit sur la manipulation sans se constituer juge de la vérité."}
+ ]}
+]

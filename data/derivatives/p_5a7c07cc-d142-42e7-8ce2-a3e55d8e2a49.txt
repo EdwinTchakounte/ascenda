@@ -1,0 +1,1365 @@
+OUVRAGE : IA dans le tourisme.pptx
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 64
+AXE : IA Travail Management Metiers
+SOMMAIRE :
+  (non structuré)
+
+[8/8 passages, 7100 tokens sur 7100]
+
+=== EXTRAITS ===
+
+[p. 1-10]
+ew 
+HEYO
+Utiliser Intelligence
+Artificielle
+pour gagner du temps dans la gestion de son marketing digital
+Auvergne
+Rhone-Alpes
+Tourisme
+
+: 
+LES intervenants
+Auvergne
+Rhône-Alpes
+Tourisme
+Natalia Zhuravieva 
+Uoann Finturault
+Chargée de mission 
+Consultant 
+/ Formateur
+e-commerce et digitalisation
+de l'offre
+
+a 4 EXO
+4Yoann Pinturault
+Consultant /
+FOP SAE PE 
+e-commerce
+et e-tourisme
+
+[A] 
+Les mardis du e-commerce : maitriser son référencement local pour plus de visibilité en ligne - Maîtriser son référencement local pour améliorer sa visibilité en ligne 
+CNONDÉMARRÉ
+res 
+Démarre dans 27j 23h 49m 
+Partager l'événement
+Mardi 16 janvier 2024 - 09h30 (CET)
+Sondages 
+4 
+x
+Aucun sondage pour l'instant
+Dans cet onglet les membres 
+de 
+l'
+© 
+s 
+Lo | 
+o 
+LE 
+C 
+ve 
+G 
+th
+Aide 
+Monter sur scene 
+Gérer 
+Partager 
+Affichage 
+Quitter 
+Liens 
+Participa 
+Sondages
+AN” 
+LA
+7”
+
+HEYC 
+e 
+biectifs
+TOURISME
+Comprendre l'intérêt des outils d'intelligence Artificielle
+Identifier des outils utiles pour son activité
+«Savoir tirer parti de la puissance de lIA pour gagner du
+temps au quotidien
+Améliorer sa communication numérique et ses méthodes
+grâce à lIA
+
+AEYC
+TOURISME
+Au neoyramme
+Introduction
+Etat des lieux de l'intelligence Artificielle
+Les différents tupes d'outil d'IA
+Le fonctionnement de base des prompts
+‘IA pour gérer son site web
+IA pour améliorer sa stratégie sur les réseaux sociaux
+TA pour gérer sa e-réputation
+IA pour améliorer ses ventes en ligne
+¢ Votre boîte à outils personnalisée sur lIA
+o 
+és
+GRR à
+
+EY 
+le 
+Qui ÊtES-VOUS ?
+TOSI Sit
+Sondage 
+|!
+Qui êtes-vous ?
+Comité Régional du Tourisme
+Office de tourisme
+Agence d’attractivité / Comité Départemental du Tourisme
+Hébergeur (hôtel, camping, chambre d'hôtes, gite, autre)
+Prestataire d'activité
+Restaurateur
+Autre(s)
+NN 
+FF Wwnr 
+bP
+
+TOURISME
+|
+» 
+Introduction
+
+HEC 
+@ 
+L'histoire de Intelligence Artificielle
+Définition
+L'IA est la capacité d'une machine à imiter l'intelligence humaine pour
+effectuer des tâches telles que la perception, le raisonnement et
+l'apprentissage.
+On retrouve par exemple :
+° 
+Assistants virtuels
+¢ 
+Reconnaissance vocale
+¢ 
+Systemes de recommandation
+¢ 
+Traitement du langage naturel
+¢ 
+Automatisation des processus
+* 
+Création de contenu
+e 
+Analyses en tout genre.
+
+HEY
+TOURISME
+L'histoire de l'Intelligence Artificielle
+Dates clés
+L'IA, ça a commencé quand ?
+° 
+1943 - 1956: Les premières recherches sur l'IA, avec des contributions de pionniers
+comme Warren McCulloch et Walter Pitts.
+° 
+1956: Conférence de Dartmouth, considérée comme le point de départ officiel de
+IA en tant que domaine de recherche.
+e 
+Années 1960-70 : Développement des premiers systèmes experts (ex : DENDRAL,
+MYCIN).
+e 
+Années 1980 : L'essor des réseaux de neurones et des algorithmes d'apprentissage.
+e 
+Années 1970-80 : Période de désillusion due à des attentes non réalisées et à des
+limitations technologiques, souvent appelée "l'hiver de l'IA"
+° __ Années 2000 : Progrès en informatique, augmentation des données disponibles (Big
+Data) et développement des algorithmes d'apprentissage profond (Deep Learning).
+
+---
+
+[p. 10-19]
+d'apprentissage.
+e 
+Années 1970-80 : Période de désillusion due à des attentes non réalisées et à des
+limitations technologiques, souvent appelée "l'hiver de l'IA"
+° __ Années 2000 : Progrès en informatique, augmentation des données disponibles (Big
+Data) et développement des algorithmes d'apprentissage profond (Deep Learning).
+: 
+L'2mMergence de 'TA générative
+|| 
+|
+HEY
+Définition de l'IA générative
+Utilisation d'algorithmes pour générer du contenu (texte, images,vidéos,
+musique).
+Avantages : Gain de temps, personnalisation, innovation.
+
+HEYC : 
+L'ÉMErTQENCE de 'TA g@nérative
+TOURISME
+|
+Et dans le tourisme ?
+Contrairement à ce qu’on peut lire parfois, l'IA ne va pas:
+¢ Accueillir vos clients à votre place
++ Faire vos chambres ni votre ménage
++ Vous faire gagner 12h de travail par semaine
+¢ Faire le café, les petits gâteaux ou la conversation
+Tout simplement travailler à votre place
+Grâce à notre formation, Pierre utilise désormais ChatGPT pour automatiser ses
+tâches, économisant ainsi des dizaines d'heures chaque mois et augmentant son
+revenu de 11%, sans travailler plus.
+
+HEY : 
+L'ÉMErTQENCE de 'TA g@nérative
+TOSI Sit
+Et dans le tourisme ?
+En revanche, l'IA peut vous permettre de :
+¢ Faire mieux avec le même temps
+¢ Gagner en efficacité et en performance
++ Optimiser certaines tâches fastidieuses
++ Trouver des idées novatrices, innover
++ Réaliser de meilleures analyses
+* Prendre de meilleures décisions
+
+HEYO 
+le 
+Utilisez aus l'TA ?
+Sondage 
+|!
+Utilisez-vous un outil d'Intelligence Artificielle ?
+Oui, quotidiennement, en version PRO
+Oui, quotidiennement, en version gratuite
+Oui, de temps en temps
+J'ai testé une fois
+nF 
+wn 
+ER
+Non pas du tout
+
+HEYO 
+Sondage
+Petit Quizz |
+55427
+|
+Karl Maude 
+|| Marie
+
+se 
+HELO
+Intelligence Artificielle
+Generative
+De quoi on parle ?
+
+|| 
+L
+L 
+7 
+1 
+1 
+1 
+: 
+? 
+? 
+u
+HEYO 
+© 
+Intelligence artificielle Générative
+Pour générer toutes sortes de contenus
+° Texte
+¢ 
+Images
++ Vidéos
+Mais aussi réaliser des analyses, automatiser certaines tâches.
+
+HEYC 
+Intelligence artificielle Générative
+TOURISME
+Avec toutes sortes d'outils
+ChatGPT (Open Al)
+DALL-E (Open Al)
+Midjourney
+Runway ML
+Jasper Al
+Copuy.ai
+Deep Art
+Artoreeder
+Pictoru
+Lumens
+Synthesia
+DeepBrain
+InVideo
+Perplexitu
+Veed.io
+
+HEYC 
+| 
+Intelligence artificielle Générative
+TOURISME
+|
+La limite des versions gratuites
++ Nombre de requêtes
++ Rapidité d'exécution
++ Fonctionnalités de base
+¢ Filigrane ou exports limités
+Limite en nombre de générations
+Les différences entre les versions de ChatGPT
+: 
+ChatGPT 
+ChatGPT 
+plus 
+ChatGPT enterprise
+Titre 
+(GPT-3.5) 
+(GPT-4 
+(GPT-4)
+Tarif 
+Gratuit 
+isé
+20 US$/mois 
+= 
+Personna lisé
+Vitesse de réponse 
+1111] 
+82 
+00e
+D disco 
+|
+Raisonnement et réponses élaborées 
+eee 
+i 
+eeee0 
+i 
+eeee0e
+1 
+1
+Réponse concise et efficace 
+ee 
+1 
+00e 
+Û 
+00e
+eee ses
+Limite du contexte 
+4k tokens = environ 3000 mots 
+8k tokens = environ 6000 mots 
+32k tokens = environ 24000 mots
+Instructions personna lisées 
+” 
+” 
+”
+ee rs 1 ES
+GPTs (plugins) 
+I 
+” 
+1 
+”
+1 
+1
+Analyse de données 
+1 
+” 
+1 
+V4
+! 
+'
+Accés au web 
+! 
+” 
+! 
+Vv
+1 
+1
+Générer des images 
+” 
+C4
+Poser des questions sur une image 
+! 
+1
+ou un PDF 
+ne v APTE CE RS 
+v Le 
+RUES
+Confidentialité des discussions 
+' 
+”
+Template de séries de prompts 
+”
+en 
+me mn me mn mm «à
+El Digitad
+
+---
+
+[p. 19-28]
+s 
+” 
+” 
+”
+ee rs 1 ES
+GPTs (plugins) 
+I 
+” 
+1 
+”
+1 
+1
+Analyse de données 
+1 
+” 
+1 
+V4
+! 
+'
+Accés au web 
+! 
+” 
+! 
+Vv
+1 
+1
+Générer des images 
+” 
+C4
+Poser des questions sur une image 
+! 
+1
+ou un PDF 
+ne v APTE CE RS 
+v Le 
+RUES
+Confidentialité des discussions 
+' 
+”
+Template de séries de prompts 
+”
+en 
+me mn me mn mm «à
+El Digitad
+HEYO 
+le 
+Intelligence artificielle Générative
+Les avantages de IIA
+La mémoire
+L'analyse
+L'automatisation
+L'accessibilité
+Les recommandations personnalisées
+ak 
+© D >
+
+HEY
+TOURISME
+Intelligence Artificielle Générative
+Les actualités de IIA
+1. 
+ChatGPT Search
+2. 
+Emergence de startups (françaises notamment) qui développent des
+outils basés sur FIA
+3. 
+Intégration de lIA générative dans le dernier iPhone ou les suites
+bureautiques (Copilot)
+4, 
+De nouveaux modèles de données plus performants (ChatGPT 4.0)
+5. 
+Toujours plus d'outils de génération performants par des géants du
+numérique (Gemini, Jasper Al, Mistral, YouChat)
+
+| 
+| 
+\ 
+L 
+. 
+L 
+À 
+À
+EXC 
+le 
+Intelligence artificielle Générative
+TOURISME
+Sondage !
+L'IA aujourd'hui, une vraie révolution ?
+Totalement !
+Une belle avancée technologique
+Peut-être, mais pas pour moi
+Non, c'est beaucoup de bruit pour rien
+ar 
+© D >
+Pas du tout |!
+
+se 
+HELO
+LES prompts
+La base pour lIA
+
+EXC 
+|
+HEXQ 
+Le 
+Les prampts
+Un prompt, c'est quoi ?
+C'est la commande textuelle qui va indiquer à l'outil ce que
+VOUS souhaitez générer ou créer.
+C'est la base, essentielle pour utiliser efficacement FIA.
+
+EY C 
+: 
+LES arompts
+TOURISME
+|
+Un prompt, c'est quoi ?
+Ce qui fait la force de l'lA générative, c'est qu'elle est accessible.
+N'importe qui peut écrire une commande textuelle et observer les
+résultats.
+Cependant, la qualité des résultats dépend de cette commande, le
+prompt.
+Il n'est donc pas à négliger.
+
+LES prompts
+TOURISME
+Un bon prompt, c'est quoi ?
+uelques conseils :
+. Clarté
+. Contexte 
+—
+. Objectif
+. Sty le et ton 
+os
+. 
+Limitations et contraintes
+. Questions ouvertes
+Nook 
+© ND a wo
+. 
+Iteration
+
+EY 
+LES srompts
+TOURISME
+1. Clarté
+* Soyez précis : Formulez votre demande de manière claire et sans
+ambiguïté. Une phrase par instruction. Une idée = un message.
+° Exemples : Incluez des exemples concrets pour illustrer ce que vous
+attendez. Cela peut aider lIA à comprendre votre demande.
+
+LES arompts
+AEYC
+TOURISME
+2. Contexte
+¢ Fournissez des informations de fond : Donnez suffisamment de
+contexte pour que l'IA comprenne le cadre de votre demande.
+Pourquoi cette demande ? Qui êtes-vous ? Sur quoi travaillez-vous ?
+Que cherchez-vous à en retirer ?
+¢ Domaine spécifique : Mentionnez le secteur ou le sujet concerné (par
+exemple, tourisme, marketing, communication).
+
+---
+
+[p. 28-36]
+ez des informations de fond : Donnez suffisamment de
+contexte pour que l'IA comprenne le cadre de votre demande.
+Pourquoi cette demande ? Qui êtes-vous ? Sur quoi travaillez-vous ?
+Que cherchez-vous à en retirer ?
+¢ Domaine spécifique : Mentionnez le secteur ou le sujet concerné (par
+exemple, tourisme, marketing, communication).
+HEYO 
+| 
+Les prompts
+[Apparté] Contexte
+Demander à ChatGPT d’endosser un rôle d'expert, ça ne sert à rien. Donc
+inutile de lui dire « TU es un expert du SEO avec 20 d'expérience »
+En revanche, cela peut être utile de lui dire à qui il s'adresse : « explique les
+bases du SEO à un néophyte complet »
+
+HEY C 
+: 
+LES arompts
+TOURISME
+|
+3. Objectif
+* Indiquez le but : Précisez ce que vous espérez accomplir avec la
+réponse de IA.
+° Types de résultats : Mentionnez le format souhaité (article, liste,
+résumé, etc.).
+
+HEYC 
+LES arompts
+TOSI Sit
+4, Style et ton
+¢ Définissez le style : Indiquez le ton souhaité (formel, informel,
+humoristique, etc.).
+¢ Public cible : Mentionnez le public visé pour orienter le style de la
+réponse.
+Préciser le public permet de modifier la manière dont lIA va générer sa réponse. ll ne
+s‘adressera pas de la même manière à un enfant de 5 ans qu'à un doctorant.
+
+e| 
+|
+HEYO 
+Les prompts
+5. Limitations et contraintes
+¢ Etablissez des limites : Indiquez des restrictions sur la longueur, le type
+de contenu ou les informations à inclure ou à éviter
+* Critères spécifiques 
+: Mentionnez des critères de qualité ou des
+préférences.
+Plus VOUS serez précis, meilleures seront les réponses.
+se
+ar
+
+HEY
+TOURISME
+LES prompts
+6. Questions ouvertes
+¢ Posez des questions : Utilisez des questions ouvertes pour encourager
+une réponse détaillée et complète.
+* Invitez à l'exploration : Demandez à l'IA d'explorer différents aspects
+d'un sujet.
+L'IA vous permet aussi d'être dans une logique exploratoire.
+
+HEY
+TOURISME
+LES prompts
+7. Iteration
+¢ Affinez le prompt : Soyez prêt à réviser et à affiner votre prompt en
+fonction des réponses obtenues.
+¢ Demandez des clarifications : Si la réponse initiale n'est pas
+satisfaisante, posez des questions de suivi pour approfondir.
+Ne vous arrêtez pas à la première réponse apportée.
+
+HEYO 
+le 
+Les prompts
+
+HEY
+TOURISME
+LES prompts
+Découpage d'un prompt « parfait »
+1. 
+Introduction
+1. 
+Contexte : Décrivez brièvement le sujet ou le domaine concerné.
+2. 
+Objectif : Indiquez ce que vous souhaitez accomplir avec la réponse.
+2. 
+Détails spécifiques
+1. 
+Instructions claires : Donnez des directives précises sur ce que vous attendez.
+2. 
+Exemples : Fournissez des exemples pour illustrer votre demande.
+3. Stule et ton
+1. 
+Stule : Spécifiez le style d'écriture souhaité (formel, informel, académique, créatif, etc.).
+2. 
+Public cible : Indiquez à qui le contenu est destiné pour ajuster le ton.
+4, 
+Limitations et contraintes
+1. 
+Lonqueur : Précisez la longueur désirée de la réponse (nombre de mots, paragraphes, etc.).
+2. 
+Éléments à inclure ou exclure : Mentionnez ce qui doit absolument être inclus ou ce qui doit être évité.
+5. Questions ouvertes ou prompts supplémentaires
+1. 
+Encouragement à l'exploration : Posez des questions ouvertes pour inciter une réflexion plus approfondie.
+2. 
+Demandes de clarification: Invitez l'IA à approfondir des points spécifiques ou à répondre à des questions de suivi.
+
+---
+
+[p. 36-44]
+absolument être inclus ou ce qui doit être évité.
+5. Questions ouvertes ou prompts supplémentaires
+1. 
+Encouragement à l'exploration : Posez des questions ouvertes pour inciter une réflexion plus approfondie.
+2. 
+Demandes de clarification: Invitez l'IA à approfondir des points spécifiques ou à répondre à des questions de suivi.
+HEY
+TOURISME
+LES prompts
+Un bon prompt, ce n'est pas :
+¢ Une conversation avec un copain. Tutoyer, vouvoyer ChatGPT, ça n'a
+pas d'impact.
+¢ Une commande vague, pas spécifique.
+° Une multitude de sujets / questions réunis dans une.
+e Sans contrainte.
+¢ Un moyen de poser des questions illégales ou contraires à l'éthique.
+¢ Une seule Question / Réponse.
+¢ Sans granularité.
+
+se 
+HELO
+Utiliser l'IR
+Pour le web
+
+|| 
+|
+HEYO 
+L 
+Utiliser (TA pour le web
+Assistant pour son site web
+1. 
+Création / Optimisation d’arborescence
+2. 
+Rédaction / Optimisation SEO
+
+HEY
+TOURISME
+Utiliser l'TA pour le web
+Assistant creation d’une arborescence
+ChatGPT peut vous aider a créer une arborescence pertinente pour votre
+site internet.
++ Listez les contenus de votre site (Pages, thématiques, articles)
++ Laissez-lui vous proposer des arborescences
+¢ Optimisez l’organisation de vos pages
+¢ Vous pouvez aussi lui demander d'optimiser une arborescence
+existante en lui donnant des contraintes
+
+EXC : 
+utiliser ITA pour le LEE
+TOURISME
+|
+Assistant rédaction SEO
+A l’aide d'un GPT, rédigez ou optimisez des contenus adaptés pour le SEO
+en lui demandant de respecter les regles de rédaction.
+.. 
+o-
+.
++ 
+A
+Sy
+Assistant SEO Expert
+Assistant SEO pour analyses et rédactions optimisées
+Comment 
+Quels sont les 
+Aide-moi a 
+Peux-tu relire
+optimiser cet article 
+points SEO 
+structurer cet article 
+ce texte pour
+pour le SEO ? 
+manquants de cet.. 
+avec des mots-clés 
+améliorer Sa...
+
+se 
+HELO
+Utiliser l'IR
+Pour ses réseaux SOCiaUx
+
+|!
+\ 
+ane 
+; 
+> 
+;
+EY 
+Utiliser l'IA pour Ses r@Seaux SOCIauxX
+TOURISME
+Assistant réseaux SOciaux
+Création de contenu visuel (images et vidéos)
+Rédaction automatisée de textes
+Analyse de sentiment
+Chatbots pour l'engagement client
+BON 
+>
+
+|| 
+L
+4% 
+Ÿ 
+DE 
+I 
+? 
+1
+HEYO 
+le 
+Utiliser TA pour abs rÉSESUX SOCIAUX
+Création de contenu visuel (images)
+Utilisez Leonardo, Recrafîft Al, DALL-E ou Canva Dream Lab pour créer
+facilement des visuels pour les réseaux sociaux.
+= 
+let ee
+as ee
+a» 
+SOCIAL MEDIA
+—
+> 
+\
+- 
+Qh 
+Slee TP 
+f
+=== 
+4 
+| 
+4 
+]
+= 
+mn 
+Ÿ 
+1°) 
+#4 
+i
+/ 
+\ 
+D 
+jf, 
+CT À
+| 
+; 
+. 
+à 
+e 
+Le
+a 
+| 
+\ 
+DT 
+à 
+|
+- 
+} 
+. 
++ 
+eh 
+|
+ql 
+.\* 
+x 
+ry 
+jé 
+|
+A 
+‘ 
+ds 
+sé 
+‘
+\\ 
+| 
+\ 
+AS 
+È 
+= i 
+4
+We i 
+dj 
+\ 
+Ÿ * 
+DS. 
+CAT = 
+aad 
+65 
+1 /
+DE 
+N 
+Ss 
+}
+= 
+“> 
+~; Se, 
+ù
+à
+svi 
+we 
+SS
+D 
+4 
+a
+ia 
+77 
+a
+A 
+a
+=
+=
+~ 
+hi
+
+---
+
+[p. 44-51]
+SOCIAL MEDIA
+—
+> 
+\
+- 
+Qh 
+Slee TP 
+f
+=== 
+4 
+| 
+4 
+]
+= 
+mn 
+Ÿ 
+1°) 
+#4 
+i
+/ 
+\ 
+D 
+jf, 
+CT À
+| 
+; 
+. 
+à 
+e 
+Le
+a 
+| 
+\ 
+DT 
+à 
+|
+- 
+} 
+. 
++ 
+eh 
+|
+ql 
+.\* 
+x 
+ry 
+jé 
+|
+A 
+‘ 
+ds 
+sé 
+‘
+\\ 
+| 
+\ 
+AS 
+È 
+= i 
+4
+We i 
+dj 
+\ 
+Ÿ * 
+DS. 
+CAT = 
+aad 
+65 
+1 /
+DE 
+N 
+Ss 
+}
+= 
+“> 
+~; Se, 
+ù
+à
+svi 
+we 
+SS
+D 
+4 
+a
+ia 
+77 
+a
+A 
+a
+=
+=
+~ 
+hi
+|| 
+|
+Ÿ 
+| 
+CE 
+I 
+? 
+|
+EC : 
+Utiliser l'TA pour Ses rÉSESUX SOCIauxX
+TOURISME
+|
+Rédaction automatisée de contenu
+Rédigez des publications pour vos réseaux sociaux à l’aide de l'IA. Plus
+vous fournissez d'éléments, plus le texte sera approprié.
+L'IA peut vous aider également à réécrire, adapter à la cible ou au réseau
+social.
+æ) © L'IA au service des réseaux sociaux !
+Saviez-vous que l'intelligence Artificielle aide à créer des visuels et des vidéos parfaits pour chaque
+plateforme ? #4 se Elle optimise les contenus pour capter l'attention de votre audience au bon
+moment, et booste l'engagement !
+L'IA transforme la manière dont nous communiquons en ligne, rendant chaque publication plus
+efficace. &”
+#1A #RéseauxSociaux #MarketingDigital #Engagement
+
+HEY
+TOURISME
+Utiliser l'TA pour Ses rÉSESUX SOCIauxX
+Analyse de sentiment
+L'IA peut analyser les commentaires et messages des utilisateurs pour
+déterminer le sentiment général autour d'une entreprise ou d'une
+destination touristique.
+Des outils comme Brandwatch (payant) ou Hootsuite Insights (payant)
+Utilisent IIA pour évaluer la perception d'une marque et ajuster les
+stratégies de communication et de marketing en fonction des retours des
+clients.
+Avec ChatGPT ou Gemini, copiez collez les commentaires pour obtenir
+des analyses avec un prompt approprié.
+
+HEYC
+TOURISME
+Utiliser 'IA pour SES rÉSEguX SOCIAUX
+ChatBots pour l'engagement client
+Les chatbots alimentés par l'A, comme ManyChat ou MobileMonkeu,
+permettent de répondre instantanément aux questions des utilisateurs
+sur des plateformes comme Facebook Messenger ou Instagram.
+Ces chatbots peuvent fournir des informations sur des destinations, des
+offres spéciales ou même aider à la réservation de services touristiques.
+
+se 
+HELO
+Utiliser l'IR
+Pour gérer sa e-réputation
+
+HEYO 
+le 
+Utiliser ITA of sa e-réputation
+Al assistant —
+O1 customer reviews 
+;
+to customer reviews 
+| 
+You helping he
+automaby tx
+autoneley <
+Assistant e-réputation
+1. 
+Réponse aux avis clients
+2. 
+Analyse de verbatims
+customel
+
+AEYC
+TOURISME
+Utiliser l'TA notit Sd e-réputation
+Assistant reponse aux avis
+Avec un GPT (assistant) générez des réponses aux avis (positifs) :
+sr © D >
+Avec une structure constante
+Votre tonalité, manière de parler
+Relecture d'avis
+Conseils sur la rédaction
+Réponds à un
+avis positif d'un
+client satisfait.
+Assistant réponses avis clients
+Assistant de réponses personnalisées aux avis clients.
+Donne une réponse
+chaleureuse à un
+court avis client.
+%
+Propose
+une réponse
+authentique a un...
+Relis et conseille
+une réponse pour
+un avis négatif.
+
+---
+
+[p. 51-57]
+er
+Relecture d'avis
+Conseils sur la rédaction
+Réponds à un
+avis positif d'un
+client satisfait.
+Assistant réponses avis clients
+Assistant de réponses personnalisées aux avis clients.
+Donne une réponse
+chaleureuse à un
+court avis client.
+%
+Propose
+une réponse
+authentique a un...
+Relis et conseille
+une réponse pour
+un avis négatif.
+e| 
+| 
+|
+HEYO 
+Utiliser l'TA of sa e-réputation
+Assistant analyse de verbatims
+Avec un GPT (assistant) analysez les verbatims emploués par vos clients
+/ Visiteurs :
+1. 
+Fournissez des avis clients pour des analyses
+2. 
+Obtenez des analyses pertinentes sur les avis déposés
+3. 
+Comprenez mieux les attentes de vos clients avec ces analyses
+
+HEYC 
+Utiliser l'TA not sa e-réputation
+Automatisez la collecte et l'analyse 
+ds 
+Gi
+Utilisez Zapier pour réaliser ça de manière 
+Len Fais
+automatique 
+|
+1. 
+Un avis est publié sur votre compte Google 
+|
+Business
+2. 
+Ilest envoyé à ChatGPT qui l'analyse 
+TEE
+3. 
+ChatGPT stocke ses analyses dans un Google 
+|
+Sheet 
+Ë
+i B} Google Sheets
+3. Create Spreadsheet Row
+|
++
+
+se 
+HELO
+Utiliser l'IR
+Pour améliorer ses ventes en ligne
+
+||HEYC 
+Utiliser l'TA pour améfibrer ses ventes en ligne
+Améliorer ses ventes en ligne
+Traduction multilingue pour l'Open Pro
+Amélioration des descriptifs
+Réflexion / Stratégie
+BON 
+>
+Rédaction de newsletters / emails commerciaux
+
+\ 
+\ 
+oyu 
+I 
+fi! 
+;
+HEC! 
+utiliser l'IR pour améliorer ses ventes en ligne
+OSS NAVE
+DeepL pour traduire ses contenus
+Ressemble à Google Translate pour l'interface mais plus performant
+dans la qualité des traductions.
+( 
+FA 
+e 
+| 
+s 
+. 
+i
+>| DeepL 
+| Traducteur v 
+| 
+Produits ¥ 
+Solutions ¥ 
+Tarifs 
+Applications v 
+@ 
+Q 
+Connexion sua 
+EUTI
+Traduire du texte
+A 
+33 langues
+B Traduire des fichiers 
+A DeepL Write 
+Traduisez directement dans votre navigateur
+pdf, .docx, .pptx 
+** 
+Corrections IA
+Traduisez ce que vous lisez et ce que vous écrivez sur internet avec
+l'extension DeepL pour Chrome.
+Détection automatique v 
+français Vv 
+oo AE 
+Télécharger gratuitement
+Note 
+: 4,8/5
+Écrivez ou collez votre texte ici.
+Pour traduire des fichiers PDF, Word (.docx) ou Powerpoint (.pptx), déposez-les
+directement dans notre interface de traduction de documents.
+Cliquez sur le microphone pour lancer la saisie vocale.
+
+OSS NAVE
+| 
+| 
+L
+Ÿ 
+à 
+CN 
+EE 
+I 
+ou 
+i
+HEY : Utiliser l'IA pour améliorer ses ventes en ligne
+Canva Translate avec ChatGPT
+Canva 
+ns
+outil. | 
+9 & Chu
+Au
+Présentation de la Fonc © vie 
+ae
+FG Copier le style 
+Ctri+Alt+C
+Magique de Canva 
+(1 Coller 
+Ctrl+V
+La fonctionnalité d'écriture magique de Canva 
+est un 
+de
+D 
+à 
+Le 
++ 
+|
+générer du contenu textuel de haute qualité de manié CJ Commenter 
+CtritAlt+N 
+tion
+avec ChatGPT, cette fonctionnalité exploite l'intelligen: 
+lans
+ee 
+=
+& Lien 
+Ctri+K
+la création de textes variés, allant des articles de blog
+Lien avec ChatGPT 
+Crau du texte 
+>
+ChatGPT, développé par 
+OpenAl, est 
+un modèle de langage avancé qui utilise des techniques
+PPPS 
+= 
+=
+d'apprentissage automatique pour comprendre et générer du texte humain. Canva a intégré cette
+| 
+= 
+. 
+arr 
+=
+technologie dans sa plateforme pour offrir une expérience d'écriture enrichie. Cette intégration
+permet aux 
+utilisateurs de Canva de bénéficier des capacités de 
+ChatGPT directement dans 
+leur
+Vy 
+PAPA
+flux de travail, rendant le processus de création de contenu plus 
+fluide et intuitif.
+
+---
+
+[p. 57-64]
+n. Canva a intégré cette
+| 
+= 
+. 
+arr 
+=
+technologie dans sa plateforme pour offrir une expérience d'écriture enrichie. Cette intégration
+permet aux 
+utilisateurs de Canva de bénéficier des capacités de 
+ChatGPT directement dans 
+leur
+Vy 
+PAPA
+flux de travail, rendant le processus de création de contenu plus 
+fluide et intuitif.
+AEYC
+“(NZ 
+Utiliser l'IA pour améliorer ses ventes en ligne
+Améliorer ses descriptifs avec ChatGPT
+Demandez à ChatGPT de rédiger un nouveau descriptif pour vos
+produits, services, structures.
+Une manière de:
++ Adopter un discours plus vendeur
+«+ Adapter à une cible client
++ Proposer des descriptifs variés (OT, distributeur, annuaire, site web,
+open pro)
+
+e| 
+| 
+|
+HEYO 
+Utiliser TA pour améfibrer ses ventes en ligne
+Réflexion / Stratégie
+Gemini ou ChatGPT peuvent également vous aider à mieux identifier des
+aspects de votre stratégie et alimenter votre réflexion :
+¢ Proposer de nouveaux services / équipements à vos clients
++ Ouvrir à de nouvelles cibles
++ Envisager une stratégie de communication multi-supports
+Revoir vos prix
+
+: Utiliser l'TA pour améligrer ses ventes en ligne
+| 
+| 
+|
+HEXC
+Rédaction de newsletters ou emails commerciaux
+Mettez en avant vos offres promotionnelles dans des emails rédigés par
+IA ! Gagnez du temps dans la rédaction qui peut être parfois fastidieuse.
+Plus pertinent : vous indiquez le montant de l'offre, les conditions, la cible
+et les produits concernés, laissez FIA faire le reste
+
+se 
+HELO
+Utiliser l'IR
+Pour améliorer sa visibilité locale
+
+le 
+Utiliser l'TA pour améliorer sa visibilité locale
+EVO
+EU
+Un assistant pour votre destination ?
+Un assistant qui serait connecté à votre base de données, votre site web
+ou tout simplement lecteur de vos brochures de présentation, peut aider
+les acteurs du territoire à mieux conseiller les clients.
+1. 
+Répond aux questions
+2. 
+Avec vos infos |!
+3. 
+À tenir à jour
+
+|| 
+|
+Ÿ 
+| 
+pu 
+! 
+fait 
+' 
+1 
+i 
+?
+HEYC 
+L Utiliser l'TA pour améliorer sa visibilité locale
+Votre propre influenceur maison ?
+Un influenceur que vous contrôlez et qui fait la promotion de la
+destination.
+1. 
+Publie du contenu sur les réseaux sociaux
+2. 
+Représente votre territoire
+3. 
+Personnifie votre destination
+
+HEYO 4@
+Merci pour votre
+Pcoute

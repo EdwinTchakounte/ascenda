@@ -1,0 +1,61 @@
+[
+ {"chapitre":"42b8c5a2","citations":[
+  {"texte":"d'ici cinq ans les LLM n'existeront plus","page":105,"axe":"02-ia-technique-academique","theme":"Une prédiction datée et vérifiable","portee":"Confronter les prédictions publiques à ce qui advient est le meilleur exercice de lucidité disponible."},
+  {"texte":"On doit donc éviter, s'agissant de l'IA, de raisonner a priori en termes malthusiens comme le faisaient les canuts ou les luddites du XIX e siècle","page":105,"axe":"06-ia-travail-management-metiers","theme":"L'avertissement des luddites","portee":"L'histoire industrielle invite à la prudence dans les deux sens, alarmiste comme rassurant."}
+ ]},
+ {"chapitre":"12459248","citations":[
+  {"texte":"les machines sont désormais capables d'apprendre à exécuter des tâches par elles-mêmes, en élaborant leurs propres règles grâce notamment aux nombreuses données disponibles.","page":107,"axe":"02-ia-technique-academique","theme":"Ce qui a invalidé les prévisions","portee":"L'erreur des économistes venait d'une conception dépassée de ce qu'une machine peut apprendre."},
+  {"texte":"Des tâches qui font appel au jugement humain, à la créativité ou même à l'empathie peuvent aujourd'hui être automatisées. Même les diplômes ne protègent plus contre cette automatisation","page":107,"axe":"06-ia-travail-management-metiers","theme":"Le diplôme n'est plus un abri","portee":"L'orientation scolaire ne peut plus reposer sur l'idée qu'un long parcours protège par lui-même."},
+  {"texte":"elles « ressentent » les poids qu'elles portent ou les pressions qu'elles exercent de sorte qu'elles n'ont aucune difficulté à faire des œufs sur le plat, à lacer des chaussures ou même à administrer une piqûre à un patient !","page":108,"axe":"06-ia-travail-management-metiers","theme":"Le paradoxe de Moravec en recul","portee":"La barrière du geste, longtemps tenue pour protectrice des métiers manuels, commence à céder."}
+ ]},
+ {"chapitre":"9e8a170d","citations":[
+  {"texte":"Il faut que nous commencions à réfléchir à plus long terme, au moins à cinquante ans, le demi-siècle étant la bonne unité de mesure pour qui pense, comme nous y invitait Keynes, à ses petits-enfants","page":110,"axe":"04-ia-societe-ethique-philosophie","theme":"Penser à l'échelle d'une génération","portee":"Le désaccord sur l'avenir du travail se dissout en partie dès qu'on précise l'horizon dont on parle."},
+  {"texte":"GPT-4 est pratiquement gratuit, qu'il travaille H24, qu'il n'est pas syndiqué et qu'il ne fait jamais grève !","page":111,"axe":"06-ia-travail-management-metiers","theme":"Le calcul de l'employeur","portee":"La décision de remplacer un poste se prend sur des critères simples que les débats théoriques ignorent."},
+  {"texte":"on peut aussi en supprimer, non pas pour être plus productif (du moment bien sûr qu'on le reste au moins autant), mais pour réduire les coûts afin de dégager des profits pour d'autres investissements.","page":112,"axe":"10-economie-entrepreneuriat-finance","theme":"Supprimer sans gagner en productivité","portee":"Lier le sort de l'emploi aux seuls gains de productivité manque une part des décisions réelles."}
+ ]},
+ {"chapitre":"b55d8b54","citations":[
+  {"texte":"entre un service gratuit, impeccable, rendu en dix minutes, et un service payant qui prendra une semaine, quoi qu'on veuille et quoi qu'on fasse, le premier finira forcément par l'emporter sur le second !","page":113,"axe":"10-economie-entrepreneuriat-finance","theme":"Ce que le boycott ne peut pas faire","portee":"Un choix individuel de résistance ne pèse rien face à un écart de coût et de délai de cet ordre."},
+  {"texte":"Si l'IA supprime 300 millions d'emplois de bac – 3 à bac + 3, et en crée 300 000 de bac + 10, le compte n'y sera pas.","page":114,"axe":"06-ia-travail-management-metiers","theme":"Compenser en nombre et en niveau","portee":"Une création d'emplois très qualifiés ne remplace pas une destruction massive d'emplois intermédiaires."},
+  {"texte":"l'IA ne se contente pas d'attaquer un secteur particulier de la vie économique comme l'industrie textile au temps des luddites et des canuts","page":113,"axe":"06-ia-travail-management-metiers","theme":"Toucher tous les secteurs à la fois","portee":"Se reconvertir suppose qu'un secteur épargné existe, ce qui n'est pas garanti ici."}
+ ]},
+ {"chapitre":"0f7729ef","citations":[
+  {"texte":"Les réponses que donnent les LLM comme ChatGPT, souvent de grande qualité, n'en sont pas moins limitées aux informations qui ont été utilisées pour les entraîner.","page":116,"axe":"03-ia-outils-pratique-prompting","theme":"Ce que le modèle ne peut pas savoir","portee":"Aucun modèle généraliste ne connaît les données propres à votre métier ou à votre entreprise."},
+  {"texte":"il s'agit de fabriquer à partir d'une IA généraliste grâce à une interface de programmation (une API), une IA spécifique (un SLM) adaptée aux particularités de l'entreprise.","page":116,"axe":"10-economie-entrepreneuriat-finance","theme":"Spécialiser un outil général","portee":"Une petite structure peut adapter un outil existant à son métier sans construire son propre modèle."}
+ ]},
+ {"chapitre":"83c3fa7b","citations":[
+  {"texte":"qu'allons faire pour nos enfants et nos petits-enfants, quel monde allons-nous leur laisser, que pouvons-nous dès maintenant leur proposer ?","page":119,"axe":"04-ia-societe-ethique-philosophie","theme":"La question qu'on repousse","portee":"Une décision que l'on refuse de préparer se prend quand même, mais sans nous."}
+ ]},
+ {"chapitre":"ec52765c","citations":[
+  {"texte":"un récent sondage de l'Ifop selon lequel 47 % des salariés avouent pratiquer d'ores et déjà le quiet quitting","page":121,"axe":"06-ia-travail-management-metiers","theme":"Le retrait silencieux","portee":"Le rapport au travail s'est délité avant même que l'automatisation ne produise ses effets."},
+  {"texte":"une humanité qui renoncerait au progrès et aux innovations pour s'engluer dans le terroir abandonnerait ce qui fait son essence même, à savoir la perfectibilité et l'historicité","page":123,"axe":"04-ia-societe-ethique-philosophie","theme":"Contre la décroissance","portee":"L'auteur oppose à la sortie du progrès une définition de l'humain par sa capacité de se transformer."}
+ ]},
+ {"chapitre":"3b31d350","citations":[
+  {"texte":"n'oublions pas que la notion d'allocation universelle a été inventée par le pape du néolibéralisme, Milton Friedman","page":125,"axe":"10-economie-entrepreneuriat-finance","theme":"L'origine oubliée d'une idée","portee":"Connaître d'où vient une proposition éclaire à qui elle profite, quel que soit le camp qui la reprend."},
+  {"texte":"ils reflètent à la perfection non seulement le point de vue des programmateurs, mais aussi celui de leurs patrons","page":125,"axe":"04-ia-societe-ethique-philosophie","theme":"La réponse porte une idéologie","portee":"Une réponse qui paraît informée reproduit souvent la position de ceux qui ont réglé le système."}
+ ]},
+ {"chapitre":"60dd5231","citations":[
+  {"texte":"En 2008, 62 % des salariés répondaient qu'ils préféraient travailler plus pour gagner plus et 38 % l'inverse","page":126,"axe":"06-ia-travail-management-metiers","theme":"Un retournement en quatorze ans","portee":"Un rapport au travail tenu pour naturel peut s'inverser en une décennie."},
+  {"texte":"c'est ici et maintenant qu'il s'agit d'être heureux, en quoi nous sommes bel et bien en train de vivre une véritable faille dans la civilisation caractérisée par le passage de l'acceptation d'un bonheur différé à l'exigence d'un bonheur immédiat","page":127,"axe":"09-developpement-personnel-influence","theme":"La fin du bonheur différé","portee":"Quand plus rien ne promet un après, tout se joue maintenant, ce qui change le rapport à l'effort."},
+  {"texte":"38 millions d'Américains à quitter leur job en 2021 parce qu'ils éprouvaient le sentiment que leur travail ne donnait aucun sens à leur vie","page":128,"axe":"06-ia-travail-management-metiers","theme":"Partir faute de sens","portee":"Le sens perçu du travail pèse davantage que la rémunération dans la décision de rester ou de partir."}
+ ]},
+ {"chapitre":"426f9901","citations":[
+  {"texte":"les seniors encore actifs sont plus heureux que les retraités du même âge et du même niveau de revenu qui n'ont plus aucune activité professionnelle.","page":130,"axe":"09-developpement-personnel-influence","theme":"Ce que l'activité apporte","portee":"À revenu égal, l'activité elle-même produit du bien-être, ce qui interroge l'idéal du repos."},
+  {"texte":"C'est en effet l'insertion dans un tissu de relations sociales qui explique cette différence, en même temps que le sens inhérent à la réalisation d'objectifs utiles à soi-même et aux autres","page":130,"axe":"06-ia-travail-management-metiers","theme":"Trois biens que donne le travail","portee":"Relations, apprentissage et utilité : trois besoins qu'un revenu seul ne satisfait pas."},
+  {"texte":"Aucun pays, aucun peuple, à ce qu'il me semble, ne peut envisager l'âge du loisir et de l'abondance sans effroi.","page":131,"axe":"04-ia-societe-ethique-philosophie","theme":"L'avertissement de Keynes","portee":"L'abondance ne résout pas la question de savoir quoi faire de sa vie, elle la pose brutalement."}
+ ]},
+ {"chapitre":"1607b6dc","citations":[
+  {"texte":"loin de diminuer le stress et d'améliorer la santé, c'est la consommation d'alcool et d'analgésiques qui a augmenté dans des proportions inquiétantes","page":133,"axe":"09-developpement-personnel-influence","theme":"Un résultat contraire aux attentes","portee":"Une enquête de terrain qui contredit son propre commanditaire vaut mieux que dix intuitions convergentes."},
+  {"texte":"à force d'inventer des technologies qui permettent de gagner des milliards sans avoir à payer des humains","page":134,"axe":"10-economie-entrepreneuriat-finance","theme":"L'intérêt derrière la générosité","portee":"Une proposition sociale gagne à être lue en fonction de ce qu'elle épargne à celui qui la porte."}
+ ]},
+ {"chapitre":"86a93ac7","citations":[
+  {"texte":"Si l'IA devait non seulement supprimer une quantité faramineuse d'emplois salariés, mais en outre dispenser nos enfants d'acquérir des connaissances","page":135,"axe":"05-ia-education-pedagogie","theme":"Le double risque","portee":"Perdre les emplois serait grave, perdre la capacité d'apprendre le serait irréparablement."},
+  {"texte":"travailler était plus amusant que s'amuser","page":135,"axe":"09-developpement-personnel-influence","theme":"Le plaisir de l'effort","portee":"Une phrase à opposer à l'idée que l'effort serait par nature l'ennemi du plaisir."},
+  {"texte":"il est « de la plus haute importance que les enfants apprennent à travailler. L'homme est le seul animal qui doit travailler","page":136,"axe":"05-ia-education-pedagogie","theme":"Apprendre à travailler","portee":"Kant fait du travail une condition de l'humanisation, non un simple moyen de subsistance."},
+  {"texte":"Un Homme qui ne travaillerait pas ne serait pas seulement un Homme pauvre, mais un pauvre Homme.","page":137,"axe":"06-ia-travail-management-metiers","theme":"Ce que le travail fait à celui qui l'exerce","portee":"Formule qui déplace la question du revenu vers celle de ce que l'activité construit en nous."}
+ ]},
+ {"chapitre":"4efab4a7","citations":[
+  {"texte":"comment respecter la liberté de l'enfant tout en lui enseignant une discipline ? Réponse : par le travail.","page":138,"axe":"05-ia-education-pedagogie","theme":"Sortir de l'alternative jeu ou dressage","portee":"Le travail scolaire n'est ni le jeu libre ni la contrainte pure, il est la voie entre les deux."},
+  {"texte":"on peut bien faire travailler quelqu'un, en l'occurrence quelque chose, une machine, à sa place, mais on ne peut pas penser à notre place.","page":139,"axe":"05-ia-education-pedagogie","theme":"Ce qui ne se délègue pas","portee":"La règle décide de tout usage scolaire honnête de ces outils : faire faire n'est pas apprendre."},
+  {"texte":"il existe aussi un ennui qui, loin d'être négatif, est tout simplement inhérent aux efforts indispensables à notre capacité d'apprendre","page":139,"axe":"05-ia-education-pedagogie","theme":"Un ennui qui fait apprendre","portee":"Supprimer tout ennui à l'école supprimerait aussi la part d'effort d'où vient l'apprentissage."}
+ ]}
+]

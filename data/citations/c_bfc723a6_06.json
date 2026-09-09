@@ -1,0 +1,116 @@
+[
+ {"chapitre":"01981669","citations":[
+  {"texte":"Cependant, il est important de se rappeler que ChatGPT n'est pas un substitut à la réalisation de recherches originales et à l'application de ses propres capacités de réflexion critique.","page":217,"axe":"05-ia-education-pedagogie","theme":"Ni recherche originale ni jugement","portee":"Ligne de partage à tenir pour tout étudiant qui rédige un mémoire avec ces outils."},
+  {"texte":"ChatGPT ne peut pas être considéré comme co-auteur d'un travail de recherche car c'est un modèle de langue IA.","page":217,"axe":"04-ia-societe-ethique-philosophie","theme":"La paternité d'un travail","portee":"Rappelle que la signature engage une responsabilité qu'une machine ne peut pas porter."},
+  {"texte":"De plus, il est crucial de n'utiliser ChatGPT que comme un complément à la recherche originale et à la réflexion critique, jamais comme un substitut.","page":218,"axe":"05-ia-education-pedagogie","theme":"Complément et non substitut","portee":"Formulation la plus nette de la règle d'usage défendue par les auteurs."}
+ ]},
+ {"chapitre":"519dec6a","citations":[
+  {"texte":"Bien que ChatGPT puisse être un outil utile pour les travaux de recherche, il est important de se rappeler qu'il ne doit pas être votre seule source de données pour votre projet.","page":219,"axe":"05-ia-education-pedagogie","theme":"Diversité des sources","portee":"Règle élémentaire, souvent oubliée quand l'outil répond vite et à tout."},
+  {"texte":"Utilisez des sources fiables dans votre étude et veillez à évaluer de manière critique les documents que vous trouvez.","page":219,"axe":"05-ia-education-pedagogie","theme":"Évaluation critique des documents","portee":"Compétence à acquérir avant l'outil, et que l'outil ne dispense pas d'exercer."}
+ ]},
+ {"chapitre":"64477c05","citations":[
+  {"texte":"En créant et affinant des questions probables, ChatGPT peut vous aider à développer une question de recherche spécifique et complète.","page":220,"axe":"03-ia-outils-pratique-prompting","theme":"Formuler la question de recherche","portee":"Le point où l'aide est la plus réelle, car formuler la question est souvent le plus difficile."},
+  {"texte":"Vérifiez une seconde fois l'exactitude des données fournies par ChatGPT et confirmez-les avec des sources fiables.","page":220,"axe":"05-ia-education-pedagogie","theme":"Double vérification","portee":"Consigne opérationnelle simple, à appliquer sans exception."}
+ ]},
+ {"chapitre":"676408d2","citations":[
+  {"texte":"Il manque une compréhension approfondie de votre sujet. Par conséquent, des en-têtes parfois inadaptés peuvent être produits.","page":221,"axe":"03-ia-outils-pratique-prompting","theme":"Limite du plan généré","portee":"Explique pourquoi un plan produit par l'outil doit toujours être repris par l'auteur."}
+ ]},
+ {"chapitre":"3735fc01","citations":[
+  {"texte":"Cependant, nous ne recommandons pas de l'utiliser pour rechercher des sources directement.","page":222,"axe":"05-ia-education-pedagogie","theme":"Ne pas chercher les sources avec l'outil","portee":"Recommandation directement liée au fait que le modèle invente des références."},
+  {"texte":"Vous devez toujours créditer correctement vos sources et vous assurer que les sources que vous utilisez sont réputées et fiables.","page":222,"axe":"05-ia-education-pedagogie","theme":"Créditer ses sources","portee":"Exigence d'honnêteté intellectuelle inchangée par l'arrivée de ces outils."}
+ ]},
+ {"chapitre":"33a7d2c5","citations":[
+  {"texte":"De nombreuses paraphrases distinctes du même concept peuvent être facilement produites grâce à ChatGPT.","page":223,"axe":"03-ia-outils-pratique-prompting","theme":"Multiplier les formulations","portee":"Usage pratique pour sortir d'un blocage d'écriture, à distinguer de la production d'idées nouvelles."}
+ ]},
+ {"chapitre":"c5a91e66","citations":[
+  {"texte":"ChatGPT n'a accès qu'aux données d'entraînement qu'il a collectées jusqu'en septembre 2021.","page":224,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Date de coupure des connaissances","portee":"Explique l'ignorance du modèle sur tout ce qui s'est passé après cette date."},
+  {"texte":"ChatGPT est sujet aux biais présents dans ses données d'entraînement, tout comme tout autre système d'IA.","page":224,"axe":"04-ia-societe-ethique-philosophie","theme":"Biais hérités du corpus","portee":"Vaut particulièrement pour les régions et les langues sous représentées dans ces corpus."},
+  {"texte":"ChatGPT a été formé à l'aide d'une large gamme de sources, cependant il est incapable d'identifier de manière fiable les sources de chaque sortie donnée. Pire encore, lorsque vous le demandez, il invente fréquemment des sources qui n'existent pas réellement.","page":224,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Invention de références","portee":"Défaut le plus dangereux pour un travail universitaire, car il est invisible sans vérification."}
+ ]},
+ {"chapitre":"528fb931","citations":[
+  {"texte":"ChatGPT est moins sensible aux biais tels que les opinions personnelles ou les préconceptions qui pourraient influencer les chercheurs humains.","page":225,"axe":"02-ia-technique-academique","theme":"Biais humains et biais machine","portee":"Affirmation à mettre en regard du biais des données d'entraînement reconnu au chapitre précédent."},
+  {"texte":"ChatGPT est un outil pratique et accessible pour les chercheurs car il est disponible 24/7 et peut être utilisé depuis n'importe quel endroit disposant d'une connexion Internet.","page":225,"axe":"05-ia-education-pedagogie","theme":"Disponibilité permanente","portee":"La condition posée, une connexion Internet, n'est pas partout acquise."}
+ ]},
+ {"chapitre":"87b669b4","citations":[
+  {"texte":"Pour le moment, nous pensons que les chercheurs devraient considérer ChatGPT comme un outil plutôt que comme un danger.","page":226,"axe":"02-ia-technique-academique","theme":"Outil plutôt que menace","portee":"Position d'auteur assumée, formulée comme un choix de posture et non comme un constat."},
+  {"texte":"Il pourrait être particulièrement utile pour les chercheurs dans les économies émergentes, les étudiants diplômés et les universitaires en début de carrière, qui manquent parfois de financement pour une assistance à la recherche traditionnelle (humaine).","page":226,"axe":"07-afrique-histoire-pensee","theme":"Chercheurs des économies émergentes","portee":"Passage directement adressé au chercheur africain qui travaille sans assistant ni budget de recherche."},
+  {"texte":"ChatGPT et d'autres applications similaires pourraient permettre de démocratiser le processus de recherche.","page":226,"axe":"05-ia-education-pedagogie","theme":"Démocratisation de la recherche","portee":"Promesse à évaluer, car l'accès à l'outil reste conditionné par la connexion et la langue."}
+ ]},
+ {"chapitre":"cdbf65a6","citations":[
+  {"texte":"Avant de commencer ce chapitre, vous devez être familiarisé avec le langage de programmation afin de faire confiance à ce que ChatGPT vous dit.","page":228,"axe":"03-ia-outils-pratique-prompting","theme":"Compétence préalable de l'utilisateur","portee":"Sans la compétence, l'utilisateur n'a aucun moyen de savoir si la réponse est bonne."},
+  {"texte":"Un grand nombre de contenus en ligne, y compris du code téléchargeable gratuitement et des tutoriels de programmation, ont servi de terrain d'entraînement.","page":228,"axe":"02-ia-technique-academique","theme":"Origine de la compétence en code","portee":"La qualité du code produit dépend de la qualité du code publié en ligne."}
+ ]},
+ {"chapitre":"320d74ac","citations":[
+  {"texte":"Parce que les réponses générées par ChatGPT étaient de mauvaise qualité mais convaincantes, Stack Overflow les a récemment interdites.","page":229,"axe":"06-ia-travail-management-metiers","theme":"Interdiction sur Stack Overflow","portee":"Cas concret où une communauté professionnelle a jugé le coût de vérification supérieur au gain."},
+  {"texte":"ChatGPT a obtenu un taux de réussite de 77,5% avec des conversations ultérieures.","page":229,"axe":"02-ia-technique-academique","theme":"Effet des relances","portee":"Montre que le résultat dépend du dialogue, donc de la compétence de celui qui interroge."}
+ ]},
+ {"chapitre":"a79a9bcb","citations":[
+  {"texte":"ChatGPT m'a impressionné car il ne trouve pas seulement les bugs dans le code, mais il fournit également des explications étape par étape et couvre tous les paramètres et donne des suggestions pour corriger le bug.","page":232,"axe":"05-ia-education-pedagogie","theme":"Correction expliquée","portee":"L'explication du défaut vaut davantage que sa correction pour qui apprend à programmer."}
+ ]},
+ {"chapitre":"9ffae9a0","citations":[
+  {"texte":"Bien que ChatGPT soit un outil utile pour les programmeurs capables de vérifier et de modifier le code produit, il n'a aucune intelligence.","page":233,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Utile sans être intelligent","portee":"Formule tranchée qui sépare l'utilité pratique de la prétention à comprendre."},
+  {"texte":"il ne peut pas raisonner logiquement ni repérer les incohérences et les absurdités dans le résultat","page":233,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Absence de contrôle logique","portee":"C'est à l'utilisateur qu'il revient de repérer ce que le modèle ne peut pas voir."}
+ ]},
+ {"chapitre":"a3e932db","citations":[
+  {"texte":"ChatGPT peut combler les vides avec des mots ou du code qui paraissent logiques","page":234,"axe":"03-ia-outils-pratique-prompting","theme":"Combler les vides","portee":"Décrit exactement la façon dont une erreur peut passer inaperçue dans un code généré."},
+  {"texte":"De plus, ChatGPT peut produire des idées ou du code redondants, incorrects ou même nocifs. Il ne peut pas comprendre l'interdépendance logique du code et peut donner des conseils généralement valables dans des situations inappropriées.","page":234,"axe":"06-ia-travail-management-metiers","theme":"Conseil valable au mauvais endroit","portee":"Le danger n'est pas le conseil faux, mais le conseil juste appliqué hors de son contexte."}
+ ]},
+ {"chapitre":"a9a54e13","citations":[
+  {"texte":"Il est crucial de se rappeler qu'avant d'être utilisé en production, le code produit par un modèle de langage IA doit toujours être examiné et vérifié par un développeur humain.","page":235,"axe":"06-ia-travail-management-metiers","theme":"Revue humaine obligatoire","portee":"Règle de production, motivée par le risque de défauts et de failles de sécurité."},
+  {"texte":"Il est crucial de se rappeler que l'intelligence artificielle (IA) ne peut pas remplacer les compétences en codage et en programmation des êtres humains.","page":235,"axe":"06-ia-travail-management-metiers","theme":"Pas de substitution du développeur","portee":"Réponse directe des auteurs à la crainte du remplacement ouverte en début de chapitre."}
+ ]},
+ {"chapitre":"7beea362","citations":[
+  {"texte":"Les développeurs humains apportent à la table un ensemble de compétences et de connaissances que l'IA ne peut pas égaler.","page":236,"axe":"06-ia-travail-management-metiers","theme":"Ce que l'humain apporte","portee":"Argument à préciser, car le texte ne dit pas lesquelles de ces compétences résistent."}
+ ]},
+ {"chapitre":"7f5ebef5","citations":[
+  {"texte":"Pour relever ce défi, ChatGPT a obtenu un financement de Microsoft, recevant 10 milliards de dollars pour une évaluation de 30 milliards de dollars.","page":238,"axe":"10-economie-entrepreneuriat-finance","theme":"Financement et valorisation","portee":"Rappelle que la puissance de calcul de ces modèles est d'abord une question de capital."},
+  {"texte":"La deuxième amélioration est l'introduction de l'historique des conversations, qui permettra aux utilisateurs de revoir et de gérer leurs conversations passées avec ChatGPT.","page":238,"axe":"03-ia-outils-pratique-prompting","theme":"Historique des conversations","portee":"Fonction pratique, mais qui constitue aussi une archive personnelle à considérer."}
+ ]},
+ {"chapitre":"7a7a1b00","citations":[
+  {"texte":"Ce modèle vise à offrir plusieurs avantages, notamment un accès général à ChatGPT même pendant les périodes de pointe, des temps de réponse plus rapides et un accès prioritaire aux nouvelles fonctionnalités et améliorations.","page":240,"axe":"10-economie-entrepreneuriat-finance","theme":"Ce que paie l'abonné","portee":"L'abonnement achète de la disponibilité et de l'antériorité, pas une capacité différente."},
+  {"texte":"La tarification par abonnement vise à soutenir la disponibilité de l'accès gratuit à ChatGPT pour un maximum de personnes.","page":240,"axe":"10-economie-entrepreneuriat-finance","theme":"Le payant finance le gratuit","portee":"Modèle économique dont dépend directement l'accès des utilisateurs les moins solvables."}
+ ]},
+ {"chapitre":"dde4952d","citations":[
+  {"texte":"De plus, la liste d'attente pour l'API ChatGPT sera bientôt lancée où les plus rapides auront peut-être la chance d'explorer leurs API en même temps que les premières utilisations.","page":241,"axe":"03-ia-outils-pratique-prompting","theme":"Ouverture de l'interface de programmation","portee":"L'accès à l'API est ce qui permet de bâtir un produit et non seulement d'utiliser un service."}
+ ]},
+ {"chapitre":"2ccfbce2","citations":[
+  {"texte":"ChatGPT est un service numérique qui a connu un succès sans précédent en peu de temps. En seulement cinq jours, il a rassemblé une impressionnante base d'un million d'utilisateurs, un exploit qu'aucun autre service numérique n'avait réalisé auparavant.","page":243,"axe":"10-economie-entrepreneuriat-finance","theme":"Un million d'utilisateurs en cinq jours","portee":"Repère de vitesse d'adoption, sans équivalent dans l'histoire des services numériques."},
+  {"texte":"Ainsi, des innovations supplémentaires sont nécessaires pour parvenir au point où nous pouvons vraiment utiliser une technologie comme ChatGPT pour garantir qu'elle pose des questions adaptées, qui ne sont pas orientées et qui sont pertinentes dans le contexte.","page":243,"axe":"06-ia-travail-management-metiers","theme":"Poser la bonne question","portee":"Ce que le modérateur humain apprend en des années reste hors de portée du modèle."}
+ ]},
+ {"chapitre":"0f0678e0","citations":[
+  {"texte":"Cependant, le maintien d'un si grand nombre d'utilisateurs et de leurs cas d'utilisation divers sur une plateforme d'accès gratuit peut être un défi.","page":244,"axe":"10-economie-entrepreneuriat-finance","theme":"Coût de la gratuité","portee":"Les interruptions de service touchent en premier les régions les moins prioritaires."},
+  {"texte":"Bien que ces solutions d'IA ne puissent pas offrir toutes les fonctionnalités de ChatGPT, elles excellent dans des tâches spécifiques et peuvent être tout aussi efficaces dans leurs domaines respectifs.","page":244,"axe":"03-ia-outils-pratique-prompting","theme":"Outils spécialisés","portee":"Invite à choisir l'outil selon la tâche plutôt qu'à s'en remettre au plus connu."}
+ ]},
+ {"chapitre":"2268a472","citations":[
+  {"texte":"Jasper Chat est une excellente option pour les entreprises souhaitant accélérer leur processus de production de contenu car, contrairement à de nombreuses autres options de ChatGPT, il se concentre uniquement sur les cas d'utilisation professionnelle.","page":244,"axe":"10-economie-entrepreneuriat-finance","theme":"Spécialisation professionnelle","portee":"Exemple de positionnement de marché fondé sur la restriction volontaire du champ."},
+  {"texte":"Character AI est un outil d'intelligence artificielle qui permet aux utilisateurs de communiquer avec des répliques synthétiques de personnages bien connus de films, de séries télévisées, de personnalités publiques et de célébrités.","page":245,"axe":"04-ia-societe-ethique-philosophie","theme":"Répliques de personnes réelles","portee":"Pose sans le dire la question du consentement des personnalités ainsi imitées."}
+ ]},
+ {"chapitre":"c886b0ae","citations":[
+  {"texte":"La façon dont Perplexity rassemble les sources à partir desquelles les solutions qu'il offre aux utilisateurs sont dérivées est l'une de ses principales caractéristiques distinctives. Les utilisateurs peuvent donc rapidement déterminer si les informations qui leur sont fournies sont légitimes et crédibles.","page":246,"axe":"03-ia-outils-pratique-prompting","theme":"Traçabilité des sources","portee":"Réponse directe au défaut des modèles qui n'indiquent pas d'où vient leur réponse."},
+  {"texte":"Cette alternative impressionnante à ChatGPT est conçue pour poursuivre un texte à partir d'une demande et est capable de produire un texte cohérent dans 46 langues différentes et 13 langages de programmation.","page":246,"axe":"02-ia-technique-academique","theme":"Couverture multilingue de BLOOM","portee":"Le nombre de langues couvertes détermine qui peut réellement se servir de ces modèles."}
+ ]},
+ {"chapitre":"3dcfe3d3","citations":[
+  {"texte":"Une autre contribution importante est l'utilisation de l'activation clairsemée, qui consiste à n'utiliser qu'un sous-ensemble de neurones pour une tâche donnée, ce qui permet d'obtenir de meilleures performances et des coûts d'exécution réduits.","page":247,"axe":"02-ia-technique-academique","theme":"Activation clairsemée","portee":"Piste technique pour réduire le coût d'exécution, donc l'obstacle principal à l'usage local."},
+  {"texte":"Il est démontré que l'OPT-175B est comparable à GPT-3, tout en ne nécessitant qu'un septième de l'empreinte carbone pour son développement.","page":247,"axe":"11-sciences-environnement","theme":"Empreinte carbone des modèles","portee":"Montre qu'à performance égale, le coût environnemental peut varier d'un facteur sept."},
+  {"texte":"Ces modèles sont difficiles à reproduire sans un capital important, étant donné leur coût de calcul.","page":247,"axe":"10-economie-entrepreneuriat-finance","theme":"Barrière du capital","portee":"Explique pourquoi la production de ces modèles reste concentrée dans quelques pays."}
+ ]},
+ {"chapitre":"68ce466a","citations":[
+  {"texte":"La capacité à créer du texte dans de nombreuses langues est l'une des caractéristiques distinctives de ChatGPT, ce qui en fait un outil précieux pour les applications qui prennent en charge de nombreuses langues.","page":249,"axe":"03-ia-outils-pratique-prompting","theme":"Capacité multilingue","portee":"Atout décisif pour des administrations et des marchés plurilingues."},
+  {"texte":"Depuis la pandémie mondiale, les cybermenaces ont augmenté de près de 80 %.","page":249,"axe":"11-sciences-environnement","theme":"Progression des cybermenaces","portee":"Chiffre à mettre en regard des budgets de sécurité informatique des administrations."},
+  {"texte":"Pour garantir que chacun puisse participer pleinement aux discussions, comprendre les problèmes et parvenir à un accord sur la meilleure action à entreprendre, une communication efficace est essentielle.","page":250,"axe":"04-ia-societe-ethique-philosophie","theme":"La langue comme condition de la participation","portee":"Vaut pour toute négociation internationale où une partie ne débat pas dans sa langue."}
+ ]},
+ {"chapitre":"71074ba8","citations":[
+  {"texte":"L'appareil d'un délégué du G20 peut être infecté par un virus malveillant via un lien, une clé USB ou une prise de charge, qui peut ensuite accéder à un réseau plus large d'appareils.","page":251,"axe":"11-sciences-environnement","theme":"Vecteurs d'infection ordinaires","portee":"Rappelle que les points d'entrée les plus banals restent les plus efficaces."}
+ ]},
+ {"chapitre":"8fafb4bf","citations":[
+  {"texte":"L'IA générative et ChatGPT peuvent rassembler et évaluer des informations de menaces actuelles provenant de diverses sources, telles que des articles de presse, des forums et des médias sociaux.","page":252,"axe":"06-ia-travail-management-metiers","theme":"Veille sur les menaces","portee":"Fonction de veille accessible sans disposer d'un service de renseignement propre."},
+  {"texte":"En traduisant du texte et de la parole en temps réel, l'IA générative et ChatGPT peuvent fournir une communication multilingue lors de la conférence du G20.","page":252,"axe":"03-ia-outils-pratique-prompting","theme":"Traduction en temps réel","portee":"Usage transposable à toute réunion où les participants ne partagent pas une langue."}
+ ]},
+ {"chapitre":"2a14cb49","citations":[
+  {"texte":"ChatGPT et l'IA générative peuvent être adaptés aux besoins de participants spécifiques, en leur offrant une aide et un soutien spécialisés dans leur langue préférée.","page":253,"axe":"03-ia-outils-pratique-prompting","theme":"Assistance dans la langue du locuteur","portee":"Ce que promet la technologie dépend de la couverture réelle de la langue concernée."}
+ ]},
+ {"chapitre":"cb7d59b7","citations":[
+  {"texte":"Selon OpenAI, GPT-4 est leur système le plus avancé à ce jour et est conçu pour produire des réponses qui sont non seulement plus précises et informatives, mais aussi plus sûres et plus utiles.","page":255,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Annonce de GPT-4","portee":"Formulation de l'éditeur, à lire comme une déclaration d'intention et non comme une mesure."},
+  {"texte":"Par exemple, il a réussi un examen de barreau simulé avec un score se situant dans les 10% meilleurs des candidats, tandis que le GPT-3.5 a obtenu un score se situant dans les 10% les plus bas.","page":255,"axe":"02-ia-technique-academique","theme":"Écart entre deux générations","portee":"Illustre l'ampleur du saut entre deux versions séparées de quelques mois."}
+ ]}
+]

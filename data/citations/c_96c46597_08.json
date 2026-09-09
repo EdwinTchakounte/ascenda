@@ -1,0 +1,170 @@
+[
+ {
+  "chapitre": "0ab1f0d0",
+  "citations": [
+   {
+    "texte": "L'algorithme word2vec n'a pas appris le concept de pays ou de pays européen ; ces deux mots apparaissent simplement dans les données d'apprentissage des contextes où apparaît France",
+    "page": 189,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ressemblance sans concept",
+    "portee": "La proximité statistique produit ce qui ressemble à une catégorie, sans qu'aucune catégorie ait été formée."
+   },
+   {
+    "texte": "Pour une personne avec un marteau, tout ressemble à un clou",
+    "page": 190,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'outil façonne le regard",
+    "portee": "Formule classique appliquée à la recherche : la méthode dont on dispose oriente la manière dont on pose les problèmes."
+   },
+   {
+    "texte": "On ne peut blâmer les vecteurs-mots ; ils ne font qu'exprimer le sexisme et autres préjugés de notre langage, et notre langue reflète les préjugés de notre société.",
+    "page": 191,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La langue porte nos préjugés",
+    "portee": "Les machines ne créent pas ces biais : elles les extraient de ce que nous écrivons, puis les redistribuent."
+   },
+   {
+    "texte": "Le débiaisage des vecteurs-mots est un défi de taille, mais probablement plus facile à relever que l'autre option : débiaiser le langage et la société.",
+    "page": 191,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Corriger l'outil ou la société",
+    "portee": "Trait d'humour lucide : réparer le reflet coûte moins cher que réparer ce qu'il reflète."
+   }
+  ]
+ },
+ {
+  "chapitre": "98a0bc66",
+  "citations": [
+   {
+    "texte": "Les premières approches de la traduction automatique ont été encouragées avec enthousiasme par le mathématicien Warren Weaver en 1947",
+    "page": 193,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Traduire comme décoder",
+    "portee": "Intuition fondatrice de 1947, séduisante et fausse : une langue n'est pas un chiffrement d'une autre."
+   },
+   {
+    "texte": "la traduction automatique statistique reposait sur un apprentissage à partir des données plutôt que sur des règles édictées par des humains",
+    "page": 193,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le tournant des données",
+    "portee": "Le basculement des années 1990 qui a fait de la traduction un problème de statistique plutôt que de grammaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "793b62fb",
+  "citations": [
+   {
+    "texte": "Mot après mot, le réseau construit une représentation de la phrase anglaise, encodée dans les activations de ses unités cachées.",
+    "page": 195,
+    "axe": "02-ia-technique-academique",
+    "theme": "Encoder une phrase",
+    "portee": "Toute la phrase se ramène à un état interne unique, qui devient le point de départ de sa reformulation."
+   },
+   {
+    "texte": "au bout d'un certain nombre de pas temporels, il « oublie » d'importantes composantes antérieures de la phrase",
+    "page": 195,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'oubli du long",
+    "portee": "Difficulté structurelle : plus la phrase est longue, plus son début s'efface de la représentation construite."
+   }
+  ]
+ },
+ {
+  "chapitre": "47366e90",
+  "citations": [
+   {
+    "texte": "il n'existe pas de traduction correcte unique d'un texte donné",
+    "page": 198,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Pas de réponse unique",
+    "portee": "Ce constat rend toute évaluation automatique difficile, en traduction comme dans toute tâche d'expression."
+   },
+   {
+    "texte": "Imaginez un cas dans lequel, alors que la plupart des traductions de phrases sont jugées « excellentes », d'autres, nombreuses, sont jugées « horribles ». La moyenne serait « plutôt bonne ».",
+    "page": 199,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ce que masque une moyenne",
+    "portee": "Une moyenne flatteuse peut recouvrir une alternance d'excellence et de désastre, préférable à éviter."
+   },
+   {
+    "texte": "les affirmations selon lesquelles ces systèmes de traduction sont proches du « niveau humain » ou atteignent la « parité humaine » reposent entièrement sur l'évaluation de traductions de phrases isolées, hors contexte, et non de passages plus longs",
+    "page": 199,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Lire les conditions du test",
+    "portee": "Une annonce de parité avec l'humain vaut ce que vaut le protocole sur lequel elle repose."
+   }
+  ]
+ },
+ {
+  "chapitre": "47c31adb",
+  "citations": [
+   {
+    "texte": "les systèmes de traduction automatique effectuent leur tâche sans rien comprendre au texte qu'ils sont en train de traduire",
+    "page": 201,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Traduire sans comprendre",
+    "portee": "L'obstacle principal n'est pas technique mais tient à ce qui manque : le rapport au monde dont parle le texte."
+   },
+   {
+    "texte": "la traduction est loin de s'arrêter à la consultation d'un dictionnaire et à la réorganisation des mots [...]. La traduction implique la création d'un modèle mental du monde concerné.",
+    "page": 201,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Traduire, c'est se représenter",
+    "portee": "On ne traduit pas des mots mais une situation que l'on doit d'abord se figurer entièrement."
+   },
+   {
+    "texte": "si la traduction automatique neuronale peut être remarquablement efficace et utile dans de nombreuses applications, les traductions, sans post-édition par des humains compétents, manquent encore fondamentalement de fiabilité",
+    "page": 201,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'humain reste en bout de chaîne",
+    "portee": "Conseil d'usage : se servir de ces outils oui, s'y fier sans relecture compétente non."
+   }
+  ]
+ },
+ {
+  "chapitre": "8f31e917",
+  "citations": [
+   {
+    "texte": "Il est difficile de ne pas être ébloui, voire stupéfait, de constater qu'une machine puisse prendre une image constituée de simples pixels et produire des légendes aussi précises.",
+    "page": 203,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'éblouissement légitime",
+    "portee": "L'autrice, très critique par ailleurs, reconnaît l'effet de sidération que produisent ces résultats."
+   },
+   {
+    "texte": "Ces légendes aberrantes vous font peut-être rire, mais si vous étiez aveugle et ne pouviez voir la photo, il vous serait difficile de savoir si la légende de la photo fait partie des légendes correctes ou incorrectes.",
+    "page": 205,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qui subit l'erreur",
+    "portee": "L'erreur amusante pour un observateur devient un problème sérieux pour celui qui dépend du système."
+   },
+   {
+    "texte": "elle passe à côté du sens de cette photo",
+    "page": 206,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Décrire sans saisir",
+    "portee": "Une légende exacte peut manquer entièrement ce que l'image dit de notre expérience et de nos émotions."
+   },
+   {
+    "texte": "Ils fonctionneront très bien dans certains cas, mais échoueront spectaculairement dans d'autres.",
+    "page": 206,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Réussite et échec sans transition",
+    "portee": "Le trait le plus constant de ces systèmes : l'absence de zone intermédiaire entre l'excellence et l'absurdité."
+   }
+  ]
+ },
+ {
+  "chapitre": "bdc48c42",
+  "citations": [
+   {
+    "texte": "L'ordinateur du vaisseau spatial Enterprise – avec son énorme fonds de connaissance et sa compréhension parfaite des questions qui lui sont posées – a longtemps été un objectif directeur de l'interaction homme-machine",
+    "page": 207,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Un modèle venu de la fiction",
+    "portee": "Une machine de science-fiction a servi de cahier des charges implicite à toute une industrie."
+   }
+  ]
+ }
+]

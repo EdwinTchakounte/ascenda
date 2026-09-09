@@ -1,0 +1,62 @@
+[
+ {"chapitre":"111bbe67","citations":[
+  {"texte":"Le théorème de Myhill-Nerode affirme que L est un langage régulier si et seulement si le nombre de classes d'équivalence de =L est fini.","page":75,"axe":"02-ia-technique-academique","theme":"Caractérisation des langages réguliers","portee":"Réduit une propriété de langage infini à un simple comptage de classes."},
+  {"texte":"Les grammaires ont été introduites pour une étude des classes de langages principalement dans le domaine des langues naturelles.","page":75,"axe":"02-ia-technique-academique","theme":"Origine linguistique des grammaires","portee":"Rappelle que la théorie des langages formels est née d'une question sur les langues humaines."}
+ ]},
+ {"chapitre":"07c734d4","citations":[
+  {"texte":"Un langage est rationnel s'il peut être décrit par une expression rationnelle.","page":76,"axe":"02-ia-technique-academique","theme":"Définition par la description","portee":"Troisième point de vue sur un même objet, après l'acceptation et la génération."},
+  {"texte":"Des améliorations algorithmiques ont été apportées depuis mais la complexité reste exponentielle et impraticable.","page":76,"axe":"02-ia-technique-academique","theme":"Décidable mais inutilisable","portee":"Un problème peut être résolu en théorie et rester hors de portée en pratique."}
+ ]},
+ {"chapitre":"f43f5436","citations":[
+  {"texte":"Cette logique est donc décidable car on peut décider de la satisfiabilité d'une formule en calculant un automate et en décidant du vide pour cet automate.","page":77,"axe":"02-ia-technique-academique","theme":"Décider une logique par un automate","portee":"Méthode générale : traduire une question logique en une question sur une machine."},
+  {"texte":"Chaque alternance de quantificateur nécessite un calcul du langage complémentaire et donc une exponentiation.","page":77,"axe":"02-ia-technique-academique","theme":"Prix de l'alternance","portee":"Chaque niveau de quantification supplémentaire multiplie le coût par une exponentielle."}
+ ]},
+ {"chapitre":"1f866a62","citations":[
+  {"texte":"Un automate détermine l'appartenance d'un mot à un langage reconnaissable avec une réponse booléenne. Une extension naturelle est d'associer à un mot une probabilité d'appartenance à un langage.","page":78,"axe":"02-ia-technique-academique","theme":"Du oui ou non à la probabilité","portee":"Passage du modèle logique au modèle statistique, qui domine aujourd'hui le traitement des langues."},
+  {"texte":"La classe des langages algébriques contient strictement la classe des langages reconnaissables","page":78,"axe":"02-ia-technique-academique","theme":"Hiérarchie des langages","portee":"Ajouter une pile à un automate lui fait franchir une frontière d'expressivité."}
+ ]},
+ {"chapitre":"d0459855","citations":[
+  {"texte":"Les langages algébriques et les automates à piles ont été très largement étudiés à cause de leurs très nombreuses applications : langages de programmation et langue naturelle, par exemple.","page":79,"axe":"02-ia-technique-academique","theme":"Deux domaines d'application","portee":"Le même formalisme sert à compiler un programme et à analyser une phrase."},
+  {"texte":"L'équivalence des transducteurs non déterministes sans e-règle est indécidable","page":79,"axe":"02-ia-technique-academique","theme":"Une frontière d'indécidabilité","portee":"Savoir si deux traducteurs font la même chose peut être hors de portée de tout algorithme."}
+ ]},
+ {"chapitre":"6168df35","citations":[
+  {"texte":"La structure d'arbre est omniprésente en informatique : analyse de programmes, arbres et-ou, arbres de classification, arbres et documents structurés, arbres phylogénétiques, ...","page":80,"axe":"02-ia-technique-academique","theme":"Omniprésence de l'arbre","portee":"Une même structure porte l'analyse d'un programme, la classification et la phylogénie."},
+  {"texte":"La plupart des propriétés s'étendent du cas des mots au cas des arbres : déterminisation, clôture par les opérations booléennes, lemme de pompage, décision du vide.","page":80,"axe":"02-ia-technique-academique","theme":"Transfert d'une théorie","portee":"Une théorie bien construite se transporte à une structure plus riche sans être refaite."}
+ ]},
+ {"chapitre":"7375bb7f","citations":[
+  {"texte":"le théorème de Rabin (Rabin's Tree Theorem) [Rabin, 1969] qui établit que la logique monadique du second-ordre des mots binaires (lesquels constituent l'arbre infini binaire) est décidable","page":81,"axe":"02-ia-technique-academique","theme":"Théorème de Rabin","portee":"Résultat de décidabilité sur une structure infinie, aux nombreuses applications."},
+  {"texte":"La situation est bien plus complexe pour la logique FO dans le cas des arbres","page":81,"axe":"02-ia-technique-academique","theme":"Le premier ordre sur les arbres","portee":"Ce qui était clair pour les mots redevient une question ouverte pour les arbres."}
+ ]},
+ {"chapitre":"82dd6869","citations":[
+  {"texte":"Cependant, les graphes sont intrinsèquement plus compliqués et il n'est pas possible de définir une bonne notion d'automate.","page":82,"axe":"02-ia-technique-academique","theme":"La limite des graphes","portee":"Rappelle qu'une méthode qui réussit sur deux structures peut échouer sur la troisième."},
+  {"texte":"L'algorithme de Knuth, Morris and Pratt [1977] a été le premier algorithme linéaire pour le filtrage. Cet algorithme a été conçu avec une vision « automates » du problème de filtrage.","page":82,"axe":"02-ia-technique-academique","theme":"Théorie et outil quotidien","portee":"Une abstraction théorique donne l'algorithme derrière une commande utilisée tous les jours."}
+ ]},
+ {"chapitre":"cf99a2a7","citations":[
+  {"texte":"L'introduction de formalismes pour une meilleure modélisation du langage naturel est constante.","page":83,"axe":"02-ia-technique-academique","theme":"Une modélisation jamais close","portee":"Aucun formalisme n'a épuisé la description des langues, ce qui explique leur multiplication."},
+  {"texte":"Les documents XML ont une structure d'arbre au sens défini précédemment mais avec la spécificité nouvelle suivante : un noeud a un nombre potentiellement non borné de fils.","page":83,"axe":"02-ia-technique-academique","theme":"XML et arbres non bornés","portee":"Un détail de format oblige à refaire une partie de la théorie des automates d'arbres."}
+ ]},
+ {"chapitre":"96edf8a5","citations":[
+  {"texte":"La question est difficile car les langages reconnaissables ne sont pas apprenables à partir de mots du langage (une trop grande généralisation ne pouvant être évitée).","page":84,"axe":"02-ia-technique-academique","theme":"Limite de l'apprentissage par exemples positifs","portee":"Sans contre-exemples, l'apprentissage généralise trop, résultat qui vaut bien au-delà des automates."},
+  {"texte":"La plupart des algorithmes construisent l'automate déterministe minimal et sont basés sur le théorème de Myhill Nérode.","page":84,"axe":"02-ia-technique-academique","theme":"De la théorie à l'apprentissage","portee":"Un théorème de caractérisation des années cinquante fonde les algorithmes d'inférence."}
+ ]},
+ {"chapitre":"5acac54d","citations":[
+  {"texte":"Attention, la simplicité de cette définition cache une difficulté liée à la représentation discrète du continu.","page":85,"axe":"02-ia-technique-academique","theme":"Représenter le continu","portee":"Toute machine ne manipule que du discret, ce qui contraint ce qu'elle peut dire des réels."},
+  {"texte":"On ne peut pas décider si un réel est nul.","page":85,"axe":"02-ia-technique-academique","theme":"Indécidabilité de la nullité","portee":"Le test le plus élémentaire du calcul numérique est indécidable en toute rigueur."}
+ ]},
+ {"chapitre":"4f9650a0","citations":[
+  {"texte":"Ces fonctions GPAC-engendrables n'incluent pas toutes celles de l'analyse récursive","page":86,"axe":"02-ia-technique-academique","theme":"Limite du calcul analogique","portee":"La machine analogique de Shannon n'atteint pas tout ce qu'une machine discrète calcule."},
+  {"texte":"Mentionnons que, dans plusieurs de ces modèles, il est possible d'exploiter le fait que l'on peut coder une suite non calculable dans un réel, ou d'utiliser le fait que l'on suppose une arithmétique exacte, pour réaliser des calculs super-Turing","page":86,"axe":"02-ia-technique-academique","theme":"Le super-Turing par hypothèse","portee":"Dépasser Turing suppose ici une idéalisation physique, non une machine réelle."}
+ ]},
+ {"chapitre":"f1bb935f","citations":[
+  {"texte":"Si cet algorithme ne présente pas d'application pratique, il est cependant la première preuve de la supériorité du calcul quantique sur le calcul classique.","page":87,"axe":"02-ia-technique-academique","theme":"Première preuve de supériorité quantique","portee":"Un résultat sans usage direct peut fonder tout un programme de recherche."},
+  {"texte":"l'algorithme de Shor permet la factorisation et le calcul du logarithme discret en temps polynomial, alors qu'aucun algorithme classique polynomial n'est connu pour résoudre ces problèmes","page":87,"axe":"02-ia-technique-academique","theme":"Algorithme de Shor","portee":"Les deux problèmes sur lesquels repose une grande partie de la cryptographie actuelle."}
+ ]},
+ {"chapitre":"07df8eee","citations":[
+  {"texte":"Il est clairement impossible d'unifier toutes les approches","page":88,"axe":"02-ia-technique-academique","theme":"Pas de modèle unique du calcul continu","portee":"Constat honnête, à opposer à l'unité que la thèse de Church donne au calcul discret."},
+  {"texte":"La première façon, proposée par Turing lui-même dans (Turing, 1939] consiste à considérer des machines avec oracles, qui correspondent à des boîtes noires capables de répondre à certaines questions.","page":88,"axe":"02-ia-technique-academique","theme":"Machines à oracle","portee":"Turing a lui-même posé le cadre pour parler de ce qui dépasserait sa propre machine."}
+ ]},
+ {"chapitre":"3b4f367b","citations":[
+  {"texte":"L'importance de ces questions est soulignée par le fait que le problème de l'égalité des classes P et NP ait été choisi comme l'un des sept problèmes mathématiques pour la solution desquels l'Institut Clay offre une prime d'un million de dollars.","page":89,"axe":"02-ia-technique-academique","theme":"Un problème du prix du millénaire","portee":"Situe l'enjeu au rang des grandes questions ouvertes des mathématiques."},
+  {"texte":"La performance d'un algorithme dépendant pour beaucoup du contexte d'utilisation, bien des résultats « optimaux » se voient détronés lorsqu'on limite d'une certaine façon le cadre d'utilisation.","page":89,"axe":"06-ia-travail-management-metiers","theme":"L'optimalité est contextuelle","portee":"Aucun choix technique n'est le meilleur dans l'absolu, il l'est pour un usage donné."}
+ ]}
+]

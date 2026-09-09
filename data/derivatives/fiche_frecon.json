@@ -1,0 +1,111 @@
+{
+ "document_id": "ac29ad99-5603-432b-8ea2-07e80a43cb3a",
+ "titre_normalise": "Manuel d'intelligence artificielle",
+ "auteurs": [
+  "Louis Frécon",
+  "Okba Kazar"
+ ],
+ "annee": 2009,
+ "type_ouvrage": "manuel",
+ "niveau": "avance",
+ "public_cible": "Étudiants de second cycle en informatique, cogniticiens, enseignants. Issu de dix-huit années de cours au département informatique de l'INSA de Lyon et à l'université Lyon 2, ainsi qu'au département informatique de l'université de Biskra, en Algérie. Publié par les Presses polytechniques et universitaires romandes, qui diffusent les travaux de l'École polytechnique fédérale de Lausanne.",
+ "these_centrale": "Un cours complet sur la tradition symbolique de l'intelligence artificielle, celle qui manipule des représentations explicites du monde plutôt que des poids statistiques. Les auteurs suivent l'ordre historique par choix de méthode, pour faire apparaître la dialectique propre à cette discipline : à chaque époque une approche dominante règle une partie du problème, et l'époque suivante est marquée par l'émergence d'un aspect qu'elle avait négligé.",
+ "idees_force": [
+  {
+   "titre": "La distinction symbolique et sous-symbolique organise tout l'ouvrage",
+   "explication": "Les auteurs annoncent d'emblée leur restriction : de même que la psychologie cognitive ne traite pas en soi des réflexes ou des émotions, l'intelligence artificielle exposée ici ne traite pas de la reconnaissance de formes, discipline voisine mais distincte, plus biophysique. Ce choix assumé explique à la fois la force du manuel sur la représentation des connaissances et son silence sur l'apprentissage statistique.",
+   "page": 1
+  },
+  {
+   "titre": "Produire, filtrer, trier",
+   "explication": "Le schéma de base de la recherche de solutions, exposé sur le problème du sac à dos. Un générateur énumère les solutions potentielles, un filtre retient les admissibles, un trieur les évalue et met à jour l'ensemble des solutions dominantes. Les auteurs en tirent deux conséquences pratiques : le procédé s'étend naturellement à l'évaluation multicritère, et il rend la recherche interruptible, puisqu'on peut publier au fil de l'eau toute solution meilleure que la précédente.",
+   "page": 38
+  },
+  {
+   "titre": "Réduire l'espace de recherche par le raisonnement avant de calculer",
+   "explication": "Sur la recherche de triplets pythagoriciens, les auteurs montrent qu'un raisonnement élémentaire sur les inégalités ramène le nombre de cas à tester d'un ordre de grandeur à un autre, et que deux formulations correctes du même filtrage diffèrent d'un facteur deux en efficacité. C'est la leçon la plus utile du chapitre sur la complexité : le gain vient du raisonnement, pas de la machine.",
+   "page": 38
+  },
+  {
+   "titre": "Laisser une chance marginale à la chance",
+   "explication": "Raffinement élégant des stratégies de jeu. La stratégie du meilleur pire cas est la plus sûre si l'adversaire joue parfaitement, mais elle ne lui laisse aucune occasion de se tromper. Les auteurs introduisent une notation qui distingue une valeur atteinte de justesse d'une valeur atteinte avec marge, ce qui permet de choisir, à sûreté égale, le coup qui offre une chance supplémentaire d'erreur adverse.",
+   "page": 73
+  },
+  {
+   "titre": "Une généalogie complète des réseaux sémantiques",
+   "explication": "Le manuel expose successivement les réseaux partitionnés, capables de représenter des énoncés emboîtés dont la vérité est indépendante de celle des propositions incluses, les réseaux à propagation de marqueurs proposés par Fahlmann en 1976, où l'héritage et l'exception deviennent des règles de propagation et la négation un lien inhibiteur, les réseaux dynamiques d'Agarwal appliqués à la planification robotique, et les graphes conceptuels de Sowa de 1984. C'est le traitement le plus complet de cette famille dans tout le corpus.",
+   "page": 109
+  },
+  {
+   "titre": "Ce qu'il faut corriger quand une conclusion est fausse",
+   "explication": "Passage de méthode qui dépasse largement l'informatique. Si une déduction valide produit une conclusion fausse, alors ou bien la dérivation est incorrecte, ou bien le jeu d'énoncés initial représente mal la réalité. On corrige donc d'abord les énoncés, prudemment. Et si aucune correction ne permet d'obtenir des conclusions acceptables, il reste à admettre que la logique employée est inadéquate, et à en chercher une autre.",
+   "page": 229
+  },
+  {
+   "titre": "Les logiques multivaluées et le paradoxe de l'implication",
+   "explication": "La partie logique ne s'arrête pas au calcul des propositions. Les auteurs montrent qu'une logique à trois valeurs, introduite pour raisonner sur des prémisses imprécises, est trop généreuse pour la déduction : le résultat d'un raisonnement y hérite d'une certitude que la prémisse ne justifie pas, et le tiers exclu cesse d'être respecté. Ils exposent alors la correction qui durcit la conjonction, et le prix qu'elle coûte.",
+   "page": 338
+  },
+  {
+   "titre": "Un cours sans exemple est un squelette",
+   "explication": "La formule, citée de Francisque Salles, gouverne la structure du livre : deux parties pratiques entières suivent les exposés généraux, l'une en Scheme, l'autre en Prolog. Les exercices sont nombreux, gradués, et systématiquement accompagnés d'indications séparées. Le manuel va jusqu'à construire pas à pas un dialogueur en langue naturelle qui apprend des faits, répond à des questions et oublie sur demande.",
+   "page": 302
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Espace d'état",
+   "definition": "Représentation d'un problème par l'ensemble de ses configurations possibles et des transitions entre elles. Les auteurs l'introduisent par la métaphore du labyrinthe, qui rend visible la différence entre parcourir et chercher."
+  },
+  {
+   "terme": "Générateur, filtre, trieur",
+   "definition": "Décomposition canonique d'une recherche de solution : énumérer, retenir les admissibles, classer les meilleures. Sa séparation en trois processus autorise un certain parallélisme."
+  },
+  {
+   "terme": "Réseau sémantique",
+   "definition": "Graphe où les sommets sont des concepts et les arcs des relations. La structure du réseau décrit les lois du système, l'état du système étant donné par l'activation des sommets."
+  },
+  {
+   "terme": "Propagation de marqueurs",
+   "definition": "Mécanisme de Fahlmann où répondre à une question consiste à activer un sommet et à laisser l'activation se propager jusqu'à stabilisation. L'héritage, l'exception et la négation deviennent des règles de propagation."
+  },
+  {
+   "terme": "Graphe conceptuel",
+   "definition": "Graphe biparti proposé par Sowa, distinguant concepts typés et relateurs typés dont les arcs numérotés permettent de traiter des relations à plusieurs arguments en distinguant les rôles."
+  },
+  {
+   "terme": "Carte cognitive",
+   "definition": "Représentation mentale qu'un individu se fait de l'organisation de l'espace où il se trouve. Notion attribuée à Tolman en 1948, dont le manuel généralise l'usage à la représentation des connaissances."
+  },
+  {
+   "terme": "Consistance",
+   "definition": "Propriété d'un jeu d'énoncés dont on ne peut dériver à la fois une proposition et sa négation. Le manuel distingue soigneusement la consistance du système d'inférence de celle de la théorie qu'on y développe."
+  },
+  {
+   "terme": "Énoncé contingent",
+   "definition": "Proposition que le système d'inférence ne permet ni de démontrer ni de réfuter. Les postulats d'Euclide sont contingents à la logique d'Aristote, ce qui explique que d'autres géométries soient possibles."
+  },
+  {
+   "terme": "Grammaire à clauses définies",
+   "definition": "Notation de Prolog permettant d'écrire directement des règles de grammaire, traduites automatiquement en prédicats qui portent la liste des mots avant et après reconnaissance."
+  },
+  {
+   "terme": "Logique multivaluée",
+   "definition": "Logique admettant plus de deux valeurs de vérité, introduite pour raisonner sur l'imprécis. Le manuel en montre les gains et les pathologies, notamment sur l'implication."
+  }
+ ],
+ "a_lire_si": "Vous voulez comprendre ce que l'intelligence artificielle a été pendant cinquante ans avant l'apprentissage profond, et pourquoi cette tradition reste vivante dans la planification, la représentation des connaissances et la vérification. C'est le seul ouvrage du corpus qui enseigne réellement, avec des exercices, des corrigés et deux langages pratiqués. Un ingénieur y trouvera des outils utilisables, pas seulement des idées.",
+ "a_eviter_si": "Vous cherchez à comprendre les systèmes actuels. Publié en 2009, le manuel exclut explicitement de son champ la reconnaissance de formes et ne traite donc ni des réseaux de neurones profonds, ni des transformeurs, ni de l'apprentissage à grande échelle. Il suppose aussi un niveau de second cycle en informatique : les chapitres logiques sont exigeants et ne se parcourent pas.",
+ "prerequis": [
+  "Des bases solides en informatique et en mathématiques discrètes. Les auteurs signalent d'ailleurs un ouvrage compagnon consacré à ces dernières.",
+  "Une familiarité avec la programmation. Les parties pratiques utilisent Scheme puis Prolog, et supposent qu'on accepte d'installer un interprète et de faire les exercices.",
+  "Aucune connaissance préalable de l'intelligence artificielle n'est requise : le manuel construit tout depuis le début."
+ ],
+ "controverses": [
+  "Le manuel est coécrit par un enseignant de l'université de Biskra, en Algérie, et il est issu en partie d'un enseignement donné là bas. C'est le seul ouvrage technique du corpus dont la production associe une institution africaine, et il démontre par son existence qu'un enseignement de ce niveau se donne sur le continent depuis longtemps.",
+  "La restriction annoncée en avant-propos, écarter la reconnaissance de formes comme discipline connexe mais distincte, était défendable en 2009. Elle est devenue le principal facteur de vieillissement du livre, puisque c'est précisément de ce champ écarté que sont venues les avancées de la décennie suivante.",
+  "L'exemplaire numérisé du corpus pose un problème pratique réel : la reconnaissance de caractères dégrade fortement les formules mathématiques, les tableaux de vérité et surtout les extraits de code. Les listings en Scheme et en Prolog sont souvent illisibles en l'état. Ce manuel doit être consulté sur une édition papier ou un exemplaire mieux numérisé pour ses parties pratiques.",
+  "Les auteurs présentent leur progression historique comme une dialectique, chaque époque corrigeant l'oubli de la précédente. C'est une thèse de philosophie des sciences, séduisante et jamais discutée, qui donne au récit une nécessité que l'histoire réelle des techniques n'a pas toujours."
+ ],
+ "confiance": 0.84
+}

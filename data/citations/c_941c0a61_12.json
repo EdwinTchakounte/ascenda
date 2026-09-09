@@ -1,0 +1,7 @@
+[
+ {"chapitre":"6eeff897","citations":[
+  {"texte":"Si ChatGPT poursuit cette voie, il pourrait devenir une superapplication, ayant incorporé de nombreuses autres applications, dont beaucoup sont des moteurs de recherche spécialisés.","page":166,"axe":"03-ia-outils-pratique-prompting","theme":"Vers la superapplication","portee":"Hypothese de 2023 sur la concentration des usages dans une seule interface. Question de dependance autant que de commodite."},
+  {"texte":"Jusqu'à l'avènement de ChatGPT et de ses semblables, les assistants virtuels utilisaient une forme différente d'IA associée à une recherche automatisée basée sur des mots clés.","page":166,"axe":"03-ia-outils-pratique-prompting","theme":"Ce qui a change chez les assistants","portee":"Distingue nettement deux generations d'assistants, souvent confondues dans le langage courant."},
+  {"texte":"Le temps nous dira comment les moteurs de recherche et les IA génératives comme ChatGPT coexistent, ou si l'un vient à supplanter l'autre.","page":166,"axe":"03-ia-outils-pratique-prompting","theme":"Coexistence ou remplacement","portee":"Prudence bienvenue apres plusieurs pages d'affirmations tranchees sur la mort du referencement."}
+ ]}
+]

@@ -1,0 +1,1176 @@
+OUVRAGE : Intelligence artificielle. Triomphes et déceptions
+AUTEUR(S) : Melanie Mitchell
+ANNÉE : inconnue
+PAGES : 333
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Page de Copyright (p. 3-4)
+  Table des matières (p. 328-333)
+  Prologue. Terrifié (p. 5-16)
+  Première partie. Le contexte (p. 17-17)
+  Chapitre 1. Les racines de l’intelligence artificielle (p. 18-18)
+  Deux mois et dix hommes à Dartmouth (p. 18-19)
+  On définit, puis on va de l’avant (p. 20-20)
+  Une anarchie de méthodes (p. 21-21)
+  L’IA symbolique (p. 22-23)
+  L’IA sub-symbolique : les perceptrons (p. 24-26)
+  Les entrées de notre perceptron (p. 27-27)
+  L’apprentissage des poids et du seuil du perceptron (p. 28-31)
+  Les limites des perceptrons (p. 32-32)
+  L’hiver de l’IA (p. 33-33)
+  Les choses faciles sont difficiles (p. 34-35)
+  Chapitre 2. Les réseaux neuronaux et l’ascension de l’apprentissage machine (p. 36-36)
+  Les réseaux neuronaux multicouches (p. 36-37)
+  L’apprentissage par rétropropagation (p. 38-39)
+  Le connexionnisme (p. 40-40)
+  Mauvais en logique, bons au frisbee (p. 41-41)
+  L’ascension de l’apprentissage machine (p. 42-42)
+  Chapitre 3. Le printemps de l’IA (p. 43-43)
+  Fièvre printanière (p. 43-44)
+  L’IA : étroite et générale, faible et forte (p. 45-45)
+  Les machines peuvent-elles penser ? (p. 46-48)
+  Le test de Turing (p. 49-51)
+  La Singularité (p. 52-53)
+  Une fable sur l’exponentielle (p. 54-55)
+  Le progrès exponentiel des ordinateurs (p. 56-56)
+  Neuro-ingénierie (p. 57-57)
+  Les sceptiques et les convaincus de la Singularité (p. 58-58)
+  Le pari sur le test de Turing (p. 59-63)
+  Deuxième partie. Regarder et voir (p. 64-64)
+  Chapitre 4. Qui, quoi, quand, où, pourquoi (p. 65-66)
+  Les choses faciles sont difficiles (surtout en vision par ordinateur) (p. 67-67)
+  La révolution de l’apprentissage profond (p. 68-68)
+  Le cerveau, le néocognitron et les réseaux neuronaux convolutifs (p. 69-69)
+  La reconnaissance d’objets dans le cerveau et dans les ConvNets (p. 69-70)
+  Entrées/sorties d’un ConvNet (p. 71-71)
+  Cartes d’activation (p. 72-75)
+  La classification dans les ConvNets (p. 76-76)
+  L’apprentissage d’un ConvNet (p. 77-78)
+  Chapitre 5. ConvNets et ImageNet (p. 79-79)
+  Construire ImageNet (p. 80-81)
+  Le Turc mécanique (p. 82-82)
+  Les compétitions ImageNet (p. 83-88)
+  La ruée sur le ConvNet (p. 89-89)
+  Les ConvNets ont-ils surpassé les humains dans la reconnaissance d’objets ? (p. 89-92)
+  Au-delà de la reconnaissance d’objets (p. 93-93)
+  Chapitre 6. Gros plan sur les machines qui apprennent (p. 94-94)
+  Apprendre seul (p. 95-95)
+  Le Big data (p. 96-97)
+  La longue traîne (p. 98-101)
+  Qu’a appris mon réseau ? (p. 102-103)
+  L’IA et les préjugés (p. 104-106)
+  Montrez vos calculs (p. 107-108)
+  Tromper les réseaux neuronaux profonds (p. 109-116)
+  Chapitre 7. Sur une IA fiable et éthique (p. 117-117)
+  L’IA bénéfique (p. 118-119)
+  Le Grand Compromis de l’IA (p. 120-120)
+
+[29/339 passages, 18841 tokens sur 243695]
+
+=== EXTRAITS ===
+
+[p. 3-4]
+L’édition originale de cet ouvrage a été publiée en anglais sous le titre
+Artificial Intelligence: A Guide for Thinking Human.
+Copyright © 2019 by Melanie Mitchell
+Avec la collaboration de Robert French
+L’Éditeur remercie Patrick Géhant
+pour l’aide apportée à la finalisation de la traduction.
+Direction artistique : Nicolas Wiel
+Image de couverture : © Jackie Niam / Adobe Stock.
+Ouvrage publié avec le concours du
+© Dunod, 2021 pour la traduction française
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ISBN : 978-2-10-083219-4
+
+À mes parents, qui m’ont appris à penser, et bien plus encore.
+
+---
+
+[p. 16-17]
+a remise en question
+de notre sentiment d’unicité de l’espèce humaine. Mon but est de vous amener à
+partager cette exploration et, comme moi, de repartir avec un sentiment plus clair
+de ce que cette discipline a accompli et du chemin qui reste à parcourir avant que
+nos machines puissent se prétendre dotées d’une humanité propre.
+Première partie
+LE CONTEXTE
+
+---
+
+[p. 25-26]
+ctivité. Au moment de
+comptabiliser la somme des entrées au neurone, chaque entrée était alors
+multipliée par son poids. Ce qui entrait donc au corps cellulaire était la somme
+des entrées brutes pondérées par leur poids. Le seuil d’un perceptron est
+simplement un nombre fixé par le programmeur (ou, comme nous allons le voir,
+*16
+appris par le perceptron lui-même).
+Figure 1. A. un neurone dans le cerveau. B. un perceptron élémentaire.
+En somme, un perceptron est un simple programme qui prend une décision de
+type binaire (c’est-à-dire oui-non, 1/0) selon que la somme de ses entrées
+pondérées dépasse ou non une valeur de seuil. Il vous arrive probablement de
+prendre des décisions de ce type. Par exemple, vous ne faites pas pareillement
+confiance à vos amis quand vous leur demandez leur point de vue sur un film. Si
+la somme totale de l’« enthousiasme des amis » – somme qui accorde plus de
+poids à vos amis les plus fiables – est suffisamment élevée (c’est-à-dire
+supérieure à une valeur de seuil inconsciente), vous décidez d’aller voir le film.
+C’est ainsi qu’un perceptron cinéphile prendrait sa décision... si seulement il
+avait des amis.
+S’inspirant des réseaux de neurones cérébraux, Rosenblatt imagina des
+réseaux de perceptrons accomplissant des tâches visuelles telles que la
+reconnaissance de visages et d’objets. Pour avoir une idée de la façon dont cela
+pourrait fonctionner, examinons le cas d’un perceptron qui doit reconnaître des
+chiffres manuscrits comme ceux de la figure 2.
+
+---
+
+[p. 35-37]
+humains aux échecs et au go, et
+résoudre de complexes problèmes d’algèbre. Comme l’a également dit Minsky,
+« En général, nous avons moins conscience de ce que notre esprit fait le
+mieux. »
+ La tentative de créer une intelligence artificielle nous a au moins
+aidés à percevoir à quel point notre esprit est complexe et subtil.
+*27
+2
+Les réseaux neuronaux et l’ascension
+de l’apprentissage machine
+Alerte spoiler : les réseaux neuronaux multicouches – extension des perceptrons
+dont Minsky et Papert estimaient qu’elle était probablement « stérile » – se sont
+en fait avérés constituer le fondement d’une bonne part de l’intelligence
+artificielle moderne. Comme ils sont à l’origine de plusieurs méthodes que je
+vais décrire dans les prochains chapitres, je vais maintenant expliquer leur
+fonctionnement.
+Les réseaux neuronaux multicouches
+Un réseau est simplement un ensemble d’éléments connectés de diverses
+manières. Nous connaissons tous les réseaux sociaux, dans lesquels les éléments
+sont des gens, et les réseaux informatiques, dans lesquels les éléments sont, bien
+entendu, des ordinateurs. Dans les réseaux neuronaux, les éléments sont des
+neurones simulés analogues aux perceptrons que j’ai décrits dans le précédent
+chapitre.
+La figure 4 montre un simple réseau neuronal multicouche, conçu pour
+reconnaître des chiffres manuscrits. Ce réseau comprend deux colonnes
+(couches) de neurones simulés de type perceptron (cercles). Par souci de
+simplicité (et probablement au grand soulagement de tout neurobiologiste qui
+lira ces lignes), j’utiliserai le terme unité au lieu de neurone simulé pour décrire
+les éléments de ce réseau. Comme le perceptron détecteur de 8 du chapitre 1, le
+réseau de cette figure 4 a 324 (18 × 18) entrées, chacune réglée sur la valeur de
+l’intensité du pixel correspondant dans l’image d’entrée. Mais contrairement au
+perceptron, ce réseau possède une couche de trois unités, dites cachées, en plus
+de sa couche de dix unités de sortie. Chaque unité de sortie correspond à un des
+dix chiffres possibles.
+
+Figure 4. Un réseau de neurones à deux couches conçu pour la reconnaissance des chiffres
+manuscrits.
+Les grosses flèches grises signifient que chaque unité dans la couche d’entrées
+a une connexion pondérée avec chaque unité cachée, et que chaque unité cachée
+a une connexion pondérée avec chaque unité de sortie. Le terme mystérieux
+d’unité cachée vient de la littérature sur les réseaux neuronaux ; il signifie
+simplement qu’il ne s’agit pas d’une unité de sortie. Un nom plus heureux aurait
+peut-être été unité intérieure.
+Pensez à la structure de votre cerveau : quelques neurones y contrôlent
+directement des « sorties » telles que les mouvements de vos muscles, mais la
+plupart d’entre eux ne font que communiquer avec d’autres neurones. On
+pourrait appeler ces derniers les neurones cachés du cerveau.
+Le réseau montré à la figure 4 est qualifié de « multicouche » parce qu’il
+contient deux couches d’unités (cachées et de sortie) au lieu d’une seule couche
+de sortie. En principe, un réseau multicouche peut avoir de multiples couches
+d’unités cachées ; les réseaux qui ont plus d’une couche d’unités cachées
+s’appellent des réseaux profonds. La « profondeur » d’un réseau est simplement
+son nombre de couches cachées. Je reviendrai plus en longueur sur les réseaux
+profonds dans les prochains chapitres.
+
+---
+
+[p. 45-45]
+Le battage médiatique sur l’intelligence artificielle devint rapidement
+assourdissant, et le milieu commercial en prit bonne note. Toutes les plus grosses
+entreprises technologiques investirent des milliards de dollars dans la recherche
+et développement en IA, soit en recrutant directement des experts en IA, soit en
+acquérant de petites start-up dans le seul but d’accaparer leurs talents (c’est le
+acqui-hiring). La possibilité d’être acquis, avec sa promesse d’élévation
+instantanée au statut de millionnaire, a nourri la prolifération de start-up, souvent
+fondées et dirigées par d’anciens professeurs d’université, chacun avec sa propre
+vision de l’IA. Comme l’observa le journaliste spécialiste de la technologie
+Kevin Kelly, « les plans de développement des 10 000 prochaines start-up sont
+faciles à prévoir : prenez X et ajouter IA. » Et point crucial, pour presque toutes
+ces entreprises, IA signifiait « apprentissage profond ».
+Le printemps de l’IA est une nouvelle fois de retour.
+L’IA : étroite et générale, faible et forte
+Comme tous ceux qui l’ont précédé, l’actuel printemps de l’IA met en scène des
+experts qui prédisent que « l’IA générale » – celle qui égale ou surpasse les
+humains dans la plupart des cas – sera bientôt là. « Le niveau humain de l’IA
+sera franchi au milieu des années 2020, » prédisait en 2008 Shane Legg,
+cofondateur de Google DeepMind. En 2015, le directeur général de FaceBook,
+Mark Zuckerberg, déclarait : « L’un de nos objectifs pour les cinq à dix
+prochaines années est fondamentalement de dépasser le niveau humain dans tous
+les sens humains primaires : la vue, l’ouïe, le langage, la cognition générale. »
+Selon un sondage de 2013 publié par les philosophes de l’IA Vincent Müller et
+Nick Bostrom, nombre de chercheurs en IA estiment à 50 % les chances pour
+que l’IA atteigne le niveau humain en 2040 .
+Si cet optimisme est en majeure partie motivé par les récents succès de
+l’apprentissage profond, ces programmes – comme tous les programmes de l’IA
+à ce jour – restent des exemples d’IA dite « étroite » ou « faible ». Ces termes ne
+sont pas aussi dépréciatifs qu’il y paraît ; ils renvoient simplement à un système
+qui ne peut effectuer qu’une seule tâche étroitement définie (ou un petit
+ensemble de tâches associées). AlphaGo est peut-être le meilleur joueur de go du
+monde, mais il ne sait rien faire d’autre ; il ne sait même pas jouer aux dames, au
+morpion, ou au Candy Land . Google Translate peut traduire en chinois une
+critique de film rédigée en anglais, mais il ne peut vous dire si son auteur a ou
+non aimé le film, et encore moins regarder lui-même le film et en faire la
+critique.
+*5
+*6
+*7
+*8
+*9
+
+---
+
+[p. 53-53]
+ard de fois plus puissante que toute l’actuelle
+intelligence humaine
+.
+L’auteur Andrian Kreye a ironisé sur cette prédiction de Kurzweil en disant
+qu’elle n’est « rien d’autre qu’une croyance dans le Ravissement
+technologique. »
+Kurzweil fonde toutes ses prédictions sur l’idée d’un « progrès exponentiel »
+*23
+*24
+*25
+*26
+*27
+*28
+
+---
+
+[p. 62-63]
+courbe de croissance incrémentale qui n’atteindra pas l’IA de niveau
+humain avant au moins un siècle ? Ou encore une autre bulle IA, bientôt suivie
+d’un autre hiver de l’IA ?
+Pour nous aider à nous orienter tant bien que mal sur ces questions, nous
+devons examiner minutieusement quelques aptitudes cruciales sous-tendant
+*49
+*50
+notre intelligence humaine, telles que la perception, le langage, la prise de
+décision, le bon sens et l’apprentissage. Nous allons voir dans les prochains
+chapitres jusqu’où l’IA est parvenue à acquérir ces aptitudes, puis nous
+évaluerons les perspectives qui s’offrent à elle, pour 2029 et au-delà.
+
+---
+
+[p. 74-75]
+son poids et
+additionner les résultats – s’appelle une convolution. D’où l’expression « réseau
+neuronal convolutif ». J’ai dit plus haut que dans un ConvNet, une carte
+d’activation est un quadrillage d’unités correspondant aux champs récepteurs qui
+couvrent l’image entière. Chaque unité d’une carte d’activation utilise les mêmes
+poids pour calculer une convolution avec son champ récepteur ; imaginez
+l’image d’entrée avec le carré blanc glissant le long de chaque fragment de
+l’image . La carte d’activation que l’on obtient est représentée à la figure 12 : le
+pixel central du champ récepteur d’une unité est coloré en blanc pour les
+activations positives et négatives élevées et en sombre pour les activations
+proches de zéro. Vous pouvez voir que les zones blanches font ressortir les
+endroits où existent des contours verticaux. Les cartes d’activation 2 et 3 de la
+figure 11 ont été créées de la même façon, mais avec des poids qui mettent
+respectivement en évidence les contours horizontaux et inclinés. Prises
+ensemble, les cartes des unités de la couche 1 détectrices de contours donnent au
+ConvNet une représentation de l’image d’entrée en termes de contours orientés
+dans différentes régions, ce qui ressemble à ce que donnerait un programme
+détecteur de contours.
+Un ConvNet (comme le cerveau) présente la scène visuelle comme une
+collection de cartes reflétant les spécialités spécifiques d’un ensemble de
+détecteurs. Dans mon exemple de la figure 11, ces spécialités sont les diverses
+orientations des contours. Nous allons le voir cependant, dans les ConvNets, le
+réseau lui-même apprend ce que devraient être ses spécialités-détecteurs ; celles-
+ci dépendent de la tâche spécifique pour laquelle il est formé.
+La fabrication de cartes ne se limite pas à la couche 1 de notre ConvNet. Vous
+le voyez à la figure 10, toutes les couches ont une structure similaire : un
+ensemble de détecteurs créant chacun sa propre carte d’activation. L’une des clés
+de la réussite du ConvNet est que – encore une fois tout comme dans le
+cerveau – ces cartes sont hiérarchisées : les entrées des unités de la couche 2
+sont les cartes d’activation de la couche 1, les entrées des unités de la couche 3
+sont les cartes d’activation de la couche 2, et ainsi de suite pour chaque couche.
+Dans notre réseau imaginaire, dans lequel les unités de la couche 1 réagissent
+aux contours, les unités de la couche 2 sont sensibles à des combinaisons
+spécifiques de contours, tels que les coins et les formes en T. Les détecteurs de la
+couche 3 sont sensibles à des combinaisons de combinaisons de contours. Quand
+vous montez dans la hiérarchie, les détecteurs deviennent sensibles à des
+caractéristiques de plus en plus complexes – ce que Hubel, Wiesel et d’autres ont
+observé dans le cerveau.
+Notre ConvNet imaginaire possède quatre couches, chacune dotée de trois
+cartes, mais dans le monde réel, ces réseaux peuvent avoir bien plus de couches
+– parfois des centaines – chacune contenant un nombre différent de cartes
+d’activation. La détermination de ces aspects et de nombreux autres de la
+structure d’un ConvNet fait partie de l’art d’amener ces réseaux complexes à
+*6
+
+---
+
+[p. 83-83]
+d’Amazon, bien que ne cherchant nullement à tromper qui que ce soit, est,
+comme le Turc mécanique originel, une « Intelligence Artificielle artificielle » .
+Fei-Fei Li perçut que si son groupe payait des dizaines de milliers de
+travailleurs sur le Turc mécanique afin de repérer les images non pertinentes
+pour chacun des termes de WordNet, la construction de l’ensemble des données
+pourrait être achevée en quelques années pour un coût relativement faible. En à
+peine deux ans, plus de trois millions d’images furent étiquetées conformément
+aux noms de WordNet pour former l’ensemble de données ImageNet. Pour le
+projet ImageNet, le Turc mécanique fut « une aubaine » . Le service est encore
+largement utilisé par des chercheurs en IA pour créer des ensembles de données ;
+de nos jours, les propositions de subventions académiques en IA incluent
+souvent un item pour « travailleurs sur le Turc mécanique ».
+Les compétitions ImageNet
+En 2010, le projet ImageNet lança le premier ImageNet Large Scale Visual
+Recognition Challenge (ILSVRC, compétition ImageNet de reconnaissance
+visuelle à grande échelle) afin d’accélérer le développement d’algorithmes plus
+généraux dans le domaine de la reconnaissance d’objets. Trente-cinq
+programmes prirent part au concours, qui émanaient de chercheurs en vision par
+ordinateur provenant d’universités et industries du monde entier. Les concurrents
+reçurent des images d’apprentissage étiquetées – 1,2 million en tout – et une liste
+des catégories possibles. Les programmes devaient ensuite trouver la bonne
+catégorie de chaque image dans un ensemble de test consistant en un nombre
+important d’images d’évaluation qui ne faisaient pas partie de l’ensemble
+d’apprentissage. Cette compétition proposait un millier de catégories possibles –
+contre vingt pour les concours PASCAL.
+Ce millier de catégories possibles était un sous-ensemble de termes choisis
+dans WordNet par les organisateurs. Ces catégories sont un assemblage aléatoire
+de noms, allant de termes familiers et banals (« citron », « château », « piano à
+queue »), parfois moins banals (« viaduc », « bernard-l’ermite »,
+« métronome »), parfois encore carrément obscurs (« lévrier écossais »,
+« tournepierre à collier », « patas »). En fait, les animaux et plantes obscurs – du
+moins ceux que je serais incapable de distinguer – constituent au moins un
+dixième du millier de catégories cibles.
+Certaines photos ne contiennent qu’un objet ; d’autres en contiennent
+plusieurs, objet « correct » compris. En raison de cette ambiguïté, un programme
+donne cinq catégories par image, et si la catégorie correcte est dans le lot, la
+*5
+*6
+
+---
+
+[p. 93-93]
+ordinateur est d’« amener une machine à décrire ce qu’elle voit », les machines
+devront alors reconnaître non seulement les objets mais aussi les relations qui les
+unissent et leurs interactions avec le monde. Si les « objets » en question sont
+des êtres vivants, les machines auront besoin de savoir des choses sur leurs actes,
+leurs objectifs, leurs émotions, sur ce qu’ils feront probablement dans
+l’immédiat, et sur tous les autres éléments qui interviennent dans la description
+d’une scène visuelle. En outre, si nous voulons vraiment que les machines
+décrivent ce qu’elles voient, elles devront utiliser un langage. Les chercheurs en
+IA travaillent activement à amener les machines à faire ces choses, mais comme
+d’habitude, ces choses « faciles » sont très difficiles. Comme l’a dit au The New
+York Times le spécialiste de la vision par ordinateur Ali Farhadi, « Nous sommes
+encore très très loin de l’intelligence visuelle, de la compréhension des scènes et
+des actions comme le font les humains. »
+Pourquoi sommes-nous encore si loin de cet objectif ? Il semble que
+l’intelligence visuelle ne puisse être facilement dissociée du reste de
+l’intelligence, en particulier de la connaissance générale, de l’abstraction et du
+langage – autant d’aptitudes qui, curieusement, impliquent des régions
+cérébrales dotées de nombreuses connexions rétroactives avec le cortex visuel.
+En outre, il se pourrait que la connaissance nécessaire à une intelligence visuelle
+de type humain – par exemple, interpréter la photo « La soldate et le chien » du
+début du précédent chapitre – ne puisse s’acquérir à partir de millions de photos
+téléchargées sur le Web et doive, d’une manière ou d’une autre, être vécue dans
+le monde réel.
+Le prochain chapitre va examiner de plus près l’apprentissage machine dans le
+domaine de la vision en se concentrant particulièrement sur les différences entre
+les humains et les machines au niveau de l’apprentissage et en essayant de voir
+ce que les machines que nous avons entraînées ont effectivement appris.
+*18
+
+---
+
+[p. 103-105]
+ses de données
+surapprenaient pareillement leurs données d’apprentissage. Un groupe a montré
+que si les ConvNets apprennent sur des photos téléchargées sur le Web (comme
+celles d’ImageNet), leur performance de reconnaissance est mauvaise sur des
+photos prises par un robot circulant dans une maison avec un appareil photo
+. Il
+*16
+semble que les clichés aléatoires d’objets domestiques peuvent être très
+différents des photos que les gens mettent sur le Web. D’autres équipes ont
+montré des modifications superficielles de photos – un léger floutage, un léger
+mouchetage, une petite modification des couleurs, une rotation des objets, etc. –
+peuvent amener les ConvNets à commettre des erreurs significatives alors que
+ces mêmes perturbations n’affectent pas la reconnaissance d’objets chez les
+humains
+. Cette faiblesse imprévue des ConvNets – même de ceux qui passent
+pour « surpasser les humains dans la reconnaissance d’objets » – indique qu’ils
+surapprennent leurs données d’apprentissage et apprennent des choses
+différentes de ce que nous essayons de leur enseigner.
+L’IA et les préjugés
+Ce manque de fiabilité des ConvNets peut provoquer des erreurs embarrassantes
+– et potentiellement préjudiciables. En 2015, Google vécut un cauchemar en
+termes de relations publique après avoir introduit une fonction d’étiquetage
+automatique de photos (via un ConvNet) dans son application Photos. Après
+avoir correctement attribué à des photos des étiquettes génériques telles que
+« Avions », « Voitures » et « Remise de diplômes », le réseau neuronal, comme
+le montre la figure 16, attribua l’étiquette « Gorilles » à un selfie de deux Afro-
+Américains. (Une profusion d’excuses plus tard, Google adopta une solution à
+court terme : la suppression de l’étiquette « Gorilles » de la liste des catégories
+possibles du réseau.)
+*17
+
+Figure 16. Étiquettes accolées à des photos par l’étiqueteur automatique de Google, et parmi
+elles, la tristement célèbre « Gorilles ».
+Ces erreurs de classification abjectes et largement ridiculisées sont
+embarrassantes pour les entreprises concernées, mais des erreurs plus subtiles
+dues à des biais raciaux ou sexuels ont été fréquemment remarquées dans les
+systèmes de vision fondés sur l’apprentissage profond. Les systèmes
+commerciaux de reconnaissance faciale, par exemple, tendent à être plus
+performants pour les visages masculins blancs que pour les visages féminins ou
+de couleur
+. Dans les appareils photo, les logiciels de reconnaissance faciale
+ont parfois tendance à ne pas voir les visages à peau foncée et à classer les
+visages asiatiques dans la catégorie « clignement des yeux » (figure 17).
+*18
+
+---
+
+[p. 118-119]
+qu’apportent
+aujourd’hui les outils de l’IA dans la vie des gens. De nombreuses autres
+technologies reposant sur l’IA, encore au stade de la recherche, sont sur le point
+de se banaliser.
+Dans un futur proche, les applications de l’IA seront probablement
+couramment utilisées dans le domaine de la santé. Des systèmes d’IA aideront
+les médecins à diagnostiquer les maladies, suggéreront des traitements,
+découvriront de nouveaux médicaments et surveilleront à domicile la santé et la
+sécurité des personnes âgées. La modélisation scientifique et l’analyse de
+données reposeront de plus en plus sur des outils de l’IA – par exemple, pour le
+perfectionnement des modèles de réchauffement climatique, de croissance et
+d’évolution démographique, d’écologie et de science alimentaire, et d’autres
+grands problèmes que la société rencontrera au cours de ce siècle. Selon Demis
+Hassabis, cofondateur du groupe DeepMind, chez Google, c’est là le plus
+important bénéfice potentiel de l’IA :
+Nous ne pourrons peut-être éviter la triste conclusion que même pour le
+groupe d’êtres humains les plus intelligents de la planète, ces problèmes ne
+s’avèrent si complexes qu’il sera difficile pour des humains et des experts
+scientifiques individuels de trouver dans leur vie le temps nécessaire pour
+innover et progresser sur ces problèmes. [...] Je suis convaincu que nous
+aurons besoin d’aide et je pense que l’IA sera la solution .
+Nous avons tous entendu dire que la future IA assumera les emplois que les
+humains détestent – les emplois mal payés, ennuyeux, épuisants, dégradants,
+basés sur l’exploitation ou carrément dangereux. Si cela se produit, cela pourrait
+être une véritable aubaine pour le bien-être de l’humanité. (Je discuterai plus loin
+l’envers de cette médaille, à savoir la razzia de l’IA sur les emplois humains.) De
+nos jours, les robots sont souvent utilisés en usine pour les tâches subalternes et
+répétitives, bien que nombre d’entre elles échappent encore aux capacités des
+robots actuels. Mais avec les progrès de l’IA, un nombre croissant de ces tâches
+pourraient être automatisées. Parmi les futures applications de l’IA sur les lieux
+de travail, on peut citer les camions et les taxis autonomes, ainsi que les robots
+pour la récolte des fruits, la lutte contre les incendies, la détection des mines
+antipersonnel et le nettoyage de l’environnement. En outre, les robots verront
+probablement leur rôle s’élargir dans le domaine de l’exploration planétaire et
+spatiale.
+La société trouvera-t-elle vraiment son compte si des systèmes d’IA prennent
+la relève dans ces emplois ? L’histoire de la technologie peut apporter quelques
+éléments de réponse à cette question. Parmi les professions occupées par les
+humains mais que la technologie a depuis longtemps automatisées, du moins
+dans les pays développés, on peut citer celle de lavandière, de conducteur de
+pousse-pousse, de liftier, de punkawallah (serviteur en Inde, dont le seul travail
+était d’actionner un ventilateur manuel pour rafraîchir la pièce, avant l’époque
+des ventilateurs électriques), de calculateurs (habituellement de calculatrices, qui
+*1
+
+---
+
+[p. 127-128]
+pour sauver
+dix piétons. Mais lorsqu’on leur demanda si elles achèteraient une voiture
+autonome programmée pour sacrifier ses passagers afin de sauver un bien plus
+grand nombre de piétons, l’immense majorité des personnes interrogées répondit
+qu’elles-mêmes n’achèteraient pas une telle voiture
+. Selon les auteurs des
+*19
+*20
+*21
+enquêtes, « les participants de six études d’Amazon Mechanical Turk ont
+approuvé les VA [voitures autonomes] utilitaires (autrement dit, les VA qui
+sacrifient leurs passagers pour le bien général) et aimeraient qu’elles aient plus
+d’acheteurs, mais préféreraient eux-mêmes rouler dans des VA qui protègent
+coûte que coûte leurs propres passagers. » Commentant cette étude, le
+psychologue Joshua Greene écrivit : « Avant de pouvoir intégrer nos valeurs
+dans des machines, nous devons donner plus de clarté et de cohérence à ces
+valeurs. »
+ Cela semble plus difficile que nous le pensons.
+Certains spécialistes de l’éthique de l’IA ont proposé de renoncer à tenter de
+programmer directement des règles morales dans les machines et de faire en
+sorte que les machines apprennent elles-mêmes des valeurs morales en observant
+le comportement humain
+. Cette approche par auto-apprentissage hérite
+toutefois de tous les problèmes de l’apprentissage machine que j’ai décrits dans
+le précédent chapitre.
+Personnellement, je pense que le progrès lié à l’attribution d’une intelligence
+morale aux ordinateurs est indissociable du progrès lié à d’autres formes
+d’intelligence : le vrai défi est de créer des machines réellement capables de
+comprendre les situations auxquelles elles sont confrontées. Comme le démontre
+Isaac Asimov dans « Cercle Vicieux » un robot ne peut fidèlement obéir à
+l’ordre d’éviter de faire du mal à un humain s’il ne comprend pas le concept de
+mal dans différentes situations. Raisonner sur la moralité exige que l’on
+reconnaisse les relations de cause à effet, que l’on envisage plusieurs futurs
+possibles, que l’on ait une idée des croyances et objectifs d’autrui, et que l’on
+prévoie les issues possibles de ses propres actions quelle que soit la situation
+dans laquelle on se trouve. Autrement dit, un préalable à un raisonnement moral
+fiable est un bon sens général ; or nous l’avons vu, même les meilleurs systèmes
+d’IA en sont aujourd’hui dépourvus.
+Jusqu’ici, nous avons vu que dans certaines tâches, les réseaux neuronaux
+profonds, entraînés sur de gigantesques ensembles de données, peuvent rivaliser
+avec les aptitudes visuelles humaines. Nous avons également vu certaines
+faiblesses de ces réseaux, notamment leur dépendance d’énormes quantités de
+données étiquetées par des humains et leur propension à échouer de manière très
+peu humaine. Comment créer un système d’IA qui apprenne réellement tout seul
+– un système qui serait plus fiable parce que, comme les humains, il saurait
+réfléchir sur la situation du moment et planifier ses actions futures en fonction de
+cette situation ? La prochaine partie du livre va montrer comment les chercheurs
+en IA utilisent des jeux tels que les échecs, le go, et même les jeux vidéo Atari
+comme « microcosmes » afin de développer des machines dotées de capacités
+*22
+*23
+
+---
+
+[p. 141-142]
+duire une
+voiture télécommandée et, avec plus ou moins de réussite, de transférer dans le
+monde réel les compétences acquises durant ces simulations . Toutefois, plus
+l’environnement est complexe et imprédictible, moins les tentatives de transfert
+dans le monde réel de ce qui a été appris durant la simulation réussissent. Ces
+*6
+difficultés expliquent pourquoi à ce jour, les plus grands succès de
+l’apprentissage par renforcement s’observent non pas en robotique, mais dans
+des domaines qui peuvent être parfaitement simulés sur un ordinateur. En
+particulier, les plus célèbres succès de l’apprentissage par renforcement sont
+associés au domaine des jeux. L’application aux jeux de l’apprentissage par
+renforcement est l’objet du prochain chapitre.
+
+---
+
+[p. 154-154]
+histoire. Par exemple, Demis Hassabis, de DeepMind, a écrit : « Le jeu d’échecs
+étant traditionnellement perçu comme une démonstration exemplaire de
+l’intelligence humaine, d’éminents informaticiens ont cru pendant des décennies
+qu’un grand joueur d’échecs numérique surpasserait bientôt toutes les autres
+capacités humaines. »
+ Nombre de gens, et parmi eux les premiers pionniers de
+l’IA Allen Newell et Herbert Simon, ont souscrit à cette vision exaltée des
+échecs. En 1958, Newell et Simon écrivirent : « Si l’on parvenait à construire un
+ordinateur jouant aux échecs à la perfection, on aurait alors le sentiment d’avoir
+pénétré au cœur même de l’intelligence humaine. »
+Le jeu d’échecs est bien plus complexe que le jeu de dames. Par exemple, j’ai
+dit plus haut qu’aux dames, il y a en moyenne six ou sept coups possibles pour
+une configuration donnée. Aux échecs, ce nombre passe à trente-cinq. Cela rend
+l’arbre de jeu des échecs bien plus grand que celui des dames. Au fil des
+décennies, les programmes joueurs d’échecs n’ont cessé de s’améliorer, de
+concert avec la vitesse croissante des ordinateurs. En 1997, IBM connut le
+second grand triomphe de ses programmes de jeu avec Deep Blue, un
+programme joueur d’échecs qui battit le champion du monde Garry Kasparov
+lors d’une rencontre en six parties largement télédiffusée.
+Deep Blue utilisa à peu près la même méthode que le programme de dames de
+Samuel : à chaque coup, il créait un arbre de jeu partiel dont la racine était la
+configuration du moment ; il appliquait sa fonction d’évaluation à la couche de
+l’arbre la plus lointaine, puis utilisait l’algorithme minimax pour faire remonter
+les valeurs à la configuration courante afin de déterminer le coup qu’il devait
+jouer. Les différences majeures entre le programme de Samuel et Deep Blue
+étaient que Deep Blue anticipait plus loin dans son arbre de jeu, avait une
+fonction d’évaluation plus complexe (adaptée aux échecs), une connaissance des
+échecs programmée à la main et avait une architecture parallèle spécialisée qui le
+rendait très rapide. En outre, contrairement au programme de Samuel, Deep Blue
+n’utilisait pas de manière centrale l’apprentissage machine.
+Comme pour la présentation à la télévision du joueur de dames de Samuel, la
+défaite de Kasparov face à Deep Blue entraîna une hausse significative de
+l’acion IBM
+. Elle suscita également une extrême consternation médiatique au
+sujet de l’intelligence surhumaine et fit douter que les humains gardent intacte
+leur motivation de jouer aux échecs. Depuis, cependant, l’humanité s’est
+adaptée. Comme Claude Shannon l’écrivit avec prescience en 1950, une
+machine capable de surpasser les humains aux échecs « nous obligera soit à
+admettre la possibilité d’une pensée mécanisée, soit à restreindre davantage
+notre concept de pensée. »
+ C’est cette seconde option qui l’a emporté. Jouer
+*14
+*15
+*16
+*17
+
+---
+
+[p. 163-163]
+10
+Au-delà des jeux
+Autrefois branche relativement obscure de l’IA, l’apprentissage par
+renforcement est devenu, lors de la dernière décennie, l’une des approches les
+plus passionnantes (et les plus financées) de cette discipline. Cette résurgence est
+largement due, en particulier aux yeux du grand public, aux projets de
+DeepMind que j’ai décrits au précédent chapitre. Les résultats de DeepMind
+avec les jeux Atari et le jeu de go sont effectivement remarquables, importants,
+et méritent d’être salués.
+Toutefois, pour la plupart des chercheurs en IA, le développement de logiciels
+de jeux surhumains n’est pas une fin en soi. Revenons en arrière et demandons-
+nous quelles sont les implications de ces succès pour l’obtention de progrès plus
+importants dans le domaine de l’IA. Sur ce sujet Demis Hassabis estime que :
+Les jeux ne sont que notre plate-forme de développement. [...] C’est le moyen
+le plus rapide de développer ces algorithmes d’IA et de les tester, mais en
+définitive, nous voulons qu’ils s’appliquent aux problèmes du monde réel et
+aient un impact énorme sur des choses telles que la santé et la science. De fait,
+cette IA est générale – elle apprend comment faire les choses [en s’appuyant
+sur] sa propre expérience et ses propres données.
+Examinons un instant cet aspect. Jusqu’à quel point cette IA est-elle
+générale ? Jusqu’où est-elle applicable au monde réel, au-delà des jeux ? Dans
+quelle mesure ces systèmes apprennent-ils effectivement « seuls » ? Et
+qu’apprennent-ils exactement ?
+La généralité et l’« apprentissage par transfert »
+Alors que je cherchais sur internet des articles sur AlphaGo, je suis tombée sur
+ce titre accrocheur : « AlphaGo de DeepMind a maîtrisé les échecs durant son
+temps libre. » Cette affirmation est fausse et trompeuse, et il importe de
+*1
+*2
+
+---
+
+[p. 170-171]
+es casseroles cachées au
+fond de l’évier. Le robot doit aussi savoir prendre divers objets et les placer
+(délicatement !) dans des endroits prévus à cet effet. Tout cela exigera
+d’apprendre à choisir parmi une multitude d’actions possibles impliquant le
+placement du corps du robot, ses « doigts » préhensiles, ses moteurs qui
+*13
+contrôlent le mouvement des objets de l’évier jusqu’à leur bon positionnement
+dans le lave-vaisselle, etc.
+Les agents joueurs de DeepMind avaient besoin de millions d’itérations pour
+leur entraînement. Si nous ne voulons pas voir des millions d’assiettes cassées,
+nous devrons entraîner notre robot par simulation. La simulation des jeux sur
+ordinateur est un processus très rapide et très précis ; il n’y a pas de mouvement
+réel des pièces, pas de balles réelles qui rebondissent sur des raquettes, pas de
+briques réelles qui explosent. En revanche, la simulation d’un robot chargeur de
+lave-vaisselle n’est pas aussi facile. Plus la simulation est réaliste, plus elle est
+lente à faire tourner sur un ordinateur, et même sur un ordinateur très rapide, il
+est extrêmement difficile d’intégrer avec précision toutes les forces physiques et
+tous les autres aspects du chargement de la vaisselle. Et puis il y a ce chien
+embêtant, et tous les autres aspects imprévisibles du monde réel ; comment
+trouver ce qu’il faut mettre dans la simulation et ce que l’on peut tranquillement
+ignorer ?
+Face à tous ces problèmes, Andrej Karpathy, directeur de l’IA chez Tesla, a
+remarqué que pour les tâches réelles, « presque toutes les suppositions associées
+au jeu de go et dont AlphaGo tire avantage sont violées, et, par conséquent, toute
+approche réussie pour les problèmes réels ne ressemblerait en rien celle adoptée
+par AlphaGo. »
+Personne ne sait ce que serait cette approche réussie. En fait, l’apprentissage
+par renforcement profond est un domaine encore très jeune. Les résultats que j’ai
+décrits dans ce chapitre peuvent être considérés comme une preuve de concept :
+la combinaison de réseaux profonds et du Q-apprentissage fonctionne
+étonnamment bien dans certains domaines extrêmement intéressants quoique
+restreints, et bien que ma discussion ait mis en lumière quelques-unes des
+actuelles limitations de cette combinaison, bon nombre de chercheurs s’efforcent
+aujourd’hui d’étendre l’apprentissage par renforcement pour lui donner une
+applicabilité plus générale. En particulier, les logiciels de jeux de DeepMind ont
+déclenché un nouvel intérêt et un nouvel enthousiasme pour cette méthode ; de
+fait, l’apprentissage par renforcement profond a été désigné comme l’une des
+« 10 technologies de pointe » de l’année 2017 par The Technology Review, le
+magazine du MIT. Les années à venir verront l’apprentissage par renforcement
+gagner en maturité et j’attendrai avec impatience l’apparition d’un robot
+autodidacte, qui chargera le lave-vaisselle et peut-être jouera au football et au go
+durant son temps libre.
+*14
+*15
+
+---
+
+[p. 180-182]
+e unité cachée calcule son activation à partir de l’entrée et des activations
+des unités cachées issues du précédent pas temporel. (Lors du premier pas
+temporel, ces valeurs récurrentes sont fixées à 0.) Cela donne au réseau un
+moyen d’interpréter les mots qu’il « lit » tout en se rappelant le contexte de ce
+qu’il a déjà « lu ».
+Figure 32 A. Réseau neuronal traditionnel. B. Réseau neuronal récurrent : à chaque
+pas temporel, les activations de ses unités cachées servent d’entrées au pas temporel suivant.
+La meilleure façon de comprendre le fonctionnement des RNR est de
+visualiser l’opération du réseau au cours du temps, comme à la figure 33, qui
+montre le RNR de la figure 32 sur huit pas temporels. Pour simplifier, j’ai
+représenté toutes les connexions récurrentes de la couche cachée par une seule
+flèche pointillée allant d’un pas temporel vers le suivant. À chaque pas temporel,
+les activations des unités cachées constituent l’encodage par le réseau de la
+phrase partielle qu’il a lue jusqu’ici. Le réseau continue d’affiner cet encodage à
+mesure qu’il continue de traiter les mots. Une fois atteint le dernier mot de la
+phrase, le réseau tombe sur un symbole FIN (similaire à un point final), qui lui
+dit que la phrase est terminée. Notez que le symbole FIN est ajouté à chaque
+phrase par des humains avant l’entrée du texte dans le réseau.
+
+Figure 33.  Le réseau neuronal récurrent de la figure 32 sur 8 pas temporels successifs.
+À chaque pas temporel, l’unité de sortie de ce réseau traite les activations
+(l’« encodage ») des unités cachées pour donner le niveau de confiance avec
+lequel le réseau considère que la phrase entrée (c’est-à-dire la partie de la phrase
+entrée dans le réseau jusqu’à ce pas temporel) génère un sentiment positif.
+Lorsqu’on applique le réseau à une phrase donnée, on peut ignorer cette sortie
+tant que la fin de la phrase n’est pas atteinte. Une fois cette fin atteinte, les unités
+cachées encodent la phrase tout entière, et l’unité de sortie donne le niveau
+définitif de confiance du réseau (en l’occurrence, 30 % de sentiment positif ou,
+de manière équivalente, 70 % de sentiment négatif).
+Le réseau ne cessant d’encoder la phrase que s’il rencontre le symbole FIN, le
+système peut, en principe, encoder des phrases de n’importe quelle longueur
+sous forme de nombres formant un ensemble de longueur fixe – les activations
+des unités cachées. Pour des raisons évidentes, ce type de réseau neuronal est
+souvent appelé réseau encodeur.
+La donnée d’un ensemble de phrases que des humains ont étiquetées
+« positives » ou « négatives » en termes de sentiment permet d’entraîner un
+réseau encodeur via la rétropropagation. Il y a cependant une chose que je n’ai
+pas encore expliquée. Les réseaux neuronaux exigent que leurs entrées soient des
+nombres . Quel est le meilleur moyen d’encoder les mots d’entrée sous forme
+de nombres ? La réponse à cette question a conduit à l’un des plus importants
+progrès réalisés en traitement du langage naturel durant la dernière décennie.
+Une idée simple pour encoder des mots sous forme de nombres
+Avant de décrire des possibilités d’encodage de mots sous forme de nombres, il
+faut définir la notion de vocabulaire d’un réseau neuronal. Ce vocabulaire est
+*9
+
+---
+
+[p. 194-195]
+d’apprentissage. Même si les systèmes de traduction automatique statistique
+avaient une connaissance très réduite des syntaxes des langues concernées, ces
+méthodes donnaient dans l’ensemble de meilleures traductions que les premières
+approches fondées sur des règles.
+Google Translate – qui est probablement le programme de traduction
+automatique le plus utilisé – a employé ces méthodes de traduction automatique
+statistique de 2006, année de son lancement, jusqu’en 2016, année à laquelle les
+chercheurs de chez Google avaient développé ce qu’ils affirmaient être une
+méthode de traduction plus performante, basée sur l’apprentissage profond et
+appelée traduction automatique neuronale. Peu après, la traduction automatique
+neuronale fut intégrée dans tous les programmes de traduction automatique
+dernier cri.
+L’encodeur rencontre le décodeur
+La figure 38 est un schéma de ce qui se passe sous le capot quand vous utilisez
+Google Translate (et tout autre programme actuel de traduction automatique),
+dans le cas, ici, d’une traduction de l’anglais vers le français . C’est un système
+complexe, j’en ai simplifié nombre de détails, mais la figure devrait vous donner
+une idée des grandes lignes du mécanisme.
+*3
+*4
+
+Figure 38.  Schéma d’une paire de réseaux « encodeurs-décodeurs » pour la traduction
+linguistique. Les rectangles blancs représentent les réseaux encodeurs et décodeurs opérant
+sur des pas temporels successifs. Les mots d’entrés – par exemple, man – sont d’abord
+transformés en vecteurs-mots – par exemple, wordvec(man) – avant de passer dans le réseau.
+La moitié supérieure de la figure 38 montre un réseau neuronal récurrent (un
+réseau encodeur), très semblable à celui que j’ai décrit au précédent chapitre. La
+phrase anglaise « A man went into a restaurant » (Un homme est entré dans un
+restaurant) est encodée en sept pas temporels. Les rectangles blancs représentent
+l’encodage de cette phrase par le réseau ; je décrirai plus loin ce à quoi
+ressemble le réseau à l’intérieur de ces rectangles. Durant l’encodage, un mot de
+la phrase entre à chaque pas temporel dans le réseau sous forme d’un vecteur-
+mot, semblable à ceux que j’ai décrits plus haut . Les flèches en pointillé qui
+relient un pas temporel au suivant représentent les connexions récurrentes dans
+la couche cachée. Mot après mot, le réseau construit une représentation de la
+phrase anglaise, encodée dans les activations de ses unités cachées.
+Lors du dernier pas temporel, le réseau encodeur reçoit un symbole END et
+les activations des unités cachées consistent maintenant en l’encodage de la
+phrase. Ces dernières activations des unités cachées fournies par l’encodeur
+entrent ensuite dans un second réseau, un réseau décodeur, qui va générer la
+traduction de la phrase. Le réseau décodeur, représenté dans la moitié inférieure
+de la figure 38, est simplement un autre réseau neuronal récurrent, mais dans
+lequel les sorties sont des nombres représentant les mots qui forment la phrase
+traduite – dont chacun rentre de nouveau dans le réseau lors du prochain pas
+temporel .
+Notez que la phrase française contient sept mots, alors que la phrase anglaise
+en a six. Ce système encodeur-décodeur peut en principe traduire une phrase de
+n’importe quelle longueur en une phrase de n’importe quelle autre longueur .
+Toutefois, lorsque les phrases deviennent trop longues, un réseau encodeur finit
+par perdre des informations utiles : au bout d’un certain nombre de pas
+temporels, il « oublie » d’importantes composantes antérieures de la phrase.
+Considérez par exemple cette phrase :
+Ma mère a dit que le chat qui est parti en avion à Hawaï avec sa sœur l’année
+avant que tu n’entres dans ce nouveau lycée vit maintenant avec mon cousin.
+Qui vit avec mon cousin ? La réponse à cette question peut influer dans
+certaines langues sur la traduction de est et vit en anglais. Les humains sont
+passablement bons pour traiter ce type de phrases alambiquées, tandis que les
+*5
+*6
+*7
+
+---
+
+[p. 206-207]
+est une machine capable d’interagir en temps
+réel, couramment et en souplesse, avec ses utilisateurs – en particulier,
+de converser avec eux et de répondre à leurs questions. Le prochain chapitre
+examine les obstacles qui restent à surmonter avant que les systèmes d’IA
+capables de traiter toutes nos questions ne voient le jour.
+13
+Demandez-moi n’importe quoi
+USS Enterprise. Date stellaire : 42402.7
+Lieutenant-Commander Data : Ordinateur, j’aimerais en savoir plus sur
+l’humour. Pourquoi certaines combinaisons de mots et d’actions font-elles rire
+les humains ?
+ORDINATEUR : Les sources sur ce sujet sont vastes. Veuillez préciser.
+Lieutenant-Commander Data : Présentation animée, humanoïde. Interaction
+requise.
+ORDINATEUR : Humour physique, cérébral, ou conteur général ?
+Lieutenant-Commander Data : De tous les artistes disponibles, qui est le plus
+drôle ?
+ORDINATEUR : Stan Orega, du trente-troisième siècle, spécialiste des
+plaisanteries sur la mathématique quantique.
+Lieutenant-Commander Data : Non. Trop ésotérique. Plus générique.
+ORDINATEUR : Accès en cours.
+(Une liste de noms s’affiche.)
+– Star Trek : The Next Generation, saison 2, épisode 4 : « The Outrageous
+Okona »
+L’ordinateur du vaisseau spatial Enterprise – avec son énorme fonds de
+connaissance et sa compréhension parfaite des questions qui lui sont posées – a
+longtemps été un objectif directeur de l’interaction homme-machine, envié par
+les fans de Star Trek et les chercheurs en IA (et l’interaction entre ces groupes
+est, dirons-nous, non négligeable).
+L’ancien cadre de Google, Tamar Yehoshua, reconnaissait franchement
+l’influence de l’ordinateur de Star Trek sur la conception de leur moteur de
+recherche du futur défendue par cette entreprise : « Notre vision est l’ordinateur
+*1
+
+---
+
+[p. 217-217]
+repérage de
+structures et de concordances de termes par le système au sein du même petit
+extrait. Le test porta uniquement sur des articles de Wikipedia proprement
+formatés – et non sur le vaste corpus de livres, d’articles de presse et de
+panneaux publicitaires qui occupe les heures de veille de la plupart des humains.
+*19
+*20
+
+---
+
+[p. 229-229]
+partie intégrante de la
+compréhension d’une situation .
+La compréhension est une simulation
+Le psychologue Lawrence Barsalou est l’un des plus célèbres promoteurs de
+l’hypothèse « compréhension égale simulation ». Selon lui, notre compréhension
+des situations que nous rencontrons est donnée par les simulations mentales que
+*5
+*6
+
+---
+
+[p. 240-241]
+ine et d’autres
+domaines spécifiques. À certains égards, la trajectoire de Cyc fait écho à celle de
+Watson d’IBM : ces deux programmes ont débuté par un effort de recherche
+fondamentale en IA, d’une portée et d’une ambition considérables, pour aboutir
+à un ensemble de produits commerciaux aux prétentions marketing élevées (du
+*6
+genre : Cyc « met la compréhension et le raisonnement humains à portée des
+ordinateurs » ) mais avec des objectifs limités plutôt que généraux, et peu de
+transparence au niveau des réelles performances et capacités du système.
+À ce jour, Cyc n’a pas eu de véritable impact sur l’ensemble des recherches en
+IA. En outre, certains membres de la communauté de l’IA ont sévèrement
+critiqué cette approche. Par exemple, selon Pedro Domingos, professeur d’IA à
+l’université de Washington, Cyc est « l’échec le plus notoire de l’histoire de
+l’IA. » Rodney Brooks, roboticien au MIT, est à peine plus aimable : « Si [Cyc]
+a été un effort héroïque, il n’a pas conduit à un système d’IA capable de livrer ne
+serait-ce qu’une compréhension simple du monde. »
+Et si nous donnions aux ordinateurs la connaissance subconsciente du monde
+apprise dans la prime enfance et l’enfance et qui est à l’origine de tous nos
+concepts ? Comment pourrions-nous, par exemple, enseigner à un ordinateur la
+physique intuitive des objets ? Plusieurs groupes de recherche ont relevé ce défi
+et construisent actuellement des systèmes d’IA capables d’apprendre petit à petit
+la physique de la cause et de l’effet dans le monde, à partir de vidéos, de jeux
+vidéo ou d’autres formes de réalité virtuelle
+. Aussi intrigantes qu’elles soient,
+ces approches ne progressent qu’à pas de bébé – comparé à la progression des
+bébés réels – vers le développement des connaissances essentielles intuitives.
+Lorsque l’apprentissage profond a commencé à faire la preuve de son
+extraordinaire série de succès, nombre de personnes, à l’intérieur et à l’extérieur
+de la communauté de l’IA, étaient relativement persuadées d’être sur le point
+d’atteindre une IA de niveau humain. Toutefois, comme je l’ai dit à de
+nombreuses reprises dans ce livre, les systèmes d’apprentissage profond étant
+plus largement utilisés, ils font apparaître les faiblesses de leur « intelligence ».
+Même les plus performants d’entre eux restent incapables d’étendre leur activité
+au-delà de leur étroit domaine d’expertise, de former des abstractions ou
+d’apprendre des choses sur les relations de cause à effet
+. Qui plus est, leurs
+erreurs non humaines et leur vulnérabilité aux exemples dits adverses montrent
+qu’ils ne comprennent pas réellement les concepts que nous essayons de leur
+inculquer. Les gens débattent encore pour savoir si l’on peut remédier à ces
+faiblesses avec plus de données ou des réseaux plus profonds, ou s’il manque
+quelque chose de plus fondamental
+.
+J’ai perçu récemment comme un changement dans les conversations :
+la communauté de l’IA reparle de plus en plus de l’importance primordiale que
+présente l’intégration du bon sens dans les machines. En 2018, le cofondateur de
+Microsoft, Paul Allen, a doublé le budget de son institut de recherche, l’Institut
+Allen pour l’IA, afin d’étudier tout spécialement le sens commun. Des
+*7
+*8
+*9
+*10
+*11
+*12
+
+---
+
+[p. 252-254]
+e de « symboles actifs » de
+Copycat afin de reconnaître des exemples de situations particulières en faisant
+des analogies. Nous aimerions que notre programme reconnaisse non seulement
+des exemples simples, tels ceux de la figure 48, mais aussi des exemples
+insolites qui exigent des glissements conceptuels. La situation prototype
+« promener un chien » met en jeu une personne (le promeneur du chien), un
+chien et une laisse. Le promeneur tient la laisse, la laisse est attachée au chien, et
+le promeneur et le chien marchent. D’accord ? En fait, c’est ce que l’on voit dans
+les exemples de la figure 48. Mais les humains qui comprennent le concept
+« promener un chien » reconnaîtraient également dans les photos de la figure 49
+des exemples de ce concept tout en étant conscients de l’écart de chacun par
+rapport à la version prototypique. Situate, qui est encore dans les premières
+phases de son développement, est censé tester des idées sur les mécanismes
+généraux sous-jacents à la création d’analogies humaines et démontrer que les
+idées mises en œuvre dans le programme Copycat peuvent fonctionner avec
+succès au-delà du micromonde des analogies entre chaînes de lettres.
+Figure 49.  Quatre exemples atypiques de « promenade de chien ».
+Copycat, Metacat et Situate ne sont que trois exemples de programmes
+créateurs d’analogies reposant sur l’architecture de symboles actifs de
+Hofstadter
+. En outre, l’architecture de symboles actifs n’est que l’une des
+multiples approches utilisées dans la communauté de l’IA pour créer des
+programmes capables de révéler des analogies. Toutefois, si l’analogie est
+fondamentale à tous les niveaux de la connaissance humaine, il n’existe encore
+aucun programme d’IA doté un tant soit peu des capacités humaines à créer des
+analogies.
+« Nous sommes vraiment, vraiment très loin »
+*24
+
+L’ère moderne de l’intelligence artificielle est dominée par l’apprentissage
+profond et son triumvirat constitué par les réseaux neuronaux profonds, le big
+data et les ordinateurs ultra-rapides. Toutefois, dans la quête d’une intelligence
+robuste et générale, l’apprentissage profond est peut-être en passe de se heurter à
+un mur, celui de l’imposante « barrière du sens ». Dans ce chapitre, j’ai présenté
+un rapide survol de quelques efforts entrepris pour déverrouiller cette barrière.
+J’ai regardé comment les chercheurs (moi-même comprise) tentent actuellement
+de doter les ordinateurs d’une connaissance de sens commun et d’aptitudes
+humaines en termes d’abstraction et de création d’analogies.
+En réfléchissant sur ce sujet, j’ai été particulièrement séduit par un article de
+blog plaisant et perspicace rédigé par Andrej Karpathy, l’expert en apprentissage
+profond et en vision par ordinateur qui dirige actuellement le département d’IA
+chez Tesla. Dans cet article, intitulé « The State of Computer Vision and AI : We
+Are Really, Really Far Away »
+, Karpathy décrit ses réactions, en tant que
+chercheur en vision par ordinateur, à une photo particulière, montrée à la
+figure 50. Il note que nous autres humains trouvons cette photo pleine d’humour
+et demande : « Que faudrait-il pour qu’un ordinateur comprenne cette image
+telle que vous ou moi la comprenons ? »
+Karpathy énumère nombre de choses que nous autres humains comprenons
+facilement mais qui échappent à l’entendement des meilleurs programmes
+actuels de vision par ordinateur. Par exemple, nous reconnaissons que cette
+scène contient non seulement des personnes, mais aussi des miroirs, de sorte que
+certaines personnes sont en fait des reflets dans ces miroirs. Nous reconnaissons
+que nous sommes dans un vestiaire et nous sommes frappés par l’insolite de la
+présence de gens en costumes dans un tel endroit.
+*25
+
+---
+
+[p. 265-265]
+assiques.
+L’EMI était-il créatif ? Ma réponse est non. La musique qu’il a produite fut
+parfois excellente, mais elle reposait sur les connaissances musicologiques de
+Cope, connaissances incluses dans les signatures musicales que Cope organisait
+et les règles musicologiques qu’il concevait. Point très important, j’irais jusqu’à
+e
+
+---
+
+[p. 274-275]
+se of stemming
+from another era entirely. As for cake, inserting that was what I would label
+“poetic lie-sense”, since of course pastry was nowhere to be found in the
+original, but it served as a natural bridge leading smoothly to the idea of jam,
+thus elegantly bringing one back to the original. Melanie also employed a rhyme
+*1
+that today wouldn’t fly – namely, “Then my love / Will remove” (corresponding
+to “Et qu’on sorte / Vitement”) – but back in Will’s day, that kind of rhyme was
+perfectly fine. All this just to say that we were having a ball relishing the fruits
+of genuine human intelligence, as opposed to the awkward stumblings of a
+machine simulacrum thereof. The idea that machines might soon or indeed ever
+be able to give any of us a run for our money was certainly was not given the
+time of day. That was just a far-fetched pipe dream.
+After graduating, Bob and Melanie remained strongly active in cognitive
+science (we eschewed the term “artificial intelligence” for our work, our
+motivation being to fathom the mind’s mysteries rather than to develop high-tech
+products), and Melanie in particular continued her work on analogy-making.
+Over the years, ever more buzz about the prowess of artificial intelligence was
+heard, about which I myself was largely skeptical but at times fearful, especially
+when certain unexpected thresholds were crossed (such as a piece of software
+running on ultra-fast hardware trouncing a top human player in Go).
+Melanie tended to pooh-pooh all the hype of AI reaching and surpassing
+human intelligence more readily than I did, but in any case each of us in our own
+way devoted a great deal of thought to the nature of AI and whether it would
+soon challenge us humans on our own turf. Eventually Melanie’s musings led to
+the writing of a book that did its best to lay to rest the exaggerated claims to
+which one is exposed all the time today.
+In this stellar study, Melanie covers essentially the full span of today’s AI,
+showcasing and explaining some of its greatest triumphs while at the same time
+revealing the enormous lacunas that remain behind the scenes and that could
+cause great dangers should AI be given control of such things as cars, planes,
+military decision-making, and so forth. She of course goes into depth on the
+topic of deep learning, which is the buzzword most frequently tossed about by
+today’s AI-hypers, and debunks it richly. She also treats the often bandied-about
+notion of self-driving cars, showing, as is crucial, how far from being realized
+full autonomy still is, because of all the crazy combinations of circumstances
+that can arise when one is on the road but cannot conceivably be imagined ahead
+of time.
+In writing this tome, Melanie has wrought a great service not only to the lay
+public, which often falls for the most brazen hype, but also to AI practitioners
+themselves, who badly need to be made aware of the need for honesty and
+humility concerning what thinking is all about, instead of being allowed by a
+credulous public to go down the route of hyperbole and hubris.
+
+---
+
+[p. 287-288]
+and Applications, 2017, p. 352-358 ; R. Geirhos et al., « Generalisation in Humans and Deep Neural
+Networks », Advances in Neural Information Processing Systems 31, 2018, p. 7549-7561 ; M. Alcorn
+et al., « Strike (with) a Pose : Neural Networks Are Easily Fooled by Strange Poses of Familiar
+Objects », arXiv:1811.11553, 2018.
+er
+*18. M. Orcutt, « Are Face Recognition Systems Accurate ? Depends on Your Race », Technology
+Review, 6 juillet 2016, www.technologyreview.com/s/601786/are-face-recognition-systems-accurate-
+depends-on-your-race.
+*19. J. Zhao et al., « Men Also Like Shopping : Reducing Gender Bias Amplification Using
+Corpus-Level Constraints », Proceedings of the 2017 Conference on Empirical Methods in Natural
+Language Processing, 2017.
+*20. W. Knight, « The Dark Secret at the Heart of AI », The Technology Review, 11 avril 2017,
+www.technologyreview.com/s/604087/the-dark-secret-at-the-heart-of-ai/.
+*21. C. Szegedy et al., « Intriguing Properties of Neural Networks », Proceedings of the
+International Conference on Learning Representations, 2014.
+*22. A. Nguyen, J. Yosinski et J. Clune, « Deep Neural Networks Are Easily Fooled : High
+Confidence Predictions for Unrecognizable Images », Proceedings of the IEEE Conference on
+Computer Vision and Pattern Recognition, 2015, p. 427-436.
+*23. Voir par exemple M. Mitchell, An Introduction to Genetic Algorithms, Cambridge (MA),
+MIT Press, 1996.
+*24. Nguyen, Yosinski et Clune, « Deep Neural Networks Are Easily Fooled ».
+*25. M. Sharif et al., « Accessorize to a Crime : Real and Stealthy Attacks on State-of-the-Art
+Face Recognition », Proceedings of the 2016 ACM SIGSAC Conference on Computer and
+Communications Security, 2016, p. 1528-1540.
+*26. K. Eykholt et al., « Robust Physical-World Attacks on Deep Learning Visual
+Classification », Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition,
+2018, p. 1625-1634.
+*27. S. G. Finlayson et al., « Adversarial Attacks on Medical Machine Learning », Science 363, n
+6433, 2019, 1287-1289.
+*28. Cité dans W. Knight, « How Long Before AI Systems Are Hacked in Creative New
+Ways ? », Technology Review, 15 décembre 2016, www.technologyreview.com/s/603116/how-long-
+before-ai-systems-are-hacked-in-creative-new-ways.
+*29. J. Clune, « How Much Do Deep Neural Networks Understand About the Images They
+Recognize 
+? 
+», 
+diapos 
+de 
+conférence, 
+2016,
+http://c4dm.eecs.qmul.ac.uk/horse2016/HORSE2016_Clune.pdf, consulté le 22 novembre 2020.
+Chapitre 7. Sur une IA fiable et éthique
+*1. Cité dans D. Palmer, « AI Could Help Solve Humanity’s Biggest Issues by Taking Over from
+Scientists, 
+Says 
+DeepMind 
+CEO 
+», 
+Computing, 
+26 
+mai 
+2015,
+www.computing.co.uk/ctg/news/2410022/ai-could-help-solve-humanity-s-biggest-issues-by-taking-
+over-from-scientists-says-deepmind-ceo.
+*2. S. Lynch, « Andrew Ng : Why AI Is the New Electricity », Insights by Stanford Business, 11
+mars 2017, www.gsb.stanford.edu/insights/andrew-ng-why-ai-new-electricity.
+*3. J. Anderson, L. Rainie et A. Luchsinger, « Artificial Intelligence and the Future of Humans »,
+Pew Research Center, 10 décembre 2018, www.pewinternet.org/2018/12/10/artificial-intelligence-
+and-the-future-of-humans.
+*4. Parmi les récentes analyses des questions d’éthiques liées à l’IA et au big data, on peut citer C.
+O’Neil, Weapons of Math Destruction : How Big Data Increases Inequality and Threatens
+o
+
+---
+
+[p. 299-300]
+sion lucide des insuffisances de l’apprentissage profond, voir G. Marcus,
+« Deep Learning : A Critical Appraisal », arXiv:1801.00631, 2018.
+*13. DARPA 
+Fiscal 
+Year 
+2019 
+Budget 
+Estimates, 
+Feb. 
+2018,
+www.darpa.mil/attachments/DARPAFY19PresidentsBudgetRequest.pdf.
+*14. Pattern Recognition, New York, Spartan Books, 1970.
+o
+o
+o
+*15. Toutes les illustrations des problèmes de Bongard que je donne ici proviennent du site Web
+de Harry Foundalis, Index of Bongard Problems, www.foundalis.com/res/bps/bpidx.htm, qui contient
+cent problèmes dus à Bongard et de nombreux autres problèmes inventés par d’autres personnes.
+*16. R. M. French, The Subtlety of Sameness, Cambridge (MA), MIT Press, 1995.
+*17. Un programme particulièrement intéressant qui tenta de résoudre les problèmes de Bongard
+fut conçu par Harry Foundalis alors qu’il préparait sa thèse dans le groupe de recherche de Douglas
+Hofstadter à l’université de l’Indiana. Foundalis déclara explicitement qu’il construisait non pas un
+« solutionneur de problèmes de Bongard », mais une « architecture cognitive inspirée par les
+problèmes de Bongard ». Ce programme fut inspiré à chaque niveau par la perception humaine,
+depuis la vision jusqu’à l’abstraction et l’analogie, tout à fait dans l’esprit des intentions de Bongard,
+bien qu’il n’ait réussi à résoudre qu’un petit nombre des problèmes de Bongard. Voir H. E.
+Foundalis, « Phaeaco : A Cognitive Architecture Inspired by Bongard’s Problems », PhD diss.,
+Indiana University, 2006, www.foundalis.com/res/Foundalisdissertation.pdf. Foundalis possède un
+vaste site Web sur lequel il actualise ses travaux sur les problèmes de Bongard :
+www.foundalis.com/res/diss_research.html.
+*18. S. Stabinger, A. Rodríguez-Sánchez et J. Piater, « 25 Years of CNNs : Can We Compare to
+Human Abstraction Capabilities ? », Proceedings of the International Conference on Artificial
+Neural Networks, 2016, p. 380-387. Une étude analogue figure dans J. Kim, M. Ricci et T. Serre,
+« Not-So-CLEVR : Visual Relations Strain Feedforward Neural Networks », Interface Focus 8, n 4,
+2018, 2018.0011.
+*19. Quand je dis « la plupart des gens », je me fie aux résultats des enquêtes que j’ai conduites
+dans le cadre de ma thèse de doctorat. Voir M. Mitchell, Analogy-Making as Perception, Cambridge
+(MA), MIT Press, 1993.
+*20. Hofstadter a inventé l’expression « conceptual slippage » (glissement conceptuel) dans sa
+discussion des problèmes de Bongard au chapitre 19 de D. R. Hofstadter, Gödel, Escher, Bach : an
+Eternal Golden Braid, New York, Basic Books, 1979. Voir la traduction française, Gödel, Escher,
+Bach : Les Brins d’une Guirlande Éternelle, Paris, InterÉditions, 1985, p. 735.
+*21. Ibid., p. 349–51. Dans la traduction française : p. 363-364
+*22. Une description détaillée de Copycat figure au chapitre 5 de D. R. Hofstadter et du Fluid
+Analogies Research Group, Fluid Concepts and Creative Analogies : Computer Models of the
+Fundamental Mechanisms of Thought, New York, Basic Books, 1995. Une description encore plus
+détaillée figure dans le livre tiré de ma thèse de doctorat, Analogy-Making as Perception, Cambridge
+(MA), MIT Press, 1993.
+*23. J. Marshall, « A Self-Watching Model of Analogy-Making and Perception », Journal of
+Experimental and Theoretical Artificial Intelligence 18, n 3, 2006, p. 267-307.
+*24. Plusieurs de ces programmes sont décrits dans Hofstadter et le Fluid Analogies Research
+Group, Fluid Concepts and Creative Analogies (Basic Books, 1996).
+*25. A. Karpathy, « The State of Computer Vision and AI : We Are Really, Really Far Away »,
+blog d’Andrej Karpathy, 22 octobre 2012, karpathy.github.io/2012/10/22/state-of-computer-vision.
+*26. Voir 
+la 
+Stanford 
+Encyclopedia 
+of 
+Philosophy, 
+sous 
+« 
+Dualism 
+»,
+plato.stanford.edu/entries/dualism/.
+*27. Pour une discussion philosophique convaincante de l’hypothèse de l’incarnation en sciences
+cognitives, voir A. Clark, Being There : Putting Brain, Body, and World Together Again, Cambridge
+(MA), MIT Press, 1996.
+o
+o
+
+---
+
+[p. 327-327]
+k Photo.
+Figure 49d : Thang Nguyen, https://www.flickr.com/photos/70209763@N00/
+399996115, sous license Creative Commons Attribution-ShareAlike 2.0 Generic
+license, https://creativecommons.org/licenses/by-sa/2.0/.
+Figure 50 : P. Souza, Obama: An Intimate Portrait (New York: Little, Brown,
+and Co., 2018), p. 102 (domaine public).

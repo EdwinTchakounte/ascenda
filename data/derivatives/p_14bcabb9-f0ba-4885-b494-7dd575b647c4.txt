@@ -1,0 +1,296 @@
+OUVRAGE : IAI lexique
+AUTEUR(S) : Miloeil Miloeil
+ANNÉE : inconnue
+PAGES : 4
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  (non structuré)
+
+[4/4 passages, 3950 tokens sur 3950]
+
+=== EXTRAITS ===
+
+[p. 1-2]
+1 
+CCBY /  Julie Stein – 2020 / 
+ 
+ 
+ 
+ 
+TERME 
+DÉFINITION 
+Algorithmes 
+Un algorithme est une suite finie et non ambiguë d’opérations ou d'instructions 
+permettant de résoudre une classe de problèmes, et de créer un programme 
+informatique. On le compare souvent à une recette de cuisine. Un algorithme est 
+donc un processus qui suit un ensemble de règles opératoires défini par son 
+concepteur (pour reprendre l’exemple de la recette de cuisine, l'algorithme pour 
+faire cuire des pâtes serait le suivant : mettre de l’eau dans une casserole, faire 
+chauffer l’eau, si l’eau bout : y plonger les pâtes, si l’eau ne bout pas : ne pas mettre 
+les pâtes dans l’eau...). 
+Anthropomorphisme 
+Attribution de caractéristiques et réactions humaines à quelque chose qui ne l’est 
+(une entité, un animal, un objet, une machine...) 
+Apprentissage 
+automatique ou “machine 
+learning” 
+Mécanisme permettant à un algorithme d’adapter son calcul  en se basant sur des 
+données. 
+Approche symbolique 
+Dans cette approche, un ensemble de méthodes et procédures permet de réaliser 
+une tâche en spécifiant le problème à résoudre sous forme de symboles et de règles 
+permettant de transformer ces symboles. C’est cette méthode qui est utilisée dans 
+les systèmes experts. 
+Approche numérique ou 
+connexionniste 
+Dans cette approche, on représente l’information numériquement et implémente le 
+traitement sous forme d’un réseau d’unités élémentaires de calcul (par exemple des 
+neurones artificiels). On entraîne le système, en donnant des exemples de ce qu’il 
+doit faire et répète cette tâche  jusqu’à minimiser les erreurs. Dans l’apprentissage 
+supervisé on fournit le résultat attendu pour chaque exemple et dans l’apprentissage 
+par renforcement on fournit un retour sous forme de récompense. 
+Apprentissage supervisé 
+Mode d’apprentissage qui se base sur des exemples annotés (ex : une image de 
+chien avec l’information “il y a un chien”). 
+Apprentissage par 
+renforcement 
+Mode d'apprentissage par “récompense”, on ne fournit pas des exemples mais un 
+retour positif ou négatif selon le résultat fourni, sans expliciter la raison. 
+Automatique 
+Se dit d’une action qui s’accomplit par l’exécution d’un algorithme sans intervention 
+humaine. 
+ 
+LEXIQUE 
+ 
+Julie Stein / 2020 /  
+ 
+ 
+ 
+ 
+ 
+
+                                
+2 
+CCBY /  Julie Stein – 2020 / 
+ 
+Biais cognitifs 
+ 
+Ensemble de facteurs psychiques, moraux, culturels ou sociaux qui influencent nos 
+modes et mécanismes de pensées. 
+Big data 
+Ensemble de techniques qui permettent d’analyser les propriétés statistiques de très 
+grandes bases de données afin d’en détecter les régularités, en particulier grâce à 
+l’utilisation d’algorithmes d’apprentissage (on parle aussi de « data mining »). 
+On utilise également cette expression, ou « données massives », comme 
+représentant des ensembles de données qui deviennent si volumineux qu’ils en 
+deviennent difficiles à traiter avec des outils classiques de gestion de base de 
+données ou de gestion de l’information. 1 
+Capteur 
+Dispositif électronique qui mesure les valeurs physiques en entrée et les traduit en 
+nombres pour un algorithme. 
+Créativité 
+Capacité à imaginer et/ou créer quelque chose d'original et ingénieux par rapport à 
+un existant. 
+Data centers 
+ou cloud 
+Ces centres de données regroupent un ensemble de serveurs sur lesquels sont 
+stockés un nombre important de données, et les traitements massifs effectués 
+dessus. On parle de données dans les “nuages” (cloud en anglais). 
+Deep learning 
+L’apprentissage profond, désigne le fait d’empiler plusieurs couches de calcul pour 
+en augmenter l'efficacité. 
+Données 
+Une donnée est ce qui est connu et sert de point de départ à un traitement 
+d'information, souvent en vue de la détermination d'un problème. 
+Données d’entrée 
+Informations fournies en entrée à un programme (une image de chat dans le cadre 
+du développement d’une IA de reconnaissance d’images, par exemple) 
+Données de sortie 
+Résultat attendu en sortie du programme (par exemple la probabilité que ce soit un 
+chat ou non). 
+Effecteur 
+Dispositif électronique qui traduit des valeurs numériques en sortie sous forme 
+effective : la commande d’un moteur ou d’un autre dispositif physique. 
+Effet boîte noire 
+Système dont le mécanisme de fonctionnement n’est pas explicité ce qui ne rend pas 
+possible l’interprétation des résultats. 
+Émotion 
+Expérience psychophysiologique d'un individu ou d’un animal lorsqu'il réagit aux 
+influences biochimiques (interne) ou environnementales (externe), par exemple d’un 
+objet. 
+Entrainement 
+ou apprentissage 
+Action, ici, de fournir des données pour faire de l’apprentissage automatique. 
+Éthique  
+L'éthique est une discipline philosophique portant sur les jugements moraux. C'est 
+une réflexion fondamentale sur laquelle la morale peut établir des normes, droits et 
+devoirs. 
+Explicabilité 
+Possibilité d’expliquer et/ou comprendre un fonctionnement. Dans le cadre de l’IA, 
+l’enjeu est l'explicabilité des algorithmes, pour comprendre comment et sur quoi se  
+base le résultat du calcul. 
+Fonctions cognitives 
+Mécanismes  de traitement de l'information liés à l’acquisition, la conservation, 
+l’utilisation ou la transmission de connaissances ou de savoir faire. 
+ 
+ 
+ 
+ 
+                                               
+1 Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise.
+
+---
+
+[p. 2-3]
+ation, 
+l’utilisation ou la transmission de connaissances ou de savoir faire. 
+ 
+ 
+ 
+ 
+                                               
+1 Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise.
+                                
+3 
+CCBY /  Julie Stein – 2020 / 
+Généralisation 
+Capacité d’un mécanisme d’apprentissage à fonctionner non pas sur les données 
+fournies par son apprentissage, mais de nouvelles données jamais considérées. 
+Hiver de l’IA 
+Périodes qui se sont déroulées entre 1974 et 1980 (premier hiver de l’IA) et entre 
+1987 et 1995 (deuxième hiver de l’IA) et durant lesquelles les avancées et recherches 
+en intelligence artificielle n’ont plus intéressé les médias après avoir déçu face aux 
+mythes qui les ont accompagnées. 
+Imiter 
+Reproduire quelque chose de déjà existant. 
+Informatique 
+Science formelle qui adresse le problème de la représentation et du traitement de 
+l’information. L’informatique étudie les algorithmes et la programmation, le codage 
+de l’information (les données),  les langages formels (en deçà des langues humaines), 
+et les machines et architectures matérielles qui calculent à l’aide de programmes 
+installés sur des machines. 
+Innovation 
+Réponse nouvelle apportée à des problèmes anciens ou nouveaux.  L'innovation est 
+la recherche constante d'améliorations de l'existant, contrairement à l’invention. 
+Inventer 
+Capacité à créer quelque chose de nouveau en rupture avec l’existant. 
+Intelligence artificielle  
+L’expression « intelligence artificielle », créée dans les années 1950, désigne le domaine 
+de recherche qui étudie les mécanismes de l’intelligence en les modélisant avec des 
+algorithmes et en les expérimentant avec des machines. Ces mécanismes incluent par 
+exemple la faculté de trouver automatiquement des solutions à des problèmes, qui peut 
+mettre en œuvre des capacités de planification, de prédiction, de contrôle, de 
+mémorisation ou d’apprentissage. Par extension, le terme « intelligence artificielle » est 
+souvent utilisé pour désigner des algorithmes simulant ou ayant des points communs 
+avec certaines des capacités d’intelligence des êtres vivants. 2 
+Intelligence artificielle 
+complète ou Forte 
+Une intelligence artificielle qui serait capable de copier les aptitudes humaines 
+(apprendre, comprendre, appréhender, raisonner, prendre des décisions, avoir une 
+conscience, des émotions...). À ce jour, l’intelligence artificielle forte n’existe pas, 
+c’est une croyance. 
+Intelligence artificielle faible 
+C’est l’intelligence artificielle qu’on connaît aujourd’hui : c’est un algorithme 
+“apprenant”, en adaptant ses paramètres à des données d’apprentissage,  non 
+pourvu de capacités mentales et cognitives, mais capable d’effectuer avec beaucoup 
+plus d'efficacité, parfois plus que l’être humain, une tâche précise. 
+Intelligence biologique  
+L’intelligence biologique correspond à  l’ensemble des capacités cognitives et 
+mentales d’un être vivant. Elle lui permet de comprendre, d'apprendre ou de 
+s'adapter à des situations nouvelles. 
+Machine  
+Dans ce contexte, une machine est un outil physique, un système matériel qui 
+permet de traiter des informations. Exemples : un ordinateur, un routeur réseau, un 
+smartphone, un robot...3. 
+Mécanique 
+Science qui étudie les mouvements physiques. 
+Neurones biologiques 
+Cellules du cerveau dont le fonctionnement nous permet de penser. 
+Outil 
+Objet ou concept nécessaire et aidant dans la réalisation d’une tâche. 
+Pixel 
+En informatique, une image peut être représentée numériquement en la divisant en 
+un certain nombre de lignes et de colonnes et en assignant une couleur à chacune  
+ 
+ 
+                                               
+2 Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise. 
+3  Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise.
+
+---
+
+[p. 3-4]
+évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise. 
+3  Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise.
+                                
+4 
+CCBY /  Julie Stein – 2020 / 
+des « cases » ainsi formées. Une telle case s’appelle pixel, contraction de l’anglais 
+picture element. 
+Prédiction 
+Capacité d’un algorithme à pouvoir prédire un résultat statistique à partir de 
+données antérieures. 
+Probabilité 
+Évaluation du caractère probable d'un événement, c'est-à-dire permet de mesurer le 
+degré de certitude de sa réalisation. 
+Processeur 
+Composant électronique qui exécute les instructions d’un programme informatique. 
+Programmer 
+Action d’élaborer un programme informatique. 
+Réseaux de neurones 
+artificiels 
+Méthode de calcul qui s'inspire vaguement du fonctionnement du cerveau et se base 
+sur un réseau de calculs élémentaires interconnectés. 
+RGPD 
+Le Règlement Général sur la Protection des Données (RGPD) est une réglementation 
+européenne qui vise à protéger les données personnelles des citoyens de l’Union 
+Européenne. 
+Robot 
+Un robot est une machine interagissant physiquement avec son environnement, à l’aide 
+de capteurs pour percevoir et d’actionneurs (ou effecteurs) pour agir, selon un 
+programme informatique qui définit son comportement. À la différence d’un 
+automate, un robot agit en fonction de ce qu’il perçoit dans son environnement. 4 
+ 
+Séquence d’instructions  
+Série d’étapes qu’un programme informatique suit pour exécuter une tâche. 
+Sciences cognitives 
+Discipline scientifique ayant pour objet la description, l'explication, et le cas échéant la 
+simulation des mécanismes de  tout système complexe de traitement de 
+l'information capable d'acquérir, conserver, utiliser et transmettre des 
+connaissances. 
+Statistiques 
+Domaine d’étude qui permet de fournir des résultats en se basant sur l’analyse d’un 
+ensemble de données. 
+Stéréotype 
+Image habituellement admise et véhiculée d'un sujet dans un cadre de référence donné,  
+négative, positive ou neutre, mais souvent caricaturale. 
+Mythe de la singularité 
+C’est la croyance selon laquelle l'invention de l'intelligence artificielle forte 
+déclencherait un emballement de la croissance technologique qui induirait des 
+changements imprévisibles sur la société humaine. 
+Réseau de neurones 
+Ensemble d’unités de calcul (dits neurones) connectés, qui se transmettent des données  
+et effectuent un calcul ou un traitement distribué entre toutes les unités.  Ajuster les 
+paramètres des connections permet de spécifier la transformation à effectuer. 
+ 
+ 
+                                               
+4Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise.
+
+---
+
+[p. 4-4]
+les 
+paramètres des connections permet de spécifier la transformation à effectuer. 
+ 
+ 
+                                               
+4Définition extraite du glossaire informatique, ce glossaire, évolutif, a été initié par Pierre-Yves Oudeyer et Didier 
+Roy d’Inria, de nombreux contributeurs ont ensuite apporté leur expertise.

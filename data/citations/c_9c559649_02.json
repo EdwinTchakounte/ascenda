@@ -1,0 +1,8 @@
+[
+ {"chapitre":"e9ec44a5","citations":[
+  {"texte":"Aux États-Unis, au contraire, tout s'appuie sur le mérite. Les diplômes, presque tout le monde s'en moque. On est embauché sur diplôme, mais ensuite, il faut montrer ce qu'on a dans le ventre.","page":32,"axe":"10-economie-entrepreneuriat-finance","theme":"Le diplôme et la preuve","portee":"Opposé au système décrit juste avant, où l'on monte en grade à l'ancienneté. Question de fond pour un jeune diplômé africain : que vaut un titre sans démonstration."},
+  {"texte":"on leur décrivait le futur sans savoir nous-mêmes exactement comment ça allait marcher concrètement","page":33,"axe":"10-economie-entrepreneuriat-finance","theme":"Vendre une vision avant de savoir la construire","portee":"Aveu rare sur la manière dont naissent les projets de rupture. À lire avec les échecs du livre, pas seulement avec ses réussites."},
+  {"texte":"L'idée maîtresse était de prendre une tâche et de la diviser en tâches élémentaires, qui étaient alors distribuées à des agents spécialisés","page":33,"axe":"02-ia-technique-academique","theme":"Le principe des agents","portee":"Définition simple et exacte d'une architecture d'agents, vingt-cinq ans avant que le mot ne redevienne à la mode."},
+  {"texte":"il était impératif que l'utilisateur humain puisse interagir avec les agents distribués en tant que membre à part entière de la communauté","page":35,"axe":"02-ia-technique-academique","theme":"L'humain dans la boucle, par conception","portee":"Choix d'architecture pris en 1997, et non ajouté après coup comme garde-fou. À confronter au garant humain de S.A.R.R.A."}
+ ]}
+]

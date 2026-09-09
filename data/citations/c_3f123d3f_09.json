@@ -1,0 +1,29 @@
+[
+ {"chapitre":"5ae4ebc4","citations":[
+  {"texte":"l’IA sort pas de nulle part. Elle se nourrit de tes données. Elle apprend grâce à toi, à tes clics, à tes likes, à tes achats, et même à tes conversations privées.","page":253,"axe":"04-ia-societe-ethique-philosophie","theme":"C'est vous qui entrainez l'IA","portee":"Renverse la representation d'une technologie exterieure : chacun y contribue chaque jour."},
+  {"texte":"ce sont exactement les mêmes questions de sécurité que ta banque utilise pour protéger ton compte.","page":254,"axe":"04-ia-societe-ethique-philosophie","theme":"Les defis viraux comme collecte","portee":"Un jeu anodin peut livrer les reponses qui protegent un compte bancaire."},
+  {"texte":"Tu peux juste pas remettre le dentifrice dans le tube une fois qu’il en est sorti.","page":254,"axe":"04-ia-societe-ethique-philosophie","theme":"L'irreversibilite de la donnee","portee":"Image qui explique pourquoi la prudence doit venir avant le partage, pas apres."},
+  {"texte":"chaque publication crée son empreinte numérique permanente.","page":254,"axe":"05-ia-education-pedagogie","theme":"Publier au nom d'un enfant","portee":"Rappelle qu'un parent engage l'avenir numerique d'un enfant qui n'a pas consenti."}]},
+
+ {"chapitre":"9319638c","citations":[
+  {"texte":"« Est-ce que j’ai vraiment envie de donner gratuitement ces infos à quelqu’un, ou à une IA, dont j’ignore les intentions ? »","page":255,"axe":"04-ia-societe-ethique-philosophie","theme":"La question a se poser avant de partager","portee":"Regle simple, applicable en une seconde, avant tout partage en ligne."},
+  {"texte":"prendre le temps d’expliquer à tes enfants ce qu’est une empreinte numérique pour qu’ils comprennent dès maintenant l’importance de préserver leur vie privée.","page":255,"axe":"05-ia-education-pedagogie","theme":"Enseigner l'empreinte numerique","portee":"Competence a transmettre tot, au meme titre que la prudence dans la rue."}]},
+
+ {"chapitre":"d7a1c7a0","citations":[
+  {"texte":"l’intelligence artificielle est jamais neutre. Derrière chaque recommandation, chaque prédiction, chaque « suggestion personnalisée », il y a des entreprises, des intérêts économiques, parfois même des agendas politiques.","page":256,"axe":"04-ia-societe-ethique-philosophie","theme":"L'IA n'est jamais neutre","portee":"Enonce central de l'ouvrage : derriere l'outil, il y a toujours un interet."},
+  {"texte":"si l’intelligence artificielle est douée pour prédire tes comportements et tes envies, elle a ni conscience, ni intuition, ni empathie. Ce sont encore des qualités purement humaines","page":256,"axe":"04-ia-societe-ethique-philosophie","theme":"Ce qui reste humain","portee":"Trois qualites que l'auteur oppose a la seule capacite predictive de la machine."},
+  {"texte":"l’IA, c’est un peu comme une motoneige : ça peut t’amener loin, te faire vivre des moments extraordinaires... mais seulement si c’est toi qui tiens le guidon.","page":257,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Tenir le guidon","portee":"Image finale qui resume la posture defendue tout au long du livre."},
+  {"texte":"la technologie peut prédire ce que tu vas probablement faire... mais elle pourra jamais prédire ce que tu choisis vraiment d’en faire.","page":257,"axe":"09-developpement-personnel-influence","theme":"Prediction contre choix","portee":"Derniere phrase de l'ouvrage, qui separe nettement le probable du decide."}]},
+
+ {"chapitre":"28a5ba6a","citations":[
+  {"texte":"Quand les données utilisées pour entraîner une IA viennent d’un monde déjà plein d’injustices... ben ça donne une IA qui répète les mêmes injustices.","page":258,"axe":"04-ia-societe-ethique-philosophie","theme":"Donnees historiques biaisees","portee":"Definition la plus claire du biais algorithmique, en une phrase accessible a tous."},
+  {"texte":"Les traces que tu laisses en ligne pour toujours – même quand tu fermes ou supprimes une app. Comme des empreintes de pas sur la Lune : elles disparaissent jamais.","page":259,"axe":"04-ia-societe-ethique-philosophie","theme":"Definition de l'empreinte numerique","portee":"Comparaison frappante qui rend concrete une notion abstraite."},
+  {"texte":"C’est le nom chic pour dire : « On va facturer à chaque client un prix différent, selon ce qu’il est prêt à payer. »","page":261,"axe":"10-economie-entrepreneuriat-finance","theme":"Definition de la tarification dynamique","portee":"Traduction sans detour d'un terme technique qui masque une pratique tres concrete."},
+  {"texte":"Mais attention : ça cache rien aux sites Web eux-mêmes, qui peuvent continuer de te suivre à la trace.","page":260,"axe":"04-ia-societe-ethique-philosophie","theme":"Les limites de la navigation privee","portee":"Corrige un malentendu tres repandu sur ce que protege reellement ce mode."}]},
+
+ {"chapitre":"b6f5ecb8","citations":[],"motif":"Bibliographie et sources : liste de references bibliographiques et d'adresses web. Aucun enonce citable."},
+
+ {"chapitre":"aa1d89a2","citations":[
+  {"texte":"après avoir fait une thèse de doctorat qui s’intéressait aux réseaux de neurones, bien avant que l’IA devienne une expression à la mode.","page":279,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Avant que le mot ne soit a la mode","portee":"Rappelle que le champ existait bien avant l'engouement public qui l'a rendu visible."},
+  {"texte":"Il aime vulgariser l’IA, surtout quand c’est pour aider le monde à comprendre ce qui s’en vient.","page":280,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Le projet de vulgarisation","portee":"Enonce en une phrase la mission que se donne l'ouvrage tout entier."}]}
+]

@@ -1,0 +1,753 @@
+OUVRAGE : Disruption
+AUTEUR(S) : Stéphane Mallard
+ANNÉE : inconnue
+PAGES : 187
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Copyright (p. 3-3)
+  Dédicace (p. 4-4)
+  Table (p. 5-6)
+  Préface (p. 7-8)
+  Introduction (p. 9-13)
+  Disruption technologique (p. 14-14)
+  1. De l'ubiquité à l'omniscience de la technologie (p. 14-25)
+  2. Vers des technologies contrôlées par la pensée (p. 26-34)
+  3. La révolution de l'intelligence artificielle (p. 35-53)
+  4. Des assistants intelligents à votre service (p. 54-65)
+  Disruption technologique (p. 66-66)
+  5. La mort inéluctable du salariat (p. 66-78)
+  6. Les quatre exigences de la disruption (p. 79-90)
+  7. Le digital est darwinien : lisez le signal ! (p. 91-103)
+  8. La connaissance et l'expertise balayées par l'empathie et l'attention (p. 104-114)
+  9. Accélération exponentielle : votre nouvelle norme (p. 115-122)
+  Disruptez-vous pour éviter de vous faire disrupter (p. 123-123)
+  10. Inversez vos croyances RH (p. 123-131)
+  11. Pensez comme un entrepreneur, pas comme un gestionnaire (p. 132-142)
+  12. Votre culture vous tue. Tuez-la (p. 143-156)
+  13. Méditation, neurosciences et drogue : la contre-culture du disrupteur (p. 157-168)
+  Conclusion (p. 169-187)
+
+[14/148 passages, 10969 tokens sur 125578]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+Disruption est une marque déposée par TBWA
+Couverture : Hung Ho Thanh
+© Dunod, 2018
+11 rue Paul Bert, 92240 Malakoff 
+www.dunod.com
+ISBN : 978-2-10-078579-7
+Ce document numérique a été réalisé par PCA
+
+---
+
+[p. 17-18]
+menté. À puissance équivalente, le prix a
+chuté. À prix équivalent, la puissance a augmenté. Et c’est cette
+tendance à la baisse rapide des prix de la technologie qui lui permet
+de se diffuser massivement absolument partout : dans tous les
+aspects de nos vies, dans nos objets, dans nos habitudes, dans tous
+les pays et pour tous.
+On a tendance à se dire que cette commodité technologique n’est
+réservée qu’aux pays développés et que pendant que l’on se plaint
+de ne pas avoir de connexion Internet dans le métro à Paris, les
+pays en développement n’ont toujours pas accès à l’eau, à une
+alimentation de base, à l’énergie, à l’éducation, à la santé et à la
+sécurité. En réalité, les pays en développement connaissent de très
+forts taux de pénétration de la technologie. D’abord parce qu’ils
+bénéficient aussi de l’effet commodité de la technologie dont les
+coûts baissent rapidement. C’est grâce à la baisse du prix des
+téléphones portables et des réseaux télécoms que des pays comme
+le Kenya ont pu développer avec un grand succès des
+infrastructures de transfert d’argent et de microcrédit accessibles sur
+mobiles, alors que les services bancaires du pays étaient largement
+déficients. Le Kenya est aujourd’hui un cas d’école qui prouve que
+dès lors que les institutions ne fournissent pas la stabilité nécessaire
+au développement du pays, les acteurs s’auto-organisent en utilisant
+la technologie. Ensuite, parce que l’afflux technologique est une
+stratégie 
+d’accélération 
+du 
+développement 
+de 
+ces 
+pays.
+L’association One Laptop Per Child conçoit par exemple des
+ordinateurs portables au prix d’une centaine de dollars pour équiper
+les enfants des pays en développement et leur donner accès à la
+connaissance. Et enfin, parce que ces pays constituent un marché
+considérable pour des acteurs comme Google et Facebook qui ont
+besoin d’utilisateurs actifs. C’est pour cette raison que Google a
+lancé le projet Loom pour connecter les zones les plus reculées de
+la planète via des montgolfières ou que Facebook a conçu des
+drones et a lancé Internet.org pour connecter toute la planète à
+Internet : plus leurs services comptent d’utilisateurs actifs, plus leurs
+revenus augmentent via la publicité.
+Là où les institutions échouent à offrir la stabilité et la confiance
+nécessaires au développement d’un pays, la technologie s’immisce
+partout où il y a des carences et permet aux individus de s’auto-
+organiser pour résoudre ensemble des problèmes qui auparavant
+relevaient de la puissance publique. La technologie ne remplace
+évidemment pas le rôle encore fondamental des États et des
+gouvernements, mais elle comble leurs manquements et est un
+catalyseur de développement.
+
+---
+
+[p. 31-32]
+one ou vous reconnaîtront à d’autres critères comme votre
+visage, votre voix, votre iris... Comme Windows ou Android, elles
+deviendront de véritables systèmes d’exploitation avec une session
+ouverte en permanence et partout, pour vous offrir une expérience
+personnalisée ininterrompue.
+Interagir avec les machines sans les toucher
+Dans le film Minority Report, on voit Tom Cruise interagir avec un
+ordinateur sans le toucher, en faisant des gestes dans l’espace
+devant lui pour faire défiler des images. Futuriste à l’époque de la
+sortie du film en 2002, ce type d’interface est aujourd’hui une réalité.
+Des capteurs permettent de nous reconnaître bouger dans l’espace
+pour ensuite piloter des machines. Microsoft a lancé en 2010 la
+Kinect, l’un des premiers dispositifs grand public pour jouer à des
+jeux vidéo sans manette, simplement en étant reconnu dans
+l’espace. On peut par exemple danser devant l’écran et le dispositif
+reproduit les mouvements de notre corps directement dans le
+personnage sur l’écran. Bien qu’encore limités en termes d’usages,
+les dispositifs de capture de mouvements sont dès aujourd’hui
+opérationnels. Difficile de dire pour l’instant quels usages seront tirés
+de ces capteurs de mouvements, mis à part peut-être pour essayer
+des vêtements dans une cabine virtuelle ou pour la réalisation de
+films – on se voit mal utiliser son smartphone à distance avec des
+gestes. En revanche, il y a une manière plutôt prometteuse
+d’interagir avec la technologie à distance : c’est de le faire
+simplement avec le regard. L’eye tracking correspond à des
+dispositifs capables de capter le mouvement et la direction de nos
+yeux pour piloter des machines ou utiliser des applications. Le
+concept fait rêver. Nous allons pouvoir utiliser notre smartphone
+sans les mains, simplement en visant certaines zones de l’écran
+avec le regard ; le dispositif suivra notre regard et sera capable de
+faire défiler les pages tout seul lorsqu’on arrivera en bas de l’écran.
+Nous allons pouvoir surfer sur Internet en cliquant sur les liens avec
+un clin d’œil ! Aujourd’hui, les technologies d’eye tracking sont très
+utilisées en marketing pour savoir où se porte le regard des clients
+en magasin ou sur les publicités. Mais très vite, nous aurons ces
+technologies dans nos poches, dans nos smartphones et sur tous
+les ordinateurs. Microsoft a d’ailleurs intégré le suivi oculaire dans
+son système d’exploitation Windows dès 2017.
+Nos moindres expressions faciales peuvent aujourd’hui être
+saisies par des capteurs de plus en plus précis pour interagir avec la
+technologie. Pour utiliser son ordinateur, le physicien britannique
+Stephen Hawking, atteint d’une sclérose latérale amyotrophique,
+utilisait par exemple un capteur infrarouge qui détectait les
+
+---
+
+[p. 43-45]
+la suite des autres, en peinture lorsqu’on combine formes et
+couleurs, en littérature lorsqu’on assemble des mots et des idées...
+Le processus créatif dans le cerveau n’est pas parfaitement connu, il
+est certainement inconscient et c’est précisément ce qui fait le
+génie : qu’on ne le comprenne pas. Mais aujourd’hui, nous sommes
+capables avec certains algorithmes de nous rapprocher de ce
+processus de créativité. Ce sont des algorithmes qui jettent des
+hypothèses dans les données qu’on leur fournit, qui tentent de relier
+des éléments entre eux et d’évaluer ensuite la valeur de ce
+rapprochement en comparant avec ce qui existe déjà. C’est de cette
+manière que l’intelligence artificielle de Google est capable de
+peindre des tableaux
+ et de composer de la musique
+.
+Récemment, c’est même un album entier qui a été composé par une
+intelligence artificielle.
+ Certains algorithmes peuvent également
+écrire des scénarios de courts-métrages.
+ En 2017, un développeur
+impatient d’attendre le prochain livre de Game of Thrones a utilisé
+une intelligence artificielle pour le rédiger.
+ Évidemment, il est facile
+de critiquer la qualité de ces créations (pourtant spectaculaires).
+Mais il faut se rappeler, encore une fois, que nous ne sommes qu’au
+début de cette révolution.
+Ces quelques exemples d’application de l’intelligence artificielle ne
+sont pas exhaustifs. Il en sort chaque jour de nouveaux, toujours
+plus stupéfiants les uns que les autres, dans tous les domaines. Ils
+ne dépendent que de l’imagination de leurs créateurs. Ce qui est
+certain, c’est que l’intelligence artificielle sera bientôt omniprésente,
+elle sera partout autour de nous. Sundar Pichai, le CEO de Google,
+a déclaré que nous passions d’un monde « mobile first » à un
+monde « AI first ».
+ Les géants de l’Internet sont les premiers
+acteurs de cette révolution. Ils injectent de l’intelligence artificielle
+partout, dans tous leurs produits et leurs services. Google a annoncé
+en 2016 avoir plusieurs milliers de projets en cours sur l’intelligence
+artificielle.
+Enjeux pour les entreprises
+Depuis l’explosion médiatique de l’intelligence artificielle ces
+dernières années grâce à ses prouesses impressionnantes, toutes
+les entreprises s’y intéressent. Et elles rêvent. Beaucoup. Elles
+pensent que l’intelligence artificielle est la solution à tous leurs
+problèmes. Qu’elles vont pouvoir tout automatiser, de la comptabilité
+14
+15
+16
+17
+18
+19
+20
+
+aux process les plus complexes, qu’elles vont pouvoir connaître
+parfaitement leurs clients avec toutes sortes d’indicateurs et ainsi
+considérablement augmenter leur chiffre d’affaires. Les cabinets de
+conseil leur disent que leurs données sont un trésor sur lequel elles
+sont assises. La réalité est beaucoup plus complexe. Il est vrai que
+les entreprises auront intérêt à injecter de l’intelligence artificielle
+dans leur fonctionnement pour optimiser leurs processus et réduire
+leurs coûts. Cela sera indispensable à leur survie, parce que si elles
+ne le font pas, leurs concurrents le feront et capteront le marché.
+Mais contrairement à ce que les entreprises croient, utiliser
+l’intelligence artificielle ne sera pas suffisant pour leur éviter de se
+faire disrupter pour une raison purement économique. D’abord,
+parce que dès qu’une solution d’intelligence artificielle sera intégrée
+avec succès pour optimiser un processus ou améliorer la
+connaissance client, chaque concurrent répliquera immédiatement.
+Les entreprises d’un même secteur se retrouveront vite au même
+niveau de maturité technologique avec l’intelligence artificielle, et la
+concurrence classique continuera à se faire par les prix. Autrement
+dit, pas de création de valeur, simplement de la récupération de
+valeur existante, sur des marchés existants.
+Deuxièmement, et c’est le plus grand danger des entreprises en
+ce moment : attention au syndrome Kodak (ou BlackBerry !). Avec
+l’arrivée de l’intelligence artificielle, la majorité des entreprises se
+demandent comment l’utiliser pour mieux faire leur activité actuelle,
+celle qui leur fait gagner de l’argent, alors que l’intelligence artificielle
+menace l’existence même de certaines activités. De la même
+manière que Kodak n’a pas compris que l’arrivée des appareils
+photo numériques rendait son activité d’impression de photos
+obsolète, beaucoup d’entreprises aujourd’hui ne comprennent pas
+que l’activité qui fonde leur raison d’être pourrait être balayée par
+l’intelligence artificielle. L’enjeu pour les entreprises est stratégique :
+il ne s’agit pas d’injecter de l’intelligence artificielle dans leur activité
+actuelle pour la poursuivre en mieux, mais de se poser la question,
+une fois qu’elles ont compris les potentiels de l’intelligence
+artificielle, de l’existence même de leur activité. Si elles se rendent
+comptent que leur activité disparaîtra avec l’intelligence artificielle,
+elles doivent d’urgence chercher à pivoter comme une startup, pour
+
+---
+
+[p. 57-58]
+e
+du texte, reconnaître ce qui se trouve sur des photos, remplir des
+formulaires, surfer sur Internet, etc., pour les utiliser ensuite pour
+atteindre des objectifs complexes, y compris avec des consignes
+vagues. Nous pourrons par exemple demander à notre assistant
+d’organiser nos vacances. Il sera capable d’analyser nos goûts et
+nos envies du moment en fonction de notre environnement de
+données, et de nous suggérer une destination sans se tromper,
+comme l’algorithme de Netflix qui nous recommande le prochain film
+à voir avec un très haut taux de pertinence. Il pourra ensuite
+s’occuper tout seul de la réservation des billets d’avion et de l’hôtel,
+en s’occupant de toutes les étapes, peu importe l’interface, qu’il
+s’agisse de le faire en ligne, via une application ou par téléphone en
+discutant avec un humain.
+Nos assistants réaliseront toutes sortes de tâches à notre service.
+Dans un premier temps, ils nous proposeront d’effectuer des actions
+simples en nous envoyant des notifications, comme « souhaites-tu
+que je recommande du café ? » parce qu’ils connaîtront nos
+habitudes, nos commandes passées et seront connectés à nos
+objets. Il nous suffira de valider leurs suggestions pour qu’ils
+s’occupent de tout. À force de les utiliser au quotidien, nous leur
+ferons progressivement confiance et les laisserons agir à notre
+place, sans attendre notre validation : ils nous enverront simplement
+des notifications pour nous prévenir de leurs actions et nous leur en
+serons reconnaissants : « Au fait, j’ai vu que tu allais manquer de
+café, alors j’en ai recommandé. J’ai également payé tes factures. »
+De simples assistants programmés pour reconnaître notre voix,
+comme le sont aujourd’hui Siri ou Alexa, nos assistants se
+transformeront en de véritables majordomes digitaux à notre service,
+à qui l’on donnera un mandat pour agir en notre nom dans notre
+environnement digital. Notre assistant sera notre alter ego digital,
+notre double, une copie virtuelle parfaite de notre individualité, nos
+caractéristiques et nos goûts, que les géants du Web auront recréée
+grâce à toutes nos données récupérées au fil de nos interactions
+avec eux. Nous confierons de plus en plus d’aspects de nos vies à
+notre assistant intelligent, il sera notre intermédiaire de confiance,
+défendra notre intérêt en toutes circonstances. On sent que la
+bataille commence dès aujourd’hui entre les acteurs de la Tech pour
+que ces assistants intelligents deviennent aussi autonomes et
+pertinents. À quel horizon ? Difficile à définir pour l’instant, mais des
+personnalités comme Yann LeCun, responsable du programme
+d’intelligence artificielle chez Facebook, estiment qu’ils seront prêts
+d’ici une dizaine ou une vingtaine d’années.1
+
+---
+
+[p. 70-71]
+uscrivant une assurance santé pour diminuer votre prime, un
+salarié a intérêt à dissimuler son niveau de compétence réel pour
+tenter de maximiser son salaire puisque l’entreprise ne peut pas le
+mesurer a priori. Les entreprises ont conscience de cette asymétrie
+d’information et tentent de la corriger de plusieurs manières. Elles
+recrutent des salariés selon leurs études et leurs diplômes parce
+qu’elles pensent que statistiquement, un salarié qui a un diplôme
+spécifique a plus de chances d’être qualifié pour le poste. Elles font
+passer des évaluations pendant le processus de recrutement pour
+identifier les candidats réellement qualifiés. C’est la théorie du
+signal : étant donné que les entreprises n’ont pas l’information sur la
+compétence réelle du candidat, les candidats tentent de signaler leur
+compétence avec des preuves comme un diplôme, de l’expérience
+sur un CV ou une capacité à réussir des entretiens et autres tests de
+recrutement. Le problème, c’est que ce signal est médiocre. Un
+diplôme certifie uniquement qu’un étudiant a été capable d’intégrer
+une école et qu’il a réussi les examens, pas qu’il sera compétent sur
+le job. C’est le même fonctionnement avec le vote démocratique. En
+étant élu, un responsable politique certifie une seule de ses
+compétences : sa capacité à se faire élire, mais cela ne présage en
+rien de sa compétence à gouverner, à prendre des décisions, à
+comprendre les problématiques et à proposer des solutions
+adaptées. Dans l’entreprise, toutes ces méthodes qui visent à
+identifier et à attirer les profils les plus compétents sont imparfaites.
+Pour un même niveau de salaire offert, comment différencier les plus
+compétents de ceux qui dissimulent leur niveau de compétence ? À
+salaire égal, face aux moins compétents, les profils les plus
+compétents se découragent, ils ont intérêt à se retirer du marché des
+salariés et à travailler à titre indépendant pour une rémunération plus
+élevée et plus de liberté, sans lien de subordination. Cette difficulté à
+identifier les profils compétents est largement réduite sur les
+plateformes de travailleurs indépendants et à terme, deviendra
+inexistante. D’abord parce qu’en étant notés et évalués précisément
+à chaque mission sur de nombreux critères (niveau de qualité,
+capacité à produire et à livrer dans les délais, respect des termes du
+contrat, etc.), les travailleurs indépendants se construisent une
+réputation 
+visible 
+qui 
+atteste 
+précisément 
+leur 
+niveau 
+de
+compétence. Les mécanismes ne sont pas encore parfaits,
+notamment parce qu’ils permettent les évaluations falsifiées, mais
+des algorithmes sophistiqués sont dès aujourd’hui entraînés à
+repérer les faux avis et ce problème sera rapidement résolu pour, à
+terme, représenter fidèlement les caractéristiques du travailleur
+
+---
+
+[p. 82-83]
+toujours le
+chemin décrit par Christensen. En plus de devoir améliorer
+constamment leurs produits, les entreprises doivent désormais
+répondre à ces deux exigences pour faire face à la disruption : ne
+jamais abandonner la partie la moins exigeante et la moins rentable
+du marché (contrairement à ce qu’enseignent tous les MBA de
+3
+toutes les Business Schools et les cabinets de conseil en stratégie)
+et ne jamais mépriser de nouveaux usages qui en apparence ont
+l’air de n’avoir aucune valeur.
+Commencez par apprendre au singe à parler
+Le dilemme de l’innovateur est complexe pour l’entreprise : d’un
+côté, elle doit parier sur une nouveauté qui a l’air absurde et
+incertaine et qui risque au passage de faire disparaître une activité
+déjà très rentable et de l’autre, ne pas négliger l’activité déjà rentable
+qui lui garantit ses revenus. Face à ce dilemme, il y a un indice qui
+ne trompe pas : le niveau de difficulté du problème que l’entreprise
+doit résoudre pour disrupter. Bien souvent, le niveau de difficulté à
+résoudre pour disrupter un secteur économique, un usage ou une
+entreprise est considéré comme tellement important, qu’il est perçu
+comme une barrière à l’entrée qui protège de la disruption. Les
+professionnels considèrent que personne mieux qu’eux ne peut
+identifier les problèmes à résoudre pour disrupter et évaluer leur
+difficulté. Et pour identifier les problèmes difficiles, les professionnels
+sont plutôt compétents. Dans la grande distribution, ils savent par
+exemple depuis près de cent ans que l’un des problèmes majeurs
+des supermarchés est la file d’attente. Les professionnels de
+l’énergie quant à eux savent que le grand frein à un bouleversement
+du secteur est le stockage de l’énergie. Les professionnels de
+l’aérospatial eux, savent qu’il est éminemment difficile de réutiliser
+des lanceurs de fusées. Les problèmes complexes à résoudre sont
+partout plutôt bien identifiés dans tous les secteurs. L’erreur que font
+les entreprises est de considérer ces difficultés comme des
+contraintes insurmontables et d’organiser leur production autour de
+ces difficultés sans jamais les affronter. Résultat : elles s’attaquent
+aux problèmes les plus simples et les plus visibles, ce qui les rend
+totalement vulnérables à la disruption. Elles se contentent
+d’implémenter une technologie moderne ou un usage en vogue de
+manière incomplète simplement pour montrer qu’elles ont pris en
+compte le besoin d’innover mais elles manquent l’essentiel, le
+problème le plus complexe à résoudre. La Société Nationale des
+
+---
+
+[p. 94-95]
+n pour faire connaître son produit, le valoriser auprès des
+clients et influencer le marché. Dans le monde digital, c’est
+impossible ; c’est la foule connectée qui décide. Elle repère la valeur,
+l’évalue avec des likes, des avis et des commentaires, et la diffuse
+en la partageant. Contrairement à l’époque de la publicité massive
+où nous étions tous visés indifféremment par des entreprises, la
+valeur est cette fois évaluée par nos pairs dans notre réseau. Nous
+serons de plus en plus touchés uniquement si la pertinence est
+assurée. Une entreprise qui propose un produit ou un service de
+qualité en adéquation avec les attentes de son marché sera
+défendue par des communautés d’utilisateurs qui se formeront
+spontanément : des ambassadeurs. Contrairement aux influenceurs
+rémunérés par les marques pour promouvoir leurs produits, ces
+ambassadeurs influencent d’autres clients gratuitement, simplement
+parce qu’ils accordent de la valeur à recommander à leur réseau ce
+qu’ils ont trouvé. L’enjeu pour les disrupteurs est d’être reconnus et
+appréciés par leurs clients : ce sont eux qui véhiculent le meilleur
+signal.
+La puissance de la foule connectée est désormais telle qu’elle
+constitue un marché universel où règne l’hyperconcurrence sans
+aucune barrière à l’entrée, mais donc aussi l’égalité des chances.
+Auparavant, un artiste, y compris inconnu, devenait visible et se
+faisait connaître en étant propulsé par son producteur qui faisait un
+pari financier sur lui en portant le risque et en utilisant ses réseaux.
+Aujourd’hui, tous les artistes sont visibles de la même manière sur
+des plateformes comme Youtube ou Soundcloud, ils sont à armes
+égales. La promotion des sociétés de production ne garantit plus
+leur succès. La seule condition de réussite est leur talent, confirmé
+et soutenu par la foule connectée. Cette mise en concurrence
+professionnelle concerne tous les métiers. Les journalistes sont
+dorénavant en concurrence avec des amateurs via les blogs ou les
+réseaux sociaux et ce sont les plus pertinents qui sont les plus suivis
+et les plus écoutés ; ils deviennent des références, deviennent
+influents. Les professeurs sont en concurrence sur Youtube et sur
+les MOOC avec des vulgarisateurs amateurs. Là encore, ce n’est
+plus le titre de professeur qui légitime la compétence à enseigner et
+transmettre mais le nombre de vues, de partages et la réputation
+qu’ils se construisent à véhiculer de l’information juste et de qualité.
+Les contenus (articles en ligne, vidéos, applications smartphone...),
+les idées et l’information en général sont également livrés à une
+concurrence exacerbée pour accaparer l’attention des internautes :
+c’est la mémétique, le phénomène de sélection des idées parce
+
+---
+
+[p. 107-108]
+capables de générer d’autres modèles d’intelligence artificielle ainsi
+que des intelligences artificielles comme DeepCoder capables
+d’écrire leur propre code informatique . Demain, plus personne ne
+programmera des machines et des logiciels comme aujourd’hui avec
+du code complexe, qui nécessite une expertise et une formation
+2
+3
+adaptée. Chris Wanstrath, le CEO de Github, la plus grande
+plateforme au monde d’hébergement, d’échange et de partage de
+code informatique, utilisée par les programmeurs du monde entier, a
+déclaré en 2017 que « le futur du code est plus de code du tout » . Il
+ne voulait pas dire que le code va disparaître – les machines
+fonctionneront toujours avec du code – mais que l’automatisation
+sera tellement importante que le métier de programmeur consistera
+à entraîner la machine à manipuler des concepts de haut niveau,
+comme on apprend les maths à un enfant. À terme, chacun pourra
+entraîner une intelligence artificielle à réaliser des tâches et à
+atteindre des objectifs en langage naturel ou en lui montrant
+comment faire. De la même manière que nous pouvons tous
+contribuer à la connaissance mondiale en alimentant Wikipedia,
+nous 
+allons 
+tous 
+participer 
+à 
+l’éducation 
+des 
+algorithmes
+d’intelligence artificielle on les éduquant. C’est d’ailleurs ce que nous
+faisons déjà lorsque nous ajoutons des hashtags à nos photos sur
+les réseaux sociaux : nous indiquons à l’algorithme ce qui se trouve
+sur la photo pour qu’il puisse s’entraîner tout seul ensuite à
+reconnaître ce qui se trouve sur la photo en agrégeant tous les
+hashtags. Les experts entraîneront les algorithmes à développer leur
+propre expertise. Les médecins aideront leurs algorithmes à
+reconnaître 
+des 
+cancers 
+sur 
+les 
+images 
+médicales, 
+les
+programmeurs aideront les leurs à générer leur propre code, les
+avocats les aideront à conduire un raisonnement juridique, les
+experts-comptables à tenir une comptabilité et les psychologues à
+reconnaître les névroses et les pathologies de leurs patients en les
+écoutant et en analysant leurs émotions en fonction de leur voix et
+de leurs micro-expressions faciales.
+L’expertise constituait le fondement de la valeur ajoutée des
+sociétés modernes, surtout dans le secteur tertiaire. Pour créer plus
+de valeur ajoutée, les entreprises se faisaient une guerre des talents
+en recrutant très cher les cerveaux les plus performants et les
+expertises les plus pointues. Avec l’arrivée de l’intelligence artificielle
+disponible en abondance, le prix de l’intelligence humaine va chuter.
+L’intelligence ne sera plus un facteur différenciant dans l’entreprise
+puisque l’intelligence deviendra une commodité accessible à tous
+dans un cloud, comme on accède aujourd’hui à Google. La
+4
+
+---
+
+[p. 121-122]
+nouvelles technologies et investissent les yeux fermés. Tous ces
+comportements irrationnels dans un environnement dans lequel il est
+difficile de suivre les changements rapides et les dernières
+innovations provoquent des décisions hâtives et erronées : la plupart
+des États tentent par exemple de mettre en place des stratégies
+12
+nationales sur l’intelligence artificielle pour figurer à terme parmi les
+leaders mondiaux, comme si le sujet était nouveau et qu’il fallait s’y
+positionner dès aujourd’hui : en réalité, les États-Unis et la Chine
+sont déjà largement leaders depuis plusieurs années.
+Les institutions, anciennes, créées pour fonctionner dans un
+monde relativement lent et stable, ne sont plus adaptées à la vitesse
+inouïe de l’accélération technologique, et sont à la source d’une
+inadéquation majeure. L’école forme toujours à des métiers dont
+nous sommes certains dès aujourd’hui qu’ils vont disparaître d’ici
+quelques années avec l’arrivée de l’intelligence artificielle, comme
+les comptables ou les radiologues. Le fonctionnement de la
+démocratie ne fait presque aucun usage de la technologie alors que
+tout est à repenser : élections, modes de représentation,
+prérogatives, durées des mandats et consultation. Même si les
+institutions sont garantes d’une stabilité indispensable des sociétés,
+elles sont aujourd’hui un frein à leur développement et ne protègent
+plus face aux risques de toutes ces technologies dont l’influence et
+le pouvoir grandissent aussi vite que leurs progrès.
+
+---
+
+[p. 134-135]
+surtout si elles sont anciennes et encore plus si elles sont de
+taille importante. Les banquiers disent « on aura toujours besoin
+d’une banque », les avocats « on aura toujours besoin d’un avocat »,
+ou même les spécialistes de l’agroalimentaire « on aura toujours
+besoin de manger ». Certes, mais peut-être, et demain sûrement,
+1
+sans eux, et c’est par cela qu’ils doivent commencer. N’oubliez pas :
+la disruption a horreur des certitudes.
+Les laboratoires pharmaceutiques gagnent aujourd’hui de l’argent
+en fabriquant des médicaments et tentent de protéger leur rente
+avec les brevets, mais avec quelle activité vont-ils gagner de l’argent
+lorsque le coût de fabrication des médicaments chutera et deviendra
+une commodité grâce à l’intelligence artificielle ? Peut-être devront-
+ils pivoter en une société de services premium aux patients, aux
+médecins et aux hôpitaux et ne plus compter sur un business model
+qui 
+repose 
+sur la 
+fabrication 
+et la 
+commercialisation 
+de
+médicaments. Dans le secteur financier, Lloyd Blankfein, le CEO de
+Goldman Sachs, la banque la plus prestigieuse et influente au
+monde, a déclaré en 2015 que Goldman Sachs était une société de
+technologie, laissant par là entendre qu’il avait anticipé la mort de la
+banque et le pivot vers la Tech. La banque est un secteur arrivé à
+maturité. Une fois les processus optimisés et les coûts réduits,
+Goldman a bien compris que les marges allaient se réduire, que la
+finance deviendrait une commodité comme une autre, avec des
+produits accessibles en trois clics sur un smartphone et qu’il allait
+falloir créer de la valeur autrement. L’annonce de Lloyd Blankfein
+sert de prémice au pivot : puisque Goldman Sachs est spécialiste de
+la finance et notamment des algorithmes, leur pivot consistera
+probablement à se libérer progressivement de la finance pour
+commercialiser des algorithmes à d’autres secteurs (transport,
+logistique, télécoms, divertissement...). De la finance à la Tech ?
+Pas idiot, puisque comme le rapportait en 2011 le pionnier d’Internet
+Marc Andreessen pour expliquer que la valeur allait basculer vers le
+logiciel, « le logiciel dévore le monde » .
+Plutôt que de chercher à protéger ou à optimiser l’existant, à
+maintenir une rente, il faut être prêt à se saborder pour se conformer
+à l’exigence imposée par les disrupteurs : expérience utilisateur
+exceptionnelle, frictions inexistantes, simplicité enfantine et surtout
+résolution utile d’un problème. Mais pour se saborder, il faut une
+vision. Les gestionnaires doivent disparaître pour laisser la place à
+des entrepreneurs, dont c’est précisément la compétence d’être
+capable de voir avant tout le monde la valeur dans le futur. Si vos
+2
+
+---
+
+[p. 146-147]
+s ont
+rencontré par hasard dans la vie réelle. La seule solution est
+désormais l’essai directement sur le marché avec itérations et
+ajustements rapides. Le CEO de Facebook Mark Zuckerberg dans
+sa lettre aux actionnaires en 2012 rappelait que chez Facebook, il
+est écrit directement sur les murs « better done than perfect » pour
+e
+insister sur l’importance de toujours livrer rapidement pour confronter
+le produit au marché.
+Il est indispensable de prévoir des budgets que l’on considère
+comme des pertes, sans attendre de rendements, pour lancer des
+projets. Puisque l’évaluation est impossible, les entreprises doivent
+lancer un maximum de projets différents pour augmenter les
+chances d’en voir certains émerger et devenir leurs nouvelles
+activités stratégiques : chaque entreprise doit adopter une attitude
+de capital-risqueur qui investit dans plusieurs projets en sachant que
+très peu seront des succès. Ce qui était auparavant une attitude
+courante en recherche et développement doit devenir une approche
+business, parce que désormais toutes les entreprises solidement
+implantées sont ou seront confrontées à de nombreuses startups qui
+tentent de les disrupter. Même si peu d’entre elles survivront,
+certaines deviendront des menaces de disruption et refuseront de se
+faire racheter (seules les moins ambitieuses et donc les moins
+dangereuses acceptent de se faire racheter).
+Il ne s’agit pas forcément d’avoir des idées brillantes à lancer qui
+ont vocation à disrupter une activité immédiatement, mais de
+découvrir des pistes intéressantes, d’autant que désormais, toute
+idée peut être testée rapidement auprès d’un panel d’utilisateurs :
+les sites de crowdfunding en sont une bonne illustration. Les
+utilisateurs investissent sur une idée alors que le produit n’existe pas
+encore, et l’appétence est directement mesurable avant production.
+Une idée étudiée dans des rapports internes et des réunions n’a
+aucune valeur tant qu’elle n’a pas été directement confrontée à la
+demande. Il n’est pas nécessaire non plus de prévoir un business
+model et encore moins des prévisions de résultats : s’il y a une
+appétence, le business model se trouvera naturellement en chemin,
+à condition d’être à l’écoute, de savoir pivoter et de continuer à
+tâtonner jusqu’à trouver le bon.
+Les entreprises doivent également intégrer l’échec comme
+indispensable à la réussite et le valoriser. Il est nécessaire à tout
+apprentissage, et est toléré pendant les périodes de formation, mais
+il est souvent interdit et sanctionné dans l’entreprise. Or face à
+l’incertitude et l’augmentation obligatoire d’essais pour innover,
+2
+
+---
+
+[p. 159-160]
+entration profonde et un intérêt vif pour le sujet sur
+lequel on décide de se concentrer. Aux États-Unis, il est facile de
+s’en procurer, il suffit de se plaindre de problèmes d’attention à son
+médecin pour qu’il en délivre une ordonnance. Un trafic illégal s’est
+même développé dans les universités de la Ivy League, où les
+5
+6
+7
+étudiants en consomment en période d’examens. Pour une
+centaine de dollars, on peut se procurer une pilule d’amphétamine
+dans les bibliothèques de ces universités américaines les plus
+prestigieuses. Certaines entreprises comme HVMN se sont mêmes
+spécialisées dans la fabrication de produits qui augmentent les
+capacités intellectuelles.
+Geoff Woo, le CEO de HVMN va encore plus loin : il essaye
+personnellement toutes les dernières techniques avérées par la
+science pour augmenter ses capacités cognitives, comme le jeûne.
+Avec plusieurs membres de son équipe, il pratique le jeûne
+36 heures chaque semaine et estime que cette pratique leur confère
+une grande acuité intellectuelle et une concentration plus
+profonde.
+ Plusieurs études confirment que la restriction calorique
+augmente la neurogenèse, c’est-à-dire la création de nouveaux
+neurones.
+La consommation de produits psychotropes à des fins productives
+reste un tabou, y compris dans la Valley. Elle est toujours plus ou
+moins associée à l’image du cadre dynamique banquier ou avocat
+d’affaires des années 1990 shooté à la cocaïne simplement pour
+faire son job. Dans la Silicon Valley, la Tech consomme mais reste
+discrète. Les expériences se partagent entre membres de petits
+groupes aux liens de confiance forts, même si en réalité ça n’est un
+secret pour personne. Le géant du développement personnel Tim
+Ferris, qui enquête depuis des années auprès des entrepreneurs à
+succès pour comprendre le secret de leur réussite, a déclaré dans
+une interview à CNN que « tous les milliardaires [qu’il] connaissait,
+presque 
+sans 
+exception, 
+consommaient 
+des 
+substances
+hallucinogènes [...] Ils essayent d’être disruptifs et de regarder le
+monde 
+différemment 
+en 
+posant 
+des 
+questions 
+totalement
+différentes ».
+ Les médecins s’inquiètent évidemment de cette
+démarche Do It Yourself des hackers sur leur propre corps. Mais les
+disrupteurs 
+hackent 
+tout, 
+même 
+les 
+recommandations 
+des
+professionnels médicaux. Pour les entreprises traditionnelles, c’est
+un obstacle de plus : elles n’affrontent pas seulement des individus
+déterminés et talentueux, mais des individus aux capacités
+intellectuelles affutées par des substances amplificatrices.
+8
+9
+10
+11
+12
+
+---
+
+[p. 173-175]
+Computer Avatar », ABC News, 9 août 2011.
+11. Arjun Kharpal, « Staying relevant in the age of artificial intelligence », CNBC,
+14 février 2017.
+12. Youssef Ezzyat et al., « Closed-loop stimulation of temporal cortex rescues
+functional networks and improves memory », Nature Communications, Vol. 9, Article
+number : 365 (2018).
+er
+1. Laurent 
+Alexandre, 
+« 
+L’éthique 
+de 
+l’intelligence 
+», 
+USI, 
+2017,
+www.youtube.com/watch?v=o3WOPKNvbt8
+2. Jordan Novet, « Google has slashed its speech recognition word error rate by more
+than 30 % since 2012 », VentureBeat.com, 11 janvier 2017.
+3. www.hawking.org.uk/the-computer.html
+4. « Controlling Drones With Your Mind », University of Florida, 2015,
+www.youtube.com/watch?v=hLjxMjBlB9k
+5. « Prosthetic Limbs, Controlled by Thought », New York Times, 20 mai 2015.
+
+1. « Tesla’s Elon Musk : We’re “Summoning the Demon” with Artificial Intelligence »,
+Bloomberg, 2014, www.youtube.com/watch?v=Tzb_CSRO-0g
+2. « Introducing the New Chair’s Initiative “Ahead of the Curve” », NGA 2017 Summer
+Meeting, www.youtube.com/watch?v=2C-A797y8dA
+3. « Stephen Hawking : “AI could spell end of the human race” », BBC News, 2014,
+www.youtube.com/watch?v=fFLVyWBDTfo
+4. Catherine Clifford, « Facebook CEO Mark Zuckerberg : Elon Musk’s doomsday AI
+predictions are “pretty irresponsible” », CNBC, 24 juillet 2017.
+5. Searle, John. R. (1980), « Minds, brains, and programs », Behavioral and Brain
+Sciences 3 (3) : 417-457.
+6. « Using large-scale brain simulations for machine learning and A.I. », Google
+Official Blog, 26 juin 2012.
+7. Hoo-Chang Shin et al., « Learning to Read Chest X-Rays : Recurrent Neural
+Cascade Model for Automated Image Annotation », National Institutes of Health,
+Bethesda, 20892-1182, USA.
+8. Alexander Jung, « AI playing Super Mario World with Deep Reinforcement
+Learning », 2016, www.youtube.com/watch?v=L4KBBAwF_bE
+9. http://alpha.openai.com/miniwob/index.html
+10. Tomoko Otake, « IBM big data used for rapid diagnosis of rare leukemia case in
+Japan », The Japan Times, 11 août 2016.
+11. Kazimierz O. Wrzeszczynski et al., « Comparing sequencing assays and human-
+machine analyses in actionable genomics for glioblastoma », Neurology Genetics,
+11 juillet 2017.
+12. www.facebook.com/notes/mark-zuckerberg/can-we-cure-all-diseases-in-our-
+childrens-lifetime/10154087783966634/
+13. Harry McCracken, Lev Grossman, « Google vs. Death », Time Magazine,
+30 septembre 2013.
+14. https://deepdreamgenerator.com
+15. https://magenta.tensorflow.org
+16. www.flow-machines.com/ai-makes-pop-music
+17. Oscar Sharp, « Sunspring | A Sci-Fi Short Film Starring Thomas Middleditch »,
+2016, https://youtu.be/LY7x2Ihqjmc
+18. Lauren Tousignant, « Artificial intelligence is writing the next Game of Thrones
+book », New York Post, 29 août 2017.
+19. Google, Google I/O Keynote, 2017, https://youtu.be/Y2VF8tmLFHw
+20. www.eetimes.com/document.asp?doc_id=1330004

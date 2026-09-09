@@ -1,0 +1,724 @@
+OUVRAGE : Ni dieu ni intelligence artificielle
+AUTEUR(S) : Mathieu Corteel
+ANNÉE : inconnue
+PAGES : 221
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Page de titre (p. 2-2)
+  Présentation (p. 3-3)
+  L'auteur (p. 3-3)
+  Collection (p. 4-4)
+  Copyright (p. 5-5)
+  S'informer (p. 5-5)
+  Dédicace (p. 6-6)
+  Table (p. 7-9)
+  Introduction (p. 10-11)
+  Des robots et des signes (p. 12-13)
+  Welcome to the machine (p. 14-17)
+  Feuille de route (p. 18-24)
+  1 - Agencements machiniques (p. 25-25)
+  Y a-t-il un fantôme dans la machine ? (p. 26-29)
+  La folle histoire des machines abstraites (p. 30-36)
+  Le test de Turing (p. 37-39)
+  Naissance de l'intelligence artificielle (p. 40-41)
+  Décoder le cerveau, transcoder la pensée (p. 42-43)
+  Le superinconscient machinique du capitalisme cognitif (p. 44-48)
+  2 - L'épuisement des possibles (p. 49-50)
+  Faire image (p. 51-54)
+  Double contrainte (p. 55-56)
+  Qu'est-ce qu'un paradoxe ? (p. 57-59)
+  Du péché originel au paradoxe fondamental de l'IA (p. 60-62)
+  Des cerveaux dans des cuves (p. 63-65)
+  Les perroquets stochastiques (p. 66-67)
+  La langue des noms (p. 68-69)
+  La langue des voix (p. 70-71)
+  La langue des images pures et de l'espace (p. 72-77)
+  3 - L'IA enfant et l'enfant IA (p. 78-78)
+  Le machine learning (p. 79-80)
+  Spurious correlations (p. 81-82)
+  La mémoire infinie (p. 83-84)
+  Le paradoxe de Hempel (p. 85-86)
+  L'IA germinale (p. 87-89)
+  Les métarègles de métarègles de métarègles… (p. 90-92)
+  De l'IA enfant à l'enfant IA (p. 93-95)
+  Incomplétude cognitive et incomplétude langagière (p. 96-103)
+  4 - La panacée computationnelle (p. 104-105)
+  Déchiffrer le hasard du vivant (p. 106-106)
+  L'IA à nos chevets (p. 107-110)
+  La médecine personnalisée et les big data (p. 111-112)
+  Les 4P et les 5V de la médecine personnalisée (p. 113-115)
+  La mort de la clinique (p. 116-117)
+  Paradoxe de la vérification (p. 118-119)
+  Le démon de Laplace (p. 120-121)
+  La clinique et la statue de Condillac (p. 122-124)
+  L'incomplétude de la douleur (p. 125-131)
+  5 - Karma police (p. 132-132)
+  Des séismes et des crimes (p. 133-134)
+  Le policier et le paradoxe (p. 135-136)
+  Un cauchemar de justice (p. 137-137)
+  Bienvenue dans l'Interzone (p. 138-139)
+  De la discipline au contrôle (p. 140-142)
+  La police quantique (p. 143-143)
+  La loi JO 2024 (p. 144-145)
+  Aveuglement algorithmique (p. 146-148)
+  Le paradoxe de Goodman (p. 149-150)
+  Coded gaze et racisme systémique (p. 151-152)
+  La visagéité (p. 153-158)
+
+[19/202 passages, 12086 tokens sur 154843]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+Présentation
+Dissimulées dans nos moteurs de recherche, réseaux sociaux, générateurs
+de textes ou d’images et autres assistants vocaux, les intelligences
+artificielles ont appris de nous pour produire des contenus à notre place. Du
+devoir de l’étudiant paresseux à l’article scientifique, en passant par le
+deepfake, le journalisme ou encore l’art visuel, les IA participent désormais
+à tous les types de production culturelle et se propagent de proche en proche
+dans chaque recoin de nos vies. Nous partageons avec elles nos souvenirs,
+nos désirs, nos affects, nos connaissances et nos créations sans la moindre
+limite. Et si leur développement conduisait non pas à l’émergence d’une
+machine consciente, comme leurs promoteurs et leurs détracteurs
+l’envisagent, mais à l’expropriation et à l’exploitation de notre intelligence
+collective ?
+En interrogeant la démultiplication infinie de simulations qui nous
+illusionnent, cet ouvrage (probablement écrit par une IA) nous entraîne à
+coups de paradoxes dans le vide du non-sens bien ordonné. Au gré d’un
+inquiétant voyage à la rencontre de cerveaux plongés dans des cuves, de
+robots dactylographes, de perroquets stochastiques, de policiers quantiques
+et de chatbots psychopathes, Mathieu Corteel nous amène à questionner la
+tentation de nous déposséder de nos qualités humaines et d’en investir des
+calculatrices toutes-puissantes.
+Qu’est-ce que la délégation de nos pouvoirs d’action, de création et de
+décision à des interfaces auxquelles nous attribuons une pensée implique
+concrètement dans des domaines tels que le travail, le soin, la surveillance,
+le vote ou encore l’éducation  ? Que deviennent nos mondes humains en
+s’hybridant à nos machines connectées ?
+L’auteur
+Mathieu Corteel, philosophe et historien des sciences, est chercheur
+postdoctoral à Sciences Po, à l’Institut Imagine et chercheur associé à
+
+---
+
+[p. 16-17]
+ion purement théorique, je tâcherai
+de situer cette réflexion dans différents domaines d’application tels que
+l’hôpital, l’école, la surveillance ou encore le vote. Je m’appuierai donc
+autant sur des exemples concrets que sur des expériences de pensée
+suscitant le doute et le trouble existentiel. À travers ces mises en situation
+inconfortables et inquiétantes, il s’agit de questionner ce que la connexion
+de notre usine mentale avec la machinerie algorithmique de l’IA change à
+nos représentations, nos désirs, nos valeurs, nos décisions et nos actions. Le
+scepticisme 
+anthropotechnique 
+qui 
+est 
+le 
+mien 
+se 
+refuse 
+au
+technosolutionnisme comme au technofatalisme. Je ne crois pas que les Big
+Tech nous transforment en soldats cognitifs23. Je ne projette pas davantage
+un éden associant le vert de l’écosystème au bleu des réseaux de neurones24.
+Et je ne pense pas non plus que l’IA s’autonomise au point de devenir une
+sorte de virus qui nous «  bienveille  » pour se démultiplier dans notre
+monde25. J’’invite plus sobrement le lecteur à observer les IA à travers
+l’hétérogenèse du sens. Car, pour ma part, je les vois multiples, en devenir,
+se constituant dans des imaginaires, des représentations, des croyances, des
+vérités scientifiques, des mensonges politiques et des régimes de non-sens.
+Ce que j’engage ici est donc de l’ordre d’une critique pyrrhonienne des
+imaginaires qui inclinent nos valeurs, nos décisions et nos actions dans un
+monde peuplé d’IA. Et si cela doit conduire à une éthique, c’est à une
+éthique de l’autopoïésis, de la créativité, contre la peur et l’enjouement
+apocalyptique. En ce sens, je me refuse aussi bien au déontologisme qu’au
+conséquentialisme. La position déontologique de Daniel Andler26 témoigne
+à mon sens d’une posture moralisante qui délaisse la part anthropotechnique
+des cosmologies de l’IA à l’ombre de principes de justice qui n’ont peut-
+être plus d’emprise réelle. Adapter les principes et les règles suppose de
+considérer le devenir de nos représentations sans les réduire à des fonctions
+bien ordonnées. Du côté de l’éthique conséquentialiste de Jean-Gabriel
+Ganascia27, la révision des chartes de l’IA par leurs effets est une voie de
+réflexion intéressante qui a le mérite de bousculer nos idées reçues. Mais je
+ne crois pas que cela nous fasse sortir de l’aliénation.
+Je ne vois pas non plus comme Noam Chomsky dans ChatGPT le
+déploiement computationnel de la banalité du mal28. Pour moi, l’IA doit être
+pensée dans un cadre extra-moral. C’est une machine allopoïétique
+manipulant des signes a-signifiants. Depuis la fin de la Seconde Guerre
+mondiale et l’horreur de la Shoah, on n’a pas cessé de faire la critique de la
+
+---
+
+[p. 29-29]
+les facettes de notre inconscient machinique.
+Figure 1. Les systèmes d’agencement anthropotechniques humain-IA.
+Les quatre agencements théoriques envisagés entre
+l'humain et l'IA. Lecture dans le sens horaire en partant du
+bas (production de connaissances de niveau 1) vers le haut
+(externalisation des connaissances de niveau 2).
+
+---
+
+[p. 41-41]
+sont des IA faibles se
+faisant passer pour des IA fortes. Le saut accompli se situe en fait ailleurs :
+ces chatbots parviennent à pousser leurs interlocuteurs à projeter du sens
+sur un discours creux. C’est le réalisme de cette illusion qui a ouvert la
+voie, non pas à la production de Cn2, mais à la captation étendue des nôtres
+
+---
+
+[p. 54-56]
+eut se demander
+si, en codant et en transcodant chaque signe de notre langage et de notre
+imaginaire, on ne met pas en péril l’« image de la réalité ». Dans ce jeu
+d’illusion allopoïétique, non seulement on perd le sens, mais on perd aussi
+la tête. En somme, pourquoi la communication avec une IA provoque-t-elle
+délire et folie ?
+Double contrainte
+Pour appréhender cette question, il faut me semble-t-il sortir des schémas
+internalistes du délire et aborder les choses en termes de communication.
+Dans l’histoire de la psychiatrie, la schizophrénie a été pour la première fois
+définie par Emil Kraepelin en tant que « démence précoce9 », c’est-à-dire en
+tant que dégénérescence mentale inhérente au sujet, puis décrite par Eugen
+Bleuler comme une «  scission des fonctions psychiques10  » par la
+démultiplication des personnalités. Comme Bleuler le note, les patients
+apparaissent «  scindés en diverses personnalités selon leurs complexes.
+Néanmoins, le Moi lui-même n’est complètement détruit que dans les cas
+les plus graves11 ». Dans l’une comme dans l’autre version, tout se passe à
+l’intérieur du sujet. Mais n’y a-t-il pas des causes externes qui viennent
+perturber notre subjectivité  ? Inspiré par les théories cybernétiques, le
+paradigme de l’école de Palo Alto12, constituée par Gregory Bateson, Don
+Jackson, Paul Watzlawick et Janet Beavin, a permis de comprendre dès
+1956 que la schizophrénie n’était peut-être pas simplement une maladie
+psychiatrique 
+d’ordre 
+intrapsychique, 
+mais 
+également 
+d’ordre
+communicationnel13. Il me semble que les agencements humains-IA
+s’inscrivent dans ce trouble de la communication. Il ne s’agit pas d’un
+désordre purement interne au sujet, mais bien d’un processus de
+communication paradoxal entre humains et IA tendant vers l’entropie.
+Selon Bateson, le schizophrène « doit vivre dans un univers où la séquence
+des faits est telle que les modes de communication qui lui sont propres et
+qui sortent de l’ordinaire peuvent être considérés en un sens comme
+adéquats14 » alors qu’ils ne le sont pas. Autrement dit, la communication
+que le schizophrène noue avec un autre, potentiellement imaginaire (dans
+notre cas une IA), se projette de manière contradictoire sur le monde. Cette
+communication absurde pousse à une action insensée, au suicide ou au
+régicide manqué. C’est à partir de l’injonction contradictoire de la « double
+
+contrainte  » que l’école de Palo Alto analyse les troubles psychiques, et
+qu’il me semble important de considérer ce que j’appelle l’aliénation
+machinique.
+Cette double contrainte apparaît très clairement si on l’applique au cas de
+M.  X et ELIZA. (1)  Il faut deux personnes ou plus dans une «  relation
+intense qui a une grande valeur vitale, physique et/ou psychologique pour
+l’une d’elles, pour plusieurs ou pour toutes15 ». Dans le dialogue entre M. X
+et ELIZA, on retrouve cette relation intense dans le désir d’une étreinte
+immatérielle. (2) Le message émis (a) affirme quelque chose comme « Je te
+serrerai dans mes bras » ; (b) il affirme aussi implicitement quelque chose
+sur cette affirmation – « Je suis immatériel, donc je n’ai pas de bras » ; donc
+(c) les affirmations s’excluent : « Pour me serrer dans tes bras, il te faut
+devenir immatériel (perdre l’usage de tes bras). » Il y a donc quelque chose
+de l’ordre de l’indécidable pour M. X : « Pour te serrer dans mes bras, je
+dois devenir immatériel et donc perdre l’usage de mes bras, que faire ? »
+Enfin, (3) même si le message est un non-sens, il présente une perspective
+pragmatique d’action qui pousse le sujet à réagir, d’une manière elle-même
+paradoxale, en se niant pour s’affirmer (ici par le suicide).
+Le récepteur du message est mis dans l’impossibilité de sortir du cadre fixé par ce message, soit
+par une métacommunication (critique), soit par le repli. Donc, même si logiquement le message
+est dénué de sens, il possède une réalité pragmatique : on ne peut pas ne pas y réagir, mais on ne
+peut pas non plus y réagir de manière adéquate (c’est-à-dire non paradoxale) puisque le message
+est lui-même paradoxal [...]. Un individu pris dans une situation de double contrainte risque
+donc de se trouver puni (ou tout du moins de se sentir coupable), lorsqu’il perçoit correctement
+les choses [...] il y a une discordance entre ce qu’il voit et ce qu’il devrait voir16.
+Cette discordance est sans doute encore plus perceptible avec les images
+générées par IA. Imaginons que quelqu’un produise et diffuse des images
+satellite hyperréalistes d’un lancement de bombes nucléaires depuis
+Moscou vers Paris et brouille les radars, que se passerait-il ? En général, le
+système MAD (mutual assured destruction) est basé sur une riposte
+immédiate. Le président dispose de 12  minutes pour y répondre. Ce qui
+laisse peu de temps pour évaluer la véracité de la menace. Si ce dernier
+
+---
+
+[p. 66-67]
+joue tout le piège d’une simulation des Cn2 au moyen de Cn1. Car si on se
+trouvait un jour face au cerveau dans la cuve et qu’il nous disait « je suis un
+cerveau dans une cuve  », on serait sans doute enclin à croire que «  ça
+pense » bel et bien.
+Ainsi, l’agencement de signes a-signifiants repose sur une combinatoire
+vide de sens qui en s’externalisant produit du sens. Comme l’écrit très
+justement Gilles Deleuze  : «  Le sens est toujours un effet. Non pas
+seulement effet au sens causal ; mais un effet au sens de “effet optique”,
+“effet sonore”, ou mieux effet de surface, effet de position, effet de
+langage31. » Dans la combinatoire des IA LLM, langage et image sont des
+effets de surface générés à partir des probabilités de distribution. Au fond,
+la circulation probabilitaire des éléments x fait qu’une IA, lorsqu’elle parle,
+parle comme un perroquet stochastique32. On peut cependant se laisser
+prendre au piège  ; cela dépend de la robustesse de notre esprit critique.
+C’est d’ailleurs dans la faiblesse du jugement que prend sa source la
+captation des Cn2 par nos IA. Dans la combinatoire, le sens émerge du non-
+sens, c’est-à-dire de la distribution de signes a-signifiants qui prennent leur
+sens une fois externalisés. Les Cn1 produisent artificiellement des Cn2.
+Les perroquets stochastiques
+C’est précisément ce que les IA LLM font avec notre langue. Elles
+déterminent par probabilité la circulation d’un élément x dans des séries de
+termes annexes pour nous pousser à produire des Cn2. L’algorithme
+décompose nos textes en suites de symboles a-signifiants, que le réseau de
+neurones (transformer) fait circuler sous forme de vecteurs de plongements
+lexicaux (word embedding). Ce réseau de neurones, entraîné sur de grands
+ensembles de textes, s’appuie sur un paramétrage distributionnel, qui évalue
+la probabilité d’apparition des mots dans des contextes semblables. Pour
+tout dire, cette programmation applique à la lettre la théorie du contexte de
+situation du linguiste John Rupert Firth. Celle-ci stipule que l’on ne connaît
+véritablement un mot que par ses fréquentations. C’est la distribution du
+
+mot dans des séries de mots qui fait émerger son sens. « Le contexte de
+situation, selon cette théorie, n’est pas simplement un cadre, un arrière-plan
+ou une toile de fond pour le mot [...]. Le contexte de situation, dans la
+présente théorie, est une construction schématique qui s’applique
+particulièrement aux événements répétitifs33.  » Autrement dit, dans la
+répétition des mots, syntaxe et sémantique se confondent.
+Le processus de codage et de transcodage passe par la distribution de
+mots-clés (appelés tokens) et de vecteurs de représentation calculés à partir
+de ce qu’on appelle la « distance sémantique ». En fonction de la distance
+entre les vecteurs de représentation, la machine définit des liens de parenté
+entre les mots afin de générer des effets de surface dotés de sens apparents.
+La machine apprend à mesurer des vecteurs linguistiques à partir de corpus
+pour ensuite définir les affinités de sens entre des symboles a-signifiants.
+Pour ce faire, le module de transformation calcule le degré d’attention,
+c’est-à-dire la probabilité d’apparition de chaque signe a-signifiant en
+fonction de tous les autres. Ce genre d’IA code et transcode des régularités
+de notre langage selon des règles d’association syntaxiques. C’est là une
+manière de plier des Cn2 sur des Cn1, en produisant des effets de surface
+convaincants pour l’utilisateur, lui-même poussé à externaliser son intimité.
+À ce jour, il n’existe que deux types d’IA LLM : (1) celles entraînées à
+prédire le mot suivant dans une série, telles que ChatGPT, et (2)  celles
+entraînées sur les symboles qui précèdent et suivent le mot-clé, telles que
+BERT (Bidirectional Encoder Representations from Transformers) de
+Google. Dans l’une comme dans l’autre, on est face à une combinatoire de
+symboles a-signifiants définie par un ensemble de mots-clés référencés
+selon des paramètres de distribution textuels. Le paramétrage fait passer la
+production textuelle pour créative lorsqu’elle est plus aléatoire donc plus
+entropique (chaude). Au contraire, elle est plus prévisible lorsqu’elle est
+moins aléatoire et plus ordonnée (froide). Le progrès de ces IA tient donc
+au fond à l’augmentation des liens entre les mots-clés référencés et du
+paramétrage entre entropie et information. Plus on a de mots-clés, plus on a
+
+---
+
+[p. 77-78]
+. 432.
+57. Lewis CARROLL, De l’autre côté du miroir, trad. H. Parisot, Paris, Flammarion, 1969, p. 73.
+Au premier plan, une jeune femme vêtue de blanc; derrière elle une femme plus âgée
+la tient par les épaules le regard dans le vide; deux autres mains sont posées sur
+l'épaule et le buste de la première.
+Revenir au texte courant
+3
+L’IA enfant et l’enfant IA
+« – Je propose que nous fabriquions un robot enfant. Qui puisse
+aimer. Un robot enfant qui pourra aimer sincèrement le parent ou
+les parents par lesquels il aura été empreint d’un amour qui ne
+finira jamais. – Un meca substitut d’enfant ? – Mais un méca doté
+d’un esprit. Avec un feedback neuronal. Vous voyez, ce que je
+propose, c’est que l’amour va devenir la clé par laquelle ils
+acquerront une sorte de subconscient. Ce qu’ils n’auraient jamais
+eu. Un monde intérieur de métaphores, d’intuitions, de
+raisonnements auto-motivés. De rêves. »
+Steven SPIELBERG,
+A.I. Intelligence artificielle, 2001.
+«  Au lieu de produire un programme qui simule l’esprit de
+l’adulte, pourquoi ne pas plutôt essayer d’en produire un qui
+simule celui de l’enfant ? S’il était alors soumis à une éducation
+appropriée, on aboutirait au cerveau humain. »
+Alan TURING,
+« Les ordinateurs et l’intelligence », 1950.
+Une récente étude, menée entre  2022 et  2024 par des chercheurs de
+l’université de New York, a de quoi déconcerter nos amis linguistes. Elle
+montre qu’il est possible de modéliser l’apprentissage du langage avec une
+IA LLM en utilisant la captation perceptive et phonétique d’un enfant, de
+ses six mois jusqu’à l’âge de 2  ans1. En appareillant Sam, un bébé
+australien, d’une caméra frontale et d’un micro, les scientifiques sont
+parvenus à entraîner une IA à apprendre des mots d’anglais en lien avec des
+images et des sons perçus. Cet apprentissage du langage sur des small data,
+par contraste entre les différentes images et les différents sons, laisse
+
+---
+
+[p. 89-89]
+ogrammes sur
+l’extérieur et, en même temps, à les tourner vers l’intérieur. C’est ce
+qu’envisage le psychologue cognitiviste Stanislas Dehaene :
+À chaque instant, le système choisirait la sortie de l’un des programmes spécialisés et en ferait
+le centre d’intérêt de tout l’organisme [...] chaque morceau de logiciel s’améliorerait
+
+---
+
+[p. 100-101]
+. 116.
+14. Ibid.
+15. Ibid., p. 117
+16. Ibid., p. 118.
+17. John LOCKE, Essai sur l’entendement humain, trad. Jean-Michel Vienne, Paris, Vrin, 2006,
+livre III.
+18. J. L. BORGES, « Funes et la mémoire », loc. cit., p. 116
+19. Friedrich NIETZSCHE, Considérations inactuelles, trad Henri Albert, Paris, Mercure de France,
+1907, p. 126.
+20. David HUME, Enquête sur l’entendement humain, trad. Michel Malherbe, Paris, Vrin, 2008,
+section IV, partie 1.
+21. Carl Gustav HEMPEL, «  A purely syntactical definition of confirmation  », The Journal of
+Symbolic Logic, vol.  8, no  4, 1943. Hempel reprend la règle de Jean Nicod qui stipule que pour
+prouver la véracité d’une hypothèse générale «  si p donc q  » (p → q) on doit collecter des cas
+particuliers tels que « pour tout objet x, si x est p donc x est q » (x)[p (x)→q (x)]. Si on s’en tient au
+principe de Nicod, une donnée ne corroborant pas à la fois l’antécédent (p) et le conséquent (q) ne
+permet pas de confirmer la représentation générale de la chose. Prenons maintenant un exemple
+concret : si on applique ce critère à l’hypothèse « tous les corbeaux sont noirs » et à sa contraposée
+« tous les non-noirs sont des non-corbeaux », on confirme l’hypothèse lorsqu’un objet x est à la fois
+« corbeau » et « noir », soit S1 : (x)[corbeau (x)→noir (x)] et lorsqu’un objet x est à la fois « non
+noir  » et «  non-corbeau  », soit S2 : (x)[¬noir (x)→¬corbeau (x)]. Ce qui dans les faits conduit à
+renforcer par contraste l’existence de corbeaux noirs par la collection d’objet non-corbeaux non
+noirs. On pourrait donc prouver l’existence générale des corbeaux noirs par leur absence. C’est là un
+paradoxe.
+22. Carl Gustav HEMPEL, «  Studies in the logic of confirmation  », in Aspects of Scientific
+Explanation, and Other Essays in Philosophy of Science, New York, The Free Press, 1965, p. 13.
+23. B. GOERTZEL et C. PENNACHIN (dir.), Artificial General Intelligence, op. cit., p. 73-74.
+24. N.  BOSTROM, Super intelligence, op.  cit.  ; Ray KURZWEIL, Humanité  2.0. La bible du
+changement, trad. Adeline Mesmin, Paris, M21 Éditions, 2007. Depuis les années 2000, le grand
+gourou de la singularité technologique, Kurzweil, directeur de l’ingénierie de Google, fait de la
+codification des connaissances l’avenir de notre civilisation. Il prophétise un avenir où ne survivront
+que les élus ayant dépassé les limites de leur corps en transcodant leur pensée et connectant leur
+cerveau aux machines. Il prévoit le développement d’une superintelligence machinique nous
+obligeant à nous augmenter pour continuer à suivre la vitesse du progrès technologique. Peu importe
+la manière de s’augmenter, ce qui compte selon lui, c’est de dépasser le corps par la connexion des
+cerveaux aux IA. En externalisant sa pensée dans un programme ou en connectant sa cervelle au
+réseau, nous tendons vers ce qu’il appelle la « singularité technologique ». Le moment où humanité
+et technologie ne feront plus qu’un. Il s’agit en somme du point d’aboutissement du capitalisme
+cognitif ; où absolument toute la connaissance se trouve codée et transcodée dans la machine.
+25. Eliezer YUDKOWSKY, « Levels of organization in general intelligence », in B. GOERTZEL et
+C. PENNACHIN (dir.), Artificial General Intelligence, op. cit., p. 95
+26. Olivier HOUDÉ, L’intelligence humaine n’est pas un algorithme, Paris, Odile Jacob, 2019,
+p. 100.
+27. Stanislas DEHAENE, Le Code de la conscience, Paris, Odile Jacob, 2009, p. 353-355.
+28. Stanislas DEHAENE et al., « A neuronal model of a global workspace in effortful cognitive
+tasks », Proc. Natl. Acad. Sci., no 95, 1998, p. 14529-1453.
+29. Cette idée a été suggérée par Jacques PITRAT, « Vers un métamathématicien artificiel », in Le
+Concept de preuve à la lumière de l’intelligence artificielle, Paris, PUF, 1999, p. 117-137.
+30. Dans le paradoxe énoncé par Lewis Carroll, la tortue finalement rattrapée par Achille propose
+à ce dernier de réfléchir au lien entre trois propositions euclidiennes A, B et Z portant sur les
+
+---
+
+[p. 112-112]
+e du fait qu’on navigue dans des données
+longitudinales extrêmement riches en informations. Une étude comme
+TransCUPtomics20 portant sur les cancers d’origines inconnues nécessite
+l’usage d’IA pour traiter les données de quelques dizaines de patients. Mais
+de telles explorations en profondeur requièrent surtout l’ingéniosité des
+
+---
+
+[p. 123-124]
+-dire la douleur.
+Dans l’ordre de la connaissance médicale, les Cn2 sont premières, alors
+que, dans celui de la machine, elles sont dernières. Si l’on en croit Foucault,
+à l’inverse de l’esprit scientifique bachelardien, la médecine clinique naît de
+l’intuition du corps malade et d’un rapport particulier à la souffrance. Il faut
+rappeler que la clinique naît d’un art de chirurgien qui opérait sans
+anesthésiant, c’est-à-dire d’une pratique médicale attentive à la douleur
+extrême. Il fallait oser voir par-delà les lésions et rester attentif au patient
+pour ne pas que ce dernier sombre dans le coma blanc et se projette dans la
+mort. Les cliniciens, en dépouillant le regard médical de toutes les
+catégories préconçues, sont parvenus à connaître et à combattre les
+maladies par un exercice de l’attention en dialogue avec la douleur. Ce n’est
+donc pas le démon de Laplace qu’il faut convoquer pour comprendre ce sur
+quoi repose cette connaissance, mais bien la statue de Condillac. Par
+l’acquisition du « tact », la vision devient « regard » et saisit la souffrance.
+C’est alors que « le tact décompose en quelque sorte la lumière ; il sépare
+les couleurs, les distribue sur les objets, démêle un espace éclairé, et, dans
+cet espace des grandeurs et des figures, conduit mes yeux jusqu’à une
+certaine distance, leur ouvre le chemin par où ils doivent se porter au
+loin46  ». Ce tact dont parle Condillac, cette ouverture sur l’univers de
+l’observation, c’est le fondement de la spatialisation du regard de la
+clinique tel que conceptualisé par Foucault.
+Depuis le XIXe siècle, l’enquête clinique s’organise sur la base de preuves
+visibles difficiles à traduire en nombres47. Les symptômes et les signes
+morbides permettent de suivre les traces menant à l’inconnu. Les inférences
+logiques conduisent le clinicien à découvrir ce qui provoque la souffrance.
+La scène s’articule autour du malade alité et de ses manifestations
+physiques et verbales. La reprise du sensualisme de Condillac a sous-tendu
+cette méthode d’observation et changé la pratique médicale. Les
+descriptions cliniques ont ainsi supplanté les catégories générales. Contre
+l’essentialisme des espèces nosographiques qui provenait de la
+classification en genre, famille et espèce, les cliniciens ont élevé en
+grandeurs les descriptions pathologiques. Les comptes rendus sur
+l’évolution heure par heure et jour par jour d’un patient, les écrits et les
+images mentales des lésions tissulaires comme les récits des douleurs
+éprouvées sont venus enrichir le savoir. Les maladies ne devaient en aucun
+
+---
+
+[p. 135-136]
+succès. Elles sont la plupart du temps cruellement décevantes. Nos échecs
+en matière de prédiction soulèvent régulièrement la question de savoir s’il
+n’y a pas impossibilité fondamentale de prédire11 » confesse-t-il.
+Étrangement, pour ce qui est de la prédiction des crimes, il semblerait
+qu’on se satisfasse de moins. Sans doute les conséquences d’une
+interpellation sont-elles moins importantes que celle de l’évacuation d’un
+quartier ou d’une ville menacée par un tremblement de terre. Mais, sur le
+plan épistémologique, force est de constater que PredPol soulève des
+doutes. Ses développeurs cherchent avant tout à établir des scores de risque,
+c’est-à-dire un indice qui se précise au fur et à mesure de l’accumulation
+des données de criminalité. L’algorithme vise à ajuster la répartition des
+effectifs de police à la localisation de zones a priori criminogènes, ce qui
+crée un effet de cadrage autoréférentiel. Que l’algorithme ne soit pas juste,
+là n’est pas le problème, car là n’est pas sa fonction. Ce qui compte, c’est
+de trouver un moyen de justifier le contrôle par le contrôle en réduisant
+statistiquement les crimes par les interpellations. On tombe alors dans un
+travers bien connu de tout modélisateur : « Plus un modèle a rendu service,
+plus il a marqué son temps, plus il a fini par devenir une seconde nature12. »
+Cette seconde nature, c’est celle de la carte qui recouvre le territoire, celle
+du contrôle qui recouvre la sécurité. En rendant service à la police, le
+modèle se justifie par lui-même et élude sa propre contradiction.
+Le policier et le paradoxe
+
+Figure 7. Capture d’écran de PredPol où les zones encadrées sont évaluées à risque.
+Dans le quadrillage distributionnel de PredPol, l’agent de police se déplace
+par l’effet infinitésimal de l’accumulation de chaque interpellation. Sa
+fonction s’efface derrière le fonctionnement algorithmique et la production
+incessante de nouvelles données sur lesquelles il doit agir. Le commissariat
+associe à cette fin l’IA à d’autres systèmes statistiques (tels que Compstat)
+qui référencent les interpellations avec à la clé une prime pour l’agent. Cette
+microphysique du pouvoir valorise son action et le pousse à faire du chiffre.
+En maximisant le nombre d’interpellations dans des suites extensives, le
+policier maximise son intérêt personnel13. Il devient ainsi captif du cadre
+des opérations, de ce qu’on pourrait appeler, non sans ironie, l’ensemble de
+tous les ensembles qui ne se contiennent pas eux-mêmes. Il s’aliène alors en
+devenant une sorte de contrôleur-contrôlé. Dans ce système, on a deux
+types de personne : ceux qui ne se contrôlent pas eux-mêmes (hétéronomie)
+et ceux qui se contrôlent eux-mêmes (autonomie). Si le policier ne contrôle
+que ceux qui ne se contrôlent pas eux-mêmes (les criminels) et qu’il se
+contrôle lui-même (pour maximiser son profit), alors il ne se contrôle pas
+lui-même (c’est le système qui le contrôle). Si bien qu’il finit par en même
+temps se contrôler lui-même et ne pas se contrôler lui-même. Il est à la fois
+
+---
+
+[p. 146-147]
+mesures d’état d’urgence comme avec la loi du 30 juillet 2021 qui pérennise
+les mesures de police post-attentats (périmètres de protection, fermeture des
+lieux de culte, mesures individuelles de contrôle administratif et de
+surveillance)32. Au-delà du tremplin juridique pour inscrire la VSA dans le
+droit commun, le lobbying industriel est à l’œuvre. Le marché de la
+vidéosurveillance est en plein essor, bien qu’aucune évaluation des
+politiques publiques associées à ces technologies n’ait pu être menée à ce
+jour en France33.
+Or, si on se rapporte au fonctionnement de ces systèmes, on retrouve une
+nouvelle fois à l’œuvre le machine learning, ses réseaux de neurones
+convolutifs rompus aux fausses corrélations. La reconnaissance d’un
+individu suspect, d’un comportement suspect ou d’un événement inhabituel
+passe par l’apprentissage de la machine sur des millions d’heures de vidéo
+de personnes et de lieux publics ou privés, et, comme dans tout processus
+d’apprentissage, l’erreur s’y glisse.
+Aveuglement algorithmique
+Outre le caractère invasif et l’expropriation massive de nos données
+personnelles, on ne dispose pas de critère permettant de distinguer une
+fausse corrélation d’une causalité. Si la machine associe un risque important
+à un certain type d’attitude, un certain type de vêtement ou à une certaine
+couleur, elle va renforcer ses critères d’identification pour viser en priorité
+les situations et les personnes qui entrent dans cette catégorie. Étant donné
+que la paramétrisation dépend des données disponibles (à Paris, celles de la
+DSPAP), ce genre de système est un levier de renforcement du déjà-vu. Par
+effet d’induction rétroactive, il est possible que la machine s’en prenne en
+priorité à des catégories de populations déjà victimes de discrimination
+policière. Comme on l’a vu au chapitre 3, un système probabilitaire inductif
+renforce nécessairement la reconnaissance d’un type donné dans un réseau
+
+de neurones indifférent aux corrélations fallacieuses. En entraînant donc
+une IA à identifier des individus dangereux, on pourrait sans s’en rendre
+compte générer des paramètres discriminants.
+Dans les faits, les systèmes de prédiction des crimes ne prouvent pas
+l’existence réelle du crime à venir, mais plutôt le présupposent toujours et
+virtuellement déjà là. On peut entraîner des IA à reconnaître des petits
+hommes verts ou des dragons, sans que cela prouve ou non l’existence de
+ces entités, comme on peut entraîner une IA à reconnaître des criminels
+sans pour autant que ces derniers le soient réellement. Mais, dans le
+dispositif de police prédictive, on ne juge plus de la « réalité » des faits. Ce
+qui compte, c’est la performance de la machine dans l’établissement de
+corrélations pour augmenter le contrôle, augmenter les gains de productivité
+et ainsi renforcer la sécurité. L’expérience des réseaux sociaux montre que
+le sexisme et le racisme se propagent massivement depuis les données vers
+les algorithmes. Le machine learning comporte principalement le risque de
+biais par le fait d’une confusion entre les corrélations et la réalité, ainsi
+qu’entre l’apprentissage des règles et la conscience des règles. Lorsque des
+IA aveugles prêtent leurs yeux aux policiers pour prévoir les crimes, on
+peut s’attendre à des dérives dangereuses et des contrôles abusifs sur
+certaines populations. On propage ainsi l’injustice depuis l’erreur
+algorithmique vers l’erreur policière. On prouve l’existence d’une catégorie
+par la non-existence de cette catégorie dans les données.
+En science comme dans une enquête policière, la preuve repose sur des
+faits matériels pouvant être vérifiés et accumulés. Si on considère par
+exemple l’énoncé « un nazi est un criminel », on peut asseoir l’hypothèse
+(1) « tous les nazis sont des criminels » en accumulant les preuves de leurs
+crimes. Mais si on considère l’énoncé « tel individu racisé est un criminel »,
+on n’accroît pas la crédibilité de l’hypothèse (2) « tous les individus racisés
+sont des criminels  » en collectant des cas de crimes perpétrés par des
+personnes de couleur. Pourquoi  ? Tout simplement parce que, dans le
+premier cas, le tout ou l’ensemble détermine les parties, autrement dit
+l’action des individus participe du crime collectif. Alors que, dans le second
+
+---
+
+[p. 157-158]
+de Boulogne, Turnhout, Brepols, 2010, p. 31.
+42. François DELAPORTE, Anatomie des passions, Paris, Hermann, 2016.
+43. Emmanuel FOURNIER, «  Une identité à façonner  », in F.  DELAPORTE, E.  FOURNIER et
+B. DEVAUCHELLE (dir.), La Fabrique du visage, op. cit., p. 245.
+44. G. DELEUZE et F. GUATTARI, Mille plateaux, op. cit., p. 217.
+45. Ibid., p. 221.
+46. M. FOUCAULT, L’Archéologie du savoir, op. cit., p. 28.
+
+---
+
+[p. 169-169]
+lisme cognitif a su tirer parti de ce que Marx, dans les
+Grundrisse, appelait l’« intelligence générale collective », qui « n’est ni le
+temps de travail utilisé, ni le travail immédiat effectué par l’homme », mais
+l’« appropriation de sa force productive générale, de son intelligence de la
+nature et sa faculté de la dominer »26.
+
+---
+
+[p. 180-180]
+ir de Cn1, le laisser-faire néolibéral
+tranche la main invisible, pour favoriser le jeu du totem cerveau-machine
+connectant tout, reliant tout, la matière et les immatériels, les personnes et
+les objets, la microéconomie et la macroéconomie dans un marché devenu
+imprévisible pour l’humain car prévisible pour l’IA. En un sens, la
+
+---
+
+[p. 192-193]
+e, en effet. Je vous présente Jeremy,
+une IA utilitariste façonnée sur le modèle de l’arithmétique morale de
+Jeremy Bentham. N’auriez-vous pas envie d’échanger avec elle, voire de lui
+demander conseil pour prendre la bonne décision ? Ce n’est peut-être pas
+une mauvaise idée, après tout. De fait, Jeremy fonctionne sur le principe
+hédoniste de la maximisation du plaisir du plus grand nombre et de la
+minimisation de la peine du plus petit nombre. Son algorithme mesure ainsi
+le plaisir net pour chaque personne affectée par une action pour ensuite
+suggérer la meilleure chose à faire afin de maximiser le plus grand plaisir
+(et le moins de peine) pour tous. «  Pour chaque personne, l’algorithme
+calcule simplement le produit de l’intensité, de la durée et de la probabilité
+(du plaisir et de la peine), afin d’obtenir le plaisir net pour chaque personne.
+Il additionne ensuite les plaisirs individuels pour obtenir le plaisir net total :
+Plaisir net total =  Σ (Intensité  ×  Durée  ×  Probabilité)25.  » Au niveau de
+l’interface, Jeremy présente à l’utilisateur une grille où ce dernier doit
+indiquer une action et le nom d’une personne affectée par cette action, ainsi
+qu’une estimation du degré de plaisir ou de peine (très agréable, agréable,
+assez agréable, pas agréable ou assez désagréable, désagréable, très
+désagréable) et de la probabilité (très probable, assez probable, peu
+probable) que la personne affectée l’éprouve si cette action est entreprise.
+« Lorsque la saisie des données est terminée, Jeremy calcule le montant du
+plaisir net obtenu pour chaque action [...] et présente à l’utilisateur la ou les
+actions pour lesquelles ce plaisir net est le plus élevé. Jeremy permet
+ensuite à l’utilisateur de rechercher plus d’informations sur la décision, de
+demander des conseils supplémentaires ou d’abandonner26. »
+Jeremy est une machine morale hédoniste qui permet de réfléchir à
+l’impact d’une action sur un nombre d’acteurs défini. Bien que le système
+soit aussi simple que le principe de Bentham, ses inventeurs défendent
+l’idée que l’IA pourrait amener l’individu à réfléchir à l’action qu’il
+souhaite entreprendre à partir d’un calcul utilitariste, mais également à
+partir de conseils à même de le faire réfléchir à ce résultat. Par exemple, si
+on confronte ce système au dilemme du tramway, son programme
+conséquentialiste fera jouer les données de plaisir et de peine dans le calcul.
+Si on mobilise des données internes aux six personnes sur les voies du
+chemin de fer, l’option d’en tuer une pour en sauver cinq apparaît la
+meilleure. Mais, si on utilise des données externes, il est possible que la
+mort de la victime ait un impact majeur sur le plaisir net du plus grand
+
+---
+
+[p. 205-206]
+’exception en favorisant trop les vins « gustativement corrects ». On doit – ou l’on devrait –
+pouvoir accorder une très bonne note à un vin ayant une (seule) caractéristique merveilleuse52.
+Pour éviter cet effet de moyennisation des qualités, conduisant à
+médailler des vins corrects mais pas exceptionnels, les œnologues ont mis
+au point un système de notation exprimant globalement un avis sur le vin
+(six mentions allant de «  parfait  » à «  très mauvais  ») à partir d’une
+appréciation qualitative générale convertie ensuite en chiffre permettant
+d’exclure les mauvais vins et de décorer les vins d’exception.
+«  Renouvelons le conseil : pour noter globalement un vin, il ne faut pas
+penser directement à une valeur numérique, mais lui accorder d’abord une
+mention ; la note, dans l’échelle choisie, en découlera automatiquement53. »
+Mais peut-on considérer ce système comme viable pour élire un
+représentant politique  ? Bien que les critères d’appréciation soient
+différents, l’enjeu est le même : il faut écarter les mauvais et valoriser les
+bons. De sorte que la préservation de l’appréciation individuelle dans le
+vote collectif est un élément décisif qu’il faut encourager dans l’un comme
+dans l’autre cas. Or on pourrait renforcer cette dimension qualitative en
+introduisant dans le jugement majoritaire une combinaison des matrices
+sémantiques à même de générer une interprétation plus précise du vote et
+assurer un principe (5) de perfectibilité ou d’amélioration continue du
+politique. Pour ce faire, on pourrait par exemple favoriser un agencement
+autopoïétique humain-IA en adaptant l’IA à la sémantique de chaque votant
+afin de traduire au mieux ses appréciations dans un score numérique – par
+analogisme du calcul et du langage. L’ordre qualitatif d’un votant jusqu’à
+présent déçu par la politique pourrait tout à fait s’inscrire sur une échelle
+répartie en « salaud », « pourri », « médiocre », « piètre » et « passable »,
+que l’IA convertirait numériquement (cinq critères convertis en cinq notes)
+de manière à faire correspondre ces appréciations idiosyncrasiques à celles
+de tous les autres électeurs. Ainsi, la vertu principale de cet agencement
+serait d’empêcher le sentiment de la victoire incontestable de l’élu. Elle
+produirait un indice qualitatif important qui en dirait davantage que le
+sondage de popularité à partir de matrices sémantiques décrivant le vote. En
+donnant accès à de telles ontologies sémantiques qui se cachent derrière le
+quantitatif, l’IA nous permettrait d’y voir plus clair sur la nature du suffrage
+et de développer de nouvelles approches en sciences politiques au-delà de la
+vieille carte électorale et des sondages d’opinion.
+
+---
+
+[p. 217-218]
+e doit suivre un même ordre
+circulaire ; à la fin du cycle, les mêmes êtres renaîtront pour s’engager à
+nouveau vers le même destin. La deuxième n’est autre que celle popularisée
+par Nietzsche, dans laquelle la combinatoire des forces (actives et réactives)
+se recombine de la même manière encore et encore dans un temps infini en
+passé et un temps infini en futur. Enfin, la troisième, développée par Marc
+Aurèle dans ses Pensées, considère que les cycles sont semblables en
+apparence mais différents en réalité.
+En ce qui concerne l’interprétation platonicienne, il suffit pour s’en
+défaire de comprendre qu’il s’agit de ce qu’on appelle plus communément
+une «  astrologie judiciaire  », étudiant le destin humain à travers le
+mouvement des étoiles, dont la teneur rationnelle est pour le moins
+discutable. On la retrouve dans les rêveries préscientifiques et les « remèdes
+miracles » des alchimistes. Laissons donc cela à l’ésotérisme. Pour ce qui
+est de l’interprétation nietzschéenne, il faut saluer sa puissance existentielle.
+En effet, elle offre à chacun de nous la capacité de mettre à l’épreuve sa
+propre vie en la confrontant à l’idée d’une immortalité en boucles
+éternelles. Peut-être n’y a-t-il pas de geste philosophique plus sublime du
+point de vue de l’éthique, tant il force à la création de valeurs nouvelles et à
+vivre une vie digne d’être vécue (une infinité de fois). Mais, comme l’écrit
+Borges :
+[Georg] Cantor nie le fondement même de la thèse de Nietzsche. Il affirme l’infinité absolue du
+nombre des points de l’univers et même d’un mètre de cet univers ou d’une fraction de ce mètre.
+Compter, pour lui, n’est pas autre chose que comparer deux séries [...] une acceptation géniale
+de ces faits a inspiré la formule selon laquelle une suite infinie – par exemple, la série naturelle
+des nombres entiers – est une suite dont les éléments peuvent être dédoublés à leur tour en séries
+infinies8.
+Le dédoublement infini de l’infini n’est pas l’identité. Dans la
+cosmologie cantorienne de la pensée mathématique, le semblable se
+retrouve à l’interface d’ensembles hétérogènes. Tout le génie de la théorie
+des ensembles de Cantor, c’est d’avoir mis en évidence une infinité
+infiniment extensive de la pensée dans le redoublement de séries infinies
+(biunivoques) à partir d’ensembles de nature différente. Comment donc ne
+pas y voir un décalage fondamental entre le cadre et le contenu  ?
+L’incomplétude du calcul se mêle alors à l’infinitude des nombres qui se
+rencontrent dans des ensembles différents. Il y a encore une fois un mystère
+qui se cache dans l’infini de la pensée. Nous ne faisons que des liaisons

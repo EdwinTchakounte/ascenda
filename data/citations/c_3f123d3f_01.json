@@ -1,0 +1,616 @@
+[
+ {
+  "chapitre": "3e59ad69",
+  "citations": [],
+  "motif": "Page de credits editoriaux : coordonnees, depot legal, ISBN et avertissement sur le droit d'auteur. Aucun enonce citable."
+ },
+ {
+  "chapitre": "f2df5ce2",
+  "citations": [
+   {
+    "texte": "Pour le meilleur ou pour le pire, il nous faudra apprendre à utiliser l’intelligence artificielle... sans en devenir les outils.",
+    "page": 19,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Utiliser sans devenir l'outil",
+    "portee": "Formule qui pose en une phrase l'enjeu de l'autonomie face a un instrument puissant."
+   },
+   {
+    "texte": "Nous allons abandonner des connaissances, des gestes et des décisions. Rien à voir avec la disparition des dactylos ou des typographes. C’est une délégation profonde de notre jugement, de nos doutes, de notre manière d’analyser.",
+    "page": 20,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que nous deleguons",
+    "portee": "Distingue nettement l'automatisation des gestes de la delegation du jugement."
+   },
+   {
+    "texte": "Les vraies questions ne sont pas de savoir si l’IA fera partie de nos vies, mais comment et jusqu’où ?",
+    "page": 19,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La bonne question",
+    "portee": "Deplace le debat de l'acceptation vers les conditions et les limites de l'usage."
+   }
+  ]
+ },
+ {
+  "chapitre": "c84a25a9",
+  "citations": [
+   {
+    "texte": "l’intelligence artificielle (IA), c’est une technologie capable d’apprendre à partir de données. De beaucoup, beaucoup de données.",
+    "page": 21,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Definition la plus simple",
+    "portee": "Point de depart accessible pour qui n'a aucune formation technique."
+   },
+   {
+    "texte": "Pas avec des règles strictes du genre « À un stop, tu t’arrêtes », mais plutôt sur la base d’exemples : « Chaque fois que les conducteurs exemplaires ont vu un stop, ils se sont arrêtés. »",
+    "page": 22,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Apprendre par l'exemple, pas par la regle",
+    "portee": "Explique en une image la rupture entre programmation classique et apprentissage automatique."
+   },
+   {
+    "texte": "Ce qu’elle fait concrètement, c’est des prédictions.",
+    "page": 22,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Une machine a prediction",
+    "portee": "Ramene l'IA a son operation fondamentale, ce qui aide a en juger les usages."
+   }
+  ]
+ },
+ {
+  "chapitre": "ce3c8ea7",
+  "citations": [
+   {
+    "texte": "C’est l’humain qui lui donne une montagne de données pour l’entraîner, mais après, c’est elle qui trouve les règles, les patterns, les tendances cachées dedans.",
+    "page": 23,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Qui trouve les regles",
+    "portee": "Precise le partage des roles : l'humain fournit la matiere, la machine degage la structure."
+   },
+   {
+    "texte": "C’est entre autres pour cette raison que tes données sont si précieuses : elles alimentent l’IA qui, conséquemment, devient toujours meilleure pour prédire ce que tu veux.",
+    "page": 23,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi vos donnees valent cher",
+    "portee": "Relie directement la valeur economique des donnees a la performance des modeles."
+   }
+  ]
+ },
+ {
+  "chapitre": "bd689d3d",
+  "citations": [
+   {
+    "texte": "Comprendre comment elle fonctionne, c’est reprendre le contrôle, au moins en partie. C’est être capable de choisir quand tu veux laisser l’IA te guider, et quand tu veux garder ton libre arbitre.",
+    "page": 25,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Comprendre pour choisir",
+    "portee": "Fait de la comprehension technique une condition de la liberte, non un luxe d'expert."
+   },
+   {
+    "texte": "L’IA, c’est juste un outil. Un outil extrêmement puissant, certes, mais un outil quand même. C’est comme une auto : elle peut t’amener loin, mais si t’apprends pas à conduire, elle peut aussi te faire rentrer droit dans un mur.",
+    "page": 25,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ni amie ni ennemie",
+    "portee": "Refus des deux postures faciles, l'emerveillement et la panique."
+   }
+  ]
+ },
+ {
+  "chapitre": "f529ed38",
+  "citations": [
+   {
+    "texte": "grâce à des algorithmes d’intelligence artificielle, les entreprises peuvent décider que TOI, tu vas payer plus cher qu’un autre client pour le même produit ou service. Et souvent, sans que tu t’en rendes compte.",
+    "page": 27,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La discrimination par les prix",
+    "portee": "Pratique legale et repandue dont la plupart des consommateurs ignorent l'existence."
+   },
+   {
+    "texte": "tu penses que tu vas trouver le meilleur prix. En fait, tu es souvent en train de négocier contre un algorithme.",
+    "page": 27,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Negocier contre un algorithme",
+    "portee": "Renverse la representation du commerce en ligne comme espace de comparaison libre."
+   }
+  ]
+ },
+ {
+  "chapitre": "7f4ce434",
+  "citations": [
+   {
+    "texte": "Ces systèmes analysent ton comportement : combien de fois tu as visité le site, quels produits tu as consultés, si tu surfes à partir d’un iPhone ou d’un vieil ordi, si tu es géolocalisé à Outremont ou à Trois- Rivières, si tu navigues sur Chrome ou Safari.",
+    "page": 27,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ce que revele votre navigation",
+    "portee": "Detaille les signaux ordinaires a partir desquels un prix personnel est construit."
+   },
+   {
+    "texte": "si tu travailles de nuit et que tu es souvent sur la route après 23 h, tu pourrais être pénalisé par défaut, même si tu conduis prudemment.",
+    "page": 28,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le biais qui punit une vie",
+    "portee": "Montre comment un modele de risque penalise une condition de travail plutot qu'un comportement."
+   }
+  ]
+ },
+ {
+  "chapitre": "3fd6b3c0",
+  "citations": [
+   {
+    "texte": "Plus longtemps tu regardes les détails d’un vol, plus le site comprend que tu es intéressé. Et plus il est probable qu’il augmentera légèrement le prix pour te convaincre que c’est le bon moment pour procéder à l’achat. Le but ? Maximiser le profit, pas ton expérience.",
+    "page": 29,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'urgence fabriquee",
+    "portee": "L'interet manifeste par le client devient l'argument pour lui vendre plus cher."
+   },
+   {
+    "texte": "si l’app remarque que t’es déjà accro à ses services gratuits (par exemple, après un essai de 30 jours), l’algorithme pourrait conclure que tu paieras facilement le plein prix pour continuer ton abonnement.",
+    "page": 29,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'habitude se paie",
+    "portee": "Le prix ne recompense pas la fidelite : il en exploite le cout de sortie."
+   }
+  ]
+ },
+ {
+  "chapitre": "06c3029d",
+  "citations": [
+   {
+    "texte": "Hilo sait exactement quand t’es chez toi, quand tu montes ou baisses le chauffage, combien de temps tu prends pour chauffer ta maison et même, indirectement, quel genre de rythme de vie tu mènes.",
+    "page": 30,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que revele un thermostat",
+    "portee": "Un objet utile devient un capteur de vie privee sans que l'usager y consente vraiment."
+   },
+   {
+    "texte": "L’IA, capable d’analyser précisément tes habitudes de consommation, saurait exactement quand tu es le plus susceptible d’accepter une hausse tarifaire sans protester",
+    "page": 30,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Connaitre le seuil d'acceptation",
+    "portee": "La connaissance fine du client sert a mesurer jusqu'ou il peut etre pousse."
+   }
+  ]
+ },
+ {
+  "chapitre": "54124842",
+  "citations": [
+   {
+    "texte": "Il s’agit de ce que l’on appelle désormais la tarification de surveillance, ou surveillance pricing en anglais. Où le prix qu’on te sert, c’est un prix unique à toi en fonction de tes comportements et de tes préférences personnelles.",
+    "page": 31,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La tarification de surveillance",
+    "portee": "Nomme precisement une pratique nouvelle, distincte de la simple fluctuation des prix."
+   },
+   {
+    "texte": "Actuellement, cette tactique est légale, et rien n’oblige une entreprise à te dire que tu payes plus cher que ton voisin pour le même produit.",
+    "page": 31,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Legal et opaque",
+    "portee": "Le vide juridique, plus que la technique, est ce qui rend la pratique possible."
+   },
+   {
+    "texte": "C’est l’algorithme qui décidera, en quelque sorte, quand il sera le mieux pour toi de consommer ou non de l’électricité.",
+    "page": 31,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qui decide de votre journee",
+    "portee": "La tarification fine reorganise les gestes quotidiens autour du calcul de l'operateur."
+   }
+  ]
+ },
+ {
+  "chapitre": "bc249e4c",
+  "citations": [
+   {
+    "texte": "être conscient que l’IA cherche à optimiser les profits de l’entreprise, pas à t’aider toi personnellement.",
+    "page": 32,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "A qui profite l'optimisation",
+    "portee": "Regle de lecture applicable a toute offre presentee comme personnalisee."
+   },
+   {
+    "texte": "tant que les algorithmes savent plus de choses sur toi que tu en sais sur eux, tu es désavantagé dans cette relation.",
+    "page": 33,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'asymetrie d'information",
+    "portee": "Formule le desequilibre de fond entre le consommateur et les systemes qui l'observent."
+   }
+  ]
+ },
+ {
+  "chapitre": "b934d0ec",
+  "citations": [
+   {
+    "texte": "Ces cartes-là ont l’air de t’offrir des récompenses ou des aubaines. Mais ce qu’elles font surtout, c’est te profiler.",
+    "page": 34,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ce que paie la carte de fidelite",
+    "portee": "La recompense visible masque la contrepartie reelle, la construction d'un profil."
+   }
+  ]
+ },
+ {
+  "chapitre": "d7da025c",
+  "citations": [
+   {
+    "texte": "L’algorithme n’essaie pas de te faire économiser. Il essaie de te faire acheter plus souvent, ou que tu restes fidèle à une marque ou à une chaîne.",
+    "page": 35,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'objectif reel du rabais",
+    "portee": "Distinction nette entre l'interet affiche et la fonction economique de la promotion ciblee."
+   },
+   {
+    "texte": "Et toi, tu penses avoir eu un deal. Mais t’as juste été manipulé par un modèle prédictif qui veut pas que t’abandonnes ton habitude",
+    "page": 35,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'illusion de la bonne affaire",
+    "portee": "Le sentiment d'avoir bien negocie fait partie du dispositif commercial."
+   }
+  ]
+ },
+ {
+  "chapitre": "77e086fd",
+  "citations": [
+   {
+    "texte": "Avant, les circulaires étaient les mêmes pour tout le monde. Aujourd’hui ? Chaque circulaire peut être personnalisée.",
+    "page": 35,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La fin du prix affiche commun",
+    "portee": "Rupture avec un principe ancien du commerce : une offre publique identique pour tous."
+   },
+   {
+    "texte": "C’est ce qu’on appelle le lift de ventes. Ça capitalise sur tes impulsions de consommateur, des achats que t’aurais pas faits",
+    "page": 36,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'agencement des rayons",
+    "portee": "L'organisation du magasin est un dispositif calcule, non une commodite pour le client."
+   }
+  ]
+ },
+ {
+  "chapitre": "11660563",
+  "citations": [
+   {
+    "texte": "le positionnement des produits en magasin est optimisé pour que ceux qui dépensent davantage trouvent encore plus à dépenser.",
+    "page": 36,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Optimiser pour les gros paniers",
+    "portee": "Le magasin n'est pas neutre : il est configure en fonction de la valeur de chaque client."
+   },
+   {
+    "texte": "Tu penses faire un choix libre, mais l’interface est faite pour t’amener là où l’IA veut que tu ailles.",
+    "page": 37,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La liberte de l'interface",
+    "portee": "Rappelle que l'ordre d'affichage est deja une decision prise a votre place."
+   }
+  ]
+ },
+ {
+  "chapitre": "8e5de557",
+  "citations": [
+   {
+    "texte": "Ton épicerie est pas juste un lieu pour te nourrir. C’est un laboratoire d’analyse comportementale en temps réel.",
+    "page": 38,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'epicerie comme laboratoire",
+    "portee": "Requalifie un lieu ordinaire en dispositif d'observation et d'experimentation."
+   },
+   {
+    "texte": "Tant que tu seras pas conscient de ça, tu continueras à penser que c’est toi qui fais les choix.",
+    "page": 38,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La conscience du dispositif",
+    "portee": "La lucidite sur le mecanisme est presentee comme le premier levier de reprise en main."
+   }
+  ]
+ },
+ {
+  "chapitre": "925f3b8e",
+  "citations": [
+   {
+    "texte": "C’est un logiciel qui utilise des algorithmes d’IA pour te proposer un portefeuille d’investissement, le gérer automatiquement et le rééquilibrer selon les fluctuations du marché.",
+    "page": 39,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Definition du robot-conseiller",
+    "portee": "Definition sobre d'un produit financier souvent survendu."
+   }
+  ]
+ },
+ {
+  "chapitre": "0d21f69b",
+  "citations": [
+   {
+    "texte": "plusieurs robots utilisent des algorithmes de répartition d’actifs passive, pas de l’intelligence artificielle avancée. Autrement dit : ils font ce que n’importe quel conseiller ferait, mais en version automatisée.",
+    "page": 40,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ce que l'etiquette IA recouvre",
+    "portee": "Avertissement utile : le mot intelligence artificielle sert souvent d'argument commercial."
+   }
+  ]
+ },
+ {
+  "chapitre": "7ab1ed88",
+  "citations": [
+   {
+    "texte": "Bref, l’IA se fout un peu de tes émotions ; elle agit comme si tes nerfs étaient faits d’acier... comme les siens !",
+    "page": 41,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'indifference de la machine",
+    "portee": "L'absence d'emotion est presentee ici comme une force et une epreuve pour l'investisseur."
+   },
+   {
+    "texte": "comme émotivité rime mal avec investissement, et que l’IA n’a aucun feeling, les pertes de ses clients ont été moindres que celles des investisseurs humains lors du crash de la pandémie.",
+    "page": 41,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Quand ne rien ressentir protege",
+    "portee": "Cas ou l'automatisation corrige un defaut humain documente, la panique de marche."
+   }
+  ]
+ },
+ {
+  "chapitre": "3f6a2fa5",
+  "citations": [
+   {
+    "texte": "Leur principal avantage, c’est la constance. Ils réagissent toujours de la même façon, sans émotion. Mais battre le marché ? Ça reste une promesse marketing plus qu’une réalité.",
+    "page": 42,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Constance plutot que performance",
+    "portee": "Recadre honnetement ce qu'un investisseur peut attendre d'une gestion automatisee."
+   },
+   {
+    "texte": "On leur promettait des rendements de 10 à 15 % par mois grâce à l’IA. En réalité, c’étaient des systèmes frauduleux ou des pyramides de Ponzi.",
+    "page": 42,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'IA comme argument d'escroquerie",
+    "portee": "Le vocabulaire technique sert de caution a des fraudes anciennes."
+   }
+  ]
+ },
+ {
+  "chapitre": "fe55b7ea",
+  "citations": [
+   {
+    "texte": "Et comme n’importe quelle scie électrique : mal utilisée, ça peut te coûter un bras.",
+    "page": 44,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'outil et le risque",
+    "portee": "Image qui rappelle que la puissance d'un instrument est aussi sa dangerosite."
+   }
+  ]
+ },
+ {
+  "chapitre": "32538f9e",
+  "citations": [
+   {
+    "texte": "l’intelligence artificielle s’est tranquillement installée dans ton compte bancaire, sans crier gare. Et elle connaît beaucoup, beaucoup de choses sur toi !",
+    "page": 45,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'IA entree sans bruit",
+    "portee": "L'adoption bancaire s'est faite sans annonce, ce qui explique l'ignorance des clients."
+   }
+  ]
+ },
+ {
+  "chapitre": "1e8a4ff3",
+  "citations": [
+   {
+    "texte": "ces systèmes utilisent l’information qu’on possède sur toi pour prévoir ton comportement et intervenir pile-poil au moment où tu te disais justement « Je devrais-tu changer de carte de crédit, moi ? ».",
+    "page": 45,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Intervenir au bon moment",
+    "portee": "La prediction sert moins a comprendre le client qu'a choisir l'instant de la sollicitation."
+   }
+  ]
+ },
+ {
+  "chapitre": "5ba9867f",
+  "citations": [
+   {
+    "texte": "Bref, ces outils veulent et peuvent t’aider... mais aussi t’orienter. Et parfois, la ligne entre les deux est mince, voire très mince.",
+    "page": 47,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Aider ou orienter",
+    "portee": "Formule la difficulte centrale de tout conseil automatise fourni par une partie interessee."
+   },
+   {
+    "texte": "Ce qui est troublant, c’est que ta banque sait pas mal tout sur toi, tout simplement parce qu’on paye plus rien comptant de nos jours.",
+    "page": 47,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La fin de l'argent comptant",
+    "portee": "Relie un changement de moyen de paiement a une perte generalisee d'anonymat."
+   }
+  ]
+ },
+ {
+  "chapitre": "75377b03",
+  "citations": [
+   {
+    "texte": "Autrement dit, l’IA devient un vendeur invisible ultra performant.",
+    "page": 48,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le vendeur invisible",
+    "portee": "Nomme ce qui distingue la sollicitation algorithmique du demarchage classique : on ne la voit pas venir."
+   },
+   {
+    "texte": "Plusieurs conseillers sont maintenant des accompagnateurs de robots. Ils n’ont plus à faire l’analyse du dossier, parce que le système l’a déjà faite.",
+    "page": 48,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Accompagnateur de robots",
+    "portee": "Decrit precisement la maniere dont un metier se vide de sa substance sans disparaitre."
+   }
+  ]
+ },
+ {
+  "chapitre": "f35243d6",
+  "citations": [
+   {
+    "texte": "Et surtout, tu es traité comme une série de données, pas comme une personne avec des objectifs de vie.",
+    "page": 49,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une serie de donnees",
+    "portee": "Enonce ce que perd la relation quand elle est mediee par un modele statistique."
+   },
+   {
+    "texte": "L’IA sait pas que tu veux acheter une maison pour ta mère malade. Elle voit seulement que tu fais plus de virements que d’habitude.",
+    "page": 49,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le motif que la machine ignore",
+    "portee": "Exemple concret de l'ecart entre un comportement observe et l'intention qui le porte."
+   }
+  ]
+ },
+ {
+  "chapitre": "d6afe51a",
+  "citations": [
+   {
+    "texte": "Rappelle-toi que l’IA te conseille dans l’intérêt de la banque, pas toujours dans le tien.",
+    "page": 49,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Dans l'interet de qui",
+    "portee": "Question a poser devant tout conseil automatise emanant d'une partie prenante."
+   },
+   {
+    "texte": "Aujourd’hui, c’est souvent toi contre l’algorithme. Et comme toujours, mieux tu comprends le jeu, plus t’as de chances de sortir gagnant.",
+    "page": 50,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Comprendre le jeu",
+    "portee": "Position de l'auteur : la connaissance du mecanisme est la seule arme du particulier."
+   }
+  ]
+ },
+ {
+  "chapitre": "215e2183",
+  "citations": [
+   {
+    "texte": "D’abord, ces applications intelligentes (comme Mint, YNAB, GoodBudget ou Wallet) ne font pas de magie.",
+    "page": 51,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Pas de magie",
+    "portee": "Mise au point liminaire contre la promesse publicitaire de ces outils."
+   }
+  ]
+ },
+ {
+  "chapitre": "dc934e40",
+  "citations": [
+   {
+    "texte": "les personnes ayant utilisé une app de gestion budgétaire augmentaient de 14 % l’adhésion à leur budget.",
+    "page": 52,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Un effet mesure",
+    "portee": "Donnee de l'Agence de la consommation en matiere financiere du Canada, qui chiffre un benefice reel mais modeste."
+   }
+  ]
+ },
+ {
+  "chapitre": "147c14b4",
+  "citations": [
+   {
+    "texte": "ces apps t’obligent à regarder en face la réalité parfois difficile de tes habitudes financières.",
+    "page": 52,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Regarder en face",
+    "portee": "L'efficacite de l'outil tient moins a son intelligence qu'a la confrontation qu'il impose."
+   },
+   {
+    "texte": "Le faux sentiment de contrôle : parfois, avoir l’app sur ton téléphone te donne l’impression d’être en contrôle... sans nécessairement que tu changes tes comportements.",
+    "page": 53,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le faux sentiment de controle",
+    "portee": "Piege frequent : confondre la mesure d'un probleme avec sa resolution."
+   }
+  ]
+ },
+ {
+  "chapitre": "2a0c3b57",
+  "citations": [
+   {
+    "texte": "Agis concrètement. Quand l’app t’avertit que tu dépasses ton budget resto ou shopping, agis en conséquence au lieu de juste soupirer pis ignorer la notification.",
+    "page": 54,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "De l'alerte a l'acte",
+    "portee": "Le maillon faible n'est pas l'information mais la decision qui devrait la suivre."
+   }
+  ]
+ },
+ {
+  "chapitre": "851a00c3",
+  "citations": [
+   {
+    "texte": "Parce qu’au fond, gérer son argent, c’est comme aller au gym : c’est toi qui dois lever les poids. L’IA, elle, elle peut juste te rappeler gentiment qu’il est temps de commencer à t’entraîner.",
+    "page": 55,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "C'est vous qui levez les poids",
+    "portee": "Image qui remet la discipline personnelle au centre, quel que soit l'outil employe."
+   }
+  ]
+ },
+ {
+  "chapitre": "9414e12b",
+  "citations": [
+   {
+    "texte": "Le gros mythe, c’est que l’IA va « voler » des jobs comme un voleur dans la nuit. En réalité, ce qu’elle a plus tendance à faire, c’est automatiser certaines tâches.",
+    "page": 57,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Des taches, pas des emplois",
+    "portee": "Correction decisive pour qui veut evaluer la vulnerabilite reelle de son metier."
+   }
+  ]
+ },
+ {
+  "chapitre": "0f9e3fc5",
+  "citations": [
+   {
+    "texte": "Est-ce que ça veut dire que l’adjointe est inutile ? Non. Mais elle doit apprendre à travailler avec ces outils, pour plutôt se concentrer sur des tâches plus stratégiques, plus humaines.",
+    "page": 57,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Se deplacer vers l'humain",
+    "portee": "Chemin concret d'adaptation pour un metier directement expose a l'automatisation."
+   },
+   {
+    "texte": "détecter les tensions dans l’équipe pour en informer son patron, des choses que les chatbots détecteront jamais",
+    "page": 58,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce que la machine ne percoit pas",
+    "portee": "Nomme une competence rarement decrite dans une fiche de poste et pourtant decisive."
+   }
+  ]
+ },
+ {
+  "chapitre": "03142937",
+  "citations": [
+   {
+    "texte": "Tous ces métiers impliquent des décisions complexes, de l’intuition, de l’écoute, de l’empathie, des contacts humains. L’IA peut les assister (ex. : suggérer des plans d’intervention, proposer des diagnostics, corriger des copies), mais elle peut pas gérer l’émotion, le jugement contextuel, l’improvisation.",
+    "page": 59,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Les metiers difficiles a automatiser",
+    "portee": "Critere utile pour s'orienter professionnellement dans un marche en recomposition."
+   },
+   {
+    "texte": "Est-ce que ça remplace les gens ? Non, mais ça remplace ce que tu fais de ton temps.",
+    "page": 59,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce qui est remplace, c'est le temps",
+    "portee": "Formule precise : l'automatisation ne supprime pas le poste, elle en redefinit le contenu."
+   }
+  ]
+ },
+ {
+  "chapitre": "49729927",
+  "citations": [
+   {
+    "texte": "Et c’est ceux qui refusent d’apprendre à utiliser l’IA dans leur travail qui risquent vraiment d’être remplacés. Non pas par une machine, mais par quelqu’un qui sait s’en servir.",
+    "page": 60,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Remplace par un collegue, pas par une machine",
+    "portee": "Deplace le risque du plan technologique au plan des competences individuelles."
+   },
+   {
+    "texte": "le meilleur moyen de pas perdre ta job à cause de l’IA... c’est de la maîtriser et d’apprendre à jouer avec.",
+    "page": 60,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Maitriser plutot que subir",
+    "portee": "Conseil operationnel qui vaut pour tout travailleur, quel que soit son secteur."
+   }
+  ]
+ }
+]

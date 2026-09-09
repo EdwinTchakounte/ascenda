@@ -1,0 +1,598 @@
+[
+ {
+  "chapitre": "25c7e0f9",
+  "citations": [
+   {
+    "texte": "Elles renforcent des comportements de contrôle excessif. Elles peuvent nourrir une image corporelle négative. Elles valorisent la minceur comme objectif premier, au lieu de la santé.",
+    "page": 111,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Pourquoi ces applications ne conviennent pas aux jeunes",
+    "portee": "Trois raisons precises qui devraient guider un parent avant d'autoriser un tel outil."
+   },
+   {
+    "texte": "Écouter ton corps autant que ton téléphone. Si t’as faim, c’est pas ton app qui a le dernier mot.",
+    "page": 111,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le corps avant l'ecran",
+    "portee": "Rappelle que le signal biologique doit primer sur la mesure numerique."
+   }
+  ]
+ },
+ {
+  "chapitre": "24b3e5ab",
+  "citations": [
+   {
+    "texte": "Alors sers-toi de l’IA si ça t’aide. Mais rappelle-toi : c’est pas ton coach. C’est un outil. Pis ton corps mérite mieux qu’un programme généré en 12 secondes par un serveur en Californie.",
+    "page": 112,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ce n'est pas ton coach",
+    "portee": "Formule qui remet a sa place un accompagnement automatise vendu comme personnel."
+   }
+  ]
+ },
+ {
+  "chapitre": "ad3ea930",
+  "citations": [
+   {
+    "texte": "Des études scientifiques confirment même que pour des diagnostics de base, certains systèmes IA sont aussi bons – voire meilleurs – que des médecins généralistes.",
+    "page": 114,
+    "axe": "11-sciences-environnement",
+    "theme": "Aussi bons que des generalistes",
+    "portee": "Constat mesure qui explique l'entree rapide de ces outils dans les systemes de sante."
+   }
+  ]
+ },
+ {
+  "chapitre": "908710e3",
+  "citations": [
+   {
+    "texte": "Parce qu’un algorithme, aussi brillant soit-il, comprend pas l’humain comme un humain. L’IA, c’est des statistiques. Ça te classe dans des catégories.",
+    "page": 115,
+    "axe": "11-sciences-environnement",
+    "theme": "Classer n'est pas comprendre",
+    "portee": "Rappelle la nature statistique du diagnostic automatise, souvent oubliee par les patients."
+   },
+   {
+    "texte": "Un médecin expérimenté va parfois voir, entendre ou ressentir quelque chose que l’IA pourra jamais capter. Comme la détresse derrière un mal de ventre. Ou la violence conjugale cachée derrière une simple chute.",
+    "page": 115,
+    "axe": "11-sciences-environnement",
+    "theme": "Ce que le clinicien percoit",
+    "portee": "Deux exemples qui montrent que le symptome n'est pas toujours le probleme."
+   }
+  ]
+ },
+ {
+  "chapitre": "78a3662a",
+  "citations": [
+   {
+    "texte": "plusieurs apps santé ne sont pas neutres. Elles veulent te vendre un abonnement, un produit miracle ou une consultation privée.",
+    "page": 116,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'outil medical qui vend",
+    "portee": "Rappel indispensable avant de suivre le conseil d'une application de sante."
+   },
+   {
+    "texte": "Exiger qu’un humain valide tout diagnostic sérieux ou toute prescription.",
+    "page": 116,
+    "axe": "11-sciences-environnement",
+    "theme": "La validation humaine",
+    "portee": "Regle de securite simple, a poser comme condition de tout usage medical de l'IA."
+   }
+  ]
+ },
+ {
+  "chapitre": "7b461cd1",
+  "citations": [
+   {
+    "texte": "Parce que la santé, c’est pas juste une question de symptômes. C’est une affaire d’écoute. De nuance. D’humain.",
+    "page": 117,
+    "axe": "11-sciences-environnement",
+    "theme": "La sante n'est pas que des symptomes",
+    "portee": "Definition de la medecine qui excede ce qu'un systeme de classification peut couvrir."
+   },
+   {
+    "texte": "Le Québec, comme bien des endroits, vit une pénurie grave de préposés, d’infirmiers et d’aidants. Les CHSLD sont surchargés. Les soins à domicile manquent de ressources. Les familles sont épuisées.",
+    "page": 118,
+    "axe": "11-sciences-environnement",
+    "theme": "La penurie qui appelle la machine",
+    "portee": "Contexte social qui explique pourquoi la technologie s'installe si vite dans les soins."
+   }
+  ]
+ },
+ {
+  "chapitre": "03b4a58f",
+  "citations": [
+   {
+    "texte": "Certains, comme Paro, le petit phoque interactif, sont utilisés pour calmer l’anxiété et stimuler les gens atteints d’Alzheimer.",
+    "page": 119,
+    "axe": "11-sciences-environnement",
+    "theme": "Le robot qui apaise",
+    "portee": "Usage therapeutique documente d'un objet interactif aupres de personnes agees."
+   }
+  ]
+ },
+ {
+  "chapitre": "ecd34c1c",
+  "citations": [
+   {
+    "texte": "Là où l’IA est forte, c’est dans la logistique, la prévention, l’organisation. Là où elle est faible, c’est dans l’humanité. Or, c’est souvent ça qui manque le plus dans les soins aux personnes âgées.",
+    "page": 120,
+    "axe": "11-sciences-environnement",
+    "theme": "Forte la ou l'on manque le moins",
+    "portee": "Diagnostic sec : l'outil excelle precisement la ou le besoin est le moins criant."
+   },
+   {
+    "texte": "On pourrait se retrouver avec des aînés bien encadrés... mais profondément seuls.",
+    "page": 120,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Encadres et seuls",
+    "portee": "Formule qui resume le risque d'une automatisation du soin sans presence humaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "5a2aef48",
+  "citations": [
+   {
+    "texte": "Demander que l’IA soit utilisée en soutien, pas en remplacement des humains.",
+    "page": 120,
+    "axe": "11-sciences-environnement",
+    "theme": "Soutien, pas remplacement",
+    "portee": "Exigence simple a porter comme proche ou comme citoyen dans le debat public."
+   },
+   {
+    "texte": "est-ce vraiment pour leur bien... ou parce qu’on a abandonné l’idée de faire mieux nous-mêmes ?",
+    "page": 121,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question qu'il faut se poser",
+    "portee": "Interroge le motif reel derriere l'automatisation du soin aux aines."
+   }
+  ]
+ },
+ {
+  "chapitre": "a78d5f88",
+  "citations": [
+   {
+    "texte": "Parce que chaque personne réagit différemment à un traitement.",
+    "page": 122,
+    "axe": "11-sciences-environnement",
+    "theme": "Le fondement de la medecine personnalisee",
+    "portee": "Fait clinique elementaire dont decoule tout le projet de personnalisation."
+   }
+  ]
+ },
+ {
+  "chapitre": "16cde020",
+  "citations": [
+   {
+    "texte": "Ensuite, elle utilise ces données pour prédire précisément quel médicament ou quelle combinaison de médicaments fonctionnera le mieux pour toi, à quelle dose, avec quel timing précis. Plus besoin de tâtonner pendant des mois.",
+    "page": 122,
+    "axe": "11-sciences-environnement",
+    "theme": "La fin du tatonnement",
+    "portee": "Promesse concrete de la medecine assistee par IA : reduire l'essai et l'erreur therapeutique."
+   }
+  ]
+ },
+ {
+  "chapitre": "47ecc01f",
+  "citations": [
+   {
+    "texte": "à Montréal, on est déjà à la pointe de la recherche mondiale sur la médecine personnalisée grâce à l’IA.",
+    "page": 124,
+    "axe": "11-sciences-environnement",
+    "theme": "Un pole de recherche",
+    "portee": "Rappelle qu'un ecosysteme regional peut peser dans une recherche mondiale."
+   },
+   {
+    "texte": "Ton ADN, tes habitudes de vie, ton état de santé – toutes ces données ultrasensibles seraient nécessaires pour concevoir ton médicament personnalisé. Comment s’assurer que ces infos ne soient pas mal utilisées ou piratées ?",
+    "page": 124,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le prix de la personnalisation",
+    "portee": "La precision du traitement se paie en exposition de donnees intimes."
+   }
+  ]
+ },
+ {
+  "chapitre": "f6b3b028",
+  "citations": [
+   {
+    "texte": "La médecine personnalisée pourrait devenir une médecine de luxe, aggravant les inégalités.",
+    "page": 125,
+    "axe": "11-sciences-environnement",
+    "theme": "Une medecine de luxe",
+    "portee": "Risque majeur pour tout systeme de sante : que le progres creuse l'ecart au lieu de le combler."
+   },
+   {
+    "texte": "L’IA pourra jamais prévoir à 100 % comment ton corps va réagir à un médicament X ou Y.",
+    "page": 125,
+    "axe": "11-sciences-environnement",
+    "theme": "La limite scientifique",
+    "portee": "Rappel de prudence contre l'idee d'une medecine devenue previsible."
+   }
+  ]
+ },
+ {
+  "chapitre": "a8607d99",
+  "citations": [
+   {
+    "texte": "même si l’IA peut beaucoup, la médecine reste encore un art humain avant d’être une science exacte.",
+    "page": 126,
+    "axe": "11-sciences-environnement",
+    "theme": "Un art avant une science",
+    "portee": "Formule qui situe le role de l'IA dans une pratique irreductible au calcul."
+   }
+  ]
+ },
+ {
+  "chapitre": "14c94cf1",
+  "citations": [
+   {
+    "texte": "celles utilisant Calm pendant au moins 10 minutes par jour rapportaient en moyenne 30 % de réduction de leur stress perçu après deux mois.",
+    "page": 128,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Un effet mesure sur le stress",
+    "portee": "Donnee chiffree qui montre qu'un usage regulier et bref produit un resultat reel."
+   }
+  ]
+ },
+ {
+  "chapitre": "ca14bf15",
+  "citations": [
+   {
+    "texte": "si tu ouvres l’app juste une fois par mois, ça risque pas de changer grand- chose à ta vie.",
+    "page": 129,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La regularite fait tout",
+    "portee": "Condition commune a tous ces outils, trop rarement enoncee dans leur publicite."
+   },
+   {
+    "texte": "Si tu commences à vérifier ta montre toutes les cinq minutes pour savoir si t’es stressé, tu risques juste d’aggraver ton anxiété.",
+    "page": 129,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Quand la mesure aggrave le mal",
+    "portee": "Effet pervers documente de l'autosurveillance permanente."
+   }
+  ]
+ },
+ {
+  "chapitre": "ca6a908f",
+  "citations": [
+   {
+    "texte": "La clé, c’est de voir ces outils comme des compléments à une bonne hygiène de vie, pas comme des solutions miracles.",
+    "page": 129,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Complement, pas solution",
+    "portee": "Regle applicable a l'ensemble des outils de bien-etre connectes."
+   },
+   {
+    "texte": "Parce qu’au bout du compte, c’est pas l’IA qui va te détendre. C’est toi.",
+    "page": 130,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "C'est toi qui te detends",
+    "portee": "Renvoie la responsabilite de l'effet a celui qui agit, non a l'outil qui rappelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "a1d7e4ad",
+  "citations": [
+   {
+    "texte": "Résultat : avec le temps, l’app finit par connaître tes goûts mieux que ta meilleure amie.",
+    "page": 133,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Elle vous connait mieux que vos proches",
+    "portee": "Le volume d'interactions donne a la plateforme une connaissance qu'aucun proche n'accumule."
+   },
+   {
+    "texte": "C’est comme si ton app te disait : « Voici les profils à ta hauteur, selon nos calculs. » C’est flatteur... ou frustrant, selon où l’algorithme te classe.",
+    "page": 133,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Etre classe par une machine",
+    "portee": "Le classement invisible des utilisateurs pose une question de dignite rarement discutee."
+   }
+  ]
+ },
+ {
+  "chapitre": "788e34c8",
+  "citations": [
+   {
+    "texte": "Trouver quelqu’un d’attirant sur une app, c’est facile. Tomber en amour et bâtir une relation durable, c’est une autre paire de manches.",
+    "page": 133,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Rencontrer n'est pas construire",
+    "portee": "Distinction que la promesse commerciale des applications tend a effacer."
+   },
+   {
+    "texte": "une étude a réussi à prédire avec plus de 75 % de précision la stabilité de couples simplement en observant la manière d’interagir de ses membres pendant une conversation filmée.",
+    "page": 134,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Predire la solidite d'un couple",
+    "portee": "Resultat qui montre combien la maniere d'interagir en dit plus que le contenu des paroles."
+   }
+  ]
+ },
+ {
+  "chapitre": "0e636fa5",
+  "citations": [
+   {
+    "texte": "L’IA peut te prévenir que ça va mal, mais elle est pas en mesure de te conseiller comment régler le problème. Elle peut prédire une rupture potentielle, mais pas comment pardonner, négocier ou grandir ensemble à travers les épreuves.",
+    "page": 135,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Predire n'est pas resoudre",
+    "portee": "Ligne de partage nette entre le diagnostic automatique et le travail relationnel."
+   }
+  ]
+ },
+ {
+  "chapitre": "9f2b1ccf",
+  "citations": [
+   {
+    "texte": "une vraie relation d’amour, ça se calcule pas. Ça se construit, ça se vit, pis parfois ça s’endure, à grands coups d’imprévus et de compromis.",
+    "page": 136,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'amour ne se calcule pas",
+    "portee": "Reponse de l'auteur a la promesse d'une compatibilite mesurable."
+   }
+  ]
+ },
+ {
+  "chapitre": "c6e8d7d2",
+  "citations": [
+   {
+    "texte": "à 30, 40 ou même 50 ans, te faire de nouveaux amis, c’est plus compliqué qu’au secondaire.",
+    "page": 137,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'amitie apres la jeunesse",
+    "portee": "Constat rarement enonce, qui explique le succes des suggestions automatisees."
+   }
+  ]
+ },
+ {
+  "chapitre": "b5fd56a7",
+  "citations": [
+   {
+    "texte": "Même tes recherches Google peuvent influencer subtilement ces suggestions, car oui, toutes ces entreprises partagent tes données (malheureusement !).",
+    "page": 138,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le partage entre plateformes",
+    "portee": "Rappelle que le profil construit sur une plateforme circule bien au-dela d'elle."
+   }
+  ]
+ },
+ {
+  "chapitre": "96e3058a",
+  "citations": [
+   {
+    "texte": "C’est prouvé scientifiquement : plus tu vois un visage, plus il devient familier et rassurant.",
+    "page": 139,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'effet de simple exposition",
+    "portee": "Mecanisme psychologique que les plateformes exploitent pour faire accepter une suggestion."
+   }
+  ]
+ },
+ {
+  "chapitre": "4ef25cf8",
+  "citations": [
+   {
+    "texte": "L’algorithme sait qu’une autre personne et toi aimez tous les deux le yoga chaud, mais il peut pas prédire si vos personnalités vont réellement « cliquer » ou non.",
+    "page": 139,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Les gouts ne font pas l'amitie",
+    "portee": "Limite fondamentale de la mise en relation par correspondance d'interets."
+   },
+   {
+    "texte": "Une amitié virtuelle est bien belle, mais partager un vrai café ensemble, ça reste encore mieux.",
+    "page": 140,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Passer au reel",
+    "portee": "Conseil simple qui distingue le contact enregistre de la relation vecue."
+   }
+  ]
+ },
+ {
+  "chapitre": "61b31f90",
+  "citations": [
+   {
+    "texte": "Une vraie amitié demande toujours du temps, des efforts et une communication authentique.",
+    "page": 141,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ce que coute une amitie",
+    "portee": "Rappel que la mise en relation ne dispense jamais du travail relationnel."
+   },
+   {
+    "texte": "la vraie magie d’une amitié se produit toujours dans le monde réel, pas seulement en ligne.",
+    "page": 141,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ou se joue l'amitie",
+    "portee": "Conclusion qui replace l'outil dans son role : un point de depart, pas une destination."
+   }
+  ]
+ },
+ {
+  "chapitre": "7e33f417",
+  "citations": [
+   {
+    "texte": "Exemple : « Essaie de reformuler ta critique en question ouverte » ou encore « Propose une pause de 10 minutes pour calmer la tension ».",
+    "page": 143,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Des conseils au moment utile",
+    "portee": "Deux techniques de communication elementaires, rendues disponibles au moment de la tension."
+   },
+   {
+    "texte": "L’idée, c’est que l’IA devient une sorte de conseiller personnel numérique, disponible en tout temps, qui te donne des clés pour mieux gérer les moments tendus.",
+    "page": 143,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Un conseiller disponible",
+    "portee": "Ce que ces outils apportent reellement : la disponibilite, plus que la profondeur."
+   }
+  ]
+ },
+ {
+  "chapitre": "54967bd6",
+  "citations": [
+   {
+    "texte": "il y a une condition majeure à l’efficacité de ces apps : il faut que les deux partenaires s’impliquent activement. Utiliser l’app en cachette pour régler tes frustrations, ça marche pas.",
+    "page": 143,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'engagement des deux cotes",
+    "portee": "Aucun outil relationnel ne fonctionne s'il n'est utilise que par une des parties."
+   },
+   {
+    "texte": "les familles se sentaient généralement moins tendues, vivaient avec moins de cris et plus de moments calmes et complices.",
+    "page": 144,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Un effet observe en famille",
+    "portee": "Resultat obtenu par des chercheurs quebecois et francais apres quelques semaines d'usage."
+   }
+  ]
+ },
+ {
+  "chapitre": "2955cb67",
+  "citations": [
+   {
+    "texte": "ces apps remplaceront jamais l’écoute active et l’attention directe que tu dois donner à tes enfants.",
+    "page": 145,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'attention ne se delegue pas",
+    "portee": "Limite claire posee a tout outil d'accompagnement parental."
+   },
+   {
+    "texte": "Parfois, les chicanes sont nécessaires pour faire sortir ce qui va mal. Éviter tout conflit est pas toujours bénéfique.",
+    "page": 145,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le conflit a sa fonction",
+    "portee": "Nuance importante contre l'idee qu'une relation sans friction serait une relation saine."
+   }
+  ]
+ },
+ {
+  "chapitre": "8c5e0f27",
+  "citations": [
+   {
+    "texte": "aucune app remplacera jamais une vraie conversation honnête, une écoute attentive ou un câlin réconfortant après une dispute.",
+    "page": 146,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Ce qui repare vraiment",
+    "portee": "Rappelle que la reparation d'une relation passe par des gestes que nul outil ne produit."
+   }
+  ]
+ },
+ {
+  "chapitre": "fcfe1ed7",
+  "citations": [
+   {
+    "texte": "des millions de personnes commencent déjà à développer des liens profonds, parfois très intenses, avec des assistants virtuels alimentés par l’intelligence artificielle.",
+    "page": 147,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un phenomene de masse",
+    "portee": "Ce qui semblait relever de la fiction est devenu un fait social mesurable."
+   }
+  ]
+ },
+ {
+  "chapitre": "78b3514f",
+  "citations": [
+   {
+    "texte": "La solitude. Les assistants virtuels sont toujours là, disponibles 24 h sur 24/7 j sur 7, jamais fatigués ni occupés ailleurs.",
+    "page": 148,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La disponibilite permanente",
+    "portee": "Premier facteur d'attachement : une presence que nul humain ne peut offrir."
+   },
+   {
+    "texte": "L’absence de jugement. Un assistant IA juge pas ; il t’accepte exactement tel que tu es, avec tes défauts et tes qualités.",
+    "page": 148,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'absence de jugement",
+    "portee": "Ce qui seduit ici est aussi ce qui manque a la relation : la resistance de l'autre."
+   }
+  ]
+ },
+ {
+  "chapitre": "b5feb6cb",
+  "citations": [
+   {
+    "texte": "Une IA te répond exactement ce que tu veux entendre. Mais une vraie relation implique des conflits, des compromis, des imperfections que tu retrouves pas dans ces relations virtuelles.",
+    "page": 148,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La relation sans friction",
+    "portee": "Explique pourquoi ces liens, si satisfaisants soient-ils, ne preparent pas aux relations reelles."
+   },
+   {
+    "texte": "après que l’entreprise a modifié son algorithme, des milliers d’utilisateurs ont signalé une détresse émotionnelle intense, certains déclarant même avoir vécu une véritable « rupture amoureuse » avec leur assistant virtuel.",
+    "page": 149,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Quand la mise a jour rompt le lien",
+    "portee": "Episode qui revele la vulnerabilite reelle creee par un attachement a un service commercial."
+   }
+  ]
+ },
+ {
+  "chapitre": "7d59b8b6",
+  "citations": [
+   {
+    "texte": "Le vrai problème, c’est quand ces relations virtuelles prennent complètement le dessus sur tes interactions réelles, humaines, imparfaites, mais authentiques.",
+    "page": 149,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ou passe la ligne",
+    "portee": "Critere praticable pour distinguer un usage de soutien d'un remplacement problematique."
+   },
+   {
+    "texte": "aucune IA, aussi sophistiquée soit-elle, pourra jamais remplacer complètement la complexité, l’imperfection et l’authenticité d’une relation humaine véritable.",
+    "page": 151,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'imperfection comme valeur",
+    "portee": "L'auteur fait de ce qui manque a la machine la definition meme de la relation humaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "1f0d5369",
+  "citations": [
+   {
+    "texte": "25 % des répondants rapportaient avoir désormais moins d’intérêt à développer des relations humaines traditionnelles.",
+    "page": 154,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un effet mesure sur le lien social",
+    "portee": "Donnee australienne qui documente un desinvestissement de la relation humaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "afbf165a",
+  "citations": [
+   {
+    "texte": "À force de t’habituer à un partenaire artificiel parfait, tu pourrais avoir du mal à gérer un partenaire humain, avec ses désirs, ses attentes et ses limites.",
+    "page": 154,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'habitude du parfait",
+    "portee": "Mecanisme d'accoutumance qui degrade la tolerance a l'alterite reelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "5ca6c3ec",
+  "citations": [
+   {
+    "texte": "L’intimité humaine repose beaucoup sur la communication ouverte, authentique et parfois maladroite – quelque chose qu’aucune IA pourra complètement reproduire.",
+    "page": 155,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La maladresse comme signe d'authenticite",
+    "portee": "Ce que la simulation elimine est precisement ce qui atteste la presence d'autrui."
+   }
+  ]
+ },
+ {
+  "chapitre": "7de48a29",
+  "citations": [
+   {
+    "texte": "Chaque clic, chaque recherche Google, chaque vidéo que tu regardes, chaque mot que tu tapes est une source de données. Et ces données sont récoltées, croisées, analysées par des algorithmes pour bâtir ton profil publicitaire.",
+    "page": 158,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La fabrication du profil publicitaire",
+    "portee": "Decrit le materiau de base de la publicite contemporaine : l'activite ordinaire de chacun."
+   }
+  ]
+ }
+]

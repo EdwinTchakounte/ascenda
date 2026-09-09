@@ -1,0 +1,69 @@
+[
+ {"chapitre":"2723ffb3","citations":[
+  {"texte":"Enfin, le contrôleur fonctionne par définition en ligne : il doit être réactif aux événements imprévus dans le plan, et assurer les conditions de sûreté principales.","page":249,"axe":"02-ia-technique-academique","theme":"Agir en temps réel","portee":"Celui qui exécute n'a pas le loisir de délibérer : il doit répondre à l'imprévu sans compromettre la sûreté."},
+  {"texte":"Les activités sont décidées et déclenchées par robot, alors que les événements échappent à son contrôle","page":249,"axe":"02-ia-technique-academique","theme":"Ce qu'on décide et ce qu'on subit","portee":"Distinction fondamentale pour tout agent : séparer ce qui dépend de soi de ce qui advient."}]},
+
+ {"chapitre":"b4a466a7","citations":[
+  {"texte":"Toutefois, les modèles qui permettent d'affiner une action en activités doivent être directement programmés par les développeurs des procédures ou des automates, et non inférés à partir de spécifications.","page":250,"axe":"02-ia-technique-academique","theme":"Programmé plutôt qu'inféré","portee":"Ce qui reste écrit à la main échappe à la vérification, faiblesse constante des systèmes qui marchent bien en pratique."}]},
+
+ {"chapitre":"698703c8","citations":[
+  {"texte":"Le contrôleur d'un robot autonome doit prendre en compte explicitement le temps.","page":251,"axe":"02-ia-technique-academique","theme":"Le temps comme contrainte","portee":"Rien de ce qu'un robot fait n'est instantané, ce qui interdit de raisonner en états successifs sans durée."},
+  {"texte":"Ceci milite pour la prise en compte des contraintes temporelles dès la planification : le plan produit sera plus robuste à l'exécution.","page":251,"axe":"09-developpement-personnel-influence","theme":"Prévoir les durées","portee":"Un plan qui ignore le temps se brise à l'exécution ; intégrer les délais dès la conception le rend solide."}]},
+
+ {"chapitre":"92f57dd2","citations":[
+  {"texte":"l'écriture des opérateurs formels de planification et leur « debugging » est difficile, en particulier lorsque l'on veut prendre en compte les situations d'exécution non nominales","page":253,"axe":"02-ia-technique-academique","theme":"Le coût du cas anormal","portee":"Modéliser le fonctionnement normal est aisé ; c'est la panne et la reprise d'erreur qui coûtent cher."}]},
+
+ {"chapitre":"104f33a0","citations":[
+  {"texte":"Cette dernière propriété permet de conserver la flexibilité tout en gardant l'assurance qu'une solution existe.","page":254,"axe":"09-developpement-personnel-influence","theme":"Flexible et sûr","portee":"On peut garder des marges de manœuvre sans renoncer à la garantie d'aboutir, si l'on décide au bon moment."}]},
+
+ {"chapitre":"e168fce1","citations":[
+  {"texte":"Malheureusement, il est rare en planification que l'espace d'état S puisse être entièrement explicité.","page":255,"axe":"02-ia-technique-academique","theme":"L'explosion des états","portee":"Un algorithme de complexité raisonnable devient impraticable dès que l'espace qu'il parcourt ne peut être écrit."}]},
+
+ {"chapitre":"44a5f7a9","citations":[
+  {"texte":"La planification de tâches et la planification de mouvements sont des problèmes de nature assez différente qui mettent en œuvre des représentations distinctes.","page":256,"axe":"02-ia-technique-academique","theme":"Deux communautés, deux langages","portee":"Décider quoi faire et décider comment bouger relèvent de traditions séparées qu'il faut réconcilier."},
+  {"texte":"Dès que la tâche est complexe ou que l'environnement est contraint cette décomposition n'est plus possible : les contraintes du mouvement doivent être prises en compte très tôt dans la planification globale.","page":256,"axe":"02-ia-technique-academique","theme":"Le concret remonte","portee":"Repousser les contraintes matérielles à la fin de la conception fonctionne tant que le problème reste facile."}]},
+
+ {"chapitre":"9b69d6fe","citations":[
+  {"texte":"Il n'est pas nécessaire de s'assurer que toutes les décompositions sont réalisables. Un plan est acceptable s'il admet au moins une décomposition faisable.","page":257,"axe":"09-developpement-personnel-influence","theme":"Une voie suffit","portee":"Un projet tient dès qu'un chemin praticable existe, non lorsque tous les chemins imaginables le sont."},
+  {"texte":"Les auteurs reconnaissent que leur système n'est pas complet","page":257,"axe":"02-ia-technique-academique","theme":"Reconnaître ses limites","portee":"Une méthode qui déclare ses hypothèses et ses manques est plus utilisable qu'une promesse de généralité."}]},
+
+ {"chapitre":"7be02ca4","citations":[
+  {"texte":"La communication dans ces systèmes n'est pas permanente et totale, ainsi les phases de replanification/redistribution doivent être elles-mêmes planifiées par avance.","page":258,"axe":"06-ia-travail-management-metiers","theme":"Planifier les rendez-vous","portee":"Quand on ne peut se parler en continu, il faut prévoir à l'avance les moments où l'on se coordonnera."}]},
+
+ {"chapitre":"ea130c1d","citations":[
+  {"texte":"Avec le développement de la robotique de Service, l'interaction homme-robot devient un problème majeur","page":259,"axe":"04-ia-societe-ethique-philosophie","theme":"Le robot parmi nous","portee":"Sortir la machine de l'atelier fait de la relation avec l'humain le problème central, plus que la performance."},
+  {"texte":"De plus, lors de l'affinement du plan, le système considère des règles sociales qui lui permettent de produire des plans considérés comme plus acceptables et compréhensibles par l'humain.","page":259,"axe":"04-ia-societe-ethique-philosophie","theme":"Règles sociales pour machines","portee":"L'acceptabilité d'une machine se programme, comme une politesse qui se calcule et non qui s'improvise."}]},
+
+ {"chapitre":"2ee9b669","citations":[
+  {"texte":"Il s'agit pour le robot d'apprendre à agir en maximisant à long terme le bénéfice perçu de ses actions.","page":261,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Apprendre par renforcement","portee":"Définition accessible d'un mécanisme d'apprentissage qui ressemble à celui de l'expérience humaine."},
+  {"texte":"Ainsi, l'apprentissage par renforcement s'appuie sur une démarche d'essai et d'erreur.","page":261,"axe":"09-developpement-personnel-influence","theme":"Essai et erreur","portee":"Sans professeur pour désigner la bonne action, il ne reste qu'à essayer, mesurer et recommencer."},
+  {"texte":"le robot doit exploiter au mieux ce qu'il sait déjà pour maximiser le bénéfice de son comportement ; pour découvrir les meilleures actions, il doit explorer les options qu'il ne connaît pas assez","page":261,"axe":"09-developpement-personnel-influence","theme":"Exploiter ou explorer","portee":"Arbitrage universel : tirer parti de ce que l'on maîtrise déjà, ou risquer du temps à découvrir mieux."}]},
+
+ {"chapitre":"a5e173f8","citations":[
+  {"texte":"En effet, la récompense ne donne qu'un retour immédiat, à court terme, alors que la qualité de réalisation de la tâche que l'on souhaite maximiser est décrite par la somme des récompenses en moyenne.","page":262,"axe":"09-developpement-personnel-influence","theme":"Court terme et long terme","portee":"Le signal reçu après chaque acte ne dit pas ce que vaut l'ensemble : difficulté d'apprentissage comme de vie."}]},
+
+ {"chapitre":"4617e34c","citations":[
+  {"texte":"Il est souvent préférable de commencer à réaliser les tâches au mieux, compte tenu de ce que l'on sait, tout en continuant à apprendre","page":263,"axe":"09-developpement-personnel-influence","theme":"Agir en apprenant","portee":"Attendre de tout savoir avant d'agir coûte plus cher que faire de son mieux en continuant d'apprendre."}]},
+
+ {"chapitre":"c5000c9f","citations":[
+  {"texte":"Ainsi, l'expérience permet d'estimer le modèle et la politique courante (via Q), et le modèle estimé permet à son tour d'améliorer la politique.","page":264,"axe":"02-ia-technique-academique","theme":"Boucle vertueuse","portee":"L'expérience nourrit le modèle, qui à son tour guide l'expérience : chaque tour accélère les suivants."},
+  {"texte":"ils ne disent rien sur des états non rencontrés : ils ne permettent pas de généraliser","page":264,"axe":"02-ia-technique-academique","theme":"Le mur de la généralisation","portee":"Savoir bien répondre aux cas déjà vus n'est pas savoir : la valeur d'un apprentissage tient à ce qu'il transfère."}]},
+
+ {"chapitre":"0aa81274","citations":[
+  {"texte":"Mais la récompense se prête rarement à une observation directe par les capteurs du robot.","page":265,"axe":"02-ia-technique-academique","theme":"Mesurer le succès","portee":"Le point faible de l'apprentissage par renforcement n'est pas l'algorithme mais la définition de ce qui compte comme réussite."}]},
+
+ {"chapitre":"398d72e2","citations":[
+  {"texte":"Ceci permet au tuteur de contrôler le processus d'apprentissage et de le focaliser progressivement sur les difficultés.","page":266,"axe":"05-ia-education-pedagogie","theme":"Le rôle du tuteur","portee":"Enseigner, c'est choisir les situations et concentrer l'effort là où l'élève achoppe."},
+  {"texte":"Cette double correspondance, très difficile, limite souvent l'apprentissage par démonstration et exige du tuteur une pédagogie particulière","page":266,"axe":"05-ia-education-pedagogie","theme":"Pédagogie de la démonstration","portee":"Montrer ne suffit pas : il faut montrer d'une manière que l'apprenant soit en mesure de transposer."}]},
+
+ {"chapitre":"b2bca000","citations":[
+  {"texte":"Elles sont finalement plus naturelles et faciles pour le tuteur, car ses propres actions sont interprétées au niveau de leurs effets sur l'environnement plutôt que de leurs commandes.","page":267,"axe":"05-ia-education-pedagogie","theme":"Enseigner par les effets","portee":"Transmettre l'intention d'un geste plutôt que le geste lui-même permet à l'apprenant de trouver sa propre exécution."},
+  {"texte":"Elles ne nécessitent pas de modèle du monde (« Le monde est son propre modèle »), et sont adaptées à des tâches réactives simples, sans planification.","page":267,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Le monde comme modèle","portee":"Formule célèbre de la robotique réactive : agir directement sur ce que l'on perçoit, sans représentation interne."}]},
+
+ {"chapitre":"f52bc796","citations":[
+  {"texte":"Les architectures hiérarchiques ou en couches sont les plus utilisées en robotique.","page":268,"axe":"02-ia-technique-academique","theme":"Organiser en couches","portee":"Séparer le décisionnel du sensori-moteur reste l'organisation la plus éprouvée des systèmes complexes."}]},
+
+ {"chapitre":"e29120d5","citations":[
+  {"texte":"La robustesse et la sûreté de l'ensemble des logiciels embarqués sur un robot posent un problème majeur.","page":269,"axe":"04-ia-societe-ethique-philosophie","theme":"Sûreté des machines","portee":"Dès qu'une machine agit dans le monde physique, la fiabilité de son logiciel devient une question de sécurité."},
+  {"texte":"Toutefois, la composition de tous ces composants, aussi robustes soient-ils individuellement, ne donne pas lieu directement à des propriétés de sûreté de fonctionnement global du robot.","page":269,"axe":"04-ia-societe-ethique-philosophie","theme":"La somme des parties","portee":"Des éléments tous corrects peuvent former un ensemble dangereux : la sûreté ne s'additionne pas."}]}
+]

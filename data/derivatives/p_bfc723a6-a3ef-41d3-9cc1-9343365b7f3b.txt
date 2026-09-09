@@ -1,0 +1,1072 @@
+OUVRAGE : L'avènement de l'IA générative et de ChatGPT
+AUTEUR(S) : Utpal Chakraborty, Soumyadeep Roy, Sumit Kumar
+ANNÉE : inconnue
+PAGES : 265
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Page de couverture (p. 2-3)
+  Page de titre (p. 4-4)
+  Page de copyright (p. 5-5)
+  Page de dédicace (p. 6-6)
+  À propos des auteurs (p. 7-8)
+  À propos du relecteur (p. 9-9)
+  Remerciements (p. 10-10)
+  Préface (p. 11-11)
+  Errata (p. 12-15)
+  Table des matières (p. 16-25)
+  1. Introduction à ChatGPT (p. 26-26)
+  Introduction (p. 26-26)
+  Aperçu technique de ChatGPT (p. 26-26)
+  Applications de ChatGPT (p. 27-28)
+  ChatGPT dans les environnements professionnels (p. 29-29)
+  Points à retenir (p. 29-30)
+  2. Histoire des modèles génératifs (p. 31-31)
+  Introduction (p. 31-31)
+  Histoire de l'IA générative (p. 31-31)
+  Évolutions de l'IA générative (p. 31-31)
+  Évaluation de l'IA générative (p. 32-32)
+  Applications de l'IA générative (p. 32-32)
+  Points à retenir (p. 32-33)
+  3. IA générative dans la banque et la finance (p. 34-34)
+  Introduction (p. 34-34)
+  Applications et cas d'utilisation (p. 34-34)
+  Détection de fraude et analyse des risques (p. 34-34)
+  Service client personnalisé (p. 35-35)
+  Recommandations d'investissement (p. 35-35)
+  Avantages (p. 35-35)
+  Efficacité améliorée (p. 35-35)
+  Personnalisation (p. 36-36)
+  Meilleure prise de décision (p. 36-36)
+  Sécurité améliorée (p. 36-36)
+  Limitations et défis (p. 36-36)
+  Confidentialité et sécurité des données (p. 36-36)
+  Préoccupations éthiques (p. 37-37)
+  Conformité réglementaire (p. 37-37)
+  Disponibilité limitée de talents qualifiés (p. 37-37)
+  Points à retenir (p. 37-38)
+  4. Aspects réglementaires et juridiques de l'IA générative (p. 39-39)
+  Introduction (p. 39-39)
+  Utilisation éthique et responsable (p. 39-39)
+  Droits de propriété intellectuelle (p. 39-39)
+  Confidentialité et protection des données (p. 39-39)
+  Biais et discrimination (p. 40-40)
+  Sécurité et sûreté (p. 40-40)
+  Points à retenir (p. 40-41)
+  5. Intelligence Artificielle Générative et ChatGPT pour les Départements Gouvernementaux (p. 42-42)
+  Introduction (p. 42-42)
+  Cas d'utilisation pour l'IA Générative (p. 42-42)
+  Création de contenu (p. 42-42)
+  Analyse d'images et de vidéos (p. 42-42)
+  Intervention en cas de catastrophe (p. 42-42)
+  Détection de fraudes (p. 42-42)
+  Prise de décision (p. 43-43)
+  Analyse prédictive (p. 43-43)
+  Services personnalisés (p. 43-43)
+  IA Générative dans le Gouvernement : Avantages et Safeguards Ethiques (p. 43-43)
+  Cas d'utilisation pour ChatGPT (p. 44-44)
+
+[29/255 passages, 15181 tokens sur 138969]
+
+=== EXTRAITS ===
+
+[p. 5-5]
+Copyright © 2023 BPB Online
+Tous droits réservés Aucune partie de ce livre ne peut être reproduite, stockée dans un système de
+recherche ou transmise sous quelque forme ou par quelque moyen que ce soit, sans l'autorisation
+écrite préalable de l'éditeur, sauf dans le cas de brèves citations intégrées à des articles critiques ou à
+des critiques.
+Tous les efforts ont été faits dans la préparation de ce livre pour garantir l'exactitude des informations
+présentées. Cependant, les informations contenues dans ce livre sont vendues sans garantie, expresse
+ou implicite. Ni l'auteur, ni BPB Online ou ses concessionnaires et distributeurs, ne seront tenus
+responsables des dommages causés ou présumés avoir été causés directement ou indirectement par ce
+livre.
+BPB Online s'est efforcé de fournir des informations sur les marques de commerce de toutes les
+entreprises et les produits mentionnés dans ce livre en utilisant correctement les majuscules.
+Cependant, BPB Online ne peut garantir l'exactitude de ces informations.
+Première publication : 2023
+Publié par BPB Online
+WeWork
+119 Marylebone Road
+Londres NW1 5PU
+Royaume-Uni | Émirats Arabes Unis | INDE | Singapour
+ISBN 978-93-5551-798-2
+www.bpbonline.com
+
+---
+
+[p. 15-18]
+ivre. Merci !
+Pour 
+plus 
+d'informations 
+sur 
+BPB, 
+veuillez 
+visiter
+www.bpbonline.com.
+Rejoignez l'espace Discord de notre livre
+Rejoignez le serveur Discord du livre pour les dernières mises à jour, offres,
+événements technologiques dans le monde, nouvelles sorties et sessions
+avec les auteurs :
+https://discord.bpbonline.com
+Table des matières
+1. Introduction à ChatGPT
+Introduction
+Aperçu technique de ChatGPT
+Applications de ChatGPT
+ChatGPT dans les environnements professionnels
+Points à retenir
+2. Historique des modèles génératifs
+Introduction
+Histoire de l'IA générative
+Évolutions dans l'IA générative
+Évaluation de l'IA générative
+Applications de l'IA générative
+Points à retenir
+3. L'IA générative dans le secteur bancaire et financier
+Introduction
+Applications et cas d'utilisation
+Détection de fraude et analyse des risques
+Service client personnalisé
+Recommandations d'investissement
+Avantages
+Efficacité améliorée
+Personnalisation
+Meilleure prise de décision
+Sécurité améliorée
+Limitations et défis
+Confidentialité et sécurité des données
+Préoccupations éthiques
+Conformité réglementaire
+Disponibilité limitée de talents qualifiés
+Points à retenir
+
+4. Aspects réglementaires et juridiques de l'IA générative
+Introduction
+Utilisation éthique et responsable
+Droits de propriété intellectuelle
+Confidentialité et protection des données
+Biais et discrimination
+Sûreté et sécurité
+Points à retenir
+5. IA générative et ChatGPT pour les ministères gouvernementaux
+Introduction
+Cas d'utilisation de l'IA générative
+Création de contenu
+Analyse d'images et de vidéos
+Réponse aux catastrophes
+Détection de fraude
+Prise de décision
+Analyse prédictive
+Services personnalisés
+IA générative dans le gouvernement : avantages et garanties éthiques
+Cas d'utilisation de ChatGPT
+Service client
+Traitement du langage naturel
+Récupération d'information
+Traduction de langues
+Analyse de politiques
+Reconnaissance vocale
+Assistants virtuels
+Points à retenir
+6. Authenticité du contenu généré par l'IA
+Introduction
+Limitations et défis du contenu généré par l'IA
+Propagation de la désinformation
+Amplification des biais
+Création de fausses identités
+Perte d'emploi
+
+Risques de sécurité
+Développement du modèle linguistique ChatGPT
+Points à retenir
+7. Aperçu technique de ChatGPT : Introduction
+Introduction
+Introduction au traitement du langage naturel
+Évolution du NLP
+GPT et ChatGPT
+Série GPT par OpenAI
+Points à retenir
+8. Brève présentation des autres modèles NLP populaires
+Introduction
+9. Flux historique et développement de la série GPT
+Introduction
+Transformateur pré-entraîné génératif - 1
+Cadre de base
+Stades de formation du modèle
+Spécifications de mise en œuvre du modèle
+Évaluation
+Transformateur pré-entraîné génératif - 2
+Cadre de base
+Spécifications du modèle
+Évaluation
+Introduction à GPT-3
+Cadre de base
+Spécifications du modèle
+Évaluation
+Développement de l'API GPT-3
+Introduction de GPT-3.5, InstructGPT
+Cadre de base
+Spécifications du modèle
+Résultats
+Réduction des coûts des jetons d'API du modèle GPT-3
+Introduction de Whisper
+
+---
+
+[p. 29-30]
+générer des réponses semblables à celles des humains et à comprendre le
+contexte en fait un outil puissant pour la construction de chatbots capables
+d'assister dans une large gamme de tâches.
+ChatGPT dans les environnements professionnels
+Il est probable que ChatGPT soit déjà utilisé par un certain nombre
+d'entreprises dans divers secteurs d'activité pour une gamme d'applications
+telles que le service client, la communication interne et le marketing.
+Il convient également de noter que ChatGPT est une variante du modèle de
+langage GPT, qui a été largement adopté par les entreprises et les
+chercheurs pour une variété de tâches. Quelques exemples d'entreprises qui
+ont mis en œuvre GPT ou des modèles similaires incluent OpenAI,
+Hugging Face et les fournisseurs de services de modèles linguistiques tels
+que Google’s Cloud Language API et AWS’s Comprehend. Ces entreprises
+proposent des outils et des services qui permettent aux entreprises de
+construire et de déployer des systèmes d'IA basés sur le langage sans avoir à
+construire et à former leurs propres modèles à partir de zéro.
+Points à retenir
+ChatGPT est un modèle génératif, ce qui signifie qu'il peut générer des
+réponses nouvelles plutôt que de simplement sélectionner une réponse
+prédéfinie dans une liste.
+GPT signifie "Generative Pre-training Transformer '', une architecture
+de réseau de neurones transformateurs qui est entraînée à l'aide d'un
+grand ensemble de données de conversation humaine pour générer des
+réponses similaires à celles des humains à l'entrée de l'utilisateur.
+Dans l'ensemble, ChatGPT est un outil puissant pour construire des
+chatbots 
+avancés 
+spécialisés 
+et 
+d'autres 
+systèmes 
+d'IA
+conversationnels, et a le potentiel de révolutionner notre façon
+d'interagir avec les ordinateurs et les autres en ligne.
+Il existe plusieurs façons d'utiliser ChatGPT dans les environnements
+professionnels pour améliorer le service client, rationaliser les
+processus et réduire les coûts.
+
+En plus de ces utilisations, ChatGPT peut également être utilisé pour
+créer des chatbots pour le marketing et les ventes.
+ChatGPT a le potentiel d'améliorer considérablement l'efficacité et
+l'efficacité des processus commerciaux, notamment dans les domaines
+du service client et de la communication interne.
+Il est également intéressant de noter que ChatGPT est une variante du
+modèle de langage GPT, largement adopté par les entreprises et les
+chercheurs pour une variété de tâches.
+Rejoignez l'espace Discord de notre livre
+Rejoignez l'espace de travail Discord du livre pour les dernières mises à
+jour, offres, événements technologiques du monde entier, nouvelles sorties
+et sessions avec les auteurs:
+https://discord.bpbonline.com
+
+---
+
+[p. 38-38]
+éployer des systèmes
+d'IA générative dans le secteur bancaire et financier.
+Rejoignez l'espace Discord de notre livre
+Rejoignez l'espace de travail Discord du livre pour les dernières mises à
+jour, offres, événements technologiques dans le monde, nouvelles
+publications et sessions avec les auteurs :
+https://discord.bpbonline.com
+
+---
+
+[p. 47-47]
+CHAPITRE 6
+Authenticité du contenu généré par
+l'IA
+Introduction
+Le niveau d'authenticité et de validité du contenu créé par l'IA générative
+dépend de l'application spécifique et de la qualité des données
+d'entraînement utilisées pour développer le modèle d'IA. En général, l'IA
+générative peut produire du contenu de haute qualité adapté à diverses fins,
+mais il ne sera pas toujours entièrement fiable ou adapté aux exigences
+diligentes haut de gamme.
+Limitations and challenges of generative AI-
+generated content
+L'IA générative fonctionne en apprenant les modèles et les relations dans
+les données afin de générer un nouveau contenu similaire en style et en
+format aux données originales. La qualité du contenu généré dépend de la
+qualité et de la quantité des données d'entraînement utilisées pour
+développer le modèle d'IA. Si les données d'entraînement sont précises,
+diversifiées et représentatives du public cible, le contenu généré est plus
+susceptible d'être authentique et valide.
+Il existe des limitations quant à l'exactitude et à la fiabilité du contenu
+généré par l'IA générative. Par exemple, l'IA générative peut produire
+du contenu grammaticalement correct mais sémantiquement incorrect
+ou trompeur. Cela peut être une préoccupation dans des applications
+où l'exactitude et la précision sont essentielles, telles que la
+documentation juridique ou médicale.
+Comme ChatGPT n'est pas mis à jour avec des données récentes et
+qu'il est également formé sur des bases de données passées, il est
+possible que les données ne soient pas parfaitement validées et mises à
+
+---
+
+[p. 55-55]
+un large éventail de tâches de traitement du langage naturel (NLP),
+notamment la classification de texte, la réponse à des questions et la
+génération de langage. Ils ont permis aux chercheurs d'obtenir des résultats
+de pointe dans différents domaines du NLP.
+Un autre développement important dans le NLP a été l'utilisation de
+l'apprentissage par transfert, où les modèles sont d'abord pré-entraînés sur un
+grand ensemble de données, puis affinés pour une tâche spécifique. Cette
+approche a été utilisée pour obtenir de hautes performances dans différentes
+tâches de NLP, telles que l'analyse des sentiments, la reconnaissance des
+entités nommées et la classification de texte.
+En plus de ces avancées, les chercheurs se sont également concentrés sur
+l'amélioration de la robustesse et de l'équité des modèles de NLP. Cela inclut
+le développement de méthodes pour détecter et atténuer les biais dans les
+données et les modèles linguistiques, ainsi que pour s'assurer que les
+applications de NLP sont accessibles aux personnes de différents milieux
+linguistiques et culturels.
+Dans l'ensemble, ces avancées dans le NLP ont ouvert de nouvelles
+possibilités pour le développement d'applications basées sur le langage plus
+sophistiquées et plus précises, des chatbots aux assistants virtuels, et
+devraient avoir des implications profondes pour de nombreuses industries
+dans les années à venir. Depuis lors, LUNAR - données qualitatives
+scientifiques, ELIZA - le premier chatbot, des modèles complexes et des cas
+d'utilisation d'aujourd'hui tels que Smart Alexa, des bots conversationnels
+comme Siri avec des réseaux neuronaux complexes en coulisses. Dans le
+contexte de ChatGPT, c'est l'une des architectures de NLP avancées
+modernes développées, capable d'effectuer des tâches de très haut niveau
+avec une précision et une précision quantitatives et qualitatives, plus proches
+des perceptions et des interprétations humaines. Entre-temps, il y a eu un
+développement progressif mais constant du processus d'amélioration du
+modèle Word2Vec jusqu'à l'actuel ChatGPT en passant par les réseaux
+neuronaux, les modèles LSTM, l'encodeur-décodeur, les modèles Attention,
+le modèle Transformer, BERT de Google, imageBERT.
+GPT et ChatGPT
+En parlant deGenerative Pre-trained Transformer (GPT), il s'agit d'une
+architecture de réseau neuronal sophistiquée qui sous-tend ChatGPT avec
+
+---
+
+[p. 64-65]
+ntraînement. Le taux d'abandon était de 0,1, avec un
+taux d'apprentissage de 6,25e-5 et une taille de lot de 32. Le fine-tune a été
+très rapide avec 3 étapes d'époques et le réchauffement se produit sur 0,2%
+de l'entraînement et est programmé en utilisant un calendrier de décroissance
+linéaire du taux d'apprentissage.
+Évaluation
+L'étude a montré comment la pré-entraînement améliorait les performances
+du modèle en mode zero shot sur diverses tâches de traitement du langage
+naturel, y compris l'analyse de sentiment, la réponse aux questions et la
+résolution de schéma. L'architecture était capable d'effectuer une gamme de
+tâches de traitement du langage naturel avec relativement peu de fine-tuning
+et permettait l'apprentissage par transfert. Ce modèle a démontré l'efficacité
+de la pré-entraînement génératif et a créé des opportunités pour que les
+futurs modèles réalisent mieux cette efficacité en utilisant des ensembles de
+données plus importants et des paramètres supplémentaires. GPT-1 s'est
+montré plus performant que les modèles étatiques spécifiquement entraînés
+de pointe dans 9 des 12 tâches sur lesquelles les modèles ont été comparés.
+Ils ont utilisé le jeu de données RACE récemment mis à disposition, qui
+contient des textes en anglais et les questions correspondantes des examens
+du collège et du lycée. Il a été démontré que ce corpus contient plus de
+questions de type raisonnement que d'autres ensembles de données tels que
+CNN ou SQuaD, ce qui en fait le terrain d'essai idéal pour le modèle, qui a
+été entraîné à gérer des contextes à longue portée. De plus, ils ont évalué
+l'utilisation du Test de Cloze Narratif, qui consiste à choisir la bonne
+conclusion parmi deux possibilités pour des histoires comportant plusieurs
+phrases. Le modèle GPT-1 a une fois de plus obtenu des performances
+nettement supérieures à celles des meilleurs résultats précédents, avec des
+gains allant jusqu'à 8,9% sur Story Cloze et 5,7% au total sur RACE.
+Pour en savoir plus sur les aspects techniques du GPT-1, vous pouvez
+consulter Improving Language Understanding by Generative Pre-Training -
+https://tinyurl.com/3fu53mrd
+Transformateur Pré-entrainé Générationnel - 2
+Date de lancement : 14 février 2019
+La prochaine version du modèle GPT a été introduite en 2019, GPT-2 qui a
+été entraîné sur un ensemble de données plus volumineux et enrichi de plus
+de paramètres pour rendre ce modèle meilleur. Dans cette deuxième version
+et sur l'amélioration typique de GPT-1, il est essentiellement conçu pour
+aborder plusieurs tâches ensemble telles que la réponse aux questions, la
+traduction automatique, la compréhension de lecture et la synthèse ; et
+essayer d'atteindre des tâches plus proches des capacités humaines. Il a été
+
+---
+
+[p. 72-74]
+uning, à savoir
+l'apprentissage avec zéro, un et quelques exemples.
+Le GPT-3 compte 96 couches, chacune avec 96 têtes d'attention.
+La taille des plongements de mots a été augmentée à 12888 pour GPT-
+3 par rapport à 1600 pour GPT-2.
+La taille de la fenêtre contextuelle a été augmentée de 1024 pour GPT-
+2 à 2048 jetons pour GPT-3.
+L'optimiseur Adam a été utilisé avec β_1=0,9, β_2=0,95 et ε= 10^(-8).
+Des motifs d'attention dense et localement dispersés ont été utilisés
+alternativement.
+Evaluation
+Une variété d'ensembles de données de modélisation linguistique et de
+TALN ont été utilisés pour tester GPT-3. Dans quelques situations de zéro-
+shot, GPT-3 a surpassé les méthodes de pointe pour des ensembles de
+données de modélisation linguistique comme LAMBADA et Penn Tree
+Bank. Bien qu'il n'ait pas pu dépasser l'état de l'art pour d'autres ensembles
+de données, il a amélioré les performances de pointe en zéro-shot. Dans des
+tâches de TALN telles que la réponse à des questions avec un livre fermé, la
+résolution de schéma, la traduction, etc., GPT-3 s'est à nouveau bien
+comporté, dépassant fréquemment des modèles bien réglés ou se rapprochant
+d'eux.
+
+Figure 9.5: Quatre méthodes pour accomplir une tâche avec un modèle de langage
+[Source : Article GPT-3]
+Le modèle s'est mieux comporté dans les configurations few-shot que dans
+les configurations one-shot et zero-shot pour la majorité des tâches. Une
+variété d'ensembles de données de modélisation linguistique et de NLP ont
+été utilisés pour tester GPT-3. Dans quelques situations ou aucune situation,
+GPT-3 a surpassé les méthodes de pointe pour les ensembles de données de
+modélisation linguistique tels que LAMBADA et Penn Tree Bank. Bien qu'il
+n'ait pas pu surpasser l'état de l'art pour les autres ensembles de données, il a
+amélioré la performance de l'état de l'art en situation zero-shot. Sur des
+tâches de NLP comme la réponse à des questions fermées, la résolution de
+schémas, la traduction, etc., GPT-3 s'est à nouveau bien comporté, dépassant
+
+---
+
+[p. 81-81]
+r une large gamme de différents ensembles de données.
+Les performances de Whisper sont proches de celles des transcripteurs
+humains professionnels. Le modèle a été testé avec des distributions WER
+de 25 enregistrements de l'ensemble de données Kincaid46 transcrits par
+Whisper, les mêmes 4 systèmes ASR commerciaux d'un service de
+
+---
+
+[p. 92-94]
+e client donne son avis sur la qualité de la réponse
+ou demande des éclaircissements supplémentaires si nécessaire.
+↓
+Résolution : ChatGPT résout la demande du client ou fournit une assistance
+supplémentaire si nécessaire. Un exemple de la façon dont GPT prend une
+requête, y répond et s'améliore davantage grâce aux commentaires.
+Figure 11.3: Démonstration de conversation avec improvisation séquentielle avec ChatGPT
+↓
+Suivi : ChatGPT peut prendre contact avec le client après un certain temps
+pour s'assurer que la résolution a été satisfaisante ou pour fournir une
+assistance supplémentaire.
+↓
+Répétition : Si le client a eu une expérience positive avec ChatGPT, il est
+plus susceptible de revenir et d'utiliser les services de ChatGPT à l'avenir.
+↓
+Dans l'ensemble, le parcours client de ChatGPT est axé sur la fourniture
+d'un service client personnalisé, efficace et de haute qualité grâce aux
+technologies avancées de NLP et de ML.
+Points à retenir
+Le client accède à ChatGPT via le site web ou l'interface de l'application.
+Dans l'ensemble, le parcours client de ChatGPT est axé sur la fourniture
+d'un service client personnalisé, efficace et de haute qualité grâce aux
+
+technologies avancées de NLP et de ML.
+Rejoignez l'espace Discord de notre livre
+Rejoignez l'espace de travail Discord du livre pour les dernières mises à jour,
+offres, événements technologiques du monde entier, nouvelles publications et
+sessions avec les auteurs :
+https://discord.bpbonline.com
+
+---
+
+[p. 104-104]
+rapidement). Vous pouvez rédiger un
+premier brouillon complet de votre e-mail après avoir saisi votre demande en
+moins de dix secondes, ce qui vous fait gagner (ou à votre personnel
+marketing) des heures. Le volume énorme de texte produit par les personnes
+sur lesquelles ChatGPT a été formé. Avec toutes ces informations stockées
+
+---
+
+[p. 113-114]
+ées sur le texte à l'offre d'expériences d'apprentissage
+individualisées.
+Rejoignez l'espace Discord de notre livre
+Rejoignez l'espace de travail Discord du livre pour les dernières mises à jour,
+offres, événements technologiques du monde entier, nouvelles publications
+et sessions avec les auteurs :
+https://discord.bpbonline.com
+CHAPITRE 15
+Cas d'utilisation à des fins de
+divertissement
+Introduction
+L'intelligence artificielle (IA) est de plus en plus utilisée dans l'industrie du
+divertissement, révolutionnant la manière dont le contenu est créé et
+consommé. Des outils et des algorithmes alimentés par l'IA sont utilisés pour
+améliorer le processus créatif, de la génération de nouvelles idées à la
+prédiction des préférences du public, en passant par l'automatisation des
+tâches et l'amélioration de la post-production.
+IA dans l'industrie du divertissement
+Dans l'industrie musicale, des algorithmes d'IA sont utilisés pour composer
+de nouvelles musiques et générer des sons d'instruments réalistes. Dans
+l'industrie cinématographique, l'IA est utilisée pour générer des effets
+spéciaux réalistes et créer des acteurs virtuels. L'IA est également utilisée
+dans l'industrie du jeu pour générer du nouveau contenu, personnaliser les
+expériences de jeu et améliorer la conception des jeux.
+Cependant, il existe également des préoccupations concernant l'utilisation de
+l'IA dans le domaine du divertissement, notamment des problèmes liés à la
+protection des données, aux biais et à la perte potentielle de la créativité et
+du contrôle humains. Alors que l'IA continue d'être intégrée à l'industrie du
+divertissement, il est important de prendre en compte ces implications
+éthiques et de veiller à ce que l'IA soit utilisée de manière à bénéficier à la
+fois aux créateurs et au public.
+NLP dans l'industrie du divertissement
+Le TALN est utilisé dans diverses applications de divertissement telles que
+les systèmes de recommandation, les chatbots et les assistants virtuels. Par
+
+---
+
+[p. 121-122]
+Points à retenir
+Croissance du marché de l'IA dans le secteur des médias et du
+divertissement Le marché mondial de l'IA dans le secteur des médias et
+du divertissement devrait passer de 10,87 milliards de dollars en 2020
+(l'industrie du divertissement a connu une augmentation en raison de la
+COVID-19) à environ 100 milliards de dollars d'ici 2030, avec un taux
+de croissance annuel composé (TCAC) de 26,9% entre 2022 et 2030,
+avec un chiffre d'affaires de 14,81 milliards de dollars en 2021 selon
+une étude de GrandView Research.
+Selon l'étude, différentes applications de l'IA dans l'industrie du
+divertissement, notamment la publicité ciblée et les systèmes de
+recommandation de contenu.
+Cette croissance est stimulée par des facteurs tels que la demande
+croissante de contenu personnalisé, les avancées dans les algorithmes et
+les techniques du TALN, et la montée des assistants virtuels et des
+chatbots dans l'industrie du divertissement.
+Cette croissance est stimulée par l'utilisation croissante de chatbots
+dans diverses applications de divertissement, telles que les jeux, la
+musique et les services de streaming vidéo.
+Ces résultats suggèrent que les services de divertissement alimentés par
+le TALN, tels que les chatbots et les systèmes de recommandation, ont
+le 
+potentiel 
+d'améliorer 
+considérablement 
+la 
+satisfaction 
+et
+l'engagement des clients dans l'industrie du divertissement.
+ChatGPT a la capacité de comprendre et de répondre aux requêtes des
+utilisateurs, 
+de 
+générer 
+des 
+recommandations 
+de 
+contenu
+personnalisées, voire de fournir un support client personnalisé. Ces
+fonctionnalités ont de nombreuses applications potentielles dans
+l'industrie du divertissement, du jeu à la musique, en passant par le
+cinéma et la télévision.
+Rejoignez l'espace Discord de notre livre
+Rejoignez l'espace Discord du livre pour les dernières mises à jour, offres,
+événements technologiques dans le monde, nouvelles publications et
+sessions avec les auteurs :
+
+https://discord.bpbonline.com
+
+---
+
+[p. 129-130]
+ails tels que l'objectif du
+code, le résultat souhaité et les éventuels détails de mise en œuvre pertinents
+peuvent être clarifiés avec soin en posant des questions. Le chatbot peut
+également fournir des commentaires et des recommandations sur le code, ce
+qui peut aider à comprendre les erreurs ou les améliorations possibles. En
+participant à ce débat interactif, les méthodes de programmation peuvent être
+plus approfondies et la confiance dans les compétences en programmation
+peut être renforcée.
+Professionnalisme et édition de code
+Créer un code propre et bien organisé est essentiel pour le développement de
+logiciels efficace. La probabilité d'introduire des défauts ou des erreurs est
+réduite car le code structuré est plus facile à travailler pour les développeurs
+et plus facile à lire et à comprendre. En plus d'être plus facile à maintenir,
+évolutif et efficace, un code bien organisé fait également un meilleur usage
+des ressources existantes. La collaboration entre les développeurs est
+également facilitée en utilisant une structure uniforme et une approche de
+codage, car les modifications peuvent être intégrées de manière plus réussie.
+Les développeurs peuvent produire un logiciel de haute qualité, plus facile à
+maintenir et à développer avec le temps, en faisant l'effort d'écrire un code
+structuré, ce qui donne un meilleur produit fini. Et ChatGPT peut vous aider
+à structurer le code de manière professionnelle, ce qui peut répondre à toutes
+ces fins de manière très précise.
+
+---
+
+[p. 140-140]
+CHAPITRE 18
+Capacités de résolution de problèmes
+(qualitatifs)
+Introduction
+La résolution de problèmes qualitatifs est une approche qui consiste à
+comprendre les principes sous-jacents et les concepts derrière un problème
+avant de tenter de le résoudre. Cette approche est souvent utilisée dans des
+domaines tels que la science, l'ingénierie et les affaires, où des problèmes
+complexes nécessitent une compréhension plus approfondie des mécanismes
+sous-jacents et des relations entre les variables. La résolution de problèmes
+qualitatifs implique de décomposer un problème en ses composantes
+fondamentales et de les analyser sous différents angles afin d'obtenir une
+compréhension globale du problème. Cette approche implique souvent
+l'utilisation de données qualitatives telles que des observations, des
+entretiens et des études de cas pour identifier des modèles et des relations
+entre les variables. L'un des principaux avantages de la résolution de
+problèmes qualitatifs est qu'elle permet aux individus d'identifier et de traiter
+les causes profondes d'un problème plutôt que de simplement traiter ses
+symptômes. Cette approche est particulièrement utile dans les scénarios de
+résolution de problèmes complexes où les causes sous-jacentes d'un
+problème peuvent ne pas être immédiatement apparentes.
+Le rôle de ChatGPT dans la résolution de
+problèmes qualitatifs
+Cette approche qualitative peut permettre différentes perspectives pour
+examiner un problème particulier et pourrait aider à aborder ou à développer
+de nombreux concepts théoriques. ChatGPT, en tant qu'outil d'IA générative,
+peut réellement progresser dans la résolution de logiques primitives pour
+obtenir un résultat fondamental. Bien qu'il ne soit pas bien adapté à l'analyse
+qualitative de niveau humain et que son opinion ne soit collectée qu'en tant
+
+---
+
+[p. 150-150]
+ne banque peut fournir ce service à ses
+clients ou si ces données peuvent aider les banquiers dans la prise de
+décision. Enfin, la possibilité pour ChatGPT de réduire les risques est un
+moteur majeur pour que les banques envisagent le déploiement de cette
+technologie. Les clients sont plus enclins à choisir une banque plus sûre.
+
+---
+
+[p. 158-158]
+ChatGPT des alternatives. Ils peuvent rester à jour sur les nouveaux
+traitements, les rappels de médicaments et les autres développements
+importants dans le domaine de la pharmacie grâce à l'utilisation de ChatGPT.
+Cela peut être particulièrement utile pour les professionnels de la santé qui
+doivent rapidement décider de la façon de traiter les patients dans des
+situations en constante évolution.
+Études médicales
+ChatGPT peut fournir un accès instantané à des informations médicales
+pertinentes et à des ressources pour les étudiants et les professionnels de la
+santé. Grâce aux capacités avancées de traitement du langage naturel de
+ChatGPT, il peut aider les professionnels de la santé à rechercher rapidement
+et à récupérer les informations les plus pertinentes sur divers sujets
+médicaux. Cela peut aider les professionnels de la santé à prendre des
+décisions plus éclairées et à améliorer les résultats des patients.
+Cadre de surveillance de la santé
+ChatGPT a la capacité de repérer les tendances et les anomalies qui
+pourraient indiquer le début d'une nouvelle maladie ou la propagation d'une
+maladie existante. Cela peut soutenir les décisions prises et les actions
+entreprises par les responsables de la santé publique et les professionnels de
+la santé pour arrêter la propagation de la maladie. De plus, ChatGPT peut
+envoyer des notifications automatiques au grand public, aux professionnels
+de la santé et aux responsables de la santé publique, facilitant ainsi les efforts
+de réponse précoce en cas de flambée potentielle. Cela peut sauver des vies
+et stopper la propagation de la maladie. ChatGPT peut permettre aux
+individus et aux organisations d'adopter une approche proactive de la
+prévention et du contrôle des maladies en offrant des informations en temps
+réel sur les données de santé mondiale.
+Responsabilité dans le déploiement de l'IA dans le
+domaine de la santé
+Enfin, bien que l'intelligence artificielle (IA) ait le potentiel de changer le
+domaine de la santé, il faut comprendre que la technologie ne peut pas
+remplacer les professionnels de la santé humains. L'IA doit être vue comme
+
+---
+
+[p. 165-166]
+es du produit
+et créer des descriptions attrayantes mettant en évidence les avantages du
+produit pour les clients potentiels. En utilisant un langage créatif et des
+techniques de narration, ChatGPT peut communiquer efficacement les
+caractéristiques et les avantages du produit aux clients, influençant ainsi leur
+décision d'achat.
+Par exemple, supposons qu'une entreprise de commerce électronique lance
+une nouvelle gamme de chaussures de sport. Dans ce cas, ChatGPT pourrait
+générer des descriptions mettant l'accent sur la technologie avancée, le
+design unique et la durabilité des chaussures. De plus, ChatGPT peut
+également intégrer les commentaires et les avis des clients pour créer des
+descriptions de produits plus personnalisées et ciblées.
+Analyse des sentiments sur les commentaires des
+clients sur les produits
+Une autre façon importante dont ChatGPT peut aider les entreprises de
+commerce électronique est en analysant les commentaires des clients et les
+avis sur les produits. Grâce à l'utilisation du traitement du langage naturel et
+de l'analyse des sentiments, ChatGPT peut déterminer le sentiment global
+des avis des clients, donnant ainsi aux entreprises un aperçu de leur
+performance et de la qualité de leurs produits. Ces informations peuvent
+aider les entreprises à prendre des décisions basées sur des données pour
+améliorer leurs produits et leur service client. De plus, ChatGPT peut fournir
+aux entreprises des résumés des avis, mettant en évidence les thèmes
+communs et identifiant les domaines où des améliorations peuvent être
+apportées. Cela peut être un outil précieux pour les entreprises qui cherchent
+à rester à l'écoute des commentaires des clients et à s'assurer qu'elles
+répondent aux besoins et aux attentes de leurs clients.
+Après l'accueil de différents clients, en utilisant toutes les techniques ci-
+dessus, des stratégies de vente croisée et de vente incitative parallèles
+peuvent être mises en place sur différents produits en fonction de la persona
+du client. ChatGPT, bien qu'il en soit encore à ses débuts, offre de nombreux
+avantages, comme en témoignent ses différents cas d'utilisation. En
+exploitant ses capacités de compréhension du langage naturel et de
+recommandation personnalisée, ChatGPT peut offrir un 
+avantage
+concurrentiel aux entreprises de commerce électronique cherchant à
+améliorer l'expérience client et à générer davantage de ventes.
+De plus, ChatGPT peut aider les entreprises de commerce électronique à
+développer des relations plus solides avec leurs clients, ce qui se traduit
+finalement par une satisfaction et une fidélité accrues. Cette technologie a le
+potentiel d'augmenter la part de marché et de générer des revenus
+supplémentaires pour les entreprises de commerce électronique, ce qui en
+
+---
+
+[p. 172-172]
+peut apporter de la valeur à
+leurs clients et à leurs activités. Ce n'est pas le moment de résister, de
+combattre ou d'ignorer la technologie. Au contraire, il s'agit d'une
+opportunité de l'exploiter au mieux pour le bénéfice à la fois de l'hôtel et de
+ses clients. En conclusion, ChatGPT a le potentiel de transformer le secteur
+
+---
+
+[p. 182-183]
+PT lorsque celui-ci
+répond à vos questions, afin d'en tirer des enseignements. Essayez de
+comprendre comment ChatGPT est parvenu à la réponse ou à la
+recommandation, et tirez-en quelque chose.
+Essayez d'utiliser les concepts et les méthodes que vous avez appris de
+ChatGPT pour résoudre des problèmes de manière indépendante. Vous
+pouvez également demander de l'aide à ChatGPT pour modifier ou
+améliorer votre travail.
+Dans l'ensemble, ChatGPT peut vous aider à développer vos compétences
+en résolution de problèmes si vous êtes débutant. Néanmoins, il est
+important de travailler seul et de pratiquer la résolution de problèmes en
+utilisant les stratégies et les idées que vous avez acquises grâce à ChatGPT.
+Limitation
+Ce type d'IA, appelé modèle de langage, est ce qui fait que ChatGPT a du
+mal avec les mathématiques. Il analyse de vastes quantités de texte
+provenant de nombreux sites web et construit un modèle des mots les plus
+susceptibles de venir les uns après les autres dans une phrase. Cette version
+de l'autocomplétion est plus avancée.
+Il répond avec des nombres incorrects tant grammaticalement que
+mathématiquement, mais avec un ton autoritaire.
+Bien que ChatGPT soit capable d'effectuer des calculs mathématiques
+complexes, il lui manque une compréhension ou une créativité de niveau
+humain. De plus, ChatGPT ne peut pas jouer le rôle d'un professeur de
+mathématiques ou d'un tuteur dans la vie réelle, capable de fournir des
+explications et des commentaires individualisés. Il peut également exister
+certaines questions mathématiques spécialisées ou difficiles auxquelles
+ChatGPT n'a pas été formé, mais ChatGPT apprend constamment et enrichit
+ses connaissances.
+ChatGPT dans la résolution de problèmes :
+Conclusion
+Il est important de souligner une fois de plus que ChatGPT en est encore à
+ses balbutiements malgré sa grandeur actuelle. Même si GPT-3.5, le modèle
+de langage sur lequel est basé ChatGPT, en est à sa troisième itération, il
+reste encore du travail à faire. GPT-4, dont la sortie est prévue fin 2023, est
+attendu pour améliorer les lacunes de GPT-3.5 grâce à de meilleures
+performances et une plus grande adhésion aux instructions et aux valeurs
+humaines.
+
+---
+
+[p. 191-192]
+ant donné les craintes que
+ChatGPT puisse être utilisé de manière abusive par des pirates informatiques
+disposant de faibles ressources et sans expertise technique, il semble que le
+secteur de la cybersécurité, un domaine qui a depuis longtemps pris en
+compte les conséquences possibles de l'IA actuelle, reste également vigilant.
+ChatGPT et l'IA générative utilisés par les
+cybercriminels
+Attaques venant de l'opposé : les algorithmes d'IA peuvent être enseignés à
+détecter les faiblesses des autres systèmes d'IA et en profiter. Un attaquant
+peut, par exemple, produire un exemple adversaire qui trompe un système de
+reconnaissance d'images en classant incorrectement une image.
+Phishing : Pour créer des e-mails et des messages de phishing convaincants
+adaptés à leurs cibles, les cybercriminels peuvent utiliser l'IA et la
+technologie de traitement du langage naturel. Ils peuvent créer des messages
+plus susceptibles d'être ouverts et cliqués, ce qui peut entraîner des
+violations de données ou des infections par des logiciels malveillants, en
+utilisant l'IA pour étudier l'activité en ligne et les intérêts de la cible. Des
+chatbots et des assistants virtuels alimentés par l'IA peuvent être utilisés pour
+l'ingénierie sociale afin de se faire passer pour de vraies personnes et
+tromper les victimes en divulguant des informations sensibles ou en
+effectuant des activités avantageuses pour l'attaquant. Par exemple, un
+chatbot peut se faire passer pour un agent de support client et tromper une
+victime pour qu'elle divulgue ses informations de connexion.
+Logiciels malveillants et ransomwares : les logiciels malveillants et les
+ransomwares basés sur l'IA peuvent échapper à la détection par les logiciels
+antivirus et autres mesures de sécurité en utilisant des algorithmes
+d'apprentissage automatique. Ces attaques, qui ont le potentiel de nuire
+gravement aux personnes et aux entreprises, peuvent être effectuées via des
+e-mails de phishing, des URL malveillantes ou d'autres vecteurs.
+Deepfakes : les deepfakes sont des photos ou des vidéos modifiées qui
+passent de manière convaincante pour la réalité. Les modèles d'IA générative
+peuvent être utilisés pour fabriquer ces deepfakes. Les deepfakes sont un
+outil que les cybercriminels peuvent utiliser pour propager de fausses
+informations ou se faire passer pour d'autres personnes.
+Crackage de mots de passe : en spéculant sur des combinaisons potentielles
+de caractères et de symboles, les systèmes d'IA peuvent être utilisés pour
+casser des mots de passe. Les cybercriminels peuvent développer des outils
+puissants de crack de mots de passe qui peuvent facilement accéder à des
+comptes protégés par mot de passe en entraînant des modèles d'IA sur de
+grands ensembles de données de références volées.
+
+---
+
+[p. 200-200]
+générer des rapports analysant les données et mettant en évidence les
+informations ou les schémas pertinents.
+ChatGPT peut également être utilisé pour analyser les schémas de
+communication et identifier tout comportement ou langage suspect. Par
+exemple, si un enquêteur cherche à déterminer si deux individus ont
+communiqué entre eux de manière clandestine, ChatGPT pourrait être
+utilisé pour analyser leur communication et identifier les schémas ou
+les points communs.
+L'IA peut être entraînée sur divers ensembles de données afin
+d'identifier différents types de menaces cybernétiques telles que les e-
+mails de phishing, les tentatives d'ingénierie sociale ou même les
+infections par des logiciels malveillants. Cela peut aider les enquêteurs
+à identifier et à réagir rapidement aux menaces, ainsi qu'à prendre des
+mesures préventives pour se protéger contre les attaques futures.
+ChatGPT peut également être formé sur des communications chiffrées,
+permettant à l'enquêteur de décrypter les messages et de mieux
+comprendre la communication en cours. Et aider l'enquêteur à traduire
+et à interpréter en temps réel.
+Il peut être utilisé pour rechercher des mots-clés ou des phrases dans de
+grandes quantités de données, telles que des archives d'e-mails ou des
+journaux de discussions. Cela peut être particulièrement utile pour
+identifier des preuves potentielles ou des schémas de comportement.
+Les avocats et les décideurs politiques utilisent
+ChatGPT ou l'IA générative
+Pour garantir que les choix juridiques et politiques sont faits de manière
+équitable, éthique et responsable, l'IA peut être un outil bénéfique pour les
+avocats et les décideurs politiques en général. Cependant, elle doit être
+utilisée en conjonction avec les compétences et le jugement humain.
+ChatGPT peut être instruit sur des documents juridiques tels que des
+lois, des règles et des précédents judiciaires, et utilisé pour aider les
+avocats dans leurs recherches juridiques concernant les questions de
+sécurité nationale. ChatGPT peut aider à localiser des dispositions
+juridiques pertinentes et fournir des informations sur la façon dont les
+tribunaux ont interprété et appliqué certaines lois.
+
+---
+
+[p. 207-207]
+Les étudiants en études civiques ou historiques peuvent lire les positions
+politiques publiées par des politiciens ou des organisations de défense
+politique et les comparer à celles produites par ChatGPT.
+Les étudiants en éducation physique et sportive peuvent analyser de manière
+critique les programmes d'exercices, les programmes alimentaires et/ou les
+recommandations en matière de santé mentale créés par ChatGPT.
+Les élèves des classes de sciences et de mathématiques peuvent demander à
+ChatGPT de clarifier une idée cruciale avant de se lancer dans un exercice
+d'investigation en ligne pour essayer d'identifier les textes originaux que
+ChatGPT a utilisés pour produire sa réponse. Les élèves peuvent bénéficier
+de la génération automatisée de questions par ChatGPT. En accumulant un
+grand nombre de questions mathématiques et scientifiques et de points de
+connaissance, le modèle ChatGPT parvient à produire automatiquement des
+questions. Il peut également adapter la difficulté en fonction du niveau
+d'apprentissage et des besoins des étudiants.
+Dans le monde de l'apprentissage en ligne, ChatGPT a fondamentalement
+transformé les règles du jeu. En donnant aux étudiants des informations
+rapides et précises, il a augmenté l'efficacité et l'efficience des plateformes
+d'apprentissage en ligne et des cours virtuels. Cela implique que les
+entreprises Edtech adoptent ChatGPT pour accompagner les étudiants dans
+leur progression dans les cours en ligne et pour fournir plus de détails et
+d'explications lorsqu'il y a peu d'opportunités d'interaction entre étudiants et
+enseignants.
+Il existe plusieurs cas d'utilisation pour ChatGPT, l'IA générative et l'IA dans
+le secteur de l'Edtech. Voici quelques exemples :
+Compréhension du sujet
+
+---
+
+[p. 215-215]
+ison de l'avancement continu de la technologie de
+l'intelligence artificielle.
+Rejoignez l'espace Discord de notre livre
+Rejoignez l'espace Discord du livre pour obtenir les dernières mises à jour,
+offres, événements technologiques dans le monde, nouvelles publications et
+sessions avec les auteurs :
+https://discord.bpbonline.com
+
+---
+
+[p. 223-224]
+prétations et des recommandations de recherche
+Les chercheurs et les étudiants peuvent modifier le sujet de recherche en
+fonction de leurs intérêts et de leurs objectifs de recherche. ChatGPT m'a
+impressionné car il génère non seulement une liste d'idées, mais aussi des
+explications étape par étape et couvre tous les paramètres.
+Enfin, utiliser ChatGPT pour améliorer le travail
+de recherche.
+ChatGPT peut vous aider avec tout, de la grammaire et du style à la
+génération de nouvelles idées. Voici quelques façons dont ChatGPT peut
+vous aider :
+De plus, vous pouvez utiliser ChatGPT pour obtenir des critiques et des
+idées sur l'organisation et le raisonnement de votre document. Vous pouvez
+demander à ChatGPT de produire des idées ou de vous inspirer si vous avez
+du mal à trouver de nouvelles concepts ou les bonnes phrases.
+Les limites de ChatGPT pour le travail de
+recherche.
+ChatGPT peut interpréter des mots et des phrases, mais il peut parfois ne pas
+comprendre pleinement le contexte d'une question ou d'un sujet d'étude.
+ChatGPT n'a accès qu'aux données d'entraînement qu'il a collectées jusqu'en
+septembre 2021. Par conséquent, il peut ne pas être au courant des avancées
+ou des connaissances les plus récentes dans un domaine donné.
+ChatGPT est sujet aux biais présents dans ses données d'entraînement, tout
+comme tout autre système d'IA. Il peut ne pas toujours offrir une analyse
+approfondie ou objective d'un sujet ou d'un problème donné.
+ChatGPT a été formé sur du texte déjà existant, l'IA a tendance à utiliser ces
+informations encore et encore, ce qui constitue peut-être du plagiat. Les
+réponses de l'IA peuvent contenir du contenu issu d'un article en ligne.
+ChatGPT est un modèle de langage et n'a pas de capacités d'interprétation
+d'images et de vidéos, ce qui peut être crucial dans certains domaines
+d'étude.
+ChatGPT a été formé à l'aide d'une large gamme de sources, cependant il est
+incapable d'identifier de manière fiable les sources de chaque sortie donnée.
+Pire encore, lorsque vous le demandez, il invente fréquemment des sources
+qui n'existent pas réellement.
+ChatGPT n'est pas capable de réaliser des recherches originales ou des
+expériences pour fournir de nouvelles données ou des informations.
+
+---
+
+[p. 233-234]
+nt étaient celles de 2022. En
+raison de la propension du modèle à être en retard par rapport aux normes de
+l'industrie les plus récentes, je produis régulièrement du code obsolète.
+Il faut toujours garder à l'esprit qu'il s'agit d'un modèle qui a été formé à
+partir de données, et non pas d'un véritable ingénieur logiciel, et que
+ChatGPT est la seule source de confirmation humaine des réponses. Par
+conséquent, différentes personnes estimeront différentes réponses comme
+étant la "bonne réponse".
+Étant donné que les données d'un moteur de recherche sont plus à jour que
+celles du modèle, il peut être nécessaire d'incorporer des outils, des
+bibliothèques, des versions récentes, etc. plutôt que de simplement les
+suggérer, et ChatGPT peut combler les vides avec des mots ou du code qui
+paraissent logiques. Il peut manquer des clés, des bibliothèques ou des
+structures de données. Ou bien il peut simplement modifier les noms, la
+séquence ou tout autre élément à chaque phase successive.
+ChatGPT doit régulièrement être rappelé de renforcer ou de durcir le code et
+est orienté vers des cas simples sans tenir compte des considérations de
+production ou des circonstances particulières. De plus, ChatGPT peut
+produire des idées ou du code redondants, incorrects ou même nocifs. Il ne
+peut pas comprendre l'interdépendance logique du code et peut donner des
+conseils généralement valables dans des situations inappropriées.
+Les entrées et sorties de ChatGPT sont limitées en taille et en complexité.
+Bien que les détails soient confidentiels, vous les rencontrerez. Par exemple,
+s'il n'y a pas assez de "place", la sortie peut se terminer en milieu de phrase
+ou en milieu de code, et ChatGPT peut combiner (en isolation) des
+procédures ou des bibliothèques plausibles, mais cela impliquerait de
+dupliquer le travail. Par exemple, il peut recommander de compresser du
+matériel déjà compressé. De plus, malgré les rappels qui ont déjà corrigé des
+problèmes, il a tendance à les répéter avec le temps.
+ChatGPT ou les limites de l'IA générative pour la
+programmation ou le codage?
+ChatGPT ou l'IA générative ne peuvent soutenir que les langages de
+programmation pour lesquels ChatGPT ou l'IA générative ont reçu une
+formation formelle. ChatGPT ou l'IA générative ont reçu une formation
+formelle dans plusieurs langages de programmation différents actuellement,
+y compris Python, Java, C++ et JavaScript. ChatGPT ou l'IA générative
+pourraient ne pas être en mesure d'écrire du code dans une langue pour
+laquelle ils n'ont pas reçu de formation formelle.
+
+---
+
+[p. 243-244]
+peu de temps. En seulement cinq jours, il a rassemblé une impressionnante
+base d'un million d'utilisateurs, un exploit qu'aucun autre service numérique
+n'avait réalisé auparavant. Actuellement, ChatGPT compte plus de 100
+millions de bases de données, ce qui démontre sa popularité continue parmi
+les utilisateurs du monde entier.
+Cependant, le maintien d'un si grand nombre d'utilisateurs et de leurs cas
+d'utilisation divers sur une plateforme d'accès gratuit peut être un défi. Cela
+peut entraîner des pannes de serveur ou des retards, provoquant des temps
+d'arrêt du serveur dans certaines parties du monde. L'équipe de
+développement de ChatGPT travaille continuellement à améliorer les
+performances de la plateforme et à veiller à ce qu'elle puisse accueillir sa
+base d'utilisateurs en constante croissance. En plus de ChatGPT, plusieurs
+solutions d'IA conversationnelle générative sont apparues pendant le
+battage médiatique initial de la plateforme, tandis que d'autres ont gagné en
+popularité dans l'industrie du marketing à cette époque. Bien que ces
+solutions d'IA ne puissent pas offrir toutes les fonctionnalités de ChatGPT,
+elles excellent dans des tâches spécifiques et peuvent être tout aussi
+efficaces dans leurs domaines respectifs.
+Quelques alternatives à ChatGPT
+Voici quelques-unes des alternatives à ChatGPT :
+ChatSonic
+Prix : Gratuit
+L'outil de création de contenu bien connu WriteSonic a créé le chatbot
+ChatSonic alimenté par l'IA. Il est devenu l'une des alternatives les plus
+compétitives à ChatGPT sur le marché de l'IA conversationnelle. ChatSonic
+offre une large gamme de fonctionnalités de pointe qui peuvent aider les
+personnes et les organisations à interagir de manière plus efficace et
+efficience.
+Le fait que ChatSonic soit totalement gratuit à utiliser est l'un de ses
+avantages les plus importants. Cela en fait une option très viable et
+abordable pour quiconque recherche une plateforme d'IA conversationnelle
+fiable. La technologie d'IA utilisée par ChatSonic vise à fournir des
+solutions de haute qualité aux demandes des clients, facilitant ainsi une
+expérience conversationnelle naturelle et simple. ChatSonic dispose d'une
+interface utilisateur intuitive qui facilite sa configuration et son utilisation.
+La technologie d'IA du chatbot évolue en permanence, garantissant ainsi
+qu'elle reste à jour par rapport aux derniers développements dans le
+domaine de l'IA conversationnelle. En conséquence, ChatSonic peut offrir
+
+---
+
+[p. 252-252]
+de la manière suivante:
+En traduisant du texte et de la parole en temps réel, l'IA générative et
+ChatGPT peuvent fournir une communication multilingue lors de la
+conférence du G20. L'interaction et la coopération entre les délégués d'autres
+nations qui parlent différentes langues peuvent être améliorées grâce à cette
+compétence.
+
+---
+
+[p. 262-263]
+ropriées au
+contexte, mais il manque de traits humains tels que le bon sens et les
+connaissances générales. Il peut seulement fournir des réponses basées
+sur les schémas qu'il a appris à rechercher dans les données
+d'entraînement, qui peuvent ne pas correspondre nécessairement à
+l'intuition humaine et aux processus de réflexion.
+Les biais existants dans les données d'entraînement peuvent être
+reproduits involontairement et amplifiés par des modèles d'IA comme
+ChatGPT. Cela peut entraîner des résultats biaisés, injustes ou
+discriminatoires envers certains groupes d'individus. De plus, les
+données de ChatGPT semblent être mises à jour jusqu'en 2021 et elles
+n'ont pas été actualisées récemment
+ChatGPT peut parfois avoir du mal à comprendre pleinement le
+contexte et les subtilités d'une requête particulière, ce qui conduit à des
+réponses sans rapport ou inexactes. Bien que ChatGPT puisse générer
+des réponses basées sur les modèles et les associations qu'il reconnaît
+dans ses données d'entraînement, il ne peut pas raisonner ou penser de
+manière critique comme le font les humains.
+ChatGPT ne possède pas d'intelligence émotionnelle et ne peut pas
+reconnaître ou répondre aux émotions de la même manière que les
+humains.
+Par conséquent, il peut être risqué de s'appuyer sur ce modèle d'IA ou
+d'avoir une confiance totale en lui car il ne fournit pas toujours des résultats
+fiables et précis. Il est recommandé de vérifier les informations fournies
+avec des sources fiables supplémentaires.
+Mais indéniablement, il a perturbé une nouvelle ère de l'IA générative et de
+l'IA conversationnelle. Ainsi, les utilisateurs et les industries ont quelques
+attentes pour corriger et améliorer certains aspects du GPT.
+Le potentiel de ChatGPT dans le traitement du
+langage naturel et la personnalisation
+Le vaste domaine de potentiel de ChatGPT réside dans sa capacité à
+analyser et comprendre le langage humain. À mesure que nos interactions
+avec la technologie deviennent de plus en plus conversationnelles et
+naturelles, la capacité à comprendre et à répondre au langage humain
+devient une caractéristique clé de nombreuses applications. ChatGPT, avec
+sa compréhension approfondie du langage naturel, pourrait être utilisé pour
+développer des interfaces conversationnelles plus intuitives et réactives
+pour un large éventail d'applications, des robots de service client aux
+assistants personnels.

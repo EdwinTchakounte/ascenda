@@ -1,0 +1,82 @@
+{
+ "document_id": "34ca7b87-3c62-4362-8ebd-7bd0715444ba",
+ "titre_normalise": "L'IA démystifiée. Guide des premiers pas",
+ "auteurs": [
+  "Célestine Tsondo"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "guide pratique",
+ "niveau": "debutant",
+ "public_cible": "Débutant complet, entrepreneur, créateur de contenu, étudiant, qui veut se mettre à l'IA générative cette semaine et non l'an prochain. Livre numérique auto-édité, très visuel, avec liens cliquables, codes de renvoi vers des tutoriels vidéo et un quiz interactif. Six sections : contexte, bases, outils, prompts et cas pratiques, stratégies, passage à l'action.",
+ "these_centrale": "L'accès à l'IA générative ne demande ni diplôme, ni budget, ni matériel : il demande de savoir quel outil ouvrir et comment lui parler. Le guide sélectionne une poignée d'outils gratuits ou à essai gratuit, en donne le mode d'emploi étape par étape, et enchaîne sur la formulation des requêtes et des cas d'application concrets. Son postulat est que la démonstration vaut mieux que l'explication.",
+ "idees_force": [
+  {
+   "titre": "L'autrice déclare que le livre a été coécrit avec une IA générative",
+   "explication": "Le préambule le dit sans détour : sans l'aide de l'IA générative, qui l'a guidée tout au long de l'écriture, l'ouvrage n'aurait pas vu le jour. Cette déclaration est en elle-même la première démonstration du propos, et l'honnêteté du procédé mérite d'être notée à un moment où beaucoup de textes produits de la même manière ne le disent pas.",
+   "page": 5
+  },
+  {
+   "titre": "La distinction IA classique et IA générative, posée simplement",
+   "explication": "L'IA classique exécute une tâche définie, reconnaître une image, prédire une tendance, décider selon des règles ; c'est un expert dans un domaine précis. L'IA générative crée du contenu original, textes, images, musiques, code ; c'est un artiste. La formule est approximative mais elle installe la bonne question chez un débutant : est-ce que j'attends une classification ou une production ?",
+   "page": 8
+  },
+  {
+   "titre": "Trois images pour trois notions",
+   "explication": "L'algorithme est une recette de cuisine pour ordinateur. L'apprentissage automatique, c'est apprendre à faire du vélo : on tombe, on se relève, on maîtrise l'équilibre. L'apprentissage profond, c'est empiler les couches de neurones pour décrypter des informations plus complexes. Ces analogies sont réutilisables telles quelles dans une salle de classe ou un atelier villageois.",
+   "page": 8
+  },
+  {
+   "titre": "Un panorama d'outils réellement accessibles",
+   "explication": "Modèles de langage : ChatGPT, Claude, Gemini, chacun avec son adresse, ses points forts et un tutoriel en cinq étapes. Génération d'images : DALL-E. Outils intégrés : Notebook LM chez Google, Copilot et Bing Chat chez Microsoft, avec leurs cas d'usage. Le mérite du guide est de nommer les adresses et de décrire l'inscription, ce qui est exactement ce qui bloque un débutant.",
+   "page": 12
+  },
+  {
+   "titre": "Cinq étapes pour une première requête",
+   "explication": "Créer un compte, accéder à l'interface, formuler sa demande dans la zone de texte, explorer les options de personnalisation, dialoguer et affiner. Le point important est le cinquième : poser des questions, demander des reformulations, guider le système. Le débutant qui croit devoir écrire la requête parfaite du premier coup passe à côté de l'essentiel, qui est l'itération.",
+   "page": 13
+  },
+  {
+   "titre": "Trois consignes de méthode qui valent plus que les outils cités",
+   "explication": "Expérimenter sans limite, parce que chaque outil a sa propre personnalité et qu'il faut tester des requêtes variées pour trouver celui qui convient. Itérer et reformuler, la patience et la persévérance étant les meilleurs atouts. Jouer, explorer, se laisser surprendre. Les outils changeront, ces trois consignes non.",
+   "page": 25
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "IA générative",
+   "definition": "Système qui produit du contenu original, texte, image, son, code, par opposition à un système qui classe ou prédit."
+  },
+  {
+   "terme": "Modèle de langage",
+   "definition": "Système conversationnel capable d'écrire, traduire, résumer et produire du code à partir d'une requête en langue naturelle."
+  },
+  {
+   "terme": "Requête ou prompt",
+   "definition": "Instruction donnée au système. Sa précision, sa longueur indiquée, le style et le niveau de créativité demandés déterminent la qualité du résultat."
+  },
+  {
+   "terme": "Itération",
+   "definition": "Reprise et reformulation de la requête à partir du résultat obtenu. Méthode de travail normale avec ces outils, et non signe d'échec."
+  },
+  {
+   "terme": "Multimodalité",
+   "definition": "Capacité d'un système à traiter et produire plusieurs types de données, texte, image, tableau, dans un même échange."
+  },
+  {
+   "terme": "Générateur d'images",
+   "definition": "Système qui transforme une description textuelle en image, utilisable pour des visuels de réseaux sociaux, des illustrations d'articles ou des couvertures."
+  },
+  {
+   "terme": "Carnet de notes interactif",
+   "definition": "Environnement où l'on écrit du code, l'exécute et visualise les données dans le même document, désormais assisté par des modèles de langage."
+  }
+ ],
+ "a_lire_si": "Vous démarrez de zéro et vous voulez avoir produit quelque chose dans l'heure qui suit. C'est le document du fonds le plus directement utilisable pour animer une première séance de découverte, notamment auprès d'un public francophone africain : il est court, visuel, écrit par une autrice africaine, et il ne suppose aucun prérequis. Il complète naturellement le lexique et les ouvrages de fond, qu'il ne remplace pas.",
+ "a_eviter_si": "Vous voulez comprendre ce qui se passe sous le capot, ou vous cherchez un regard critique : le guide est enthousiaste de bout en bout et ne traite ni des biais, ni des limites de fiabilité, ni du coût énergétique, ni des questions de propriété intellectuelle. Le catalogue d'outils se périme vite : versions, tarifs et adresses changent d'un trimestre à l'autre, et certaines fonctionnalités décrites comme réservées à une offre payante sont depuis devenues gratuites ou l'inverse. Vérifiez toujours avant de recommander.",
+ "prerequis": [],
+ "controverses": [
+  "Un guide entièrement positif sur des outils dont il ne mentionne aucune limite pose un problème pédagogique : le lecteur qui découvre l'IA par ce document ignorera qu'un modèle peut inventer des faits avec assurance. Il doit impérativement être associé à un texte traitant de la fiabilité.",
+  "Le classement de cet ouvrage parmi les fondamentaux est discutable : il relève des outils et de la pratique, et gagnerait à être rattaché à cet axe."
+ ],
+ "confiance": 0.8
+}

@@ -1,0 +1,182 @@
+{
+ "document_id": "15614410-2924-43f8-9846-9235461400a6",
+ "titre_normalise": "L'intelligence artificielle",
+ "auteurs": [
+  "Margaret A. Boden"
+ ],
+ "annee": 2021,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Lecteur cultivé qui veut une carte complète du domaine en moins de deux cents pages, étudiant en sciences cognitives, en philosophie ou en informatique. Titre original : Artificial Intelligence: A Very Short Introduction, Oxford University Press, 2016 et 2018, traduction française d'Alan Rodney, EDP Sciences, collection ChronoSciences, 2021, ISBN 978-2-7598-2579-0. Boden est professeure de sciences cognitives à l'université du Sussex, autrice de The Creative Mind et de Mind as Machine, et l'une des rares personnes à avoir suivi le domaine depuis ses débuts.",
+ "these_centrale": "L'intelligence artificielle n'est pas une technique unique mais un ensemble de traditions rivales : IA symbolique, réseaux de neurones, robotique située, vie artificielle, calcul évolutionniste. Chacune a réussi là où les autres échouaient, aucune n'a produit une intelligence générale, et Boden soutient qu'aucune n'y parviendra dans un avenir prévisible parce que l'obstacle n'est pas la puissance de calcul mais notre méconnaissance de ce qu'est l'esprit. Sa formule est le cœur du livre : la principale leçon de l'IA est que l'esprit humain est bien plus riche et plus subtil que les psychologues ne l'imaginaient.",
+ "idees_force": [
+  {
+   "titre": "L'IA est d'abord une science de l'esprit, accessoirement une industrie",
+   "explication": "Boden maintient le projet originel : construire des modèles calculables des processus mentaux pour comprendre l'esprit, humain ou animal. Chaque échec de programme est une découverte psychologique, parce qu'il révèle une compétence humaine que personne n'avait su formuler. Ce renversement de perspective vaut d'être médité par quiconque veut apprendre à penser : les limites des machines sont un instrument de connaissance de soi.",
+   "page": 53
+  },
+  {
+   "titre": "L'unification fondatrice : neurophysiologie, logique et calcul",
+   "explication": "McCulloch et Pitts, en 1943, montrent qu'un réseau de neurones formels peut réaliser tout calcul réalisable par une machine de Turing. Le même cadre théorique s'applique alors à l'intelligence des hommes et à celle des machines. Boden souligne ce qu'ils croyaient aussi et qui était faux : que le langage naturel se réduirait à des expressions logiques. Toute l'histoire ultérieure du domaine se joue dans cet écart.",
+   "page": 23
+  },
+  {
+   "titre": "Deux révélations de la fin des années 1950",
+   "explication": "Le programme de dames d'Arthur Samuel apprend à battre Samuel lui-même, première indication qu'un programme peut dépasser son programmeur. La Machine de la Théorie Logique de Newell et Simon démontre dix-huit théorèmes des Principia de Russell et en trouve pour l'un d'eux une preuve plus élégante que l'originale. Russell fut ravi, mais le Journal of Symbolic Logic refusa de publier un article dont un programme informatique était cosignataire. La résistance institutionnelle à la contribution machinique est aussi ancienne que la contribution elle-même.",
+   "page": 24
+  },
+  {
+   "titre": "La planification est plus difficile qu'elle n'en a l'air",
+   "explication": "Les premiers planificateurs supposaient un monde entièrement observable, déterministe, fini, statique, et des sous-objectifs indépendants. Aucune de ces hypothèses ne tient dans la réalité : le résultat d'une action peut être annulé par une autre. Les planificateurs modernes traitent des problèmes partiellement sécables, des environnements partiellement observables et probabilistes, et révisent continuellement objectifs et croyances en cours d'exécution. Cette description est une bonne définition de ce que signifie agir dans un monde incertain, pour une machine comme pour un être humain.",
+   "page": 39
+  },
+  {
+   "titre": "Le chaînage avant et arrière rend le raisonnement explicable",
+   "explication": "Les systèmes symboliques peuvent restituer le chemin par lequel ils sont parvenus à une conclusion, ce qui permet à l'utilisateur de juger si le conseil est fondé. C'est exactement ce que les réseaux profonds ne savent pas faire. Boden rappelle donc que l'explicabilité n'est pas une exigence nouvelle imposée de l'extérieur : c'était une propriété acquise que le domaine a perdue en changeant de méthode.",
+   "page": 39
+  },
+  {
+   "titre": "Le plus difficile est l'ordinaire",
+   "explication": "Aucun robot ne sait plier une robe en satin qui glisse ; certains apprennent péniblement à plier une serviette rectangulaire. Enfiler un tee-shirt suppose de savoir que la tête entre en premier et non par une manche, et personne ne sait formuler pourquoi. Ces problèmes topologiques sont presque absents de la recherche. De même, l'IA ne sait pas utiliser un schéma pour raisonner, comme nous le faisons au dos d'une enveloppe, et les psychologues ne savent pas non plus comment nous le faisons.",
+   "page": 53
+  },
+  {
+   "titre": "SHRDLU, sommet et impasse de l'analyse syntaxique",
+   "explication": "Écrit par Terry Winograd au MIT au début des années 1970, le programme obéissait à des ordres en anglais pour déplacer des blocs colorés et savait assigner une structure grammaticale à des phrases d'une complexité remarquable, du type : combien d'œufs auriez-vous utilisés dans le gâteau si vous n'aviez pas appris que la recette de votre grand-mère était erronée ? Il a pourtant déçu, parce qu'il était truffé de bogues et inutilisable hors du laboratoire, et parce que la maîtrise de la syntaxe ne donnait pas la compréhension.",
+   "page": 71
+  },
+  {
+   "titre": "Trois formes de créativité, et ce que les machines en atteignent",
+   "explication": "Boden distingue la créativité combinatoire, qui associe des idées existantes, la créativité exploratoire, qui parcourt un espace conceptuel donné, et la créativité transformationnelle, qui modifie les règles de cet espace. Les programmes actuels font de l'exploratoire et un peu de transformationnel ; le combinatoire, paradoxalement le plus banal chez l'humain, leur est presque interdit parce qu'il exige de savoir pourquoi deux idées éloignées valent la peine d'être rapprochées. Tant qu'un système ne peut pas analyser un style par lui-même, ses explorations ne sont pas vraiment son œuvre.",
+   "page": 83
+  },
+  {
+   "titre": "La rétropropagation résout l'attribution du mérite",
+   "explication": "Dans un système complexe qui fonctionne, quelles parties sont responsables du succès ? La rétropropagation, anticipée par Werbos en 1974 et formulée commodément par Hinton au début des années 1980, remonte de la sortie vers les couches cachées et répartit la part d'erreur imputable à chaque unité, proportionnellement au poids de sa connexion. Boden note ce que la vulgarisation oublie : c'est un apprentissage supervisé, qui exige de connaître la bonne réponse, et le cerveau ne procède presque certainement pas ainsi.",
+   "page": 99
+  },
+  {
+   "titre": "Le recuit simulé expliqué par un sac de billes",
+   "explication": "Pour échapper à un optimum local, on perturbe fortement le système au départ puis de moins en moins, comme on secoue vigoureusement puis doucement un sac de billes pour déloger celles qui reposent sur une crête. L'image donne une intuition juste de ce que signifie chercher un meilleur équilibre plutôt que le premier équilibre venu, et vaut au-delà de l'informatique.",
+   "page": 99
+  },
+  {
+   "titre": "Le criquet de Barbara Webb : l'intelligence peut être dans le corps",
+   "explication": "La femelle du criquet localise le chant du mâle, non par un traitement neuronal élaboré, mais grâce à un tube de longueur fixe dans son thorax, dont la longueur correspond exactement à la longueur d'onde du chant. La physique des annulations de phase fait le travail. Webb a reproduit le comportement avec quatre neurones. Leçon générale : une compétence apparemment cognitive peut être portée par la morphologie du corps, pas par le calcul. C'est le cœur de la robotique située et une objection sérieuse à l'idée que tout se ramène à du logiciel.",
+   "page": 116
+  },
+  {
+   "titre": "Le principe infomax et l'auto-organisation",
+   "explication": "Les détecteurs d'orientation présents chez les singes nouveau-nés ne sont pas appris et ne sont pas non plus codés dans les gènes : ils émergent spontanément d'un réseau initialement aléatoire soumis à de simples règles hebbiennes, comme l'a montré Ralph Linsker. Sa théorie infomax veut que les connexions se développent de manière à maximiser l'information préservée à chaque étape. Conséquence importante pour la théorie de l'évolution : une mutation isolée peut être adaptative si chaque niveau s'ajuste spontanément aux modifications des autres.",
+   "page": 129
+  },
+  {
+   "titre": "L'objection de l'incarnation",
+   "explication": "Pour les philosophes de l'incarnation, être intelligent c'est être un corps vivant engagé activement dans un environnement à la fois physique et socioculturel ; les propriétés psychologiques premières ne sont pas le raisonnement mais l'adaptation et la communication. Aucun système à l'écran ne saurait donc être intelligent. Boden cite Wittgenstein : si un lion pouvait parler, nous ne le comprendrions pas. Nous partageons pourtant avec le lion la faim, la peur, la fatigue, assez pour une empathie minimale. Avec un robot, rien de tel, ce qui rend selon elle préoccupante la recherche sur les compagnons artificiels destinés aux personnes isolées.",
+   "page": 148
+  },
+  {
+   "titre": "Contre les croyants de la Singularité",
+   "explication": "Boden se déclare sceptique et argumente : la superintelligence suppose d'abord une intelligence générale, que rien ne laisse voir. Les croyants ignorent les limites des systèmes actuels, supposent que le progrès technique réécrit toutes les règles, et se protègent de la réfutation en observant que jamais est une très longue échéance. Elle concède loyalement que les sceptiques n'ont pas d'argument décisif, puisqu'elle admet l'intelligence générale possible en principe. C'est une leçon de probité intellectuelle : on peut défendre une position sans prétendre l'avoir démontrée.",
+   "page": 162
+  },
+  {
+   "titre": "L'émulation du cerveau entier, en chiffres et en dates",
+   "explication": "Le projet européen Human Brain Project annoncé en 2013, environ un milliard de livres sterling sur dix ans ; le projet américain BRAIN la même année, trois milliards de dollars publics ; Blue Brain en Suisse depuis 2005, d'abord une colonne corticale de rat pour viser le million de colonnes du néocortex humain ; SyNAPSE financé par la DARPA à hauteur de quarante millions de dollars puis quarante de plus. En 2012 l'ordinateur K mettait encore quarante minutes à simuler une seconde d'activité d'une fraction de cerveau. L'ordre de grandeur du fossé est là.",
+   "page": 162
+  },
+  {
+   "titre": "La compétence morale des machines est un chantier de recherche, pas une promesse",
+   "explication": "Un projet réunissant cinq universités américaines cherche à doter des robots d'une compétence morale, non par une liste de lois à la manière d'Asimov ni par le choix d'une méta-éthique, mais en construisant un système capable de raisonner et de discuter moralement. Les questions posées sont concrètes : dans un sauvetage, qui évacuer en premier ? Un robot d'accompagnement doit-il parfois taire la vérité ? Boden doute de la faisabilité, mais juge l'exercice utile parce qu'il révèle les dangers d'employer des machines dans des situations moralement chargées.",
+   "page": 175
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Machine virtuelle",
+   "definition": "Niveau de fonctionnement défini au-dessus du matériel, comme un langage de programmation, qui permet de définir à son tour des niveaux supérieurs. Concept que Boden utilise pour penser les rapports entre esprit et cerveau sans dualisme."
+  },
+  {
+   "terme": "IA symbolique",
+   "definition": "Approche fondée sur la manipulation de symboles et de règles explicites. Ses forces : la planification, la preuve, l'explication du raisonnement. Ses faiblesses : la perception, le corps, le sens commun."
+  },
+  {
+   "terme": "Traitement distribué en parallèle",
+   "definition": "Nom donné à l'approche par réseaux de neurones : la connaissance n'est pas localisée dans un symbole mais répartie sur l'ensemble des poids du réseau."
+  },
+  {
+   "terme": "Problème de l'attribution du mérite",
+   "definition": "Dans un système complexe qui réussit ou échoue, déterminer quelles composantes en sont responsables. La rétropropagation et l'algorithme du seau à jetons sont deux réponses."
+  },
+  {
+   "terme": "Recuit simulé",
+   "definition": "Technique empruntée à la métallurgie : perturber fortement le système au début de l'apprentissage puis de moins en moins, afin d'échapper aux optima locaux."
+  },
+  {
+   "terme": "Minimum local",
+   "definition": "Solution meilleure que ses voisines immédiates mais inférieure à l'optimum global. Piège central de tout apprentissage par ajustement progressif."
+  },
+  {
+   "terme": "Robotique située",
+   "definition": "Approche qui renonce aux représentations internes du monde au profit de couplages directs entre capteurs et actionneurs. Les robots cafards de Beer et les criquets de Webb en sont les exemples canoniques."
+  },
+  {
+   "terme": "Phonotaxie",
+   "definition": "Déplacement dirigé vers une source sonore. Chez le criquet femelle, elle repose sur la géométrie d'un tube thoracique, non sur un traitement neuronal."
+  },
+  {
+   "terme": "Vie artificielle",
+   "definition": "Étude par simulation des propriétés du vivant, auto-organisation, évolution, émergence, indépendamment de leur support biologique."
+  },
+  {
+   "terme": "Règle hebbienne",
+   "definition": "Principe d'apprentissage selon lequel deux unités activées ensemble voient leur connexion renforcée. Base biologique plausible de l'apprentissage associatif."
+  },
+  {
+   "terme": "Infomax",
+   "definition": "Théorie de Linsker selon laquelle les connexions d'un réseau se développent de façon à maximiser l'information conservée à chaque étape du traitement."
+  },
+  {
+   "terme": "Créativité combinatoire, exploratoire, transformationnelle",
+   "definition": "Trois formes distinguées par Boden : associer des idées existantes, parcourir un espace conceptuel donné, modifier les règles de cet espace."
+  },
+  {
+   "terme": "Intelligence artificielle générale",
+   "definition": "Système capable de transposer sa compétence à des domaines nouveaux, comme un humain. Aucun n'existe."
+  },
+  {
+   "terme": "Incarnation",
+   "definition": "Thèse selon laquelle la pensée suppose un corps vivant engagé dans un environnement physique et social, ce qui exclut par principe une intelligence purement logicielle."
+  },
+  {
+   "terme": "Théorie de l'esprit",
+   "definition": "Capacité à interpréter le comportement d'autrui en termes d'intentions, de croyances et d'agence. Préalable à toute compétence morale."
+  },
+  {
+   "terme": "Émulation du cerveau entier",
+   "definition": "Programme de recherche visant à simuler un cerveau réel neurone par neurone, avec ses connexions et leur temporalité."
+  },
+  {
+   "terme": "Calcul neuromorphique",
+   "definition": "Matériel conçu pour imiter l'organisation du tissu nerveux plutôt que l'architecture classique à processeur et mémoire séparés."
+  },
+  {
+   "terme": "IA conviviale",
+   "definition": "Expression d'Eliezer Yudkowsky pour un système à la fois sûr et bénéfique, reposant sur des algorithmes intelligibles et fiables."
+  }
+ ],
+ "a_lire_si": "Vous voulez la carte complète du domaine, ses cinq traditions et leurs rapports, dans un format court et écrit par quelqu'un qui a vu naître la discipline. C'est le meilleur point d'entrée pour un lecteur exigeant qui n'a pas le temps d'un gros ouvrage, et le meilleur complément aux livres centrés sur le seul apprentissage profond, dont il montre qu'il n'est qu'une branche parmi d'autres. Les chapitres sur la robotique située, la vie artificielle et la créativité n'ont pratiquement pas d'équivalent en français.",
+ "a_eviter_si": "Vous débutez complètement : la densité est élevée, les transitions sont rapides, et Boden suppose acquise une certaine familiarité avec le vocabulaire de la psychologie cognitive. La traduction française est parfois maladroite et laisse passer des coquilles, des sigles non déployés et quelques phrases obscures. Le texte date de 2016, révisé en 2018 : il ne traite pas des grands modèles de langage.",
+ "prerequis": [
+  "Notions de base sur les réseaux de neurones",
+  "Curiosité pour la philosophie de l'esprit"
+ ],
+ "controverses": [
+  "Singularité : Boden se range explicitement du côté des sceptiques et qualifie d'absurdes les spéculations des croyants, tout en admettant que l'intelligence générale est possible en principe et que les sceptiques n'ont pas d'argument décisif.",
+  "Incarnation : la pensée exige-t-elle un corps vivant ? Les phénoménologues répondent oui et excluent toute intelligence logicielle ; Boden expose l'argument sans y souscrire entièrement.",
+  "La robotique située a-t-elle eu raison de rejeter la planification et les représentations internes dans les années 1980 ? Boden juge cette critique largement erronée, la robotique ayant besoin des deux.",
+  "Peut-on admettre une machine dans la communauté morale ? Boden montre que plus on examine les conséquences pratiques, respect de ses intérêts, imputabilité de ses actes, participation à la délibération, plus l'idée devient problématique.",
+  "Les compagnons artificiels destinés aux personnes isolées posent selon elle un problème moral distinct, parce que la relation qu'ils simulent ne peut pas exister."
+ ],
+ "confiance": 0.93
+}

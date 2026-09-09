@@ -1,0 +1,48 @@
+[
+ {"chapitre":"5970bdc1","citations":[
+  {"texte":"On ne peut pas dire que la société s'intéresse à la quête d'IA, pas plus qu'elle ne s'y oppose. Elle l'ignore tout simplement.","page":340,"axe":"04-ia-societe-ethique-philosophie","theme":"L'indifférence du public","portee":"Écrit en 2014, ce constat mesure le chemin parcouru en dix ans dans l'attention portée au sujet."},
+  {"texte":"Malgré leur allure spectaculaire, ces systèmes industriels ne manifestent aucune intelligence du type animal.","page":340,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Robot n'est pas intelligent","portee":"Confondre automatisation mécanique et intelligence est l'erreur la plus répandue sur le sujet."}]},
+
+ {"chapitre":"1ba25048","citations":[
+  {"texte":"Les premières décennies de recherche dans ce domaine ont été un grand échec.","page":341,"axe":"04-ia-societe-ethique-philosophie","theme":"Un long échec","portee":"Rappel salutaire : le domaine aujourd'hui triomphant a connu des décennies sans résultat."},
+  {"texte":"Aucune machine ne peut avoir une expérience adéquate du monde réel dans lequel les traductions prennent leur sens.","page":341,"axe":"04-ia-societe-ethique-philosophie","theme":"Traduire suppose d'avoir vécu","portee":"Le sens d'un texte tient au monde que le traducteur a connu, et qu'aucune machine n'a habité."}]},
+
+ {"chapitre":"2e1e5077","citations":[
+  {"texte":"Dans la mesure où toute la programmation actuelle est entièrement basée sur cette approche « objets », on peut considérer que les retombées de la recherche en IA ont laissé une marque définitive sur l'informatique.","page":342,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Retombées inattendues","portee":"Une recherche qui manque son but déclaré peut transformer durablement tout un domaine par ses effets latéraux."},
+  {"texte":"On est aujourd'hui sorti du long hiver de la machine en quête de sapience, et l'ambiance actuelle n'est ni triste ni exubérante, seulement pragmatique.","page":342,"axe":"04-ia-societe-ethique-philosophie","theme":"Après l'hiver","portee":"Note d'humeur juste : la maturité d'un domaine se reconnaît à ce qu'il cesse d'alterner promesses et désillusions."}]},
+
+ {"chapitre":"7bb6026d","citations":[
+  {"texte":"Quand on ose évoquer la quête de sapience dans le contexte des machines électroniques, il faut tenir compte, au même instant, de ce qu'est la sapience chez cette autre machine, l'homme.","page":343,"axe":"04-ia-societe-ethique-philosophie","theme":"Deux machines à comparer","portee":"On ne peut juger l'intelligence des machines sans interroger en même temps la nôtre."},
+  {"texte":"Les organismes vivants et les artefacts humains n'appartiennent pas à deux ordres de réalité fondamentalement distincts.","page":343,"axe":"11-sciences-environnement","theme":"Vivant et artefact","portee":"Thèse forte : ce qui sépare l'être vivant de la machine tient à la complexité et au temps, non à la nature."},
+  {"texte":"Les quêteurs ne peuvent plus se contenter d'appliquer les protocoles de recherche et d'expérimentation d'hier, car le laboratoire lui-même s'est subtilement métamorphosé autour d'eux","page":343,"axe":"04-ia-societe-ethique-philosophie","theme":"Le laboratoire a changé","portee":"On poursuit souvent d'anciennes questions avec d'anciennes méthodes dans un monde qui a changé sans qu'on le voie."}]},
+
+ {"chapitre":"ffa5f131","citations":[
+  {"texte":"A partir de la compréhension des mécanismes chimiques de l'ADN, on a pu entrevoir le monde vivant - les plantes et les bactéries aussi bien que les bêtes et les hommes - comme un gigantesque système informatique, élaboré fortuitement par la nature.","page":344,"axe":"11-sciences-environnement","theme":"Le vivant comme information","portee":"Un changement de regard qui a fait de la biologie une science de l'information autant que de la matière."}]},
+
+ {"chapitre":"7f63514e","citations":[
+  {"texte":"On peut donc rester admiratif devant l'ingéniosité de la nature, qui ne s'est jamais écartée de l'exploitation de la « viande » pour l'assemblage de son produit haut-de-gamme : l'homme.","page":345,"axe":"11-sciences-environnement","theme":"L'ingéniosité de la nature","portee":"Avec un seul matériau et un alphabet de quatre lettres, l'évolution a produit tout le vivant connu."},
+  {"texte":"Enfin, un organe d'un type assez bizarre fit son apparition : le cerveau.","page":345,"axe":"11-sciences-environnement","theme":"L'apparition du cerveau","portee":"Une nouvelle couche de traitement de l'information posée sur la première, qui se mit à rêver de créer la sienne."}]},
+
+ {"chapitre":"1b30815a","citations":[
+  {"texte":"Nous sommes comme des nains juchés sur des épaules de géants (les Anciens), de telle sorte que nous puissions voir plus de choses et de plus éloignées que n'en voyaient ces derniers.","page":346,"axe":"09-developpement-personnel-influence","theme":"Sur les épaules des Anciens","portee":"Image médiévale toujours juste : on ne voit loin qu'en s'appuyant sur ce que d'autres ont bâti avant nous."}]},
+
+ {"chapitre":"81b05d36","citations":[
+  {"texte":"De nos jours, on finit par se dire que la machine en quête de sapience existe probablement depuis un certain temps déjà. Cette machine, c'est nous.","page":347,"axe":"04-ia-societe-ethique-philosophie","theme":"Cette machine, c'est nous","portee":"Retournement final de la postface : la question de l'intelligence artificielle nous ramène à notre propre nature."},
+  {"texte":"les adeptes de l'IA ont d'abord grossièrement sous-estimé les « challenges techniques réussis par notre activité mentale courante »","page":347,"axe":"04-ia-societe-ethique-philosophie","theme":"Le prix de l'ordinaire","portee":"Ce que nous faisons sans y penser s'est révélé bien plus difficile à reproduire que ce que nous jugions savant."}]},
+
+ {"chapitre":"cff9c411","citations":[
+  {"texte":"Il propose un état des lieux approfondi et documenté des recherches récentes en IA, de ses développements et de ses principaux résultats qui restent trop souvent méconnus, y compris dans la communauté des chercheurs en informatique.","page":349,"axe":"05-ia-education-pedagogie","theme":"Un savoir méconnu","portee":"Beaucoup de résultats existent déjà et restent ignorés faute d'être rassemblés et rendus lisibles."}]},
+
+ {"chapitre":"33d5c3e0","citations":[
+  {"texte":"De fait, la représentation de connaissances sous toutes leurs formes possibles, et avec toutes leurs imperfections, et pas simplement le traitement de données, fussent-elles massives, est une spécificité de l'IA.","page":350,"axe":"02-ia-technique-academique","theme":"Connaissances et données","portee":"Distinction essentielle : traiter des données n'est pas représenter un savoir, avec ses lacunes et ses doutes."},
+  {"texte":"Tôt, il a été remarqué que l'efficacité de la résolution de problèmes dépendait dans une certaine mesure du cadre de représentation utilisé","page":350,"axe":"09-developpement-personnel-influence","theme":"Le cadre décide","portee":"La façon dont on se représente un problème conditionne largement la facilité avec laquelle on le résout."}]},
+
+ {"chapitre":"1a740d27","citations":[
+  {"texte":"il s'agit de réussir à donner à des machines des capacités leur permettant d'effectuer des tâches ou des activités réputées intelligentes (dans le sens où jusqu'à présent uniquement réalisées par des humains)","page":351,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Ce que vise l'IA","portee":"Définition prudente et honnête, qui ne prétend pas définir l'intelligence mais décrire ce que l'on cherche à obtenir."},
+  {"texte":"Une telle définition reste cependant assez vague car elle ne donne ni une définition de l'intelligence, ni même ne précise la nature des capacités dont il convient de doter la machine.","page":351,"axe":"04-ia-societe-ethique-philosophie","theme":"Une définition qui se sait vague","portee":"Rare exemple d'auteurs qui signalent eux-mêmes l'imprécision de leur définition plutôt que de la masquer."}]},
+
+ {"chapitre":"83b4dd0a","citations":[
+  {"texte":"Il ne s'agit bien sûr pas de trancher entre ces différentes conceptions de l'idée d'intelligence qui toutes font sens dans l'artificiel, comme dans le vivant","page":352,"axe":"04-ia-societe-ethique-philosophie","theme":"Ne pas trancher","portee":"Plusieurs conceptions rivales peuvent être vraies ensemble, à des niveaux différents du même phénomène."},
+  {"texte":"L'IA a ainsi connu des alternances de périodes d'engouement et de périodes de défiance, voire de discrédit.","page":352,"axe":"04-ia-societe-ethique-philosophie","theme":"Cycles d'engouement","portee":"Connaître ces cycles aide à garder la tête froide devant l'enthousiasme comme devant le rejet."},
+  {"texte":"Le besoin de vanter un nouveau paradigme, la recherche de soutiens institutionnels et industriels a souvent gonflé ces promesses, quelquefois dans des proportions extraordinaires.","page":352,"axe":"10-economie-entrepreneuriat-finance","theme":"Survendre pour financer","portee":"La course aux financements pousse à promettre au-delà du possible, mécanisme toujours à l'œuvre aujourd'hui."}]}
+]

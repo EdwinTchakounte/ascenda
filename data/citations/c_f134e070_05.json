@@ -1,0 +1,258 @@
+[
+ {
+  "chapitre": "050de76f",
+  "citations": [
+   {
+    "texte": "On fait souvent les améliorations les plus faciles en premier ce qui entraine des rendements décroissants",
+    "page": 105,
+    "axe": "02-ia-technique-academique",
+    "theme": "La loi ordinaire de l'optimisation",
+    "portee": "Bostrom la nuance aussitot : il existe aussi des ameliorations en cascade, qui ouvrent des gains ulterieurs."
+   },
+   {
+    "texte": "L’augmentation cognitive par l’amélioration de la santé publique et le régime alimentaire a des rendements décroissants très rapides",
+    "page": 106,
+    "axe": "11-sciences-environnement",
+    "theme": "La limite des politiques de sante publique",
+    "portee": "Les grands benefices viennent de l'elimination des deficits graves, ce qui reste a faire dans les pays les plus pauvres."
+   },
+   {
+    "texte": "il est tout à fait possible que la quête d’une IA se perde dans une jungle inextricable jusqu’à ce qu’une percée inattendue révèle la ligne d’arrivée dans une clairière à quelques brèves encablures",
+    "page": 107,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi la voie de l'IA n'offre aucun repere",
+    "portee": "A la difference de l'emulation, jalonnee par l'insecte puis la souris, l'IA ne donne pas de point d'observation intermediaire."
+   },
+   {
+    "texte": "Il est tout à fait possible que la récalcitrance cesse quand une machine atteindra le niveau humain.",
+    "page": 108,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'hypothese qu'il ne faut pas faire",
+    "portee": "Bostrom qualifie de tres dangereuse l'idee que le pas du niveau humain au surhumain serait le plus difficile."
+   },
+   {
+    "texte": "Puisque on n’a jamais vu, dans l’économie humaine, qu’un travailleur puisse être littéralement copié, réinitialisé, accéléré etc., ceux qui dirigeront la première cohorte d’émulés découvriront une multitude de pratiques managériales innovantes.",
+    "page": 109,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un management sans precedent",
+    "portee": "L'organisation du travail deviendrait un domaine d'innovation a part entiere, aux consequences sociales inedites."
+   },
+   {
+    "texte": "les émulations ou leurs partisans biologiques s’organisent pour restreindre l’utilisation des travailleurs émulés, limiter le nombre de copies, empêcher certains types d’expérimentations sur des esprits digitaux, instituer les droits de ces travailleurs, leur salaire minimum",
+    "page": 109,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un droit du travail pour les esprits digitaux",
+    "portee": "Bostrom envisage aussi le mouvement inverse : une exploitation deregulee si le cout des criteres moraux eleves devient clair."
+   },
+   {
+    "texte": "L’IA pourrait connaître une transition apparemment rapide en intelligence de notre point de vue anthropomorphique, à cause de notre tendance à penser que, sur l’échelle d’intelligence, les extrêmes sont « l’idiot du village » et Einstein",
+    "page": 110,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'echelle de Yudkowsky",
+    "portee": "Sur l'echelle des esprits en general, ces deux points peuvent a peine etre distingues, d'ou la possibilite d'un franchissement en moins d'un mois."
+   },
+   {
+    "texte": "Il sera sans doute plus difficile et long de construire une machine intelligente qui a le niveau général de l’idiot du village que de passer de celui-ci à un système bien plus intelligent que n’importe quel humain.",
+    "page": 110,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ou se trouve la vraie difficulte",
+    "portee": "Renverse l'intuition commune, et fonde l'argument de Bostrom en faveur d'une transition explosive."
+   },
+   {
+    "texte": "Un système pourrait donc accroître considérablement ses capacités intellectuelles en absorbant des contenus préexistants accumulés par la science et la civilisation humaines pendant des siècles, en lisant par exemple tout ce qu’il y a sur Internet.",
+    "page": 111,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux leviers distincts",
+    "portee": "Bostrom separe le fait de rendre un systeme plus intelligent et celui d'augmenter ce qu'il sait, deux sources de gains independantes."
+   },
+   {
+    "texte": "En quelques semaines, le système a lu et maîtrisé tous les contenus de la Bibliothèque du Congrès et il en sait alors beaucoup plus qu’un être humain et pense beaucoup plus vite : il est devenu une superintelligence faible",
+    "page": 111,
+    "axe": "02-ia-technique-academique",
+    "theme": "La recalcitrance au contenu",
+    "portee": "Scenario ou la transition est precipitee non par un progres algorithmique mais par l'absorption de savoirs deja accumules."
+   },
+   {
+    "texte": "Il y a comme un problème si, en lisant une bibliothèque, vous avez oublié le sens d’« ormeau » au moment où vous arrivez à « oryctérope ».",
+    "page": 112,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La contrainte de memoire",
+    "portee": "Les emulations heritent des limites du cerveau d'origine, la ou une IA peut disposer d'une capacite adaptee a un apprentissage sans limite."
+   },
+   {
+    "texte": "la puissance de calcul obtenue avec 1 dollar double environ tous les 18 mois",
+    "page": 114,
+    "axe": "02-ia-technique-academique",
+    "theme": "La variante de la loi de Moore retenue par Bostrom",
+    "portee": "Il ajoute qu'on ne peut etre sur que ce rythme persistera jusqu'a la mise au point d'une machine de niveau humain."
+   }
+  ]
+ },
+ {
+  "chapitre": "d4b925f1",
+  "citations": [
+   {
+    "texte": "le taux de changement en intelligence d’un système est égal à son pouvoir d’optimisation divisé par sa récalcitrance",
+    "page": 115,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'equation centrale du chapitre 4",
+    "portee": "Elle montre qu'une transition rapide n'exige pas une recalcitrance faible, si le pouvoir d'optimisation croit assez vite."
+   },
+   {
+    "texte": "toute augmentation de la capacité du système se traduit dorénavant par une augmentation proportionnelle de son pouvoir de s’optimiser et ainsi de suite",
+    "page": 116,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qui change au croisement",
+    "portee": "Point de bascule ou l'optimisation cesse de venir de l'exterieur : la retroaction produit alors une croissance exponentielle."
+   },
+   {
+    "texte": "ce qui n’était qu’un petit projet de recherche deviendrait d’un coup le centre d’efforts intenses de recherche et de développement dans le monde entier",
+    "page": 116,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'effet d'une percee inattendue",
+    "portee": "L'afflux de moyens exterieurs est lui-meme un facteur d'acceleration, avant meme que le systeme s'optimise seul."
+   },
+   {
+    "texte": "la boucle de forte rétroaction qui se produit au croisement tend à rendre la transition plus rapide qu’elle ne le serait sans elle",
+    "page": 119,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que les modeles chiffres veulent montrer",
+    "portee": "Bostrom presente ses trajectoires comme de simples illustrations, dont la conclusion qualitative est robuste."
+   },
+   {
+    "texte": "même si une transition rapide ou modérée semble plus probable, on ne peut exclure une transition lente",
+    "page": 121,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La reserve finale du chapitre",
+    "portee": "Bostrom envisage que la premiere machine de niveau humain vienne d'un grand projet a supercalculateurs, la loi de Moore ayant expire."
+   }
+  ]
+ },
+ {
+  "chapitre": "58c70de1",
+  "citations": [
+   {
+    "texte": "L’explosion d’une superintelligence propulsera-t-elle un des projets possibles tellement en avance sur tous les autres qu’il pourra imposer l’avenir ?",
+    "page": 122,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question du chapitre 5",
+    "portee": "Elle deplace le probleme de la technique vers la politique : un seul pouvoir ou plusieurs a l'arrivee."
+   },
+   {
+    "texte": "si la transition est rapide (en quelques heures, jours ou semaines), il est hautement improbable que deux projets indépendants aient réussi en même temps cette transition avant que d’autres n’aient même commencé",
+    "page": 122,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Vitesse et concentration du pouvoir",
+    "portee": "La vitesse de la transition determine directement le nombre d'acteurs qui compteront a l'arrivee."
+   }
+  ]
+ },
+ {
+  "chapitre": "d20e7d95",
+  "citations": [
+   {
+    "texte": "Comme un cycliste qui est trop loin du peloton finit par ne plus être abrité du vent, un suiveur qui resterait suffisamment à la traîne derrière l’avant-garde aurait du mal à estimer l’avance qu’elle a sur lui",
+    "page": 123,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi l'ecart peut s'auto-entretenir",
+    "portee": "Le leader peut atteindre un palier tel que ses innovations deviennent intransferables aux niveaux plus rudimentaires."
+   },
+   {
+    "texte": "Dans une IA, pas d’employés mécontents facilement débauchés par les concurrents ou soudoyés pour devenir des informateurs",
+    "page": 124,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'avantage de composants parfaitement loyaux",
+    "portee": "Ce que les organisations humaines perdent en fuites et en frictions internes, un systeme d'IA le conserve."
+   },
+   {
+    "texte": "La Chine a maintenu son monopole sur la culture de la soie pendant deux mille ans.",
+    "page": 124,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Le plus long secret technologique connu",
+    "portee": "Reveler les pratiques ou exporter des vers a soie etait puni de mort ; le secret ne sortit que par un vol vers 300 de notre ere."
+   },
+   {
+    "texte": "l’espèce humaine mit dix mille ans pour se diffuser autour du globe, la révolution agricole des milliers d’années, la révolution industrielle des centaines d’années seulement et la révolution de l’information n’a mis que quelques décennies",
+    "page": 124,
+    "axe": "11-sciences-environnement",
+    "theme": "L'acceleration des diffusions",
+    "portee": "Bostrom precise aussitot que toutes ces transitions n'ont pas eu la meme profondeur."
+   },
+   {
+    "texte": "Ce sont peut-être les inventions mathématiques qui ressemblent le plus au cas de l’IA : elles ne requièrent aucun développement d’une nouvelle infrastructure matérielle.",
+    "page": 125,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'analogie la plus juste",
+    "portee": "Bostrom cite Diffie-Hellman et RSA, connus des cryptographes britanniques des le debut des annees 1970, publies seulement en 1976 et 1978."
+   }
+  ]
+ },
+ {
+  "chapitre": "51bea05c",
+  "citations": [
+   {
+    "texte": "le concept de singleton est abstrait : il peut être une démocratie, une tyrannie, une seule IA dominante, un ensemble puissant de normes globales qui incluent des dispositions efficaces pour leur applications",
+    "page": 127,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qu'est un singleton",
+    "portee": "La seule caracteristique definissante est d'etre une administration capable de resoudre la plupart des problemes de coordination mondiale."
+   },
+   {
+    "texte": "Il faut distinguer la question de l’ampleur du projet qui réalisera le système de celle de l’ampleur du groupe qui contrôlera si, comment et quand le système sera créé.",
+    "page": 128,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Realiser et controler ne sont pas la meme chose",
+    "portee": "Bostrom illustre par le projet Manhattan, ou 130 000 employes travaillaient sous un controle politique tres etroit."
+   },
+   {
+    "texte": "Étant donnée la portée stratégique considérable d’une superintelligence, les gouvernements chercheront vraisemblablement à nationaliser tout projet réalisé sur leur territoire qui s’approcherait du but.",
+    "page": 129,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La nationalisation previsible",
+    "portee": "Bostrom envisage aussi l'espionnage, le vol, le kidnapping, la corruption, la menace ou la conquete militaire pour s'emparer d'un projet etranger."
+   },
+   {
+    "texte": "Il serait plus facile de contrôler des projets exigeant un lourd équipement, comme celui d’une émulation du cerveau entier. La recherche en IA au contraire ne nécessite qu’un ordinateur personnel",
+    "page": 129,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qui rend l'IA difficile a reguler",
+    "portee": "Certains travaux theoriques se font avec du papier et un crayon, ce qui rend illusoire toute interdiction generale."
+   },
+   {
+    "texte": "on peut imaginer par exemple que ce thème fasse l’objet de controverses religieuses ou politiques enflammées, ce qui en ferait un tabou pour les responsables dans certains pays",
+    "page": 130,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La marginalisation des lanceurs d'alerte",
+    "portee": "Bostrom rapproche cette configuration de ce qui s'est produit lors des deux hivers de l'intelligence artificielle."
+   },
+   {
+    "texte": "Faire démarrer le Projet Manhattan a demandé un énorme travail de plusieurs savants visionnaires, en particulier de Marc Oliphant et Leo Szilard",
+    "page": 131,
+    "axe": "11-sciences-environnement",
+    "theme": "La chaine de persuasion qui a lance le projet Manhattan",
+    "portee": "Szilard persuada Wigner de persuader Einstein de signer une lettre pour interesser Roosevelt, longtemps reste sceptique."
+   },
+   {
+    "texte": "Les opportunités, pour des personnes privées, de réduire l’étendue du risque existentiel d’une explosion potentielle d’intelligence sont plus élevées quand les grands acteurs ne sont pas vraiment conscients de ce qui se passe",
+    "page": 131,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ou l'action individuelle compte encore",
+    "portee": "Conseil strategique explicite de Bostrom aux personnes qui veulent agir : la fenetre d'influence se ferme quand les Etats entrent en jeu."
+   },
+   {
+    "texte": "Un pays qui penserait pouvoir unilatéralement faire la percée décisive pourrait être tenté de le faire seul, sans essayer de collaborer avec d’autres.",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'obstacle a la collaboration internationale",
+    "portee": "S'y ajoute la crainte que des participants detournent les avancees communes vers un projet national secret."
+   },
+   {
+    "texte": "Gorbatchev n’était pas convaincu par cette proposition gagnant-gagnant ; il y voyait une ruse",
+    "page": 132,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Reykjavik 1986",
+    "portee": "Bostrom retient de cet episode que, sincere ou non, une offre de partage technologique se heurte d'abord a la mefiance."
+   }
+  ]
+ }
+]

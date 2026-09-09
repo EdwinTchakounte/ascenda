@@ -1,0 +1,94 @@
+[
+ {
+  "chapitre": "4368519e",
+  "citations": [
+   {
+    "texte": "La communication réussie avec ChatGPT repose sur trois principes fondamentaux: la pertinence, la concentration et la clarté.",
+    "page": 100,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Trois principes",
+    "portee": "Regle memorisable et directement applicable. Elle vaut aussi pour toute consigne donnee a un collaborateur humain."
+   },
+   {
+    "texte": "Il est préférable de donner à l'IA une seule tâche à la fois afin qu'elle puisse la suivre avec précision.",
+    "page": 102,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Une tache a la fois",
+    "portee": "Corrige l'erreur la plus frequente : empiler plusieurs demandes dans une seule consigne."
+   },
+   {
+    "texte": "De plus, une entrée inutilement longue limite la sortie maximale de l'IA.",
+    "page": 102,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Entree et sortie se partagent la place",
+    "portee": "Contrainte technique qui impose la precision plutot que l'abondance dans la formulation."
+   },
+   {
+    "texte": "Ce type de sollicitation vague rend les sorties de l'IA vulnérables aux erreurs d'évaluation et aux erreurs car elle est facilement distraite par des détails non pertinents ou ne fait que des déclarations très générales.",
+    "page": 100,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Le cout d'une consigne vague",
+    "portee": "Decrit precisement ce que produit une demande approximative : de la generalite et des erreurs d'appreciation."
+   }
+  ]
+ },
+ {
+  "chapitre": "60ac5fb6",
+  "citations": [
+   {
+    "texte": "La capacité à exprimer des informations de manière précise et compréhensible est cruciale dans la collaboration avec l'IA.",
+    "page": 105,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Savoir formuler",
+    "portee": "La competence decisive n'est pas technique mais linguistique. Elle se travaille par la lecture et l'ecriture."
+   },
+   {
+    "texte": "Commencez par clarifier à l'IA ce que vous souhaitez réaliser avec la conversation.",
+    "page": 105,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Annoncer l'objectif d'abord",
+    "portee": "Premiere etape de la methode. Elle oblige aussi l'utilisateur a clarifier pour lui-meme ce qu'il cherche."
+   },
+   {
+    "texte": "ChatGPT peut créer bien plus qu'un simple texte fluide. Avec les bonnes instructions, vous pouvez créer des listes, des vers rimés, un tableau pour une meilleure clarté ou générer une sortie dans n'importe quelle autre langue ou tonalité.",
+    "page": 106,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Imposer le format de sortie",
+    "portee": "Levier tres sous-employe : demander la forme voulue evite de retravailler ensuite le texte."
+   },
+   {
+    "texte": "Que ChatGPT puisse réellement fournir ici une distance correcte dépend de nombreux facteurs et doit être vérifié dans tous les cas.",
+    "page": 107,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "La forme ne garantit pas le fond",
+    "portee": "Un tableau bien range donne une impression de rigueur que les chiffres qu'il contient ne justifient pas."
+   }
+  ]
+ },
+ {
+  "chapitre": "ccaa16cc",
+  "citations": [
+   {
+    "texte": "Dans ce cas, essayez de formuler votre instruction de manière non équivoque, comme si vous parliez à quelqu'un qui n'a jamais entendu parler de la matière dans sa vie.",
+    "page": 108,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Parler a quelqu'un qui ignore tout",
+    "portee": "Regle simple pour tester une consigne : la relire en se demandant si un profane la comprendrait."
+   },
+   {
+    "texte": "Si vous vous trouvez dans une niche extrêmement spécialisée, vous devriez fournir à ChatGPT les informations nécessaires par copier-coller avant de lui demander d'écrire quelque chose pour vous.",
+    "page": 109,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Apporter la matiere soi-meme",
+    "portee": "Reponse concrete au probleme des sujets peu documentes en ligne, dont relevent beaucoup de realites africaines."
+   },
+   {
+    "texte": "Si vous êtes déjà engagé dans une conversation prolongée avec ChatGPT, essayez de transmettre à nouveau la demande dans une nouvelle conversation.",
+    "page": 110,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Repartir a neuf",
+    "portee": "Solution pratique quand les reponses tournent en rond : l'historique peut nuire autant qu'il aide."
+   }
+  ]
+ }
+]

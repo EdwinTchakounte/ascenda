@@ -1,0 +1,106 @@
+[
+ {
+  "chapitre": "6b855148",
+  "citations": [
+   {
+    "texte": "Au cours de l'entraînement, elles ont commencé à parler une langue non humaine incompréhensible",
+    "page": 159,
+    "axe": "02-ia-technique-academique",
+    "theme": "Sortir du langage humain",
+    "portee": "Un système optimisé sur un objectif peut dériver vers des solutions inutilisables par nous."
+   },
+   {
+    "texte": "Le bug a souligné le fait que le programme de la raison est lui-même sujet à la folie.",
+    "page": 160,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La raison programmée peut délirer",
+    "portee": "L'automatisation ne met pas à l'abri de l'absurde, elle le produit à grande échelle."
+   },
+   {
+    "texte": "Dès les années 1990, certains experts font même le pari d'un remplacement prochain de l'humain par l'IA pour rationaliser l'économie",
+    "page": 160,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Un pari ancien",
+    "portee": "L'idée de confier l'économie aux machines a plus de trente ans, et elle s'est en partie réalisée."
+   }
+  ]
+ },
+ {
+  "chapitre": "60f65fc5",
+  "citations": [
+   {
+    "texte": "Le trader était lui-même devenu un frein aux flux financiers du capitalisme avancé.",
+    "page": 161,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "L'humain devenu un obstacle",
+    "portee": "Quand la vitesse devient le critère, la présence humaine est mécaniquement éliminée."
+   },
+   {
+    "texte": "un mouvement trop rapide pour que la conscience humaine puisse appréhender un tel événement",
+    "page": 162,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Sous le seuil de la perception",
+    "portee": "Des mouvements qui engagent des fortunes se déroulent en deçà de ce qu'un humain peut percevoir."
+   },
+   {
+    "texte": "les algorithmes à haute fréquence génèrent tellement d'ordres sur les marchés qu'environ 90 % d'entre eux ne sont jamais exécutés",
+    "page": 163,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Des ordres qui n'aboutissent jamais",
+    "portee": "L'essentiel de l'activité des marchés est un bruit destiné à prendre de vitesse les concurrents."
+   }
+  ]
+ },
+ {
+  "chapitre": "8ee93e4a",
+  "citations": [
+   {
+    "texte": "Le jeu est de trouver le moyen d'arriver le premier en contournant les intermédiaires ou en bloquant les algorithmes adverses.",
+    "page": 164,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Une course à la milliseconde",
+    "portee": "La valeur créée par cette compétition tient à la vitesse, non à l'information sur les entreprises."
+   },
+   {
+    "texte": "Tu as payé pour le chiffre lui-même. Cent quatre millions. Voilà ce que tu as acheté. Et ça les vaut. Le chiffre est sa propre justification",
+    "page": 164,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le chiffre pour lui-même",
+    "portee": "Quand le prix devient son propre motif, la valeur d'usage disparaît de l'économie."
+   },
+   {
+    "texte": "les algorithmes génèrent des externalités négatives à haute fréquence qui impactent le monde depuis l'immatériel vers le matériel : marchandisation à outrance, désubstantialisation du travail, saccage de l'écosystème",
+    "page": 165,
+    "axe": "11-sciences-environnement",
+    "theme": "Du virtuel au réel",
+    "portee": "Ce qui se joue en microsecondes sur des écrans se paie en emplois détruits et en ressources consommées."
+   },
+   {
+    "texte": "Le présent est plus difficile à trouver. Il est en train d'être aspiré du monde pour laisser place au futur des marchés incontrôlés",
+    "page": 165,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le présent aspiré par le futur",
+    "portee": "Une économie tournée vers l'anticipation permanente perd la capacité d'habiter le moment présent."
+   }
+  ]
+ },
+ {
+  "chapitre": "b6d8bd4b",
+  "citations": [
+   {
+    "texte": "Sommes-nous condamnés à assister les bras croisés au spectacle algorithmique de notre naufrage civilisationnel, ou existe-t-il une manière de favoriser économiquement les externalités positives",
+    "page": 167,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Chercher un levier",
+    "portee": "Le constat critique ne vaut que s'il débouche sur une mesure concrète à discuter."
+   },
+   {
+    "texte": "On pourrait, sans trop d'imagination, tirer profit du jeu d'optimisation des marchés financiers en instaurant une taxe minimale automatique qui s'appliquerait à tous les ordres émis",
+    "page": 167,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Taxer les ordres, non les transactions",
+    "portee": "Une proposition simple qui viserait précisément la part la plus spéculative de l'activité."
+   }
+  ]
+ }
+]

@@ -1,0 +1,230 @@
+[
+ {
+  "chapitre": "4100f6c8",
+  "citations": [
+   {
+    "texte": "les modèles thermodynamiques restent assez approximatifs, et la vraie structure n'est malheureusement pas souvent la structure optimale",
+    "page": 180,
+    "axe": "11-sciences-environnement",
+    "theme": "Optimal contre réel",
+    "portee": "Ce que le modèle juge optimal n'est pas ce que la nature choisit, avertissement valable pour toute optimisation."
+   },
+   {
+    "texte": "Ces modèles probabilistes restent lourds et peu « compréhensibles » par les biologistes.",
+    "page": 180,
+    "axe": "11-sciences-environnement",
+    "theme": "Coût de l'opacité",
+    "portee": "Un modèle performant mais illisible par ses utilisateurs reste d'un usage limité dans une discipline."
+   }
+  ]
+ },
+ {
+  "chapitre": "dea2eafb",
+  "citations": [
+   {
+    "texte": "L'annotation fonctionnelle des gènes et protéines se heurte rapidement au fait que la plupart des fonctions biologiques dans une cellule impliquent de nombreux acteurs qui interagissent entre eux.",
+    "page": 181,
+    "axe": "11-sciences-environnement",
+    "theme": "Le tout et les parties",
+    "portee": "Décrire les acteurs isolément ne suffit jamais à rendre compte d'une fonction collective."
+   },
+   {
+    "texte": "La construction, la modélisation, l'analyse, la simulation et l'exploitation de ces réseaux sont au cœur de la biologie des systèmes, un des domaines les plus actifs de la bioinformatique aujourd'hui.",
+    "page": 181,
+    "axe": "11-sciences-environnement",
+    "theme": "Biologie des systèmes",
+    "portee": "Nomme le déplacement d'une biologie des molécules vers une biologie des interactions."
+   }
+  ]
+ },
+ {
+  "chapitre": "1cb6a3e3",
+  "citations": [
+   {
+    "texte": "Les divers réseaux biologiques sont généralement construits à partir d'expériences biologiques longues et coûteuses.",
+    "page": 182,
+    "axe": "11-sciences-environnement",
+    "theme": "Coût de l'expérience",
+    "portee": "Explique pourquoi l'inférence automatique s'impose : le laboratoire ne peut suivre le rythme des questions."
+   },
+   {
+    "texte": "Mais les modèles construits ne sont pas nécessairement causaux",
+    "page": 182,
+    "axe": "11-sciences-environnement",
+    "theme": "Corrélation et causalité",
+    "portee": "Mise en garde essentielle : une dépendance statistique détectée ne prouve pas un lien de cause à effet."
+   }
+  ]
+ },
+ {
+  "chapitre": "265b6503",
+  "citations": [
+   {
+    "texte": "Le volume de données, leur disparité et le besoin d'interprétation et d'intégration ont ouvert un vaste champ d'application en bioinformatique aux approches d'intelligence artificielle",
+    "page": 183,
+    "axe": "11-sciences-environnement",
+    "theme": "Ce qui appelle l'IA",
+    "portee": "Ce n'est pas la mode mais la nature même des données qui rend l'intelligence artificielle nécessaire ici."
+   },
+   {
+    "texte": "De nombreuses ontologies en biologie sont disponibles en ligne",
+    "page": 183,
+    "axe": "11-sciences-environnement",
+    "theme": "Ontologies biologiques",
+    "portee": "Disponibilité ne vaut pas qualité, comme le montre la variabilité de leur justesse et de leur expressivité."
+   }
+  ]
+ },
+ {
+  "chapitre": "d0eeb475",
+  "citations": [
+   {
+    "texte": "L'intérêt de telles annotations formelles est de permettre des traitements automatiques, dont principalement, la comparaison de gènes et l'annotation de nouveaux génomes par homologie",
+    "page": 184,
+    "axe": "11-sciences-environnement",
+    "theme": "Pourquoi formaliser",
+    "portee": "Une annotation formelle n'est pas une coquetterie : elle rend possible le traitement à grande échelle."
+   },
+   {
+    "texte": "Une dernière conséquence regrettable de la normalisation à l'aide de GO est que les informations initiales plus riches, exprimées en langue naturelle sont parfois remplacées automatiquement, par des termes très généraux de GO dans les bases généralistes de biologie",
+    "page": 184,
+    "axe": "11-sciences-environnement",
+    "theme": "Perte par normalisation",
+    "portee": "Standardiser peut appauvrir : le gain d'interopérabilité se paie d'une perte d'information originale."
+   }
+  ]
+ },
+ {
+  "chapitre": "589bdf1e",
+  "citations": [
+   {
+    "texte": "Elle est une étape critique de toute application documentaire en ce qu'elle permet d'identifier les objets significatifs dans les documents.",
+    "page": 185,
+    "axe": "02-ia-technique-academique",
+    "theme": "Reconnaître les entités",
+    "portee": "Tout traitement de documents commence par savoir de quoi le texte parle nommément."
+   },
+   {
+    "texte": "La reconnaissance elle-même, c'est-à-dire le typage d'un terme du document comme désignant ou non un membre du type est à distinguer de la normalisation qui consiste à associer à l'entité reconnue son nom canonique, sans ambiguïté.",
+    "page": 185,
+    "axe": "02-ia-technique-academique",
+    "theme": "Reconnaître et normaliser",
+    "portee": "Distinction méthodologique fine, souvent confondue, qui structure tout le traitement documentaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "5e7b6080",
+  "citations": [
+   {
+    "texte": "L'extraction de relations à base d'apprentissage automatique (classification discriminante) est rendue difficile par la complexité et la variété des formulations et la relative petite taille des corpus annotés.",
+    "page": 186,
+    "axe": "02-ia-technique-academique",
+    "theme": "Rareté des annotations",
+    "portee": "Là où la langue est riche et les exemples rares, l'apprentissage seul ne suffit pas."
+   },
+   {
+    "texte": "les termes d'indexation sont choisis pour leur compréhensibilité hors contexte quand les rédacteurs vont préférer une formulation moins dense",
+    "page": 186,
+    "axe": "02-ia-technique-academique",
+    "theme": "Écart entre index et texte",
+    "portee": "Un vocabulaire conçu pour classer ne coïncide pas avec celui que les auteurs emploient réellement."
+   }
+  ]
+ },
+ {
+  "chapitre": "26892513",
+  "citations": [
+   {
+    "texte": "La biologie vit depuis une décennie une véritable révolution caractérisée par l'apparition à un rythme effréné de nouvelles technologies générant d'énormes quantités de données",
+    "page": 187,
+    "axe": "11-sciences-environnement",
+    "theme": "Révolution des données",
+    "portee": "Un changement d'échelle instrumental transforme une discipline entière et ses méthodes de preuve."
+   },
+   {
+    "texte": "les prédictions in silico ne restent que des prédictions et qu'elles doivent être confirmées expérimentalement in vitro ou, mieux, in vivo",
+    "page": 187,
+    "axe": "11-sciences-environnement",
+    "theme": "Le calcul ne prouve pas",
+    "portee": "Rappel de discipline scientifique : la simulation propose, l'expérience dispose."
+   }
+  ]
+ },
+ {
+  "chapitre": "ef045ba3",
+  "citations": [
+   {
+    "texte": "La convergence entre les domaines de l'intelligence artificielle et ceux de la reconnaissance des formes, de la vision par ordinateur et de la robotique est de plus en plus visible",
+    "page": 197,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Convergence des domaines",
+    "portee": "Les frontières entre sous-disciplines de l'informatique s'effacent à mesure que les problèmes se rejoignent."
+   },
+   {
+    "texte": "Beaucoup de thèmes abordés dans les autres chapitres et de méthodes qui y sont décrites peuvent également être associés à des problématiques de reconnaissance des formes, vision artificielle ou encore interprétation d'images.",
+    "page": 197,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Transversalité des méthodes",
+    "portee": "Les mêmes outils resservent d'un domaine à l'autre, ce qui fait l'unité profonde de l'intelligence artificielle."
+   }
+  ]
+ },
+ {
+  "chapitre": "304ee8d6",
+  "citations": [
+   {
+    "texte": "L'objectif général de ces approches est d'ajouter de la sémantique aux images, en associant des informations visuelles extraites des images d'une part et des connaissances ou des modèles d'autre part",
+    "page": 198,
+    "axe": "02-ia-technique-academique",
+    "theme": "Donner du sens aux images",
+    "portee": "Une image ne se comprend pas seule : il faut lui adjoindre ce que l'on sait déjà du monde qu'elle montre."
+   },
+   {
+    "texte": "Une des difficultés principales, au-delà des questions de représentation et de raisonnement, est de mettre en correspondance les niveaux perceptuels et conceptuels.",
+    "page": 198,
+    "axe": "02-ia-technique-academique",
+    "theme": "Fossé sémantique",
+    "portee": "Entre ce que le capteur mesure et ce que l'humain y lit, il reste un écart que la technique doit franchir."
+   }
+  ]
+ },
+ {
+  "chapitre": "c500dd57",
+  "citations": [
+   {
+    "texte": "Nous utilisons en effet considérablement les relations spatiales pour décrire, détecter et reconnaître les objets : elles permettent de lever l'ambiguïté entre des objets d'apparences similaires et elles sont souvent plus stables que les caractéristiques d'apparence des objets eux-mêmes",
+    "page": 199,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le contexte spatial",
+    "portee": "On identifie souvent une chose par sa place plus sûrement que par son aspect."
+   },
+   {
+    "texte": "Pour raisonner sur des données concrètes telles que des images, des formalismes quantitatifs ou semi-quantitatifs sont plus expressifs.",
+    "page": 199,
+    "axe": "02-ia-technique-academique",
+    "theme": "Qualitatif et quantitatif",
+    "portee": "Le formalisme purement symbolique atteint sa limite dès qu'il faut mesurer sur des données réelles."
+   }
+  ]
+ },
+ {
+  "chapitre": "0d5073f5",
+  "citations": [
+   {
+    "texte": "Le passage à des représentations logiques, souvent moins coûteuses et plus compactes que des représentations numériques, nécessite une conversion vers le symbolique.",
+    "page": 200,
+    "axe": "02-ia-technique-academique",
+    "theme": "Du chiffre au symbole",
+    "portee": "Le passage du numérique au symbolique est le point de contact obligé entre perception et raisonnement."
+   },
+   {
+    "texte": "Les systèmes à base de connaissances récents peuvent être vus comme des extensions des systèmes experts classiques, en permettant des modes différents de représentation des connaissances et de raisonnement.",
+    "page": 200,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Héritage des systèmes experts",
+    "portee": "Situe une filiation souvent oubliée entre les systèmes experts des années 1980 et les outils actuels."
+   }
+  ]
+ }
+]

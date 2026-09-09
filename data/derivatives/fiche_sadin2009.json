@@ -1,0 +1,100 @@
+{
+ "document_id": "79d6542d-3c69-41fc-8d5f-fce836267cd0",
+ "titre_normalise": "Surveillance globale. Enquête sur les nouvelles formes de contrôle",
+ "auteurs": [
+  "Éric Sadin"
+ ],
+ "annee": 2009,
+ "type_ouvrage": "essai",
+ "niveau": "avance",
+ "public_cible": "Chercheurs, juristes, professionnels de la sécurité et du marketing, lecteurs de sciences sociales. Publié chez Climats (Flammarion) en février 2009, six ans avant La Vie algorithmique du même auteur, également présent dans cette bibliothèque.",
+ "these_centrale": "La surveillance contemporaine n'est ni un complot ni un Big Brother : c'est un maillage encore fragmenté de dispositifs hétérogènes, interconnexion, géolocalisation, vidéosurveillance, bases de données, biométrie, RFID, dont le danger réel n'est pas la caméra visible mais leur agrégation progressive à des bases de données. Sadin y refuse explicitement les lectures binaires : « les surveillants ne sont pas situés d'un côté et les surveillés de l'autre », et la technique « ne constitue jamais une force qui impose, mais une puissance qui propose ».",
+ "idees_force": [
+  {
+   "titre": "Big Brother est une chimère, et le dire n'est pas rassurant",
+   "explication": "Sadin réfute la thèse de la société de contrôle par un argument empirique : si nous y étions, « les attentats du 11 septembre 2001, du 11 mars 2004 à Madrid, de juillet 2005 à Londres ne seraient pas advenus, les traces auraient été repérées ». Ce qu'exposent ces échecs, c'est « la profusion de cases vides ». Tant que les machines d'observation restent fragmentées et non agrégées, la figure omnipotente est « une chimère patente d'ignorance ».",
+   "page": 18
+  },
+  {
+   "titre": "Contrôle et surveillance sont deux notions distinctes",
+   "explication": "Distinction que Sadin juge décisive et que le débat public confond systématiquement : le contrôle « ambitionne vainement d'orienter les individus », la surveillance « de recueillir des informations à leur sujet ». Chacune « renvoie à des illusions ou à des efficaces distinctes ». Il ajoute que la représentation du contrôle « n'est jamais très éloignée de l'illusion de la théorie du complot ».",
+   "page": 18
+  },
+  {
+   "titre": "La technique propose, elle n'impose pas",
+   "explication": "S'appuyant sur Michel de Certeau et ses analyses des tactiques de réappropriation, Sadin documente le va-et-vient entre usages militaires et civils, la géolocalisation passée du champ de bataille au marché, les jeux vidéo récupérés pour la simulation militaire. « Chaque protocole est disposé à offrir des applications initialement imprévues. » Il cite les pratiques artistiques qui retournent les dispositifs : le film Faceless de Manu Luksch, composé uniquement d'images de vidéosurveillance réclamées au titre du droit d'accès britannique.",
+   "page": 33
+  },
+  {
+   "titre": "La peur se fixe sur la caméra et manque l'essentiel",
+   "explication": "L'angoisse suscitée par la vidéosurveillance « se leurre par le fait d'un trop grand privilège accordé à la partie visible des dispositifs ». Ce qui compte se joue ailleurs, « selon des modalités invisibles et aux formes quasi immatérielles : l'articulation de l'ensemble des techniques de traçabilité à des bases de données ». Repérage, localisation et profilage connectés à des serveurs, c'est là que se forme la maille, pas devant l'objectif.",
+   "page": 71
+  },
+  {
+   "titre": "Du suspect désigné à l'estimation indifférenciée de tous",
+   "explication": "« La surveillance du XXe siècle se chargeait de placer sous contrôle les personnes avérées délictueuses ou ennemies ; la matrice du XXIe se déploie sur une estimation indifférenciée de la totalité des unités mobiles et interconnectées. » Le link analysis cartographie les liens entre êtres et entre êtres et choses ; l'objectif devient l'anticipation, la « précognition », Sadin renvoie à Minority Report, et non plus la vérification, qu'il tient pour « une catégorie historique définitivement obsolète ».",
+   "page": 83
+  },
+  {
+   "titre": "Le marketing est devenu l'instrument du contrôle social",
+   "explication": "Citant Deleuze, Sadin décrit l'économie des « ombres digitales » : des sociétés spécialisées commercialisent des bases comportementales, agrégeant questionnaires, programmes de fidélité, achats par carte et navigations via cookies. L'identité devient « une marchandise, ultime objet de transaction de l'économie libérale ». Il note l'ambivalence du consentement : l'opt-in doit être « à la fois intrusif et propre à inspirer confiance ».",
+   "page": 96
+  },
+  {
+   "titre": "Le corps comme dernière interface : la biopuce",
+   "explication": "Sadin documente le Verichip, autorisé sur le marché américain en 2004, dérivé des puces d'identification du bétail : usages médicaux, discothèques à paiement par scannage de la peau, suivi de patients Alzheimer ou d'unités militaires. « L'introduction de composants électroniques dans les tissus biologiques constitue un saut décisif dans l'histoire », la forme la plus achevée du suivi continu.",
+   "page": 132
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Link analysis",
+   "definition": "Technique d'analyse des liens entre personnes et entre personnes et objets, développée en priorité après le 11 septembre 2001 : elle déduit des significations de corrélations comportementales, cours de pilotage communs, communications, achats incohérents avec un train de vie déclaré."
+  },
+  {
+   "terme": "Précognition",
+   "definition": "Basculement de la surveillance vers l'anticipation : il ne s'agit plus de vérifier après coup mais de prévoir avant. Sadin emprunte le terme à Philip K. Dick et au film Minority Report, et l'applique à la vidéosurveillance dite intelligente."
+  },
+  {
+   "terme": "Ombres digitales",
+   "definition": "Ensemble des traces relatives à la vie privée d'une personne, constituées en actif commercialisable. Leur mise sur le marché fait de l'identité humaine un objet de transaction."
+  },
+  {
+   "terme": "Opt-in",
+   "definition": "Principe du consentement exprès à la collecte, qui autorise en théorie la désinscription. Sadin y voit une stratégie d'équilibre entre intrusion et confiance plus qu'une protection effective."
+  },
+  {
+   "terme": "Horizontalisation de la surveillance",
+   "definition": "Passage d'une surveillance verticale, exercée par une instance sur des sujets, à une surveillance mutuelle entre individus, voyeurisme et exhibitionnisme réciproques, dont les réseaux et les reality shows sont les formes ordinaires."
+  },
+  {
+   "terme": "Biotransparence",
+   "definition": "Horizon d'une lisibilité intégrale du corps par des capteurs biométriques omniprésents programmés à identifier, authentifier et tracer."
+  },
+  {
+   "terme": "Secteur quaternaire",
+   "definition": "Économie des transactions strictement informationnelles : le commerce de bases de données personnelles et comportementales comme activité à part entière."
+  },
+  {
+   "terme": "Dispositif",
+   "definition": "Au sens de Foucault, que Sadin reprend explicitement : un ensemble hétérogène de discours, d'institutions, d'aménagements, de lois et de mesures, « du dit aussi bien que du non-dit »."
+  },
+  {
+   "terme": "Seconde hypermodernité",
+   "definition": "Sortie que Sadin propose en conclusion : quitter « une période ébahie et enivrée par la nouveauté miraculeuse » pour un moment plus mature, « non pas moins enthousiaste mais éveillé », qui appelle l'ajustement continu des pratiques."
+  }
+ ],
+ "a_lire_si": "Vous voulez comprendre l'architecture technique de la surveillance couche par couche, chaque chapitre traite un dispositif et ses limites réelles. C'est aussi le meilleur antidote du corpus aux lectures paranoïaques : Sadin y démonte méthodiquement Big Brother, la théorie du complot et le déterminisme technique, avec des arguments qu'un lecteur pressé attribuerait spontanément à ses adversaires.",
+ "a_eviter_si": "Vous cherchez un état des lieux actuel. Le livre date de 2009 : il précède le smartphone généralisé, les révélations Snowden, les réseaux sociaux dominants, le RGPD et l'IA générative. Ses exemples, Galileo, le passe Navigo, DoubleClick, le Verichip, sont datés, même si l'architecture qu'il décrit s'est réalisée. La prose est aussi dense que dans ses autres ouvrages.",
+ "prerequis": [
+  "Une familiarité avec Foucault (dispositif, sécurité-territoire-population) et Deleuze (Post-scriptum sur les sociétés de contrôle) aide beaucoup.",
+  "À lire AVANT La Vie algorithmique du même auteur : c'est l'ouvrage antérieur, et le second y renvoie explicitement."
+ ],
+ "controverses": [
+  "⚠️ Le point le plus intéressant de cette fiche : ce livre contredit sur plusieurs points celui que le MÊME auteur publiera six ans plus tard. En 2009, Sadin écrit que « la technique ne constitue jamais une force qui impose, mais une puissance qui propose », insiste sur les capacités de réappropriation décrites par Michel de Certeau, refuse le déterminisme et conclut sur une hypermodernité « non pas moins enthousiaste ». En 2015, dans La Vie algorithmique, il soutient que l'axiome d'optimisation est inscrit dès l'origine dans la conception des dispositifs et que la ligne de fuite se referme. Les deux livres sont dans cette bibliothèque : les lire ensemble, dans l'ordre, est plus formateur que de lire l'un des deux.",
+  "Sadin lui-même signale ce déplacement dans La Vie algorithmique : il y écrit qu'en 2009 il relevait « les limites qui alors s'imposaient à la mécanique générale de la surveillance », et que depuis « les angles morts peu à peu disparaissent ». Reste à décider si c'est le monde qui a changé, ou le regard de l'auteur, question à poser à l'agent, extraits à l'appui.",
+  "Son refus de la « société de contrôle » repose sur un argument par l'échec (les attentats ont eu lieu, donc le maillage est troué) qui prouve l'imperfection du dispositif, pas son innocuité.",
+  "Le livre décrit largement des projets et des annonces d'industriels, Verichip, biotransparence, dont certains ne se sont pas réalisés sous la forme annoncée, ce qui invite à lire ses projections avec la même prudence qu'il recommande ailleurs."
+ ],
+ "confiance": 0.85
+}

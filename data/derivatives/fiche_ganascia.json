@@ -1,0 +1,96 @@
+{
+ "document_id": "930b9d39-b315-4763-b041-2c9276c68695",
+ "titre_normalise": "Intelligence artificielle : vers une domination programmée ?",
+ "auteurs": [
+  "Jean-Gabriel Ganascia"
+ ],
+ "annee": 2017,
+ "type_ouvrage": "essai",
+ "niveau": "debutant",
+ "public_cible": "Grand public curieux, enseignants, étudiants. Publié dans la collection « Idées reçues » du Cavalier Bleu : chaque chapitre part d'une phrase entendue partout et l'examine. Format court, deux à six pages par idée.",
+ "these_centrale": "La plupart des affirmations qui circulent sur l'intelligence artificielle, Turing en serait l'inventeur, les machines passeraient son test, l'IA reproduirait le cerveau, une IA forte serait imminente, elle menacerait l'existence de l'humanité, sont soit fausses, soit mal formulées. Ganascia, chercheur en IA et président du comité d'éthique du CNRS, les reprend une à une et montre que le danger réel n'est pas la rébellion des machines mais le transfert de souveraineté des États vers quelques acteurs privés.",
+ "idees_force": [
+  {
+   "titre": "Le test de Turing n'a jamais dit ce qu'on lui fait dire",
+   "explication": "Turing n'a jamais évoqué une indiscernabilité totale entre l'humain et la machine, et il n'ignorait pas les dimensions perceptives de l'intelligence, il les jugeait seulement trop difficiles à reproduire à court terme. Sa prophétie apparaît « incidemment », comme une prévision empirique quantifiée. Pour Turing comme pour McCarthy, doter les machines de pensée était « l'horizon régulateur d'une science à venir, et non un objectif final à atteindre dans un terme défini ».",
+   "page": 27
+  },
+  {
+   "titre": "Une machine n'a pas besoin de conscience pour être dite intelligente",
+   "explication": "« Dès que, dans le temps de l'action, une machine se comporte comme si un être intelligent l'animait, on parle d'intelligence artificielle. » C'est une approche expérimentale et pragmatique. Le malentendu vient de ceux qui croient que l'IA prétend réduire l'intégralité de l'intelligence à des mécanismes, et qui en concluent qu'elle est vouée à l'échec. Ganascia répond que même si quelque chose d'irréductible subsiste, cela n'empêche pas de reproduire ce qu'on peut reproduire.",
+   "page": 119
+  },
+  {
+   "titre": "Si les géants publient leurs algorithmes, c'est que la valeur est ailleurs",
+   "explication": "Ganascia résout une apparente contradiction : l'IA est stratégique pour les grandes plateformes, et pourtant elles en partagent gratuitement les techniques. C'est que « ce qui importe, ce sont d'une part les tours de main nécessaires à leur mise en œuvre, et d'autre part les masses de données sur lesquelles les algorithmes fonctionnent ». L'open source ne coûte rien quand la barrière à l'entrée est le corpus, pas le code.",
+   "page": 50
+  },
+  {
+   "titre": "Deep Blue n'était pas invincible, et on l'a détruite",
+   "explication": "Aucune machine ne peut énumérer toutes les parties d'échecs, Shannon en estime le nombre supérieur au nombre de particules de notre galaxie. La victoire de 1997 ne prouve donc pas une supériorité absolue. Ganascia ajoute un détail que peu retiennent : « les concepteurs de Deep Blue ont détruit leur machine, juste après sa victoire », ce qui interdit à jamais de savoir si des humains l'auraient rattrapée à son contact.",
+   "page": 95
+  },
+  {
+   "titre": "Les prédictions de l'IA ont toutes échoué sur les délais, pas toujours sur le fond",
+   "explication": "En 1958, Simon et Newell annonçaient sous dix ans le champion du monde d'échecs, la composition musicale, des théorèmes originaux, la simulation du psychisme. Tout s'est révélé faux, puis tout est arrivé, avec quarante ans de retard. « Mais qu'est-ce qu'un retard de quarante ans au regard de l'histoire de l'humanité ? » La leçon de Ganascia n'est pas que les prophètes ont tort, c'est que la date est la partie de la prophétie sur laquelle personne ne sait rien.",
+   "page": 164
+  },
+  {
+   "titre": "Le vrai danger n'est pas Big Brother mais les « Gentils Organisateurs »",
+   "explication": "C'est le renversement politique du livre. Face aux acteurs privés, « l'État démocratique assure de plus en plus difficilement la sécurité intérieure », l'affaire du chiffrement de San Bernardino, l'usage de Telegram. Ce n'est donc pas un Léviathan unique qu'il faut craindre : ce sont des géants qui « n'ont besoin d'aucune caution démocratique, d'aucun vote » et qui vident la souveraineté populaire de sa substance tout en affichant les meilleures intentions.",
+   "page": 140
+  },
+  {
+   "titre": "L'argument du risque existentiel mélange trois questions distinctes",
+   "explication": "Face à la tribune de Hawking, Russell, Tegmark et Wilczek, Ganascia refuse de répondre en bloc : leurs déclarations affirment simultanément des conséquences dramatiques, l'inéluctabilité et l'imminence. « Ces trois points méritent d'être examinés l'un après l'autre. » Il souligne aussi le présupposé caché : que des machines devenues plus intelligentes se rebelleraient, ce qui suppose de leur prêter des désirs et des aspirations.",
+   "page": 186
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Jeu de l'imitation",
+   "definition": "Épreuve décrite par Turing en 1950 : un interrogateur doit distinguer, par échange écrit, un humain d'une machine. Turing prévoyait qu'en cinquante ans une machine tromperait l'interrogateur dans plus de 30 % des cas sur cinq minutes, prévision quantifiée, donc réfutable."
+  },
+  {
+   "terme": "IA faible / IA forte",
+   "definition": "Distinction introduite par le philosophe John Searle dans le cadre de son argument de la chambre chinoise : l'IA faible simule des facultés intellectuelles, l'IA forte prétendrait qu'un programme peut littéralement penser."
+  },
+  {
+   "terme": "Système expert",
+   "definition": "Logiciel construit à partir du savoir d'hommes de métier et capable de résoudre les problèmes de leur champ. Vedette des années 1980, industriellement déçue, puis diffusée discrètement dans l'industrie."
+  },
+  {
+   "terme": "Web 2.0",
+   "definition": "Web participatif apparu vers 2004, où l'utilisateur est impliqué dans la conception des produits et où ses appréciations sont récupérées. C'est lui qui rend l'apprentissage machine stratégique, en constituant les corpus dont il a besoin."
+  },
+  {
+   "terme": "Informatique affective",
+   "definition": "Branche qui construit des interfaces communiquant par le langage des émotions, plus immédiat et plus universel que les chiffres ou le langage naturel. Pour Ganascia, l'intelligence d'une machine n'est pas une propriété intrinsèque : c'est celle que nous lui attribuons."
+  },
+  {
+   "terme": "Armes autonomes",
+   "definition": "Systèmes qui choisissent leurs cibles et engagent le feu sans intervention humaine, ce qui les distingue des drones pilotés. Décrites comme la troisième révolution de la guerre après la poudre et le nucléaire ; objet d'une lettre ouverte signée en 2015 par plus de 3 000 spécialistes."
+  },
+  {
+   "terme": "Les « Gentils Organisateurs »",
+   "definition": "Formule de Ganascia pour les grandes plateformes qui se substituent aux États sans mandat démocratique. Sa réponse au Big Brother orwellien, qu'il juge être la mauvaise métaphore."
+  },
+  {
+   "terme": "Mythe de la singularité",
+   "definition": "Objet du livre suivant de l'auteur (Le Seuil, 2017) : l'idée d'un point de non-retour au-delà duquel l'IA échapperait à ses créateurs, que Ganascia traite comme une croyance à analyser plutôt que comme une hypothèse scientifique."
+  }
+ ],
+ "a_lire_si": "Vous voulez la voix d'un praticien qui est aussi philosophe de formation et président du comité d'éthique du CNRS, c'est-à-dire quelqu'un qui connaît à la fois la technique et l'argumentation. Le format court, une idée reçue par chapitre, en fait la meilleure porte d'entrée du corpus pour qui veut vérifier ce qu'il croit savoir avant de lire des thèses plus engagées.",
+ "a_eviter_si": "Vous cherchez un exposé continu : le format « idées reçues » découpe la matière en fragments et n'organise pas une démonstration d'ensemble. Le livre date de 2017 et son état de l'art précède les grands modèles de langage. Attention aussi à l'exemplaire du corpus : il a été récupéré par OCR, et quelques pages portent des artefacts de reconnaissance (filigranes de copyright mêlés au texte).",
+ "prerequis": [
+  "Aucun. C'est le titre le plus accessible de cet axe avec celui de Luc Julia.",
+  "Se lit très bien dans le désordre, une idée reçue à la fois."
+ ],
+ "controverses": [
+  "Ganascia s'oppose explicitement à Bostrom, Hawking et Russell sur le risque existentiel, et il nomme Laurent Alexandre parmi les relais français de cette inquiétude. Les trois positions, Bostrom, Alexandre, Ganascia, sont dans cette bibliothèque et se répondent.",
+  "Sa réfutation porte surtout sur les présupposés (prêter des désirs aux machines, confondre imminence et possibilité) plus que sur le cœur technique de l'argument de Bostrom, qui ne suppose justement pas de rébellion mais une indifférence aux fins humaines. Le lecteur qui a lu les deux verra que les deux auteurs ne visent pas tout à fait la même cible.",
+  "Son diagnostic, des acteurs privés qui vident la souveraineté de sa substance, rejoint celui d'Éric Sadin, mais Ganascia l'attribue à une carence des États plutôt qu'à une logique inscrite dans la technique elle-même. Le désaccord porte sur la cause, pas sur le constat.",
+  "Publié en 2017, le livre juge les agents conversationnels tout juste conformes à la prédiction de Turing. Le lecteur de 2026 peut légitimement se demander ce que l'auteur écrirait aujourd'hui, et c'est une bonne question à poser à l'agent."
+ ],
+ "confiance": 0.8
+}

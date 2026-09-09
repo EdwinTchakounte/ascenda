@@ -1,0 +1,241 @@
+[
+ {
+  "chapitre": "e6d4474c",
+  "questions": [
+   {
+    "q": "Qui les Chanteau attendent-ils avec tant d'inquiétude au début du roman ?",
+    "choix": [
+     "Madame Chanteau, qui ramène de Paris Pauline Quenu, une orpheline de dix ans placée sous leur tutelle",
+     "Le médecin de Caen venu soigner la goutte de Chanteau",
+     "Lazare, parti s'installer à Paris pour ses études",
+     "Le notaire chargé de la succession de la famille"
+    ],
+    "reponse": 0,
+    "explication": "Chanteau, goutteux, chauffe ses lourdes jambes devant un feu de coke et refait sans fin le calcul des correspondances, de Caen à Bayeux, puis d'Arromanches à Bonneville, dix kilomètres seulement.",
+    "niveau": "restitution",
+    "page": 5
+   },
+   {
+    "q": "Comment Zola présente-t-il Véronique, la servante des Chanteau ?",
+    "choix": [
+     "Une grande fille de trente-cinq ans, avec des mains d'homme et une face de gendarme, entrée dans la maison à quinze ans",
+     "Une jeune paysanne timide arrivée le mois précédent",
+     "Une vieille nourrice qui a élevé Lazare",
+     "Une cuisinière parisienne engagée pour l'arrivée de Pauline"
+    ],
+    "reponse": 0,
+    "explication": "Elle est entrée au service de Chanteau l'année même de son mariage. Sa brusquerie est acceptée de tous : elle gourmande son maître comme un enfant et son juron habituel, quand Monsieur a une crise, est passé dans le langage de la maison.",
+    "niveau": "restitution",
+    "page": 6
+   },
+   {
+    "q": "Pourquoi Chanteau a-t-il accepté la tutelle de Pauline ?",
+    "choix": [
+     "Un notaire lui a appris que son cousin Quenu, veuf, était mort en le chargeant par testament de sa fille, et l'enfant héritait d'une charcuterie",
+     "Il avait promis à son propre père de recueillir tous les enfants de la famille",
+     "Sa femme voulait une compagne pour Lazare",
+     "Il espérait obtenir en échange l'appui du conseil de famille"
+    ],
+    "reponse": 0,
+    "explication": "Les deux hommes ne s'étaient rencontrés que deux ou trois fois, lors des voyages de Chanteau à Paris pour consulter les célébrités médicales. Le mourant rêvait peut-être pour sa fille l'air salubre de la mer, et l'enfant, héritière, serait loin d'être une charge.",
+    "niveau": "comprehension",
+    "page": 8
+   },
+   {
+    "q": "Que fait Lazare Chanteau depuis huit mois quand commence le roman ?",
+    "choix": [
+     "Il bat les falaises sans se décider à choisir une occupation, passionné seulement de musique",
+     "Il travaille au commerce de bois de Caen avec Davoine",
+     "Il prépare son baccalauréat au lycée de Caen",
+     "Il cherche une position à Paris avec sa mère"
+    ],
+    "reponse": 0,
+    "explication": "Ce garçon de dix-neuf ans, au front large et aux yeux très clairs, a passé son baccalauréat en août. Sa mère est partie fâchée à Paris parce qu'il avait refusé de l'y accompagner.",
+    "niveau": "restitution",
+    "page": 14
+   },
+   {
+    "q": "Quel danger menace le village de Bonneville ?",
+    "choix": [
+     "La mer, qui ronge la côte et avale les maisons une à une",
+     "Un incendie déclaré dans les greniers du village",
+     "L'effondrement de la falaise sous le cimetière",
+     "La fermeture du commerce de bois qui faisait vivre le pays"
+    ],
+    "reponse": 0,
+    "explication": "La maison des Cuche a déjà été fendue du haut en bas en septembre, et Prouane jure qu'elle sera par terre le lendemain. Le curé, tenant sa soutane entre ses cuisses contre l'ouragan, approuve que l'on retire les barques.",
+    "niveau": "comprehension",
+    "page": 13
+   },
+   {
+    "q": "Quelle est la préoccupation continuelle de Pauline depuis son départ de Paris ?",
+    "choix": [
+     "La mer, qu'elle rêvait de voir et dont elle semble prendre possession d'un regard",
+     "Le chien Mathieu, dont sa tante lui avait parlé",
+     "La chambre qu'on lui donnerait dans la maison",
+     "Le sort de la charcuterie de son père"
+    ],
+    "reponse": 0,
+    "explication": "Elle questionnait sa tante à chaque coteau du voyage, puis est restée muette sur la plage d'Arromanches, les yeux agrandis. Devant la fenêtre de Bonneville, elle regarde monter l'écume blanche, tandis qu'un crépuscule de mort pèse sur le village désert.",
+    "niveau": "comprehension",
+    "page": 24
+   },
+   {
+    "q": "Quel objet trône sous une boîte de verre sur la cheminée de la salle à manger ?",
+    "choix": [
+     "Un pont de bois en miniature, chef-d'œuvre de charpentier du père de Chanteau",
+     "Une maquette de bateau rapportée d'Arromanches",
+     "Une horloge héritée des hobereaux du Cotentin",
+     "Un modèle réduit de la charcuterie des Quenu"
+    ],
+    "reponse": 0,
+    "explication": "Chanteau ne rougit pas de son origine ouvrière. Madame Chanteau tolère la curiosité encombrante malgré l'humeur que lui cause ce rappel de son mariage avec un fils d'ouvrier.",
+    "niveau": "restitution",
+    "page": 23
+   },
+   {
+    "q": "Que se passe-t-il quand madame Chanteau sort une terrine de foie gras de son sac ?",
+    "choix": [
+     "Chanteau cède à sa gourmandise malgré l'interdiction formelle de son médecin",
+     "Il refuse par crainte d'une nouvelle crise de goutte",
+     "Véronique la remporte aussitôt à la cuisine",
+     "Lazare la partage entre Pauline et lui"
+    ],
+    "reponse": 0,
+    "explication": "Le dîner avait été désastreux, le gigot réduit en cuir desséché faute d'être servi à l'heure. De terribles combats se livrent souvent en lui entre la terreur d'un accès et la violence de sa gourmandise, et presque toujours la gourmandise l'emporte.",
+    "niveau": "comprehension",
+    "page": 29
+   },
+   {
+    "q": "Comment le chien Mathieu marque-t-il son adoption de Pauline dès le premier soir ?",
+    "choix": [
+     "Au dessert, il pose sa tête énorme sur son genou et ne la quitte plus de ses regards suppliants",
+     "Il dort à ses pieds toute la nuit devant la cheminée",
+     "Il refuse de manger tant qu'elle n'a pas quitté la table",
+     "Il aboie chaque fois que quelqu'un s'approche d'elle"
+    ],
+    "reponse": 0,
+    "explication": "D'habitude c'est Lazare qui se laisse le plus vite apitoyer lors de la ronde du terre-neuve. Ce soir-là, le chien devine en Pauline une grande amie des bêtes et des gens. Dès l'arrivée, il lui avait débarbouillé le visage d'un coup de langue, sans l'effrayer.",
+    "niveau": "application",
+    "page": 31
+   },
+   {
+    "q": "Qui est Eugénie de la Vignière, devenue madame Chanteau ?",
+    "choix": [
+     "Une institutrice, orpheline de hobereaux ruinés du Cotentin, qui comptait souffler son ambition à son mari",
+     "La fille d'un armateur d'Arromanches",
+     "Une cousine des Quenu venue de Paris",
+     "La veuve d'un associé du commerce de bois"
+    ],
+    "explication": "Elle se heurta à l'inertie d'un homme d'éducation incomplète, prudent et routinier, qui reculait devant les vastes entreprises. À la naissance de son fils, elle reporta sur lui son espoir d'une haute fortune, le mit au lycée et le fit travailler elle-même chaque soir.",
+    "reponse": 0,
+    "niveau": "comprehension",
+    "page": 37
+   },
+   {
+    "q": "À quoi la famille Chanteau est-elle réduite à Bonneville ?",
+    "choix": [
+     "À vivre sur trois mille francs de rentes, après la vente du cheval, Véronique cultivant le potager",
+     "À emprunter chaque mois à leur associé Davoine",
+     "À louer une partie de la maison aux estivants",
+     "À vendre le bois de la propriété pour subsister"
+    ],
+    "explication": "L'association avec Davoine, à Caen, était l'œuvre de madame Chanteau, qui n'en accepte plus la responsabilité. Comme il se lance dans de grandes spéculations et réclame des avances continuelles, les inventaires se soldent presque par des pertes.",
+    "reponse": 0,
+    "niveau": "comprehension",
+    "page": 40
+   },
+   {
+    "q": "Quel reproche madame Chanteau adresse-t-elle à son mari quand il l'accuse de l'avoir mal conseillé ?",
+    "choix": [
+     "Que sans sa maladie ils seraient peut-être millionnaires",
+     "Qu'il n'a jamais su tenir ses comptes",
+     "Qu'il s'est laissé dominer par son père charpentier",
+     "Qu'il a refusé de vendre la maison à temps"
+    ],
+    "explication": "Chaque fois que l'amertume de sa femme déborde ainsi, Chanteau baisse la tête, gêné et honteux d'abriter dans ses os l'ennemie de la famille. La goutte le fait souffrir depuis l'âge de quarante ans.",
+    "reponse": 0,
+    "niveau": "application",
+    "page": 40
+   },
+   {
+    "q": "Que devient l'espoir que madame Chanteau avait placé en son fils ?",
+    "choix": [
+     "Elle le rêvait préfet ou président de cour, et il parle d'écrire des opéras",
+     "Elle le voulait médecin, et il veut reprendre le commerce de bois",
+     "Elle le destinait au notariat, et il refuse toute étude",
+     "Elle l'imaginait officier, et il veut rester à Bonneville"
+    ],
+    "explication": "C'est elle pourtant qui lui avait appris le piano, et la seule vue d'une partition l'exaspère aujourd'hui. Elle le voit déjà courir le cachet comme elle l'a fait, dans la boue des rues.",
+    "reponse": 0,
+    "niveau": "comprehension",
+    "page": 41
+   },
+   {
+    "q": "De combien s'élève la fortune que madame Chanteau rapporte de Paris dans son sac ?",
+    "choix": [
+     "Cent cinquante mille francs de valeurs, la charcuterie ayant été adjugée quatre-vingt-dix mille francs comptant",
+     "Quatre-vingt-dix mille francs, prix de la seule charcuterie",
+     "Soixante mille francs trouvés en titres chez le notaire",
+     "Trois cent mille francs, dont la moitié en immeubles"
+    ],
+    "explication": "Deux concurrents enragés avaient fait monter les enchères, et le notaire avait déjà trouvé soixante mille francs en titres dans un meuble. Les titres arrivent serrés entre les deux feuilles de carton d'un vieux registre de la charcuterie, piqueté de taches de graisse.",
+    "reponse": 0,
+    "niveau": "restitution",
+    "page": 45
+   },
+   {
+    "q": "Comment madame Chanteau justifie-t-elle d'avoir fait fixer à huit cents francs la pension de Pauline ?",
+    "choix": [
+     "Ils sont moins riches que l'enfant et ne peuvent lui faire la charité, mais nul ne voudrait gagner sur elle",
+     "La tutelle exige légalement une pension de ce montant",
+     "Le conseil de famille l'a imposée contre son gré",
+     "Les frais de la maison ont doublé depuis l'arrivée de l'enfant"
+    ],
+    "explication": "Elle assure qu'on replacera les intérêts des rentes et qu'on doublera presque le capital d'ici à la majorité de la petite, ajoutant qu'il faut obéir aux morts et que cela leur portera peut-être chance. Le père et le fils en sont attendris.",
+    "reponse": 0,
+    "niveau": "application",
+    "page": 46
+   },
+   {
+    "q": "Que répond Prouane à Chanteau qui s'emporte contre un village bâti sous les vagues et conseille de partir ?",
+    "choix": [
+     "« On est là, monsieur, on y reste... Il faut bien être quelque part »",
+     "Que les pêcheurs attendent une aide du maire pour déménager",
+     "Que la mer se retirera d'elle-même au printemps",
+     "Que les Cuche partiront dès le lendemain matin"
+    ],
+    "explication": "Prouane vient annoncer que la maison des Cuche est tombée et que la famille s'est réfugiée chez les Gonin, le père la tête à moitié fendue par une poutre. Chanteau se fâche surtout parce que ce drame va lui gâter sa nuit et l'occuper le lendemain.",
+    "reponse": 0,
+    "niveau": "comprehension",
+    "page": 52
+   },
+   {
+    "q": "Où les titres de Pauline sont-ils rangés devant elle, le premier soir ?",
+    "choix": [
+     "Dans le premier tiroir de gauche du secrétaire, refermé à deux tours de clef",
+     "Dans le coffre de la chambre de sa tante",
+     "Chez le notaire d'Arromanches, qui viendra les chercher",
+     "Sous la boîte de verre du pont de bois, sur la cheminée"
+    ],
+    "explication": "Madame Chanteau tient à ce que l'enfant sache où se trouve son bien : ils n'en sortiront que le jour où elle sera assez grande fille pour les reprendre elle-même. L'idée que la Minouche pourrait ouvrir le meuble et manger les papiers fait éclater Pauline de rire.",
+    "reponse": 0,
+    "niveau": "restitution",
+    "page": 57
+   },
+   {
+    "q": "Pourquoi Pauline rouvre-t-elle sa porte au moment de se coucher ?",
+    "choix": [
+     "Elle a peur quand les portes sont fermées à clef et veut pouvoir appeler Lazare, pas la bonne",
+     "Elle veut regarder encore la chambre de son cousin",
+     "Elle a oublié de dire bonsoir à son oncle",
+     "Elle cherche Mathieu pour le faire dormir près d'elle"
+    ],
+    "explication": "Elle avait d'abord voulu mentir, puis avait cédé à son besoin de franchise. Lazare, séduit par le charme de cette enfance si droite et si tendre, s'avance pour lui dire bonsoir, et elle se jette à son cou.",
+    "reponse": 0,
+    "niveau": "application",
+    "page": 60
+   }
+  ]
+ }
+]

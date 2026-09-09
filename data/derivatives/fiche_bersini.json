@@ -1,0 +1,119 @@
+{
+ "document_id": "92743b51-3955-4459-8c09-84d50281548c",
+ "titre_normalise": "L'intelligence artificielle en pratique avec Python. Recherche, optimisation, apprentissage",
+ "auteurs": [
+  "Hugues Bersini",
+  "Ken Hasselmann"
+ ],
+ "annee": null,
+ "type_ouvrage": "guide_pratique",
+ "niveau": "intermediaire",
+ "public_cible": "Étudiants qui découvrent le domaine, et informaticiens confirmés qui se sentent décontenancés devant l'offre pléthorique de recettes dont ils n'arrivent pas à comprendre qui fait quoi. Deuxième édition publiée chez Eyrolles. Hugues Bersini, membre de l'Académie royale de Belgique, dirige le laboratoire d'intelligence artificielle de l'Université libre de Bruxelles ; Ken Hasselmann enseigne à l'École centrale des arts et métiers de Bruxelles et travaille sur les essaims de robots.",
+ "these_centrale": "Trois mécanismes seulement fondent l'intelligence artificielle algorithmique : chercher, optimiser, apprendre. Ils sont constamment confondus, y compris par des praticiens expérimentés. Le livre prend dix problèmes concrets et montre pour chacun laquelle de ces trois familles convient, pourquoi, et à quel prix. Sa thèse pratique est que le Web regorge de codes clés en main qui constituent rarement la bonne solution, et que prendre du recul pour trancher entre les offres algorithmiques est précisément la compétence qui manque.",
+ "idees_force": [
+  {
+   "titre": "Chercher, optimiser, apprendre ne résolvent pas le même problème",
+   "explication": "Le taquin illustre la distinction en une phrase. Une recherche heuristique résout le problème en un coup, une fois pour toutes. Un algorithme d'apprentissage par renforcement joue de mieux en mieux au fil des essais et n'atteint la solution optimale qu'à la fin, idéalement la même que celle trouvée d'emblée par la recherche. Un algorithme génétique, lui, fait évoluer une population de solutions candidates. Trois voies vers le même résultat, trois coûts et trois usages différents.",
+   "page": 30
+  },
+  {
+   "titre": "Le vrai compromis n'est pas technique, il est intellectuel",
+   "explication": "La formulation la plus forte du livre porte sur ce que coûte réellement un algorithme. Les auteurs opposent la mise en œuvre du génie humain, pour laborieuse qu'elle soit, en vue d'une écriture subtile d'algorithmes sobres et de faible consommation, à la compensation de notre laxisme intellectuel par la puissance de calcul de nos ordinateurs. C'est un argument de sobriété qui vaut aussi bien pour l'écologie que pour quiconque travaille avec des ressources limitées.",
+   "page": 39
+  },
+  {
+   "titre": "Apprendre en explorant, puis en exploitant",
+   "explication": "L'apprentissage par renforcement est expliqué sans détour. À chaque configuration on associe une valeur pour chaque action possible, initialisée au hasard. Le choix se fait sur la base de ces valeurs, en favorisant le tirage aléatoire au début, quand on ne sait rien, et la meilleure valeur connue vers la fin, quand on a appris. Ce déplacement progressif de l'exploration vers l'exploitation est le cœur de toute la famille.",
+   "page": 30
+  },
+  {
+   "titre": "Anticiper les coups de l'autre, et savoir que l'évaluation fait tout",
+   "explication": "Sur le Puissance 4, les auteurs rappellent que l'algorithme d'anticipation attribue à chaque feuille de l'arbre une évaluation heuristique, puis remonte en minimisant aux nœuds de l'adversaire et en maximisant aux siens. Et ils énoncent la conséquence pratique décisive : de la qualité de l'évaluation retenue dépend en grande partie la performance, et plus l'évaluation est précise, moins l'arbre a besoin d'être profond. Le travail de conception se paie moins cher que la force brute.",
+   "page": 61
+  },
+  {
+   "titre": "L'apprentissage non supervisé se juge à l'aveugle",
+   "explication": "Différence fondamentale rarement dite aussi nettement. En apprentissage supervisé, on réserve un ensemble de validation et on mesure. En apprentissage non supervisé, il faut découvrir les catégories et y répartir les documents en même temps, donc on ne peut plus se reposer sur un ensemble test. L'appréciation du résultat devient l'objet d'un regard subjectif du connaisseur du domaine. Les auteurs ajoutent que le nombre de catégories est fixé d'avance, en espérant qu'il soit un optimum.",
+   "page": 143
+  },
+  {
+   "titre": "Un modèle prédictif est un miroir, pas un juge",
+   "explication": "Le passage le plus important du livre, et le plus discuté. Les auteurs demandent de ne pas confondre deux emplois du mot mauvais. Un modèle est mauvais si ses prédictions sont fausses, ou si ses données ne sont qu'un pâle reflet de la réalité sociale. Une société est mauvaise si une catégorie s'y trouve discriminée, même quand le modèle prédit correctement le risque. Ils en tirent qu'il est absurde d'attendre d'un modèle prédictif qu'il pratique la discrimination positive, et que c'est précisément parce qu'il révèle l'effet des variables sensibles qu'un décideur peut choisir de s'en affranchir.",
+   "page": 133
+  },
+  {
+   "titre": "L'équité algorithmique n'a pas de définition unique",
+   "explication": "Les auteurs énumèrent plusieurs définitions concurrentes : égaliser les faux négatifs entre groupes, égaliser tous les positifs, ou simplement exiger la parité de traitement quelles que soient les catégories. Ils concluent que le choix entre elles est essentiellement arbitraire et ne se résout qu'à l'issue d'une discussion entre les principaux concernés, conscients de ce que chaque option coûtera en qualité de prédiction et de la société qu'ils souhaitent.",
+   "page": 133
+  },
+  {
+   "titre": "Le test de Turing est un aveu, pas une définition",
+   "explication": "Le portrait qui ouvre la conclusion est remarquable. Interrogé sur sa définition de l'intelligence, Turing se trouve à ce point dépourvu qu'il propose non pas une définition mais un test, et même une performance. Les auteurs notent qu'il en était conscient, que c'est la notion d'intelligence elle même qui fait débat, et qu'il choisit alors de se cantonner à une tâche banale mais emblématique de notre humanité, le dialogue.",
+   "page": 164
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Recherche, optimisation, apprentissage",
+   "definition": "Les trois mécanismes fondamentaux que le livre s'attache à distinguer. Chercher explore un espace d'états vers un but connu, optimiser fait évoluer des solutions candidates selon un critère, apprendre ajuste un comportement à partir d'exemples ou de récompenses."
+  },
+  {
+   "terme": "Distance de Manhattan",
+   "definition": "Somme des écarts horizontaux et verticaux entre la position d'un élément et sa position cible. Heuristique classique du taquin, admissible parce qu'elle ne surestime jamais le nombre de coups restants."
+  },
+  {
+   "terme": "Apprentissage par renforcement",
+   "definition": "Famille d'algorithmes qui découvrent la meilleure action dans chaque état par essais et erreurs, en s'appuyant sur des récompenses parfois retardées."
+  },
+  {
+   "terme": "Arbitrage exploration exploitation",
+   "definition": "Compromis entre essayer des actions inconnues pour apprendre et jouer la meilleure action connue pour gagner. Un paramètre en calibre le rapport dans la plupart des algorithmes concernés."
+  },
+  {
+   "terme": "Recherche arborescente de Monte-Carlo",
+   "definition": "Méthode combinant simulation aléatoire et construction progressive d'un arbre, où le choix du nœud à explorer additionne un terme d'exploitation et un terme d'exploration. C'est ce qui a rendu possibles les programmes de go de niveau champion."
+  },
+  {
+   "terme": "Algorithme génétique",
+   "definition": "Optimisation inspirée de l'évolution : une population de solutions subit sélection, croisement et mutation selon une fonction d'évaluation. Le livre l'applique aussi bien au sudoku qu'aux poids d'un réseau de neurones."
+  },
+  {
+   "terme": "Classificateur naïf de Bayes",
+   "definition": "Méthode probabiliste qui estime la probabilité d'une catégorie à partir de la fréquence des mots, en supposant leur indépendance. Naïve mais remarquablement efficace pour le tri de courriels."
+  },
+  {
+   "terme": "Arbre de décision",
+   "definition": "Modèle qui induit des règles lisibles de la forme si le salaire est inférieur à un seuil et le taux d'endettement supérieur à un autre, alors le client est peu fiable à tel pourcentage. Sa lisibilité est son principal avantage."
+  },
+  {
+   "terme": "Ensemble de validation",
+   "definition": "Jeu de données tenu à l'écart de l'apprentissage, servant à détecter le surapprentissage. Le prédicteur doit fonctionner non sur les clients d'hier, dont on sait comment cela s'est terminé, mais sur ceux de demain."
+  },
+  {
+   "terme": "Allocation latente de Dirichlet",
+   "definition": "Méthode de découverte de thèmes non supervisée qui produit deux distributions : l'importance de chaque thème dans un document, et l'importance de chaque mot dans un thème."
+  },
+  {
+   "terme": "Plongement lexical",
+   "definition": "Représentation des mots ou des documents par des vecteurs de sens, permettant de regrouper des textes selon leur signification profonde plutôt que selon les mots employés."
+  },
+  {
+   "terme": "Apprentissage par transfert",
+   "definition": "Réutilisation d'un réseau déjà entraîné sur une grande tâche pour en résoudre une plus petite avec peu de données. C'est ce qui rend accessible la reconnaissance d'images sans moyens de calcul importants."
+  }
+ ],
+ "a_lire_si": "Vous êtes ingénieur et vous voulez pouvoir décider quel algorithme employer plutôt que copier celui qui traîne en ligne. C'est le livre le plus directement utile du corpus : dix problèmes, du code fourni et exécutable, et à chaque chapitre la question du choix posée avant celle de la mise en œuvre. Son chapitre sur le crédit est aussi le meilleur traitement de l'équité algorithmique de toute la bibliothèque, parce qu'il vient de quelqu'un qui sait ce que le modèle calcule.",
+ "a_eviter_si": "Vous ne programmez pas. Le livre suppose Python installé, un environnement configuré, et l'envie de faire tourner le code plutôt que de le lire. Il n'est pas non plus un traité : chaque méthode est présentée juste assez pour être comprise et employée sur le problème traité, sans démonstration ni étude de convergence.",
+ "prerequis": [
+  "Savoir programmer en Python, au moins au niveau des fonctions, des listes et des classes.",
+  "Savoir installer un environnement de développement. Le livre fournit les instructions pour Windows et pour Linux, et le code source est téléchargeable chez l'éditeur.",
+  "Aucune connaissance préalable en intelligence artificielle n'est nécessaire : les dix chapitres construisent chaque notion au moment où le problème la réclame."
+ ],
+ "controverses": [
+  "La position des auteurs sur l'équité algorithmique est argumentée et minoritaire dans le débat public. Affirmer qu'il est absurde d'attendre d'un modèle qu'il pratique la discrimination positive, et qu'un modèle n'est qu'un miroir tendu à la société, sera contesté par ceux qui soulignent que le déploiement d'un modèle modifie la société qu'il prétend décrire. Les auteurs le reconnaissent d'ailleurs en citant les travaux de Virginia Eubanks sur l'amplification des inégalités par les politiques algorithmisées.",
+  "Leur distinction entre le rôle de l'informaticien, qui répond de la qualité de la prédiction, et celui du juge ou du sociologue, qui répond de ses effets, est claire et un peu commode : elle suppose que ces acteurs se parlent, ce que les auteurs posent comme condition sans dire comment l'obtenir.",
+  "Le livre est écrit depuis un contexte européen doté de moyens de calcul abondants. Sa remarque sur le compromis entre algorithmes sobres et puissance de calcul est pourtant décisive pour quiconque travaille avec des ressources contraintes, et elle mériterait d'être développée plus qu'un paragraphe.",
+  "L'année d'édition n'a pas pu être établie à partir de l'exemplaire du corpus. Il s'agit de la deuxième édition, augmentée de nouveaux chapitres, mais la date exacte reste à valider."
+ ],
+ "confiance": 0.88
+}

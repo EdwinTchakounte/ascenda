@@ -1,0 +1,170 @@
+[
+ {
+  "chapitre": "d8bcab07",
+  "citations": [
+   {
+    "texte": "À nouveau, la source d'inspiration première est évidente : notre cognition. Nous n'agissons pas différemment lorsqu'il s'agit de jouer : nous anticipons jusqu'à une certaine profondeur nos coups et ceux de l'adversaire.",
+    "page": 62,
+    "axe": "02-ia-technique-academique",
+    "theme": "Min-Max et la pensée du joueur",
+    "portee": "L'algorithme ne fait que formaliser une conduite ordinaire : anticiper les coups de l'autre autant que les siens."
+   },
+   {
+    "texte": "Sans surprise, de multiples évaluations sont possibles et de la qualité de celle retenue dépendra en grande partie la performance de l'algorithme.",
+    "page": 62,
+    "axe": "02-ia-technique-academique",
+    "theme": "Tout tient à l'évaluation",
+    "portee": "Le travail décisif n'est pas dans l'algorithme mais dans la fonction qui juge une position."
+   },
+   {
+    "texte": "De nombreux psychologues à l'époque en ont déduit que Kasparov devait mettre en œuvre des stratégies inconscientes afin de supprimer de son exploration consciente des milliards de coups possibles",
+    "page": 64,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que fait un champion",
+    "portee": "L'expertise humaine n'est pas un calcul plus rapide mais une élimination massive et inconsciente des possibilités."
+   },
+   {
+    "texte": "Une fois encore, l'apprentissage pallie le manque d'expertise « consciente » des joueurs de go et compense par la puissance de calcul et les vertus du hasard ce que, sans doute, un plus gros effort de réflexion aurait pu produire tout autant de la part de ces mêmes experts.",
+    "page": 66,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le hasard remplace la réflexion",
+    "portee": "Constat lucide : la machine compense par le calcul ce que nous n'avons pas pris la peine d'élucider."
+   },
+   {
+    "texte": "L'IA a envoyé le jeu de go sur une autre planète non encore explorée même par les meilleurs joueurs humains (les seuls explorateurs sont les logiciels IA).",
+    "page": 66,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un savoir que nous ne comprenons plus",
+    "portee": "Les auteurs parlent d'une régression temporaire de la pratique du jeu, le temps que les humains se réapproprient ces façons de jouer."
+   }
+  ]
+ },
+ {
+  "chapitre": "61a77bc3",
+  "citations": [
+   {
+    "texte": "Or, c'est souvent ce recours à des algorithmes plus simples et plus compréhensibles qui permet de mieux saisir les tenants et aboutissants des problèmes affrontés et les pourquoi et comment des solutions algorithmiques ; en un mot, de demeurer scientifique avant tout.",
+    "page": 67,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Rester scientifique",
+    "portee": "Plaidoyer pour la simplicité comme condition de la compréhension, et non comme aveu de faiblesse."
+   },
+   {
+    "texte": "Dans la pratique, pour la plupart des jeux, il n'est pas possible d'explorer tout l'arbre des possibilités et on fixe une profondeur maximale à atteindre avant d'estimer la qualité des positions et d'en déduire le meilleur coup probable.",
+    "page": 67,
+    "axe": "02-ia-technique-academique",
+    "theme": "La limite de profondeur",
+    "portee": "Tout algorithme de jeu est un compromis entre ce qu'on peut calculer et ce qu'on doit estimer."
+   },
+   {
+    "texte": "Ce complément algorithmique évite d'explorer les sous-arbres conduisant à des situations qui ne contribueront pas à maximiser le score à la racine de l'arbre.",
+    "page": 69,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que fait l'élagage",
+    "portee": "Gagner du temps sans rien perdre en qualité : rare, et c'est ce qui a fait la longévité de l'élagage alpha-bêta."
+   }
+  ]
+ },
+ {
+  "chapitre": "304a5878",
+  "citations": [
+   {
+    "texte": "Ces deux termes sont à la base du compromis exploration-exploitation typique des algorithmes d'apprentissage par renforcement.",
+    "page": 74,
+    "axe": "02-ia-technique-academique",
+    "theme": "Explorer ou exploiter",
+    "portee": "Le dilemme fondamental de tout apprentissage : essayer du nouveau ou tirer parti de ce que l'on sait déjà."
+   }
+  ]
+ },
+ {
+  "chapitre": "2542fda1",
+  "citations": [
+   {
+    "texte": "Ils découvrent alors par l'expérience ce qu'ils auraient aisément pu anticiper s'ils s'étaient davantage questionnés sur la véritable nature du problème et les briques algorithmiques plus aptes à l'affronter dans un temps décent.",
+    "page": 75,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Réfléchir avant de coder",
+    "portee": "Le reproche revient à chaque chapitre : le temps passé à comprendre le problème est toujours regagné ensuite."
+   },
+   {
+    "texte": "une solution plus naturelle et surtout plus économe est de se mettre à la place du serpent et de ne coder comme état que la perception de ce serpent",
+    "page": 76,
+    "axe": "02-ia-technique-academique",
+    "theme": "Changer de point de vue",
+    "portee": "Passer d'une description absolue du monde à la perception de l'agent réduit d'un coup une combinatoire ingérable."
+   },
+   {
+    "texte": "En revanche, on ne peut pas garantir que la position dans laquelle il va se retrouver à la fin sera telle qu'il puisse se sortir de sa situation.",
+    "page": 77,
+    "axe": "02-ia-technique-academique",
+    "theme": "Optimiser le prochain pas n'est pas gagner",
+    "portee": "Atteindre chaque cible au plus vite peut conduire à une impasse : le meilleur coup immédiat n'est pas la meilleure stratégie."
+   }
+  ]
+ },
+ {
+  "chapitre": "1c4ff5d3",
+  "citations": [
+   {
+    "texte": "Rappelons-le, malgré l'engouement récent pour l'apprentissage dit profond basé sur les réseaux de neurones, il s'agit bien là d'une technologie qui fête son soixante-cinquième anniversaire",
+    "page": 78,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Une technologie qui a soixante-cinq ans",
+    "portee": "Correctif utile à la présentation médiatique des réseaux de neurones comme une invention récente."
+   },
+   {
+    "texte": "Évidemment, ce qui est recherché ici n'est pas tant sa capacité à reproduire exactement les données qu'on lui apprend, mais bien sa capacité à extrapoler à partir de ces données, c'est-à-dire à exécuter les bonnes actions face à de nouvelles situations qui, bien que jamais rencontrées auparavant, ne devraient pas être trop éloignées de celles qui ont servi à constituer les données d'apprentissage.",
+    "page": 78,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le vrai but de l'apprentissage",
+    "portee": "Définition rigoureuse de la généralisation, avec sa limite : elle ne vaut qu'au voisinage de ce qui a été appris."
+   },
+   {
+    "texte": "Le réseau de neurones n'est pas censé conduire une voiture sur la planète Mars.",
+    "page": 78,
+    "axe": "02-ia-technique-academique",
+    "theme": "La limite de la généralisation",
+    "portee": "Formule qui résume pourquoi un modèle entraîné sur un contexte échoue dans un autre, question majeure pour des données produites ailleurs."
+   },
+   {
+    "texte": "Les poids s'ajustent petit à petit dans la meilleure direction et la meilleure intensité qu'il faut pour minimiser cette erreur",
+    "page": 80,
+    "axe": "02-ia-technique-academique",
+    "theme": "La descente de gradient",
+    "portee": "Formulation intuitive du mécanisme qui fait fonctionner tous les réseaux de neurones actuels."
+   }
+  ]
+ },
+ {
+  "chapitre": "b7ca2544",
+  "citations": [
+   {
+    "texte": "Pour apprendre les poids du réseau de neurones, il est impossible ici d'appliquer un algorithme de gradient à partir des sorties désirées car, justement, ce sont ces mêmes sorties que l'on cherche.",
+    "page": 82,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quand le gradient ne s'applique pas",
+    "portee": "Cas classique : sans réponses connues, l'apprentissage supervisé est impossible et il faut changer de méthode."
+   }
+  ]
+ },
+ {
+  "chapitre": "864610d2",
+  "citations": [
+   {
+    "texte": "Il n'est pas des plus faciles, dans des cas semblables, de décider a priori de la meilleure manière d'optimiser le réseau de neurones en question, selon l'algorithme du Q-learning ou un algorithme de type génétique ; seuls les résultats pratiques d'expérience (difficulté du codage, qualité de la solution et temps de calcul pour l'obtenir) permettent de trancher.",
+    "page": 84,
+    "axe": "02-ia-technique-academique",
+    "theme": "Quand seule l'expérience tranche",
+    "portee": "Aveu honnête : la théorie ne dit pas toujours quel algorithme choisir, il faut alors mesurer."
+   },
+   {
+    "texte": "Notez que cette dernière ne sera jamais atteinte par le serpent, puisqu'il ne peut se déplacer en diagonale. Cette distance sous-estime donc celle restant à parcourir. Cette heuristique n'en demeure pas moins admissible car elle ne surestime pas cette distance.",
+    "page": 86,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qui rend une heuristique admissible",
+    "portee": "Explication concrète de la condition théorique qui garantit l'optimalité d'A*."
+   }
+  ]
+ }
+]

@@ -1,0 +1,304 @@
+[
+ {
+  "chapitre": "d7c3a2bd",
+  "citations": [
+   {
+    "texte": "l'introduction de l'intelligence artificielle peut souvent se cacher derrière un outil numérique déjà utilisé, auquel elle",
+    "page": 97,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Arrivee incognito",
+    "portee": "Explique pourquoi personne ne voit arriver l'IA dans une entreprise : elle est ajoutee a un outil connu au lieu de le remplacer."
+   },
+   {
+    "texte": "En tant qu'acteur syndical et en tant que manager, la première question à poser est donc : mon entreprise/administration utilise-t-elle des systèmes d'intelligence artificielle ?",
+    "page": 98,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "La premiere question",
+    "portee": "Point de depart de toute demarche : avant de discuter des garanties, etablir simplement s'il y a un systeme et lequel."
+   },
+   {
+    "texte": "Qui est exclu de l'IA et quelle est l'ampleur de la perte des droits sociaux et sociétaux générée par son utilisation ?",
+    "page": 98,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Qui est exclu",
+    "portee": "Question la plus originale de la grille en huit points : elle porte non sur ceux que le systeme lese, mais sur ceux qu'il ne voit pas."
+   }
+  ]
+ },
+ {
+  "chapitre": "e94698cb",
+  "citations": [
+   {
+    "texte": "Cette étude vise à mesurer l'impact de l'IA sur l'ensemble des métiers et des compétences, de la relation client aux fonctions support et au niveau organisationnel.",
+    "page": 102,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Cartographier avant de negocier",
+    "portee": "Methode transposable a n'importe quelle branche : mesurer l'impact reel avant d'ouvrir la negociation, plutot que d'argumenter sur des impressions."
+   }
+  ]
+ },
+ {
+  "chapitre": "9e74cb77",
+  "citations": [
+   {
+    "texte": "pour rester compétitives et innovantes, les assurances doivent s'appuyer sur des personnels « hybrides » capables de créer des passerelles entre différents champs d'expertise",
+    "page": 103,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Profils hybrides",
+    "portee": "Indique la direction que prend la valeur professionnelle : non plus la specialite isolee, mais la capacite a relier des domaines."
+   },
+   {
+    "texte": "Les emplois de pur traitement administratif de l'information disparaissent.",
+    "page": 103,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Emplois qui disparaissent",
+    "portee": "Enonce net et verifiable. Il designe precisement la categorie d'emplois de bureau que l'automatisation absorbe en premier."
+   },
+   {
+    "texte": "La valeur ajoutée de chacun tient davantage à la prise en charge du complexe.",
+    "page": 104,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Prendre en charge le complexe",
+    "portee": "Formule breve et utile pour orienter une reconversion : ce qui reste a l'humain est ce qui resiste a la standardisation."
+   }
+  ]
+ },
+ {
+  "chapitre": "19f950aa",
+  "citations": [
+   {
+    "texte": "que signifie le pivotement d'une culture d'entreprise tournée vers le savoir à une culture d'entreprise tournée vers la supervision ?",
+    "page": 105,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Du savoir a la supervision",
+    "portee": "Question decisive pour tout metier d'expertise : si la machine detient le savoir, le professionnel devient surveillant de machine."
+   },
+   {
+    "texte": "Peu de métiers vont disparaître, la plupart vont se transformer, avec un renforcement de la spécialisation pour répondre aux nouvelles exigences du secteur",
+    "page": 106,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Transformation plutot que disparition",
+    "portee": "Contredit le recit de la destruction massive d'emplois, sur la base d'une etude paritaire de branche et non d'une prevision generale."
+   },
+   {
+    "texte": "les robots sont certes de bons conseillers, mais ils ne sont pas de bons commerciaux",
+    "page": 106,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Ce que le robot ne fait pas",
+    "portee": "Observation empirique tiree du cas Nutmeg. Elle designe une frontiere concrete entre ce qui s'automatise et ce qui exige la relation humaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "0266631b",
+  "citations": [
+   {
+    "texte": "Il existe tout un arsenal juridique pour interpeller une entreprise sur l'introduction interne de technologies d'intelligence artificielle.",
+    "page": 109,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le droit existe deja",
+    "portee": "These centrale de toute la sixieme partie : il n'y a pas besoin d'attendre une loi sur l'IA, les textes existants suffisent a ouvrir la discussion."
+   }
+  ]
+ },
+ {
+  "chapitre": "467c5595",
+  "citations": [
+   {
+    "texte": "Si l'intelligence artificielle n'est pas évoquée en conseil d'administration, que son introduction est passée sous silence, comme il arrive souvent, d'autres voies d'intervention sont possibles",
+    "page": 111,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Contourner le silence",
+    "portee": "Le guide construit ses recours en supposant que rien ne sera annonce : c'est ce realisme qui le rend utilisable."
+   }
+  ]
+ },
+ {
+  "chapitre": "38470b1b",
+  "citations": [
+   {
+    "texte": "Un comité d'éthique peut mesurer et définir les limites qu'il faut donner aux machines.",
+    "page": 112,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Fixer des limites",
+    "portee": "Le comite d'ethique n'evalue pas la performance du systeme, il decide de ce qu'on lui interdit. La nuance change tout son role."
+   }
+  ]
+ },
+ {
+  "chapitre": "8ed663f2",
+  "citations": [
+   {
+    "texte": "En matière de négociation de branche, deux références existent : le Code du travail et le RGPD.",
+    "page": 113,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Deux points d'appui",
+    "portee": "Articulation simple a retenir : un texte de droit social et un reglement de protection des donnees suffisent a rendre l'IA negociable."
+   }
+  ]
+ },
+ {
+  "chapitre": "29e6851f",
+  "citations": [
+   {
+    "texte": "Sur les conditions de travail, la gestion prévisionnelle des emplois et des compétences, et sur la prise en compte des effets de l'exposition aux facteurs de risques professionnels",
+    "page": 114,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le thème qui ouvre la porte",
+    "portee": "Troisieme alinea de l'article L. 2241-1. Il couvre l'organisation du travail, l'evolution des metiers et la sante : les trois entrees par lesquelles l'IA touche les salaries."
+   }
+  ]
+ },
+ {
+  "chapitre": "950a0b15",
+  "citations": [
+   {
+    "texte": "permettre de maintenir les compétences des salariés face aux évolutions économiques, technologiques et d'organisation par une anticipation, un accompagnement et une adaptation face aux changements, notamment l'intelligence artificielle",
+    "page": 115,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "IA dans un accord de branche",
+    "portee": "Accord de la branche bancaire du 5 fevrier 2020. Preuve qu'une branche peut inscrire nommement l'IA dans ses priorites de formation."
+   },
+   {
+    "texte": "l'application américaine Uber de les avoir « licenciés » en utilisant un algorithme sans leur avoir donné le droit de se défendre ou d'en savoir plus",
+    "page": 116,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Licencie par un algorithme",
+    "portee": "Premiere action fondee sur l'article 22 du RGPD contre une decision automatisee de rupture. Cas d'ecole a connaitre."
+   }
+  ]
+ },
+ {
+  "chapitre": "6843fadc",
+  "citations": [
+   {
+    "texte": "Aucune information concernant personnellement un salarié ne peut être collectée par un dispositif qui n'a pas été porté préalablement à sa connaissance",
+    "page": 124,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Pas de dispositif cache",
+    "portee": "Article L. 1222-4 du Code du travail. Un dispositif dissimule est illicite quel que soit ce qu'il collecte : c'est l'arme la plus simple du salarie."
+   },
+   {
+    "texte": "l'employeur ne peut surveiller constamment ses salariés",
+    "page": 123,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Limite de la surveillance",
+    "portee": "Regle de principe, assortie d'exceptions dument justifiees au regard de la nature de la tache. A opposer a tout projet de controle permanent."
+   },
+   {
+    "texte": "Le salarié aurait donc le statut et la protection de lanceur d'alerte s'il témoigne par exemple sur les biais ou les effets discriminatoires résultant d'algorithmes.",
+    "page": 126,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Alerter sur un biais",
+    "portee": "Application inedite d'un droit existant : le signalement d'une discrimination algorithmique devient une alerte protegee."
+   }
+  ]
+ },
+ {
+  "chapitre": "f01110d6",
+  "citations": [
+   {
+    "texte": "les coursiers de cette entreprise étaient dépendants de la plateforme, et que celle-ci était donc bien une entreprise de transport",
+    "page": 130,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Qualifier la plateforme",
+    "portee": "Arret Uber Elite de la CJUE du 20 decembre 2017. Rendu en droit commercial, il fournit un appui indirect mais solide au droit social."
+   },
+   {
+    "texte": "effectuer une recherche sur le Web, retranscrire une phrase, légender une photo, répondre à un questionnaire sur un ordinateur ou un smartphone, rapportant quelques centimes d'euros",
+    "page": 130,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le micro-travail",
+    "portee": "Definit la main-d'œuvre invisible qui entraine les systemes d'IA. Sujet majeur pour les pays du Sud, ou une part de ce travail est sous-traitee."
+   }
+  ]
+ },
+ {
+  "chapitre": "33632e86",
+  "citations": [
+   {
+    "texte": "Les travailleurs doivent être formés à utiliser l'IA et à la robotique, à travailler avec elles et, en particulier, à pouvoir les arrêter en cas d'urgence",
+    "page": 132,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le frein d'urgence",
+    "portee": "Traduction concrete du principe de controle humain : savoir arreter la machine est a la fois un droit et une competence a acquerir."
+   },
+   {
+    "texte": "l'information et la consultation sur les décisions susceptibles d'entraîner des modifications importantes dans l'organisation du travail ou dans les contrats de travail",
+    "page": 131,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Consulter avant de deployer",
+    "portee": "Directive 2002/14/CE. Fondement le plus direct pour exiger une consultation avant l'installation d'un systeme qui change l'organisation du travail."
+   }
+  ]
+ },
+ {
+  "chapitre": "823707a6",
+  "citations": [
+   {
+    "texte": "l'employeur prend les mesures nécessaires pour assurer la sécurité et protéger la santé mentale et physique des travailleurs",
+    "page": 133,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Sante mentale au travail",
+    "portee": "Article L. 4121-1 du Code du travail. La mention explicite de la sante mentale permet d'y rattacher les risques lies aux parametrages algorithmiques."
+   },
+   {
+    "texte": "de suspendre l'utilisation de l'IA en cas de doute sur sa conformité",
+    "page": 134,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le doute profite a la personne",
+    "portee": "Obligation la plus forte du projet de reglement europeen : elle inverse la charge, en faisant primer la protection sur la continuite du service."
+   }
+  ]
+ },
+ {
+  "chapitre": "bce66d4c",
+  "citations": [
+   {
+    "texte": "Le droit à la portabilité et le droit d'accès issus également du RGPD offrent aux personnes la possibilité de récupérer une partie de leurs données dans un format ouvert et lisible par machine.",
+    "page": 136,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Portabilite des donnees",
+    "portee": "Droit peu utilise et pourtant concret : il permet de recuperer ce qu'un service detient sur soi et de le transferer ailleurs."
+   }
+  ]
+ },
+ {
+  "chapitre": "0b2e0f01",
+  "citations": [
+   {
+    "texte": "avec un système fondé sur l'IA tel que la voiture autonome, il peut être difficile de prouver la défectuosité du produit une fois le dommage survenu et le lien de cause à effet entre les deux",
+    "page": 137,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Responsabilite du fait des produits",
+    "portee": "Montre pourquoi un droit ancien devient inoperant : quand le comportement du produit evolue, la preuve du defaut devient impossible."
+   },
+   {
+    "texte": "ces dernières années, la Cnil a reçu plus de 2 000 plaintes pa",
+    "page": 138,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Volume des plaintes",
+    "portee": "Ordre de grandeur des plaintes annuelles sur la surveillance des salaries par la technologie. Le sujet n'est pas theorique, il est deja contentieux."
+   }
+  ]
+ },
+ {
+  "chapitre": "cec1b71c",
+  "citations": [
+   {
+    "texte": "les organisations syndicales représentatives peuvent exercer une action de groupe en violation du droit sur les données personnelles",
+    "page": 139,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Action de groupe",
+    "portee": "Article 80 du RGPD. Il faut au moins deux travailleurs lesés : le seuil est assez bas pour rendre l'action reellement accessible."
+   },
+   {
+    "texte": "Le juge pourra, le cas échéant, prononcer l'arrêt du système d'évaluation ou de contrôle ayant abouti à une violation des données personnelles et indemniser les travailleurs rattachés à l'action de groupe.",
+    "page": 140,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Faire arreter un systeme",
+    "portee": "Seul recours du guide qui permette d'obtenir a la fois l'arret du dispositif et la reparation du prejudice. C'est le point d'aboutissement du livre."
+   }
+  ]
+ }
+]

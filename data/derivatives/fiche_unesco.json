@@ -1,0 +1,85 @@
+{
+ "document_id": "9e728c06-f413-40b4-bd52-ec30ca5f217c",
+ "titre_normalise": "Intelligence artificielle : promesses et menaces (Le Courrier de l'UNESCO, juillet-septembre 2018)",
+ "auteurs": [
+  "Collectif",
+  "Jasmina Šopova (dir. éditoriale)"
+ ],
+ "annee": 2018,
+ "type_ouvrage": "recueil",
+ "niveau": "debutant",
+ "public_cible": "Grand public, enseignants, documentalistes, animateurs de débats. Revue trimestrielle publiée en neuf langues, dont l'espéranto et le sarde, en libre accès sous licence Creative Commons. Format court : une quinzaine d'articles signés de journalistes et de spécialistes de plusieurs continents.",
+ "these_centrale": "Un numéro thématique qui refuse le point de vue unique. Plutôt qu'une thèse, il juxtapose des situations concrètes venues du Chili, du Japon, d'Australie, de Russie et d'Europe, et laisse le lecteur mesurer lui même l'écart entre les usages qui améliorent des vies et ceux qui inquiètent. Sa vraie contribution au corpus est géographique : c'est le seul titre de cet axe qui ne regarde pas le monde depuis Paris ou la Californie.",
+ "idees_force": [
+  {
+   "titre": "Un algorithme cuisinier au Chili, avec ses ratés assumés",
+   "explication": "Giuseppe, conçu par la jeune entreprise chilienne The Not Company, parcourt une base de plantes caractérisées au niveau moléculaire, nutritionnel et sensoriel pour recomposer le goût, la couleur et la texture d'aliments d'origine animale. Ses combinaisons surprennent : lupin et pois chiche pour émuler l'œuf, champignons pour rehausser le sucré d'un chocolat. Son cofondateur reconnaît sans détour les erreurs, comme un lait parfait mais rose, corrigé par une équipe humaine qui informe la machine.",
+   "page": 13
+  },
+  {
+   "titre": "L'argument écologique chiffré derrière la substitution alimentaire",
+   "explication": "Le même article donne l'ordre de grandeur qui fonde le projet : selon l'Organisation des Nations unies pour l'alimentation et l'agriculture, il faut mille cinq cents litres d'eau pour produire un kilo de blé, et dix fois plus pour un kilo de viande. Il note aussi que quatre vingt cinq pour cent des clients ne sont ni véganes ni végétariens, ce qui déplace la question de la conviction vers celle du produit.",
+   "page": 13
+  },
+  {
+   "titre": "Les armes létales autonomes, troisième révolution de la guerre",
+   "explication": "Vasily Sychev rapporte l'analyse selon laquelle ces systèmes constituent la troisième révolution militaire après la poudre à canon et l'arme nucléaire. Les militaires assurent que la décision finale de tuer restera humaine. L'article oppose une objection historique en une phrase, et c'est la plus forte du numéro : l'arme nucléaire, qui n'aurait jamais dû voir le jour et qui rencontra dès sa conception de nombreux opposants, a pourtant bel et bien été utilisée.",
+   "page": 24
+  },
+  {
+   "titre": "Aux trois piliers de l'école, il faut en ajouter d'autres",
+   "explication": "Leslie Loble, responsable du système éducatif de Nouvelle-Galles du Sud, soutient que lire, écrire et compter ne suffisent plus. Il faut y joindre des compétences non cognitives : sentiment d'efficacité personnelle, résilience, adaptabilité, et d'abord la pensée critique. Elle relève que ces compétences s'acquièrent aujourd'hui hors de la classe, dans le sport, le théâtre, les débats et le bénévolat, et que le défi consiste à les légitimer, les intégrer aux programmes et savoir les évaluer.",
+   "page": 34
+  },
+  {
+   "titre": "Ce sont les enseignants qui doivent garder la main",
+   "explication": "La même autrice pose une condition ferme à l'usage scolaire de ces systèmes. Il revient aux enseignants et aux chefs d'établissement, formés à cette fin, de définir clairement la place de la machine dans la classe, et les élèves doivent participer aux décisions, donc être éduqués aux aspects éthiques. La formule qui clôt l'article est simple : leur avenir dépendra des politiques que nous adoptons aujourd'hui.",
+   "page": 35
+  },
+  {
+   "titre": "Une ruse de l'intelligence artistique",
+   "explication": "Un essai du numéro sort du thème et le prolonge autrement. Il soutient que l'influence n'est jamais mécanique mais dialogique : Les Demoiselles d'Avignon sont possédées par l'art africain parce que Picasso cherchait de nouveaux matériaux expressifs. Il rappelle la formule de Maillol selon laquelle l'art nègre renferme plus d'idées que l'art grec, et celle de Martin Luther King pour qui la musique est une arme de guerre. Le métissage y est défini comme un mouvement vers le nouveau qui intègre l'ancien en le dépassant.",
+   "page": 53
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Systèmes d'armes létales autonomes",
+   "definition": "Dispositifs capables de sélectionner et d'engager une cible sans intervention humaine, distincts des drones pilotés à distance. Leur interdiction est demandée par de nombreux scientifiques et industriels."
+  },
+  {
+   "terme": "Compétences non cognitives",
+   "definition": "Capacités qui ne relèvent pas du savoir mesuré par les examens : efficacité personnelle, résilience, adaptabilité, coopération, empathie. Leur évaluation reste le principal obstacle à leur intégration scolaire."
+  },
+  {
+   "terme": "Compétences mondiales",
+   "definition": "Cadre élaboré par l'UNESCO et l'OCDE pour favoriser la coopération interculturelle, aux côtés des aptitudes générales inscrites depuis 2009 aux programmes australiens."
+  },
+  {
+   "terme": "Entéléchie",
+   "definition": "Terme d'Aristote repris dans l'essai sur l'art : ce qui séjourne dans sa fin, la forme achevée que l'énergie de l'artiste confère à l'œuvre en lui donnant son autonomie."
+  },
+  {
+   "terme": "Métis",
+   "definition": "Déesse grecque dont le nom signifie le conseil et la ruse, et qu'Hésiode disait savoir plus de choses que tout dieu ou tout mortel. L'essai en tire l'image du métissage comme intelligence rusée plutôt que comme simple mélange."
+  },
+  {
+   "terme": "Libre accès",
+   "definition": "Régime de diffusion adopté par l'UNESCO pour cette revue, sous licence Creative Commons attribution et partage à l'identique, applicable aux textes mais non aux images."
+  }
+ ],
+ "a_lire_si": "Vous voulez sortir du face à face franco-américain qui domine le reste de cet axe, ou vous cherchez des supports courts pour animer un débat en classe ou en formation. Le numéro est entièrement réutilisable : sa licence autorise la citation, la traduction et la rediffusion des textes, ce qui en fait la ressource la plus directement exploitable de toute la bibliothèque.",
+ "a_eviter_si": "Vous cherchez une analyse suivie. C'est une revue : les articles font trois à quatre pages, ne se répondent pas, et le numéro comprend aussi des contenus sans rapport avec le thème, notamment un dossier archéologique et un article commémorant le centenaire de la naissance de Nelson Mandela. La date de 2018 précède aussi entièrement les modèles génératifs.",
+ "prerequis": [
+  "Aucun. C'est la porte d'entrée la plus légère du corpus.",
+  "Chaque article se lit indépendamment, ce qui convient à une consultation par extraits."
+ ],
+ "controverses": [
+  "⚠️ L'ours de la revue indique que Le Courrier de l'UNESCO est publié grâce au généreux soutien de la République populaire de Chine. L'information est donnée en toute transparence, et elle mérite d'être prise en compte : un numéro consacré aux promesses et aux menaces de l'intelligence artificielle ne comporte aucun article traitant des usages chinois de la reconnaissance faciale, de la notation sociale ou de la censure algorithmique, alors que ces sujets étaient largement documentés en 2018.",
+  "L'article sur l'entreprise chilienne reprend largement le discours de ses fondateurs, sans contradicteur ni évaluation indépendante des produits. Il se lit comme une présentation favorable plus que comme un reportage.",
+  "L'article sur les robots soignants au Japon présente l'automatisation comme un remède à la pénurie de personnel, sans interroger les causes de cette pénurie ni les conditions de travail qu'elle recouvre.",
+  "L'essai sur l'influence artistique et le métissage est le texte le plus fort du numéro, et il n'a aucun rapport avec l'intelligence artificielle. Il fait en revanche un excellent pont vers l'axe consacré à l'histoire et à la pensée africaines.",
+  "La revue rappelle qu'elle était le seul périodique que Nelson Mandela était autorisé à lire à Robben Island, les gardiens la jugeant sans importance. L'anecdote dit quelque chose de ce qu'une publication institutionnelle peut faire passer, et de ce qu'elle ne dit pas."
+ ],
+ "confiance": 0.88
+}

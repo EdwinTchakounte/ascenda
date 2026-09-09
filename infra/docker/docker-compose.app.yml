@@ -1,0 +1,81 @@
+# Les deux services applicatifs, en complément de docker-compose.yml qui porte
+# la base, le stockage et le cache.
+#
+#   cd infra/docker
+#   docker compose --env-file ../../.env up -d                      # socle seul
+#   docker compose --env-file ../../.env -f docker-compose.yml -f docker-compose.app.yml up -d --build
+#
+# Le socle et l'application sont séparés parce qu'ils n'ont pas le même cycle :
+# on redéploie l'API dix fois par semaine, la base une fois par an.
+
+name: ascenda
+
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: apps/api/Dockerfile
+      args:
+        # Faux par défaut : l'image reste à 340 Mo et la recherche est en plein
+        # texte, ce que l'API annonce dans le champ `mode`. À vrai, elle sait
+        # chercher par le sens, au prix de deux gigaoctets d'image.
+        AVEC_RECHERCHE_SEMANTIQUE: ${RECHERCHE_SEMANTIQUE:-false}
+    container_name: ascenda-api
+    restart: unless-stopped
+    depends_on:
+      postgres: {condition: service_healthy}
+    environment:
+      # Dans le réseau du compose, la base s'appelle par son nom de service et
+      # écoute sur son port interne, pas sur celui publié vers l'hôte.
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      API_ENV: ${API_ENV:-prod}
+      JWT_SECRET: ${JWT_SECRET}
+      API_CORS_ORIGINS: ${API_CORS_ORIGINS}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      AGENT_MODEL: ${AGENT_MODEL:-claude-opus-5}
+      TARA_API_KEY: ${TARA_API_KEY:-}
+      TARA_BUSINESS_ID: ${TARA_BUSINESS_ID:-}
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL}
+      # Ce réglage valide des paiements sans encaissement : l'API refuse de
+      # démarrer s'il est actif alors que API_ENV vaut prod.
+      PAIEMENT_TEST_AUTO_VALIDE: "false"
+      BREVO_API_KEY: ${BREVO_API_KEY:-}
+    ports: ["${API_PORT:-8250}:8250"]
+    volumes:
+      # Le cache des modèles. Sans lui, l'API retélécharge deux gigaoctets de
+      # poids à chaque recréation du conteneur, ce qui sur nos connexions veut
+      # dire une journée. Inutile quand la recherche sémantique est désactivée,
+      # et sans effet dans ce cas.
+      - ascenda_modeles:/home/ascenda/.cache/huggingface
+
+  vitrine:
+    build:
+      context: ../..
+      dockerfile: apps/web-vitrine/Dockerfile
+      args:
+        # Figée à la construction : Next l'inline dans les pages pré-rendues.
+        NEXT_PUBLIC_API_URL: ${PUBLIC_BASE_URL}
+        NEXT_PUBLIC_SITE_URL: ${SITE_BASE_URL:-http://localhost:3251}
+        NEXT_PUBLIC_APP_URL: ${APP_URL:-}
+        NEXT_PUBLIC_APK_URL: ${APK_URL:-}
+        NEXT_PUBLIC_CONTACT_EMAIL: ${CONTACT_EMAIL:-}
+        NEXT_PUBLIC_FORME_JURIDIQUE: ${FORME_JURIDIQUE:-}
+        NEXT_PUBLIC_IMMATRICULATION: ${IMMATRICULATION:-}
+        NEXT_PUBLIC_ADRESSE: ${ADRESSE:-}
+        NEXT_PUBLIC_TELEPHONE: ${TELEPHONE_PUBLIC:-}
+        NEXT_PUBLIC_HEBERGEUR: ${HEBERGEUR:-}
+    container_name: ascenda-vitrine
+    restart: unless-stopped
+    depends_on: [api]
+    ports: ["3251:3251"]
+
+volumes:
+  ascenda_modeles: {}

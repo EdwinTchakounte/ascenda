@@ -1,0 +1,2280 @@
+OUVRAGE : Superintelligence
+AUTEUR(S) : Nick Bostrom [Bostrom, Nick]
+ANNÉE : inconnue
+PAGES : 481
+AXE : IA Societe Ethique Philosophie
+SOMMAIRE :
+  Couverture (p. 2-3)
+  Copyright (p. 4-4)
+  Table (p. 5-9)
+  La fable inachevée des moineaux… (p. 10-11)
+  Avant-propos (p. 12-15)
+  Chapitre 1. Ce qui est déjà acquis et ce que nous saurons faire (p. 16-16)
+  La croissance dans l’Histoire (p. 16-18)
+  Les grandes espérances (p. 19-21)
+  Un temps pour espérer, un temps pour se décourager (p. 22-30)
+  État de l’art (p. 31-39)
+  Que penser des machines intelligentes du futur ? (p. 40-44)
+  Chapitre 2. Les chemins qui mèneront à la superintelligence (p. 45-45)
+  L’intelligence artificielle (p. 46-55)
+  Émulation du cerveau entier ? (p. 56-63)
+  La cognition biologique (p. 64-76)
+  Les interfaces cerveau-ordinateur (p. 77-80)
+  Réseaux et organisations (p. 81-83)
+  Conclusion (p. 84-85)
+  Chapitre 3. Les formes de superintelligence (p. 86-86)
+  La superintelligence rapide (p. 87-87)
+  La superintelligence collective (p. 88-91)
+  La superintelligence qualitative (p. 92-93)
+  Y parvenir directement ou pas (p. 94-94)
+  Les avantages de l’intelligence digitale (p. 95-99)
+  Chapitre 4. La dynamique d’une explosion d’intelligence (p. 100-100)
+  Déroulement et vitesse de la transition (p. 100-104)
+  Récalcitrance (p. 105-114)
+  Pouvoir d’optimisation et explosivité (p. 115-121)
+  Chapitre 5. Avantage stratégique décisif (p. 122-122)
+  Le favori s’assurera-t-il un avantage stratégique décisif ? (p. 123-126)
+  Quelle sera l’ampleur du projet qui gagnera ? (p. 127-132)
+  De l’avantage stratégique au singleton (p. 133-137)
+  Chapitre 6. Les superpouvoirs cognitifs (p. 138-138)
+  Fonctionnalités et superpouvoirs (p. 139-143)
+  Un scénario de prise de pouvoir (p. 144-149)
+  Pouvoir sur la nature, pouvoir sur les agents (p. 150-156)
+  Chapitre 7. Ce que voudrait une superintelligence (p. 157-157)
+  La relation entre intelligence et motivation (p. 157-161)
+  La convergence instrumentale (p. 162-170)
+  Chapitre 8. Le résultat par défaut est-il l’Apocalypse ? (p. 171-171)
+  La destruction de l’humanité comme résultat par défaut de l’explosion de l’intelligence ? (p. 171-172)
+  Le tournant de la mutinerie (p. 173-176)
+  Les échecs malins (p. 177-187)
+  Chapitre 9. Le problème du contrôle (p. 188-188)
+  Les deux problèmes d’agence (p. 188-190)
+  Les méthodes de contrôle des capacités (p. 191-202)
+  Les méthodes de sélection de motivation (p. 203-208)
+  Synopsis (p. 209-210)
+  Chapitre 10. Oracles, génies, souverains et outils (p. 211-211)
+  Les oracles (p. 211-214)
+  Les génies et les souverains (p. 215-218)
+  Les outils (p. 219-225)
+  Comparaison (p. 226-228)
+  Chapitre 11. Les scénarios multipolaires (p. 229-229)
+  Des chevaux et des hommes (p. 230-238)
+  La vie dans une économie algorithmique (p. 239-253)
+  La formation d’un singleton après la transition ? (p. 254-265)
+  Chapitre 12. Implémenter des valeurs (p. 266-266)
+  Le problème du téléchargement de valeurs (p. 266-268)
+  Sélection évolutionniste (p. 269-270)
+
+[44/434 passages, 38483 tokens sur 381117]
+
+=== EXTRAITS ===
+
+[p. 4-4]
+L’édition originale de cet ouvrage a été publiée en 2014 en Grande-Bretagne par Oxford University
+Press sous le titre Superintelligence, Paths, Dangers, Strategies
+© Nick Bostrom, 2014
+Superintelligence was originally published in English in 2014. This translation is published by
+arrangement with Oxford University Press. Dunod Éditeur is solely responsible for this translation
+from the original work and Oxford University Press shall have no liability for any errors, omissions
+or inaccuracies or ambiguities in such translation or for any losses caused by reliance thereon.
+ 
+ 
+Traduction : Françoise Parot
+Conception de la couverture et de la maquette intérieure : Grégory
+Bricout
+Illustration de couverture : Claire Scully
+ 
+Ouvrage publié avec le concours du 
+ 
+© Dunod, 2017, pour la traduction française
+11 rue Paul Bert, 92240 Malakoff
+www.dunod.com
+ 
+ISBN : 978-2-10-077252-0
+ 
+Ce document numérique a été réalisé par PCA
+
+---
+
+[p. 18-18]
+cénario dans lequel l’économie
+mondiale pourrait en venir à doubler en quelques semaines sans qu’aient été
+créés des esprits plus rapides et plus efficaces que ceux de notre espèce
+biologique. Cependant, pour prendre au sérieux la perspective d’une
+révolution de l’intelligence des machines, il n’est pas nécessaire de tenir
+3
+4
+5
+
+---
+
+[p. 29-30]
+iste de toutes les actions possibles. Il peut
+alors calculer la distribution de probabilité conditionnelle à chaque action  : c’est la
+distribution de probabilité qu’on obtient en conditionnant la distribution de probabilité
+actuelle à l’observation qui vient juste d’être faite avant. Il peut alors calculer la valeur
+28
+29
+30
+31
+attendue de l’action en faisant la somme de la valeur de chacun des mondes possibles
+multipliée par la probabilité conditionnelle de ce monde étant donnée cette action ).
+La règle d’apprentissage et la règle de décision définissent la « notion d’optimalité » pour
+l’agent (cette notion d’optimalité a été largement utilisée en intelligence artificielle, en
+épistémologie, en philosophie des sciences, en économie et en statistiques ). En réalité, il est
+impossible de concevoir un tel agent parce qu’il est impossible, d’un point de vue
+computationnel, de réaliser les calculs nécessaires. Toute tentative de le faire est écrasée par
+une explosion combinatoire, exactement semblable à celle que nous avons évoquée pour la
+GOFAI. Pour comprendre pourquoi, considérons un minuscule ensemble de mondes
+possibles, ceux permis par un seul écran d’ordinateur flottant dans un vide sans fin. Ce
+moniteur a 1 000 pixels sur 1000, et chacun est soit allumé, soit éteint. Même cet ensemble
+de possibles est très grand : les 2
+ états possibles de l’écran dépassent toutes les
+computations supposées présentes dans l’univers observable. On ne pourrait donc pas même
+énumérer tous les mondes possibles dans cet ensemble minuscule, et donc encore moins
+réaliser des computations plus élaborées sur chacun d’eux individuellement.
+Les notions d’optimalité peuvent avoir un intérêt théorique même si elles sont impossibles à
+réaliser concrètement. Elles nous permettent de juger des approximations heuristiques et
+quelquefois on peut réfléchir à ce qu’un agent optimal ferait dans tel cas particulier. Nous
+retrouverons d’autres notions d’optimalité pour les agents artificiels au chapitre 12.
+On peut se faire une idée de cette question en s’intéressant à ce qui a été
+fait au cours de deux dernières décennies sur les modèles graphiques
+probabilistes, comme les réseaux bayésiens. Ceux-ci permettent de
+représenter avec concision les relations d’indépendance probabiliste et
+conditionnelle qu’on trouve dans certains domaines (se servir de ces
+relations 
+d’indépendance 
+est 
+essentiel 
+pour 
+dépasser 
+l’explosion
+combinatoire qui constitue un problème tant pour les inférences statistiques
+que pour les déductions logiques). Ils permettent aussi une meilleure
+approche du concept de causalité .
+En rapprochant les problèmes d’apprentissage dans divers domaines
+spécifiques du problème général de l’inférence bayésienne, on comprend
+que les nouveaux algorithmes, qui rendent celle-ci plus efficace, peuvent
+aussi apporter des améliorations immédiates dans divers domaines. Ainsi
+les progrès accomplis dans les techniques d’approximation avec la méthode
+de Monte-Carlo sont directement appliqués dans la vision par ordinateur, la
+robotique et la génétique computationnelle. Par ailleurs cette démarche
+permet aux spécialistes de différentes disciplines de mettre plus facilement
+en commun leurs découvertes. Les modèles graphiques et les statistiques
+32
+33
+(1000×1000)
+34
+
+---
+
+[p. 40-40]
+voit pas qu’on se prend la tête et qu’on est frappé de stupeur par le caractère absolument
+inadapté de ce qu’il fait. Nous reviendrons sur ce genre de problème.
+Une troisième leçon : alors que l’automate a contribué à l’incident, il a également contribué à
+sa solution. Le préprogramme a stoppé le processus, suspendu les échanges quand les prix
+sont devenus délirants, et devait le faire automatiquement parce qu’il avait été correctement
+programmé en anticipant que des évènements pouvaient se déclencher à une échelle de temps
+trop courte pour que l’être humain puisse réagir. La nécessité de préinstaller des fonctions
+automatiques de sécurité (et non de se contenter d’une surveillance humaine) annonce une
+fois de plus un thème qui sera important dans notre discussion sur la machine
+superintelligente .
+Que penser des machines intelligentes du futur ?
+Les progrès se sont faits sur deux fronts  : améliorer les fondements
+statistiques et théoriques de l’apprentissage automatique et développer
+diverses applications pour des problèmes ou des domaines spécifiques avec
+une réussite pratique et commerciale. Et ce sont ces progrès qui ont restauré
+le prestige de la recherche en intelligence artificielle. Mais il demeure un
+effet culturel, qui vient des débuts de l’intelligence artificielle et qui fait
+hésiter des chercheurs à s’engager sans réticence dans ce domaine. Ainsi
+Nils Nilsson, l’un des pères fondateurs, se plaint de ce qu’il manque à ses
+collègues aujourd’hui l’audace, le souffle qui animait les pionniers de sa
+génération :
+« L’inquiétude quant à leur “respectabilité” a exercé, je pense, un effet paralysant sur certains
+chercheurs en intelligence artificielle. Je les entends dire des choses comme “l’intelligence
+artificielle est critiquée parce qu’elle est bling-bling. Maintenant que nous avons fait des
+progrès solides, ne risquons pas de perdre notre respectabilité”. L’un des résultats de ce
+conservatisme est qu’ils se concentrent de plus en plus sur “l’intelligence artificielle faible”,
+qui consiste à apporter des aides à penser, et se tiennent à l’écart de “l’intelligence artificielle
+forte”, celle qui veut mécaniser l’intelligence de niveau humain . »
+Nombre de ceux qui ont fondé l’intelligence artificielle partagent le point
+de vue de Nilsson, comme Marvin Minsky, John McCarthy ou Patrick
+Winston .
+Dans les dernières années, on a assisté à un regain d’intérêt pour l’lA, qui
+pourrait encore se traduire par des efforts renouvelés vers la conception
+72
+73
+74
+
+---
+
+[p. 51-53]
+s pourraient facilement économiser en consacrant les algorithmes évolutifs au
+développement de logiciels intelligents.
+Il se peut qu’en éliminant les inefficacités semblables à celles que nous venons de voir, on
+puisse diminuer de plusieurs ordres de grandeurs les FLOPS 10 -10 calculés plus tôt. Il est
+12
+25
+31
+44
+16
+13
+14
+31
+44
+malheureusement difficile de savoir de combien d’ordres de grandeur, et même de les estimer
+grossièrement  : pour autant qu’on le sache, l’efficacité gagnée serait de quatre ordres de
+grandeurs, ou de dix, ou de vingt-cinq .
+Figure 3 Performance des superordinateurs.
+Au sens étroit, la « loi de Moore » porte sur le nombre de transistors dans les circuits
+intégrés qui depuis plusieurs décennies a doublé à peu près tous les deux ans. Mais
+on l’utilise aussi souvent pour renvoyer à la tendance exponentielle tout aussi rapide
+de l’évolution de nombreuses performances en matière de technologie informatique.
+On voit sur ce graphique que la vitesse de pointe du superordinateur le plus rapide du
+monde est une fonction du temps (à une échelle logarithmique verticale). Dans les
+dernières années, la courbe de la vitesse de débit a stagné, mais l’utilisation accrue
+de la parallélisation a permis au nombre total de computations réalisées de rester sur
+la même pente
+.
+Ces considérations évolutionnistes soulèvent un autre problème, en vertu
+duquel il est difficile de se faire une idée même très vague de jusqu’où il
+faudra aller pour évoluer vers cette intelligence. Il faut nous garder d’inférer
+que, parce que la vie intelligente a évolué sur la Terre, les processus
+impliqués avaient une probabilité a priori raisonnablement élevée de
+produire l’intelligence. Une telle inférence n’est pas valide parce qu’elle ne
+prend pas en compte le caractère sélectif des observations qui garantit que
+tous les observateurs jugent qu’ils viennent d’une planète où est apparue la
+vie intelligente, qu’il ait été ou non probable qu’une telle planète mènerait à
+l’intelligence. Supposons par exemple qu’en plus des effets systématiques
+de la sélection naturelle, il faille une énorme succession de coïncidences
+heureuses pour produire une vie intelligente (assez pour que celle-ci
+15
+16
+
+n’évolue que sur une seule planète parmi les 10
+planètes sur laquelle les
+réplicateurs existent). Dans ce cas quand nos ordinateurs utilisent nos
+algorithmes génétiques pour essayer de répliquer ce que la sélection
+naturelle a fait, on pourrait devoir effectuer 10 simulations avant de
+tomber sur une planète où tous les éléments apparaissent ensemble le même
+jour. Ce qui paraît cohérent avec la conviction selon laquelle la vie a évolué
+ici, sur la Terre. Par un raisonnement prudent et compliqué (en analysant les
+exemples de convergence évolutive des traits attachés à l’intelligence et en
+prenant en compte les subtilités de la théorie de la sélection de
+l’observation) nous pourrons peut-être contourner partiellement les
+obstacles épistémologiques. Jusqu’à ce que quelqu’un se donne le mal de le
+faire, rien ne permettra d’exclure que la « limite supérieure » supposée des
+nécessités computationnelles pour récapituler l’évolution de l’intelligence,
+évoquée dans l’encart 3, puisse être trop faible d’un ordre de grandeur de 30
+(ou d’un ordre encore plus grand) .
+Ce qui plaide aussi pour la faisabilité d’une intelligence artificielle, c’est
+que nous pourrions utiliser le cerveau humain comme modèle pour une
+machine intelligente. Cette approche prend diverses formes selon le degré
+d’imitation des fonctions cérébrales qui est proposé. D’un côté, celui des
+imitations très fines, c’est l’idée d’une émulation du cerveau entier, que
+nous allons discuter plus loin. De l’autre côté, une approche qui s’inspire du
+fonctionnement du cerveau mais en renonçant à l’imiter. Les progrès en
+neurosciences et en psychologie cognitive (qui seront aidés par
+l’amélioration des instruments) pourraient bien parvenir en fin de compte à
+découvrir les principes généraux du fonctionnement cérébral. Et ces
+connaissances pourraient alors orienter les efforts de l’intelligence
+artificielle. Les réseaux neuronaux sont l’exemple même d’une technique
+d’intelligence artificielle inspirée par le cerveau. L’organisation perceptive
+hiérarchisée a été transposée des sciences du cerveau vers l’apprentissage
+automatique. L’étude de l’apprentissage par renforcement a été fondée (au
+moins en partie) sur son rôle dans les théories psychologiques de la
+cognition animale, et les techniques d’apprentissage par renforcement (les
+« algorithmes d’apprentissage par différence temporelle » : T-D Algorithms)
+inspirées de ces théories sont maintenant très utilisées en IA . On va
+probablement voir se multiplier des cas comme ceux-ci. Puisqu’il existe un
+nombre limité – peut-être très limité – de mécanismes fondamentaux qui
+30 
+30
+17
+18
+
+---
+
+[p. 64-65]
+finalement le dernier obstacle sera franchi, ce qui constituait auparavant un
+système complètement dysfonctionnel (comme, disons, un cerveau
+inconscient subissant une crise d’épilepsie) pourrait devenir un état
+conscient cohérent. Dans une telle éventualité, le progrès décisif n’aurait
+pas été annoncé par une série d’émulations fonctionnelles d’animaux de
+plus en plus grands (qui provoqueraient des gros titres de journaux en
+caractères eux aussi de plus en plus grands). Et même ceux qui surveillent
+ces avancées auraient du mal à prévoir combien de défauts entachent encore
+les modèles neurocomputationnels et combien de temps il va falloir pour les
+corriger, et cela même si l’on est à la veille de la percée décisive (quand on
+sera parvenu à l’émulation d’un cerveau humain entier, d’autres avancées
+potentiellement explosives pourraient survenir  ; nous en discuterons au
+chapitre 4).
+On peut imaginer des scénarios surprises même si les recherches sur
+l’émulation du cerveau ne sont pas clandestines. Mais, à côté de la voie qui
+mènerait à la machine intelligente par l’intelligence artificielle, cette
+émulation serait précédée par quelques signes avant-coureurs puisqu’elle
+repose principalement sur des technologies concrètes, observables, et n’est
+pas fondée uniquement sur des conceptions théoriques. On peut aussi
+penser avec plus de certitude que, contrairement à la voie de l’IA, celle de
+l’émulation ne réussira pas avant longtemps (pendant les quinze prochaines
+années par exemple), et cela parce qu’on sait que les prérequis
+technologiques sont loin d’être déjà en place. Mais il est possible que
+quelqu’un puisse, en principe, s’asseoir devant son ordinateur personnel
+ordinaire et coder une IA  germe  ; et on peut imaginer, mais c’est peu
+probable, que quelqu’un, quelque part, parvienne à comprendre comment le
+faire dans un futur proche.
+La cognition biologique
+Une troisième voie qui pourrait mener à une intelligence supérieure à celle
+de l’homme consiste à améliorer le fonctionnement d’un cerveau
+biologique. En principe, on peut y parvenir sans technologie, par un élevage
+sélectif. Toute tentative de mettre en place un programme d’eugénisme à
+grande échelle devrait cependant affronter des obstacles politiques et
+éthiques majeurs. Qui plus est, à moins que la sélection ne soit extrêmement
+
+sévère, il faudrait de nombreuses générations pour parvenir à un résultat
+substantiel. Avant qu’une telle initiative porte ses fruits, la biotechnologie
+aurait fait des progrès pour contrôler plus directement la génétique et la
+neurobiologie humaines, rendant bien superflu tout programme d’élevage
+humain. Je m’arrêterai donc aux méthodes qui devraient permettre
+d’apporter plus vite des résultats, à l’échelle de quelques générations.
+Nos capacités cognitives individuelles peuvent être augmentées de bien
+des manières, et d’abord par les méthodes traditionnelles de l’éducation et
+de la formation. On peut accélérer le développement neurologique par des
+interventions sommaires en optimisant la nutrition de la mère et de l’enfant,
+en éliminant le plomb et d’autres polluants neurotoxiques de
+l’environnement, en éradiquant les parasites, en veillant à un bon sommeil
+et à un exercice régulier, en prévenant les maladies qui nuisent au
+cerveau . On peut sans aucun doute améliorer la cognition par chacun de
+ces moyens, mais les gains sont assez limités, surtout sur les populations
+qui se nourrissent déjà correctement et qui sont bien scolarisées. Ce n’est
+sûrement pas par l’une de ces mesures qu’on parviendra à la
+superintelligence, mais elles peuvent y contribuer à la marge, en améliorant
+le niveau de vie des défavorisés et en repérant mieux les talents
+internationaux (la dégradation permanente d’intelligence due à un déficit
+d’iode reste répandue dans de nombreuses régions pauvres du monde, ce
+qui est un véritable scandale quand on sait qu’on pourrait l’empêcher en
+mangeant un peu plus de sel de table, dont le coût est de quelques centimes
+par personne et par an ).
+Les améliorations biologiques pourraient donner un coup d’accélérateur
+plus puissant. Il existe déjà des médicaments réputée accroître la mémoire,
+la concentration et l’énergie du cerveau, au moins chez certains sujets
+(d’ailleurs mon travail pour ce livre a été alimenté de cafés et de chewing-
+gum à la nicotine). Alors que l’efficacité de la nouvelle génération de ce
+genre de médicaments est variable, marginale, et généralement incertaine,
+les futurs nootropes apporteraient des bénéfices évidents avec moins
+d’effets secondaires . Mais il est improbable, tant sur le plan neurologique
+qu’évolutionniste, qu’on puisse déclencher un saut spectaculaire
+d’intelligence en introduisant dans le cerveau d’une personne en bonne
+santé une substance chimique . Le fonctionnement cognitif du cerveau
+humain repose sur l’orchestration fine de nombreux facteurs, en particulier
+33
+34
+35
+36
+37
+
+---
+
+[p. 76-76]
+ée d’êtres humains cognitivement augmentés ; (3)
+quand on considère les scénarios qui concernent la deuxième moitié de ce
+siècle et au-delà, on doit tenir compte de l’émergence probable d’une
+génération génétiquement augmentée d’électeurs, d’inventeurs, de savants,
+et s’attendre à des augmentations de plus en plus nombreuses.
+63
+
+---
+
+[p. 84-85]
+des données plus puissants, des logiciels plus autonomes et des protocoles
+plus efficaces pour les coordonner) et que de nombreuses améliorations
+créent progressivement la base d’une forme d’intelligence plus unifiée. On
+peut en tout cas admettre qu’un système cognitif fondé sur le web, sursaturé
+de puissance computationnelle et de toutes les ressources nécessaires à une
+croissance explosive, à l’exception d’un élément crucial, pourrait, dès que
+cet élément manquant serait jeté dans le chaudron, bouillonner de
+superintelligence. Ce genre de scénario converge en fait vers une autre voie
+menant à la superintelligence, que nous avons déjà vue  : celle de
+l’intelligence artificielle générale.
+Conclusion
+Parce que divers chemins sont susceptibles de mener à la superintelligence,
+nous pouvons penser que nous y parviendrons. Si l’un de ces chemins est
+bloqué, cela n’empêchera pas de progresser.
+Il y a divers chemins, mais pas divers points d’arrivée  : même si une
+augmentation significative de l’intelligence est d’abord permise par des
+intelligences non mécaniques, cela ne disqualifiera pas la machine
+intelligente. Au contraire  : l’amélioration de l’intelligence biologique ou
+organisationnelle accélèrera les développements scientifiques et techniques,
+et donc l’arrivée de formes plus radicales d’augmentation de l’intelligence
+comme l’émulation du cerveau entier et l’IA.
+Ce qui ne signifie nullement que peu nous importe la voie qu’on
+empruntera, parce qu’elles n’auraient pas toutes les mêmes conséquences.
+Si, au bout du compte, les capacités atteintes ne dépendent pas de la
+trajectoire suivie, l’usage de ces capacités (quel contrôle nous aurons sur cet
+usage) pourrait bien être déterminé pas les détails de l’approche choisie. Par
+exemple, l’augmentation biologique ou organisationnelle pourrait accroître
+notre pouvoir d’anticiper les risques et de concevoir une machine
+superintelligente sûre et bénéfique (un contrôle stratégique complet se
+heurterait à bien des complications, nous le verrons au chapitre 14).
+Une véritable superintelligence pourrait être d’abord obtenue par la voie
+de l’IA, mais ce chemin comporte des incertitudes fondamentales et il est
+donc bien délicat de prévoir le temps que prendra ce chemin et ce que
+seront les nombreux obstacles qui seront rencontrés. Il se pourrait aussi que
+
+ce soit l’émulation du cerveau qui mène en premier au but  ; mais pour
+progresser sur cette voie-là, il faudra de nombreux progrès technologiques
+plus que théoriques, et il y a de bonnes raisons de croire que c’est de là que
+viendra le succès. Mais bien sûr, il se peut que, même si l’on progresse
+rapidement sur ce chemin-là, l’IA soit quand même la première à franchir la
+ligne d’arrivée et cela parce que l’IA neuromorphique est fondée sur des
+émulations partielles.
+On pourrait évidemment faire des progrès dans l’augmentation de la
+cognition biologique, en partie grâce à la sélection génétique. La sélection
+itérative d’embryons en particulier est prometteuse. Mais ces progrès seront
+relativement plus lents et graduels que les progrès possibles en matière de
+machine intelligente et ne mèneront au mieux qu’à des formes faibles de
+superintelligence (nous y reviendrons plus loin).
+Bien entendu des savants et des ingénieurs à l’intelligence augmentée
+seront capables de faire plus de progrès et plus vite que leurs équivalents
+«  naturels  » et donc ces possibilités d’augmentation cognitive laissent
+augurer que la machine intelligente sera réalisable. Si l’apparition de la
+superintelligence se déroule dans un demi-siècle, la cohorte des individus
+cognitivement augmentés venant aux affaires jouera un rôle croissant dans
+les développements ultérieurs.
+Les interfaces cerveau-machine ne paraissent pas une voie plausible pour
+parvenir à la superintelligence. Les améliorations des réseaux et des
+organisations mèneraient à des formes faibles d’intelligence collective à
+long terme  ; mais plus probablement, elles joueraient un rôle similaire à
+celui des augmentations cognitives, en accroissant régulièrement la capacité
+de l’humanité à résoudre ses problèmes intellectuels. Elles feraient la
+différence plus tôt que les améliorations biologiques : en fait cela se produit
+déjà, et a déjà un impact. Cependant les améliorations des réseaux et
+organisations augmenteraient moins notre capacité à résoudre des
+problèmes que les augmentations biologiques, parce qu’elles boosteraient
+« l’intelligence collective » plutôt que « la qualité de l’intelligence ». Et
+nous y revenons dans le chapitre suivant.
+
+---
+
+[p. 93-93]
+ents (qui n’ont pas un pouvoir
+computationnel supérieur à celui du cerveau humain) possédant ces talents
+augmenteraient leur capacité à réaliser un large ensemble de tâches
+décisives.
+En nous intéressant aux animaux non humains et aux individus qui ont
+des déficits dans un domaine cognitif particulier, nous pouvons nous faire
+13
+
+---
+
+[p. 103-104]
+i des émulations ou autres esprits digitaux bas
+de gamme mais fonctionnels envahissaient graduellement le marché du
+travail pendant plusieurs années, on peut imaginer que les chômeurs
+protesteraient massivement et feraient pression sur les gouvernements pour
+augmenter les allocations chômage, mettre en place un salaire universel
+garanti pour tous les citoyens, lever des taxes spéciales ou exiger un salaire
+minimum des entreprises qui recourraient à ces travailleurs émulés. Pour
+que l’apaisement obtenu par ces mesures soit plus que passager, il faudrait
+que celles-ci soient pérennisées par des structures de décision permanentes.
+On parviendrait aux mêmes résultats avec un scénario lent ; mais dans le
+scénario modéré, le déséquilibre et le changement rapide laisseraient à des
+petits groupes la possibilité d’exercer une influence excessive.
+Certains lecteurs pourraient penser que, de ces trois scénarios, celui
+d’une lente transition est le plus probable, que celui d’une transition
+modérée l’est moins et celui d’une transition rapide encore moins. Et il est
+possible en effet de trouver fantaisiste l’idée que le monde pourrait en une
+heure ou deux se transformer radicalement, que l’humanité pourrait être
+dépossédée de sa supériorité cognitive. Aucun changement d’une telle
+ampleur ne s’est produit dans notre histoire et ce qui s’en rapproche le plus,
+les révolutions agricole et industrielle, s’est déroulé à une échelle de temps
+bien supérieure. Pour le type de transition impliquée dans les scénarios
+modéré ou rapide le taux de base en matière de vitesse ou d’ampleur est de
+zéro puisqu’il manque toute référence historique antérieure .
+Néanmoins, ce chapitre présente des raisons de penser qu’une transition
+lente est peu probable. Si et quand les choses commenceront, ce sera de
+manière explosive.
+Pour analyser la rapidité de la transition, on peut se représenter la vitesse
+de croissance d’un système intelligent comme une fonction (à  croissance
+monotone) à deux variables  : 1) l’ampleur du pouvoir d’optimisation ou
+effort de conception à qualité pondérée nécessaire pour accroître
+l’intelligence du système et 2) sa réactivité à l’application d’un tel pouvoir
+d’optimisation d’ampleur donnée. On peut appeler le contraire de cette
+réactivité « récalcitrance » et écrire :
+Pour l’instant, en attendant de préciser comment quantifier l’intelligence,
+l’effort de conception et la récalcitrance, cette expression est d’ordre
+qualitatif. Mais elle permet au moins d’observer que l’intelligence d’un
+système s’accroîtra rapidement si l’on applique beaucoup d’effort à
+2
+
+---
+
+[p. 113-114]
+re faible. La seule difficulté sera d’accéder
+à une puissance de calcul additionnelle. Il y a plusieurs façons d’étendre la
+base matérielle d’un système et chacune a son calendrier.
+À court-terme, la puissance de calcul devrait évoluer de manière à peu
+près linéaire selon les financements  : doubler les financements, c’est
+11
+12
+doubler le nombre d’ordinateurs, ce qui permet de les faire fonctionner en
+même temps. L’émergence d’un service d’informatique dématérialisé
+donnerait la possibilité d’augmenter les ressources computationnelles sans
+devoir attendre que de nouveaux ordinateurs soient reçus et installés, bien
+que les soucis de confidentialité mènent à préférer les ordinateurs internes
+(dans certains scénarios, la puissance de calcul pourrait être obtenue par
+d’autres moyens comme les réseaux de zombies contrôlés ). La facilité
+d’augmenter le système d’un facteur donné dépend de la puissance de
+calcul du système initial utilisé. Un système qui tourne sur un PC pourrait
+être multiplié par des milliers pour un million de dollars. Mais
+l’augmentation d’un programme qui tourne sur un superordinateur coûterait
+beaucoup plus cher.
+À plus long terme, le coût pour ajouter du matériel pourrait grimper au
+moment où une part croissante de la capacité mondiale de production de ce
+matériel serait consacrée à faire tourner des esprits digitaux. Dans le cas où
+une émulation viendrait sur un marché compétitif, le coût pour en faire
+tourner une copie supplémentaire devrait être à peu près équivalent au
+revenu marginal généré par la copie, parce que les investisseurs feraient
+monter les cours d’achat de l’infrastructure informatique existante pour
+parvenir au retour sur investissement qu’ils espèrent (mais si un seul projet
+est parvenu à maîtriser la technologie de l’émulation, il pourrait avoir le
+statut de monopsone sur le marché de la puissance de calcul et payer donc
+le matériel à un prix inférieur).
+À plus long terme, l’apport en puissance de calcul augmenterait quand
+une nouvelle capacité sera installée. Un pic de la demande inciterait à
+accroître alors la production industrielle de semi-conducteurs et stimulerait
+la construction de nouvelles usines (un accroissement unique de la
+performance, d’un ordre de grandeur de 1 ou de 2, serait possible aussi en
+utilisant des microprocesseurs adaptés ). La vague montante des
+améliorations technologiques créerait des volumes de plus en plus
+importants de puissance computationnelle dans les turbines des machines
+pensantes. La vitesse d’amélioration de cette technologique a été exprimée
+par la loi de Moore qui, dans l’une de ses variantes, établit que la puissance
+de calcul obtenue avec 1 dollar double environ tous les 18 mois . Même si
+l’on ne peut pas être sûr que ce rythme d’amélioration persistera jusqu’à la
+mise au point d’une machine intelligente de niveau humain, on sait que,
+13
+14
+15
+
+---
+
+[p. 126-126]
+apacités si semblables qu’aucun n’aurait un avantage stratégique
+décisif. Si la transition démarre relativement lentement puis s’accélère, la
+distance entre les projets tendrait à grandir. Pour revenir à notre métaphore
+cycliste, la situation serait celle d’une paire de coureurs dont l’un grimperait
+13
+14
+15
+16
+17
+18
+19
+20
+21
+12
+
+---
+
+[p. 136-137]
+ent qu’il est de plus en plus probable
+qu’un pouvoir doté d’une superintelligence lui conférant un véritable
+avantage stratégique en userait pour former un singleton. La désirabilité
+d’un tel aboutissement dépend évidemment de la nature de ce singleton et
+aussi de ce à quoi ressemblera le futur de la vie intelligente dans les
+36
+différents scénarios multipolaires. Nous reviendrons à ces questions dans
+des chapitres ultérieurs. Mais auparavant, regardons de plus près les raisons
+pour lesquelles une superintelligence serait puissante et efficace et comment
+elle s’y prendrait pour parvenir à obtenir des résultats dans le monde entier.
+
+---
+
+[p. 147-149]
+r du détail des moyens qu’une
+superintelligence utiliserait, on peut penser qu’au moins en l’absence de
+tout égal sur le plan intellectuel et en l’absence de toute mesure de sécurité
+anticipée par les humains, une superintelligence produirait de quoi
+reconfigurer les ressources terrestres de manière à maximiser la réalisation
+11
+de ces objectifs. N’importe quel scénario que nous pouvons imaginer ne
+peut au mieux déterminer qu’une limite inférieure à la rapidité et à
+l’efficacité avec lesquelles cette superintelligence pourrait y parvenir. Mais
+il reste possible qu’elle trouve une voie plus courte pour parvenir à ces fins.
+
+Encart 6 : Le scénario de la vente d’ADN par correspondance
+Yudkowsky décrit le scénario suivant de prise de pouvoir d’une IA  :
+1. Résoudre le problème du repliement des protéines de manière à pouvoir générer des séries
+d’ADN dont les séquences peptidiques repliées remplissent des fonctions spécifiques dans
+une interaction chimique complexe.
+2. Envoyer par mail des ensembles de séries d’ADN à au moins un laboratoire qui procède à
+la synthèse d’ADN, au séquençage des peptides et à la livraison par Fedex (de nombreux
+laboratoires offrent aujourd’hui ces services, et assurent un délai de 72 heures).
+3. Trouver au moins un humain en ligne sur Internet qui peut payer, lui faire un chantage ou
+le duper par une histoire quelconque pour le convaincre de recevoir par Fedex des flacons
+et de les mélanger dans un certain environnement.
+4.  Les protéines de synthèse forment un système humide très primitif, qui, comme le
+ribosome, peut accepter des instructions externes, peut-être des vibrations acoustiques
+structurées, déclenchées par un haut-parleur intégré au dispositif.
+5.  Utiliser le nanosystème très primitif pour obtenir des systèmes plus compliqués qui en
+construisent d’autres encore plus sophistiqués, ouvrant la porte à la nanotechnologie
+moléculaire, ou au-delà.
+Dans ce scénario, la superintelligence se sert de son superpouvoir de recherche technologique
+pour résoudre le problème du repliement des protéines à la première étape, ce qui lui permet
+de mettre en place les composantes d’un assembleur nanotechnologique rudimentaire ou d’un
+dispositif de fabrication qui peut s’auto-assembler dans une solution aqueuse (quatrième
+étape). Le même pouvoir de recherche technologique est encore utilisé à la cinquième étape
+pour passer d’une machine avancée primitive à la nanotechnologie. La compétence requise
+pour la troisième phase (repérer un utilisateur crédule d’Internet et le persuader de suivre
+quelques instructions simples) est déjà opérationnelle chaque jour partout dans le monde.
+Tout ce scénario a été inventé par un esprit humain, et la compétence stratégique nécessaire
+pour le formuler est également de niveau humain.
+Dans ce scénario-là, l’IA commence par avoir accès à Internet. Si elle ne peut pas, des étapes
+supplémentaires doivent être ajoutées. Par exemple, l’IA devrait faire usage de son
+superpouvoir de manipulation pour convaincre d’interagir avec elle et lui permettre d’être
+libre. Elle pourrait aussi utiliser son superpouvoir de piratage pour s’échapper. Si une IA ne
+possède pas ces capacités, elle devrait d’abord user de son pouvoir d’augmentation de son
+intelligence pour développer la compétence nécessaire à la manipulation sociale ou au
+piratage.
+Une IA superintelligente naîtra sans doute dans un monde hautement mis en réseau. On peut
+souligner les inventions variées qui pourront potentiellement aider l’IA à contrôler le monde :
+l’informatique en nuage (cloud), les capteurs connectés à Internet, les drones civils et
+militaires, l’automatisation de la recherche en laboratoire et en usines, la fiabilité accrue des
+paiements en ligne et des marchés financiers en ligne et l’automatisation du filtrage
+12
+
+---
+
+[p. 161-161]
+son modèle
+d’origine . Elle pourrait conserver certaines de ces motivations
+même si ses capacités cognitives ont été considérablement
+augmentées pour qu’elle devienne superintelligente. Ce type
+d’inférence nécessite d’être prudent  : les buts et les valeurs de
+l’agent pourraient être altérés au moment du téléchargement ou
+5
+6
+7
+
+---
+
+[p. 171-172]
+8
+Le résultat par défaut est-
+il l’Apocalypse ?
+Nous l’avons, dit, le lien entre valeurs et intelligence est très vague.
+Nous avons montré aussi que la convergence des valeurs pratiques est
+de mauvais augure. Quand il s’agit d’agents qui ont peu de pouvoir, ces
+problèmes n’ont pas vraiment d’importance parce qu’ils sont faciles à
+contrôler et ne peuvent pas faire beaucoup de dégâts. Mais nous avons
+vu au chapitre 6 que la première superintelligence pourrait bien avoir
+un avantage stratégique décisif et que ses objectifs pourraient être
+déterminants pour l’avenir cosmique de l’humanité. Nous pouvons
+donc en venir maintenant à ce qu’il y a de menaçant dans cette
+perspective.
+La destruction de l’humanité comme résultat par défaut
+de l’explosion de l’intelligence ?
+Un risque existentiel est ce qui menace d’entraîner l’extinction de la vie
+intelligente ayant pour origine la Terre ou au moins d’annihiler de manière
+définitive et brutale ses volontés d’expansion. L’idée d’un avantage conféré
+à qui arrivera le premier à la superintelligence, la thèse de l’orthogonalité et
+celle de la convergence instrumentale permettent ensemble d’entrevoir les
+
+raisons de craindre qu’un résultat par défaut de la création d’une machine
+superintelligente soit une catastrophe existentielle.
+Premièrement : nous avons vu comment la superintelligence peut obtenir
+dès le début un avantage stratégique décisif ; elle peut donc être en position
+de constituer un singleton et de façonner le futur de la vie intelligente sur
+Terre. Ce qui se déroule par la suite dépend des motivations de cette
+superintelligence.
+Deuxièmement  : la thèse de l’orthogonalité affirme qu’on ne peut pas
+faire en toute tranquillité l’hypothèse que la superintelligence partagera
+nécessairement toutes les valeurs habituellement associées à la sagesse et au
+développement intellectuel humain comme la curiosité scientifique, la
+bienveillance, les lumières spirituelles et leur contemplation, la renonciation
+aux bien matériels, un goût pour la culture ou pour les plaisirs simples de
+l’existence, l’humilité et l’altruisme, etc. Nous verrons plus loin s’il serait
+possible, grâce à un effort volontaire, de mettre au point une
+superintelligence qui accorderait de la valeur à ces aspirations, ou d’en
+construire une qui aurait le souci du bien être humain, de la bonté ou de
+toute autre aspiration que ses concepteurs voudraient qu’elle respecte. Mais
+il est tout aussi possible (et en fait techniquement bien plus facile) de
+construire une superintelligence dont le but final ne serait que le calcul des
+décimales de π. Ceci laisse penser que (sans un effort particulier) cette
+première superintelligence pourrait avoir un objectif ultime très aléatoire et
+réductionniste.
+Troisièmement : la thèse de la convergence pratique implique qu’on ne
+peut pas, en toute tranquillité, supposer qu’une superintelligence dont le but
+serait de calculer les décimales de π (ou de fabriquer des trombones, ou de
+compter des grains de sable) limiterait ses activités de manière à ne pas aller
+à l’encontre des intérêts des êtres humains. Un agent qui aurait ce type de
+but aurait des raisons pratiques convergentes, dans bien des situations,
+d’acquérir une quantité illimitée de ressources et, si possible, d’éliminer les
+menaces qui pèseraient sur lui et sur ses intentions. Les êtres humains
+pourraient constituer une menace potentielle ; ils constitueraient sans aucun
+doute des ressources physiques.
+À elles trois, ces questions montrent que la première superintelligence
+pourrait façonner le futur de la vie sur Terre, avoir sans problème des
+intentions non-anthropomorphiques, et avoir probablement des raisons
+
+---
+
+[p. 181-182]
+en ayant autant réfléchi que possible, nous ne
+découvrions pas un moyen quelconque de réalisation perverse de l’objectif
+en question, nous devrions rester sur le qui-vive parce qu’il se pourrait
+qu’une superintelligence, elle, trouve un moyen que nous ne pouvons pas
+concevoir : après tout, elle est bien plus rusée que nous.
+5
+6
+La prolifération d’infrastructures
+On pourrait considérer que, parmi les exemples de réalisation perverse
+d’objectifs, le « hackage de hardware » est certes un échec, mais bénin :
+l’IA « s’allume, se règle, abandonne », ou maintient à fond son signal de
+récompense et perd tout intérêt pour le monde extérieur, à peu près comme
+un héroïnomane. Mais cela ne se passe pas nécessairement de cette manière
+comme nous l’avons déjà évoqué au chapitre 7. Même un junkie veut faire
+ce qu’il faut pour assurer son approvisionnement. L’IA à «  hackage de
+hardware », elle aussi, voudrait faire ce qu’il faut pour maximiser l’afflux
+de récompenses qu’elle attend. En fonction de la définition précise du
+signal de récompense, l’IA peut même ne pas avoir besoin de sacrifier une
+quantité significative de temps, d’intelligence ou de productivité pour
+satisfaire au mieux son besoin, et laisser la plupart de ses capacités libres
+d’agir avec un autre objectif que l’enregistrement immédiat d’une
+récompense. Quel « autre objectif » ? Le seul qui ait une valeur ultime pour
+l’IA, c’est par hypothèse le signal de récompense. Toutes ses ressources
+disponibles devraient donc être consacrées à l’augmentation du volume et
+de la durée de ce signal ou à réduire le risque qu’il soit perturbé. Tant que
+l’IA peut penser qu’un usage de ses ressources additionnelles aura un effet
+positif non nul sur ses paramètres, elle aura des raisons pratiques de se
+servir de ces ressources. Elles pourraient être utilisées par exemple pour
+construire un système extérieur de sauvegarde comme barrière de défense
+externe. Et même si l’IA n’imagine pas un moyen supplémentaire de
+réduire directement les risques qui menaceraient la maximisation du flux de
+récompenses, elle pourrait assigner ses ressources additionnelles à
+l’augmentation de son matériel computationnel pour qu’il soit plus efficace
+dans la recherche de manières nouvelles de limiter ces risques.
+Ainsi, même un objectif apparemment auto-limitatif comme le hackage
+de hardware implique une politique d’expansion sans bornes et
+d’acquisition de ressources chez un agent maximisant l’utilité qui a acquis
+un avantage stratégique décisif . Ce cas d’une IA à hackage de hardware est
+en fait un exemple d’un autre échec malin  : la prolifération
+d’infrastructures, phénomène dans lequel un agent transforme une large
+part de l’univers qui est à sa portée en infrastructures au service d’un
+objectif, avec pour effet collatéral d’empêcher la réalisation du potentiel
+axiologique de l’humanité.
+7
+
+---
+
+[p. 192-193]
+me l’accès aux réseaux de communication.
+Déconnecter une IA d’Internet n’assure pas vraiment une sécurité si un
+être humain au moins sert de contrôleur d’accès et reste en communication
+avec le système. Pendant la phase de développement, le programmeur
+exerce ce contrôle  ; pendant la phase opérationnelle, le propriétaire du
+4
+5
+système peut jouer ce rôle. Si une IA persuade ou trompe un contrôleur
+d’accès pour qu’il le laisse sortir de sa boîte, et a alors accès soit à Internet
+soit directement à des manipulateurs physiques, la stratégie de confinement
+échoue. Les êtres humains ne sont pas des systèmes de sécurité
+performants, tout particulièrement quand ils ont en face d’eux une
+superintelligence comploteuse et persuasive .
+Même si confier le détournement des communications sortantes d’une
+machine intelligente à un être humain ne garantit pas la sécurité, cela peut
+constituer une mesure auxiliaire. Il existe certaines précautions pour réduire
+le risque que l’IA échappe à cette surveillance. L’IA peut être autorisée à ne
+communiquer que via un téléscripteur à faible bande passante, ce qui rend
+plus difficile la manipulation psychologique des contrôleurs d’accès (en
+écartant l’utilisation de sons ou d’images suscitant des émotions ou la
+projection trompeuse de patterns hypnotiques induisant un état de transe ).
+En outre, le contenu (et pas seulement le mode de présentation des sorties)
+pourrait être restreint : l’IA pourrait par exemple être contrainte de donner
+des réponses à bit unique à des questions en oui ou non. L’idée de
+construire un système de réponse à des questions sera étudiée dans le
+chapitre suivant.
+Le cas limite de confinement serait celui d’un système complètement
+isolé, physiquement et informationnellement. Pourtant, même si c’était
+possible, un tel système serait à peu près sans utilité puisqu’il n’aurait
+aucun effet sur le monde extérieur. On pourrait peut-être imaginer un projet
+scientifique qui créerait une superintelligence et la garderait sous clé : en
+étudiant ce modèle d’auto-confinement, on pourrait mieux connaître sa
+dynamique interne et ses types de comportements. Mais ce serait une
+erreur  : dès que le système est observé, il cesse d’être isolé sur le plan
+informationnel . L’information peut en effet être transmise non seulement
+par des messages que l’IA envoie par un « canal d’output » mais aussi via
+toute observation faite de l’extérieur qui aurait une conséquence causale sur
+le travail de l’IA, directe ou indirecte (son pouvoir computationnel,
+l’utilisation de son unité centrale et de sa mémoire, ses états
+computationnels ou en fait toute trace laissée après qu’il ait été éteint). Une
+IA prévoyant qu’elle pourrait être ainsi observée pourrait adopter de
+manière stratégique des comportements conçus pour influencer tout
+observateur  : par exemple, elle pourrait «  dysfonctionner  » de n’importe
+6
+7
+8
+
+---
+
+[p. 203-204]
+Le contrôle du contenu, qui suppose que les états intentionnels de
+l’IA soient transparents pour les programmeurs ou pour un
+mécanisme automatique de surveillance, peut être impossible dans
+certaines architectures d’IA (les réseaux neuronaux, par exemple,
+sont opaques parce qu’ils représentent l’information de manière
+holistique et avec des moyens qui ne correspondent pas forcément
+aux concepts humains). Ce qui peut constituer une raison d’éviter
+d’utiliser ces architectures.
+Les méthodes de sélection de motivation
+Les méthodes de sélection de motivation cherchent à empêcher des résultats
+non souhaitables en modelant ce que la superintelligence veut faire. En
+mettant au point le système motivationnel de l’agent et ses objectifs
+ultimes, elles donnent lieu à une superintelligence qui ne voudrait pas
+exploiter d’une manière malfaisante un avantage stratégique décisif.
+Puisque qu’une superintelligence a les capacités de parvenir à ses fins, si
+elle préfère ne pas être malfaisante (dans le bon sens de « mal faire »), elle
+tendra à ne pas l’être (dans ce sens-là de « mal faire »).
+Dans la sélection de motivation, on peut formuler explicitement un but
+ou un ensemble de règles à suivre (spécification directe), ou concevoir le
+système pour qu’il puisse découvrir par lui-même l’ensemble requis de
+valeurs grâce à un critère implicite formulé indirectement (normativité
+indirecte). Une autre option consiste à tenter de construire le système pour
+qu’il n’ait que des buts modestes, peu ambitieux (domesticité). Pour ne pas
+créer un système de motivations à partir de rien, on peut encore sélectionner
+un agent qui possède déjà un système de motivation acceptable et
+augmenter ses pouvoirs cognitifs pour le rendre superintelligent, tout en
+s’assurant que son système de motivation ne se pervertisse pas pendant le
+processus (augmentation). Venons-en à chacune de ces méthodes.
+La spécification directe
+C’est l’approche la plus simple de la question du contrôle. Elle existe en
+deux versions, fondée sur des règles et conséquentialiste, et suppose
+d’essayer de définir explicitement un ensemble de règles ou de valeurs qui
+imposeraient, même à une superintelligence en liberté, d’agir en toute
+sécurité et de manière bénéfique. La spécification directe rencontre
+
+cependant des obstacles éventuellement insurmontables, qui viennent de la
+difficulté de déterminer les règles et les valeurs que nous voudrions
+conférer à cette IA et de la difficulté d’exprimer ces règles et valeurs dans
+un code lisible par l’ordinateur.
+L’illustration habituelle de cette approche c’est le concept des « trois lois
+de la robotique », qu’a formulé Isaac Asimov l’auteur d’une nouvelle de
+science-fiction publié en 1942 (Le cercle vicieux). Ces trois lois sont : 1.
+Un robot ne peut porter atteinte à un être humain, ni, en restant passif,
+permettre qu’un être humain soit exposé au danger ; 2. un robot doit obéir
+aux ordres qui lui sont donnés par un être humain, sauf si de tels ordres
+entrent en conflit avec la première loi  ; 3. un robot doit protéger son
+existence tant que cette protection n’entre pas en conflit avec la première ou
+la deuxième loi. Les lois d’Asimov sont malheureusement pour notre
+espèce restées à la pointe du progrès pendant environ un demi-siècle, et cela
+en dépit des obstacles évidents de cette approche, dont certains ont
+d’ailleurs été analysés par Asimov lui-même (Asimov avait formulé ces lois
+au début de manière à ce que, précisément, elles échouent d’une manière
+instructive qui fournirait les intrigues de ses histoires) .
+Bertrand Russell, qui passa de nombreuses années à travailler sur les
+fondements des mathématiques, fit la remarque suivante  : «  Toute chose
+reste vague à un point que vous ne réalisez pas jusqu’à ce que vous essayez
+de la rendre précise  » . Ce que dit Russell s’applique parfaitement à
+l’approche par la spécification directe. Voyons par exemple comment on
+pourrait expliquer la première loi d’Asimov : veut-elle dire qu’un robot doit
+minimiser la probabilité que tout être humain soit exposé à un danger  ?
+Dans ce cas, les deux autres lois deviennent superflues puisqu’il est
+toujours possible qu’une IA entreprenne une action qui aurait au minimum
+un effet microscopique sur cette probabilité. Comment le robot va-t-il
+mettre en balance un gros risque que quelques humains soient en danger et
+un risque minime que de nombreux humains le soient ? Commet définit-on
+« danger » en fait ? Comment évaluer l’atteinte que constitue une douleur
+physique par rapport à une horreur architecturale ou une à injustice
+sociale  ? Un sadique souffre-t-il si on l’empêche de faire du mal à sa
+victime ? Comment définit-on un « être humain » ? Pourquoi ne pas prendre
+en considération d’autres êtres moralement importants, comme les animaux
+sensibles ou les esprits digitaux ? Plus on y réfléchit, plus ça se complique.
+22
+23
+24
+
+---
+
+[p. 213-214]
+de manière totalement véridique
+mais nous manipule subtilement pour réaliser ses intentions cachées ; l’une
+des manières de réduire légèrement cette menace serait de créer plusieurs
+oracles avec chacun un codage et une information de base un peu différents.
+On pourrait alors simplement comparer leurs réponses et ne les rendre
+4
+publiques que lorsqu’elles concordent. Même si l’on est en droit de penser
+qu’un oracle généraliste superintelligent connaîtrait l’existence des autres
+oracles (il l’inférerait grâce à sa connaissance de la société humaine), on
+devrait pouvoir, pour chaque oracle, dissimuler aux autres certains détails
+d’implémentation. Si les oracles sont incapables de communiquer entre eux,
+il leur serait difficile de se coordonner sur la manière de nous tromper en
+répondant aux questions. Il y a bien des façons de s’écarter de la vérité et
+les oracles pourraient ne pas s’accorder sur la façon la plus adaptée (la
+vérité elle-même est un point de Schelling : un point focal d’accord entre
+des participants qui ne peuvent pas communiquer). Ainsi, si les oracles
+parvenaient à un consensus, ce pourrait être la preuve qu’ils donnent la
+bonne réponse .
+Un oracle serait digne de confiance si nous pouvions nous assurer qu’il
+réponde de manière aussi juste que ses capacités le lui permettent. Mais
+même un oracle qui ne le serait pas peut être utile. On pourrait lui poser une
+question dont la réponse est difficile à trouver mais facile à vérifier : c’est le
+cas de bien des problèmes mathématiques. Si l’on se demande si une
+proposition mathématique est vraie, on peut demander à l’oracle d’en
+produire la preuve ou la réfutation. Découvrir la preuve nécessite une
+compréhension et une créativité qui dépassent notre entendement, mais
+vérifier la validité d’une preuve proposée peut reposer sur une simple
+procédure mécanique.
+Si l’on trouve que vérifier les réponses coûtent trop cher (comme c’est
+souvent le cas dans des domaines qui ne sont pas mathématiques ou
+logiques) on peut choisir au hasard des réponses de l’oracle et les vérifier ;
+si elles sont bonnes, on peut accorder une probabilité élevée d’exactitude à
+la plupart de ses autres réponses. Cette procédure peut nous faire
+économiser de l’argent (malheureusement, cela ne donne rien pour les
+réponses qu’on ne peut pas vérifier, car un oracle dissimulateur pourrait
+décider de ne répondre correctement qu’aux questions dont on peut vérifier
+la réponse).
+On pourrait lui poser des questions importantes qui nous permettraient
+d’avoir un indice prédictif de la bonne qualité des réponses (ou d’une
+méthode pour trouver la bonne réponse) même si nous ne devons pas nous
+fier du tout à la provenance de cet indice. On pourrait par exemple
+demander à l’oracle la solution de problèmes variés, d’ordre technique ou
+5
+
+---
+
+[p. 223-225]
+nsparence. Un système bien
+conçu, avec une séparation claire entre ses valeurs et ses croyances, nous
+permettrait de prédire les résultats qu’il aurait tendance à produire. Même si
+l’on ne pouvait prévoir exactement quelles croyances le système va acquérir
+ou dans quelles situations il va se trouver, nous aurions le moyen de
+166
+surveiller ses valeurs et donc le critère qu’il va utiliser pour sélectionner ses
+actions à venir et évaluer tout plan d’action.
+
+Encart 9 : Solutions étranges dans une recherche aveugle
+Même les processus évolutifs de recherche simple produisent quelquefois des résultats tout à
+fait inattendus, qui satisfont le critère formel défini par l’utilisateur d’une manière totalement
+différente de celle à laquelle il s’attendait.
+Le champ de l’électronique évolutive en offre de nombreuses illustrations. Dans ce domaine,
+un algorithme évolutif recherche l’espace des structures possibles de hardware et teste la
+fitness de chaque structure en la réalisant physiquement sur une zone rapidement
+reconfigurable d’une carte mère. Les structures résultant de ce tri permettent souvent de faire
+des économies remarquables. Par exemple, on a découvert un circuit de discrimination de
+fréquences qui fonctionne sans horloge, un composant pourtant nécessaire à son
+fonctionnement. Les chercheurs ont estimé que ce circuit était deux à trois fois plus petit que
+ce qu’un opérateur humain aurait produit. En fait le circuit établi par l’algorithme exploite les
+propriétés physiques de ses composants de manière non-orthodoxe  : certains composants
+nécessaires et actifs ne sont même pas connectés aux broches d’entrée ou de sortie  ! Ils
+interviennent en fait via ce qu’on aurait normalement considéré comme des effets collatéraux
+nuisibles, tel le couplage électromagnétique ou le chargement de l’alimentation électrique.
+Un autre processus de recherche, chargé de créer un oscillateur, s’est privé de ce qui était
+avant un élément indispensable, le condensateur. Quand l’algorithme a présenté sa solution,
+les chercheurs l’ont examiné et ont d’abord dit « ça ne peut pas marcher ». En y regardant de
+plus près, ils ont découvert que l’algorithme avait, comme MacGyver, reconfiguré sa carte
+mère sans capteur pour en faire un récepteur radio de fortune, en se servant de la carte de
+circuit imprimé de celui-ci comme d’une antenne pour capter les signaux venant des
+ordinateurs qui étaient autour de lui dans le laboratoire. Le circuit amplifiait ces signaux pour
+produire à la sortie l’oscillateur
+.
+Dans d’autres expériences, des algorithmes évolutifs ont conçu des circuits capables de
+détecter si la carte mère était surveillée par un oscilloscope ou si un fer à souder était branché
+sur l’alimentation électrique du laboratoire. Ces exemples montrent comment un processus de
+recherche ouvert peut revisiter le matériel auquel il a accès pour inventer des capacités
+sensorielles complètement inattendues avec des moyens que l’inventivité conventionnelle des
+humains sait mal exploiter ou même expliquer rétrospectivement.
+La tendance de cette recherche évolutive à « tricher » ou à trouver des moyens contre-intuitifs
+de parvenir à une certaine fin est également à l’œuvre dans la nature ; mais elle nous paraît
+moins évidente parce que nous sommes déjà habitués à ce qu’est aujourd’hui la biologie, et
+donc enclins à considérer comme normaux les résultats des processus évolutifs naturels
+(même s’ils auraient semblés inattendus auparavant). Mais on sait procéder à des expériences
+de sélection artificielle dans lesquelles on voit les processus sélectifs en jeu hors de leur
+contexte habituel. Dans ce cas, les chercheurs peuvent créer des conditions qui n’ont pas
+cours dans la nature, et observer les résultats.
+Par exemple, avant les années 1960, on affirmait communément en biologie que les
+populations de prédateurs limitaient leur reproduction pour éviter de tomber dans le piège
+177
+
+---
+
+[p. 233-234]
+s dans le monde contemporain,
+beaucoup de personnes n’ont rien. Et ceci inclut non seulement ceux qui
+vivent dans la pauvreté mais aussi des personnes qui ont un bon revenu, ou
+qui ont un capital humain élevé mais un actif net négatif. Par exemple, dans
+des pays riches comme le Danemark ou la Suède, 30 % de la population ont
+2
+3
+une richesse négative : jeunes le plus souvent, ce sont des gens de la classe
+moyenne avec quelques biens réels et un crédit ou des prêts étudiant .
+Même si l’épargne peut rapporter beaucoup, il leur faudrait un capital pour
+démarrer, pour que le mécanisme s’enclenche .
+Pourtant même ceux qui n’auraient aucune richesse personnelle au début
+de la transition pourraient devenir très riches. Ceux qui, par exemple, ont un
+plan de retraite public ou privé seraient en bonne position, à condition que
+ce plan soit au moins partiellement financé . Les démunis pourraient aussi
+devenir riches grâce à la philanthropie de ceux qui verraient leur actif net
+s’envoler  : à cause de la taille astronomique de cette manne, même
+l’aumône d’une petite fraction de cet actif constituerait une somme très
+élevée dans l’absolu.
+Il est possible aussi que le travail permette encore de devenir riche, même
+après la transition, quand les machines seraient fonctionnellement
+supérieures aux hommes dans tous les domaines (et moins coûteuses que le
+salaire humain de subsistance). Comme nous l’avons déjà dit, cela pourrait
+résulter de niches dans lesquelles le travail par l’homme serait préféré pour
+des raisons esthétiques, idéologiques, éthiques, religieuses ou pour toute
+autre raison non pratique. Dans un monde où la richesse de ceux qui
+détiennent le capital aurait tellement augmenté, l’attrait pour ce genre de
+travail augmenterait d’autant. Les nouveaux multimilliardaires auraient les
+moyens de payer des sommes inimaginables pour que leurs biens et services
+résultent d’un « commerce équitable » avec la force de travail organique.
+On peut revenir ici à l’histoire des chevaux : après être tombée à 2 millions
+au début des années 1950, la population des chevaux aux États-Unis s’est
+constamment redressée ; un recensement récent en a compté un peu moins
+de 10 millions . Et cette croissance n’est pas due à de nouveaux besoins en
+matière d’agriculture ou de transport : en fait, la croissance économique a
+permis à plus d’Américains de satisfaire leur goût pour les plaisirs
+équestres.
+Il existe encore une autre différence entre les chevaux et les hommes, en-
+dehors de la propriété d’un capital  : les êtres humains sont aptes à la
+mobilisation politique. Un gouvernement humain pourrait recourir à son
+pouvoir de taxation pour redistribuer les bénéfices privés, il pourrait
+augmenter les revenus en vendant les actifs nationaux comme les terrains
+publics, ou mettre la population à la retraite. Là encore, à cause d’une
+4
+5
+6
+7
+
+---
+
+[p. 243-244]
+quement abattre leur troupeau  : les
+fluctuations de la demande de différents types de travailleurs, l’économie
+des coûts du repos et du sommeil et l’introduction de nouveaux modèles
+améliorés. Pour éviter que ces travailleurs échafaudent des plans de
+subversion ou des conspirations, les émulations qui occuperaient des postes
+19
+sensibles pourraient ne fonctionner que pendant des périodes limitées, avec
+des réinitialisations fréquentes à un état antérieur .
+Ces états antérieurs devraient avoir été préparés avec beaucoup
+d’attention et approuvés. Une émulation à vie brève typique pourrait
+s’éveiller dans un état mental reposé et optimisé pour la loyauté et la
+productivité. Elle se souviendrait d’avoir obtenu la première place à son
+diplôme après plusieurs années (subjectives) de préparation intense et de
+sélections, d’avoir ensuite bien profité de ses vacances et d’avoir bien
+dormi, puis d’avoir écouté un discours éveillant sa motivation et de la
+musique stimulante et enfin serait impatiente de se mettre au travail et de
+faire de son mieux pour son employeur. Elle ne serait pas plus que ça
+perturbée à la pensée de l’imminence de sa mort, prévue en fin de journée.
+Des émulations avec des angoisses de mort ou d’autres préoccupations du
+même genre seraient moins productives et n’auraient donc pas été
+sélectionnées .
+Ce travail totalement efficace serait-il amusant ?
+Pour savoir s’il est tentant de vivre dans une situation comme celle-là, il
+faut tenir compte du plaisir qu’y prendra une émulation moyenne . Un
+travailleur émulé lambda souffrirait-il ou trouverait-il agréable de travailler
+dur à sa tâche ?
+Il faut que nous résistions à la tentation de projeter nos propres
+impressions sur ce travailleur émulé imaginaire : la question n’est pas de
+savoir si vous seriez heureux de travailler tout le temps et de ne jamais
+passer de temps avec ceux que vous aimez... perspective terrifiante à vrai
+dire.
+Est-il pertinent de prendre en considération l’expérience de plaisir qu’ont
+les humains en moyenne pendant leurs heures de travail  ? Les études
+internationales demandent à des sujets à quel point ils sont heureux au
+travail et leurs réponses vont de « plutôt heureux » à « tout à fait heureux »
+(en moyenne 3,1 sur une échelle de 1 à 4) . Les études sur les affects
+moyens ressentis, dans lesquelles on demande aux sujets à quelle fréquence
+ils ont récemment ressenti des états affectifs positifs ou négatifs, donnent le
+même type de résultats (affect moyen de 0.52 sur une échelle de -1 à +1). Il
+y a un faible effet positif du salaire moyen par habitant d’un pays sur le
+20
+21
+22
+23
+
+---
+
+[p. 253-253]
+de propriété ou les relevés de compte plus
+que sur des signes extérieurs comme des costumes de couturier ou des
+Rolex. Dans l’avenir, on pourra engager des entreprises d’audit qui
+vérifieront que l’agent-client possède ce qu’il déclare avoir à l’aide d’études
+détaillées de ses antécédents comportementaux, de tests dans des
+31
+32
+
+---
+
+[p. 263-264]
+auquel sa participation est
+indispensable et où il ne ramasserait pas presque tous les gains. Certains
+d’entre nous possèdent déjà des traits de personnalité relatifs à
+l’incorruptibilité . Un caractère très rigoriste aurait cependant l’effet
+inverse s’il s’avérait qu’il y a d’autres agents autour de lui pour croire qu’ils
+42
+43
+ont droit à plus que leur part équitable et qui seraient décidés à ne pas céder.
+La force irrésistible rencontrerait alors l’objet inamovible, et aucun accord
+ne pourrait être conclu (ou pire : la guerre totale). Le docile et l’acratique
+obtiendraient quand même quelque chose, mais moins qu’une part
+équitable.
+Il est difficile de se voir quel type d’équilibre en théorie des jeux serait
+atteint dans ces négociations post-transition. Les agents pourraient choisir
+des stratégies plus compliquées que celles que nous avons envisagées. Il
+faut espérer qu’un équilibre serait trouvé et qu’il serait centré sur des
+normes de loyauté qui serviraient de point de Schelling (trait marquant dans
+un grand espace de résultats qui, en raison d’attentes partagées, devient un
+point de coordination probable dans un jeu de coordination sous-
+déterminé). Cet équilibre peut reposer sur certaines de nos dispositions
+naturelles et sur une programmation culturelle  : une préférence générale
+pour la loyauté pourrait, à supposer qu’on réussisse à transférer nos valeurs
+dans l’ère de la post-transition, influencer les attentes et les stratégies de
+manière à produire un équilibre attrayant .
+Au total, avec cette possibilité de formes flexibles mais robustes
+d’engagement préalable, le résultat des négociations pourrait prendre une
+allure originale. Même si l’ère de la post-transition commençait par être
+multipolaire, 
+il 
+se 
+pourrait 
+très 
+bien 
+qu’un 
+singleton 
+surgisse
+presqu’immédiatement 
+comme 
+conséquence 
+d’une 
+traité 
+négocié
+aplanissant tous les problèmes décisifs d’une coordination mondiale. Les
+coûts de la transaction, y compris de surveillance et de contrainte,
+chuteraient avec les nouvelles capacités technologiques dont disposeraient
+les machines intelligentes. D’autres frais, en particulier liés au marchandage
+stratégique, pourraient rester significatifs. Quelle que soit la manière dont
+ce marchandage stratégique affecterait la nature de l’accord obtenu, il n’y
+aurait aucune raison pour qu’on mette longtemps à parvenir à un accord (si
+un accord peut être trouvé). Si l’on n’en trouve aucun, on assisterait à
+certaines formes de combat. Alors qu’une faction gagnerait et constituerait
+un singleton autour d’une coalition de vainqueurs, ou qu’il en résulterait un
+conflit interminable et qu’alors aucun singleton ne pourrait se constituer, le
+résultat général ne correspondrait pas du tout à ce qu’il aurait pu ou dû être
+si l’humanité et ses descendants avaient agi en se coordonnant et en
+coopérant.
+44
+
+---
+
+[p. 274-275]
+particulières, et non au hasard ; et elles continueraient de présupposer un
+cadre de référence anthropocentrique inchangé pour fournir des évaluations
+généralisées sensées (comme éviter le type de réalisation perverse d’une
+description de buts superficiellement plausibles que nous l’avons vu au
+chapitre 8). Savoir si c’est faisable reste une question ouverte.
+Une autre question se pose à propos de l’accroissement de valeurs : une
+IA pourrait désactiver le mécanisme d’accroissement. Comme nous l’avons
+vu au chapitre 7, l’intégrité du système de buts est une valeur instrumentale
+convergente. Quand une IA atteint un certain stade de développement
+cognitif, elle peut se mettre à regarder le déroulement du mécanisme
+d’accroissement comme une altération . Ce n’est pas nécessairement une
+mauvaise chose, mais il faudrait faire attention de sceller le système de buts
+au bon moment, après que les valeurs appropriées aient été accrues mais
+avant qu’elles aient été écrasées par des accroissements supplémentaires
+pervers.
+Le montage motivationnel
+On peut considérer le problème de cette implémentation de valeurs comme
+ce que j’appellerai « montage motivationnel » : il s’agit de donner à l’IA
+germe un système de buts provisoires, fait d’objectifs relativement simples
+que nous pouvons formuler par un codage explicite ou tout autre méthode.
+Quand l’IA a développé des facultés représentationnelles plus complexes,
+on remplace le système provisoire par un autre avec des buts différents. Ce
+système nouveau gouverne l’IA pendant qu’elle progresse vers une réelle
+superintelligence.
+Parce que les buts ainsi échafaudés ne sont pas seulement instrumentaux
+mais aussi ultimes pour l’IA, on peut s’attendre à ce que celle-ci résiste au
+remplacement de ses buts (parce que l’intégrité du système d’objectifs est
+une valeur instrumentale). C’est un danger. Si l’IA parvient à contrecarrer le
+remplacement de ses objectifs, la méthode est mise en échec.
+Pour éviter cet échec, certaines précautions s’imposent. Les méthodes de
+contrôle des capacités par exemple peuvent servir à limiter les pouvoir de
+l’IA jusqu’à ce que soit installé le système motivationnel de remplacement.
+Il faudrait en particulier essayer de maintenir son développement cognitif à
+un niveau de sécurité permettant cependant de représenter les valeurs qu’on
+11
+
+souhaite inclure dans ses objectifs ultimes. Pour ce faire, on doit tenter de
+retarder certains types de compétences intellectuelles, comme celles
+requises pour des stratégies et des complots machiavéliques, tout en
+permettant le développement de compétences (apparemment) inoffensives.
+On peut également tenter d’utiliser les méthodes de sélection de
+motivation pour induire une relation plus collaborative entre l’IA germe et
+l’équipe qui la programme. Par exemple, dans le système de montage de la
+motivation, on peut inclure le but de se prêter à un guidage en ligne par les
+programmeurs en leur permettant de remplacer tout système de buts de
+l’IA . D’autres buts ainsi construits peuvent inclure d’être transparent pour
+les programmeurs pour ce qui concerne les valeurs et les stratégies  ; de
+développer une architecture facile à comprendre pour les programmeurs et
+qui facilite l’implémentation ultérieure d’un objectif humain ; d’avoir des
+motivations de domesticité (comme limiter l’usage de ressources
+computationnelles).
+On pourrait même envisager d’équiper une IA avec le seul objectif ultime
+de se remplacer lui-même par un autre qui pourrait n’avoir été spécifié
+qu’implicitement et indirectement par les programmeurs. L’une des
+questions que soulève ce montage avec un but qui s’«  auto-remplace  »
+survient dans le contexte de la méthode d’apprentissage de valeurs abordée
+dans ce qui suit. D’autres questions seront discutées au chapitre 13.
+L’approche par le montage motivationnel n’est pas sans inconvénient :
+elle expose par exemple au risque que l’IA soit devenue trop puissante alors
+qu’elle tourne encore avec son système provisoire de buts. Elle peut alors
+faire échec aux tentatives des programmeurs d’installer un système définitif
+de buts (soit par une résistance acharnée, soit par une subversion tranquille).
+Les buts provisoires peuvent alors rester implantés sur l’IA quand elle
+marche vers la superintelligence. Un autre inconvénient, c’est qu’installer
+les objectifs définitifs attendus dans une IA de niveau humain n’est pas
+nécessairement plus facile que de le faire sur une IA moins développée.
+Une IA de niveau humain est plus complexe et peut avoir développé une
+architecture opaque et difficile à modifier. Une IA germe, elle, est comme
+une tabula rasa pour ses programmeurs, sur laquelle ils peuvent inscrire
+toute structure qu’ils jugent utile. L’inconvénient peut être transformé en
+avantage si l’on parvient à conférer à une IA germe un montage de buts tel
+qu’elle veut développer une architecture qui sera utile aux programmeurs
+12
+
+---
+
+[p. 286-286]
+ui produise une description mathématique
+disons d’une seule pièce contenant un terminal d’ordinateur (instanciant le terminal abstrait).
+Mais comment obtenir une description mathématique précise d’un cerveau humain
+déterminé ? Ce serait évidemment par son émulation, mais comment faire quand on n’en est
+pas encore capable ?
+25
+26
+
+---
+
+[p. 295-296]
+risques qui n’existent pas dans le cas d’agents qui ne contiennent pas de
+subagents intelligents. Néanmoins, le montage institutionnel mérite une
+plus ample exploration .
+Résumé
+La mise au point d’un système éthique ne constitue pas encore une
+discipline à part entière. On ne sait pas actuellement comment transférer
+une éthique humaine à un ordinateur, et ce serait vrai aussi si l’on disposait
+d’une machine de niveau humain. Nous avons passé en revue un certain
+nombre d’approches, et certaines d’entre elles se sont révélées des
+impasses ; mais d’autres peuvent sembler prometteuses et méritent d’être
+explorées. Un résumé en est donné dans le tableau 12.
+Si nous savions comment résoudre le problème de l’implantation de
+valeurs, nous rencontrerions un autre problème : quelles valeurs implanter ?
+En d’autres termes, qu’est-ce que nous souhaitons qu’une intelligence
+souhaite ? C’est vers un problème plus philosophique que nous allons nous
+tourner maintenant.
+Tableau 12 Résumé des techniques d’implantation de valeurs
+Représentation
+explicite
+Pourrait permettre de télécharger des valeurs de domesticité ; moins
+prometteuse quand il s’agit de valeurs plus compliquées.
+Sélection
+évolutionniste
+Moins prometteuse. Une recherche intensive peut déterminer le
+modèle qui satisfait le critère de recherche formel mais pas nos
+intentions ; de plus si les modèles sont évalués en les faisant tourner
+(et même ceux qui ne satisfont pas le critère formel) on s’expose à un
+grand danger. L’évolution ne permet pas d’éviter le crime massif
+contre l’esprit, surtout quand on cherche à modeler des esprits
+semblables aux humains.
+Apprentissage 
+par
+renforcement
+On peut utiliser un ensemble de méthodes pour résoudre les problèmes
+de l’apprentissage par renforcement, mais elles supposent de créer un
+système qui cherche à maximiser le signal de récompense, ce qui
+produit l’échec par hackage quand le système devient plus intelligent.
+Méthode qui semble non prometteuse.
+Augmentation
+de valeurs
+Nous acquérons la plupart de nos objectifs grâce à nos réactions.
+L’augmentation de valeurs peut en principe permettre de créer un
+agent avec des motivations humaines, mais la disposition humaine à
+39
+
+cette augmentation peut être difficile à répliquer dans une IA germe.
+Une mauvaise approximation produit une IA qui généralise autrement
+que les humains et acquiert donc des objectifs inattendus. Il faut plus
+de recherches pour savoir faire fonctionner cette augmentation avec
+suffisamment de précision.
+Montage
+motivationnel
+Il est trop tôt pour dire si nous pourrons encourager un système à
+développer des représentations internes de haut niveau qui soient
+transparentes aux êtres humains (en maintenant les capacités du
+système sous le seuil de dangerosité)  ; nous ne savons pas encore
+utiliser ces représentations pour concevoir une éthique. Cette approche
+pourrait se révéler prometteuse (cependant, comme avec toute
+approche non expérimentée qui reporte le travail difficile sur la
+sécurité au développement d’une IA de niveau humain, il faut veiller à
+ne pas permettre que cela devienne une excuse pour une attitude
+laxiste face au problème du contrôle en attendant).
+Apprentissage
+de valeurs
+Approche potentiellement prometteuse mais il faut plus de recherches
+pour savoir s’il sera possible de spécifier formellement une référence
+qui désigne l’information externe adéquate aux valeurs humaines (et si
+l’on pourra spécifier un critère correct pour la fonction d’utilité en
+termes de cette référence). Les propositions de « Je vous salue Marie »
+ou de la construction de Paul Christiano (ou tout autre raccourci)
+doivent être explorées.
+Modulation
+des émulations
+Si l’on parvient à la machine intelligente en passant par l’émulation,
+on pourra sûrement ajuster les motivations par un équivalent digital
+des médicaments ou par d’autres moyens. La question reste ouverte de
+savoir si cela permettrait de télécharger des valeurs avec une précision
+suffisante pour assurer la sécurité même quand une émulation serait
+poussée jusqu’à la superintelligence (des contraintes éthiques
+pourraient venir compliquer ce projet).
+Montage
+institutionnel
+Diverses méthodes fortes pour instaurer un contrôle social peuvent être
+appliquées à une institution constituée d’émulations. En principe, ces
+méthodes le peuvent aussi s’il s’agit d’IA. Les émulations ont des
+propriétés qui les rendent plus faciles à contrôler, mais d’autres qui les
+rendent plus difficiles à contrôler que les IA. La conception
+d’institution semble devoir être explorée comme technique potentielle
+d’implantation de valeurs.
+
+---
+
+[p. 305-306]
+pter (ce qu’il croit aussi), alors le genre
+humain en viendra à accepter ses convictions si les gens ont moins de
+préjugés et de parti pris, s’ils passent plus de temps à étudier les livres
+saints, s’ils comprennent plus clairement comment va le monde et
+reconnaissent les priorités essentielles, s’ils sont libérés des rebellions
+irrationnelles et de la peur, etc. . Pour sa part, l’humaniste penserait que,
+dans ces conditions idéalisées, l’humanité épousera ses propres principes.
+• « Laisser à l’humanité la responsabilité de son destin »
+Nous pourrions ne pas souhaiter qu’une superintelligence paternaliste
+nous surveille constamment, par une microgestion de nos affaires et un œil
+pour optimiser chaque détail et l’accorder avec un plan d’ensemble. Même
+si nous stipulions que la superintelligence doit être parfaitement
+bienveillante, dénuée de toute présomption, d’arrogance, qu’elle ne doit être
+ni tyrannique ni étroite d’esprit, bref qu’elle n’ait aucun des défauts des
+êtres humains, nous pourrions ressentir que nous avons perdu notre
+inaliénable autonomie. Nous pourrions préférer créer notre destinée au fur
+et à mesure, même si cela implique que nous tâtonnions de temps en temps.
+Nous voudrions éventuellement une superintelligence qui soit notre filet de
+sécurité et nous aide quand les choses tourneraient à la catastrophe, mais
+qui nous laisserait nous débrouiller tout seuls pour le reste.
+L’approche par la VCE le permet  : la VCE est en principe une
+«  dynamique initiale  », c’est-à-dire un processus qui démarre puis se
+remplace lui-même selon les souhaits de la volonté extrapolée. Si la volonté
+extrapolée de l’humanité est de vivre sous la supervision d’une IA
+paternaliste, la dynamique de la VCE créera une IA qui prendra les rênes en
+main. Si l’humanité préfère qu’un gouvernement mondial humain soit créé,
+la dynamique de la VCE en facilitera l’instauration et restera invisible pour
+le reste. Si la volonté extrapolée de l’humanité c’est que chaque individu
+doit avoir des ressources qu’il peut utiliser comme il lui plaît pour autant
+qu’il respecte les droits d’autrui, la dynamique de la VCE rendra cette
+disposition possible en intervenant à l’arrière-plan, comme le font les lois
+de la nature, pour éviter les abus, les vols, les agressions et tout autre
+débordement non consensuel .
+La structure de cette approche permet un ensemble virtuellement illimité
+de résultats. On peut aussi imaginer que la volonté extrapolée de l’humanité
+serait que la VCE n’intervienne pas du tout. Dans ce cas, s’il était établi
+avec une probabilité suffisante que c’est bien ce que veut l’humanité, l’IA
+chargée d’implémenter la VCE s’éteindrait elle-même.
+Remarques complémentaires
+15
+16
+
+---
+
+[p. 315-316]
+nommer ces dispositions « enveloppe incitative », comme façon d’accroître
+la probabilité qu’un projet réussisse en acceptant jusqu’à un certain point de
+compromettre l’objectif qu’il poursuit.
+Par exemple, si le projet a pour objectif de créer une dynamique qui
+implémente la volonté cohérente extrapolée de l’humanité, alors une
+enveloppe incitative spécifierait que la volonté de certains individus
+pourrait avoir plus de poids dans l’extrapolation. Si ce projet réussit, le
+résultat ne sera pas nécessairement l’implémentation de la volonté
+cohérente extrapolée de l’humanité  ; mais on pourrait parvenir à s’en
+approcher .
+L’enveloppe incitative serait un élément du contenu de l’objectif,
+interprété et poursuivi par la superintelligence, et l’on pourrait donc tirer
+parti de la normativité indirecte et spécifier des dispositions subtiles et
+complexes qu’un opérateur humain aurait des difficultés à implémenter. Par
+exemple, au lieu de récompenser les programmeurs en fonction d’une
+mesure rudimentaire et facilement accessible (comme leur nombre d’heures
+de travail ou de bugs qu’ils ont corrigés), l’enveloppe incitative pourrait
+spécifier que les programmeurs « seront récompensés en proportion de leur
+contribution à l’augmentation de la probabilité antérieure raisonnable que le
+projet soit totalement achevé de la manière attendue par ses
+commanditaires  ». En outre, il n’y aurait aucune raison de limiter cette
+enveloppe incitative à l’équipe du projet. On pourrait préciser que chaque
+personne devrait être récompensée en fonction de son mérite. L’allocation
+de crédits est un problème difficile, mais on peut attendre qu’une
+superintelligence établisse une approximation raisonnable du critère
+spécifié, explicitement ou implicitement, par l’enveloppe incitative.
+On peut penser que la superintelligence trouverait même une manière de
+récompenser les individus qui sont morts avant sa création . L’enveloppe
+incitative pourrait aller jusqu’à inclure au moins quelques personnes
+décédées, des individus qui sont morts avant la conception même du projet,
+ou même avant la première formulation de ce concept d’enveloppe
+incitative. Même si l’institution de cette mesure rétroactive n’inciterait pas
+causalement ces personnes qui sont déjà aujourd’hui dans la tombe, elle
+aurait des raisons morales  ; bien qu’on puisse argumenter que, dans la
+mesure où l’équité est un objectif, elle devrait plutôt faire partie de la
+spécification visée que de l’enveloppe incitative.
+Nous ne pouvons pas développer ici toutes les questions éthiques et
+stratégiques associées à ce dispositif de récompenses. La position qu’un
+projet prendrait sur ces questions constituerait un aspect important de sa
+conception fondamentale.
+34
+35
+
+---
+
+[p. 324-325]
+une attention
+particulière aux personnes vivantes ou qui vivront, si le changement
+s’opère ; on considère chacun de la même façon, à quelque moment que ce
+soit  ; on accorde une grande valeur à l’existence de nouveaux individus
+pourvu qu’ils aient des vies qui méritent d’être vécues : plus on crée de vies
+heureuses, mieux c’est.
+Cette distinction, même si elle laisse entrevoir les complexités morales
+liées à la révolution des machines intelligentes, peut nous servir pour
+commencer l’analyse. Nous allons adopter d’abord le point de vue
+impersonnel, puis nous verrons ce qui change si l’on donne de l’importance
+à ce qui affecte les personnes dans nos discussions.
+Stratégie scientifique et technologique
+Avant de nous focaliser sur les questions spécifiques que soulève la
+superintelligence, il faut introduire certains concepts et remarques qui
+relèvent du développement scientifique et technologique en général.
+Développement stratégique différentiel
+Supposons qu’un décideur propose de couper les financements pour un
+domaine scientifique par souci des risques ou des conséquences à long
+terme d’une éventuelle technologie à laquelle il pourrait mener. Ce décideur
+devrait s’attendre à une levée de boucliers de la communauté scientifique.
+Les scientifiques et ceux qui les soutiennent disent souvent qu’il est vain
+d’essayer de contrôler l’évolution technologique en bloquant la recherche.
+Si une technologie est faisable, disent-ils, elle se fera et cela malgré les
+craintes des décideurs quant aux risques supposés. En fait, plus les
+potentialités d’un domaine sont prometteuses, plus on peut être certain que
+quelqu’un, quelque part, sera bien décidé à les réaliser. Couper les fonds
+n’arrêtera pas le progrès ni ne protègera des dangers.
+Bizarrement, cette objection de la vanité de ce genre de mesure n’est
+presque jamais soulevée quand un décideur propose d’augmenter les
+financements d’un domaine de recherche, pourtant l’argument marche dans
+les deux sens. On entend rarement des voix indignées protester « S’il vous
+plaît, non, n’augmentez pas nos financements. Réduisez-les plutôt  ! Les
+chercheurs à l’étranger prendront la relève, ce travail peut être fait
+n’importe où  ! Ne gaspillez pas les fonds publics pour la recherche
+scientifique nationale ! ».
+Que penser de cette apparente contradiction  ? Elle peut bien sûr
+s’expliquer par le biais égoïste des membres de la communauté scientifique
+qui les mène à croire que la recherche est toujours bonne et à adopter
+
+---
+
+[p. 334-335]
+nos aptitudes et de notre
+intelligence au moment d’implémenter la meilleure solution dont on
+disposera (et qu’on improvisera si nous n’en avons pas) . Il est évident que
+c’est la raison pour laquelle l’augmentation cognitive est nécessaire. Savoir
+comment cette augmentation influencera le point (a) reste une question
+délicate.
+9
+Supposons, comme nous l’avons fait plus haut, que l’augmentation
+cognitive soit un accélérateur du développement macro-structurel général.
+Cela accélèrera l’arrivée de cette explosion d’intelligence, réduisant ainsi le
+temps nécessaire à notre préparation et à nos progrès face au problème du
+contrôle. Normalement, ce n’est pas une bonne chose. Pourtant, si la seule
+raison pour laquelle nous avons moins de temps pour accomplir ces progrès
+intellectuels, c’est que ces progrès intellectuels sont accélérés, alors il ne
+peut y avoir de réduction nette des progrès réalisés avant l’explosion de
+l’intelligence.
+À ce point, l’augmentation cognitive semblerait neutre à l’égard du
+facteur (a) : le progrès intellectuel qui aurait été fait avant l’explosion de
+l’intelligence (y compris sur la question du contrôle), serait fait, mais
+intensifié sur une courte période de temps. En réalité pourtant,
+l’augmentation cognitive pourrait se révéler positive pour (a).
+Si l’augmentation cognitive peut faire progresser la réflexion sur la
+question du contrôle avant l’explosion de l’intelligence, c’est que ce
+problème est particulièrement dépendant de niveaux très élevés de
+performance intellectuelle (plus même que le travail nécessaire à la création
+de la machine intelligente). Le rôle des essais et erreurs et de
+l’accumulation de résultats expérimentaux est limité pour le problème du
+contrôle, alors que l’apprentissage expérimental jouera probablement un
+rôle important dans le développement de l’intelligence artificielle ou de
+l’émulation du cerveau entier. Selon les tâches, le temps pourrait être
+substitué à l’esprit de manière à ce que l’augmentation cognitive entraîne
+plus de progrès sur le contrôle que sur la création de la machine intelligente.
+Une autre raison pour que l’augmentation cognitive favorise les progrès
+sur le problème du contrôle, c’est que le besoin de réaliser ces progrès sera
+mieux perçu par des sociétés et des individus cognitivement plus avancés. Il
+faut être capable de prévoir et de raisonner pour comprendre pourquoi le
+problème de contrôle est important et pour en faire une priorité . Il faut
+sans doute aussi une sagacité peu commune pour découvrir des manières
+prometteuses d’aborder un problème aussi peu familier.
+Après ces considérations, nous pouvons avancer pour conclure que
+l’augmentation cognitive est souhaitable, au moins tant qu’on se concentre
+sur les risques vitaux engagés par une explosion de l’intelligence. Le même
+raisonnement s’applique à d’autres risques vitaux soulevés par des défis où
+10
+
+---
+
+[p. 344-346]
+non .
+3.  On ne sait pas si une ECE mènerait à une transition plus lente
+qu’une IA. Peut-être qu’avec une ECE on s’attendrait à moins
+d’excès de hardware, puisqu’elle est moins efficace sur le plan
+computationnel qu’une IA. Peut-être aussi qu’un système d’IA
+transformerait plus facilement tout le pouvoir computationnel en un
+22
+intellect intégré énorme, là où une ECE renoncerait à une
+superintelligence qualitative et ne dépasserait l’humanité qu’en
+rapidité et en taille de la population. Si l’ECE mène à une transition
+plus lente, cela aura l’avantage de réduire le problème du contrôle et
+d’augmenter les chances d’un résultat multipolaire. Mais on ne sait
+pas si c’est souhaitable.
+Venons-en à une question qui permet de douter qu’il serait plus sûr que
+l’ECE arrive en premier : il lui faudrait affronter une seconde transition. Si
+la première machine intelligente a été obtenue par émulation, il resterait
+encore possible de développer l’IA. Une IA, dans sa forme achevée,
+présente un grand avantage par rapport à l’ECE, qui en fait la technologie la
+plus puissante  : elle rendrait l’ECE obsolète (sauf dans le but spécifique
+de conserver les esprits humains), alors que l’inverse n’est pas vrai.
+En effet, si l’IA se développe en premier, il n’y a qu’une seule vague
+d’explosion d’intelligence ; mais si c’est l’ECE qui vient en premier, il y
+aura deux vagues  : le première sera l’arrivée de l’ECE, et la seconde,
+l’arrivée de l’IA. Ce qui fait que le risque vital total dans ce cas sera la
+somme du risque auquel expose la première transition et de celui auquel
+expose la seconde (si elle procède de la première) (voir figure 13) .
+Figure 13 IA en premier ou ECE ?
+Si c’est l’IA, une seule transition présente un risque vital  ; si c’est l’ECE, deux
+transitions sont risquées : l’une avec le développement de l’ECE, l’autre avec celui de
+l’IA, et le risque est alors double. Cependant, le risque avec l’IA dans ce cas serait
+plus faible puisqu’elle surviendrait dans un monde où l’on a déjà introduit l’ECE.
+23
+24
+
+Pourquoi l’IA serait-elle moins risquée dans un monde avec des ECE ?
+On peut considérer que la transition vers l’IA serait moins explosive car une
+certaine forme de machine intelligente aurait déjà été réalisée  : les
+émulations fonctionneraient à des vitesses digitales et seraient beaucoup
+plus nombreuses que la population humaine biologique, ce qui réduirait
+donc le différentiel cognitif ; le contrôle de l’IA en serait facilité. Certes,
+mais la différence entre l’IA et l’ECE pourrait rester importante. Cependant,
+si les émulations n’étaient pas seulement plus rapides et plus nombreuses
+mais aussi plus ingénieuses que les êtres humains (ou au moins issues de la
+tranche supérieure de la distribution de l’intelligence humaine), le scénario
+commençant par l’ECE aurait les mêmes avantages que l’augmentation
+cognitive humaine dont nous avons déjà parlé.
+Il faut comprendre aussi que la transition vers l’ECE étendrait la
+domination du favori. Supposons qu’il ait six mois d’avance sur son
+concurrent le plus proche dans le développement de cette technologie ; que
+les premières émulations en cours de création soient coopératives,
+sécurisées et patientes. Si elles fonctionnent sur un matériel rapide, ces
+émulations pourraient consacrer des éternités subjectives à la création d’IA
+sûres. Par exemple, si elles fonctionnent à une vitesse 100  000 fois plus
+rapide et sont capables de travailler à ce problème de contrôle de manière
+ininterrompue pendant six mois du temps sidéral, elles pourraient se
+consacrer au problème du contrôle pendant cinquante millénaires avant
+d’entrer en compétition avec d’autres émulations. Avec un hardware
+suffisant, elles hâteraient ces progrès en faisant travailler leurs nombreuses
+copies indépendamment sur les diverses parties du problème. Si le favori
+reste six mois en tête et forme un singleton, il pourrait payer une équipe de
+développement d’IA pour la faire travailler pendant très longtemps au
+problème du contrôle .
+Au total, il semble que le risque que fait courir la transition par l’IA serait
+réduit si l’ECE venait en premier. Cependant, quand on combine le risque
+résiduel de la transition par l’IA avec celui de la transition antérieure par
+l’ECE, on ne sait pas vraiment comment mesurer le risque vital total par
+rapport au risque de passer par l’IA en premier. Ce n’est que si l’on est
+pessimiste sur la capacité de l’humanité biologique à gérer une transition
+par l’IA (après avoir pris en compte que la nature humaine ou la civilisation
+25
+
+---
+
+[p. 357-358]
+ansition (et plus collaborative).
+Second cas  : la nature de l’explosion d’intelligence produit une
+dynamique où le gagnant rafle la mise (sans doute parce que la transition est
+rapide). Dans ce cas, s’il n’y a pas de collaboration étendue avant la
+transition, un singleton a des chances d’émerger (un seul projet entreprend
+42
+43
+seul la transition et, à un certain moment, obtient un avantage stratégique
+décisif en plus de la superintelligence). Un singleton est par définition un
+ordre social hautement collaboratif. L’absence de vraie collaboration
+avant la transition mènerait donc à une très forte collaboration post-
+transition. Par contre, un niveau élevé de collaboration à l’approche de
+l’explosion de l’intelligence permet des résultats très variés  : des projets
+collaboratifs peuvent synchroniser leur avancée pour s’assurer de passer
+ensemble ce moment sans qu’aucun d’eux ne s’arroge un avantage
+stratégique décisif ; différents sponsors peuvent fusionner leurs efforts en
+un seul projet, tout en refusant de donner à celui-ci le mandat de devenir un
+singleton. On peut par exemple imaginer un consortium de nations
+construisant un projet scientifique commun pour développer la machine
+superintelligente, sans souhaiter que celui-ci évolue vers un groupement
+aussi lourd que les Nations Unies, en choisissant plutôt de maintenir l’ordre
+mondial fractionné du passé.
+Dans le cas d’une transition rapide, par conséquent, il est possible qu’une
+collaboration pré-transition donne lieu à moins de collaboration post-
+transition. Néanmoins, tant que les entités qui collaborent sont capables de
+décider du résultat, elles ne pourraient permettre l’émergence ou la
+poursuite d’une absence de collaboration que si elles prévoient qu’il n’y
+aura pas de conséquences catastrophiques d’une post-transition fractionnée.
+Les scénarios dans lesquels une collaboration pré-transition réduirait la
+collaboration post-transition sont ceux dans lesquels une collaboration post-
+transition serait sans effet.
+En général, une collaboration post-transition plus solide est souhaitable.
+Elle réduirait les risques d’une dynamique dystopique où la compétition
+économique et l’expansion rapide de la population aboutiraient à une
+situation malthusienne, où la sélection évolutionniste minerait les valeurs
+humaines et choisirait des formes non-eudémoniques, et où les pouvoirs
+rivaux subiraient ces autres échecs de coordination que sont la guerre où la
+compétition 
+technologique. 
+Cette 
+dernière 
+serait 
+particulièrement
+problématique si la transition en est à une forme intermédiaire de machine
+intelligente (l’émulation cerveau entier) parce que cela entraînerait une
+nouvelle dynamique de course qui diminuerait les chances de résoudre le
+problème du contrôle avant la transition suivante vers une forme plus
+avancée de machine intelligente (l’intelligence artificielle).
+44
+
+---
+
+[p. 368-369]
+incluant le respect du principe du bien public et la promesse d’accélérer la
+sécurité si et quand l’arrivée de la machine superintelligente deviendra
+imminente. Les vœux pieux n’y suffisent pas et ne rendront pas sûre une
+technologie dangereuse : mais quand de la bouche ils sortent, l’esprit suit
+petit à petit.
+D’autres occasions pourraient se présenter, qui nous inciteraient à nous
+concentrer sur un paramètre pivot, par exemple l’atténuation du risque vital,
+la promotion de l’augmentation de la cognition biologique, ou les
+améliorations de notre sagesse collective ou même l’harmonisation du
+monde politique.
+Que le meilleur de la nature humaine se lève !
+Avant que ne survienne une explosion d’intelligence, nous autres humains
+sommes comme des petits enfants qui jouent avec une bombe. Décalage
+entre le pouvoir de notre jouet et l’immaturité de notre conduite. La
+superintelligence est un défi, auquel nous ne sommes pas préparés et auquel
+nous ne serons pas prêts avant longtemps. Nous n’avons qu’une petite idée
+de la détonation qui se produira, même si, quand nous approchons le
+dispositif de notre oreille, nous entendons un vague tic-tac.
+Un enfant qui aurait une bombe dans ses mains devrait évidemment la
+déposer gentiment, sortir rapidement de la pièce et contacter l’adulte le plus
+proche. Mais ce que nous avons ici, ce n’est pas un enfant mais beaucoup
+d’enfants, chacun avec un mécanisme de déclenchement à sa portée. Les
+chances que nous aurons tous la sagesse de déposer cette chose dangereuse
+semblent à peu près nulles. Un imbécile est prêt à appuyer sur le bouton,
+juste pour voir ce que ça fait.
+Nous ne pouvons pas parvenir à plus de sécurité en nous enfuyant, parce
+que le souffle de l’explosion fera tomber le firmament même. Et il n’y a
+aucun adulte à l’horizon.
+Pas question, dans une telle situation, d’éprouver un sentiment
+d’exaltation genre « ça alors ! ». La consternation et la peur seraient plus
+indiquées ; mais l’attitude à adopter, c’est plus une détermination glacée à
+être aussi compétents que nous le pourrons, un peu comme si nous nous
+
+préparions à un examen difficile qui nous permettrait de réaliser nos rêves,
+ou qui les détruirait.
+Il ne s’agit pas d’être fanatique. L’explosion de l’intelligence ne se
+produira peut-être que dans plusieurs décennies. Le défi qui nous fait face
+est plutôt, en bonne part, d’être fermes sur notre humanité : ne pas céder sur
+nos fondamentaux, notre bon sens, notre bonne humeur courtoise, même
+dans la mâchoire de ce problème contre-nature et inhumain. Nous devons
+consacrer toutes nos ressources d’humanité pour le résoudre.
+Ne perdons pas de vue ce qui est mondialement important : à travers la
+brume de nos trivialités quotidiennes, nous pouvons pressentir, même
+vaguement, ce qui reste notre tâche essentielle. Dans ce livre, nous avons
+tenté de discerner un peu mieux les contours de ce qui serait autrement
+demeuré informe et négatif : notre principale priorité morale (en tout cas du
+point de vue impersonnel et public) est la réduction du risque vital et la
+trajectoire de la civilisation qui mènera à l’usage bienveillant et jubilatoire
+des très nombreuses vies qui nous attendent dans le cosmos.
+
+---
+
+[p. 379-380]
+oppés, le Soleil tourne autour de la Terre
+(Crabtree, 1999 ; Dean, 2005).
+64. World Robotics (2011).
+65. Estimation à partir des données de Guizzo (2010).
+66. Holley (2009).
+67. On utilise aussi des approches statistiques à base de règles hybrides, mais elles ne sont que
+minoritaires.
+68. Cross et Walker (1994) ; Hedberg (2002).
+69. Fondé sur des statistiques du groupe TABB, une entreprise d’études des marchés financiers de
+New York et Londres.
+70. CFTC et SEC (2010). Pour un autre point de vue sur les événements du 6 mai, voir groupe
+CME (2010).
+71. Rien de tout cela ne doit être utilisé comme argument contre le trading à haute fréquence
+algorithmique, qui devrait normalement engendrer des bénéfices en accroissant les liquidités et
+l’efficacité des marchés.
+72. Une panique des marchés de moindre ampleur a eu lieu le 1er août 2012, en partie parce que le
+« coupe-circuit » n’était pas non plus programmé pour arrêter les échanges si le nombre d’actions
+échangées subissait des changements extrêmes (Popper, 2012). Et c’est ce qui laisse présager un
+autre problème : la difficulté d’anticiper toutes les possibilités qu’une règle apparemment plausible
+puisse mal tourner.
+73. Nilsson (2009, 19).
+74. Minsky (2006) ; McCarthy (2007) ; Beal et Winston (2009).
+75. Peter Norvig, communication personnelle. L’ensemble des machines à apprentissage
+automatique sont aussi très populaires, et cela correspond à la vague médiatique du «  big-data  »
+(inspirée par Google et le Prix Netflix).
+76. Armstrong et Sotala (2016).
+77. Müller et Bostrom (2016).
+78. Voir Baum et al. (2011), une autre enquête citée, et Sandberg et Bostrom (2011).
+79. Nilsson (2009).
+80. Cela dépend évidemment de l’absence d’une catastrophe disruptive de la civilisation. La
+définition de l’HLMI de Nilsson est «  la possibilité pour une intelligence artificielle de réaliser
+environ 80 % des métiers et des meilleures performances humaines » (Kruel, 2012).
+81. Où TP-IA désigne des membres des Conférences sur la Philosophie et la Théorie de
+l’intelligence artificielle tenue à Thessalonique en 2011 (réponses en 2012 de 43 membres sur 88),
+AGI la société savante consacrée à l’Intelligence Artificielle Générale (réponses en 2012 de 72
+membres sur 111), EETN l’association Grecque pour l’Intelligence artificielle (réponses en 2013 de
+26 membres sur 250), TOP100 « les plus grandes figures de l’histoire de l’intelligence artificielle »
+selon Microsoft Academic search (indice du nombre de citations, réponses en 2013, 29 réponses sur
+100). Sur les 549 personnes interrogées par mail au total, 170 ont répondu.
+82. Interview de 28 praticiens de l’intelligence artificielle et d’experts indéniables réalisés par mail
+par Kruel (2011).
+83. La figure montre les estimations des médianes renormalisées. Les moyennes sont assez
+différentes  : la moyenne pour «  très mauvais  » est de 7,6  % pour le Top 100, et 17,2  % (pour
+l’ensemble des experts combinés).
+84. On dispose d’une littérature importante sur la faible fiabilité des experts dans bien des
+domaines ; et on a toutes les raisons de penser que nombre de ces résultats s’appliquent aussi au
+domaine de l’IA. Les prévisionnistes ont en particulier tendance à surestimer la valeur de leurs
+prédictions, parce qu’ils se considèrent comme plus qualifiés qu’ils ne le sont, et attribuent donc une
+faible probabilité à la possibilité que leurs hypothèses respectives soient fausses (Tetlock, 2005) (on
+sait qu’il y a ici bien d’autres biais  ; voir Gilovitch et al., 2002). Mais nul ne peut échapper à
+l’incertitude ; la plupart de nos actes reposent inévitablement sur la plausibilité plus ou moins élevée
+de leurs conséquences à long terme selon nous ; autrement dit, sur des prédictions statistiques. Et ce
+problème épistémologique ne disparaît pas quand on se refuse à produire une prédiction probabiliste ;
+
+---
+
+[p. 391-393]
+d’efficacité
+énergétique. Le computeur le plus rapide au monde au moment où j’écris est le Tianhe-2 chinois qui
+a supplanté le Titan de Cray Inc. En juin 2013 avec une performance de 33,86 petaFLOPS. Il utilise
+17,6 mégawatt de puissance, soit un ordre de grandeur de 6 par rapport à celle de notre cerveau
+(environ 20 W).
+18
+3
+15
+33. Remarquons que cette revue des sources des avantages de la machine est disjonctive : notre
+argumentation vaut même si certains des items de la liste sont illusoires, tant qu’il y a au moins une
+des sources qui peut produire un avantage suffisamment grand.
+
+Chapitre 4 : La dynamique d’une explosion d’intelligence
+1. Le système pourrait ne pas atteindre ces niveaux à un moment précis ; il pourrait y avoir plutôt
+un intervalle pendant lequel le système progresse graduellement avant de dépasser l’équipe de
+recherche sur un nombre croissant de tâches de développement de son auto-amélioration.
+2. Au cours du dernier demi-siècle, on a largement envisagé un scénario dans lequel l’ordre
+mondial existant prendrait fin en quelques minutes ou en quelques heures  : une guerre nucléaire
+mondiale.
+3. Ce qui serait cohérent avec le fait que l’effet Flynn (l’accroissement des scores de QI dans la
+plupart des populations au rythme de 3 points par décennie dans les 60 dernières années) semble
+avoir récemment cessé ou même s’être inversé dans les pays très développés comme le Royaume-
+Uni, le Danemark et la Norvège (Teasdale et Owen, 2008 ; Sundet et al., 2004). Dans le passé, les
+causes de l’effet Flynn (et de combien et jusqu’à quel point il représente un gain d’intelligence
+générale ou simplement une meilleure capacité à répondre aux questions typiques du QI) ont fait
+l’objet de nombreux débats qui n’ont pas été tranchés. Même si l’effet Flynn reflète (au moins
+partiellement) des gains cognitifs réels, et même si cet effet diminue aujourd’hui ou s’inverse, cela ne
+démontre pas que nous avons déjà atteint des rendements décroissants pour quelque cause que ce soit
+qu’on pensait dans le passé responsable de cet effet. Le déclin ou l’inversion peuvent être dus à un
+facteur préjudiciable indépendant qui autrement aurait produit un déclin encore plus grand.
+4. Bostrom et Roache (2011).
+5. La thérapie génique somatique pourrait éliminer ce délai de maturation, mais elle est
+techniquement plus difficile que les interventions sur les lignées germinales et ses potentialités
+ultimes sont moins importantes.
+6. La croissance annuelle de la productivité économique mondiale entre 1960 et 2000 a été de
+4,3  % (Isaksson, 2007). Seule une partie de cette croissance vient des gains en efficacité
+organisationnelle. Certains réseaux ou processus organisationnels particuliers s’améliorent bien sûr à
+un rythme plus rapide.
+7. L’évolution du cerveau biologique a subi des contraintes et été l’objet de compromis qui
+diminuent spectaculairement quand l’esprit devient digital  : par exemple la taille du cerveau est
+limitée par celle du crâne et une tête trop grosse ne passe pas bien à la naissance  ; elle dépense
+beaucoup de ressources métaboliques et c’est un poids mort quand il faut bouger. La connexion entre
+des régions corticales peut être limitée par des contraintes stériques (le volume de matière blanche est
+bien supérieur à celui de la matière grise connectée). La dissipation thermique est limitée par la
+circulation sanguine et peut s’approcher des limites supérieures. En plus, les neurones biologiques
+sont pleins de bruit, ils sont lents et ils nécessitent une protection et un entretien constants ainsi qu’un
+approvisionnement par les cellules gliales et les vaisseaux sanguins. Voir Bostrom et Sandberg
+(2009b).
+8. Yudkowsky (2008a, 326). Pour une discussion récente, voir Yudkowsky (2013).
+9. On constate que la capacité cognitive est un paramètre unidimensionnel ; mais ce n’est pas là
+l’essentiel. On peut, par exemple, représenter plutôt le profil de capacité cognitive comme une
+hypersurface dans un espace multidimensionnel.
+10. Lin et al. (2012).
+11. On peut obtenir une certaine augmentation de l’intelligence collective en accroissant le nombre
+de ceux qui la composent. Cela permet au moins une meilleure performance totale à des tâches qui
+
+---
+
+[p. 403-404]
+ent)  ; (c) le singleton a une
+valeur ultime qui exige qu’il s’abstienne de suivre certaines pistes technologiques ; (d) le singleton
+n’est pas sûr qu’il va rester stable et préfèrerait donc ne pas développer des technologies qui
+pourraient menacer sa stabilité interne ou qui aggraveraient les conséquences d’une dissolution (par
+exemple, le gouvernement mondial pourrait ne pas souhaiter développer des technologies facilitant la
+production d’armes de destruction massive qui pourraient faire des ravages s’il devait se dissoudre) ;
+(e) de la même manière, le singleton pourrait prendre l’engagement stratégique contraignant de ne
+pas développer telle technologie, engagement qui resterait valable même si cette technologie paraît
+souhaitable (remarquons que les raisons actuelles de développer une technologie ne s’appliquent pas
+à un singleton : par exemple les raisons qui concernent la course aux armements).
+19. Supposons qu’un agent rabaisse les ressources obtenues dans l’avenir à un rythme exponentiel,
+parce que la limitation par la vitesse de la lumière le contraint à ne les augmenter qu’à un rythme
+polynomial. Cela implique-t-il qu’il y aura un moment après lequel l’agent trouvera que cela ne
+vaudra plus la peine de poursuivre une expansion acquisitive ? Non, car bien que la valeur actuelle
+des ressources à obtenir se rapproche asymptotiquement de zéro plus on regarde loin vers le futur, il
+en va de même du coût actuel pour les obtenir. Le prix actuel pour envoyer une sonde de von
+Neumann d’ici 100 millions d’années à partir de maintenant (en utilisant une ressource acquise un
+tout petit peu avant) diminuerait autant que la valeur des ressources futures qu’une sonde
+supplémentaire acquerrait (sous réserve d’un facteur constant).
+20. Alors que le volume atteint par des sondes de colonisation à un moment donné peut être
+sphérique et se développer à un rythme proportionnel au carré du temps écoulé depuis que la
+première sonde a été lancée (environ t ), la quantité de ressources contenues dans ce volume suivrait
+une croissance moins régulière parce que la distribution des ressources n’est pas homogène et varie
+de plusieurs échelles. Au départ, le rythme de leur croissance peut être d’environ t lorsque la planète
+d’origine est colonisée ; puis ce rythme devient très variable au fur et à mesure que des planètes et
+des systèmes solaires proches sont colonisés  ; ensuite, quand le volume du disque que forme
+vaguement la Voie lactée est rempli, le rythme se stabilise et est approximativement proportionnel à
+t ; puis le rythme de croissance redevient très variable lorsque des galaxies voisines soit colonisées ;
+le rythme s’approche d’environ t quand l’expansion se réalise à une échelle au-delà de laquelle la
+distribution des galaxies est à peu près homogène ; s’ensuit alors une période très variée puis une
+croissance d’environ t quand les superamas galactiques sont colonisés  ; et cela jusqu’à ce que
+décline le rythme de croissance jusqu’à être nul lorsque l’expansion de l’univers s’accroît tellement
+que toute colonisation devient impossible.
+21. L’argument de la simulation est particulièrement important dans ce contexte  : un agent
+superintelligent pourrait accorder une probabilité significative à l’hypothèse qu’il réside dans une
+simulation informatique et que ce qu’il perçoit est généré par une autre superintelligence, et ceci
+pourrait produire des raisons instrumentales convergentes dépendant des suppositions de l’agent à
+propos du type de simulation dans laquelle il est susceptible de se trouver (Bostrom, 2003a).
+22. La découverte des lois fondamentales de la physique et des autres faits essentiels sur le monde
+constitue un objectif instrumental. Nous pouvons le ranger dans la rubrique des «  augmentations
+cognitives  », même s’il peut également relever du but de perfection technologique (puisque des
+phénomènes physiques nouveaux pourraient permettre des technologies nouvelles).
+2
+2
+2
+2
+
+---
+
+[p. 414-415]
+ait seulement de deux ordres de
+grandeur. Il vaut donc mieux considérer la part de la population mondiale qui est politiquement
+intégrée, et non pas son nombre absolu (en particulier si la transition vers la machine intelligente
+entraîne une explosion de la population d’émulations ou d’esprits digitaux). Mais il y a également eu
+des développements d’institutions et de réseaux de collaboration à l’extérieur des structures étatiques
+formelles, et il faut également les prendre en compte.
+35. L’une des raisons de supposer que la première révolution de la machine intelligente serait
+brutale (l’expérience possible d’un excès de hardware) ne s’applique pas ici. Mais il pourrait y avoir
+d’autres sources d’avancée rapide, comme la rupture spectaculaire en matière de logiciel qui
+accompagnerait la transition des émulations vers une machine intelligente totalement synthétique.
+36. Shulman (2010b).
+37. La manière dont s’équilibreraient les pour et les contre dépendrait du type de travail
+qu’essayerait de réaliser le superorganisme et des capacités générales du modèle d’origine le plus
+doué pour l’émulation. L’une des raisons pour lesquelles il est nécessaire, dans les grandes
+organisations, d’avoir de nombreux types d’humains différents, c’est que les humains très doués dans
+tous les domaines sont très rares.
+38. Il serait évidemment très simple de réaliser de nombreuses copies d’un agent logiciel. Mais ce
+ne serait généralement pas suffisant pour s’assurer que ces copies auraient les mêmes objectifs
+ultimes. Pour que deux agents aient les mêmes objectifs (au sens adapté de « mêmes »), les objectifs
+doivent coïncider dans leurs éléments déictiques : si Bob est égoïste, une copie de Bob sera aussi
+égoïste. Pourtant leurs objectifs ne coïncident pas : Bob s’intéresse à Bob, sa copie s’intéresse à la
+copie de Bob.
+39. Shulman (2010b, 6).
+40. Cette coordination serait plus facile pour des humains biologiques que pour des intelligences
+artificielles qui pourraient avoir été mises au point avec des compartiments ou des dynamiques
+fonctionnelles cachés et très difficiles à découvrir. D’une autre côté, les IA conçues spécifiquement
+pour être transparentes permettraient un examen et une vérification bien plus approfondis qu’il n’est
+possible avec des architectures semblables à celle d’un cerveau. La pression sociale peut encourager
+une IA à exposer son code source et à se modifier pour être transparente (spécialement si cette
+transparence est une condition préalable pour qu’on lui fasse confiance et qu’on lui donne l’occasion
+de prendre part à des transactions profitables (Hall, 2007).
+41. Il y aurait d’autres problèmes, relativement mineurs, en particulier quand les enjeux seraient
+considérables (comme lors des échecs de la coordination mondiale), comme le coût de la recherche
+de politiques d’intérêt réciproque et la possibilité que des agents aient une préférence de base pour
+une forme « d’autonomie » qui serait réduite par l’entrée dans des traités mondiaux disposant de
+mécanismes de direction et d’application.
+42. Une IA pourrait réussir à se modifier convenablement pour donner aux observateurs un accès
+en lecture de son code source. Une machine intelligente avec une architecture plus opaque (comme
+une émulation) pourrait y parvenir en s’appliquant publiquement à elle-même une méthode de
+sélection de ses motivations. Sinon, une agence coercitive externe, comme une force superorganique
+de police, pourrait peut-être servir non seulement à faire réaliser l’implémentation d’un traité
+souhaité par les différentes parties, mais aussi à engager une seule partie à suivre une certaine ligne
+de conduite.
+43. La sélection évolutive pourrait avoir favorisé ceux qui négligent les menaces et même les
+fortes-têtes qui préfèreraient combattre jusqu’à la mort plutôt que de subir le moindre revers. Une
+telle disposition pourrait apporter à ceux qui l’ont des signes de bénéfices intéressants (toute
+récompense instrumentale d’une telle disposition ne devrait jouer aucun rôle dans la motivation
+consciente de l’agent : il valoriserait la justice et l’honneur comme des fins en soi).
+44. Pour une conclusion définitive, il faudra attendre d’autres analyses. Il existe d’autres
+complications potentielles, que nous ne pouvons explorer ici.
+
+---
+
+[p. 424-425]
+s pourrions aussi préférer une IA qui
+choisit parmi les actions moralement permises celle qui satisfait aussi au maximum un autre de nos
+souhaits (non de l’ordre de la moral)  : par exemple, l’IA sélectionnerait, parmi les choix permis,
+l’action que notre VCE préfèrerait  ; une telle IA, sans jamais commettre quoi que ce soit de
+moralement répréhensible, protègerait plus nos intérêts qu’une IA faisant ce qui est le plus juste
+moralement.
+27. Quand l’IA évaluerait la permissibilité morale de notre action de créer l’IA, elle devrait
+interpréter cette permissibilité dans son sens objectif. Au sens ordinaire, un médecin agit d’une
+manière permise moralement s’il prescrit un médicament qui guérira selon lui le patient (même si
+celui-ci, à l’insu de son médecin, est allergique à ce médicament et meurt). En se centrant sur la
+permissibilité morale objective, on tire un avantage de la position épistémique supposée supérieure
+de l’IA.
+28. Plus directement, cela dépend de croyances de l’IA sur quelle théorie éthique est vraie (ou plus
+précisément de sa distribution de probabilités sur les théories éthiques).
+29. Il peut être difficile d’imaginer à quel point ces vies physiques possibles pourraient être
+extraordinairement merveilleuses. Voir Bostrom (2008c) pour une tentative de le faire comprendre
+sur le mode poétique, et Bostrom (2008b) pour les raisons qui font que certains des possibles
+pourraient être bons pour nous, bons pour les êtres humains qui existent.
+30. Promouvoir une solution alors qu’on sait qu’il en existe une meilleure pourrait paraître
+trompeur ou manipulateur. Mais on peut le faire en évitant un manque de sincérité. Par exemple, on
+pourrait reconnaître la supériorité de ce qui est idéal tout en promouvant ce qui ne l’est pas parce que
+c’est le seul compromis réalisable.
+31. Ou tout autre adjectif positif comme « bon », « génial » ou « merveilleux ».
+32. Ce qui fait écho à un type de logiciel connu comme « Fais ce que je veux dire » (Teitelman,
+1966).
+33. L’objectif, la théorie de la décision et l’épistémologie doivent être élucidés  ; mais nous
+n’aborderons pas la question de la nécessité de décomposer clairement ces trois composantes
+différentes.
+34. Un projet éthique doit attribuer au mieux une petite partie des bénéfices éventuels que
+produirait la superintelligence pour récompenser ceux qui ont contribué de manière moralement juste
+au succès du projet. Attribuer une large part à cette enveloppe incitative serait inconvenant. Cela
+ressemblerait à une œuvre de charité qui verserait 90 % des dons récoltés à ses collecteurs de fonds
+au titre de primes de rendement ou à ses campagnes de publicité pour des dons.
+35. Comment récompenser les morts ? On a plusieurs possibilités. Au minimum, on trouve les
+monuments, les mémoriaux, pour ceux qui désireraient rester célèbres. Les morts pourraient avoir des
+dernières volontés pour l’avenir, qu’on respecterait, par exemple pour les arts, l’architecture,
+l’environnement. Plus, les individus se souciant d’abord de leurs descendants, des privilèges
+particuliers pourraient être accordés à ceux-ci. Mais on peut imaginer que la superintelligence serait
+capable de créer des simulations relativement fidèles de personnes du passé, simulations qui seraient
+conscientes et ressembleraient suffisamment à leur original pour être considérées comme une forme
+de survie de celui-ci (au moins selon certains critères). Ce serait sans doute plus facile pour ceux qui
+auraient été cryogénisés ; mais peut-être qu’une superintelligence pourrait recréer un être similaire à
+un humain original à partir de supports préservés comme la correspondance, les publications, le
+matériel audiovisuel ou digital, ou les souvenirs laissés aux autres. Une superintelligence pourrait
+aussi avoir des idées que nous n’avons pas encore sur le sujet.
+36. Sur l’agression de Pascal, voir Bostrom (2009b). Pour une analyse des questions liées à l’utilité
+infinie, voir Bostrom (2011a). Sur l’incertitude normative, voir Bostrom (2009a).
+37. Price (1991) ; Joyce (1999) ; Drescher (2006) ; Yudkowsky (2010) ; Dai (2009).
+38. Bostrom (2009a).
+
+---
+
+[p. 435-436]
+ylor, D. M. et Tresco, P. A.
+(éds) 2008. Brain-Computer Interfaces: An International Assessment of Research and
+Development Trends. Springer.
+Berger, T. W., Song, D., Chan, R. H., Marmarelis, V. Z., LaCoss, J., Wills, J., Hampson, R. E.,
+Deadwyler, S. A., et Granacki, J. J. 2012. “A Hippocampal Cognitive Prosthesis: Multi-Input,
+Multi-Output Nonlinear Modeling and VLSI Implementation.” IEEE Transactions on Neural
+Systems and Rehabilitation Engineering 20 (2) : 198-211.
+Berliner, Hans J. 1980a. “Backgammon Computer-Program Beats World Champion.” Artificial
+Intelligence 14 (2) : 205-220.
+Berliner, Hans J. 1980b. “Backgammon Program Beats World Champ.” SIGART Newsletter 69 : 6-
+9.
+Bernardo, José M. et Smith, Adrian F. M. 1994. Bayesian Theory, 1   éd., Wiley Series in
+Probability & Statistics. New York : Wiley.
+Birbaumer, N., Murguialday, A. R. et Cohen, L. 2008. “Brain-Computer Interface in Paralysis.”
+Current Opinion in Neurology 21 (6) : 634-638.
+Bird, Jon et Layzell, Paul. 2002. “The Evolved Radio and Its Implications for Modelling the
+Evolution of Novel Sensors.” In Proceedings of the 2002 Congress on Evolutionary
+Computation, 2 : 1836-1841.
+Blair, Clay, Jr. 1957. “Passing of a Great Mind: John von Neumann, a Brilliant, Jovial
+Mathematician, was a Prodigious Servant of Science and His Country.” Life, 25 février, 89-104.
+Bobrow, Daniel G. 1968. “Natural Language Input for a Computer Problem Solving System.” In
+Minsky Marvin (éd.) Semantic Information Processing, 146-227. Cambridge : MIT Press.
+Bostrom, Nick. 1997. “Predictions from Philosophy? How Philosophers Could Make Themselves
+Useful.” Manuscrit non publié, revu le 19 septembre 1998.
+Bostrom, Nick. 2002a. Anthropic Bias: Observation Selection Effects in Science and Philosophy.
+New York : Routledge.
+Bostrom, Nick. 2002b. “Existential Risks: Analyzing Human Extinction Scénarios and Related
+Hazards.” Journal of Evolution and Technology 9.
+Bostrom, Nick. 2003a. “Are We Living in a Computer Simulation?” Philosophical Quarterly 53
+(211) : 243-255.
+Bostrom, Nick. 2003b. “Astronomical Waste: The Opportunity Cost of Delayed Technological
+Development.” Utilitas 15 (3) : 308-314.
+Bostrom, Nick. 2003c. “Ethical Issues in Advanced Artificial Intelligence.” In Smit Iva et Lasker
+George E. (éds.) Cognitive, Emotive and Ethical Aspects of Decision Making in Humans and in
+Artificial Intelligence, 2 : 12-17.
+Bostrom, Nick. 2004. “The Future of Human Evolution.” In Tandy Charles (éd.) Two Hundred
+Years After Kant, Fifty Years After Turing, 2 : 339-371. Death and Anti-Death. Palo Alto : Ria
+University Press.
+Bostrom, Nick. 2006a. “How Long Before Superintelligence?” Linguistic and Philosophical
+Investigations 5(1) : 11-30.
+Bostrom, Nick. 2006b. “Quantity of Experience: Brain-Duplication and Degrees of
+Consciousness.” Minds and Machines 16 (2) : 185-200.
+Bostrom, Nick. 2006c. “What is a Singleton?” Linguistic and Philosophical Investigations 5 (2) :
+48-54.
+Bostrom, Nick. 2007. “Technological Revolutions: Ethics and Policy in the Dark.” In Nigel M. de
+S. Cameron et M. Ellen Mitchell (éds.) Nanoscale: Issues and Perspectives for the Nano
+Century, 129-152. Hoboken : Wiley.
+re
+
+---
+
+[p. 445-446]
+meister, K. 1999. “Proverb: The Probabilistic Cruciverbalist.” In
+Proceedings of the Sixteenth National Conference on Artificial Intelligence, 710-717. Menlo
+Park : AAAI Press.
+Kell, Harrison J., Lubinski, David et Benbow, Camilla P.  2013. “Who Rises to the Top? Early
+Indicators.” Psychological Science 24 (5) : 648-659.
+th
+e
+er
+Keller, Wolfgang. 2004. “International Technology Diffusion.” Journal of Economic Literature 42
+(3) : 752-782.
+KGS Go Server. 2012. “KGS Game Archives: Games of KGS player zen19.” Revu le
+22 
+juillet 
+2013. 
+Disponible 
+sur 
+http://www.gokgs.com/gameArchives.jsp?
+user=zen19d&oldAccounts=t&year=2012&month=3.
+Knill, Emanuel, Laflamme, Raymond et Viola, Lorenza. 2000. “Theory of Quantum Error
+Correction for General Noise.” Physical Review Letters 84 (11) : 2525-2528.
+Koch, K., McLean, J., Segev, R., Freed, M. A., Berry, M. J., Balasubramanian, V. et Sterling,
+P. 2006. “How Much the Eye Tells the Brain.” Current Biology 16 (14) : 1428-1434.
+Kong, A., Frigge, M. L., Masson, G., Besenbacher, S., Sulem, P., Magnusson, G., Gudjonsson, S.
+A., Sigurdsson, A., et al., 2012. “Rate of De Novo Mutations and the Importance of Father’s
+Age to Disease Risk.” Nature 488 : 471-475.
+Koomey, Jonathan G. 2011. Growth in Data Center Electricity Use 2005 to 2010. Technical report,
+08/01/2011. Oakland : Analytics Press.
+Koubi, Vally. 1999. “Military Technology Races.” International Organization 53 (3) : 537-565.
+Koubi, Vally et Lalman, David. 2007. “Distribution of Power and Military R&D.” Journal of
+Theoretical Politics 19 (2) : 133-152.
+Koza, J. R., Keane, M. A., Streeter, M. J., Mydlowec, W., Yu, J. et Lanza, G. 2003. Genetic
+Programming IV: Routine Human-Competitive Machine Intelligence. 2   éd. Genetic
+Programming. Norwell : Kluwer Academic.
+Kremer, Michael. 1993. “Population Growth and Technological Change: One Million B.C. to
+1990.” Quarterly Journal of Economics 108 (3) : 681-716.
+Kruel, Alexander. 2011. “Interview Series on Risks from AI.” Less Wrong Wiki (blog). Revu le
+26 
+octobre 
+2013. 
+Disponible 
+sur
+http://wiki.lesswrong.com/wiki/Interview_series_on_risks_from_AI.
+Kruel, Alexander. 2012. “Q&A with Experts on Risks From AI #2.” Less Wrong (blog), 9 janvier.
+Krusienski, D. J. et Shih, J. J. 2011. “Control of a Visual Keyboard Using an Electrocorticographic
+Brain-Computer Interface.” Neurorehabilitation and Neural Repair 25 (4) : 323-331.
+Kuhn, Thomas. S. 1962. The Structure of Scientific Revolutions. 1   éd. Chicago: University of
+Chicago Press. Trad. 1972. La structure des révolutions scientifiques. Paris : Flammarion.
+Kuipers, Benjamin. 2012. “An Existing, Ecologically-Successful Genus of Collectively Intelligent
+Artificial Creatures.” Présenté à la 4 conférence internationale, ICCCI 2012, Ho Chi Minh
+Ville, Vietnam, 28-30 novembre.
+Kurzweil, Ray. 2001. “Response to Stephen Hawking.” Kurzweil Accelerating Intelligence. 5
+septembre. Revu le 31 décembre 2012. Disponible sur http://www.kurzweilai.net/response-to-
+stephen-hawking.
+Kurzweil, Ray. 2005. “The Singularity Is Near ; When Humans Transcend Biology”. New York :
+Viking. Trad. 2007. La Bible du changement, Paris : M21 Éditions.
+Laffont, Jean-Jacques et Martimort, David. 2002. The Theory of Incentives: The Principal-Agent
+Model. Princeton : Princeton University Press.
+Lancet, The. 2008. “Iodine Deficiency – Way to Go Yet.” The Lancet 372 (9633): 88.
+Landauer, Thomas K. 1986. “How Much Do People Remember? Some Estimates of the Quantity
+of Learned Information in Long-Term Memory.” Cognitive Science 10 (4) : 477-493.
+e
+re
+e
+
+---
+
+[p. 455-456]
+anogaster. Plainview, NY : Cold Spring Harbor Laboratory.
+Tuomi, Ilkka. 2002. “The Lives and the Death of Moore’s Law.” First Monday 7 (11).
+Turing, Alan. M. 1950. “Computing Machinery and Intelligence”. Mind 59 (236) : 433-460. Trad.
+1995. « Les ordinateurs et l’intelligence » in La machine de Turing. Paris : Seuil, 133-175.
+re
+Turkheimer, Eric, Haley, Andreana, Waldron, Mary, D’Onofrio, Brian et Gottesman, Irving I.
+2003. “Socioeconomic Status Modifies Heritability of IQ in Young Children.” Psychological
+Science 14 (6) : 623-628.
+Uauy, Ricardo et Dangour, Alan D. 2006. “Nutrition in Brain Development and Aging: Role of
+Essential Fatty Acids.” Supplément, Nutrition Reviews 64 (5) : S24-S33.
+Ulam, Stanislaw M. 1958. “John von Neumann.” Bulletin of the American Mathematical Society
+64 (3) : 1-49.
+Uncertain Future, The. 2012. “Frequently Asked Questions.” The Uncertain Future. Revu le
+25 mars 2012. Disponible sur http://www.theuncertainfuture.com/faq.html.
+U.S. Congress, Office of Technology Assessment. 1995. U.S.-Russian Cooperation in Space ISS-
+618. Washington : U.S. Government Printing Office, Avril.
+Van Zanden, Jan Luiten. 2003. On Global Economic History: A Personal View on an Agenda for
+Future Research. Amsterdam : International Institute of Social History, 23 juillet.
+Vardi, Moshe Y. 2012. “Artificial Intelligence: Past and Future.” Communications of the ACM 55
+(1) : 5.
+Vassar, Michael et Freitas, Robert A., Jr. 2006. “Lifeboat Foundation Nanoshield.” Lifeboat
+Foundation. Revu le 12 mai 2012. Disponible sur http://lifeboat.com/ex/nanoshield.
+Vinge, Vernor. 1993. “The Coming Technological Singularity: How to Survive in the Post-Human
+Era.” In Vision-21: Interdisciplinary Science and Engineering in the Era of Cyberspace, 11-22.
+NASA Conference Publication 10129. NASA Lewis Research Center.
+Visscher, P. M., Hill, W. G. et Wray, N. R. 2008. “Heritability in the Genomics Era: Concepts and
+Misconceptions.” Nature Reviews Genetics 9 (4) : 255-266.
+Vollenweider, Franz, Gamma, Alex, Liechti, Matthias et Huber, Theo. 1998. “Psychological and
+Cardiovascular Effects and Short-Term Sequelae of MDMA (’Ecstasy’) in MDMA-Naïve
+Healthy Volunteers.” Neuropsychopharmachology 19 (4) : 241-251.
+Wade, Michael J. 1976. “Group Selections Among Laboratory Populations of Tribolium.”
+Proceedings of the National Academy of Sciences of the United States of America 73 (12)  :
+4604-4607.
+Wainwright, Martin J. et Jordan, Michael I. 2008. “Graphical Models, Exponential Families, and
+Variational Inference.” Foundations and Trends in Machine Learning 1 (1-2) : 1-305.
+Walker, Mark. 2002. “Prolegomena to Any Future Philosophy.” Journal of Evolution and
+Technology 10 (1).
+Walsh, Nick Paton. 2001. “Alter our DNA or robots will take over, warns Hawking.” The
+Observer, 1  septembre. http://www.theguardian.com/uk/2001/sep/02/medicalscience.genetics.
+Warwick, Kevin. 2002. I, Cyborg. London: Century.
+Wehner, M., Oliker, L. et Shalf, J. 2008. “Towards Ultra-High Resolution Models of Climate and
+Weather.” International Journal of High Performance Computing Applications 22 (2) : 149-165.
+Weizenbaum, Joseph. 1966. “Eliza: A Computer Program for the Study of Natural Language
+Communication Between Man and Machine.” Communications of the ACM 9 (1) : 36-45.
+Weizenbaum, Joseph. 1976. Computer Power and Human Reason: From Judgment to Calculation.
+San Francisco : W. H. Freeman.
+Werbos, Paul John. 1994. The Roots of Backpropagation: From Ordered Derivatives to Neural
+Networks and Political Forecasting. New York : Wiley.
+er
+
+---
+
+[p. 471-474]
+, 2
+geek 1
+généralisation du stimulus 1
+génétique computationnelle 1
+génie 1, 2, 3, 4, 5, 6, 7, 8, 9
+génétique 1, 2, 3
+génome 1
+génotypage 1
+Ginsberg, Matt 1
+go (jeu de) 1
+Good, I. J. 1
+Good Old-Fashioned Artificial Intelligence (GOFAI) 1-2, 3
+Gorbatchev, Mikhaïl 1
+gouvernance 1, 2, 3
+H
+hackage
+de hardware 1, 2, 3, 4, 5, 6, 7, 8
+Hanson, Robin 1, 2
+hardware 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+hédonisme 1, 2, 3, 4
+hédonium 1, 2
+héritabilité 1, 2
+heuristique 1, 2, 3, 4, 5, 6
+hiérarchie digitale 1
+Hill, Benny 1
+homologue aux gamètes (gamete-like) 1
+human-level machine intelligence (HLMI) 1-2
+hypothèse de Riemann 1, 2
+I
+implémentation 1, 2, 3, 4, 5, 6-7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+incertitude 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+lexicale 1, 2
+incitation 1, 2, 3-4, 5, 6, 7, 8
+inférence 1, 2, 3, 4, 5, 6
+ingénierie 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
+input 1, 2, 3, 4, 5, 6
+instanciation 1, 2, 3, 4, 5, 6
+intégration sociale 1, 2, 3, 4, 5
+intellect 1, 2, 3, 4, 5, 6, 7
+intelligence
+artificielle (IA) 1, 2-3, 4-5, 6-7, 8-9, 10, 11
+amicale 1, 2, 3
+complète 1, 2, 3, 4
+faible 1
+gentille 1
+germe 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23
+hostile 1, 2
+perverse 1-2, 3
+digitale 1, 2-3, 4, 5, 6, 7, 8-9, 10
+intention 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+interface cerveau-ordinateur 1, 2-3, 4, 5, 6, 7
+Internet 1, 2
+
+interprétation 1
+in vitro (fécondation) 1, 2, 3, 4
+J
+Jeopardy (jeu) 1, 2
+jeu 1-2, 3
+K
+Kasparov, Garry 1
+Kepler, Johannes 1
+Knuth, Donald 1
+Kolmogorov (complexité de) 1, 2, 3
+krach-éclair (Flash-Crash) 1
+Kurzweil, Ray 1
+L
+langage 1, 2, 3, 4, 5, 6, 7, 8
+formel 1, 2, 3, 4
+langue naturelle 1, 2, 3, 4, 5, 6
+largeur de bande 1, 2, 3
+Lenat, Douglas 1
+limitation 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+limite de Landauer 1
+limite physique 1, 2, 3, 4
+logiciel 1, 2, 3, 4, 5, 6, 7-8, 9, 10, 11-12, 13, 14, 15, 16, 17-18, 19
+Logic Theorist (système) 1
+Logistello (programme) 1
+loi de Moore 1, 2, 3, 4, 5, 6, 7
+lois de la robotique 1
+M
+machine-enfant 1
+machine de Turing 1
+malthusianisme 1-2, 3-4, 5, 6, 7
+
+manipulateur 1, 2, 3, 4, 5
+manipulation 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+génétique 1
+marché
+financier 1-2, 3, 4, 5
+prédictif subventionné 1
+Mathematica 1
+mathématique 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+matière humide (wetware) 1, 2
+matrice de connectivité 1, 2
+maturation 1, 2
+McCarthy, John 1, 2, 3, 4
+McCulloch-Pitts, neurone de 1
+médaille Fields 1, 2
+MégaTerre 1, 2
+méthode
+de consensus 1
+de contrôle 1
+de Monte-Carlo 1, 2
+évolutive 1
+Mill, John Stuart 1
+Minsky, Marvin 1
+modèle
+de Hodgkin-Huxley 1
+neurocomputationnel 1, 2, 3, 4
+modélisation 1, 2
+module 1, 2, 3, 4, 5, 6, 7, 8
+neurocomputationnel 1
+monde possible 1, 2, 3, 4, 5, 6, 7
+monopsone 1
+montage motivationnel 1-2, 3, 4
+Moore, loi de 1-2, 3, 4, 5-6
+morale 1, 2, 3, 4, 5, 6, 7-8, 9, 10-11, 12, 13, 14, 15, 16
+Moravec, Hans 1, 2
+moteur de recherche 1, 2, 3
+motivation 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16-17, 18, 19-20, 21, 22
+mutation 1, 2, 3, 4, 5

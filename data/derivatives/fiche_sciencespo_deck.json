@@ -1,0 +1,104 @@
+{
+ "document_id": "e1e99d38-765e-4114-b349-4f30cacdadce",
+ "titre_normalise": "IA génératives, éducation et formation. Support de formation universitaire",
+ "auteurs": [
+  "Jean-Pierre Berthet",
+  "Guillaume Augé"
+ ],
+ "annee": 2024,
+ "type_ouvrage": "support de formation",
+ "niveau": "intermediaire",
+ "public_cible": "Enseignants du supérieur, responsables pédagogiques, services d'appui à l'enseignement. Diaporama de quatre-vingt-seize diapositives produit par l'Institut des compétences et de l'innovation de Sciences Po, présenté à l'INSPE de l'université de Lorraine, version de juillet 2024 mise à jour fin 2024. Deux parties : introduction aux systèmes génératifs, puis leurs usages en éducation, avec la politique d'établissement et le dispositif d'accompagnement.",
+ "these_centrale": "Un établissement d'enseignement ne peut ni ignorer ces outils ni se contenter de les interdire. Le document propose une troisième voie qu'il a lui-même mise en œuvre : encadrer par une règle claire, à savoir déclaration obligatoire de tout recours et autorisation dans les usages pédagogiques supervisés ; former massivement les enseignants ; et repenser les modalités d'évaluation plutôt que de les défendre. La partie technique sert cette position en montrant à la fois la puissance réelle des outils et leurs défaillances.",
+ "idees_force": [
+  {
+   "titre": "Le premier bénéfice cité par les chercheurs concerne la langue",
+   "explication": "Une enquête de la revue Nature auprès de mille six cents chercheurs, publiée le 10 octobre 2023, classe en tête des bénéfices de l'IA générative pour la recherche : aider les chercheurs dont l'anglais n'est pas la langue maternelle, par la relecture ou la traduction. Devant l'aide au code, devant le résumé de la littérature, devant la rédaction. C'est le fait le plus important de tout ce diaporama pour un chercheur ou un étudiant africain : l'obstacle qui écartait des travaux valables des revues internationales devient franchissable.",
+   "page": 46
+  },
+  {
+   "titre": "Les problèmes recensés par la même enquête",
+   "explication": "Prolifération de la désinformation en tête, puis plagiat rendu plus facile et plus difficile à détecter, erreurs introduites dans les textes et le code, fabrication ou falsification de résultats plus aisée et moins détectable, biais dans les recherches bibliographiques, difficulté à évaluer les apprentissages des étudiants, renforcement des inégalités dans les textes scientifiques, empreinte énergétique. Cette liste, établie par des chercheurs sur leur propre pratique, vaut mieux que n'importe quelle prédiction d'expert.",
+   "page": 46
+  },
+  {
+   "titre": "Jill Watson, l'assistante que personne n'a remarquée",
+   "explication": "En 2016, bien avant l'engouement public, le professeur Ashok Goel de Georgia Tech intègre une intelligence artificielle nommée Jill Watson parmi ses assistants d'enseignement. Aucun étudiant ne s'en aperçoit du semestre. Le cas est cité pour rappeler que l'usage pédagogique de ces outils précède de loin leur médiatisation, et qu'il produit des résultats attendus mais aussi inattendus.",
+   "page": 55
+  },
+  {
+   "titre": "La règle d'établissement, formulée en deux lignes",
+   "explication": "L'usage des IA génératives est proscrit et sanctionné s'il n'est pas clairement mentionné par l'étudiant qui y a recours, à l'exception d'un usage pédagogique encadré par un enseignant. Le fondement n'est pas un règlement nouveau mais l'article du règlement de scolarité et la charte d'intégrité académique existants. S'y ajoute un module d'autoformation suivi par tous les étudiants et présentant les règles de citation d'une IA générative. C'est le modèle de politique le plus simple et le plus transposable que contienne le fonds.",
+   "page": 59
+  },
+  {
+   "titre": "Les œufs de vache, démonstration d'une défaillance",
+   "explication": "Interrogé sur la manière de distinguer des œufs de vache d'œufs de poule, le système répond sans broncher que les œufs de vache sont plus gros, à coquille plus épaisse, de couleur plus foncée, qu'on les trouve dans les fermes et sur les marchés tandis que les œufs de poule sont vendus en supermarché, et conseille de vérifier l'étiquette pour connaître l'origine. La démonstration est imparable devant un public : le système n'a jamais refusé de répondre à une question dont la prémisse est absurde.",
+   "page": 11
+  },
+  {
+   "titre": "Le photographe qui refuse son prix",
+   "explication": "En mars 2023, Boris Eldagsen est primé dans la catégorie création du Sony World Photography Award pour une image intitulée Pseudomnesia. Il refuse la récompense en révélant qu'elle a été produite par une IA. La même année, le générique d'une série télévisée à grand budget est engendré automatiquement, le scénariste justifiant le choix par la capacité de l'outil à traduire un sentiment d'inquiétude. Deux façons opposées d'assumer l'outil, l'une par la révélation, l'autre par la revendication.",
+   "page": 34
+  },
+  {
+   "titre": "Trois découvertes scientifiques datées",
+   "explication": "Novembre 2023 : plus de deux millions de nouveaux matériaux prédits, dont sept cents en cours de synthèse en laboratoire. Novembre 2023 : des prévisions météorologiques fiables jusqu'à dix jours, alors qu'il avait fallu trente ans pour passer de trois à six jours. Décembre 2023 : une nouvelle classe d'antibiotiques identifiée au Massachusetts Institute of Technology, la précédente remontant à soixante ans, active contre des bactéries résistantes responsables de cent cinquante mille infections et trente-cinq mille décès par an dans la seule Union européenne. Ce sont les arguments les plus solides en faveur de ces outils, et ils ne concernent pas la rédaction de courriels.",
+   "page": 48
+  },
+  {
+   "titre": "La formule qui circule, et ce qu'elle vaut",
+   "explication": "L'intelligence artificielle ne remplacera pas les gens, mais les gens qui l'utilisent remplaceront ceux qui ne l'utilisent pas. Le diaporama la cite dans sa version professionnelle appliquée au journalisme par Kati Bremme : l'outil ne remplacera pas un journaliste, mais un journaliste sachant s'en servir dépassera les autres de loin, au risque de déstabiliser la rédaction, car toutes n'auront pas les mêmes balises éthiques et certaines voudront aller plus vite. La formule est un slogan, la seconde formulation en fait un problème d'organisation.",
+   "page": 42
+  },
+  {
+   "titre": "Repenser l'évaluation plutôt que la protéger",
+   "explication": "La dernière partie s'appuie sur l'alignement pédagogique de Biggs pour poser trois stratégies d'évaluation possibles face à ces outils. Le raisonnement de fond est le bon : si un exercice peut être entièrement produit par une machine, c'est que l'exercice n'évaluait peut-être pas ce que l'on croyait. La réponse n'est pas la surveillance, c'est la refonte de la tâche demandée.",
+   "page": 69
+  },
+  {
+   "titre": "Le prix Nobel et l'aveu",
+   "explication": "Octobre 2024, Geoffrey Hinton reçoit le prix Nobel de physique pour ses travaux fondateurs sur l'apprentissage par réseaux de neurones artificiels et déclare lors de la conférence de presse : nous n'avons aucune expérience de ce que c'est que d'avoir des objets plus intelligents que nous. Venant de celui qui a rendu la chose possible, la phrase pèse.",
+   "page": 53
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Statistique sémantique",
+   "definition": "Formulation employée dans le support pour décrire la production d'une réponse à partir des régularités statistiques du langage plutôt que d'une compréhension du sujet."
+  },
+  {
+   "terme": "Alternance symbolique et connexionniste",
+   "definition": "Lecture historique du domaine en trois vagues, symbolique puis connexionniste, séparées par deux hivers."
+  },
+  {
+   "terme": "Multimodalité",
+   "definition": "Capacité d'un système à recevoir et produire du texte, du son et de l'image, illustrée par les modèles de 2024 et l'usage de tuteur pédagogique."
+  },
+  {
+   "terme": "Intégrité académique",
+   "definition": "Ensemble des règles d'honnêteté intellectuelle. Le recours à une IA générative y est traité comme une source à déclarer et à citer, non comme une infraction nouvelle."
+  },
+  {
+   "terme": "Alignement pédagogique",
+   "definition": "Principe de Biggs selon lequel objectifs d'apprentissage, activités et modalités d'évaluation doivent être cohérents. Cadre retenu pour repenser les évaluations."
+  },
+  {
+   "terme": "Frontière homme-machine",
+   "definition": "Proportion des tâches accomplies par des humains et par des machines, mesurée par le Forum économique mondial et projetée de 2022 à 2027."
+  },
+  {
+   "terme": "Guide enseignant",
+   "definition": "Dispositif d'accompagnement composé de fiches pratiques : intégrer les IA dans les activités pédagogiques, préparer un cours, les intégrer aux modes d'évaluation."
+  }
+ ],
+ "a_lire_si": "Vous devez définir la position d'un établissement, d'une école ou d'une formation face à ces outils. Le document donne un modèle complet et éprouvé : la règle en deux lignes, le dispositif de formation des enseignants, les fiches pratiques, le séminaire de retour d'expérience, la refonte des évaluations. Le passage sur l'enquête de Nature, et particulièrement le rang du bénéfice linguistique, mérite d'être extrait et diffusé auprès de tout chercheur non anglophone.",
+ "a_eviter_si": "Vous cherchez un texte suivi. C'est un support de projection reconnu par lecture optique à partir d'images : de nombreuses diapositives sont illisibles, les frises chronologiques et les graphiques sont réduits à des fragments de mots, les légendes se mêlent aux titres. Il faut accepter de reconstruire le propos. Les captures d'outils, les comparaisons de versions et les tableaux de bord datent de 2024.",
+ "prerequis": [],
+ "controverses": [
+  "Le support annonce cent soixante-dix mille milliards de paramètres pour un modèle de 2023. Ce chiffre est une rumeur reprise dans la presse et jamais confirmée par l'éditeur. Il ne doit pas être cité.",
+  "Interdire, encadrer ou intégrer ? L'établissement tranche pour l'encadrement par déclaration obligatoire, ce qui suppose une confiance dans la déclaration des étudiants et des enseignants formés en nombre. Toutes les institutions n'ont ni l'une ni les autres.",
+  "Les outils de détection de texte engendré ne sont pas présentés comme fiables, ce qui est exact, mais laisse entière la question de l'évaluation à distance."
+ ],
+ "confiance": 0.75
+}

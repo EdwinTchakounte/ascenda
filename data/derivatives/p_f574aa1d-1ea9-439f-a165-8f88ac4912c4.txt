@@ -1,0 +1,684 @@
+OUVRAGE : Rédaction de texte efficace avec l'IA - ChatGPT, GPT-4, GPT-3...
+AUTEUR(S) : Kai Spriestersbach
+ANNÉE : inconnue
+PAGES : 238
+AXE : IA Outils Pratique Prompting
+SOMMAIRE :
+  Titelseite (p. 4-4)
+  Impressum (p. 5-6)
+  INHALT (p. 7-9)
+  Einleitung (p. 10-13)
+  Vorwort (p. 14-15)
+  Aktualität und Anwendbarkeit (p. 16-16)
+  Beispiele in diesem Buch (p. 17-17)
+  Kapitel 1: KI – Einführung und Grundlagen (p. 18-18)
+  Was ist Künstliche Intelligenz? (p. 18-19)
+  Die Geschichte der Künstlichen Intelligenz (p. 20-22)
+  Der Unterschied zwischen schwacher und starker KI (p. 23-24)
+  Maschinelles Lernen (p. 25-25)
+  Deep Learning revolutionierte das maschinelle Lernen (p. 26-27)
+  Der aktuelle Stand der Technik (p. 28-28)
+  OpenAI – Die Firma hinter dem KI-Hype (p. 29-29)
+  GPT, GPT-2, GPT-3, GPT-3.5 & GPT-4 (p. 30-34)
+  So lernte ChatGPT sprechen (p. 35-36)
+  Transformer brachten den Durchbruch (p. 37-40)
+  Sprachmodelle sind keine Wissensmodelle (p. 41-42)
+  Einblick in die Wahrscheinlichkeiten des Modells (p. 43-49)
+  Was ist Wahrheit für die Maschine? (p. 50-51)
+  Wird das Problem bald gelöst? (p. 52-52)
+  So viele Tools und doch nur eine KI? (p. 53-55)
+  Kapitel 2: Was du über ChatGPT wissen musst (p. 56-56)
+  Was darf ChatGPT? (p. 56-64)
+  Was kann ChatGPT? (p. 65-90)
+  Unterschiede zwischen GPT-3.5 und GPT-4 (p. 91-93)
+  Der richtige Umgang mit den Grenzen der KI (p. 94-97)
+  Kapitel 3: ChatGPT-Prompting für Einsteiger (p. 98-98)
+  Klarheit und Verständigung führen zum Ziel (p. 99-104)
+  Schritt-für-Schritt-Anleitung für gute Gespräche mit der KI (p. 105-107)
+  Fehlersuche: Wieso macht ChatGPT nicht, was ich will? (p. 108-110)
+  Kapitel 4: Die besten Prompts für erstaunliche Resultate (p. 111-112)
+  Gib ChatGPT einen Job! (p. 113-118)
+  Prompts für mehr Persönlichkeit (p. 119-122)
+  Prompts für Beruf und Karriere (p. 123-128)
+  Prompts für Schule und Studium (p. 129-133)
+  Prompts für Marketing und Vertrieb (p. 134-144)
+  Prompts, um Texte zu verbessern (p. 145-154)
+  Prompts für Fortgeschrittene (p. 155-164)
+  Exkurs: Künstliche Intelligenz und Kreativität (p. 165-165)
+  Was ist Kreativität überhaupt? (p. 165-165)
+  Kann KI kreativ sein? (p. 166-167)
+  Kreativität durch Inspiration (p. 168-168)
+  Echte Kreativleistungen der KI (p. 169-169)
+  Schreibblockaden überwinden (p. 170-171)
+  Prompts zur Inspiration (p. 172-174)
+  Kapitel 5: Einen Text mit der KI schreiben (p. 175-175)
+  1. Finde ein geeignetes Thema (p. 176-177)
+  2. Einarbeitung in das Thema (p. 178-180)
+  3. Definiere den Zweck des Textes (p. 181-181)
+  4. Lege die Zielgruppe und deren Bedürfnisse fest (p. 182-185)
+  Exkurs: Wieso du keine Personas mit ChatGPT generieren solltest (p. 186-190)
+  5. Einen Titel finden (p. 191-194)
+  6. Erstelle eine Gliederung für den Text (p. 195-198)
+  7. Den Text schreiben lassen (p. 199-201)
+  Kapitel 6: Ausblick auf die Zukunft der KI (p. 202-203)
+  Die Grenzen derzeitiger KI (p. 204-204)
+  Rechtsprechung zu KI und von ihr generierten Texten (p. 205-211)
+  Lassen sich KI-generierte Texte erkennen? (p. 212-212)
+
+[17/163 passages, 9733 tokens sur 133000]
+
+=== EXTRAITS ===
+
+[p. 5-6]
+Information bibliographique de la Bibliothèque nationale allemande
+La Bibliothèque nationale allemande répertorie cette publication dans la Bibliographie nationale
+allemande.
+Des données bibliographiques détaillées sont disponibles sur Internet via http://d-nb.de.
+Pour toute question ou suggestion, contactez :
+info@mvg-verlag.de
+Édition originale
+1re édition 2023
+© 2023 par mvg Verlag, une marque de Münchner Verlagsgruppe GmbH
+Türkenstraße 89
+80799 Munich
+Tél. : 089 651285-0
+Fax : 089 652096
+Tous droits réservés, en particulier le droit de reproduction et de diffusion, ainsi que le droit de
+traduction. Aucune partie de l'œuvre ne peut être reproduite ou distribuée sous quelque forme que ce
+soit (par photocopie, microfilm ou tout autre moyen) sans l'autorisation écrite de l'éditeur, ni stockée,
+traitée, reproduite ou diffusée à l'aide de systèmes électroniques.
+Rédaction : Petra Holzmann
+Conception de la couverture : Marc-Torben Fischer
+Mise en page : Daniel Förster
+eBook : ePUBoo.com
+ISBN imprimé 978-3-7474-0574-1
+ISBN E-Book (PDF) 978-3-96121-966-7
+ISBN E-Book (EPUB, Mobi) 978-3-96121-967-4
+
+Vous pouvez trouver plus d'informations sur l'éditeur à
+www.mvg-verlag.de
+Veuillez également consulter nos autres éditeurs àwww.m-vg.de .
+
+---
+
+[p. 16-17]
+s ce livre, ce qui inclut la sortie de GPT-4.
+Mais ce livre ne deviendra pas pour autant obsolète.
+Lors de la rédaction, j'ai veillé à ce que les informations dans ce livre
+soient intemporelles. Tu constateras au fil du livre que tous les chatbots
+utilisant l'Intelligence Artificielle ainsi que les outils d'IA pour la génération
+de texte qui apparaissent de partout sur Internet reposent tous sur le même
+principe simple. Une fois que tu auras compris le principe fondamental de
+la technologie derrière ChatGPT et compagnie, cela t'aidera à obtenir de
+meilleurs résultats plus rapidement et te permettra même de concrétiser tes
+propres idées grâce à l'IA.
+Exemples dans ce livre
+En raison du développement constant des outils, il se peut que certaines
+instructions de mes exemples dans ce livre produisent une sortie différente
+de celle que j'ai imprimée ici.
+N'hésitez pas à essayer. En tant qu'acheteur de ce livre, vous pouvez
+télécharger sur mon site web à l'adresse https://kai.im/prompts une liste à
+jour des meilleures instructions à donner à l'IA, que je développe
+continuellement. Elle contient tous les exemples de ce livre. Le mot de
+passe pour cette page se trouve dans le chapitre 4.
+
+---
+
+[p. 27-27]
+sance vocale, la
+reconnaissance d'images et l'automatisation des processus dans différents
+secteurs. De 2009 à 2012, un groupe de recherche au laboratoire suisse IDSIA a
+remporté une série de compétitions internationales en reconnaissance de motifs et
+en apprentissage automatique à l'aide du Deep Learning. Cela a attiré beaucoup
+
+---
+
+[p. 39-40]
+ow-Ketten zuvor. Bei GPT-4 sind es in der größten
+Ausbaustufe sogar bis zu 20.000 Wörter, was etwa 50 Buchseiten Text entspricht.
+Da will man sich gar nicht ausmalen, wie viele Wahrscheinlichkeiten man
+speichern und berechnen müsste. Die Anzahl möglicher Wort-Kombinationen
+übersteigt die menschliche Vorstellungskraft bei Weitem.
+Den Durchbruch zur Lösung dieses Problems brachte die "Transformer-
+Architektur" (das T in GPT ), qui a été publiée pour la première fois en décembre
+2017 dans un document de recherche rédigé par des employés de Google sur la
+traduction automatique intitulé "Attention Is All You Need". Dans cette
+recherche, les employés de Google ont tenté de développer un modèle de langage
+capable de traduire automatiquement des textes multilingues. Grâce à leur
+nouvelle architecture, ils ont réalisé une véritable révolution dans la construction
+de modèles de langage.
+Les chercheurs ont tiré parti du fait suivant : dans la langue naturelle, tous les
+mots ne sont pas présents avec la même fréquence et certains mots dans une
+phrase sont plus importants que d'autres pour sa signification et son expression.
+Cela permet de réduire considérablement la complexité du langage ainsi que
+l'espace mémoire et les ressources nécessaires.
+Avant de traiter une phrase, un tel modèle de langage analyse d'abord les
+relations entre les mots. Ainsi, le modèle apprend quels mots sont importants pour
+le contexte de la phrase. Cela permet de déterminer quels mots sont nécessaires
+pour prédire le mot suivant et lesquels ne le sont pas. En d'autres termes, le réseau
+neuronal reconnaît quels mots dans la phrase définissent le contexte pour un mot
+donné.
+Ceci se produit dans une couche spécialisée à l'intérieur du réseau neuronal,
+appelée "Transformer". Dans l'ensemble, les Transformers aident donc à
+comprendre le sens des mots dans leur contexte en modélisant les relations entre
+les mots dans une phrase ou un document, permettant ainsi une compréhension
+plus profonde du sens du texte.
+Les modèles de Transformer modernes sont donc basés sur la capture et
+l'utilisation du sens d'un mot par les connexions et les relations au sein
+des phrases.
+Les couches de traitement suivantes du réseau neuronal peuvent maintenant
+utiliser ces informations pour réduire la complexité de l'entrée, c'est-à-dire la
+dépendance des mots par rapport au contexte, et ainsi minimiser la charge de
+calcul.
+Cette architecture a révolutionné le traitement du langage naturel, surpassant
+les méthodes précédentes dans de nombreuses applications. L'architecture
+
+---
+
+[p. 51-51]
+Ils
+dépendent de l'analyse et de l'évaluation des informations et des données
+à leur disposition. Dans de nombreux cas, cela peut aboutir à la
+fourniture d'informations fiables et précises. Mais il y a aussi des cas où
+ils fournissent des informations erronées ou trompeuses, sans que cela
+soit facilement reconnaissable pour toi.
+
+---
+
+[p. 64-64]
+r ce type de suggestions. Je les mentionne ici
+principalement pour que vous sachiez à quoi vous attendre et parce que, de
+mon point de vue, cela aide à comprendre le fonctionnement de
+l'intelligence artificielle derrière ChatGPT et comment des fausses
+informations ou d'autres déchets sur Internet peuvent être produits avec
+l'IA.
+
+---
+
+[p. 81-83]
+les, je recommande de faire une recherche en ligne ou de
+visiter son site web officiel ou ses réseaux sociaux.
+C'est étonnant lorsque l'on considère que GPT-3.5 et GPT-4 reposent sur les
+mêmes données d'entraînement. Cependant, le nouveau modèle semble être
+meilleur pour retrouver les traces que j'ai laissées, par exemple depuis
+l'année 2010, à travers des articles réguliers sur mon blog, des podcasts et
+des conférences. Il est probable que certains de mes articles invités dans
+d'autres médias se soient retrouvés dans les données d'entraînement,
+marqués par des informations sur ma personne dans la boîte de l'auteur,
+fournissant ainsi davantage d'indications statistiques à GPT-4.
+ChatGPT est limité dans sa longueur
+Dans la dernière section, j'ai écrit que ChatGPT peut se référer aux
+informations que nous avons nous-mêmes fournies dans une conversation.
+C'est vrai, mais il y a une restriction importante à prendre en compte : la
+longueur d'entrée maximale pour le modèle linguistique est limitée ! Cela
+s'applique également aux conversations longues avec ChatGPT.
+Le fait que l'on puisse avoir une conversation avec l'IA aussi longue que
+l'on souhaite pourrait laisser penser que l'on peut insérer de longs textes
+progressivement en petites bouchées dans le chat, pour finalement les
+résumer dans leur ensemble. Malheureusement, cela ne fonctionne pas de
+cette manière. Même ChatGPT avec le nouveau modèle GPT-4 n'est pas
+capable d'accéder aux messages précédents au-delà d'un certain nombre de
+mots.
+Par exemple, si vous voulez traduire un long texte en anglais, vous ne
+pouvez pas le copier d'un seul coup dans le champ de messages de
+ChatGPT. Au plus tard lors de l'envoi, vous recevrez un message indiquant
+que vous avez dépassé le nombre maximal de caractères. Vous devrez alors
+diviser le texte en petites parties et les faire traduire successivement.
+Ensuite, vous pouvez réassembler les parties traduites dans votre logiciel de
+traitement de texte.
+Ce que cela signifie concrètement pour le travail avec des textes
+plus longs, où se trouvent exactement ces limites et comment vous
+pouvez y faire face en pratique, je l'ai décrit en détail dans un
+chapitre ultérieur.
+
+ChatGPT n'a pas d'humour, n'est-ce pas ?
+Vous avez peut-être remarqué en expérimentant avec ChatGPT que l'IA ne
+peut pas raconter de blagues. La complexité de l'humour humain est idéale
+pour vous montrer une limitation fondamentale de l'IA. J'y reviendrai tout
+de suite. Mais revenons à la blague. Même avec le modèle GPT-4 actuel,
+ChatGPT répond à ma question
+Raconte-moi une blague, s'il te plaît !
+quelque chose que je ne qualifierais pas de drôle :
+Bien sûr, voici une blague pour toi :
+Pourquoi les poissons ne vont-ils jamais à l'école ?
+Parce qu'ils préfèrent nager dans la mer !
+Je sais bien que les groupes de poissons sont également appelés des bancs
+d'école, ce qui permettrait effectivement de faire une blague, mais la chute
+de l'IA ne me semble tout simplement pas évidente. Alors je voulais savoir
+pourquoi ChatGPT trouve cela drôle :
+Pourquoi est-ce drôle ?
+Sur quoi l'IA fournit une explication assez absurde qui contient des
+affirmations clairement fausses :
+La blague est un jeu de mots et joue sur la double signification du mot "mer". En
+allemand, "mer" peut signifier à la fois "mer" (comme habitat des poissons) et
+"école" (un établissement d'éducation pour les humains). La surprise
+humoristique survient parce qu'on s'attend normalement à ce que la réponse à
+
+---
+
+[p. 98-98]
+CHAPITRE 3
+CHATGPT-PROMPTING FOR BEGINNERS
+Maintenant, passons à la pratique : dans ce chapitre, tu apprendras comment
+maîtriser l'art de la communication avec ChatGPT.
+Tu te souviens peut-être de la première fois où tu as parlé à quelqu'un
+dans une langue étrangère. Tu cherches les bons mots et tu es incertain si
+ton interlocuteur te comprend. Avec une IA qui génère du texte comme
+GPT-3, c'est un peu similaire, sauf que cette langue étrangère est composée
+d'instructions claires et précises.
+Heureusement, ChatGPT, tout comme GPT-4, est capable de
+comprendre et de répondre à la langue naturelle, presque comme un
+interlocuteur humain. Tu peux communiquer avec ChatGPT dans le même
+langage et la même syntaxe que tu le ferais avec un rédacteur ou une
+rédactrice réel(le). ChatGPT tient également compte du contexte de la
+conversation, ce qui permet à l'IA de fournir des réponses plus appropriées
+et pertinentes à tes questions.
+La qualité de tes invitations est la clé de la réussite d'une conversation
+avec ChatGPT. Comme on dit : "Shit in, shit out !". Des invitations de
+mauvaise qualité donnent de mauvais résultats, c'est-à-dire que des
+invitations mal définies peuvent donner lieu à des conversations et à des
+textes qui semblent décousus ou qui perdent leur focalisation thématique.
+Cela peut entraîner des dialogues saccadés ou peu focalisés, moins
+attrayants et informatifs. En revanche, des instructions bien définies
+permettent de maintenir la conversation sur la bonne voie et de traiter les
+sujets d'intérêt pour l'utilisateur ou le lecteur.
+C'est exactement là que nous intervenons.
+Dans ce chapitre, tu apprendras tout ce que tu dois savoir pour créer des
+invitations claires et efficaces qui conduisent à des conversations
+
+---
+
+[p. 112-112]
+it dans l'instruction, que vous
+devez adapter en fonction de vos besoins.
+Pour certains exemples qui ne sont pas explicites, j'ajoute des
+explications 
+pour 
+une 
+meilleure 
+compréhension 
+et 
+des
+recommandations pour faire face aux difficultés. Au fait : je ne
+reproduirai plus la sortie de l'IA pour chaque prompt à partir de ce
+
+---
+
+[p. 126-128]
+dans le rôle
+de l'intervieweur. Ne notez pas tout d'un coup. Je souhaite que vous meniez
+seulement l'entretien avec moi. Posez-moi les questions et attendez mes réponses.
+N'écrivez pas d'explications. Posez-moi les questions une par une, comme le ferait
+un intervieweur, et attendez mes réponses. Ma première phrase est "Bonjour".
+Conseils de carrière généraux
+ChatGPT peut faire encore plus pour ta carrière. Tu peux interroger l'IA
+comme un conseiller de carrière pour toutes sortes de choses :
+S'il te plaît, sois mon conseiller de carrière.
+Suivi de ta question :
+Quels sont les écueils pour les nouveaux arrivants dans le domaine [Branche] et
+comment les éviter ?
+Ou bien :
+Je suis dans le domaine [Branche] depuis [X années] et je souhaite changer de
+carrière. Je m'intéresse particulièrement au sujet [Interesse]. Comment pourrais-je
+faire évoluer ma carrière dans cette direction ?
+Ta créativité et ta soif de connaissance sont sans limites ici.
+ChatGPT peut même te donner des indications concrètes pour postuler à
+des postes qui t'intéressent.
+En tant que coach de carrière pour les entretiens d'embauche dans [BRANCHE],
+donnez-moi des conseils sur le CV, y compris les compétences pertinentes, les
+qualifications, les certifications spécifiques à l'industrie ou les formations et les
+compétences non techniques importantes, ainsi que des questions d'entretien
+possibles pour le poste de "[STELLENBEZEICHNUNG]".
+Lettres et courriers
+
+L'IA peut non seulement rédiger des lettres de motivation pour toi. J'utilise
+désormais ChatGPT pour presque tous les types de lettres ou courriers,
+lorsque l'objectif est simplement d'insérer quelques informations de base
+dans des formules de politesse. Bien sûr, je fournis moi-même les
+déclarations importantes dans mon instruction initiale, afin que l'IA sache
+ce qu'elle doit transmettre à l'interlocuteur.
+S'il te plaît, écris une lettre [formelle/amicale] à [Empfänger], dans laquelle tu fais part
+de [Sachverhalt].
+Plus tu fournis d'informations et plus tu décris précisément le but de la
+lettre, meilleurs seront les résultats.
+E-mails
+Cela fonctionne également pour les e-mails, en particulier pour ceux qui ne
+sont qu'un cadre formel pour une procédure, comme par exemple :
+S'il te plaît, écris un e-mail poli pour transmettre une facture à un client, avec un texte
+du genre "Vous trouverez votre facture en pièce jointe".
+Ou un rappel de paiement :
+S'il te plaît, écris un rappel de paiement poli pour un client qui n'a pas payé une
+facture à temps.
+Tu peux personnaliser et étendre ces instructions à volonté, par exemple en
+demandant à l'IA de tutoyer le client ou de le remercier pour la commande
+et la collaboration jusqu'à présent.
+
+---
+
+[p. 143-144]
+t intéressants.
+Bien sûr, vous pouvez ensuite demander à ChatGPT d'écrire les messages
+pour vous :
+Veuillez créer un texte pour chaque conseil d'expert pour une publication sur
+LinkedIn, visant à renforcer ma position en tant que [domaine] et à inciter les
+utilisateurs de la plateforme à [regarder la vidéo / écouter le podcast].
+Ensuite, il vous suffit de réviser et de publier ces contributions. Les
+exemples suivants vous montrent comment ChatGPT peut vous aider à
+créer en quelques minutes différents formats pour différentes plateformes,
+canaux et objectifs à partir d'une transcription :
+Donnez-moi 15 tweets contenant les informations tirées de la transcription originale
+qui sont intéressantes et qui touchent mon public cible.
+Ne cherchez pas à les amener à écouter le podcast. Je veux que les informations
+soient assimilées sous forme de tweets dans le fil d'actualité.
+Dans ce flux de travail, il est possible de développer d'autres formats basés
+sur la transcription. Essayez simplement différents formats, longueurs et
+objectifs, tels que :
+Transformez la transcription ci-dessus en un article de blog de 500 mots.
+Transformez la transcription ci-dessus en une courte newsletter par e-mail.
+Transformez la transcription ci-dessus en une publication LinkedIn qui cible
+[utilisateur/niche].
+Transformez la transcription ci-dessus en un texte pour un carrousel Instagram.
+Transformez la transcription ci-dessus en une série de tweets.
+Les possibilités sont presque infinies.
+Trouver des hashtags et des mots-clés
+ChatGPT est assez doué pour suggérer des hashtags appropriés pour les
+publications sur les plateformes de médias sociaux. Que ce soit sur
+LinkedIn
+
+---
+
+[p. 162-164]
+même manière si vous souhaitez
+faire résumer de longs textes. Vous devez également faire résumer ces
+textes par l'IA en plusieurs parties plus petites. Pour les textes
+particulièrement longs, vous pouvez faire passer les résumés de ChatGPT
+obtenus à la fin à nouveau dans ChatGPT, pour ainsi dire en tant que
+résumés des résumés.
+Éviter les préliminaires
+Lorsqu'il répond à presque chaque instruction, ChatGPT commence par
+répéter l'instruction avec ses propres mots et expliquer ce qu'il fait. C'est
+bien au début pour voir si l'IA a bien compris l'instruction, mais cela
+devient assez agaçant après un certain temps car la réponse réelle se fait
+attendre.
+Maintenant, j'arrête ce comportement avec l'instruction suivante à la fin
+de chaque rappel, notamment pour éviter que ces préliminaires ne limitent
+la longueur de la réponse :
+Ne dis pas ce que tu fais, fais-le simplement.
+Pour les instructions complexes, une formulation comme celle-ci est utile :
+Ne me rappelle pas ce que je t'ai demandé. Ne t'excuse pas. Ne te réfère pas à toi-
+même.
+Essaie-le simplement, tu vas adorer.
+Écrire des histoires cohérentes
+En raison du nombre limité de jetons, il est un véritable défi d'écrire une
+histoire plus longue et cohérente avec ChatGPT. Si tu demandes
+simplement à l'IA d'écrire un conte de fées, un script ou tout autre forme
+d'histoire, elle essaiera toujours de conclure l'intrigue dans 1 500 mots.
+En revanche, si tu la freines avec des instructions, par exemple en
+demandant que toutes les scènes, les personnages ou les actions soient très
+détaillés, tu devras constamment lui dire desuite pour poursuivre l'histoire.
+Malheureusement, elle perdra rapidement le fil conducteur car elle ne
+
+pourra plus "voir" comment l'histoire a commencé, où se déroule la trame
+actuelle de l'intrigue ou comment s'appellent les protagonistes.
+Tu dois donc d'abord construire l'épine dorsale de ton histoire en dehors
+de ChatGPT et la noter dans un logiciel de traitement de texte. Ensuite, tu
+peux utiliser l'IA comme des scènes individuelles dans un film, en lui
+permettant de formuler et de garnir de détails des parties distinctes.
+L'art est de toujours lui fournir les informations nécessaires par rappel
+pour créer une narration cohérente dans le cadre général.
+
+---
+
+[p. 174-175]
+sations afin que tu
+puisses voir l'étendue et peut-être même trouver de tout nouveaux cas
+d'utilisation pour toi-même.
+Comme toujours, rappelle-toi : utilise ChatGPT comme générateur
+d'idées, mais ne te fie pas à 100 % aux contenus générés ! Tous les faits et
+les affirmations de l'IA doivent être vérifiés par mesure de sécurité.
+CHAPITRE 5
+ÉCRIRE UN TEXTE AVEC L'IA
+Maintenant que tu as acquis beaucoup de connaissances sur ChatGPT et le
+pouvoir des prompts efficaces, je vais te montrer comment écrire un texte
+complexe à l'aide de l'IA. Comme je l'ai déjà mentionné à plusieurs reprises,
+il est très important de contrôler les informations utilisées par ChatGPT
+dans ses textes.
+Lors de chaque instruction, veillez à ce que ChatGPT comprenne ce
+qu'il doit faire et utilise les bonnes informations. Gardez toujours à l'esprit
+les informations dont la machine peut disposer. En raison de l'ancienneté
+des données d'entraînement, ChatGPT ne peut pas en savoir plus sur un
+smartphone récent que sur votre CV.
+Si vous commencez simplement par
+Écrivez un texte marketing percutant de 1 500 mots sur [Produit].
+les chances que le résultat corresponde à vos exigences sont relativement
+faibles. Vous devez donc insérer les informations pertinentes que l'IA ne
+peut pas connaître, afin que votre article atteigne la profondeur de contenu
+nécessaire sans générer de fausses informations. Cela vous fera économiser
+beaucoup de corrections et de vérifications des faits.
+Mais commençons par le début. Je vais vous guider à travers tout le
+processus en utilisant un exemple.
+Si vous n'avez aucune idée du type de texte que vous souhaitez écrire, il
+peut être difficile de formuler les bonnes instructions pour l'IA. Il peut être
+
+---
+
+[p. 187-189]
+emps d'identifier de manière plus
+précise les problèmes et les besoins spécifiques de cette cible, ainsi que les
+contenus, produits ou services propres à résoudre ces problèmes et besoins.
+Une telle analyse des besoins permet également de créer un texte pour
+un article ou une page de vente spécifiquement adapté aux besoins de la
+cible, contribuant ainsi à l'acceptation des contenus, produits ou services.
+Cela se fait généralement par le biais de la recherche de marché, de
+l'analyse des tendances ou des retours des clients. Mais il est également
+possible d'interroger l'IA.
+Par exemple, si vous souhaitez écrire un texte sur le thème de la
+"surchage d'engrais" pour des élèves de 5e à 7e année, les questions que les
+élèves pourraient se poser sur ce thème peuvent vous aider à structurer vos
+arguments et à présenter les informations de votre article de manière plus
+claire. Vous pourriez donner l'instruction suivante à l'IA :
+Imaginez que vous êtes un élève de 6e année qui s'intéresse à l'environnement et à
+la protection de la nature. Quelles questions vous poseriez-vous sur la surcharge
+d'engrais ?
+La liste des questions ainsi établie peut déjà servir de plan pour l'article, ou
+du moins pour une présentation de questions et de réponses ci-dessous :
+Un élève de 6e année intéressé par l'environnement et la protection de la nature
+pourrait se poser les questions suivantes sur la surcharge d'engrais :
+1. Qu'est-ce que la surcharge d'engrais et comment se produit-elle ?
+2. Pourquoi la surcharge d'engrais pose-t-elle un problème pour
+l'environnement et la protection de la nature ?
+3. Quels sont les effets de la surcharge d'engrais sur les lacs, les rivières et
+la mer ?
+4. Que se passe-t-il lorsque trop de nutriments pénètrent dans l'eau ?
+5. Qu'est-ce que les fleurs d'algues et pourquoi sont-elles néfastes pour
+l'écosystème ?
+6. Comment la surcharge d'engrais affecte-t-elle les plantes, les animaux et
+les humains ?
+7. Quelles activités humaines contribuent à la surcharge d'engrais ?
+8. Comment les élèves peuvent-ils contribuer à éviter la surdose d'engrais ?
+9. Que pouvons-nous faire en tant que communauté pour prévenir ou réduire
+la surdose d'engrais ?
+
+Y a-t-il des exemples de mesures réussies contre la surdose d'engrais ?
+Si vous souhaitez commercialiser un produit ou un service, une liste de
+questions vous aidera également à répondre aux besoins des clients. Dans
+un exemple, il pourrait s'agir d'engrais biologiques :
+Imaginez que vous soyez un agriculteur moderne dans une exploitation agricole
+consciente de l'environnement. Vous avez besoin d'engrais pour vos champs, mais
+vous ne souhaitez plus utiliser d'engrais chimiques conventionnels. Quelles questions
+un tel agriculteur se poserait-il avant de choisir un engrais ?
+De nombreux bons arguments pour une argumentation avantageuse sur une
+page de destination de produit peuvent être déduits du résultat :
+1. Quelles sont les alternatives respectueuses de l'environnement aux
+engrais chimiques conventionnels disponibles sur le marché ?
+2. Comment puis-je répondre de manière durable aux besoins nutritifs de
+mes plantes sans nuire à l'environnement ?
+3. Comment puis-je optimiser l'utilisation des engrais pour éviter une surdose
+et l'eutrophisation ?
+4. Existe-t-il des moyens d'utiliser efficacement des engrais organiques tels
+que le compost, le fumier ou les engrais verts dans mon exploitation ?
+5. Comment puis-je fermer le cycle des éléments nutritifs dans mon
+exploitation pour réduire au minimum le besoin d'engrais externes ?
+6. Quel rôle jouent les échantillons de sol et les analyses de sol dans la
+détermination de l'utilisation optimale des engrais ?
+7. Existe-t-il des programmes de soutien ou des incitations financières pour
+passer à des méthodes d'engrais respectueuses de l'environnement ?
+8. Quelles techniques d'agriculture de précision et quels outils numériques
+peuvent m'aider à mieux contrôler et améliorer l'utilisation des engrais ?
+9. Quelles expériences et recommandations existent déjà d'autres
+agriculteurs qui ont réussi à passer à la fertilisation respectueuse de
+l'environnement ?
+
+---
+
+[p. 201-203]
+ou un
+service que vous souhaitez commercialiser. Par exemple:
+Écrivez-moi sept appels à l'action pour mon produit appelé [Nom du produit], qui aide
+[Avantage pour le client], que je pourrais insérer à la fin de cet article.
+ou:
+Veuillez écrire une demande d'abonnement à notre bulletin d'information mensuel à
+la fin de l'article.
+CHAPITRE 6
+UN APERÇU DE L'AVENIR DE L'IA
+Imaginez une technologie si transformative qu'elle a le potentiel de
+remodeler toute l'histoire de l'humanité. Une technologie dont l'impact sur
+notre vie et notre avenir pourrait même être plus important que celui du feu
+ou de l'électricité dans l'histoire de l'humanité. Cette technologie n'est pas
+une vision lointaine du futur, mais est en principe déjà devenue réalité en
+2020. Cette affirmation audacieuse a été faite par Sundar Pichai, le PDG de
+Google. 36 Et bien qu'elle puisse sembler exagérée au premier abord, il y a
+de bonnes raisons de la prendre au sérieux. En effet, l'Intelligence
+Artificielle n'est pas seulement un concept abstrait ou une collection
+d'algorithmes, mais une technologie qui est déjà en train de changer le
+monde qui nous entoure.
+L'Intelligence Artificielle a déjà montré qu'elle pouvait être utile dans de
+nombreux domaines de notre vie. Des tâches simples comme la
+planification de rendez-vous et les prévisions météorologiques à la
+résolution de problèmes complexes tels que le diagnostic médical et la
+modélisation du climat. L'IA a le potentiel de changer notre façon de penser
+et de travailler. Un bon exemple en est la reconnaissance vocale. Vous avez
+sûrement déjà utilisé Siri, Alexa ou l'Assistant Google, n'est-ce pas ? Ces
+systèmes ne sont rien d'autre que des applications d'IA formées pour
+comprendre et réagir à la langue humaine. Les systèmes d'IA peuvent déjà
+traduire des textes, décrire des images et même composer de la musique. La
+prochaine génération d'IA générative sera capable de générer non seulement
+des textes et des images, mais aussi des vidéos complètes, y compris des
+séquences animées et de l'audio. Les modèles de langage actuels sont utiles
+pour une variété de tâches, mais leurs capacités sont encore limitées. Les
+seules informations dont ils peuvent apprendre sont leurs données
+
+d'entraînement, qui sont à la fois obsolètes et ne conviennent pas à toutes
+les applications. Mais cela ne durera plus longtemps. Des applications sont
+déjà en train de naître qui serviront de yeux et d'oreilles à l'Intelligence
+Artificielle, lui fournissant des informations plus récentes, personnelles ou
+spécifiques que ses données d'entraînement.
+OpenAI gives its chatbot ChatGPT the ability to access current
+information through plugins. ChatGPT plugins are like little helpers
+specifically designed for the language model, helping the AI to access the
+latest information and data, perform calculations, or use third-party services
+such as Expedia, Kayak, Shopify, or OpenTable. This makes it possible, for
+example, for ChatGPT to research current flights, reserve a table at the
+restaurant of your choice, or search for specific products. In addition, with
+the "Speak" plugin, ChatGPT has the ability of speech synthesis, so it can
+not only read its answer to you but also say how to pronounce something in
+another language. However, the biggest innovation will come from the two
+plugins developed by OpenAI itself: a web browser and a code interpreter.
+With the web browser, not only will it be possible for ChatGPT to retrieve
+web pages for translation, summarization, or answering questions; through
+the integrated Bing API, the AI can also search the internet for information
+and learn to decide for itself when to perform a search in order to answer a
+question correctly.
+Je suppose également que des normes certaines se développeront tôt
+ou tard pour la manière dont différents systèmes d'IA communiquent
+entre eux ou accèdent à des applications externes. Cela permettra
+bientôt de développer des systèmes d'assistance personnelle
+capables d'organiser des rendez-vous entre eux ou même de
+négocier 
+les 
+premières 
+conditions 
+pour 
+des 
+coopérations
+potentielles.
+Comme tu peux le constater, le développement de l'intelligence artificielle a
+fait d'énormes progrès au cours des dernières années. Les systèmes d'IA
+sont aujourd'hui capables de prendre en charge des tâches dont les
+
+---
+
+[p. 214-214]
+érêts. Cela nécessite cependant une
+compétence dans la gestion de telles technologies, à la fois du côté du
+législateur et du grand public.
+J'espère que mon travail sur ce livre pourra contribuer à une
+meilleure compréhension du sujet, car je pense que l'importance
+d'une discussion large et éclairée et de la prise de décision en
+
+---
+
+[p. 227-232]
+sulté le 01.03.23, disponible en ligne
+sur: https://kai.im/solmecke
+42 Vinu Sankar Sadasivan, Aounon Kumar, Sriram Balasubramanian, Wenxiao Wang, Soheil Feizi:
+"Peut-on détecter de manière fiable des textes générés par l'IA ?", pré-publication arXiv, consulté le
+05.04.23, disponible en ligne sur: https://kai.im/ai-text-detection
+43 Kyle Wiggers: "Les tentatives d'OpenAI de marquer les textes de l'IA atteignent leurs limites",
+Techcrunch, consulté le 14.02.23, disponible en ligne sur : https://kai.im/openai-watermark
+44 OpenAI : "GPT-4 Developer Livestream" sur YouTube, consulté le 15.03.23, disponible en ligne
+sur : https://kai.im/gpt-4-developer-livestream
+45 Sébastien Bubeck, Varun Chandrasekaran, Ronen Eldan, Johannes Gehrke, Eric Horvitz, Ece
+Kamar, Peter Lee, Yin Tat Lee, Yuanzhi Li, Scott Lundberg, Harsha Nori, Hamid Palangi, Marco
+Tulio Ribeiro, Yi Zhang: "Des étincelles d'intelligence artificielle générale : premières expériences
+avec GPT-4", arXiv Pre-Print, consulté le 15.03.23, disponible en ligne sur : https://kai.im/arxiv-gpt-
+4-sparks
+
+Ne croyez pas tout ce que vous pensez
+Reinwarth, Alexandra
+9783961213788
+256 pages
+Achetez et lisez le titre maintenant
+Alexandra Reinwarth prend ses décisions de manière rationnelle. Du
+moins en partie. C'est du moins ce qu'elle pensait jusqu'à ce qu'elle
+se pose la question de savoir si la 17e paire de chaussures noires
+dans son placard était vraiment nécessaire. Maintenant, elle sait que
+
+l'esprit n'a rien à dire. On est régulièrement induit en erreur par des
+erreurs de pensée inculquées. Avec perspicacité et humour,
+Alexandra Reinwarth montre comment repérer ces erreurs et
+prendre enfin des décisions intelligentes. Une aide indispensable
+pour tous ceux qui s'étonnent de ne jamais tenir leurs bonnes
+résolutions, de ne jamais concrétiser de bonnes idées et d'acheter
+constamment des choses dont ils n'auront jamais besoin.
+Achetez et lisez le titre maintenant
+
+Guide du Tarot pour débutants
+Caponi, Stefanie
+9783961219292
+128 pages
+Acheter et lire le titre maintenant
+Votre guide indispensable pour lire les cartes de tarot - avec
+confiance et facilité. Que ce soit des questions sur le travail, l'amour,
+les relations interpersonnelles ou le développement personnel - avec
+les 78 cartes de tarot, vous trouverez les réponses à tout ce que
+vous voulez savoir sur votre vie. Dans ce guide complet, l'experte en
+
+tarot Stefanie Caponi explique de manière claire et détaillée la
+signification de chaque carte, les différents systèmes de lecture,
+comment interpréter correctement les cartes et comment apprendre
+à avoir confiance en votre intuition. Vous serez bientôt assez
+expérimenté pour vous lire les cartes à vous-même et aux autres.
+Dans le guide du tarot, vous trouverez: · Profils illustrés des cartes
+de tarot avec des significations astrologiques, numérologiques et
+élémentaires, des informations sur le travail, l'amour et la vie
+spirituelle ainsi que l'interprétation des cartes inversées · Des outils
+d'introduction avec des instructions étape par étape pour la
+préparation et la réalisation des lectures, ainsi qu'une variété de
+systèmes de lecture à essayer · Des exercices pour renforcer votre
+intuition et vos compétences en interprétation du tarot · Le
+fonctionnement de la croix celtique expliqué, afin que les débutants
+puissent maîtriser facilement ce système de lecture populaire · Une
+vue d'ensemble de toutes les images de cartes et de leurs
+significations les plus importantes
+Achetez et lisez le titre maintenant

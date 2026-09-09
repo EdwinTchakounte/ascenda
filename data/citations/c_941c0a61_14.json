@@ -1,0 +1,38 @@
+[
+ {"chapitre":"97ed4396","citations":[
+  {"texte":"Parce que de plus en plus d'alternatives arrivent, il est utile de regarder périodiquement autour de soi pour s'assurer d'utiliser le modèle d'IA générative qui convient le mieux à vos besoins.","page":181,"axe":"03-ia-outils-pratique-prompting","theme":"Ne pas s'enfermer dans un seul outil","portee":"Conseil de methode : reevaluer regulierement son outillage plutot que de s'attacher a une marque."}
+ ]},
+ {"chapitre":"cff0d79d","citations":[
+  {"texte":"Considérer ChatGPT comme un simple outil de prédiction de motifs de mots est une sous-estimation flagrante des réalisations humaines remarquables nécessaires pour le créer et de la nature puissante de l'outil lui-même.","page":182,"axe":"02-ia-technique-academique","theme":"Ne pas sous-estimer non plus","portee":"Contrepoids aux formules du livre lui-meme sur la machine qui ne sait rien. Les deux affirmations sont a tenir ensemble."},
+  {"texte":"Cependant, les rendus réalisés par un artiste professionnel seront bien plus sophistiqués car leurs requêtes le sont.","page":182,"axe":"03-ia-outils-pratique-prompting","theme":"La competence se deplace vers la demande","portee":"L'outil n'egalise pas les talents : il transpose l'ecart de savoir-faire dans la formulation."}
+ ]},
+ {"chapitre":"680a02dd","citations":[
+  {"texte":"Lire à voix haute est un test ancien pour les écrivains afin de s'assurer que le texte coule de manière fluide et naturelle.","page":185,"axe":"09-developpement-personnel-influence","theme":"Lire a voix haute","portee":"Conseil d'ecriture anterieur a toute machine, et qui reste le meilleur test de fluidite d'un texte."},
+  {"texte":"DeepL Write est un outil pour améliorer votre écriture plutôt que de répondre à des questions générales et plus larges.","page":184,"axe":"03-ia-outils-pratique-prompting","theme":"Un outil pour ecrire, pas pour savoir","portee":"Distinction claire d'usage : ameliorer une formulation n'est pas produire une information."}
+ ]},
+ {"chapitre":"fa17695f","citations":[
+  {"texte":"Cedille est un modèle de langue française open source basé sur GPT-J, un modèle GPT différent de ceux dont nous avons discuté jusqu'à présent, qui a été développé par l'équipe EleutherAI.","page":186,"axe":"02-ia-technique-academique","theme":"Un modele pense pour le francais","portee":"Cas interessant pour l'espace francophone : un modele concu dans la langue plutot qu'adapte depuis l'anglais."},
+  {"texte":"Étant donné que l'entreprise est située dans l'UE, les utilisateurs bénéficient de protections de la vie privée et de la confidentialité bien plus importantes que celles offertes par les entreprises d'IA dans certains autres pays, comme les États-Unis.","page":186,"axe":"04-ia-societe-ethique-philosophie","theme":"Le lieu d'hebergement compte","portee":"Rappelle que le droit applicable depend du pays de l'entreprise. Question ouverte pour les utilisateurs africains, qu'aucune de ces legislations ne protege."}
+ ]},
+ {"chapitre":"c09a129a","citations":[
+  {"texte":"Contrairement à d'autres modèles mentionnés dans ce chapitre, Notion AI n'est pas formé par les utilisateurs. Les données que vous saisissez dans les prompts et les récits générés par la machine que vous utilisez en partie ou en totalité dans d'autres applications sont privées et chiffrées.","page":188,"axe":"03-ia-outils-pratique-prompting","theme":"Un modele qui n'apprend pas de vous","portee":"Critere de choix concret quand on travaille sur des documents confidentiels."}
+ ]},
+ {"chapitre":"6870f6be","citations":[
+  {"texte":"Il cite les sources des informations qu'il inclut dans ses réponses.","page":189,"axe":"03-ia-outils-pratique-prompting","theme":"Citer ses sources comme avantage","portee":"Repond directement au reproche principal adresse aux modeles generatifs. Critere a exiger de tout outil."},
+  {"texte":"La confidentialité offerte par ce moteur de recherche est similaire à celle de DuckDuckGo, en ce sens que les annonceurs et les fournisseurs de publicités tels que Google ne peuvent pas voir ou utiliser votre historique de recherche et autres données.","page":189,"axe":"04-ia-societe-ethique-philosophie","theme":"Chercher sans etre profile","portee":"Alternative concrete pour qui veut limiter le profilage publicitaire."}
+ ]},
+ {"chapitre":"04ad2a9a","citations":[
+  {"texte":"Cependant, il ne peut pas faire de calculs mathématiques, vous devrez donc calculer combien vous êtes prêt à dépenser pour ce niveau de gratification instantanée fourni par un moulin à contenu basé sur l'IA.","page":192,"axe":"10-economie-entrepreneuriat-finance","theme":"Le moulin a contenu","portee":"Formule ironique qui pose la vraie question : payer pour produire vite du contenu de faible valeur."}
+ ]},
+ {"chapitre":"570d8e67","citations":[
+  {"texte":"Pensez à Poe non pas comme à un chatbot, mais comme à un endroit où plusieurs chatbots basés sur des modèles d'IA peuvent coexister afin que les utilisateurs de Quora puissent interagir avec n'importe lequel d'entre eux à volonté.","page":193,"axe":"03-ia-outils-pratique-prompting","theme":"Comparer plusieurs modeles au meme endroit","portee":"Interet reel : confronter les reponses de plusieurs modeles a une meme question est un bon exercice de verification."}
+ ]},
+ {"chapitre":"78d65380","citations":[
+  {"texte":"Si vous n'annulez pas votre abonnement après l'essai gratuit, votre carte sera automatiquement débitée de 49 $ par mois","page":195,"axe":"10-economie-entrepreneuriat-finance","theme":"L'essai gratuit qui ne l'est pas","portee":"Piege commercial courant. A verifier systematiquement avant de saisir une carte bancaire."},
+  {"texte":"Il m'a demandé le nom de l'entreprise (j'ai inventé Scribblers) et ce que fait mon entreprise. Avec seulement ces deux informations, Durable m'a construit un site web en moins de 30 secondes.","page":196,"axe":"10-economie-entrepreneuriat-finance","theme":"Un site en trente secondes","portee":"Abaisse considerablement la barriere d'entree pour un petit commerce. Encore faut-il verifier ce que l'outil ecrit a votre place."}
+ ]},
+ {"chapitre":"6c518989","citations":[
+  {"texte":"Ce n'est pas cool, mais c'est un autre exemple pour nous rappeler à tous de faire attention à ne pas supposer que le contenu créé par l'IA est véridique.","page":196,"axe":"04-ia-societe-ethique-philosophie","theme":"Des temoignages clients inventes","portee":"Cas concret de fabrication de fausse preuve sociale. Publier de tels temoignages engagerait la responsabilite du commercant."},
+  {"texte":"Lorsque le Mode Divin est convaincu de comprendre la tâche, il établit un plan pour l'exécuter, y compris en élaborant sa logique et en écrivant du code informatique, comme le montre Figure 10-17. Il vous demandera d'approuver son plan en premier.","page":198,"axe":"03-ia-outils-pratique-prompting","theme":"L'agent qui planifie seul","portee":"Premiere apparition dans ce livre des agents autonomes. L'approbation du plan par l'humain reste le garde-fou essentiel."}
+ ]}
+]

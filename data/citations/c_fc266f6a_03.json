@@ -1,0 +1,310 @@
+[
+ {
+  "chapitre": "0719c4e8",
+  "citations": [
+   {
+    "texte": "Comment assurerons-nous le contrôle qualité de ces systèmes si nous ne sommes pas capables de comprendre les raisons pour lesquelles ils fonctionnent bien et si leurs performances dépassent les nôtres",
+    "page": 70,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Vérifier ce qu'on ne comprend plus",
+    "portee": "Quand l'outil surpasse l'expert, la fonction même de contrôle humain devient à repenser."
+   },
+   {
+    "texte": "Les séquenceurs d'aujourd'hui identifient plus d'un milliard de bases d'ADN par seconde quand il fallait il y a peu encore des années pour en séquencer mille !",
+    "page": 71,
+    "axe": "11-sciences-environnement",
+    "theme": "Un ordre de grandeur bouleversé",
+    "portee": "Un progrès de cette ampleur ne rend pas la recherche plus rapide, il la rend possible autrement."
+   },
+   {
+    "texte": "tout dans notre destin soit génétique, sa dimension épigénétique (l'évolution de notre ADN, de notre épigénome, au cours de notre vie en fonction de nos habitudes, des impacts du milieu, etc.) étant presque aussi importante que notre situation génomique de départ.",
+    "page": 71,
+    "axe": "11-sciences-environnement",
+    "theme": "Le génome n'est pas un destin",
+    "portee": "Nos habitudes et notre milieu pèsent presque autant que ce dont nous héritons à la naissance."
+   }
+  ]
+ },
+ {
+  "chapitre": "e28fc320",
+  "citations": [
+   {
+    "texte": "la défaite du vieillissement est à notre portée dès la prochaine génération",
+    "page": 73,
+    "axe": "11-sciences-environnement",
+    "theme": "La vieillesse traitée comme une maladie",
+    "portee": "Requalifier un phénomène tenu pour naturel en maladie change entièrement ce qu'on entreprend contre lui."
+   },
+   {
+    "texte": "il allait être possible non seulement de ralentir ou retarder le vieillissement cellulaire, mais bel et bien de l'inverser, de rajeunir les cellules",
+    "page": 74,
+    "axe": "11-sciences-environnement",
+    "theme": "Inverser plutôt que ralentir",
+    "portee": "Passer du ralentissement à l'inversion change la nature même de l'ambition médicale."
+   },
+   {
+    "texte": "il ne servirait à rien de rajeunir l'ensemble de notre organisme si de son côté notre cerveau continuait de vieillir",
+    "page": 75,
+    "axe": "11-sciences-environnement",
+    "theme": "La question laissée de côté",
+    "portee": "Un progrès partiel peut créer une situation pire que celle qu'il prétendait corriger."
+   },
+   {
+    "texte": "la paresse ne risquerait-elle pas de nous anesthésier si notre longévité devenait indéfinie ? Comment gérer la question démographique ? N'y aura-t-il pas des inégalités sociales insupportables dans l'accès à cette nouvelle forme de soins",
+    "page": 78,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les questions que la réussite poserait",
+    "portee": "L'accès inégal à une longévité prolongée serait la plus brutale des inégalités jamais instituées."
+   }
+  ]
+ },
+ {
+  "chapitre": "9ab69c5f",
+  "citations": [
+   {
+    "texte": "une IA littéraire, pourvu qu'on lui pose les bonnes questions, pourrait donner le coup de pouce, le déclic qui permet de s'asseoir à sa table et de recommencer à écrire.",
+    "page": 79,
+    "axe": "08-litterature-romans",
+    "theme": "Débloquer l'écriture",
+    "portee": "L'usage le plus honnête de l'outil pour un auteur est de relancer le travail, non de le remplacer."
+   }
+  ]
+ },
+ {
+  "chapitre": "e01c520c",
+  "citations": [
+   {
+    "texte": "une machine dénuée de conscience et d'émotions, privée par conséquent de passions et d'intérêts, peut-elle vraiment avoir le même rapport aux valeurs qu'un être humain ?",
+    "page": 81,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question du rapport aux valeurs",
+    "portee": "Écrire des phrases justes sur le bien n'est pas la même chose que tenir à quelque chose."
+   },
+   {
+    "texte": "Amazon exige désormais qu'on indique de manière explicite si les ouvrages ont été rédigés ou non avec l'aide d'une IA",
+    "page": 81,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Déclarer ce qui a été généré",
+    "portee": "La transparence sur l'origine d'un texte devient la première règle du marché du livre."
+   }
+  ]
+ },
+ {
+  "chapitre": "f47139cb",
+  "citations": [
+   {
+    "texte": "aucun grand philosophe, je dis bien aucun, ni Aristote, ni Platon, ni Descartes, ni Spinoza, ni Kant, ni Hegel, ni Nietzsche, ni aucun autre n'a jamais écrit quoi que ce soit qui ressemble si peu que ce soit aux dissertations en trois parties qu'on demande à nos élèves !",
+    "page": 84,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'exercice scolaire et la chose enseignée",
+    "portee": "Confondre la forme d'un exercice avec la discipline qu'il prétend transmettre appauvrit les deux."
+   },
+   {
+    "texte": "étant par essence même inapte à ressentir le moindre sentiment, à aimer ou haïr, à éprouver des intérêts et des passions, elle est a priori privée du rapport aux valeurs qui est le nôtre",
+    "page": 85,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi la philosophie survivra",
+    "portee": "L'argument déplace la défense : ce n'est pas la compétence qui manque à la machine, c'est l'enjeu."
+   }
+  ]
+ },
+ {
+  "chapitre": "a748a7ec",
+  "citations": [
+   {
+    "texte": "le déni corporatiste n'étant jamais porteur de vérité...",
+    "page": 86,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Défendre son métier ou chercher le vrai",
+    "portee": "L'intérêt professionnel est le pire des guides pour juger de ce qui menace sa propre activité."
+   },
+   {
+    "texte": "ce sont bel et bien les réponses qui sont géniales, pas les questions basiques ni les « problématiques » toutes simples auxquelles elles se sont attachées à répondre.",
+    "page": 86,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Le prix des réponses",
+    "portee": "Valoriser le questionnement pour lui-même dispense trop commodément d'avoir à conclure."
+   },
+   {
+    "texte": "la sagesse qui conduit vers la vie bonne consistant à se mettre en harmonie avec l'harmonie cosmique comme Ulysse à Ithaque.",
+    "page": 86,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La réponse grecque",
+    "portee": "Une première façon de répondre à la question de la vie bonne, qui cherche l'accord avec l'ordre du monde."
+   },
+   {
+    "texte": "Il ne s'agit plus de trouver la vie bonne dans l'harmonie avec le cosmos ou avec Dieu, mais dans l'harmonie avec les autres, avec l'humanité au sein d'une res-publica, d'une république démocratique.",
+    "page": 87,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La réponse humaniste",
+    "portee": "Fonder la vie bonne sur l'humain lui-même est ce qui rend pensables la démocratie et les droits."
+   },
+   {
+    "texte": "ces Lumières qui furent, certes, porteuses d'un vaste et magnifique projet d'émancipation, mais qui conduisirent aussi l'Occident vers un racisme colonial dont nous ne cessons de payer encore aujourd'hui la folle arrogance.",
+    "page": 88,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "L'envers colonial des Lumières",
+    "portee": "Le même mouvement a produit l'idée d'égalité et la justification de la domination coloniale."
+   },
+   {
+    "texte": "nous sommes des nains juchés sur le dos de géants",
+    "page": 88,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Voir loin depuis ce qui nous précède",
+    "portee": "On ne pense le présent qu'en connaissant le passé, ce qui donne sa raison d'être à la lecture."
+   }
+  ]
+ },
+ {
+  "chapitre": "32d39bf6",
+  "citations": [
+   {
+    "texte": "il est clair que la philosophie des droits de l'homme et de la démocratie, pour ne citer qu'un exemple que tout le monde comprendra, représente un progrès par rapport aux philosophies antiques qui justifiaient à la fois l'aristocratie et l'esclavage",
+    "page": 89,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Un progrès qu'on peut nommer",
+    "portee": "Refuser toute idée de progrès en morale revient à mettre l'esclavage et son abolition sur le même plan."
+   },
+   {
+    "texte": "j'aime (c'est le mot qui convient, un mot qu'une machine ne saurait prononcer que par imitation) les progrès accomplis en philosophie par les visions du monde humanistes",
+    "page": 89,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un verbe que la machine ne peut dire",
+    "portee": "Le choix des valeurs engage un attachement, non un calcul, et c'est là que passe la frontière."
+   }
+  ]
+ },
+ {
+  "chapitre": "5d9e43b6",
+  "citations": [
+   {
+    "texte": "ce ne sont pas elles qui créeront, ni qui choisiront leurs valeurs et leurs systèmes de référence",
+    "page": 90,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'outil ne choisit pas ses valeurs",
+    "portee": "Quelqu'un choisit toujours à sa place, et il faut savoir qui."
+   },
+   {
+    "texte": "que ce soit en matière d'éthique, de politique, d'esthétique ou de spiritualité, donc de choix de valeurs, l'intelligence ne suffit pas",
+    "page": 91,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'intelligence ne suffit pas",
+    "portee": "Être brillant ne préserve d'aucune erreur morale, l'histoire intellectuelle du XXe siècle le montre assez."
+   },
+   {
+    "texte": "on ait trouvé parmi les êtres les plus savants, les plus cultivés et sans aucun doute les plus intelligents, des intellectuels pour soutenir la révolution iranienne",
+    "page": 91,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Le savoir n'immunise pas",
+    "portee": "Les engagements désastreux d'esprits éminents avertissent contre l'argument d'autorité."
+   }
+  ]
+ },
+ {
+  "chapitre": "d19ef092",
+  "citations": [
+   {
+    "texte": "Une fois alignée sur différentes visions du monde, sur tel ou tel grand philosophe, voire sur toute l'histoire de la philosophie et des grandes questions qui la traversent, l'IA pourra très aisément et très rapidement donner le change, comme le fait un bon élève",
+    "page": 92,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Donner le change",
+    "portee": "Un système peut simuler la réflexion aussi bien qu'un bon élève simule la compréhension."
+   }
+  ]
+ },
+ {
+  "chapitre": "5eba46e7",
+  "citations": [
+   {
+    "texte": "la machine peut devenir championne en disserte et apprendre ces règles sans la moindre difficulté si un ingénieur en IA les lui enseigne et lui fait avaler quelques milliers d'exemples bien tournés",
+    "page": 95,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Un exercice entièrement imitable",
+    "portee": "Tout exercice réductible à des règles finit par être reproduit, ce qui interroge son usage en évaluation."
+   },
+   {
+    "texte": "Il ne s'agit pas de corporatisme, de défendre son petit pré carré",
+    "page": 95,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Distinguer l'argument de l'intérêt",
+    "portee": "Un raisonnement doit tenir indépendamment du bénéfice que son auteur en tire."
+   }
+  ]
+ },
+ {
+  "chapitre": "00094325",
+  "citations": [
+   {
+    "texte": "il faut en effet bien distinguer la question de fait (allons-nous oui ou non vers la fin du travail salarié, remplacé par des IA ?) et la question de droit (serait-ce une bonne ou une mauvaise nouvelle ?)",
+    "page": 96,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Deux questions à ne pas confondre",
+    "portee": "Savoir ce qui va arriver et savoir si on le souhaite sont deux enquêtes distinctes."
+   },
+   {
+    "texte": "70 % du temps de travail des salariés sera potentiellement remplacé par des IA génératives d'ici cinq à dix ans.",
+    "page": 98,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Un chiffre qui circule",
+    "portee": "Un tel pourcentage doit être lu avec son auteur et sa méthode, car il oriente des politiques entières."
+   },
+   {
+    "texte": "le problème du chômage ne viendra pas tant d'innovations favorisant le grand remplacement que d'une inadéquation entre la formation des salariés et les demandes des employeurs",
+    "page": 99,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "La formation comme point de rupture",
+    "portee": "Si la thèse est juste, c'est vers l'école et la formation continue que l'effort doit se porter."
+   }
+  ]
+ },
+ {
+  "chapitre": "7bd58137",
+  "citations": [
+   {
+    "texte": "j'ai pris l'habitude, quand j'écris un livre, d'étudier attentivement tous les points de vue, à commencer par ceux qui sont opposés au mien",
+    "page": 101,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Chercher d'abord la thèse adverse",
+    "portee": "Une méthode de travail simple qui protège de la conviction confortable."
+   }
+  ]
+ },
+ {
+  "chapitre": "34474790",
+  "citations": [
+   {
+    "texte": "aucune garantie que les machines parviennent rapidement à saisir le contexte, ce qui est indispensable pour traiter des tâches au niveau supérieur de complexité",
+    "page": 102,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le contexte, verrou de l'automatisation",
+    "portee": "Ce que l'outil ne sait pas situer, il ne sait pas le traiter, et beaucoup de métiers tiennent là."
+   }
+  ]
+ },
+ {
+  "chapitre": "966448fd",
+  "citations": [
+   {
+    "texte": "les emplois entièrement automatisables sont en réalité assez rares",
+    "page": 103,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Automatiser une tâche n'est pas supprimer un métier",
+    "portee": "La plupart des emplois combinent des tâches dont seules certaines se laissent automatiser."
+   },
+   {
+    "texte": "les innovations liées à l'IA « s'accompagnent de créations de nouvelles professions comme celle de data scientist, parfaitement exotique encore dans les années 2000 »",
+    "page": 103,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Des métiers qui n'existaient pas",
+    "portee": "Les emplois de demain ne figurent pas dans les catalogues d'orientation d'aujourd'hui."
+   },
+   {
+    "texte": "les créations apparaissent toujours tardivement dans le monde réel, en toute hypothèse longtemps après l'innovation technologique",
+    "page": 104,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Le décalage entre invention et effets",
+    "portee": "Juger d'une technologie sur ses premières années conduit à conclure trop tôt, dans un sens ou dans l'autre."
+   }
+  ]
+ }
+]

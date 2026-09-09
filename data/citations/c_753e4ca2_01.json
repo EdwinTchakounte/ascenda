@@ -1,0 +1,261 @@
+[
+ {
+  "chapitre": "cfa513ca",
+  "citations": [
+   {
+    "texte": "de telle façon que le «virus infox» se répand aujourd'hui sur Internet, d'autant plus facilement que les messages faux sont plus attractifs que les vrais et que l'objectif économique des grandes plateformes numériques est de maximiser les revenus publicitaires en ligne en capturant l'attention des internautes",
+    "page": 7,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Economie de l'attention et propagation du faux",
+    "portee": "Le faux n'est pas seulement toléré par le modèle économique des plateformes : il lui est utile, parce qu'il capte mieux l'attention. Comprendre cela évite d'attribuer la désinformation à la seule malveillance des internautes."
+   },
+   {
+    "texte": "Par construction même, et indépendamment des intentions de ses concepteurs, de ses déployeurs et de ses utilisateurs, l'IA générative constitue une poche potentielle de désinformation.",
+    "page": 7,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un défaut structurel, non intentionnel",
+    "portee": "Phrase centrale du rapport. Le problème ne se règle pas en trouvant un coupable : il tient à l'architecture autorégressive elle-même, qui produit du vraisemblable et non du vrai."
+   },
+   {
+    "texte": "Premièrement, la relation entre l'exposition à la désinformation et un changement effectif d'attitude est à ce stade encore mal connue et réclame une poursuite des études. Deuxièmement, la désinformation en ligne s'intègre dans un ensemble plus vaste de manipulation des contenus, mettant notamment en jeu les médias classiques hors ligne, ainsi que les acteurs politiques.",
+    "page": 8,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les deux seuls résultats consensuels de la littérature",
+    "portee": "Honnêteté intellectuelle rare dans un rapport institutionnel : sur un sujet aussi mobilisateur, les auteurs refusent d'affirmer plus que ce que les études établissent. À imiter."
+   },
+   {
+    "texte": "Proposition 1. Susciter, au sein de l'Éducation nationale, l'émergence d'un outil collaboratif d'IA générative «vertueuse », ChatPedia, co-utilisé et co- amélioré par les professeurs et les élèves.",
+    "page": 9,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Construire son outil plutôt que subir celui des autres",
+    "portee": "Proposition directement transposable à un système éducatif africain : au lieu d'interdire ou de subir un outil conçu ailleurs, en construire un dont la communauté enseignante garde la maîtrise."
+   },
+   {
+    "texte": "Proposition 4. Construire, par exemple à l'initiative du Secrétariat d'État au numérique et à l'IA, un Observatoire de l'édition artificielle, l'OEA, dont l'objet serait de tester régulièrement et de rendre publiques les «lignes éditoriales » implicites des langageurs les plus populaires",
+    "page": 10,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Rendre publiques les lignes éditoriales des modèles",
+    "portee": "Un modèle de langage a une orientation, comme un journal. La différence est qu'elle n'est pas déclarée. Tester et publier ces biais est une tâche que n'importe quelle institution peut engager, y compris avec peu de moyens."
+   },
+   {
+    "texte": "Proposition 5. Contraindre les grandes plateformes à afficher un score d’artificialité des contenus les plus viraux",
+    "page": 10,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le score d'artificialité",
+    "portee": "L'indicateur est double : probabilité que le contenu ait été engendré par l'IA, et probabilité qu'il ait été diffusé par des comptes non humains. Il porte sur les contenus viraux seulement, ce qui le rend opérationnel."
+   }
+  ]
+ },
+ {
+  "chapitre": "eb47ef58",
+  "citations": [
+   {
+    "texte": "qui place désormais la mésinformation et la désinformation en toute première position des risques systémiques à court terme",
+    "page": 19,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La désinformation classée premier risque systémique mondial",
+    "portee": "Devant les conflits armés et le dérèglement climatique. Ce classement, contestable comme tout exercice de ce type, indique surtout que le sujet est désormais traité comme une question de sécurité et non de morale."
+   }
+  ]
+ },
+ {
+  "chapitre": "65554cab",
+  "citations": [
+   {
+    "texte": "Face au «tsuNumi*», ou tsunami des flots numériques, comment séparer le vrai du faux, comment se protéger contre l'intoxication informationnelle",
+    "page": 21,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question directrice du rapport",
+    "portee": "Formulation simple d'un problème que chaque lecteur éprouve quotidiennement. Le rapport pose la question avant d'y répondre, sans présupposer que la catastrophe est acquise."
+   }
+  ]
+ },
+ {
+  "chapitre": "0836a869",
+  "citations": [
+   {
+    "texte": "Bien que chaque expert fût individuellement dans l'erreur, l'assemblée disait le vrai!",
+    "page": 23,
+    "axe": "11-sciences-environnement",
+    "theme": "La sagesse des foules, expérience de Galton",
+    "portee": "Le résultat est réel, mais conditionné : il suppose diversité et indépendance statistique des jugements. Sur les réseaux, cette indépendance disparaît, et l'agrégation amplifie l'erreur au lieu de la corriger."
+   },
+   {
+    "texte": "Les faits sont souvent reconstruits pour soutenir les argumentaires, et non pas les argumentaires fondés sur les faits.",
+    "page": 24,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le renversement du rapport aux faits",
+    "portee": "Description exacte d'un réflexe que chacun peut observer chez soi avant de le dénoncer chez les autres. C'est le point de départ de tout travail sur le sens critique."
+   }
+  ]
+ },
+ {
+  "chapitre": "ad227a20",
+  "citations": [
+   {
+    "texte": "Selon une structure en poupées russes, dans les trois cas règne la malinformation*, qui se mue en mésinformation* dans les deux dernières situations, et en désinformation* ou infox*, ou encore fake news*, dans la dernière.",
+    "page": 25,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Malinformation, mésinformation, désinformation",
+    "portee": "Vocabulaire précis et emboîté : information tronquée ou partisane, puis erreur factuelle, puis falsification délibérée. Distinguer ces trois niveaux évite d'accuser de mensonge celui qui se trompe."
+   }
+  ]
+ },
+ {
+  "chapitre": "933c15f2",
+  "citations": [
+   {
+    "texte": "Or, sur les réseaux sociaux, le combat n'est ni équitable ni loyal: sur un sujet donné, un message vrai est communiqué une seule fois et, faute d'être surprenant, n'attire pas une attention particulière, alors qu'un message faux, même s'il émane d'une communauté",
+    "page": 27,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi le libre marché des idées ne fonctionne pas en ligne",
+    "portee": "L'argument de Milton et Mill supposait des armes égales. Le rapport montre où la condition est violée, plutôt que de rejeter l'argument en bloc : c'est une critique constructive et non idéologique."
+   },
+   {
+    "texte": "dix fois plus chronophage et énergivore qu’engendrer l'infox originelle (Brandolini, 2013)",
+    "page": 27,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le principe d'asymétrie du baratin",
+    "portee": "Conséquence pratique : la vérification ne pourra jamais suivre le rythme de la production de faux. Il faut donc investir en amont, dans la formation du jugement, plutôt qu'en aval seulement."
+   },
+   {
+    "texte": "En bref, les messages échangés sur le Net sont davantage comparables à de la monnaie qu'à un bien économique: la mauvaise chasse la bonne!",
+    "page": 27,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "La loi de Gresham appliquée à l'information",
+    "portee": "Transposition élégante d'une loi monétaire du seizième siècle. Elle contredit l'idée que l'ouverture d'internet suffirait à faire émerger la qualité."
+   }
+  ]
+ },
+ {
+  "chapitre": "ea1ff813",
+  "citations": [
+   {
+    "texte": "Ainsi, des études expérimentales, menées à l'université auprès de groupes d'étudiants, révèlent que, sur les réseaux sociaux, des profils quasi-identiques au moment de leur création se différencient très",
+    "page": 28,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'effet papillon des recommandations",
+    "portee": "La polarisation ne suppose pas des utilisateurs déjà opposés : de minuscules écarts initiaux suffisent, l'algorithme faisant le reste. Cela déplace la responsabilité du côté du dispositif technique."
+   }
+  ]
+ },
+ {
+  "chapitre": "ad2630c9",
+  "citations": [
+   {
+    "texte": "Un statut sui generis, à mi-chemin entre leur actuel statut d’hébergeur et celui d'éditeur, devrait être attribué à ces entreprises numériques: un statut qui les rende comptables des effets sociétaux qu'elles induisent via leurs algorithmes",
+    "page": 29,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ni hébergeur ni éditeur",
+    "portee": "Proposition juridique fine : la responsabilité porterait sur les effets de l'ordonnancement, non sur le contenu lui-même. Elle échappe ainsi au reproche de censure."
+   },
+   {
+    "texte": "ce qui est partagé et qui le partage importe moins, en définitive, que la manière dont ces contenus sont poussés par les algorithmes d'ordonnancement",
+    "page": 30,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le comment plutôt que le quoi",
+    "portee": "Déplacement de perspective décisif pour toute politique publique : réguler la mise en avant préserve mieux la liberté d'expression que supprimer des contenus."
+   },
+   {
+    "texte": "Ainsi, durant la crise sanitaire de la covid-19, la communauté antivax, très active en France, a obtenu une résonance en ligne excédant largement la part que son degré de radicalité aurait normalement dû lui réserver.",
+    "page": 30,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La visibilité ne mesure pas l'adhésion",
+    "portee": "Leçon pratique pour quiconque lit les réseaux comme un sondage : une minorité hyperactive occupe l'espace. Le rapport ajoute qu'un sondage limité aux internautes aurait donné Asselineau vainqueur en 2017."
+   }
+  ]
+ },
+ {
+  "chapitre": "762c713c",
+  "citations": [
+   {
+    "texte": "Le public se défie des journaux, mais sa défiance ne le protège pas. Sachant en gros qu'un journal contient des vérités et des mensonges, il répartit les nouvelles annoncées entre ces deux rubriques, mais au hasard, au gré de ses",
+    "page": 31,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Simone Weil : la défiance ne protège pas",
+    "portee": "Texte de 1943 d'une actualité brutale. Douter de tout n'est pas un esprit critique : c'est choisir selon ses préférences, ce qui livre à l'erreur aussi sûrement que la crédulité."
+   }
+  ]
+ },
+ {
+  "chapitre": "a61cd2d1",
+  "citations": [
+   {
+    "texte": "Le plus grand ennemi du savoir n'est pas l'ignorance, mais l'illusion du savoir !",
+    "page": 32,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Hawking cité par le rapport",
+    "portee": "Formule à retenir pour tout lecteur : le danger n'est pas de ne pas savoir, c'est de croire savoir. Le rapport l'associe à l'allégorie de la caverne de Platon."
+   }
+  ]
+ },
+ {
+  "chapitre": "00d996bd",
+  "citations": [
+   {
+    "texte": "Ainsi, le test de Turing est-il une condition nécessaire, mais non suffisante, pour garantir qu'une intelligence artificielle se situe au niveau humain; et, même si tel était le cas, ceci n'impliquerait pas qu'elle dise toujours la vérité",
+    "page": 33,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Les limites du test de Turing",
+    "portee": "Deux limites en une phrase : parler comme un humain n'est ni comprendre, ni dire vrai. L'humain lui-même désinforme. Le critère de Turing ne dit donc rien de la fiabilité."
+   },
+   {
+    "texte": "l'objectif est de former des phrases plausibles, non pas des phrases vraies!",
+    "page": 34,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La cause de l'hallucination, en une phrase",
+    "portee": "La meilleure définition courte du phénomène. L'hallucination n'est pas une panne : c'est le comportement normal d'un système entraîné à la vraisemblance."
+   }
+  ]
+ },
+ {
+  "chapitre": "27a6ad63",
+  "citations": [
+   {
+    "texte": "Le souci est que cette ligne et les biais qu'elle induit ne sont généralement pas explicites, au contraire de ceux des médias classiques.",
+    "page": 36,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une ligne éditoriale non déclarée",
+    "portee": "On sait qu'un journal a une orientation et on en tient compte en le lisant. Avec un modèle de langage, l'orientation existe mais reste invisible : le lecteur n'a pas les moyens de la corriger."
+   }
+  ]
+ },
+ {
+  "chapitre": "0b377841",
+  "citations": [
+   {
+    "texte": "de toute l'histoire de l'humanité, il s'agit du système technologique le plus testé à son lancement, et testé de la manière la plus intense",
+    "page": 37,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La mise à disposition du public comme rupture",
+    "portee": "Argument à double tranchant, et le rapport l'assume : cette exposition massive a permis d'identifier naïvetés et hallucinations, mais elle a fait du public un banc d'essai involontaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "764ea905",
+  "citations": [
+   {
+    "texte": "Que la question posée et le prompt s'expriment tous les deux en langue naturelle ouvre la porte aux usages toxiques!",
+    "page": 39,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La faille est dans le pilotage, pas dans le modèle",
+    "portee": "Consigne et question circulent par le même canal, ce qui rend leur séparation stricte illusoire. Le rapport note lui-même qu'exiger cette séparation reviendrait à l'injonction vaine de ne pas faire le mal. On décrit ici le mécanisme sans en donner le mode d'emploi."
+   },
+   {
+    "texte": "il faut essayer et réessayer! Telle est la recommandation fondamentale à destination des concepteurs souhaitant développer un LLM pour leurs besoins propres.",
+    "page": 39,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "L'expertise ne s'acquiert que par l'usage",
+    "portee": "Le ticket d'entrée s'est abaissé par rapport à l'informatique classique, mais le savoir-faire reste empirique. Bonne nouvelle pour qui n'a pas accès à une formation formelle : l'essai répété est la voie."
+   },
+   {
+    "texte": "les gens présents sur la photo sont des vendeurs, et non pas des clients, tandis que les marchandises posées sur les étals sont des légumes, et non pas des fruits!",
+    "page": 40,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Impressionnant et approximatif",
+    "portee": "L'exemple est un marché tropical, et l'erreur porte précisément sur ce que la scène a de spécifique. Rappel utile : ces systèmes décrivent le probable, et le probable est appris ailleurs."
+   }
+  ]
+ }
+]

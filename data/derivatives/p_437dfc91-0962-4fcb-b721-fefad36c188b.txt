@@ -1,0 +1,987 @@
+OUVRAGE : Mondialisation, management et entreprenariat : opportunité entreprenariale ou nécessité managériale
+AUTEUR(S) : Paulet
+ANNÉE : inconnue
+PAGES : 240
+AXE : Economie Entrepreneuriat Finance
+SOMMAIRE :
+  TABLE DES MATIÈRES (p. 9-14)
+  INTRODUCTION (p. 15-20)
+  PREMIÈRE PARTIE La mondialisation, facteur de mutation (p. 21-22)
+  Chapitre 1 Mondialisation et régionalisation : Quelle interaction ? Quelles perspectives ? Francesc RELAÑO (p. 23-23)
+  1.1. Le concept : qu’est-ce que la mondialisation ? (p. 24-31)
+  1.2. Un « débordement » de l’Etat-nation ? (p. 32-42)
+  1.3. Les intégrations régionales : un nouveau cadre de régulation ? (p. 43-54)
+  1.4. Bibliographie (p. 55-58)
+  CHAPITRE 2 La mondialisation, facteur de changement dans l’enseignement du management ? Ahmed HIKMI (p. 59-59)
+  2.1. L’enseignement du management connaît des mutations profondes (p. 60-69)
+  2.2. Les effets de la mondialisation de l’enseignement supérieur sur les pratiques managériales (p. 70-73)
+  2.3. Conclusion (p. 74-75)
+  2.4. Bibliographie (p. 76-78)
+  DEUXIÈME PARTIE L'entreprise dans ce nouveau contexte mondial (p. 79-80)
+  Chapitre 3 L'innovation et les trajectoires des PME dans un contexte international : renouveau ou statu quo, Didier CUMENAL (p. 81-81)
+  3.1. Introduction : objectifs, périmètre et intentions (p. 81-81)
+  3.2. Les faits marquants de ce début du XXIe siècle (p. 82-85)
+  3.3. Vers un changement plus profond des mentalités mais aussi de l’organisation ? (p. 86-86)
+  3.4. Capitaliser les connaissances pour maintenir l’avance technologique (p. 87-88)
+  3.5. Qu’est-ce que la mondialisation par rapport à l’internationalisation ? (p. 89-89)
+  3.6. L’innovation : qu’est-ce que c’est ? (p. 90-94)
+  3.7. L’internationalisation des PME : encore des progrès à faire (p. 95-97)
+  3.8. L’analyse de la valeur pour valider une idée, une innovation (p. 98-99)
+  3.9. Quelle est la dynamique du processus d’internationalisation d’une PME ? (p. 100-101)
+  3.10. Un modèle cognitif pour expliquer les étapes d’une PME qui s’internationalise (p. 102-108)
+  3.11. Comment dès lors remplir certaines conditions pour amorcer à l’intérieur même de l’entreprise une dynamique de progrès ? (p. 109-110)
+  3.12. Conclusion (p. 111-112)
+  3.13. Bibliographie (p. 113-116)
+  CHAPITRE 4 La réalité des entreprises multinationales : enjeux, caractéristiques et modes d’organisation, Olivier MEIER et Guillaume SCHIER (p. 117-117)
+  4.1. Qu’entend-on par entreprise multinationale ? (p. 117-118)
+  4.2. L’ampleur du phénomène (p. 119-123)
+  4.3. Les modes d’organisation des FMN (p. 124-130)
+  4.4. L’organisation géographique des activités (p. 131-135)
+  4.5. Conclusion (p. 136-136)
+  4.6. Bibliographie (p. 137-138)
+  CHAPITRE 5 Performance et gestion des ressources humaines, Jean-Yves SAULQUIN (p. 139-139)
+  5.1. Introduction (p. 139-139)
+  5.2. La performance organisationnelle (p. 140-151)
+  5.3. L’affrontement entre la logique économique et la logique sociale (p. 152-157)
+  5.4. Les implications de la gestion de ressources humaines en termes de risque et de création de valeur (p. 158-166)
+  5.5. Bibliographie (p. 167-168)
+  TROISIÈME PARTIE Influence de la globalisation sur la politique financière (p. 169-170)
+  CHAPITRE 6 Performance financière, risque et gouvernement d'entreprise : une causalité non complètement définie, Elisabeth PAULET (p. 171-171)
+  6.1. Introduction (p. 171-171)
+  6.2. Intégration bancaire et performance dans le contexte européen (p. 172-176)
+  6.3. Rôle des différents instruments financiers dans le financement de l'entreprise (p. 177-182)
+  6.4. Corporate gouvernance et performance économique et financière de l'entreprise (p. 183-187)
+  6.5. Conclusion (p. 188-190)
+  6.6. Bibliographie (p. 191-194)
+  CHAPITRE 7 La bureaucratisation, un avatar de la globalisation le cas du marché des euro-obligations, Flora SFEZ (p. 195-195)
+  7.1. Introduction (p. 195-196)
+  7.2. Etude de l'évolution du marché des euro-obligations (p. 197-218)
+  7.3. Une évolution portant les marques d'une bureaucratie organisationnelle (p. 219-230)
+  7.4. Conclusion (p. 231-232)
+  7.5. Bibliographie (p. 233-236)
+  CONCLUSION Entreprendre dans la mondialisation ? (p. 237-240)
+
+[20/195 passages, 11900 tokens sur 156664]
+
+=== EXTRAITS ===
+
+[p. 3-7]
+Mondialisation, management et entreprenariat
+
+© LAVOISIER, 2006
+LAVOISIER
+11, rue Lavoisier
+75008 Paris
+www.hermes-science.com
+www.lavoisier.fr
+ISBN 2-7462-1243-9
+Tous les noms de sociétés ou de produits cités dans cet ouvrage sont utilisés à des fins
+d’identification et sont des marques de leurs détenteurs respectifs.
+Le Code de la propriété intellectuelle n'autorisant, aux termes de l'article L. 122-5, d'une
+part, que les "copies ou reproductions strictement réservées à l'usage privé du copiste et non
+destinées à une utilisation collective" et, d'autre part, que les analyses et les courtes citations
+dans un but d'exemple et d'illustration, "toute représentation ou reproduction intégrale, ou
+partielle, faite sans le consentement de l'auteur ou de ses ayants droit ou ayants cause, est
+illicite" (article L. 122-4). Cette représentation ou reproduction, par quelque procédé que ce
+soit, constituerait donc une contrefaçon sanctionnée par les articles L. 335-2 et suivants du
+Code de la propriété intellectuelle.
+
+Mondialisation,
+management
+et entreprenariat
+opportunité entreprenariale
+ou nécessité managériale
+coordonné par
+Elisabeth Paulet
+
+COLLECTION ESCEM
+sous la direction de Jean-Marie Doublet et Jean-Yves Saulquin
+Liste des auteurs
+Didier CUMENAL
+Professeur affilié
+ESCEM
+Ahmed HIKMI
+Professeur associé
+ESCEM
+Olivier MEIER
+Maître de conférences
+Université Paris 12
+Elisabeth PAULET
+Professeur
+ESCEM
+Francesc RELAÑO
+Professeur associé
+ESCEM
+Jean-Yves SAULQUIN
+Professeur
+ESCEM
+Guillaume SCHIER
+Professeur
+ESCEM
+Flora SFEZ
+Professeur associé
+ESCEM
+
+---
+
+[p. 20-21]
+e concurrence entre les intermédiaires financiers.  
+Un mode de réponse organisationnelle à l’intensification de la 
+concurrence a été la mise en place de normes de marché destinées à 
+protéger les intervenants et a instauré une bureaucratisation des 
+marchés financiers au sens webérien du terme comme développé par  
+Flora Sfez.
+ 
+PREMIÈRE PARTIE 
+La mondialisation,  
+facteur de mutation
+
+---
+
+[p. 31-31]
+on verra dans la prochaine subsection que pour 
+les entreprises, les différences entre territoires continuent à être un 
+facteur essentiel de leur développement. Ce qui change, ce qui est 
+vraiment nouveau dans le contexte actuel est que, à côté du facteur 
+territoire, il y a maintenant une deuxième variable qui permet de mieux
+
+---
+
+[p. 41-42]
+qui passe par moins d’Etat interventionniste et plus d’Etat régulateur, 
+garant des bases du développement et des solidarités. En ce sens, il 
+serait grossier de voir dans la mondialisation une simple perte de 
+souveraineté des Etats, car la réalité montre plutôt une modification des 
+conditions dans lesquelles elle est exercée.
+40     Mondialisation, management et entreprenariat 
+ 
+Du point de vue politique, le constat d’un déclin de l’Etat doit aussi être 
+nuancé. Plusieurs travaux suggèrent, au contraire, que le pouvoir de 
+l’Etat peut éventuellement sortir renforcé de l’actuelle transformation 
+qui affecte les relations internationales. Des auteurs d’inspiration 
+réaliste comme Kenneth Waltz (1979) ou Robert Gilpin (1987), mais 
+aussi d’autres chercheurs comme Panitch (1996) et Meyer (1997), 
+concordent dans l’analyse que l’Etat reste l’acteur principal sur la scène 
+internationale. Pour eux, les nouveaux défis que pose la mondialisation 
+sont encore largement maîtrisés par les gouvernements nationaux. Il 
+l’atteste, par exemple, la constitution du G7-G8, dont les sommets de 
+nature interétatique jouent un rôle régulateur très important dans un 
+nombre croissant de domaines à l’échelle planétaire : le commerce, la 
+monnaie, l’énergie, le développement, le blanchiment d’argent sale, etc. De 
+même, des auteurs comme Stephen Krasner (1983) soulignent la capacité 
+des Etats à édicter des « régimes internationaux », qui régulent le 
+comportement des différents acteurs dans un secteur précis de la vie 
+internationale.  
+C’est donc, au bout du compte, une nouvelle forme de gouvernance 
+sans gouvernement. Elle souligne à la fois la capacité de réaction des 
+Etats et leur dépassement. Car une chose est sûre : le monde ne peut 
+plus se concevoir comme une mosaïque d’unités politiques discrètes. 
+Même si les Etats restent des acteurs primordiaux de la scène 
+internationale, on devine à côté la géographie invisible du marché et 
+toute une série de forces et structures qui se superposent. L’interaction 
+complexe qui s’instaure et le partage de pouvoir rappellent quelque part 
+la période du Moyen Age, où aucun Etat n’était complètement 
+souverain sur un segment de population. Son autorité se partageait avec 
+les seigneurs de la noblesse au niveau inférieur et avec le Pape ou 
+l’Empereur au niveau supérieur. Par analogie, on parle ainsi de la 
+présente imbrication d’instances de pouvoir comme d’un « nouveau 
+médiévalisme » (Held et al. 1999, p.85).  
+Dans ce contexte, rester souverain consiste à savoir poursuivre ses 
+propres objectifs malgré les contraintes de l’interdépendance. Mais cela 
+est-il vraiment possible à l’échelle étatique ? Jusqu’où l’Etat pourra-t-il 
+concéder de nouvelles prérogatives de souveraineté sans porter atteinte 
+à l’intérêt général de sa population ? Ces cessions de pouvoir marquent-
+
+---
+
+[p. 51-52]
+« nouveau multilatéralisme » où les partenaires sont des 
+grands blocs suprarégionaux. Ils ont donc tort ceux qui, comme Schiff 
+et Winters (2004, p. 249-253), opposent multilatéralisme et 
+régionalisme sous prétexte que ce dernier est un obstacle et non pas 
+une étape, vers la mondialisation du libre-échange. En réalité, cette
+50     Mondialisation, management et entreprenariat 
+ 
+contraposition est plus théorique que réelle. Dans les conditions 
+expliquées plus haut, l’évolution du multilatéralisme vers la 
+régionalisation n’est pas une avancée sans issue qui bloque le libre-
+échange. Au contraire, le régionalisme prend le relais d’un 
+multilatéralisme intergouvernemental à bout de souffle pour amener 
+dans le futur à un plurilatéralisme plus effectif, qui n’est pas autre 
+chose qu’un « nouveau multilatéralisme » entre un petit nombre de 
+blocs régionaux. La véritable séquence serait donc : multilatéralisme – 
+régionalisme – plurilatéralisme. Comment peut-il alors y avoir opposition 
+entre ces termes ? Il s’agit d’un seul et même processus pour mieux 
+s’adapter au contexte de mondialisation, tout en facilitant aussi 
+l’organisation d’une gouvernance mondiale concertée.  
+Le véritable problème est la transition entre le « vieux » 
+multilatéralisme et le « nouveau ». Que nous le voulions ou pas, la 
+mondialisation prend de plus en plus d’emprise sur les économies et 
+les sociétés de la planète entière. A terme, le monde présidé par les 
+Etats-Nations semble condamné à s’éteindre dans la nouvelle ère de 
+gouvernance mondiale qui s’annonce. Un plurilatéralisme entre 
+forums macrorégionaux, organisés selon le principe de subsidiarité, 
+s’avère en ce sens comme la meilleure alternative. Le principal défi 
+est donc de savoir s’y préparer. Il faut que le passage aux grands 
+ensembles suprarégionaux qui se dessine à l’horizon soit fait par un 
+transfert de pouvoir volontaire, consenti et maîtrisé, plutôt que par une 
+capitulation.   
+Trois grandes interrogations vont façonner cette longue transition où 
+nous sommes déjà installées. La première concerne l’Etat. Va-t-il 
+savoir s’adapter à une nouvelle situation où il ne sera plus l’acteur 
+principal ? Est-il encore en mesure de résister, du moins 
+provisoirement, sous la forme d’un système international amendé ou 
+la mondialisation pousse déjà à une gouvernance mondiale de nature 
+différente ? Il y a des raisons de penser que le balancier s’inclinera 
+finalement pour cette deuxième alternative. Car le processus de 
+régionalisation des années 1990 a été principalement conduit par de forces 
+non étatiques. Ces mêmes forces demandent maintenant un régionalisme 
+globalement 
+compatible 
+avec 
+un 
+« nouveau 
+multilatéralisme » 
+(plurilatéralisme).
+
+---
+
+[p. 63-64]
+à la langue de travail du pays cible ou est première langue 
+étrangère, y trouvent un marché qu’on peut qualifier de naturel. En 
+effet, il est facile par exemple à une université française ou canadienne 
+du Québec d’exporter ses programmes de formation vers les zones ou le 
+Français est une langue d’enseignement ou d’affaires.
+62     Mondialisation, management et entreprenariat 
+ 
+2.1.1.4. Raréfaction des ressources publiques 
+ 
+Dans de nombreux pays, on constate une dualité des systèmes 
+d’enseignement supérieur notamment en management. Les universités 
+y sont des universités d’état. Le financement public n’augmente pas 
+aussi vite que les institutions le souhaiteraient pour financer leur 
+croissance. Le rapport de l’OCDE sur l’éducation de 2004 conclut sur 
+la tendance générale à la réduction des dépenses destinées à 
+l’enseignement supérieur en termes de pourcentage du PIB. La 
+recherche de ressources supplémentaires est l’activité à laquelle les 
+institutions consacrent des efforts grandissant et des équipes dédiées.  
+Ceci a eu des conséquences diverses selon les pays :  
+– d’abord l’apparition d’institutions de formation publiques 
+parallèles à l’université se finançant sur des ressources mixtes. La part 
+publique devenant, au fil du temps, de plus en plus petite. C’est le cas 
+des écoles de commerce dont certaines sont assez anciennes mais 
+beaucoup ont été créées à l’initiative d’instances locales (collectivités 
+et chambres de commerce) ; 
+– l’apparition de frais de scolarité additionnels qui fait qu’en réalité 
+les universités ne coûtent pas les mêmes sommes pour les candidats 
+aux études supérieures. Malgré les systèmes de bourses, d’aide, il 
+n’est pas facile de rentrer dans les meilleures universités britanniques 
+pour un bon candidat issu d’un milieu peu favorisé ; 
+– apparition dans certains pays des écoles privées ou universités 
+privées. Dans beaucoup de pays en développement, les familles 
+constatent les difficultés d’insertion pour les diplômes des universités, 
+et l’inadaptation de ces institutions par rapport aux besoins du tissu 
+économique. Elles préfèrent donc mettre leurs enfants dans des écoles 
+privées.  
+2.1.1.5. L’université et le marché 
+L’observation de l’évolution des institutions d’enseignement supérieur 
+nous permet de constater l’arrivée des notions de concurrence, 
+compétitivités et de marché en général. Ces notions, attitudes et 
+pratiques étaient jusque-là observées dans les secteurs marchands et 
+dans l’entreprise. Elles ont gagné les acteurs de l’enseignement
+
+---
+
+[p. 76-77]
+74     Mondialisation, management et entreprenariat 
+ 
+2.4. Bibliographie 
+ATTALI J., « Pour un modèle européen d’enseignement supérieur », rapport 
+présenté par Jacques Attali à l’issue de la mission confiée par Claude 
+Allègre, ministre de l’Education nationale, de la Recherche et de la 
+Technologie, disponible à l’adresse : www.education.gouv.fr/forum/ 
+attalia.htm, Paris, 1998. 
+BRETON G., « De l’internationalisation à la globalisation de l’enseignement 
+supérieur », actes du colloque La globalisation : quels enjeux pour les 
+universités, université Laval, Quebec, septembre 2002. 
+HERBILLON M., « L’enseignement supérieur en Europe » rapport d’information 
+déposé par la délégation de l’Assemblée nationale pour l’Union 
+européenne à la présidence de l’Assemblée nationale, Paris, 17 novembre 
+2004. 
+HOEFELE J., « Restructuration de l’enseignement supérieur », Horizons et 
+débats, n° 26, Paris, juin 2004. 
+JENAR R.M., « Le marché de l’enseignement supérieur », revue Res Publica , 
+n° 34, Paris, août 2003. 
+KAHN S., « L’espace européen d’enseignement supérieur à la croisée des 
+chemins », revue en ligne Etudes Européennes,  disponible à l’adresse : 
+www.etudes-européennes.fr. 
+KAUFMANN C., « L’enseignement supérieur en Europe : Etat des lieux », 
+colloque 
+l’Université 
+dans 
+la 
+tourmente , 
+Ecole des 
+sciences 
+philosophiques et religieuses, Bruxelles, 25 février 2000. 
+KUMAR K. et STRANDHOLM K., « American business education-effect on the 
+ethical orientation of foreign students », Journal of Education for 
+Business, vol. 77, Iss. 6, p.  345,  Washington, juillet-août 2002. 
+MEULEMEESTER 
+J.L. 
+(2003), 
+« Privatisation, 
+marchandisation 
+ou 
+instrumentalisation de l’enseignement : une autre voie est-elle encore 
+possible ? », 27 avril 2003, disponible à l’adresse :http://wb.attac;be/ 
+privatisation-marchandisation-ou html. 
+MINISTERE DE L’ECONOMIE DES FINANCES ET L’INDUSTRIE, « Ouverture 
+internationale des grandes écoles de gestion françaises » Qualitique  
+n° 149, (résultat d’une étude menée par le CEFi et l’agence Noir et 
+Blanc), Paris, juillet-août 2003. 
+MINTZBERG H., Des managers, des vrais ! Pas des MBA, Editions des 
+organisations, Paris, 2004. 
+
+Mondialisation et enseignement du management    75 
+OCDE, Regards sur l’éducation, Les indicateurs de l’OCDE, OCDE, Paris, 
+2005. 
+SHETLY A.et RUDELL F., « Internationalizing the business program. A 
+perspective of a small Scholl », Journal of Education for Business, 
+vol. 78, iss.2, p. 103, Washington, novembre-décembre 2002. 
+TRENTESAUX J, « Business schools, c’est la lutte mondiale », l’Express, Paris, 
+10 mai 2004. 
+TRENTESAUX J, « Le diktat des classements », l’Express, Paris, 04 octobre 
+2004. 
+Financial Times, dossier sur le classement des masters européens en 
+management, 12 septembre 2005. 
+Statistiques : Erasmus : disponible à l’adresse : 
+ 
+http://europa.eu.int/comm/education/programmes/socrates/erasmus/ 
+statisti/stat14.pdf.
+
+---
+
+[p. 88-88]
+9. De nombreuses discussions ont lieu autour de cette notion de fracture cognitive 
+qui consiste à donner du sens et à exploiter convenablement l’information reçue.  
+Deux auteurs, Philippe Bourgeois et Catherine Côme, font allusion à cette 
+fracture cognitive dans l’ouvrage : Technologie du Futur, Omniscience, 2005.
+
+---
+
+[p. 99-99]
+u d’un processus. 
+ 
+Prix 
+Facilité 
+    vitesse apprentissage      Qualité         Précision              guidage   
+d’uilisation        (mise en station) 
+     optique          /monture            (GPS, etc.) 
+Elevé 
+ 
+ 
+ 
+ 
+ 
+Moyen 
+ 
+ 
+ 
+ 
+ 
+Bas 
+ 
+Dobson (Newton) 
+de 300 mm 
+d’ouverture 
+Schmidt-
+Dobson 
+Schmidt 
+Cassegrain
+
+---
+
+[p. 109-110]
+mobilité 
+interne et externe, de recrutement, de formation ou même 
+d’outsourcing sur le territoire national ou à l’étranger. 
+Les systèmes : ils concernent les nouvelles technologies, les outils de 
+gestion, les systèmes d’information et aussi les systèmes de 
+management. Cette force appuie la volonté de progresser, de changer.
+108     Mondialisation, management et entreprenariat 
+ 
+La sixième force qui résulte de ces cinq premières caractérise 
+« l’entrepreneurship » et « l’intrapreneurship »22. Elle alimente la 
+dynamique de progrès et est basée sur la volonté du dirigeant et de son 
+équipe à porter le changement. 
+Un communiqué de presse de la BNP Paribas (Lease Group) en date 
+du 18 janvier 2005) donne des indications précieuses sur le profil des 
+dirigeants de PME et en particulier sur les visions des chefs 
+d’entreprise sur l’avenir, la mondialisation, et les technologies. Il fait 
+suite à une enquête annuelle sur la conjoncture 2004 et les 
+perspectives 2005, réalisée auprès de 93 000 patrons de PME-PMI 
+européennes de 6 à 200 salariés. 
+Nous reproduisons ci-après quelques extraits de ce communiqué de 
+presse : 
+« Les dirigeants français se déclarent peu menacés par la concurrence 
+étrangère (seuls 12 % disent l’affronter). Leurs confrères du G4 se 
+sentent eux plus exposés à cette menace : les Allemands (24 %), les 
+Italiens (27 %) ou les Espagnols (18 %). Au sein du G4, les réponses 
+sont corrélées à la taille de l’entreprise. 
+En France, 97 % des dirigeants du BTP se sentent à l’abri de la 
+mondialisation comme, logiquement, ceux du commerce de détail.  
+La concurrence internationale est plus présente dans le transport (pour 
+16 % des chefs d’entreprises), le commerce de gros (26 %) et surtout 
+l’industrie (34 %) qui compte quelques secteurs très sensibles comme 
+l’industrie du textile, cuir, chaussures : 58 %, la construction 
+mécanique : 44 %, l’industrie du caoutchouc et des plastiques à 49 %.. 
+Près d’un dirigeant sur deux au sein du G4 a le sentiment que son 
+activité va être radicalement modifiée dans les dix ans qui viennent 
+par les nouvelles technologies. En France, 57 % des dirigeants 
+                             
+22. L’intrapreneurship est un style de management et aussi un mode 
+d’organisation permettant à des salariés cadres ou futurs dirigeants d’être des 
+entrepreneurs en interne à qui l’on confie des projets de développement 
+stratégique. Ils ont toute liberté et la marge de manœuvre suffisante pour les 
+réaliser. Ces projets pouvant être par exemple la création de nouvelles unités 
+d’affaires ou le lancement de nouveaux produits, services.
+
+---
+
+[p. 121-123]
+nt les filiales à elles seules emploient 6 millions de 
+personnes, disposent de plus de 2000 milliards de dollars d’actifs à 
+l’étranger (soit 1/8e du total des actifs détenus par l’ensemble des 
+sociétés-mères). Elles effectuent en outre un chiffre d’affaires à 
+l’étranger de l’ordre de 2000 milliards de dollars (CNUCED, 2000).
+120     Mondialisation, management et entreprenariat 
+ 
+Selon l’étude réalisée, parmi les dix premières villes accueillant le plus 
+de sièges, six sont européennes (avec Paris et Londres), trois 
+américaines (New York, Washington, San Francisco) et une est 
+japonaise (Tokyo). Beijing et plusieurs villes américaines suivent ce 
+classement. 
+ 
+Classement mondial des villes accueillant le plus de sièges parmi  
+les 100 premières entreprises mondiales (en 2004) 
+Ville 
+Nombre de sièges
+Ville 
+Nombre de sièges 
+Tokyo 
+11 
+Zürich 
+3 
+Paris 
+10 
+Beijing 
+2 
+New York 
+8 
+Cincinnatti 
+2 
+Londres 
+6 
+Chicago 
+2 
+Munich 
+4 
+San Antonio 
+2 
+Washington 
+4 
+Detroit 
+2 
+San Francisco 
+3 
+Stuttgart 
+2 
+Amsterdam- 
+La Have 
+3 
+Osaka 
+2 
+Düsseldorf 
+3 
+Séoul 
+2 
+Tableau 4.1. Classement des villes accueillant le plus de sièges 
+sources : Journal du Net, Fortune, L’Expansion, Académie de Grenoble 
+De même au niveau de la répartition par nationalité, les Etats-Unis 
+arrivent largement en tête, devant l’Allemagne, le Japon et plusieurs 
+autres pays européens (France, Royaume-Uni, Pays-Bas notamment) 
+et conserve donc la première place de ce classement. 
+Ceci confirme les résultats d’une étude de F. Hipple relatée par François 
+Chesnais dans son ouvrage intitulé La mondialisation du capital (1997) 
+qui montrait que « pas moins de 99 % du commerce extérieur des Etats-
+Unis comportait la participation d’une FMN américaine ou étrangère en 
+tant que partie à la transaction ».  
+Selon cette même étude, les multinationales américaines (sociétés- 
+mères et filiales) réalisaient à elles seules, 80 % des exportations et près 
+de 50 % des importations des Etats-Unis. Résultats qui attestent si 
+besoin est de la domination économique des Etats-Unis sur le reste du 
+monde.  
+
+La réalité des entreprises     121 
+Evolution de la répartition par nationalité  
+des 100 premières entreprises mondiales 
+En 2004 
+En 1996 
+Pays 
+Nombre de sièges
+Pays 
+Nombre de sièges 
+Etats-Unis 
+35 
+Etats-Unis 
+32 
+Allemagne 
+15 
+Japon 
+21 
+Japon 
+14 
+Allemagne 
+12 
+France  
+10 
+France 
+9 
+Royaume-Uni 
+7 
+Corée du Sud 
+5 
+Pays-Bas 
+4 
+Italie 
+4 
+Suisse 
+4 
+Pays Bas 
+3 
+Italie 
+4 
+Suisse 
+3 
+Chine 
+3 
+Royaume-Uni 
+2 
+Corée du Sud 
+2 
+Suède 
+2 
+Mexique 
+1 
+Mexique 
+1 
+Venezuela 
+1 
+Venezuela 
+1 
+Espagne 
+1 
+Espagne 
+1 
+ 
+ 
+Canada 
+1 
+ 
+ 
+Brésil 
+1 
+ 
+ 
+Belgique 
+1 
+ 
+ 
+Norvège 
+1 
+Tableau 4.2. Evolution de la répartition par nationalité des cent premières 
+entreprises mondiales - sources : Journal du Net, Fortune, l’Expansion,  
+Académie de Grenoble 
+On peut également remarquer que la Chine est aujourd’hui en 
+neuvième position et devrait a priori continuer sa progression dans les 
+années à venir, en raison de l’importance du marché national (la Chine 
+était non classée en 1996).  
+En ce qui concerne l’origine nationale des 750 premiers groupes 
+mondiaux, les Etats-Unis apparaissent en position de force et montrent 
+leur vitalité en matière de leadership mondiaux avec 47 % de parts des 
+entreprises leader sur leur secteur.
+
+---
+
+[p. 133-134]
+par produit), sans avoir leurs inconvénients. 
+Plus 
+flexible, 
+l’organisation 
+matricielle 
+entend 
+ainsi 
+faciliter 
+l’intégration des activités à l’international, tout en permettant aux 
+responsables d’adapter leurs politiques à la réalité locale. Elle est 
+généralement adoptée par des entreprises ayant à gérer des problèmes
+132     Mondialisation, management et entreprenariat 
+ 
+complexes nécessitant l’utilisation de compétences variées dans un 
+environnement changeant et incertain. Dans l’organisation matricielle, 
+les activités dans les pays d’origine n’ont plus de positionnement 
+particulier, elles ne sont qu’un élément constitutif du groupe en dehors 
+de toute référence géographique. En revanche, les services de 
+recherche-développement et les services financiers continuent à être 
+directement rattachés au siège de la maison-mère, dans le pays 
+d’origine. 
+Une telle organisation, en dépit de son intérêt, n’est pas sans poser de 
+problèmes, notamment au niveau de son application opérationnelle. 
+Coûteuse et complexe (lourdeur dans la prise de décision), elle 
+engendre des problèmes d’autorité, compte tenu des risques de conflits 
+d’intérêts entre les deux formes de légitimités qui caractérisent ce mode 
+d’organisation (dualité de commandement).  
+La notion de pouvoir hiérarchique comme système de commandement 
+est doublement remise en cause. Le pouvoir n’est plus unique, mais 
+résulte d’arbitrages permanents entre les différentes formes d’autorité. 
+La structure matricielle oblige à redéfinir les rôles et les responsabilités 
+dans l’organisation des activités. Il s’agit d’amener les responsables à 
+résoudre les conflits par la négociation plutôt que par la ligne 
+hiérarchique, ce qui nécessite un équilibre entre les différentes formes 
+de légitimités présentes dans l’organisation pour éviter que l’entreprise 
+évolue vers une structure classique de commandement (structure 
+fonctionnelle ou par produits).  
+L’organisation matricielle conduit également à faire perdre, au système 
+d’autorité en place, son caractère stable (et rassurant), compte tenu de la 
+complexité que génère ce type d’organisation (problème d’interprétation, 
+jeu d’acteurs, logique de coalition). C’est pourquoi sa mise en œuvre 
+provoque généralement un choc culturel qui demande une politique de 
+communication appropriée, si l’on souhaite que ce choix apparaisse 
+légitime et soit compris par l’ensemble des équipes (compréhension de la 
+finalité et des nouvelles règles du jeu).
+
+---
+
+[p. 143-144]
+: elles sont le moteur de la réussite future, elles 
+fournissent aux pilotes une indispensable vision globale de la 
+performance dans plusieurs domaines simultanément. Parce qu’elle 
+traduit des objectifs, la mesure globale de la performance est un outil de 
+guidance pour les salariés auxquels il faut des points de repère précis
+142     Mondialisation, management et entreprenariat 
+ 
+pour leur permettre de se situer. C’est l’interprétation propre de leurs 
+résultats qui permet aux acteurs de prendre des décisions.  
+La performance possède un caractère relatif. Elle a autant de facettes 
+qu’il existe d’observateurs à l’intérieur et à l’extérieur de l’organisation. 
+Elle est ainsi définie par ceux qui vont utiliser l’information. Elle n’a 
+d’importance (de valeur) que par rapport à ce que l’utilisateur de cette 
+information va faire. La performance reste une affaire de perception, et 
+c’est pour cela que, dans les moments difficiles, les individus 
+s’affrontent sur ce qu’elle est. Il est difficile d’être en bonne position sur 
+tous les critères à la fois.  
+Dès lors, peut-on considérer que la performance est un outil de 
+motivation ? Elle apparaît effectivement comme un mythe mobilisateur 
+au niveau du discours managérial, mais il n’est pas certain qu’elle soit 
+vécue par le salarié comme un objectif individuel satisfaisant. Elle 
+contribue parfois à justifier les licenciements, et elle s’inscrit par la suite 
+contre la motivation. 
+Au nom de la compétition économique, ce concept possède des effets 
+pervers. La performance est un mythe « rationalisateur », mais peut-on 
+faire autrement dans notre contexte économique ? La guerre 
+économique est un mythe qui permet fréquemment de tout justifier, y 
+compris l’injustice sociale.  
+Posons-nous la question de savoir quelle est la nature du discours sur la 
+performance ? N’est-il pas le fondement d’une vision idéologique du 
+fonctionnement de l’entreprise ? Les discours sur le mythe du 
+consensus, la cohérence et l’harmonie, avec l’accent mis sur la 
+motivation et l’implication des acteurs ne participent-ils pas à une 
+vision idéaliste où l’on aurait gommé toutes les contradictions et tous 
+les conflits ?  
+Brabet (1993) avance qu’avec la métaphore de l’entreprise − organisme 
+vivant −, la performance a été naturalisée. La logique mise en œuvre 
+pourrait se résumer ainsi : l’entreprise « a pour fonction de survivre et 
+de se développer en produisant le plus efficacement possible dans un 
+environnement hostile, face auquel les membres doivent se solidariser et 
+se plier aux orientations définies par un noyau stratégique. Si l’entreprise
+
+---
+
+[p. 155-157]
+En ce qui concerne les partenaires internes, nous ne 
+pouvons qu’insister sur le rôle que jouent les facteurs de reconnaissance 
+au travail pour améliorer la motivation des salariés. 
+Les études sur les attentes par rapport au travail montrent que les 
+aspects liés à l’initiative et à la responsabilité sont en forte progression
+154     Mondialisation, management et entreprenariat 
+ 
+en France et en Europe, même si la rémunération reste le premier 
+élément d’importance. 
+5.3.2. L’imbrication entre social et économique existe, mais peut-elle être 
+harmonieuse ? 
+Peut-on séparer performance économique et performance sociale ? 
+Pour les économistes, la question de l’efficacité industrielle est traitée 
+par la rationalisation du travail. Cela conduit à une croyance fausse, 
+celle « d’une séparation entre des logiques d’efficacité pures − technico-
+économiques − et des formes sociales plus ou moins contingentes avec 
+lesquelles les premières devraient composer » (Veltz, 2000). Il semble 
+que nous vivions encore sur ces référentiels structurants notre 
+perception des organisations. La comptabilité analytique n’est-elle pas 
+fille du taylorisme ?  
+Beaucoup de manuels et de techniques de gestion sont toujours 
+imprégnés de cette vision classique assise sur la rationalisation du 
+travail. La sphère de l’efficacité n’est pas seulement industrielle, il 
+existe une imbrication forte entre l’économique et le social. D’une part 
+les formes sociales sont modelées par les schémas d’efficacité 
+économique, et d’autre part, le monde de la production fait partie 
+intégrante du tissu social.  
+L’imbrication existe donc, mais peut-elle se faire sans heurt ? 
+Un chef d’entreprise, en tant qu’individu, peut très bien s’inscrire 
+totalement dans une logique de développement social, mais l’impératif 
+de concurrence l’empêche d’y adhérer en tant que gestionnaire. Sauf à 
+s’exclure du jeu concurrentiel, on ne peut supprimer cette compétition 
+qui reste un facteur de progrès individuel et collectif (elle conduit à plus 
+de qualité, plus d’innovation, plus de productivité). Aussi la logique 
+sociale ne peut-elle faire l’impasse sur la notion de compétitivité. Mais 
+reconnaître la nécessité de la compétitivité ne signifie pas 
+nécessairement pour autant l’ériger en valeur exclusive.  
+La plupart des outils d’évaluation utilisés par les dirigeants reposent 
+aujourd’hui sur un étalon monétaire, parce qu’ils visent prioritairement 
+
+Performance et gestion des ressources humaines     155 
+à mesurer la performance financière. Ce recours à un étalon monétaire 
+ne condamne-t-il pas définitivement la mesure des progrès sociaux ? 
+La responsabilité des analystes financiers est grande sur ce point. Leurs 
+évaluations influencent les décisions d’investissement. Faute de pouvoir 
+objectiver la performance de l’entreprise autrement que par des 
+indicateurs dictés par la logique de profit, ils confortent la 
+représentation économique dominante de la performance. Mais les 
+comportements évoluent, et la presse spécialisée nous rapporte que les 
+investisseurs refusent de plus en plus l’immobilisme social et que 
+certains critères sociaux ont d’ores et déjà un contenu informatif. 
+La GRH pourrait intervenir davantage encore dans le jeu pour proposer 
+des indicateurs qui pèseraient significativement sur le marché financier. 
+Aujourd’hui, le critère premier reste la rentabilité, mais en seconde 
+place viennent le management social, l’éthique et l’environnement. Il y 
+a donc là une opportunité pour la GRH, même si nous n’oublions pas 
+les difficultés qui entourent la construction de normes sociales.  
+Finalement, la performance n’est plus aujourd’hui la seule performance 
+financière. Nous avons déjà souligné qu’elle était au minimum 
+financière.  
+Le social reste un enjeu financier, alors pourquoi opposer responsabilité 
+sociale et finance ? Il faut à l’entreprise une performance financière 
+minimale, c’est elle qui va conditionner un certain niveau de pratiques 
+sociales. On peut difficilement envisager un comportement citoyen sans 
+un certain degré de profit.  
+Mais par ailleurs, le management ne peut ignorer la synergie positive 
+qui existe entre performance sociale et performance financière. C’est ce 
+processus vertueux qui permet le développement harmonieux et durable 
+de l’entreprise.  
+Malgré les réticences à promouvoir les innovations sociales et le 
+manque de certitudes sur les effets économiques de la gestion sociale, 
+on ne peut occulter le fait que la GRH représente un facteur de risque.
+
+---
+
+[p. 168-169]
+vantage through People, Harvard Business School 
+Press, Harvard, 1994. 
+PFEFFER J., « Pitfalls on the road to measurement : the dangerous liaison of 
+human resources with the ideas of accpunting and finance », Human 
+Resource Management, vol. 36 (3), 1997. 
+VELTZ P., Le nouveau monde industriel, Le Débat, Gallimard, Paris, 2000.
+ 
+TROISIÈME PARTIE 
+Influence de la globalisation  
+sur la politique financière
+
+---
+
+[p. 182-182]
+ionnaires 
+majoritaires/minoritaires 
+Systèmes incitatifs et 
+contrôle ex ante. 
+Tous les partenaires 
+Rôle disciplinaire 
+curatif 
+Systèmes de contrôle ex post. 
+Dirigeants/actionnaires 
+majoritaires/minoritaires 
+Systèmes incitatifs et 
+contrôle ex post. 
+Tous les partenaires 
+Tableau 6.4. Les rôles des systèmes de gouvernance
+
+---
+
+[p. 196-196]
+porteur des marques de la 
+bureaucratie. Ce qui nous permettra au final de nous interroger sur la 
+forme organisationnelle des marchés financiers dans leur ensemble. Cet 
+                             
+2. La Bruslerie (H.) de, Gestion obligataire internationale, t. 1 : marchés et actifs 
+financiers, p. 35, Economica, Paris, 1990.
+
+---
+
+[p. 208-209]
+bres de la seconde structure ; d’autre part un organe exécutif 
+                             
+10. Voir à ce sujet Anderson T., The growing war between Cedel and Euro-
+Clear, Euromoney London, p. 35-42, Londres, mai 1981. 
+11. La Bruslerie H. de, Euro-obligations et marchés internationaux des capitaux, 
+Paris, Clet, p. 367. 1984.
+La bureaucratisation avatar de la globalisation     207 
+ 
+conduisant les affaires courantes et qui est doté, depuis 1976, d’un 
+secrétariat permanent afin d’assurer un point de contact entre les 
+autorités et les organisations intéressées au développement du marché 
+euro-obligataire. 
+Trois objectifs principaux sont assignés à la nouvelle association 
+professionnelle : améliorer l’information, former les adhérents et 
+favoriser l’auto-régulation du marché. L’harmonisation des pratiques de 
+marché est assurée par un comité ad hoc dont les premières décisions 
+sont la conception des premières tables de rendement actuariel de 
+l’association, l’imposition d’un lot minimum de 10 000 dollars de titres 
+et l’obligation de calculer les intérêts sur une base annuelle et non semi-
+annuelle comme cela est le cas pour le marché obligataire américain. La 
+formation des adhérents fait l’objet d’une attention toute particulière et 
+c’est dès 1973, à Montreux, que commence le programme de formation.  
+Enfin, et c’est sans doute là un point essentiel, l’auto-régulation des 
+pratiques de marché s’avère nécessaire pour éviter aux autorités 
+étatiques d’exercer une quelconque tutelle sur ce dernier. C’est l’AIBD 
+qui instaure l’anglais comme langue officielle et qui contrôle les 
+intervenants spécialisés comme les teneurs de marché (market makers) 
+et les dealers.  
+Ainsi la première catégorie d’intervenants (qui assure via les reporting 
+dealers de manière continue son activité de contrepartiste sur une liste 
+significative de titres) doit respecter les normes édictées par l’AIBD, et 
+lui communiquer régulièrement la liste des titres traitée et lui faire part 
+de ses cotations chaque jour ouvrable. 
+Cependant, les markets makers et les dealers peuvent parfois entraver 
+cette volonté d’amélioration de la transmission informatique de 
+l’information et de l’exécution des ordres. C’est le cas avec le système 
+informatique Eurex mis en fonctionnement en janvier 1979 et qui se 
+solde par un échec car les dealers craignent une disparition de leur 
+profession et une réduction des marges pour les market-makers.  
+Ce système accordait au prix une fonction déterminante et les initiateurs 
+de ce système semblent avoir ignoré que l’activité du marché 
+secondaire repose sur une stratégie commerciale des markets-makers
+
+---
+
+[p. 221-222]
+R.S., Formal organizations, Chandler Pub. Co., San 
+Francisco, 1962. 
+21. Simon H.A, Administrative behavior, Free Press, New York, 1945. 
+22. Coase R.H., « The nature of firm », Economica, new series, p. 386-405, 1937. 
+23. Williamson O.E, Markets and Hierarchies analysis and antitrust 
+implications, Free Press, New York, 1975.
+220     Mondialisation, management et entreprenariat 
+ 
+(c’est-à-dire les coûts de transaction) permet de soulever la question de 
+la forme organisationnelle qui doit convenir « idéalement » au marché 
+euro-obligataire. C’est par conséquent à l’étude de la morphologie de 
+l’organisation étudiée qu’il convient à présent se consacrer.  
+7.3.2. Quelles formes organisationnelles pour le marché des euro-
+obligations ? 
+La question de la forme organisationnelle prise par le marché des 
+euro-obligations, si elle paraît ne pas devoir se poser de prime abord, 
+apparaît de première importance suite à l’analyse qui vient d’être 
+menée. Contrairement à ce que laisse penser sa dénomination 
+« standard », le marché des euro-obligations s’est organisé autour de 
+nœuds de relations qui dépassent largement celui de la transaction 
+effectuée entre l’emprunteur et l’investisseur. Les théories fondées sur 
+les coûts de transaction contribuent particulièrement à expliquer le 
+hiatus qu’il peut y avoir entre la dénomination et la forme 
+organisationnelle. Dans un premier temps, les travaux de Coase 
+permettent de comprendre comment le jeu des économies de coûts de 
+transaction a pu engendrer l’émergence d’une organisation-firme au 
+sein de ce marché. Ensuite, la théorie conçue par Williamson éclaire 
+plus précisément les mécanismes d’émergence et de résorption de ces 
+coûts au sein d’une structure plus centralisée. 
+7.3.2.1. Les travaux de Coase et la légitimation d’une organisation firme 
+Coase est l’un des premiers théoriciens à se demander pourquoi la 
+firme existe alors que selon les théories néoclassiques le marché peut 
+prendre en charge la réalisation des transactions sans coûts 
+supplémentaires et ce dans une situation d’optimisation du profit pour 
+chacune des parties. Dans un article fondateur de 193724, « la nature 
+de la firme », il justifie l’existence de la firme par la présence de coûts 
+spécifiques à la réalisation d’un échange sur un marché. Peu à peu, ce 
+nouveau concept a pris le nom de coûts de transactions du marché 
+dans la théorie économique mais il est introduit par l’auteur en tant 
+                             
+24. Ronald H. Coase, La firme, le marché et le droit, Diderot Editeur, Paris, 
+1997.
+
+---
+
+[p. 233-234]
+La bureaucratisation avatar de la globalisation     231 
+ 
+Mots-clés 
+Bureaucratisation, intermédiation, coûts de transaction, organisation, 
+innovation financière, domination légale. 
+Résumé 
+En étudiant l’évolution du marché des euro-obligations, nous 
+montrons comment un marché globalisé avant l’heure est devenu 
+porteur des marques de la bureaucratie. Ce qui nous permet au final de 
+nous interroger sur la forme organisationnelle des marchés financiers 
+dans leur ensemble. 
+Questions pour aller plus loin 
+► Quel est le devenir du marché des euro-obligations ? 
+► Un marché financier globalisé est-il fatalement porteur des marques 
+de la bureaucratie ?  
+► La globalisation a-t’elle engendré une croissance des coûts de 
+transaction sur les marchés financiers ? 
+7.5. Bibliographie 
+ANDERSON T., « The growing war between Cedel and Euro-Clear », 
+Euromoney, p. 35-42, Londres, mai 1981. 
+BARNARD C.I., The Functions of the Executive, 30th anniversary ed., 
+Cambridge, Harvard, 1968. 
+BEKERMAN G., Les euro-dollars, Que sais-je, Paris, 1981. 
+BLAU P.M., SCOTT R.S., Formal organizations, Chandler Pub.co., San 
+Francisco, 1962. 
+COASE R.H., « The nature of firm », Economica, new series, p. 386-405, New 
+York, 1937. 
+COASE R.H., La firme, le marché et le droit, Diderot Editeur, Paris, 1997. 
+
+232     Mondialisation, management et entreprenariat 
+ 
+CLAES A., DE CEUSTER M.J.K., POLFLIET R., « Anatomy of the eurobond 
+market 1980-2000 », European Financial Management, vol. 8, n° 3, p.  
+373-386, Oxford, 2002.  
+COOPER R.N., « The interest equalization tax :an experiment in the separation 
+of capital markets », Finanzarchiv Neue Folge, Band 24, Heft 3, p. 447-
+471, Tübingen, décembre 1965. 
+DE BEKKER R., « An history of the eurobond market:the first 21 years », 
+Euromoney, Londres, 1984. 
+DUFLOUX C., « Crise actuelle et innovations récentes sur le marché financier 
+international », La Revue Banque, n° 395, p. 618, Paris, mai 1980. 
+DUFLOUX C., « L’innovation au service des emprunteurs », La Revue 
+Banque, n° 425, p. 171, Paris, février 1983. 
+DUFLOUX C., « L’imagination créatrice des banquiers sur le marché euro-
+obligataire », La Revue Banque, p. 915, Paris, 1983. 
+DUFLOUX C., « De nouvelles euro-obligations pour attirer les investisseurs », 
+La Revue Banque, n° 435, p. 69, janvier, Paris, 1984. 
+DUFLOUX C., KARLIN M., « Le marché financier international : innovations, 
+risques et réflexions », La Revue Banque, n° 473, p. 591-595, juin 1987, 
+Paris. 
+DUFLOUX C., KARLIN M., « Une innovation financière internationale 
+récente : les bull and bear bonds », La Revue Banque, n° 475, p. 824-830, 
+Paris, septembre 1987. 
+EINZIG P., SCOTT QUINN B.S., The eurodollar system, Macmillan, 6e édition, 
+Londres, 1977. 
+GURLEY J.G., SHAW E.S., Money in a Theory of Finance, Brookings 
+Institutions, Washington DC, 1960. 
+KAPLAN J.J., SCHLEIMINGER G., The european payments union: financial 
+diplomacy in the 1950’s, Oxford University Press, New-York, 1989. 
+LA BRUSLERIE H. de, « Le marché obligataire et la gestion des titres à revenu 
+fixe », thèse d’Etat Paris IX Dauphine, Paris, 1982. 
+LA BRUSLERIE H de, 1984, Euro-obligations et marchés internationaux des 
+capitaux, Clet, Paris, 1984. 
+LA BRUSLERIE H de, Gestion obligataire internationale, t. 1 : marchés et 
+actifs financiers, Paris Economica, 1990. 
+MARCH J.G. , SIMON H.A., Organizations, Wiley, New York, 1958.

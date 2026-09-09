@@ -1,0 +1,300 @@
+[
+ {
+  "chapitre": "079124c0",
+  "citations": [
+   {
+    "texte": "La robotique est un domaine essentiellement pluridisciplinaire.",
+    "page": 229,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Discipline de carrefour",
+    "portee": "Aucune formation unique ne suffit à faire un roboticien, ce qui en fait un terrain d'entrée par plusieurs voies."
+   },
+   {
+    "texte": "La robotique est également un domaine fortement expérimental. La recherche y nécessite des plates-formes et des validations empiriques.",
+    "page": 229,
+    "axe": "11-sciences-environnement",
+    "theme": "Science par l'expérience",
+    "portee": "On ne progresse pas ici sur le papier : il faut construire, essayer et mesurer."
+   }
+  ]
+ },
+ {
+  "chapitre": "8b1ba11a",
+  "citations": [
+   {
+    "texte": "Il faut souligner que la démarche pluridisciplinaire et intégrative est scientifiquement très fructueuse en robotique.",
+    "page": 230,
+    "axe": "11-sciences-environnement",
+    "theme": "Fécondité de l'intégration",
+    "portee": "Assembler des savoirs séparés fait souvent apparaître des problèmes qu'aucune discipline seule n'aurait posés."
+   },
+   {
+    "texte": "C'est également dû au fait que les verrous qui ont mobilisé l'essentiel de la communauté robotique ont relevé davantage des fonctions sensorielles et motrices que des fonctions cognitives.",
+    "page": 230,
+    "axe": "02-ia-technique-academique",
+    "theme": "Percevoir avant de penser",
+    "portee": "Faire bouger et percevoir une machine s'est révélé plus difficile que la faire raisonner."
+   }
+  ]
+ },
+ {
+  "chapitre": "b711f5b6",
+  "citations": [
+   {
+    "texte": "Un robot est une machine capable d'accomplir un ensemble de tâches dans une classe d'environnements avec un certain degré d'autonomie et de robustesse face aux variabilités des tâches et de l'environnement.",
+    "page": 231,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Définition du robot",
+    "portee": "Définition sobre et opératoire, qui met l'autonomie et la robustesse au centre plutôt que la forme humanoïde."
+   }
+  ]
+ },
+ {
+  "chapitre": "ae1b3de8",
+  "citations": [
+   {
+    "texte": "Une difficulté essentielle en robotique est la variabilité des environnements et des tâches auxquels un robot doit être confronté.",
+    "page": 232,
+    "axe": "02-ia-technique-academique",
+    "theme": "La variabilité, vrai obstacle",
+    "portee": "Ce n'est pas la complexité de la tâche qui bloque, c'est le fait qu'elle change."
+   },
+   {
+    "texte": "Dans ces deux cas, l'environnement unique du robot fait l'objet d'un effort important d'ingénierie.",
+    "page": 232,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Aménager le monde",
+    "portee": "Beaucoup d'automatisations réussies tiennent moins à la machine qu'au monde qu'on a réorganisé autour d'elle."
+   }
+  ]
+ },
+ {
+  "chapitre": "ecdec304",
+  "citations": [
+   {
+    "texte": "Lorsque l'environnement ou les tâches sont très variables, le degré d'autonomie du robot devient un facteur important.",
+    "page": 233,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Quand l'autonomie compte",
+    "portee": "L'autonomie n'est pas une valeur en soi : elle devient nécessaire à mesure que le monde devient imprévisible."
+   },
+   {
+    "texte": "Dans tous les cas, l'absence totale d'autonomie contraint considérablement la tâche.",
+    "page": 233,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Prix de la dépendance",
+    "portee": "Un outil entièrement piloté ne peut jamais faire mieux que ce que la liaison avec son opérateur permet."
+   }
+  ]
+ },
+ {
+  "chapitre": "cedbdb93",
+  "citations": [
+   {
+    "texte": "Même lorsque l'autonomie n'est pas souhaitée, on voudra télé-opérer un robot au niveau de la tâche",
+    "page": 234,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Déléguer le comment",
+    "portee": "Confier l'exécution en gardant l'intention est le partage de travail le plus productif entre humain et machine."
+   }
+  ]
+ },
+ {
+  "chapitre": "82147fc3",
+  "citations": [
+   {
+    "texte": "La nature fortement expérimentale de la recherche en robotique conditionne les progrès de l'état de l'art à la disponibilité de plates-formes ayant de bonnes capacités fonctionnelles et largement accessibles, en coût et en complexité d'utilisation.",
+    "page": 236,
+    "axe": "11-sciences-environnement",
+    "theme": "L'accès aux instruments",
+    "portee": "Le progrès scientifique dépend d'abord de qui peut se procurer les outils, question décisive pour les laboratoires africains."
+   },
+   {
+    "texte": "Cependant, l'effet en termes de mobilisation et de visibilité, en particulier auprès des étudiants, reste largement dynamisant.",
+    "page": 236,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Vertu des compétitions",
+    "portee": "Une compétition imparfaite qui met des étudiants au travail vaut mieux qu'un programme parfait qui n'engage personne."
+   }
+  ]
+ },
+ {
+  "chapitre": "2583d373",
+  "citations": [
+   {
+    "texte": "La maîtrise de la mobilité est une fonction essentielle pour un robot autonome",
+    "page": 237,
+    "axe": "02-ia-technique-academique",
+    "theme": "Se déplacer d'abord",
+    "portee": "Avant toute intelligence, une machine autonome doit savoir aller quelque part sans se détruire."
+   },
+   {
+    "texte": "Sinon, le robot devra explorer l'environnement pour apprendre les modèles nécessaires à ses déplacements.",
+    "page": 237,
+    "axe": "02-ia-technique-academique",
+    "theme": "Explorer pour apprendre",
+    "portee": "Faute de carte donnée, il faut aller voir : le mouvement devient lui-même un instrument de connaissance."
+   }
+  ]
+ },
+ {
+  "chapitre": "f3729b4d",
+  "citations": [
+   {
+    "texte": "Mais un robot a des contraintes cinématiques qui restreignent ses déplacements.",
+    "page": 238,
+    "axe": "02-ia-technique-academique",
+    "theme": "Contraintes du corps",
+    "portee": "Un corps mécanique n'est pas libre dans l'espace : sa forme borne ce qu'il peut faire."
+   }
+  ]
+ },
+ {
+  "chapitre": "174c92bc",
+  "citations": [
+   {
+    "texte": "On se ramène ainsi à un simple problème de recherche de chemin dans un graphe.",
+    "page": 239,
+    "axe": "02-ia-technique-academique",
+    "theme": "Réduire à un problème connu",
+    "portee": "L'art de l'algorithmique consiste souvent à ramener une difficulté nouvelle à une forme déjà maîtrisée."
+   }
+  ]
+ },
+ {
+  "chapitre": "d50f2471",
+  "citations": [
+   {
+    "texte": "Comme on s'en doute, ces techniques ont fait avancer l'état de l'art mais ne résolvent pas définitivement la planification de mouvements en robotique.",
+    "page": 240,
+    "axe": "02-ia-technique-academique",
+    "theme": "Progrès sans solution finale",
+    "portee": "Honnêteté scientifique : avancer sur un problème n'est pas le clore."
+   },
+   {
+    "texte": "En pratique, on souhaitera synthétiser un plan robuste aux incertitudes des modèles et aux incertitudes sensorielles lors de l'exécution du mouvement",
+    "page": 240,
+    "axe": "02-ia-technique-academique",
+    "theme": "Planifier robuste",
+    "portee": "Un bon plan n'est pas le plus court, c'est celui qui survit aux imprécisions du réel."
+   }
+  ]
+ },
+ {
+  "chapitre": "c47dbd61",
+  "citations": [
+   {
+    "texte": "En particulier, le robot doit en permanence savoir où il se trouve dans l'environnement.",
+    "page": 241,
+    "axe": "02-ia-technique-academique",
+    "theme": "Savoir où l'on est",
+    "portee": "Exécuter un plan suppose de réévaluer sans cesse sa position réelle, non de dérouler des consignes."
+   }
+  ]
+ },
+ {
+  "chapitre": "290d5c72",
+  "citations": [
+   {
+    "texte": "Mais pour un robot adaptable à une large classe d'environnements, la localisation devra être faite en confrontant les éléments perçus par le robot au modèle de l'environnement.",
+    "page": 242,
+    "axe": "02-ia-technique-academique",
+    "theme": "Se situer par comparaison",
+    "portee": "Sans repère absolu, on se localise en confrontant ce que l'on perçoit à ce que l'on croit savoir."
+   },
+   {
+    "texte": "En pratique les deux problèmes se posent conjointement, avec une carte initiale qui est rarement parfaite, et des moyens de localisation qui sont par définition bruités.",
+    "page": 242,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux inconnues à la fois",
+    "portee": "Il faut parfois résoudre ensemble deux problèmes qui se contaminent, plutôt que l'un après l'autre."
+   },
+   {
+    "texte": "Les détails techniques peuvent paraître compliqués mais une présentation progressive montre que le principe reste simple.",
+    "page": 242,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Simplicité derrière la technique",
+    "portee": "Profession de foi pédagogique : la difficulté d'une formule ne dit rien de la difficulté de l'idée."
+   }
+  ]
+ },
+ {
+  "chapitre": "25bedd75",
+  "citations": [
+   {
+    "texte": "L'erreur résultante de la combinaison des deux mesures diminue relativement aux erreurs initiales",
+    "page": 243,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux mesures valent mieux qu'une",
+    "portee": "Combiner deux observations imparfaites donne une estimation meilleure que la meilleure des deux."
+   }
+  ]
+ },
+ {
+  "chapitre": "4e1cc079",
+  "citations": [
+   {
+    "texte": "Cette approche a été fréquemment implémentée avec succès car elle présente de nombreux avantages",
+    "page": 244,
+    "axe": "02-ia-technique-academique",
+    "theme": "Filtrage de Kalman",
+    "portee": "Une méthode s'impose moins par son élégance que par le nombre de fois où elle a fonctionné."
+   }
+  ]
+ },
+ {
+  "chapitre": "158fe56a",
+  "citations": [
+   {
+    "texte": "En pratique, le nombre d'amers augmente dynamiquement.",
+    "page": 245,
+    "axe": "02-ia-technique-academique",
+    "theme": "Carte qui grandit",
+    "portee": "La représentation du monde n'est pas fixée d'avance : elle s'enrichit à mesure que l'on avance."
+   }
+  ]
+ },
+ {
+  "chapitre": "5aab9737",
+  "citations": [
+   {
+    "texte": "Une erreur d'association peut conduire à des erreurs plus graves qu'une imprécision de positionnement.",
+    "page": 246,
+    "axe": "02-ia-technique-academique",
+    "theme": "Confondre est pire que se tromper",
+    "portee": "Prendre une chose pour une autre fausse tout le raisonnement, bien plus qu'une mesure légèrement inexacte."
+   }
+  ]
+ },
+ {
+  "chapitre": "3a475431",
+  "citations": [
+   {
+    "texte": "Les approches récentes du SLAM privilégient cette formulation par DBN, en posant un problème global d'estimation de l'ensemble des paramètres de position des amers et du robot",
+    "page": 247,
+    "axe": "02-ia-technique-academique",
+    "theme": "Estimer globalement",
+    "portee": "Reformuler des corrections successives en un unique problème global change la nature des solutions accessibles."
+   }
+  ]
+ },
+ {
+  "chapitre": "fa8226ef",
+  "citations": [
+   {
+    "texte": "En effet, un planificateur est par définition un système de prédiction : il choisit, parmi diverses simulations de futurs possibles, celles susceptibles de mener au but.",
+    "page": 248,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Planifier, c'est simuler",
+    "portee": "Prévoir revient à parcourir mentalement des futurs possibles pour retenir ceux qui mènent au but."
+   },
+   {
+    "texte": "Les plans produits sont davantage des guides pour agir que des programmes à exécuter en boucle ouverte",
+    "page": 248,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le plan n'est pas la règle",
+    "portee": "Un plan sert à orienter l'action, non à l'exécuter aveuglément : il faut suivre son déroulement et corriger."
+   }
+  ]
+ }
+]

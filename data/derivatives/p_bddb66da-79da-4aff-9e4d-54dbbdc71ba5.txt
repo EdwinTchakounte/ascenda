@@ -1,0 +1,1508 @@
+OUVRAGE : Intelligence artificielle et informatique
+AUTEUR(S) : inconnu
+ANNÉE : inconnue
+PAGES : 545
+AXE : IA Technique Academique
+SOMMAIRE :
+  (non structuré)
+
+[24/415 passages, 23576 tokens sur 452253]
+
+=== EXTRAITS ===
+
+[p. 1-3]
+INTELLIGENCE
+g ARTIFICIELLE
+INFORMATIQUE
+THEORIQUE ..
+J.-M. ALLIOT
+T. SCHIEX
+P. BRISSET
+FE GARCIA
+
+Intelligence
+artificielle
+et
+Informatique
+théorique
+2° édition
+Jean-Marc ALLIOT
+Ancien élève de Polytechnique
+Docteur en Informatique
+Thomas SCHIEX
+Ancien élève de l'École Centrale des Arts et Manufacture
+Docteur en Intelligence artificielle
+Pascal BRISSET
+Ancien élève de l'École Normale Supérieure de Saint-Cloud
+Docteur en Informatique
+Frédérick GARCIA
+Ancien élève de l’École Nationale Supérieure
+de l’Aéronautique et de l'Espace
+Docteur en Intelligence artificielle
+CÉPADUES-ÉDITIONS
+111, rue Nicolas-Vauquelin
+31100 TOULOUSE - France
+Tél. : 05 61 40 57 36 
+- Fax : 05 61 41 79 89
+(de l'étranger ) + 33 5 61 40 57 36 — Fax : + 33 5 61 41 79 89
+www.cepadues.com
+e.mail: cepadues@cepadues.com
+
+CHEZ LE MEME ÉDITEUR
+LA. et Informatique théorique ........cccccscssssssssesssssssessecessssssusssescessssnsusssessecsssnsecsseeessessnneees Alliot J.-M., Schiex T.
+Techniques avancées pour le traitement de Vinformation ou... 
+cece Amat J.-L. et Yahiaoui G.
+Acquisition et ingénierie des CONNAISSANCES ocean 
+Aussenac-Gilles, Laublet, Raynaud
+Simulation et algorithmes stochastiques :
+une introduction avec applications ou... eeecccseesccssssesscessuesseessseseeessssueesseessenecsssneneees Bartoli N., Del Moral P
+Lindicateur de performance : concepts & applications 0.02... ccsecseecscesssssssssnenrsesssesseesssssnunneees Berrah L.
+Logique floue. Exercices corrigés
+et exemples d'applications .....cccecccssseecsessssneseeessssnneeee Bouchon-Meumer B., Foulloy L., Ramdani M.
+BDA! 2001 mme 
+nn 
+Collectif
+HCI Aero 2000 nn 
+Collectif
+CGIP’ 2000 nn 
+Collectif
+Le document multimédia — Tome ? nee 
+Collectif
+Le temps, l’espace et l’évolutif - Tome 2... 
+donnes Collectif
+QUAV 2001... 
+nn 
+een 
+Collectif
+THM 2001, 99, 98, 97, 96, 95... 
+eme 
+Collectif
+Rencontres francophones sur la logique floue
+et ses applications - LFA 2001, 2000, 99, 98, 97, 96, 95 ecscessseeescssssssnnnntessssssunaecsaesnnneeds Collectif
+La CAO par le menu — Lisp par Autocad once ensessesccessssssssnnuenesseceecseessasnansusnsecesete Contensou J.-N.
+Induction symbolique numérique à partir de données ou... 
+Diday E., Kodratoff Y. et al.
+Introduction au modèle de maturité CMM ow 
+eecseeenees Dymond K.-M., trad. A. Combelles et al.
+13 — Revue Information-Interaction-Intelligence 0... 
+cee Garbay C., Doucet A., Prade H.
+Traitement parallèle dans les bases de données relationnelles 0... 
+Hameurlain A. et al.
+Conception de circuits en VHDL cssssssssssneseseesseecesssssssssusseseeeeseessssssssssssasecerseesseeesssssnannaseeesserssese Houzet D.
+Analyse des structures par éléments finis, 3° éd. 2... eeeeecccssssseesesecsssssssueecssesssssenseesssssssssuesesssssneesees Imbert J.-F.
+Guide de la sûreté de fonctionnement un 
+Laprie J.-C.
+Optique et INfOrMAtION eee 
+Laug M.
+Structures de programmation parallèle oo. 
+eccesseecceseessstnnnte Mauran Ph., Padiou G., Papaix Ph.
+Bases de radiométrie optique 2° éd... 
+Meyzonette J.-L. , Lépine Th.
+Techniques de synchronisation pour les applications paralléles 0.0... 
+eee Padiou G., Sayah A.
+A la découverte du C++ = 2° éd. donnee 
+Perrin FE
+Programmation langage C cccssssesessccsssssessssssssseeescssssssssmesssssssusseeseseessssuneeeseeesssansersess Rigaud J.-M., Sayah A.
+Votre entreprise sur Internet «0... ceeccsssseessssssseseeneeeessssssenessesesssssuueesessessssnersereeeasssnnnee Ventre D., David F
+© CEPAD 2002 
+ISBN : 2.85428.578.6
+Le code de la propriété intellectuelle du 1“ juillet 1992 interdit expressément la photocopie à usage collectif sans
+autorisation des ayants droit. Or, cette pratique en se généralisant provoquerait une baisse brutale des achats de livres,
+au point que la possibilité même pour les auteurs de créer des œuvres nouvelles et de les faire éditer correctement
+serait alors menacée.
+Nous rappelons donc que toute reproduction, partielle ou totale, du présent ouvrage est interdite sans autorisation de
+l'éditeur ou du Centre français d exploitation du droit de copie (CFC ~ 3, rue d Hautefeuille - 75006 Paris).
+DANGER
+rate
+Dépôt légal : mars 2002 
+N° éditeur : 578
+
+---
+
+[p. 25-26]
+eprésentation des connaissances. Autant alors enseigner la
+bonne vieille programmation!. »
+1 
+Ilest parfois bon de rappeler que l'intelligence artificielle n’est qu'une partie de l’informatique, et que des mots aussi
+mystérieux que #on-déterminisme, logique floue, ou algorithmes génétiques sinterprétent simplement par le passage
+26 Intelligence Artificielle et Informatique Théorique
+Avant d’aller plus avant dans la polémique essayons de faire une petite analyse histo-
+rique de l’TA, qui nous éclairera peut-être sur la raison de la violence des réactions qu’elle
+a provoquées.
+1.2 
+Historique
+1.2.1 
+La préhistoire : 1945-1955
+LIA a débuté, même si elle ne portait pas encore ce nom là, après la seconde guerre
+mondiale. Le premier problème auquel se sont attaqués certains informaticiens était la
+traduction automatique. Ils s'étaient consacrés pendant la guerre aux problèmes de dé-
+cryptage et pensaient pouvoir adapter des méthodes classiques aux problèmes de traduc-
+tion du langage. Leur erreur fut probablement de faire preuve d’un peu trop d’optimisme
+et surtout de croire qu’il était possible de réaliser une traduction sans qu’il soit nécessaire
+de comprendre le sens d’un texte. Ils pensaient ainsi réussir à mettre au point un tra-
+ducteur automatique dans les cinq ans (!) et le clamèrent bien haut. Très vite, ils durent
+déchanter ; le problème se révéla tellement ardu qu'il fut pratiquement abandonné sous
+sa forme initiale. Les enseignements que lPon en tira furent néanmoins profitables : on
+se rendit en particulier compte de l'importance considérable que revêt dans le raisonne-
+ment humain l’ensemble de connaissances non exprimées. Ce premier échec amena à se
+poser des questions sur la représentation à donner aux connaissances, ainsi qu’à la façon
+de les « extraire » d’un individu. On se rendit compte aussi de l’impossibilité d'exprimer
+toutes les connaissances et donc de la nécessité de les rédiger sous des formes génériques.
+Toutes ces remarques donnèrent naissance à certaines branches de VIA telle qu’elle allait
+apparaître.
+Cependant le résultat pratique était décevant”.
+1.2.2 
+Les débuts : 1955-1970
+Dans les années 55-65, d’autres équipes de recherche s'intéressèrent à des problèmes
+que l’on allait commencer à appeler problèmes d’IA. La définition du mot date d’ailleurs
+de la conférence tenue au Dartmouth College (New Hampshire, USA) où il est employé
+pour la première fois par John McCarthy. Dès le commencement, McCarthy fonde l’TA
+sur le postulat mécaniste qui veut que toute activité intelligente soit modélisable et re-
+productible par une machine. Nous allons revenir sur ce postulat de façon plus précise.
+d’une exécution séquentielle à une exécution arborescente, par la combinaison mathématique simple de coefficients
+numériques ou par une méthode d'optimisation dans un espace discret. Trop souvent, ces mots sont employés par
+de pseudo-spécialistes, comme certains faiseurs de faux miracles employaient abracadabra ou alakazam, dans le
+seul but d’impressionner une assistance trop inculte, trop crédule ou trop heureuse d’assister là à un événement
+d’une telle importance. Cette forme d’hallucination collective doit en effet être dénoncée avec force, et, dans cette
+acception, on ne peut que partager l’avis de Jean-Jacques Duby.
+2 
+Utile cependant. Le Maître d'échecs Tchigorine disait : 
+« Mes défaites m'ont plus appris que mes victoires. » Cette
+remarque s applique bien souvent à la recherche. Avoir échoué, c’est aussi avoir examiné à fond un domaine et avoir
+trouvé qu'il fallait utiliser une autre approche ou une autre théorie, ce qui est en soi un résultat positif.
+
+---
+
+[p. 48-49]
+ence sur d autres théo-
+rèmes.
+Nous allons maintenant introduire les axiomes” du calcul propositionnel :
+9 
+Dans la présentation axiomatique que nous utilisons ici, il vaudrait mieux parler de schéma daxiome. En effet,
+nous utilisons des lettres majuscules dans l'énoncé de ces axiomes, ce qui signifie que nous pouvons substituer
+Le calcul propositionnel 49
+Axiome 2.1 —
+A — (B- À)
+Axiome 2.2 —
+(4 — (B>C)) > 
+((A> B) 
+> (A 
+C))
+Axiome 2.3 —
+(—B -» +A) + (AB)
+Cet ensemble d’axiomes est l’ensemble de cardinal minimal’ que l’on puisse adopter.
+On remarque qu’un certain nombre de connecteurs (+,A,V) n'apparaissent pas dans
+ces axiomes. En fait, ces connecteurs sont explicitement définis comme des synonymes
+d’autres expressions. Ainsi (A A B), (A V B) et (A + B) sont définis respectivement
+par (A — 7B), (AA > B) et -((A — B) — -(B — A)).
+Nous devons également rappeler que À, B et C’, dans les schémas d’axiomes précé-
+dents, représentent n'importe quelle formule de notre langage. Nous pouvons donc sub-
+stituer à ces éléments formels n'importe quelle formule de notre langage formel z.e., nous
+pouvons substituer n'importe quoi à À, B et C’; la formule résultante sera un théorème
+de notre logique. Ainsi considérons 
+À — (B — A); nous pouvons remplacer A par
+(p — q) et B par (r — s). Nous obtenons alors : (p — q) — ((r — 8) > (p > q))
+qui est un théorème.
+Nous allons maintenant nous intéresser à la partie déductive du langage ;
+Règle d’inférence 2.2 — Règle du modus-ponens
+FA+HA=B
+FB
+La règle du modus-ponens peut se lire : « si A est un théorème et si 
+À — B 
+est
+un théorème alors B est un théorème ». On voit ici que la règle d’inférence permet de
+construire de nouveaux théorèmes, comme annoncé.
+2.5.2 
+Démonstrations
+Définition 2.11 — Démonstration — Une démonstration d’un théorème A est une suite
+finie (Ay, Ag, ... Aj, 
+... A) où chaque À; est soit un axiome, soit obtenu par l'application
+n'importe quelle formule à la lettre en question. Il ne s'agit donc pas à proprement parler d’un axiome (qui serait
+par exemple : (p — (q — 1))) mais bien d’un schéma général. Ainsi la règle de substitution uniforme est
+implicitement présente. On peut utiliser une autre présentation en donnant de véritables axiomes et en ajoutant
+un principe général de substitution.
+10 On peut se demander ce que veut dire minimal. Nous devons nous rappeler que nous construisons ce système
+formel afin qu’il soit adéquat à l’interprétation usuelle que nous avons du calcul des propositions. Le jeu d’axiomes
+ci-dessus est le jeu de plus petit cardinal connu qui atteigne ce but.
+
+---
+
+[p. 70-71]
+remplacée par une liste d’actions possibles. Pour explorer com-
+plétement l’ensemble des exécutions possibles, il faut donc effectuer, l’un après l’autre,
+l’ensemble des choix possibles. Au lieu d’être séquentiel, le schéma d’exécution devient
+arborescent. Chaque nœud de l’arbre correspond à une configuration et est un point de
+Les machines de Turing 71
+choix pour la machine de Turing, chaque segment correspond à une transition, chaque
+feuille à une position terminale de la résolution (une configuration d’arrêt) et chaque
+branche à une suite de choix.
+Formellement, la différence se situe au niveau de la fonction 6 dont l’espace d’arrivée
+nest plus À = (Z x I x {G, D,I}), mais l’ensemble des n-uplets (n fini) d'éléments
+de À.
+Les machines de Turing non déterministes sont peu utilisées par les logiciens. En
+revanche, elles ont une grande importance en théorie de la complexité, c’est la raison
+pour laquelle nous les avons brièvement définies ici.
+4.6 
+Remarques
+Notons tout de suite que, de par la définition de la calculabilité, une fonction f(a)
+n’est calculable que s’il existe une machine de Turing pouvant calculer f pour toute va-
+leur de a. En particulier, une machine de Turing doit être capable d’effectuer des cal-
+culs sur des nombres arbitrairement grands. C’est parce que les fonctions calculables
+doivent être totalement calculables, que nous pourrons bientôt construire une fonction
+non-calculable.
+Remarquons également la similitude qui existe entre une machine de Turing et un
+humain effectuant un calcul numérique. Comme le fait remarquer Kleene (Kleene 1987),
+on peut considérer la bande de la machine de Turing comme une feuille de papier, les
+symboles utilisés sont les symboles de calcul et les états de la machine sont les « états
+mentaux » du calculateur humain, états qui lui permettent de se rappeler à quel point
+du calcul il se trouve à un instant donné. Le nombre d’états du calculateur (humain ou
+mécanique) est supposé fini. Citons la phrase de Turing :
+« Le nombre d'états mentaux qu'il faut prendre en considération est fini. Si
+nous admettions une infinité de ces états, certains d’entre eux seraient aussi
+voisins que l’on voudrait et il y aurait des confusions. »
+Il s’agit là, bien entendu, d’un postulat qui prétend qu’un être humain effectue des séries
+de calculs de façon numérique et non analogique. Si cette hypothèse est peu critiquable
+quand elle s'applique à des nombres, elle est loin d’être évidente si l’on se réfère à des
+domaines plus complexes comme la compréhension du langage ou la perception des
+formes. Les textes de Turing ayant été une des bases du développement de PIA, on com-
+prend mieux les théses et postulats mécanistes développés quelques années plus tard en
+s'appuyant précisément sur ces paroles.
+
+---
+
+[p. 90-91]
+deux modèles telle que pour tout
+symbole de prédicat P d’arité n, Mi(P)(a1,...,an) est vrai ssi M2(P)(f(a1),..., f(an)) est vrai et telle que
+pour tout symbole fonctionnel g d’arité n, Mi(g)(a1,...,an) vaut a ssi Mo(g)(f(ai),...,@n) vaut f(a).
+Tous les modèles d’une théorie catégorique sont donc mathématiquement indiscernables.
+Les systèmes formels 91
+système axiomatique du premier ordre. Ce théorème n’est pas aussi paradoxal qu'il peut
+le paraître. En effet, toute théorie axiomatique formelle contient au plus, nous l’avons vu,
+un nombre dénombrable de démonstrations. Il semble clairement difficile dans ces condi-
+tions de représenter des ensembles non-dénombrables. On peut aussi mettre le théorème
+de Lowenheim-Skolem en relation avec le théorème d’incomplétude : considérons un
+système S « riche ». Comme tous les systèmes « riches » sont incomplets, on peut trouver
+une propriété p telle que les systèmes S Up et S U-p soient des systèmes « corrects ». Ces
+deux systèmes ne peuvent être catégoriques car les interprétations ne sont pas isomorphes.
+Remarquons enfin la grande différence qui existe entre le théorème d’incomplétude
+et le théorème énonçant l'impossibilité de démontrer la consistance de N dans N. Le pre-
+mier stipule qu'il existe des propriétés vraies non démontrables. Le second ne prétend en
+aucun cas qu'il existe des propriétés démontrables qui ne soient pas vraies. \\ dit simplement
+que l’on ne peut démontrer la consistance de N en utilisant seulement les axiomes de N
+et des méthodes finitistes, comme l’exigeait Hilbert. Une démonstration de consistance
+utilisant des méthodes non-finitistes a d’ailleurs été publiée par Gerhard Gentzen peu
+après que Gédel ait énoncé son théorème. Cette méthode satisfait de nombreux mathé-
+maticiens, même si elle fait appel à la notion d’induction transfinie. Il ne faut donc en
+aucun cas parler de théorème d’inconsistance comme on parle du théorème d’incomplé-
+tude, mais bien d’un théorème de non-démontrabilité finitiste de la consistance, ce qui
+est bien différent.
+5.7 
+Faut-il jeter la logique ?
+Les résultats obtenus par Gédel ont eu des conséquences très importantes sur la com-
+munauté des mathématiciens eux-mêmes. Certains d’entre eux, dont Imre Lakatos, ont
+même estimé nécessaire de renoncer à la théorie de la démonstration pour ne garder aux
+démonstrations mathématiques que leur caractère intuitif (Lakatos 1984) :
+« Pourquoi ne disons-nous pas que le test ultime permettant de savoir si une
+méthode peut-être admise en arithmétique revient à la question de savoir si
+elle est intuitivement convaincante ? »
+Il faut cependant faire une distinction entre ce qui apparaît comme deux parties
+fondamentalement différentes de la logique, que l’on a parfois tendance à confondre :
+— Il ya d’une part un problème à caractère philosophique qui s'interroge sur la valeur
+sémantique des axiomes logiques; Est-ce qu’un axiome est vrai? Qu'est-ce que
+la vérité? Ce problème interpelle les philosophes anglo-saxons depuis près d’un
+siècle; un bon livre faisant le point sur la philosophie de la logique est (Engel
+1989).
+— Il y a d'autre part un problème mathématique qui s'interroge sur la relation entre
+une théorie de la vérité, et une axiomatisation de cette théorie. C’est essentielle-
+ment à ce point que nous nous sommes intéressés.
+En fait, ces deux points correspondent à deux étapes pragmatiques du travail du
+mathématicien ou du logicien. Face à une réalité trop vaste pour être traitée efficacement,
+il commence par la réduire en un langage formel dans lequel il définit une théorie de la
+vérité et un modèle, puis il construit une théorie de la démonstration qui lui permet
+
+---
+
+[p. 112-113]
+unifiables ;
+3. trouver un plus grand unificateur o de 1; et la, et calculer la clause résolvante R¢ ;
+4 
+Signalons tout de même un « petit problème » bien connu de tous les gens qui s'intéressent à la résolution auto-
+matique. Supposons que nous ayons à unifier des termes x et f(x). Lalgorithme d’unification pourrait retourner
+Calcul des prédicats et résolution 113
+4, remplacer N par NU {R}.
+Nous allons prendre un exemple classique consistant à montrer que si dans un groupe,
+chaque élément est son propre inverse, alors le groupe est commutatif. L'exemple est pris
+dans (Thaysse and others 1988).
+Nous avons trois hypothèses :
+1. VaVyVz, (xy)z = x(yz) : associativité ;
+2. Vz, xe = ex = x : élément neutre e;
+3. Vz, xx = e : chaque élément est son propre inverse.
+Nous voulons arriver à la conclusion C 
+:
+Va, Vy, ry = yx
+On introduit un prédicat E(x, y, z) à trois variables qui s'interpréte comme (ry =
+z).
+Il ne nous reste plus qu'à mettre notre système sous forme normale (skolémisation,
+etc.). Nous obtenons alors :
+1. -E(x,y,u) V AE(y, z,v) V AE(u, z, w
+nE(2,y,u) V -E(y,z,v) V -E(x,v,w) V E(u, z, w)
+E(x,e, x)
+E(e,x,x)
+E(x, x,e)
+E(a, b, c)
+—ÆE(b, a, c)
+(3) exprime x = ze, (4) x = ex, (5) e = xx, et (6) et (7) sont la négation de la
+conclusion (c = ab) A (c # ba). Il est intéressant de détailler (1) et (2) pour montrer
+(informellement) qu’elles expriment l’associativité. Remarquons que l’associativité peut
+aussi s'exprimer par :
+<
+=
+8
+<
+S
+NAM 
+WD
+(u = zy) A (uv = yz) A (w = uz) A (w = xv)
+Nous pouvons alors constater que l’on peut réécrire cette formule en :
+(Qu = zy) A (u = yz) A (w = uz) À (w # xv) V
+((u = zy) A (u = yz) A (w = zu) A (w # uz)))
+Punifieur défini par o(x) = f(f(f(f(... (@)...)))). Mais Punivers de Herbrand n’est pas censé contenir de
+termes infinis (on peut éventuellement décider, comme le fait PROLOG 11 de travailler sur un domaine plus riche,
+contenant des termes dits rationnels et correspondant à des « arbres infinis »). En toute rigueur, il faudrait donc
+vérifier avant chaque unification que l’on ne risque pas de se trouver dans une situation de ce type i.e., que l’on
+nessaie pas d’unifier une variable x avec un terme contenant æ, mais ne se limitant pas à x. Ce test, qu'il faudrait
+effectuer, s’appelle test d'occurrence, ou occur-check en anglais. Aucun des langages de programmation logique actuels
+n'effectue le test d’occurrence.
+5 
+Nous aurions pu dans notre axiomatique du calcul des prédicats, présenter l’axiomatique du calcul des prédicats
+avec l’égalité. Voir (Kleene 1987).
+
+---
+
+[p. 138-139]
+Les algorithmes de Markov sont très
+proches des machines de Turing et les systèmes de Post très proches des systèmes formels.
+Nous retrouvons donc des parentés fort naturelles.
+5 
+Attention, d’autres auteurs réservent cette notation à la relation de production directe, que nous n’avons pas définie
+pour les algorithmes de Markov.
+Intelligence Artificielle et Informatique Théorique 139
+CHAPITRE 10
+La calculabilité
+Jean-Marc Alliot
+10.1 
+Introduction
+Nous avons introduit les notions fondamentales de calculabilité et de décidabilité
+dans le chapitre consacré aux systèmes formels. Nous n’y reviendrons pas.
+D'autre part, la démonstration d’indécidabilité pour un problème A 
+se fait le plus
+souvent par référence à un problème B dont on a déjà montré l’indécidabilité : on montre
+que si le problème À était décidable, alors le problème B le serait aussi. Nous considérons
+comme acquis le résultat démontré dans le chapitre 5 consacré aux systèmes formels
+i.e, le prédicat Pr = nT(i,i,n) est indécidable, ou encore le comportement d’une
+machine de Turing avec comme argument son index est indécidable. Nous nous servirons
+de ce résultat pour établir notre deuxième théorème d’indécidabilité.
+Nous ne parlerons dans ce chapitre que de quelques problèmes de décision classiques.
+Il aurait sans doute aussi fallu, pour être plus général, parler des problèmes de Thue. Nous
+ne l’avons pas fait. Le lecteur intéressé peut se reporter à (Salomaa 1989).
+10.2 
+Problème de reconnaissance
+On appelle problème de reconnaissance d’un mot m, pour un langage L donné (ici
+récursivement énumérable), le problème consistant à déterminer si ce mot appartient au
+langage L. Nous avons vu qu'un langage L est récursivement énumérable ssi il existe une
+machine de Turing permettant précisément de reconnaître chaque mot de L. Donc si le
+problème de la reconnaissance était décidable, cela signifierait que le prédicat Pr serait
+décidable, ce qui est faux. Donc le problème de reconnaissance est indécidable.
+Théorème 10.1 — Indécidabilité du problème de reconnaissance — Le problème consis-
+tant à déterminer si un mot M donné appartient au langage généré par une grammaire G
+donnée est indécidable.
+Il est intéressant de bien réfléchir à ce théorème ; il signifie qu'il est impossible de
+trouver un algorithme qui garantisse de déterminer en un temps fini, et dans tous les
+cas, si un mot M appartient à un langage L(G) généré par une grammaire G (ou par un
+système de Post). Il est évident qu’il existe des grammaires G pour lesquelles il est possible
+
+---
+
+[p. 159-160]
+15 En toute rigueur, elle aboutit en un temps inférieur ou égal à P(n). Mais on peut toujours supposer que le calcul
+ne se termine qu’à l'instant P(n) en imposant à la machine de Turing de ne rien faire dès quelle a terminé le calcul
+effectif, jusqu'à P(n), instant de l'arrêt.
+16 Nous ne nous intéressons qu’à la complexité en n.
+160 Intelligence Artificielle et Informatique Théorique
+1. À l'instant initial, M est dans la configuration initiale définie par m. Donc les cases
+0,1,...,n—1 sont occupées par les symboles a1,a2,...,an et les cases —P(n), —P(n+
+1),...,—-letn,n+1,...,P(n) sont occupées par le symbole blanc B. D’autre part la
+machine est dans l’état initial 20, noté 0. On peut traduire cet état par la formule :
+_—] 
+n—1 
+P(n)
+Fi = ( /\ [i,0, B, -1]) A [0,0,a1,0] A ( A [,0, ai41, —1]) A( A [,0, B, —1])
+i=—P(n) 
+i=1 
+i=n
+Cette formule peut être écrite en un nombre de pas de l’ordre de P(n)!”.
+2. À l'instant P(n), la machine de Turing a terminé son calcul. Elle est alors dans l’état final
+zy (noté p) et pointe sur une case quelconque contenant un symbole quelconque. On
+peut donc le traduire par :
+P(n) 
+q
+Fp= 
+VV 
+Vi, P(),s;,0)
+i=—P(n)j=1
+Cette formule peut être écrite en un nombre de pas de l’ordre de P(n)!® (q est une
+constante).
+Nous avons avec les conditions (1) et (2) traduit l’existence d’un état initial défini par m et
+d’un état final d’acceptation. Nous allons maintenant exprimer que le changement d’état d’une
+case dépend de la fonction de transition 5!? de la machine de Turing M.
+3. Considérons une case c dans un état (s,2) avecO < z < p. Que devient cette case à
+l'instant { + 1 ? Elle peut :
+(a) passer dans l’état (s’, z’) si (2’, 8’, 
+I) € 6(z, 8);
+(b) passer dans l'état (s >>,—1) si (z >>,8 >>,G) € 6(z,s8) ou(z >>,s >>
+, D) € 6(z, 8).
+Il faut bien se rappeler que la machine de Turing est non déterministe. Donc à chaque
+étape, elle a plusieurs possibilités d’action (la fonction 6 a pour image un ensemble de
+triplets et non un seul triplet). Ainsi non seulement nous avons deux possibilités principales
+(I) ou (G ou D), mais pour chacune de ces possibilités, il peut y avoir plusieurs alternatives.
+Cette condition peut se traduire par la formule :
+fa(c, t) = [e,t, 
+8, z] — ( VV [c,t + 1, s(t), z(2)]) V ( VV [c,t + 1, s(7), —1])
+iEeDi 
+jED2
+Le domaine D, décrit le sous-ensemble de 6(z,s) comprenant les actions qui laissent
+la machine immobile, et le domaine D2 le sous-ensemble des actions qui déplacent la
+machine à droite ou à gauche. La taille d’un programme donné d’une machine de Turing
+étant finie, elle est bornée par une constante C’, donc la formule f3 précédente peut être
+17 En fait, en toute rigueur, la notation des variables étant dyadique, il faut prendre (log n) P(n) comme majorant
+ou, pour être tranquille, nP(n). Mais cela ne change en rien le caractère polynomial de l'expression.
+18 La note précédente s'applique et continuera de s'appliquer pour les étapes suivantes.
+19 Pour le lecteur qui aurait oublié ce qu’est la fonction de transition 6, un petit retour à la définition des machines
+de Turing non-déterministes est conseillé.
+
+---
+
+[p. 182-183]
+tion). Elle correspond, informellement, à la séquence :
+((Az.(xx))L) 
+> (LL) 
+>, (L'L’)
+dans laquelle tous les termes L ont été réduits en même temps.
+5 
+Preuve dans (Hindley and Seldin 1986; Barendregt 1981) par exemple.
+6 
+Lors de la substitution de L à x, on ne conserve qu’un exemplaire de L, partagé par ses deux occurrences.
+A-calcul 183
+12.3.7 
+(-équivalence
+La B-réduction est non symétrique. Cependant, il est possible de définir la B-
+équivalence (ou B-égalité, notée =g) en posant qu'un terme A est B-égal à un terme
+B si et seulement si B est obtenu à partir de À après un nombre fini (éventuellement
+nul) de B-contractions, de 3-contractions inversées’ et de renommages de variables. La
+B-équivalence constitue un affaiblissement de l’a-équivalence qui va nous permettre de
+mettre en relation deux termes se réduisant en deux formes normales a-équivalentes.
+Définition 12.12 — Deux termes A et B sont 3-équivalents (noté À =g B) si et seulement
+sil existe une séquence de termes Ag..., À, telle que :
+Apo = A,
+An = B,
+Vi < (n — 1), (Aims Aj41) Ou (AD A;) Ou (Aj;=aAi41)
+De la même façon que pour la 5-réduction, ona:
+Théorème 12.3 — Propriété de Church-Rosser — Soient deux termes A et B, tels que
+A=,B, alors il existe un terme T tel que A>g T et 
+Bog T.
+Ce théorème montre que deux termes (-égaux représentent intuitivement la même
+fonction, puisqu'ils peuvent tous deux être réduits au même terme. Dans la pratique,
+la relation de B-équivalence est indécidable®, elle est cependant employée dans certains
+dialectes PROLOG réalisant une fH-unification (A-Prolog par exemple).
+On en déduit aisément un certain nombre de corollaires, en particulier que si deux
+termes sont /-égaux, ils ont :
+— soit tous les deux une forme normale;
+— soit aucun d’entre eux n'en possède une.
+De plus, s'ils en possèdent chacun une, elles sont a-équivalentes.
+12.3.8 
+Extensionnalité et 7-réduction
+Le concept d'égalité de deux fonctions mathématiques est habituellement extensionnel
+i.e., si deux fonctions prennent la même valeur en tout point (F’ = x + x et G = 2 * Z)
+alors elles sont égales :
+Va, f(x) = g(x) = f= 9
+Le À-calcul muni des règles de 
+B-réduction et d’a-équivalence ne 
+présente 
+pas cette
+. 
+. 
+, 
+. 8 
+> 
+. 
+q 
+P 
+P
+propriété puisqu'il est possible d’exhiber des termes A et B tels que :
+7 
+Lrésulte de la B-contraction inversée de M 
+ssi Log M.
+8 
+Plus précisément semi-décidable, puisque si deux termes ont une forme normale, on peut y aboutir par une réduc-
+tion standard. Il s’agit du premier théorème d’indécidabilité de l’histoire des mathématiques. C'est à partir de lui
+que Church démontra l’indécidabilité du calcul des prédicats en 1936.
+
+---
+
+[p. 210-211]
+que nous avons introduits au chapitre 6 constituent un
+système de production inductif.
+5 
+Nous ne considérons pas ici la technique utilisée pour générer ces états (c’est-à-dire pour se déplacer dans l’espace
+d'états), ni la méthode utilisée pour représenter le monde d'états ainsi généré. Nous aborderons plus loin ces
+techniques.
+Méthodes faibles 211
+| 
+Monotonique 
+| 
+Non-monotonique
+Partiellement commutatif 
+Démonstration de théorème | Missionnaires et cannibales
+Non partiellement commutatif 
+Voyageur de commerce 
+Poker
+Table 13.1 — Caractéristiques de problémes
+Le jeu d’échecs : L'ensemble des règles de déplacement des pièces constitue un système
+de production du jeu d'échecs. Remarquons que ce n’est pas le seul. En fait, on
+peut appeler ce système de production, par analogie avec la théorie des ensembles,
+un système défini en compréhension. On pourrait aussi définir un système en
+extension, qui consisterait à stocker l’ensemble des états possibles et l’ensemble des
+liaisons possibles entre chaque état. Cette méthode est bien entendu prohibitive
+aux échecs, vu le nombre de configurations possibles, mais possible en théorie
+car le nombre d’états est fini. Un système de production inductif présenterait peu
+d'intérêt pour le jeu d’échecs, sauf dans un cas: si l’on souhaite rechercher s'il existe
+un moyen d'arriver à une position donnée (problème de rétro-analyse) ; ce type de
+problème n’a pas grand-chose à voir avec le jeu d'échecs à proprement parler.
+Le problème du voyageur de commerce : Soit un état (%1,%2,...,%x), on construit
+les états (x1,T2,..., Te, Le41) où Trr1 décrit l’ensemble des villes différentes de
+T1, T2,...,%8. On génère ainsi l’ensemble des états possibles, qui contient forcé-
+ment la solution. Il est impossible de construire un mécanisme inductif puisqu'on
+ne connaît pas l’état final de façon exacte. Ce système de production est monoto-
+nique puisque le choix d’une ville a à un instant ¢ n'empêche pas de choisir une
+ville b à t’ si b était aussi disponible à t. En revanche, il n’est pas commutatif, car
+l’ordre du choix des villes influe sur la solution.
+Le jeu de Poker: Le système de production est également simple : il s'agit des règles
+régissant les enchères et la valeur des mains. Ce système n’est ni partiellement
+commutatif, ni monotonique : toute enchère est irréversible et entraîne des modi-
+fications sur la suite du déroulement de la partie. Remarquons cependant que nous
+ne pouvons pas prévoir, à un instant donné, le chemin suivi vers la solution. Nous
+allons y revenir. La notion de système de production inductif est ici sans intérêt.
+Dans le tableau 13.1, sont résumées les caractéristiques de nos problèmes relativement à
+la monotonie et à la commutativité.
+Il nous reste maintenant à trouver une représentation formelle adaptée à nos espaces
+d'états et à dégager des méthodes de résolution aussi efficaces que possibles.
+13.4 
+Représentation formelle
+Nous allons nous intéresser maintenant à la représentation formelle de l’espace d’états
+construit par un système de production.
+
+---
+
+[p. 238-239]
+es de la contrainte ou
+encore qu'elle n'est pas viable. On dira qu'un CSP est arc-consistant s'il ne contient pas
+de valeurs non viables. Plus formellement :
+19 L'arrêt est garanti et définit un CSP unique dans tous les cas qui nous intéressent. Lajout de contraintes qui sont
+induites garantit d’autre part l’équivalence des CSP.
+Problèmes de satisfaction de contraintes 239
+Définition 14.15 — Arc-consistance — Un CSP 
+P = (X, D, C) est arc-consistant ssi pour
+toute variable x, € X, on a dj 
+A © ev € dj, Vc; = (v;,7;) € C'| x € v,, il existe
+AE Tr; tel que A(xi) =v.
+De nombreuses procédures d’établissement de la consistance d’arc ont été exhibées.
+Nous ne considérerons dans la suite de cette section que les CSP binaires”, On se limite
+ici au calcul de contraintes unaires, induites par des « sous-CSP » définis par des couples
+de variables. Les algorithmes les plus anciens s'appuient sur une procédure très simple,
+appelée Revise, qui s'applique à une paire de variables (zi, z;) reliées par une contrainte
+Cr. Revise supprime du domaine de x; toute valeur qui rend impossible la satisfaction
+de la contrainte entre x; et Z; et retourne, en sus des effets de bord sur les domaines, un
+booléen qui indique si le domaine de x; a été modifié.
+Algorithme 2: Revise
+Revise(x;, x;);
+soit modification 
+— faux;
+pour chaque v € d; faire
+si fv’ € d; | {tr > v, 2; — v'} est consistante alors
+d; <— (d; — {v});
+modification — vrai;
+retourner modification;
+Cette procédure est appliquée sur tous les couples de variables. Le problème essen-
+tiel est que la réduction du domaine d; peut entraîner l'apparition de nouvelles valeurs
+arc-inconsistantes sur d’autres variables reliées par une contrainte à x; et qu’une seule
+itération ne suffit généralement pas. Dans la version la plus primitive appelée AC1, on
+répète l’application sur tous les couples de variables (dans les deux sens) et jusqu’à ce que
+la procédure Revise retourne faux pour tous les couples de variables. Dans la version ap-
+pelée AC3, une file L est utilisée pour éviter l’application inutilement répétée de Revise.
+Si l’on considère un CSP formé de m contraintes et dont les domaines ont un cardinal
+de d, on obtient ainsi une complexité en O(m.d?).
+Algorithme 3: AC-3
+AC-3();
+soit L < liste des paires (x;,2;) | 4 une contrainte entre x; et x;;
+tant que L # © faire
+Choisir et supprimer dans L une paire (x:, 2; );
+si Revise(x;, x; ) alors
+| Le LU {(x, ti) 
+| 
+d une contrainte entre xp, et x};
+La premiére version de complexité optimale dans le pire des cas, appelée AC-4 (Mohr
+and Henderson 1986), ne s'appuie plus sur la procédure Revise. L'algorithme AC-4 dé-
+termine dans une première phase :
+20 Un certain nombre d’algorithmes ont été étendus aux contraintes n-aires (Mohr and Masini 1988; Janssen 1990;
+Jégou 1991; Bessière and Régin 1997).
+
+---
+
+[p. 263-264]
+aleur et sans que les chiffres les plus significatifs (z.e., les plus à
+gauche de chaque « mot » ; S et M dans ce cas) ne soient nuls :
+SEND+MORE+GOLD=MONEY 
+DONALD+GERALD=ROBERT 
+CROSS+ROADS=DANGER
+ADAM+EVE+ON+A=RAFT 
+AIN+AISNE+DROME+MARNE=SOMME 
+TWO*TWO=THREE
+LYNDON*B=JOHNSON 
+DEUX+DEUX+DEUX+NEUF+NEUF=FULL 
+FORTY+TEN+TEN=SIXTY
+264 Intelligence Artificielle et Informatique Théorique
+ABCD 
+: 
+EFG 
+= 
+HC
+- 
+* 
++
+FHA 
+- 
+IG 
+= 
+FJD
+AFBE 
+- 
+ACFE 
+= 
+FAJ
+Un problème difficile? dans le domaine est le suivant : dans la multiplication ci-
+dessous, chaque point (qui sera représenté par une variable) doit étre remplacé par un
+chiffre pris dans la liste (0,1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9) (il ne doit pas y avoir
+plus de deux occurrences du méme chiffre, donc précisément deux). Ce probléme est
+présenté dans (Lauriére 1976) :
+Citons rapidement, et en vrac (le lecteur intéressé pourra se reporter pour plus de
+détails et des problémes plus nombreux 4 (Roseaux 1986; Gardner 1986; 1987 1988;
+1989; Berloquin 1973; Oxusoff and Rauzy 1989; Smullyan 1981; Hofstadter 1990;
+Laurière 1976; Berge 1970)) :
+— Les N-reines : placer, sur un échiquier de N x N cases, N reines qui ne s’at-
+taquent pas (suivant les régles classiques des échecs). Ce probléme fut traité (entre
+autres) par Gauss dans le cas N = 8, cas où il oublia quelques solutions... Il agit
+d’un problème équivalent à la recherche d’un ensemble intérieurement stable (qui
+sera maximum) dans un graphe de N x N nœuds (un nœud pour chaque case),
+chaque arête correspondant à une diagonale, une verticale ou une horizontale. Ce
+problème est, il faut le rappeler, un problème polynomial (voir par exemple (Beas-
+ley 1990) pour une procédure de satisfaction polynomiale). Il peut s’envisager pour
+d’autres types de pièces.
+— Le lemme de Shurr : il faut disposer m billes numérotées de 1 à m dans n boîtes
+sans qu’une seule boîte contienne deux billes x et y telles que x = 2 * y ou trois
+billes telles que x + y = 2. Habituellement traité avec 3 boîtes. Le problème est
+consistant jusqu'à M = 13;
+— La conjecture d’Erdôs : former une séquence des entiers de 1 à n sans que l’on
+puisse en extraire une sous-séquence, non forcément contigué, de k entiers, stric-
+tement croissante ou strictement décroissante. En général, on s'intéresse à k = 4:
+le problème est consistant pour n = 9, inconsistant pour n = 10;
+— Le cavalier d’Euler : trouver une séquence de mouvement du cavalier permettant
+de parcourir toutes les cases de l’échiquier, sans repasser par la même case, et en
+revenant au point de départ ;
+34 La résolution devient simple si l’algorithme de satisfaction exploite la dépendance fonctionnelle des quatorze
+« points » inférieurs par rapport aux six « points » du haut. Encore faut-il qu'il la détecte.
+
+---
+
+[p. 287-288]
+rée comme
+positive puisqu'elles ne donnent plus accès au coin, qui est déjà occupé. De même, les
+cases du bord qui sont reliés au coin par une chaîne continue de pions de la même couleur
+24 À distinguer des échecs où une partie peut durer moins de 10 coups ou plus de 100.
+25 On est loin des principes cognitifs fondateurs de PIA!
+288 Intelligence Artificielle et Informatique Théorique
+500 | -150 | 30 | 10 | 10 | 30 | -150 | 500
+-150 | -250 | 0 | O | O | O | -250 | -150
+30 
+0 
+112121]1 
+0 
+30
+10 
+0 
+2 
+|16] 
+16] 
+2 
+0 
+10
+10 
+0 
+2 
+|16] 
+16] 
+2 
+0 
+10
+30 
+0 
+1} 
+2 
+);2] 
+1 
+0 
+30
+-150 | -250; 
+0 | O | O | O | -250 | -150
+500 | -150 | 30 | 10 | 10 | 30 | -150 | 500
+Figure 15.8 — Exemple de valuation de cases pour Othello
+sont beaucoup plus intéressantes car désormais imprenables. Un autre facteur important
+de la position à Othello est le nombre de cases libres contigués à ses propres pions. Il faut
+essayer de le minimiser car plus ce nombre est petit et moins |’adversaire a, en général, de
+coups disponibles.
+15.6.4 
+Othello et apprentissage
+Le programme que nous venons de présenter garantit un niveau de jeu intéressant,
+mais est cependant très loin des meilleurs programmes d’Othello. Tous les meilleurs pro-
+grammes utilisent aujourd’hui des techniques d’apprentissage qui peuvent étre de plu-
+sieurs sortes. Ce type de mécanisme n’est pas nouveau, puisqu'il était déjà utilisé par
+Arthur Samuel (Samuel 1959) dans son programme de jeu de dames.
+La plupart des fonctions d'évaluation sont de la forme Xcit; où les t; sont les carac-
+téristiques de la position et les c; les coefficients qui mesurent l'importance à accorder
+à telle ou telle caractéristique. Au fur et à mesure de l'apprentissage, les coefficients c;
+doivent être modifiés de façon à enregistrer l'information acquise pendant les parties.
+Comment modifier les coefficients ? Il est clair que l’on doit augmenter la valeur des
+coefficients qui prédisent correctement l'issue du coup et diminuer la valeur de ceux qui
+fournissent des informations incorrectes. Le problème dans un programme de jeu est
+qu'il faut être capable, après la partie, d'analyser les coups qui se sont révélés bons ou
+mauvais, de façon à modifier la fonction d'évaluation. On peut implanter ce mécanisme
+en supposant que toute séquence de coups qui a amené à une bonne situation est une
+bonne séquence et que les coefficients qui ont encouragé cette séquence doivent être
+renforcés et ceux qui tendaient à l’éviter, diminués (méthode de la carotte et du bâton).
+Quant à mesurer en quoi une situation est bonne, c’est facile lorsque l’on est proche de
+la fin de la partie (car on peut aisément faire des analyses exhaustives), mais en milieu
+de partie, on doit se fier à la fonction d'évaluation elle-même qui fournit, en quelque
+26 Nous simplifions ici à l’extrême. En fait, nombre de programmes utilisent des fonctions d'évaluation contenant des
+termes non linéaires.
+
+---
+
+[p. 308-309]
+olu.
+Le Go : Le Go fait partie des jeux extrêmement difficiles à programmer, bien qu'il soit
+à information complete. En effet, l’arbre de jeu ne peut pas être examiné de façon
+complète, même sur deux niveaux, en raison du très grand nombre possible de
+61 Le tic-tac-toe est un jeu résolu, mais il n’est pas franchement complexe...
+La programmation des jeux 309
+coups à chaque tour de jeu (plus de 300 en début de partie). D'autre part, le jeu
+est avant tout lié à des concepts positionnels stratégiques très difficiles à forma-
+liser simplement. Le Go est très étudié en ce moment. II s’agit probablement du
+prochain grand défi après les échecs. On peut lire avec profit (Chen et af 1990)
+et (Shirayanagi 1990) sur le sujet.
+Un des meilleurs programmes de Go est MFGO (Many Faces of Go), de David
+Fotland. Il a une force approximative de 13 Kyu?, ce qui le place loin des très
+bons joueurs.
+Dans un programme de Go, il y a trois parties principales : les structures qui
+représentent la connaissance, la fonction d’évaluation pour déterminer le score et
+la fonction de sélection des coups.
+La représentation des connaissances : Il faut organiser la connaissance de façon
+à pouvoir l'utiliser efficacement et rapidement. Les structures ne sont pas
+relatives à des cases, ni globales, mais sont attachées à des groupes, des chaînes
+de pierres, des connexions ou des yeux.
+L'évaluation : La fonction d'évaluation tente de donner à chaque groupe une va-
+leur heuristique en terme de vie ou de mort. Un groupe ayant deux yeux
+sera inconditionnellement vivant et aura la plus forte évaluation, un groupe
+pouvant être capturé en peu de coups sera inconditionnellement mort. Entre
+ces deux extrêmes, David Fotland distingue 23 catégories en fonction des
+yeux potentiels, de la possibilité de s'échapper, le nombre de groupes voisins
+faibles. 
+.. Cette fonction d'évaluation utilise un programme de recherche tac-
+tique pour évaluer les prises possibles.
+La sélection de coups : Plutôt que de tester chaque coup, le programme utilise
+un ensemble de règles expertes qui lui suggèrent des coups à essayer en prio-
+rité, en fonction de certains critères. On vérifie, après la réalisation du coup
+suggéré, qu'il a bien mené au but recherché. Par exemple, si une règle offen-
+sive suggère d'attaquer un groupe, le groupe doit être plus faible après que le
+coup ait été réalisé.
+Cette rapide description montre bien que l'approche de la programmation du Go
+se distingue très nettement de celle des autres jeux. Elle s'appuie plus sur des consi-
+dérations expertes que sur des considérations de force brute. II reste à savoir quel
+sera l'avenir de ces programmes. Les premiers programmes d'échecs étaient eux
+aussi des programmes plus orientés vers l'expertise que vers la force, et la tendance
+s'est lentement inversée.
+62 Le classement des joueurs de Go est complexe. Les joueurs « faibles » sont classés en Kyu. Plus faible est le Kyu, plus
+fort est le joueur. Les débutants ont une force de 30 Kyu approximativement. Un joueur pratiquant régulièrement
+en club, pendant un ou deux ans, doit atteindre une force de l’ordre de 10 Kyu. Lors d’une partie, la différence
+des Kyu des deux joueurs est utilisée pour déterminer le nombre de pierres de handicap. Arrivé à 1 Kyu, le rang
+suivant est 1 Dan, et le rang le plus élevé possible est 9 Dan. Les meilleurs joueurs amateurs ont une force de 7
+Dan environ. David Fotland, l’auteur de MFGO, a une force de 3 Dan.
+
+---
+
+[p. 332-333]
+décrivent
+une scène particulière (d’où leur nom). Les scripts utilisent fréquemment les primitives
+de la DC pour représenter les relations entre actions.
+Lutilisation des scripts permet, à partir d'événements fractionnaires, de reconstituer
+un grand nombre d'informations sous-entendues (par défaut). Ainsi, si on me dit : « Paul
+Les systèmes experts 333
+va au restaurant », j'en déduis en général que Paul a faim et qu’il a de l'argent. Un or-
+dinateur qui utilise un script en est également capable. Il est également capable d’inférer
+toutes les actions que Paul va faire en allant au restaurant. Si on lui dit : « Paul est parti
+sans payer », il en déduira qu'il n'y avait pas la nourriture appropriée et que Paul n’a pas
+mangé.
+Une grande faiblesse des scripts est leur inaptitude à réagir face à une séquence impré-
+vue. Ainsi, soit la phrase : « Victoria est allée au restaurant. Elle a trouvé un cafard dans
+sa salade, s’est plainte au chef et est partie. » et voilà notre ordinateur perdu. Impossible
+pour lui de répondre à la question : « Victoria a-t-elle payée? » En revanche, le script
+peut détecter l’événement anormal qui interrompt la séquence « a trouvé un cafard dans
+la salade, s’est plainte au chef ».
+Il existe nombre de situations où les scripts peuvent être utiles : les accidents de
+voiture, une interrogation écrite... en fait, toute séquence stéréotypée d'événements. Il
+ne faut cependant pas en attendre plus que ce qu’ils peuvent donner : un script ne peut
+s'écarter de ce qu’il sait traiter et les événements exceptionnels doivent faire l’objet d’un
+traitement séparé.
+16.3 
+SE à base de règles
+Un système expert (par règles) s'articule autour de trois éléments principaux :
+La base de faits : elle contient l’ensemble des faits relatifs au problème considéré. C’est
+là que sont stockées les données symboliques et numériques. Par exemple, en lo-
+gique propositionnelle, il s’agit des affirmations concernant la valeur de vérité des
+propositions (p est vrai, q est faux...).
+La base de règles : elle contient l’ensemble des règles de production et des connaissances
+heuristiques déterminant la résolution du problème. En logique propositionnelle,
+il s’agit des hypothèses de la forme p — q, (pV q) + T...
+Le moteur d’inférence : il réalise le fonctionnement créatif du système en sélectionnant
+règles et faits pour générer de nouvelles règles et de nouveaux faits. En logique
+propositionnelle, il s’agit des règles d’inférence pour le chaînage avant : CR p—9 et
+des règles de déduction pour le chaînage arrière.
+On inclut parfois deux éléments supplémentaires dans les systèmes experts :
+Les méta-règles : il s’agit de règles destinées à guider le moteur d’inférence quant à la
+stratégie de résolution ou à la maintenance des bases de règles et de faits. Ainsi,
+lorsque nous avons introduit en logique propositionnelle algorithme de Davis et
+Putnam comme méthode de résolution, nous avons signalé qu’il était judicieux
+d'utiliser un mode particulier de sélection des clauses pour que cet algorithme soit
+efficace : c’est un exemple typique de méta-règle. On peut bien entendu avoir des
+méta-(méta-règles), des méta-(méta-(...))règles.
+Les agendas: il s’agit d’un moyen de gérer la notion de plans et de planification.
+L'agenda est une liste de tâches que le système peut effectuer avec les « raisons »
+qui poussent le système à penser qu'une tâche donnée est « intéressante ». Ainsi le
+système peut choisir la tâche la plus intéressante pour poursuivre la résolution. En
+
+---
+
+[p. 355-356]
+bre; droit 
+: 
+’a arbre }
+Ce type, récursif et polymorphe (? a), est construit avec un type somme (constructeurs
+Feuille ou Noeud) et un type produit (étiquettes gauche et droit). On peut remarquer
+qu’une fonction de parcours d’une valeur de ce type a une structure semblable au type :
+pattern-matching à deux cas et récursivité :
+356 Intelligence Artificielle et Informatique Théorique
+let rec nb_feuilles = fun arbre ->
+match arbre with
+Feuille _ -> 1
+| 
+Noeud {gauche = g; droit = d} -> nb_feuilles g + nb_feuilles d
+Litérateur canonique pour ce type s'écrit aussi automatiquement en respectant les règles
+suivantes :
+— à chaque constructeur, on associe une fonction, passée en argument ;
+— à chaque constructeur est associé un cas dans un pattern-matching ;
+— à un type récursif est associé un itérateur récursif ;
+— à un type produit est associé une séquence.
+let rec iter = fun f -> fun n -> fun arbre ->
+match arbre with
+Feuille x -> f x
+| 
+Noeud {gauche = g; droit = d} -> n (iter f n g) (iter f n d)
+La fonction précédente nb_feuilles est donc une instance de cet itérateur :
+let nb_feuilles = iter (fun _x -> 1) (+)
+De même le calcul de la liste des feuilles d’un arbre s'écrit simplement avec cet itérateur
+(@ est l'opérateur de concaténation de listes) :
+let feuilles = iter (fun x -> x::[]) (fun gd -> g @ d)
+Si les feuilles sont des entiers le calcul de leur somme constitue une troisième instance :
+let somme = iter (fun x -> x) (+)
+17.2.12 
+Le compilateur
+Le compilateur OCaml peut être utilisé de diverses manières :
+— Boucle interactive (ocaml) : c’est le mode d’utilisation habituel pour les langages
+de la famille Lisp et Prolog. Les expressions saisies par l'utilisateur sont analysées,
+typées, compilées, exécutées et la valeur ainsi que le type du résultat sont imprimés.
+Ce mode de fonctionnement, bien qu’utile pour l’initiation et l’enseignement, at-
+teint rapidement ses limites pour des programmes importants (plusieurs modules,
+connexion avec d’autres langages, interfaces graphiques, ...). On l’utilisera pour
+découvrir le langage mais on devra lui préférer les modes suivants pour une activité
+de programmation en vraie grandeur.
+— Compilation pour une machine abstraite (ocamlc) : c’est le mode standard de
+développement suivant la séquence classique : édition, compilation et production
+d’un exécutable, exécution. Dans ce mode, le code produit est émulé par une ma-
+chine abstraite ; l’avantage est qu’un même code produit peut alors être exécuté sur
+des plateformes différentes. Un outil de mise au point (ocamldebug) permet de
+tracer une exécution et en particulier de faire marche arrière.
+— Compilation pour un processeur (ocamlopt) : c’est un mode analogue au précé-
+dent mais le code produit est du code #atif pour une architecture donnée. Lavan-
+tage est l’efficacité accrue du résultat obtenu. Des tests extensifs ont montré que
+les programmes obtenus ont une efficacité comparable, en temps, aux compilations
+obtenues avec les compilateurs C (Bagley 2001).
+
+---
+
+[p. 379-380]
+e de ces langages dans un cadre théorique commun, J. Jaffar et
+J.L. Lassez ont conçu le schéma de langage CLP(4) (CLP pour Constraint Logic Program-
+ming, la variable 4 représentant les différents domaines dans lesquels on peut instancier
+10 plus précisément les clauses de Horn définies j.e., ayant un atome en partie conséquent.
+380 Intelligence Artificielle et Informatique Théorique
+ce schéma). PROLOG III est ainsi un CLP (arbres rationnels, R, Q, Booléens), CLP(R) est
+un CLP(arbres finis, R).
+Considérons un domaine D. Tout comme pour les termes d’ordre un, on va consi-
+dérer un ensemble © de noms de fonction (avec leur arité, une fonction d’arité nulle sera
+une constante) et un ensemble II de symboles de prédicats (avec leur arité). À la différence
+des termes d'ordre un, on donnera 4 priori une interprétation pour ces symboles.
+— pour chaque symbole de fonction f € X d’arité n, on définit la fonction de D? —
+D qui lui donne un sens;
+— pour chaque symbole de prédicat p € II d’arité n, on définit la relation de D" —
+{v, f } qui lui donne un sens.
+On peut ainsi envisager comme structure Ÿ =(domaine(s), symboles de fonctions et
+de prédicats, interprétation des symboles) :
+— l'univers de Herbrand, muni des fonctions de formation de termes et de la relation
+d'égalité (qui correspond à PROLOG) ;
+— le domaine des entiers naturels, muni de (+, x) (avec leur sens habituel) et de la
+relation — ;
+— le domaine des réels, muni de + et de la multiplication par une constante (unaire),
+des relations =, <,>,<,>;
+— le domaine des réels, muni de +, x, des relations =, <,>,<,>;
+— le domaine des booléens, équipé de l’algèbre habituelle (V, A, =, 3, 
+...) et de
+la relation d'égalité ;
+— tout ensemble fini, sans aucune fonction, et muni des relations (=, 4), ou d’autres
+relations...
+Une fois la structure définie, et étant donné un ensemble de symboles de variables, il
+est assez simple d’étendre la définition des termes du premier ordre à une structure 4 
+:
+Définition 18.1 — X-terme — Un % -terme est défini récursivement par :
+— un symbole de variable est un terme;
+— si f € X est un symbole de fonction darité n et sity, ..., tn sont des X-termes, alors
+Ff (ti, to,...,tn) est un X-terme.
+On définit alors une ¥-contrainte :
+Définition 18.2 — ¥-contrainte — Une X -contrainte est définie récursivement par :
+— sip € Il est un symbole de prédicat darité n et sity, .... tn sont des X-termes, alors
+p(t, to,...,tn) est une X -contrainte (dite primitive) ;
+— Si P1,...,Dn sont des X-contraintes, alors la conjonction {p,,..., Dn} est une X-
+contrainte.
+Pour la structure ¥ = (N, {+, -, x}, {=}):
+—a“2+y,3x2+2xyt+4,3 x x X x + y sont des exemples de ¥-termes ;
+— {x+y=38xr+2xy+4,38 x x X x +y= 2} est une Ÿ-contrainte 
+formée
+par la conjonction de deux V-contraintes primitives ;
+On dira qu'une %-contrainte est satisfiable s’il existe une affectation des variables de
+la contrainte qui la rend vraie dans l’interprétation donnée par la structure Y.
+Un programme de CLP(4') est alors formé d’une conjonction de V-clauses de Horn
+définies, de la forme :
+H : 
+—- c,B;,...,B;
+dans laquelle H et les B; sont les atomes habituels formés à partir de symboles de prédi-
+cats (non interprétés) appliqués à des Ÿ'-termes et c une X-contrainte.
+
+---
+
+[p. 406-408]
+lles sont les portes dont la fonction doit être modifiée, et comment la modifier.
+La première notion que l’on peut définir est celle de responsabilité. Un nœud est dit
+responsable si le changement de sa valeur de sortie change la valeur de la sortie du réseau,
+11 Voir les machines de Boltzmann, (Hertz et 4l. 1991), chapitre 7.1.
+Les réseaux de neurones 407
+ANA 
+A 
+A
+Figure 20.1 — Exemple d’ALN à 8 entrées
+Fonction | (0,0) 
+(0,1) 
+(1,0) 
+(1,1)
+ET 
+0 
+0 
+0 
+1
+OU 
+0 
+1 
+1 
+1
+GAUCHE] 
+O0 
+0 
+1 
+1
+DROITE 
+0 
+1 
+0 
+1
+Table 20.1 — Valeur de sortie en fonction des entrées
+toutes les autres sorties restant les mêmes (sauf, bien sûr, celles dépendant directement du
+nœud modifié). On peut donc définir récursivement, en partant de la racine de l'arbre,
+la responsabilité d’un nœud : ainsi, considérons un nœud ET qui est responsable. Si une
+entrée x de ce nœud vaut 0, alors la valeur de l’entrée opposée est sans importance. En
+revanche, si la valeur de x est 1, alors le nœud fils relié à l’autre entrée est responsable de
+la valeur de sortie’.
+Il faut également remarquer (table 20.1) que le type de la fonction n’a de l'influence
+que lorsque l’entrée est (0, 1) ou (1,0). C’est donc seulement pour ces valeurs en entrée
+que l’on peut adapter la valeur de sortie, et donc la fonction. Une technique simple
+consiste à associer, pour chaque neurone, à l’entrée (0, 1) un compteur Co, et à l’entrée
+(1,0) un compteur C0. En phase d’apprentissage, lorsque l’entrée est (0,1), que le
+neurone est responsable et que la sortie théorique est 1, alors le compteur est incrémenté ;
+si la sortie théorique est 0, alors le compteur est décrémenté. On applique le méme
+algorithme pour le compteur C9 et l’entrée (1, 0). A chaque étape, la sortie d’un neurone
+est calculée à partir de la valeur des deux compteurs. Si les compteurs sont positifs tous les
+deux, alors le neurone se comportera comme un OÙ. Si les deux compteurs sont négatifs,
+alors le neurone se comporte comme un ET. Si le compteur Co est positif et le compteur
+Cio négatif, alors la fonction du neurone est la fonction DROITE ; symétriquement,
+si le compteur Co est positif et le compteur Co; négatif, la fonction est GAUCHE.
+12 Responsable ne doit pas être pris dans le sens de coupable, mais bien dans le sens de « a une influence directe sur ».
+
+408 Intelligence Artificielle et Informatique Théorique
+On obtient ainsi un système auto-adaptatif qui tend à récompenser les neurones qui se
+comportent bien et à punir les neurones qui se comportent mal".
+Malheureusement, cette technique se révèle en pratique trop simple; elle a, en ef-
+fet, tendance à entraîner le réseau vers un optimum local. D’autres techniques ont
+été développées, basées sur une notion de responsabilité heuristique d’un nœud et non
+plus sur la responsabilité « simple ». Elles sont décrites dans (Armstrong et al. 1990;
+Armstrong and Gecsi 1979; Armstrong 1976). On peut rapidement indiquer la plus
+simple : le nœud situé à la racine de l’arbre est toujours heuristiquement responsable.
+Si un nœud est heuristiquement responsable et qu'une de ses entrées n’est pas égale à la
+valeur de sortie désirée du réseau, alors cette entrée est une erreur. Si le signal de droite est
+une erreur, alors le nœud de gauche est heuristiquement responsable. Chaque neurone
+mémorise la dernière valeur du signal d’erreur pour chaque entrée ; le nœud de gauche est
+également responsable si le signal de droite n’est pas une erreur, mais est égal au dernier
+signal d’erreur pour l'entrée droite. Bien entendu, la responsabilité heuristique du nœud
+de droite est déterminée symétriquement. Cette stratégie est appelée par le professeur
+Armstrong the latest error strategy. Avec cette technique, on améliore considérablement
+les capacités d'apprentissage des réseaux.
+20.5.3 
+Apprentissage de fonctions numériques
+Les réseaux logiques ne sont pas limités à l'apprentissage de fonctions logiques. Ils
+peuvent également apprendre des fonctions de variables entières ou discrètes, à valeurs
+entières ou discrètes. La méthode naïve, qui consiste à coder en base 2 les valeurs d’entrée
+et de sortie, est cependant insuffisante. En effet, par un semblable mécanisme, on ne
+différencie pas les bits de poids faibles des bits de poids forts. Or il est clair que la présence
+ou l’absence d’un bit de poids fort est plus importante que la présence ou l’absence d’un
+bit de poids faible. Il faut donc raffiner la méthode. On commence tout d’abord par
+effectuer une quantification en k niveaux des valeurs d’entrée!*. La phase suivante est un
+peu plus complexe; on prend la première valeur de quantification et on lui associe un
+vecteur aléatoire d’un espace de Hamming de dimension n. Récursivement, si j’ai associé
+aux à — | premières valeurs de quantification, un vecteur de mon espace de Hamming,
+j'associe à la i-ème valeur de quantification un vecteur aléatoire du même espace de
+Hamming se trouvant à une distance de Hamming p du vecteur associé à la valeur à — 1
+(cette technique de codage est décrite dans (Smith and Stanford 1990)). L'intérêt de cette
+méthode est qu’elle maintient une relation de localité dans l’espace de Hamming entre
+deux éléments proches au sens de la distance euclidienne, tout en supprimant le problème
+lié aux bits de poids forts et de poids faibles. On utilisera le même mécanisme pour coder
+les valeurs de sortie du réseau. Il faut cependant se rappeler qu'un réseau logique ne
+pouvant fournir qu'un seul bit en sortie, il faudra utiliser autant de réseaux qu'il y aura
+de bits utilisés pour coder la variable de sortie.
+13 On remarquera la similitude avec les techniques d’apprentissage numérique des fonctions d'évaluation pour les
+algorithmes de jeux. Le problème est le même : trouver dans une fonction complexe quelles sont les parties à
+récompenser ou à punir, en fonction du comportement global du système.
+14 Par exemple, si l’on décide d’étudier la fonction 2? sur l'intervalle [0, 1[, on quantifie le problème en un certain
+nombre de niveaux k. Sik = 4, les quatre valeurs 0, 1, 2 et 3 représenteront les nombres 0, 0.25, 0.50 0.75. k
+doit être d’autant plus grand que l’on veut une plus grande précision.
+
+---
+
+[p. 435-436]
+lection est alors simple : on tire deux individus au hasard
+13 Ce travail s inspire d’un travail similaire (Schoenauer et al. 1993).
+14 En ce qui concerne les autres opérateurs de base, à savoir le croisement et la mutation, il n’y a aucune modification,
+car ceux-ci travaillent dans l’espace d’état et non dans l’espace résultat.
+436 Intelligence Artificielle et Informatique Théorique
+ainsi 
+qu'une sous-population!”® à laquelle ils n’appartiennent 
+pas et 
+qui va servir à les
+q
+comparer.
+Trois cas se présentent alors :
+— si le premier élément domine tous ceux de la sous-population, et que ce n’est pas
+le cas pour le second, alors le premier sera sélectionné.
+— inversement, si seul le second élément domine l’ensemble de la sous-population,
+alors c’est lui qui sera conservé.
+— il reste deux possibilités : soit les deux sont dominés, soit les deux dominent. On
+ne peut se prononcer sans ajouter un autre test, c’est pourquoi dans ce cas il est fait
+usage d’un nouveau type de sharing qui opère sur l’espace objectif.
+Le sharing va conduire à sélectionner celui des deux individus qui a le moins de
+voisins proches, autrement dit, on élimine celui qui se situe dans une zone d’agrégation
+pour conserver celui qui est dans une région moins dense.
+Le terme voisin proche n'a pas de signification précise mais il est possible de définir un
+voisinage (aussi appelé niche) correct en se servant de la distance de Holder :
+i
+P
+du(E, E;) = | S [ff - fil
+k=1
+ff désignant la k-ième composante du vecteur adaptation de l'élément 7. Le paramètre
+p permet de faire varier la forme et la taille du voisinage. A l’intérieur des voisinages ainsi
+définis dans l’espace objectif, il suffit de compter le nombre d’individus pour favoriser les
+zones les moins denses, et de cette façon, maintenir la diversité de la population.
+21.5.9 
+Algorithmes génétiques et coévolution
+Pour certains problémes d’optimisation, la fonction fitness résulte d’une évaluation
+sur un certain nombre de cas tests. Or bien souvent, il est difficile de choisir une base de
+cas tests représentative de tous les cas possibles. Imaginons par exemple que l’on veuille
+approcher la courbe que nous fournit une boite noire par un polynéme de degré n et que
+l’on veuille déterminer les coefficients du polynéme en utilisant un algorithme génétique.
+On peut sélectionner un certain nombre de points de la courbe qui permettront, pour un
+polynôme donné de mesurer la qualité du polynôme retenu. Rien ne garantit toutefois
+qu'une autre sélection de points ne donne pas une évaluation totalement différente.
+Le principe de la coévolution est de faire évoluer deux populations différentes en
+parallèle. Dans le cas présent, la première population est une population d'individus
+codant les coefficients d’un polynôme, la deuxième population est une population de
+points de la courbe servant à tester la première population.
+Il n'existe pas d’algorithme de coévolution canonique. Différents travaux ayant utilisé
+le principe de coévolution permettent de donner une image plus concrète de ce que peut
+être la coévolution :
+15 La sous-population tirée aura une taille proportionnelle à celle de la population de départ (généralement autour de
+10%). Seule une partie des individus est ainsi utilisée, ce qui permet de réduire le temps de calcul.
+
+---
+
+[p. 459-461]
+réécrite de la manière suivante
+(nous utilisons la propriété V(sy) = V(T) = 0):
+Vs) — Vs) +a(sx) ((re + Veux) — V(Sx))
++(rroi + V(sxy2) — V(sx+1))
++ oe
++(rw-1 + V(sw) — V(sw-1)))
+soit encore
+V (sx) — Vs) + a(sx)(de + dei +--+ + dn-1) 
+(22.7)
+en définissant la différence temporelle dy par
+dy = Te + V(sx+1) — V(sx), 
+k=0,...,N-1.
+460 Intelligence Artificielle et Informatique Théorique
+Cette erreur dy peut être interprétée en chaque état comme une estimation de la diffé-
+rence entre l'estimation courante V(s4) et l’estimation corrigée à un coup rx, + V(sx41).
+Son calcul est possible dès que la transition (54, 41,7) a été observée, et cela conduit
+donc à une version « on-line » de la règle de mise à jour 22.7 où il n’est plus nécessaire
+d'attendre la fin de la trajectoire pour commencer à modifier les valeurs de V 
+:
+V(s) <— V(s) + a(si)dy, 
+[=0,...,k 
+(22.8)
+dès que la transition (sx, 5441, 7%) est simulée et l'erreur dy calculée. Selon qu’une tra-
+jectoire puisse parcourir plusieurs fois le méme état ou non, cette version « on-line »
+peut légèrement différer de l’algorithme original 22.7. Toutefois sa convergence presque
+sûre vers V reste valide. La encore, une approche de type first-visit semble préférable en
+pratique (Singh and Sutton 1996).
+Méthode de la programmation dynamique
+Poursuivant la même démarche que celle ayant abouti à l'algorithme de value itera-
+tion 22.3 à partir de l'équation de Bellman, il est possible de dériver de 22.4 une nouvelle
+règle de mise à jour pour la fonction de valeur V d’une stratégie :
+Vs) 
+<— 
+V(sx) + a(sz)(rx + V(srr1) — V(sx)) 
+(22.9)
+— 
+V (sx) + a(sp) dy 
+(22.10)
+en chaque point s, de la trajectoire. La valeur de V(s4) est donc mise à jour uniquement
+à chaque passage en 54, avec un terme d’erreur limité à un horizon d’un coup.
+TD)
+L'originalité de la méthode TD(A) est de proposer un compromis entre ces deux
+équations 22.7 et 22.10. Soit donc À € [0,1] un paramètre de pondération. Avec les
+mêmes notations que précédemment, l'algorithme de TD(A) défini par Sutton (Sutton
+1988) est le suivant :
+m=N-1
+V(sk) — V(sx)+a(se) So dm, b= 0,...,N 1. 
+(22.11)
+m=k
+On peut essayer de mieux comprendre le rôle du coefficient À en réécrivant l’équa-
+tion 22.11 sous la forme
+Vsx) — V(sx) + (se) 
+(ze — V(sx)).
+On a alors
+m=N—1
+ze = Via)+ So 17,
+m=k
+m=N—1
+= V(sp)+de+A So AT,
+m=k+1
+= V(s,) + dx + Mega — V(sx+1))
+= 
+V (sx) + Te + V (5x41) — V (sx) + M Zar En V(skH))
+= ret (Axi, + (1 — A)V (ser)
+
+Apprentissage par renforcement 461
+Ainsi, le cas À = 1 revient à prendre en compte le coût total observé de la trajectoire,
+comme dans la méthode de Monte Carlo, et le cas À = 0 revient à ne considérer qu'un
+horizon de un coup, comme pour la méthode de la programmation dynamique.
+Pour tout À, les deux approches de type first-vist ou every-visit peuvent être consi-
+dérée. De même, une version on-line de l'algorithme d’apprentissage TD(A) décrit par
+l’équation 22.11 est possible :
+Vs) — Va) +a(s)X "dy, 
+1—=0,...,k 
+(22.12)
+dès que la transition (54, sk41, Tx) est simulée et l’erreur dy calculée.
+La convergence presque sûre l'algorithme TD(,) a été montré pour toute valeur de À,
+en on-line ou off-line, sous les hypothèses classiques de visite en nombre infini de chaque
+état s € S, et décroissance des a vers 0 à chaque itération n, telle que 97, Qn(s) = co
+et >, a2(8) < 00 (Jaakkola et al. 1994; Bertsekas and Tsitsiklis 1996).
+L'application du TD(A) pour l’évaluation d’une stratégie 7 selon le critère y-pondéré
+entraîne certaines modifications des algorithmes standards 22.11 ou 22.12, qu'il est né-
+cessaire de citer ici.
+Un calcul en tout point semblable au cas y = 1 conduit à une règle du type:
+m=Co
+V (sz) — V(sx) +a(sx) D (TA) 
+du. 
+(22.13)
+m=k
+Il est alors clair que l'absence potentielle d’états finaux absorbants rend inadéquate un
+algorithme de type off-line ne mettant à jour la fonction de valeur V qu'à la fin de la
+trajectoire, car celle ci peut étre de taille infinie. On définit donc une version on-line
+de 22.13, qui prend la nouvelle forme suivante :
+V(s) 
+— V(s) +a(s)Zn(s)dn, 
+VsesS 
+(22.14)
+dès que la nième transition (Sp, Sn41,7n) a été simulée et l’erreur d, calculée. Le terme
+dé 
+é 
+d'éligibilité? se définit 
+ainsi 
+dans 
+| 
+ion 
+la 
+pl 
+he 
+d
+2n(s), 
+dénommé trace 
+d'éligibilité” 
+se 
+définit ainsi 
+dans 
+la version 
+la plus proche 
+de
+l'algorithme TD()) original :
+Définition 22.6 — Trace d'éligibilité accumulative —
+zo(s) =0, 
+VsesS
+Lama) 
+88 £59
+2n(s) = { yAzn-1(S) +1 sis=Sy
+Ce coefficient déligibilité augmente donc sa valeur à chaque nouveau passage dans
+l’état associé, puis décroît exponentiellement au cours des itérations suivantes, jusqu’à un
+nouveau passage dans cet état (voir figure 22.3).
+Dans certains cas une définition légèrement différente de la trace z,(s) semble
+conduire à une convergence plus rapide de la fonction de valeur V 
+:
+2 
+Traduit de l’anglais eligibility trace, ou encore activity.
+
+---
+
+[p. 485-486]
+calculatoire.
+13 On pourrait la résumer en une seule, en citant la définition presque caricaturale que donne Jean-François Ri-
+chard (Richard 1990) dans un traité de psychologie cognitive : « Ce qui caractérise les opérations mentales, c’est
+qu’elles construisent des représentations et qu’elles opèrent sur ces représentations. »
+486 Intelligence Artificielle et Informatique Théorique
+— Ces représentations sont constituées par des structures symboliques bien
+formées.
+— Le comportement s'effectue au moyen d’une manipulation de symboles
+qui constituent ces représentations, c’est-à-dire au moyen d'opérations cal-
+culatoires. »
+Les critiques que l’on peut adresser à ce modèle sont extrêmement nombreuses.
+D'une part, il néglige l’aspect fondamental de la perception corporelle, dont l’impor-
+tance était déjà soulignée par Husserl dès 1933 (Husserl 1976) :
+« Ainsi, la sensibilité, le fonctionnement égologique actif de la chair et des or-
+ganes charnels, fait-elle essentiellement et fondamentalement partie de toute
+expérience des corps. »
+Merleau-Ponty (Merleau-Ponty 1945) a développé cet argument, et Hubert Dreyfus l’a
+appliqué à IIA très tôt (Dreyfus 1984). Il est intéressant de voir aujourd’hui un chercheur
+du MIT reprendre à son compte, sans le dire, certaines des critiques de Dreyfus : selon
+Rodney Brooks, un aspect fondamental est l’embodiment'*, ou nécessité de donner un
+corps à la machine en plus d’un cerveau!?. Il décrit ainsi le but de son approche (Brooks
+1991) :
+« Les robots sont situés dans le monde — Ils n'ont pas affaire à des descrip-
+tions abstraites, mais avec le ici et le maintenant du monde qui influencent
+directement le comportement du système.
+Les robots ont des corps et sont en rapport direct avec le monde — leurs
+actions sont une partie d’une dynamique avec le monde et ont ainsi un effet
+immédiat en retour sur leurs sensations.
+Les robots sont intelligents — mais la source de l'intelligence n’est pas limitée
+à un système de calcul. Elle vient également de la situation dans le monde, des
+transformations des signaux à travers les senseurs, et du couplage physique du
+robot avec le monde.
+L'intelligence du système émerge des interactions du système avec le monde
+et parfois des interactions entre ses composants — il est très difficile de dire
+quelle partie du système est responsable d’une action externe. »
+Dans un ouvrage récent (Dreyfus and Dreyfus 1986), Hubert Dreyfus s’est également
+attaqué au postulat calculatoire de l'IA forte. Dreyfus commence par séparer, au niveau
+de l'être humain, plusieurs niveaux d'efficacité :
+Le novice : il ne sait qu'appliquer un certain nombre de schémas fixes, de règles totale-
+ment déterministes indépendantes du contexte, donc facilement modélisables sur
+un ordinateur. Aux échecs par exemple, les schémas correspondent aux règles du
+jeu (déplacement des pièces, prises, mat) et à des assignations de valeur à chacune
+des pièces. Les règles correspondent à des séquences du type « si... alors » comme
+par exemple : « si dans un échange de pièces, le total des points des pièces que tu
+perds est inférieur au total des points des pièces perdues par ton adversaire, alors
+réalise l’échange ». Lordinateur étant plus rapide que le joueur humain dans ce
+type d'exercices, il écrasera aisément le débutant.
+14 Que l’on pourrait traduire en français par incarnation.
+15 Dans un livre récent (Varela et al. 1991), les auteurs désignent l’approche de Rodney Brooks sous le nom d’enactive.
+
+---
+
+[p. 505-506]
+and Jan Gecsi. Adaptation algorithms for binary tree networks. JEEE
+transactions on systems, man and cybernetics, 9(5), 1979.
+[16] William Armstrong, Jiandong Liang, Dekang Lin, and Scott Reynolds. Experiments using
+parsimonious adaptative logic. Technical Report TR 90-30, University of Alberta, Edmonton,
+Alberta, Canada, 1990.
+506 Intelligence Artificielle et Informatique Théorique
+[17] William Armstrong, Jiandong Liang, Dekang Lin, and Scott Reynolds. Experience using
+adaptative logic networks. In Proceedings of the IASTED International Symposium on Compu-
+ters, electronics, communication and control, 1991.
+[18] William Armstrong. Adaptive boolean logic element. US patent 3 934 231, January 1976.
+[19] Jacques Arsac. Les machines a penser. Seuil, 1987.
+[20] H. Asada and S. Liu. Transfer of Human Skills to Neural Net Robot Controllers. 
+In
+Proceeding of IEEE conference on Robotics and Automation, Sacramento, 1991. IEEE.
+[21] Philippe Jégou Assef Chmeiss. Path-consistency : When space misses time. In AAAI Press,
+editor, Proc. of AAAI-96, pages 196-201, 1996.
+[22] Eric Audureau, Patrice Enjalbert, and Luis Farifias Del Cerro. Logique temporelle. Séman-
+tique et validation des programmes paralleles. Masson, 1990.
+[23] M. Bacharach and S. Hurley, editors. Foundations of Decision Theory, chapter Dynamic
+Consistency and Non-Expected Utility, by Machina, M. J., pages 39-91. 
+Basil-Blackwell,
+Oxford, 1991.
+[24] T. Back and H. P Schwefel. An overview of evolutionary algorithms for parameter optimi-
+zation. Evolutionary Computation, 1(1) :1-24, 1993.
+[25] T. Back, G. Rudolph, and H. P Schwefel. Evolutionary programming and evolution strate-
+gies : similarities and differences. In D. B. Fogel and W. Atmar, editors, Proceedings of the 274
+Annual Conference on Evolutionary Programming, pages 11-22. Evolutionary Programming
+Society, 1993.
+[26] J. Backus. Can programming be liberated from the von neumann style ? a functionnal style
+and its algebra of programs. ACM, 21(8) :613-641, 1978.
+[27] Doug 
+Bagley. 
+The 
+great computer 
+language 
+shootout. 
+Web 
+Page, 
+2001.
+www. bagley.org/~doug/shootout/.
+[28] L. Baird and A. Moore. Gradient descent for general reinforcement learning. N/PS-12,
+1999.
+[29] H.P Barendregt. 
+The À-Calculus, Its Syntax and Semantics. 
+North Holland Publishing
+Company, Amsterdam, Netherlands, 1981. La bible des « Knights of Lambda-Calculus ».
+ISBN : 0-444-87508-5.
+[30] J.P Barthélemy, G. Cohen, and A. Lobstein. Complexité algorithmique et problèmes de com-
+munications. 
+Masson — collection technique et scientifique des télécommunications, Paris,
+France, 1992. ISBN : 2-225-82672-2.
+[31] A.G. Barto, S.J. Bradtke, and S.P Singh. Learning to act using real-time dynamic program-
+ming. Artificial Intelligence, 72 :81-138, 1995.
+[32] Marianne Baudinet. Temporal logic programming is complete and expressive. In Sixteenth
+ACM Symposium on Principles of Programming Language, 1989.
+[33] J. Baxter and P. L. Bartlett. Reinforcement learning in pomdp’s via direct gradient ascent.
+In International Conference on Machine Learning, volume 17, 2000.
+[34] J. Baxter, A. Tridgell, and L. Weaver. Knightcap : a chess program that learns by combining
+td(A) with game-tree search. In International Conference on Machine Learning, volume 15,
+1998.
+[35] John D. Beasley. The mathematics of games. Oxford University Press, 1990. ISBN : 0-19-
+286 107-7.
+[36] Danièle Beauquier, Jean Berstel, and Philippe Chrétienne. Éléments d'algorithmique. Masson
+(Manuels informatiques), Paris, France, 1992. ISBN : 2-225-82704-4.
+
+---
+
+[p. 523-524]
+-0.
+[409] Gadi Pinkas. Propositional non-monotonic reasoning and inconsistency in symetric neural
+networks. In Proc. of the 12th IJCAI, pages 525-530, Sidney, Australia, 1991.
+[410] Aske Plaat, Jonathan Schaeffer, Arie DeBruin, and Wim Pijls. 
+A minimax algorithm better
+than sss*. Artificial Intelligence, 87(1-2) :255-293, 1996.
+524 Intelligence Artificielle et Informatique Théorique
+[411] Krzystof Pomian, editor. Le problème du déterminisme. Gallimard, 1990.
+[412] Bibliothèque pour la science. Le cerveau. Payot, 1987. ISBN 2-902918-24-0.
+[413] ProloglA. ProloglIl, Manuel de référence et d'utilisation, March 1990.
+[414] Projet CSPFlex., Gérard Bel, Eric Bensana, Pierre Berlandier, Philippe David, Hélène Far-
+gier, Christine Gaspin, Khaled Ghedira, Philippe Janssen, Philippe Jégou, Tibor Kékeny, Jé-
+rome Lang, David Lesaint, Roger Martin-Clouaire, Bertrand Neveu, Jean-Pierre Rellier, Tho-
+mas Schiex, Brigitte Trousse, Gérard Verfaillie, and Marie-Catherine Vilarem. Représentation
+et traitement pratique de la flexibilité dans les problèmes sous contraintes. In Actes des journées
+nationales du PRC GDR Intelligence Artificielle, Marseille, France, October 1992.
+[415] Patrick Prosser, Chris Conway, and Claude Muller. A constraint maintenance system for
+the distributed allocation problem. Jntelligent Systems Engineering, 1(1) :76-83, 1992.
+[416] Patrick Prosser. Hybrid algorithms for the Constraint Satisfaction Problem. Computational
+Intelligence, 9(3) :268-299, August 1993.
+[417] Gregory M. Provan. The computational complexity of multiple-context truth mainte-
+nance systems. In Proc. of the 8°” ECAI, pages 522-527, Stockholm, 1990.
+[418] Jean-François Puget. On the satisfiability of symmetrical constrained satisfaction problems.
+In Proc. of ISMIS’93, 1993.
+[419] PW. Purdom. Search rearrangement backtracking and polynomial average time. Artificial
+Intelligence, 21 :117-133, 1983.
+[420] M. L. Puterman and M. C. Shin. Modified policy iteration algorithms for discounted
+Markov decision processes. Management Science, 24 :1127-1137, 1978.
+[421] M.L. Puterman. Markov decision processes : discrete stochastic dynamic programming. Wiley-
+Interscience, New York, 1994.
+[422] Zenon Pylyshyn. Computation and Cognition : Toward a Foundation for Cognitive Science.
+MIT Press, 1984. ISBN : 0-262-16098-6.
+[423] William J. Rapaport. Cognitive science. In A. Ralston and E. D. Reilly, editors, Encyclope-
+dia of computer science and engineering. Van Rostrand Reinhold, 1983. ISBN : 0-442-24496-7.
+[424] Thomas Ray. An approach to the synthesis of life. Technical report, School of Life and
+Science, University of Delaware, 1991.
+[425] J.C. Régin. A filtering algorithm for constraints of difference in CSPs. In Proc. of AAAI-94,
+pages 362-367, Seattle, WA, 1994.
+[426] Jean-Charles Régin. Développement d'outils algorithmiques pour l'Intelligence Artificielle —
+Application à la chimie organique. PhD thesis, Univeristé Montpellier III, December 1995.
+[427] J.C. Régin. 
+Generalized arc consistency for global cardinality constraints. 
+In Proc. of
+AAAI-96, pages 362-367, Portland, OR, 1996.
+[428] R. Reiter. On reasoning by defaults. In Ronald J. Brachman and Hector J. Levesque,
+editors, Readings in knowledge representation. Morgan Kaufman, 1987. ISBN : 0-934613-01-
+X (pbk.).
+[429] N. Rescher and A. Urquhart. Temporal logic. Springer-Verlag, 1971. ISBN : 0-387-80995-
+3.
+[430] Elaine Rich and Kevin Knight. Artificial Intelligence. McGraw-Hill, 1991. ISBN : 0-07-
+052263-4.
+[431] Elaine Rich. Artificial intelligence. McGraw-Hill, 1983. ISBN : 0-07-052261-8.
+[432] Elaine Rich. Intelligence Artificielle. 
+Masson, 1987. Très bon livre de présentation de
+PIA. Traduction de (Rich 1983). Une version plus récente existe en anglais : (Rich and Knight
+1991).
+
+---
+
+[p. 545-545]
+mprendre comment elle a pu
+susciter tant de discours différents et tant de
+polémiques.
+Cet ouvrage offre un panorama des connaissan-
+ces théoriques et techniques indispensables
+pour bien comprendre l'informatique d’aujour-
+d'hui et évoluer vers ce que sera l'informatique
+de demain.
+ét. : 578
+1.S.B.N. : 2.85428.578.6
+9 | 782854 I

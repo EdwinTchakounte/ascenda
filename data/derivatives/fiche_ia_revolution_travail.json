@@ -1,0 +1,61 @@
+{
+ "document_id": "3a813ef9-3272-4c4f-af55-10d51b32a27b",
+ "titre_normalise": "L'IA va révolutionner le monde du travail",
+ "auteurs": [],
+ "annee": 2025,
+ "type_ouvrage": "opuscule",
+ "niveau": "debutant",
+ "public_cible": "Salarié ou responsable qui veut une vue d'ensemble rapide et des questions à se poser. Vingt-neuf pages, six chapitres, chacun clos par deux questions de réflexion adressées au lecteur. Aucun nom d'auteur n'apparaît dans le fichier.",
+ "these_centrale": "Ce qui arrive au travail avec l'intelligence artificielle reproduit la mécanique de la révolution industrielle : une hausse brutale de productivité, un déplacement des tâches plutôt qu'une disparition pure et simple des métiers, et des bouleversements sociaux qui appellent une adaptation permanente. La conclusion est constante d'un chapitre à l'autre : la formation continue et les compétences proprement humaines sont la seule protection.",
+ "idees_force": [
+  {
+   "titre": "Les questions de réflexion, meilleur apport du texte",
+   "explication": "Chaque chapitre se termine par deux questions adressées au lecteur : ce que l'intelligence artificielle représente dans son quotidien, comment elle pourrait affecter son domaine, quelles leçons il tire des cas présentés, quelles compétences il devra acquérir, comment il peut s'y préparer, quelles préoccupations éthiques il a dans son secteur. Ces questions font du texte un support d'atelier plutôt qu'une lecture, et c'est le seul usage pour lequel il vaut quelque chose.",
+   "page": 3
+  },
+  {
+   "titre": "Trois compétences humaines à cultiver",
+   "explication": "Créativité, pensée critique, intelligence émotionnelle. Le raisonnement avancé est correct : plus les tâches techniques sont automatisées, plus ce qui résiste à l'automatisation prend de la valeur. Le texte y ajoute les compétences interpersonnelles, communication et collaboration, nécessaires pour travailler en équipe et tenir la relation avec les clients.",
+   "page": 14
+  },
+  {
+   "titre": "Trois stratégies d'adaptation pour une organisation",
+   "explication": "Investir dans la formation continue par des programmes de développement professionnel, des cours en ligne et des ateliers ; encourager une culture où l'expérimentation est valorisée et où l'échec n'est pas puni ; promouvoir la mobilité interne pour que chacun puisse changer de rôle et diversifier ses compétences, ce qui réduit le risque de chômage lié à l'automatisation. Rien d'original, mais l'énumération est juste et sert de liste de contrôle.",
+   "page": 10
+  },
+  {
+   "titre": "La qualité des données conditionne tout le reste",
+   "explication": "Le texte cite un incident hospitalier où des erreurs dans les données ont conduit à des décisions cliniques erronées, et en tire la seule mise en garde utile qu'il contienne : un système est inefficace, voire dangereux, sans un cadre de gestion des données. Il ajoute le risque de dépendance, une panne ou une attaque informatique pouvant interrompre les opérations.",
+   "page": 12
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Automatisation des tâches répétitives",
+   "definition": "Prise en charge par la machine de la saisie, du traitement de premier niveau et des opérations standardisées, libérant du temps pour les tâches jugées stratégiques."
+  },
+  {
+   "terme": "Maintenance prédictive",
+   "definition": "Analyse des données de capteurs pour anticiper les pannes et sécuriser l'exploitation."
+  },
+  {
+   "terme": "Mobilité interne",
+   "definition": "Changement de poste au sein d'une même organisation, présenté comme la principale protection contre l'obsolescence d'un métier."
+  },
+  {
+   "terme": "Compétences humaines",
+   "definition": "Créativité, pensée critique, intelligence émotionnelle et compétences relationnelles, difficiles à reproduire par une machine et appelées à être davantage valorisées."
+  },
+  {
+   "terme": "Culture de l'innovation",
+   "definition": "Environnement où l'expérimentation est encouragée et l'échec toléré, condition de l'adoption de toute technologie nouvelle."
+  }
+ ],
+ "a_lire_si": "Vous animez une réunion d'équipe ou un atelier de sensibilisation et vous cherchez des questions à poser. Le texte se lit en une demi-heure et ses douze questions de réflexion peuvent structurer une discussion.",
+ "a_eviter_si": "Vous cherchez une information fiable. Le texte est générique, sans auteur identifié, sans référence vérifiable, et sa structure très régulière ainsi que ses répétitions signalent une production automatisée. Les cas d'entreprises sont des lieux communs, les témoignages cités sont anonymes et interchangeables, et le chiffre de productivité attribué à un cabinet de conseil n'est accompagné d'aucune référence permettant de le retrouver. Rien de ce qu'il avance ne doit être cité.",
+ "prerequis": [],
+ "controverses": [
+  "Le texte présente la période allant de 1980 à 1990 comme un été de l'intelligence artificielle et ne mentionne pas les deux hivers du domaine. Or c'est précisément l'effondrement des systèmes experts à la fin des années 1980 qui a produit le second hiver. Cette omission fausse la leçon historique que le livre prétend tirer."
+ ],
+ "confiance": 0.35
+}

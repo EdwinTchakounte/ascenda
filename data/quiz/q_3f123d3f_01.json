@@ -1,0 +1,1557 @@
+[
+ {
+  "chapitre": "3e59ad69",
+  "questions": [],
+  "motif": "Page de credits editoriaux : coordonnees de l'editeur, mentions de depot legal, ISBN et avertissement sur le droit d'auteur. Aucun contenu interrogeable."
+ },
+ {
+  "chapitre": "f2df5ce2",
+  "questions": [
+   {
+    "q": "Quelle inquietude Pierre-Yves McSween exprime-t-il dans sa preface ?",
+    "choix": [
+     "Une anxiete sourde : celle de ne pas s'outiller assez vite, de ne pas apprendre a s'en servir a temps, et de prendre un retard impossible a combler",
+     "La crainte de voir son metier disparaitre",
+     "La peur d'une surveillance generalisee",
+     "Le sentiment que la technologie appauvrit la pensee"
+    ],
+    "reponse": 0,
+    "explication": "Le prefacier pose alors le choix : attendre de cogner dans le mur de la desuetude ou decider qu'il est temps d'apprivoiser la bete.",
+    "niveau": "restitution",
+    "page": 19
+   },
+   {
+    "q": "Quelle difference le prefacier etablit-il entre l'IA et les revolutions technologiques precedentes ?",
+    "choix": [
+     "Les grandes revolutions comme l'informatique ou Internet se sont etalees sur des decennies et laissaient le temps de s'adapter, alors que cette fois il s'agit d'une delegation profonde de notre jugement, de nos doutes et de notre maniere d'analyser",
+     "L'IA touche plus de secteurs a la fois",
+     "L'IA coute moins cher a adopter",
+     "L'IA se diffuse d'abord par les jeunes generations"
+    ],
+    "reponse": 0,
+    "explication": "Il precise que cela n'a rien a voir avec la disparition des dactylos ou des typographes.",
+    "niveau": "comprehension",
+    "page": 20
+   },
+   {
+    "q": "Quelles questions le prefacier juge-t-il veritablement decisives ?",
+    "choix": [
+     "Non pas de savoir si l'IA fera partie de nos vies, mais comment et jusqu'ou, et ou tracer la ligne entre optimisation et plagiat, entre assistance et substitution",
+     "De savoir qui controlera les modeles et a quel prix",
+     "De savoir si les emplois detruits seront remplaces",
+     "De savoir quels pays imposeront leurs regles"
+    ],
+    "reponse": 0,
+    "explication": "Il ajoute : quelle sera la frontiere entre ce qu'on juge acceptable et ce qu'on refusera de ceder ?",
+    "niveau": "comprehension",
+    "page": 19
+   },
+   {
+    "q": "Quelle revelation le prefacier fait-il a la fin de son texte ?",
+    "choix": [
+     "Les paragraphes que le lecteur vient de lire representent une version amelioree de la preface originale, modifiee en fonction des suggestions faites par ChatGPT",
+     "Il a demande a l'auteur de reecrire sa preface",
+     "Il a renonce a utiliser l'IA pour ce texte",
+     "Il a compare sa version a celle produite par la machine"
+    ],
+    "reponse": 0,
+    "explication": "Il conclut : je dois avouer que le resultat est deconcertant, ca y est, je fais de l'anxiete.",
+    "niveau": "restitution",
+    "page": 20
+   },
+   {
+    "q": "Quel avertissement le prefacier formule-t-il sur notre rapport a l'outil ?",
+    "choix": [
+     "Pour le meilleur ou pour le pire, il nous faudra apprendre a utiliser l'intelligence artificielle sans en devenir les outils",
+     "Il faudra apprendre a s'en passer regulierement",
+     "Il faudra encadrer son usage par la loi",
+     "Il faudra former les jeunes avant les adultes"
+    ],
+    "reponse": 0,
+    "explication": "Il note que dans bien des domaines, l'IA pulverise notre vitesse d'execution et qu'aucun humain ne peut reflechir aussi rapidement.",
+    "niveau": "restitution",
+    "page": 19
+   }
+  ]
+ },
+ {
+  "chapitre": "c84a25a9",
+  "questions": [
+   {
+    "q": "Comment l'auteur definit-il l'intelligence artificielle en ouverture ?",
+    "choix": [
+     "Une technologie capable d'apprendre a partir de donnees, de beaucoup de donnees, qui fonctionne un peu comme le cerveau mais analyse des quantites gigantesques d'informations a une vitesse hallucinante",
+     "Un programme qui suit des regles ecrites par des humains",
+     "Un systeme capable de raisonner comme un humain",
+     "Un ensemble de statistiques appliquees a des textes"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur compare l'apprentissage de l'IA a celui d'un enfant a qui l'on montre de nombreuses photos de chats.",
+    "niveau": "restitution",
+    "page": 21
+   },
+   {
+    "q": "Quelle difference l'auteur souligne-t-il entre l'IA et les programmes informatiques traditionnels, dans l'exemple de la voiture autonome ?",
+    "choix": [
+     "L'IA n'apprend pas des regles strictes du genre a un stop tu t'arretes, mais des exemples : chaque fois que les conducteurs exemplaires ont vu un stop, ils se sont arretes",
+     "L'IA traite plus de donnees a la fois",
+     "L'IA corrige ses erreurs en temps reel",
+     "L'IA n'a pas besoin de capteurs physiques"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que cette difference subtile est ce qui rend l'IA infiniment plus puissante que les programmes traditionnels.",
+    "niveau": "comprehension",
+    "page": 22
+   },
+   {
+    "q": "Que fait concretement une IA, selon l'auteur ?",
+    "choix": [
+     "Des predictions : en analysant des milliards de gigaoctets de donnees, elle observe des patterns, des regularites, puis les utilise pour deviner ce qui devrait arriver",
+     "Elle classe l'information par categories",
+     "Elle applique des regles apprises par coeur",
+     "Elle compare chaque situation a un modele de reference"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur appelle inferences ce raisonnement du type : je viens de detecter un pieton, que ferait un conducteur exemplaire dans cette situation ?",
+    "niveau": "comprehension",
+    "page": 22
+   },
+   {
+    "q": "Avec quels equipements l'auteur decrit-il l'entrainement d'une voiture autonome ?",
+    "choix": [
+     "Des cameras, des micros, des capteurs de vibrations, des radars, des sonars et des lidars, un genre de radar qui fonctionne avec des lasers",
+     "Des cameras et un systeme de positionnement satellitaire",
+     "Un ordinateur de bord relie a une base de donnees routiere",
+     "Des capteurs de pression et un altimetre"
+    ],
+    "reponse": 0,
+    "explication": "On fait ensuite conduire le vehicule par des conducteurs exemplaires sur des millions de kilometres en enregistrant tout.",
+    "niveau": "restitution",
+    "page": 22
+   }
+  ]
+ },
+ {
+  "chapitre": "ce3c8ea7",
+  "questions": [
+   {
+    "q": "Qu'est-ce qui rend l'IA vraiment speciale, selon l'auteur ?",
+    "choix": [
+     "Sa capacite a apprendre toute seule : l'humain lui donne une montagne de donnees pour l'entrainer, mais c'est elle qui trouve les regles, les patterns et les tendances cachees dedans",
+     "Sa rapidite de calcul",
+     "Sa capacite a fonctionner sans supervision",
+     "Sa faculte a expliquer ses conclusions"
+    ],
+    "reponse": 0,
+    "explication": "On appelle cela le machine learning, ou apprentissage automatique.",
+    "niveau": "comprehension",
+    "page": 23
+   },
+   {
+    "q": "Quel exemple l'auteur donne-t-il pour montrer comment les donnees s'accumulent ?",
+    "choix": [
+     "Chez Netflix, chaque fois que quelqu'un regarde une serie, clique sur un titre ou arrete une video apres cinq minutes, c'est une donnee supplementaire, multipliee par des millions d'utilisateurs",
+     "Chez Google, chaque recherche est archivee pendant dix ans",
+     "Chez Amazon, chaque colis livre alimente un profil",
+     "Chez Spotify, chaque morceau ecoute est note"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur en tire pourquoi les donnees personnelles sont si precieuses : elles alimentent l'IA qui devient toujours meilleure pour predire ce que l'on veut.",
+    "niveau": "restitution",
+    "page": 23
+   },
+   {
+    "q": "Quels autres acteurs enregistrent nos faits et gestes, selon l'auteur ?",
+    "choix": [
+     "Google quand on cherche quelque chose, Facebook quand on fait defiler son fil d'actualite, et meme sa banque quand elle propose un pret ou une carte de credit",
+     "Les operateurs telephoniques et les fournisseurs d'acces",
+     "Les administrations publiques et les assureurs",
+     "Les moteurs de recherche uniquement"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur montre que la collecte ne se limite pas aux plateformes de divertissement.",
+    "niveau": "restitution",
+    "page": 23
+   }
+  ]
+ },
+ {
+  "chapitre": "4ec9ba6c",
+  "questions": [
+   {
+    "q": "Quel est l'objectif que l'auteur assigne a son livre ?",
+    "choix": [
+     "Montrer comment l'IA transforme le quotidien du lecteur, son argent, son travail, sa famille, sa sante, ses relations, son magasinage, son temps libre et sa societe, et comment ne pas perdre au change",
+     "Former le lecteur a la programmation d'algorithmes",
+     "Dresser un panorama technique de l'IA",
+     "Predire l'evolution du marche de l'emploi"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que le livre ne fera pas du lecteur un expert en intelligence artificielle.",
+    "niveau": "restitution",
+    "page": 24
+   },
+   {
+    "q": "Quelles questions concretes l'auteur annonce-t-il vouloir traiter ?",
+    "choix": [
+     "Vas-tu perdre ta job a cause de l'IA, ton epicerie sait-elle deja ce que tu vas acheter, ton ado triche-t-il grace a ChatGPT, Netflix manipule-t-il tes gouts, un robot pourrait-il remplacer ton medecin",
+     "Comment choisir un outil d'IA, comment le parametrer, comment l'evaluer",
+     "Quelles entreprises dominent le marche et pourquoi",
+     "Comment la reglementation va evoluer dans les prochaines annees"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur annonce des chapitres courts, faciles a lire, avec des exemples concrets, des explications simples et des conseils pratiques.",
+    "niveau": "restitution",
+    "page": 24
+   }
+  ]
+ },
+ {
+  "chapitre": "bd689d3d",
+  "questions": [
+   {
+    "q": "Pourquoi est-il important de comprendre l'IA, selon l'auteur ?",
+    "choix": [
+     "Parce que c'est deja la : comme n'importe quelle technologie puissante, l'IA peut etre utilisee pour son bien ou contre soi, et comprendre comment elle fonctionne c'est reprendre le controle au moins en partie",
+     "Parce que la loi obligera bientot chacun a s'y former",
+     "Parce que les emplois non qualifies disparaitront les premiers",
+     "Parce que les outils deviendront payants"
+    ],
+    "reponse": 0,
+    "explication": "C'est etre capable de choisir quand on veut laisser l'IA nous guider, et quand on veut garder son libre arbitre.",
+    "niveau": "comprehension",
+    "page": 25
+   },
+   {
+    "q": "Comment l'auteur repond-il a la question de savoir si l'IA est une amie ou une ennemie ?",
+    "choix": [
+     "Ni l'une ni l'autre : l'IA est juste un outil, extremement puissant certes, mais un outil quand meme",
+     "Une amie, si l'on sait s'en servir",
+     "Une ennemie, tant qu'elle n'est pas reglementee",
+     "Cela depend entierement de qui la controle"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur compare l'IA a une auto : elle peut vous amener loin, mais si vous n'apprenez pas a conduire, elle peut aussi vous faire rentrer droit dans un mur.",
+    "niveau": "comprehension",
+    "page": 25
+   },
+   {
+    "q": "Par quelle image l'auteur cloture-t-il son introduction ?",
+    "choix": [
+     "L'intelligence artificielle, c'est comme l'hiver au Quebec : elle est la, elle ne partira pas demain matin, et il vaut mieux s'equiper pour y faire face",
+     "L'IA est une vague qu'il faut apprendre a surfer",
+     "L'IA est un train qu'il ne faut pas rater",
+     "L'IA est une langue qu'il faut apprendre"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur annonce vouloir apprendre au lecteur a conduire dans ce monde-la.",
+    "niveau": "restitution",
+    "page": 25
+   }
+  ]
+ },
+ {
+  "chapitre": "f529ed38",
+  "questions": [
+   {
+    "q": "Comment s'appelle la pratique par laquelle une entreprise decide que vous paierez plus cher qu'un autre client pour le meme produit ?",
+    "choix": [
+     "La tarification dynamique, ou discrimination algorithmique par les prix",
+     "La segmentation commerciale",
+     "L'optimisation de marge",
+     "La modulation concurrentielle"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que ce n'est ni de la science-fiction ni une theorie du complot, mais une pratique courante et parfaitement legale.",
+    "niveau": "restitution",
+    "page": 27
+   },
+   {
+    "q": "Quelle correction l'auteur apporte-t-il aux explications habituelles de la hausse des prix ?",
+    "choix": [
+     "L'inflation, les guerres, le petrole et les chaines d'approvisionnement expliquent en partie la hausse, mais l'IA est deja utilisee pour ajuster les prix a la volee, et souvent pas en faveur du consommateur",
+     "Les hausses sont surtout dues a la concentration du marche",
+     "Les hausses proviennent principalement des couts logistiques",
+     "Les hausses sont un effet retarde de la pandemie"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur souligne que ce point n'est generalement pas dit au consommateur.",
+    "niveau": "comprehension",
+    "page": 27
+   },
+   {
+    "q": "Quelle formule l'auteur emploie-t-il pour decrire une recherche de prix en ligne ?",
+    "choix": [
+     "Vous pensez que vous allez trouver le meilleur prix, mais en fait vous etes souvent en train de negocier contre un algorithme",
+     "Vous comparez des offres deja triees pour vous",
+     "Vous entrez dans un marche ou les prix sont fixes a l'avance",
+     "Vous participez a une enchere invisible"
+    ],
+    "reponse": 0,
+    "explication": "Ces systemes analysent le comportement du visiteur avant d'adapter le prix a son profil.",
+    "niveau": "comprehension",
+    "page": 27
+   }
+  ]
+ },
+ {
+  "chapitre": "7f4ce434",
+  "questions": [
+   {
+    "q": "Quels elements du comportement de l'internaute les systemes de tarification analysent-ils ?",
+    "choix": [
+     "Combien de fois il a visite le site, quels produits il a consultes, s'il navigue depuis un iPhone ou un vieil ordinateur, sa geolocalisation et le navigateur qu'il utilise",
+     "Uniquement son historique d'achat et son adresse de livraison",
+     "Uniquement sa frequence de visite et son panier moyen",
+     "Uniquement son adresse IP et l'heure de connexion"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise qu'ensuite, ces systemes adaptent le prix au profil du visiteur.",
+    "niveau": "restitution",
+    "page": 27
+   },
+   {
+    "q": "Comment fonctionne le programme Ajusto offert par Desjardins ?",
+    "choix": [
+     "L'entreprise suit les habitudes de conduite, vitesse, freinage, acceleration, utilisation du cellulaire et heures de conduite, puis des algorithmes ajustent la prime en fonction du profil personnel",
+     "L'assure declare lui-meme son kilometrage annuel",
+     "Un boitier compte uniquement les trajets effectues",
+     "La prime est calculee sur la base du quartier de residence"
+    ],
+    "reponse": 0,
+    "explication": "Ces technologies de telemetrie et d'analyse comportementale ont ete integrees par plusieurs assureurs.",
+    "niveau": "restitution",
+    "page": 28
+   },
+   {
+    "q": "Quel biais l'auteur signale-t-il dans ces modeles d'assurance ?",
+    "choix": [
+     "Ils peuvent surevaluer le niveau de risque : une personne qui travaille de nuit et roule souvent apres 23 heures pourrait etre penalisee par defaut, meme si elle conduit prudemment",
+     "Ils sous-estiment le risque des conducteurs experimentes",
+     "Ils ignorent les conditions meteorologiques",
+     "Ils favorisent les gros rouleurs"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute que ces pratiques manquent de transparence : on ne sait pas exactement comment l'algorithme prend ses decisions.",
+    "niveau": "comprehension",
+    "page": 28
+   },
+   {
+    "q": "Quelles entreprises l'auteur cite-t-il comme utilisant deja ces techniques ?",
+    "choix": [
+     "Amazon, Google, Facebook, Expedia, Airbnb, Uber et Netflix, mais aussi des compagnies quebecoises comme Metro, Desjardins, Intact ou Videotron",
+     "Uniquement les geants americains du numerique",
+     "Uniquement les compagnies aeriennes et hotelieres",
+     "Uniquement les plateformes de commerce en ligne"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur montre ainsi que la pratique s'est etendue bien au-dela du secteur technologique.",
+    "niveau": "restitution",
+    "page": 28
+   }
+  ]
+ },
+ {
+  "chapitre": "3fd6b3c0",
+  "questions": [
+   {
+    "q": "Pourquoi le prix d'un vol peut-il augmenter entre deux consultations ?",
+    "choix": [
+     "Les sites analysent la demande en temps reel mais creent aussi un sentiment d'urgence : plus longtemps on regarde les details d'un vol, plus le site comprend qu'on est interesse et plus il est probable qu'il augmente legerement le prix",
+     "Les compagnies ajustent leurs tarifs toutes les heures",
+     "Les places disponibles diminuent au fil de la journee",
+     "Le taux de change est recalcule en continu"
+    ],
+    "reponse": 0,
+    "explication": "Le but est de maximiser le profit, pas l'experience du client ; plusieurs journalistes l'ont demontre en testant des recherches avec et sans navigation privee, depuis differents appareils et a differents moments.",
+    "niveau": "comprehension",
+    "page": 29
+   },
+   {
+    "q": "Comment les abonnements numeriques appliquent-ils la tarification personnalisee ?",
+    "choix": [
+     "Si l'algorithme detecte qu'un visiteur consulte regulierement le site sans jamais s'abonner, il peut proposer des rabais temporaires ; a l'inverse, s'il remarque que l'utilisateur est deja accro aux services gratuits, il peut conclure qu'il paiera facilement le plein prix",
+     "Ils proposent le meme tarif d'essai a tous les visiteurs",
+     "Ils ajustent le prix selon le pays de connexion uniquement",
+     "Ils reservent les rabais aux nouveaux inscrits"
+    ],
+    "reponse": 0,
+    "explication": "Le resultat est un prix plus eleve, choisi specifiquement pour cet utilisateur.",
+    "niveau": "comprehension",
+    "page": 29
+   },
+   {
+    "q": "En quoi consiste la tarification dynamique de l'electricite envisagee au Quebec ?",
+    "choix": [
+     "Plutot que de payer toujours le meme tarif au kilowattheure, la facture varierait en fonction du moment precis ou l'on utilise l'electricite",
+     "Le tarif varierait selon la puissance souscrite",
+     "Le tarif dependrait du type de logement",
+     "Le tarif serait module selon le revenu du menage"
+    ],
+    "reponse": 0,
+    "explication": "L'objectif affiche est d'encourager les Quebecois a deplacer leur consommation hors des periodes de pointe, pour eviter les surcharges sur le reseau.",
+    "niveau": "restitution",
+    "page": 29
+   }
+  ]
+ },
+ {
+  "chapitre": "06c3029d",
+  "questions": [
+   {
+    "q": "Quel exemple ontarien l'auteur cite-t-il sur la tarification horaire de l'electricite ?",
+    "choix": [
+     "Les consommateurs doivent constamment surveiller l'heure pour eviter des couts exorbitants, l'electricite consommee durant les periodes de pointe coutant parfois jusqu'a trois fois plus cher que lors des periodes creuses",
+     "Les factures ont baisse en moyenne de dix pour cent",
+     "La consommation de pointe a ete reduite de moitie",
+     "Le systeme a du etre abandonne apres deux ans"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur cite comme moments critiques le lavage du linge, le lave-vaisselle ou la recharge d'une voiture electrique entre 17 h et 21 h en plein hiver.",
+    "niveau": "restitution",
+    "page": 30
+   },
+   {
+    "q": "Qu'est-ce que Hilo, filiale lancee par Hydro-Quebec ?",
+    "choix": [
+     "Une filiale qui installe des thermostats intelligents dans les maisons quebecoises, lesquels apprennent les habitudes du foyer afin d'optimiser le chauffage",
+     "Un service de conseil en efficacite energetique",
+     "Une plateforme de revente d'electricite entre particuliers",
+     "Un programme de subvention a l'isolation"
+    ],
+    "reponse": 0,
+    "explication": "Ces thermostats devraient permettre des economies substantielles sur la facture, une idee que l'auteur juge assez seduisante.",
+    "niveau": "restitution",
+    "page": 30
+   },
+   {
+    "q": "Quelle realite se cache derriere ces thermostats, selon l'auteur ?",
+    "choix": [
+     "Relies a une intelligence artificielle centrale, ils accumulent enormement de donnees : Hilo sait quand vous etes chez vous, quand vous montez ou baissez le chauffage, combien de temps vous prenez pour chauffer, et indirectement quel rythme de vie vous menez",
+     "Ils transmettent leurs donnees a des tiers commerciaux",
+     "Ils peuvent etre pilotes a distance sans votre accord",
+     "Ils cessent de fonctionner hors abonnement"
+    ],
+    "reponse": 0,
+    "explication": "Avec ces donnees precises, Hydro-Quebec pourrait personnaliser ses tarifs encore plus finement.",
+    "niveau": "comprehension",
+    "page": 30
+   },
+   {
+    "q": "Quel usage inquietant de ces donnees l'auteur envisage-t-il ?",
+    "choix": [
+     "L'IA, capable d'analyser precisement les habitudes de consommation, saurait exactement quand un client est le plus susceptible d'accepter une hausse tarifaire sans protester",
+     "L'IA pourrait couper le chauffage a distance",
+     "L'IA pourrait revendre le profil energetique du foyer",
+     "L'IA pourrait signaler les absences prolongees"
+    ],
+    "reponse": 0,
+    "explication": "Cela simplement parce que le client n'a pas d'autre choix que de chauffer sa maison au retour du travail.",
+    "niveau": "comprehension",
+    "page": 30
+   }
+  ]
+ },
+ {
+  "chapitre": "54124842",
+  "questions": [
+   {
+    "q": "Quelle est la difference entre tarification dynamique et tarification de surveillance ?",
+    "choix": [
+     "La tarification dynamique fait fluctuer le prix selon l'offre et la demande du marche, tandis que la tarification de surveillance sert un prix unique a chacun en fonction de ses comportements et de ses preferences personnelles",
+     "La premiere est legale, la seconde ne l'est pas",
+     "La premiere concerne les biens, la seconde les services",
+     "La premiere est temporaire, la seconde est permanente"
+    ],
+    "reponse": 0,
+    "explication": "On parle en anglais de surveillance pricing.",
+    "niveau": "comprehension",
+    "page": 31
+   },
+   {
+    "q": "Quel est l'etat du droit sur ces pratiques, selon l'auteur ?",
+    "choix": [
+     "Cette tactique est legale et rien n'oblige une entreprise a dire a un client qu'il paye plus cher que son voisin pour le meme produit",
+     "Elle est interdite mais rarement sanctionnee",
+     "Elle est encadree par une loi quebecoise recente",
+     "Elle exige un consentement explicite du consommateur"
+    ],
+    "reponse": 0,
+    "explication": "Les modeles de tarification algorithmique sont opaques, complexes et peu encadres, et l'Office de la protection du consommateur du Quebec reconnait que c'est une tendance preoccupante.",
+    "niveau": "restitution",
+    "page": 31
+   },
+   {
+    "q": "De quoi l'OCDE s'inquietait-elle des 2018 ?",
+    "choix": [
+     "Que la personnalisation des prix puisse entrainer une inegalite de traitement entre consommateurs, surtout si ceux-ci ne sont pas conscients que leur profil influence les offres qui leur sont proposees",
+     "Que les prix personnalises faussent la concurrence",
+     "Que les donnees collectees soient revendues sans controle",
+     "Que les algorithmes echappent a toute verification"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute que le consommateur risque de se retrouver coince dans un systeme ou il n'a plus vraiment le controle : c'est l'algorithme qui decidera quand il sera le mieux pour lui de consommer.",
+    "niveau": "restitution",
+    "page": 31
+   }
+  ]
+ },
+ {
+  "chapitre": "bc249e4c",
+  "questions": [
+   {
+    "q": "Quelles mesures concretes l'auteur conseille-t-il pour limiter son exposition ?",
+    "choix": [
+     "Utiliser la navigation privee ou plusieurs appareils, vider regulierement son historique et ses cookies, comparer les prix depuis differents appareils et localisations, et ajuster son comportement d'achat aux moments creux",
+     "Refuser tous les cookies et bloquer la geolocalisation",
+     "Utiliser exclusivement des comparateurs de prix",
+     "Acheter uniquement en magasin physique"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute qu'il faut etre conscient que l'IA cherche a optimiser les profits de l'entreprise, pas a aider le client personnellement.",
+    "niveau": "application",
+    "page": 32
+   },
+   {
+    "q": "Que le consommateur ne peut-il pas faire, selon l'auteur ?",
+    "choix": [
+     "Desactiver completement ces pratiques de tarification algorithmique, ni avoir la certitude absolue de payer le meme prix que son voisin",
+     "Contester juridiquement un prix personnalise",
+     "Obtenir le detail du calcul de son prix",
+     "Se faire retirer d'une base de profilage"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise aussi qu'il ne faut pas faire totalement confiance a une offre dite personnalisee pour soi, ni ignorer les conditions d'utilisation ou ces pratiques sont souvent precisees subtilement.",
+    "niveau": "comprehension",
+    "page": 32
+   },
+   {
+    "q": "Quelle conclusion l'auteur tire-t-il de ce premier chapitre ?",
+    "choix": [
+     "L'IA peut faire monter les factures non parce qu'elle est mechante, mais parce qu'elle est au service d'entreprises qui cherchent a optimiser leurs profits ; et tant que les algorithmes en savent plus sur vous que vous n'en savez sur eux, vous etes desavantage",
+     "Les prix personnalises finiront par etre interdits",
+     "La concurrence retablira l'equilibre a terme",
+     "Les consommateurs informes paient toujours moins cher"
+    ],
+    "reponse": 0,
+    "explication": "Le premier pas pour reprendre le pouvoir, ecrit l'auteur, c'est de comprendre comment ca fonctionne.",
+    "niveau": "comprehension",
+    "page": 33
+   }
+  ]
+ },
+ {
+  "chapitre": "b934d0ec",
+  "questions": [
+   {
+    "q": "Que font surtout les cartes de fidelite comme Moi, Scene+ ou PC Optimum, selon l'auteur ?",
+    "choix": [
+     "Elles profilent le client : chaque passage en caisse indique a l'entreprise ce qu'il achete, a quelle frequence et a quelle heure",
+     "Elles permettent de mesurer la rentabilite du magasin",
+     "Elles servent surtout a fideliser par la recompense",
+     "Elles alimentent les statistiques de vente nationales"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ouvre le chapitre sur le constat qu'on entre a l'epicerie avec un plan de match et qu'on en ressort avec des produits qu'on n'avait pas prevu acheter.",
+    "niveau": "comprehension",
+    "page": 34
+   },
+   {
+    "q": "Quelle these l'auteur avance-t-il sur l'epicerie moderne ?",
+    "choix": [
+     "On n'est plus dans le bon vieux temps des circulaires en papier : aujourd'hui c'est l'intelligence artificielle qui organise votre panier d'epicerie, parfois sans que vous le sachiez",
+     "Les epiceries suivent les tendances de consommation nationales",
+     "Les rabais sont calcules par les fournisseurs",
+     "Les marges sont fixees par les centrales d'achat"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur demande si l'epicerie savait d'avance ce que le client allait acheter, et si elle avait manipule son parcours, ses choix et meme ses envies.",
+    "niveau": "comprehension",
+    "page": 34
+   }
+  ]
+ },
+ {
+  "chapitre": "d7da025c",
+  "questions": [
+   {
+    "q": "Quelles informations la carte de fidelite transmet-elle a l'enseigne ?",
+    "choix": [
+     "Ce que vous achetez, a quelle frequence, a quelle heure, avec quoi vous l'associez, et si vous reagissez aux promotions",
+     "Votre adresse, votre age et votre profession",
+     "Votre budget mensuel et votre mode de paiement",
+     "Vos preferences declarees a l'inscription"
+    ],
+    "reponse": 0,
+    "explication": "Avec ces informations, l'IA peut anticiper le prochain achat mieux que le client lui-meme.",
+    "niveau": "restitution",
+    "page": 34
+   },
+   {
+    "q": "Quel exemple l'auteur donne-t-il d'un rabais qui n'en est pas un ?",
+    "choix": [
+     "Un rabais d'un dollar sur une sauce n'est envoye que lorsque l'IA detecte que le client risque de la delaisser, par exemple s'il n'en a pas achete depuis trois semaines",
+     "Un rabais applique sur un produit dont le stock est excedentaire",
+     "Un rabais reserve aux clients les plus depensiers",
+     "Un rabais annonce mais indisponible en magasin"
+    ],
+    "reponse": 0,
+    "explication": "L'algorithme n'essaie pas de faire economiser le client, mais de le faire acheter plus souvent ou de le garder fidele a une marque ou a une chaine.",
+    "niveau": "comprehension",
+    "page": 35
+   },
+   {
+    "q": "Quelle formule l'auteur emploie-t-il au sujet de l'offre dite exclusive ?",
+    "choix": [
+     "Souvent, ce n'est pas une recompense, c'est une strategie pour vous garder accro",
+     "C'est une facon de tester votre sensibilite au prix",
+     "C'est un moyen d'ecouler les invendus",
+     "C'est un remerciement pour votre fidelite"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur conclut que le client pense avoir eu un bon prix mais a ete manipule par un modele predictif.",
+    "niveau": "comprehension",
+    "page": 35
+   }
+  ]
+ },
+ {
+  "chapitre": "77e086fd",
+  "questions": [
+   {
+    "q": "En quoi les circulaires numeriques different-elles des circulaires papier ?",
+    "choix": [
+     "Avant, les circulaires etaient les memes pour tout le monde ; aujourd'hui chaque circulaire peut etre personnalisee, et ce que vous voyez comme rabais sur votre application, votre voisin ne le voit pas necessairement",
+     "Elles sont mises a jour plus souvent",
+     "Elles couvrent un assortiment plus large",
+     "Elles sont moins detaillees sur les prix"
+    ],
+    "reponse": 0,
+    "explication": "L'IA selectionne les offres les plus susceptibles de faire acheter, en tenant compte aussi de ce que le client achetera de toute facon au prix regulier.",
+    "niveau": "comprehension",
+    "page": 35
+   },
+   {
+    "q": "Quel raisonnement l'IA tient-elle sur un produit que vous achetez toujours au prix fort ?",
+    "choix": [
+     "Inutile de lui faire une offre la-dessus, on garde notre marge de profit pleine et entiere",
+     "Il faut le mettre en avant pour augmenter le volume",
+     "Il faut baisser le prix pour fideliser",
+     "Il faut proposer un produit concurrent"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur prend l'exemple d'un client qui craque toujours pour la meme marque de pain, meme sans rabais.",
+    "niveau": "comprehension",
+    "page": 36
+   },
+   {
+    "q": "Comment certaines epiceries suivent-elles les deplacements en magasin ?",
+    "choix": [
+     "Par des cameras intelligentes ou des capteurs suivant les deplacements en temps reel, et par des applications mobiles connectees a des balises Bluetooth dans les allees",
+     "Par le passage en caisse uniquement",
+     "Par la lecture des codes-barres des chariots",
+     "Par un comptage manuel aux entrees de rayon"
+    ],
+    "reponse": 0,
+    "explication": "En croisant ces donnees avec le profil du client, l'IA peut optimiser l'emplacement des produits pour maximiser les achats impulsifs.",
+    "niveau": "restitution",
+    "page": 36
+   },
+   {
+    "q": "Qu'est-ce que le lift de ventes, illustre par l'auteur ?",
+    "choix": [
+     "L'augmentation significative des ventes de plusieurs produits quand ils sont places ensemble, comme le confit d'oignons a cote du brie et des craquelins",
+     "La hausse saisonniere des ventes d'un rayon",
+     "L'effet d'une promotion sur le chiffre d'affaires global",
+     "La progression des ventes apres une campagne publicitaire"
+    ],
+    "reponse": 0,
+    "explication": "Cela capitalise sur les impulsions du consommateur, des achats qu'il n'aurait pas faits sans cette mise en scene.",
+    "niveau": "comprehension",
+    "page": 36
+   }
+  ]
+ },
+ {
+  "chapitre": "11660563",
+  "questions": [
+   {
+    "q": "Quelle consequence l'auteur tire-t-il du scan de la carte de fidelite ?",
+    "choix": [
+     "Le positionnement des produits en magasin est optimise pour que ceux qui depensent davantage trouvent encore plus a depenser",
+     "Les prix montent pour les clients les plus fideles",
+     "Les rabais sont reserves aux nouveaux clients",
+     "Les rayons sont reorganises chaque semaine"
+    ],
+    "reponse": 0,
+    "explication": "En scannant sa carte, le client apprend a l'epicerie que la tactique fonctionne sur lui, mais pas forcement sur son voisin.",
+    "niveau": "comprehension",
+    "page": 36
+   },
+   {
+    "q": "L'epicerie en ligne protege-t-elle mieux le consommateur ?",
+    "choix": [
+     "Non : les plateformes utilisent les memes algorithmes qu'en magasin en les poussant encore plus loin, l'historique etant analyse, les recherches enregistrees et les habitudes profilees",
+     "Oui, car le client compose lui-meme son panier",
+     "Oui, car les prix y sont uniformes",
+     "Oui, car aucun capteur ne suit ses deplacements"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur note qu'un client ayant passe quinze secondes a regarder l'onglet du boeuf a ete note par son epicerie.",
+    "niveau": "comprehension",
+    "page": 37
+   },
+   {
+    "q": "Que nous dit la recherche depuis vingt ans sur les resultats presentes en ligne ?",
+    "choix": [
+     "On choisira presque assurement l'une des premieres propositions affichees, et c'est encore plus vrai sur telephone et davantage encore avec un assistant vocal comme Alexa",
+     "On compare en moyenne trois offres avant de choisir",
+     "On revient generalement sur les resultats du bas de page",
+     "On se fie surtout aux avis des autres clients"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur en conclut que le client pense faire un choix libre alors que l'interface est faite pour l'amener la ou l'IA veut qu'il aille.",
+    "niveau": "comprehension",
+    "page": 37
+   },
+   {
+    "q": "Ces pratiques sont-elles legales, selon l'auteur ?",
+    "choix": [
+     "Oui, tout cela est parfaitement legal : meme si l'Office de la protection du consommateur rappelle qu'il est interdit de passer sous silence des faits importants, il n'existe pas de reglementation specifique pour l'usage de l'IA dans les promotions du commerce de detail",
+     "Non, elles contreviennent a la loi sur la protection du consommateur",
+     "Elles relevent d'une zone grise en cours de jugement",
+     "Elles sont interdites depuis 2024"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur cite l'exemple d'un voisin ayant droit a un rabais alors qu'un autre client non.",
+    "niveau": "restitution",
+    "page": 37
+   }
+  ]
+ },
+ {
+  "chapitre": "8e5de557",
+  "questions": [
+   {
+    "q": "Quelle difficulte particuliere l'auteur signale-t-il sur les aubaines ciblees ?",
+    "choix": [
+     "Comme elles sont ciblees individuellement, on ne peut meme pas comparer avec son voisin pour savoir si l'on est desavantage",
+     "Elles changent trop vite pour etre verifiees",
+     "Elles ne sont valables que sur l'application",
+     "Elles ne s'appliquent qu'a certains rayons"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur souligne qu'on ne peut pas se retirer soi-meme d'un algorithme, mais qu'on peut limiter son pouvoir.",
+    "niveau": "comprehension",
+    "page": 38
+   },
+   {
+    "q": "Quels gestes concrets l'auteur recommande-t-il a l'epicerie ?",
+    "choix": [
+     "Utiliser les cartes de fidelite de facon strategique sans les scanner a chaque visite, effacer son historique d'achat quand c'est possible, magasiner avec une liste et la respecter, verifier si le rabais est reel en comparant avec les circulaires publiques, et tester les aubaines avec et sans carte",
+     "Renoncer aux cartes de fidelite et payer comptant",
+     "Changer d'enseigne regulierement",
+     "Acheter uniquement les produits en promotion"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur note que parfois, on gagne a rester invisible.",
+    "niveau": "application",
+    "page": 38
+   },
+   {
+    "q": "Quelle formule resume la conclusion de ce chapitre ?",
+    "choix": [
+     "Votre epicerie n'est pas juste un lieu pour vous nourrir : c'est un laboratoire d'analyse comportementale en temps reel",
+     "Votre epicerie est le premier commerce a avoir adopte l'IA",
+     "Votre epicerie connait mieux votre sante que votre medecin",
+     "Votre epicerie fixe les prix selon votre quartier"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute que l'IA anticipe les choix, orchestre les parcours, controle ce que l'on voit et influence ce que l'on mange.",
+    "niveau": "restitution",
+    "page": 38
+   }
+  ]
+ },
+ {
+  "chapitre": "925f3b8e",
+  "questions": [
+   {
+    "q": "Qu'est-ce qu'un robot-conseiller, selon l'auteur ?",
+    "choix": [
+     "Un logiciel qui utilise des algorithmes d'IA pour proposer un portefeuille d'investissement, le gerer automatiquement et le reequilibrer selon les fluctuations du marche",
+     "Un conseiller humain assiste par un logiciel",
+     "Un systeme de trading a haute frequence",
+     "Un comparateur de produits financiers"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que ce n'est pas un petit bonhomme metallique avec un veston-cravate.",
+    "niveau": "restitution",
+    "page": 39
+   },
+   {
+    "q": "Quel avertissement l'auteur donne-t-il face aux publicites promettant des rendements grace a l'IA ?",
+    "choix": [
+     "Cela sonne presque trop beau pour etre vrai, et c'est souvent la que le piege se referme",
+     "Ces offres sont generalement fiables mais couteuses",
+     "Ces offres ne conviennent qu'aux gros patrimoines",
+     "Ces offres sont interdites au Quebec"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur note que l'idee qu'un algorithme puisse gerer votre argent mieux que vous est de plus en plus populaire, notamment au Quebec.",
+    "niveau": "comprehension",
+    "page": 39
+   }
+  ]
+ },
+ {
+  "chapitre": "0d21f69b",
+  "questions": [
+   {
+    "q": "Sur quoi repose le questionnaire initial d'un robot-conseiller ?",
+    "choix": [
+     "La tolerance au risque, l'horizon de placement et les objectifs financiers",
+     "Le revenu annuel, l'age et la situation familiale",
+     "Le patrimoine detenu et les dettes en cours",
+     "La connaissance des marches et l'experience passee"
+    ],
+    "reponse": 0,
+    "explication": "Le systeme propose ensuite un portefeuille cles en main, sans conseiller humain, ce qui permet aux banques et firmes de faire des economies qu'elles ne redonnent pas toujours au client.",
+    "niveau": "restitution",
+    "page": 39
+   },
+   {
+    "q": "Quels arguments de vente les robots-conseillers mettent-ils en avant ?",
+    "choix": [
+     "C'est simple, c'est moins cher, c'est objectif car sans vendeur a commission, et c'est base sur les donnees plutot que sur l'intuition",
+     "C'est garanti par l'institution financiere",
+     "C'est adapte a tous les profils d'investisseurs",
+     "C'est plus performant que la gestion humaine"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur juge que sur un horizon de court terme, cela fonctionne assez bien, mais que confier sa retraite a un robot est moins clair.",
+    "niveau": "restitution",
+    "page": 40
+   },
+   {
+    "q": "Quelle limite l'auteur signale-t-il sur les donnees utilisees par ces robots ?",
+    "choix": [
+     "Comme ils s'appuient pour la plupart sur des donnees historiques, ils peuvent etre pris de court en cas de crise ou de situation exceptionnelle, comme une pandemie, une guerre ou un krach soudain",
+     "Ils ne traitent que les donnees du marche local",
+     "Ils actualisent leurs modeles trop rarement",
+     "Ils ignorent les frais de transaction"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute que plusieurs robots utilisent des algorithmes de repartition d'actifs passive, et non de l'intelligence artificielle avancee.",
+    "niveau": "comprehension",
+    "page": 40
+   }
+  ]
+ },
+ {
+  "chapitre": "7ab1ed88",
+  "questions": [
+   {
+    "q": "Comment les robots-conseillers ont-ils reagi lors de la debacle boursiere de 2020 ?",
+    "choix": [
+     "L'algorithme n'a pas change de cap meme quand les utilisateurs paniquaient : il a continue a suivre les donnees, alors que plusieurs humains auraient conseille de vendre une partie des actions",
+     "Ils ont vendu massivement des le debut de la chute",
+     "Ils ont suspendu les operations le temps de la crise",
+     "Ils ont sollicite une validation humaine"
+    ],
+    "reponse": 0,
+    "explication": "Certains portefeuilles ont plonge de 20 a 30 %, ce qui etait le cas partout.",
+    "niveau": "restitution",
+    "page": 40
+   },
+   {
+    "q": "Quel avantage inattendu l'auteur reconnait-il a cette insensibilite ?",
+    "choix": [
+     "Comme l'emotivite rime mal avec l'investissement et que l'IA n'a aucun feeling, les pertes de ses clients ont ete moindres que celles des investisseurs humains lors du krach de la pandemie",
+     "Les frais de gestion ont ete reduits pendant la crise",
+     "Les portefeuilles ont recupere plus vite que la moyenne",
+     "Les clients ont ete indemnises par la plateforme"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute que cela peut marcher a condition d'etre pret a lacher le volant et a faire confiance au pilote automatique.",
+    "niveau": "comprehension",
+    "page": 41
+   },
+   {
+    "q": "Qu'est-ce que le trading algorithmique, distingue du robot-conseiller ?",
+    "choix": [
+     "Une pratique ou l'IA achete et vend des placements en quelques millisecondes en analysant des tonnes de donnees, en esperant de petits gains qui s'accumulent, ce qui est extremement risque surtout pour les petits investisseurs",
+     "Une gestion automatisee de portefeuille a long terme",
+     "Un service de conseil personnalise en temps reel",
+     "Une plateforme d'echange entre particuliers"
+    ],
+    "reponse": 0,
+    "explication": "Ces systemes sont surtout utilises par des firmes specialisees ou des fonds de couverture ; depuis deux ans, ce genre d'IA n'a livre aucun gain dans certains secteurs tres volatils comme le petrole.",
+    "niveau": "comprehension",
+    "page": 41
+   }
+  ]
+ },
+ {
+  "chapitre": "3f6a2fa5",
+  "questions": [
+   {
+    "q": "L'IA peut-elle battre le marche, selon l'auteur ?",
+    "choix": [
+     "Pas toujours : la majorite des etudes montrent que les portefeuilles geres par IA ne font pas systematiquement mieux ni pire que les portefeuilles equilibres classiques, leur principal avantage etant la constance",
+     "Oui, sur un horizon superieur a cinq ans",
+     "Oui, dans les marches volatils uniquement",
+     "Non, ils font systematiquement moins bien"
+    ],
+    "reponse": 0,
+    "explication": "Battre le marche reste une promesse marketing plus qu'une realite, et personne n'a trouve l'algorithme miracle.",
+    "niveau": "comprehension",
+    "page": 42
+   },
+   {
+    "q": "Quelle offre les gestionnaires quebecois proposent-ils desormais ?",
+    "choix": [
+     "Des services automatises hybrides : on peut parler a un humain, mais c'est l'IA qui gere l'argent en arriere-plan",
+     "Des portefeuilles entierement geres par IA",
+     "Des mandats de gestion classiques uniquement",
+     "Des services de conseil a la carte"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur estime que la meilleure decision est probablement celle qui permet de dormir sur ses deux oreilles.",
+    "niveau": "restitution",
+    "page": 42
+   },
+   {
+    "q": "Quelles fraudes le succes de ces plateformes a-t-il attirees ?",
+    "choix": [
+     "Depuis 2022, plusieurs Quebecois se sont fait avoir par de fausses plateformes d'investissement automatise promettant des rendements de 10 a 15 % par mois grace a l'IA, en realite des systemes frauduleux ou des pyramides de Ponzi",
+     "Des usurpations d'identite bancaire",
+     "Des logiciels de trading contrefaits",
+     "Des faux conseillers demarchant par telephone"
+    ],
+    "reponse": 0,
+    "explication": "Une regle simple : si ca semble trop beau pour etre vrai, c'est probablement faux ; l'Autorite des marches financiers recommande de verifier si l'entreprise est enregistree avant de lui confier son argent.",
+    "niveau": "restitution",
+    "page": 42
+   }
+  ]
+ },
+ {
+  "chapitre": "bfe52b47",
+  "questions": [
+   {
+    "q": "Quelles pratiques l'auteur recommande-t-il a qui veut utiliser un robot-conseiller ?",
+    "choix": [
+     "Choisir une plateforme reconnue, comparer les frais de gestion, garder une vision a long terme, lire les petits caracteres car certaines plateformes se disent intelligentes sans reelle IA, et se former un minimum en finances personnelles",
+     "Confier l'ensemble de son epargne a un seul outil",
+     "Choisir la plateforme aux frais les plus bas",
+     "Suivre les recommandations sans intervenir"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur note que l'IA performe mieux quand on la laisse faire son travail sur plusieurs annees.",
+    "niveau": "application",
+    "page": 43
+   },
+   {
+    "q": "Quelles erreurs l'auteur met-il en garde de commettre ?",
+    "choix": [
+     "S'attendre a des miracles, confier ses placements sans supervision, reagir emotivement pendant un krach en essayant de battre l'IA, et confondre robot-conseiller et trader algorithmique a haute frequence",
+     "Diversifier excessivement son portefeuille",
+     "Consulter trop souvent son solde",
+     "Changer de plateforme en cours de route"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur souligne que l'IA est concue pour ne pas paniquer, contrairement a l'investisseur humain.",
+    "niveau": "application",
+    "page": 43
+   }
+  ]
+ },
+ {
+  "chapitre": "fe55b7ea",
+  "questions": [
+   {
+    "q": "Quelle reponse nuancee l'auteur donne-t-il a la question de savoir si l'on peut gagner plus d'argent avec l'IA ?",
+    "choix": [
+     "Oui si l'on comprend comment cela marche et si l'on utilise des plateformes serieuses, bien encadrees, avec des frais transparents ; mais non, l'IA ne fera pas de miracles et ne remplacera pas une vraie reflexion sur ses objectifs, son budget et son horizon",
+     "Oui, dans tous les cas, grace a la reduction des frais",
+     "Non, les rendements restent inferieurs a la gestion humaine",
+     "Cela depend uniquement du montant investi"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que son livre ne pretend pas donner de conseils financiers et qu'il faut toujours se fier a des professionnels pour cela.",
+    "niveau": "comprehension",
+    "page": 44
+   },
+   {
+    "q": "Par quelle comparaison l'auteur cloture-t-il ce chapitre ?",
+    "choix": [
+     "L'IA peut etre un bon outil, mais un outil reste un outil, et comme n'importe quelle scie electrique, mal utilisee, ca peut couter un bras",
+     "L'IA est un moteur qu'il faut savoir entretenir",
+     "L'IA est une carte routiere, pas un chauffeur",
+     "L'IA est un miroir de nos propres decisions"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur rappelle que l'IA ne prendra pas soin de vos emotions financieres.",
+    "niveau": "restitution",
+    "page": 44
+   }
+  ]
+ },
+ {
+  "chapitre": "32538f9e",
+  "questions": [
+   {
+    "q": "Quel constat l'auteur fait-il sur le conseiller bancaire d'aujourd'hui ?",
+    "choix": [
+     "Ce sont desormais les notifications, les alertes sur l'application ou les recommandations de produits dans l'espace client qui indiquent quoi faire, et tout cela n'est pas le fruit d'un etre humain",
+     "Les conseillers sont moins nombreux mais mieux formes",
+     "Les conseillers travaillent desormais a distance",
+     "Les conseillers ne traitent plus que les dossiers complexes"
+    ],
+    "reponse": 0,
+    "explication": "L'intelligence artificielle s'est tranquillement installee dans votre compte bancaire, sans crier gare.",
+    "niveau": "comprehension",
+    "page": 45
+   },
+   {
+    "q": "Quelle est la deuxieme phase de la transformation numerique des banques ?",
+    "choix": [
+     "L'automatisation intelligente, c'est-a-dire l'IA",
+     "La centralisation des donnees clients",
+     "La fermeture des succursales physiques",
+     "L'ouverture des interfaces a des tiers"
+    ],
+    "reponse": 0,
+    "explication": "Au Canada, les grandes institutions financieres ont toutes investi massivement dans la transformation numerique.",
+    "niveau": "restitution",
+    "page": 45
+   }
+  ]
+ },
+ {
+  "chapitre": "1e8a4ff3",
+  "questions": [
+   {
+    "q": "Qu'est-ce qu'un systeme de recommandation predictive bancaire ?",
+    "choix": [
+     "Un systeme qui utilise l'information detenue sur le client pour prevoir son comportement et intervenir pile au moment ou il se demandait justement s'il devrait changer de carte de credit",
+     "Un moteur de comparaison des produits du marche",
+     "Un outil de notation du risque de credit",
+     "Un service de rappel des echeances"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur cite une institution ayant developpe des modeles internes pour predire les moments ou un client risque de demander un pret ou de partir vers une autre banque, et qui agit avant meme qu'il ne pose la question.",
+    "niveau": "comprehension",
+    "page": 45
+   },
+   {
+    "q": "Quels exemples de suggestions d'applications bancaires l'auteur cite-t-il ?",
+    "choix": [
+     "Vous pourriez economiser 20 dollars par mois en limitant vos repas au restaurant, ce mois-ci vous avez depense 15 % de plus en abonnements, ou il est possible que ce commercant vous ait facture en double",
+     "Votre solde sera insuffisant dans trois jours",
+     "Votre taux hypothecaire va augmenter",
+     "Vos placements ont perdu de la valeur"
+    ],
+    "reponse": 0,
+    "explication": "Ces conseils viennent d'assistants virtuels dopes a l'intelligence artificielle, presents depuis un certain temps chez plusieurs institutions.",
+    "niveau": "restitution",
+    "page": 46
+   },
+   {
+    "q": "Quel benefice l'auteur reconnait-il a ces assistants ?",
+    "choix": [
+     "Si le conseiller virtuel est capable de vous faire epargner ou de vous avertir d'une fraude probable avant que vous n'ayez paye, c'est certainement a votre avantage",
+     "Ils remplacent utilement un conseiller humain",
+     "Ils reduisent les frais bancaires",
+     "Ils garantissent le respect du budget"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute qu'il faut rester prudent car ces IA sont souvent biaisees, notamment parce qu'elles n'ont pas forcement tout le portrait de la situation.",
+    "niveau": "comprehension",
+    "page": 46
+   }
+  ]
+ },
+ {
+  "chapitre": "5ba9867f",
+  "questions": [
+   {
+    "q": "Quels biais l'auteur reproche-t-il aux conseillers financiers virtuels ?",
+    "choix": [
+     "Ils ne tiennent pas toujours compte des vraies priorites, comme le fait qu'un restaurant n'est pas juste une depense mais une sortie sociale, ils peuvent faire sentir coupable de choix justifies, et leurs conseils visent parfois a amener vers un nouveau produit de la banque",
+     "Ils sous-estiment les revenus irreguliers",
+     "Ils ignorent les dettes contractees ailleurs",
+     "Ils privilegient l'epargne sur l'investissement"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur resume : ces outils veulent et peuvent vous aider, mais aussi vous orienter, et la ligne entre les deux est parfois tres mince.",
+    "niveau": "comprehension",
+    "page": 46
+   },
+   {
+    "q": "Qui envoie reellement les messages de type votre marge de credit pourrait etre augmentee ?",
+    "choix": [
+     "Un modele algorithmique qui a scanne l'historique de depenses, de revenus, de remboursements et de paiements, et qui envoie le bon message au bon moment",
+     "Le conseiller attitre du client",
+     "Le service de recouvrement de la banque",
+     "Un partenaire commercial de l'institution"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que ce n'est pas un conseiller qui a pris le temps d'analyser le dossier.",
+    "niveau": "comprehension",
+    "page": 47
+   },
+   {
+    "q": "Pourquoi la banque en sait-elle autant sur ses clients, selon l'auteur ?",
+    "choix": [
+     "Tout simplement parce qu'on ne paye plus rien comptant de nos jours : la banque connait le salaire, les habitudes de paiement, l'historique de credit, les virements automatiques, les depenses au restaurant et les voyages reserves",
+     "Parce qu'elle croise ses donnees avec celles des commercants",
+     "Parce que les clients remplissent des questionnaires detailles",
+     "Parce qu'elle achete des donnees a des courtiers"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur juge ce point troublant.",
+    "niveau": "comprehension",
+    "page": 47
+   }
+  ]
+ },
+ {
+  "chapitre": "75377b03",
+  "questions": [
+   {
+    "q": "Pourquoi ces systemes bancaires sont-ils si efficaces, selon l'auteur ?",
+    "choix": [
+     "Parce que pour qu'une IA soit precise il lui faut des montagnes de donnees, et que la banque dispose d'une quantite quasi infinie d'informations sur son client, ce qui fait de l'IA un vendeur invisible ultra performant",
+     "Parce qu'ils sont supervises par des experts humains",
+     "Parce qu'ils sont mis a jour quotidiennement",
+     "Parce qu'ils comparent plusieurs institutions"
+    ],
+    "reponse": 0,
+    "explication": "Ces systemes sont concus pour augmenter la retention, reduire les risques pour la banque et vendre plus de produits.",
+    "niveau": "comprehension",
+    "page": 47
+   },
+   {
+    "q": "Comment le role du conseiller humain a-t-il evolue ?",
+    "choix": [
+     "Plusieurs conseillers sont maintenant des accompagnateurs de robots : ils n'ont plus a faire l'analyse du dossier puisque le systeme l'a deja faite, leur travail consistant a valider, a repondre aux cas complexes ou a rassurer",
+     "Ils se consacrent desormais a la prospection",
+     "Ils supervisent plusieurs agences a la fois",
+     "Ils se specialisent dans un seul type de produit"
+    ],
+    "reponse": 0,
+    "explication": "Selon un sondage KPMG mene en 2024, plus de la moitie des Canadiens se rendent dans une succursale bancaire tout au plus une fois par an.",
+    "niveau": "comprehension",
+    "page": 48
+   },
+   {
+    "q": "Quelle evolution le sondage KPMG de 2024 revele-t-il ?",
+    "choix": [
+     "56 % des Canadiens se rendent en succursale tout au plus une fois par an, et la proportion de ceux qui declarent ne jamais s'y rendre a double depuis la pandemie",
+     "Un tiers des Canadiens ont ferme leur compte physique",
+     "Les visites en succursale ont augmente chez les aines",
+     "Les operations en ligne restent minoritaires"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que c'est voulu : les banques misent sur l'automatisation pour reduire leurs couts, un robot ne prenant pas de vacances et travaillant en continu.",
+    "niveau": "restitution",
+    "page": 48
+   }
+  ]
+ },
+ {
+  "chapitre": "f35243d6",
+  "questions": [
+   {
+    "q": "Quels avantages l'auteur reconnait-il a la banque automatisee ?",
+    "choix": [
+     "Des alertes utiles comme un solde trop bas ou un paiement oublie, un acces plus rapide aux produits, et un meilleur suivi de son budget",
+     "Des frais reduits et des taux plus avantageux",
+     "Une disponibilite permanente d'un conseiller",
+     "Une meilleure protection contre la fraude"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur oppose a ces avantages une surveillance permanente, le risque d'etre oriente vers des produits inadaptes et la perte du lien humain.",
+    "niveau": "restitution",
+    "page": 49
+   },
+   {
+    "q": "Quelle limite fondamentale l'auteur souligne-t-il ?",
+    "choix": [
+     "Vous etes traite comme une serie de donnees, pas comme une personne avec des objectifs de vie : l'IA ne sait pas que vous voulez acheter une maison pour votre mere malade, elle voit seulement que vous faites plus de virements que d'habitude",
+     "L'IA ne peut pas traiter les situations exceptionnelles",
+     "L'IA ne connait pas votre situation professionnelle",
+     "L'IA ne tient pas compte de votre age"
+    ],
+    "reponse": 0,
+    "explication": "Elle agit selon ce que lui prescrit son algorithme, pas selon vos intentions.",
+    "niveau": "comprehension",
+    "page": 49
+   },
+   {
+    "q": "Quels reflexes l'auteur conseille-t-il pour rester maitre de son compte ?",
+    "choix": [
+     "Poser des questions a un vrai humain quand on en a la chance, surtout pour les gros produits financiers, desactiver les recommandations automatisees si l'option existe, et comparer toujours les suggestions avec des sources externes",
+     "Changer de banque tous les cinq ans",
+     "Refuser toute communication de l'institution",
+     "Consulter son solde chaque jour"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur ajoute qu'il faut garder un oeil sur les frais, les robots ne disant pas toujours quand une option est plus chere.",
+    "niveau": "application",
+    "page": 49
+   }
+  ]
+ },
+ {
+  "chapitre": "d6afe51a",
+  "questions": [
+   {
+    "q": "Quelle question l'auteur conseille-t-il de se poser devant une offre bancaire automatisee ?",
+    "choix": [
+     "Si l'on a vraiment besoin d'augmenter sa marge de credit, ou de ce qu'on nous propose : c'est parfois flatteur, mais ce n'est pas pour vos beaux yeux que l'algorithme vous l'offre",
+     "Si l'offre est disponible ailleurs a de meilleures conditions",
+     "Si l'offre a ete validee par un conseiller",
+     "Si l'offre est limitee dans le temps"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur rappelle que l'IA vous conseille dans l'interet de la banque, pas toujours dans le votre.",
+    "niveau": "application",
+    "page": 49
+   },
+   {
+    "q": "Quelle conclusion l'auteur tire-t-il sur la banque automatisee ?",
+    "choix": [
+     "Pour bien des taches c'est efficace, rapide et pratique, mais il ne faut pas se faire d'illusions : l'IA est surtout un outil de plus dans l'arsenal des banques pour vous accompagner et vous attacher a elles toujours davantage",
+     "L'automatisation profite d'abord aux clients modestes",
+     "Le conseiller humain redeviendra bientot central",
+     "La reglementation corrigera ces desequilibres"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur conclut : aujourd'hui, c'est souvent vous contre l'algorithme, et mieux vous comprenez le jeu, plus vous avez de chances de sortir gagnant.",
+    "niveau": "comprehension",
+    "page": 50
+   }
+  ]
+ },
+ {
+  "chapitre": "215e2183",
+  "questions": [
+   {
+    "q": "Quelles applications de budget l'auteur cite-t-il, et quel avertissement donne-t-il d'emblee ?",
+    "choix": [
+     "Mint, YNAB, GoodBudget ou Wallet, en precisant d'emblee que ces applications intelligentes ne font pas de magie",
+     "Bankin', Linxo et Bud, presentees comme equivalentes",
+     "Les applications fournies par les banques elles-memes",
+     "Des outils payants reserves aux gros patrimoines"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur pose la question de savoir si une intelligence artificielle peut vraiment aider a mieux gerer son argent, ou si c'est une promesse marketing de plus.",
+    "niveau": "restitution",
+    "page": 51
+   },
+   {
+    "q": "Quelle question l'auteur pose-t-il face aux publicites de ces applications ?",
+    "choix": [
+     "Est-ce qu'une intelligence artificielle peut vraiment aider a mieux gerer son argent, ou est-ce juste une autre promesse marketing qui veut surtout controler votre carte de credit",
+     "Ces applications sont-elles fiables sur le plan technique",
+     "Ces applications sont-elles adaptees aux petits budgets",
+     "Ces applications remplacent-elles un conseiller"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur decrit la situation familiere de qui se promet de faire attention a son budget puis craque pour un achat impulsif.",
+    "niveau": "restitution",
+    "page": 51
+   }
+  ]
+ },
+ {
+  "chapitre": "dc934e40",
+  "questions": [
+   {
+    "q": "Comment fonctionnent concretement ces applications de budget ?",
+    "choix": [
+     "Connexion directe au compte bancaire pour suivre les depenses en temps reel, classement automatique des depenses, analyse predictive des depenses futures, et alertes et recommandations personnalisees",
+     "Saisie manuelle des depenses puis synthese mensuelle",
+     "Import des releves bancaires en fin de mois",
+     "Photographie des recus et classement automatique"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur compare le resultat a une comptable virtuelle toujours dans sa poche, sans le regard plein de jugement.",
+    "niveau": "restitution",
+    "page": 51
+   },
+   {
+    "q": "Que montre l'etude de l'Agence de la consommation en matiere financiere du Canada ?",
+    "choix": [
+     "Les personnes ayant utilise une application de gestion budgetaire augmentaient de 14 % l'adhesion a leur budget, 31 % d'entre elles savaient mieux ou allait leur argent et 21 % etablissaient des objectifs d'epargne",
+     "Les utilisateurs epargnaient en moyenne 14 % de plus",
+     "Un tiers des utilisateurs abandonnaient au bout d'un mois",
+     "Les applications reduisaient les decouverts de moitie"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que ces applications ne fonctionnent que si l'on s'en sert activement.",
+    "niveau": "restitution",
+    "page": 52
+   }
+  ]
+ },
+ {
+  "chapitre": "147c14b4",
+  "questions": [
+   {
+    "q": "Pourquoi ces applications fonctionnent-elles, selon l'auteur ?",
+    "choix": [
+     "Parce qu'elles obligent a regarder en face la realite parfois difficile de ses habitudes financieres : quand on realise avoir depense 120 dollars en livraison de repas le mois dernier, l'envie de cuisiner revient vite",
+     "Parce qu'elles bloquent les depenses excessives",
+     "Parce qu'elles recompensent les efforts d'epargne",
+     "Parce qu'elles comparent avec des menages semblables"
+    ],
+    "reponse": 0,
+    "explication": "Les personnes interrogees rapportent aussi se sentir plus sereines financierement, avec une reduction marquee de l'anxiete liee a l'argent.",
+    "niveau": "comprehension",
+    "page": 52
+   },
+   {
+    "q": "Quelles limites l'auteur signale-t-il a ces applications ?",
+    "choix": [
+     "La dependance a la technologie, le faux sentiment de controle, la securite des donnees puisqu'elles accedent aux comptes bancaires, et l'invasion de publicites ciblees qui pourrait augmenter la tentation de depenser",
+     "Le cout de l'abonnement et la complexite d'usage",
+     "L'absence de version francaise et les erreurs de classement",
+     "La lenteur de la synchronisation bancaire"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur resume le faux sentiment de controle ainsi : savoir qu'on depense trop au restaurant est une chose, arreter de commander en est une autre.",
+    "niveau": "comprehension",
+    "page": 53
+   }
+  ]
+ },
+ {
+  "chapitre": "2a0c3b57",
+  "questions": [
+   {
+    "q": "Quels conseils pratiques l'auteur donne-t-il pour tirer profit d'une application de budget ?",
+    "choix": [
+     "Bien choisir son application selon son pays et sa langue, la consulter au moins une fois par semaine, ajuster les categories et budgets proposes a sa realite, et agir concretement quand l'application signale un depassement",
+     "Connecter tous ses comptes des le premier jour",
+     "Fixer des objectifs ambitieux pour se motiver",
+     "Comparer ses depenses avec la moyenne nationale"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur note que les budgets automatiques sont pratiques mais rarement parfaits pour chacun.",
+    "niveau": "application",
+    "page": 54
+   },
+   {
+    "q": "Que le lecteur peut-il attendre de ces applications, selon l'auteur ?",
+    "choix": [
+     "Avoir une vision claire et honnete de ses depenses, profiter des alertes pour changer ses comportements, tester plusieurs applications avant de choisir, et faire le menage dans ses abonnements inutiles",
+     "Obtenir un plan d'epargne personnalise valide",
+     "Negocier de meilleures conditions bancaires",
+     "Obtenir un diagnostic financier complet"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur mentionne que Mint est tres populaire mais americaine, tandis que Bankin' est une application francaise qui fonctionne bien en francais.",
+    "niveau": "restitution",
+    "page": 54
+   }
+  ]
+ },
+ {
+  "chapitre": "851a00c3",
+  "questions": [
+   {
+    "q": "Que l'auteur deconseille-t-il d'attendre de ces applications ?",
+    "choix": [
+     "Esperer que l'application fasse tout le travail d'economiser a votre place, ignorer la securite de vos donnees financieres, croire qu'une simple installation reglera magiquement vos problemes, et vous fier aveuglement aux recommandations commerciales integrees",
+     "Les utiliser plus d'une fois par semaine",
+     "Les connecter a plusieurs comptes a la fois",
+     "Les partager avec votre conjoint"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur rappelle que la discipline reste necessaire.",
+    "niveau": "application",
+    "page": 55
+   },
+   {
+    "q": "Par quelle comparaison l'auteur conclut-il ce chapitre ?",
+    "choix": [
+     "Gerer son argent, c'est comme aller au gymnase : c'est vous qui devez lever les poids, l'IA peut juste vous rappeler gentiment qu'il est temps de commencer a vous entrainer",
+     "L'IA est un entraineur qui ne se fatigue jamais",
+     "L'IA est une balance qui ne ment pas",
+     "L'IA est un carnet de bord automatique"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur rappelle que le vrai controle de son budget reste humain avant tout.",
+    "niveau": "restitution",
+    "page": 55
+   }
+  ]
+ },
+ {
+  "chapitre": "9414e12b",
+  "questions": [
+   {
+    "q": "Quelle reponse courte l'auteur donne-t-il a la question de savoir si l'IA va vous faire perdre votre emploi ?",
+    "choix": [
+     "Peut-etre, mais probablement pas comme vous le pensez",
+     "Non, les emplois qualifies sont proteges",
+     "Oui, dans la majorite des secteurs",
+     "Cela depend uniquement de votre employeur"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur souligne que c'est la question que des millions de travailleurs se posent en ce moment, l'IA n'etant plus un gadget de laboratoire.",
+    "niveau": "restitution",
+    "page": 57
+   },
+   {
+    "q": "Quel mythe l'auteur veut-il corriger ?",
+    "choix": [
+     "Le gros mythe est que l'IA va voler des emplois comme un voleur dans la nuit ; en realite, elle a plutot tendance a automatiser certaines taches",
+     "Le mythe selon lequel l'IA ne toucherait que l'industrie",
+     "Le mythe selon lequel l'IA creerait autant d'emplois qu'elle en detruit",
+     "Le mythe selon lequel l'IA remplacerait d'abord les cadres"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que l'IA transforme les emplois, et parfois les deplace.",
+    "niveau": "comprehension",
+    "page": 57
+   }
+  ]
+ },
+ {
+  "chapitre": "0f9e3fc5",
+  "questions": [
+   {
+    "q": "Comment l'exemple de l'adjointe administrative illustre-t-il la transformation des metiers ?",
+    "choix": [
+     "Des outils comme Copilot, Gemini ou ChatGPT peuvent rediger des courriels, generer des resumes de reunions et proposer des plages horaires, mais l'adjointe n'est pas inutile : elle doit apprendre a travailler avec ces outils pour se concentrer sur des taches plus strategiques et plus humaines",
+     "L'adjointe est remplacee par un assistant vocal",
+     "L'adjointe devient formatrice aupres de ses collegues",
+     "L'adjointe est reaffectee a d'autres services"
+    ],
+    "reponse": 0,
+    "explication": "L'adjointe de demain pourra adapter le ton des messages, detecter les tensions dans l'equipe, personnaliser les interactions et preserver les relations humaines.",
+    "niveau": "comprehension",
+    "page": 57
+   },
+   {
+    "q": "Quels metiers l'Institut du Quebec identifie-t-il comme les plus vulnerables a l'automatisation ?",
+    "choix": [
+     "La comptabilite de base, le service a la clientele surtout par clavardage, le travail des caissiers et des commis, la traduction simple, le traitement de donnees et la fabrication industrielle repetitive",
+     "Les metiers du transport et de la logistique",
+     "Les metiers du batiment et de la construction",
+     "Les metiers de la restauration et de l'hotellerie"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur precise que ces metiers ne vont pas disparaitre, mais que les entreprises en auront de moins en moins besoin.",
+    "niveau": "restitution",
+    "page": 58
+   },
+   {
+    "q": "Quelles taches l'adjointe de demain pourra-t-elle privilegier, selon l'auteur ?",
+    "choix": [
+     "Adapter le ton des messages, detecter les tensions dans l'equipe pour en informer son patron, personnaliser les interactions selon les preferences de chacun, et preserver les relations en gardant le contact humain vivant",
+     "Superviser le parametrage des outils",
+     "Former les nouveaux employes",
+     "Analyser les donnees de l'entreprise"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur souligne que les tensions d'equipe sont des choses que les agents conversationnels ne detecteront jamais.",
+    "niveau": "comprehension",
+    "page": 58
+   }
+  ]
+ },
+ {
+  "chapitre": "03142937",
+  "questions": [
+   {
+    "q": "Quels exemples quebecois d'automatisation l'auteur cite-t-il ?",
+    "choix": [
+     "Revenu Quebec a automatise en 2024 une partie de son service telephonique avec une IA conversationnelle, et la SAQ recommande des produits selon l'historique d'achat sans passer par un conseiller",
+     "Hydro-Quebec a automatise son service a la clientele",
+     "La Societe de transport a remplace ses guichetiers",
+     "Les caisses Desjardins ont ferme leurs comptoirs"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur illustre ainsi que l'automatisation touche deja des services publics et parapublics.",
+    "niveau": "restitution",
+    "page": 59
+   },
+   {
+    "q": "Quels metiers restent difficiles a remplacer, selon l'auteur ?",
+    "choix": [
+     "Les infirmieres, enseignantes, travailleuses sociales, chefs de chantier, artistes, educatrices en garderie et psychologues, dont les metiers impliquent des decisions complexes, de l'intuition, de l'ecoute, de l'empathie et des contacts humains",
+     "Les metiers exigeant un diplome universitaire",
+     "Les metiers de direction et de strategie",
+     "Les metiers manuels specialises"
+    ],
+    "reponse": 0,
+    "explication": "L'IA peut les assister en suggerant des plans d'intervention, en proposant des diagnostics ou en corrigeant des copies, mais elle ne peut pas gerer l'emotion, le jugement contextuel ni l'improvisation.",
+    "niveau": "comprehension",
+    "page": 59
+   },
+   {
+    "q": "Que remplace reellement l'IA dans le travail de bureau, selon l'auteur ?",
+    "choix": [
+     "Elle ne remplace pas les gens, mais ce qu'ils font de leur temps, ce qui veut dire que les employeurs peuvent leur demander de faire autre chose, d'en faire plus, ou d'etre plus rentables",
+     "Elle remplace les postes d'entree de gamme",
+     "Elle remplace les fonctions support",
+     "Elle remplace la moitie des taches de chaque poste"
+    ],
+    "reponse": 0,
+    "explication": "Des milliers de petites et moyennes entreprises utilisent deja des outils pour generer des textes marketing, resumer des reunions, creer des presentations, analyser des donnees et automatiser des reponses a la clientele.",
+    "niveau": "comprehension",
+    "page": 59
+   }
+  ]
+ },
+ {
+  "chapitre": "49729927",
+  "questions": [
+   {
+    "q": "Qui risque vraiment d'etre remplace, selon l'auteur ?",
+    "choix": [
+     "Ceux qui refusent d'apprendre a utiliser l'IA dans leur travail, non pas par une machine, mais par quelqu'un qui sait s'en servir",
+     "Ceux dont les taches sont les plus repetitives",
+     "Ceux qui travaillent dans les grandes organisations",
+     "Ceux qui n'ont pas de formation technique"
+    ],
+    "reponse": 0,
+    "explication": "L'auteur conclut que le meilleur moyen de ne pas perdre son emploi a cause de l'IA, c'est de la maitriser et d'apprendre a jouer avec.",
+    "niveau": "comprehension",
+    "page": 60
+   },
+   {
+    "q": "Quels atouts le Quebec possede-t-il en intelligence artificielle ?",
+    "choix": [
+     "Le Quebec est un leader mondial en recherche, avec des centres comme le MILA fonde par Yoshua Bengio, un des peres de l'apprentissage profond, et un ecosysteme incluant l'IVADO, HEC Montreal et le Creative Destruction Lab",
+     "Le Quebec detient les principaux brevets nord-americains",
+     "Le Quebec accueille les sieges sociaux des grands editeurs",
+     "Le Quebec forme le plus grand nombre d'ingenieurs du continent"
+    ],
+    "reponse": 0,
+    "explication": "MILA signifie Montreal Institute for Learning Algorithms, et IVADO l'Institut de valorisation des donnees.",
+    "niveau": "restitution",
+    "page": 60
+   },
+   {
+    "q": "Que revele le sondage KPMG sur l'adoption de l'IA par les organisations quebecoises ?",
+    "choix": [
+     "Les deux tiers des organisations quebecoises utilisaient activement l'IA en 2024, et pres de la moitie disaient l'avoir integree completement, un taux plus eleve que la moyenne canadienne",
+     "Un tiers des organisations avaient lance un projet pilote",
+     "L'adoption restait plus faible que la moyenne canadienne",
+     "La moitie des organisations envisageaient d'adopter l'IA en 2025"
+    ],
+    "reponse": 0,
+    "explication": "Jusqu'a recemment, on considerait l'adoption en entreprise comme timide, surtout dans les petites et moyennes entreprises.",
+    "niveau": "restitution",
+    "page": 60
+   }
+  ]
+ }
+]

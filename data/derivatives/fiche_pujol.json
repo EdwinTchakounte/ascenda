@@ -1,0 +1,78 @@
+{
+ "document_id": "5d3e936a-2aeb-4ac5-a1ef-e8561c59136e",
+ "titre_normalise": "La Planète invisible",
+ "auteurs": [
+  "René Pujol"
+ ],
+ "annee": 1930,
+ "type_ouvrage": "roman",
+ "niveau": "debutant",
+ "public_cible": "Lecteurs de science-fiction classique, curieux de l'imaginaire scientifique de l'entre-deux-guerres, enseignants cherchant un texte court et libre de droits. Paru en feuilleton dans la revue Sciences et Voyages du 18 septembre 1930 au 5 mars 1931 sous le titre La Planète mystérieuse, numérisé par la Bibliothèque numérique romande.",
+ "these_centrale": "Un inventeur solitaire, M. Lebisclot, a construit l'Astra, un astronef en cuivre propulsé par un « canon atomique » qui décolle en accélérant dans l'atmosphère plutôt qu'en étant tiré comme un obus. Avec l'ingénieur André Le Gall et un entomologiste embarqué clandestinement, il découvre un second satellite de la Terre invisible aux astronomes parce qu'un brouillard permanent y absorbe la lumière, et qu'y vit une faune géante, jusqu'à des êtres humanoïdes.",
+ "idees_force": [
+  {
+   "titre": "Une critique du canon de Jules Verne, argumentée par le récit",
+   "explication": "Lebisclot rejette explicitement le projectile : « Comment voulez-vous qu'un obus parvienne intact dans un astre quelconque ? Il s'écraserait en arrivant. » Il détaille l'échauffement par frottement, le choc de départ létal pour les occupants, et propose de « parvenir tranquillement au plus haut point possible avant de s'élancer dans l'espace ». Le roman prend au sérieux, en 1930, le problème du décollage assisté, l'intuition est juste même si la physique invoquée ne l'est pas.",
+   "page": 17
+  },
+  {
+   "titre": "Une science mêlée d'erreurs assumées et de vraies intuitions",
+   "explication": "Lebisclot nie l'existence du vide, « ce que vous nommez l'éther est sûrement un gaz d'une espèce inconnue », et affirme que la Terre a onze mouvements. Mais il cite les onze mille mètres par seconde de la vitesse de libération, il conçoit une double coque isolante, un plancher capitonné et des meubles fixés dans des alvéoles sur toutes les parois, plafond compris, en prévision d'un basculement en apesanteur. Le mélange est exactement celui de la vulgarisation scientifique de son temps.",
+   "page": 33
+  },
+  {
+   "titre": "L'invisibilité comme énigme scientifique et non comme magie",
+   "explication": "Le ressort du titre est rationnel : si les astronomes n'ont jamais repéré cet astre proche, c'est que son brouillard permanent « absorbe la lumière comme une éponge absorbe l'eau ». Lebisclot hésite entre deux hypothèses raisonnées, un second satellite terrestre ou une planète en deçà de l'orbite de Mars, et refuse la comète comme le météore. Le mystère est posé comme un problème d'observation.",
+   "page": 121
+  },
+  {
+   "titre": "La rencontre tourne au drame, et le roman s'en désole",
+   "explication": "Trois croix de Saint-André gravées sur la coque de cuivre révèlent la présence d'êtres pensants. Mais le premier contact avec les géants se solde par une mort. La réplique d'André Le Gall est le seul moment moral du livre, et il est net : « Nous ne nous connaissons pas et c'est déjà la guerre... la mort... Pourquoi ?... Pourquoi ?... »",
+   "page": 192
+  },
+  {
+   "titre": "Le diamant ne vaut que chez ceux « qui se croient civilisés »",
+   "explication": "Ayant ramassé des pierres énormes, Lebisclot conclut : « Une modeste boîte de bœuf en conserve nous sera plus utile que ce diamant. Il n'a de valeur que chez les peuples qui se croient civilisés. Rien n'est plus conventionnel. » Le roman glisse là une remarque sur le caractère conventionnel de la valeur, d'autant plus notable que le reste du livre ne remet nullement en cause la hiérarchie coloniale de son époque.",
+   "page": 209
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Roman scientifique",
+   "definition": "Appellation française du genre avant que « science-fiction » ne s'impose : un récit d'aventures dont le ressort est une hypothèse scientifique exposée et discutée dans le texte même."
+  },
+  {
+   "terme": "Canon atomique",
+   "definition": "Le moteur de l'Astra, jamais expliqué techniquement, le mot « atomique » sert de caution moderne en 1930, trois ans avant la découverte du neutron."
+  },
+  {
+   "terme": "Éther sidéral",
+   "definition": "Milieu supposé remplir l'espace, hypothèse abandonnée par la physique après Michelson-Morley en 1887 mais encore vivace dans la culture de vulgarisation. Lebisclot en fait un argument central de son projet."
+  },
+  {
+   "terme": "Noctiluques",
+   "definition": "Organismes marins bioluminescents. Pujol en fait le système d'éclairage de l'astronef, maintenus dans une solution chimique inspirée des travaux d'Alexis Carrel, une caution scientifique contemporaine."
+  },
+  {
+   "terme": "Vitesse de libération",
+   "definition": "Vitesse nécessaire pour échapper à l'attraction terrestre. Le texte l'évalue à plus de onze mille mètres par seconde, ce qui est correct, tout en construisant l'intrigue sur l'idée de la contourner."
+  },
+  {
+   "terme": "Feuilleton scientifique",
+   "definition": "Format de publication en épisodes hebdomadaires dans une revue de vulgarisation, qui impose un rythme de rebondissements et explique la structure en vingt-deux chapitres courts."
+  }
+ ],
+ "a_lire_si": "Vous voulez lire un texte de science-fiction française d'avant-guerre dans son jus, court, rapide, sans prétention, ou étudier comment la vulgarisation scientifique de 1930 imaginait le voyage spatial. C'est aussi, dans cette bibliothèque, l'un des rares ouvrages entièrement libres de droits : il peut être cité, extrait et diffusé sans restriction.",
+ "a_eviter_si": "Vous cherchez de la littérature au sens exigeant : les personnages sont des fonctions, l'écriture est celle du feuilleton hebdomadaire, et l'intrigue se résout par la fuite. Et vous devez savoir avant d'ouvrir le livre qu'il véhicule le racisme ordinaire de son époque, voir la mise en garde ci-dessous.",
+ "prerequis": [
+  "Aucun. Le texte est très accessible.",
+  "Une lecture avertie suppose de connaître le contexte colonial français de 1930, sans quoi la représentation des personnages non blancs risque d'être reçue comme un simple pittoresque."
+ ],
+ "controverses": [
+  "⚠️ Racisme colonial explicite. Les deux domestiques, Ali l'Arabe et Samba le Noir, sont des personnages subalternes ; Samba s'exprime en petit-nègre (« Ci cira tris rigolo », « Tout li monde descend »). Surtout, l'un des ressorts comiques du roman est que les géants extraterrestres fuient d'épouvante en voyant « sa face noire comme de l'ébène », n'ayant « jamais vu de nègre ». Le narrateur commente que « dans une autre circonstance, la chose eût été comique ». Ce n'est pas un détail : c'est la structure raciale de la France coloniale de 1930 inscrite dans le récit.",
+  "Ce texte n'a d'intérêt pédagogique que lu comme document historique. Dans une bibliothèque qui contient aussi Cheikh Anta Diop et Kwame Nkrumah, il gagne à être mis en regard de ce que ces auteurs écrivent précisément contre les représentations que ce roman reconduit sans y penser.",
+  "Les données scientifiques du texte sont fausses sur plusieurs points (négation du vide, onze mouvements terrestres, rotation des planètes), la Bibliothèque numérique romande a d'ailleurs ajouté une note corrective en bas de page sur les durées de rotation de Vénus, Mars et Jupiter.",
+  "Le titre du corpus (« La Planète invisible ») diffère du titre de parution en revue (« La Planète mystérieuse »)."
+ ],
+ "confiance": 0.88
+}

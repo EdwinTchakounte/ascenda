@@ -1,0 +1,104 @@
+{
+ "document_id": "8f9cffe4-d1e4-4c53-b045-6411ec28151d",
+ "titre_normalise": "La Vie algorithmique. Critique de la raison numérique",
+ "auteurs": [
+  "Éric Sadin"
+ ],
+ "annee": 2015,
+ "type_ouvrage": "essai",
+ "niveau": "avance",
+ "public_cible": "Lecteurs de philosophie et de sciences sociales, chercheurs, enseignants, militants du numérique. Publié dans la collection « Pour en finir avec » des Éditions L'Échappée, qui revendique des analyses radicales au sens littéral : qui visent la cause profonde.",
+ "these_centrale": "Le numérique n'est pas un outil neutre dont les usages seraient bons ou mauvais : il obéit depuis l'origine à un axiome unique, la maximisation automatisée de l'efficacité, et il est en train d'instaurer un régime où les données deviennent l'instance première de l'intelligibilité et de l'action. Sadin y voit moins une surveillance imposée d'en haut qu'un data-panoptisme entretenu de partout, au nom du confort, avec notre consentement.",
+ "idees_force": [
+  {
+   "titre": "Le numérique n'a jamais eu qu'un seul axiome : l'optimisation",
+   "explication": "Sadin refuse l'idée de deux histoires parallèles, l'une émancipatrice et l'autre marchande. Le principe fondateur a « dès l'origine été conçu en vue de répondre à un unique axiome : celui d'accéder à un surcroît automatisé d'efficacité et d'optimisation organisationnelles ». Il reprend Jacques Ellul : toute intervention technique est une réduction au schéma logique. Ce qu'on a pris pour une révolution était une rationalisation qui avançait masquée sous des interfaces ludiques.",
+   "page": 33
+  },
+  {
+   "titre": "Les données ne redoublent pas le réel, elles le remplacent",
+   "explication": "Le tournant que Sadin appelle « post-symbolique » ne produit pas un équivalent chiffré du monde à côté du monde : il « institue les données comme l'instance première et primordiale de l'intelligibilité et de l'action ». La décision devient data driven, et l'ancienne distinction entre l'avant et le maintenant se défait au profit d'un flux continu où résultats et actions s'engendrent mutuellement.",
+   "page": 64
+  },
+  {
+   "titre": "Le temps réel congédie la déduction au profit de l'induction corrélative",
+   "explication": "Le raisonnement déductif suppose une conclusion ; le processus inductif ne s'interrompt jamais, « la vérité en quelque sorte est toujours à venir ». Sadin décrit le passage d'une épistémè stable à un mode de connaissance qui suit indéfiniment l'écoulement des événements. Le temps réel n'est pas une commodité technique : c'est une condition qui réalise le vieux rêve occidental de maîtrise totale du cours des choses.",
+   "page": 106
+  },
+  {
+   "titre": "La mesure quanto-qualitative ferme toute ligne de fuite",
+   "explication": "La société de consommation était « un mode de vie partiel et découpé dans le temps » ; l'évaluation algorithmique, elle, s'étend à des pans toujours plus larges du social jusqu'à ne plus offrir d'échappatoire. Elle produit une régulation sociale impersonnelle : la chaîne des acteurs est indistincte, les procédures invisibles, ce qui interdit d'identifier une cause initiale ou un lieu où protester.",
+   "page": 116
+  },
+  {
+   "titre": "Big Brother est mort, le data-panoptisme l'a remplacé",
+   "explication": "C'est le renversement central du livre. La surveillance comme captation masquée et partielle se marginalise ; ce qui la remplace n'est « pas détenu par quelques figures omnipotentes, la NSA ou d'autres entités, mais entretenu et exploité de partout, avec pour objectif prioritaire d'offrir des services ». Sadin cite La Boétie : « D'où a-t-il tant d'yeux qui vous épient, si ce n'est de vous ? » Ce n'est plus une contrainte, c'est une servitude volontaire.",
+   "page": 169
+  },
+  {
+   "titre": "Le sublime computationnel exclut le sensible",
+   "explication": "Le prix de cette intelligibilité amplifiée est une double invisibilité : les processus techniques sont immatériels, et même la datavisualisation échoue à représenter ce qui se joue, Sadin prend l'exemple du trading algorithmique, dont l'activité dépasse nos facultés d'entendement. Il y voit un sublime kantien inversé : le sentiment de notre finitude nous revient à l'instant exact de notre plus grande puissance supposée.",
+   "page": 124
+  },
+  {
+   "titre": "Le Quantified Self est une confession chrétienne sécularisée",
+   "explication": "S'appuyant sur Foucault, Sadin lit l'auto-mesure comme un « redressement assisté de soi » : on se repent de ses excès alimentaires ou de son manque d'exercice comme on avouait ses péchés. Sous l'apparence de l'autonomie et de la performance se cache une fragilité inquiète, et les canons objectivés « découvrent des écarts qui appellent sans fin à être comblés », chaque victoire prépare la défaite suivante.",
+   "page": 146
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Datafication",
+   "definition": "Processus par lequel des pans toujours plus larges de la réalité, gestes, corps, trajets, humeurs, sont convertis en données exploitables. Chez Sadin, ce n'est pas un enregistrement du réel mais sa reconfiguration."
+  },
+  {
+   "terme": "Totalisation numérique",
+   "definition": "Mouvement d'ensemble par lequel capteurs, interopérabilité et géolocalisation suppriment progressivement les angles morts, jusqu'à une perception « virtuellement intégrale » des phénomènes."
+  },
+  {
+   "terme": "Data-panoptisme",
+   "definition": "Successeur de la surveillance numérique selon Sadin : un régime de visibilité totale qui n'est plus détenu par une instance centrale mais entretenu de partout, y compris par les surveillés eux-mêmes, au nom du service et du confort."
+  },
+  {
+   "terme": "Induction corrélative",
+   "definition": "Mode de connaissance qui, à la différence de la déduction, ne conclut jamais : il suit indéfiniment le flux des corrélations. Sadin le qualifie de « néo-héraclitéen » et y voit la forme épistémique propre au temps réel."
+  },
+  {
+   "terme": "Mesure quanto-qualitative",
+   "definition": "Évaluation qui ne se contente plus de compter mais qualifie, l'état émotionnel d'un client, la qualité d'une crème sur un type de peau donné. Elle étend le benchmarking à la vie entière selon des échelles modulaires."
+  },
+  {
+   "terme": "Sublime computationnel",
+   "definition": "Sentiment d'excès face à des systèmes que nous avons construits mais dont l'ampleur dépasse notre capacité de représentation. Référence au sublime kantien, retourné : la puissance technique nous rappelle notre finitude."
+  },
+  {
+   "terme": "Sur-mesure algorithmique",
+   "definition": "Régime où la plus grande liberté apparente de l'individu est soutenue et capitalisée par des systèmes qui l'anticipent en continu. La personnalisation n'est pas le contraire de la norme : elle en est la forme la plus efficace."
+  },
+  {
+   "terme": "Techno-pouvoir",
+   "definition": "Forme de pouvoir exercée non par la loi ni par la discipline mais par la conception même des dispositifs, portée par une classe d'ingénieurs et légitimée par l'idéologie de l'innovation. Son efficacité tient à l'invisibilité du computationnel."
+  },
+  {
+   "terme": "Normativité algorithmique",
+   "definition": "Production de normes par la recommandation plutôt que par la prescription. On n'interdit pas, on suggère, et la suggestion, personnalisée, est intériorisée comme un choix propre."
+  },
+  {
+   "terme": "Parlement des données",
+   "definition": "Proposition politique de Sadin en fin d'ouvrage : instituer une instance délibérative sur l'usage des données, pour sortir du face-à-face entre acteurs privés et individus isolés."
+  }
+ ],
+ "a_lire_si": "Vous voulez la formulation la plus rigoureuse en langue française de la critique du numérique comme rationalité, pas comme technologie. C'est le contrepoint indispensable à tout le reste de l'axe : là où Luc Julia dit « ce n'est qu'un outil » et Bostrom « c'est un agent futur dangereux », Sadin dit que le danger est déjà là, qu'il n'a pas besoin d'être intelligent, et qu'il est dans la forme même du calcul.",
+ "a_eviter_si": "Vous cherchez une lecture rapide ou des réponses opérationnelles. La prose est extrêmement dense, phrases longues, vocabulaire conceptuel emprunté à Ellul, Foucault, Kant, Illich, Weber, et le livre argumente sans jamais donner la parole à ses adversaires. Les propositions politiques n'arrivent qu'au chapitre VII et restent programmatiques. L'ouvrage date aussi de 2015 : il précède le RGPD, la régulation des plateformes et l'IA générative, et son exemple emblématique reste les Google Glass, produit qui a échoué.",
+ "prerequis": [
+  "Une familiarité avec le vocabulaire de la philosophie continentale rend le livre beaucoup plus lisible : Foucault (biopouvoir, technologies de soi), Ellul (le système technicien), le panoptique de Bentham.",
+  "Aucune connaissance technique n'est requise, Sadin ne décrit jamais un algorithme, il décrit un régime."
+ ],
+ "controverses": [
+  "Le désaccord frontal avec Luc Julia et les tenants de la neutralité technique : pour Sadin, l'idée que « tout dépend de l'usage » est précisément l'illusion à dissiper, puisque l'axiome d'optimisation est inscrit dans la conception même des dispositifs.",
+  "Le reproche le plus courant fait à Sadin : un déterminisme technologique qui laisse peu de place à l'appropriation, au détournement et à la résistance des usagers, pourtant abondamment documentés en sociologie des usages.",
+  "L'absence quasi totale de contre-exemples et de voix contradictoires dans un livre qui se présente comme une critique de la raison, le procédé rhétorique fait partie du projet éditorial de la collection, il n'en reste pas moins une limite argumentative.",
+  "Le statut de la prescription : « un parlement des données » suffit-il à répondre à un diagnostic aussi total ? Plusieurs lecteurs relèvent l'écart entre la radicalité du constat et la modestie des remèdes."
+ ],
+ "confiance": 0.84
+}

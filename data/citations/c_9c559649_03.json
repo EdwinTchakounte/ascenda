@@ -1,0 +1,68 @@
+[
+ {
+  "chapitre": "6a855b23",
+  "citations": [
+   {
+    "texte": "Pour faire croire aux gens que Siri était « intelligent », nous avons volontairement introduit une dose de stupidité.",
+    "page": 40,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La stupidité artificielle",
+    "portee": "Aveu du concepteur : le succès de Siri tient à une mise en scène de l'humanité, non à une supériorité technique. Antidote direct au mythe de la machine intelligente."
+   },
+   {
+    "texte": "comme on connaissait déjà le texte qui devait être lu, le reconnaisseur de la parole n'était là que pour confirmer et assister l'élève, et n'avait en rien besoin d'être parfait",
+    "page": 42,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Placer l'outil imparfait au bon endroit",
+    "portee": "Leçon de conception pédagogique : une technologie médiocre devient utile si le cas d'usage la décharge de ce qu'elle ne sait pas faire. Applicable à tout outil de lecture assistée."
+   },
+   {
+    "texte": "C'est donc bien à moi, utilisateur, de contrôler mes données et de décider de ce que j'en fais.",
+    "page": 57,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Qui décide du partage",
+    "portee": "Position d'un ingénieur qui a construit la plateforme : le contrôle doit être inscrit dans l'architecture, pas ajouté par la loi. À confronter au data-panoptisme de Sadin."
+   },
+   {
+    "texte": "chaque objet possède une fonction simple, mais quand on les fait interagir avec d'autres objets, ils deviennent eux mêmes plus intelligents",
+    "page": 63,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'intelligence naît de l'interaction",
+    "portee": "Définition non mystique de l'intelligence des systèmes : elle est un effet de composition, pas une propriété d'une machine isolée."
+   },
+   {
+    "texte": "l'addition de nos compétences nous rend plus performants que quand nous faisons les choses tout seuls dans notre coin",
+    "page": 63,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le modèle humain de la coopération",
+    "portee": "L'auteur tire du fonctionnement des objets connectés une règle de travail humain. Écho direct à son éloge des échanges de la Silicon Valley."
+   },
+   {
+    "texte": "je suis incapable de me faire une opinion sur les capacités techniques et humaines de quelqu'un pendant un entretien d'embauche d'une heure. C'est pour ça que j'aime beaucoup les stages : ce sont des entretiens d'embauche de six mois",
+    "page": 65,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Juger quelqu'un demande du temps",
+    "portee": "Pratique de recrutement à contre-courant, qui a permis à l'auteur de s'entourer de fidèles et de licencier très rarement. Utile à tout jeune qui cherche sa première place."
+   },
+   {
+    "texte": "pendant 20 % de votre temps, vous faites ce que vous voulez, sauf travailler sur les projets pour lesquels vous avez été embauché",
+    "page": 66,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le temps libre comme méthode",
+    "portee": "Règle instaurée avant que Google ne la popularise. L'effet observé fut inattendu : les équipes se sont mises à inventer ensemble des choses mises ensuite en production."
+   }
+  ]
+ },
+ {
+  "chapitre": "b5406b8d",
+  "citations": [
+   {
+    "texte": "Il tenait toujours à préciser que ces succès avaient été des aventures collectives avant tout. C'était quelqu'un de très modeste.",
+    "page": 67,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La modestie de l'inventeur de la souris",
+    "portee": "Portrait de Douglas Engelbart. Contrepoint au récit du génie solitaire qui domine les biographies de la technologie."
+   }
+  ]
+ }
+]

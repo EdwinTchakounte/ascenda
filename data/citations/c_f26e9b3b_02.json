@@ -1,0 +1,509 @@
+[
+ {
+  "chapitre": "2812ead3",
+  "citations": [
+   {
+    "texte": "Ces automates sont remarquables du fait que tous leurs mécanismes soient contenus dans leur corps (et non, par exemple, dans un meuble attenant), ce qui rend d’autant plus impressionnants leur programmation, leur miniaturisation et leur inoubliable caractère réaliste.",
+    "page": 70,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La miniaturisation avant l'electronique",
+    "portee": "Prouesse d'ingenierie qui prefigure l'integration des composants dans les machines modernes."
+   },
+   {
+    "texte": "On dit que, plus tard, il construisit deux mains artificielles pour un homme atteint de déformation congénitale.",
+    "page": 71,
+    "axe": "11-sciences-environnement",
+    "theme": "De l'automate a la prothese",
+    "portee": "Le savoir-faire du spectacle bascule vers la reparation du corps, premiere forme d'ingenierie medicale."
+   }
+  ]
+ },
+ {
+  "chapitre": "a5035446",
+  "citations": [
+   {
+    "texte": "« Le livre interroge la relation de l’homme à la technologie : sommes-nous en train de créer un monstre incontrôlable, de perdre notre humanité, notre compassion, notre capacité à ressentir des émotions et de l’empathie ? »",
+    "page": 72,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question de Frankenstein",
+    "portee": "Reformulation contemporaine, par Paolo Gallo, de ce que le roman de 1818 mettait deja en jeu."
+   },
+   {
+    "texte": "« Frankenstein repose sur l’idée que les humains vont intrinsèquement rejeter l’intelligence artificielle comme étant contre nature et étrange. Cela tient en grande partie à l’apparence particulièrement hors du commun du monstre de Frankenstein. (...) Mais qu’en est-il quand l’IA apparaît sous un jour meilleur, avec une véritable utilité ? »",
+    "page": 74,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le rejet et la seduction",
+    "portee": "Deplace le probleme : ce n'est pas la machine repoussante qui inquiete, mais celle qui plait."
+   },
+   {
+    "texte": "« La vie et la mort me parurent des limites idéales ; j’allais bientôt les franchir ; j’allais verser un torrent de lumière sur l’obscurité du monde. Une nouvelle génération me bénirait comme son créateur",
+    "page": 73,
+    "axe": "08-litterature-romans",
+    "theme": "L'orgueil de Victor Frankenstein",
+    "portee": "Le motif du createur qui se prend pour un dieu, matrice de tous les recits d'IA depuis."
+   }
+  ]
+ },
+ {
+  "chapitre": "57d6d47a",
+  "citations": [
+   {
+    "texte": "« On valorise les créatifs et leurs contributions au progrès culturel. De plus, un comportement créatif sous-entend un ensemble d’autres capacités intellectuelles, c’est pourquoi imiter de tels comportements est un véritable défi technique pour la recherche en Intelligence Artificielle.",
+    "page": 75,
+    "axe": "02-ia-technique-academique",
+    "theme": "La creativite comme frontiere",
+    "portee": "Explique pourquoi la creation artistique sert de test ultime aux systemes generatifs."
+   },
+   {
+    "texte": "en se servant de moyens computationnels ou artificiels, un ordinateur est capable de générer des designs et des produits qui, s’ils avaient été le fait d’un humain, auraient été qualifiés d’actes créatifs.",
+    "page": 76,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Definir la creativite par le resultat",
+    "portee": "Definition qui contourne la question de l'intention, et deplace le debat sur l'oeuvre elle-meme."
+   },
+   {
+    "texte": "D’après Winkel, si chaque performance durait cinq minutes, il faudrait plus de 138 trillions d’années pour que le componium joue l’ensemble des combinaisons musicales possibles !",
+    "page": 76,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La puissance de la combinatoire",
+    "portee": "Un mecanisme simple suffit a engendrer une variete que nulle vie humaine ne peut epuiser."
+   }
+  ]
+ },
+ {
+  "chapitre": "1e1685e1",
+  "citations": [
+   {
+    "texte": "On sait aujourd’hui que Babbage était en avance de près d’un siècle sur son époque et que les contextes politique et économique de son temps n’étaient pas en phase avec ses grands rêves.",
+    "page": 77,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'invention hors de son temps",
+    "portee": "Rappelle qu'une idee juste echoue quand les conditions materielles et politiques ne suivent pas."
+   },
+   {
+    "texte": "Bien qu’elle reçût l’aide de Babbage, on considère souvent Ada comme la première programmatrice informatique de l’humanité.",
+    "page": 79,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ada Lovelace",
+    "portee": "La premiere personne a avoir ecrit un programme etait une femme, un siecle avant le premier ordinateur."
+   }
+  ]
+ },
+ {
+  "chapitre": "26594605",
+  "citations": [
+   {
+    "texte": "Il se demande s’il est possible « d’imiter les mouvements gracieux de la Nature, tels que ceux produits par le vol des oiseaux ou l’activité de petits animaux. »",
+    "page": 80,
+    "axe": "08-litterature-romans",
+    "theme": "Imiter la grace du vivant",
+    "portee": "Programme esthetique autant que technique, qui traverse toute l'histoire des automates."
+   },
+   {
+    "texte": "Mais Owen a en quelque sorte un moment d’épiphanie en comprenant que la beauté du papillon est éternelle.",
+    "page": 81,
+    "axe": "08-litterature-romans",
+    "theme": "L'oeuvre survit a l'objet",
+    "portee": "Hawthorne separe la valeur de la creation de la fragilite de son support materiel."
+   }
+  ]
+ },
+ {
+  "chapitre": "738c39e6",
+  "citations": [
+   {
+    "texte": "convaincu que toute pensée humaine pouvait être réduite à une série de règles mathématiques et défendant l’idée que les machines puissent être un moyen de se substituer aux besognes humaines.",
+    "page": 82,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le pari de Boole",
+    "portee": "Postulat fondateur de la logique symbolique et, par ricochet, de l'informatique."
+   },
+   {
+    "texte": "Boole s’intéressait à la réduction de la logique en un algèbre simple n’utilisant que deux quantités, 0 et 1, et trois opérations basiques : et, ou et non.",
+    "page": 82,
+    "axe": "02-ia-technique-academique",
+    "theme": "Deux chiffres et trois operations",
+    "portee": "L'ensemble du numerique contemporain repose sur cette reduction radicale."
+   },
+   {
+    "texte": "« Personne n’aurait pensé, avant que cela ne soit prouvé, que les emblématiques processus d’algèbre, inventés comme des outils de calcul numérique, puissent exprimer chaque acte de pensée et fournir la grammaire et le vocabulaire d’un système complet de logique. »",
+    "page": 83,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'etonnement de De Morgan",
+    "portee": "Temoignage de la surprise que representait, pour ses contemporains, la formalisation de la pensee."
+   }
+  ]
+ },
+ {
+  "chapitre": "72f47a09",
+  "citations": [
+   {
+    "texte": "« Nous créons nos propres successeurs ; chaque jour nous améliorons la beauté et la délicatesse de leur organisation, chaque jour nous leur donnons un peu plus de puissance",
+    "page": 84,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Creer ses successeurs",
+    "portee": "Ecrite en 1863, la phrase de Samuel Butler enonce deja la these de la succession des especes techniques."
+   },
+   {
+    "texte": "« Le temps viendra où les machines seront les vraies maîtresses du monde et de ceux qui l’habitent. »",
+    "page": 84,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La prophetie de Butler",
+    "portee": "Formulation la plus ancienne et la plus nette du renversement de la hierarchie homme machine."
+   },
+   {
+    "texte": "« Si nous allons dans le sens de créer des machines qui apprennent et dont le comportement est modifié par l’expérience, alors nous devons accepter le fait que chaque degré d’indépendance que nous leur octroyons est un degré de potentielle désobéissance à nos volontés.",
+    "page": 85,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Autonomie et desobeissance",
+    "portee": "Norbert Wiener enonce le compromis fondamental de tout systeme apprenant : liberte contre controle."
+   }
+  ]
+ },
+ {
+  "chapitre": "80303cfa",
+  "citations": [
+   {
+    "texte": "des histoires mettant le plus souvent en scène un jeune inventeur qui échappe aux dangers grâce à son inventivité",
+    "page": 88,
+    "axe": "08-litterature-romans",
+    "theme": "Les Edisonades",
+    "portee": "Genre populaire qui installe l'ingeniosite technique comme vertu heroique."
+   },
+   {
+    "texte": "« Le travail d’Ellis nous offre un bon aperçu des mœurs de l’époque, de la manière dont on envisageait le futur et des changements qui s’opéraient. »",
+    "page": 88,
+    "axe": "08-litterature-romans",
+    "theme": "La fiction comme temoignage",
+    "portee": "Ce que l'on imagine du futur renseigne surtout sur le present qui l'imagine."
+   }
+  ]
+ },
+ {
+  "chapitre": "fa9a3e72",
+  "citations": [
+   {
+    "texte": "il représente en effet un bon test standardisé pour évaluer dans quelle mesure un robot intègre des capacités de fin raisonnement, en lien avec des perceptions et des manipulations.",
+    "page": 91,
+    "axe": "02-ia-technique-academique",
+    "theme": "Un jeu comme banc d'essai",
+    "portee": "Les casse-tetes simples servent d'etalon pour mesurer le raisonnement des machines."
+   },
+   {
+    "texte": "le jeu sert souvent à enseigner les algorithmes récursifs dans les cours de programmation informatique",
+    "page": 91,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Enseigner la recursivite",
+    "portee": "Exemple de la vertu pedagogique d'un objet concret pour transmettre une notion abstraite."
+   }
+  ]
+ },
+ {
+  "chapitre": "51aece4f",
+  "citations": [
+   {
+    "texte": "ces Edisonades nous donnent cependant un aperçu du mode de pensée de l’époque, chargé de préjugés, d’espoirs et d’ambitions.",
+    "page": 94,
+    "axe": "08-litterature-romans",
+    "theme": "Lire les prejuges d'une epoque",
+    "portee": "Invitation a lire les fictions techniques avec le recul critique qu'elles appellent."
+   }
+  ]
+ },
+ {
+  "chapitre": "55988eb8",
+  "citations": [
+   {
+    "texte": "« La connaissance, l’expérience, le discernement – l’esprit, pour ainsi dire – de l’opérateur à distance s’incarnaient dans la machine alors capable de se déplacer et d’effectuer toutes ses manœuvres avec raison et intelligence.",
+    "page": 96,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Les esprits d'emprunt",
+    "portee": "Tesla decrit en 1900 ce que nous appellerions aujourd'hui la telepresence et la commande a distance."
+   },
+   {
+    "texte": "« on pourrait même inventer un automate doté de son “propre esprit”, indépendant de tout opérateur, entièrement livré à lui-même et capable de mener une multitude d’actions et d’opérations en réponse à des stimuli extérieurs, comme s’il était doué d’intelligence. »",
+    "page": 96,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "L'automate autonome imagine par Tesla",
+    "portee": "Anticipation precise de l'agent autonome, un demi-siecle avant le mot intelligence artificielle."
+   },
+   {
+    "texte": "« Peu importe que l’automate soit en chair et en os, en bois ou en acier, du moment qu’il est capable de faire tout ce qu’on lui demande, comme un être intelligent. »",
+    "page": 97,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le substrat indifferent",
+    "portee": "Position fonctionnaliste avant la lettre : seul compte ce que le systeme fait, pas ce dont il est fait."
+   }
+  ]
+ },
+ {
+  "chapitre": "da3799df",
+  "citations": [
+   {
+    "texte": "« Je ne suis qu’une machine. Je ne peux pas être gentil, pas plus que désolé ou heureux. »",
+    "page": 100,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La machine qui se sait machine",
+    "portee": "Reponse de Tic-Tac qui pose, des 1907, la question de la sincerite affective des systemes conversationnels."
+   },
+   {
+    "texte": "L’émotion est-elle la différence majeure entre les humains et les machines ? Dans quelle mesure nos visions de l’IA et de ses limites sont-elles influencées par la littérature et le cinéma ?",
+    "page": 100,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que la fiction nous fait croire",
+    "portee": "Nos attentes envers l'IA sont largement formees par des recits, pas par des faits techniques."
+   },
+   {
+    "texte": "« Les cyborgs, les robots et autres êtres mécanisés sont essentiels pour comprendre les rêves technophiles et technophobes d’une époque ; ils incarnent nos craintes face à une emprise technologique",
+    "page": 100,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le robot comme miroir",
+    "portee": "Alex Goody fait des figures robotiques un revelateur des peurs et des desirs collectifs."
+   }
+  ]
+ },
+ {
+  "chapitre": "f74936e2",
+  "citations": [
+   {
+    "texte": "nous « n’usurpons pas de façon irrespectueuse le pouvoir [divin] de créer des âmes, pas plus que lorsque nous procréons des enfants ; dans les deux cas, nous sommes plutôt les instruments de Sa volonté, nous accueillons les âmes qu’Il crée. »",
+    "page": 101,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La reponse de Turing a l'objection theologique",
+    "portee": "Argument rarement cite qui montre Turing prenant au serieux la difficulte religieuse."
+   },
+   {
+    "texte": "Les résultats de ses expériences l’amenèrent à avancer que le poids de l’âme serait de vingt-et-un grammes. Hélas, ni lui ni personne ne parvint par la suite à reproduire ce résultat.",
+    "page": 102,
+    "axe": "11-sciences-environnement",
+    "theme": "Une experience non reproductible",
+    "portee": "Cas d'ecole : un resultat celebre reste sans valeur tant qu'il n'est pas reproduit."
+   },
+   {
+    "texte": "si l’on retire le volant d’une voiture, celle-ci réagit différemment, mais cela ne signifie pas pour autant qu’il n’y ait pas un conducteur à part.",
+    "page": 102,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'argument dualiste du volant",
+    "portee": "Montre qu'un meme fait experimental peut nourrir deux interpretations opposees."
+   }
+  ]
+ },
+ {
+  "chapitre": "a2bb3004",
+  "citations": [
+   {
+    "texte": "L’OCR désigne les procédés informatiques permettant la traduction d’images de textes imprimés ou dactylographiés en fichiers de texte.",
+    "page": 103,
+    "axe": "02-ia-technique-academique",
+    "theme": "Definition de l'OCR",
+    "portee": "Technologie discrete mais decisive pour rendre accessible le patrimoine ecrit numerise."
+   },
+   {
+    "texte": "le physicien irlandais Edmund Fournier d’Albe (1868-1933) avait inventé l’optophone, un outil qui permettait de convertir de nombreuses polices en sons pour les personnes aveugles grâce à des photocapteurs.",
+    "page": 104,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Lire par le son",
+    "portee": "Une des premieres technologies d'accessibilite, un siecle avant les lecteurs d'ecran."
+   }
+  ]
+ },
+ {
+  "chapitre": "f7b797f2",
+  "citations": [
+   {
+    "texte": "Le mot robot vient du tchèque robota, qui signifie corvée ou esclavage.",
+    "page": 106,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'etymologie de robot",
+    "portee": "Le mot lui-meme inscrit la machine dans le rapport de domination du travail contraint."
+   },
+   {
+    "texte": "Elle a poussé les gens à considérer les impacts de l’évolution des technologies d’IA, non seulement en matière d’emploi et de possible déshumanisation de la société, mais aussi de façon plus globale sur les dangers encourus par la race humaine.",
+    "page": 106,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le tournant de R.U.R",
+    "portee": "Une piece de theatre installe durablement les termes du debat public sur l'automatisation."
+   },
+   {
+    "texte": "« l’indéfinissable étincelle d’humanité tient aux sentiments et aux actes des êtres, et non pas à la manière dont ils ont été créés. »",
+    "page": 106,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce qui fait l'humanite",
+    "portee": "Critere moral et non biologique, qui ouvre la question des droits des entites artificielles."
+   }
+  ]
+ },
+ {
+  "chapitre": "5aaf380d",
+  "citations": [
+   {
+    "texte": "Le leitmotiv du film est que « le lien entre le cerveau et les muscles ne peut être que le cœur »",
+    "page": 109,
+    "axe": "08-litterature-romans",
+    "theme": "Le coeur entre le cerveau et les muscles",
+    "portee": "Formule de Metropolis qui oppose la mediation humaine a la rationalite technique pure."
+   },
+   {
+    "texte": "« l’humain commençant à ressembler à une machine, se transformant en sa création technologique, et la machine devenant humaine, avec nos pires défauts et aspects.",
+    "page": 110,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le double mouvement",
+    "portee": "Thomas Lombardo decrit la convergence inquietante des deux termes que l'on croyait opposes."
+   }
+  ]
+ },
+ {
+  "chapitre": "89ed7bed",
+  "citations": [
+   {
+    "texte": "Pour couper court à toute rumeur comme quoi un homme aurait été dissimulé dans un costume de robot, ses inventeurs avaient volontairement fait un trou dans son corps.",
+    "page": 112,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Prouver qu'il n'y a personne dedans",
+    "portee": "Echo direct au Turc mecanique : la demonstration technique doit desormais prouver son honnetete."
+   },
+   {
+    "texte": "Elektro fit naître des vocations d’ingénieurs chez bon nombre d’enfants aux États-Unis.",
+    "page": 113,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "L'effet d'une demonstration publique",
+    "portee": "Une machine spectaculaire peut faire plus pour les vocations qu'un programme scolaire."
+   }
+  ]
+ },
+ {
+  "chapitre": "13cd6ce1",
+  "citations": [
+   {
+    "texte": "nous vivons dans un monde où il sera de plus en plus difficile de savoir si la voix d’une personne en qui nous avons confiance (comme un associé, un proche, un enfant) émane vraiment de cette personne.",
+    "page": 114,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La voix volee",
+    "portee": "Enonce, avant que le mot deepfake ne se repande, le risque d'usurpation vocale."
+   },
+   {
+    "texte": "Que se passe-t-il quand on peut « voler » la voix de quelqu’un pour lui faire dire ce que l’on veut ?",
+    "page": 114,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La question de la preuve orale",
+    "portee": "Question decisive pour les societes ou la parole enregistree fait foi."
+   }
+  ]
+ },
+ {
+  "chapitre": "d122383a",
+  "citations": [
+   {
+    "texte": "(1) un robot ne peut porter atteinte à un être humain, ni, en restant passif, permettre qu’un être humain soit exposé au danger",
+    "page": 117,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La premiere loi de la robotique",
+    "portee": "Enonce fondateur de toute reflexion sur la securite des systemes autonomes."
+   },
+   {
+    "texte": "Les lois sont importantes et utiles du fait des multiples questions qu’elles soulèvent. Quelles autres lois pourrions-nous ajouter à celles d’Asimov ?",
+    "page": 118,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La valeur des lois d'Asimov",
+    "portee": "Leur interet n'est pas d'etre applicables mais de rendre visibles les dilemmes."
+   },
+   {
+    "texte": "Et si un terroriste se servait d’une multitude de robots pour faire du mal à des gens, sans qu’aucun robot n’ait connaissance du plan global, et donc sans enfreindre la première loi ?",
+    "page": 118,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La faille du plan distribue",
+    "portee": "Montre qu'une regle individuelle ne protege pas d'une nuisance repartie entre plusieurs agents."
+   }
+  ]
+ },
+ {
+  "chapitre": "419abdf3",
+  "citations": [
+   {
+    "texte": "Les discussions sont toujours en cours au sujet de l’éventuelle utilisation par la suite d’armes meurtrières autonomes qui pourraient effectivement choisir et attaquer des cibles militaires sans intervention humaine.",
+    "page": 119,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les armes autonomes",
+    "portee": "Etat du debat sur la delegation a une machine de la decision de tuer."
+   },
+   {
+    "texte": "Mais quelle part d’indépendance laisser à ces machines de combat ? À qui incomberait la responsabilité d’un robot attaquant une école par erreur ?",
+    "page": 120,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La responsabilite en cas d'erreur",
+    "portee": "Question juridique non resolue, centrale des qu'un systeme agit sans operateur."
+   },
+   {
+    "texte": "En 2015, un grand nombre d’experts ont signé une lettre mettant en garde contre les dangers d’un usage militaire d’armes offensives autonomes échappant au contrôle humain et pouvant aboutir à une course mondiale aux armes d’intelligence artificielle.",
+    "page": 120,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'appel de 2015",
+    "portee": "Mobilisation de scientifiques contre une course aux armements algorithmiques."
+   }
+  ]
+ },
+ {
+  "chapitre": "4c2a4818",
+  "citations": [
+   {
+    "texte": "Grâce à une période d’entraînement, où on commence au hasard puis on ajuste les poids et seuils, ces systèmes peuvent apprendre à effectuer des tâches, comme reconnaître une image d’éléphant",
+    "page": 121,
+    "axe": "02-ia-technique-academique",
+    "theme": "Comment un reseau apprend",
+    "portee": "Explication accessible de l'apprentissage supervise par ajustement des poids."
+   },
+   {
+    "texte": "des ordinateurs montrent leur capacité à apprendre sans avoir été explicitement programmés pour une tâche",
+    "page": 122,
+    "axe": "02-ia-technique-academique",
+    "theme": "Apprendre sans etre programme",
+    "portee": "Rupture decisive avec la programmation classique, ou chaque regle devait etre ecrite."
+   },
+   {
+    "texte": "« Le moment où les animaux ont développé des yeux a constitué un progrès évolutif important. Désormais, les ordinateurs ont des yeux. »",
+    "page": 122,
+    "axe": "02-ia-technique-academique",
+    "theme": "Les ordinateurs ont des yeux",
+    "portee": "Formule de Jeff Dean qui compare la vision par ordinateur a un saut evolutif."
+   }
+  ]
+ },
+ {
+  "chapitre": "9de9b716",
+  "citations": [
+   {
+    "texte": "« Le cerveau mécanique élargit les horizons de l’Homme »",
+    "page": 123,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "La presse decouvre l'ordinateur",
+    "portee": "Titre de 1946 qui montre que le vocabulaire du cerveau machine est aussi ancien que la machine."
+   },
+   {
+    "texte": "« Avec l’avènement du recours quotidien aux calculs complexes, la vitesse est devenue essentielle au point qu’aucune machine n’est aujourd’hui en mesure de répondre à l’ensemble des demandes des méthodes de calcul contemporaines.",
+    "page": 125,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le besoin de vitesse",
+    "portee": "Extrait du brevet de l'ENIAC : la demande de calcul precede et appelle la machine."
+   }
+  ]
+ },
+ {
+  "chapitre": "0e3060f5",
+  "citations": [
+   {
+    "texte": "« Ces machines ressemblent à ce que serait un cerveau s’il était fait de fer et de câbles plutôt que de chair et de nerfs. Il est donc normal de nommer ces machines des cerveaux mécaniques. »",
+    "page": 126,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Nommer la machine un cerveau",
+    "portee": "Analogie de 1949 dont nous n'avons toujours pas fini de mesurer les effets sur notre imaginaire."
+   },
+   {
+    "texte": "il était intéressant par les questions qu’il soulevait sur la pertinence de l’utilisation du terme cerveau et du mot pensant pour les ordinateurs. Beaucoup de ces questions résonnent encore aujourd’hui.",
+    "page": 126,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les mots que l'on emploie",
+    "portee": "Le choix du vocabulaire engage la maniere dont une societe se represente ses machines."
+   }
+  ]
+ }
+]

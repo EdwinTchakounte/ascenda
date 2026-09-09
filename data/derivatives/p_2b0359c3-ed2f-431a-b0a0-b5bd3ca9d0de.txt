@@ -1,0 +1,380 @@
+OUVRAGE : Intelligence artificielle et modelisation du risque de credit
+AUTEUR(S) : Karim Amzile
+ANNÉE : inconnue
+PAGES : 6
+AXE : IA Technique Academique
+SOMMAIRE :
+  (non structuré)
+
+[5/5 passages, 4648 tokens sur 4648]
+
+=== EXTRAITS ===
+
+[p. 1-3]
+Intelligence artificielle 
+et modélisation du risque 
+de crédit
+Karim Amzile
+Co llec t io n L’ ESPR I T ÉCO NO MI Q U E
+SÉR I E C O U R S P R I N C I PA U X
+LEDIT OUVRAGE EST EN VENTE
+CLIQUEZ-MOI POUR LE PAYER
+
+Karim Amzile 
+ 
+ 
+ 
+ 
+ 
+ 
+Intelligence artificielle et modélisation  
+du risque de crédit 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+LEDIT OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+
+9 
+Sommaire 
+ 
+Sommaire ................................................................................................... 5 
+liste des figures ........................................................................................ 10 
+liste des tableaux ...................................................................................... 11 
+liste des annexes ...................................................................................... 12 
+liste des abreviations ................................................................................ 14 
+liste des equations .................................................................................... 14 
+abstract ..................................................................................................... 17 
+resume ...................................................................................................... 17 
+introduction generale ............................................................................... 19 
+partie 1 : les soubassements theoriques pour guider une recherche de 
+modelisation du risque de credit. .................................................................. 27 
+chapitre 1 : soubassements theoriques et demarche methodologique de la 
+recherche ....................................................................................................... 29 
+section 1 : soubassements theoriques de la recherche scientifique .......... 29 
+section 2 : fondements theoriques de notre etude .................................... 43 
+conclusion chapitre 1 ............................................................................... 48 
+chapitre 2 : fondement theorique de la modelisation du risque de credit 49 
+section 1 : fondement theorique du risque de credit ................................ 50 
+section 2 : la reglementation de la modelisation du risque de credit ....... 70 
+conclusion chapitre 2 : ............................................................................. 80 
+chapitre 3 : les approches de modelisation du risque de credit ................ 81 
+section 1 : fondements theoriques de la modelisation du risque de 
+credit ............................................................................................................. 81 
+section 2 : la modelisation du risque de credit selon les methodes 
+statistiques classiques ................................................................................... 92 
+conclusion chapitre 3 ............................................................................. 106 
+conclusion partie 1 : ............................................................................... 107 
+partie 2 : la modelisation du risque de credit en utilisant les techniques du 
+data mining ................................................................................................. 109 
+chapitre 1 : data mining et modelisation du risque de credit ................. 111 
+section 1 : la modelisation du risque de credit en utilisant les methodes du 
+data mining : revue de litterature ................................................................ 112 
+section 2 : les processus du data mining et leurs applications dans la 
+modelisation du risque de credit ................................................................. 132 
+conclusion chapitre 1 : ........................................................................... 141 
+chapitre 2 : soubassements theoriques de la modelisation du risque de 
+credit................142 
+section 1 : methodologie de modelisation du risque de credit en utilisant 
+les techniques du data mining ..................................................................... 143 
+section 2 : fondements theoriques des methodes utilisees ..................... 149 
+conclusion chapitre 2 : ........................................................................... 172 
+LEDIT OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+
+---
+
+[p. 3-4]
+PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+19 
+Introduction générale  
+ 
+ 
+Les banques ont pour mission de protéger l’argent et d’autres objets de 
+valeur pour leurs clients, elles fournissent également des prêts, des services de 
+crédit et de paiement tel que les comptes courants et les chèques de caisse. Les 
+banques peuvent également offrir des produits d’investissement et 
+d’assurance ainsi qu’une vaste gamme de services financiers. 
+La nature même de l’activité bancaire est si sensible vu que plus de 80 % 
+de leur passif sont des dépôts de clients (Saunders, Cornet, 2005). Cependant, 
+les banques utilisent ces dépôts pour générer du crédit pour leurs emprunteurs, 
+ce qui est en fait une activité génératrice de revenus pour la plupart des 
+banques. 
+En outre, la création des crédits est la principale activité génératrice de 
+revenus pour les banques. Mais cette activité comporte d’énormes risques 
+pour le prêteur et l’emprunteur. Ce processus de création de crédit expose les 
+banques à un risque de défaut élevé qui pourrait entrainer des difficultés 
+financières. Tout de même, à côté d’autres services, les banques doivent créer 
+de crédits pour leurs clients afin de faire de l’argent, de croître et de survivre 
+à une concurrence féroce sur le marché. 
+Toutefois, le risque qu’un client ne remplisse pas ses obligations en vertu 
+du contrat à la date d’échéance ou à tout moment peut compromettre 
+grandement le bon fonctionnement des activités d’une banque. D’autre part, 
+une banque avec un risque de crédit élevé a un risque de faillite élevé qui met 
+les déposants en danger. 
+De ce fait, le risque de crédit est devenu un sujet de grande préoccupation 
+pour la plupart des autorités bancaires et des organismes de réglementation 
+bancaire, ainsi que le risque de crédit qui peut facilement et très probablement 
+conduit à la faillite de la banque, à cet effet une meilleure gestion dudit risque 
+aura des retombés tangibles sur les plus-values de la banque. 
+Le risque de crédit peut être défini comme étant la possibilité qu’un 
+emprunteur bancaire, qu’il soit particulier ou professionnel, ne remplisse pas 
+ses obligations conformément aux modalités convenues lors de la conclusion 
+du contrat de crédit.  
+Alors que l’objectif de la modélisation du risque de crédit est de maximiser 
+le taux de rendement ajusté du risque d’une banque, en maintenant 
+l’exposition au risque de crédit dans des paramètres acceptables. La 
+modélisation du risque de crédit a pour objectif d’assigner des clients à l’un 
+des deux groupes : solvable ou non-Solvable, étant donné qu’un client qui 
+appartient au groupe Solvable est considéré comme susceptible de rembourser 
+son obligation financière. 
+En effet, la modélisation du risque de crédit ou bien la gestion du risque de 
+crédit (GRC) est l'un des principaux processus des banques visant à évaluer, 
+LEDIT OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+
+---
+
+[p. 4-5]
+PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+27 
+Partie 1 : les soubassements théoriques pour guider une 
+recherche de modélisation du risque de crédit. 
+ 
+ 
+Un prêt est une dette et comme tous les instruments de dette, un prêt 
+implique la redistribution des actifs financiers au fil du temps, entre le prêteur 
+et l’emprunteur. L’emprunteur reçoit initialement une somme d’argent du 
+prêteur, qu’elle doit être remboursée, mais parfois pas toujours en versements 
+réguliers.  
+Cependant, chaque opération de crédit représente un service, qui est 
+généralement fourni en contrepartie d’une rémunération, connue sous le nom 
+d’intérêt sur la dette. Le prêteur peut soumettre l’emprunteur à certaines 
+restrictions appelées engagements de prêt. L’une des principales obligations 
+des établissements financiers est de fournir des prêts, qui sont généralement 
+la source de revenus des banques, les prêts bancaires et le crédit constituent 
+également l’un des moyens d’accroître la masse monétaire dans l’économie. 
+Ainsi, un établissement de crédit peut rencontrer différents types de risque 
+: risque de crédit, risque de marché (risque de taux d’intérêt, risque de change, 
+risque de modèle), risque opérationnel (risque de désastre, risque de fraude, 
+risque de traitement, risque technologique), risque de liquidité et risque 
+stratégique. 
+De nos jours, dans le secteur financier et précisément le secteur bancaire, 
+le risque majeur demeure le risque de crédit qui est également la forme la plus 
+ancienne du risque sur le marché des capitaux. Bien que la plupart des 
+banques, les prêts représentent la source la plus importante et la plus évidente 
+de risque de crédit. 
+Toutefois, les banques ont connu des difficultés au fil des années, et ce, 
+pour de nombreuses raisons, la principale cause de graves problèmes 
+bancaires demeure liée directement au laxisme des normes de crédit pour les 
+emprunteurs et les contreparties et à la mauvaise gestion du risque de 
+portefeuille, ou un manque d’attention à l’évolution des circonstances 
+économiques ou autres pouvant conduire à une détérioration de la qualité de 
+crédit des contreparties d’un établissement de crédit.  
+En outre, d’autres sources de risque de crédit existent tout au long des 
+activités d’une banque, y compris dans le portefeuille bancaire, tant au bilan 
+qu’à l’extérieur. Les banques sont de plus en plus confrontées au risque de 
+crédit (ou au risque de contrepartie) dans divers instruments financiers autres 
+que les prêts, y compris les transactions interbancaires, le financement des 
+opérations commerciales, les opérations de change, les contrats financiers à 
+terme, les swaps, les obligations, les actions, les options, et dans l’extension 
+des engagements et des garanties, et le règlement des transactions. 
+CROUHY, 2000 affirme que le risque de crédit et la codification des 
+relations entre prêteurs et emprunteurs étaient déjà au cœur des préoccupations 
+LEDIT OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+
+---
+
+[p. 5-6]
+PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+29 
+Chapitre 1 : soubassements théoriques et démarche 
+méthodologique de la recherche 
+ 
+Les études de recherche constituent des processus complexes visant à 
+résoudre des problèmes donnés. Cependant, leurs résultats peuvent être de 
+nature cognitive. Toutefois, la recherche peut être effectuée en vue d'aboutir à 
+des objectifs pratiques déterminés, réalisés dans toutes les branches, ainsi la 
+recherche se compose d'éléments figés, à savoir l'analyse et la synthèse. 
+Cependant, l'apport des éléments particuliers dépend du caractère des 
+phénomènes examinés. 
+Par conséquent, tout travail de recherche est une production de la 
+connaissance. Quel que soit, peu ou trop investigué, dans lequel 
+éventuellement, des travaux ont été développés. La condition d’un travail de 
+recherche est d’apporter une valeur ajoutée à l’édifice de la connaissance dans 
+tel ou tel domaine. (Source : http://www.babounia.com/mdr.pdf) 
+Toutefois, pour qu’une recherche en sciences de gestion progresse, il est 
+important que les chercheurs évaluent les méthodes qu'ils utilisent. Les 
+retombées des études de gestion dépendent de la pertinence et de la rigueur 
+des méthodes de recherche choisies. Les choix de conception concernant 
+l'instrumentation, l'analyse des données, la validation des concepts, etc. 
+Peuvent affecter les types de conclusions tirées (Sackett et al., 1990). 
+Dans ce chapitre nous allons présenter les principes qui influent sur le 
+choix de la piste d'une recherche scientifique et de donner une image globale 
+des positions épistémologiques et méthodologiques possibles dans les 
+sciences de gestion, ainsi que des différentes méthodes et techniques 
+susceptibles d'être utilisées au cours des étapes d’un travail de recherche, et 
+bien évidemment aussi dans le présent travail. 
+ 
+Section 1 : soubassements théoriques de la recherche 
+scientifique  
+1 
+ Type de recherche scientifique 
+ 
+Une panoplie de classification du type de recherche est distinguée par les 
+chercheurs. Néanmoins, une des classifications de la recherche peut être 
+présentée en termes du résultat obtenu de l’étude. Différents types d’études 
+peuvent être planifiés à savoir :  
+• 
+Étude exploratoire, 
+• 
+Étude descriptive,  
+• 
+Étude analytique :  
+o 
+Explicative et confirmative,  
+ 
+LEDIT OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER
+
+---
+
+[p. 6-6]
+PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYERLEDIT 
+OUVRAGE EST EN VENTE 
+CLIQUEZ-MOI POUR LE PAYER

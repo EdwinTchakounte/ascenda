@@ -1,0 +1,142 @@
+{
+ "document_id": "14bcabb9-f0ba-4885-b494-7dd575b647c4",
+ "titre_normalise": "Lexique de l'intelligence artificielle",
+ "auteurs": [
+  "Julie Stein"
+ ],
+ "annee": 2020,
+ "type_ouvrage": "lexique",
+ "niveau": "debutant",
+ "public_cible": "Enseignants, animateurs, formateurs, élèves, toute personne qui doit fixer un vocabulaire commun avant de discuter d'intelligence artificielle. Quatre pages, une soixantaine d'entrées, sous licence Creative Commons attribution. Plusieurs définitions sont reprises du glossaire informatique évolutif initié par Pierre-Yves Oudeyer et Didier Roy, de l'Inria.",
+ "these_centrale": "Un vocabulaire précis est le premier outil de résistance au discours flou. Ce lexique définit en une ou deux phrases chaque terme du débat public sur l'intelligence artificielle, en distinguant systématiquement ce qui existe de ce qui relève de la croyance. Deux entrées le résument : l'intelligence artificielle forte y est définie comme n'existant pas à ce jour et étant une croyance, et la singularité y est appelée mythe de la singularité.",
+ "idees_force": [
+  {
+   "titre": "Un algorithme est une recette de cuisine",
+   "explication": "Suite finie et non ambiguë d'opérations permettant de résoudre une classe de problèmes. La comparaison à la recette est développée jusqu'au bout : mettre de l'eau dans une casserole, la chauffer, si l'eau bout y plonger les pâtes, sinon ne pas les y mettre. Cette image contient déjà la séquence, la condition et le résultat, c'est-à-dire l'essentiel.",
+   "page": 1
+  },
+  {
+   "titre": "Les deux grandes approches nommées et opposées",
+   "explication": "L'approche symbolique spécifie le problème sous forme de symboles et de règles de transformation, c'est celle des systèmes experts. L'approche numérique ou connexionniste représente l'information par des nombres et la traite dans un réseau d'unités de calcul élémentaires que l'on entraîne par exemples jusqu'à minimiser les erreurs. Toute l'histoire du domaine tient dans l'alternance entre ces deux familles.",
+   "page": 1
+  },
+  {
+   "titre": "L'intelligence artificielle forte est présentée comme une croyance",
+   "explication": "Le lexique la définit comme une intelligence qui serait capable de copier les aptitudes humaines, apprendre, comprendre, raisonner, décider, avoir une conscience et des émotions, et ajoute immédiatement qu'à ce jour elle n'existe pas, que c'est une croyance. L'intelligence artificielle faible, la seule réelle, y est décrite comme un algorithme apprenant, dépourvu de capacités mentales, mais capable d'accomplir une tâche précise avec une grande efficacité.",
+   "page": 3
+  },
+  {
+   "titre": "Les hivers de l'IA sont datés",
+   "explication": "Deux périodes précises, de 1974 à 1980 et de 1987 à 1995, pendant lesquelles la recherche a cessé d'intéresser les médias après avoir déçu par rapport aux mythes qui l'accompagnaient. Cette formulation dit l'essentiel : ce n'est pas la recherche qui s'est effondrée, c'est l'écart entre la promesse et le résultat qui s'est retourné contre elle.",
+   "page": 3
+  },
+  {
+   "titre": "La distinction entre robot et automate",
+   "explication": "Un robot interagit physiquement avec son environnement au moyen de capteurs pour percevoir et d'effecteurs pour agir, et à la différence d'un automate il agit en fonction de ce qu'il perçoit. La distinction est nette et évite la confusion la plus fréquente.",
+   "page": 4
+  },
+  {
+   "titre": "Généralisation, l'exigence réelle",
+   "explication": "Capacité d'un mécanisme d'apprentissage à fonctionner non sur les données de son apprentissage mais sur des données jamais rencontrées. Toute évaluation sérieuse d'un système se ramène à cette question, et c'est elle que les démonstrations commerciales évitent.",
+   "page": 3
+  },
+  {
+   "titre": "Trois mots pour distinguer imiter, innover et inventer",
+   "explication": "Imiter, c'est reproduire ce qui existe. Innover, c'est apporter une réponse nouvelle en améliorant l'existant. Inventer, c'est créer en rupture avec l'existant. Trois définitions courtes qui permettent de poser correctement la question de la créativité des machines au lieu de la trancher par l'enthousiasme.",
+   "page": 3
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Algorithme",
+   "definition": "Suite finie et non ambiguë d'opérations permettant de résoudre une classe de problèmes."
+  },
+  {
+   "terme": "Anthropomorphisme",
+   "definition": "Attribution de caractéristiques et de réactions humaines à ce qui ne l'est pas. Biais central de toute discussion sur les machines."
+  },
+  {
+   "terme": "Approche symbolique",
+   "definition": "Résolution par manipulation de symboles selon des règles explicites, méthode des systèmes experts."
+  },
+  {
+   "terme": "Approche connexionniste",
+   "definition": "Traitement numérique de l'information dans un réseau d'unités de calcul entraînées par exemples."
+  },
+  {
+   "terme": "Apprentissage supervisé",
+   "definition": "Apprentissage sur des exemples annotés, où la réponse attendue accompagne chaque exemple."
+  },
+  {
+   "terme": "Apprentissage par renforcement",
+   "definition": "Apprentissage par retour positif ou négatif sur le résultat, sans que la raison soit explicitée."
+  },
+  {
+   "terme": "Big data",
+   "definition": "Techniques d'analyse statistique de très grandes bases de données pour en détecter les régularités, et par extension ensembles trop volumineux pour les outils classiques."
+  },
+  {
+   "terme": "Capteur",
+   "definition": "Dispositif qui mesure une grandeur physique et la traduit en nombres exploitables par un algorithme."
+  },
+  {
+   "terme": "Effecteur",
+   "definition": "Dispositif qui traduit des valeurs numériques en action physique, commande d'un moteur par exemple."
+  },
+  {
+   "terme": "Effet boîte noire",
+   "definition": "Système dont le fonctionnement n'est pas explicité, ce qui interdit d'interpréter ses résultats."
+  },
+  {
+   "terme": "Explicabilité",
+   "definition": "Possibilité de comprendre sur quoi se fonde le résultat d'un calcul."
+  },
+  {
+   "terme": "Généralisation",
+   "definition": "Capacité d'un système appris à fonctionner sur des données qu'il n'a jamais vues."
+  },
+  {
+   "terme": "Hiver de l'IA",
+   "definition": "Périodes de désintérêt, 1974 à 1980 et 1987 à 1995, consécutives à des promesses déçues."
+  },
+  {
+   "terme": "Intelligence artificielle forte",
+   "definition": "Machine qui aurait toutes les aptitudes humaines, y compris la conscience. N'existe pas ; le lexique la qualifie de croyance."
+  },
+  {
+   "terme": "Intelligence artificielle faible",
+   "definition": "Algorithme apprenant, sans capacité mentale, très efficace sur une tâche précise. C'est la seule qui existe."
+  },
+  {
+   "terme": "Mythe de la singularité",
+   "definition": "Croyance selon laquelle l'apparition d'une intelligence artificielle forte déclencherait un emballement technologique aux conséquences imprévisibles."
+  },
+  {
+   "terme": "Biais cognitifs",
+   "definition": "Facteurs psychiques, moraux, culturels ou sociaux qui influencent nos modes de pensée."
+  },
+  {
+   "terme": "Stéréotype",
+   "definition": "Image admise et véhiculée d'un sujet dans un cadre de référence donné, souvent caricaturale."
+  },
+  {
+   "terme": "Robot",
+   "definition": "Machine qui perçoit par des capteurs, agit par des effecteurs, et adapte son comportement à ce qu'elle perçoit."
+  },
+  {
+   "terme": "Pixel",
+   "definition": "Case élémentaire d'une image numérique divisée en lignes et colonnes, contraction de picture element."
+  },
+  {
+   "terme": "Sciences cognitives",
+   "definition": "Discipline décrivant, expliquant et simulant les mécanismes de tout système complexe de traitement de l'information."
+  }
+ ],
+ "a_lire_si": "Vous préparez un cours, un atelier ou une note d'orientation et vous voulez fixer le vocabulaire avant d'entrer dans le fond. Le document est court, libre de droits sous condition d'attribution, et peut donc être distribué, imprimé, traduit ou adapté. Pour une plateforme de lecture guidée, c'est la ressource d'entrée idéale : elle peut être remise à tout lecteur sans contrainte juridique.",
+ "a_eviter_si": "Vous cherchez des explications développées : ce sont des définitions d'une à trois phrases, sans exemples ni démonstration. Quelques entrées sont trop générales pour être utiles telles quelles, notamment celles qui portent sur l'émotion, la créativité ou l'éthique.",
+ "prerequis": [],
+ "controverses": [
+  "Le lexique tranche explicitement deux débats en les qualifiant : l'intelligence artificielle forte est une croyance, la singularité est un mythe. Ce parti pris est défendable et cohérent avec la position de la recherche académique française, mais c'est un parti pris, et il faut le présenter comme tel."
+ ],
+ "confiance": 0.9
+}

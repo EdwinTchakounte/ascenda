@@ -1,0 +1,353 @@
+[
+ {
+  "chapitre": "dd4dc397",
+  "citations": [
+   {
+    "texte": "« la Fée Bleue fait partie de ce grand défaut qu’ont les humains de désirer des choses qui n’existent pas, ou du seul plus grand don humain – la capacité à poursuivre nos rêves. Et c’est une chose qu’aucune machine n’avait jamais faite avant toi. »",
+    "page": 239,
+    "axe": "08-litterature-romans",
+    "theme": "Desirer ce qui n'existe pas",
+    "portee": "Le desir de l'impossible presente a la fois comme le defaut et le don propre a l'humanite."
+   },
+   {
+    "texte": "un androïde n’est rien de plus qu’« une marionnette dont les ficelles sont tirées par un programme informatique »",
+    "page": 239,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La these de Roger Ebert",
+    "portee": "Position sceptique qui refuse d'accorder une vie interieure a ce qui n'est qu'execution de code."
+   },
+   {
+    "texte": "« Nous nous mesurons aux robots, en essayant de définir ce qui fait de nous des humains, en craignant que même alors que nous nous robotisons, nos créations ne deviennent de plus en plus humaines et finissent par nous surpasser ou nous remplacer.",
+    "page": 240,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le double mouvement d'Andrew Gordon",
+    "portee": "Nous nous mecanisons a mesure que nos machines s'humanisent : la crainte tient a ce croisement."
+   }
+  ]
+ },
+ {
+  "chapitre": "81d133e4",
+  "citations": [
+   {
+    "texte": "l’awari est un exemple intéressant : c’est un jeu de société africain vieux de trois mille cinq cents ans.",
+    "page": 241,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Un jeu africain millenaire",
+    "portee": "L'awari inscrit l'Afrique dans la longue histoire des jeux de strategie etudies par la recherche en IA."
+   },
+   {
+    "texte": "« A-t-on gâché un jeu tout à fait intéressant ? » demandent Romein et Bal. « Ce n’est pas notre avis. Le jeu Puissance 4 a lui aussi été résolu, et les gens continuent à y jouer.",
+    "page": 242,
+    "axe": "07-afrique-histoire-pensee",
+    "theme": "Resoudre n'est pas detruire",
+    "portee": "Un jeu resolu par la machine garde sa valeur pour ceux qui le pratiquent."
+   }
+  ]
+ },
+ {
+  "chapitre": "826ef59d",
+  "citations": [
+   {
+    "texte": "au fur à mesure que ces appareils gagnent en sophistication, des questions liées à la protection de la vie privée émergent.",
+    "page": 245,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le robot domestique et la vie privee",
+    "portee": "Un objet banal du foyer devient un capteur, avec tout ce que cela implique."
+   },
+   {
+    "texte": "la police pourrait peut-être même interroger de tels robots au cours de ses enquêtes criminelles.",
+    "page": 246,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le temoin mecanique",
+    "portee": "Perspective juridique inedite : l'appareil menager comme source de preuve."
+   }
+  ]
+ },
+ {
+  "chapitre": "6256be58",
+  "citations": [
+   {
+    "texte": "Même en donnant à des IA très intelligentes et compétentes des buts utiles, nous ne sommes pas à l’abri d’obtenir des résultats dangereux à l’avenir.",
+    "page": 247,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le danger des buts utiles",
+    "portee": "Enonce le probleme de l'alignement : le risque ne vient pas de la malveillance mais de l'obeissance."
+   },
+   {
+    "texte": "il vise à attirer notre attention sur le fait, très sérieux, que l’IA puisse avoir des motivations différentes de celles des humains que nous pouvons vraiment comprendre.",
+    "page": 247,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Des motivations etrangeres",
+    "portee": "Justifie pourquoi un scenario absurde reste un outil de reflexion serieux."
+   },
+   {
+    "texte": "Comment les humains pourraient-ils s’assurer que les objectifs de l’IA, les récompenses mathématiques qui les constituent et leurs fonctions utilitaires restent stables et compréhensibles au fil des décennies et des siècles ?",
+    "page": 247,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La stabilite des objectifs dans la duree",
+    "portee": "Question de gouvernance a long terme, rarement posee dans les debats immediats sur l'IA."
+   }
+  ]
+ },
+ {
+  "chapitre": "5eb91b14",
+  "citations": [
+   {
+    "texte": "Après avoir perdu trois parties sur cinq, Boys affirma : « Mieux vaut encore être un humain qu’un ordinateur. »",
+    "page": 249,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La reponse du vaincu",
+    "portee": "Reponse d'un champion qui deplace la valeur de la performance vers la condition."
+   },
+   {
+    "texte": "Le Scrabble, comme le poker, est considéré comme un jeu à information imparfaite : nous ne voyons pas les jetons de l’adversaire.",
+    "page": 250,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'information imparfaite",
+    "portee": "Distinction technique qui separe les jeux resolus des jeux ou l'incertitude demeure."
+   }
+  ]
+ },
+ {
+  "chapitre": "429fd49a",
+  "citations": [
+   {
+    "texte": "« Je m’imaginais comme le Grand Espoir à base de Carbone face à une nouvelle génération de machines pensantes. (...)»",
+    "page": 251,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "Le champion humain",
+    "portee": "Ken Jennings decrit avec humour la charge symbolique dont un joueur se sent investi."
+   },
+   {
+    "texte": "Mon petit cerveau, qui n’est rien de plus que de l’eau, des sels et des protéines, a tenu bon face à un superordinateur valant des millions et des millions de dollars.",
+    "page": 252,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "La mesure de la defaite",
+    "portee": "Facon juste de perdre : rapporter la performance aux moyens engages de part et d'autre."
+   }
+  ]
+ },
+ {
+  "chapitre": "6ab7016a",
+  "citations": [
+   {
+    "texte": "« La vision est l’art de voir les choses invisibles. »",
+    "page": 253,
+    "axe": "08-litterature-romans",
+    "theme": "Voir l'invisible",
+    "portee": "Formule de Swift qui sert de fil aux formes d'art produites avec l'aide des machines."
+   },
+   {
+    "texte": "la ressemblance entre les œuvres d’art créées par DeepDream et les hallucinations vécues par les consommateurs de certaines substances psychotropes laisse penser que DeepDream pourrait aider les chercheurs à mieux comprendre les liens entre les réseaux de neurones artificiels et les véritables réseaux de neurones du cortex visuel de notre cerveau.",
+    "page": 255,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce que la machine dit du cerveau",
+    "portee": "Le modele artificiel devient instrument d'etude du modele biologique dont il s'inspirait."
+   }
+  ]
+ },
+ {
+  "chapitre": "bde20892",
+  "citations": [
+   {
+    "texte": "« La chose la plus importante au sujet de la production de machines, c’est qu’elles ne penseront pas comme nous »",
+    "page": 256,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Elles ne penseront pas comme nous",
+    "portee": "Correction decisive du recit dominant : l'enjeu n'est pas l'imitation mais l'alterite."
+   },
+   {
+    "texte": "« IA pourrait tout aussi bien signifier Intelligence Alien.",
+    "page": 256,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Intelligence etrangere",
+    "portee": "Renomme le champ pour en changer la perspective : rencontrer plutot que fabriquer."
+   },
+   {
+    "texte": "Certaines pensées sont impensables, certaines visions ne peuvent être qu’entrevues.",
+    "page": 257,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Les limites de notre entendement",
+    "portee": "Rappel d'humilite : notre cognition est un instrument fini, pas une mesure universelle."
+   }
+  ]
+ },
+ {
+  "chapitre": "4e3d611f",
+  "citations": [
+   {
+    "texte": "« À l’heure actuelle, Mars est entièrement peuplée de robots », dit le planétologue Raymond Francis, « et l’un d’eux est suffisamment intelligent pour décider par lui-même quoi viser avec son laser. »",
+    "page": 258,
+    "axe": "11-sciences-environnement",
+    "theme": "Une planete peuplee de robots",
+    "portee": "Etat de fait remarquable : la seule presence intelligente connue sur Mars est artificielle."
+   },
+   {
+    "texte": "« Le logiciel – seulement environ vingt mille lignes de code parmi les 3,8 millions qui font tourner Curiosity – a transformé un robot à propulsion nucléaire à six roues, de la taille d’une voiture, en un scientifique de terrain. »",
+    "page": 261,
+    "axe": "11-sciences-environnement",
+    "theme": "Vingt mille lignes de code",
+    "portee": "Un ajout logiciel minime change la nature de la machine : d'executant a chercheur."
+   }
+  ]
+ },
+ {
+  "chapitre": "21059a90",
+  "citations": [
+   {
+    "texte": "le nombre de positions possibles autorisées est bien supérieur au nombre d’atomes dans l’univers visible !",
+    "page": 262,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'immensite du go",
+    "portee": "Explique pourquoi la force brute est inoperante et pourquoi le go a resiste si longtemps."
+   },
+   {
+    "texte": "En un sens, AlphaGo Zero découvrit ou déduisit des millénaires de connaissance humaine, de créativité et d’entraînement ; puis, en l’espace de quelques jours, inventa des méthodes supérieures.",
+    "page": 264,
+    "axe": "02-ia-technique-academique",
+    "theme": "Des millenaires en quelques jours",
+    "portee": "Moment ou l'accumulation culturelle humaine cesse d'etre un avantage decisif."
+   },
+   {
+    "texte": "« tout le monde s’accorde à dire qu’on a l’impression qu’une civilisation extraterrestre a déposé parmi nous un énigmatique manuel : un manuel exceptionnel, du moins pour ce qui est des parties que nous comprenons. »",
+    "page": 264,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Un manuel que l'on ne comprend qu'en partie",
+    "portee": "L'IA produit un savoir utilisable dont la justification nous echappe : condition nouvelle du savoir."
+   }
+  ]
+ },
+ {
+  "chapitre": "69c90166",
+  "citations": [
+   {
+    "texte": "Par rapport à des chirurgiens humains, les points de suture de STAR étaient beaucoup plus réguliers et formèrent un intestin plus résistant aux fuites au niveau des coutures.",
+    "page": 265,
+    "axe": "11-sciences-environnement",
+    "theme": "La regularite de la machine",
+    "portee": "Premier cas documente ou un geste chirurgical autonome depasse la main humaine."
+   },
+   {
+    "texte": "Dans le domaine émergent de la téléchirurgie, des instruments robotisés connectés à des réseaux haut débit permettent à un chirurgien d’opérer un patient à distance.",
+    "page": 266,
+    "axe": "11-sciences-environnement",
+    "theme": "Operer a distance",
+    "portee": "Perspective decisive pour les regions ou les chirurgiens specialises sont rares."
+   }
+  ]
+ },
+ {
+  "chapitre": "da75d43e",
+  "citations": [
+   {
+    "texte": "Ici, les joueurs disposent d’une information imparfaite, ce qui rend le jeu particulièrement complexe pour les ordinateurs et nécessite une forme d’« intuition » pour déterminer quelles sont les stratégies gagnantes.",
+    "page": 268,
+    "axe": "02-ia-technique-academique",
+    "theme": "Une intuition calculee",
+    "portee": "Le poker oblige la machine a produire l'equivalent fonctionnel de ce que nous appelons intuition."
+   },
+   {
+    "texte": "Les IA capables de gérer des informations imparfaites peuvent être utiles dans de nombreuses situations réelles, comme pour deviner le prix de vente effectif d’une maison ou négocier le prix d’une nouvelle voiture.",
+    "page": 269,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "De la table de jeu a la negociation",
+    "portee": "Ce qui s'apprend au poker se transpose a toute transaction ou l'information est cachee."
+   }
+  ]
+ },
+ {
+  "chapitre": "ccc68353",
+  "citations": [
+   {
+    "texte": "Imaginez qu’en accrochant un bouton à votre chemise ou en plaçant un autocollant sur un panneau stop vous puissiez faire croire à une intelligence artificielle (par exemple une caméra de surveillance intelligente ou une voiture autonome) que vous ou le panneau êtes autre chose",
+    "page": 270,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Tromper la machine",
+    "portee": "Vulnerabilite concrete des systemes de perception, avec des consequences physiques immediates."
+   },
+   {
+    "texte": "les observateurs ne comprendront donc pas que ce motif peut conduire un drone à identifier un hôpital comme une cible militaire, par exemple.",
+    "page": 270,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une attaque invisible a l'oeil humain",
+    "portee": "Le danger tient a ce que l'agression ne ressemble a rien pour un temoin humain."
+   },
+   {
+    "texte": "Des études sur « l’apprentissage automatique contradictoire » (« adversarial machine learning ») impliquent la manipulation de données d’apprentissage alors même qu’une IA est en train d’apprendre.",
+    "page": 272,
+    "axe": "02-ia-technique-academique",
+    "theme": "Empoisonner l'apprentissage",
+    "portee": "Attaque en amont : corrompre ce que le systeme apprend plutot que ce qu'il percoit."
+   }
+  ]
+ },
+ {
+  "chapitre": "f8f17428",
+  "citations": [
+   {
+    "texte": "Si l’on vous donnait un cube pour chacune de ces positions « autorisées », vous pourriez couvrir environ deux cent cinquante fois la surface de la Terre (océans compris).",
+    "page": 273,
+    "axe": "02-ia-technique-academique",
+    "theme": "Donner l'echelle d'un grand nombre",
+    "portee": "Procede de vulgarisation efficace : traduire un nombre abstrait en surface concrete."
+   },
+   {
+    "texte": "une machine de deep learning finit par s’apprendre elle-même à résoudre un Rubik’s cube en utilisant l’apprentissage par renforcement sans connaissance humaine.",
+    "page": 275,
+    "axe": "02-ia-technique-academique",
+    "theme": "Apprendre sans qu'on lui montre",
+    "portee": "Meme rupture qu'au go : la performance s'obtient sans transmission de savoir humain."
+   }
+  ]
+ },
+ {
+  "chapitre": "6e4e505d",
+  "citations": [
+   {
+    "texte": "Savoir à quel moment ces soins spécifiques sont nécessaires peut avoir des effets positifs sur le patient, sa famille et les soignants – et aider à identifier le moment où ils seront les plus efficaces.",
+    "page": 276,
+    "axe": "11-sciences-environnement",
+    "theme": "L'utilite de la prediction",
+    "portee": "Justifie une application qui pourrait sembler morbide : mieux accompagner la fin de vie."
+   },
+   {
+    "texte": "« [Le système d’apprentissage profond] apprend, mais il ne peut pas nous dire pourquoi il a appris ; il attribue des probabilités, mais il ne peut pas facilement exprimer le raisonnement qui se cache derrière.",
+    "page": 277,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Apprendre sans pouvoir expliquer",
+    "portee": "Formulation de Siddhartha Mukherjee du probleme de l'opacite, en contexte medical."
+   },
+   {
+    "texte": "l’algorithme nous regarde sans nous voir quand nous demandons “pourquoi ?”. Comme la mort, il n’est qu’une boîte noire de plus. »",
+    "page": 277,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Une boite noire de plus",
+    "portee": "Image forte qui rapproche l'opacite de l'algorithme de celle du fait qu'il predit."
+   }
+  ]
+ },
+ {
+  "chapitre": "f1c98871",
+  "citations": [
+   {
+    "texte": "« L’intelligence artificielle est la prochaine étape de l’évolution, mais c’est une étape différente. (...) Un appareil intelligent de manière artificielle peut dire à un autre tout ce qu’il sait, dans le sens où un professeur peut dire à un étudiant une partie de ce qu’il sait, mais il peut tout dire à un autre appareil sur sa propre conception.",
+    "page": 278,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La transmission integrale entre machines",
+    "portee": "Difference decisive avec la culture humaine, ou la transmission est toujours partielle et lente."
+   },
+   {
+    "texte": "Fondamentalement, l’esprit humain n’est pas plus proche d’un dieu que d’un ordinateur. Il est plus proche de celui d’un chimpanzé et [conçu] pour se sentir à son aise dans la jungle ou dans les champs. »",
+    "page": 278,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'esprit humain remis a sa place",
+    "portee": "Rappel evolutionniste d'Edward Fredkin contre toute divinisation de l'intelligence humaine."
+   }
+  ]
+ },
+ {
+  "chapitre": "b29a04d0",
+  "citations": [],
+  "motif": "Fin de l'index alphabetique et credits iconographiques : liste de noms, de pages et de mentions de droits photographiques. Aucun enonce citable."
+ }
+]

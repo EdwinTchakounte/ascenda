@@ -1,0 +1,86 @@
+{
+ "document_id": "0a97d22d-31b3-4a96-9b35-9c12a7b86470",
+ "titre_normalise": "Influence et manipulation, les six principes de Cialdini. Adaptation romancée non officielle",
+ "auteurs": [],
+ "annee": 2024,
+ "type_ouvrage": "resume derive",
+ "niveau": "debutant",
+ "public_cible": "Lecteur pressé cherchant à connaître les principes de la persuasion sans lire l'ouvrage de référence. Trente-neuf pages. Le document se présente en page de garde comme portant sur le livre Influence et Manipulation de Robert Cialdini, psychologue et professeur émérite. Il ne s'agit pas de ce livre : c'est une adaptation narrative anonyme, qui met en scène un personnage nommé Alex et son mentor pour exposer les six principes en sept courts chapitres.",
+ "these_centrale": "Six mécanismes psychologiques déterminent nos réponses aux sollicitations, le plus souvent à notre insu : la réciprocité, l'engagement et la cohérence, la preuve sociale, la sympathie, l'autorité et la rareté. Les connaître offre un double avantage : influencer avec intégrité et se défendre contre la manipulation. Le septième chapitre est consacré à ces défenses.",
+ "idees_force": [
+  {
+   "titre": "La réciprocité, ou la dette invisible",
+   "explication": "Recevoir crée une obligation de rendre, indépendamment de la valeur de ce qui a été reçu. Une expérience citée dans le document montre que les participants ayant reçu un petit cadeau avant qu'on leur demande de remplir un questionnaire acceptaient bien plus souvent. Les entreprises exploitent quotidiennement ce ressort par les échantillons gratuits, les essais et les cadeaux promotionnels, qui installent une dette implicite. Savoir cela permet de distinguer le don véritable du don qui achète.",
+   "page": 8
+  },
+  {
+   "titre": "L'engagement et la cohérence",
+   "explication": "Après un premier engagement, même minime, les personnes agissent pour rester cohérentes avec lui, y compris quand cela demande beaucoup plus d'effort. Le procédé est partout : on obtient d'abord un essai gratuit ou une signature, puis un abonnement ; une petite promesse, puis un vote ; une pétition signée, puis l'organisation bénévole de l'événement. Le point capital est que les personnes ne se sentent pas influencées : elles obéissent à leur propre besoin de ne pas paraître incohérentes, devant les autres et devant elles-mêmes.",
+   "page": 14
+  },
+  {
+   "titre": "La preuve sociale",
+   "explication": "Devant l'incertitude, nous nous réglons sur ce que font les autres. Le document formule correctement l'essentiel : il s'agit de reconnaître quand agir par jugement personnel et quand laisser la preuve sociale guider ses choix. Elle est économe et souvent juste dans les décisions ordinaires, et dangereuse exactement là où la décision compte.",
+   "page": 20
+  },
+  {
+   "titre": "La sympathie et ses quatre leviers",
+   "explication": "Nous acceptons plus volontiers les demandes de ceux que nous apprécions, et quatre facteurs renforcent cette sympathie : la similarité, les compliments, la coopération et l'attrait physique. Un vendeur, un candidat, un collègue au sourire facile obtiennent ce que d'autres n'obtiennent pas. La conséquence pratique est inconfortable : la qualité d'une idée et l'adhésion qu'elle recueille sont deux choses sans rapport nécessaire.",
+   "page": 22
+  },
+  {
+   "titre": "L'autorité, ses signes et ses combinaisons",
+   "explication": "Les titres, les diplômes, les uniformes et les symboles de pouvoir font accepter des idées sans contestation, y compris lorsque d'autres savent qu'elles ne sont pas les meilleures. Le document ajoute une observation juste : l'autorité se combine aux autres principes et son effet se multiplie, une figure d'autorité par ailleurs sympathique devenant très difficile à contredire. D'où la règle de discernement proposée : distinguer l'autorité légitime, fondée sur une compétence réelle, de l'autorité affichée.",
+   "page": 26
+  },
+  {
+   "titre": "La rareté",
+   "explication": "Ce qui est rare, limité dans le temps ou en voie de disparition, prend de la valeur indépendamment de ses qualités propres. Sixième principe, à peine développé dans ce document alors qu'il est le plus employé dans le commerce en ligne.",
+   "page": 31
+  },
+  {
+   "titre": "Les défenses, seul chapitre qui compte vraiment",
+   "explication": "La conclusion soutient que ces principes ne sont pas des outils de manipulation mais peuvent servir à créer des relations solides, guider des décisions responsables et protéger sa liberté personnelle, et que la véritable puissance ne réside pas dans la capacité à influencer mais dans la conscience de cette influence et la responsabilité qui l'accompagne. La position est la bonne. Elle reste malheureusement énoncée, jamais outillée : aucun exercice, aucun signal d'alerte concret, aucune conduite à tenir.",
+   "page": 37
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Réciprocité",
+   "definition": "Obligation ressentie de rendre ce qui a été donné, y compris quand le don n'a pas été sollicité."
+  },
+  {
+   "terme": "Engagement et cohérence",
+   "definition": "Tendance à agir conformément à ses engagements antérieurs, exploitée en obtenant d'abord un accord minime."
+  },
+  {
+   "terme": "Preuve sociale",
+   "definition": "Recours au comportement d'autrui comme critère de décision en situation d'incertitude."
+  },
+  {
+   "terme": "Sympathie",
+   "definition": "Disposition à accepter les demandes de ceux qu'on apprécie, renforcée par la similarité, le compliment, la coopération et l'apparence."
+  },
+  {
+   "terme": "Autorité",
+   "definition": "Déférence accordée aux signes de statut, titres, diplômes, uniformes, indépendamment de la valeur de ce qui est affirmé."
+  },
+  {
+   "terme": "Rareté",
+   "definition": "Valorisation de ce qui est limité, en quantité ou dans le temps."
+  },
+  {
+   "terme": "Défense",
+   "definition": "Capacité à repérer qu'un de ces mécanismes est en train d'être activé sur soi, et à suspendre sa réponse."
+  }
+ ],
+ "a_lire_si": "Vous voulez connaître les six principes en une heure et vous n'avez pas accès à l'ouvrage original. Les six mécanismes sont correctement nommés et correctement décrits, et cela suffit déjà à repérer une bonne partie des sollicitations commerciales et politiques ordinaires.",
+ "a_eviter_si": "Vous voulez pouvoir citer, vérifier ou enseigner. Ce document n'est pas le livre de Cialdini et ne doit jamais être présenté comme tel. Les expériences y sont évoquées sans référence, sans protocole et sans chiffres, alors que c'est précisément ce qui fait la valeur de l'ouvrage original, fondé sur des décennies de travaux publiés et d'observations de terrain menées en s'infiltrant chez des vendeurs et des démarcheurs. La forme narrative, un jeune homme et son mentor bienveillant, dilue l'information dans une fiction sans intérêt et occupe la place qu'auraient dû prendre les preuves.",
+ "prerequis": [],
+ "controverses": [
+  "Le statut de ce document pose un problème sérieux. Il emprunte le titre et le nom d'un auteur reconnu pour un texte qui n'est pas le sien, sans mention de résumé, d'adaptation ni d'auteur responsable. Sa structure régulière, ses transitions formulaires et l'absence totale de sources indiquent une production automatisée. Un système de lecture guidée doit signaler cet écart au lecteur, faute de quoi il propage une attribution fausse.",
+  "L'ouvrage de référence compte une septième influence, l'unité ou sentiment d'appartenance commune, ajoutée par l'auteur dans ses travaux ultérieurs. Elle est absente de ce document.",
+  "Présenter ces mécanismes comme des outils dont l'usage éthique dépend de l'intention est commode mais insuffisant : la même technique, employée de bonne foi sur une personne vulnérable, produit le même effet que la manipulation. La question du consentement de celui qu'on influence n'est jamais posée."
+ ],
+ "confiance": 0.5
+}

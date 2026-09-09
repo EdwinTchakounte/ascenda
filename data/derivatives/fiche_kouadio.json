@@ -1,0 +1,80 @@
+{
+ "document_id": "03b71110-5cc8-4179-a3d7-291134173151",
+ "titre_normalise": "L'IA au service de tous. Comment utiliser l'intelligence artificielle pour gagner du temps, de l'argent et améliorer votre vie",
+ "auteurs": [
+  "Konan Joël Kouadio"
+ ],
+ "annee": null,
+ "type_ouvrage": "guide_pratique",
+ "niveau": "debutant",
+ "public_cible": "Débutants complets : salariés, indépendants, étudiants, artisans, entrepreneurs sans aucune compétence technique. Cinquante deux pages, publication indépendante, écrite pour être parcourue plutôt que lue.",
+ "these_centrale": "Un inventaire d'outils et de gestes concrets destiné à quelqu'un qui n'a jamais utilisé d'assistant conversationnel. La proposition tient dans une phrase du dernier chapitre : vous n'êtes pas en compétition avec l'intelligence artificielle, vous êtes en compétition avec ceux qui savent déjà s'en servir.",
+ "idees_force": [
+  {
+   "titre": "Elle ne pense pas, elle calcule",
+   "explication": "Le chapitre premier pose le point le plus important du livre en trois lignes. Le système n'a ni conscience, ni émotion, ni volonté, et il ne comprend pas au sens humain. Quand on lui pose une question, il ne sait pas si ce qu'il dit est vrai ou faux, il donne la réponse la plus probable statistiquement compte tenu de ce qu'il a appris. L'auteur en tire la seule conclusion qui vaille : c'est dangereux dès qu'on lui accorde du pouvoir sans surveillance.",
+   "page": 14
+  },
+  {
+   "titre": "Trois causes ont rendu possible l'accélération récente",
+   "explication": "Puissance de calcul devenue rapide et bon marché, explosion du volume de données produites chaque jour, amélioration des algorithmes. Cette explication tient en une page et suffit à comprendre pourquoi une technologie vieille de décennies a semblé surgir d'un coup.",
+   "page": 14
+  },
+  {
+   "titre": "Un chapitre de démystification honnête",
+   "explication": "Le troisième chapitre démonte cinq idées reçues, et il le fait bien. Elle ne remplacera pas tous les humains mais transformera la nature du travail. Elle n'est pas plus intelligente que l'homme, elle est performante dans un contexte précis. Elle n'est pas neutre : un système de recrutement formé sur des candidatures biaisées reproduira les discriminations, un système judiciaire nourri de décisions déséquilibrées reproduira l'injustice. Il n'est pas nécessaire d'être informaticien. Et la conquête du monde relève du fantasme cinématographique.",
+   "page": 19
+  },
+  {
+   "titre": "Des enchaînements d'outils décrits pas à pas",
+   "explication": "La valeur pratique du livre est là. Un article résumé, transformé en vidéo, sonorisé et publié. Un livre numérique structuré, rédigé, mis en page, illustré en couverture puis vendu sur une plateforme. Chaque étape est associée à un outil nommé. Le lecteur qui n'a jamais rien automatisé voit concrètement ce que cela veut dire.",
+   "page": 39
+  },
+  {
+   "titre": "Trois conditions pour rester difficile à remplacer",
+   "explication": "Maîtriser l'outil mieux que la moyenne dans son propre domaine. Développer une signature personnelle, c'est à dire une identité que la machine ne reproduit pas. Devenir un connecteur, en combinant compétences techniques, humaines et stratégiques. L'exemple donné est celui d'un accompagnateur professionnel qui automatise son marketing tout en maintenant la relation humaine.",
+   "page": 43
+  },
+  {
+   "titre": "Une bibliographie de formation courte et bien choisie",
+   "explication": "Le dernier chapitre recense des ressources gratuites de qualité, dont le cours Elements of AI de l'université d'Helsinki, les cours d'apprentissage automatique de Google, et Fast.ai pour aller plus loin. Il ajoute une méthode simple : un sujet par semaine, un plan de formation demandé à l'assistant, et un projet concret pour pratiquer.",
+   "page": 48
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Automatisation sans code",
+   "definition": "Ensemble d'outils permettant de relier des applications entre elles et de déclencher des actions sans écrire de programme. Le livre cite Zapier et Make comme points d'entrée."
+  },
+  {
+   "terme": "Assistant entraîné sur ses propres documents",
+   "definition": "Système conversationnel auquel on fournit ses catalogues, contrats ou procédures pour qu'il réponde dans le périmètre de son organisation. Présenté comme accessible sans compétence technique."
+  },
+  {
+   "terme": "Produit numérique",
+   "definition": "Livre électronique, modèle, application, formation : bien reproductible à coût marginal nul, que l'auteur présente comme la voie la plus directe vers un revenu récurrent."
+  },
+  {
+   "terme": "Signature personnelle",
+   "definition": "Ce qui, dans une production, reflète une identité ou une sensibilité qu'un système génératif ne reproduit pas exactement. Le livre en fait un actif professionnel."
+  },
+  {
+   "terme": "Connecteur",
+   "definition": "Profil combinant plusieurs registres de compétences, technique, humain et stratégique, pour proposer des solutions d'ensemble plutôt qu'une expertise isolée."
+  }
+ ],
+ "a_lire_si": "Vous n'avez jamais utilisé d'assistant conversationnel et vous voulez savoir en une heure ce qu'il est possible de faire. Le chapitre trois, sur les idées reçues, est utilisable tel quel en formation. La liste de ressources d'apprentissage du dernier chapitre est fiable et gratuite pour l'essentiel.",
+ "a_eviter_si": "Vous avez déjà pratiqué ces outils, ou vous cherchez à comprendre plutôt qu'à faire. Le livre ne démontre rien, ne cite presque aucune source et ne discute jamais ses propres affirmations. Sa seconde moitié est un manuel de revenus en ligne standard, dont l'intelligence artificielle n'est que le prétexte le plus récent.",
+ "prerequis": [
+  "Aucun, c'est explicitement le propos.",
+  "Un accès à un assistant conversationnel est indispensable pour que le livre serve à quelque chose : il se lit en pratiquant."
+ ],
+ "controverses": [
+  "⚠️ Publication indépendante sans maison d'édition, sans date de parution repérable et sans appareil critique. Le numéro de contrôle attribué à la Bibliothèque du Congrès figurant sur la page de droits ne correspond à aucun dépôt vérifiable. Le lecteur doit traiter ce texte comme un aide-mémoire personnel, pas comme une référence.",
+  "Les chapitres sept à neuf relèvent du manuel de revenus en ligne : tunnel de vente, produit en trois niveaux, revenus passifs. Les rendements suggérés ne sont jamais chiffrés ni sourcés, et le livre ne mentionne à aucun moment la saturation de ces marchés ni le taux d'échec de ces démarches.",
+  "La liste d'outils est le cœur du livre et c'est aussi ce qui vieillira le plus vite : plusieurs des services cités changent de nom, de tarif ou disparaissent d'une année sur l'autre.",
+  "La formule répétée selon laquelle ce ne sont pas les humains qui seront remplacés mais ceux qui ne savent pas utiliser l'outil est une antienne du secteur. Elle est rassurante, elle déplace la responsabilité collective vers l'effort individuel, et elle n'est étayée par aucune donnée.",
+  "Le chapitre consacré à l'éthique fait trois pages et s'achève sur des généralités. C'est peu, dans un livre qui consacre dix huit pages à la monétisation."
+ ],
+ "confiance": 0.85
+}

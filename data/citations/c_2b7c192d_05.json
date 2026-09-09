@@ -1,0 +1,208 @@
+[
+ {
+  "chapitre": "1a2123e1",
+  "citations": [
+   {
+    "texte": "si les machines et robots se substituent à notre force physique (nos bras et nos jambes notamment), l'IA remplace en partie les capacités de notre cerveau",
+    "page": 183,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce que l'IA remplace",
+    "portee": "Analogie corporelle simple, aussitot nuancee : nous n'avons pas cesse d'utiliser nos jambes depuis l'invention du velo."
+   },
+   {
+    "texte": "toute décision doit être rattachable à un humain, responsable, pour être expliquée, et éventuellement réparée",
+    "page": 183,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Rattacher la decision",
+    "portee": "Formule le principe juridique le plus solide du guide : sans auteur identifiable, il n'y a ni explication ni reparation possible."
+   },
+   {
+    "texte": "L'industrie du futur est donc une transformation profonde dont l'objectif est d'accroître la performance économique. L'enjeu pour le syndicalisme est d'en faire un progrès pour l'humanité.",
+    "page": 186,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Deux finalites en concurrence",
+    "portee": "Distingue nettement l'objectif reel de la transformation et la finalite qu'on peut lui disputer. La technologie ne tranche pas cette question."
+   },
+   {
+    "texte": "les algorithmes ne sont pas par nature racistes ou sexistes, mais reproduisent les biais (humains) constatés via les données",
+    "page": 190,
+    "axe": "02-ia-technique-academique",
+    "theme": "Origine humaine des biais",
+    "portee": "Rappel de bon sens qui deplace la responsabilite : le probleme n'est pas la machine, ce sont les donnees et ceux qui les ont produites."
+   },
+   {
+    "texte": "selon une étude publiée en 2017 par Dell et l'Institut pour le futur, un think tank californien, 85 % des emplois de 2030 n'existent pas encore",
+    "page": 193,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Les emplois de demain",
+    "portee": "Chiffre tres cite, a manier avec prudence, mais utile pour ouvrir une discussion sur ce qu'on peut anticiper et ce qu'on ne peut pas."
+   },
+   {
+    "texte": "près d'un tiers des CDD signés chaque année en France est de moins d'une journée",
+    "page": 193,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Fragmentation de l'emploi",
+    "portee": "Donnee brute qui documente la precarisation independamment de tout discours : la duree moyenne d'un CDD est passee de 112 jours en 2001 a 46 en 2017."
+   },
+   {
+    "texte": "l'automatisation des tâches manuelles a globalement réduit la pénibilité physique, mais a accru l'intensité du travail et la charge cognitive pour les salariés",
+    "page": 195,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Deplacement de la penibilite",
+    "portee": "Bilan honnete d'une vague technologique passee, et meilleur guide pour anticiper la suivante."
+   },
+   {
+    "texte": "le degré de prescription faite par l'IA à l'homme étant susceptible de réduire son autonomie, et de générer une forme de déshumanisation du travail",
+    "page": 195,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Prescription et autonomie",
+    "portee": "Nomme la variable qui compte vraiment : ce n'est pas la presence de l'IA mais le degre auquel elle dicte le geste."
+   },
+   {
+    "texte": "l'obéissance exclusive aux instructions de machines, l'impossibilité de discuter avec ses collègues sans passer par une interface machine",
+    "page": 196,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Nouvelles penibilites",
+    "portee": "Proposition de Cedric Villani pour faire evoluer le compte penibilite. Elle reconnaitrait juridiquement des penibilites produites par l'organisation numerique."
+   },
+   {
+    "texte": "L'acteur qui capte les données stratégiques pour le modèle d'affaires est aussi celui qui détient le pouvoir au sein de la plateforme",
+    "page": 197,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Ou est le pouvoir",
+    "portee": "Regle de lecture des economies de plateforme : suivre la donnee pour trouver le decideur, plutot que l'organigramme."
+   },
+   {
+    "texte": "Alors que le partage d'information constitue la base d'un diagnostic partagé entre les partenaires sociaux, il n'est pas rare de se retrouver avec une",
+    "page": 198,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Sans information, pas de dialogue",
+    "portee": "Explique pourquoi le dialogue social institutionnel echoue sur l'IA : la matiere premiere de la discussion manque."
+   },
+   {
+    "texte": "En clair, adapter le travailleur aux transformations et non les concevoir avec lui.",
+    "page": 200,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Adapter ou concevoir",
+    "portee": "Phrase qui resume l'ecart entre le discours sur l'humain au centre et sa traduction reelle en formation et gestion des competences."
+   },
+   {
+    "texte": "très majoritairement, les projets de transformation des entreprises n'atteignent jamais leurs cibles. Pire encore, il arrive fréquemment qu'ils dégradent la performance ainsi que la santé des travailleurs",
+    "page": 200,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Echec des transformations",
+    "portee": "Argument de performance, et non de justice, en faveur d'une autre methode de conduite du changement. Il porte mieux aupres d'une direction."
+   },
+   {
+    "texte": "la FGMM-CFDT propose de conduire le changement en articulant le dialogue social, entre la direction et les syndicats, avec le dialogue professionnel qui",
+    "page": 200,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Design social",
+    "portee": "Cœur de la proposition : deux conversations distinctes, l'une strategique, l'autre sur le contenu concret du travail, articulees et non confondues."
+   },
+   {
+    "texte": "La question de l'IA renvoie aux finalités qui lui sont assignées et donc aux priorités de l'entreprise qui doit agir pour le bien commun, et non dans le seul intérêt des actionnaires.",
+    "page": 203,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Finalite de l'entreprise",
+    "portee": "Relie la question technique a la question de la raison d'etre de l'entreprise, sujet ouvert en France par la loi Pacte."
+   },
+   {
+    "texte": "Il n'est pas anormal de considérer qu'une entreprise implantée dans un territoire rende des comptes aux élus de celui-ci sur son activité, son impact environnemental",
+    "page": 205,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Rendre des comptes au territoire",
+    "portee": "Proposition institutionnelle concrete : etendre la logique du comite social et economique aux parties prenantes externes."
+   },
+   {
+    "texte": "les lois sont nationales, alors que les plateformes ne connaissent pas, par essence, de frontières",
+    "page": 199,
+    "axe": "10-economie-entrepreneuriat-finance",
+    "theme": "Limite de la loi nationale",
+    "portee": "Enonce en une ligne l'impasse de la regulation des plateformes, et justifie de porter le sujet au niveau europeen et interne aux entreprises."
+   },
+   {
+    "texte": "ces textes, basés sur le volontariat, ne prévoient généralement aucune sanction en cas de violation. Ces démarches relèvent donc plus de l'« ethics washing »",
+    "page": 208,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ethics washing",
+    "portee": "Verdict d'Aida Ponce del Castillo sur plus de 84 chartes ethiques europeennes. A opposer a toute charte presentee comme une garantie."
+   },
+   {
+    "texte": "la société de demain pourrait avoir deux visages : l'un séduisant, affichant les traits radieux d'un retour à une économie locale et solidaire et l'autre, grimaçant, qui serait le reflet de l'exploitation la plus sauvage et de la régression sociale",
+    "page": 208,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Deux avenirs possibles",
+    "portee": "Refuse le determinisme technologique dans les deux sens : ni utopie automatique, ni catastrophe inevitable."
+   },
+   {
+    "texte": "Sera-t-elle à l'origine d'un progrès pour l'humanité et la planète ou le dernier avatar du capitalisme financier ? Seul le débat démocratique dans la société et l'entreprise permettra de trouver la voie de l'intérêt et du bien commun.",
+    "page": 209,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Phrase de cloture",
+    "portee": "Derniere phrase du corps de l'ouvrage. Elle place la reponse non dans la technique ni dans le droit, mais dans la deliberation."
+   }
+  ]
+ },
+ {
+  "chapitre": "0c1d1689",
+  "citations": [
+   {
+    "texte": "Un projet d'intelligence artificielle est en effet avant tout un projet de transformation de processus, mais dans un cadre de confiance.",
+    "page": 210,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'IA est un projet d'organisation",
+    "portee": "Dit par un dirigeant : la difficulte n'est pas de construire l'algorithme, elle est de transformer le travail autour de lui."
+   },
+   {
+    "texte": "L'élaboration d'un algorithme prend deux mois, la transformation du processus associé... un an et demi à deux ans.",
+    "page": 214,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le vrai calendrier",
+    "portee": "Chiffre le plus instructif de l'entretien : la technique represente 30 % du temps et du budget, la transformation du metier 70 %."
+   },
+   {
+    "texte": "L'algorithme ne prend jamais une décision à la place de l'humain.",
+    "page": 212,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Qui decide",
+    "portee": "Engagement pris par une direction, a confronter aux pratiques reelles : c'est exactement ce que le dialogue social permet de verifier."
+   },
+   {
+    "texte": "l'IA est encore loin de reproduire des raisonnements sophistiqués ; elle assure plutôt des tâches assez rudimentaires qui permettent néanmoins de garantir une prestation de qualité",
+    "page": 213,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce que l'IA fait vraiment",
+    "portee": "Temoignage de praticien qui degonfle le discours ambiant, venant de ceux qui deploient ces systemes au quotidien."
+   },
+   {
+    "texte": "L'IA intervient sur 1 % de la palette d'activités d'un collaborateur. On ne peut pas dire qu'il y ait un remplacement massif des activités.",
+    "page": 215,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Mesurer l'emprise reelle",
+    "portee": "Ordre de grandeur precieux : il ramene la question du remplacement a une echelle verifiable, tache par tache."
+   },
+   {
+    "texte": "il peut y avoir des biais dans les données historiques, l'algorithme peut alors en être un amplificateur",
+    "page": 215,
+    "axe": "02-ia-technique-academique",
+    "theme": "Amplification des biais",
+    "portee": "Reconnaissance d'un risque par ceux qui construisent les systemes, avec les parades qu'ils appliquent : echantillon temoin et donnees anonymisees."
+   },
+   {
+    "texte": "Nous utilisons du machine learning, très peu d'« apprentissage profond », une famille d'algorithmes moins « explicables ». Nous faisons donc un choix technique qui permet une meilleure explicabilité.",
+    "page": 216,
+    "axe": "02-ia-technique-academique",
+    "theme": "Choisir l'explicabilite",
+    "portee": "Cas concret d'arbitrage entre performance et interpretabilite : l'explicabilite se decide au moment du choix de la methode, pas apres coup."
+   },
+   {
+    "texte": "Il y a un mythe de l'algorithme qui décide seul. Un algorithme ne prend pas de décision",
+    "page": 216,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Recommandation, pas decision",
+    "portee": "Distinction essentielle pour un lecteur non technique : ce que produit le systeme est un classement, ce qui en est fait releve de l'organisation."
+   }
+  ]
+ }
+]

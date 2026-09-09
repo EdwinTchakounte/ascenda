@@ -1,0 +1,1120 @@
+OUVRAGE : Présentation PowerPoint
+AUTEUR(S) : Guillaume.auge;Guillaume Augé
+ANNÉE : inconnue
+PAGES : 96
+AXE : IA Education Pedagogie
+SOMMAIRE :
+  Diapositive 1  IA, Éducation et formation  INSPE Université de Lorraine (p. 1-1)
+  Diapositive 2 Partie 1 : Introduction aux IA génératives (p. 2-2)
+  Diapositive 3 (p. 3-3)
+  Diapositive 4 Qui est ChatGPT ?    Où se situe-t-il dans l’histoire et le monde de l’IA ? (p. 4-4)
+  Diapositive 5 (p. 5-5)
+  Diapositive 6 (p. 6-6)
+  Diapositive 7 (p. 7-7)
+  Diapositive 8 (p. 8-8)
+  Diapositive 9 (p. 9-9)
+  Diapositive 10 (p. 10-10)
+  Diapositive 11 (p. 11-11)
+  Diapositive 12 (p. 12-12)
+  Diapositive 14 (p. 13-13)
+  Diapositive 15 (p. 14-14)
+  Diapositive 16 Multiplication   et accélération (p. 15-15)
+  Diapositive 17 (p. 16-16)
+  Diapositive 18 (p. 17-17)
+  Diapositive 19 (p. 18-18)
+  Diapositive 20 (p. 19-19)
+  Diapositive 21 (p. 20-20)
+  Diapositive 22 (p. 21-21)
+  Diapositive 23 (p. 22-22)
+  Diapositive 24 (p. 23-23)
+  Diapositive 25 (p. 24-24)
+  Diapositive 26 (p. 25-25)
+  Diapositive 27 (p. 26-26)
+  Diapositive 28 (p. 27-27)
+  Diapositive 29 (p. 28-28)
+  Diapositive 30 (p. 29-29)
+  Diapositive 31 (p. 30-30)
+  Diapositive 32 (p. 31-31)
+  Diapositive 33 (p. 32-32)
+  Diapositive 34 (p. 33-33)
+  Diapositive 35 (p. 34-34)
+  Diapositive 36 (p. 35-35)
+  Diapositive 37 (p. 36-36)
+  Diapositive 38 (p. 37-37)
+  Diapositive 39 Enjeux, limites et risques (p. 38-38)
+  Diapositive 40 (p. 39-39)
+  Diapositive 41 (p. 40-40)
+  Diapositive 42 (p. 41-41)
+  Diapositive 43 (p. 42-42)
+  Diapositive 44 (p. 43-43)
+  Diapositive 45 IA et recherche (p. 44-44)
+  Diapositive 46 (p. 45-45)
+  Diapositive 47 (p. 46-46)
+  Diapositive 48 (p. 47-47)
+  Diapositive 49 (p. 48-48)
+  Diapositive 50 (p. 49-49)
+  Diapositive 51 Et demain ? (p. 50-50)
+  Diapositive 52 (p. 51-51)
+  Diapositive 53 (p. 52-52)
+  Diapositive 54 Partie 2 : IA génératives et Éducation (p. 53-53)
+  Diapositive 55 (p. 54-54)
+  Diapositive 56 (p. 55-55)
+  Diapositive 57 (p. 56-56)
+  Diapositive 58 Quelle est la position de Sciences Po? (p. 57-57)
+  Diapositive 59 (p. 58-58)
+  Diapositive 60 (p. 59-59)
+  Diapositive 61 Le dispositif d’accompagnement mis en place (p. 60-60)
+
+[24/95 passages, 7116 tokens sur 25931]
+
+=== EXTRAITS ===
+
+[p. 3-3]
+SciencesPo 
+Une longue histoire d’amour.. Ou pas !
+INSTITUT DES COMPETENCES
+ET DE L'INNOVATION
+Education et technologie : 
+gal: Coleu 
+seme
+per la facaltéde Theologie 
+de Paris. 
+AN)
+«Jet’aime,moinonplus!» 
+|
+WIKIPEDIA
+Google!
+Qn les vend à Paris, en la grand fille
+| 
+du Palais,au premier pillicr, par Jehan
+André libraire iuré de lunwerfite 
+de
+Paris,
+ti 44
+—_ gat
+GOpenAL 
+4 
+a
+ChatG PT | 
+|
+|
+e 
+? 
+h 
+a 
+|
+Le dernier Pharmakon ar
+=)
+
+---
+
+[p. 6-7]
+014
+Turing 
+1984 
+7 
+L'IET 
+ks 
+car F1
+t= 
+2012 
+Œ | 4€ Fe
+a 
+2011 
+- FY 
+|
+2009
+Deep learning
+s 
+= =
+$30,681
+==
+1997 
+fm 
+=
+1950 
+Hiver 1 
+Hiver 2 
+NI >
+Premiere voiture
+autonome de Google
+Watson d’IBM
+champion de Jeopardy
+>
+#7
+1950 
+1960 
+1970 
+1980 
+1900 
+2000 
+2010 
+2020
+IA connexionniste 
+IA symbolique 
+IA connexionniste 
+6
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+yo TS
+2019 — 2024 I’explosion des LLM (Large Langage Models)
+Publicly Available
+(> GShard
+2020 ayy
+(|
+one Ernie 3.0
+Al21 
+in.
+, 
+Jurassic-1
+wy PanGu-æ
+MLA
+mrs
+GPT-3 G’
+Codex GE ——
+Anthropic
+WebGPT
+HyperCLOVA NAVER
+#2. PLUG
+G FLAN
+LaMDA
+mspur Yuan 1.0
+© AlphaCode
+3AAI CPM-2
+InstructGPT EC
+CodeGen
+Ernie 3.0 Titan 0%»
+f
+\ 
+eo 
+|
+© Chinchilla 
+3
+2022 
+_ CodeGeeX
+| 
+ULZ
+1 
+G
+© Sparrow 
+_© Pythia
+icxLc 
+BB
+MT-NLG =
+BLOOM $F) 
+GLM e)
+OPT CO
+“NeoX-20B 
+MN
+GPT-NeoX-20B (@ yi
+Tk-Instruct Aj?
+G Flan-Ts
+G Flan-PaLM
+nC Luminous
+LM
+[srs 
+| Vieuna
+ge PanGu-2
+HUAWE
+G Bard
+G PaLM
+\ 4 @ vm
+mT0 €> 
+a 
+‘ohere 
+SP 
+7-10 
+C9 SELB
+AlexaTM a 
+Cohere 
+OO LLaMA
+BLOOMZ 
+— 
+11-12
+2 
+weLM (A 
+— 2023 — ||,
+Galatica OO 
+| 
+—>
+OPT-IML (0X) 
+ChatGPT S 
+GPT-4 GS
+
+---
+
+[p. 10-11]
+WebText2 
+19 billion
+Books1 
+12 billion
+Books2 
+55 billion
+Wikipedia 
+3 billion
+Non connecté directement au web
+Pas d’information postérieure a 2021 dans sa
+version initiale.
+Version 4 de GPT sortie en 2023 :
+Données d’entrainement : 1 000 000 GB
+Paramètres : 170 000 milliards
+Disponible dans ChatGPT Pro et
+Microsoft Copilot
+10
+SciencesPo 
+Qui est ChatGPT ?
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+ChatGPT utilise le principe de la statistique sémantique en réponse à un
+« prompt »
+Ecris une dissertation de droit public français sur le sujet "L'inaction de l'Etat" avec une
+introduction, 4 paragraphes et une conclusion. Dans les paragraphes, cite des exemples de 
+; 
+Comment différencier des oeufs de vache d'oeufs de poule ?
+lois ou de jurisprudence du Conseil d'Etat.
+Introduction : 
+ow 
+| 
+|| est possible de différencier les œufs de vache de ceux de poule en
+observant leur taille et leur couleur. Les œufs de vache sont généralement
+L'inaction de l'Etat est un sujet de réflexion important en droit public français. Lorsque l'Etat 
+s 
+a
+1 
+plus gros que les œufs de poule, avec une coquille plus épaisse et plus dure.
+ne prend pas les mesures nécessaires pour protéger les droits et les intérêts de ses citoyens,
+: 
+| 
+‘ 
+rs 
+- 
+ils ont également une couleur plus foncée, généralement marron ou bleue.
+il peut être tenu responsable de cette inaction. Dans cette dissertation, nous examinerons les
+conséquences juridiques de l'inaction de l'Etat, les moyens de la combattre et les limites de 
+Les œufs de poule, en revanche, ont une coquille plus fine et plus fragile, et
+la responsabilité de l'Etat. 
+sont généralement blancs ou jaunes. || est possible de trouver des œufs de
+vache dans les fermes, les étals de marché ou les magasins d'aliments
+Paragraphe 1 
+: Les conséquences juridiques de l'inaction de l'Etat 
+‘ 
++
+naturels, tandis que les ceufs de poule sont généralement vendus dans les
+L'inaction de l'Etat peut avoir des conséquences juridiques graves, notamment en matière 
+supermarchés. Il est important de noter que ces caractéristiques varient en
+de responsabilité de l'Etat. Lorsque l'Etat ne prend pas les mesures nécessaires pour 
+fonction des races de vaches ou de poules, il est donc important de vérifier
+proteger les droits et les intéréts de ses citoyens, il peut étre tenu responsable de cette 
+l'étiquette pour connaître l'origine de l'oeuf.
+inaction. En effet, le Conseil d'Etat a jugé que "L'Etat est tenu à une obligation de sécurité de
+résultat" (CE, Ass. 4 juillet 2007, n° 282476). Ainsi, lorsque l'Etat n'a pas pris les mesures
+nécessaires pour éviter un dommage, il peut être tenu responsable de ce dommage.
+
+---
+
+[p. 13-13]
+la requête à la réponse. Institut interdisciplinaire
+d'innovation technologique et Université de Sherbrooke. En ligne
+hitosy//muro.com/app/board/uxiV¥MeA 
+p=/?share 
+link 1d=851063995aq5
+Fl
+Réponse
+en langage
+naturel
+Le systame révise
+et corrige le texte
+de sortie et
+finalement l'affiche
+sur l'interface
+conversation
+nelle.
+©OOSO
+
+---
+
+[p. 16-17]
+sPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Multiplication
+et accélération
+“OpenAl, (2023 Janvier), DALL:E 2, “An oil painting of a robot thinking about Education’, https: |
+~ ©
+re 
+Mn
+= Tr
+à 
+,
+Wwe 
+»
+v7 
+EE 
+2
+is 
+< 
+2
++ 
+. 
+'
+4
+Midjourney : comparaison V1 (février 2022), V2, V3, V4, V5, V5.1, V5.2 et V6 (décembre 2023)
+17
+Midjourney : améliorations sur les V5.2 et V6
+@& 
+ChaseLean @
+@chaseleantj
+4. Prompt: A Coca Cola ad, featuring a beverage can design with
+traditional Hawaiian patterns
+Traduire le post
+18
+
+---
+
+[p. 20-21]
+e
+Input
+19 Là
+Output
+There are many options for what you can make with these ingredients! Some possibilities
+include:
+- Pancakes or wallies
+- Crepes
+- 
+French los
+-Omelelte or irittala
+- Quiche
+USL où puy
+Cake or cupcakes
+Muffins or bread- Cookies or biscuits
+These are just a few examples, hut the possibilities are endlessil}
+21
+GPT-40 (omni avril 2024) : texte + son + vision en entrée et texte + son + image en sortie
+Cas d'usage : tuteur pédagogique
+22
+
+---
+
+[p. 24-25]
+ages
+Institute for Intelligent Computing, Alibaba Group
+https://arxiv.org/pdf/2311.17117.pdf
+SciencesPo 
+Multiplication et accélération
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+La multiplication des IA et une accélération de leurs possibilités
+Génération automatique de vidéos a partir d'images
+... Fake news et copyright ? 
+25
+Génération automatique de vidéos a partir d'images : Microsoft VASA-1 Talking Faces
++ ile + °° 088 met
+CI +! S| ale
+Single image 
+Audio clip 
+Control signals
+À.
+
+---
+
+[p. 28-29]
+célération de leurs possibilités
+Génération automatique de vidéos avec DreamMachine de LumaAl
+EN
+Adobe (2024 février), Firefly, « Chemin côtier dans le golfe du Morbihan », 
+https://lumalabs.ai/dream-machine avec le prompt « zoom in on
+https://firefly.adobe.com/ 
+this image as if you were walking along the path » - juin 2024 
+29
+SciencesPo 
+Multiplication et accélération
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+La multiplication des IA et une accélération de leurs possibilités
+Génération automatique de vidéos avec DreamMachine de LumaAl
+s 
+pe 
+LS
+Ce
+a
+Microsoft (2024 mai), Copilot, « Un sinagot dans le golfe du Morbihan, 
+https://lumalabs.ai/dream-machine avec uniquement l'option
+heure dorée, style aquarelle», https://microsoft.copilot.com/ 
+Enhance prompt - septembre 2024 
+30
+
+---
+
+[p. 32-33]
+web, génération multimodale ...
+am Microsoft
+"
+Copilot
+Microsoft 365 Copilot
+avec OpenAl
+GPT-4 et DALL-E 3
+“Microsoft, (2024 Février), Copilot, “Un combat de sumo entre Microsoft Copilot et Google
+Gemini dans un style marvel comics”, https://copilot.microsoft.com/images/create
+Google
+Gemini
+Gemini
+Google Workplace
+avec Gemini
+33
+SciencesPo 
+Multiplication et accélération
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+IA et création artistique
+En mars 2023, le photographe
+Boris Eldagsen est récompensé
+dans la catégorie «creative» pour
+sa photographie intitulée
+«Pseudomnesia : The Electrician»
+lors du Sony World Photography
+Award.
+ll refuse le prix car sa photographie
+a été réalisée par une IA
+34
+
+---
+
+[p. 36-37]
+scénaristes, le générique
+de la dernière série Marvel
+« secret invasion » a été
+produit par une IA.
+Le scénariste justifie ce choix par la capacité de I’IA à traduire le sentiment
+d'inquiétude de la série et par la possibilité de la faire évoluer en dialoguant
+avec l’outil de Method Studio, une entreprise spécialisée dans IIA
+37
+Projection en extérieur au brésil
+Au MoMa:
+Unsupervised
+de Refik Anadol
+38
+
+---
+
+[p. 40-41]
+e
+aoe
+() One million: 
+@ Lost jobs 
+Stable jobs @ New jobs
+Source: World 
+Economic Forum, Future of Jobs Aeport 2023
+https://www.weforum.org/reports/the-future-of-jobs-report-2023
+Future of Jobs 
+WORLD
+. 
+. 
+ECONOMIC
+Human-machine frontier 
+FORUM
+Proportion of tasks completed by humans vs machines
+2022
+2027
+@ Machine 
+@ Human
+41
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Enjeux, limites et risques
+La transformation majeure de certains métiers :
+AI won't replace people—but
+people who use AI will replace
+people who don't.
+Augmented work
+for an automated,
+Al-driven world
+Boost performance with
+human-machine partnerships
+https://www.ibm.com/downloads/cas/NGAWMXAK
+PRINTEMPS-ÊTÉ 2023
+KATI BREMME
+4 
+ChatGPT ne va pas remplacer un
+= 
+& 
+journaliste, mais un journaliste
+Nouvelle génération 
+*achant l'utiliser dépassera tous les
+outres de loin, ou risque de désta-
+biliser la rédaction. Tous los rmüdios
+n'auront pos los mbmes balises
+éthiques, certains voudront aller plus
+vite que les outres, Ils se distinque-
+rant parla nature de la relation qu'ils
+auront avec ll.
+Le Big Bang 
+Bienvenue dans 
+| 
+Changements
+de l'IA générative 
+la post-vérité 
+de pouvoir
+meta-media.fr 
+france-ty
+https://www.meta-media.fr/wp- 
+42
+content/uploads/sites/33/2023/07/metamedia-22-pages.pdf
+
+---
+
+[p. 44-45]
+titude
+skills to their profiles in 2023
+https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part 
+44
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+IA et recherche
+“OpenAl, (2023 septembre), DALL-E 2, “A futuristic library with Al avatars and students ”, https://labs.openai.com/
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Les impacts sur les métiers de la recherche :
+Etude de la revue Nature sur l'augmentation de l'usage des Als et leur impact en recherche :
+« Al and science: what 1,600 researchers think » (10 octobre 2023)
+BENEFITS OF GENERATIVE Al
+Q: What do you think are currently the biggest benefits of g 
+ive 
+Al for 
+h?
+(Choose all that apply.)
+Helps researchers without
+English as a first language
+(through editing or translation)
+Makes coding easier and faster
+Summarizes other research
+to save time reading it
+Speeds administrative tasks
+Helps write manuscripts faster
+Improves scientific search
+Helps creative work
+by brainstorming new ideas
+Generates new
+research hypotheses
+Helps peer-review
+manuscripts faster
+Other
+PROBLEMS OF GENERATIVE 
+Al
+Q: Where do you think generative Al may have negative impacts on
+research? (Choose all that apply.)
+May proliferate
+misinformation
+Makes plaglarism easier,
+and harder to detect
+May bring mistakes or inaccuracies
+Into research texts (papers, code)
+Makes it easier to fabricate or falsify
+research and harder to detect
+May bring biases
+into literature searches
+Makes it harder to
+assess student learning
+May entrench bias or
+inequities into research texts
+Raises energy consumption and
+carbon footprint of research
+Other
+i] 
+10 
+20 
+30 
+40 
+50 
+60 
+70%
+https://www.nature.com/articles/d41586-023-02980-0
+IA et recherche
+46
+
+---
+
+[p. 48-49]
+lions de nouveaux matériaux, 700 sont en cours de creation en laboratoire (29 novembre 2023)
+MARILYN SARGENT/BERKELEY LAB
+https://www.nature.com/articles/s41586-023-06735-9 
+48
+Les prévisions à 3 jours ont mis 30 ans pour passer à 6 jours.
+Google DeepMind Ses 
+propose des prévisions météos fiables <à 10 jjours (Novembre 2023)
+49
+SciencesPo 
+IA et recherche
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Vers une science dopée par l'IA ?
+À l’aide de l’IA, des chercheurs du MIT ont identifié une nouvelle classe d’antibiotiques (décembre 2023).
+La dernière découverte remonte à 60 ans. Ce type d’antibiotique peut tuer certaines bactéries résistantes,
+causant 150 000 infections et entraînant 35 000 décès chaque année dans l’Union européenne.
+https://www.nature.com/articles/s41586-023-06887-8 
+50
+
+---
+
+[p. 53-54]
+e BBC _: « Nous n'avons aucune expérience de ce que c'est que d'avoir 
+that enable machine learning
+with artificial neural networks”
+des objets plus intelligents que nous », a déclaré M. Hinton, qui s'exprimait
+par téléphone lors de la conférence de presse du prix Nobel (octobre 2024) »
+53
+Hndof a robot thinking about Education’
+SciencesPo 
+Des usages de I’IA en pédagogie bien avant ChatGPT
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Georgia Tech :
+En 2016, le professeur Ashok Goel intègre une intelligence artificielle, Jill Watson,
+parmi ses teaching assistants.
+Aucun étudiant ne s’en est aperçu.
+Des résultats attendus...
+... et inattendus |!
+A teaching assistant named Jill Watson | Ashok Goel | TEDxSanFrancisco
+https://www.youtube.com/watch ?v=WbCgulCyfTA
+55
+
+---
+
+[p. 57-58]
+out If
+ChatGPT can outperform MBA students in coming up with new
+products.
+Source 
+1
+Is ChatGPT a Better Entrepreneur Than Most? 
+57
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Quelle est la position
+de Sciences Po?
+“OpenAl, (2023 Janvier), DALL:E 2, “An oil painting of a robot thinking about Education’, https: |
+~ ©
+SciencesPo 
+Quelle est la position de Sciences Po ?
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+L'utilisation des IA génératives (ChatGPT) est proscrite et sanctionnée :
+°_sielle n’est pas clairement mentionnée par l'étudiant qui y aurait recours
+°__à l'exception d’un usage pédagogique encadré par une enseignante ou un
+enseignant
+Cadre qui régit l'honnêteté intellectuelle à Sciences Po :
+e 
+_Ilest composé de l’article 12 du règlement de scolarité et de la charte de
+l'intégrité académique
+e 
+Il constitue le fondement exclusif de tout travail académique individuel et
+collectif, écrit et oral.
+La nouvelle charte de l'intégrité académique :
+*__ 
+Cadre rénové qui régit l'honnêteté intellectuelle à Sciences Po
+¢ 
+Un module e-learning sur l'intégrité académique suivi par tous les
+étudiants, ouverts aux enseignants et aux équipes depuis la rentrée 2023.
+Ce module présente les règles de citation d’une IA générative. 
+59
+
+---
+
+[p. 61-62]
+d'évaluation.
+Accompagnement en pédagogie universitaire et numérique :
+¢ 
+Formations et ateliers pratiques
+° 
+Chaque semestre en pré-rentrée
+¢ 
+pré-rentrées 24-25 : 1178 inscriptions
+° __ Evénements du Learning Lab tout le long du semestre
+¢ 
+Bilan pédagogique de fin de semestre
+Une semaine d'ateliers à la fin de chaque semestre
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Accompagnement par l’ICI
+Sur les IA génératives comme ChatGPT
+Un guide enseignant
+SciencesPo
+NSTITUT 
+DES COMPETENCE 
+Guide enseignant
+lA génératives, ChatGPT et Enseignement
+Fiches pédagogiques :
+Fiche : Intégrer des IA génératives dans les activités pédagogiques
+e 
+Fiche : Préparer un cours avec les IA génératives
+—= 
+. 
+7 
+2 
+2 
+. 
+7 
+.
+Fiche : Intégrer les IA génératives dans les modes d'évaluation
+—
+Une sphere Whaller
+réservée a la communauté Sciences Po (plus de 300 membres)
+& [ENSEIGNANTS] IA, ChatGPT et Education
+Ÿ Jean pierre BERTHET 
+f 
+:
+Bonjour à toutes et à tous,
+Voici le support de La présuntation ulilisd pour le loemation 14 géndratives ot Edueetion (16)
+et le support de l'atelier de prise en main (V6) du mois de juillet 2024
+Vous retrouverez également ces deux supports dans le bloc “lens utiles” dans la colonne de droite
+de cette page.
+Attention :
+ces versions comportent des mises à jour par rapport aux précédentes versions.
+63
+
+---
+
+[p. 65-66]
+pales IA génératives
+° 
+Un atelier avancé sur les méthodes de prompting
+Séminaire RETEX« Enseigner avec l'IA : enjeux techniques, pédagogiques et éthiques »
+e 
+Une journée de séminaire avec quatre tables rondes
+¢ 
+Participation d’une centaine d'enseignants
+(faculté permanente, chargés d'enseignements vacataires et doctorants)
+66
+SciencesPo
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Vers une
+(r)évolution des
+évaluations ?
+1 AS PENSE 
+À FAIRE
+J
+, 
+à
+(a 
+. 
+it 
+à
+À 
+J 
+- 
+‘ 
+. 
+' 
+, 
+H
+. a 
+J es f 
+4 
+iz 
+D 
+| | 
+| 
+\ 1
+TA DISSERTATION |
+Pou DÉMAIN ?
+| 
+\
+A) 
+Rs)
+_—- 
+— 
+=
+Ça y est p‘pa
++ 
+C’est fini !'
+a 6
+Re
+a
+.
+
+---
+
+[p. 69-70]
+iggs, 2014)
+69
+SciencesPo 
+Repenser les évaluations
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Trois stratégies d'évaluation possibles :
+1. 
+Cibler des modes d'évaluation pour lesquels l'usage de ChatGPT est inutile
+2. 
+Tenir compte de ChatGPT dans les modes d'évaluation
+3. 
+Utiliser ChatGPT dans les exercices et évaluations
+70
+SciencesPo 
+Repenser les évaluations
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+1. Cibler des modes d'évaluation pour lesquels l'usage de ChatGPT est inutile :
+Choisir une production à réaliser par les étudiants en tenant compte des limites de
+ChatGPT et des autres IA génératives, comme par exemple :
+° 
+des commentaires de documents
+(attention certaines Al génératives peuvent analyser des PDF)
+° 
+des présentations orales fondées sur des analyses de dossiers documentaires
+° 
+des essais sur des sujets postérieurs à 2023
+(attention certaines Al génératives sont maintenant connectées au web)
+° 
+des documents composites comprenant du texte, mais aussi des cartes, des
+schémas, des cartes conceptuelles, des illustrations sourcées, des vidéos, etc.
+¢ 
+un travail réflexif ou comportant des réflexions tirées de leur expérience
+
+---
+
+[p. 73-74]
+a détection des productions :
+Solutions techniques pour détecter l'usage de ChatGPT :
+° 
+Al Text Classifier 
+\ Fermé le 20 juin 2023 par OpenAl
+* 
+GTPZero 
+a
+° 
+Draft & Goal
+Attention : ces outils ne sont pas fiables et ne doivent pas être
+utilisés comme seule source d'appréciation de l’utilisation de
+ChatGPT par un étudiant.
+74
+SciencesPo 
+Repenser les évaluations
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+La détection des productions :
+Selon une étude publiée par des chercheurs de
+Une étudiante anglaise accusée à tort d’avoir
+Stanford, les détecteurs d’IA introduisent des biais
+utilisé ChatGPT à 64% par un logiciel anti-plagiat
+It is too easy to falsely accuse a
+student of using Al: a cautionary tale
+Based solely on a Turnitin report, Emily was condemned for using ChatGPT to
+write her essay. Except that she hadn't, writes Daniel Sokol
+july 10, 2023
+Daniel Sokol
+Twitter: ®DanielSokol9
+Emily is an aspiring lawyer and a first-year
+undergraduate at à well-known London
+university. Like so many students, she
+suffers from anxiety and depression.
+In April, after hours of reading and
+drafting, she submitted a 1,300-word
+essay about a film by Pedro Almodovar,
+the great Spanish director. The following
+month, she logged on to the university
+systern Lo check her mark, Bul there was
+none. Instead, her essay was flagged as
+“Al-generated”.
+https://www.timeshighereducation.com/blog/it-too-
+easy-falsely-accuse-student-using-ai-cautionary-tale
+Human-written text
+By native English speakers 
+it 51% flagged as Al-written
+By non-native English speakers 
+61.3% flagged as Al-written
+Modified human-written text
+By native English speakers, but
+modified with a simpler vocabulary 
+DES) Hagges as AE Prin
+By non-native English speakers, but sa 
+7 
+Re
+modified with enhanced vocabulary 
+11876 Nagged as A written
+Note: Average misclassification of seven Al detectors.
+Chart: Joel Eastwood : Source: W. Liang et al.
+https://themarkup.org/machine-learning/2023/08/14/ai-detection-
+tools-falsely-accuse-international-students-of-cheating
+75
+
+---
+
+[p. 77-78]
+ntifier les copier-
+coller et les recopies de texte au kilomètre.
+SciencesPo 
+Repenser les évaluations
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Pour aller plus loin :
+Une fiche disponible pour approfondir : Intégrer les IA génératives dans les modes d'évaluation
+(réservée à la communauté Sciences Po)
+77
+A 
+midjourney.com/app/
+SciencesPo 
+Intégration dans les activités pédagogiques
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Revisiter des activités pédagogiques existantes en intégrant l'IA :
+¢ 
+Dans le travail individuel
+¢ 
+Dans un travail de groupe en intégrant l’IA comme un membre du groupe
+¢ 
+Lors d’une recherche bibliographique (au niveau master)
+¢ 
+Pour le développement de compétences numériques
+79
+
+---
+
+[p. 81-82]
+GE
+1. CREATE ARTISTIC IMAGES BASED ON PHOTOS
+OF THE STUDENT TEAM
+2. REIMAGINE AND CREATE LOGOS
+FOR COLOMBIAN POLITICAL PARTIES
+3. EXPLAIN THE DIFFERENCES BETWEEN CLASSIC
+AND QUATUM PHYSICS
+4. À LITERATURE REVIEW ABOUT LGBT RIGHTS
+IN LATIN AMERICA
+we
+PARTIDO VERDE
+PARTIDO CONSERVADOR
+COLOMBIANO
+POLO
+DEMOCRATICO
+Pacto Historico
+82
+SciencesPo 
+Intégration dans les activités pédagogiques
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Une fiche disponible pour approfondir : Intégrer des IA génératives dans les activités pédagogiques
+(réservée à la communauté Sciences Po)
+83
+
+---
+
+[p. 86-87]
+* Analyses écrites de documents et de textes clés de l'intégration européenne
+* Débats en classe sur les enjeux actuels de l'UE
+* Visites de sites institutionnels européens
+Évaluations :
+* Participation et implication en classe (20 %)
+* Analyses écrites de documents clés (30 %)
+* Présentations orales (20 %)
+* Examen final (30 %)
+SciencesPo 
+Conseils pratiques pour écrire un prompt
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Les 6 éléments à intégrer dans un prompt :
+Tâche 
+La réponse attendue,
+| Tâche 
+en démarrant par un verbe d’action 
+Persona
+Rôle donné à l’IA en matière
+d'expertise
+Informations clés sur le contexte, l’environnement,
+Précision sur le format de sortie attendu :
+les critères de succès, les prérequis ... 
+Format
+nombre de paragraphes, article, podcast,
+framework d'écriture ...
+Ton 
+Style de la réponse : formel, informel,
+académique, amical, à la manière de...
+Contexte
+Exemples permettant d'améliorer la
+qualité de la réponse
+Exemple :
+Tu es un responsable pédagogique à l'Ecole d'Affaires Publiques de Sciences Po. Ton
+rôle est d'aider les enseignants à préparer et améliorer leur cours. Ecris un plan de
+cours pour un cours de niveau premiere année de master dont le sujet est l’histoire de
+De 
+7 
+e 
+7 
+e 
+e 
+/ 
+e
+| integration européenne: Ce plan de cours comprend les objectifs pedagogiques, une contexte
+variété d'activités et d'évaluations comme par exemple des visites sur le terrain, des
+simulations ou du travail de groupe. Le cours est prévu sur 12 séances de deux heures pre
+Ce plan de cours est écrit dans un style académique.
+Tâche
+Ton 
+88
+
+---
+
+[p. 89-90]
+r exemple, se référer aux codes de la photographie :
+«utilise un Canon EOS 5D Mark IV DSLR avec un objectif EF 50mm f/1.8 STM pour
+capturer la scène, en mettant l'accent sur [sujet]. --ar 16:9 »
+Les IA génératives sont conversationnelles :
+° _ Générez des réponses alternatives
+° 
+Demandez des précisions
+¢ 
+Dialoguez avec l'IA
+90
+SciencesPo 
+Préparer un cours avec les IA génératives
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Une fiche disponible pour approfondir : Préparer un cours avec les IA génératives
+(réservée à la communauté Sciences Po)
+91
+
+---
+
+[p. 93-94]
+l'utilisateur
+Exemples d'utilisation :
+- 
+Eloborer une praductian complete
+avec ou sans edition
+* 
+Répondre Sune question d'un
+QUE, examen ou autre evaluction
+Source : Direction de l’apprentissage et de l’innovation pédagogique HEC Montréal (2024). Guide d’intégration de l’IA pour les activités d’enseignement et d’évaluation 94
+SciencesPo 
+IA et transformation des compétences
+INSTITUT DES COMPÉTENCES
+ET DE L'INNOVATION
+Compétences métiers
+(IA spécifiques)
+Transformation profonde des métiers
+ex. Utiliser des IA métiers,
+concevoir, configurer, maintenir des agents IA
+métiers, réviser la production des IA,
+maitriser des techniques de prompting avancé
+Compétences transversales,
+productivité individuelle 
+©)
+(IA génériques)
+ex. comprendre le fonctionnement des
+IA, la variété des modèles,
+connaitre les limites, les biais, les
+enjeux, garder une distance critique sur
+ce que produisent les IA génératives,
+connaitre les principales méthodes de
+prompting
+Compétences fondamentales
+(pas d’IA souhaitable)
+ex. expression écrite, expression orale, esprit
+critique, intégrité académique,
+méthodologies du travail universitaire,
+disciplines du cursus, apprendre à apprendre
+95

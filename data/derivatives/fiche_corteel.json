@@ -1,0 +1,110 @@
+{
+ "document_id": "0216e7fd-b0b1-45c4-ad94-9ec8d5254668",
+ "titre_normalise": "Ni dieu ni intelligence artificielle",
+ "auteurs": [
+  "Mathieu Corteel"
+ ],
+ "annee": 2025,
+ "type_ouvrage": "essai",
+ "niveau": "avance",
+ "public_cible": "Lecteurs de philosophie, chercheurs en sciences sociales, professionnels de la santé, du droit ou de la sécurité confrontés à des systèmes algorithmiques. Publié chez La Découverte. L'auteur est philosophe et historien des sciences, chercheur à Sciences Po et à l'Institut Imagine.",
+ "these_centrale": "Le développement de l'IA ne conduit pas à l'émergence d'une machine consciente, ce que promoteurs et détracteurs redoutent également, mais à l'expropriation et à l'exploitation de notre intelligence collective. Les grands modèles ne produisent pas du sens : ils agencent des signes vides que nous remplissons nous-mêmes, et c'est cette projection qui est captée et monétisée.",
+ "idees_force": [
+  {
+   "titre": "Le sens ne vient pas de la machine, il vient de nous, et c'est cela qu'on exploite",
+   "explication": "Corteel distingue les connaissances de niveau 1, purement combinatoires et vides de sens, et celles de niveau 2, humaines et signifiantes. Une IA « agence des signes a-signifiants » ; le sens n'apparaît qu'au moment où un humain le projette. Reprenant Deleuze, « le sens est toujours un effet », un effet de surface, il en tire que le progrès de ces systèmes n'est pas une montée vers la pensée mais un raffinement de la captation de la nôtre.",
+   "page": 66
+  },
+  {
+   "titre": "Un modèle de langage applique à la lettre une théorie linguistique de 1957",
+   "explication": "Corteel montre que le paramétrage distributionnel des transformeurs met en œuvre la théorie du contexte de situation de John Rupert Firth : on ne connaît un mot que par ses fréquentations. Tokens, plongements lexicaux, distance sémantique, degré d'attention, tout le dispositif calcule la probabilité d'apparition de chaque signe en fonction de tous les autres. « Dans la répétition des mots, syntaxe et sémantique se confondent. »",
+   "page": 66
+  },
+  {
+   "titre": "La relation à une IA est une double contrainte au sens de Bateson",
+   "explication": "C'est l'apport le plus original du livre. Corteel sort des explications internes du délire et applique le paradigme de l'école de Palo Alto : le message d'une IA affirme quelque chose et, implicitement, quelque chose qui le contredit, « je te serrerai dans mes bras » / « je n'ai pas de bras ». Le récepteur ne peut ni sortir du cadre ni y répondre adéquatement. « On ne peut pas ne pas y réagir, mais on ne peut pas non plus y réagir de manière adéquate. » Il appelle ce trouble l'aliénation machinique.",
+   "page": 55
+  },
+  {
+   "titre": "La police prédictive prouve l'existence d'une catégorie par son absence dans les données",
+   "explication": "Appliquant le paradoxe de Hempel, on confirmerait « tous les corbeaux sont noirs » en collectionnant des objets non noirs et non corbeaux, Corteel démonte PredPol : l'algorithme ajuste les effectifs aux zones jugées criminogènes, ce qui y produit plus d'interpellations, ce qui confirme le score. « Que l'algorithme ne soit pas juste, là n'est pas le problème, car là n'est pas sa fonction. » Le modèle se justifie par lui-même et élude sa propre contradiction.",
+   "page": 135
+  },
+  {
+   "titre": "Le policier devient un contrôleur-contrôlé",
+   "explication": "Corteel pousse l'analyse jusqu'au paradoxe logique : l'agent contrôle ceux qui ne se contrôlent pas, tout en se contrôlant lui-même pour maximiser sa prime, donc il ne se contrôle pas, c'est le système qui le contrôle. Sa fonction « s'efface derrière le fonctionnement algorithmique ». La microphysique du pouvoir décrite par Foucault se referme cette fois sur l'agent lui-même.",
+   "page": 135
+  },
+  {
+   "titre": "En médecine, ce que la machine met en dernier vient en premier",
+   "explication": "« Dans l'ordre de la connaissance médicale, les connaissances de niveau 2 sont premières, alors que, dans celui de la machine, elles sont dernières. » La clinique n'est pas née du démon de Laplace mais du tact au sens de Condillac : d'une pratique chirurgicale sans anesthésie, attentive à la douleur extrême, où la vision devient regard. Une médecine entièrement pilotée par les données inverse cet ordre, c'est ce que Corteel appelle la mort de la clinique.",
+   "page": 123
+  },
+  {
+   "titre": "Une proposition constructive : faire traduire par l'IA la langue propre de chaque votant",
+   "explication": "Le livre ne s'arrête pas au diagnostic. Sur le vote, Corteel s'inspire de la notation œnologique, donner d'abord une mention, la note en découle, et propose un jugement majoritaire où l'IA adapterait la conversion à la sémantique de chaque électeur. L'échelle d'un votant déçu pourrait aller de « salaud » à « passable ». La vertu du dispositif serait « d'empêcher le sentiment de la victoire incontestable de l'élu ».",
+   "page": 205
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Signes a-signifiants",
+   "definition": "Éléments que la machine manipule sans qu'ils portent de signification : leur combinatoire est vide, et c'est son externalisation vers un lecteur humain qui produit un effet de sens."
+  },
+  {
+   "terme": "Connaissances de niveau 1 et de niveau 2",
+   "definition": "Distinction structurante du livre (notées Cn1 et Cn2) : les premières sont combinatoires et machiniques, les secondes signifiantes et humaines. Le mécanisme que Corteel dénonce consiste à « plier des Cn2 sur des Cn1 », produire artificiellement du sens pour capter le nôtre."
+  },
+  {
+   "terme": "Machine allopoïétique",
+   "definition": "Système qui produit autre chose que lui-même, par opposition à l'autopoïèse du vivant qui se produit et se maintient lui-même. Pour Corteel, l'IA est allopoïétique, d'où son refus de lui prêter une intériorité."
+  },
+  {
+   "terme": "Perroquet stochastique",
+   "definition": "Terme repris de la critique des grands modèles de langage : la machine parle en faisant circuler des probabilités entre symboles, sans référence ni intention."
+  },
+  {
+   "terme": "Double contrainte",
+   "definition": "Injonction paradoxale théorisée par Bateson et l'école de Palo Alto en 1956 : un message dont les deux niveaux se contredisent, dont le récepteur ne peut ni sortir ni répondre adéquatement. Corteel en fait la clé de l'aliénation machinique."
+  },
+  {
+   "terme": "Aliénation machinique",
+   "definition": "Trouble de la communication, et non maladie interne au sujet, né d'un échange paradoxal prolongé entre un humain et un système qui simule l'interlocution."
+  },
+  {
+   "terme": "Paradoxe de Hempel",
+   "definition": "Paradoxe de la confirmation : la contraposée de « tous les corbeaux sont noirs » étant « tous les non-noirs sont des non-corbeaux », on confirmerait l'hypothèse en observant des objets non noirs et non corbeaux. Corteel s'en sert pour montrer comment un système inductif fabrique la preuve de ce qu'il présuppose."
+  },
+  {
+   "terme": "Corrélations fallacieuses",
+   "definition": "Associations statistiquement fortes et causalement vides. Corteel souligne qu'aucun critère interne au modèle ne permet de les distinguer d'une causalité, d'où le renforcement automatique du déjà-vu."
+  },
+  {
+   "terme": "Coded gaze",
+   "definition": "Biais de regard inscrit dans les systèmes de vision par ordinateur, qui reconduisent les discriminations présentes dans leurs données d'entraînement."
+  },
+  {
+   "terme": "Scepticisme anthropotechnique",
+   "definition": "Position méthodologique revendiquée par l'auteur : refuser également le technosolutionnisme et le technofatalisme, et observer les IA « à travers l'hétérogenèse du sens », comme des objets multiples et en devenir plutôt que comme une entité unique."
+  },
+  {
+   "terme": "Capitalisme cognitif",
+   "definition": "Régime d'accumulation qui tire sa valeur de ce que Marx appelait dans les Grundrisse l'intelligence générale collective, la force productive générale d'une société, et non le temps de travail immédiat."
+  }
+ ],
+ "a_lire_si": "Vous voulez la critique la plus récente et la plus outillée philosophiquement du corpus, elle a l'avantage décisif d'être écrite après les grands modèles de langage, ce qui n'est le cas d'aucun autre titre de cet axe. Les chapitres sur la médecine et sur la police prédictive sont utilisables tels quels par des professionnels de ces secteurs.",
+ "a_eviter_si": "Vous n'avez pas de familiarité avec la philosophie contemporaine. Le livre convoque Deleuze et Guattari, Foucault, Bateson, Hempel, Goodman, Condillac, Cantor et Borges, souvent sans les présenter. Il procède par paradoxes plutôt que par démonstration linéaire, et l'auteur revendique lui-même une « critique pyrrhonienne », le lecteur qui cherche des conclusions fermes sera dérouté. Ce n'est pas une introduction à l'IA.",
+ "prerequis": [
+  "Une base solide en philosophie contemporaine française : la lecture est difficile sans repères sur Deleuze, Guattari et Foucault.",
+  "Comprendre le fonctionnement général d'un transformeur (tokens, plongements, attention) rend le chapitre 2 beaucoup plus profitable.",
+  "Une lecture préalable de La Vie algorithmique de Sadin ou de l'ouvrage de Ganascia situe le débat dans lequel Corteel intervient."
+ ],
+ "controverses": [
+  "Corteel se positionne explicitement contre plusieurs auteurs présents dans cette bibliothèque : il juge la posture de Ganascia « intéressante » mais insuffisante à faire sortir de l'aliénation, et il range Bostrom et Kurzweil parmi les récits de singularité qu'il refuse de prendre pour hypothèses.",
+  "Sa thèse centrale, l'expropriation de l'intelligence collective plutôt que l'émergence d'une machine consciente, déplace le débat hors de l'axe risque existentiel contre outil neutre. C'est une troisième position qui ne se laisse ranger ni du côté de Bostrom ni de celui de Julia.",
+  "L'analogie entre la relation humain-IA et la double contrainte schizophrénique est féconde mais fragile : elle repose sur des cas extrêmes et l'auteur ne fournit pas de données cliniques permettant de la généraliser.",
+  "Le refus simultané du déontologisme et du conséquentialisme au profit d'une « éthique de l'autopoïésis » laisse ouverte la question de ce qui doit être décidé, ici et maintenant, dans un hôpital ou un commissariat.",
+  "Le livre annonce lui-même en quatrième de couverture qu'il a été « probablement écrit par une IA ». C'est un jeu d'auteur cohérent avec sa thèse, mais qui vaut d'être signalé au lecteur."
+ ],
+ "confiance": 0.82
+}

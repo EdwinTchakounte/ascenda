@@ -1,0 +1,106 @@
+[
+ {
+  "chapitre": "7fa8143c",
+  "citations": [
+   {
+    "texte": "le médecin a peu à peu cessé d'être lui-même le lieu d'enregistrement et d'interprétation de l'information",
+    "page": 116,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le savoir sort du praticien",
+    "portee": "Un mouvement engagé bien avant l'informatique, et que ces outils ne font qu'achever."
+   },
+   {
+    "texte": "Pour garantir une évaluation objective des résultats, Hill prône l'effacement subjectif du médecin comme du patient par l'administration aléatoire du remède et du placébo.",
+    "page": 117,
+    "axe": "11-sciences-environnement",
+    "theme": "L'objectivité par l'effacement",
+    "portee": "L'essai clinique moderne repose sur la neutralisation délibérée du jugement de celui qui soigne."
+   }
+  ]
+ },
+ {
+  "chapitre": "5252b1fe",
+  "citations": [
+   {
+    "texte": "En l'absence de règle logique permettant de distinguer une corrélation d'une causalité, la vérification humaine se révèle cruciale.",
+    "page": 118,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Non entraînés à dire le vrai",
+    "portee": "Une phrase à retenir : ces systèmes optimisent la plausibilité, jamais la vérité."
+   },
+   {
+    "texte": "La machine ne voit pas une maladie, et encore moins un malade ou de la douleur ; elle répond à des seuils d'activation.",
+    "page": 118,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Ce que la machine ne voit pas",
+    "portee": "Un système peut surpasser un spécialiste sur une image sans rien savoir de ce qu'il regarde."
+   },
+   {
+    "texte": "au même titre que l'e-mail n'a pas fait gagner du temps aux cols blancs en remplaçant la lettre (mais a simplement augmenté leurs cadences), l'IA ne risque pas de rendre les médecins plus disponibles",
+    "page": 119,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le temps gagné n'est jamais rendu",
+    "portee": "Chaque gain de productivité a jusqu'ici été absorbé par une augmentation de la cadence, non par du temps libre."
+   },
+   {
+    "texte": "à mesure que l'habitude s'ancrera et que la plupart des vérifications apparaîtront inutiles (dans 90 % des cas le résultat est juste), certains médecins finiront par devenir de plus en plus confiants dans les performances de la machine au point d'arrêter peu à peu de vérifier",
+    "page": 119,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "L'usure de la vigilance",
+    "portee": "Une vérification qui confirme presque toujours finit par ne plus être faite, et c'est prévisible."
+   }
+  ]
+ },
+ {
+  "chapitre": "6616a291",
+  "citations": [
+   {
+    "texte": "Ils s'annulent, s'effacent, pour devenir des ingénieurs vérifiant un programme dont ils deviennent partie prenante, au point d'en perdre leurs compétences initiales et le sens de leur pratique.",
+    "page": 120,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Perdre sa compétence en la surveillant",
+    "portee": "Le métier de contrôleur d'une machine détruit peu à peu le savoir-faire qui rendait le contrôle possible."
+   },
+   {
+    "texte": "Pour la philosophie des grands nombres, nos erreurs proviennent d'un manque d'information.",
+    "page": 121,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le postulat des grands nombres",
+    "portee": "Si toute erreur venait d'un manque de données, il suffirait d'en accumuler assez pour atteindre la certitude."
+   }
+  ]
+ },
+ {
+  "chapitre": "a4711b21",
+  "citations": [
+   {
+    "texte": "il subsiste une dimension essentielle de la maladie qui ne pourra pas, quoi qu'il arrive, être circonscrite dans la combinatoire : la douleur",
+    "page": 122,
+    "axe": "11-sciences-environnement",
+    "theme": "Ce qui résiste au calcul",
+    "portee": "La douleur d'une personne ne se déduit d'aucune donnée, elle se recueille auprès d'elle."
+   },
+   {
+    "texte": "Pour Leriche, un individu fait sa douleur.",
+    "page": 122,
+    "axe": "11-sciences-environnement",
+    "theme": "La douleur est singulière",
+    "portee": "Deux personnes portant la même lésion ne souffrent pas de la même façon, ce qu'aucune image ne montre."
+   },
+   {
+    "texte": "Pour lire et parler le langage de la maladie, il faut parfois oublier la théorie et laisser émerger la connaissance en abandonnant tout présupposé statistique de répétition et de normalisation.",
+    "page": 122,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Oublier la théorie devant le malade",
+    "portee": "Le savoir général doit céder devant le cas singulier, ce qu'aucun protocole n'apprend à faire."
+   },
+   {
+    "texte": "On ne peut réduire un malade à sa maladie.",
+    "page": 123,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Le malade et la maladie",
+    "portee": "Une règle de soin élémentaire, que la logique des données rend d'autant plus difficile à tenir."
+   }
+  ]
+ }
+]

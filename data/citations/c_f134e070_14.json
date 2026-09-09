@@ -1,0 +1,229 @@
+[
+ {
+  "chapitre": "b9d0a194",
+  "citations": [
+   {
+    "texte": "Bizarrement, cette objection de la vanité de ce genre de mesure n’est presque jamais soulevée quand un décideur propose d’augmenter les financements d’un domaine de recherche, pourtant l’argument marche dans les deux sens.",
+    "page": 325,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'asymetrie de l'argument de la vanite",
+    "portee": "On n'entend jamais protester qu'il serait vain de financer une recherche que d'autres feraient de toute facon ailleurs."
+   },
+   {
+    "texte": "Malheureusement, nous disposerons bientôt d’un moyen de détruire le monde. Heureusement, nous avons reçu une subvention pour le mettre au point !",
+    "page": 326,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le raisonnement d'interet national",
+    "portee": "Bostrom en fait la formule condensee d'un calcul qui peut paraitre rationnel a l'echelle d'un pays et desastreux a celle du monde."
+   },
+   {
+    "texte": "Si les efforts de développement scientifique et technologique se poursuivent, alors toutes les compétences fondamentales qui pourront être obtenues par une technologie possible le seront",
+    "page": 326,
+    "axe": "11-sciences-environnement",
+    "theme": "La conjecture du developpement des technologies",
+    "portee": "Bostrom l'accepte pour montrer qu'elle n'implique nullement l'inutilite de toute politique technologique."
+   },
+   {
+    "texte": "Ce qui compte, ce n’est pas seulement de savoir si une technologie est développée, mais aussi de savoir quand et dans quel contexte.",
+    "page": 326,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que la politique peut encore infléchir",
+    "portee": "Le calendrier et les circonstances d'apparition, qui determinent l'impact d'une technologie, restent accessibles a l'action publique."
+   },
+   {
+    "texte": "Retarder le développement de technologies dangereuses ou malfaisantes, surtout celles qui élèvent le niveau de risque vital ; accélérer le développement des technologies bénéfiques, surtout celles qui réduisent les risques vitaux",
+    "page": 327,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le principe de developpement differentiel",
+    "portee": "Regle d'evaluation des politiques de recherche : ce qui compte est l'avantage relatif donne aux formes souhaitables."
+   },
+   {
+    "texte": "ce qui compte c’est que nous disposions d’une superintelligence avant de disposer d’autres technologies dangereuses, comme les nanotechnologies avancées",
+    "page": 328,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'ordre d'arrivee prefere",
+    "portee": "La superintelligence reduirait le risque pose par la nanotechnologie, alors que l'inverse n'est pas vrai."
+   },
+   {
+    "texte": "Plus il faudra de temps pour parvenir à la superintelligence, plus on fera de progrès sur ce problème avant qu’elle soit mise au point.",
+    "page": 329,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'argument en faveur d'une arrivee tardive",
+    "portee": "Bostrom note que le probleme du controle n'est connu que depuis peu et que la plupart des meilleures idees datent de la derniere decennie."
+   },
+   {
+    "texte": "le progrès scientifique implique que nous savons plus de choses ; la croissance économique apportera à une plus grande partie de la population une meilleure nutrition (surtout dans les",
+    "page": 329,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Les tendances qui elevent le niveau de lucidite",
+    "portee": "Nutrition des premieres annees, education de qualite et technologies de communication contribuent aux capacites cognitives collectives."
+   },
+   {
+    "texte": "des progrès dans la surveillance, l’extraction de données, la détection des mensonges, la biométrie et les moyens psychologiques et neurochimiques de manipuler les opinions et les désirs réduiraient des risques vitaux",
+    "page": 330,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le double tranchant de la surveillance",
+    "portee": "Ces memes progres permettraient que se forment des regimes totalitaires permanents."
+   },
+   {
+    "texte": "Son activation reviendrait à rééchelonner la mesure du temps, sans qu’on perçoive un changement",
+    "page": 330,
+    "axe": "11-sciences-environnement",
+    "theme": "Pourquoi l'acceleration universelle ne veut rien dire",
+    "portee": "Ce qui compte est l'acceleration differentielle d'un type de processus par rapport a un autre."
+   },
+   {
+    "texte": "En moyenne, une journée était bien plus remplie au Pléistocène qu’aujourd’hui.",
+    "page": 331,
+    "axe": "11-sciences-environnement",
+    "theme": "Macroniveau et microniveau",
+    "portee": "Le developpement macro-structurel pouvait etre quasi nul pendant un millenaire alors que les vies individuelles restaient pleines d'evenements."
+   },
+   {
+    "texte": "On ne divise pas par deux le risque qu’on prend en traversant un champ de mines en courant deux fois plus vite.",
+    "page": 331,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le risque de transition",
+    "portee": "Il est ponctuel et ne depend pas de la duree, a la difference du risque d'etat qui s'accumule avec le temps d'exposition."
+   },
+   {
+    "texte": "la vitesse du développement macro-structurel est surtout importante parce qu’elle affecte la qualité de la préparation avec laquelle l’humanité abordera sa confrontation avec les risques décisifs de la transition",
+    "page": 333,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le critere qui tranche la question du rythme",
+    "portee": "Bostrom estime qu'ajourner d'une decennie exposerait a un risque d'etat minime pour un gain notable sur les risques de transition."
+   },
+   {
+    "texte": "On ne peut pas faire directement l’expérience de cette explosion (jusqu’à ce qu’il soit trop tard), et tout conspire pour que cette question du contrôle ne se pose qu’une seule fois et sans précédent historique.",
+    "page": 334,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi le temps ne remplace pas l'intelligence ici",
+    "portee": "L'apprentissage par l'experience, efficace pour d'autres defis, est ici structurellement indisponible."
+   },
+   {
+    "texte": "Il faut être capable de prévoir et de raisonner pour comprendre pourquoi le problème de contrôle est important et pour en faire une priorité",
+    "page": 335,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Pourquoi l'augmentation cognitive aide",
+    "portee": "Des societes et des individus cognitivement plus avances percevraient mieux la necessite de ces travaux, et trouveraient plus vite comment les aborder."
+   },
+   {
+    "texte": "Avant de se marier avec son amoureux, tenir compte des beaux-parents.",
+    "page": 336,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La regle du couplage de technologies",
+    "portee": "Il est deconseille d'accelerer une technologie souhaitee si elle exige un precurseur redoutable ou entraine immediatement une application redoutee."
+   },
+   {
+    "texte": "chercher le meilleur résultat supposé (l’émulation du cerveau entier) aboutirait au pire des résultats (une IA neuromorphique)",
+    "page": 336,
+    "axe": "02-ia-technique-academique",
+    "theme": "Le piege du couplage",
+    "portee": "Alors que viser le deuxieme resultat souhaitable, l'IA synthetique, y aurait effectivement mene."
+   },
+   {
+    "texte": "Ce qui, au départ, semblait être une bonne raison pour aller doucement ou même s’arrêter (les risques de X sont élevés) tourne court avec ce type de raisonnement et laisse place à une bonne raison d’aller plus vite.",
+    "page": 339,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le retournement de l'argument du risque",
+    "portee": "Bostrom rattache cette forme d'argument aux travaux d'Eric Drexler sur la nanotechnologie moleculaire."
+   },
+   {
+    "texte": "une demi-catastrophe agit comme une inoculation, mettant la civilisation au défi d’éviter une menace relativement surmontable et stimulant ainsi les réponses immunitaires qui nous préparent à affronter la version existentielle de la menace",
+    "page": 339,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'argument cynique de l'inoculation",
+    "portee": "Bostrom le mentionne sans l'approuver, comme exemple d'argumentation speculative."
+   }
+  ]
+ },
+ {
+  "chapitre": "df145e29",
+  "citations": [
+   {
+    "texte": "en traitant les autres comme des agents irrationnels et en jouant avec leurs biais et leurs erreurs, on peut déclencher une réaction qui sera plus compétente que si l’on s’était adressé honnêtement et sans détour à leurs facultés rationnelles",
+    "page": 340,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La definition de l'argumentation speculative",
+    "portee": "Bostrom l'expose pour en montrer aussitot la fragilite pratique et le cout moral."
+   },
+   {
+    "texte": "Un déploiement à plein régime de ces pratiques de communication tuerait toute sincérité et laisserait la vérité voler de ses propres ailes dans la nuit des coups bas des gnomes de la politique.",
+    "page": 340,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Pourquoi la manipulation se retourne",
+    "portee": "Tenter d'etre plus malin que les autres est un jeu a somme nulle, voire negative une fois le temps et l'energie comptes."
+   },
+   {
+    "texte": "Des ordinateurs plus rapides encourageraient aussi les approches reposant surtout sur la force brute des techniques",
+    "page": 341,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'effet du materiel sur les methodes",
+    "portee": "Des systemes obtenus par force brute sont plus anarchiques et imprecis, donc plus difficiles a controler que des systemes concus en detail."
+   },
+   {
+    "texte": "une transition rapide laisse moins d’opportunité de réagir et de s’adapter, ce qui accroît les risques",
+    "page": 342,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le cout de l'exces de materiel",
+    "portee": "S'y ajoute qu'une IA aurait besoin de moins de processeurs pour se transformer en superintelligence, ce qui affaiblit tout confinement."
+   },
+   {
+    "texte": "lorsqu’on ne voit pas comment agir sur un paramètre, il peut être utile de déterminer son « signe » (c’est-à-dire si son augmentation ou sa diminution est préférable) avant de déterminer les limites stratégiques du terrain",
+    "page": 342,
+    "axe": "06-ia-travail-management-metiers",
+    "theme": "Une regle de methode strategique",
+    "portee": "On peut ensuite decouvrir un moyen d'agir, ou un autre parametre correle plus facile a manipuler."
+   },
+   {
+    "texte": "Il est loin d’être assuré qu’une émulation hériterait des motivations de son modèle original humain.",
+    "page": 343,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le second avantage suppose de l'emulation",
+    "portee": "Meme un modele vertueux serait imprevisible une fois augmente jusqu'a la superintelligence et tente de prendre le pouvoir sur le monde."
+   },
+   {
+    "texte": "si l’IA se développe en premier, il n’y a qu’une seule vague d’explosion d’intelligence ; mais si c’est l’ECE qui vient en premier, il y aura deux vagues",
+    "page": 345,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'argument des deux transitions",
+    "portee": "Le risque vital total serait alors la somme des risques des deux transitions, la seconde procedant de la premiere."
+   },
+   {
+    "texte": "elles pourraient se consacrer au problème du contrôle pendant cinquante millénaires avant d’entrer en compétition avec d’autres émulations",
+    "page": 346,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qu'une avance de six mois vaudrait a vitesse digitale",
+    "portee": "A cent mille fois la vitesse humaine, six mois de temps sideral offrent des eternites subjectives de travail sur la securite."
+   },
+   {
+    "texte": "il semble que les modèles neuromorphiques soient plus risqués, et cela parce que l’imitation y remplace la compréhension",
+    "page": 346,
+    "axe": "02-ia-technique-academique",
+    "theme": "Pourquoi le neuromorphique inquiete",
+    "portee": "Copier un systeme existant n'oblige pas a comprendre son fonctionnement, alors que le construire ex nihilo l'exige."
+   },
+   {
+    "texte": "l’IA peut survenir n’importe quand si quelqu’un opère une rupture conceptuelle inattendue",
+    "page": 347,
+    "axe": "02-ia-technique-academique",
+    "theme": "Ce qui distingue les deux calendriers",
+    "portee": "L'emulation exige au contraire de franchir des etapes prealables visibles, ce qui la rend annoncee longtemps a l'avance."
+   },
+   {
+    "texte": "Je pense instinctivement qu’il faut aller plus vite. Pas parce que c’est mieux pour la planète.",
+    "page": 348,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La perspective de ce qui affecte la personne",
+    "portee": "Bostrom cite ce commentaire de blog comme expression franche d'un raisonnement tres repandu et rarement assume."
+   },
+   {
+    "texte": "Le résultat par défaut est en effet que presque tous ceux qui vivent aujourd’hui seront morts dans cent ans.",
+    "page": 348,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "L'argument le plus fort en faveur de la vitesse",
+    "portee": "Du point de vue de ceux qui vivent, tout retard a un cout certain, la ou le risque n'est que probable."
+   }
+  ]
+ }
+]

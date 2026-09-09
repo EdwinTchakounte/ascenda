@@ -1,0 +1,123 @@
+{
+ "document_id": "0e784b48-921d-466f-a0c4-8f42a842db81",
+ "titre_normalise": "Panorama de l'intelligence artificielle. Volume 3 : l'intelligence artificielle, frontières et applications",
+ "auteurs": [
+  "Pierre Marquis (coord.)",
+  "Odile Papini (coord.)",
+  "Henri Prade (coord.)",
+  "Paul Braffort (préface)"
+ ],
+ "annee": 2014,
+ "type_ouvrage": "manuel",
+ "niveau": "avance",
+ "public_cible": "Chercheurs, doctorants, enseignants du supérieur, ingénieurs confirmés. Ouvrage collectif publié par Cépaduès, dernier des trois volumes d'un traité dont la pagination est continue : ce volume commence à la page 999. Chaque chapitre est signé par des spécialistes du domaine traité et se termine par sa propre bibliographie.",
+ "these_centrale": "Un état de l'art collectif du champ francophone, organisé non par technique mais par frontière disciplinaire. Ce troisième volume traite de ce qui se passe aux limites : ce que l'informatique théorique impose comme bornes infranchissables, ce que les bases de données, le Web sémantique, la linguistique, la biologie et la robotique demandent à l'intelligence artificielle, et ce qu'elles lui renvoient en retour.",
+ "idees_force": [
+  {
+   "titre": "Un témoignage direct des origines, par quelqu'un qui y était",
+   "explication": "La préface de Paul Braffort n'est pas une introduction de circonstance. Il rappelle que la cybernétique de Wiener paraît en français dès 1946 chez Hermann et connaît un grand succès, qu'un premier congrès international de cybernétique se tient à Namur en 1954, et que le champ ne prend son nom qu'ensuite. Il dirigeait alors le laboratoire de calcul analogique du Commissariat à l'énergie atomique, puis un groupe de recherche à Euratom, et il énumère les quatre sujets d'alors : documentation automatique, traduction automatique, simulation des jeux, démonstration automatique de théorèmes.",
+   "page": 14
+  },
+  {
+   "titre": "Le financement de la recherche suit la politique, pas la science",
+   "explication": "Braffort le dit sans détour à propos du premier grand échec du champ : la traduction automatique bénéficia d'investissements considérables pour d'évidentes raisons économiques et politiques, investissements brutalement réduits lorsqu'il apparut que les connaissances en linguistique, et particulièrement en sémantique, demeuraient insuffisantes. Le cycle argent, promesse, désillusion, coupure était déjà établi soixante ans avant l'engouement actuel.",
+   "page": 14
+  },
+  {
+   "titre": "Déduire et calculer sont la même activité",
+   "explication": "L'isomorphisme de Curry et Howard établit que non seulement l'activité de déduction est mécanisable, mais qu'elle est équivalente à l'activité de calcul. Une démonstration est un programme, une proposition est un type. Le volume qualifie ce fait de spectaculaire et note qu'il offre à réfléchir bien au delà de son expression mathématique.",
+   "page": 23
+  },
+  {
+   "titre": "Deux hypothèses physiques suffisent à fonder la thèse de Church",
+   "explication": "Gandy a montré en 1980 que tout dispositif physique satisfaisant à quatre principes est simulable par machine de Turing, et que ces principes traduisent deux hypothèses sur la nature : la vitesse de transmission de l'information est finie, et la densité de l'information est finie. La conséquence est immédiate et rarement énoncée : ces hypothèses ne valent pas nécessairement en mécanique quantique ni en physique relativiste, et la question de ce qui serait alors calculable reste ouverte.",
+   "page": 31
+  },
+  {
+   "titre": "Descendre de l'Olympe pour retrouver le temps des hommes",
+   "explication": "La plus belle page du volume. Sur l'île de Calypso, Ulysse renonce à l'éternité pour reprendre son identité d'homme qui vieillit et meurt. La calculabilité demande si un problème est décidable, sans relation au temps, comme si tout était déjà là : c'est le temps des dieux. Prendre le chemin de la complexité, c'est réintégrer le temps linéaire comme une donnée fondamentale du calcul.",
+   "page": 65
+  },
+  {
+   "titre": "Le calcul a des bornes physiques, et elles sont chiffrables",
+   "explication": "Le plus grand nombre d'unités de temps ayant un sens physique est de l'ordre de dix puissance quarante et un : l'âge de l'univers divisé par le temps que met un photon à traverser un proton. Le nombre de particules élémentaires de l'univers est borné par dix puissance quatre-vingts. Il en résulte qu'un algorithme de coût exponentiel a une complexité rédhibitoire, non par convention mais par physique. La théorie de la complexité est présentée comme la théorie de la calculabilité raisonnable.",
+   "page": 65
+  },
+  {
+   "titre": "On échange du temps contre de la matière grise",
+   "explication": "La multiplication apprise à l'école coûte le produit du nombre de chiffres des deux opérandes. Il existe des algorithmes plus rapides, mais conceptuellement plus difficiles. Cette formule résume ce qui distingue l'ingénieur du praticien : le gain de performance se paie en effort de compréhension, et ce coût là est réel.",
+   "page": 65
+  },
+  {
+   "titre": "Le Web sémantique, ou la représentation des connaissances à l'échelle du monde",
+   "explication": "Le chapitre retrace un déplacement instructif. Tim Berners-Lee écrivait en 1998 que le Web sémantique n'était pas de l'intelligence artificielle, avant d'ajouter plus tard que c'était la représentation des connaissances devenue globale. Les techniques du champ s'y trouvent confrontées à cinq difficultés propres au Web : l'échelle, l'hétérogénéité, l'incomplétude, l'incohérence et la dynamique.",
+   "page": 127
+  },
+  {
+   "titre": "Rendre décidable ce qui ne l'était pas, en acceptant d'en dire moins",
+   "explication": "Le résultat sur la famille DL-Lite illustre un compromis fondamental. Il s'agit d'un des fragments décidables maximaux de la logique du premier ordre pour lequel répondre à des requêtes sur de grands volumes de données, en présence de contraintes logiques, reste traitable. Le point décisif est que la reformulation de la requête en fonction des axiomes de l'ontologie est indépendante des données : on paie en expressivité ce qu'on gagne en passage à l'échelle.",
+   "page": 120
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Thèse de Church, Kleene et Turing",
+   "definition": "Affirmation que tous les modèles de calcul proposés conduisent à la même classe de fonctions calculables, et que chacun formalise donc la notion intuitive de calculabilité. Ce n'est pas un théorème mais une thèse, et le volume explique pourquoi."
+  },
+  {
+   "terme": "Principes de Gandy",
+   "definition": "Quatre conditions techniques dont la satisfaction par un dispositif physique garantit qu'il est simulable par machine de Turing. Elles traduisent la finitude de la vitesse de transmission et de la densité de l'information."
+  },
+  {
+   "terme": "Isomorphisme de Curry et Howard",
+   "definition": "Correspondance entre démonstrations et programmes, entre propositions et types. Elle fait de l'extraction d'un programme à partir d'une preuve une opération mécanique."
+  },
+  {
+   "terme": "Preuve constructive",
+   "definition": "Démonstration dont on peut extraire un algorithme. Les auteurs préfèrent ce terme à celui d'intuitionniste, parce qu'il met l'accent sur le caractère opérationnel plutôt que sur une position philosophique."
+  },
+  {
+   "terme": "Théorème de Herbrand",
+   "definition": "Ce qui remplace la propriété du témoin lorsqu'on étend l'interprétation algorithmique des preuves à la logique classique. Les démonstrations classiques y apparaissent comme des algorithmes non déterministes."
+  },
+  {
+   "terme": "Machine à oracle",
+   "definition": "Machine de Turing dotée d'une boîte noire capable de répondre à certaines questions. Proposée par Turing lui même en 1939, elle devient plus puissante qu'une machine ordinaire dès que l'oracle n'est pas calculable."
+  },
+  {
+   "terme": "Machine accélérante",
+   "definition": "Machine effectuant chaque opération en un temps égal à la moitié de la précédente, ce qui permet en principe une infinité d'opérations en temps fini. Idée ancienne, dont on a discuté des réalisations physiques en mécanique quantique ou par trous noirs."
+  },
+  {
+   "terme": "Automate d'arbres",
+   "definition": "Automate reconnaissant des structures arborescentes plutôt que des mots. La plupart des propriétés du cas linéaire s'y étendent, ce qui rend décidables des questions posées sur des documents structurés."
+  },
+  {
+   "terme": "Contrainte d'intégrité",
+   "definition": "Métadonnée exprimant une propriété que les données doivent respecter. Elle sert deux fins : garantir la conformité au réel, et permettre d'optimiser les traitements, jusqu'à éviter d'évaluer une requête dont on détecte à la compilation qu'elle ne renverra rien."
+  },
+  {
+   "terme": "Ontologie",
+   "definition": "Définition formelle du vocabulaire d'un domaine, fournissant une vue conceptuelle des données et des services. Elle est au cœur du Web sémantique."
+  },
+  {
+   "terme": "Champ aléatoire conditionnel",
+   "definition": "Modèle discriminant qui, contrairement aux modèles à variables cachées, ne suppose pas l'indépendance des observations. Il est devenu central en prédiction de gènes parce qu'il permet d'intégrer des sources de données disparates."
+  }
+ ],
+ "a_lire_si": "Vous cherchez la référence francophone du domaine et vous savez déjà ce que vous voulez y trouver. C'est un ouvrage de consultation, chapitre par chapitre, avec des bibliographies qui sont à elles seules un instrument de travail. Les deux premiers chapitres sur l'informatique théorique sont ce que le corpus contient de plus solide sur les limites du calcul, et un ingénieur y trouvera des arguments définitifs sur ce qui est impossible plutôt que difficile.",
+ "a_eviter_si": "Vous voulez apprendre. Ce n'est pas un livre d'enseignement mais un état de l'art destiné à des lecteurs qui connaissent déjà le vocabulaire. Chaque chapitre suppose une familiarité avec son domaine et renvoie à la littérature de recherche plutôt qu'il n'explique. Aucune notion n'y est introduite depuis le début.",
+ "prerequis": [
+  "Un niveau de troisième cycle en informatique ou en mathématiques appliquées, ou une pratique professionnelle du domaine traité.",
+  "Les deux volumes précédents, dont la pagination se poursuit ici, exposent les bases méthodologiques et les algorithmes. Ce volume trois les suppose acquis.",
+  "Les chapitres sont indépendants : on peut en lire un sans les autres, à condition d'en maîtriser le domaine d'application."
+ ],
+ "controverses": [
+  "L'exemplaire du corpus est une numérisation dont les pages portent des étiquettes en cyrillique, ce qui indique une provenance étrangère au circuit éditorial. Il s'agit d'un ouvrage universitaire commercial protégé, et sa présence dans une bibliothèque destinée à être mise en ligne pose un problème de droits qu'il faudra trancher avant toute diffusion.",
+  "La page de garde et l'achevé d'imprimer n'ont pas été récupérés par la numérisation. L'année portée dans cette notice est à valider : les références internes s'arrêtent en 2012, ce qui fixe seulement une borne inférieure.",
+  "L'ouvrage a été composé avant la vague de l'apprentissage profond. Il traite abondamment de représentation des connaissances, de logiques et de contraintes, et fort peu des réseaux de neurones à grande échelle. Ce déséquilibre est celui du champ académique francophone de l'époque, et il constitue à la fois la valeur documentaire du livre et sa limite pour comprendre les systèmes actuels.",
+  "Le volume est collectif et son homogénéité s'en ressent : certains chapitres sont des exposés pédagogiques aboutis, d'autres des recensions bibliographiques annotées. La qualité varie d'un domaine à l'autre.",
+  "La reconnaissance de caractères dégrade fortement les formules, les indices et les symboles logiques. Les passages mathématiques doivent être vérifiés sur une autre édition."
+ ],
+ "confiance": 0.8
+}

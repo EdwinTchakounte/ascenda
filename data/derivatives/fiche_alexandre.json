@@ -1,0 +1,106 @@
+{
+ "document_id": "4bbbc5af-2a0b-404f-a743-7c1d97f82789",
+ "titre_normalise": "La guerre des intelligences à l'heure de ChatGPT",
+ "auteurs": [
+  "Laurent Alexandre"
+ ],
+ "annee": 2023,
+ "type_ouvrage": "essai",
+ "niveau": "intermediaire",
+ "public_cible": "Grand public, enseignants, parents, décideurs. Écrit sur un ton de tribune : phrases courtes, formules frappantes, prise de position permanente. Édition refondue de l'ouvrage de 2017 après l'arrivée de ChatGPT.",
+ "these_centrale": "L'IA « faible », sans conscience, sans bon sens, suffit déjà à bouleverser l'ordre économique et politique, et l'intelligence humaine devient la ressource la plus discriminante du siècle. Laurent Alexandre en tire une conclusion qui structure tout le livre : puisque l'école ne parvient pas à réduire les écarts cognitifs, il faudra « démocratiser l'intelligence biologique » par les neurotechnologies, sous peine de voir se former une aristocratie de l'intelligence face à une masse d'« inutiles ».",
+ "idees_force": [
+  {
+   "titre": "C'est la bêtise de l'IA, pas sa subtilité, qui est révolutionnaire",
+   "explication": "L'IA faible « ne possède aucun bon sens, aucune conscience du monde et d'elle-même. Son nom est usurpé. » Mais c'est précisément parce qu'elle a besoin de masses colossales de données pour apprendre, là où un bébé se contente de quelques exemples, qu'elle crée des monopoles impossibles à démanteler et pousse les plateformes à rendre leurs applications addictives. La faiblesse technique produit la puissance économique.",
+   "page": 30
+  },
+  {
+   "titre": "Nous sommes les idiots utiles de l'IA",
+   "explication": "La matière première de l'IA, c'est nous. Par la loi de Metcalfe, la valeur d'un réseau croît exponentiellement avec le nombre d'utilisateurs, chaque compte créé accroît la puissance des GAFAM et des BATX. « Nous pensons que le smartphone est le degré ultime de la supériorité technologique de l'homme, sans comprendre qu'il est en réalité l'outil de sa vassalisation. »",
+   "page": 30
+  },
+  {
+   "titre": "La surabondance d'information favorise la croyance, pas le savoir",
+   "explication": "S'appuyant sur les travaux de Gérald Bronner, Alexandre décrit une concurrence déloyale sur le marché cognitif : quel que soit le sujet, environ 70 % des sites sont crédules, parce que la motivation des croyants dépasse celle des savants. « Désormais, la vérité se décrète à l'applaudimètre. » Le pari selon lequel l'accès universel à la connaissance renforcerait la raison scientifique s'est révélé faux.",
+   "page": 73
+  },
+  {
+   "titre": "ChatGPT ne renvoie qu'une réponse, et c'est le problème",
+   "explication": "Un moteur de recherche propose une série de résultats à partir desquels on se forge une opinion ; ChatGPT « ne donne qu'une réponse unique sans références permettant de vérifier ses affirmations ». Comme entraîner ces modèles coûte des dizaines de milliards, l'oligopole est mécanique, et cet oligopole formatera la pensée. Alexandre relève aussi que le modèle « porte de façon flagrante la marque d'une éducation reçue sur la côte ouest des États-Unis ».",
+   "page": 131
+  },
+  {
+   "titre": "L'école prépare à l'économie d'avant ChatGPT",
+   "explication": "Un système « encore centré sur l'enseignement en silo de matières quasiment inchangées depuis le XIXe siècle, par des personnels formés il y a trente ans et sélectionnés pour leur stricte conformité aux canons scolaires » ne peut pas préparer à un marché du travail radicalement différent. Alexandre prédit que la réforme viendra de l'extérieur, imposée par les neurotechnologies américaines ou chinoises.",
+   "page": 189
+  },
+  {
+   "titre": "« Ce n'est pas le revenu qui doit être universel mais le développement du cerveau »",
+   "explication": "C'est la formule-programme du livre. Alexandre s'oppose frontalement au revenu universel : « personne ne redeviendra un travailleur actif après dix ans de revenu universel ». Il lui substitue un droit à la formation tout au long de la vie, puis, à plus long terme, l'augmentation cognitive, seul moyen selon lui d'éviter que les non-augmentés deviennent les « Inutiles » décrits par Harari.",
+   "page": 189
+  },
+  {
+   "titre": "Le tabou du QI est, selon l'auteur, suicidaire",
+   "explication": "Alexandre soutient que les écarts de quotient intellectuel sont « la plus grande injustice, et la source de toutes les inégalités », et que le silence public à leur sujet arrange autant la gauche, qui préfère des causes extérieures, que la droite, qui préfère le mérite. Il prédit que le jour où les neurotechnologies rendront l'intelligence modifiable, ces écarts deviendront un scandale politique, parce qu'« on peut seulement revendiquer l'égalisation de choses sur lesquelles on peut agir ».",
+   "page": 218
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "IA faible / IA forte",
+   "definition": "L'IA faible exécute ce qu'on lui a appris dans un domaine déterminé et reste sous contrôle humain ; l'IA forte disposerait d'une conscience d'elle-même et pourrait poursuivre son propre projet. Alexandre soutient que l'IA faible est le problème immédiat."
+  },
+  {
+   "terme": "NBIC",
+   "definition": "Convergence des nanotechnologies, biotechnologies, informatique et sciences cognitives. Pour Alexandre, ce qui distingue cette révolution des précédentes est qu'elle change la nature des choses et non leur proportion."
+  },
+  {
+   "terme": "Loi de Metcalfe",
+   "definition": "La valeur d'un réseau croît de façon exponentielle avec le nombre de ses utilisateurs. Appliquée à l'IA, elle explique pourquoi la position dominante d'une plateforme se renforce d'elle-même."
+  },
+  {
+   "terme": "Homo Deus",
+   "definition": "Terme emprunté à Yuval Noah Harari désignant l'humain doté de pouvoirs autrefois réservés aux dieux : créer la vie, modifier le génome, reprogrammer le cerveau. Alexandre en fait la « quatrième tentative » après Adam, le Déluge et Babel."
+  },
+  {
+   "terme": "General Purpose Technology (GPT)",
+   "definition": "Technologie à usage général qui réorganise l'économie et l'ordre social, machine à vapeur, électricité, moteur à explosion, microprocesseur. Alexandre range les modèles de langage comme la cinquième, en jouant sur l'homonymie avec GPT-4."
+  },
+  {
+   "terme": "Guerre des cerveaux",
+   "definition": "Double compétition selon Alexandre : d'abord entre zones géographiques (Asie contre Occident), puis entre cerveaux biologiques et cerveaux de silicium."
+  },
+  {
+   "terme": "Neuroaugmentation",
+   "definition": "Ensemble des techniques visant à accroître les capacités cognitives, implants intracérébraux, sélection d'embryons, pharmacologie. Alexandre les présente comme inévitables et préférables à l'inaction."
+  },
+  {
+   "terme": "Les « Inutiles »",
+   "definition": "Expression reprise de Harari désignant ceux dont le travail devient économiquement sans valeur. Alexandre y ajoute la citation de Joan Robinson : « La misère d'être exploité par les capitalistes n'est rien comparée à la misère de ne pas être exploité du tout. »"
+  },
+  {
+   "terme": "Nudgital",
+   "definition": "Terme de Gaspard Koenig fusionnant le nudge et le capital : si le comportement d'un individu est prévisible, il est aussi manipulable, et plus nous émettons de données, plus nous nous prêtons au nudge."
+  },
+  {
+   "terme": "Neurodictature",
+   "definition": "Scénario où la manipulation ne porte plus sur l'information mais directement sur les souvenirs et les états cérébraux."
+  }
+ ],
+ "a_lire_si": "Vous voulez comprendre l'argumentaire techno-progressiste français dans sa version la plus assumée, et saisir pourquoi la question éducative est au cœur du débat sur l'IA. Le livre est aussi utile comme document : il donne à voir une position qui pèse dans le débat public francophone, avec ses forces rhétoriques et ses angles morts.",
+ "a_eviter_si": "Vous cherchez une analyse équilibrée. C'est un pamphlet : l'auteur ne discute presque jamais les objections, il les qualifie, « mayonnaise collapsologique », « dictature verte », « négationnisme génétique ». Les chapitres 4, 5 et 7 sont une charge politique contre l'écologie plutôt qu'une analyse de l'IA. Si le sujet qui vous intéresse est l'IA elle-même et non le combat idéologique de l'auteur, une part importante du livre vous paraîtra hors sujet.",
+ "prerequis": [
+  "Aucun prérequis technique.",
+  "Ce livre gagne énormément à être lu APRÈS un ouvrage plus neutre sur l'histoire et le fonctionnement de l'IA, sans quoi il est difficile de distinguer ce qui relève du constat établi de ce qui relève de la thèse de l'auteur.",
+  "Une notion de ce que l'héritabilité mesure en génétique quantitative est nécessaire pour lire les chapitres 10 à 13 avec esprit critique."
+ ],
+ "controverses": [
+  "Le cœur contesté du livre : l'affirmation que les écarts de QI sont « la source de toutes les inégalités ». C'est une inversion causale que la majorité des travaux en sciences sociales rejette, les performances aux tests sont fortement corrélées à l'environnement social, et l'héritabilité d'un trait dans une population ne dit rien de la cause des écarts entre groupes. Alexandre écarte Bourdieu d'une formule (« Bourdieu avait tout faux ») sans discuter ses travaux.",
+  "La confusion, récurrente dans le livre, entre héritabilité statistique et déterminisme génétique individuel. Ce sont deux notions distinctes, et la première n'autorise pas les conclusions politiques que l'auteur en tire.",
+  "Les propositions de neuroaugmentation et de sélection d'embryons touchent directement à l'eugénisme. L'auteur ne l'ignore pas, un chapitre s'intitule « Du toboggan eugéniste à la dictature neuronale », mais il traite la question comme un problème de calendrier plutôt que comme une question morale ouverte.",
+  "La charge contre l'écologie, qui va jusqu'à demander si les écologistes « sont manipulés par la Chine », relève du registre polémique et non de l'argumentation. Elle occupe pourtant plusieurs chapitres.",
+  "L'auteur reconnaît lui-même s'être « lourdement trompé » en 2017 en jugeant l'IA non explosive. C'est à son honneur, et c'est aussi un élément à retenir pour évaluer la fiabilité des prédictions datées qui remplissent l'ouvrage, dont un « planning pour le dépassement de l'homme par ChatGPT » placé dès les premières pages."
+ ],
+ "confiance": 0.85
+}

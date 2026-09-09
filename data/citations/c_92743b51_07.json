@@ -1,0 +1,112 @@
+[
+ {
+  "chapitre": "563bd9ff",
+  "citations": [
+   {
+    "texte": "S'il nous proposa une performance en effet, la capacité au dialogue d'une machine à ce point indistinguable de celle d'un être humain banal, il passa complètement sous silence la manière d'y parvenir.",
+    "page": 166,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La faille du test de Turing",
+    "portee": "Toute évaluation par la seule performance ignore le procédé, et peut donc être satisfaite par une imposture."
+   },
+   {
+    "texte": "Qualifieriez-vous vraiment un tel programme « d'intelligent », même si pourtant il parle plutôt bien, jusqu'au point de confondre son interlocuteur ?",
+    "page": 166,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Parler bien n'est pas penser",
+    "portee": "Question à garder présente devant tout agent conversationnel actuel, dont le procédé n'est pas si éloigné de celui décrit ici."
+   },
+   {
+    "texte": "C'est aussi la preuve qu'un logiciel d'une grande stupidité, comme de nombreuses productions de l'IA aujourd'hui et surtout de l'apprentissage profond, perroquet obèse, obsessionnel du plagiat, peuvent nous bluffer sur leur soi-disant intelligence ou créativité.",
+    "page": 167,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le perroquet obèse",
+    "portee": "Formule mordante d'un chercheur du domaine, qui vaut mise en garde avant toute démonstration impressionnante."
+   },
+   {
+    "texte": "À ses yeux, les manipulations syntaxiques ne conduisent pas directement au sens. L'univers sémantique reste partiellement délaissé, inaccessible.",
+    "page": 167,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "La syntaxe et le sens",
+    "portee": "Objection de Searle en une phrase, toujours vivante devant les modèles de langage actuels."
+   },
+   {
+    "texte": "En substance, des algorithmes stupides peuvent apparemment se comporter intelligemment, prouvant que l'intelligence artificielle n'est pas toujours là où on la croit.",
+    "page": 168,
+    "axe": "01-ia-fondamentaux-vulgarisation",
+    "theme": "Là où on ne la croit pas",
+    "portee": "Conclusion des deux expériences historiques, ELIZA et la chambre chinoise, en une phrase."
+   },
+   {
+    "texte": "On qualifiera la deuxième de « consciente ». Cette fois, l'expertise humaine reste toujours de mise, essentielle, la tâche se trouvant décomposée et découpée en séquences pour y glisser justement cette expertise.",
+    "page": 168,
+    "axe": "02-ia-technique-academique",
+    "theme": "Les deux IA",
+    "portee": "Distinction qui donne son titre à la conclusion et structure tout l'ouvrage : apprendre sans nous, ou raisonner avec nous."
+   },
+   {
+    "texte": "Actuellement, nous vivons cependant les succès spectaculaires essentiellement de l'IA inconsciente, celle qui s'ingénie à se passer de nous, celle qui met toute la force brute de nos ordinateurs à son service, celle qui se nourrit de la myriade de données que nous lui abandonnons dans les réseaux sociaux et autre carrefours informatiques incontournables sur Internet.",
+    "page": 169,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Ce que nous lui abandonnons",
+    "portee": "Le carburant de cette IA est ce que nous produisons sans y penser : nos traces quotidiennes."
+   },
+   {
+    "texte": "Il est rassurant de penser que le processus d'apprentissage machine pourrait supprimer les biais que le programmeur met naturellement dans un programme qu'il fabriquera « à la main », de par les choix techniques et logiques qu'il doit opérer durant sa conception. En fait, il n'en est rien ; on a plus que souvent simplement déplacé le problème du biais du concepteur aux données d'apprentissage.",
+    "page": 169,
+    "axe": "04-ia-societe-ethique-philosophie",
+    "theme": "Le biais déplacé, non supprimé",
+    "portee": "Correctif décisif à l'idée que les données seraient neutres : le biais change de place et devient plus difficile à voir."
+   },
+   {
+    "texte": "Elles se doivent de comprendre autant que de prédire. Si la prédiction s'effectue au détriment de la compréhension, il y a tout lieu de faire marche arrière, de revenir aux fondamentaux.",
+    "page": 170,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Comprendre autant que prédire",
+    "portee": "Critère qui distingue une démarche scientifique d'une performance technique, et qui vaut bien au-delà de l'informatique."
+   },
+   {
+    "texte": "Il pourrait exceller à cette prédiction, mais la physique, elle, que gagnerait-elle à cette nouvelle manière d'exercer sa discipline ? Prédiction parfaite, d'accord, mais compréhension absente !",
+    "page": 170,
+    "axe": "05-ia-education-pedagogie",
+    "theme": "Prédire sans comprendre",
+    "portee": "Expérience de pensée limpide sur ce qu'une science perdrait à se réduire à la prédiction."
+   },
+   {
+    "texte": "Ces réseaux peuvent être à la fois excellents et ignorants.",
+    "page": 170,
+    "axe": "02-ia-technique-academique",
+    "theme": "Excellents et ignorants",
+    "portee": "Cinq mots qui résument tout le débat sur la nature de la performance des modèles actuels."
+   },
+   {
+    "texte": "Il est d'ailleurs tout aussi erroné de considérer les réseaux de neurones convolutifs comme de simples boîtes noires, car les filtres convolutifs qui les composent résultent de très longues années d'expérience et de connaissance en matière de traitement d'image.",
+    "page": 170,
+    "axe": "02-ia-technique-academique",
+    "theme": "L'expertise n'a pas disparu",
+    "portee": "Nuance honnête : le savoir humain s'est déplacé de l'extraction des caractéristiques vers l'architecture du réseau."
+   },
+   {
+    "texte": "Cependant, ceci a un coût de calcul important (ainsi, les algorithmes de Deep Learning sont des énergivores voraces) et il est très possible que la conscientisation écologique amène les développeurs de demain à une plus grande sobriété, en exploitant plus et mieux nos ressources cognitives qui, comme tous les neurobiologistes le savent, nous surprennent toujours et encore par leur faible consommation énergétique.",
+    "page": 171,
+    "axe": "11-sciences-environnement",
+    "theme": "Vers une sobriété algorithmique",
+    "portee": "Le cerveau humain fait mieux pour quelques watts : argument à opposer à l'idée que la puissance de calcul dispense de réfléchir."
+   },
+   {
+    "texte": "Il est donc conseillé, lorsqu'il s'agit de développer un logiciel pour un problème quelconque, de commencer par quelque chose de simple, de sobre, de compréhensible et de maîtrisable (un simple classifieur linéaire avant un Deep Learning)",
+    "page": 171,
+    "axe": "03-ia-outils-pratique-prompting",
+    "theme": "Commencer simple",
+    "portee": "Conseil directement actionnable, et le plus accessible de tous : la méthode la plus légère se teste d'abord."
+   },
+   {
+    "texte": "Et c'est surtout à vous que nous pensons, les plus jeunes, les programmeurs en herbe, afin de saisir les opportunités extraordinaires que l'IA vous offre pour faire face à tous ces défis, et d'y faire face au plus vite.",
+    "page": 172,
+    "axe": "09-developpement-personnel-influence",
+    "theme": "L'adresse finale aux jeunes",
+    "portee": "Dernière phrase du livre, et invitation directe à ceux qui commencent : les outils sont là, les problèmes aussi."
+   }
+  ]
+ }
+]

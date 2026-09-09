@@ -1,0 +1,16 @@
+[
+ {"chapitre":"22f4b7af","citations":[
+  {"texte":"L'IA avancée de ChatGPT nous confronte inéluctablement à la question de savoir si la pensée est autre chose que le juste maniement du langage.","page":135,"axe":"04-ia-societe-ethique-philosophie","theme":"Parler est-il penser","portee":"Formule la question philosophique que pose un modèle de langage, sans y répondre. Point de départ d'un débat entre Descartes et Wittgenstein."},
+  {"texte":"si apprendre n'est pas si différent d'imiter, si prédire correctement n'est pas si différent de comprendre en matière de communication humaine, les frontières entre les formes d'intelligence deviennent plus difficiles à cerner","page":135,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Imiter, prédire, comprendre","portee":"Explique pourquoi la question de l'intelligence des machines est mal posée tant qu'on n'a pas défini ce que comprendre veut dire."}
+ ]},
+ {"chapitre":"19e02629","citations":[
+  {"texte":"puisque ChatGPT peut accomplir mieux que nous les tâches intellectuelles les plus ordinaires et les plus","page":157,"axe":"05-ia-education-pedagogie","theme":"L'exigence nouvelle","portee":"Ouverture de la conclusion : la machine faisant l'ordinaire, il revient à l'humain d'être plus inventif. Argument pour changer la nature des examens."},
+  {"texte":"il nous faut imaginer des examens mettant en jeu la sagacité humaine et non la réponse à de simples QCM que ChatGPT remplirait mieux que nous","page":157,"axe":"05-ia-education-pedagogie","theme":"Ce que vaut encore un QCM","portee":"À garder sous les yeux pendant la production de la banque de questions : un QCM ne vaut que s'il atteste d'une lecture réelle, pas d'un savoir général."}
+ ]},
+ {"chapitre":"5ccb398d","citations":[
+  {"texte":"Méfiez-vous des questions trop précises sur des points qui ne sont pas de notoriété publique et de connaissance générale : ChatGPT peut avoir tendance à inventer plutôt que de reconnaître qu'il ne sait rien.","page":161,"axe":"03-ia-outils-pratique-prompting","theme":"Où le modèle invente","portee":"Règle pratique la plus utile de l'annexe : le risque d'hallucination croît quand la question sort de la connaissance commune."}
+ ]},
+ {"chapitre":"04271be8","citations":[
+  {"texte":"pour ChatGPT, il n'existe pas de différence « ontologique », comme diraient les philosophes, c'est-à-dire de nature, entre le probable et le vrai : le vrai n'est qu'une vérité statistique","page":123,"axe":"01-ia-fondamentaux-vulgarisation","theme":"Le vrai et le probable","portee":"Explication la plus claire du corpus sur l'origine des hallucinations : le modèle ne distingue pas ce qui est vrai de ce qui est vraisemblable."}
+ ]}
+]

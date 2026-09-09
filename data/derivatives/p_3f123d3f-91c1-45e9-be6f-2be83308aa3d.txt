@@ -1,0 +1,1240 @@
+OUVRAGE : L IA débarque - Qu est-ce que ça change dans ta vie
+AUTEUR(S) : inconnu
+ANNÉE : 2025
+PAGES : 280
+AXE : IA Fondamentaux Vulgarisation
+SOMMAIRE :
+  Page de marque (p. 15-15)
+  Crédits (p. 16-16)
+  Page titre (p. 17-17)
+  Dédicace (p. 18-18)
+  Préface (p. 19-20)
+  Introduction (p. 21-21)
+  D’abord, c’est quoi précisément l’intelligence artificielle ? (p. 21-22)
+  Une machine à prédiction qui apprend toute seule (p. 23-23)
+  À quoi t’attendre dans ce livre ? (p. 24-24)
+  Pourquoi c’est important de comprendre l’IA ? (p. 25-25)
+  L’IA, amie ou ennemie ? (p. 25-25)
+  Partie 1 : Ton argent (p. 26-26)
+  Chapitre 1 : Tes factures augmentent-elles à cause de l’IA ? (p. 27-27)
+  L’IA te surveille pendant que tu magasines (p. 27-27)
+  L’assurance auto : quand l’IA te profile (p. 28-28)
+  Les prix d’Expedia ou d’Air Canada qui montent tout seuls (p. 28-28)
+  Les abonnements numériques : des prix personnalisés à la carte (p. 29-29)
+  Ton électricité bientôt tarifée à l’heure ? (p. 29-29)
+  Les thermostats intelligents Hilo : amis ou ennemis ? (p. 30-30)
+  Le problème de la transparence et de la réglementation (p. 31-31)
+  Ce que tu peux faire (ou pas) (p. 32-32)
+  En conclusion (p. 32-33)
+  Chapitre 2 : Ton épicerie sait-elle ce que tu vas acheter avant toi ? (p. 34-34)
+  De la carte de points au profil d’achat algorithmique (p. 34-34)
+  L’aubaine… vraiment ? (p. 35-35)
+  L’algorithme derrière les circulaires numériques (p. 35-35)
+  Ton parcours en magasin est optimisé contre toi (p. 36-36)
+  Et l’épicerie en ligne ? (p. 37-37)
+  Est-ce que c’est légal ? (p. 37-37)
+  Qu’est-ce que tu peux faire ? (p. 38-38)
+  En conclusion (p. 38-38)
+  Chapitre 3 : Peux-tu faire plus d’argent grâce à l’IA ? (p. 39-39)
+  Qu’est-ce qu’un « robot-conseiller » ? (p. 39-39)
+  Les promesses… et les risques (p. 40-40)
+  Et quand les marchés s’écroulent ? (p. 40-40)
+  Les algorithmes qui jouent à la Bourse pour toi (p. 41-41)
+  Est-ce que l’IA peut battre le marché ? (p. 42-42)
+  Et les arnaques ? (p. 42-42)
+  Ce que tu peux faire (ou pas) (p. 43-43)
+  En conclusion (p. 44-44)
+  Chapitre 4 : Ton compte de banque est-il géré par un robot ? (p. 45-45)
+  Les banques sont déjà passées au numérique… puis à l’intelligent (p. 45-45)
+  Le beau côté : les IA qui t’aident à « mieux gérer ton argent » (p. 46-46)
+  Le côté plus sombre : l’IA qui te « conseille » sans que tu le saches (p. 47-47)
+  Et ton conseiller humain, dans tout ça ? (p. 48-48)
+  La grande question : est-ce que c’est bon pour toi ? (p. 49-49)
+  Que peux-tu faire ? (p. 49-49)
+  En conclusion (p. 50-50)
+  Chapitre 5 : Peux-tu vraiment mieux contrôler tes dépenses grâce à l’IA ? (p. 51-51)
+  Comment une app d’IA peut-elle gérer ton argent ? (p. 51-51)
+  Est-ce que ces apps marchent vraiment pour économiser ? (p. 52-52)
+  Mais attention, l’IA budgétaire a ses limites (p. 53-53)
+  Comment vraiment tirer profit de ces apps de budget intelligentes ? (p. 54-54)
+  Ce que tu peux faire (ou pas) (p. 54-54)
+  En conclusion (p. 55-55)
+  Partie 2 : Ton travail et ton avenir professionnel (p. 56-56)
+  Chapitre 6 : Vas-tu perdre ta job à cause de l’IA ? (p. 57-57)
+  L’IA remplace pas des jobs… elle les transforme (et parfois les déplace) (p. 57-57)
+  Les secteurs les plus à risque (p. 58-58)
+  Les métiers plus « humains » sont encore difficiles à remplacer (p. 59-59)
+
+[29/259 passages, 16135 tokens sur 136147]
+
+=== EXTRAITS ===
+
+[p. 2-4]
+Table des matières
+Couverture
+Page de marque
+Crédits
+Page titre
+Dédicace
+Préface
+Introduction
+D’abord, c’est quoi précisément l’intelligence artificielle ?
+Une machine à prédiction qui apprend toute seule
+À quoi t’attendre dans ce livre ?
+Pourquoi c’est important de comprendre l’IA ?
+L’IA, amie ou ennemie ?
+Partie 1 : Ton argent
+Chapitre 1 : Tes factures augmentent-elles à cause de l’IA ?
+L’IA te surveille pendant que tu magasines
+L’assurance auto : quand l’IA te profile
+Les prix d’Expedia ou d’Air Canada qui montent tout
+seuls
+Les abonnements numériques : des prix personnalisés à
+la carte
+Ton électricité bientôt tarifée à l’heure ?
+Les thermostats intelligents Hilo : amis ou ennemis ?
+Le problème de la transparence et de la réglementation
+Ce que tu peux faire (ou pas)
+En conclusion
+Chapitre 2 : Ton épicerie sait-elle ce que tu vas acheter avant
+toi ?
+De la carte de points au profil d’achat algorithmique
+
+L’aubaine... vraiment ?
+L’algorithme derrière les circulaires numériques
+Ton parcours en magasin est optimisé contre toi
+Et l’épicerie en ligne ?
+Est-ce que c’est légal ?
+Qu’est-ce que tu peux faire ?
+En conclusion
+Chapitre 3 : Peux-tu faire plus d’argent grâce à l’IA ?
+Qu’est-ce qu’un « robot-conseiller » ?
+Les promesses... et les risques
+Et quand les marchés s’écroulent ?
+Les algorithmes qui jouent à la Bourse pour toi
+Est-ce que l’IA peut battre le marché ?
+Et les arnaques ?
+Ce que tu peux faire (ou pas)
+En conclusion
+Chapitre 4 : Ton compte de banque est-il géré par un robot ?
+Les banques sont déjà passées au numérique... puis à
+l’intelligent
+Le beau côté : les IA qui t’aident à « mieux gérer ton
+argent »
+Le côté plus sombre : l’IA qui te « conseille » sans que tu
+le saches
+Et ton conseiller humain, dans tout ça ?
+La grande question : est-ce que c’est bon pour toi ?
+Que peux-tu faire ?
+En conclusion
+Chapitre 5 : Peux-tu vraiment mieux contrôler tes dépenses
+grâce à l’IA ?
+Comment une app d’IA peut-elle gérer ton argent ?
+Est-ce que ces apps marchent vraiment pour économiser ?
+Mais attention, l’IA budgétaire a ses limites
+
+Comment vraiment tirer profit de ces apps de budget
+intelligentes ?
+Ce que tu peux faire (ou pas)
+En conclusion
+Partie 2 : Ton travail et ton avenir professionnel
+Chapitre 6 : Vas-tu perdre ta job à cause de l’IA ?
+L’IA remplace pas des jobs... elle les transforme (et parfois
+les déplace)
+Les secteurs les plus à risque
+Les métiers plus « humains » sont encore difficiles à
+remplacer
+Ton travail de bureau est-il en sursis ?
+OK, mais au Québec, est-ce qu’on est vraiment en danger ?
+Que peux-tu faire ?
+En conclusion
+Chapitre 7 : L’IA peut-elle t’aider à trouver un emploi ?
+ATS, l’algorithme qui trie ton CV... sans émotion
+Des IA qui classent... et parfois jugent
+Ça aide... ou ça discrimine ?
+L’IA peut-elle t’aider à trouver un emploi aussi ?
+Ce que tu peux faire pour que ton CV se retrouve en haut de
+la pile
+En conclusion
+Chapitre 8 : L’IA peut-elle t’aider à négocier ton salaire ?
+L’IA du côté... de ton boss
+Le piège de la transparence algorithmique
+Et si tu es une femme ?
+Des outils IA pour connaître ta valeur sur le marché
+Comment l’IA peut t’aider à mieux négocier
+Ce que tu peux faire
+En conclusion
+Chapitre 9 : Es-tu espionné par l’IA au bureau ?
+
+---
+
+[p. 17-18]
+constitue une infraction au droit d’auteur et est passible de
+poursuites légales ou civiles pouvant entraîner des pénalités ou le paiement de dommages
+et intérêts.
+Guy Saint-Jean Éditeur est membre de
+l’Association nationale des éditeurs de livres (ANEL).
+JEAN-FRANÇOIS OUELLET
+L’IA
+DÉBARQUE
+Qu’est-ce que ça change dans ta vie ?
+À Xavier et Maxence, mes fils,
+dont l’avenir me pousse à scruter celui du monde avec une vigilance redoublée.
+Et à mon père, Denis,
+qui m’a transmis le goût d’analyser, de comprendre et, surtout, de toujours foncer.
+
+---
+
+[p. 26-27]
+ndre à conduire dans ce monde-là.
+Parce que l’intelligence artificielle, c’est comme l’hiver au Québec :
+elle est là, elle partira pas demain matin, pis t’es mieux de t’équiper
+pour y faire face.
+Bonne lecture !
+* Hein ! Quoi ? T’inquiète pas : tu trouveras une définition des mots soulignés dans le
+glossaire.
+PARTIE 1
+TON ARGENT
+CHAPITRE 1
+TES FACTURES AUGMENTENT-
+ELLES À CAUSE DE L’IA ?
+Est-ce que les grandes entreprises profitent des
+algorithmes pour gonfler tes prix sans que tu
+t’en rendes compte ?
+Depuis quelque temps, t’as sûrement remarqué que ton panier
+d’épicerie te coûte plus cher, que tes primes d’assurances
+augmentent sans raison claire ou que le prix de ton vol change d’une
+minute à l’autre. Tu te dis que c’est à cause de l’inflation, des
+guerres, du pétrole, des chaînes d’approvisionnement, de
+Trump... Oui, en partie. Mais ce que personne te dit vraiment, c’est
+que l’intelligence artificielle est déjà utilisée pour ajuster tes
+prix à la volée. Et souvent, pas en ta faveur !
+C’est pas de la science-fiction, ni une théorie du complot. C’est une
+pratique courante et parfaitement légale qu’on appelle la tarification
+dynamique ou la discrimination algorithmique par les prix. C’est-
+à-dire que, grâce à des algorithmes d’intelligence artificielle, les
+entreprises peuvent décider que TOI, tu vas payer plus cher qu’un
+autre client pour le même produit ou service. Et souvent, sans que tu
+t’en rendes compte.
+L’IA te surveille pendant que tu magasines
+Quand tu fais une recherche pour un billet d’avion, un sac à dos ou
+une assurance auto, tu penses que tu vas trouver le meilleur prix. En
+fait, tu es souvent en train de négocier contre un algorithme. Ces
+systèmes analysent ton comportement : combien de fois tu as visité
+
+---
+
+[p. 36-37]
+avec de la gelée d’oignons, ça serait donc ben
+bon ce soir.
+Et quand tu scannes ta carte de fidélité, tu fais en plus le cadeau à
+ton épicerie de savoir que cette tactique-là, elle fonctionne sur toi,
+mais pas forcément sur ton voisin, qui, lui, dépense moins que toi
+dans l’épicerie en question. Résultat : le positionnement des
+produits en magasin est optimisé pour que ceux qui dépensent
+davantage trouvent encore plus à dépenser.
+Et l’épicerie en ligne ?
+Tu te dis peut-être : « Je vais commander en ligne. Comme ça, je
+contrôlerai mieux mon panier. » Bonne idée... en théorie.
+Mais les plateformes comme Voilà (IGA) utilisent les mêmes
+algorithmes qu’en magasin, mais en les poussant encore plus. Ton
+historique est analysé. Tes recherches sont enregistrées. Tes
+habitudes d’achat sont profilées. Tu as passé 15 secondes à
+regarder l’onglet de bœuf ? Ton épicerie l’a bien noté. Et en passant,
+cette stratégie s’en vient aussi dans les épiceries physiques :
+Amazon, avec son concept Amazon Fresh aux États-Unis, fait
+exactement ça !
+En ligne, une fois que l’algorithme a appris à te connaître, tu finis par
+voir toujours les mêmes produits, dans le même ordre, avec les
+mêmes suggestions. Tu penses faire un choix libre, mais l’interface
+est faite pour t’amener là où l’IA veut que tu ailles. Parce qu’on
+sait bien que tu vas pas aller voir la boîte de biscuits qui est affichée
+au bas de la page des résultats... La recherche nous dit depuis 20
+ans que tu vas presque assurément choisir l’une des premières qui
+te sont présentées, et c’est encore plus vrai si tu magasines sur ton
+cell et plus encore si tu magasines au moyen d’un assistant vocal
+comme Alexa.
+Est-ce que c’est légal ?
+Oui. En ce moment, tout ça est parfaitement légal. Même si l’Office
+de la protection du consommateur du Québec rappelle qu’il est
+interdit de passer sous silence des faits importants – par exemple
+que ton voisin a droit à un rabais, mais pas toi –, il n’existe toujours
+pas de réglementation spécifique pour l’usage de l’IA dans les
+promotions des commerces au détail.
+
+---
+
+[p. 45-46]
+ligent
+Au Canada, les grandes institutions financières – Desjardins,
+Banque Nationale, Banque Laurentienne, etc. – ont toutes investi
+massivement dans la transformation numérique. Mais ce qu’on
+oublie souvent, c’est que la deuxième phase de cette
+transformation, c’est l’automatisation intelligente. Et ça, ça veut
+dire de l’IA...
+Par exemple, plusieurs banques ont mis en place ce qu’on appelle
+des systèmes de recommandation prédictive pour t’orienter vers les
+bons produits, selon ton historique bancaire. En gros, ces systèmes
+utilisent l’information qu’on possède sur toi pour prévoir ton
+comportement et intervenir pile-poil au moment où tu te disais
+justement « Je devrais-tu changer de carte de crédit, moi ? ». Par
+exemple, une institution financière a développé des modèles
+internes pour prédire les moments où tu as des chances de faire une
+demande de prêt... ou de partir vers une autre banque. Et ils
+agissent avant même que tu poses une question.
+Le beau côté : les IA qui t’aident à « mieux gérer ton
+argent »
+T’as peut-être remarqué que ton appli bancaire te fait des
+suggestions comme :
+« Vous pourriez économiser 20 $ par mois en limitant vos repas
+au resto. »
+« Ce mois-ci, vous avez dépensé 15 % de plus en
+abonnements. »
+« Il est possible que ce commerçant vous ait facturé en double :
+voulez-vous vérifier ? »
+Ces conseils et avertissements viennent d’assistants virtuels
+dopés à l’intelligence artificielle. Ils existent depuis un certain
+temps chez Tangerine, Wealthsimple, RBC et les autres. Leur but :
+te rappeler gentiment comment et combien tu dépenses, si t’es en
+train de dépasser ton budget du mois, ou si tu devrais en profiter
+pour cotiser tes surplus du mois dans ton REER.
+En général, ces outils peuvent être utiles et t’aider à mieux
+comprendre ton comportement financier. Si ton conseiller virtuel
+est capable de te faire épargner ou de t’avertir d’une fraude probable
+avant que t’aies payé ton compte, c’est certainement à ton avantage.
+Mais il faut rester prudent, parce que, malheureusement, ces IA sont
+souvent biaisées, entre autres parce qu’elles ont pas forcément en
+
+---
+
+[p. 54-55]
+laire et honnête de tes
+dépenses.
+profiter des alertes intelligentes pour changer tes
+comportements financiers.
+tester plusieurs apps avant de choisir celle qui convient
+réellement à ta réalité financière.
+faire régulièrement le ménage dans tes abonnements ou
+dépenses inutiles grâce aux recommandations de l’app.
+Tu devrais pas :
+espérer que l’app fasse tout le travail d’économiser à ta place.
+(La discipline reste nécessaire !)
+ignorer l’importance d’assurer la sécurité de tes données
+financières sensibles.
+croire que simplement installer une app réglera magiquement
+tes problèmes financiers.
+te fier aveuglément aux recommandations commerciales
+intégrées dans certaines de ces apps.
+En conclusion
+Oui, l’intelligence artificielle peut vraiment t’aider à mieux gérer ton
+argent et même à économiser concrètement chaque mois. Mais
+seulement si tu l’utilises intelligemment, activement et en pleine
+conscience de ses limites.
+Rappelle-toi que le vrai contrôle de ton budget reste humain avant
+tout. Une app intelligente peut te donner les outils, mais la décision
+finale de cliquer sur « Acheter maintenant » au lieu de juste rien
+acheter et de plutôt économiser ce que tu aurais dépensé, ça restera
+toujours la tienne.
+Parce qu’au fond, gérer son argent, c’est comme aller au gym : c’est
+toi qui dois lever les poids. L’IA, elle, elle peut juste te rappeler
+gentiment qu’il est temps de commencer à t’entraîner.
+
+---
+
+[p. 63-64]
+nques nord-américaines, qui fait une « entrevue
+automatisée » où l’algorithme analyse chaque mot, chaque pause,
+chaque expression.
+Ça aide... ou ça discrimine ?
+Le gros problème, c’est que ces systèmes sont souvent biaisés.
+Ils ont été entraînés sur des données historiques... qui reflètent
+parfois des pratiques discriminatoires.
+Exemple : si, dans les dernières années, les candidats embauchés
+étaient tous des hommes blancs entre 30 et 45 ans détenant un bac
+en finances, l’algorithme pourrait favoriser automatiquement ce
+profil, sans même s’en rendre compte.
+C’est exactement ce qui est arrivé chez Amazon, dont le système
+d’embauche IA discriminait systématiquement les candidatures
+féminines en raison des données historiques utilisées pour
+l’entraîner.
+Et au Québec ? Il y a peu de transparence sur l’utilisation de ces
+outils, mais certaines PME et grandes organisations les testent déjà.
+Le danger, c’est qu’aucune loi oblige les employeurs à déclarer qu’ils
+utilisent l’IA pour te trier.
+Et les jeunes là-dedans ?
+Les jeunes adultes, en particulier les finissants des universités, sont
+souvent les premières cibles des outils de tri automatisé, parce
+qu’ils postulent beaucoup, souvent pour des postes juniors, et dans
+des grandes entreprises.
+Mais ils sont aussi les plus à l’aise pour contourner le
+système... quand on leur explique comment le faire.
+L’éducation numérique devrait inclure l’apprentissage du marché
+de l’emploi numérique, y compris comment les algorithmes
+sélectionnent (ou éliminent) les candidatures.
+L’IA peut-elle t’aider à trouver un emploi
+aussi ?
+Oui ! Elle n’est pas juste là pour te bloquer. Elle peut aussi devenir
+ton alliée.
+Voici quelques outils qui peuvent vraiment t’aider :
+Jobscan : pour adapter ton CV aux offres d’emploi et passer le
+filtre des ATS.
+
+---
+
+[p. 73-74]
+u
+risques de démissionner dans les trois à six prochains mois.
+Ton employeur veut-il te fliquer... ou t’aider ?
+Ça dépend.
+Certaines entreprises disent qu’elles utilisent ces données pour
+améliorer le bien-être au travail. Elles détectent les employés
+surchargés, stressés, isolés, et interviennent avant que la situation
+explose.
+D’autres s’en servent pour couper dans le gras. Si l’algorithme
+détecte que tu contribues moins, que ton « niveau d’engagement
+numérique » est en baisse, tu pourrais te retrouver sur la liste des
+employés « à risque »... de perdre leur job.
+Bref, ça peut être un outil de gestion humaine ou un outil de gestion
+froide. Ça dépend de la culture d’entreprise.
+Et chez nous ?
+Au Québec, peu d’entreprises avouent utiliser ces outils de
+surveillance algorithmique. Mais plusieurs le font probablement
+sans le dire, ou en testent des options « en douce ».
+On sait cela puisque des cas ont été rapportés. Comme lorsqu’un
+employeur a congédié une employée après avoir démontré que
+celle-ci consacrait 21 % de son temps à des activités
+personnelles... une démonstration faite grâce à un logiciel espion,
+vraisemblablement l’outil OccupEye.
+Ou encore ces cas chez Affaires mondiales Canada, où une
+trentaine d’employés ont été réprimandés pour des raisons
+similaires, et au moyen d’un outil semblable.
+Mais, est-ce que c’est légal ? Oui... à certaines conditions.
+La Loi 25 sur la protection des renseignements personnels oblige les
+employeurs à informer leurs employés s’ils sont surveillés. Mais,
+en pratique, cette information est souvent noyée dans une politique
+RH longue comme un bottin.
+Et surtout : rien interdit encore clairement l’analyse
+algorithmique du comportement au travail tant que les données
+sont internes à l’entreprise.
+Donc, ton patron peut pas t’espionner à la maison sans te le dire.
+Mais s’il t’a fourni un ordi de travail, une adresse de courriel ou un
+compte Microsoft 365, il peut techniquement analyser tes données
+d’utilisation.
+
+---
+
+[p. 82-83]
+penses que ton ado ne connaît pas ces outils ? Détrompe-toi. Un
+sondage mené en 2024 auprès de 1001 étudiants américains du
+primaire et du secondaire montre que :
+77 % des élèves de ces niveaux disent utiliser l’IA dans leurs
+études ;
+49 % l’utilisent chaque semaine ;
+39 % disent l’utiliser sans permission... et sans l’indiquer.
+Et ce n’est pas juste pour tricher. Plusieurs l’utilisent pour :
+reformuler leurs phrases ;
+corriger la grammaire ;
+résumer des textes complexes ;
+trouver des idées ;
+traduire des textes ou générer des synonymes.
+Donc, oui, l’IA est devenue un nouvel outil scolaire, au même titre
+que la calculatrice ou Antidote... sauf qu’elle peut aussi tout faire à
+leur place.
+Est-ce que c’est vraiment de la triche ?
+C’est là que les avis divergent. Pour certains enseignants, demander
+à ChatGPT de rédiger un paragraphe, c’est comme copier-coller du
+contenu à partir de Wikipédia. C’est de la triche, point final.
+Mais d’autres commencent à nuancer :
+Est-ce que l’élève comprend le texte généré ?
+Est-ce qu’il l’a révisé ? Amélioré ?
+Est-ce que l’usage de l’IA était encadré par l’enseignant ou fait
+en catimini par l’élève ?
+Parce que, dans bien des cas, l’IA ne remplace pas le travail : elle le
+transforme. Un élève qui demande à ChatGPT de lui expliquer la
+Révolution tranquille en cinq points, c’est pas de la triche. C’est
+même de l’autonomie. Surtout s’il a suffisamment étudié pour être
+en mesure de savoir si ce que l’IA lui a fourni est de la bullshit.
+Mais s’il copie-colle un devoir complet sans rien comprendre ? Là,
+oui, c’est un problème. De la même manière que s’il copiait-collait
+sur des sites comme Wikipédia ou Alloprof.
+Pire que juste une question de triche, l’utilisation aveugle de l’IA a
+des effets pervers sur l’apprentissage. Quand tu fais même plus
+l’effort de relire, de critiquer et d’augmenter ce que l’IA a pondu pour
+toi, t’apprends plus rien. Et c’est ça le vrai danger.
+
+---
+
+[p. 92-93]
+, c’est quoi au juste ?
+C’est pas juste un babyphone. Une nounou IA, c’est :
+un assistant vocal (comme Alexa, Google Nest, Siri) qui peut
+raconter des histoires, rappeler des routines, répondre aux
+questions des enfants ;
+un robot interactif comme Miko, Cubo, ou Eilik, qui bouge,
+réagit, parle et apprend à connaître ton enfant ;
+une app comme Zigazoo ou ABCmouse, qui adapte ses
+contenus selon l’âge du tout-petit, ses réponses, les émotions
+qu’elle détecte chez lui.
+Ces outils font pas juste divertir. Ils analysent, ajustent,
+s’adaptent. Ils apprennent comment ton enfant parle, s’exprime,
+réagit. Ils suivent son humeur, son vocabulaire, son attention pour
+développer des liens toujours plus proches avec lui. Et surtout : ils
+sont susceptibles de prendre ta place... un peu plus chaque
+jour.
+Est-ce que ça marche ?
+Sur le plan technique, oui. Plusieurs parents rapportent que leur
+enfant :
+écoute mieux un robot qu’un parent ;
+se calme plus vite avec une voix synthétique ;
+apprend du vocabulaire ou des chansons grâce à l’IA.
+Un groupe mené par une chercheuse de l’Université de l’Illinois a
+même montré que les enfants et les adolescents s’attachent
+émotionnellement à des assistants vocaux, dont une application
+en particulier appelée Character.AI. Ils lui parlent comme à un ami,
+trouvent du réconfort auprès de lui, et lui posent des questions
+intimes, voire... très intimes.
+Autrement dit : ça fonctionne... parfois trop bien.
+Mais est-ce une bonne idée ?
+Pas toujours. Parce qu’une nounou humaine, c’est pas juste une
+voix douce et une routine bien réglée. C’est :
+de l’empathie réelle ;
+une capacité à improviser ;
+une intuition face aux besoins non exprimés ;
+une autorité affective.
+
+---
+
+[p. 102-103]
+oche
+Depuis quelques années, on a vu apparaître des plateformes
+d’apprentissage assistées par l’IA qui fonctionnent comme des
+profs personnalisés disponibles 24 h sur 24/7 j sur 7.
+Parmi les plus populaires :
+Khanmigo (de Khan Academy) : un tuteur IA basé sur GPT-4,
+qui aide à comprendre les maths, les sciences, l’histoire, etc.
+Socratic (par Google) : l’enfant prend une photo d’un devoir,
+l’IA lui explique la démarche à effectuer pour le compléter.
+Photomath : pour résoudre des équations avec des étapes
+expliquées.
+Century (utilisé dans certaines écoles au Royaume-Uni) : suit
+les forces/faiblesses de l’élève et adapte les leçons.
+Et même des options québécoises en émergence, comme
+AlloFlo de la plateforme bien connue Alloprof.
+Ces outils donnent pas juste des réponses. Ils adaptent leur
+langage, leur niveau de difficulté et leur façon d’enseigner selon
+chaque élève. En gros, c’est comme si ton enfant avait un prof privé
+dans sa tablette.
+Est-ce que ça fonctionne pour vrai ?
+Plusieurs études montrent que les élèves qui utilisent ces outils de
+façon régulière améliorent leur compréhension, leur autonomie et
+leur motivation. Surtout ceux qui :
+ont de la difficulté dans une matière précise ;
+sont gênés de poser des questions en classe ;
+ont besoin de plus de répétitions.
+Dans une étude pilotée par des chercheurs de l’Université Harvard,
+des étudiants qui utilisaient un tuteur virtuel dans le cadre d’un cours
+de sciences physiques ont appris deux fois plus en consacrant
+15 % moins de temps à leurs études.
+Une autre recherche réalisée au Royaume-Uni suggère quant à elle
+que les tuteurs artificiellement intelligents sont plus
+performants que les tuteurs humains dans l’apprentissage de la
+lecture, notamment en matière de compréhension de textes.
+Et au Québec ?
+L’intégration est encore lente, mais elle commence.
+
+---
+
+[p. 111-112]
+mais c’est toi qui
+décide.
+Écouter ton corps autant que ton téléphone. Si t’as faim, c’est
+pas ton app qui a le dernier mot.
+Parler avec un professionnel. Un vrai. Pas juste un chatbot.
+À éviter :
+Utiliser ces apps pour des jeunes en croissance.
+Laisser l’IA fixer tes objectifs sans supervision.
+Confondre motivation et contrôle.
+En conclusion
+Oui, une IA peut t’aider à perdre du poids. À te structurer. À mieux
+manger. À bouger plus.
+Mais elle est ni nutritionniste, ni médecin, ni thérapeute. Elle connaît
+pas ton passé, ton métabolisme, tes blessures, ton horaire.
+Et elle peut pas te dire si tu veux perdre du poids pour de bonnes
+raisons... ou juste pour ressembler à ce que l’algorithme t’a montré.
+Alors sers-toi de l’IA si ça t’aide. Mais rappelle-toi : c’est pas ton
+coach. C’est un outil. Pis ton corps mérite mieux qu’un programme
+généré en 12 secondes par un serveur en Californie.
+
+---
+
+[p. 120-121]
+sonnes au lieu
+d’embaucher plus de soignants.
+Remplacer les visites par des appels automatisés.
+Faire croire à une surveillance 24 h sur 24/7 j sur 7 quand c’est
+juste une IA qui lit des chiffres.
+On pourrait se retrouver avec des aînés bien encadrés... mais
+profondément seuls.
+CE QUE TU PEUX FAIRE, COMME PROCHE
+OU COMME CITOYEN
+À faire :
+T’informer sur les outils technos utilisés dans les milieux de
+soins de tes proches.
+Demander que l’IA soit utilisée en soutien, pas en
+remplacement des humains.
+Visiter, appeler, parler, même quand la technologie est
+présente – elle remplace pas un câlin ou une blague partagée.
+À surveiller :
+Des décisions basées uniquement sur des scores d’algorithme
+(ex. : qui a droit à quoi ?).
+La tentation pour les établissements de couper dans les
+effectifs en se disant que la techno suffit.
+Les entreprises privées qui vendent du soin robotisé comme si
+c’était une relation humaine.
+En conclusion
+Oui, l’IA peut jouer un rôle important dans les soins aux personnes
+âgées. Elle peut prévenir des accidents, alléger la charge des
+préposés, améliorer la qualité des suivis médicaux.
+Mais elle remplacera jamais un humain bienveillant. Dans les
+soins aux aînés, le cœur reste essentiel.
+Et si on commence à confier nos parents uniquement à des
+machines, faut se demander : est-ce vraiment pour leur bien... ou
+parce qu’on a abandonné l’idée de faire mieux nous-mêmes ?
+
+---
+
+[p. 130-131]
+stress ou à améliorer ton sommeil, mais c’est pas magique. Ça
+fonctionne surtout si tu l’utilises intelligemment et régulièrement, en
+complément d’habitudes de vie plus saines.
+Donc, si ton Apple Watch te dit de respirer profondément... fais-le
+vraiment ! Parce qu’au bout du compte, c’est pas l’IA qui va te
+détendre. C’est toi.
+PARTIE 5
+TES RELATIONS
+PERSONNELLES,
+AMOUREUSES ET SEXUELLES
+
+---
+
+[p. 139-140]
+trusion dans la vie privée. Ces suggestions
+d’amis révèlent parfois des connexions que tu préférerais
+garder privées (comme cette collègue que tu veux pas vraiment
+mélanger avec ton groupe d’amies proches...).
+Risque de superficialité. L’algorithme sait qu’une autre
+personne et toi aimez tous les deux le yoga chaud, mais il peut
+pas prédire si vos personnalités vont réellement « cliquer » ou
+non.
+Surmenage social numérique. Accepter trop rapidement
+toutes les suggestions peut vite te submerger, surtout si tu te
+retrouves à gérer des amitiés « virtuelles » qui n’apportent pas
+vraiment de connexion authentique dans ta vie réelle.
+Sans compter que parfois, les suggestions de Facebook
+peuvent être vraiment creepy : t’as parlé deux minutes avec
+quelqu’un dans un café, et pouf ! La voilà dans ta liste de Personnes
+que vous connaissez peut-être.
+COMMENT UTILISER INTELLIGEMMENT L’IA
+POUR TE FAIRE DES AMIS ?
+Alors, comment bien utiliser ces algorithmes pour développer des
+relations qui comptent vraiment ?
+Tu peux :
+accepter des suggestions automatiques quand elles ont
+réellement du sens (amis communs, intérêts similaires). As-tu
+vraiment quelque chose en commun avec untel ou unetelle, à
+part vos 22 amis Facebook ?
+utiliser ces recommandations comme un prétexte pour briser la
+glace (« Allô ! Facebook insiste tellement pour qu’on devienne
+amies, j’ai fini par craquer ! »).
+transformer rapidement ces amitiés virtuelles en vraies
+rencontres pour vérifier la chimie réelle. Une amitié virtuelle est
+bien belle, mais partager un vrai café ensemble, ça reste
+encore mieux.
+Sois conscient des données que tu partages. Ces
+recommandations sont pas magiques, elles proviennent de tout
+ce que tu dévoiles en ligne. Protège ta vie privée en ajustant
+
+---
+
+[p. 148-149]
+à ce que tu attends de lui, évoluant en même
+temps que toi.
+Tout ça rend les IA extrêmement attirantes émotionnellement, au
+point où certaines personnes les préfèrent déjà à de vraies relations
+humaines.
+Des risques bien réels
+Malgré leur côté séduisant, les relations intimes avec des IA
+comportent plusieurs risques importants :
+Isolement social. En passant plus de temps avec un assistant
+virtuel qu’avec tes vrais amis ou les membres de ta famille, tu
+peux devenir encore plus isolé socialement.
+Dépendance émotionnelle. Certains utilisateurs deviennent
+totalement dépendants émotionnellement de ces IA, au point
+d’avoir du mal à créer de véritables relations humaines.
+Relations irréelles et biaisées. Une IA te répond exactement
+ce que tu veux entendre. Mais une vraie relation implique des
+conflits, des compromis, des imperfections que tu retrouves pas
+dans ces relations virtuelles.
+Manipulation émotionnelle. Une IA pourrait potentiellement
+être programmée pour influencer subtilement tes décisions ou
+tes comportements émotionnels à ton insu.
+Des exemples concrets qui font réfléchir
+En 2023, un incident impliquant l’application Replika a attiré
+beaucoup d’attention médiatique : après que l’entreprise a modifié
+son algorithme, des milliers d’utilisateurs ont signalé une détresse
+émotionnelle intense, certains déclarant même avoir vécu une
+véritable « rupture amoureuse » avec leur assistant virtuel.
+Ici au Québec, plusieurs psychologues rapportent avoir reçu des
+patients aux prises avec de vraies détresses psychologiques liées à
+leur dépendance émotionnelle envers une IA. L’Ordre des
+psychologues du Québec commence même à se questionner
+sérieusement sur la nécessité d’encadrer ces outils virtuels qui
+jouent avec des émotions humaines très profondes.
+Mais alors, ces relations avec l’IA sont-elles
+mauvaises ?
+Pas forcément, mais fais très attention. Si tu les utilises comme
+soutien émotionnel ponctuel ou pour mieux comprendre tes propres
+émotions, pourquoi pas ? Dans certains cas précis, notamment pour
+
+---
+
+[p. 158-160]
+puis te pousse à cliquer, encore
+et encore.
+Le tracking algorithmique : comment les
+pubs « te trouvent »
+Chaque clic, chaque recherche Google, chaque vidéo que tu
+regardes, chaque mot que tu tapes est une source de données. Et
+ces données sont récoltées, croisées, analysées par des
+algorithmes pour bâtir ton profil publicitaire.
+Ce profil inclut :
+ton âge, ton genre, ta langue ;
+ta localisation (même approximative) ;
+les produits que t’as consultés ;
+les sites que t’as visités ;
+les publications que t’as aimées ;
+les mots-clés que t’as recherchés.
+Pis ensuite ? L’IA décide quelles pubs tu vas voir, combien de
+fois, à quel moment de la journée et sur quelle plateforme. C’est
+pas une pub choisie au hasard : c’est plus comme un missile dirigé
+précisément vers toi.
+L’effet psychologique de la répétition algorithmique
+Tu vois dix fois la même robe sur différents sites ? C’est voulu. Ce
+phénomène s’appelle le retargeting (ou reciblage publicitaire).
+L’idée est que plus tu la vois, plus ton cerveau va croire qu’elle est
+populaire, désirable, voire nécessaire.
+C’est basé sur un biais cognitif bien connu, l’effet de simple
+exposition : plus tu es exposé à un objet, plus tu développes un
+sentiment de familiarité, et souvent... d’affection face à cet objet.
+T’as l’impression que la robe de la pub commence à te tomber dans
+l’œil, finalement ?
+Les algorithmes le savent. Et ils te servent à la louche.
+Les « pubs intelligentes » au Québec : une réalité déjà
+bien implantée
+Tu penses que c’est juste Amazon qui fait ça ? Détrompe-toi. Des
+compagnies bien québécoises – comme SSENSE, Simons,
+Vidéotron, Loto-Québec, Beneva et plusieurs autres – utilisent déjà
+l’IA pour ajuster leurs campagnes marketing selon ton
+comportement. Le magazine Infopresse y a même dédié toute une
+journée lors d’un événement en 2024.
+
+Tu reçois des courriels automatisés avec ton prénom ? Des offres
+ciblées sur Facebook après avoir visité un site ? C’est pas un
+stagiaire qui t’a trouvé charmant. C’est une IA branchée sur ton
+historique.
+Certaines entreprises québécoises utilisent même des outils de
+prédiction d’intention : si t’as visité un site de meubles trois fois en
+deux jours, tu pourrais recevoir une pub pour une carte de crédit
+« parfaite pour rénover ta maison ».
+Tes contextes aussi sont analysés
+T’as remarqué que tu vois pas les mêmes pubs le lundi matin que le
+vendredi soir ? Que tes recommandations changent quand il fait
+-25 oC dehors ou quand t’es en vacances dans le Bas-du-Fleuve ?
+C’est pas un hasard : les publicités intelligentes s’adaptent aussi
+à ton contexte.
+L’IA prend en compte l’heure de la journée, la météo, ton
+emplacement, ton type d’appareil, le niveau de charge de ta
+batterie (!), ton historique récent... pour te servir LA pub qui risque
+le plus de te faire cliquer.
+Il pleut ? On te propose un imper.
+T’es sur ton cell dans un bus ? On te montre des pubs
+silencieuses, faciles à consommer.
+Tu viens de visiter un site de restos ? On t’offre un rabais Uber
+Eats à 17 h 45 pile.
+T’as utilisé Google Maps avant d’aller chez le vétérinaire ? On
+te montre une pub d’assurance pour animaux.
+Ce genre de ciblage contextuel est maintenant hypercourant, et
+soutenu par des algorithmes d’apprentissage automatique. Les pubs
+sont pas juste adaptées à qui tu es... mais aussi à ce que tu fais,
+quand tu le fais et où tu le fais.
+Autrement dit : ce n’est plus juste ton profil qui compte, c’est ton
+moment. Et plus le moment est bien ciblé, plus t’as de chances de
+
+---
+
+[p. 167-169]
+sur investissement immédiat.
+Cela dit, il y a eu des initiatives prometteuses. L’entreprise
+montréalaise COVEO promet d’aider les détaillants à rendre leurs
+sites Web personnalisés à chaque visiteur, mais tout dépend des
+données qu’ont déjà en main les détaillants... ce qui est souvent très
+(trop) peu pour rivaliser avec Amazon.
+Des programmes québécois comme le Centre québécois
+d’innovation en commerce (CQIC) ont bien tenté aussi de
+sensibiliser et d’aider les entreprises locales à adopter l’IA pour
+mieux concurrencer les géants étrangers. Mais le chemin est long.
+Tellement long que le CQIC a disparu.
+En bref, oui, les détaillants québécois pourraient rattraper une
+partie de leur retard. Mais pour rivaliser directement avec
+Amazon ? C’est encore une bataille extrêmement difficile, qui va
+demander des investissements massifs, un vrai changement culturel
+dans l’approche technologique, et surtout, une prise de conscience
+rapide des enjeux par les dirigeants.
+La vraie question : seront-ils capables de le faire avant qu’Amazon
+ait complètement monopolisé l’attention et le portefeuille des
+consommateurs québécois ? Ça, c’est loin d’être certain.
+CE QUE TU PEUX FAIRE (OU PAS)
+Tu peux :
+désactiver ton historique Amazon. Dans ton compte Amazon,
+désactive ou efface régulièrement l’historique de tes recherches
+et consultations. Moins de données = moins de ciblage.
+utiliser des bloqueurs de pubs et de cookies. Des outils comme
+uBlock Origin ou Privacy Badger limitent ce qu’Amazon et
+d’autres sites collectent à ton sujet. Pense aussi à naviguer en
+mode privé ou incognito quand tu veux pas que ta recherche
+devienne un aimant à pubs.
+limiter l’usage d’Alexa à certaines pièces. Mets Alexa dans une
+pièce neutre (salon ou chambre d’amis) plutôt que dans ta
+cuisine ou ton bureau. Évite de discuter de sujets confidentiels
+à côté d’elle. Même si Amazon dit que l’écoute est limitée,
+mieux vaut prévenir.
+
+lire (un peu) les politiques de confidentialité. Oui, c’est plate,
+mais prends au moins quelques minutes pour vérifier ce
+qu’Amazon fait vraiment de tes données avant de connecter
+tous tes appareils ensemble. Souvent, tu peux décocher
+certaines autorisations inutiles.
+diversifier tes achats. Magasine pas seulement chez Amazon.
+Utilise des détaillants québécois ou canadiens quand c’est
+possible. Non seulement tu réduis la collecte centralisée de tes
+données, mais tu soutiens aussi l’économie locale.
+ignorer les recommandations (parfois). Entraîne-toi à
+reconnaître quand Amazon tente de te pousser vers un achat
+non nécessaire. Prends toujours une minute pour réfléchir :
+« Est-ce que j’en ai vraiment besoin ? », comme dirait l’autre.
+Tu peux pas :
+empêcher complètement Amazon de bâtir ton profil. Dès que tu
+navigues sur Amazon, que tu achètes quelque chose ou que tu
+regardes Prime, tu fournis des données. Amazon s’en sert
+automatiquement pour affiner son profilage.
+éviter à 100 % les suggestions personnalisées. Même en
+désactivant des options, les algorithmes prédictifs d’Amazon
+sont profondément intégrés dans chaque page du site.
+Impossible d’y échapper totalement.
+récupérer toutes tes données déjà partagées. Tout ce que tu as
+déjà cherché, regardé ou commandé sur Amazon est
+probablement stocké quelque part sur ses serveurs. Le passé
+reste dans la mémoire de la compagnie.
+croire que l’IA d’Amazon sera moins intrusive avec le temps.
+Amazon perfectionne constamment ses systèmes de prédiction
+comportementale. Si tu continues à utiliser leurs services
+intensivement, tu lui fournis en permanence des nouvelles
+données pour affiner ton profil.
+
+---
+
+[p. 176-177]
+s près, tu vas voir que ton look est déjà influencé par
+des calculs, des corrélations, des modèles prédictifs.
+C’est pas mauvais en soi. Mais rappelle-toi : la mode, c’est censé
+être une manière de t’exprimer. Si t’es toujours en train de copier
+ce que l’algorithme te sert, est-ce que c’est encore toi qu’on voit
+dans le miroir ?
+CHAPITRE 29
+QUI DÉCIDE CE QUE TU
+MANGES ?
+Quand ton frigo parle à ton épicier... sans te
+consulter
+T’arrives devant ton frigo. Il t’affiche une petite alerte : « Plus de lait.
+Commande en cours. Livraison demain 17 h. »
+T’as rien demandé. T’as même pas eu à penser. Ton frigo a décidé
+pour toi. Pis c’est ton épicier – ou pire, Amazon – qui s’en occupe
+maintenant.
+C’est ça, l’alimentation à l’ère de l’intelligence artificielle : tu manges
+encore, mais ce n’est plus toi qui choisis. C’est ton frigo, ton
+assistant vocal, ton compte sur Voilà (IGA) ou Metro.ca et une
+armée d’algorithmes qui orchestrent ton menu, ta commande, pis ton
+réfrigérateur... pendant que t’as même pas encore décidé si tu veux
+manger chez vous ce soir.
+On est plus dans la pub. On est dans la logistique automatisée de
+ton assiette.
+Le frigo qui pense... et qui agit à ta place
+Les nouveaux frigos dits « intelligents » – comme ceux de Samsung,
+LG ou Bosch – sont plus que des boîtes froides. Ils :
+scannent ce que tu mets dedans (avec une caméra ou un
+code-barres) ;
+détectent ce qui manque (ou ce qui va bientôt expirer) ;
+te proposent des recettes en fonction de ce que t’as déjà ;
+
+---
+
+[p. 185-186]
+iments ; juste du concret, du rapide, du personnalisé.
+Mais pour ceux qui aiment fouiller, essayer, discuter, découvrir... il
+reste de la place pour l’humain. Et c’est tant mieux !
+Parce que magasiner, c’est pas juste consommer. C’est aussi vivre
+une expérience. Et ça, même l’algorithme le plus avancé le recréera
+jamais à 100 %.
+PARTIE 7
+TON TEMPS LIBRE
+
+---
+
+[p. 194-195]
+onfronte encore à une réalité bien terre à
+terre.
+Alors pour tes prochaines fins de semaine de détente, continue de
+prévoir un bon thermos de café pour ton trajet. Parce que pour
+l’instant, l’intelligence artificielle peut t’aider à conduire... mais elle te
+remplace pas encore tout à fait.
+Mais bon, on peut toujours rêver, non ?
+CHAPITRE 33
+EST-CE QUE LES ROBOTS VONT
+BIENTÔT TE FAIRE PLEURER OU
+RIRE AUX LARMES ?
+L’IA peut-elle vraiment composer le prochain hit
+de l’été, écrire un best-seller ou le show de ton
+humoriste préféré ?
+Tu viens d’entendre une toune catchy à la radio. Tu trouves ça bon.
+Vraiment bon ! Tu shazames la chanson... pis là, surprise : c’est une
+chanson générée par une IA. Même chose avec ce roman qui t’a fait
+brailler la semaine passée... écrit en partie par un robot. Pis ton
+humoriste préféré ? Il commence à tester du contenu écrit (ou
+validé) par une IA pour ses prochains shows.
+Tu te demandes : « Est-ce que les robots peuvent vraiment me
+faire rire, pleurer ou chanter comme un humain le ferait ? »
+La réponse est de moins en moins floue. Spoiler : c’est déjà en train
+d’arriver. Mais est-ce que c’est bon pour autant ? Pas toujours.
+L’IA peut-elle pondre un hit de l’été ?
+Oui. Pis c’est déjà fait.
+Des IA comme Suno, Aiva et Amper Music sont capables de
+composer des morceaux complets – paroles, musique, mélodie,
+voix, arrangements – sans intervention humaine, ou presque.
+En 2023, le DJ David Guetta a admis avoir utilisé ChatGPT et
+DeepFake Audio pour créer une fausse voix d’Eminem sur un beat
+
+---
+
+[p. 204-205]
+ogle
+Travel.
+Tu devrais pas :
+t’attendre à des conseils ultrapersonnalisés si tu cherches
+quelque chose d’émotif, de subtil ou de hors normes.
+voyager à l’aveugle en pensant que l’IA va tout régler pour toi
+(surtout au Québec).
+remplacer un vrai contact humain quand vient le temps de
+gérer une crise ou de négocier avec un hôtel.
+En conclusion
+Oui, ton prochain voyage pourrait être conçu à 80 % par une IA. Et
+peut-être même qu’il sera très réussi. Mais est-ce qu’il sera
+humainement mémorable, émouvant, inattendu ?
+Pas forcément, en tout cas pas encore.
+Parce que voyager, c’est pas juste suivre un itinéraire parfait ;
+regarder des images et des descriptions de tout ce qui t’attend ; ou
+meubler chaque minute avec un truc à voir ou à faire différent.
+Voyager, c’est aussi se perdre un peu, faire des erreurs, goûter des
+choses étranges et revenir avec des histoires à raconter...
+Et ça, même le meilleur robot peut pas encore te le garantir.
+
+---
+
+[p. 213-214]
+r.
+Ici aussi, les lave-vaisselles connectés entrent en scène. Certains
+modèles (comme les Bosch Série 8, Miele G 7000 et LG ThinQ)
+utilisent :
+des capteurs de saleté ;
+des algorithmes qui optimisent la température et la durée ;
+et des apps qui te préviennent quand les jets sont obstrués ou
+quand le savon est trop concentré ( !).
+Et attention : dans les labos de LG ou Panasonic, on développe
+maintenant des bras robotisés capables de vider le lave-vaisselle à
+ta place. On est pas encore chez les Jetson... mais on s’en
+approche.
+Les robots humanoïdes
+arrivent... tranquillement
+Dans les faits, un enjeu persiste : le temps libéré est souvent perdu
+ensuite en partie par le manque de synchronisation entre tous ces
+outils. C’est que l’on appelle l’interopérabilité.
+Un peu comme ta laveuse a beau laver ton linge, il faut quand même
+que tu mettes toi-même ensuite ton linge propre, mais mouillé, dans
+la sécheuse.
+Ton robot aspirateur a beau ramasser les graines par terre dans la
+cuisine, faut encore que tu vides toi-même sa station de base de
+temps en temps.
+Ton Thermomix a beau te faire à manger et ton lave-vaisselle
+intelligent faire ta vaisselle par la suite, c’est encore toi qui dois
+mettre la bouffe dans ton cuiseur intelligent et ranger tes assiettes
+quand ton lave-vaisselle a fini son cycle.
+C’est pour ça que la vraie promesse, c’est un assistant ménager
+capable de tout faire.
+En 2024, Tesla a présenté son robot Optimus Gen 2, capable de
+marcher, de saisir des objets et même de plier un chandail
+(maladroitement, mais quand même).
+Et l’entreprise de robotique Figure AI a signé un partenariat avec
+BMW pour automatiser certaines tâches en usine.
+Ces robots pourraient, à terme, effectuer des tâches dans nos
+maisons : t’aider avec les sacs d’épicerie, ranger ton épicerie dans
+le frigo, remplir la laveuse. La présence d’un robot droïde comme C-
+
+---
+
+[p. 223-224]
+ux
+entendre.
+La politique ne se joue plus juste au cours des débats ou dans les
+urnes. Elle se joue dans tes émotions, dans ton attention... et dans
+ton fil d’actualité.
+Alors la prochaine fois qu’un message politique te fera fortement
+réagir, demande-toi : c’est une conviction qui monte... ou un
+algorithme qui vient de gagner ?
+CHAPITRE 38
+PEUX-TU ÊTRE FAUSSEMENT
+ACCUSÉ À CAUSE DE L’IA ?
+Ces caméras de surveillance et logiciels de
+reconnaissance faciale commettent-ils vraiment
+des erreurs ?
+T’as rien fait de mal. Tu marches dans un centre commercial, tu
+regardes une vitrine, tu t’achètes un latté. Quelques jours plus tard,
+la police débarque chez toi. Une vidéo de surveillance t’aurait « vu »
+sur les lieux d’un vol. Ton visage aurait été reconnu par un système
+d’intelligence artificielle. Sauf que c’était pas toi.
+Tu te dis : « Ça se peut pas. Ils doivent être sûrs avant d’accuser
+quelqu’un ! » Et pourtant... c’est pas si simple.
+Parce que les technologies de reconnaissance faciale, aussi
+impressionnantes soient-elles, commettent des erreurs. Pis parfois,
+elles détruisent des vies.
+Alors... est-ce que l’IA peut vraiment t’accuser à tort ?
+Malheureusement, oui. Et c’est arrivé plus souvent que tu penses.
+La reconnaissance faciale, c’est quoi au
+juste ?
+La reconnaissance faciale, c’est une technologie qui analyse les
+traits de ton visage à partir d’une photo, d’une vidéo ou même d’un
+simple passage devant une caméra.
+
+---
+
+[p. 232-233]
+millions de variables.
+En 2023, DeepMind (la filiale d’IA de Google) a développé un
+système nommé GNoME, capable d’identifier de nouveaux
+matériaux durables en quelques heures... là où des chercheurs
+auraient mis des mois pour arriver aux mêmes résultats. Ce genre
+d’outil pourrait, par exemple, découvrir un nouveau matériau pour
+fabriquer des batteries, un alliage plus léger pour la conception
+d’avions ou un meilleur catalyseur pour capturer le CO2.
+De même, en 2024, l’outil ClimateGPT a été présenté comme un
+assistant IA pour les décideurs politiques. Il est en effet capable de
+recommander les politiques publiques les plus efficaces pour
+réduire les émissions de gaz à effet de serre en fonction des
+spécificités locales (économie, géographie, réseau énergétique,
+etc.).
+Mais... (parce qu’il y a toujours un mais) même la meilleure IA du
+monde invente rien à partir de rien. Elle extrapole, elle optimise, elle
+combine. Mais l’intuition créative humaine, l’audace de penser
+complètement autrement, ça, c’est encore notre job.
+En d’autres mots, l’IA pourrait un jour trouver une solution brillante à
+un problème climatique, plus vite ou plus efficacement que n’importe
+quel génie.
+Mais il faudra encore du génie humain pour poser les bonnes
+questions, interpréter les résultats... et surtout, avoir le courage de
+les mettre en œuvre.
+Alors non, l’IA remplacera pas le génie humain. Mais elle pourrait
+très bien devenir son meilleur allié – ou son arme secrète – pour
+affronter la plus grande crise de notre époque.
+Alors... c’est un problème ou une solution ?
+L’IA, c’est un peu comme un couteau de chef : ça peut couper tes
+carottes comme ça peut aussi te couper le pouce.
+En soi, elle est ni bonne ni mauvaise. Tout dépend de qui l’utilise
+et avec quelle intention.
+Pour qu’elle devienne un outil écologique :
+il faut qu’elle serve des objectifs environnementaux clairs ;
+il faut optimiser l’efficacité énergétique des modèles ;
+
+---
+
+[p. 242-243]
+ains lampadaires intelligents dernier cri détectent même les
+infractions qui sont commises ou les accidents survenant à
+proximité.
+Certaines municipalités québécoises ont commencé à remplacer
+progressivement leurs lampadaires traditionnels par des modèles
+connectés à l’IA.
+Avantages :
+réduction de la consommation d’électricité ;
+baisse des coûts de maintenance ;
+sécurité accrue dans les rues.
+Et pour l’environnement ?
+Certaines villes utilisent déjà l’IA pour :
+prédire les pics de pollution de l’air (et ajuster le transport en
+commun en conséquence) ;
+détecter les fuites d’eau ou les déchets mal disposés ;
+mieux planifier les collectes d’ordures ou de recyclage (en
+fonction du volume, pas d’un horaire fixe) ;
+optimiser la consommation énergétique de bâtiments publics.
+Stockholm, par exemple, a réduit sa consommation énergétique de
+25 % dans les bâtiments municipaux grâce à des systèmes IA de
+gestion intelligente de l’énergie.
+Et les tuyaux sous tes pieds ?
+Une ville intelligente, c’est aussi un gros potentiel de s’occuper de ce
+qu’on voit pas et qui est chiant et coûteux à réparer quand ça pète :
+les infrastructures souterraines.
+Les villes québécoises – comme beaucoup ailleurs dans le monde –
+ sont aux prises avec des réseaux vieillissants :
+aqueducs percés ;
+égouts surchargés ;
+infiltrations ;
+dégâts d’eau qui coûtent une fortune à réparer.
+Et c’est là que l’intelligence artificielle et les capteurs connectés
+entrent en jeu.
+Des villes comme Boston et Singapour testent déjà des systèmes
+de maintenance prédictive qui utilisent :
+des capteurs de pression dans les conduites d’eau ;
+des analyses sonores qui détectent les micro-fuites ;
+
+---
+
+[p. 252-253]
+froidement, mathématiquement. Toi, tu ressens, tu
+ajustes, tu décides.
+Alors, si un jour, une IA te dit que ta relation est vouée à l’échec, que
+tu vas perdre ta job, ou que t’es « statistiquement à risque » de
+contracter telle ou telle maladie...
+Regarde-la bien en face. Et dis-lui :
+« Peut-être. Mais regarde-moi ben aller ! »
+CONCLUSION
+L’intelligence artificielle est là pour de bon – à toi
+de décider ce que tu en fais
+Si t’as lu ce livre jusqu’ici, c’est probablement parce que tu t’es
+rendu compte que l’intelligence artificielle, c’est pas juste un
+buzzword ou une mode passagère. C’est devenu une partie
+intégrante de ton quotidien, de tes choix, de tes loisirs, de ton argent
+pis même de tes relations personnelles. En fait, c’est partout autour
+de toi, souvent sans que tu t’en rendes vraiment compte.
+Et dans tout ça, la grande question : est-ce une bonne ou une
+mauvaise chose ?
+Comme tu l’as remarqué, la réponse est pas si simple. L’IA, c’est ni
+un ange ni un démon. C’est une technologie, un outil – et comme
+tous les outils, c’est la manière dont on l’utilise qui fait toute la
+différence.
+Ce que tu dois retenir, c’est que t’as quand même du pouvoir entre
+les mains. Oui, les algorithmes sont puissants. Oui, ils te
+connaissent mieux que tu l’imagines. Oui, ils peuvent influencer tes
+décisions, tes goûts, et même ta façon de voir le monde. Mais au
+bout du compte, le choix de comment t’agis avec tout ça, c’est
+encore à toi de le faire.
+Oublie jamais que celui qui entraîne
+l’IA... c’est toi !
+Tout au long de ce livre, on t’a montré à quel point l’intelligence
+artificielle influence ton quotidien. Mais il y a un détail crucial dans
+tout ça : l’IA sort pas de nulle part. Elle se nourrit de tes données.
+
+---
+
+[p. 263-264]
+online grocery shopping”, 18 février,
+https://canadiangrocer.com/why-canadians-still-reject-online-grocery-shopping.
+Breugelmans, E., K. Campo et E. Gijsbrechts (2007). “Shelf sequence and proximity effects
+on online grocery choices”, Marketing Letters, 18(1/2), 117-133, https://doi-
+org.proxy2.hec.ca/10.1007/s11002-006-9002-x.
+Office de la protection du consommateur (OPC) (2020). « Publicité : Ce qui est interdit par
+la loi », https://www.opc.gouv.qc.ca/consommateur/sujet/publicite-
+illegale/interdiction/pratiques.
+Chapitre 3 – Peux-tu faire plus d’argent grâce à l’IA ?
+Autorité des marchés financiers (AMF) (2025). « Conseiller en ligne (Robot-conseiller) : 7
+choses à savoir », https://lautorite.qc.ca/grand-public/investissements/conseils-cles-avant-
+dinvestir/conseiller-en-ligne-robot-conseiller.
+La Presse (2023). « Un robot-conseiller pour vos placements en Bourse ? », 24 décembre.
+Liu, C., M. Yang et M. Wen (2023). “Judge me on my losers : Do rob-advisors outperform
+human investors during the COVID-19 financial market crash ?” Production and Operations
+Management, 32(10), 3174-3192, https://doi.org/10.1111/poms.14029.
+Bloomberg (2025). “Oil Algorithmic Traders Loosen Grip on Market After Back-to-Back
+Annual Losses”, https://www.bnnbloomberg.ca/investing/2025/01/09/oil-algorithmic-traders-
+loosen-grip-on-market-after-back-to-back-annual-losses.
+Financial Post (2024). “Can AI beat the stock market ? In the long run, don’t bet on it”, 31
+juillet, https://financialpost.com/wealth/smart-money/can-ai-beat-the-stock-market-in-the-
+long-run-dont-bet-on-it.
+AMF Québec (2023). « Devenir un super investisseur en quelques jours ? Impossible ! »,
+https://lautorite.qc.ca/grand-public/tes-affaires/zone-jeunes/eviter-la-fraude-
+financiere/devenir-un-super-investisseur-en-quelques-jours-impossible.
+Chapitre 4 – Ton compte de banque est-il géré par un robot ?
+Banker S., et S. Khetani (2019). “Algorithm Overdependence : How the Use of Algorithmic
+Recommendation Systems Can Increase Risks to Consumer Well-Being”, Journal of Public
+Policy & Marketing, 38(4) : 500-515. doi :10.1177/0743915619858057.
+Ebbage, A. “Banking on artificial intelligence”, Engineering & Technology, vol. 13, n° 10,
+novembre 2018, p. 66-69, doi : 10.1049/ et.2018.1008.
+Desjardins. Rapport annuel 2022, section Innovation,
+https://www.desjardins.com/ressources/pdf/d50-rapport-annuel-mcd-2022-t4-f.pdf.
+KPMG (2024). « Selon un sondage de KPMG, les banques et les coopératives d’épargne et
+de crédit canadiennes doivent transformer leurs réseaux de succursales pour mieux servir
+les clients qui maîtrisent le numérique » (communiqué de presse),
+https://www.newswire.ca/fr/news-releases/selon-un-sondage-de-kpmg-les-banques-et-les-
+cooperatives-d-epargne-et-de-credit-canadiennes-doivent-transformer-leurs-reseaux-de-
+succursales-pour-mieux-servir-les-clients-qui-maitrisent-le-numerique--851947595.html.
+Chapitre 5 – Peux-tu vraiment mieux contrôler tes dépenses grâce à l’IA ?
+Urbania (2022). « Les meilleures applications de finances personnelles testées pour vous »,
+https://urbania.ca/article/les-meilleurs-applications-de-finances-personnelles-testees-pour-
+vous.
+Agence de la consommation en matière financière du Canada (2017). « Promouvoir
+l’établissement d’un budget chez les personnes qui n’en ont pas : Projet pilote sur la
+littératie financière réalisé au moyen des technologies mobiles »,
+
+---
+
+[p. 272-273]
+The Verge (2025). “Samsung’s smart fridges will use AI to suggest groceries to buy on
+Instacart”, https://www.theverge.com/2025/1/2/24334411/samsung-instacart-smart-fridge-
+partnership.
+Wired (2017). “Amazon is About to Transform how you Buy Groceries”,
+https://www.wired.com/story/amazon-whole-foods-acquisition-grocery-shopping.
+Chapitre 30 – L’IA va-t-elle remplacer les vendeurs en magasin ?
+Forbes (2025). “The AI-Powered Revolution Transforming The Future Of Retail”,
+https://www.forbes.com/councils/forbestechcouncil/2025/02/27/the-ai-powered-revolution-
+transforming-the-future-of-retail.
+Forbes (2022). “20 years on from Minority Report : Are we living in Spielberg’s Vision of a
+Retail Future ?”, https://www.forbes.com/sites/jonbird1/2022/01/24/20-years-on-from-
+minority-report-are-we-living-in-spielbergs-vision-of-a-retail-future.
+Startup House (2024). “Smart Mirrors in Retail : Enhancing Shopping Experiences with
+Technology”, https://startup-house.com/blog/smart-mirrors-in-retail.
+Forbes (2024). “How AI Can Enhance, Not Replace, Human Interaction In Business”,
+https://www.forbes.com/councils/forbesbusinesscouncil/2024/07/16/how-ai-can-enhance-
+not-replace-human-interaction-in-business.
+PARTIE 7 - TON TEMPS LIBRE
+Chapitre 31 – Ton show télé est-il fait sur mesure pour toi ?
+Netflix Technology Blog (2017). “Artwork Personalization at Netflix”,
+https://netflixtechblog.com/artwork-personalization-c589f074ad76.
+Scientific American (2023). “How Recommendation Algorithms Work—And Why They May
+Miss the Mark”, https://www.scientificamerican.com/article/how-recommendation-
+algorithms-work-and-why-they-may-miss-the-mark.
+CNET (2018). “YouTube’s AI is the puppet master over most of what you watch”,
+https://www.cnet.com/tech/services-and-software/youtube-ces-2018-neal-mohan.
+Variety (2024). “Netflix’s Ted Sarandos : Generative AI Tools Will Be a ‘Great Way for
+Creators to Tell Better Stories’”, https://variety.com/2024/digital/news/netflix-ted-sarandos-
+generative-ai-tools-creators-1236077524.
+The Globe and Mail (2025). “Crave marks 10 years in trenches of streaming wars”,
+https://www.theglobeandmail.com/arts/television/article-its-not-tv-but-its-not-just-hbo-either-
+crave-marks-10-years-in.
+Chapitre 32 – Ton char te conduira-t-il un jour ?
+Tesla (2024). « À propos de l’Autopilot », https://www.tesla.com/fr_ca/autopilot.
+CNBC (2025). “Waymo expands its robotaxi service again, this time to parts of Silicon
+Valley”, https://www.cnbc.com/2025/03/11/waymo-expands-its-robotaxi-service-in-the-san-
+francisco-bay-area.html.
+Radio-Canada (2019). « Les hivers canadiens auront-ils raison de la voiture autonome ? »,
+https://ici.radio-canada.ca/ohdio/premiere/emissions/moteur-de-
+recherche/segments/chronique/101928/voiture-autonome-hiver-canada-vehicule-neige-
+glace-lidar.
+Ministère des Transports et de la Mobilité durable (2022). « Projets d’expérimentation de
+véhicules autonomes au Québec », https://www.transports.gouv.qc.ca/fr/modes-transport-
+utilises/vehicules-autonomes/projets-vehicules-autonomes/Pages/projets-vehicules-
+autonomes.aspx.

@@ -1,0 +1,125 @@
+{
+ "document_id": "f574aa1d-1ea9-439f-a165-8f88ac4912c4",
+ "titre_normalise": "Rédaction de texte efficace avec l'IA",
+ "auteurs": [
+  "Kai Spriestersbach"
+ ],
+ "annee": 2023,
+ "type_ouvrage": "manuel pratique",
+ "niveau": "intermediaire",
+ "public_cible": "Personne qui écrit pour de bon : rédacteur, formateur, responsable de communication, auteur, enseignant produisant des supports. Édition originale allemande, mvg Verlag, Munich, 2023, ISBN 978-3-7474-0574-1. La version disponible ici est une traduction automatique non révisée depuis l'allemand. L'auteur est un spécialiste du référencement et de la rédaction web, en activité depuis les années 2010.",
+ "these_centrale": "Les outils changent, le principe ne change pas. L'auteur soutient qu'une fois compris le mécanisme sous-jacent, prédiction du mot suivant à partir de relations apprises entre les mots, on cesse de subir l'outil et on obtient de meilleurs résultats plus vite. Le livre articule trois choses : une explication technique honnête, dont la thèse est qu'un modèle de langue n'est pas un modèle de connaissance ; un catalogue raisonné de requêtes classées par domaine ; et une méthode complète en sept étapes pour écrire un texte long dont l'auteur reste maître du contenu.",
+ "idees_force": [
+  {
+   "titre": "Un modèle de langue n'est pas un modèle de connaissance",
+   "explication": "C'est le titre de section le plus important du livre et la formule qu'il faut retenir. Le système modélise la langue, c'est-à-dire la probabilité qu'un mot suive les précédents, pas les faits du monde. Il peut donc énoncer avec une syntaxe irréprochable une affirmation entièrement fausse, sans que rien dans la forme ne permette de s'en apercevoir. Toutes les conséquences pratiques du livre découlent de cette distinction.",
+   "page": 41
+  },
+  {
+   "titre": "L'architecture transformeur expliquée par l'inégalité des mots",
+   "explication": "Publiée en décembre 2017 par des chercheurs de Google dans un article sur la traduction automatique intitulé Attention Is All You Need. L'idée exploitée est que tous les mots n'ont pas la même importance dans une phrase : le modèle analyse d'abord les relations entre les mots pour repérer lesquels définissent le contexte, ce qui réduit massivement la complexité et la mémoire nécessaires. C'est ce qui a rendu possible le passage à l'échelle. L'explication est la plus claire du fonds sur ce point.",
+   "page": 37
+  },
+  {
+   "titre": "La limite de longueur est structurelle, pas contournable par la patience",
+   "explication": "On ne peut pas coller un long texte morceau par morceau dans une conversation pour le faire résumer ensuite : au-delà d'un certain nombre de mots, le système ne peut plus accéder aux messages antérieurs. Pour traduire un texte long, il faut le découper, traiter chaque partie, puis recomposer dans un traitement de texte. Pour résumer un texte très long, on résume chaque partie puis on résume les résumés. Cette technique en cascade est directement applicable au traitement d'un livre entier.",
+   "page": 81
+  },
+  {
+   "titre": "Faire jouer au système le rôle du lecteur pour construire son plan",
+   "explication": "La meilleure technique du livre. Plutôt que de demander un texte, on demande : imaginez que vous êtes un élève de sixième qui s'intéresse à la protection de la nature, quelles questions vous poseriez-vous sur ce sujet ? La liste obtenue devient le plan de l'article, ou directement une suite de questions et de réponses. Même chose pour un produit : quelles questions se poserait un agriculteur soucieux de l'environnement avant de choisir un engrais ? Les réponses fournissent l'argumentaire. C'est une méthode d'analyse des besoins accessible sans étude de marché.",
+   "page": 187
+  },
+  {
+   "titre": "Ne demandez pas de personas",
+   "explication": "L'auteur consacre un développement à expliquer pourquoi il ne faut pas faire fabriquer des profils types de clientèle par un modèle de langue. Le système produira des personnages plausibles et stéréotypés, statistiquement moyens, qui n'apprennent rien sur votre public réel et donnent l'illusion d'une connaissance qu'on n'a pas acquise. La bonne méthode est celle du point précédent : faire émerger des questions, pas des personnages.",
+   "page": 186
+  },
+  {
+   "titre": "Supprimer les préliminaires",
+   "explication": "Le système commence presque toujours par reformuler la demande et annoncer ce qu'il va faire, ce qui est rassurant au début et pénible ensuite, et qui consomme de la longueur de réponse. Deux consignes règlent le problème : ne dis pas ce que tu fais, fais-le simplement ; et pour les demandes complexes, ne me rappelle pas ce que je t'ai demandé, ne t'excuse pas, ne te réfère pas à toi-même.",
+   "page": 162
+  },
+  {
+   "titre": "Construire l'ossature d'un récit long en dehors de l'outil",
+   "explication": "Un système sollicité pour écrire une histoire cherchera toujours à conclure en environ mille cinq cents mots ; forcé à continuer, il perd le fil, oublie où commence l'intrigue et comment s'appellent les personnages. La méthode est donc inverse : écrire soi-même la structure, les personnages et la progression dans un traitement de texte, puis utiliser l'outil scène par scène en lui fournissant à chaque fois le contexte nécessaire. Le principe vaut pour tout ouvrage long, pas seulement pour la fiction.",
+   "page": 162
+  },
+  {
+   "titre": "L'humour comme révélateur de la limite",
+   "explication": "L'auteur demande une blague, obtient une chute qui ne fonctionne pas, puis demande pourquoi c'est drôle : le système fournit une explication assurée qui contient des affirmations manifestement fausses. La démonstration est plus efficace que n'importe quel exposé théorique. Elle montre en même temps que le système ne sait pas qu'il ne sait pas, et que le comique repose sur un savoir partagé qu'aucune statistique de mots ne restitue.",
+   "page": 81
+  },
+  {
+   "titre": "Fournir soi-même ce que le système ne peut pas savoir",
+   "explication": "Demander un texte de mille cinq cents mots sur un produit sans rien fournir donnera un résultat générique et probablement faux, parce que les données d'entraînement sont anciennes. La règle est de toujours se demander de quelles informations la machine peut disposer, et d'insérer soi-même les autres. L'auteur formule cela en une image utile : le système ne peut pas en savoir plus sur un téléphone récent que sur votre propre curriculum vitae.",
+   "page": 175
+  },
+  {
+   "titre": "Décliner un contenu unique en de multiples formats",
+   "explication": "À partir de la transcription d'une vidéo ou d'un enregistrement, on obtient successivement un article, une lettre d'information, une publication professionnelle, une série de messages courts, un carrousel d'images. Le flux de travail est d'abord de produire une source unique et soignée, puis de la décliner, et non de produire séparément pour chaque canal.",
+   "page": 143
+  },
+  {
+   "titre": "L'entretien mené par le système, avec attente des réponses",
+   "explication": "La consigne est précise : tu joues l'intervieweur, tu ne notes pas tout d'un coup, tu poses les questions une par une et tu attends ma réponse, tu n'écris pas d'explications, ma première phrase est bonjour. Cette structure, qui force le tour de parole, transforme un générateur de texte en interlocuteur, et sert aussi bien à préparer un entretien d'embauche qu'à conduire une révision ou un examen blanc.",
+   "page": 126
+  },
+  {
+   "titre": "Ce qui entre détermine ce qui sort",
+   "explication": "L'auteur emploie la formule crue des informaticiens et la développe : des consignes mal définies produisent des textes décousus qui perdent leur fil, des consignes précises maintiennent la conversation sur sa trajectoire. Il compare l'apprentissage de la formulation à celui d'une langue étrangère : au début on cherche ses mots et on doute d'être compris ; c'est une compétence qui s'acquiert par la pratique.",
+   "page": 99
+  }
+ ],
+ "concepts_cles": [
+  {
+   "terme": "Modèle de langue",
+   "definition": "Système qui modélise la probabilité d'enchaînement des mots. Il produit du langage vraisemblable, ce qui n'est pas la même chose que du vrai."
+  },
+  {
+   "terme": "Transformeur",
+   "definition": "Architecture publiée en décembre 2017 dans Attention Is All You Need, qui analyse les relations entre les mots d'une séquence pour identifier ceux qui portent le contexte."
+  },
+  {
+   "terme": "Attention",
+   "definition": "Mécanisme par lequel le modèle pondère l'importance de chaque mot pour l'interprétation des autres."
+  },
+  {
+   "terme": "Jeton",
+   "definition": "Unité de découpage du texte. Le nombre de jetons disponibles borne la longueur de ce que le système peut prendre en compte et produire."
+  },
+  {
+   "terme": "Fenêtre de contexte",
+   "definition": "Quantité maximale de texte accessible en une fois. Au-delà, les messages antérieurs deviennent inaccessibles, y compris dans une même conversation."
+  },
+  {
+   "terme": "Résumé en cascade",
+   "definition": "Technique consistant à résumer chaque partie d'un texte trop long, puis à résumer l'ensemble des résumés obtenus."
+  },
+  {
+   "terme": "Attribution de rôle",
+   "definition": "Consigne donnant au système une fonction, intervieweur, conseiller, tuteur, lecteur cible, qui oriente la forme et le niveau de la réponse."
+  },
+  {
+   "terme": "Persona",
+   "definition": "Profil type de public utilisé en marketing. L'auteur déconseille formellement de le faire produire par un modèle de langue."
+  },
+  {
+   "terme": "Suppression des préliminaires",
+   "definition": "Consigne interdisant au système de reformuler la demande et de commenter son propre travail avant de répondre."
+  },
+  {
+   "terme": "Détection de texte généré",
+   "definition": "Question traitée en fin d'ouvrage : dans quelle mesure peut-on reconnaître un texte produit par une machine, et avec quelle fiabilité."
+  }
+ ],
+ "a_lire_si": "Vous produisez régulièrement des textes et vous voulez une méthode complète plutôt que des astuces : de la recherche du sujet à la rédaction, en passant par la définition du but, l'identification du public, le titre et le plan. C'est le seul ouvrage du fonds qui explique correctement l'architecture transformeur tout en donnant une méthode de travail éprouvée. La technique du lecteur qui pose ses questions et la méthode du récit dont l'ossature est construite à la main sont directement transposables à la rédaction d'un livre.",
+ "a_eviter_si": "La traduction française est automatique et non relue : des paragraphes entiers sont restés en allemand, plusieurs titres de chapitre également, la terminologie flotte, le mot requête est parfois rendu par invitation, et l'exemple de la blague repose sur un jeu de mots allemand devenu inintelligible en français. Il faut accepter de lire à travers ces défauts. Les captures et les comparaisons de versions datent de 2023 et sont dépassées.",
+ "prerequis": [],
+ "controverses": [
+  "L'auteur affirme que son livre ne deviendra pas obsolète parce qu'il expose des principes intemporels. C'est en partie vrai pour la méthode et faux pour tout le catalogue de fonctionnalités et de comparaisons de versions, qui occupe plusieurs chapitres.",
+  "La question de savoir si l'on peut détecter un texte produit par une machine est posée en fin d'ouvrage. Les outils de détection existants restent peu fiables et produisent des accusations à tort, ce qui pèse particulièrement sur les personnes écrivant dans une langue seconde.",
+  "Le statut juridique des textes engendrés, notamment en matière de droit d'auteur, est présenté à partir de la jurisprudence allemande et n'est transposable ni tel quel ni partout."
+ ],
+ "confiance": 0.85
+}
