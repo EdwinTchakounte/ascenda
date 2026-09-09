@@ -39,6 +39,18 @@ plutôt qu'une grille vide.
 l'emporte sur toute utilitaire Tailwind : le `color` posé sur `h1` écrasait
 sinon chaque `text-…` du site, et le titre du hero devenait illisible.
 
+**Chaque ouvrage et chaque axe porte son image de partage.** Elle est
+composée à la volée par `opengraph-image.tsx` : titre, auteurs, axe, et la
+mention de droits. Sans cela, les trente publications de la campagne auraient
+toutes remonté la même vignette générique.
+
+Deux règles pour ces images. **Aucune police n'est chargée depuis le réseau** :
+un appel qui échoue produirait en silence une image de repli qu'on ne verrait
+qu'au moment du partage, trop tard pour la corriger. Et **pas de caractère
+typographique fin** : l'espace insécable étroite de `toLocaleString("fr-FR")`
+n'a pas de glyphe dans la police du générateur, et « 1 497 pages » s'affichait
+« 1▯497 pages ». Les milliers y sont séparés à la main.
+
 **Le site existe pour être trouvé.** Deux pages indexées ne captent personne.
 Le plan du site en compte 98 : les onze axes et les soixante-dix-huit ouvrages
 s'y ajoutent, et chacun est une porte d'entrée qui arrive sur ce que le lecteur
