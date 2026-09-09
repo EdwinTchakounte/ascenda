@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
@@ -96,8 +97,21 @@ class EcranProgression extends ConsumerWidget {
               const SizedBox(height: 16),
               const _Regularite(),
               const SizedBox(height: 30),
-              Text('Carte des notions', style: t.textTheme.titleLarge),
-              const SizedBox(height: 16),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text('Carte des notions', style: t.textTheme.titleLarge),
+                  ),
+                  // La carte dit où l'on en est ; le glossaire dit ce qu'il y a
+                  // à savoir. L'un sans l'autre laisse le lecteur devant un
+                  // constat sans issue.
+                  TextButton(
+                    onPressed: () => context.push('/notions'),
+                    child: const Text('Toutes les notions'),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 8),
               const _Maitrise(),
               const SizedBox(height: 30),
               Text('Ce que vous avez fait', style: t.textTheme.titleLarge),

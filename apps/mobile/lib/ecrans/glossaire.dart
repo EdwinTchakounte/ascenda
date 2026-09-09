@@ -1,0 +1,312 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+import '../etat/fournisseurs.dart';
+import '../theme/couleurs.dart';
+import '../widgets/etats.dart';
+
+/// Le glossaire : les notions du corpus, et où elles sont dites.
+///
+/// Ce n'est pas un dictionnaire. Une notion n'a d'intérêt ici que parce qu'on
+/// peut aller lire le passage qui la définit, dans l'ouvrage qui la définit.
+/// Le nombre d'occurrences est donc affiché, et une notion qui n'est ancrée
+/// nulle part est reléguée : elle vient d'une fiche de lecture sans que le
+/// texte l'emploie, et elle ne mène à rien.
+class EcranGlossaire extends ConsumerStatefulWidget {
+  const EcranGlossaire({super.key, this.axe});
+
+  final String? axe;
+
+  @override
+  ConsumerState<EcranGlossaire> createState() => _EtatGlossaire();
+}
+
+class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
+  final _champ = TextEditingController();
+  String _q = '';
+  Timer? _attente;
+
+  @override
+  void dispose() {
+    _attente?.cancel();
+    _champ.dispose();
+    super.dispose();
+  }
+
+  void _saisie(String v) {
+    _attente?.cancel();
+    _attente = Timer(const Duration(milliseconds: 300), () {
+      if (mounted) setState(() => _q = v.trim());
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final notions = ref.watch(glossaireProvider((axe: widget.axe, q: _q)));
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Les notions')),
+      body: SafeArea(
+        bottom: false,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 8, 20, 12),
+              child: TextField(
+                controller: _champ,
+                onChanged: _saisie,
+                decoration: InputDecoration(
+                  hintText: 'Une notion, un terme…',
+                  prefixIcon: const Icon(Icons.search_rounded, size: 21),
+                  suffixIcon: _champ.text.isEmpty
+                      ? null
+                      : IconButton(
+                          icon: const Icon(Icons.close_rounded, size: 19),
+                          onPressed: () {
+                            _champ.clear();
+                            setState(() => _q = '');
+                          },
+                        ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: notions.when(
+                loading: () => const Padding(
+                  padding: EdgeInsets.all(20),
+                  child: SqueletteCarte(lignes: 5),
+                ),
+                error: (e, _) => EtatErreur(
+                  erreur: e,
+                  reessayer: () =>
+                      ref.invalidate(glossaireProvider((axe: widget.axe, q: _q))),
+                ),
+                data: (liste) {
+                  // Les notions ancrées dans le texte d'abord : ce sont les
+                  // seules qui mènent quelque part.
+                  final ancrees = liste.where((n) => (n['occurrences'] as int? ?? 0) > 0).toList();
+                  final orphelines = liste.where((n) => (n['occurrences'] as int? ?? 0) == 0).toList();
+                  if (liste.isEmpty) {
+                    return const EtatMessage(
+                      icone: Icons.search_off_rounded,
+                      titre: 'Aucune notion',
+                      texte: "Aucun terme du glossaire ne correspond. Essayez une "
+                          "formulation plus courte.",
+                    );
+                  }
+                  return ListView(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
+                    children: [
+                      for (final n in ancrees) _LigneNotion(notion: n),
+                      if (orphelines.isNotEmpty) ...[
+                        const SizedBox(height: 22),
+                        Text('Nommées sans être définies dans le texte',
+                            style: t.textTheme.titleSmall),
+                        const SizedBox(height: 2),
+                        Text(
+                          "Ces notions viennent des fiches de lecture. Aucun passage "
+                          "du corpus ne les emploie, il n'y a donc rien à ouvrir.",
+                          style: t.textTheme.bodySmall
+                              ?.copyWith(color: Couleurs.grisChaud, height: 1.5),
+                        ),
+                        const SizedBox(height: 10),
+                        for (final n in orphelines) _LigneNotion(notion: n),
+                      ],
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _LigneNotion extends StatelessWidget {
+  const _LigneNotion({required this.notion});
+  final Map<String, dynamic> notion;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final n = notion['occurrences'] as int? ?? 0;
+    return ListTile(
+      contentPadding: EdgeInsets.zero,
+      title: Text('${notion['terme']}', style: t.textTheme.bodyMedium),
+      subtitle: Text(
+        '${notion['definition'] ?? ''}',
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+        style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud, height: 1.45),
+      ),
+      trailing: n == 0
+          ? null
+          : Text('$n',
+              style: t.textTheme.labelSmall?.copyWith(
+                color: Couleurs.orTexte,
+                fontWeight: FontWeight.w600,
+              )),
+      enabled: n > 0,
+      onTap: n == 0 ? null : () => context.push('/notion/${notion['id']}'),
+    );
+  }
+}
+
+/// Une notion et les passages qui la portent.
+class EcranNotion extends ConsumerWidget {
+  const EcranNotion({super.key, required this.notionId});
+
+  final String notionId;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final t = Theme.of(context);
+    final notion = ref.watch(notionProvider(notionId));
+
+    return Scaffold(
+      appBar: AppBar(title: const Text('Notion')),
+      body: SafeArea(
+        bottom: false,
+        child: notion.when(
+          loading: () => const Padding(
+            padding: EdgeInsets.all(20),
+            child: SqueletteCarte(lignes: 4),
+          ),
+          error: (e, _) => EtatErreur(
+            erreur: e,
+            reessayer: () => ref.invalidate(notionProvider(notionId)),
+          ),
+          data: (d) {
+            final occurrences =
+                ((d['occurrences'] as List?) ?? []).cast<Map<String, dynamic>>();
+            return ListView(
+              padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+              children: [
+                if ('${d['axe_label'] ?? ''}'.isNotEmpty)
+                  Text('${d['axe_label']}'.toUpperCase(),
+                      style: t.textTheme.labelSmall?.copyWith(
+                        color: Couleurs.orTexte,
+                        letterSpacing: 1.1,
+                      )),
+                const SizedBox(height: 6),
+                Text('${d['terme']}', style: t.textTheme.headlineSmall),
+                if ('${d['definition'] ?? ''}'.isNotEmpty) ...[
+                  const SizedBox(height: 10),
+                  Text('${d['definition']}',
+                      style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
+                ],
+                const SizedBox(height: 26),
+                Text(
+                  occurrences.isEmpty
+                      ? 'Aucun passage repéré'
+                      : 'Où le corpus en parle',
+                  style: t.textTheme.titleLarge,
+                ),
+                const SizedBox(height: 12),
+                for (final o in occurrences) _CarteOccurrence(occurrence: o),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class _CarteOccurrence extends StatelessWidget {
+  const _CarteOccurrence({required this.occurrence});
+  final Map<String, dynamic> occurrence;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final o = occurrence;
+    // Le serveur marque le passage qui définit la notion, par opposition à
+    // ceux qui l'emploient. C'est celui-là qu'on veut lire en premier, et il
+    // arrive en tête : autant le dire.
+    final definit = o['definition'] == true;
+    final chapitreId = o['chapitre_id'];
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      decoration: BoxDecoration(
+        color: t.colorScheme.surface,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: definit ? Couleurs.or.withValues(alpha: 0.5) : Couleurs.traitClair,
+        ),
+      ),
+      child: Material(
+        color: Colors.transparent,
+        borderRadius: BorderRadius.circular(16),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () => context.push(chapitreId == null
+              ? '/ouvrage/${o['document_id']}'
+              : '/lecture/${o['document_id']}/$chapitreId'),
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text('${o['ouvrage'] ?? ''}',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: t.textTheme.titleSmall),
+                    ),
+                    if (definit) ...[
+                      const SizedBox(width: 8),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
+                        decoration: BoxDecoration(
+                          color: Couleurs.or.withValues(alpha: 0.16),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Text('la définit',
+                            style: t.textTheme.labelSmall
+                                ?.copyWith(color: Couleurs.orTexte)),
+                      ),
+                    ],
+                  ],
+                ),
+                const SizedBox(height: 3),
+                Row(
+                  children: [
+                    if ('${o['chapitre'] ?? ''}'.isNotEmpty)
+                      Flexible(
+                        child: Text('${o['chapitre']}',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: t.textTheme.labelSmall
+                                ?.copyWith(color: Couleurs.grisChaud)),
+                      ),
+                    if (o['page'] != null) ...[
+                      const SizedBox(width: 8),
+                      Text('p. ${o['page']}',
+                          style: t.textTheme.labelSmall
+                              ?.copyWith(color: Couleurs.orTexte)),
+                    ],
+                  ],
+                ),
+                const SizedBox(height: 10),
+                Text('${o['extrait'] ?? ''}',
+                    maxLines: 5,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.textTheme.bodySmall?.copyWith(height: 1.6)),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

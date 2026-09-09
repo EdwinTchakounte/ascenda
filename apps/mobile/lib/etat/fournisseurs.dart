@@ -251,6 +251,36 @@ final journalProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((
   return j.cast<Map<String, dynamic>>();
 });
 
+/// Le glossaire du corpus, filtrable par axe et par terme.
+///
+/// Public : c'est un index de ce que les ouvrages contiennent, et il se
+/// consulte avant d'ouvrir un compte comme une table des matières en librairie.
+final glossaireProvider =
+    FutureProvider.autoDispose.family<List<Map<String, dynamic>>, ({String? axe, String q})>(
+        (ref, f) async {
+  final api = ref.watch(clientApiProvider);
+  final j = await api.get('/concepts', auth: false, params: {
+    'limite': 120,
+    if (f.axe != null) 'axe': f.axe,
+    if (f.q.length >= 2) 'q': f.q,
+  }) as List;
+  return j.cast<Map<String, dynamic>>();
+});
+
+/// Une notion et les passages du corpus où elle apparaît, définition d'abord.
+final notionProvider =
+    FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, id) async {
+  final api = ref.watch(clientApiProvider);
+  return await api.get('/concepts/$id', auth: false) as Map<String, dynamic>;
+});
+
+/// Un axe et les ouvrages qu'il porte.
+final axeProvider =
+    FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, slug) async {
+  final api = ref.watch(clientApiProvider);
+  return await api.get('/axes/$slug', auth: false) as Map<String, dynamic>;
+});
+
 /// Recharge tout ce qui dépend de la progression après une action.
 /// Prend un WidgetRef : ces invalidations sont déclenchées depuis les écrans.
 void rafraichirProgression(WidgetRef ref) {

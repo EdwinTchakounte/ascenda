@@ -29,8 +29,9 @@ lib/
 
 Cinq onglets : Aujourd'hui, Bibliothèque, Agent, Progression, Profil.
 Hors onglets : bienvenue, connexion, diagnostic, fiche d'ouvrage, lecteur, quiz,
-chronogramme, révision, abonnement, recherche dans le corpus, mot de passe
-oublié, changement de mot de passe.
+chronogramme, révision, abonnement, recherche dans le corpus, glossaire et
+fiche de notion, fiche d'axe, quiz d'un ouvrage, mot de passe oublié,
+changement de mot de passe.
 
 ## Ce qui mérite d'être connu
 
@@ -45,6 +46,18 @@ coupé ne dit pas la même chose qu'un quota atteint ou qu'une fonction payante.
 **Les axes sans parcours possible sont désactivés dans le diagnostic.** Deux axes
 du corpus n'ont aucun ouvrage découpé en chapitres : les proposer conduirait à un
 échec après six questions.
+
+**Une notion n'a d'intérêt que si elle mène au texte.** Le glossaire montre
+d'abord les notions ancrées dans le corpus, avec leur nombre de passages, et
+relègue en fin de liste celles qui viennent des fiches de lecture sans qu'aucun
+passage ne les emploie : elles ne s'ouvrent pas, et la liste le dit au lieu de
+laisser buter dessus. Sur la fiche d'une notion, le passage qui la définit porte
+une pastille et arrive en tête.
+
+**Un axe ordonne, il ne regroupe pas.** Sa fiche présente les ouvrages du plus
+accessible au plus exigeant, l'ordre que suit le chronogramme, et non par ordre
+alphabétique. C'est la différence entre un axe et un rayon de bibliothèque, et
+elle ne se voit que si l'écran la montre.
 
 **Rien de ce qui est vendu n'est écrit dans l'application.** Le nom des
 formules, leur descriptif et leurs plafonds viennent de `/compte/formules`, que

@@ -5,12 +5,14 @@ import 'package:go_router/go_router.dart';
 import 'ecrans/abonnement.dart';
 import 'ecrans/agent.dart';
 import 'ecrans/auth.dart';
+import 'ecrans/axe.dart';
 import 'ecrans/bibliotheque.dart';
 import 'ecrans/chronogramme.dart';
 import 'ecrans/coque.dart';
 import 'ecrans/demarrage.dart';
 import 'ecrans/diagnostic.dart';
 import 'ecrans/fiche_ouvrage.dart';
+import 'ecrans/glossaire.dart';
 import 'ecrans/lecteur.dart';
 import 'ecrans/mot_de_passe.dart';
 import 'ecrans/profil.dart';
@@ -66,7 +68,9 @@ final routeurProvider = Provider<GoRouter>((ref) {
         final libre = chemin.startsWith('/bibliotheque') ||
             chemin.startsWith('/ouvrage') ||
             chemin.startsWith('/mot-de-passe-oublie') ||
-            chemin.startsWith('/recherche');
+            chemin.startsWith('/recherche') ||
+            chemin.startsWith('/notion') ||
+            chemin.startsWith('/axe/');
         return (surAuth || libre) ? null : '/bienvenue';
       }
       return surAuth ? '/aujourdhui' : null;
@@ -88,6 +92,9 @@ final routeurProvider = Provider<GoRouter>((ref) {
           titre: s.uri.queryParameters['titre'],
         ),
       ),
+      GoRoute(path: '/axe/:slug', builder: (c, s) => EcranAxe(slug: s.pathParameters['slug']!)),
+      GoRoute(path: '/notions', builder: (c, s) => EcranGlossaire(axe: s.uri.queryParameters['axe'])),
+      GoRoute(path: '/notion/:id', builder: (c, s) => EcranNotion(notionId: s.pathParameters['id']!)),
       GoRoute(
         path: '/recherche',
         builder: (c, s) => EcranRecherche(initiale: s.uri.queryParameters['q']),

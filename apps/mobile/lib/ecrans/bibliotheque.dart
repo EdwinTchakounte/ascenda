@@ -109,6 +109,20 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                 orElse: () => const SizedBox.shrink(),
               ),
             ),
+            // Un axe sélectionné devient une porte. Le filtre dit ce qu'on
+            // retire ; la fiche d'axe dit dans quel ordre lire ce qui reste.
+            if (_axe != null)
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 12),
+                  child: TextButton.icon(
+                    onPressed: () => context.push('/axe/$_axe'),
+                    icon: const Icon(Icons.route_outlined, size: 18),
+                    label: const Text("Par où commencer dans cet axe"),
+                  ),
+                ),
+              ),
             SizedBox(
               height: 46,
               child: ListView(
