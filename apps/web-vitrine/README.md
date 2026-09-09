@@ -17,6 +17,8 @@ npm run build && npx next start -p 3251
 
 - `/` : hero, les 11 axes, la méthode, le chronogramme en détail, les tarifs, la preuve.
 - `/bibliotheque` : catalogue public, filtrable par axe.
+- `/ouvrage/[id]` : la fiche d'un ouvrage, avec son balisage `Book`.
+- `/axe/[slug]` : les ouvrages d'un axe, dans l'ordre où les lire.
 - `/commencer` : les trois étapes, et les deux accès à l'application.
 - `/connexion` : aiguillage vers l'application, qui porte les sessions.
 - `/a-propos` : le projet, ses partis pris.
@@ -36,6 +38,16 @@ plutôt qu'une grille vide.
 **Les règles de base sont dans `@layer base`.** Une déclaration hors couche
 l'emporte sur toute utilitaire Tailwind : le `color` posé sur `h1` écrasait
 sinon chaque `text-…` du site, et le titre du hero devenait illisible.
+
+**Le site existe pour être trouvé.** Deux pages indexées ne captent personne.
+Le plan du site en compte 98 : les onze axes et les soixante-dix-huit ouvrages
+s'y ajoutent, et chacun est une porte d'entrée qui arrive sur ce que le lecteur
+cherchait vraiment. Une fiche d'ouvrage porte son balisage `schema.org/Book`,
+sans jamais inventer un champ : ce qui n'est pas connu est absent du balisage,
+pas rempli au jugé.
+
+L'API accepte cent ouvrages par page au maximum, et le corpus tient dessous. Le
+jour où il le dépassera, `sitemap.ts` devra paginer.
 
 **Aucun lien ne doit tomber dans le vide.** Le site a longtemps eu huit liens
 morts, dont `/commencer`, posé à trois endroits : c'était le bouton principal.

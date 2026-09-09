@@ -17,8 +17,11 @@ const NIVEAUX: Record<string, string> = {
 };
 
 function Carte({ o }: { o: Ouvrage }) {
+  // La carte entière est un lien : afficher une fiche sans pouvoir l'ouvrir
+  // était le seul cul-de-sac qui restait sur la bibliothèque.
   return (
-    <li className="flex flex-col rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--surface)] p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(212,162,63,0.4)] hover:shadow-[var(--shadow-douce)]">
+    <li className="flex flex-col rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--surface)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(212,162,63,0.4)] hover:shadow-[var(--shadow-douce)]">
+     <Link href={`/ouvrage/${o.id}`} className="flex flex-1 flex-col p-5">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-[1rem] font-semibold leading-snug">{o.titre}</h3>
         {!o.lecture_integrale && (
@@ -62,6 +65,7 @@ function Carte({ o }: { o: Ouvrage }) {
           </span>
         ) : null}
       </div>
+     </Link>
     </li>
   );
 }

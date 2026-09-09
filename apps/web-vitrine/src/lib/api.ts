@@ -75,6 +75,77 @@ export async function lesOuvrages(params: Record<string, string> = {}) {
   );
 }
 
+export type Fiche = {
+  id: string;
+  titre: string;
+  sous_titre: string | null;
+  auteurs: string[];
+  annee: number | null;
+  editeur: string | null;
+  isbn: string | null;
+  pages: number | null;
+  langue: string | null;
+  axes: { slug: string; label: string }[];
+  pedagogie: {
+    niveau: string | null;
+    type: string | null;
+    public: string | null;
+    duree_min: number | null;
+    these_centrale: string | null;
+    idees_force: unknown[];
+  };
+  droits: { lecture_integrale: boolean; plafond_extrait: number | null; message: string };
+  contenu: { chapitres: number; lots_quiz: number; questions: number; citations: number };
+};
+
+/**
+ * Une fiche d'ouvrage. Retourne null si l'API ne la connaît pas ou ne répond
+ * pas : la page appelle alors notFound(), plutôt que d'afficher un gabarit
+ * vide qui serait indexé tel quel.
+ */
+export async function laFiche(id: string): Promise<Fiche | null> {
+  try {
+    const r = await fetch(`${API_BASE}/v1/bibliotheque/${id}`, { next: { revalidate: 3600 } });
+    if (!r.ok) return null;
+    return (await r.json()) as Fiche;
+  } catch {
+    return null;
+  }
+}
+
+export type FicheAxe = {
+  slug: string;
+  label: string;
+  description: string | null;
+  ouvrages: Ouvrage[];
+};
+
+export async function laFicheAxe(slug: string): Promise<FicheAxe | null> {
+  try {
+    const r = await fetch(`${API_BASE}/v1/axes/${slug}`, { next: { revalidate: 3600 } });
+    if (!r.ok) return null;
+    return (await r.json()) as FicheAxe;
+  } catch {
+    return null;
+  }
+}
+
+/** Du plus accessible au plus exigeant : l'ordre que suit le chronogramme. */
+export function parNiveau(ouvrages: Ouvrage[]): Ouvrage[] {
+  const rang: Record<string, number> = { debutant: 0, intermediaire: 1, avance: 2 };
+  return [...ouvrages].sort((a, b) => {
+    const ra = rang[a.niveau ?? ""] ?? 1;
+    const rb = rang[b.niveau ?? ""] ?? 1;
+    return ra !== rb ? ra - rb : (a.pages ?? 0) - (b.pages ?? 0);
+  });
+}
+
+export const NIVEAUX: Record<string, string> = {
+  debutant: "Débutant",
+  intermediaire: "Intermédiaire",
+  avance: "Avancé",
+};
+
 export function heures(minutes: number): string {
   const h = Math.round(minutes / 60);
   if (h < 1) return `${minutes} min`;
