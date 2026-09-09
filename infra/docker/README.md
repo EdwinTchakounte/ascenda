@@ -72,10 +72,17 @@ Rappel : la vectorisation du corpus, elle, se fait hors du conteneur avec
 `pipeline/embed/`. Sans vecteurs en base, la recherche reste en plein texte même
 avec les dépendances installées, et le seuil est de 95 % du corpus vectorisé.
 
+## Mettre en ligne
+
+Le domaine est `ascenda-books.online`. La marche à suivre complète, des
+enregistrements DNS à la déclaration du webhook chez Tara, est dans
+[DEPLOIEMENT.md](DEPLOIEMENT.md).
+
 ## Ce que le compose ne fait pas
 
-**Il ne termine pas devant Internet.** Il n'y a ni certificat ni redirection
-vers HTTPS. Or Tara ne signe pas ses notifications : la sécurité du webhook
+**Il ne termine pas devant Internet, à lui seul.** Il n'y a ni certificat ni
+redirection vers HTTPS tant qu'on ne superpose pas `docker-compose.tls.yml`,
+qui ajoute Caddy et retire la publication directe des ports. Or Tara ne signe pas ses notifications : la sécurité du webhook
 repose entièrement sur le fait que son adresse est en HTTPS et connue d'eux
 seuls. Un rappel de proxy inverse, Caddy ou Traefik, est donc obligatoire avant
 d'encaisser le premier franc.

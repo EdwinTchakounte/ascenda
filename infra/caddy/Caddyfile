@@ -1,0 +1,52 @@
+# Terminaison TLS pour ASCENDA.
+#
+# Caddy obtient et renouvelle les certificats tout seul, par Let's Encrypt.
+# C'est la brique que le compose applicatif ne fournissait pas, et sans laquelle
+# on ne peut pas encaisser : Tara ne signe pas ses notifications, la sécurité du
+# webhook repose entièrement sur le fait que son adresse est en HTTPS et connue
+# d'eux seuls.
+#
+# Deux noms, deux services :
+#   ascenda-books.online       la vitrine
+#   api.ascenda-books.online   l'API, et le point d'arrivée du webhook
+#
+# Les deux doivent pointer vers l'adresse IP du serveur, en A pour l'IPv4 et en
+# AAAA si le serveur en a une. Caddy refuse de démarrer tant que le nom ne
+# résout pas : c'est voulu, un certificat sur un nom qu'on ne contrôle pas
+# n'existe pas.
+
+{
+	# Une adresse valable pour les avis d'expiration de certificat.
+	email contact@ascenda-books.online
+}
+
+ascenda-books.online, www.ascenda-books.online {
+	encode zstd gzip
+	reverse_proxy vitrine:3251
+
+	# Le site n'est pas une application bancaire, mais il porte des comptes et
+	# un paiement. Ces trois en-têtes coûtent une ligne chacun.
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+}
+
+api.ascenda-books.online {
+	encode zstd gzip
+	reverse_proxy api:8250
+
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		-Server
+	}
+
+	# Les téléchargements de pack et les exports PDF prennent leur temps sur
+	# une connexion lente. Le délai par défaut les couperait au milieu.
+	request_body {
+		max_size 20MB
+	}
+}

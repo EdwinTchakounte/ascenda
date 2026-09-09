@@ -15,7 +15,7 @@ from .base import ErreurCourriel, FournisseurCourriel, ResultatEnvoi
 
 log = logging.getLogger("ascenda.courriel.brevo")
 
-# « ASCENDA <ne-pas-repondre@ascenda.app> » se découpe en nom et adresse.
+# « ASCENDA <ne-pas-repondre@ascenda-books.online> » se découpe en nom et adresse.
 _EXPEDITEUR = re.compile(r"^\s*(?:(?P<nom>.*?)\s*<)?(?P<adresse>[^<>\s]+@[^<>\s]+?)>?\s*$")
 
 

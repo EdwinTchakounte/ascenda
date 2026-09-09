@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 import { lesAxes, lesOuvrages } from "@/lib/api";
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ascenda.app";
+const BASE = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ascenda-books.online";
 
 /**
  * Les pages du site, avec leur priorité relative. La bibliothèque change quand

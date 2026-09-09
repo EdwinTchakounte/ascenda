@@ -20,7 +20,7 @@ const corps = Inter({
 /* Sans cette base, Next résout l'image de partage sur localhost:3000 et
    l'aperçu du lien reste vide partout où le site est partagé. La variable est
    lue à la construction : elle doit être posée avant `next build`. */
-const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ascenda.app";
+const base = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ascenda-books.online";
 
 export const metadata: Metadata = {
   metadataBase: new URL(base),

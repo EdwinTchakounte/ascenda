@@ -1,0 +1,35 @@
+# Terminaison TLS. À superposer aux deux autres composes en production.
+#
+#   docker compose -f docker-compose.yml -f docker-compose.app.yml \
+#                  -f docker-compose.tls.yml up -d
+#
+# Les ports 80 et 443 doivent être libres sur la machine, et les deux noms
+# doivent déjà résoudre vers elle : Caddy demande ses certificats au démarrage.
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: ascenda-caddy
+    restart: unless-stopped
+    depends_on: [api, vitrine]
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ../caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_donnees:/data
+      - caddy_config:/config
+
+  # Les deux services cessent de publier leurs ports vers l'extérieur : ils ne
+  # sont plus joignables que par Caddy, dans le réseau du compose. Sans cela,
+  # l'API resterait accessible en clair sur 8250, et tout le travail de
+  # terminaison ne servirait à rien.
+  api:
+    ports: !reset []
+
+  vitrine:
+    ports: !reset []
+
+volumes:
+  caddy_donnees: {}
+  caddy_config: {}

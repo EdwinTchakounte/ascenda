@@ -12,7 +12,7 @@
 export const EDITEUR = {
   nom: "ASCENDA",
   responsable: "Tchamba Tchakounte Edwin",
-  courriel: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@ascenda.app",
+  courriel: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contact@ascenda-books.online",
   pays: "Cameroun",
 
   /** À compléter avant la mise en ligne publique. */

@@ -71,7 +71,7 @@ class Settings(BaseSettings):
 
     # ---- courrier
     brevo_api_key: str = ""
-    mail_expediteur: str = "ASCENDA <ne-pas-repondre@ascenda.app>"
+    mail_expediteur: str = "ASCENDA <ne-pas-repondre@ascenda-books.online>"
 
     # ---- stockage
     minio_endpoint: str = "localhost:9250"
