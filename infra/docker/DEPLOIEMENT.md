@@ -117,7 +117,19 @@ construisez-la contre le bon domaine :
 ```bash
 flutter build apk --release --split-per-abi \
   --dart-define=API_URL=https://api.ascenda-books.online
+cp apps/mobile/build/app/outputs/flutter-apk/app-arm64-v8a-release.apk \
+   apps/web-vitrine/public/telechargements/ascenda.apk
 ```
+
+**Ne déposez pas l'APK avant que l'API ne réponde.** La page `/commencer`
+n'affiche le bouton que si le fichier est là : le mettre en place trop tôt
+revient à proposer une application qui s'ouvre sur « pas de connexion ». Sans le
+fichier, la page dit que l'application n'est pas encore publiée, ce qui est
+exact et ne coûte personne.
+
+L'adresse de l'API est **figée à la construction** de l'APK. Une application
+construite contre `localhost` ne joindra jamais le serveur, quel que soit le
+réglage côté machine : il faut la reconstruire.
 
 **Les sauvegardes.** Le volume `ascenda_pgdata` porte les comptes, les
 abonnements et la progression. `data/` reconstruit le corpus, pas les
