@@ -1,7 +1,35 @@
 # ASCENDA, lecture guidée
 
+**ascenda-books.online**
+
 Trois surfaces : une **API**, un **site vitrine** public, une **application**
 mobile, adossées à un corpus de 78 ouvrages (15 601 pages, 11 axes).
+
+L'accès aux livres n'est plus le problème : ce qui manque est un chemin dedans.
+ASCENDA part d'un diagnostic de six minutes et du temps dont vous disposez
+réellement, et compose un chronogramme de séances datées, avec leurs pages.
+Chaque séance est suivie d'un quiz corrigé par l'extrait qui le justifie, et ce
+qui est manqué revient en révision espacée.
+
+## Mettre en ligne
+
+La marche à suivre complète, des enregistrements DNS à la déclaration du webhook
+chez Tara, est dans **[infra/docker/DEPLOIEMENT.md](infra/docker/DEPLOIEMENT.md)**.
+
+| nom | rôle |
+|---|---|
+| `ascenda-books.online` | la vitrine |
+| `api.ascenda-books.online` | l'API, et le point d'arrivée du webhook |
+
+## Vérifier
+
+```bash
+./tests/lancer.sh
+```
+
+Neuf suites, précédées d'une reconstruction de la base à partir de rien et d'un
+contrôle du contrat entre l'API et ses deux clients. Elles tournent sur le
+corpus réel, sans bouchon. Voir [tests/README.md](tests/README.md).
 
 ## Arborescence
 
@@ -21,10 +49,14 @@ pipeline/
   concepts/       ancrer.py : rattache les notions du glossaire au texte
   derive/         fiches, citations, quiz, comptes rendus + import depuis data/
   livre/          le module par ouvrage : état de production et orchestration
-db/               schema.pg.sql (canonique) · schema.sql (SQLite local)
-infra/docker/     postgres+pgvector, minio, redis
-docs/             MODELE-DONNEES.md · PROMPT-CLAUDE-DESIGN.md
-livres/           corpus classé par axe (hors dépôt)
+db/               schema.pg.sql (canonique) · migrations/ · verifier.sh
+infra/docker/     postgres+pgvector, minio, redis, les composes et le déploiement
+infra/caddy/      terminaison TLS, certificats automatiques
+tests/            neuf suites de vérification, sur le corpus réel
+docs/             MODELE-DONNEES.md · communication/ (cahier éditorial, bios)
+marque/           logo et déclinaisons
+livres/           corpus source classé par axe (hors dépôt)
+data/             le corpus dérivé, source de vérité de la base
 ```
 
 ## Démarrer
@@ -77,15 +109,21 @@ done
 | Documents | 78, tous exploitables (15 601 pages) |
 | Chapitres | 3 853 exploitables, sur 11 axes |
 | Passages | 11 403 |
-| Dérivés | 2 304 quiz · 1 798 citations · 74 fiches de lecture |
+| Vectorisés | 11 403 sur 11 403, index HNSW et centroïdes d'axes posés |
+| Dérivés | 2 304 quiz · 1 799 citations · 74 fiches de lecture |
 | Glossaire | 610 notions, 419 ancrées dans le texte (5 160 occurrences) |
+
+Le corpus est vectorisé, mais **aucun ouvrage n'est complet** : il manque 1 549
+quiz, 2 054 citations et l'ensemble des comptes rendus. `pipeline/livre/etat.py`
+dit où l'on en est, et `derive.py --estimer` ce que la suite coûtera.
 
 Trois limites connues, à traiter dans le pipeline et non dans les applications :
 
-1. **Vectorisation en cours.** La recherche est hybride : plein texte et
-   vecteur, fusionnés par rang réciproque. Tant que les vecteurs manquent, elle
-   reste en plein texte et le champ `mode` de la réponse le dit. Aucun
-   changement côté client le jour où ils arrivent.
+1. **La recherche sémantique n'est pas dans l'image par défaut.** Elle demande
+   deux gigaoctets de dépendances et autant de poids de modèle. Sans elles,
+   l'API bascule en plein texte et le champ `mode` de la réponse le dit ; les
+   clients l'affichent au lieu de laisser croire que le moteur comprend mal.
+   Voir `infra/docker/README.md`.
 2. **Structure reconstituée sur les 28 documents qui n'en avaient pas.**
    Vingt-sept PDF n'ont pas de sommaire interne : `pipeline/ingest/structure.py`
    les découpe en sections d'environ trente minutes, nommées « Pages 24 à 41 ».
@@ -144,6 +182,19 @@ en Django. Quatre garanties, toutes vérifiées par des tests :
 
 Tout laisse une trace dans `payment_event`. L'abonnement se ferme seul à
 échéance : le compte repasse en `free` et les quotas referment l'accès.
+
+## Courrier transactionnel
+
+Cinq messages par Brevo : bienvenue, reçu de paiement, rejet, rappel à sept
+jours de l'échéance, avis de fin d'abonnement. Les gabarits vivent en base, ce
+qui permet de corriger une faute sans redéployer, et un drapeau `actif` sert
+d'interrupteur. Sans `BREVO_API_KEY`, les messages sont composés, tracés dans
+`email_log` avec le statut `simule`, et ne quittent pas la machine.
+
+La réinitialisation de mot de passe passe par un code à six chiffres, stocké
+haché, valable trente minutes, à usage unique, cinq essais, une demande par
+quart d'heure. Un lien profond aurait supposé un site déployé ; un code se
+recopie depuis n'importe quel appareil.
 
 ## Réparer un corpus incomplet
 
