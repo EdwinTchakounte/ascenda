@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { Voile } from "./Formes";
+
 export type Dos = { id: string; titre: string; auteur: string; axe: string; slug: string };
 
 /**
@@ -74,6 +76,9 @@ export default function Etagere3D({ ouvrages }: { ouvrages: Dos[] }) {
 
   return (
     <section id="etagere" className="relative overflow-hidden bg-[var(--color-nuit)] py-20 sm:py-24">
+      <Voile teinte="#4a6fa5" opacite={0.3} className="left-[-10%] top-[6%] h-[520px] w-[680px]" />
+      <Voile teinte="#c4704f" opacite={0.2} className="bottom-[-14%] right-[-8%] h-[460px] w-[600px]" />
+
       <div className="cadre relative">
         <div className="mx-auto max-w-[60ch] text-center">
           <p className="oeil">La bibliothèque</p>

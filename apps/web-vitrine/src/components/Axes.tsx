@@ -2,6 +2,7 @@ import Link from "next/link";
 import Apparition from "./Apparition";
 import IconeAxe from "./IconesAxes";
 import Relief from "./Relief";
+import { Carreaux, Voile } from "./Formes";
 import { heures, lesAxes, lesOuvrages, type Axe } from "@/lib/api";
 
 /**
@@ -169,15 +170,13 @@ export default async function Axes() {
 
   return (
     <section id="axes" className="relative overflow-hidden bg-[var(--fond)] py-24">
-      {/* Une lueur très basse, pour que la section ne soit pas une bande plate. */}
-      <span
-        aria-hidden
-        className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 opacity-60"
-        style={{
-          background:
-            "radial-gradient(ellipse at center, color-mix(in srgb, var(--color-or) 12%, transparent) 0%, transparent 70%)",
-        }}
-      />
+      {/* Le fond de la section : une grille très pâle, et trois voiles de
+          couleur pris dans la palette des pôles. Une bande unie de la même
+          valeur que la précédente se lit comme une page qui s'arrête. */}
+      <Carreaux />
+      <Voile teinte="#d4a23f" opacite={0.14} className="-top-32 left-1/2 h-[460px] w-[820px] -translate-x-1/2" />
+      <Voile teinte="#8a7f9e" opacite={0.1} className="right-[-8%] top-[38%] h-[420px] w-[520px]" />
+      <Voile teinte="#6f8f57" opacite={0.09} className="bottom-[-10%] left-[-6%] h-[380px] w-[520px]" />
 
       <div className="cadre relative">
         <div className="mx-auto max-w-[62ch] text-center">

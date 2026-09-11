@@ -1,3 +1,5 @@
+import { Voile } from "./Formes";
+
 /**
  * Le chronogramme en détail : une maquette d'écran, trois annotations.
  * Les données affichées sortent d'un plan réellement généré par l'API.
@@ -27,8 +29,11 @@ const LIGNES = [
 
 export default function Produit() {
   return (
-    <section className="bg-[var(--fond)] py-24">
-      <div className="cadre">
+    <section className="relative overflow-hidden bg-[var(--fond)] py-24">
+      <Voile teinte="#9e6b8a" opacite={0.1} className="right-[-10%] top-[4%] h-[460px] w-[580px]" />
+      <Voile teinte="#4f8687" opacite={0.1} className="bottom-[-12%] left-[-8%] h-[420px] w-[560px]" />
+
+      <div className="cadre relative">
         <div className="mx-auto max-w-[58ch] text-center">
           <p className="oeil">Le chronogramme</p>
           <h2 className="mt-3 text-[2.1rem] font-semibold leading-tight sm:text-[2.5rem]">

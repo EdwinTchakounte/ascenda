@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import Bouton from "./Bouton";
-import { CadreDore, Halo, Trame } from "./Formes";
+import { CadreDore, Halo, Trame, Voile } from "./Formes";
 import Poussiere3D from "./Poussiere3D";
 import Relief from "./Relief";
 
@@ -103,6 +103,10 @@ export default function HeroSlider() {
       aria-label="Présentation d'ASCENDA"
     >
       <Halo className="-top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2" />
+      {/* Deux voiles froids sous le halo doré : le bleu creuse le fond, le
+          violet l'empêche de virer au gris. */}
+      <Voile teinte="#4a6fa5" opacite={0.34} className="bottom-[-24%] left-[-10%] h-[560px] w-[720px]" />
+      <Voile teinte="#8a7f9e" opacite={0.22} className="right-[-12%] top-[18%] h-[460px] w-[560px]" />
       <Trame />
       {/* La profondeur derrière tout le reste : des grains projetés en vraie
           perspective, qui répondent au pointeur en déplaçant la caméra. */}

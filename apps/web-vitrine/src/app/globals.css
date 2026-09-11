@@ -139,6 +139,29 @@
   color: var(--accent-texte);
 }
 
+/* La dérive des carrés de fond. Lente au point qu'on ne la voit pas bouger, on
+   s'aperçoit seulement qu'ils n'étaient pas là tout à l'heure. */
+.eclat {
+  animation-name: deriver;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  will-change: transform;
+}
+@keyframes deriver {
+  from {
+    translate: 0 0;
+  }
+  to {
+    translate: 26px -34px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .eclat {
+    animation: none;
+  }
+}
+
 /* ---------------------------------------------------------------------------
    Le relief
 

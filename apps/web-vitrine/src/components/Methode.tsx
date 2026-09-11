@@ -1,3 +1,5 @@
+import { Carreaux, Eclats, Voile } from "./Formes";
+
 const ETAPES = [
   {
     n: "01",
@@ -21,8 +23,13 @@ const ETAPES = [
 
 export default function Methode() {
   return (
-    <section id="methode" className="bg-[var(--fond-creux)] py-24">
-      <div className="cadre">
+    <section id="methode" className="relative overflow-hidden bg-[var(--fond-creux)] py-24">
+      <Carreaux pas={56} masque="radial-gradient(ellipse 60% 70% at 50% 30%, #000 10%, transparent 76%)" />
+      <Voile teinte="#4a6fa5" opacite={0.11} className="left-[-10%] top-[-12%] h-[440px] w-[600px]" />
+      <Voile teinte="#d4a23f" opacite={0.12} className="bottom-[-16%] right-[-6%] h-[420px] w-[560px]" />
+      <Eclats teintes={["#4a6fa5", "#d4a23f", "#6f8f57"]} />
+
+      <div className="cadre relative">
         <div className="mx-auto max-w-[58ch] text-center">
           <p className="oeil">La méthode</p>
           <h2 className="mt-3 text-[2.1rem] font-semibold leading-tight sm:text-[2.5rem]">

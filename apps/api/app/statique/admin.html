@@ -51,6 +51,7 @@
   --corps:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
   --barre:266px; --rayon:0px; --rayon-l:0px;
+  --quadrillage:rgba(11,20,53,.045); --nappe:rgba(212,162,63,.13);
 }
 
 @media (prefers-color-scheme:dark){
@@ -67,6 +68,7 @@
     --ombre-haute:0 2px 6px rgba(0,0,0,.36),0 32px 64px rgba(0,0,0,.50);
     --serie-1:#e8c070; --serie-2:#93b399; --serie-3:#6d92c8;
     --serie-4:#e09b7e; --serie-5:#a99cbd;
+    --quadrillage:rgba(232,192,112,.05); --nappe:rgba(212,162,63,.12);
   }
 }
 :root[data-theme="dark"]{
@@ -82,6 +84,7 @@
   --ombre-haute:0 2px 6px rgba(0,0,0,.36),0 32px 64px rgba(0,0,0,.50);
   --serie-1:#e8c070; --serie-2:#93b399; --serie-3:#6d92c8;
   --serie-4:#e09b7e; --serie-5:#a99cbd;
+  --quadrillage:rgba(232,192,112,.05); --nappe:rgba(212,162,63,.12);
 }
 
 /* ------------------------------------------------------------------ base */
@@ -177,7 +180,19 @@ aside .pied b{color:#b9c1d6;font-weight:600;font-variant-numeric:tabular-nums}
 .jauge i{display:block;height:100%;border-radius:0;
   background:linear-gradient(90deg,var(--or-sombre),var(--or-clair))}
 
-main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column}
+main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column;position:relative}
+main::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(var(--quadrillage) 1px,transparent 1px),
+                   linear-gradient(90deg,var(--quadrillage) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(ellipse 80% 46% at 50% 0%,#000 5%,transparent 72%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 46% at 50% 0%,#000 5%,transparent 72%)}
+main > *{position:relative;z-index:1}
+/* Une nappe dorée derrière l'entête, pour que la console ne commence pas sur
+   une bande unie. */
+main::after{content:"";position:absolute;top:-120px;left:50%;width:min(980px,90%);
+  height:340px;transform:translateX(-50%);pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse at center,var(--nappe) 0%,transparent 68%)}
 .barre-haut{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--fond) 88%,transparent);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--trait);
   padding:13px 26px;display:flex;align-items:center;gap:14px}

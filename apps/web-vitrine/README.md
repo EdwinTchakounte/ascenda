@@ -30,6 +30,19 @@ npm run build && npx next start -p 3251
 
 ## Ce qui mérite d'être connu
 
+**Les fonds portent des formes.** Chaque section a son atmosphère : un
+quadrillage très pâle qui redit en fond la grille sur laquelle la page est
+construite, des voiles de couleur pris dans la palette des pôles, et parfois
+trois carrés au trait qui dérivent lentement. La couleur change de section en
+section, ce qui donne un parcours en descendant la page au lieu d'un empilement
+de bandes de la même valeur.
+
+Le voile est la seule forme ronde que le site s'autorise, et elle passe parce
+qu'elle n'a pas de bord : à cent vingt pixels de flou, on ne voit pas un cercle,
+on voit une couleur qui se lève. Un carré net de la même teinte serait un bloc
+posé sur la page. Tout cela est `pointer-events-none`, `aria-hidden`, et la
+dérive s'arrête quand le système demande moins d'animation.
+
 **L'angle droit, partout.** Aucune surface n'est arrondie : cartes, boutons,
 champs, pastilles, jetons, barres de progression. Les jetons `--radius-douce` et
 `--radius-carte` valent zéro, et il n'existe plus une seule classe `rounded-`

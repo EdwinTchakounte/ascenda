@@ -1,4 +1,5 @@
 import Bouton from "./Bouton";
+import { Carreaux, Voile } from "./Formes";
 import { lesTarifs, montant } from "@/lib/api";
 
 const FORMULES = [
@@ -68,8 +69,12 @@ export default async function Tarifs() {
   const mensuel =
     grille.formules.find((f) => f.periode_mois === 1) ?? grille.formules[0];
   return (
-    <section id="tarifs" className="bg-[var(--fond-creux)] py-24">
-      <div className="cadre">
+    <section id="tarifs" className="relative overflow-hidden bg-[var(--fond-creux)] py-24">
+      <Carreaux pas={40} />
+      <Voile teinte="#d4a23f" opacite={0.16} className="left-1/2 top-[-14%] h-[440px] w-[760px] -translate-x-1/2" />
+      <Voile teinte="#6f8f57" opacite={0.1} className="bottom-[-14%] left-[-8%] h-[400px] w-[540px]" />
+
+      <div className="cadre relative">
         <div className="mx-auto max-w-[56ch] text-center">
           <p className="oeil">Deux formules</p>
           <h2 className="mt-3 text-[2.1rem] font-semibold leading-tight sm:text-[2.5rem]">

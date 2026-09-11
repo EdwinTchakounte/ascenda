@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Entete from "@/components/Entete";
+import { Carreaux, Voile } from "@/components/Formes";
 import Pied from "@/components/Pied";
 import IconeAxe from "@/components/IconesAxes";
 import { heures, lesAxes, lesOuvrages, type Ouvrage } from "@/lib/api";
@@ -98,7 +99,10 @@ export default async function Bibliotheque({
     <>
       <Entete />
       <main className="min-h-[70vh] bg-[var(--fond)] pb-24">
-        <div className="border-b border-[var(--trait)] bg-[var(--fond-creux)] py-14">
+        <div className="relative overflow-hidden border-b border-[var(--trait)] bg-[var(--fond-creux)] py-14">
+          <Carreaux pas={48} masque="linear-gradient(180deg, #000 0%, transparent 92%)" />
+          <Voile teinte="#8a7f9e" opacite={0.12} className="right-[-6%] top-[-36%] h-[380px] w-[520px]" />
+          <Voile teinte="#6f8f57" opacite={0.1} className="bottom-[-44%] left-[-6%] h-[340px] w-[460px]" />
           <div className="cadre">
             <p className="oeil">Bibliothèque</p>
             <h1 className="mt-3 text-[2.2rem] font-semibold leading-tight sm:text-[2.6rem]">

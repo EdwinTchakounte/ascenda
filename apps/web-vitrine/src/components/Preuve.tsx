@@ -1,4 +1,5 @@
 import Bouton from "./Bouton";
+import { Voile } from "./Formes";
 import { CORPUS } from "@/lib/api";
 
 const CHIFFRES = [
@@ -10,11 +11,9 @@ const CHIFFRES = [
 export default function Preuve() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-nuit-profond)] py-24">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute bottom-[-30%] left-1/2 h-[480px] w-[820px] -translate-x-1/2 rounded-full opacity-[0.14] blur-[110px]"
-        style={{ background: "radial-gradient(circle, #d4a23f 0%, transparent 70%)" }}
-      />
+      <Voile teinte="#d4a23f" opacite={0.18} flou={110} className="bottom-[-30%] left-1/2 h-[480px] w-[820px] -translate-x-1/2" />
+      <Voile teinte="#4a6fa5" opacite={0.26} className="left-[-12%] top-[-18%] h-[440px] w-[600px]" />
+      <Voile teinte="#8a7f9e" opacite={0.2} className="right-[-10%] top-[10%] h-[400px] w-[520px]" />
 
       <div className="cadre relative">
         <ul className="grid gap-10 sm:grid-cols-3">

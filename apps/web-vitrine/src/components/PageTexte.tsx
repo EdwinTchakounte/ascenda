@@ -1,4 +1,5 @@
 import Entete from "./Entete";
+import { Carreaux, Voile } from "./Formes";
 import Pied from "./Pied";
 
 /**
@@ -23,8 +24,11 @@ export default function PageTexte({
     <>
       <Entete />
       <main>
-        <header className="border-b border-[var(--trait)] bg-[var(--fond-creux)] py-16 sm:py-20">
-          <div className="cadre max-w-[760px]">
+        <header className="relative overflow-hidden border-b border-[var(--trait)] bg-[var(--fond-creux)] py-16 sm:py-20">
+          <Carreaux pas={48} masque="linear-gradient(180deg, #000 0%, transparent 92%)" />
+          <Voile teinte="#d4a23f" opacite={0.14} className="right-[-6%] top-[-30%] h-[380px] w-[520px]" />
+          <Voile teinte="#4a6fa5" opacite={0.1} className="bottom-[-40%] left-[-8%] h-[340px] w-[460px]" />
+          <div className="cadre relative max-w-[760px]">
             {oeil && <p className="oeil mb-3">{oeil}</p>}
             <h1 className="text-[2rem] font-semibold leading-[1.15] text-[var(--titre)] sm:text-[2.6rem]">
               {titre}
