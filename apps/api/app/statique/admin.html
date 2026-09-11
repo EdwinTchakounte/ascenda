@@ -218,10 +218,11 @@ main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column}
 @keyframes tourner{to{transform:rotate(360deg)}}
 
 /* ---------------------------------------------------------------- tuiles */
-.tuiles{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(178px,1fr))}
+.tuiles{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(min(178px,100%),1fr))}
 /* Trois tuiles étirées sur toute la largeur ne disent rien de plus que trois
    tuiles de taille normale, elles font seulement du vide. */
-.tuiles.serre{grid-template-columns:repeat(auto-fit,minmax(178px,272px));justify-content:start}
+.tuiles.serre{grid-template-columns:repeat(auto-fit,minmax(min(178px,100%),272px));
+  justify-content:start}
 .tuile{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
   padding:15px 16px 16px;position:relative;overflow:hidden;
   transition:border-color .16s,box-shadow .16s,transform .16s}
@@ -274,7 +275,7 @@ h2:first-child{margin-top:0}
 /* ------------------------------------------------------------- panneaux */
 /* Une rangée de deux panneaux, qui redevient une colonne dès qu'un graphique
    n'a plus la place de dire quelque chose. */
-.rangee{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+.rangee{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));
   align-items:start}
 .panneau{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
   padding:16px 18px 18px;box-shadow:var(--ombre)}
@@ -404,7 +405,7 @@ td.large{white-space:normal;max-width:420px}
 .pages button:not(:disabled):hover{border-color:var(--or);color:var(--accent)}
 
 /* ---------------------------------------------------------------- cartes */
-.cartes{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.cartes{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(310px,100%),1fr))}
 .carte{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
   padding:18px;box-shadow:var(--ombre)}
 /* Une carte seule dans sa grille s'étire sur toute la largeur, et ses champs
@@ -513,10 +514,11 @@ code{font-family:var(--mono);font-size:.8em}
 @media (max-width:860px){
   #console.ouvert{grid-template-columns:1fr}
   aside{position:static;height:auto;flex-direction:row;align-items:center;
-    overflow-x:auto;padding:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}
+    overflow-x:auto;padding:0;border-right:0;min-width:0;
+    border-bottom:1px solid rgba(255,255,255,.07)}
   aside .logo{border-bottom:0;padding:12px 16px}
   aside .logo span{display:none}
-  aside nav{flex-direction:row;padding:8px 10px}
+  aside nav{flex-direction:row;padding:8px 10px;min-width:0;overflow:visible}
   aside nav .groupe,aside .pied{display:none}
   aside nav button{white-space:nowrap}
   aside nav button[aria-current="true"]::before{display:none}
