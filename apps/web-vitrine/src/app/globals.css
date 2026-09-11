@@ -135,6 +135,220 @@
   color: var(--accent-texte);
 }
 
+/* ---------------------------------------------------------------------------
+   Le relief
+
+   Trois dimensions réelles : une perspective sur le parent, des rotations sur
+   l'enfant, et de la profondeur en translateZ. Pas de bibliothèque 3D : elle
+   pèserait cent cinquante kilo-octets avant la première image, et ASCENDA
+   s'ouvre sur des connexions où cela se compte en secondes.
+--------------------------------------------------------------------------- */
+
+.relief {
+  perspective: 900px;
+}
+.relief-plan {
+  position: relative;
+  height: 100%;
+  border-radius: var(--radius-carte);
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transform-style: preserve-3d;
+  /* Lent au retour, vif sous la main : l'inverse donne une carte qui flotte. */
+  transition: transform 0.5s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+.relief:hover .relief-plan {
+  transition-duration: 0.09s;
+}
+.relief-reflet {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: var(--eclat, 0);
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    420px circle at var(--lx, 50%) var(--ly, 50%),
+    rgba(232, 192, 112, 0.18),
+    transparent 62%
+  );
+}
+/* Ce qui doit décoller de la carte plutôt que rester collé dessus. */
+.en-avant {
+  transform: translateZ(38px);
+  transform-style: preserve-3d;
+}
+.en-arriere {
+  transform: translateZ(-18px);
+}
+
+/* ---------------------------------------------------------------------------
+   L'étagère
+
+   Un arc de cercle vu en perspective. Chaque volume porte une tranche de pages
+   et un dos : de trois quarts, il se lit comme un objet posé, et non comme une
+   vignette qu'on aurait inclinée.
+--------------------------------------------------------------------------- */
+
+.etagere {
+  position: relative;
+  height: clamp(330px, 43vw, 440px);
+  perspective: 1500px;
+  perspective-origin: 50% 44%;
+  cursor: grab;
+  /* Le doigt fait défiler la page verticalement et tourner l'étagère
+     horizontalement. Sans cela, le geste vertical serait mangé. */
+  touch-action: pan-y;
+}
+.etagere:active {
+  cursor: grabbing;
+}
+.etagere:focus-visible {
+  outline: 2px solid var(--color-or);
+  outline-offset: 10px;
+  border-radius: 18px;
+}
+.etagere-scene {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.etagere-sol {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  width: min(720px, 86%);
+  height: 80px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212, 162, 63, 0.16) 0%,
+    rgba(212, 162, 63, 0.05) 42%,
+    transparent 72%
+  );
+  filter: blur(6px);
+}
+
+.volume {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(176px, 21vw, 238px);
+  aspect-ratio: 1 / 1.48;
+  padding: 24px 20px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px 11px 11px 3px;
+  background: linear-gradient(148deg, #182549 0%, #0b1435 52%, #060e26 100%);
+  box-shadow:
+    0 34px 64px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(232, 192, 112, 0.13);
+  transform-style: preserve-3d;
+  transition:
+    transform 0.62s cubic-bezier(0.22, 0.8, 0.3, 1),
+    opacity 0.5s ease,
+    filter 0.5s ease;
+  cursor: pointer;
+  will-change: transform;
+}
+/* Le dos, avec la couleur du pôle. C'est ce qui distingue deux volumes de loin,
+   comme sur une vraie étagère. */
+.volume-dos {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 14px;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(180deg, var(--dos, #d4a23f), rgba(0, 0, 0, 0.55));
+  box-shadow: inset -2px 0 6px rgba(0, 0, 0, 0.45);
+}
+.axe-01 { --dos: #d4a23f; }
+.axe-02 { --dos: #4a6fa5; }
+.axe-03 { --dos: #7c9a82; }
+.axe-04 { --dos: #8a7f9e; }
+.axe-05 { --dos: #c4704f; }
+.axe-06 { --dos: #5f8a8b; }
+.axe-07 { --dos: #b8863f; }
+.axe-08 { --dos: #9e6b8a; }
+.axe-09 { --dos: #6f8f57; }
+.axe-10 { --dos: #4f7ba0; }
+.axe-11 { --dos: #86a05f; }
+
+/* La tranche : un vrai plan à quatre-vingt-dix degrés du plat, pas un dégradé
+   peint dessus. C'est elle qui donne l'épaisseur quand le volume pivote. */
+.volume-tranche {
+  position: absolute;
+  right: 0;
+  top: 2.5%;
+  bottom: 2.5%;
+  width: 13px;
+  transform-origin: right center;
+  transform: rotateY(90deg) translateZ(6.5px);
+  background: repeating-linear-gradient(
+    90deg,
+    #ddd6c6 0 1px,
+    #b3ab99 1px 2.2px
+  );
+  border-radius: 1px;
+}
+.volume-filet {
+  position: absolute;
+  left: 30px;
+  right: 20px;
+  top: 62px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-or), transparent);
+  opacity: 0.55;
+}
+.volume-lustre {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(
+    114deg,
+    rgba(255, 255, 255, 0.14) 0%,
+    rgba(255, 255, 255, 0.03) 26%,
+    transparent 52%
+  );
+}
+.volume-axe {
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--color-or-clair);
+  opacity: 0.85;
+}
+.volume-titre {
+  margin-top: 26px;
+  font-family: var(--font-titre);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.26;
+  color: #f4f1e8;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.volume-auteur {
+  margin-top: auto;
+  font-size: 0.76rem;
+  color: #93a0bf;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .volume,
+  .relief-plan {
+    transition: none;
+  }
+}
+
 /* Hors couche et volontairement : le respect d'un réglage d'accessibilité ne
    doit être écrasé par aucune utilitaire. */
 @media (prefers-reduced-motion: reduce) {

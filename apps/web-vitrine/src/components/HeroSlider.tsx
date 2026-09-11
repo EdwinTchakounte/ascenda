@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import Bouton from "./Bouton";
 import { CadreDore, Halo, Trame } from "./Formes";
+import Poussiere3D from "./Poussiere3D";
+import Relief from "./Relief";
 
 /**
  * Le hero en trois temps.
@@ -102,6 +104,9 @@ export default function HeroSlider() {
     >
       <Halo className="-top-40 left-1/2 h-[560px] w-[900px] -translate-x-1/2" />
       <Trame />
+      {/* La profondeur derrière tout le reste : des grains projetés en vraie
+          perspective, qui répondent au pointeur en déplaçant la caméra. */}
+      <Poussiere3D densite={0.00014} />
 
       <div className="cadre relative grid gap-12 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-16 lg:py-28">
         {/* Le texte */}
@@ -158,8 +163,10 @@ export default function HeroSlider() {
           </div>
         </div>
 
-        {/* L'image, et la carte de chronogramme par-dessus */}
-        <div className="relative">
+        {/* L'image, et la carte de chronogramme par-dessus. L'ensemble est un
+            diorama : la photo au fond, la carte en avant, et le tout s'incline
+            sous le pointeur. */}
+        <Relief intensite={9} className="relative">
           <CadreDore>
             <div className="relative aspect-[4/3] w-full sm:aspect-[16/11]">
               {DIAPOSITIVES.map((s, i) => (
@@ -187,7 +194,7 @@ export default function HeroSlider() {
           </CadreDore>
 
           {/* Carte flottante : une vraie séance issue d'un plan généré. */}
-          <div className="relative mx-auto -mt-16 w-[92%] rounded-[18px] border border-[rgba(232,192,112,0.18)] bg-[rgba(11,20,53,0.92)] p-4 backdrop-blur-md sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:w-[290px] sm:p-5">
+          <div className="en-avant relative mx-auto -mt-16 w-[92%] rounded-[18px] border border-[rgba(232,192,112,0.18)] bg-[rgba(11,20,53,0.92)] p-4 shadow-[0_24px_48px_rgba(0,0,0,0.45)] backdrop-blur-md sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:w-[290px] sm:p-5">
             <p className="oeil text-[0.66rem]">Séance du jour</p>
             <p className="mt-1.5 font-[family-name:var(--font-titre)] text-[1.02rem] leading-snug text-[#f4f1e8]">
               La guerre des intelligences
@@ -202,7 +209,7 @@ export default function HeroSlider() {
               <span className="text-[0.7rem] tabular-nums text-[#8590aa]">38 %</span>
             </div>
           </div>
-        </div>
+        </Relief>
       </div>
 
       <style>{`

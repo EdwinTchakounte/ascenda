@@ -15,7 +15,7 @@ npm run build && npx next start -p 3251
 
 ## Pages
 
-- `/` : hero, les 11 axes, la méthode, le chronogramme en détail, les tarifs, la preuve.
+- `/` : hero, les 11 axes, l'étagère en relief, la méthode, le chronogramme en détail, les tarifs, la preuve.
 - `/bibliotheque` : catalogue public, filtrable par axe.
 - `/ouvrage/[id]` : la fiche d'un ouvrage, avec son balisage `Book`.
 - `/axe/[slug]` : les ouvrages d'un axe, dans l'ordre où les lire.
@@ -29,6 +29,31 @@ npm run build && npx next start -p 3251
 - `robots.txt` et `sitemap.xml` sont générés par `src/app/robots.ts` et `sitemap.ts`.
 
 ## Ce qui mérite d'être connu
+
+**La troisième dimension est écrite à la main.** Le hero porte une poussière
+d'étoiles en vraie perspective, les cartes d'axes s'inclinent sous le pointeur,
+et la bibliothèque se présente en étagère tournante. Rien de tout cela ne passe
+par une bibliothèque 3D : elle pèserait cent cinquante kilo-octets avant la
+première image, et ASCENDA s'ouvre sur des connexions où cela se compte en
+secondes d'attente. Ce qu'il faut savoir avant d'y toucher :
+
+- `Poussiere3D` projette ses grains par `f / (f + z)`. Le rendu s'arrête dès que
+  la section sort de l'écran ou que l'onglet passe en arrière-plan, et il ne
+  démarre jamais si le système demande moins d'animation. Une seule image est
+  tout de même dessinée dans ce cas : la profondeur reste, le mouvement part.
+- `Relief` pose des variables CSS sur le noeud plutôt que de rendre à nouveau.
+  Une grille de onze cartes qui rendrait soixante fois par seconde pour un effet
+  décoratif serait payée par la batterie du lecteur. L'effet ne s'arme pas sur
+  écran tactile : il n'y a pas de survol au doigt, seulement un temps d'attente
+  avant que la carte réponde au clic.
+- `Etagere3D` est un arc de cercle, pas une succession de vignettes inclinées.
+  Chaque volume porte une tranche de pages à quatre-vingt-dix degrés du plat et
+  un dos à la couleur de son pôle : de trois quarts, il se lit comme un objet.
+  L'étagère tourne au doigt, à la souris, aux flèches du clavier, et toute seule
+  quand personne n'y touche.
+- `Apparition` ne cache jamais son contenu côté serveur. Une section invisible
+  pour un moteur de recherche serait une section perdue : le masquage n'est posé
+  qu'une fois le JavaScript en place, et pas du tout en mode sobre.
 
 **La vitrine reste affichable sans l'API.** C'est une page publique : elle ne peut
 pas dépendre d'un service applicatif pour exister. `lib/api.ts` porte des valeurs
