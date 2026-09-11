@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ASCENDA, exploitation</title>
+<style>
+:root{
+  --nuit:#0b1435; --nuit-profond:#050d22; --ardoise:#223454;
+  --or:#d4a23f; --or-clair:#e8c070; --or-sombre:#9a7118;
+  --sauge:#7c9a82; --terracotta:#c4704f;
+  --fond:#faf8f4; --creux:#f2eee6; --surface:#fff;
+  --texte:#1a1f2e; --doux:#6b7280; --trait:rgba(11,20,53,.10);
+  --corps:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font-family:var(--corps);
+  font-size:14px;line-height:1.55}
+.cadre{max-width:1180px;margin-inline:auto;padding:0 20px}
+header{background:var(--nuit-profond);color:#e6e9f2;padding:16px 0;
+  border-bottom:3px solid var(--or)}
+header .cadre{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.marque{font-weight:700;letter-spacing:.26em;color:var(--or-clair);font-size:.78rem}
+.oeil{font-size:.78rem;color:#8590aa}
+#sortir{margin-left:auto;background:none;border:1px solid #2b3a5c;color:#b9c1d6;
+  border-radius:20px;padding:5px 13px;cursor:pointer;font-size:.8rem}
+#sortir:hover{border-color:var(--or)}
+
+/* connexion */
+#connexion{max-width:340px;margin:14vh auto;padding:0 20px}
+#connexion h1{font-size:1.3rem;margin:0 0 6px}
+#connexion p{color:var(--doux);margin:0 0 22px;font-size:.9rem}
+input,select{width:100%;padding:10px 12px;border:1px solid var(--trait);
+  border-radius:10px;font:inherit;background:var(--surface);color:var(--texte);margin-bottom:10px}
+button.principal{width:100%;padding:11px;border:0;border-radius:22px;background:var(--or);
+  color:#1a1400;font:inherit;font-weight:600;cursor:pointer}
+button.principal:hover{background:var(--or-clair)}
+.erreur{color:var(--terracotta);font-size:.86rem;margin:8px 0 0;min-height:1.2em}
+
+/* tuiles */
+.tuiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
+  margin:22px 0}
+.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:14px 16px}
+.tuile b{display:block;font-size:1.7rem;font-weight:600;line-height:1.1;
+  font-variant-numeric:tabular-nums}
+.tuile span{font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux)}
+.tuile .sous{font-size:.78rem;color:var(--doux);text-transform:none;letter-spacing:0;margin-top:3px}
+.tuile.alerte{border-color:var(--terracotta);background:rgba(196,112,79,.07)}
+.tuile.alerte b{color:#9c5233}
+.tuile.bien b{color:#4a6b51}
+
+h2{font-size:1.05rem;margin:26px 0 10px}
+.courbe{display:flex;align-items:flex-end;gap:2px;height:96px;padding:10px 14px;
+  background:var(--surface);border:1px solid var(--trait);border-radius:14px}
+.barre{flex:1;min-width:3px;background:var(--or);border-radius:2px 2px 0 0;position:relative}
+.barre.vide{background:var(--trait)}
+.barre span{display:none;position:absolute;bottom:100%;left:50%;transform:translateX(-50%);
+  background:var(--nuit);color:#fff;font-size:.7rem;padding:3px 7px;border-radius:6px;
+  white-space:nowrap;margin-bottom:5px}
+.barre:hover span{display:block}
+
+nav.onglets{display:flex;gap:6px;flex-wrap:wrap;margin:26px 0 12px}
+nav.onglets button{background:none;border:1px solid var(--trait);border-radius:20px;
+  padding:5px 13px;font:inherit;font-size:.84rem;color:var(--doux);cursor:pointer}
+nav.onglets button[aria-selected="true"]{border-color:var(--or);color:var(--or-sombre);
+  background:rgba(212,162,63,.10);font-weight:600}
+
+.tableau{overflow-x:auto;background:var(--surface);border:1px solid var(--trait);
+  border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:.86rem}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--trait);
+  white-space:nowrap}
+th{font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux);
+  font-weight:600}
+tr:last-child td{border-bottom:0}
+td.nombre{text-align:right;font-variant-numeric:tabular-nums}
+.pastille{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.74rem;
+  font-weight:600}
+.p-valide{background:rgba(124,154,130,.18);color:#3f6047}
+.p-attente{background:rgba(212,162,63,.18);color:#7d5a12}
+.p-rejete{background:rgba(196,112,79,.16);color:#8e4a2e}
+.vide{padding:26px;text-align:center;color:var(--doux)}
+
+.reglages{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.reglage{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:15px 16px}
+.reglage h3{margin:0 0 3px;font-size:.95rem}
+.reglage p{margin:0 0 12px;font-size:.82rem;color:var(--doux)}
+.reglage.on{border-color:var(--or);background:rgba(212,162,63,.07)}
+.ligne{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.ligne label{font-size:.8rem;color:var(--doux);min-width:78px}
+.ligne input{margin:0}
+footer{color:var(--doux);font-size:.8rem;padding:30px 0 40px}
+</style>
+</head>
+<body>
+
+<div id="connexion">
+  <h1>Exploitation</h1>
+  <p>Réservé aux comptes qui portent le droit d'administration.</p>
+  <input id="email" type="email" placeholder="Adresse électronique" autocomplete="username">
+  <input id="mdp" type="password" placeholder="Mot de passe" autocomplete="current-password">
+  <button class="principal" id="entrer">Entrer</button>
+  <p class="erreur" id="erreur"></p>
+</div>
+
+<div id="bord" hidden>
+  <header>
+    <div class="cadre">
+      <span class="marque">ASCENDA</span>
+      <span class="oeil" id="periode">30 derniers jours</span>
+      <button id="sortir">Sortir</button>
+    </div>
+  </header>
+  <main class="cadre">
+    <div class="tuiles" id="tuiles"></div>
+    <h2>Inscriptions et paiements, jour par jour</h2>
+    <div class="courbe" id="courbe"></div>
+
+    <h2>Les trois interrupteurs</h2>
+    <div class="reglages" id="reglages"></div>
+
+    <nav class="onglets" id="onglets"></nav>
+    <div class="tableau" id="tableau"></div>
+    <footer id="pied"></footer>
+  </main>
+</div>
+
+<script>
+const API = "";
+let jeton = null;
+try { jeton = localStorage.getItem("ascenda_admin"); } catch (_) {}
+
+const $ = (id) => document.getElementById(id);
+
+async function appel(chemin, options = {}) {
+  const r = await fetch(API + chemin, {
+    ...options,
+    headers: {
+      "Content-Type": "application/json",
+      ...(jeton ? { Authorization: "Bearer " + jeton } : {}),
+      ...(options.headers || {}),
+    },
+  });
+  if (r.status === 401 || r.status === 403) { deconnecter(); throw new Error("refuse"); }
+  if (!r.ok) throw new Error("http " + r.status);
+  return r.status === 204 ? null : r.json();
+}
+
+function deconnecter() {
+  jeton = null;
+  try { localStorage.removeItem("ascenda_admin"); } catch (_) {}
+  $("bord").hidden = true;
+  $("connexion").hidden = false;
+}
+
+$("entrer").onclick = async () => {
+  $("erreur").textContent = "";
+  try {
+    const r = await fetch(API + "/v1/auth/connexion", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: $("email").value.trim(), mot_de_passe: $("mdp").value }),
+    });
+    if (!r.ok) throw new Error("identifiants");
+    const d = await r.json();
+    jeton = (d.jetons || d).access_token;
+    try { localStorage.setItem("ascenda_admin", jeton); } catch (_) {}
+    await demarrer();
+  } catch (e) {
+    $("erreur").textContent =
+      e.message === "identifiants"
+        ? "Adresse ou mot de passe incorrect."
+        : "Connexion impossible. Le service répond-il ?";
+  }
+};
+$("sortir").onclick = deconnecter;
+$("mdp").addEventListener("keydown", (e) => { if (e.key === "Enter") $("entrer").click(); });
+
+const nombre = (n) => (n ?? 0).toLocaleString("fr-FR");
+const montant = (n) => nombre(n) + " XAF";
+const date = (s) => (s ? new Date(s).toLocaleDateString("fr-FR", {day:"2-digit",month:"2-digit",year:"2-digit"}) : "");
+
+function tuiles(d) {
+  const orphelins = d.paiements.orphelins || 0;
+  const echecs = d.courriels.echecs || 0;
+  const items = [
+    { v: nombre(d.comptes.total), l: "comptes", s: "+" + nombre(d.comptes.aujourdhui) + " aujourd'hui" },
+    { v: nombre(d.actifs.semaine), l: "actifs 7 jours", s: nombre(d.actifs.mois) + " sur 30 jours" },
+    { v: nombre(d.comptes.abonnes), l: "abonnés", s: nombre(d.abonnements.actifs) + " abonnements actifs" },
+    { v: montant(d.paiements.encaisse), l: "encaissé", s: nombre(d.paiements.valides) + " paiements" },
+    { v: nombre(d.paiements.en_attente), l: "en attente", s: nombre(d.paiements.rejetes) + " rejetés" },
+    { v: nombre(d.abonnements.bientot_echus), l: "échéance sous 7 j",
+      c: d.abonnements.bientot_echus > 0 ? "bien" : "" },
+    // Un webhook non rattaché, c'est peut-être l'argent de quelqu'un. Il
+    // mérite la couleur d'alerte tant qu'il en reste un.
+    { v: nombre(orphelins), l: "webhooks orphelins", c: orphelins > 0 ? "alerte" : "bien",
+      s: orphelins > 0 ? "à examiner" : "rien en souffrance" },
+    { v: nombre(echecs), l: "courriels en échec", c: echecs > 0 ? "alerte" : "bien",
+      s: nombre(d.courriels.simules) + " simulés" },
+  ];
+  $("tuiles").innerHTML = items.map((i) =>
+    `<div class="tuile ${i.c || ""}"><b>${i.v}</b><span>${i.l}</span>` +
+    (i.s ? `<div class="sous">${i.s}</div>` : "") + `</div>`).join("");
+}
+
+function courbe(points) {
+  const max = Math.max(1, ...points.map((p) => p.comptes));
+  $("courbe").innerHTML = points.map((p) => {
+    const h = Math.round((p.comptes / max) * 100);
+    return `<div class="barre ${p.comptes ? "" : "vide"}" style="height:${Math.max(h, 2)}%">` +
+      `<span>${date(p.jour)} : ${p.comptes} compte(s), ${p.paiements} paiement(s)</span></div>`;
+  }).join("");
+}
+
+function reglages(liste) {
+  $("reglages").innerHTML = liste.map((r) => {
+    const v = r.valeur || {};
+    const actif = v.actif === true;
+    const version = r.cle === "version_minimale";
+    return `<div class="reglage ${actif ? "on" : ""}" data-cle="${r.cle}">
+      <h3>${r.cle.replace(/_/g, " ")}</h3>
+      <p>${r.description || ""}</p>
+      ${version
+        ? `<div class="ligne"><label>version</label><input data-champ="version" value="${v.version || "0.0.0"}"></div>`
+        : `<div class="ligne"><label>actif</label>
+             <select data-champ="actif">
+               <option value="false" ${actif ? "" : "selected"}>non</option>
+               <option value="true" ${actif ? "selected" : ""}>oui</option>
+             </select></div>
+           <div class="ligne"><label>jusqu'au</label>
+             <input data-champ="jusqu_au" type="date" value="${(v.jusqu_au || "").slice(0, 10)}"></div>`}
+      <div class="ligne"><label>message</label><input data-champ="message" value="${(v.message || "").replace(/"/g, "&quot;")}"></div>
+      <button class="principal" data-poser="${r.cle}">Enregistrer</button>
+    </div>`;
+  }).join("");
+
+  $("reglages").querySelectorAll("[data-poser]").forEach((b) => {
+    b.onclick = async () => {
+      const bloc = b.closest(".reglage");
+      const valeur = {};
+      bloc.querySelectorAll("[data-champ]").forEach((c) => {
+        const nom = c.dataset.champ;
+        if (nom === "actif") valeur.actif = c.value === "true";
+        else if (nom === "jusqu_au") valeur.jusqu_au = c.value ? c.value + "T23:59:59+00:00" : null;
+        else valeur[nom] = c.value;
+      });
+      b.textContent = "…";
+      try {
+        await appel("/v1/admin/reglages/" + b.dataset.poser,
+          { method: "POST", body: JSON.stringify({ valeur }) });
+        b.textContent = "Enregistré";
+        setTimeout(() => (b.textContent = "Enregistrer"), 1600);
+      } catch (_) {
+        b.textContent = "Échec";
+        setTimeout(() => (b.textContent = "Enregistrer"), 1600);
+      }
+    };
+  });
+}
+
+const ONGLETS = [
+  { cle: "paiements", titre: "Paiements", chemin: "/v1/admin/paiements?limite=60",
+    colonnes: [
+      ["email", "compte"], ["statut", "statut", "pastille"], ["montant", "montant", "montant"],
+      ["periode_mois", "mois", "nombre"], ["reseau", "opérateur"], ["telephone", "numéro"],
+      ["cree_le", "créé", "date"], ["motif_rejet", "motif"],
+    ] },
+  { cle: "orphelins", titre: "Webhooks orphelins", chemin: "/v1/admin/webhooks-orphelins",
+    colonnes: [["type", "type"], ["source", "source"], ["le", "reçu", "date"], ["details", "détail", "json"]] },
+  { cle: "utilisateurs", titre: "Comptes", chemin: "/v1/admin/utilisateurs?limite=60",
+    colonnes: [
+      ["email", "adresse"], ["nom", "nom"], ["plan", "formule"],
+      ["paiements", "paiements", "nombre"], ["actions", "actions", "nombre"],
+      ["inscrit_le", "inscrit", "date"], ["derniere_connexion", "vu", "date"],
+    ] },
+  { cle: "courriels", titre: "Courriels", chemin: "/v1/admin/courriels?limite=60",
+    colonnes: [["gabarit", "message"], ["destinataire", "destinataire"], ["statut", "statut", "pastille"],
+      ["le", "envoyé", "date"], ["erreur", "erreur"]] },
+];
+
+function cellule(valeur, format) {
+  if (valeur === null || valeur === undefined || valeur === "") return "";
+  if (format === "date") return date(valeur);
+  if (format === "montant") return montant(valeur);
+  if (format === "json") return `<code>${JSON.stringify(valeur).slice(0, 90)}</code>`;
+  if (format === "pastille") {
+    const c = { valide: "p-valide", envoye: "p-valide", simule: "p-attente",
+                en_attente: "p-attente", rejete: "p-rejete", echec: "p-rejete" }[valeur] || "";
+    return `<span class="pastille ${c}">${valeur}</span>`;
+  }
+  return String(valeur);
+}
+
+async function afficherOnglet(o) {
+  $("onglets").querySelectorAll("button").forEach((b) =>
+    b.setAttribute("aria-selected", b.dataset.cle === o.cle));
+  $("tableau").innerHTML = `<div class="vide">Chargement…</div>`;
+  try {
+    const lignes = await appel(o.chemin);
+    if (!lignes.length) { $("tableau").innerHTML = `<div class="vide">Rien à afficher.</div>`; return; }
+    $("tableau").innerHTML =
+      `<table><thead><tr>${o.colonnes.map((c) => `<th>${c[1]}</th>`).join("")}</tr></thead>` +
+      `<tbody>${lignes.map((l) =>
+        `<tr>${o.colonnes.map((c) =>
+          `<td class="${c[2] === "nombre" || c[2] === "montant" ? "nombre" : ""}">` +
+          `${cellule(l[c[0]], c[2])}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+  } catch (_) {
+    $("tableau").innerHTML = `<div class="vide">Impossible de charger cette liste.</div>`;
+  }
+}
+
+async function demarrer() {
+  try {
+    const d = await appel("/v1/admin/tableau-de-bord?jours=30");
+    $("connexion").hidden = true;
+    $("bord").hidden = false;
+    tuiles(d);
+    courbe(d.courbe);
+    reglages(await appel("/v1/admin/reglages"));
+    $("onglets").innerHTML = ONGLETS.map((o) =>
+      `<button data-cle="${o.cle}" aria-selected="false">${o.titre}</button>`).join("");
+    $("onglets").querySelectorAll("button").forEach((b) => {
+      b.onclick = () => afficherOnglet(ONGLETS.find((o) => o.cle === b.dataset.cle));
+    });
+    await afficherOnglet(ONGLETS[0]);
+    const c = d.corpus;
+    $("pied").textContent =
+      `Corpus : ${nombre(c.ouvrages)} ouvrages, ${nombre(c.passages)} passages dont ` +
+      `${nombre(c.vectorises)} vectorisés, ${nombre(c.quiz)} lots de quiz. ` +
+      `Relevé le ${new Date().toLocaleString("fr-FR")}.`;
+  } catch (_) {
+    deconnecter();
+  }
+}
+
+if (jeton) demarrer(); else $("connexion").hidden = false;
+</script>
+</body>
+</html>

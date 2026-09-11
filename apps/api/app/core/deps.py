@@ -19,7 +19,8 @@ async def _load_user(token: str | None) -> dict | None:
     if not claims:
         return None
     user = await fetch_one(
-        """select id, email, display_name, plan, plan_until, is_active, locale, created_at
+        """select id, email, display_name, plan, plan_until, is_active, locale,
+                  created_at, est_admin
            from app_user where id = %s""",
         (claims["sub"],),
     )
@@ -56,6 +57,16 @@ async def premium_user(user: Annotated[dict, Depends(current_user)]) -> dict:
     return user
 
 
+async def admin_user(user: Annotated[dict, Depends(current_user)]) -> dict:
+    """Le droit d'administration, posé à la main en base et jamais accordé par
+    une route. Le message ne dit pas qu'il existe un espace d'administration :
+    une réponse qui renseigne est une réponse qui aide à chercher."""
+    if not user.get("est_admin"):
+        raise Forbidden("Vous n'avez pas accès à cette ressource.")
+    return user
+
+
 CurrentUser = Annotated[dict, Depends(current_user)]
 OptionalUser = Annotated[dict | None, Depends(optional_user)]
 PremiumUser = Annotated[dict, Depends(premium_user)]
+AdminUser = Annotated[dict, Depends(admin_user)]

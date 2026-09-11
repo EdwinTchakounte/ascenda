@@ -1,15 +1,17 @@
 """Point d'entrée de l'API ASCENDA."""
 import asyncio
 import logging
+from pathlib import Path
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
 
 from app.core.config import settings
 from app.core.db import close_pool, fetch_one, open_pool
 from app.routers import (
+    admin,
     agent,
     axes,
     bibliotheque,
@@ -151,6 +153,26 @@ async def sante():
     return {"service": "ascenda-api", "version": app.version, "base": base, "env": settings.api_env}
 
 
+@app.get("/admin", include_in_schema=False)
+async def page_admin():
+    """Le tableau de bord d'exploitation, servi par l'API elle-même.
+
+    Une page, pas une application. La faire vivre dans la vitrine aurait obligé
+    celle-ci à porter une session, alors qu'elle n'a délibérément rien à savoir
+    de personne ; en faire un troisième déploiement aurait ajouté une brique à
+    surveiller pour un écran qu'on ouvre le matin. Elle voyage donc avec l'image
+    de l'API, sans construction ni dépendance.
+
+    Elle n'est pas indexable et ne donne rien sans un compte porteur du droit
+    d'administration, qui se pose à la main en base.
+    """
+    return FileResponse(
+        Path(__file__).parent / "statique" / "admin.html",
+        media_type="text/html; charset=utf-8",
+        headers={"X-Robots-Tag": "noindex, nofollow"},
+    )
+
+
 @app.get("/v1/etat", tags=["Service"], summary="L'état d'exploitation")
 async def etat():
     """Ce que les applications lisent pour savoir dans quel monde elles vivent.
@@ -166,6 +188,7 @@ async def etat():
 
 
 for r in (
+    admin.router,
     auth_router.router,
     axes.router,
     bibliotheque.router,

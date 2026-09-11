@@ -183,6 +183,17 @@ en Django. Quatre garanties, toutes vérifiées par des tests :
 Tout laisse une trace dans `payment_event`. L'abonnement se ferme seul à
 échéance : le compte repasse en `free` et les quotas referment l'accès.
 
+## Tableau de bord d'exploitation
+
+`/admin`, servi par l'API elle-même. Comptes ouverts et actifs, encaissé et
+paiements par statut, abonnements et échéances, courriels, état du corpus, le
+tout en un seul appel. Les webhooks orphelins et les courriels en échec passent
+au rouge quand ils ne sont pas à zéro : le premier est peut-être l'argent de
+quelqu'un. Voir [docs/EXPLOITATION.md](docs/EXPLOITATION.md).
+
+Le droit d'administration se pose à la main en base et ne se demande par aucune
+route.
+
 ## Les trois interrupteurs
 
 Période de lancement, maintenance, version minimale d'application. Ils vivent
