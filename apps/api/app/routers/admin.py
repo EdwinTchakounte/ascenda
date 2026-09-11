@@ -114,10 +114,14 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
              count(*) as total,
              count(*) filter (where created_at >= date_trunc('day', now())) as aujourdhui,
              count(*) filter (where created_at >= now() - make_interval(days => %s)) as periode,
+             -- La période précédente de même longueur. Un chiffre seul ne dit
+             -- pas s'il monte : c'est la comparaison qui informe.
+             count(*) filter (where created_at >= now() - make_interval(days => %s * 2)
+                                and created_at <  now() - make_interval(days => %s)) as precedent,
              count(*) filter (where plan <> 'free') as abonnes,
              count(*) filter (where not is_active) as desactives
            from app_user""",
-        (jours,),
+        (jours, jours, jours),
     )
     # Un compte actif est un compte qui a fait quelque chose, pas un compte qui
     # existe. La différence est tout l'intérêt de la mesure.
@@ -136,9 +140,13 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
              count(*) filter (where statut = 'rejete') as rejetes,
              coalesce(sum(montant) filter (where statut = 'valide'), 0) as encaisse,
              coalesce(sum(montant) filter (where statut = 'valide'
-                and created_at >= now() - make_interval(days => %s)), 0) as encaisse_periode
+                and created_at >= now() - make_interval(days => %s)), 0) as encaisse_periode,
+             coalesce(sum(montant) filter (where statut = 'valide'
+                and created_at >= now() - make_interval(days => %s * 2)
+                and created_at <  now() - make_interval(days => %s)), 0) as encaisse_precedent,
+             coalesce(round(avg(montant) filter (where statut = 'valide')), 0) as panier_moyen
            from payment""",
-        (jours,),
+        (jours, jours, jours),
     )
     # Un webhook arrivé sans paiement à qui le rattacher. C'est la première
     # chose à regarder quand quelqu'un affirme avoir payé.
@@ -176,12 +184,70 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
                     where date_trunc('day', u.created_at) = d) as comptes,
                   (select count(*) from payment p
                     where date_trunc('day', p.created_at) = d
-                      and p.statut = 'valide') as paiements
+                      and p.statut = 'valide') as paiements,
+                  (select coalesce(sum(p.montant), 0) from payment p
+                    where date_trunc('day', p.created_at) = d
+                      and p.statut = 'valide') as encaisse,
+                  (select count(distinct e.user_id) from progress_event e
+                    where date_trunc('day', e.at) = d) as actifs
              from generate_series(
                     date_trunc('day', now()) - make_interval(days => %s - 1),
                     date_trunc('day', now()), interval '1 day') d
             order by d""",
         (jours,),
+    )
+    # Ce que les gens font, et non seulement combien ils sont. Cinq types
+    # d'événements suffisent à dire si la plateforme est lue ou seulement
+    # ouverte.
+    activite = await fetch_all(
+        """select type, count(*) as n, count(distinct user_id) as personnes
+             from progress_event
+            where at >= now() - make_interval(days => %s)
+            group by type order by n desc""",
+        (jours,),
+    )
+    # Les ouvrages les plus programmés. C'est la mesure la plus honnête de ce
+    # qui sert : un ouvrage qu'on ouvre une fois pèse moins qu'un ouvrage que
+    # le planificateur place dans des dizaines de parcours.
+    ouvrages = await fetch_all(
+        """select coalesce(nullif(d.title_clean, ''), d.title_raw) as titre,
+                  count(*) as seances,
+                  count(*) filter (where s.status = 'fait') as faites,
+                  count(distinct c.user_axis_id) as parcours
+             from session s
+             join chronogram c on c.id = s.chronogram_id
+             join document d on d.id = s.document_id
+            where c.generated_at >= now() - make_interval(days => %s)
+            group by d.id, titre
+            order by seances desc limit 8""",
+        (jours,),
+    )
+    axes_choisis = await fetch_all(
+        """select a.label, a.slug,
+                  count(*) as choix,
+                  count(*) filter (where ua.created_at >= now() - make_interval(days => %s)) as periode
+             from user_axis ua join axis a on a.id = ua.axis_id
+            group by a.id, a.label, a.slug
+            order by choix desc limit 8""",
+        (jours,),
+    )
+    # L'entonnoir. Chaque marche perdue est une marche à réparer, et on ne sait
+    # laquelle qu'en les voyant côte à côte.
+    entonnoir = await fetch_one(
+        """select
+             (select count(*) from app_user) as comptes,
+             (select count(distinct user_id) from user_axis) as diagnostiques,
+             (select count(distinct ua.user_id)
+                from chronogram c join user_axis ua on ua.id = c.user_axis_id) as plans,
+             (select count(distinct ua.user_id)
+                from session s
+                join chronogram c on c.id = s.chronogram_id
+                join user_axis ua on ua.id = c.user_axis_id
+               where s.status = 'fait') as en_marche,
+             (select count(*) from app_user where plan <> 'free') as abonnes""",
+    )
+    plans = await fetch_all(
+        """select plan, count(*) as n from app_user group by plan order by n desc""",
     )
     corpus = await fetch_one(
         """select
@@ -199,9 +265,15 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
         "courriels": dict(courriels or {}),
         "corpus": dict(corpus or {}),
         "courbe": [
-            {"jour": str(c["jour"]), "comptes": c["comptes"], "paiements": c["paiements"]}
+            {"jour": str(c["jour"]), "comptes": c["comptes"], "paiements": c["paiements"],
+             "encaisse": int(c["encaisse"] or 0), "actifs": c["actifs"]}
             for c in courbe
         ],
+        "activite": [dict(a) for a in activite],
+        "ouvrages": [dict(o) for o in ouvrages],
+        "axes_choisis": [dict(a) for a in axes_choisis],
+        "entonnoir": dict(entonnoir or {}),
+        "plans": [dict(p) for p in plans],
         "exploitation": await exploitation.etat(),
     }
 

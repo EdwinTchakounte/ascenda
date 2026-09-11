@@ -42,6 +42,11 @@
   --ombre:0 1px 2px rgba(11,20,53,.04),0 8px 24px rgba(11,20,53,.06);
   --ombre-haute:0 2px 4px rgba(11,20,53,.06),0 28px 56px rgba(11,20,53,.16);
 
+  /* Cinq teintes pour les répartitions. Elles ne se lisent jamais comme des
+     états : le vert d'ici n'est pas « bon », c'est une part. */
+  --serie-1:#d4a23f; --serie-2:#7c9a82; --serie-3:#4a6fa5;
+  --serie-4:#c4704f; --serie-5:#8a7f9e;
+
   --titre-police:"Fraunces",Georgia,"Times New Roman",serif;
   --corps:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -60,6 +65,8 @@
     --voile:rgba(2,6,16,.72);
     --ombre:0 1px 2px rgba(0,0,0,.30),0 10px 30px rgba(0,0,0,.34);
     --ombre-haute:0 2px 6px rgba(0,0,0,.36),0 32px 64px rgba(0,0,0,.50);
+    --serie-1:#e8c070; --serie-2:#93b399; --serie-3:#6d92c8;
+    --serie-4:#e09b7e; --serie-5:#a99cbd;
   }
 }
 :root[data-theme="dark"]{
@@ -73,6 +80,8 @@
   --voile:rgba(2,6,16,.72);
   --ombre:0 1px 2px rgba(0,0,0,.30),0 10px 30px rgba(0,0,0,.34);
   --ombre-haute:0 2px 6px rgba(0,0,0,.36),0 32px 64px rgba(0,0,0,.50);
+  --serie-1:#e8c070; --serie-2:#93b399; --serie-3:#6d92c8;
+  --serie-4:#e09b7e; --serie-5:#a99cbd;
 }
 
 /* ------------------------------------------------------------------ base */
@@ -254,6 +263,96 @@ h2:first-child{margin-top:0}
 .courbe line.grille{stroke-dasharray:2 4}
 .legende{display:flex;justify-content:space-between;font-size:.72rem;color:var(--sourd);
   margin-top:8px;font-variant-numeric:tabular-nums}
+.courbe path.aire{fill:url(#or-aire)}
+.courbe path.trait{fill:none;stroke:var(--sauge);stroke-width:2;
+  vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round}
+.cles{display:flex;gap:16px;flex-wrap:wrap;font-size:.74rem;color:var(--doux);
+  margin-bottom:10px}
+.cles i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;
+  vertical-align:-1px}
+
+/* ------------------------------------------------------------- panneaux */
+/* Une rangée de deux panneaux, qui redevient une colonne dès qu'un graphique
+   n'a plus la place de dire quelque chose. */
+.rangee{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+  align-items:start}
+.panneau{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+  padding:16px 18px 18px;box-shadow:var(--ombre)}
+.panneau > h3{margin:0 0 3px;font-size:.95rem;display:flex;align-items:center;gap:8px}
+.panneau > h3 .ico{color:var(--accent)}
+.panneau .dit{margin:0 0 14px;font-size:.78rem;color:var(--doux)}
+
+/* Un classement : le libellé, une barre à l'échelle du premier, le chiffre.
+   Des barres valent mieux qu'un tableau de nombres pour dire « celui-ci pèse
+   trois fois celui-là ». */
+.classement{display:flex;flex-direction:column;gap:11px}
+.rang{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+.rang .nom{font-size:.85rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+  min-width:0}
+.rang .val{font-size:.85rem;font-weight:600;font-variant-numeric:tabular-nums;
+  color:var(--titre)}
+.rang .val small{font-weight:400;color:var(--doux);font-size:.76rem}
+.rang .piste{grid-column:1/-1;height:6px;border-radius:6px;background:var(--creux);
+  overflow:hidden}
+.rang .piste i{display:block;height:100%;border-radius:6px;
+  background:linear-gradient(90deg,var(--or-sombre),var(--or))}
+.rang.pale .piste i{background:linear-gradient(90deg,#5f7f66,var(--sauge))}
+
+/* L'entonnoir. La largeur dit le volume, le pourcentage dit la marche perdue. */
+.marches{display:flex;flex-direction:column;gap:3px}
+.marche{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;
+  padding:9px 0;border-bottom:1px solid var(--trait)}
+.marche:last-child{border-bottom:0}
+.marche .nom{font-size:.85rem}
+.marche .val{font-size:.95rem;font-weight:600;font-variant-numeric:tabular-nums;
+  color:var(--titre);font-family:var(--titre-police)}
+.marche .piste{grid-column:1/-1;height:22px;border-radius:7px;background:var(--creux);
+  overflow:hidden;position:relative}
+.marche .piste i{display:block;height:100%;border-radius:7px;
+  background:linear-gradient(90deg,rgba(212,162,63,.75),rgba(212,162,63,.35))}
+.marche .piste span{position:absolute;inset:0;display:flex;align-items:center;
+  padding-left:10px;font-size:.72rem;color:var(--texte);font-variant-numeric:tabular-nums}
+.marche.perte .piste i{background:linear-gradient(90deg,rgba(196,112,79,.7),rgba(196,112,79,.3))}
+/* L'abonnement n'est pas une marche de l'entonnoir : on ne s'abonne pas parce
+   qu'on a fait une séance, et afficher « 159 % de la marche précédente » ne
+   voulait rien dire. Il se lit à part, rapporté au total des comptes. */
+.marche.a-part{margin-top:10px;padding-top:14px;border-top:1px solid var(--trait-fort)}
+.marche.a-part .piste i{background:linear-gradient(90deg,#5f7f66,var(--sauge))}
+
+/* Le beignet de l'activité : cinq arcs, une légende chiffrée à côté. */
+.beignet{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.beignet svg{width:148px;height:148px;flex:none;transform:rotate(-90deg)}
+.beignet circle{fill:none;stroke-width:16}
+.beignet .coeur{position:relative}
+.beignet .coeur b{position:absolute;inset:0;display:grid;place-content:center;
+  font-family:var(--titre-police);font-size:1.5rem;color:var(--titre);
+  font-variant-numeric:tabular-nums;line-height:1.05;text-align:center}
+.beignet .coeur b small{display:block;font-family:var(--corps);font-size:.66rem;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--doux);font-weight:600}
+.beignet ul{list-style:none;margin:0;padding:0;flex:1;min-width:170px;
+  display:flex;flex-direction:column;gap:7px}
+.beignet li{display:flex;align-items:center;gap:9px;font-size:.83rem}
+.beignet li i{width:10px;height:10px;border-radius:3px;flex:none}
+.beignet li b{margin-left:auto;font-variant-numeric:tabular-nums}
+.beignet li span{color:var(--doux);font-size:.76rem;font-variant-numeric:tabular-nums}
+
+/* La bande d'alerte : ce qui demande qu'on s'en occupe, avant tout le reste. */
+.alertes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.alertes button{display:flex;align-items:center;gap:9px;border:1px solid rgba(196,112,79,.45);
+  background:var(--mauvais-fond);color:var(--mauvais-texte);border-radius:12px;
+  padding:9px 14px;cursor:pointer;font-size:.84rem;transition:transform .12s,box-shadow .15s}
+.alertes button:hover{transform:translateY(-1px);box-shadow:var(--ombre)}
+.alertes button b{font-weight:700;font-variant-numeric:tabular-nums}
+.alertes .calme{border-color:var(--trait);background:var(--bien-fond);color:var(--bien-texte);
+  cursor:default}
+.alertes .calme:hover{transform:none;box-shadow:none}
+
+/* L'écart avec la période précédente. Un chiffre seul ne dit pas s'il monte. */
+.delta{display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:600;
+  padding:1px 7px;border-radius:20px;margin-left:7px;vertical-align:2px}
+.delta.monte{background:var(--bien-fond);color:var(--bien-texte)}
+.delta.baisse{background:var(--mauvais-fond);color:var(--mauvais-texte)}
+.delta.stable{background:var(--creux);color:var(--doux)}
 
 /* --------------------------------------------------------------- filtres */
 .filtres{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
@@ -439,6 +538,10 @@ code{font-family:var(--mono);font-size:.8em}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <linearGradient id="or-vertical" x1="0" y1="0" x2="0" y2="1">
   <stop offset="0%" stop-color="#e8c070"></stop><stop offset="100%" stop-color="#d4a23f"></stop>
+</linearGradient>
+<linearGradient id="or-aire" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#7c9a82" stop-opacity=".34"></stop>
+  <stop offset="100%" stop-color="#7c9a82" stop-opacity="0"></stop>
 </linearGradient>
 <symbol id="i-tableau" viewBox="0 0 24 24"><path d="M4 19a8 8 0 1 1 16 0"></path><path d="M12 15l4-4"></path><circle cx="12" cy="19" r="1.4"></circle></symbol>
 <symbol id="i-membres" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 19a5.6 5.6 0 0 1 11 0"></path><path d="M16 5.4a3.2 3.2 0 0 1 0 5.6M17.5 14.2A5.6 5.6 0 0 1 20.5 19"></path></symbol>
@@ -775,6 +878,91 @@ $("volet-fermer").onclick = () => $("volet").close();
 const paires = (obj) => Object.entries(obj)
   .map(([k, v]) => `<div class="paire"><span>${ech(k)}</span><b>${v ?? ""}</b></div>`).join("");
 
+/* ------------------------------------------------------- outils de la vue */
+
+/** L'écart avec la période précédente, en points de pourcentage.
+ *  Un chiffre seul ne dit pas s'il monte : sans la comparaison, on regarde
+ *  1 034 comptes et on ne sait pas si c'est une bonne ou une mauvaise semaine. */
+function delta(maintenant, avant) {
+  if (!avant) return maintenant ? `<span class="delta monte">${ico("hausse", "pt")}nouveau</span>` : "";
+  const p = Math.round(((maintenant - avant) / avant) * 100);
+  const genre = p > 2 ? "monte" : p < -2 ? "baisse" : "stable";
+  return `<span class="delta ${genre}">${p > 0 ? "+" : ""}${p} %</span>`;
+}
+
+/** Un graphique de période : des barres pour le volume, une ligne pour une
+ *  seconde série. La grille est en coordonnées de 0 à 100 étirées par le SVG,
+ *  donc la largeur des barres ne dépend d'aucun réglage de disposition. */
+function graphe(points, barre, ligne, aire) {
+  const n = points.length, pas = 100 / n, large = Math.max(pas * 0.62, 0.7);
+  const maxB = Math.max(1, ...points.map((p) => p[barre]));
+  const maxL = ligne ? Math.max(1, ...points.map((p) => p[ligne])) : 1;
+  const y = (v, max) => 100 - (v / max) * 88;
+  const grille = [22, 44, 66, 88].map((g) =>
+    `<line class="grille" x1="0" y1="${g}" x2="100" y2="${g}" vector-effect="non-scaling-stroke"></line>`).join("");
+  const barres = points.map((p, i) => {
+    const h = p[barre] ? Math.max(100 - y(p[barre], maxB), 1.6) : 1.2;
+    return `<rect class="j ${p[barre] ? "" : "vide"}" rx="0.35"` +
+      ` x="${(i * pas + (pas - large) / 2).toFixed(2)}" y="${(100 - h).toFixed(2)}"` +
+      ` width="${large.toFixed(2)}" height="${h.toFixed(2)}">` +
+      `<title>${jour(p.jour)}</title></rect>`;
+  }).join("");
+  let chemin = "";
+  if (ligne) {
+    const pts = points.map((p, i) => `${(i * pas + pas / 2).toFixed(2)} ${y(p[ligne], maxL).toFixed(2)}`);
+    chemin = aire
+      ? `<path class="aire" d="M 0 100 L ${pts.join(" L ")} L 100 100 Z"></path>` +
+        `<path class="trait" d="M ${pts.join(" L ")}"></path>`
+      : `<path class="trait" d="M ${pts.join(" L ")}"></path>`;
+  }
+  return `<svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="Série sur ${n} jours">
+    ${grille}${barres}${chemin}
+    <line class="socle" x1="0" y1="99.7" x2="100" y2="99.7" vector-effect="non-scaling-stroke"></line></svg>`;
+}
+
+/** Un classement à barres. Un tableau de nombres ne dit pas « celui-ci pèse
+ *  trois fois celui-là », une barre le dit sans qu'on ait à calculer. */
+function classement(lignes, pale) {
+  if (!lignes.length) return `<p class="note">Rien encore sur cette période.</p>`;
+  const max = Math.max(1, ...lignes.map((l) => l.v));
+  return `<div class="classement">` + lignes.map((l) =>
+    `<div class="rang ${pale ? "pale" : ""}">
+       <span class="nom" title="${ech(l.nom)}">${ech(l.nom)}</span>
+       <span class="val">${nb(l.v)}${l.s ? ` <small>${ech(l.s)}</small>` : ""}</span>
+       <span class="piste"><i style="width:${Math.max((l.v / max) * 100, 2)}%"></i></span>
+     </div>`).join("") + `</div>`;
+}
+
+const NOMS_ACTIVITE = { opened_doc: "Ouvertures d'ouvrage", read_pages: "Pages lues",
+  quiz_attempt: "Quiz tentés", question_asked: "Questions à l'agent",
+  note_created: "Notes prises", concept_mastered: "Concepts acquis",
+  session_skipped: "Séances sautées" };
+
+/** Le beignet de l'activité. Cinq arcs sur un cercle de périmètre connu :
+ *  chaque part est un `stroke-dasharray` et un décalage, sans une seule
+ *  coordonnée trigonométrique à écrire. */
+function beignet(parts) {
+  const total = parts.reduce((s, p) => s + p.v, 0);
+  if (!total) return `<p class="note">Aucune activité sur cette période.</p>`;
+  const R = 58, C = 2 * Math.PI * R;
+  let pos = 0;
+  const arcs = parts.map((p, i) => {
+    const part = (p.v / total) * C;
+    const arc = `<circle r="${R}" cx="74" cy="74" stroke="var(--serie-${i + 1})"
+        stroke-dasharray="${part.toFixed(2)} ${(C - part).toFixed(2)}"
+        stroke-dashoffset="${(-pos).toFixed(2)}"><title>${ech(p.nom)} : ${nb(p.v)}</title></circle>`;
+    pos += part;
+    return arc;
+  }).join("");
+  return `<div class="beignet">
+    <div class="coeur"><svg viewBox="0 0 148 148">${arcs}</svg>
+      <b>${nb(total)}<small>gestes</small></b></div>
+    <ul>` + parts.map((p, i) =>
+      `<li><i style="background:var(--serie-${i + 1})"></i>${ech(p.nom)}
+         <b>${nb(p.v)}</b><span>${Math.round((p.v / total) * 100)} %</span></li>`).join("") +
+    `</ul></div>`;
+}
+
 /* ----------------------------------------------------------------- zones */
 const ZONES = [];
 const zone = (z) => { ZONES.push(z); return z; };
@@ -783,54 +971,147 @@ zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble",
   ico: "tableau", aide: "Les chiffres du matin : comptes, argent, corpus, et ce qui demande qu'on s'en occupe.", async rendre() {
   const d = await api("/v1/admin/tableau-de-bord?jours=30");
   resume = d;
-  const orph = d.paiements.orphelins || 0, ech2 = d.courriels.echecs || 0;
-  const tuiles = [
-    { v: nb(d.comptes.total), l: "comptes", i: "membres",
-      s: "+" + nb(d.comptes.aujourdhui) + " aujourd'hui" },
+  const p = d.paiements, c = d.comptes, e = d.entonnoir;
+  const orph = p.orphelins || 0, ratees = d.courriels.echecs || 0, attente = p.en_attente || 0;
+
+  // Ce qui demande qu'on s'en occupe passe avant tout le reste. Trois chiffres
+  // à zéro valent une seule ligne verte ; un seul qui ne l'est pas mérite sa
+  // propre porte vers la vue qui le traite.
+  const soucis = [
+    { n: orph, un: "webhook orphelin", des: "webhooks orphelins",
+      i: "orphelin", va: "orphelins" },
+    { n: ratees, un: "courriel en échec", des: "courriels en échec",
+      i: "envoi", va: "courriels" },
+    { n: attente, un: "paiement en attente", des: "paiements en attente",
+      i: "horloge", va: "paiements" },
+  ].filter((a) => a.n > 0);
+  const alertes = `<div class="alertes">` + (soucis.length
+    ? soucis.map((a) => `<button data-va="${a.va}">${ico(a.i)}<b>${nb(a.n)}</b>
+         ${ech(a.n > 1 ? a.des : a.un)}${ico("droite", "pt")}</button>`).join("")
+    : `<button class="calme" disabled>${ico("oui")}Rien en souffrance ce matin.</button>`) + `</div>`;
+
+  const tauxAbo = c.total ? Math.round((c.abonnes / c.total) * 100) : 0;
+  const tauxPaie = p.total ? Math.round((p.valides / p.total) * 100) : 0;
+  const pouls = [
+    { v: nb(c.total), l: "comptes", i: "membres",
+      s: `+${nb(c.periode)} sur ${d.periode_jours} jours ${delta(c.periode, c.precedent)}` },
     { v: nb(d.actifs.semaine), l: "actifs 7 jours", i: "hausse",
-      s: nb(d.actifs.mois) + " sur 30 jours" },
-    { v: nb(d.comptes.abonnes), l: "abonnés", i: "bouclier",
-      s: nb(d.abonnements.actifs) + " abonnements actifs" },
-    { v: xaf(d.paiements.encaisse), l: "encaissé", i: "piece",
-      s: nb(d.paiements.valides) + " paiements" },
-    { v: nb(d.paiements.en_attente), l: "en attente", i: "horloge",
-      s: nb(d.paiements.rejetes) + " rejetés" },
-    { v: nb(d.abonnements.bientot_echus), l: "échéance 7 jours", i: "calendrier" },
-    { v: nb(orph), l: "webhooks orphelins", i: "orphelin", c: orph ? "alerte" : "bien",
-      s: orph ? "à examiner" : "rien en souffrance" },
-    { v: nb(ech2), l: "courriels en échec", i: "envoi", c: ech2 ? "alerte" : "bien",
-      s: nb(d.courriels.simules) + " simulés" },
+      s: `${nb(d.actifs.jour)} aujourd'hui · ${nb(d.actifs.mois)} sur 30 jours` },
+    { v: tauxAbo + " %", l: "taux d'abonnement", i: "bouclier",
+      c: tauxAbo >= 10 ? "bien" : "", s: `${nb(c.abonnes)} abonnés sur ${nb(c.total)}` },
+    { v: xaf(p.encaisse_periode), l: `encaissé sur ${d.periode_jours} j`, i: "piece",
+      s: `${nb(p.valides)} paiements ${delta(p.encaisse_periode, p.encaisse_precedent)}` },
+    { v: xaf(p.panier_moyen), l: "panier moyen", i: "paiement",
+      s: `${xaf(p.encaisse)} depuis l'origine` },
+    { v: tauxPaie + " %", l: "paiements aboutis", i: "oui",
+      c: tauxPaie >= 60 ? "bien" : tauxPaie < 40 ? "alerte" : "",
+      s: `${nb(p.rejetes)} rejetés, ${nb(attente)} en attente` },
   ];
-  const max = Math.max(1, ...d.courbe.map((p) => p.comptes));
-  // Une grille de 100 par 100, étirée par le SVG : les coordonnées sont des
-  // pourcentages déguisés, et la largeur des barres ne dépend d'aucun réglage
-  // de disposition.
-  const n = d.courbe.length, pas = 100 / n, large = Math.max(pas * 0.68, 0.8);
-  const barres = d.courbe.map((p, i) => {
-    const h = p.comptes ? Math.max((p.comptes / max) * 96, 2) : 1.5;
-    return `<rect class="j ${p.comptes ? "" : "vide"}" x="${(i * pas + (pas - large) / 2).toFixed(2)}"` +
-      ` y="${(100 - h).toFixed(2)}" width="${large.toFixed(2)}" height="${h.toFixed(2)}" rx="0.4">` +
-      `<title>${jour(p.jour)} : ${p.comptes} compte(s), ${p.paiements} paiement(s)</title></rect>`;
-  }).join("");
-  const grille = [25, 50, 75].map((y) =>
-    `<line class="grille" x1="0" y1="${y}" x2="100" y2="${y}" vector-effect="non-scaling-stroke"></line>`).join("");
-  const premier = d.courbe[0], dernier = d.courbe[n - 1];
-  return `<div class="tuiles">` + tuiles.map(tuile).join("") + `</div>
-    <h2>${ico("graphe")}Inscriptions, jour par jour</h2>
-    <div class="courbe"><svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img"
-      aria-label="Inscriptions des ${n} derniers jours, maximum ${max} en un jour">
-      ${grille}${barres}<line class="socle" x1="0" y1="99.7" x2="100" y2="99.7"
-        vector-effect="non-scaling-stroke"></line></svg>
-      <div class="legende"><span>${jour(premier && premier.jour)}</span>
-        <span>maximum ${nb(max)} en un jour</span>
-        <span>${jour(dernier && dernier.jour)}</span></div></div>
-    <h2>${ico("corpus")}Corpus</h2><div class="tuiles serre">` + [
+
+  const premier = d.courbe[0], dernier = d.courbe[d.courbe.length - 1];
+  const bornes = `<div class="legende"><span>${jour(premier && premier.jour)}</span>
+    <span>${jour(dernier && dernier.jour)}</span></div>`;
+
+  // L'entonnoir se lit de haut en bas, chaque marche rapportée à la précédente.
+  // C'est la seule façon de voir laquelle on perd.
+  const etapes = [
+    { l: "Comptes créés", v: e.comptes, i: "membres" },
+    { l: "Diagnostic passé", v: e.diagnostiques, i: "poles" },
+    { l: "Plan construit", v: e.plans, i: "calendrier" },
+    { l: "Au moins une séance faite", v: e.en_marche, i: "livre" },
+  ];
+  const haut = Math.max(1, e.comptes);
+  const largeur = (v) => Math.max((v / haut) * 100, 1.5);
+  const marches = etapes.map((m, i) => {
+    const avant = i ? etapes[i - 1].v : m.v;
+    const garde = avant ? Math.round((m.v / avant) * 100) : 0;
+    return `<div class="marche ${i && garde < 50 ? "perte" : ""}">
+      <span class="nom">${ico(m.i, "pt")} ${ech(m.l)}</span>
+      <span class="val">${nb(m.v)}</span>
+      <span class="piste"><i style="width:${largeur(m.v)}%"></i>
+        <span>${i ? garde + " % de la marche précédente" : "la totalité"}</span></span>
+    </div>`;
+  }).join("") +
+    `<div class="marche a-part">
+       <span class="nom">${ico("bouclier", "pt")} Abonnés</span>
+       <span class="val">${nb(e.abonnes)}</span>
+       <span class="piste"><i style="width:${largeur(e.abonnes)}%"></i>
+         <span>${haut ? Math.round((e.abonnes / haut) * 100) : 0} % des comptes créés</span></span>
+     </div>`;
+
+  return alertes + `<div class="tuiles">` + pouls.map(tuile).join("") + `</div>
+
+    <h2>${ico("graphe")}Le mouvement, jour par jour</h2>
+    <div class="rangee">
+      <div class="panneau">
+        <h3>${ico("membres")}Inscriptions et présence</h3>
+        <p class="dit">Les barres comptent les inscriptions, la ligne compte les
+          personnes qui ont fait quelque chose ce jour là.</p>
+        <div class="cles">
+          <span><i style="background:var(--or)"></i>inscriptions</span>
+          <span><i style="background:var(--sauge)"></i>actifs du jour</span>
+        </div>
+        <div class="courbe">${graphe(d.courbe, "comptes", "actifs", false)}${bornes}</div>
+      </div>
+      <div class="panneau">
+        <h3>${ico("piece")}Encaissement</h3>
+        <p class="dit">Les barres comptent les paiements validés, l'aire suit le
+          montant encaissé.</p>
+        <div class="cles">
+          <span><i style="background:var(--or)"></i>paiements validés</span>
+          <span><i style="background:var(--sauge)"></i>montant encaissé</span>
+        </div>
+        <div class="courbe">${graphe(d.courbe, "paiements", "encaisse", true)}${bornes}</div>
+      </div>
+    </div>
+
+    <h2>${ico("hausse")}Du compte créé à l'abonné</h2>
+    <div class="rangee">
+      <div class="panneau">
+        <h3>${ico("hausse")}L'entonnoir</h3>
+        <p class="dit">Chaque marche rapportée à la précédente. Celle qui tombe est
+          celle à réparer. L'abonnement se lit à part : on ne s'abonne pas parce
+          qu'on a fait une séance.</p>
+        <div class="marches">${marches}</div>
+      </div>
+      <div class="panneau">
+        <h3>${ico("etincelle")}Ce que les gens font</h3>
+        <p class="dit">Les gestes enregistrés sur ${d.periode_jours} jours. Un compte
+          qui existe n'est pas un compte qui lit.</p>
+        ${beignet(d.activite.map((a) => ({ nom: NOMS_ACTIVITE[a.type] || a.type, v: a.n })))}
+      </div>
+    </div>
+
+    <h2>${ico("livre")}Ce qui sert le plus</h2>
+    <div class="rangee">
+      <div class="panneau">
+        <h3>${ico("corpus")}Les ouvrages les plus programmés</h3>
+        <p class="dit">Un ouvrage qu'on ouvre une fois pèse moins qu'un ouvrage que
+          le planificateur place dans des dizaines de parcours.</p>
+        ${classement(d.ouvrages.map((o) => ({ nom: o.titre, v: o.seances,
+          s: `séances · ${nb(o.parcours)} parcours` })))}
+      </div>
+      <div class="panneau">
+        <h3>${ico("poles")}Les pôles les plus choisis</h3>
+        <p class="dit">Ce que les gens veulent apprendre, dans l'ordre. C'est là
+          qu'il faut mettre le prochain ouvrage.</p>
+        ${classement(d.axes_choisis.map((a) => ({ nom: a.label, v: a.choix,
+          s: `choix · ${nb(a.periode)} récents` })), true)}
+      </div>
+    </div>
+
+    <h2>${ico("corpus")}Le corpus</h2><div class="tuiles serre">` + [
       { v: nb(d.corpus.ouvrages), l: "ouvrages", i: "livre" },
       { v: nb(d.corpus.passages), l: "passages", i: "base",
-        s: nb(d.corpus.vectorises) + " vectorisés" },
+        s: `${nb(d.corpus.vectorises)} vectorisés` },
       { v: nb(d.corpus.quiz), l: "lots de quiz", i: "quiz" },
     ].map(tuile).join("") + `</div>`;
-} });
+},
+  async apres() {
+    $("zone").querySelectorAll("[data-va]").forEach((b) => {
+      b.onclick = () => afficher(ZONES.find((z) => z.cle === b.dataset.va));
+    });
+  } });
 
 zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
   ico: "membres", aide: "Chercher un membre, ouvrir sa fiche, suivre ce qu'il a payé et lu.",

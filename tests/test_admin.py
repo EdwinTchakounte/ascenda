@@ -61,7 +61,8 @@ async def main():
         ok("le tableau se charge", code == 200, code)
         ok("il tient en un seul appel",
            set(tb) >= {"comptes", "actifs", "paiements", "abonnements", "courriels",
-                       "corpus", "courbe", "exploitation"}, list(tb))
+                       "corpus", "courbe", "exploitation", "activite", "ouvrages",
+                       "axes_choisis", "entonnoir", "plans"}, list(tb))
 
         # La somme de la courbe doit égaler le compteur de la période. C'est ce
         # qui manquait : une double jointure multipliait les comptes par le
@@ -72,6 +73,45 @@ async def main():
            somme == tb["comptes"]["periode"], f"{somme} contre {tb['comptes']['periode']}")
         ok("elle porte un point par jour, les jours vides compris",
            len(tb["courbe"]) == 30, len(tb["courbe"]))
+        ok("chaque point porte ses quatre séries",
+           all({"comptes", "paiements", "encaisse", "actifs"} <= set(j) for j in tb["courbe"]),
+           tb["courbe"][0])
+        # Même contrôle que pour la courbe des comptes : une jointure de travers
+        # sur les paiements gonflerait l'encaissement du jour.
+        somme_xaf = sum(j["encaisse"] for j in tb["courbe"])
+        ok("l'encaissement de la courbe s'accorde à celui de la période",
+           somme_xaf == tb["paiements"]["encaisse_periode"],
+           f"{somme_xaf} contre {tb['paiements']['encaisse_periode']}")
+
+        print("\n· Ce que la vue d'ensemble raconte")
+        ok("la comparaison avec la période précédente est là",
+           "precedent" in tb["comptes"] and "encaisse_precedent" in tb["paiements"])
+        ok("l'activité est ventilée par type",
+           all({"type", "n", "personnes"} <= set(a) for a in tb["activite"]), tb["activite"][:1])
+        ok("et ne compte pas plus de personnes que de gestes",
+           all(a["personnes"] <= a["n"] for a in tb["activite"]))
+        ok("l'entonnoir porte ses cinq marches",
+           {"comptes", "diagnostiques", "plans", "en_marche", "abonnes"} <= set(tb["entonnoir"]),
+           list(tb["entonnoir"]))
+        # Chaque marche est un sous-ensemble de la précédente. Si l'une dépasse,
+        # la requête compte autre chose que ce que son nom annonce.
+        e = tb["entonnoir"]
+        ok("chaque marche tient dans la précédente",
+           e["comptes"] >= e["diagnostiques"] >= e["plans"] >= e["en_marche"],
+           e)
+        ok("le classement des ouvrages est borné et ordonné",
+           len(tb["ouvrages"]) <= 8
+           and all(tb["ouvrages"][i]["seances"] >= tb["ouvrages"][i + 1]["seances"]
+                   for i in range(len(tb["ouvrages"]) - 1)),
+           [o["seances"] for o in tb["ouvrages"]])
+        ok("celui des pôles aussi",
+           len(tb["axes_choisis"]) <= 8
+           and all(tb["axes_choisis"][i]["choix"] >= tb["axes_choisis"][i + 1]["choix"]
+                   for i in range(len(tb["axes_choisis"]) - 1)),
+           [a["choix"] for a in tb["axes_choisis"]])
+        ok("la répartition des formules couvre tous les comptes",
+           sum(f["n"] for f in tb["plans"]) == tb["comptes"]["total"],
+           tb["plans"])
 
         vrai = await fetch_one("select count(*) as n from app_user")
         ok("le nombre de comptes est celui de la base",
