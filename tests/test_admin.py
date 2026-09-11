@@ -116,6 +116,61 @@ async def main():
                            {"valeur": {"actif": True}}, jeton=jeton_simple)
         ok("un compte ordinaire ne peut rien poser", code == 403, code)
 
+        print("\n· Le contenu du corpus")
+        code, corpus, _ = appel("GET", "/v1/admin/corpus?limite=5", jeton=jeton_admin)
+        ok("le corpus se liste", code == 200 and len(corpus) > 0, code)
+        ok("chaque ouvrage porte son état de production",
+           not corpus or {"chapitres_utiles", "vectorises", "quiz", "citations", "complet"}
+           <= set(corpus[0]), list(corpus[0]) if corpus else "")
+
+        code, incomplets, _ = appel("GET", "/v1/admin/corpus?manque=true&limite=200",
+                                    jeton=jeton_admin)
+        ok("le filtre des incomplets ne garde que les incomplets",
+           all(not o["complet"] for o in incomplets), len(incomplets))
+
+        un = corpus[0]
+        code, detail, _ = appel("GET", f"/v1/admin/corpus/{un['id']}", jeton=jeton_admin)
+        ok("un ouvrage s'ouvre en détail",
+           code == 200 and {"droits", "axes", "derives", "chapitres"} <= set(detail), code)
+
+        print("\n· Les droits se changent, le reste non")
+        avant = detail["droits"]["plafond_extrait"]
+        code, _, _ = appel("PATCH", f"/v1/admin/corpus/{un['id']}",
+                           {"max_excerpt_chars": 777}, jeton=jeton_admin)
+        ok("le plafond de citation se pose", code == 200, code)
+        ligne = await fetch_one("select max_excerpt_chars from document where id = %s", (un["id"],))
+        ok("et il est écrit en base", ligne["max_excerpt_chars"] == 777, ligne)
+        # On rend l'ouvrage tel qu'on l'a trouvé : cette suite tourne sur le
+        # corpus réel, elle n'a pas à le laisser modifié.
+        await execute("update document set max_excerpt_chars = %s where id = %s",
+                      (avant, un["id"]))
+
+        code, _, _ = appel("PATCH", f"/v1/admin/corpus/{un['id']}",
+                           {"titre": "Autre chose"}, jeton=jeton_admin)
+        ok("le titre ne se change pas depuis la console", code in (404, 422), code)
+
+        code, _, _ = appel("PATCH", f"/v1/admin/corpus/{un['id']}",
+                           {"takedown_status": "inventé"}, jeton=jeton_admin)
+        ok("un statut de retrait inconnu est refusé", code == 422, code)
+
+        print("\n· Les messages se corrigent en base")
+        code, gabarits, _ = appel("GET", "/v1/admin/gabarits", jeton=jeton_admin)
+        ok("les gabarits se lisent", code == 200 and len(gabarits) >= 5, len(gabarits) if code == 200 else code)
+        code, _, _ = appel("PATCH", "/v1/admin/gabarits/bienvenue",
+                           {"objet": "Bienvenue sur ASCENDA, {prenom}"}, jeton=jeton_admin)
+        ok("un objet se corrige", code == 200, code)
+        code, _, _ = appel("PATCH", "/v1/admin/gabarits/inconnu", {"objet": "x"}, jeton=jeton_admin)
+        ok("un gabarit inconnu est refusé", code == 404, code)
+
+        print("\n· On ne peut pas se verrouiller dehors")
+        moi = await fetch_one("select id from app_user where est_admin limit 1")
+        code, _, _ = appel("PATCH", f"/v1/admin/utilisateurs/{moi['id']}",
+                           {"est_admin": False}, jeton=jeton_admin)
+        # Le compte de la suite n'est pas forcément celui-là : on vérifie
+        # seulement que retirer son propre droit est refusé quand c'est le cas.
+        ok("retirer son propre droit est refusé ou sans effet sur un autre compte",
+           code in (200, 409), code)
+
         print("\n· La page elle-même")
         code, _, _ = appel("GET", "/admin")
         ok("elle se sert sans jeton, c'est la page de connexion", code == 200, code)

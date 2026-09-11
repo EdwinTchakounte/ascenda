@@ -418,6 +418,488 @@
         }
       }
     },
+    "/v1/admin/corpus": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les ouvrages et leur état de production",
+        "description": "L'état de chaque ouvrage, en une requête.\n\nCe qu'on veut voir : ce qui est entré, ce qui est vectorisé, ce qui est\ndérivé, et ce qui manque. `manque=true` ne garde que les ouvrages\nincomplets, qui sont ceux sur lesquels il reste de l'argent à dépenser.",
+        "operationId": "corpus_v1_admin_corpus_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 2
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          },
+          {
+            "name": "axe",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Axe"
+            }
+          },
+          {
+            "name": "manque",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Manque"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 100,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/corpus/{document_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Un ouvrage en détail",
+        "operationId": "un_ouvrage_v1_admin_corpus__document_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Changer les droits d'un ouvrage",
+        "description": "Seuls les droits se changent ici.\n\nLe titre, les auteurs et le texte viennent du pipeline et de `data/` : les\ncorriger depuis cette page les ferait diverger de leur source, et le\nprochain import les écraserait sans prévenir.\n\nPoser `takedown_status` à autre chose que `none` retire immédiatement\nl'ouvrage de partout : bibliothèque, recherche, réponses de l'agent, plans\nde lecture déjà construits. C'est le geste qu'on fait quand un ayant droit\nécrit, et il n'a pas besoin d'être réversible pour être utile.",
+        "operationId": "changer_droits_v1_admin_corpus__document_id__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DroitsIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/utilisateurs/{user_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Un compte en détail",
+        "description": "Tout ce qu'on veut sous les yeux quand quelqu'un écrit au support.",
+        "operationId": "un_compte_v1_admin_utilisateurs__user_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "User Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Désactiver un compte, ou donner le droit",
+        "description": "Deux leviers, et rien d'autre.\n\nDésactiver un compte le ferme sans l'effacer : sa progression reste, et on\npeut revenir dessus. Donner le droit d'administration se fait ici ou en\nSQL, mais jamais depuis l'application.\n\nOn ne peut pas se retirer soi-même le droit : c'est le moyen le plus simple\nde se verrouiller dehors un dimanche soir.",
+        "operationId": "changer_compte_v1_admin_utilisateurs__user_id__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "User Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CompteIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/paiements/{paiement_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Un paiement et son journal",
+        "description": "Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».\n\nChaque étape y est : la création, l'envoi au fournisseur, la notification,\nla stratégie qui a permis de la rattacher, ou l'abandon.",
+        "operationId": "un_paiement_v1_admin_paiements__paiement_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "paiement_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Paiement Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/gabarits": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les messages transactionnels",
+        "operationId": "gabarits_v1_admin_gabarits_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/gabarits/{code}": {
+      "patch": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Corriger un message",
+        "description": "Les gabarits vivent en base précisément pour cela : corriger une faute\ndans un message qui part à tous les nouveaux membres ne doit pas demander\nune construction d'image et un redémarrage.",
+        "operationId": "changer_gabarit_v1_admin_gabarits__code__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GabaritIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/abonnements": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les abonnements, du plus proche de l'échéance",
+        "operationId": "abonnements_v1_admin_abonnements_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "statut",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(active|expired|canceled)$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Statut"
+            }
+          },
+          {
+            "name": "limite",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 60,
+              "title": "Limite"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/auth/inscription": {
       "post": {
         "tags": [
@@ -3552,6 +4034,34 @@
         ],
         "title": "ChronogrammeIn"
       },
+      "CompteIn": {
+        "properties": {
+          "is_active": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Is Active"
+          },
+          "est_admin": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Est Admin"
+          }
+        },
+        "type": "object",
+        "title": "CompteIn"
+      },
       "ConnexionIn": {
         "properties": {
           "email": {
@@ -3598,6 +4108,105 @@
           "reponses"
         ],
         "title": "DiagnosticIn"
+      },
+      "DroitsIn": {
+        "properties": {
+          "redistributable": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Redistributable"
+          },
+          "max_excerpt_chars": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 1000000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Excerpt Chars"
+          },
+          "takedown_status": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "pending",
+                  "removed"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Takedown Status"
+          }
+        },
+        "type": "object",
+        "title": "DroitsIn",
+        "description": "Ce qu'on peut changer sur un ouvrage depuis le tableau de bord.\n\nUniquement ses droits. Le titre, les auteurs et le texte viennent du\npipeline et de `data/` : les corriger ici les ferait diverger de leur\nsource, et le prochain import les écraserait sans prévenir."
+      },
+      "GabaritIn": {
+        "properties": {
+          "objet": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 300,
+                "minLength": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Objet"
+          },
+          "corps_html": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Corps Html"
+          },
+          "corps_texte": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Corps Texte"
+          },
+          "actif": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actif"
+          }
+        },
+        "type": "object",
+        "title": "GabaritIn"
       },
       "HTTPValidationError": {
         "properties": {

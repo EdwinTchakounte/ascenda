@@ -4,337 +4,681 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>ASCENDA, exploitation</title>
+<title>ASCENDA, console</title>
 <style>
 :root{
   --nuit:#0b1435; --nuit-profond:#050d22; --ardoise:#223454;
   --or:#d4a23f; --or-clair:#e8c070; --or-sombre:#9a7118;
   --sauge:#7c9a82; --terracotta:#c4704f;
-  --fond:#faf8f4; --creux:#f2eee6; --surface:#fff;
+  --fond:#f7f5f1; --creux:#efece5; --surface:#fff;
   --texte:#1a1f2e; --doux:#6b7280; --trait:rgba(11,20,53,.10);
   --corps:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  --barre:248px;
 }
 *{box-sizing:border-box}
+html,body{height:100%}
+body{overflow-x:hidden}
 body{margin:0;background:var(--fond);color:var(--texte);font-family:var(--corps);
-  font-size:14px;line-height:1.55}
-.cadre{max-width:1180px;margin-inline:auto;padding:0 20px}
-header{background:var(--nuit-profond);color:#e6e9f2;padding:16px 0;
-  border-bottom:3px solid var(--or)}
-header .cadre{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.marque{font-weight:700;letter-spacing:.26em;color:var(--or-clair);font-size:.78rem}
-.oeil{font-size:.78rem;color:#8590aa}
-#sortir{margin-left:auto;background:none;border:1px solid #2b3a5c;color:#b9c1d6;
-  border-radius:20px;padding:5px 13px;cursor:pointer;font-size:.8rem}
-#sortir:hover{border-color:var(--or)}
+  font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:var(--or-sombre)}
 
-/* connexion */
-#connexion{max-width:340px;margin:14vh auto;padding:0 20px}
+/* ------------------------------------------------------------ connexion */
+#connexion{max-width:340px;margin:13vh auto;padding:0 20px}
+#connexion .logo{font-weight:700;letter-spacing:.26em;color:var(--or-sombre);
+  font-size:.78rem;margin-bottom:26px}
 #connexion h1{font-size:1.3rem;margin:0 0 6px}
 #connexion p{color:var(--doux);margin:0 0 22px;font-size:.9rem}
-input,select{width:100%;padding:10px 12px;border:1px solid var(--trait);
-  border-radius:10px;font:inherit;background:var(--surface);color:var(--texte);margin-bottom:10px}
-button.principal{width:100%;padding:11px;border:0;border-radius:22px;background:var(--or);
-  color:#1a1400;font:inherit;font-weight:600;cursor:pointer}
-button.principal:hover{background:var(--or-clair)}
+#connexion input{width:100%;padding:10px 12px;border:1px solid var(--trait);
+  border-radius:10px;background:var(--surface);margin-bottom:10px}
+.bouton{border:0;border-radius:22px;background:var(--or);color:#1a1400;
+  font-weight:600;cursor:pointer;padding:10px 20px}
+.bouton:hover{background:var(--or-clair)}
+.bouton.plein{width:100%;padding:11px}
+.bouton.fin{background:none;border:1px solid var(--trait);color:var(--doux);
+  padding:5px 13px;border-radius:20px;font-weight:400;font-size:.84rem}
+.bouton.fin:hover{border-color:var(--or);color:var(--or-sombre);background:none}
 .erreur{color:var(--terracotta);font-size:.86rem;margin:8px 0 0;min-height:1.2em}
 
-/* tuiles */
-.tuiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));
-  margin:22px 0}
-.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:14px 16px}
-.tuile b{display:block;font-size:1.7rem;font-weight:600;line-height:1.1;
+/* ------------------------------------------------------------ ossature */
+#console{display:none;min-height:100%}
+#console.ouvert{display:grid;grid-template-columns:var(--barre) 1fr}
+
+aside{background:var(--nuit-profond);color:#b9c1d6;padding:20px 0;
+  display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
+aside .logo{padding:0 20px 20px;font-weight:700;letter-spacing:.24em;
+  color:var(--or-clair);font-size:.76rem}
+aside nav{display:flex;flex-direction:column;gap:1px;overflow-y:auto;flex:1}
+aside nav button{background:none;border:0;text-align:left;padding:9px 20px;
+  color:#8590aa;cursor:pointer;font-size:.88rem;display:flex;align-items:center;
+  gap:10px;border-left:3px solid transparent}
+aside nav button:hover{color:#e6e9f2;background:rgba(255,255,255,.03)}
+aside nav button[aria-current="true"]{color:var(--or-clair);border-left-color:var(--or);
+  background:rgba(212,162,63,.09);font-weight:600}
+aside nav .groupe{padding:16px 20px 6px;font-size:.66rem;letter-spacing:.14em;
+  text-transform:uppercase;color:#4d5876}
+aside .pied{padding:16px 20px 0;border-top:1px solid #17224180;font-size:.75rem;
+  color:#5d688a}
+aside .pastille-nav{margin-left:auto;background:var(--terracotta);color:#fff;
+  border-radius:20px;padding:1px 7px;font-size:.68rem;font-weight:700}
+
+main{min-width:0;padding:0 0 60px}
+.barre-haut{position:sticky;top:0;z-index:5;background:rgba(247,245,241,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--trait);
+  padding:14px 26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.barre-haut h1{font-size:1.05rem;margin:0}
+.barre-haut .compte{margin-left:auto;font-size:.8rem;color:var(--doux)}
+.zone{padding:22px 26px}
+
+/* ------------------------------------------------------------ éléments */
+.tuiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:14px;
+  padding:14px 16px}
+.tuile b{display:block;font-size:1.6rem;font-weight:600;line-height:1.15;
   font-variant-numeric:tabular-nums}
-.tuile span{font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux)}
-.tuile .sous{font-size:.78rem;color:var(--doux);text-transform:none;letter-spacing:0;margin-top:3px}
+.tuile span{font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux)}
+.tuile .sous{font-size:.78rem;color:var(--doux);margin-top:3px}
 .tuile.alerte{border-color:var(--terracotta);background:rgba(196,112,79,.07)}
 .tuile.alerte b{color:#9c5233}
 .tuile.bien b{color:#4a6b51}
 
-h2{font-size:1.05rem;margin:26px 0 10px}
-.courbe{display:flex;align-items:flex-end;gap:2px;height:96px;padding:10px 14px;
-  background:var(--surface);border:1px solid var(--trait);border-radius:14px}
-.barre{flex:1;min-width:3px;background:var(--or);border-radius:2px 2px 0 0;position:relative}
-.barre.vide{background:var(--trait)}
-.barre span{display:none;position:absolute;bottom:100%;left:50%;transform:translateX(-50%);
-  background:var(--nuit);color:#fff;font-size:.7rem;padding:3px 7px;border-radius:6px;
-  white-space:nowrap;margin-bottom:5px}
-.barre:hover span{display:block}
+h2{font-size:1rem;margin:26px 0 10px}
+h2:first-child{margin-top:0}
 
-nav.onglets{display:flex;gap:6px;flex-wrap:wrap;margin:26px 0 12px}
-nav.onglets button{background:none;border:1px solid var(--trait);border-radius:20px;
-  padding:5px 13px;font:inherit;font-size:.84rem;color:var(--doux);cursor:pointer}
-nav.onglets button[aria-selected="true"]{border-color:var(--or);color:var(--or-sombre);
-  background:rgba(212,162,63,.10);font-weight:600}
+/* Le graphique est en SVG, et non en boîtes CSS.
+   Une rangée de barres en flex ou en grille se laisse dimensionner par son
+   contenu dès qu'un réglage se glisse de travers : les barres vides prenaient
+   soixante pixels chacune et débordaient la page. Un SVG place ses marques à
+   la coordonnée qu'on lui donne, et nulle part ailleurs. */
+.courbe{background:var(--surface);border:1px solid var(--trait);border-radius:14px;
+  padding:12px 14px}
+.courbe svg{display:block;width:100%;height:96px}
+.courbe rect.j{fill:var(--or)}
+.courbe rect.j.vide{fill:rgba(11,20,53,.08)}
+.courbe rect.j:hover{fill:var(--or-sombre)}
+.courbe line.socle{stroke:var(--trait);stroke-width:1}
+
+.filtres{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.filtres input,.filtres select{padding:7px 11px;border:1px solid var(--trait);
+  border-radius:10px;background:var(--surface)}
+.filtres input{min-width:220px}
 
 .tableau{overflow-x:auto;background:var(--surface);border:1px solid var(--trait);
   border-radius:14px}
 table{width:100%;border-collapse:collapse;font-size:.86rem}
-th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--trait);
-  white-space:nowrap}
-th{font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux);
-  font-weight:600}
+th,td{padding:9px 13px;text-align:left;border-bottom:1px solid var(--trait);white-space:nowrap}
+th{font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux);font-weight:600}
 tr:last-child td{border-bottom:0}
+tbody tr.cliquable{cursor:pointer}
+tbody tr.cliquable:hover{background:var(--creux)}
 td.nombre{text-align:right;font-variant-numeric:tabular-nums}
-.pastille{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.74rem;
-  font-weight:600}
-.p-valide{background:rgba(124,154,130,.18);color:#3f6047}
-.p-attente{background:rgba(212,162,63,.18);color:#7d5a12}
-.p-rejete{background:rgba(196,112,79,.16);color:#8e4a2e}
-.vide{padding:26px;text-align:center;color:var(--doux)}
+td.large{white-space:normal;max-width:420px}
+.pastille{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.73rem;font-weight:600}
+.p-ok{background:rgba(124,154,130,.20);color:#3f6047}
+.p-attente{background:rgba(212,162,63,.20);color:#7d5a12}
+.p-mauvais{background:rgba(196,112,79,.18);color:#8e4a2e}
+.p-neutre{background:var(--creux);color:var(--doux)}
+.vide{padding:30px;text-align:center;color:var(--doux)}
 
-.reglages{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
-.reglage{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:15px 16px}
-.reglage h3{margin:0 0 3px;font-size:.95rem}
-.reglage p{margin:0 0 12px;font-size:.82rem;color:var(--doux)}
-.reglage.on{border-color:var(--or);background:rgba(212,162,63,.07)}
-.ligne{display:flex;gap:8px;align-items:center;margin-bottom:8px}
-.ligne label{font-size:.8rem;color:var(--doux);min-width:78px}
-.ligne input{margin:0}
-footer{color:var(--doux);font-size:.8rem;padding:30px 0 40px}
+.cartes{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.carte{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:16px}
+.carte.on{border-color:var(--or);background:rgba(212,162,63,.06)}
+.carte h3{margin:0 0 3px;font-size:.95rem}
+.carte p.aide{margin:0 0 12px;font-size:.82rem;color:var(--doux)}
+.champ{display:flex;gap:9px;align-items:center;margin-bottom:8px}
+.champ label{font-size:.79rem;color:var(--doux);min-width:92px}
+.champ input,.champ select,.champ textarea{flex:1;min-width:0;padding:7px 10px;
+  border:1px solid var(--trait);border-radius:9px;background:var(--surface)}
+.champ textarea{min-height:130px;font-family:var(--mono);font-size:.78rem;line-height:1.5}
+
+.paire{display:flex;justify-content:space-between;gap:16px;padding:7px 0;
+  border-bottom:1px solid var(--trait);font-size:.87rem}
+.paire:last-child{border-bottom:0}
+.paire span{color:var(--doux)}
+.paire b{font-weight:600;text-align:right}
+
+dialog{border:0;border-radius:18px;padding:0;max-width:min(900px,94vw);width:100%;
+  background:var(--fond);color:var(--texte);box-shadow:0 30px 80px rgba(5,13,34,.35)}
+dialog::backdrop{background:rgba(5,13,34,.55)}
+dialog .tete{display:flex;align-items:center;gap:14px;padding:16px 22px;
+  background:var(--nuit);color:#f4f1e8}
+dialog .tete h3{margin:0;font-size:1rem;flex:1;min-width:0;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+dialog .tete button{background:none;border:1px solid #2b3a5c;color:#b9c1d6;
+  border-radius:20px;padding:4px 12px;cursor:pointer;font-size:.82rem}
+dialog .corps{padding:20px 22px;max-height:72vh;overflow-y:auto}
+code{font-family:var(--mono);font-size:.8em}
+.note{font-size:.82rem;color:var(--doux);margin:10px 0 0}
+@media (max-width:840px){
+  #console.ouvert{grid-template-columns:1fr}
+  aside{position:static;height:auto;flex-direction:row;align-items:center;
+    overflow-x:auto;padding:10px 0}
+  aside nav{flex-direction:row}
+  aside nav .groupe,aside .pied{display:none}
+  aside nav button{border-left:0;border-bottom:3px solid transparent;white-space:nowrap}
+  aside nav button[aria-current="true"]{border-left-color:transparent;border-bottom-color:var(--or)}
+}
 </style>
 </head>
 <body>
 
 <div id="connexion">
-  <h1>Exploitation</h1>
-  <p>Réservé aux comptes qui portent le droit d'administration.</p>
+  <div class="logo">ASCENDA</div>
+  <h1>Console d'exploitation</h1>
+  <p>Réservée aux comptes qui portent le droit d'administration.</p>
   <input id="email" type="email" placeholder="Adresse électronique" autocomplete="username">
   <input id="mdp" type="password" placeholder="Mot de passe" autocomplete="current-password">
-  <button class="principal" id="entrer">Entrer</button>
+  <button class="bouton plein" id="entrer">Entrer</button>
   <p class="erreur" id="erreur"></p>
 </div>
 
-<div id="bord" hidden>
-  <header>
-    <div class="cadre">
-      <span class="marque">ASCENDA</span>
-      <span class="oeil" id="periode">30 derniers jours</span>
-      <button id="sortir">Sortir</button>
+<div id="console">
+  <aside>
+    <div class="logo">ASCENDA</div>
+    <nav id="menu"></nav>
+    <div class="pied" id="pied-barre"></div>
+  </aside>
+  <main>
+    <div class="barre-haut">
+      <h1 id="titre-zone">Vue d'ensemble</h1>
+      <button class="bouton fin" id="rafraichir">Rafraîchir</button>
+      <span class="compte" id="qui"></span>
+      <button class="bouton fin" id="sortir">Sortir</button>
     </div>
-  </header>
-  <main class="cadre">
-    <div class="tuiles" id="tuiles"></div>
-    <h2>Inscriptions et paiements, jour par jour</h2>
-    <div class="courbe" id="courbe"></div>
-
-    <h2>Les trois interrupteurs</h2>
-    <div class="reglages" id="reglages"></div>
-
-    <nav class="onglets" id="onglets"></nav>
-    <div class="tableau" id="tableau"></div>
-    <footer id="pied"></footer>
+    <div class="zone" id="zone"></div>
   </main>
 </div>
 
+<dialog id="volet"><div class="tete"><h3 id="volet-titre"></h3>
+  <button id="volet-fermer">Fermer</button></div>
+  <div class="corps" id="volet-corps"></div></dialog>
+
 <script>
-const API = "";
-let jeton = null;
+const $ = (id) => document.getElementById(id);
+let jeton = null, moi = null, resume = null;
 try { jeton = localStorage.getItem("ascenda_admin"); } catch (_) {}
 
-const $ = (id) => document.getElementById(id);
-
-async function appel(chemin, options = {}) {
-  const r = await fetch(API + chemin, {
+/* ---------------------------------------------------------------- réseau */
+async function api(chemin, options = {}) {
+  const r = await fetch(chemin, {
     ...options,
-    headers: {
-      "Content-Type": "application/json",
-      ...(jeton ? { Authorization: "Bearer " + jeton } : {}),
-      ...(options.headers || {}),
-    },
+    headers: { "Content-Type": "application/json",
+      ...(jeton ? { Authorization: "Bearer " + jeton } : {}), ...(options.headers || {}) },
   });
-  if (r.status === 401 || r.status === 403) { deconnecter(); throw new Error("refuse"); }
+  if (r.status === 401 || r.status === 403) { sortir(); throw new Error("refuse"); }
   if (!r.ok) throw new Error("http " + r.status);
   return r.status === 204 ? null : r.json();
 }
 
-function deconnecter() {
+function sortir() {
   jeton = null;
   try { localStorage.removeItem("ascenda_admin"); } catch (_) {}
-  $("bord").hidden = true;
-  $("connexion").hidden = false;
+  $("console").classList.remove("ouvert");
+  $("connexion").style.display = "";
 }
+$("sortir").onclick = sortir;
 
 $("entrer").onclick = async () => {
   $("erreur").textContent = "";
   try {
-    const r = await fetch(API + "/v1/auth/connexion", {
-      method: "POST",
+    const r = await fetch("/v1/auth/connexion", { method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: $("email").value.trim(), mot_de_passe: $("mdp").value }),
-    });
+      body: JSON.stringify({ email: $("email").value.trim(), mot_de_passe: $("mdp").value }) });
     if (!r.ok) throw new Error("identifiants");
     const d = await r.json();
     jeton = (d.jetons || d).access_token;
+    moi = (d.utilisateur || {}).email || $("email").value.trim();
     try { localStorage.setItem("ascenda_admin", jeton); } catch (_) {}
     await demarrer();
   } catch (e) {
-    $("erreur").textContent =
-      e.message === "identifiants"
-        ? "Adresse ou mot de passe incorrect."
-        : "Connexion impossible. Le service répond-il ?";
+    $("erreur").textContent = e.message === "identifiants"
+      ? "Adresse ou mot de passe incorrect."
+      : "Connexion impossible. Le service répond-il ?";
   }
 };
-$("sortir").onclick = deconnecter;
 $("mdp").addEventListener("keydown", (e) => { if (e.key === "Enter") $("entrer").click(); });
 
-const nombre = (n) => (n ?? 0).toLocaleString("fr-FR");
-const montant = (n) => nombre(n) + " XAF";
-const date = (s) => (s ? new Date(s).toLocaleDateString("fr-FR", {day:"2-digit",month:"2-digit",year:"2-digit"}) : "");
+/* ---------------------------------------------------------------- format */
+const nb = (n) => (n ?? 0).toLocaleString("fr-FR");
+const xaf = (n) => nb(n) + " XAF";
+const jour = (s) => s ? new Date(s).toLocaleDateString("fr-FR",
+  { day: "2-digit", month: "2-digit", year: "2-digit" }) : "";
+const instant = (s) => s ? new Date(s).toLocaleString("fr-FR",
+  { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" }) : "";
+const ech = (s) => String(s ?? "").replace(/[&<>"]/g, (c) =>
+  ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-function tuiles(d) {
-  const orphelins = d.paiements.orphelins || 0;
-  const echecs = d.courriels.echecs || 0;
-  const items = [
-    { v: nombre(d.comptes.total), l: "comptes", s: "+" + nombre(d.comptes.aujourdhui) + " aujourd'hui" },
-    { v: nombre(d.actifs.semaine), l: "actifs 7 jours", s: nombre(d.actifs.mois) + " sur 30 jours" },
-    { v: nombre(d.comptes.abonnes), l: "abonnés", s: nombre(d.abonnements.actifs) + " abonnements actifs" },
-    { v: montant(d.paiements.encaisse), l: "encaissé", s: nombre(d.paiements.valides) + " paiements" },
-    { v: nombre(d.paiements.en_attente), l: "en attente", s: nombre(d.paiements.rejetes) + " rejetés" },
-    { v: nombre(d.abonnements.bientot_echus), l: "échéance sous 7 j",
-      c: d.abonnements.bientot_echus > 0 ? "bien" : "" },
-    // Un webhook non rattaché, c'est peut-être l'argent de quelqu'un. Il
-    // mérite la couleur d'alerte tant qu'il en reste un.
-    { v: nombre(orphelins), l: "webhooks orphelins", c: orphelins > 0 ? "alerte" : "bien",
-      s: orphelins > 0 ? "à examiner" : "rien en souffrance" },
-    { v: nombre(echecs), l: "courriels en échec", c: echecs > 0 ? "alerte" : "bien",
-      s: nombre(d.courriels.simules) + " simulés" },
-  ];
-  $("tuiles").innerHTML = items.map((i) =>
-    `<div class="tuile ${i.c || ""}"><b>${i.v}</b><span>${i.l}</span>` +
-    (i.s ? `<div class="sous">${i.s}</div>` : "") + `</div>`).join("");
+const CLASSES = { valide: "p-ok", envoye: "p-ok", active: "p-ok", none: "p-neutre",
+  simule: "p-attente", en_attente: "p-attente", pending: "p-attente",
+  rejete: "p-mauvais", echec: "p-mauvais", removed: "p-mauvais", expired: "p-neutre" };
+const pastille = (v) => v === null || v === undefined || v === ""
+  ? "" : `<span class="pastille ${CLASSES[v] || "p-neutre"}">${ech(v)}</span>`;
+
+function cellule(v, f) {
+  if (v === null || v === undefined || v === "") return "";
+  if (f === "jour") return jour(v);
+  if (f === "instant") return instant(v);
+  if (f === "xaf") return xaf(v);
+  if (f === "pastille") return pastille(v);
+  if (f === "oui") return v ? `<span class="pastille p-ok">oui</span>` : "";
+  // Un état normal ne mérite pas de pastille : n'afficher que ce qui demande
+  // qu'on s'en occupe fait ressortir les deux lignes qui comptent sur soixante.
+  if (f === "signal") return v && v !== "none" ? pastille(v) : "";
+  if (f === "json") return `<code>${ech(JSON.stringify(v)).slice(0, 110)}</code>`;
+  if (f === "liste") return ech(Array.isArray(v) ? v.join(", ") : v);
+  return ech(v);
 }
 
-function courbe(points) {
-  const max = Math.max(1, ...points.map((p) => p.comptes));
-  $("courbe").innerHTML = points.map((p) => {
-    const h = Math.round((p.comptes / max) * 100);
-    return `<div class="barre ${p.comptes ? "" : "vide"}" style="height:${Math.max(h, 2)}%">` +
-      `<span>${date(p.jour)} : ${p.comptes} compte(s), ${p.paiements} paiement(s)</span></div>`;
-  }).join("");
+function table(colonnes, lignes, surClic) {
+  if (!lignes.length) return `<div class="tableau"><div class="vide">Rien à afficher.</div></div>`;
+  const corps = lignes.map((l, i) =>
+    `<tr class="${surClic ? "cliquable" : ""}" data-i="${i}">` +
+    colonnes.map((c) => {
+      const aligne = ["xaf", "nombre"].includes(c[2]) ? "nombre" : (c[2] === "large" ? "large" : "");
+      return `<td class="${aligne}">${cellule(l[c[0]], c[2])}</td>`;
+    }).join("") + `</tr>`).join("");
+  return `<div class="tableau"><table><thead><tr>` +
+    colonnes.map((c) => `<th>${c[1]}</th>`).join("") +
+    `</tr></thead><tbody>${corps}</tbody></table></div>`;
 }
 
-function reglages(liste) {
-  $("reglages").innerHTML = liste.map((r) => {
-    const v = r.valeur || {};
-    const actif = v.actif === true;
-    const version = r.cle === "version_minimale";
-    return `<div class="reglage ${actif ? "on" : ""}" data-cle="${r.cle}">
-      <h3>${r.cle.replace(/_/g, " ")}</h3>
-      <p>${r.description || ""}</p>
-      ${version
-        ? `<div class="ligne"><label>version</label><input data-champ="version" value="${v.version || "0.0.0"}"></div>`
-        : `<div class="ligne"><label>actif</label>
-             <select data-champ="actif">
-               <option value="false" ${actif ? "" : "selected"}>non</option>
-               <option value="true" ${actif ? "selected" : ""}>oui</option>
-             </select></div>
-           <div class="ligne"><label>jusqu'au</label>
-             <input data-champ="jusqu_au" type="date" value="${(v.jusqu_au || "").slice(0, 10)}"></div>`}
-      <div class="ligne"><label>message</label><input data-champ="message" value="${(v.message || "").replace(/"/g, "&quot;")}"></div>
-      <button class="principal" data-poser="${r.cle}">Enregistrer</button>
-    </div>`;
-  }).join("");
-
-  $("reglages").querySelectorAll("[data-poser]").forEach((b) => {
-    b.onclick = async () => {
-      const bloc = b.closest(".reglage");
-      const valeur = {};
-      bloc.querySelectorAll("[data-champ]").forEach((c) => {
-        const nom = c.dataset.champ;
-        if (nom === "actif") valeur.actif = c.value === "true";
-        else if (nom === "jusqu_au") valeur.jusqu_au = c.value ? c.value + "T23:59:59+00:00" : null;
-        else valeur[nom] = c.value;
-      });
-      b.textContent = "…";
-      try {
-        await appel("/v1/admin/reglages/" + b.dataset.poser,
-          { method: "POST", body: JSON.stringify({ valeur }) });
-        b.textContent = "Enregistré";
-        setTimeout(() => (b.textContent = "Enregistrer"), 1600);
-      } catch (_) {
-        b.textContent = "Échec";
-        setTimeout(() => (b.textContent = "Enregistrer"), 1600);
-      }
-    };
+function brancherClics(lignes, surClic) {
+  if (!surClic) return;
+  $("zone").querySelectorAll("tbody tr.cliquable").forEach((tr) => {
+    tr.onclick = () => surClic(lignes[Number(tr.dataset.i)]);
   });
 }
 
-const ONGLETS = [
-  { cle: "paiements", titre: "Paiements", chemin: "/v1/admin/paiements?limite=60",
-    colonnes: [
-      ["email", "compte"], ["statut", "statut", "pastille"], ["montant", "montant", "montant"],
-      ["periode_mois", "mois", "nombre"], ["reseau", "opérateur"], ["telephone", "numéro"],
-      ["cree_le", "créé", "date"], ["motif_rejet", "motif"],
-    ] },
-  { cle: "orphelins", titre: "Webhooks orphelins", chemin: "/v1/admin/webhooks-orphelins",
-    colonnes: [["type", "type"], ["source", "source"], ["le", "reçu", "date"], ["details", "détail", "json"]] },
-  { cle: "utilisateurs", titre: "Comptes", chemin: "/v1/admin/utilisateurs?limite=60",
-    colonnes: [
-      ["email", "adresse"], ["nom", "nom"], ["plan", "formule"],
-      ["paiements", "paiements", "nombre"], ["actions", "actions", "nombre"],
-      ["inscrit_le", "inscrit", "date"], ["derniere_connexion", "vu", "date"],
-    ] },
-  { cle: "courriels", titre: "Courriels", chemin: "/v1/admin/courriels?limite=60",
-    colonnes: [["gabarit", "message"], ["destinataire", "destinataire"], ["statut", "statut", "pastille"],
-      ["le", "envoyé", "date"], ["erreur", "erreur"]] },
-];
-
-function cellule(valeur, format) {
-  if (valeur === null || valeur === undefined || valeur === "") return "";
-  if (format === "date") return date(valeur);
-  if (format === "montant") return montant(valeur);
-  if (format === "json") return `<code>${JSON.stringify(valeur).slice(0, 90)}</code>`;
-  if (format === "pastille") {
-    const c = { valide: "p-valide", envoye: "p-valide", simule: "p-attente",
-                en_attente: "p-attente", rejete: "p-rejete", echec: "p-rejete" }[valeur] || "";
-    return `<span class="pastille ${c}">${valeur}</span>`;
-  }
-  return String(valeur);
+/* ----------------------------------------------------------------- volet */
+function ouvrirVolet(titre, html) {
+  $("volet-titre").textContent = titre;
+  $("volet-corps").innerHTML = html;
+  $("volet").showModal();
 }
+$("volet-fermer").onclick = () => $("volet").close();
+const paires = (obj) => Object.entries(obj)
+  .map(([k, v]) => `<div class="paire"><span>${ech(k)}</span><b>${v ?? ""}</b></div>`).join("");
 
-async function afficherOnglet(o) {
-  $("onglets").querySelectorAll("button").forEach((b) =>
-    b.setAttribute("aria-selected", b.dataset.cle === o.cle));
-  $("tableau").innerHTML = `<div class="vide">Chargement…</div>`;
+/* ----------------------------------------------------------------- zones */
+const ZONES = [];
+const zone = (z) => { ZONES.push(z); return z; };
+
+zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble", async rendre() {
+  const d = await api("/v1/admin/tableau-de-bord?jours=30");
+  resume = d;
+  const orph = d.paiements.orphelins || 0, ech2 = d.courriels.echecs || 0;
+  const tuiles = [
+    { v: nb(d.comptes.total), l: "comptes", s: "+" + nb(d.comptes.aujourdhui) + " aujourd'hui" },
+    { v: nb(d.actifs.semaine), l: "actifs 7 jours", s: nb(d.actifs.mois) + " sur 30 jours" },
+    { v: nb(d.comptes.abonnes), l: "abonnés", s: nb(d.abonnements.actifs) + " abonnements actifs" },
+    { v: xaf(d.paiements.encaisse), l: "encaissé", s: nb(d.paiements.valides) + " paiements" },
+    { v: nb(d.paiements.en_attente), l: "en attente", s: nb(d.paiements.rejetes) + " rejetés" },
+    { v: nb(d.abonnements.bientot_echus), l: "échéance sous 7 j" },
+    { v: nb(orph), l: "webhooks orphelins", c: orph ? "alerte" : "bien",
+      s: orph ? "à examiner" : "rien en souffrance" },
+    { v: nb(ech2), l: "courriels en échec", c: ech2 ? "alerte" : "bien",
+      s: nb(d.courriels.simules) + " simulés" },
+  ];
+  const max = Math.max(1, ...d.courbe.map((p) => p.comptes));
+  // Une grille de 100 par 100, étirée par le SVG : les coordonnées sont des
+  // pourcentages déguisés, et la largeur des barres ne dépend d'aucun réglage
+  // de disposition.
+  const n = d.courbe.length, pas = 100 / n, large = Math.max(pas * 0.68, 0.8);
+  const barres = d.courbe.map((p, i) => {
+    const h = p.comptes ? Math.max((p.comptes / max) * 96, 2) : 1.5;
+    return `<rect class="j ${p.comptes ? "" : "vide"}" x="${(i * pas + (pas - large) / 2).toFixed(2)}"` +
+      ` y="${(100 - h).toFixed(2)}" width="${large.toFixed(2)}" height="${h.toFixed(2)}" rx="0.4">` +
+      `<title>${jour(p.jour)} : ${p.comptes} compte(s), ${p.paiements} paiement(s)</title></rect>`;
+  }).join("");
+  return `<div class="tuiles">` + tuiles.map((t) =>
+      `<div class="tuile ${t.c || ""}"><b>${t.v}</b><span>${t.l}</span>` +
+      (t.s ? `<div class="sous">${t.s}</div>` : "") + `</div>`).join("") + `</div>
+    <h2>Inscriptions, jour par jour</h2>
+    <div class="courbe"><svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img"
+      aria-label="Inscriptions des ${n} derniers jours, maximum ${max} en un jour">
+      ${barres}<line class="socle" x1="0" y1="99.7" x2="100" y2="99.7"
+        vector-effect="non-scaling-stroke"></line></svg></div>
+    <p class="note">Maximum sur la période : ${nb(max)} comptes en un jour.</p>
+    <h2>Corpus</h2><div class="tuiles">
+      <div class="tuile"><b>${nb(d.corpus.ouvrages)}</b><span>ouvrages</span></div>
+      <div class="tuile"><b>${nb(d.corpus.passages)}</b><span>passages</span>
+        <div class="sous">${nb(d.corpus.vectorises)} vectorisés</div></div>
+      <div class="tuile"><b>${nb(d.corpus.quiz)}</b><span>lots de quiz</span></div>
+    </div>`;
+} });
+
+zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
+  filtres: `<input id="f-q" placeholder="Adresse ou nom…">`,
+  async rendre() {
+    const q = ($("f-q") || {}).value || "";
+    const lignes = await api("/v1/admin/utilisateurs?limite=80" + (q.length > 1 ? "&q=" + encodeURIComponent(q) : ""));
+    const colonnes = [["email", "adresse"], ["nom", "nom"], ["plan", "formule", "pastille"],
+      ["paiements", "paiements", "nombre"], ["actions", "actions", "nombre"],
+      ["inscrit_le", "inscrit", "jour"], ["derniere_connexion", "vu", "jour"]];
+    this.lignes = lignes;
+    return table(colonnes, lignes, true);
+  },
+  async apres() {
+    brancherClics(this.lignes, async (l) => {
+      const d = await api("/v1/admin/utilisateurs/" + l.id);
+      const c = d.compte;
+      ouvrirVolet(c.email, `
+        <div class="cartes">
+          <div class="carte"><h3>Le compte</h3>${paires({
+            "formule": pastille(c.plan), "jusqu'au": jour(c.plan_jusqu_au),
+            "actif": c.actif ? "oui" : "non", "administrateur": c.administrateur ? "oui" : "non",
+            "inscrit le": instant(c.inscrit_le), "dernière connexion": instant(c.derniere_connexion),
+          })}
+          <div class="champ" style="margin-top:14px">
+            <button class="bouton" data-bascule="is_active" data-v="${!c.actif}">
+              ${c.actif ? "Désactiver ce compte" : "Réactiver ce compte"}</button></div></div>
+          <div class="carte"><h3>Paiements</h3>${d.paiements.length
+            ? d.paiements.map((p) => `<div class="paire"><span>${jour(p.cree_le)} ${ech(p.reseau || "")}</span>` +
+                `<b>${xaf(p.montant)} ${pastille(p.statut)}</b></div>`).join("")
+            : `<p class="aide">Aucun paiement.</p>`}</div>
+          <div class="carte"><h3>Abonnements</h3>${d.abonnements.length
+            ? d.abonnements.map((a) => `<div class="paire"><span>${a.periode_mois} mois, ${pastille(a.statut)}</span>` +
+                `<b>jusqu'au ${jour(a.fin)}</b></div>`).join("")
+            : `<p class="aide">Aucun abonnement.</p>`}</div>
+          <div class="carte"><h3>Courriels</h3>${d.courriels.length
+            ? d.courriels.slice(0, 8).map((m) => `<div class="paire"><span>${ech(m.gabarit)}</span>` +
+                `<b>${pastille(m.statut)} ${jour(m.le)}</b></div>`).join("")
+            : `<p class="aide">Aucun message.</p>`}</div>
+          <div class="carte"><h3>Activité</h3>${d.activite.length
+            ? d.activite.slice(0, 10).map((a) => `<div class="paire"><span>${ech(a.type)}</span>` +
+                `<b>${ech((a.ouvrage || "").slice(0, 28))} ${instant(a.le)}</b></div>`).join("")
+            : `<p class="aide">Aucune action.</p>`}</div>
+        </div>`);
+      $("volet-corps").querySelectorAll("[data-bascule]").forEach((b) => {
+        b.onclick = async () => {
+          b.textContent = "…";
+          try {
+            await api("/v1/admin/utilisateurs/" + l.id, { method: "PATCH",
+              body: JSON.stringify({ [b.dataset.bascule]: b.dataset.v === "true" }) });
+            $("volet").close(); await afficher(courante);
+          } catch (_) { b.textContent = "Échec"; }
+        };
+      });
+    });
+  } });
+
+zone({ cle: "paiements", groupe: "Membres", titre: "Paiements",
+  filtres: `<select id="f-statut"><option value="">tous les statuts</option>
+    <option value="valide">validés</option><option value="en_attente">en attente</option>
+    <option value="rejete">rejetés</option></select>`,
+  async rendre() {
+    const s = ($("f-statut") || {}).value || "";
+    const lignes = await api("/v1/admin/paiements?limite=100" + (s ? "&statut=" + s : ""));
+    this.lignes = lignes;
+    return table([["email", "compte"], ["statut", "statut", "pastille"], ["montant", "montant", "xaf"],
+      ["periode_mois", "mois", "nombre"], ["reseau", "opérateur"], ["telephone", "numéro"],
+      ["cree_le", "créé", "instant"], ["motif_rejet", "motif", "large"]], lignes, true);
+  },
+  async apres() {
+    brancherClics(this.lignes, async (l) => {
+      const d = await api("/v1/admin/paiements/" + l.id);
+      ouvrirVolet(d.email + " · " + xaf(d.montant), `
+        <div class="cartes"><div class="carte"><h3>Le paiement</h3>${paires({
+          statut: pastille(d.statut), montant: xaf(d.montant), durée: d.periode_mois + " mois",
+          numéro: ech(d.telephone || ""), opérateur: ech(d.reseau || ""),
+          référence: `<code>${ech(d.reference || "")}</code>`,
+          "clé d'idempotence": `<code>${ech(d.cle_idempotence).slice(0, 13)}…</code>`,
+          "créé le": instant(d.cree_le), "validé le": instant(d.valide_le),
+          motif: ech(d.motif_rejet || ""),
+        })}</div></div>
+        <h2>Le journal</h2>
+        ${d.journal.length ? `<div class="tableau"><table><thead><tr><th>étape</th><th>source</th>
+          <th>stratégie</th><th>quand</th><th>détails</th></tr></thead><tbody>` +
+          d.journal.map((e) => `<tr><td>${ech(e.type)}</td><td>${ech(e.source)}</td>` +
+            `<td>${ech(e.strategie || "")}</td><td>${instant(e.le)}</td>` +
+            `<td class="large"><code>${ech(JSON.stringify(e.details || {})).slice(0, 150)}</code></td></tr>`).join("") +
+          `</tbody></table></div>` : `<p class="note">Aucune étape enregistrée.</p>`}
+        <p class="note">Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».</p>`);
+    });
+  } });
+
+zone({ cle: "orphelins", groupe: "Membres", titre: "Webhooks orphelins",
+  alerte: () => (resume?.paiements?.orphelins || 0),
+  async rendre() {
+    const lignes = await api("/v1/admin/webhooks-orphelins?limite=100");
+    return `<p class="note" style="margin:0 0 14px">Des notifications de paiement qu'aucun
+      paiement n'a pu recevoir. C'est peut-être l'argent de quelqu'un : conservées plutôt
+      que jetées, elles sont la seule trace qui reste.</p>` +
+      table([["type", "type"], ["source", "source"], ["strategie", "stratégie"],
+        ["le", "reçu", "instant"], ["details", "charge utile", "json"]], lignes);
+  } });
+
+zone({ cle: "abonnements", groupe: "Membres", titre: "Abonnements",
+  filtres: `<select id="f-abo"><option value="active">actifs</option>
+    <option value="">tous</option><option value="expired">expirés</option></select>`,
+  async rendre() {
+    const s = $("f-abo") ? $("f-abo").value : "active";
+    const lignes = await api("/v1/admin/abonnements?limite=120" + (s ? "&statut=" + s : ""));
+    return table([["email", "compte"], ["statut", "statut", "pastille"],
+      ["periode_mois", "mois", "nombre"], ["montant", "montant", "xaf"],
+      ["debut", "début", "jour"], ["fin", "échéance", "jour"],
+      ["jours_restants", "jours restants", "nombre"]], lignes);
+  } });
+
+zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
+  filtres: `<input id="f-corpus" placeholder="Titre ou auteur…">
+    <label style="font-size:.84rem;color:var(--doux)">
+      <input type="checkbox" id="f-manque" style="min-width:auto"> incomplets seulement</label>`,
+  async rendre() {
+    const q = ($("f-corpus") || {}).value || "";
+    const m = $("f-manque") && $("f-manque").checked;
+    const lignes = await api("/v1/admin/corpus?limite=200" +
+      (q.length > 1 ? "&q=" + encodeURIComponent(q) : "") + (m ? "&manque=true" : ""));
+    this.lignes = lignes;
+    const prets = lignes.filter((l) => l.complet).length;
+    return `<div class="tuiles" style="margin-bottom:16px">
+        <div class="tuile"><b>${nb(lignes.length)}</b><span>ouvrages listés</span></div>
+        <div class="tuile ${prets ? "bien" : ""}"><b>${nb(prets)}</b><span>complets</span>
+          <div class="sous">${nb(lignes.length - prets)} à compléter</div></div>
+        <div class="tuile"><b>${nb(lignes.filter((l) => l.lecture_integrale).length)}</b>
+          <span>en lecture intégrale</span>
+          <div class="sous">${nb(lignes.filter((l) => !l.lecture_integrale).length)} en extraits</div></div>
+      </div>` +
+      table([["titre", "ouvrage", "large"], ["axes", "axes", "large"],
+        ["pages", "pages", "nombre"], ["chapitres_utiles", "chapitres", "nombre"],
+        ["vectorises", "vectorisés", "nombre"], ["quiz", "quiz", "nombre"],
+        ["citations", "citations", "nombre"], ["lecture_integrale", "intégral", "oui"],
+        ["retrait", "retrait", "signal"]], lignes, true);
+  },
+  async apres() {
+    brancherClics(this.lignes, async (l) => {
+      const d = await api("/v1/admin/corpus/" + l.id);
+      const dr = d.droits;
+      ouvrirVolet(d.titre, `
+        <div class="cartes">
+          <div class="carte"><h3>L'ouvrage</h3>${paires({
+            auteurs: ech((d.auteurs || []).join(", ")), année: d.annee ?? "",
+            éditeur: ech(d.editeur || ""), ISBN: ech(d.isbn || ""),
+            pages: nb(d.pages), langue: ech(d.langue || ""),
+            axes: ech(d.axes.map((a) => a.label).join(", ")),
+            "entré le": jour(d.entre_le), fichier: `<code>${ech((d.fichier || "").slice(0, 34))}</code>`,
+          })}</div>
+          <div class="carte"><h3>Droits</h3>
+            <p class="aide">Le seul endroit où l'on modifie un ouvrage. Le titre et le texte
+              viennent de <code>data/</code> : les corriger ici les ferait diverger de leur
+              source, et le prochain import les écraserait.</p>
+            <div class="champ"><label>lecture intégrale</label>
+              <select id="d-integral">
+                <option value="false" ${dr.lecture_integrale ? "" : "selected"}>non, extraits</option>
+                <option value="true" ${dr.lecture_integrale ? "selected" : ""}>oui</option></select></div>
+            <div class="champ"><label>plafond</label>
+              <input id="d-plafond" type="number" min="0" value="${dr.plafond_extrait ?? 0}"></div>
+            <div class="champ"><label>retrait</label>
+              <select id="d-retrait">
+                ${["none", "pending", "removed"].map((v) =>
+                  `<option value="${v}" ${dr.retrait === v ? "selected" : ""}>${v}</option>`).join("")}
+              </select></div>
+            <button class="bouton" id="d-poser" data-id="${d.id}">Enregistrer les droits</button>
+            <p class="note">Un retrait autre que « none » sort l'ouvrage de partout :
+              bibliothèque, recherche, réponses de l'agent, plans déjà construits.</p></div>
+          <div class="carte"><h3>Ce qui est produit</h3>${d.derives.length
+            ? d.derives.map((v) => `<div class="paire"><span>${ech(v.type)}</span>` +
+                `<b>${nb(v.lots)} lots, ${nb(v.jetons_entree + v.jetons_sortie)} jetons</b></div>`).join("")
+            : `<p class="aide">Rien de produit pour cet ouvrage.</p>`}</div>
+        </div>
+        <h2>Les chapitres</h2>
+        ${table([["ordre", "n°", "nombre"], ["titre", "titre", "large"],
+          ["page_debut", "de", "nombre"], ["page_fin", "à", "nombre"],
+          ["tokens", "tokens", "nombre"], ["quiz", "quiz", "nombre"],
+          ["citations", "citations", "nombre"]], d.chapitres)}`);
+      const b = $("d-poser");
+      if (b) b.onclick = async () => {
+        b.textContent = "…";
+        try {
+          await api("/v1/admin/corpus/" + b.dataset.id, { method: "PATCH",
+            body: JSON.stringify({
+              redistributable: $("d-integral").value === "true",
+              max_excerpt_chars: Number($("d-plafond").value || 0),
+              takedown_status: $("d-retrait").value }) });
+          $("volet").close(); await afficher(courante);
+        } catch (_) { b.textContent = "Échec"; }
+      };
+    });
+  } });
+
+zone({ cle: "gabarits", groupe: "Contenu", titre: "Messages", async rendre() {
+  const liste = await api("/v1/admin/gabarits");
+  return `<p class="note" style="margin:0 0 14px">Les messages vivent en base : corriger une
+    faute dans un courriel qui part à tous les nouveaux membres ne demande ni construction
+    ni redémarrage.</p><div class="cartes">` + liste.map((g) => `
+    <div class="carte ${g.actif ? "on" : ""}" data-code="${ech(g.code)}">
+      <h3>${ech(g.code).replace(/_/g, " ")}</h3>
+      <p class="aide">Modifié le ${instant(g.modifie_le)}</p>
+      <div class="champ"><label>actif</label><select data-c="actif">
+        <option value="true" ${g.actif ? "selected" : ""}>oui</option>
+        <option value="false" ${g.actif ? "" : "selected"}>non</option></select></div>
+      <div class="champ"><label>objet</label><input data-c="objet" value="${ech(g.objet)}"></div>
+      <div class="champ"><label>corps</label><textarea data-c="corps_html">${ech(g.corps_html)}</textarea></div>
+      <button class="bouton" data-poser="${ech(g.code)}">Enregistrer</button>
+    </div>`).join("") + `</div>`;
+},
+  async apres() {
+    $("zone").querySelectorAll("[data-poser]").forEach((b) => {
+      b.onclick = async () => {
+        const carte = b.closest(".carte"), corps = {};
+        carte.querySelectorAll("[data-c]").forEach((c) => {
+          corps[c.dataset.c] = c.dataset.c === "actif" ? c.value === "true" : c.value;
+        });
+        b.textContent = "…";
+        try {
+          await api("/v1/admin/gabarits/" + b.dataset.poser, { method: "PATCH", body: JSON.stringify(corps) });
+          b.textContent = "Enregistré"; setTimeout(() => (b.textContent = "Enregistrer"), 1600);
+        } catch (_) { b.textContent = "Échec"; setTimeout(() => (b.textContent = "Enregistrer"), 1600); }
+      };
+    });
+  } });
+
+zone({ cle: "courriels", groupe: "Contenu", titre: "Journal des envois",
+  filtres: `<select id="f-mail"><option value="">tous</option><option value="envoye">envoyés</option>
+    <option value="simule">simulés</option><option value="echec">en échec</option></select>`,
+  async rendre() {
+    const s = ($("f-mail") || {}).value || "";
+    const lignes = await api("/v1/admin/courriels?limite=120" + (s ? "&statut=" + s : ""));
+    return table([["gabarit", "message"], ["destinataire", "destinataire"],
+      ["statut", "statut", "pastille"], ["objet", "objet", "large"],
+      ["le", "quand", "instant"], ["erreur", "erreur", "large"]], lignes);
+  } });
+
+zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs", async rendre() {
+  const liste = await api("/v1/admin/reglages");
+  return `<div class="cartes">` + liste.map((r) => {
+    const v = r.valeur || {}, actif = v.actif === true, version = r.cle === "version_minimale";
+    return `<div class="carte ${actif ? "on" : ""}">
+      <h3>${ech(r.cle).replace(/_/g, " ")}</h3>
+      <p class="aide">${ech(r.description || "")}</p>
+      ${version
+        ? `<div class="champ"><label>version</label><input data-c="version" value="${ech(v.version || "0.0.0")}"></div>`
+        : `<div class="champ"><label>actif</label><select data-c="actif">
+             <option value="false" ${actif ? "" : "selected"}>non</option>
+             <option value="true" ${actif ? "selected" : ""}>oui</option></select></div>
+           <div class="champ"><label>jusqu'au</label>
+             <input data-c="jusqu_au" type="date" value="${String(v.jusqu_au || "").slice(0, 10)}"></div>`}
+      <div class="champ"><label>message</label><input data-c="message" value="${ech(v.message || "")}"></div>
+      <button class="bouton" data-reglage="${ech(r.cle)}">Enregistrer</button>
+      <p class="note">Modifié le ${instant(r.modifie_le)}. Effet sous dix secondes.</p></div>`;
+  }).join("") + `</div>`;
+},
+  async apres() {
+    $("zone").querySelectorAll("[data-reglage]").forEach((b) => {
+      b.onclick = async () => {
+        const carte = b.closest(".carte"), valeur = {};
+        carte.querySelectorAll("[data-c]").forEach((c) => {
+          if (c.dataset.c === "actif") valeur.actif = c.value === "true";
+          else if (c.dataset.c === "jusqu_au") valeur.jusqu_au = c.value ? c.value + "T23:59:59+00:00" : null;
+          else valeur[c.dataset.c] = c.value;
+        });
+        b.textContent = "…";
+        try {
+          await api("/v1/admin/reglages/" + b.dataset.reglage, { method: "POST", body: JSON.stringify({ valeur }) });
+          b.textContent = "Enregistré"; setTimeout(() => (b.textContent = "Enregistrer"), 1600);
+        } catch (_) { b.textContent = "Échec"; setTimeout(() => (b.textContent = "Enregistrer"), 1600); }
+      };
+    });
+  } });
+
+/* --------------------------------------------------------------- rendu */
+let courante = ZONES[0];
+
+async function afficher(z) {
+  courante = z;
+  $("titre-zone").textContent = z.titre;
+  $("menu").querySelectorAll("button").forEach((b) =>
+    b.setAttribute("aria-current", b.dataset.cle === z.cle));
+  $("zone").innerHTML = `<div class="vide">Chargement…</div>`;
   try {
-    const lignes = await appel(o.chemin);
-    if (!lignes.length) { $("tableau").innerHTML = `<div class="vide">Rien à afficher.</div>`; return; }
-    $("tableau").innerHTML =
-      `<table><thead><tr>${o.colonnes.map((c) => `<th>${c[1]}</th>`).join("")}</tr></thead>` +
-      `<tbody>${lignes.map((l) =>
-        `<tr>${o.colonnes.map((c) =>
-          `<td class="${c[2] === "nombre" || c[2] === "montant" ? "nombre" : ""}">` +
-          `${cellule(l[c[0]], c[2])}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+    const html = await z.rendre();
+    $("zone").innerHTML = (z.filtres ? `<div class="filtres">${z.filtres}</div>` : "") + html;
+    // Les filtres sont réinsérés à chaque rendu : on rebranche, et on
+    // conserve ce qui était saisi en le relisant avant de redessiner.
+    $("zone").querySelectorAll(".filtres input, .filtres select").forEach((c) => {
+      const evenement = c.tagName === "SELECT" || c.type === "checkbox" ? "change" : "input";
+      let minuterie;
+      c.addEventListener(evenement, () => {
+        clearTimeout(minuterie);
+        minuterie = setTimeout(() => afficher(z), evenement === "input" ? 350 : 0);
+      });
+    });
+    if (z.apres) await z.apres();
   } catch (_) {
-    $("tableau").innerHTML = `<div class="vide">Impossible de charger cette liste.</div>`;
+    $("zone").innerHTML = `<div class="tableau"><div class="vide">Impossible de charger cette vue.</div></div>`;
   }
+}
+$("rafraichir").onclick = () => afficher(courante);
+
+function menu() {
+  let groupe = null;
+  $("menu").innerHTML = ZONES.map((z) => {
+    const tete = z.groupe !== groupe ? ((groupe = z.groupe), `<div class="groupe">${z.groupe}</div>`) : "";
+    const n = z.alerte ? z.alerte() : 0;
+    return tete + `<button data-cle="${z.cle}" aria-current="false">${z.titre}` +
+      (n ? `<span class="pastille-nav">${nb(n)}</span>` : "") + `</button>`;
+  }).join("");
+  $("menu").querySelectorAll("button").forEach((b) => {
+    b.onclick = () => afficher(ZONES.find((z) => z.cle === b.dataset.cle));
+  });
 }
 
 async function demarrer() {
   try {
-    const d = await appel("/v1/admin/tableau-de-bord?jours=30");
-    $("connexion").hidden = true;
-    $("bord").hidden = false;
-    tuiles(d);
-    courbe(d.courbe);
-    reglages(await appel("/v1/admin/reglages"));
-    $("onglets").innerHTML = ONGLETS.map((o) =>
-      `<button data-cle="${o.cle}" aria-selected="false">${o.titre}</button>`).join("");
-    $("onglets").querySelectorAll("button").forEach((b) => {
-      b.onclick = () => afficherOnglet(ONGLETS.find((o) => o.cle === b.dataset.cle));
-    });
-    await afficherOnglet(ONGLETS[0]);
-    const c = d.corpus;
-    $("pied").textContent =
-      `Corpus : ${nombre(c.ouvrages)} ouvrages, ${nombre(c.passages)} passages dont ` +
-      `${nombre(c.vectorises)} vectorisés, ${nombre(c.quiz)} lots de quiz. ` +
-      `Relevé le ${new Date().toLocaleString("fr-FR")}.`;
-  } catch (_) {
-    deconnecter();
-  }
+    resume = await api("/v1/admin/tableau-de-bord?jours=30");
+    $("connexion").style.display = "none";
+    $("console").classList.add("ouvert");
+    $("qui").textContent = moi || "";
+    const c = resume.corpus;
+    $("pied-barre").textContent =
+      `${nb(c.ouvrages)} ouvrages · ${nb(c.vectorises)}/${nb(c.passages)} vectorisés`;
+    menu();
+    await afficher(ZONES[0]);
+  } catch (_) { sortir(); }
 }
 
-if (jeton) demarrer(); else $("connexion").hidden = false;
+if (jeton) demarrer(); else $("connexion").style.display = "";
 </script>
 </body>
 </html>
