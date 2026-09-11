@@ -36,6 +36,7 @@ services:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
       MINIO_BUCKET: ${MINIO_BUCKET}
+      DOSSIER_LIVRES: /chantier/livres
       API_ENV: ${API_ENV:-prod}
       JWT_SECRET: ${JWT_SECRET}
       API_CORS_ORIGINS: ${API_CORS_ORIGINS}
@@ -50,11 +51,64 @@ services:
       BREVO_API_KEY: ${BREVO_API_KEY:-}
     ports: ["${API_PORT:-8250}:8250"]
     volumes:
+      # Le dossier où la console dépose les PDF reçus, et où le pipeline va les
+      # chercher. Partagé avec l'ouvrier, qui les ingère.
+      - ../../livres:/chantier/livres
       # Le cache des modèles. Sans lui, l'API retélécharge deux gigaoctets de
       # poids à chaque recréation du conteneur, ce qui sur nos connexions veut
       # dire une journée. Inutile quand la recherche sémantique est désactivée,
       # et sans effet dans ce cas.
       - ascenda_modeles:/home/ascenda/.cache/huggingface
+
+  # L'ouvrier : il exécute les travaux longs que la console met dans la file.
+  #
+  # Un processus séparé de l'API, pour deux raisons. Une requête HTTP qui dure
+  # dix minutes est une requête qui échoue, et l'image de l'API ne porte pas le
+  # pipeline : elle sert la base, elle ne la fabrique pas. L'ouvrier, lui, monte
+  # `pipeline/`, `data/` et `livres/` depuis le dépôt cloné.
+  #
+  # Un seul exemplaire. Sur une machine à seize gigaoctets partagés avec
+  # PostgreSQL et l'API, deux vectorisations en parallèle ne vont pas deux fois
+  # plus vite : elles se disputent le processeur et finissent en retard toutes
+  # les deux. La réservation par `skip locked` permettrait d'en lancer
+  # plusieurs le jour où la machine le supporte.
+  travailleur:
+    image: ascenda-api:local
+    build:
+      context: ../..
+      dockerfile: apps/api/Dockerfile
+      args:
+        # L'ouvrier vectorise : il lui faut le modèle, contrairement à l'API.
+        AVEC_RECHERCHE_SEMANTIQUE: ${RECHERCHE_SEMANTIQUE:-false}
+    container_name: ascenda-travailleur
+    restart: unless-stopped
+    depends_on:
+      postgres: {condition: service_healthy}
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      EMBED_MODEL: ${EMBED_MODEL:-intfloat/multilingual-e5-large}
+      PYTHON_PIPELINE: python
+      PYTHONPATH: /chantier/pipeline
+    volumes:
+      - ../../pipeline:/chantier/pipeline:ro
+      - ../../data:/chantier/data
+      # En écriture : la console y dépose les PDF déposés depuis le navigateur.
+      - ../../livres:/chantier/livres
+      - ascenda_modeles:/home/ascenda/.cache/huggingface
+    working_dir: /chantier
+    # L'arrêt laisse le travail en cours aller au bout : une base à moitié
+    # écrite coûte plus cher qu'une minute d'attente au redéploiement.
+    stop_grace_period: 120s
+    entrypoint: ["python", "pipeline/travailleur.py"]
 
   # Le chargement du corpus, à la demande.
   #

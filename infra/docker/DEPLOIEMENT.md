@@ -57,6 +57,15 @@ Le troisième fichier ajoute Caddy et **retire la publication directe des ports*
 de l'API et de la vitrine : sans cela, l'API resterait joignable en clair sur
 8250 et toute la terminaison TLS ne servirait à rien.
 
+La pile monte cinq services : Postgres, le stockage objet, l'API, la vitrine et
+**l'ouvrier**. Ce dernier ne répond à personne : il prend les travaux inscrits
+depuis la console (ingestion d'un ouvrage déposé, reconstruction des chapitres,
+import de `data/`) et les exécute hors de la requête HTTP. Sans lui, les dépôts
+faits depuis la console resteraient éternellement en attente. Il monte
+`pipeline/`, `data/` et `livres/` depuis le dépôt cloné, ainsi que le cache des
+modèles, et on lui laisse deux minutes pour finir son travail en cours à
+l'arrêt.
+
 Puis les migrations, une seule fois :
 
 ```bash

@@ -1092,6 +1092,534 @@
         }
       }
     },
+    "/v1/admin/axes": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les pôles d'apprentissage",
+        "operationId": "axes_admin_v1_admin_axes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Ouvrir un pôle d'apprentissage",
+        "description": "Un axe nouveau naît vide, et c'est normal.\n\nIl se remplit en y rattachant des ouvrages. Son centroïde, qui sert au\nclassement automatique des nouveaux entrants, se calcule une fois qu'il en\nporte assez : `pipeline/embed/embed.py --centroides`.",
+        "operationId": "creer_axe_v1_admin_axes_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AxeIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/axes/{slug}": {
+      "patch": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Renommer ou décrire un axe",
+        "operationId": "changer_axe_v1_admin_axes__slug__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AxePatch"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/corpus/{document_id}/axes/{slug}": {
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Rattacher un ouvrage à un axe",
+        "operationId": "rattacher_v1_admin_corpus__document_id__axes__slug__post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          },
+          {
+            "name": "poids",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "maximum": 1,
+              "minimum": 0,
+              "default": 1.0,
+              "title": "Poids"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Détacher un ouvrage d'un axe",
+        "operationId": "detacher_v1_admin_corpus__document_id__axes__slug__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          },
+          {
+            "name": "slug",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Slug"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/travaux": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "La file des travaux",
+        "operationId": "liste_travaux_v1_admin_travaux_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "etat",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(en_attente|en_cours|termine|echec|annule)$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Etat"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 100,
+              "minimum": 1,
+              "default": 40,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Mettre un travail dans la file",
+        "description": "Lance une étape du pipeline sans ouvrir un terminal.\n\nCe n'est pas exécuté ici : l'ouvrier prendra le travail dans les secondes\nqui suivent. Une requête HTTP qui dure dix heures est une requête qui\néchoue.",
+        "operationId": "inscrire_travail_v1_admin_travaux_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TravailIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/travaux/{travail_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Un travail et son journal",
+        "operationId": "un_travail_v1_admin_travaux__travail_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "travail_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Travail Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Annuler un travail en attente",
+        "description": "Un travail en cours ne s'annule pas d'ici : il tourne dans un autre\nprocessus, et le tuer à mi-parcours laisserait la base à moitié écrite.",
+        "operationId": "annuler_travail_v1_admin_travaux__travail_id__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "travail_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Travail Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/travaux/{travail_id}/relancer": {
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Remettre un travail échoué dans la file",
+        "operationId": "relancer_travail_v1_admin_travaux__travail_id__relancer_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "travail_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Travail Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/corpus/import": {
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Déposer un ouvrage",
+        "description": "Reçoit un PDF et inscrit son ingestion dans la file.\n\nLe fichier est écrit dans `livres/` sous l'axe demandé, là où le pipeline\nva le chercher. On l'écrit par morceaux : un ouvrage de cent mégaoctets\nchargé en mémoire ferait tomber un conteneur à deux cents.\n\nL'envoi n'est pas reprenable. Sur une connexion qui coupe, il faut\nrecommencer : c'est une limite assumée, et la console le dit.",
+        "operationId": "importer_ouvrage_v1_admin_corpus_import_post",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "$ref": "#/components/schemas/Body_importer_ouvrage_v1_admin_corpus_import_post"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
     "/v1/auth/inscription": {
       "post": {
         "tags": [
@@ -4126,6 +4654,133 @@
         ],
         "title": "AchatIn"
       },
+      "AxeIn": {
+        "properties": {
+          "slug": {
+            "type": "string",
+            "maxLength": 80,
+            "minLength": 3,
+            "pattern": "^[a-z0-9][a-z0-9-]*$",
+            "title": "Slug"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 2,
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "ordre": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ordre"
+          },
+          "premium": {
+            "type": "boolean",
+            "title": "Premium",
+            "default": false
+          }
+        },
+        "type": "object",
+        "required": [
+          "slug",
+          "label"
+        ],
+        "title": "AxeIn"
+      },
+      "AxePatch": {
+        "properties": {
+          "label": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description"
+          },
+          "ordre": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ordre"
+          },
+          "premium": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Premium"
+          }
+        },
+        "type": "object",
+        "title": "AxePatch"
+      },
+      "Body_importer_ouvrage_v1_admin_corpus_import_post": {
+        "properties": {
+          "fichier": {
+            "type": "string",
+            "format": "binary",
+            "title": "Fichier"
+          },
+          "axe": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Axe"
+          }
+        },
+        "type": "object",
+        "required": [
+          "fichier"
+        ],
+        "title": "Body_importer_ouvrage_v1_admin_corpus_import_post"
+      },
       "ChangerMotDePasseIn": {
         "properties": {
           "ancien": {
@@ -4859,6 +5514,43 @@
           "citation"
         ],
         "title": "SurlignageIn"
+      },
+      "TravailIn": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "ingestion",
+              "structure",
+              "passages",
+              "vecteurs",
+              "derive",
+              "import_data"
+            ],
+            "title": "Type"
+          },
+          "charge": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Charge"
+          },
+          "document_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Document Id"
+          }
+        },
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "title": "TravailIn"
       },
       "Utilisateur": {
         "properties": {

@@ -201,7 +201,9 @@ async def _profil(user_id: str) -> dict:
 
 @router.post("/chronogrammes", status_code=status.HTTP_201_CREATED, summary="Générer un chronogramme")
 async def creer(data: ChronogrammeIn, user: CurrentUser):
-    axe = await fetch_one("select id, slug, label, is_premium from axis where slug = %s", (data.axe,))
+    axe = await fetch_one(
+        "select id, slug, label, is_premium from axis "
+        "where slug = %s and slug not like '\\_%%'", (data.axe,))
     if not axe:
         raise NotFound("Cet axe n'existe pas.")
     if axe["is_premium"] and user["plan"] == "free":

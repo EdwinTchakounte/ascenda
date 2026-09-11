@@ -214,7 +214,29 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
+    # Un seul fichier, chemin relatif à livres/. La console dépose un ouvrage
+    # et demande son ingestion : ratisser tout le dossier ferait entrer au
+    # passage les .ocr.pdf posés à côté des originaux, qui sont des doublons.
+    ap.add_argument("--fichier", help="n'ingérer que ce fichier (relatif à livres/)")
     args = ap.parse_args()
+
+    if args.fichier:
+        cible = (LIVRES / args.fichier).resolve()
+        # Le chemin vient d'une requête : on refuse tout ce qui sort de livres/.
+        if not str(cible).startswith(str(LIVRES.resolve())) or not cible.is_file():
+            print(f"Fichier introuvable ou hors du corpus : {args.fichier}")
+            sys.exit(1)
+        conn, client = pg(), s3()
+        slug = cible.parent.name.lower()
+        with conn.cursor() as cur:
+            cur.execute("""insert into axis (slug, label) values (%s, %s)
+                           on conflict (slug) do nothing""",
+                        (slug, re.sub(r"^\d{2}-", "", cible.parent.name).replace("-", " ")))
+        conn.commit()
+        statut, doc_id, nch = ingest_one(conn, client, cible, slug, args.force)
+        print(f"{cible.name} : {statut}" + (f", {nch} chapitres" if nch else ""))
+        conn.close()
+        sys.exit(0 if statut != "erreur" else 1)
 
     conn, client = pg(), s3()
     dirs = sorted(d for d in LIVRES.iterdir()

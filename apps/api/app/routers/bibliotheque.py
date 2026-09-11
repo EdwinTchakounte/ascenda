@@ -121,6 +121,7 @@ async def filtres():
     axes = await fetch_all(
         """select a.slug as v, a.label, count(da.document_id) as n
            from axis a left join document_axis da on da.axis_id = a.id
+           where a.slug not like '\\_%'
            group by a.id order by a.sort_order"""
     )
     return {

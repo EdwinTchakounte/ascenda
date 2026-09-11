@@ -14,7 +14,9 @@ souvent.
 """
 from typing import Annotated, Literal
 
-from fastapi import APIRouter, Query
+from pathlib import Path
+
+from fastapi import APIRouter, File, Form, Query, UploadFile
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
@@ -24,7 +26,7 @@ from app.core.config import settings
 from app.core.db import execute, fetch_all, fetch_one
 from app.core.deps import AdminUser
 from app.core.errors import Conflict, NotFound
-from app.services import exploitation
+from app.services import exploitation, travaux
 
 log = logging.getLogger("ascenda.admin")
 
@@ -80,6 +82,29 @@ class GabaritIn(BaseModel):
 class CompteIn(BaseModel):
     is_active: bool | None = None
     est_admin: bool | None = None
+
+
+class AxeIn(BaseModel):
+    # Le raccourci sert d'adresse publique : il ne porte ni majuscule, ni
+    # accent, ni espace, et il ne change plus une fois posé.
+    slug: str = Field(min_length=3, max_length=80, pattern=r"^[a-z0-9][a-z0-9-]*$")
+    label: str = Field(min_length=2, max_length=120)
+    description: str | None = None
+    ordre: int | None = None
+    premium: bool = False
+
+
+class AxePatch(BaseModel):
+    label: str | None = Field(default=None, min_length=2, max_length=120)
+    description: str | None = None
+    ordre: int | None = None
+    premium: bool | None = None
+
+
+class TravailIn(BaseModel):
+    type: Literal["ingestion", "structure", "passages", "vecteurs", "derive", "import_data"]
+    charge: dict = Field(default_factory=dict)
+    document_id: str | None = None
 
 
 @router.get("/tableau-de-bord", summary="Tout ce qu'il faut voir le matin")
@@ -843,3 +868,190 @@ async def fichier_source(document_id: str, user: AdminUser):
             "Content-Length": str(d["size_bytes"] or 0),
         },
     )
+
+
+# --------------------------------------------------------------- les axes
+
+@router.get("/axes", summary="Les pôles d'apprentissage")
+async def axes_admin(user: AdminUser):
+    lignes = await fetch_all(
+        """select a.id, a.slug, a.label, a.description, a.sort_order, a.is_premium,
+                  (select count(*) from document_axis da where da.axis_id = a.id) as ouvrages,
+                  (a.centroid is not null) as centroide
+             from axis a order by a.sort_order nulls last, a.slug"""
+    )
+    return [
+        {"id": str(l["id"]), "slug": l["slug"], "label": l["label"],
+         "description": l["description"], "ordre": l["sort_order"],
+         "premium": l["is_premium"], "ouvrages": l["ouvrages"],
+         "centroide": l["centroide"]}
+        for l in lignes
+    ]
+
+
+@router.post("/axes", status_code=201, summary="Ouvrir un pôle d'apprentissage")
+async def creer_axe(data: AxeIn, user: AdminUser):
+    """Un axe nouveau naît vide, et c'est normal.
+
+    Il se remplit en y rattachant des ouvrages. Son centroïde, qui sert au
+    classement automatique des nouveaux entrants, se calcule une fois qu'il en
+    porte assez : `pipeline/embed/embed.py --centroides`.
+    """
+    if await fetch_one("select 1 from axis where slug = %s", (data.slug,)):
+        raise Conflict("Un axe porte déjà ce raccourci.")
+    ligne = await fetch_one(
+        """insert into axis (slug, label, description, sort_order, is_premium)
+           values (%s, %s, %s, %s, %s) returning id, slug, label""",
+        (data.slug, data.label, data.description, data.ordre, data.premium),
+    )
+    return {"id": str(ligne["id"]), "slug": ligne["slug"], "label": ligne["label"]}
+
+
+@router.patch("/axes/{slug}", summary="Renommer ou décrire un axe")
+async def changer_axe(slug: str, data: AxePatch, user: AdminUser):
+    champs = data.model_dump(exclude_none=True)
+    if not champs:
+        raise NotFound("Rien à changer.")
+    if not await fetch_one("select 1 from axis where slug = %s", (slug,)):
+        raise NotFound("Cet axe n'existe pas.")
+    colonnes = ", ".join(f"{'sort_order' if c == 'ordre' else ('is_premium' if c == 'premium' else c)} = %s"
+                         for c in champs)
+    await execute(f"update axis set {colonnes} where slug = %s",
+                  list(champs.values()) + [slug])
+    return {"slug": slug, **champs}
+
+
+@router.post("/corpus/{document_id}/axes/{slug}", summary="Rattacher un ouvrage à un axe")
+async def rattacher(document_id: str, slug: str, user: AdminUser,
+                    poids: Annotated[float, Query(ge=0, le=1)] = 1.0):
+    axe = await fetch_one("select id from axis where slug = %s", (slug,))
+    if not axe or not await fetch_one("select 1 from document where id = %s", (document_id,)):
+        raise NotFound("Cet ouvrage ou cet axe n'existe pas.")
+    # 'curator' et non 'admin' : la table n'accepte que auto, user et curator,
+    # et c'est bien un rattachement décidé par une personne qu'on note ici.
+    await execute(
+        """insert into document_axis (document_id, axis_id, weight, assigned_by)
+           values (%s, %s, %s, 'curator')
+           on conflict (document_id, axis_id) do update set weight = excluded.weight,
+                                                            assigned_by = 'curator'""",
+        (document_id, axe["id"], poids),
+    )
+    return {"document_id": document_id, "axe": slug, "poids": poids}
+
+
+@router.delete("/corpus/{document_id}/axes/{slug}", status_code=204,
+               summary="Détacher un ouvrage d'un axe")
+async def detacher(document_id: str, slug: str, user: AdminUser):
+    axe = await fetch_one("select id from axis where slug = %s", (slug,))
+    if not axe:
+        raise NotFound("Cet axe n'existe pas.")
+    await execute(
+        "delete from document_axis where document_id = %s and axis_id = %s",
+        (document_id, axe["id"]),
+    )
+
+
+# ------------------------------------------------------------ les travaux
+
+@router.get("/travaux", summary="La file des travaux")
+async def liste_travaux(
+    user: AdminUser,
+    etat: Annotated[str | None, Query(pattern="^(en_attente|en_cours|termine|echec|annule)$")] = None,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=100)] = PAR_PAGE,
+):
+    limite, saut = bornes(page, par_page)
+    lignes, total = await travaux.lister(etat, limite, saut)
+    return enveloppe(lignes, total, page, par_page)
+
+
+@router.get("/travaux/{travail_id}", summary="Un travail et son journal")
+async def un_travail(travail_id: str, user: AdminUser):
+    t = await travaux.un(travail_id)
+    if not t:
+        raise NotFound("Ce travail n'existe pas.")
+    return t
+
+
+@router.post("/travaux", status_code=201, summary="Mettre un travail dans la file")
+async def inscrire_travail(data: TravailIn, user: AdminUser):
+    """Lance une étape du pipeline sans ouvrir un terminal.
+
+    Ce n'est pas exécuté ici : l'ouvrier prendra le travail dans les secondes
+    qui suivent. Une requête HTTP qui dure dix heures est une requête qui
+    échoue.
+    """
+    try:
+        t = await travaux.inscrire(
+            data.type, data.charge, data.document_id, str(user["id"])
+        )
+    except ValueError as exc:
+        raise NotFound(str(exc)) from exc
+    if t.get("deja"):
+        raise Conflict("Ce travail est déjà dans la file ou en cours.")
+    return await travaux.un(str(t["id"]))
+
+
+@router.post("/travaux/{travail_id}/relancer", summary="Remettre un travail échoué dans la file")
+async def relancer_travail(travail_id: str, user: AdminUser):
+    t = await travaux.relancer(travail_id)
+    if not t:
+        raise Conflict("Seul un travail en échec ou annulé se relance.")
+    return await travaux.un(travail_id)
+
+
+@router.delete("/travaux/{travail_id}", status_code=204, summary="Annuler un travail en attente")
+async def annuler_travail(travail_id: str, user: AdminUser):
+    """Un travail en cours ne s'annule pas d'ici : il tourne dans un autre
+    processus, et le tuer à mi-parcours laisserait la base à moitié écrite."""
+    if not await travaux.annuler(travail_id):
+        raise Conflict("Seul un travail encore en attente s'annule.")
+
+
+@router.post("/corpus/import", status_code=201, summary="Déposer un ouvrage")
+async def importer_ouvrage(
+    user: AdminUser,
+    fichier: Annotated[UploadFile, File()],
+    axe: Annotated[str | None, Form()] = None,
+):
+    """Reçoit un PDF et inscrit son ingestion dans la file.
+
+    Le fichier est écrit dans `livres/` sous l'axe demandé, là où le pipeline
+    va le chercher. On l'écrit par morceaux : un ouvrage de cent mégaoctets
+    chargé en mémoire ferait tomber un conteneur à deux cents.
+
+    L'envoi n'est pas reprenable. Sur une connexion qui coupe, il faut
+    recommencer : c'est une limite assumée, et la console le dit.
+    """
+    nom = Path(fichier.filename or "sans-nom.pdf").name
+    if not nom.lower().endswith(".pdf"):
+        raise Conflict("Seuls les fichiers PDF sont acceptés.")
+
+    dossier = Path(settings.dossier_livres) / (axe or "_a-classer")
+    try:
+        dossier.mkdir(parents=True, exist_ok=True)
+        chemin = dossier / nom
+        taille = 0
+        with chemin.open("wb") as sortie:
+            while morceau := await fichier.read(1024 * 1024):
+                taille += len(morceau)
+                if taille > settings.taille_max_import:
+                    sortie.close()
+                    chemin.unlink(missing_ok=True)
+                    raise Conflict(
+                        f"Fichier trop lourd : la limite est de "
+                        f"{settings.taille_max_import // (1024 * 1024)} Mo."
+                    )
+                sortie.write(morceau)
+    except Conflict:
+        raise
+    except OSError as exc:
+        log.exception("Dépôt impossible dans %s", dossier)
+        raise Conflict(f"Le fichier n'a pas pu être écrit : {exc}") from exc
+
+    t = await travaux.inscrire(
+        "ingestion",
+        {"fichier": nom, "axe": axe, "octets": taille},
+        demande_par=str(user["id"]),
+    )
+    return {**await travaux.un(str(t["id"])), "fichier": nom, "octets": taille}

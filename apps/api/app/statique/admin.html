@@ -674,6 +674,157 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
     });
   } });
 
+zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rendre() {
+  const axes = await api("/v1/admin/axes");
+  const env = await api("/v1/admin/travaux?par_page=20&page=" + (this.page || 1));
+  this.env = env;
+  const enCours = env.lignes.filter((t) => t.etat === "en_cours" || t.etat === "en_attente").length;
+  return `<div class="cartes" style="margin-bottom:20px">
+    <div class="carte">
+      <h3>Déposer un PDF</h3>
+      <p class="aide">Le fichier est écrit là où le pipeline va le chercher, puis son
+        ingestion entre dans la file. L'envoi n'est pas reprenable : sur une connexion
+        qui coupe, il faut recommencer.</p>
+      <div class="champ"><label>axe</label><select id="i-axe">
+        <option value="">à classer plus tard</option>
+        ${axes.map((a) => `<option value="${ech(a.slug)}">${ech(a.label)}</option>`).join("")}
+      </select></div>
+      <div class="champ"><label>fichier</label>
+        <input id="i-fichier" type="file" accept="application/pdf,.pdf"></div>
+      <button class="bouton" id="i-envoyer">Déposer et ingérer</button>
+      <p class="note" id="i-etat">Cent mégaoctets au maximum.</p>
+    </div>
+    <div class="carte">
+      <h3>Lancer une étape</h3>
+      <p class="aide">Ce n'est pas exécuté ici : l'ouvrier prend le travail dans les
+        secondes qui suivent. Un même travail lourd ne s'inscrit pas deux fois.</p>
+      <div class="champ"><label>étape</label><select id="i-type">
+        <option value="structure">Reconstituer les chapitres</option>
+        <option value="passages">Reconstruire les passages</option>
+        <option value="vecteurs">Vectoriser le corpus</option>
+        <option value="derive">Produire les dérivés</option>
+        <option value="import_data">Importer data/ vers la base</option>
+      </select></div>
+      <button class="bouton" id="i-lancer">Mettre dans la file</button>
+      <p class="note" id="i-lancer-etat">${enCours ? nb(enCours) + " travail(aux) en file." : "File vide."}</p>
+    </div>
+  </div>
+  <h2>La file</h2>` +
+  table([["libelle", "travail"], ["etat", "état", "pastille"],
+    ["progression", "avancement", "nombre"], ["ouvrage", "ouvrage", "large"],
+    ["demandeur", "demandé par"], ["cree_le", "inscrit", "instant"],
+    ["fini_le", "fini", "instant"]], env.lignes, true) + pagination(env);
+},
+  async apres() {
+    const envoyer = $("i-envoyer");
+    if (envoyer) envoyer.onclick = async () => {
+      const f = $("i-fichier").files[0];
+      if (!f) { $("i-etat").textContent = "Choisissez un fichier."; return; }
+      const forme = new FormData();
+      forme.append("fichier", f);
+      if ($("i-axe").value) forme.append("axe", $("i-axe").value);
+      $("i-etat").textContent = `Envoi de ${(f.size / 1048576).toFixed(1)} Mo…`;
+      envoyer.disabled = true;
+      try {
+        // Pas de `Content-Type` : le navigateur pose lui-même la frontière
+        // multipart, et l'écraser casse l'envoi.
+        const r = await fetch("/v1/admin/corpus/import", { method: "POST",
+          headers: { Authorization: "Bearer " + jeton }, body: forme });
+        if (!r.ok) {
+          const e = await r.json().catch(() => ({}));
+          throw new Error((e.detail || {}).message || "refusé");
+        }
+        $("i-etat").textContent = "Déposé. L'ingestion est dans la file.";
+        $("i-fichier").value = "";
+        setTimeout(() => afficher(courante), 1200);
+      } catch (e) {
+        $("i-etat").textContent = e.message || "L'envoi a échoué.";
+      } finally { envoyer.disabled = false; }
+    };
+
+    const lancer = $("i-lancer");
+    if (lancer) lancer.onclick = async () => {
+      lancer.textContent = "…";
+      try {
+        await api("/v1/admin/travaux", { method: "POST",
+          body: JSON.stringify({ type: $("i-type").value }) });
+        $("i-lancer-etat").textContent = "Inscrit dans la file.";
+        setTimeout(() => afficher(courante), 900);
+      } catch (_) {
+        $("i-lancer-etat").textContent = "Déjà dans la file, ou refusé.";
+      } finally { lancer.textContent = "Mettre dans la file"; }
+    };
+
+    brancherClics(this.env.lignes, async (l) => {
+      const d = await api("/v1/admin/travaux/" + l.id);
+      ouvrirVolet(d.libelle, `
+        <div class="cartes"><div class="carte"><h3>Le travail</h3>${paires({
+          état: pastille(d.etat), avancement: d.progression + " %",
+          ouvrage: ech(d.ouvrage || ""), "demandé par": ech(d.demandeur || ""),
+          inscrit: instant(d.cree_le), commencé: instant(d.commence_le),
+          fini: instant(d.fini_le),
+          "durée attendue": d.duree_attendue_min ? d.duree_attendue_min + " min" : "",
+          erreur: ech(d.erreur || ""),
+        })}
+        <div class="champ" style="margin-top:14px">
+          ${["echec", "annule"].includes(d.etat)
+            ? `<button class="bouton" data-relance="${d.id}">Relancer</button>` : ""}
+          ${d.etat === "en_attente"
+            ? `<button class="bouton fin" data-annule="${d.id}">Annuler</button>` : ""}
+        </div></div></div>
+        <h2>Le journal</h2>
+        <div class="contenu"><pre>${ech(d.journal || "Rien encore.")}</pre></div>`);
+      const r = $("volet-corps").querySelector("[data-relance]");
+      if (r) r.onclick = async () => {
+        await api(`/v1/admin/travaux/${r.dataset.relance}/relancer`, { method: "POST" });
+        $("volet").close(); afficher(courante);
+      };
+      const an = $("volet-corps").querySelector("[data-annule]");
+      if (an) an.onclick = async () => {
+        await api(`/v1/admin/travaux/${an.dataset.annule}`, { method: "DELETE" });
+        $("volet").close(); afficher(courante);
+      };
+    });
+  } });
+
+zone({ cle: "axes", groupe: "Contenu", titre: "Pôles d'apprentissage", async rendre() {
+  const axes = await api("/v1/admin/axes");
+  this.axes = axes;
+  return `<div class="cartes" style="margin-bottom:20px"><div class="carte">
+      <h3>Ouvrir un pôle</h3>
+      <p class="aide">Un axe nouveau naît vide et se remplit en y rattachant des
+        ouvrages. Son centroïde, qui classe automatiquement les nouveaux entrants,
+        se calcule une fois qu'il en porte assez.</p>
+      <div class="champ"><label>raccourci</label>
+        <input id="a-slug" placeholder="12-sante-publique"></div>
+      <div class="champ"><label>nom</label>
+        <input id="a-label" placeholder="Santé publique"></div>
+      <div class="champ"><label>description</label><input id="a-desc"></div>
+      <button class="bouton" id="a-creer">Créer l'axe</button>
+      <p class="note" id="a-etat">Le raccourci sert d'adresse publique : minuscules,
+        chiffres et tirets, et il ne change plus une fois posé.</p>
+    </div></div>
+    <h2>Les ${axes.length} pôles</h2>` +
+    table([["slug", "raccourci"], ["label", "nom", "large"],
+      ["ouvrages", "ouvrages", "nombre"], ["centroide", "centroïde", "oui"],
+      ["premium", "réservé", "oui"], ["description", "description", "large"]], axes);
+},
+  async apres() {
+    const b = $("a-creer");
+    if (b) b.onclick = async () => {
+      b.textContent = "…";
+      try {
+        await api("/v1/admin/axes", { method: "POST", body: JSON.stringify({
+          slug: $("a-slug").value.trim(), label: $("a-label").value.trim(),
+          description: $("a-desc").value.trim() || null }) });
+        $("a-etat").textContent = "Axe créé.";
+        setTimeout(() => afficher(courante), 900);
+      } catch (_) {
+        $("a-etat").textContent = "Refusé : raccourci déjà pris, ou mal formé.";
+      } finally { b.textContent = "Créer l'axe"; }
+    };
+  } });
+
 zone({ cle: "gabarits", groupe: "Contenu", titre: "Messages", async rendre() {
   const liste = await api("/v1/admin/gabarits");
   return `<p class="note" style="margin:0 0 14px">Les messages vivent en base : corriger une

@@ -57,6 +57,15 @@ class Settings(BaseSettings):
     # de la colonne `chunk.embedding`.
     embed_model: str = "intfloat/multilingual-e5-large"
 
+    # ---- import d'ouvrages
+    # Où le pipeline va chercher les PDF. La console y dépose ce qu'on lui
+    # donne, dans un sous-dossier par axe.
+    dossier_livres: str = str(ROOT / "livres")
+    # Cent mégaoctets : au delà, c'est un scan qui n'a pas été compressé, et il
+    # vaut mieux le dire tout de suite que de le découvrir après vingt minutes
+    # d'envoi sur une connexion lente.
+    taille_max_import: int = 100 * 1024 * 1024
+
     # ---- paiement
     # Sans identifiants, le fournisseur passe en mode simulé : utile en
     # développement, refusé en production par la vérification ci-dessous.

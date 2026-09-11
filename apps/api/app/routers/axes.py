@@ -1,4 +1,11 @@
-"""Les 11 axes : la porte d'entrée de la bibliothèque et du chronogramme."""
+"""Les axes : la porte d'entrée de la bibliothèque et du chronogramme.
+
+Un axe dont le raccourci commence par un tiret bas est une zone de dépôt, pas
+un pôle d'apprentissage : `_a-classer` reçoit les ouvrages déposés par la
+console avant qu'un humain ne décide où ils vont. Ces zones restent visibles
+dans la console et invisibles partout ailleurs, sans quoi la bibliothèque
+afficherait un axe vide au nom de dossier.
+"""
 from fastapi import APIRouter
 
 from app.core.db import fetch_all, fetch_one
@@ -25,6 +32,7 @@ left join lateral (
   select count(*) as n from chapter c
    where c.document_id = d.id and coalesce(c.token_count, 0) >= 300
 ) u on true
+where a.slug not like '\\_%'
 group by a.id
 order by a.sort_order, a.label
 """
@@ -55,7 +63,8 @@ async def lister_axes(user: OptionalUser):
 
 @router.get("/{slug}", summary="Un axe et ses ouvrages")
 async def detail_axe(slug: str, user: OptionalUser):
-    axe = await fetch_one("select * from axis where slug = %s", (slug,))
+    axe = await fetch_one(
+        "select * from axis where slug = %s and slug not like '\\_%%'", (slug,))
     if not axe:
         raise NotFound("Cet axe n'existe pas.")
     ouvrages = await fetch_all(
