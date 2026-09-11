@@ -86,7 +86,7 @@ export default async function Tarifs() {
           {FORMULES.map((f) => (
             <div
               key={f.code}
-              className={`flex flex-col rounded-[var(--radius-carte)] bg-[var(--surface)] p-8 ${
+              className={`flex min-w-0 flex-col rounded-[var(--radius-carte)] bg-[var(--surface)] p-6 sm:p-8 ${
                 f.mise_en_avant
                   ? "border-2 border-[var(--color-or)] shadow-[var(--shadow-flottante)]"
                   : "border border-[var(--trait)] shadow-[var(--shadow-douce)]"

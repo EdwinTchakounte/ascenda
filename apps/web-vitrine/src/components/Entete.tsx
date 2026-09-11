@@ -12,10 +12,12 @@ const LIENS = [
 export default function Entete() {
   return (
     <header className="sticky top-0 z-50 border-b border-[rgba(232,192,112,0.12)] bg-[rgba(5,13,34,0.86)] backdrop-blur-md">
-      <div className="cadre flex h-[72px] items-center justify-between gap-6">
+      <div className="cadre flex h-[72px] items-center justify-between gap-3 sm:gap-6">
         <Link href="/" className="flex items-center gap-2.5" aria-label="ASCENDA, accueil">
           <Logo taille={34} />
-          <span className="font-[family-name:var(--font-titre)] text-[1.3rem] font-semibold tracking-[0.14em] text-[#f4f1e8]">
+          {/* Sous 360 pixels, le mot-symbole et le bouton se disputaient les
+              deux derniers pixels de la barre. */}
+          <span className="font-[family-name:var(--font-titre)] text-[1.12rem] font-semibold tracking-[0.1em] text-[#f4f1e8] sm:text-[1.3rem] sm:tracking-[0.14em]">
             ASCENDA
           </span>
         </Link>

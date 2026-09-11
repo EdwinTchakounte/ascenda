@@ -260,20 +260,20 @@
   bottom: 0;
   width: 14px;
   border-radius: 3px 0 0 3px;
-  background: linear-gradient(180deg, var(--dos, #d4a23f), rgba(0, 0, 0, 0.55));
+  background: linear-gradient(180deg, var(--teinte, #d4a23f), rgba(0, 0, 0, 0.55));
   box-shadow: inset -2px 0 6px rgba(0, 0, 0, 0.45);
 }
-.axe-01 { --dos: #d4a23f; }
-.axe-02 { --dos: #4a6fa5; }
-.axe-03 { --dos: #7c9a82; }
-.axe-04 { --dos: #8a7f9e; }
-.axe-05 { --dos: #c4704f; }
-.axe-06 { --dos: #5f8a8b; }
-.axe-07 { --dos: #b8863f; }
-.axe-08 { --dos: #9e6b8a; }
-.axe-09 { --dos: #6f8f57; }
-.axe-10 { --dos: #4f7ba0; }
-.axe-11 { --dos: #86a05f; }
+.axe-01 { --teinte: #c08a2e; }
+.axe-02 { --teinte: #4a6fa5; }
+.axe-03 { --teinte: #5f8a6a; }
+.axe-04 { --teinte: #8a7f9e; }
+.axe-05 { --teinte: #c4704f; }
+.axe-06 { --teinte: #4f8687; }
+.axe-07 { --teinte: #a8752f; }
+.axe-08 { --teinte: #9e6b8a; }
+.axe-09 { --teinte: #6f8f57; }
+.axe-10 { --teinte: #4f7ba0; }
+.axe-11 { --teinte: #7a9450; }
 
 /* La tranche : un vrai plan à quatre-vingt-dix degrés du plat, pas un dégradé
    peint dessus. C'est elle qui donne l'épaisseur quand le volume pivote. */

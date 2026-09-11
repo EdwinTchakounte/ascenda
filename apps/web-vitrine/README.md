@@ -55,6 +55,22 @@ secondes d'attente. Ce qu'il faut savoir avant d'y toucher :
   pour un moteur de recherche serait une section perdue : le masquage n'est posé
   qu'une fois le JavaScript en place, et pas du tout en mode sobre.
 
+**Les onze pôles portent chacun leur teinte**, la même que le dos de leurs
+volumes sur l'étagère. Onze rectangles blancs identiques ne disaient rien : le
+pôle qui porte dix-sept ouvrages avait le même poids visuel que celui qui en
+porte un. La carte montre donc d'abord son volume, en grand, avec une barre qui
+dit sa part du corpus. Le pôle le mieux fourni occupe deux colonnes et affiche
+trois de ses titres : un nom de pôle ne dit pas ce qu'on va lire, trois
+couvertures, si. Ce n'est pas qu'un effet de mise en page, onze cartes dans une
+grille de trois laissent un trou en fin de rangée, et une grille qui ne tombe
+pas juste se voit plus qu'on ne le croit.
+
+**Rien ne déborde en largeur, de 320 à 1 024 pixels.** Vérifié page par page.
+Deux défauts y sont passés : le mot-symbole et le bouton de l'entête se
+disputaient les deux derniers pixels sous 360 pixels, et les cartes de tarifs
+refusaient de se réduire faute de `min-w-0`, le `min-width: auto` d'un élément
+de grille valant sa largeur de contenu minimale.
+
 **La vitrine reste affichable sans l'API.** C'est une page publique : elle ne peut
 pas dépendre d'un service applicatif pour exister. `lib/api.ts` porte des valeurs
 de repli tirées du corpus réel, et la bibliothèque affiche un état explicite
