@@ -196,24 +196,61 @@ code{font-family:var(--mono);font-size:.8em}
 
 <script>
 const $ = (id) => document.getElementById(id);
-let jeton = null, moi = null, resume = null;
-try { jeton = localStorage.getItem("ascenda_admin"); } catch (_) {}
+let jeton = null, renouveau = null, moi = null, resume = null;
+try {
+  jeton = localStorage.getItem("ascenda_admin");
+  renouveau = localStorage.getItem("ascenda_admin_r");
+  moi = localStorage.getItem("ascenda_admin_qui");
+} catch (_) {}
 
 /* ---------------------------------------------------------------- réseau */
-async function api(chemin, options = {}) {
+
+/** Le jeton d'accès expire au bout d'une demi-heure. Sans renouvellement, une
+ *  console d'exploitation déconnecte au milieu du travail, ce qui pousse à la
+ *  garder ouverte dans un onglet et à ne plus jamais s'en servir. */
+async function renouveler() {
+  if (!renouveau) return false;
+  try {
+    const r = await fetch("/v1/auth/rafraichir", { method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ refresh_token: renouveau }) });
+    if (!r.ok) return false;
+    const d = await r.json();
+    poserJetons((d.jetons || d));
+    return true;
+  } catch (_) { return false; }
+}
+
+function poserJetons(j) {
+  jeton = j.access_token;
+  renouveau = j.refresh_token || renouveau;
+  try {
+    localStorage.setItem("ascenda_admin", jeton);
+    if (renouveau) localStorage.setItem("ascenda_admin_r", renouveau);
+    if (moi) localStorage.setItem("ascenda_admin_qui", moi);
+  } catch (_) {}
+}
+
+async function api(chemin, options = {}, reessai = true) {
   const r = await fetch(chemin, {
     ...options,
     headers: { "Content-Type": "application/json",
       ...(jeton ? { Authorization: "Bearer " + jeton } : {}), ...(options.headers || {}) },
   });
+  if (r.status === 401 && reessai && (await renouveler())) {
+    return api(chemin, options, false);
+  }
   if (r.status === 401 || r.status === 403) { sortir(); throw new Error("refuse"); }
   if (!r.ok) throw new Error("http " + r.status);
   return r.status === 204 ? null : r.json();
 }
 
 function sortir() {
-  jeton = null;
-  try { localStorage.removeItem("ascenda_admin"); } catch (_) {}
+  jeton = renouveau = null;
+  try {
+    localStorage.removeItem("ascenda_admin");
+    localStorage.removeItem("ascenda_admin_r");
+  } catch (_) {}
   $("console").classList.remove("ouvert");
   $("connexion").style.display = "";
 }
@@ -227,9 +264,8 @@ $("entrer").onclick = async () => {
       body: JSON.stringify({ email: $("email").value.trim(), mot_de_passe: $("mdp").value }) });
     if (!r.ok) throw new Error("identifiants");
     const d = await r.json();
-    jeton = (d.jetons || d).access_token;
     moi = (d.utilisateur || {}).email || $("email").value.trim();
-    try { localStorage.setItem("ascenda_admin", jeton); } catch (_) {}
+    poserJetons(d.jetons || d);
     await demarrer();
   } catch (e) {
     $("erreur").textContent = e.message === "identifiants"

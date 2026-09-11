@@ -42,7 +42,7 @@ async def main():
     await open_pool()
     try:
         _, jeton_simple = await compte(admin=False)
-        _, jeton_admin = await compte(admin=True)
+        email_admin, jeton_admin = await compte(admin=True)
 
         print("\n· Ce que l'administration refuse")
         for chemin in ("/v1/admin/tableau-de-bord", "/v1/admin/paiements",
@@ -163,13 +163,16 @@ async def main():
         ok("un gabarit inconnu est refusé", code == 404, code)
 
         print("\n· On ne peut pas se verrouiller dehors")
-        moi = await fetch_one("select id from app_user where est_admin limit 1")
-        code, _, _ = appel("PATCH", f"/v1/admin/utilisateurs/{moi['id']}",
+        # On vise le compte de la suite, et lui seul. Viser « le premier
+        # administrateur venu » retirait son droit à un vrai compte, et la
+        # console refusait d'ouvrir au passage suivant. Une suite ne doit pas
+        # pouvoir abîmer ce sur quoi elle tourne.
+        mien = await fetch_one("select id from app_user where email = %s", (email_admin,))
+        code, _, _ = appel("PATCH", f"/v1/admin/utilisateurs/{mien['id']}",
                            {"est_admin": False}, jeton=jeton_admin)
-        # Le compte de la suite n'est pas forcément celui-là : on vérifie
-        # seulement que retirer son propre droit est refusé quand c'est le cas.
-        ok("retirer son propre droit est refusé ou sans effet sur un autre compte",
-           code in (200, 409), code)
+        ok("retirer son propre droit est refusé", code == 409, code)
+        toujours = await fetch_one("select est_admin from app_user where id = %s", (mien["id"],))
+        ok("et le droit est resté", toujours["est_admin"] is True, toujours)
 
         print("\n· La page elle-même")
         code, _, _ = appel("GET", "/admin")
