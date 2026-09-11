@@ -47,11 +47,13 @@ class EcranBienvenue extends StatelessWidget {
             children: [
               // Le bloc complet porte déjà le nom et la baseline : les
               // réécrire à côté ferait doublon.
-              Image.asset(
-                'assets/marque/logo-complet.png',
-                height: 132,
-                filterQuality: FilterQuality.medium,
-                semanticLabel: 'ASCENDA, Learn. Grow. Become.',
+              Center(
+                child: Image.asset(
+                  'assets/marque/logo-complet.png',
+                  height: 132,
+                  filterQuality: FilterQuality.medium,
+                  semanticLabel: 'ASCENDA, Learn. Grow. Become.',
+                ),
               ),
               const Spacer(),
               Text(
@@ -164,6 +166,8 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                const Center(child: MarqueAscenda(taille: 56)),
+                const SizedBox(height: 26),
                 Text(
                   _inscription ? 'Créer votre compte' : 'Content de vous revoir',
                   style: t.textTheme.headlineMedium,

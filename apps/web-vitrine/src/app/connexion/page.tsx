@@ -40,15 +40,16 @@ export default function Connexion() {
           </Link>
         </div>
 
-        {/* La réinitialisation de mot de passe n'existe pas encore, ni dans
-            l'API ni dans l'application. Écrire ici qu'elle se demande depuis
-            l'écran de connexion enverrait la personne chercher un bouton qui
-            n'y est pas. On dit donc ce qui marche réellement aujourd'hui. */}
+        {/* Ce paragraphe disait que la réinitialisation n'existait pas et
+            renvoyait au formulaire de contact. Elle existe depuis, dans l'API
+            comme dans l'application : la page envoyait donc les gens écrire
+            pour un bouton qu'ils avaient sous les yeux. */}
         <p className="mt-10 text-[0.88rem] leading-[1.7] text-[var(--texte-doux)]">
-          Mot de passe perdu ? La réinitialisation autonome n&apos;est pas encore en place.
-          Écrivez-nous depuis la page{" "}
+          Mot de passe perdu ? L&apos;application vous le réinitialise :
+          « J&apos;ai oublié mon mot de passe » sur l&apos;écran de connexion vous envoie un
+          lien par courriel. Si l&apos;adresse du compte ne vous appartient plus,{" "}
           <Link href="/contact" className="text-[var(--accent-texte)] underline underline-offset-2">
-            contact
+            écrivez-nous
           </Link>{" "}
           et nous rouvrons votre accès.
         </p>

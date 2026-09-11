@@ -131,6 +131,9 @@ h1,h2,h3,h4{font-family:var(--titre-police);color:var(--titre);
 
 .guichet{display:flex;align-items:center;justify-content:center;padding:40px 28px}
 .guichet .boite{width:100%;max-width:352px}
+.marque-guichet{display:none;flex-direction:column;align-items:center;gap:8px;
+  margin-bottom:26px;color:var(--accent)}
+.marque-guichet span{font-weight:600;letter-spacing:.26em;font-size:.74rem}
 .guichet h1{font-size:1.5rem;margin:0 0 6px}
 .guichet .pre{color:var(--doux);margin:0 0 26px;font-size:.9rem}
 .guichet label{display:block;font-size:.76rem;letter-spacing:.06em;
@@ -525,6 +528,7 @@ code{font-family:var(--mono);font-size:.8em}
 @media (max-width:980px){
   #connexion.ouvert{grid-template-columns:1fr}
   .enseigne{display:none}
+  .marque-guichet{display:flex}
 }
 @media (max-width:860px){
   #console.ouvert{grid-template-columns:1fr}
@@ -622,6 +626,14 @@ code{font-family:var(--mono);font-size:.8em}
   </div>
   <div class="guichet">
     <div class="boite">
+      <!-- Sous 980 pixels, le panneau de marque disparaît et l'écran se
+           présentait sans un seul logo : on demandait un mot de passe sans
+           dire à quoi. La marque se centre au-dessus du formulaire. -->
+      <div class="marque-guichet">
+        <svg class="ico xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round"><use href="#i-marque"></use></svg>
+        <span>ASCENDA</span>
+      </div>
       <h1>Console d'exploitation</h1>
       <p class="pre">Réservée aux comptes qui portent le droit d'administration.</p>
       <label for="email">Adresse électronique</label>
