@@ -27,10 +27,16 @@ export default async function Axes() {
                 href={`/bibliotheque?axe=${axe.slug}`}
                 className="group flex h-full flex-col rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--surface)] p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(212,162,63,0.42)] hover:shadow-[var(--shadow-flottante)]"
               >
-                <IconeAxe
-                  slug={axe.slug}
-                  className="h-9 w-9 text-[var(--accent-texte)] transition-colors group-hover:text-[var(--color-or)]"
-                />
+                {/* L'icône dans un jeton teinté plutôt que posée à nu : c'est la
+                    même anatomie que les tuiles de la console, et une grille de
+                    onze symboles isolés se lit moins bien qu'une grille de
+                    onze objets. */}
+                <span className="grid h-11 w-11 place-items-center rounded-[14px] bg-[var(--fond-creux)] transition-colors group-hover:bg-[rgba(212,162,63,0.16)]">
+                  <IconeAxe
+                    slug={axe.slug}
+                    className="h-[22px] w-[22px] text-[var(--accent-texte)] transition-colors group-hover:text-[var(--color-or)]"
+                  />
+                </span>
                 <h3 className="mt-4 text-[1.06rem] font-semibold leading-snug">{axe.label}</h3>
                 <p className="mt-auto pt-5 text-[0.84rem] text-[var(--texte-doux)]">
                   {axe.nb_ouvrages} ouvrage{axe.nb_ouvrages > 1 ? "s" : ""}

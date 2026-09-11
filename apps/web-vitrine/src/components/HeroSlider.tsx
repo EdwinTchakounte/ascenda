@@ -36,7 +36,7 @@ const DIAPOSITIVES: Diapositive[] = [
       </>
     ),
     texte:
-      "Dites où vous en êtes et combien de temps vous avez vraiment. ASCENDA découpe 78 ouvrages en séances datées que vous pouvez tenir.",
+      "Dites où vous en êtes et combien de temps vous avez vraiment. ASCENDA découpe la bibliothèque en séances datées que vous pouvez tenir.",
     image: "/images/lecture.jpg",
     alt: "Un livre ouvert posé près d'une fenêtre",
   },

@@ -4,86 +4,239 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta name="color-scheme" content="light dark">
 <title>ASCENDA, console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Les mêmes polices que la vitrine : Fraunces dit « livre » sans être
+     décorative, Inter porte l'interface. Si elles ne se chargent pas, la pile
+     de secours tient la page, elle ne la casse pas. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
 <style>
+/* ---------------------------------------------------------------------------
+   ASCENDA, console d'exploitation.
+
+   Même langage visuel que la vitrine : un « A » doré sur bleu nuit, Fraunces
+   pour les titres et les grands nombres, Inter pour l'interface. L'or est un
+   rehaut, jamais une surface. Ce qui change ici, c'est le registre : la vitrine
+   se lit, la console s'opère. D'où des densités plus fortes, des chiffres
+   tabulaires partout, et une icône par vue pour retrouver la bonne d'un coup
+   d'oeil plutôt qu'en lisant onze libellés.
+--------------------------------------------------------------------------- */
+
 :root{
-  --nuit:#0b1435; --nuit-profond:#050d22; --ardoise:#223454;
+  /* La marque. Ces teintes ne bougent pas d'un thème à l'autre. */
+  --nuit-profond:#050d22; --nuit:#0b1435; --ardoise:#223454;
   --or:#d4a23f; --or-clair:#e8c070; --or-sombre:#9a7118;
   --sauge:#7c9a82; --terracotta:#c4704f;
-  --fond:#f7f5f1; --creux:#efece5; --surface:#fff;
-  --texte:#1a1f2e; --doux:#6b7280; --trait:rgba(11,20,53,.10);
-  --corps:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+
+  /* Les surfaces, en clair. Redéfinies plus bas pour le sombre. */
+  --fond:#faf8f4; --creux:#f2eee6; --surface:#fff; --surface-2:#fbfaf7;
+  --texte:#1a1f2e; --titre:#0b1435; --doux:#6b7280; --sourd:#9099a8;
+  --trait:rgba(11,20,53,.09); --trait-fort:rgba(11,20,53,.16);
+  --accent:#9a7118;
+  --bien-fond:rgba(124,154,130,.16); --bien-texte:#3f6047;
+  --attente-fond:rgba(212,162,63,.18); --attente-texte:#7d5a12;
+  --mauvais-fond:rgba(196,112,79,.16); --mauvais-texte:#8e4a2e;
+  --voile:rgba(5,13,34,.55);
+  --ombre:0 1px 2px rgba(11,20,53,.04),0 8px 24px rgba(11,20,53,.06);
+  --ombre-haute:0 2px 4px rgba(11,20,53,.06),0 28px 56px rgba(11,20,53,.16);
+
+  --titre-police:"Fraunces",Georgia,"Times New Roman",serif;
+  --corps:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
-  --barre:248px;
+  --barre:266px; --rayon:14px; --rayon-l:20px;
 }
+
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --fond:#050d22; --creux:#0b1435; --surface:#101c3d; --surface-2:#0e1935;
+    --texte:#e6e9f2; --titre:#f4f1e8; --doux:#9aa3ba; --sourd:#6f7b96;
+    --trait:rgba(232,192,112,.13); --trait-fort:rgba(232,192,112,.24);
+    --accent:#e8c070;
+    --bien-fond:rgba(124,154,130,.20); --bien-texte:#a8c4ad;
+    --attente-fond:rgba(212,162,63,.18); --attente-texte:#e8c070;
+    --mauvais-fond:rgba(196,112,79,.20); --mauvais-texte:#e09b7e;
+    --voile:rgba(2,6,16,.72);
+    --ombre:0 1px 2px rgba(0,0,0,.30),0 10px 30px rgba(0,0,0,.34);
+    --ombre-haute:0 2px 6px rgba(0,0,0,.36),0 32px 64px rgba(0,0,0,.50);
+  }
+}
+:root[data-theme="dark"]{
+  --fond:#050d22; --creux:#0b1435; --surface:#101c3d; --surface-2:#0e1935;
+  --texte:#e6e9f2; --titre:#f4f1e8; --doux:#9aa3ba; --sourd:#6f7b96;
+  --trait:rgba(232,192,112,.13); --trait-fort:rgba(232,192,112,.24);
+  --accent:#e8c070;
+  --bien-fond:rgba(124,154,130,.20); --bien-texte:#a8c4ad;
+  --attente-fond:rgba(212,162,63,.18); --attente-texte:#e8c070;
+  --mauvais-fond:rgba(196,112,79,.20); --mauvais-texte:#e09b7e;
+  --voile:rgba(2,6,16,.72);
+  --ombre:0 1px 2px rgba(0,0,0,.30),0 10px 30px rgba(0,0,0,.34);
+  --ombre-haute:0 2px 6px rgba(0,0,0,.36),0 32px 64px rgba(0,0,0,.50);
+}
+
+/* ------------------------------------------------------------------ base */
 *{box-sizing:border-box}
 html,body{height:100%}
-body{overflow-x:hidden}
-body{margin:0;background:var(--fond);color:var(--texte);font-family:var(--corps);
-  font-size:14px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;overflow-x:hidden;background:var(--fond);color:var(--texte);
+  font-family:var(--corps);font-size:14px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  font-feature-settings:"cv05" 1,"ss01" 1}
 button,input,select,textarea{font:inherit;color:inherit}
-a{color:var(--or-sombre)}
+a{color:var(--accent);text-underline-offset:2px}
+h1,h2,h3,h4{font-family:var(--titre-police);color:var(--titre);
+  letter-spacing:-.015em;text-wrap:balance;font-weight:600}
+:focus-visible{outline:2px solid var(--or);outline-offset:2px;border-radius:6px}
+::selection{background:rgba(212,162,63,.28)}
 
-/* ------------------------------------------------------------ connexion */
-#connexion{max-width:340px;margin:13vh auto;padding:0 20px}
-#connexion .logo{font-weight:700;letter-spacing:.26em;color:var(--or-sombre);
-  font-size:.78rem;margin-bottom:26px}
-#connexion h1{font-size:1.3rem;margin:0 0 6px}
-#connexion p{color:var(--doux);margin:0 0 22px;font-size:.9rem}
-#connexion input{width:100%;padding:10px 12px;border:1px solid var(--trait);
-  border-radius:10px;background:var(--surface);margin-bottom:10px}
-.bouton{border:0;border-radius:22px;background:var(--or);color:#1a1400;
-  font-weight:600;cursor:pointer;padding:10px 20px}
-.bouton:hover{background:var(--or-clair)}
-.bouton.plein{width:100%;padding:11px}
-.bouton.fin{background:none;border:1px solid var(--trait);color:var(--doux);
-  padding:5px 13px;border-radius:20px;font-weight:400;font-size:.84rem}
-.bouton.fin:hover{border-color:var(--or);color:var(--or-sombre);background:none}
-.erreur{color:var(--terracotta);font-size:.86rem;margin:8px 0 0;min-height:1.2em}
+/* Les icônes. Un seul gabarit, la couleur vient du texte autour. */
+.ico{width:18px;height:18px;flex:none;display:inline-block;vertical-align:-3px}
+.ico.pt{width:15px;height:15px}
+.ico.gd{width:22px;height:22px}
+.ico.xl{width:30px;height:30px}
 
-/* ------------------------------------------------------------ ossature */
+/* ------------------------------------------------------------- connexion */
+#connexion{display:none;min-height:100%;grid-template-columns:1.05fr .95fr}
+#connexion.ouvert{display:grid}
+.enseigne{background:
+    radial-gradient(120% 90% at 8% 0%,rgba(212,162,63,.20),transparent 58%),
+    linear-gradient(160deg,var(--nuit) 0%,var(--nuit-profond) 100%);
+  color:#dfe4f0;padding:48px;display:flex;flex-direction:column;
+  justify-content:space-between;position:relative;overflow:hidden}
+.enseigne::after{content:"";position:absolute;inset:auto -20% -35% auto;width:70%;
+  aspect-ratio:1;border-radius:50%;background:rgba(212,162,63,.07);filter:blur(10px)}
+.enseigne .marque{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
+.enseigne .marque span{font-weight:600;letter-spacing:.26em;font-size:.78rem;
+  color:var(--or-clair)}
+.enseigne .mot{position:relative;z-index:1;max-width:38ch}
+.enseigne .mot h2{font-size:clamp(1.8rem,2.7vw,2.7rem);color:#f4f1e8;margin:0 0 16px;
+  line-height:1.18}
+.enseigne .mot p{color:#a8b2c9;margin:0;font-size:.95rem;line-height:1.7}
+.enseigne .socle{position:relative;z-index:1;display:flex;gap:26px;flex-wrap:wrap;
+  font-size:.78rem;color:#7c88a6}
+.enseigne .socle b{display:block;font-family:var(--titre-police);font-size:1.35rem;
+  color:var(--or-clair);font-weight:600;font-variant-numeric:tabular-nums}
+
+.guichet{display:flex;align-items:center;justify-content:center;padding:40px 28px}
+.guichet .boite{width:100%;max-width:352px}
+.guichet h1{font-size:1.5rem;margin:0 0 6px}
+.guichet .pre{color:var(--doux);margin:0 0 26px;font-size:.9rem}
+.guichet label{display:block;font-size:.76rem;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--doux);margin:0 0 5px;font-weight:600}
+.guichet .saisie{position:relative;margin-bottom:14px}
+.guichet .saisie .ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  color:var(--sourd)}
+.guichet input{width:100%;padding:11px 13px 11px 38px;border:1px solid var(--trait);
+  border-radius:11px;background:var(--surface);transition:border-color .16s,box-shadow .16s}
+.guichet input:focus{border-color:var(--or);box-shadow:0 0 0 3px rgba(212,162,63,.16);outline:0}
+
+/* -------------------------------------------------------------- ossature */
 #console{display:none;min-height:100%}
 #console.ouvert{display:grid;grid-template-columns:var(--barre) 1fr}
 
-aside{background:var(--nuit-profond);color:#b9c1d6;padding:20px 0;
-  display:flex;flex-direction:column;position:sticky;top:0;height:100vh}
-aside .logo{padding:0 20px 20px;font-weight:700;letter-spacing:.24em;
-  color:var(--or-clair);font-size:.76rem}
-aside nav{display:flex;flex-direction:column;gap:1px;overflow-y:auto;flex:1}
-aside nav button{background:none;border:0;text-align:left;padding:9px 20px;
-  color:#8590aa;cursor:pointer;font-size:.88rem;display:flex;align-items:center;
-  gap:10px;border-left:3px solid transparent}
-aside nav button:hover{color:#e6e9f2;background:rgba(255,255,255,.03)}
-aside nav button[aria-current="true"]{color:var(--or-clair);border-left-color:var(--or);
-  background:rgba(212,162,63,.09);font-weight:600}
-aside nav .groupe{padding:16px 20px 6px;font-size:.66rem;letter-spacing:.14em;
-  text-transform:uppercase;color:#4d5876}
-aside .pied{padding:16px 20px 0;border-top:1px solid #17224180;font-size:.75rem;
-  color:#5d688a}
+/* La barre reste nuit dans les deux thèmes : c'est l'ancre de la marque, et
+   une console qui change entièrement de couleur la nuit se reconnaît moins. */
+aside{background:var(--nuit-profond);color:#b9c1d6;display:flex;flex-direction:column;
+  position:sticky;top:0;height:100vh;border-right:1px solid rgba(255,255,255,.05)}
+aside .logo{display:flex;align-items:center;gap:11px;padding:20px 20px 18px;
+  border-bottom:1px solid rgba(255,255,255,.06)}
+aside .logo span{font-weight:600;letter-spacing:.24em;color:var(--or-clair);font-size:.76rem}
+aside nav{display:flex;flex-direction:column;gap:2px;overflow-y:auto;flex:1;
+  padding:8px 12px 14px;scrollbar-width:thin;scrollbar-color:#1d2947 transparent}
+aside nav button{background:none;border:0;text-align:left;padding:9px 12px;
+  color:#8c97b1;cursor:pointer;font-size:.875rem;display:flex;align-items:center;
+  gap:11px;border-radius:10px;width:100%;position:relative;
+  transition:background .15s,color .15s}
+aside nav button .ico{color:#5f6c8d;transition:color .15s}
+aside nav button:hover{color:#e6e9f2;background:rgba(255,255,255,.045)}
+aside nav button:hover .ico{color:#93a0bf}
+aside nav button[aria-current="true"]{color:#f4f1e8;font-weight:600;
+  background:linear-gradient(90deg,rgba(212,162,63,.20),rgba(212,162,63,.05))}
+aside nav button[aria-current="true"] .ico{color:var(--or-clair)}
+aside nav button[aria-current="true"]::before{content:"";position:absolute;left:-12px;
+  top:9px;bottom:9px;width:3px;border-radius:0 3px 3px 0;background:var(--or)}
+aside nav .groupe{padding:15px 12px 6px;font-size:.64rem;letter-spacing:.16em;
+  text-transform:uppercase;color:#4d5876;font-weight:600}
 aside .pastille-nav{margin-left:auto;background:var(--terracotta);color:#fff;
-  border-radius:20px;padding:1px 7px;font-size:.68rem;font-weight:700}
-
-main{min-width:0;padding:0 0 60px}
-.barre-haut{position:sticky;top:0;z-index:5;background:rgba(247,245,241,.94);
-  backdrop-filter:blur(8px);border-bottom:1px solid var(--trait);
-  padding:14px 26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.barre-haut h1{font-size:1.05rem;margin:0}
-.barre-haut .compte{margin-left:auto;font-size:.8rem;color:var(--doux)}
-.zone{padding:22px 26px}
-
-/* ------------------------------------------------------------ éléments */
-.tuiles{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
-.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:14px;
-  padding:14px 16px}
-.tuile b{display:block;font-size:1.6rem;font-weight:600;line-height:1.15;
+  border-radius:20px;padding:1px 7px;font-size:.66rem;font-weight:700;
   font-variant-numeric:tabular-nums}
-.tuile span{font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux)}
-.tuile .sous{font-size:.78rem;color:var(--doux);margin-top:3px}
-.tuile.alerte{border-color:var(--terracotta);background:rgba(196,112,79,.07)}
-.tuile.alerte b{color:#9c5233}
-.tuile.bien b{color:#4a6b51}
+aside .pied{padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.06);
+  font-size:.72rem;color:#6d7a9b}
+aside .pied .ligne{display:flex;justify-content:space-between;gap:10px;margin-bottom:7px}
+aside .pied b{color:#b9c1d6;font-weight:600;font-variant-numeric:tabular-nums}
+.jauge{height:4px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden}
+.jauge i{display:block;height:100%;border-radius:4px;
+  background:linear-gradient(90deg,var(--or-sombre),var(--or-clair))}
 
-h2{font-size:1rem;margin:26px 0 10px}
+main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column}
+.barre-haut{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--fond) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--trait);
+  padding:13px 26px;display:flex;align-items:center;gap:14px}
+.barre-haut .ecusson{width:38px;height:38px;border-radius:11px;display:grid;
+  place-items:center;background:var(--creux);color:var(--accent);flex:none}
+.barre-haut .intitule{min-width:0;flex:1}
+.barre-haut h1{font-size:1.08rem;margin:0;line-height:1.3}
+.barre-haut .aide-vue{margin:1px 0 0;font-size:.78rem;color:var(--doux);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.barre-haut .outils{display:flex;align-items:center;gap:8px}
+.qui{display:flex;align-items:center;gap:9px;padding:4px 12px 4px 5px;
+  border:1px solid var(--trait);border-radius:24px;font-size:.8rem;color:var(--doux);
+  max-width:230px}
+.qui .jeton{width:26px;height:26px;border-radius:50%;flex:none;display:grid;
+  place-items:center;background:var(--nuit);color:var(--or-clair);font-size:.68rem;
+  font-weight:700;letter-spacing:.02em}
+.qui em{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.zone{padding:24px 26px;flex:1}
+
+/* --------------------------------------------------------------- boutons */
+.bouton{border:0;border-radius:24px;background:var(--or);color:#1a1400;font-weight:600;
+  cursor:pointer;padding:10px 20px;display:inline-flex;align-items:center;gap:8px;
+  box-shadow:0 1px 2px rgba(154,113,24,.30);transition:background .15s,transform .1s,box-shadow .15s}
+.bouton:hover{background:var(--or-clair);box-shadow:0 3px 12px rgba(154,113,24,.28)}
+.bouton:active{transform:translateY(1px)}
+.bouton.plein{width:100%;justify-content:center;padding:12px}
+.bouton.fin{background:none;border:1px solid var(--trait);color:var(--doux);
+  padding:6px 14px;border-radius:22px;font-weight:500;font-size:.83rem;box-shadow:none}
+.bouton.fin:hover{border-color:var(--or);color:var(--accent);background:none;box-shadow:none}
+.bouton.danger{background:var(--terracotta);color:#fff;box-shadow:none}
+.bouton.danger:hover{background:#b0603f}
+.bouton[disabled]{opacity:.5;cursor:default;pointer-events:none}
+.icobouton{width:34px;height:34px;border-radius:50%;border:1px solid var(--trait);
+  background:none;color:var(--doux);cursor:pointer;display:grid;place-items:center;
+  flex:none;transition:color .15s,border-color .15s,background .15s}
+.icobouton:hover{color:var(--accent);border-color:var(--or);background:var(--creux)}
+.icobouton.tourne .ico{animation:tourner .7s linear infinite}
+@keyframes tourner{to{transform:rotate(360deg)}}
+
+/* ---------------------------------------------------------------- tuiles */
+.tuiles{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(178px,1fr))}
+/* Trois tuiles étirées sur toute la largeur ne disent rien de plus que trois
+   tuiles de taille normale, elles font seulement du vide. */
+.tuiles.serre{grid-template-columns:repeat(auto-fit,minmax(178px,272px));justify-content:start}
+.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+  padding:15px 16px 16px;position:relative;overflow:hidden;
+  transition:border-color .16s,box-shadow .16s,transform .16s}
+.tuile:hover{border-color:var(--trait-fort);box-shadow:var(--ombre);transform:translateY(-1px)}
+.tuile .haut{display:flex;align-items:center;gap:9px;margin-bottom:9px;height:34px}
+.tuile .rond{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+  background:var(--creux);color:var(--accent);flex:none}
+.tuile span{font-size:.71rem;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--doux);font-weight:600;line-height:1.18}
+.tuile b{display:block;font-family:var(--titre-police);font-size:1.72rem;font-weight:600;
+  line-height:1.15;color:var(--titre);font-variant-numeric:tabular-nums;
+  letter-spacing:-.02em;white-space:nowrap}
+/* Un montant en francs CFA tient onze caractères. À la taille des autres
+   chiffres il passait à la ligne et étirait la tuile. */
+.tuile b.long{font-size:1.22rem;letter-spacing:-.01em}
+.tuile .sous{font-size:.78rem;color:var(--doux);margin-top:4px}
+.tuile.alerte{border-color:rgba(196,112,79,.45);background:var(--mauvais-fond)}
+.tuile.alerte .rond{background:rgba(196,112,79,.18);color:var(--mauvais-texte)}
+.tuile.alerte b{color:var(--mauvais-texte)}
+.tuile.bien .rond{background:var(--bien-fond);color:var(--bien-texte)}
+.tuile.bien b{color:var(--bien-texte)}
+
+h2{font-size:1.02rem;margin:28px 0 11px;display:flex;align-items:center;gap:9px}
+h2 .ico{color:var(--accent)}
 h2:first-child{margin-top:0}
 
 /* Le graphique est en SVG, et non en boîtes CSS.
@@ -91,126 +244,366 @@ h2:first-child{margin-top:0}
    contenu dès qu'un réglage se glisse de travers : les barres vides prenaient
    soixante pixels chacune et débordaient la page. Un SVG place ses marques à
    la coordonnée qu'on lui donne, et nulle part ailleurs. */
-.courbe{background:var(--surface);border:1px solid var(--trait);border-radius:14px;
-  padding:12px 14px}
-.courbe svg{display:block;width:100%;height:96px}
-.courbe rect.j{fill:var(--or)}
-.courbe rect.j.vide{fill:rgba(11,20,53,.08)}
+.courbe{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+  padding:16px 16px 12px}
+.courbe svg{display:block;width:100%;height:132px}
+.courbe rect.j{fill:url(#or-vertical)}
+.courbe rect.j.vide{fill:var(--trait)}
 .courbe rect.j:hover{fill:var(--or-sombre)}
-.courbe line.socle{stroke:var(--trait);stroke-width:1}
+.courbe line.socle,.courbe line.grille{stroke:var(--trait);stroke-width:1}
+.courbe line.grille{stroke-dasharray:2 4}
+.legende{display:flex;justify-content:space-between;font-size:.72rem;color:var(--sourd);
+  margin-top:8px;font-variant-numeric:tabular-nums}
 
-.filtres{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
-.filtres input,.filtres select{padding:7px 11px;border:1px solid var(--trait);
-  border-radius:10px;background:var(--surface)}
-.filtres input{min-width:220px}
+/* --------------------------------------------------------------- filtres */
+.filtres{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.filtres input,.filtres select{padding:8px 12px;border:1px solid var(--trait);
+  border-radius:11px;background:var(--surface);transition:border-color .16s,box-shadow .16s}
+.filtres input:focus,.filtres select:focus{border-color:var(--or);outline:0;
+  box-shadow:0 0 0 3px rgba(212,162,63,.14)}
+.filtres input{min-width:230px}
+.filtres .cherche{position:relative;display:flex;align-items:center}
+.filtres .cherche .ico{position:absolute;left:11px;color:var(--sourd);pointer-events:none}
+.filtres .cherche input{padding-left:35px}
+.filtres label{display:inline-flex;align-items:center;gap:7px;font-size:.83rem;
+  color:var(--doux);cursor:pointer}
 
+/* -------------------------------------------------------------- tableaux */
 .tableau{overflow-x:auto;background:var(--surface);border:1px solid var(--trait);
-  border-radius:14px}
+  border-radius:var(--rayon);box-shadow:var(--ombre)}
 table{width:100%;border-collapse:collapse;font-size:.86rem}
-th,td{padding:9px 13px;text-align:left;border-bottom:1px solid var(--trait);white-space:nowrap}
-th{font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--doux);font-weight:600}
+th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--trait);white-space:nowrap}
+th{font-size:.69rem;letter-spacing:.07em;text-transform:uppercase;color:var(--doux);
+  font-weight:600;background:var(--surface-2)}
 tr:last-child td{border-bottom:0}
-tbody tr.cliquable{cursor:pointer}
+tbody tr.cliquable{cursor:pointer;transition:background .12s}
+tbody tr.cliquable td:first-child{position:relative}
 tbody tr.cliquable:hover{background:var(--creux)}
+tbody tr.cliquable:hover td:first-child::before{content:"";position:absolute;left:0;
+  top:0;bottom:0;width:3px;background:var(--or)}
 td.nombre{text-align:right;font-variant-numeric:tabular-nums}
 td.large{white-space:normal;max-width:420px}
-.pastille{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.73rem;font-weight:600}
-.p-ok{background:rgba(124,154,130,.20);color:#3f6047}
-.p-attente{background:rgba(212,162,63,.20);color:#7d5a12}
-.p-mauvais{background:rgba(196,112,79,.18);color:#8e4a2e}
+
+.pastille{display:inline-flex;align-items:center;gap:6px;padding:2px 10px 2px 8px;
+  border-radius:20px;font-size:.73rem;font-weight:600;line-height:1.5}
+.pastille::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;
+  flex:none;opacity:.85}
+.p-ok{background:var(--bien-fond);color:var(--bien-texte)}
+.p-attente{background:var(--attente-fond);color:var(--attente-texte)}
+.p-mauvais{background:var(--mauvais-fond);color:var(--mauvais-texte)}
 .p-neutre{background:var(--creux);color:var(--doux)}
-.vide{padding:30px;text-align:center;color:var(--doux)}
-.pages{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:.84rem;
-  color:var(--doux)}
-.pages button{background:var(--surface);border:1px solid var(--trait);border-radius:18px;
-  padding:5px 14px;cursor:pointer}
+
+.vide{padding:44px 24px;text-align:center;color:var(--doux)}
+.vide .ico{color:var(--sourd);margin-bottom:10px;opacity:.65}
+.vide p{margin:0;font-size:.88rem}
+
+.pages{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82rem;
+  color:var(--doux);font-variant-numeric:tabular-nums}
+.pages button{background:var(--surface);border:1px solid var(--trait);border-radius:20px;
+  padding:6px 13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .pages button:disabled{opacity:.4;cursor:default}
-.pages button:not(:disabled):hover{border-color:var(--or);color:var(--or-sombre)}
-.contenu{background:var(--creux);border-radius:12px;padding:14px 16px;margin-bottom:12px}
-.contenu h4{margin:0 0 8px;font-size:.9rem}
-.contenu .q{border-bottom:1px solid var(--trait);padding:9px 0}
-.contenu .q:last-child{border-bottom:0}
-.contenu .q b{display:block;font-weight:600;margin-bottom:4px}
-.contenu .bonne{color:#3f6047;font-weight:600}
-.contenu .just{font-size:.82rem;color:var(--doux);margin-top:4px;font-style:italic}
-.contenu pre{margin:0;white-space:pre-wrap;font-family:var(--mono);font-size:.78rem;
-  line-height:1.5;color:var(--doux)}
+.pages button:not(:disabled):hover{border-color:var(--or);color:var(--accent)}
 
-.cartes{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.carte{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:16px}
-.carte.on{border-color:var(--or);background:rgba(212,162,63,.06)}
-.carte h3{margin:0 0 3px;font-size:.95rem}
-.carte p.aide{margin:0 0 12px;font-size:.82rem;color:var(--doux)}
-.champ{display:flex;gap:9px;align-items:center;margin-bottom:8px}
-.champ label{font-size:.79rem;color:var(--doux);min-width:92px}
-.champ input,.champ select,.champ textarea{flex:1;min-width:0;padding:7px 10px;
-  border:1px solid var(--trait);border-radius:9px;background:var(--surface)}
-.champ textarea{min-height:130px;font-family:var(--mono);font-size:.78rem;line-height:1.5}
+/* ---------------------------------------------------------------- cartes */
+.cartes{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.carte{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+  padding:18px;box-shadow:var(--ombre)}
+/* Une carte seule dans sa grille s'étire sur toute la largeur, et ses champs
+   deviennent des rubans de quinze centimètres pour saisir un raccourci. */
+.carte.seule{max-width:640px}
+.carte.on{border-color:var(--or);background:linear-gradient(180deg,rgba(212,162,63,.09),transparent 60%)}
+.carte h3{margin:0 0 3px;font-size:.98rem;display:flex;align-items:center;gap:8px}
+.carte h3 .ico{color:var(--accent)}
+.carte p.aide{margin:0 0 14px;font-size:.82rem;color:var(--doux);line-height:1.6}
+.champ{display:flex;gap:10px;align-items:center;margin-bottom:9px}
+.champ label{font-size:.78rem;color:var(--doux);min-width:96px}
+.champ input,.champ select,.champ textarea{flex:1;min-width:0;padding:8px 11px;
+  border:1px solid var(--trait);border-radius:10px;background:var(--surface);
+  transition:border-color .16s,box-shadow .16s}
+.champ input:focus,.champ select:focus,.champ textarea:focus{border-color:var(--or);
+  outline:0;box-shadow:0 0 0 3px rgba(212,162,63,.14)}
+.champ textarea{min-height:138px;font-family:var(--mono);font-size:.78rem;line-height:1.55}
+/* Le champ de dépôt est un libellé déguisé : l'entrée native est masquée, et
+   c'est lui qui porte le nom du fichier choisi. Le bouton natif s'affiche dans
+   la langue du navigateur, ce qui mettait un « Choose File » anglais au milieu
+   d'une carte française. */
+.champ .depot{flex:1;min-width:0;display:flex;align-items:center;gap:9px;padding:8px 12px;
+  border:1px dashed var(--trait-fort);border-radius:10px;background:var(--surface);
+  cursor:pointer;font-size:.85rem;color:var(--doux);transition:border-color .16s,color .16s}
+.champ .depot:hover{border-color:var(--or);color:var(--accent)}
+.champ .depot .ico{flex:none}
+.champ .depot span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.champ .depot input[type=file]{position:absolute;width:1px;height:1px;opacity:0;
+  pointer-events:none}
 
-.paire{display:flex;justify-content:space-between;gap:16px;padding:7px 0;
+.paire{display:flex;justify-content:space-between;gap:16px;padding:8px 0;
   border-bottom:1px solid var(--trait);font-size:.87rem}
 .paire:last-child{border-bottom:0}
 .paire span{color:var(--doux)}
-.paire b{font-weight:600;text-align:right}
+/* Un nom de fichier tient sur cinquante caractères et débordait la colonne :
+   la valeur revient à la ligne plutôt que de se faire couper. */
+.paire b{font-weight:600;text-align:right;font-variant-numeric:tabular-nums;
+  min-width:0;overflow-wrap:anywhere}
+.paire b code{white-space:normal;word-break:break-all}
 
-dialog{border:0;border-radius:18px;padding:0;max-width:min(900px,94vw);width:100%;
-  background:var(--fond);color:var(--texte);box-shadow:0 30px 80px rgba(5,13,34,.35)}
-dialog::backdrop{background:rgba(5,13,34,.55)}
-dialog .tete{display:flex;align-items:center;gap:14px;padding:16px 22px;
+.contenu{background:var(--creux);border:1px solid var(--trait);border-radius:var(--rayon);
+  padding:16px 18px;margin-bottom:12px}
+.contenu h4{margin:0 0 10px;font-size:.92rem;display:flex;align-items:center;gap:8px}
+.contenu h4 .ico{color:var(--accent)}
+.contenu .q{border-bottom:1px solid var(--trait);padding:10px 0}
+.contenu .q:last-child{border-bottom:0}
+.contenu .q b{display:block;font-weight:600;margin-bottom:5px}
+.contenu .bonne{color:var(--bien-texte);font-weight:600}
+.contenu .just{font-size:.82rem;color:var(--doux);margin-top:5px;font-style:italic}
+.contenu pre{margin:0;white-space:pre-wrap;font-family:var(--mono);font-size:.78rem;
+  line-height:1.55;color:var(--doux)}
+
+/* ------------------------------------------------------------- squelette */
+/* Une vue qui charge affiche sa forme au lieu de rien. Sur une liste de
+   quarante lignes tirée d'un serveur lointain, le vide donne l'impression que
+   la console a lâché. */
+.squelette{display:grid;gap:13px}
+.squelette .bloc{background:var(--surface);border:1px solid var(--trait);
+  border-radius:var(--rayon);height:76px;position:relative;overflow:hidden}
+.squelette .bloc.haut{height:220px}
+.squelette .bloc::after{content:"";position:absolute;inset:0;transform:translateX(-100%);
+  background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--creux) 90%,transparent),transparent);
+  animation:glisser 1.25s infinite}
+.squelette .rang{display:grid;gap:13px;grid-template-columns:repeat(auto-fit,minmax(178px,1fr))}
+@keyframes glisser{to{transform:translateX(100%)}}
+
+/* ----------------------------------------------------------------- volet */
+dialog{border:0;border-radius:var(--rayon-l);padding:0;max-width:min(920px,94vw);
+  width:100%;background:var(--fond);color:var(--texte);box-shadow:var(--ombre-haute)}
+dialog::backdrop{background:var(--voile);backdrop-filter:blur(3px)}
+dialog .tete{display:flex;align-items:center;gap:13px;padding:16px 20px;
   background:var(--nuit);color:#f4f1e8}
+dialog .tete .ecusson{width:34px;height:34px;border-radius:10px;display:grid;
+  place-items:center;background:rgba(212,162,63,.16);color:var(--or-clair);flex:none}
 dialog .tete h3{margin:0;font-size:1rem;flex:1;min-width:0;overflow:hidden;
-  text-overflow:ellipsis;white-space:nowrap}
+  color:#f4f1e8;text-overflow:ellipsis;white-space:nowrap}
 dialog .tete button{background:none;border:1px solid #2b3a5c;color:#b9c1d6;
-  border-radius:20px;padding:4px 12px;cursor:pointer;font-size:.82rem}
+  border-radius:50%;width:32px;height:32px;cursor:pointer;display:grid;place-items:center;
+  transition:color .15s,border-color .15s}
+dialog .tete button:hover{color:var(--or-clair);border-color:var(--or-sombre)}
 dialog .corps{padding:20px 22px;max-height:72vh;overflow-y:auto}
+
+/* --------------------------------------------------------------- annonce */
+#annonces{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;
+  flex-direction:column;gap:9px;pointer-events:none}
+.annonce{display:flex;align-items:center;gap:10px;background:var(--surface);
+  border:1px solid var(--trait);border-left:3px solid var(--or);
+  border-radius:12px;padding:11px 16px;box-shadow:var(--ombre-haute);font-size:.86rem;
+  max-width:340px;animation:monter .22s ease both}
+.annonce.mauvais{border-left-color:var(--terracotta)}
+.annonce.mauvais .ico{color:var(--terracotta)}
+.annonce.bien .ico{color:var(--sauge)}
+@keyframes monter{from{opacity:0;transform:translateY(8px)}}
+
 code{font-family:var(--mono);font-size:.8em}
-.note{font-size:.82rem;color:var(--doux);margin:10px 0 0}
-@media (max-width:840px){
+.note{font-size:.81rem;color:var(--doux);margin:11px 0 0;line-height:1.6}
+.erreur{color:var(--terracotta);font-size:.85rem;margin:10px 0 0;min-height:1.2em;
+  display:flex;align-items:center;gap:7px}
+.erreur:empty{display:none}
+
+/* ------------------------------------------------------------ étroitesse */
+@media (max-width:980px){
+  #connexion.ouvert{grid-template-columns:1fr}
+  .enseigne{display:none}
+}
+@media (max-width:860px){
   #console.ouvert{grid-template-columns:1fr}
   aside{position:static;height:auto;flex-direction:row;align-items:center;
-    overflow-x:auto;padding:10px 0}
-  aside nav{flex-direction:row}
+    overflow-x:auto;padding:0;border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}
+  aside .logo{border-bottom:0;padding:12px 16px}
+  aside .logo span{display:none}
+  aside nav{flex-direction:row;padding:8px 10px}
   aside nav .groupe,aside .pied{display:none}
-  aside nav button{border-left:0;border-bottom:3px solid transparent;white-space:nowrap}
-  aside nav button[aria-current="true"]{border-left-color:transparent;border-bottom-color:var(--or)}
+  aside nav button{white-space:nowrap}
+  aside nav button[aria-current="true"]::before{display:none}
+  .barre-haut{padding:12px 16px}
+  .barre-haut .aide-vue,.qui em{display:none}
+  .zone{padding:18px 16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
 </style>
 </head>
 <body>
 
+<!-- Les icônes, définies une fois et appelées partout. Un jeu de traits de
+     1,6 pixel sur une grille de 24, qui prend la couleur du texte autour : une
+     console se lit d'abord par ses formes, et onze libellés alignés se
+     ressemblent tous quand on cherche vite. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<linearGradient id="or-vertical" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#e8c070"></stop><stop offset="100%" stop-color="#d4a23f"></stop>
+</linearGradient>
+<symbol id="i-tableau" viewBox="0 0 24 24"><path d="M4 19a8 8 0 1 1 16 0"></path><path d="M12 15l4-4"></path><circle cx="12" cy="19" r="1.4"></circle></symbol>
+<symbol id="i-membres" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"></circle><path d="M3.5 19a5.6 5.6 0 0 1 11 0"></path><path d="M16 5.4a3.2 3.2 0 0 1 0 5.6M17.5 14.2A5.6 5.6 0 0 1 20.5 19"></path></symbol>
+<symbol id="i-paiement" viewBox="0 0 24 24"><rect x="2.8" y="5.5" width="18.4" height="13" rx="2.4"></rect><path d="M2.8 10h18.4M6.5 14.6h3.2"></path></symbol>
+<symbol id="i-orphelin" viewBox="0 0 24 24"><path d="M9.5 14.5 7 17a3.6 3.6 0 0 1-5-5l2.5-2.5M14.5 9.5 17 7a3.6 3.6 0 0 1 5 5l-2.5 2.5"></path><path d="m4 4 2 2M20 20l-2-2M12 3v2M3 12h2"></path></symbol>
+<symbol id="i-abonnement" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-14.7 5.8M3.5 12a8.5 8.5 0 0 1 14.7-5.8"></path><path d="M18.5 2.8v3.6h-3.6M5.5 21.2v-3.6h3.6"></path></symbol>
+<symbol id="i-corpus" viewBox="0 0 24 24"><path d="M4 5.2A1.4 1.4 0 0 1 5.4 3.8h3.2A1.4 1.4 0 0 1 10 5.2v15H4z"></path><path d="M10 5.2a1.4 1.4 0 0 1 1.4-1.4h3.2A1.4 1.4 0 0 1 16 5.2v15h-6z"></path><path d="m16.6 6.4 2.2-.6 2.4 12.6-2.6.7"></path></symbol>
+<symbol id="i-depot" viewBox="0 0 24 24"><path d="M12 16V4.5M8.4 8.1 12 4.5l3.6 3.6"></path><path d="M4 15v3.4A1.6 1.6 0 0 0 5.6 20h12.8a1.6 1.6 0 0 0 1.6-1.6V15"></path></symbol>
+<symbol id="i-poles" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"></circle><path d="m15.4 8.6-1.9 4.9-4.9 1.9 1.9-4.9z"></path></symbol>
+<symbol id="i-message" viewBox="0 0 24 24"><rect x="2.8" y="5" width="18.4" height="14" rx="2.4"></rect><path d="m3.6 7 7.5 5.4a1.6 1.6 0 0 0 1.8 0L20.4 7"></path></symbol>
+<symbol id="i-envoi" viewBox="0 0 24 24"><path d="M20.8 3.2 10.6 13.4M20.8 3.2 14.4 21l-3.8-7.6L3 9.6z"></path></symbol>
+<symbol id="i-reglage" viewBox="0 0 24 24"><path d="M4 7h7M15 7h5M4 17h3M11 17h9"></path><circle cx="13" cy="7" r="2.2"></circle><circle cx="9" cy="17" r="2.2"></circle></symbol>
+<symbol id="i-loupe" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.6"></circle><path d="m15.6 15.6 4.4 4.4"></path></symbol>
+<symbol id="i-relance" viewBox="0 0 24 24"><path d="M20.4 12a8.4 8.4 0 1 1-2.6-6.1"></path><path d="M20.6 3.4v4.8h-4.8"></path></symbol>
+<symbol id="i-sortie" viewBox="0 0 24 24"><path d="M9.5 20H5.6A1.6 1.6 0 0 1 4 18.4V5.6A1.6 1.6 0 0 1 5.6 4h3.9"></path><path d="M15.4 15.6 20 12l-4.6-3.6M20 12H9.6"></path></symbol>
+<symbol id="i-fermer" viewBox="0 0 24 24"><path d="m6.4 6.4 11.2 11.2M17.6 6.4 6.4 17.6"></path></symbol>
+<symbol id="i-gauche" viewBox="0 0 24 24"><path d="m14.4 5.6-6.4 6.4 6.4 6.4"></path></symbol>
+<symbol id="i-droite" viewBox="0 0 24 24"><path d="m9.6 5.6 6.4 6.4-6.4 6.4"></path></symbol>
+<symbol id="i-oui" viewBox="0 0 24 24"><path d="m4.6 12.6 4.8 4.8L19.4 7.4"></path></symbol>
+<symbol id="i-alerte" viewBox="0 0 24 24"><path d="M10.6 4.2 2.8 17.6a1.6 1.6 0 0 0 1.4 2.4h15.6a1.6 1.6 0 0 0 1.4-2.4L13.4 4.2a1.6 1.6 0 0 0-2.8 0z"></path><path d="M12 9.4v4M12 17h.01"></path></symbol>
+<symbol id="i-horloge" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"></circle><path d="M12 7.2V12l3.2 1.9"></path></symbol>
+<symbol id="i-hausse" viewBox="0 0 24 24"><path d="m3.4 16.6 5.4-5.4 3.6 3.6 8.2-8.2"></path><path d="M15.6 6.6h5v5"></path></symbol>
+<symbol id="i-pdf" viewBox="0 0 24 24"><path d="M13.4 3.2H7a1.8 1.8 0 0 0-1.8 1.8v14a1.8 1.8 0 0 0 1.8 1.8h10a1.8 1.8 0 0 0 1.8-1.8V8.6z"></path><path d="M13.4 3.2v5.4h5.4M8.8 13.4h6.4M8.8 16.6h4.2"></path></symbol>
+<symbol id="i-quiz" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"></circle><path d="M9.6 9.6a2.5 2.5 0 1 1 3.3 2.4c-.6.2-.9.8-.9 1.4v.5M12 16.8h.01"></path></symbol>
+<symbol id="i-citation" viewBox="0 0 24 24"><path d="M9.4 6.4C6.6 7.6 5 10 5 12.9c0 2.4 1.4 4 3.4 4 1.8 0 3.1-1.3 3.1-3 0-1.7-1.2-2.9-2.8-2.9-.3 0-.7 0-1 .2.4-1.6 1.4-2.8 2.9-3.6z"></path><path d="M19.4 6.4C16.6 7.6 15 10 15 12.9c0 2.4 1.4 4 3.4 4 1.8 0 3.1-1.3 3.1-3 0-1.7-1.2-2.9-2.8-2.9-.3 0-.7 0-1 .2.4-1.6 1.4-2.8 2.9-3.6z"></path></symbol>
+<symbol id="i-oeil" viewBox="0 0 24 24"><path d="M2 12s3.6-6.4 10-6.4S22 12 22 12s-3.6 6.4-10 6.4S2 12 2 12z"></path><circle cx="12" cy="12" r="2.8"></circle></symbol>
+<symbol id="i-poubelle" viewBox="0 0 24 24"><path d="M4.4 6.6h15.2M9.4 6.6V4.8a1.4 1.4 0 0 1 1.4-1.4h2.4a1.4 1.4 0 0 1 1.4 1.4v1.8"></path><path d="M6.6 6.6 7.6 19a1.6 1.6 0 0 0 1.6 1.5h5.6a1.6 1.6 0 0 0 1.6-1.5l1-12.4"></path></symbol>
+<symbol id="i-lancer" viewBox="0 0 24 24"><path d="M8 5.4 18.6 12 8 18.6z"></path></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></symbol>
+<symbol id="i-soleil" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2.6v2.2M12 19.2v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.6 12h2.2M19.2 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"></path></symbol>
+<symbol id="i-lune" viewBox="0 0 24 24"><path d="M20.4 14.2A8.6 8.6 0 0 1 9.8 3.6a8.6 8.6 0 1 0 10.6 10.6z"></path></symbol>
+<symbol id="i-personne" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"></circle><path d="M5 19.4a7 7 0 0 1 14 0"></path></symbol>
+<symbol id="i-piece" viewBox="0 0 24 24"><ellipse cx="12" cy="6.6" rx="7.4" ry="3.2"></ellipse><path d="M4.6 6.6v10.8c0 1.8 3.3 3.2 7.4 3.2s7.4-1.4 7.4-3.2V6.6"></path><path d="M4.6 12c0 1.8 3.3 3.2 7.4 3.2s7.4-1.4 7.4-3.2"></path></symbol>
+<symbol id="i-graphe" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4.6M16 20v-7.4M21 20H3"></path></symbol>
+<symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="5.8" rx="7.6" ry="2.8"></ellipse><path d="M4.4 5.8v12.4c0 1.5 3.4 2.8 7.6 2.8s7.6-1.3 7.6-2.8V5.8"></path><path d="M4.4 12c0 1.5 3.4 2.8 7.6 2.8s7.6-1.3 7.6-2.8"></path></symbol>
+<symbol id="i-etincelle" viewBox="0 0 24 24"><path d="m12 3.2 1.9 5.2 5.2 1.9-5.2 1.9-1.9 5.2-1.9-5.2-5.2-1.9 5.2-1.9z"></path><path d="M18.6 16.4 19.4 18.6l2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M9 6.4h11M9 12h11M9 17.6h11"></path><circle cx="4.6" cy="6.4" r="1.5"></circle><circle cx="4.6" cy="12" r="1.5"></circle><circle cx="4.6" cy="17.6" r="1.5"></circle></symbol>
+<symbol id="i-calendrier" viewBox="0 0 24 24"><rect x="3.4" y="5.2" width="17.2" height="15.4" rx="2.2"></rect><path d="M3.4 10h17.2M8.2 3.4v3.4M15.8 3.4v3.4"></path></symbol>
+<symbol id="i-crayon" viewBox="0 0 24 24"><path d="M16.4 3.9a2.1 2.1 0 0 1 3 3L9 17.3l-4 1 1-4z"></path><path d="m14.6 5.7 3.7 3.7"></path></symbol>
+<symbol id="i-bouclier" viewBox="0 0 24 24"><path d="M12 3.2 4.8 6v5.6c0 4.4 3 8.1 7.2 9.2 4.2-1.1 7.2-4.8 7.2-9.2V6z"></path><path d="m9.2 11.8 2 2 3.6-3.6"></path></symbol>
+<symbol id="i-livre" viewBox="0 0 24 24"><path d="M12 6.6C10.4 5 8.4 4.2 5 4.2v13c3.4 0 5.4.8 7 2.4 1.6-1.6 3.6-2.4 7-2.4v-13c-3.4 0-5.4.8-7 2.4z"></path><path d="M12 6.6v13"></path></symbol>
+<symbol id="i-marque" viewBox="0 0 24 24"><path d="M3.6 20.4 12 3.6l8.4 16.8" stroke-width="1.9"></path><path d="M7.6 15.4h8.8" stroke-width="1.9"></path></symbol>
+</defs></svg>
+
 <div id="connexion">
-  <div class="logo">ASCENDA</div>
-  <h1>Console d'exploitation</h1>
-  <p>Réservée aux comptes qui portent le droit d'administration.</p>
-  <input id="email" type="email" placeholder="Adresse électronique" autocomplete="username">
-  <input id="mdp" type="password" placeholder="Mot de passe" autocomplete="current-password">
-  <button class="bouton plein" id="entrer">Entrer</button>
-  <p class="erreur" id="erreur"></p>
+  <div class="enseigne">
+    <div class="marque">
+      <svg class="ico gd" viewBox="0 0 24 24" fill="none" stroke="#e8c070" stroke-width="1.6"
+           stroke-linecap="round" stroke-linejoin="round"><use href="#i-marque"></use></svg>
+      <span>ASCENDA</span>
+    </div>
+    <div class="mot">
+      <h2>La lecture guidée, tenue de bout en bout.</h2>
+      <p>Cette console est le poste de conduite : les comptes, l'argent, le corpus
+         et les trois interrupteurs qui décident de ce que voient les lecteurs.</p>
+    </div>
+    <div class="socle">
+      <div><b>24 h</b>de rapprochement des paiements</div>
+      <div><b>Un clic</b>pour figer l'application en maintenance</div>
+    </div>
+  </div>
+  <div class="guichet">
+    <div class="boite">
+      <h1>Console d'exploitation</h1>
+      <p class="pre">Réservée aux comptes qui portent le droit d'administration.</p>
+      <label for="email">Adresse électronique</label>
+      <div class="saisie">
+        <svg class="ico pt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round"><use href="#i-message"></use></svg>
+        <input id="email" type="email" placeholder="vous@ascenda-books.online" autocomplete="username">
+      </div>
+      <label for="mdp">Mot de passe</label>
+      <div class="saisie">
+        <svg class="ico pt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+             stroke-linecap="round" stroke-linejoin="round"><use href="#i-bouclier"></use></svg>
+        <input id="mdp" type="password" placeholder="Mot de passe" autocomplete="current-password">
+      </div>
+      <button class="bouton plein" id="entrer">Entrer</button>
+      <p class="erreur" id="erreur"></p>
+    </div>
+  </div>
 </div>
 
 <div id="console">
   <aside>
-    <div class="logo">ASCENDA</div>
+    <div class="logo">
+      <svg class="ico gd" viewBox="0 0 24 24" fill="none" stroke="#d4a23f" stroke-width="1.6"
+           stroke-linecap="round" stroke-linejoin="round"><use href="#i-marque"></use></svg>
+      <span>ASCENDA</span>
+    </div>
     <nav id="menu"></nav>
     <div class="pied" id="pied-barre"></div>
   </aside>
   <main>
     <div class="barre-haut">
-      <h1 id="titre-zone">Vue d'ensemble</h1>
-      <button class="bouton fin" id="rafraichir">Rafraîchir</button>
-      <span class="compte" id="qui"></span>
-      <button class="bouton fin" id="sortir">Sortir</button>
+      <div class="ecusson" id="ecusson-zone"></div>
+      <div class="intitule">
+        <h1 id="titre-zone">Vue d'ensemble</h1>
+        <p class="aide-vue" id="aide-zone"></p>
+      </div>
+      <div class="outils">
+        <button class="icobouton" id="rafraichir" title="Rafraîchir" aria-label="Rafraîchir"></button>
+        <button class="icobouton" id="theme" title="Changer de thème" aria-label="Changer de thème"></button>
+        <span class="qui" id="qui"></span>
+        <button class="icobouton" id="sortir" title="Sortir" aria-label="Sortir"></button>
+      </div>
     </div>
     <div class="zone" id="zone"></div>
   </main>
 </div>
 
-<dialog id="volet"><div class="tete"><h3 id="volet-titre"></h3>
-  <button id="volet-fermer">Fermer</button></div>
-  <div class="corps" id="volet-corps"></div></dialog>
+<dialog id="volet">
+  <div class="tete">
+    <div class="ecusson" id="volet-ecusson"></div>
+    <h3 id="volet-titre"></h3>
+    <button id="volet-fermer" aria-label="Fermer"></button>
+  </div>
+  <div class="corps" id="volet-corps"></div>
+</dialog>
+
+<div id="annonces" aria-live="polite"></div>
 
 <script>
 const $ = (id) => document.getElementById(id);
+
+/** Une icône du jeu défini en tête de page. Elle prend la couleur du texte
+ *  autour, ce qui évite d'avoir à la redéclarer pour chaque état. */
+const ico = (nom, classe = "") =>
+  `<svg class="ico ${classe}" viewBox="0 0 24 24" fill="none" stroke="currentColor"` +
+  ` stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">` +
+  `<use href="#i-${nom}"></use></svg>`;
+
+/* Le thème. Trois états : clair choisi, sombre choisi, et le réglage système
+   qui ne pose aucun attribut. La console s'ouvre aussi à deux heures du matin
+   quand un paiement ne passe pas. */
+function poserTheme(t) {
+  if (t) document.documentElement.setAttribute("data-theme", t);
+  else document.documentElement.removeAttribute("data-theme");
+  const sombre = t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches);
+  $("theme").innerHTML = ico(sombre ? "soleil" : "lune");
+  $("theme").title = sombre ? "Passer en clair" : "Passer en sombre";
+}
+try { poserTheme(localStorage.getItem("ascenda_admin_theme")); } catch (_) { poserTheme(null); }
+$("theme").onclick = () => {
+  const sombre = document.documentElement.getAttribute("data-theme") === "dark"
+    || (!document.documentElement.hasAttribute("data-theme")
+        && matchMedia("(prefers-color-scheme: dark)").matches);
+  const suite = sombre ? "light" : "dark";
+  poserTheme(suite);
+  try { localStorage.setItem("ascenda_admin_theme", suite); } catch (_) {}
+};
+
+$("rafraichir").innerHTML = ico("relance");
+$("sortir").innerHTML = ico("sortie");
+$("volet-fermer").innerHTML = ico("fermer", "pt");
+
+/** Une annonce brève, en bas à droite. Une action qui réussit sans rien dire
+ *  laisse douter qu'elle ait eu lieu, et on la refait. */
+function annoncer(texte, genre = "bien") {
+  const d = document.createElement("div");
+  d.className = "annonce " + genre;
+  d.innerHTML = ico(genre === "mauvais" ? "alerte" : "oui") + `<span>${ech(texte)}</span>`;
+  $("annonces").appendChild(d);
+  setTimeout(() => d.remove(), 3800);
+}
 let jeton = null, renouveau = null, moi = null, resume = null;
 try {
   jeton = localStorage.getItem("ascenda_admin");
@@ -267,12 +660,12 @@ function sortir() {
     localStorage.removeItem("ascenda_admin_r");
   } catch (_) {}
   $("console").classList.remove("ouvert");
-  $("connexion").style.display = "";
+  $("connexion").classList.add("ouvert");
 }
 $("sortir").onclick = sortir;
 
 $("entrer").onclick = async () => {
-  $("erreur").textContent = "";
+  $("erreur").innerHTML = "";
   try {
     const r = await fetch("/v1/auth/connexion", { method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -283,9 +676,9 @@ $("entrer").onclick = async () => {
     poserJetons(d.jetons || d);
     await demarrer();
   } catch (e) {
-    $("erreur").textContent = e.message === "identifiants"
+    $("erreur").innerHTML = ico("alerte", "pt") + "<span>" + (e.message === "identifiants"
       ? "Adresse ou mot de passe incorrect."
-      : "Connexion impossible. Le service répond-il ?";
+      : "Connexion impossible. Le service répond-il ?") + "</span>";
   }
 };
 $("mdp").addEventListener("keydown", (e) => { if (e.key === "Enter") $("entrer").click(); });
@@ -321,8 +714,21 @@ function cellule(v, f) {
   return ech(v);
 }
 
+/** Une tuile de chiffre : icône, libellé, valeur, et la ligne de contexte qui
+ *  dit ce que le chiffre vaut. `c` la teinte en alerte ou en bien. */
+const tuile = (t) =>
+  `<div class="tuile ${t.c || ""}">
+     <div class="haut"><span class="rond">${ico(t.i || "graphe", "pt")}</span><span>${t.l}</span></div>
+     <b class="${String(t.v).length > 9 ? "long" : ""}">${t.v}</b>` +
+  (t.s ? `<div class="sous">${t.s}</div>` : "") + `</div>`;
+
+/** L'état vide. Une phrase seule au milieu d'un cadre blanc se lit comme une
+ *  panne ; une icône dit que la vue a bien répondu, et qu'elle est vide. */
+const rienAVoir = (texte, icone = "loupe") =>
+  `<div class="tableau"><div class="vide">${ico(icone, "xl")}<p>${ech(texte)}</p></div></div>`;
+
 function table(colonnes, lignes, surClic) {
-  if (!lignes.length) return `<div class="tableau"><div class="vide">Rien à afficher.</div></div>`;
+  if (!lignes.length) return rienAVoir("Rien à afficher.");
   const corps = lignes.map((l, i) =>
     `<tr class="${surClic ? "cliquable" : ""}" data-i="${i}">` +
     colonnes.map((c) => {
@@ -346,9 +752,9 @@ function brancherClics(lignes, surClic) {
 function pagination(env, allerA) {
   if (!env || env.pages <= 1) return "";
   return `<div class="pages">
-    <button ${env.page <= 1 ? "disabled" : ""} data-page="${env.page - 1}">Précédente</button>
+    <button ${env.page <= 1 ? "disabled" : ""} data-page="${env.page - 1}">${ico("gauche", "pt")}Précédente</button>
     <span>page ${env.page} sur ${env.pages} · ${nb(env.total)} au total</span>
-    <button ${env.page >= env.pages ? "disabled" : ""} data-page="${env.page + 1}">Suivante</button>
+    <button ${env.page >= env.pages ? "disabled" : ""} data-page="${env.page + 1}">Suivante${ico("droite", "pt")}</button>
   </div>`;
 }
 
@@ -359,7 +765,8 @@ function brancherPages(allerA) {
 }
 
 /* ----------------------------------------------------------------- volet */
-function ouvrirVolet(titre, html) {
+function ouvrirVolet(titre, html, icone = "oeil") {
+  $("volet-ecusson").innerHTML = ico(icone);
   $("volet-titre").textContent = titre;
   $("volet-corps").innerHTML = html;
   $("volet").showModal();
@@ -372,20 +779,26 @@ const paires = (obj) => Object.entries(obj)
 const ZONES = [];
 const zone = (z) => { ZONES.push(z); return z; };
 
-zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble", async rendre() {
+zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble",
+  ico: "tableau", aide: "Les chiffres du matin : comptes, argent, corpus, et ce qui demande qu'on s'en occupe.", async rendre() {
   const d = await api("/v1/admin/tableau-de-bord?jours=30");
   resume = d;
   const orph = d.paiements.orphelins || 0, ech2 = d.courriels.echecs || 0;
   const tuiles = [
-    { v: nb(d.comptes.total), l: "comptes", s: "+" + nb(d.comptes.aujourdhui) + " aujourd'hui" },
-    { v: nb(d.actifs.semaine), l: "actifs 7 jours", s: nb(d.actifs.mois) + " sur 30 jours" },
-    { v: nb(d.comptes.abonnes), l: "abonnés", s: nb(d.abonnements.actifs) + " abonnements actifs" },
-    { v: xaf(d.paiements.encaisse), l: "encaissé", s: nb(d.paiements.valides) + " paiements" },
-    { v: nb(d.paiements.en_attente), l: "en attente", s: nb(d.paiements.rejetes) + " rejetés" },
-    { v: nb(d.abonnements.bientot_echus), l: "échéance sous 7 j" },
-    { v: nb(orph), l: "webhooks orphelins", c: orph ? "alerte" : "bien",
+    { v: nb(d.comptes.total), l: "comptes", i: "membres",
+      s: "+" + nb(d.comptes.aujourdhui) + " aujourd'hui" },
+    { v: nb(d.actifs.semaine), l: "actifs 7 jours", i: "hausse",
+      s: nb(d.actifs.mois) + " sur 30 jours" },
+    { v: nb(d.comptes.abonnes), l: "abonnés", i: "bouclier",
+      s: nb(d.abonnements.actifs) + " abonnements actifs" },
+    { v: xaf(d.paiements.encaisse), l: "encaissé", i: "piece",
+      s: nb(d.paiements.valides) + " paiements" },
+    { v: nb(d.paiements.en_attente), l: "en attente", i: "horloge",
+      s: nb(d.paiements.rejetes) + " rejetés" },
+    { v: nb(d.abonnements.bientot_echus), l: "échéance 7 jours", i: "calendrier" },
+    { v: nb(orph), l: "webhooks orphelins", i: "orphelin", c: orph ? "alerte" : "bien",
       s: orph ? "à examiner" : "rien en souffrance" },
-    { v: nb(ech2), l: "courriels en échec", c: ech2 ? "alerte" : "bien",
+    { v: nb(ech2), l: "courriels en échec", i: "envoi", c: ech2 ? "alerte" : "bien",
       s: nb(d.courriels.simules) + " simulés" },
   ];
   const max = Math.max(1, ...d.courbe.map((p) => p.comptes));
@@ -399,25 +812,30 @@ zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble", async rendre
       ` y="${(100 - h).toFixed(2)}" width="${large.toFixed(2)}" height="${h.toFixed(2)}" rx="0.4">` +
       `<title>${jour(p.jour)} : ${p.comptes} compte(s), ${p.paiements} paiement(s)</title></rect>`;
   }).join("");
-  return `<div class="tuiles">` + tuiles.map((t) =>
-      `<div class="tuile ${t.c || ""}"><b>${t.v}</b><span>${t.l}</span>` +
-      (t.s ? `<div class="sous">${t.s}</div>` : "") + `</div>`).join("") + `</div>
-    <h2>Inscriptions, jour par jour</h2>
+  const grille = [25, 50, 75].map((y) =>
+    `<line class="grille" x1="0" y1="${y}" x2="100" y2="${y}" vector-effect="non-scaling-stroke"></line>`).join("");
+  const premier = d.courbe[0], dernier = d.courbe[n - 1];
+  return `<div class="tuiles">` + tuiles.map(tuile).join("") + `</div>
+    <h2>${ico("graphe")}Inscriptions, jour par jour</h2>
     <div class="courbe"><svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img"
       aria-label="Inscriptions des ${n} derniers jours, maximum ${max} en un jour">
-      ${barres}<line class="socle" x1="0" y1="99.7" x2="100" y2="99.7"
-        vector-effect="non-scaling-stroke"></line></svg></div>
-    <p class="note">Maximum sur la période : ${nb(max)} comptes en un jour.</p>
-    <h2>Corpus</h2><div class="tuiles">
-      <div class="tuile"><b>${nb(d.corpus.ouvrages)}</b><span>ouvrages</span></div>
-      <div class="tuile"><b>${nb(d.corpus.passages)}</b><span>passages</span>
-        <div class="sous">${nb(d.corpus.vectorises)} vectorisés</div></div>
-      <div class="tuile"><b>${nb(d.corpus.quiz)}</b><span>lots de quiz</span></div>
-    </div>`;
+      ${grille}${barres}<line class="socle" x1="0" y1="99.7" x2="100" y2="99.7"
+        vector-effect="non-scaling-stroke"></line></svg>
+      <div class="legende"><span>${jour(premier && premier.jour)}</span>
+        <span>maximum ${nb(max)} en un jour</span>
+        <span>${jour(dernier && dernier.jour)}</span></div></div>
+    <h2>${ico("corpus")}Corpus</h2><div class="tuiles serre">` + [
+      { v: nb(d.corpus.ouvrages), l: "ouvrages", i: "livre" },
+      { v: nb(d.corpus.passages), l: "passages", i: "base",
+        s: nb(d.corpus.vectorises) + " vectorisés" },
+      { v: nb(d.corpus.quiz), l: "lots de quiz", i: "quiz" },
+    ].map(tuile).join("") + `</div>`;
 } });
 
 zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
-  filtres: `<input id="f-q" placeholder="Adresse ou nom…">`,
+  ico: "membres", aide: "Chercher un membre, ouvrir sa fiche, suivre ce qu'il a payé et lu.",
+  filtres: `<span class="cherche">${ico("loupe", "pt")}` +
+    `<input id="f-q" placeholder="Adresse ou nom…"></span>`,
   async rendre() {
     const q = ($("f-q") || {}).value || "";
     const env = await api("/v1/admin/utilisateurs?par_page=40&page=" + (this.page || 1) +
@@ -434,7 +852,7 @@ zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
       const c = d.compte;
       ouvrirVolet(c.email, `
         <div class="cartes">
-          <div class="carte"><h3>Le compte</h3>${paires({
+          <div class="carte"><h3>${ico("personne")}Le compte</h3>${paires({
             "formule": pastille(c.plan), "jusqu'au": jour(c.plan_jusqu_au),
             "actif": c.actif ? "oui" : "non", "administrateur": c.administrateur ? "oui" : "non",
             "inscrit le": instant(c.inscrit_le), "dernière connexion": instant(c.derniere_connexion),
@@ -442,37 +860,42 @@ zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
           <div class="champ" style="margin-top:14px">
             <button class="bouton" data-bascule="is_active" data-v="${!c.actif}">
               ${c.actif ? "Désactiver ce compte" : "Réactiver ce compte"}</button></div></div>
-          <div class="carte"><h3>Paiements</h3>${d.paiements.length
+          <div class="carte"><h3>${ico("paiement")}Paiements</h3>${d.paiements.length
             ? d.paiements.map((p) => `<div class="paire"><span>${jour(p.cree_le)} ${ech(p.reseau || "")}</span>` +
                 `<b>${xaf(p.montant)} ${pastille(p.statut)}</b></div>`).join("")
             : `<p class="aide">Aucun paiement.</p>`}</div>
-          <div class="carte"><h3>Abonnements</h3>${d.abonnements.length
+          <div class="carte"><h3>${ico("abonnement")}Abonnements</h3>${d.abonnements.length
             ? d.abonnements.map((a) => `<div class="paire"><span>${a.periode_mois} mois, ${pastille(a.statut)}</span>` +
                 `<b>jusqu'au ${jour(a.fin)}</b></div>`).join("")
             : `<p class="aide">Aucun abonnement.</p>`}</div>
-          <div class="carte"><h3>Courriels</h3>${d.courriels.length
+          <div class="carte"><h3>${ico("message")}Courriels</h3>${d.courriels.length
             ? d.courriels.slice(0, 8).map((m) => `<div class="paire"><span>${ech(m.gabarit)}</span>` +
                 `<b>${pastille(m.statut)} ${jour(m.le)}</b></div>`).join("")
             : `<p class="aide">Aucun message.</p>`}</div>
-          <div class="carte"><h3>Activité</h3>${d.activite.length
+          <div class="carte"><h3>${ico("hausse")}Activité</h3>${d.activite.length
             ? d.activite.slice(0, 10).map((a) => `<div class="paire"><span>${ech(a.type)}</span>` +
                 `<b>${ech((a.ouvrage || "").slice(0, 28))} ${instant(a.le)}</b></div>`).join("")
             : `<p class="aide">Aucune action.</p>`}</div>
-        </div>`);
+        </div>`, "personne");
       $("volet-corps").querySelectorAll("[data-bascule]").forEach((b) => {
         b.onclick = async () => {
-          b.textContent = "…";
+          b.innerHTML = "…";
           try {
             await api("/v1/admin/utilisateurs/" + l.id, { method: "PATCH",
               body: JSON.stringify({ [b.dataset.bascule]: b.dataset.v === "true" }) });
             $("volet").close(); await afficher(courante);
-          } catch (_) { b.textContent = "Échec"; }
+            annoncer(b.dataset.v === "true" ? "Compte réactivé." : "Compte désactivé.");
+          } catch (_) {
+            b.innerHTML = ico("alerte", "pt") + "Échec";
+            annoncer("Ce compte n'a pas pu être modifié.", "mauvais");
+          }
         };
       });
     });
   } });
 
 zone({ cle: "paiements", groupe: "Membres", titre: "Paiements",
+  ico: "paiement", aide: "Chaque transaction et son journal complet, de la création au rapprochement.",
   filtres: `<select id="f-statut"><option value="">tous les statuts</option>
     <option value="valide">validés</option><option value="en_attente">en attente</option>
     <option value="rejete">rejetés</option></select>`,
@@ -490,7 +913,7 @@ zone({ cle: "paiements", groupe: "Membres", titre: "Paiements",
     brancherClics(this.lignes, async (l) => {
       const d = await api("/v1/admin/paiements/" + l.id);
       ouvrirVolet(d.email + " · " + xaf(d.montant), `
-        <div class="cartes"><div class="carte"><h3>Le paiement</h3>${paires({
+        <div class="cartes"><div class="carte"><h3>${ico("paiement")}Le paiement</h3>${paires({
           statut: pastille(d.statut), montant: xaf(d.montant), durée: d.periode_mois + " mois",
           numéro: ech(d.telephone || ""), opérateur: ech(d.reseau || ""),
           référence: `<code>${ech(d.reference || "")}</code>`,
@@ -498,18 +921,19 @@ zone({ cle: "paiements", groupe: "Membres", titre: "Paiements",
           "créé le": instant(d.cree_le), "validé le": instant(d.valide_le),
           motif: ech(d.motif_rejet || ""),
         })}</div></div>
-        <h2>Le journal</h2>
+        <h2>${ico("file")}Le journal</h2>
         ${d.journal.length ? `<div class="tableau"><table><thead><tr><th>étape</th><th>source</th>
           <th>stratégie</th><th>quand</th><th>détails</th></tr></thead><tbody>` +
           d.journal.map((e) => `<tr><td>${ech(e.type)}</td><td>${ech(e.source)}</td>` +
             `<td>${ech(e.strategie || "")}</td><td>${instant(e.le)}</td>` +
             `<td class="large"><code>${ech(JSON.stringify(e.details || {})).slice(0, 150)}</code></td></tr>`).join("") +
           `</tbody></table></div>` : `<p class="note">Aucune étape enregistrée.</p>`}
-        <p class="note">Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».</p>`);
+        <p class="note">Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».</p>`, "paiement");
     });
   } });
 
 zone({ cle: "orphelins", groupe: "Membres", titre: "Webhooks orphelins",
+  ico: "orphelin", aide: "Les notifications de paiement qu'on n'a pas su rattacher. C'est peut-être l'argent de quelqu'un.",
   alerte: () => (resume?.paiements?.orphelins || 0),
   async rendre() {
     const env = await api("/v1/admin/webhooks-orphelins?par_page=40&page=" + (this.page || 1));
@@ -523,6 +947,7 @@ zone({ cle: "orphelins", groupe: "Membres", titre: "Webhooks orphelins",
   } });
 
 zone({ cle: "abonnements", groupe: "Membres", titre: "Abonnements",
+  ico: "abonnement", aide: "Qui est abonné, jusqu'à quand, et ce qui arrive à échéance.",
   filtres: `<select id="f-abo"><option value="active">actifs</option>
     <option value="">tous</option><option value="expired">expirés</option></select>`,
   async rendre() {
@@ -537,7 +962,9 @@ zone({ cle: "abonnements", groupe: "Membres", titre: "Abonnements",
   } });
 
 zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
-  filtres: `<input id="f-corpus" placeholder="Titre ou auteur…">
+  ico: "corpus", aide: "L'état de production de chaque ouvrage, ses droits, et ce qu'il a produit.",
+  filtres: `<span class="cherche">${ico("loupe", "pt")}` +
+    `<input id="f-corpus" placeholder="Titre ou auteur…"></span>
     <label style="font-size:.84rem;color:var(--doux)">
       <input type="checkbox" id="f-manque" style="min-width:auto"> incomplets seulement</label>`,
   async rendre() {
@@ -549,14 +976,14 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
     // Les compteurs viennent du total du serveur, pas de la page affichée :
     // annoncer « 40 ouvrages » parce que la page en montre quarante serait faux.
     const incomplets = m ? env.total : (resume ? env.total - 0 : env.total);
-    return `<div class="tuiles" style="margin-bottom:16px">
-        <div class="tuile"><b>${nb(env.total)}</b><span>ouvrages ${m ? "incomplets" : "au corpus"}</span>
-          <div class="sous">page ${env.page} sur ${env.pages}</div></div>
-        <div class="tuile"><b>${nb(env.lignes.filter((l) => l.complet).length)}</b>
-          <span>complets sur cette page</span></div>
-        <div class="tuile"><b>${nb(env.lignes.filter((l) => l.lecture_integrale).length)}</b>
-          <span>intégraux sur cette page</span></div>
-      </div>` +
+    return `<div class="tuiles serre" style="margin-bottom:16px">` + [
+        { v: nb(env.total), l: "ouvrages " + (m ? "incomplets" : "au corpus"), i: "livre",
+          s: `page ${env.page} sur ${env.pages}` },
+        { v: nb(env.lignes.filter((l) => l.complet).length), l: "complets sur cette page",
+          i: "oui" },
+        { v: nb(env.lignes.filter((l) => l.lecture_integrale).length),
+          l: "intégraux sur cette page", i: "oeil" },
+      ].map(tuile).join("") + `</div>` +
       table([["titre", "ouvrage", "large"], ["axes", "axes", "large"],
         ["pages", "pages", "nombre"], ["chapitres_utiles", "chapitres", "nombre"],
         ["vectorises", "vectorisés", "nombre"], ["quiz", "quiz", "nombre"],
@@ -569,14 +996,14 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
       const dr = d.droits;
       ouvrirVolet(d.titre, `
         <div class="cartes">
-          <div class="carte"><h3>L'ouvrage</h3>${paires({
+          <div class="carte"><h3>${ico("livre")}L'ouvrage</h3>${paires({
             auteurs: ech((d.auteurs || []).join(", ")), année: d.annee ?? "",
             éditeur: ech(d.editeur || ""), ISBN: ech(d.isbn || ""),
             pages: nb(d.pages), langue: ech(d.langue || ""),
             axes: ech(d.axes.map((a) => a.label).join(", ")),
             "entré le": jour(d.entre_le), fichier: `<code>${ech((d.fichier || "").slice(0, 34))}</code>`,
           })}</div>
-          <div class="carte"><h3>Droits</h3>
+          <div class="carte"><h3>${ico("bouclier")}Droits</h3>
             <p class="aide">Le seul endroit où l'on modifie un ouvrage. Le titre et le texte
               viennent de <code>data/</code> : les corriger ici les ferait diverger de leur
               source, et le prochain import les écraserait.</p>
@@ -591,33 +1018,33 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
                 ${["none", "pending", "removed"].map((v) =>
                   `<option value="${v}" ${dr.retrait === v ? "selected" : ""}>${v}</option>`).join("")}
               </select></div>
-            <button class="bouton" id="d-poser" data-id="${d.id}">Enregistrer les droits</button>
+            <button class="bouton" id="d-poser" data-id="${d.id}">${ico("oui", "pt")}Enregistrer les droits</button>
             <p class="note">Un retrait autre que « none » sort l'ouvrage de partout :
               bibliothèque, recherche, réponses de l'agent, plans déjà construits.</p></div>
-          <div class="carte"><h3>Ce qui est produit</h3>${d.derives.length
+          <div class="carte"><h3>${ico("etincelle")}Ce qui est produit</h3>${d.derives.length
             ? d.derives.map((v) => `<div class="paire"><span>${ech(v.type)}</span>` +
                 `<b>${nb(v.lots)} lots, ${nb(v.jetons_entree + v.jetons_sortie)} jetons</b></div>`).join("")
             : `<p class="aide">Rien de produit pour cet ouvrage.</p>`}</div>
         </div>
-        <h2>Lire ce qui a été produit</h2>
+        <h2>${ico("etincelle")}Lire ce qui a été produit</h2>
         <div class="filtres">
           <select id="v-kind">
             ${d.derives.map((v) => `<option value="${ech(v.type)}">${ech(v.type)} (${v.lots})</option>`).join("")}
           </select>
-          <button class="bouton fin" id="v-pdf" data-id="${d.id}">Ouvrir le PDF d'origine</button>
+          <button class="bouton fin" id="v-pdf" data-id="${d.id}">${ico("pdf", "pt")}Ouvrir le PDF d'origine</button>
         </div>
         <div id="v-contenu"><p class="note">Choisissez un type pour lire le contenu.</p></div>
-        <h2>Les chapitres</h2>
+        <h2>${ico("livre")}Les chapitres</h2>
         ${table([["ordre", "n°", "nombre"], ["titre", "titre", "large"],
           ["page_debut", "de", "nombre"], ["page_fin", "à", "nombre"],
           ["tokens", "tokens", "nombre"], ["quiz", "quiz", "nombre"],
-          ["citations", "citations", "nombre"]], d.chapitres)}`);
+          ["citations", "citations", "nombre"]], d.chapitres)}`, "livre");
 
       // Le PDF part avec le jeton : une balise `a href` ne peut pas porter
       // d'en-tête d'autorisation. On récupère le flux et on l'ouvre.
       const bp = $("v-pdf");
       if (bp) bp.onclick = async () => {
-        bp.textContent = "…";
+        bp.innerHTML = ico("horloge", "pt") + "Ouverture…";
         try {
           const r = await fetch(`/v1/admin/corpus/${bp.dataset.id}/fichier`,
             { headers: { Authorization: "Bearer " + jeton } });
@@ -627,8 +1054,11 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
           // On rend la mémoire au navigateur : un PDF de cent mégaoctets gardé
           // en objet blob le reste tant que l'onglet vit.
           setTimeout(() => URL.revokeObjectURL(url), 60000);
-          bp.textContent = "Ouvrir le PDF d'origine";
-        } catch (_) { bp.textContent = "Fichier introuvable"; }
+          bp.innerHTML = ico("pdf", "pt") + "Ouvrir le PDF d'origine";
+        } catch (_) {
+          bp.innerHTML = ico("alerte", "pt") + "Fichier introuvable";
+          annoncer("Le PDF d'origine est introuvable dans le stockage.", "mauvais");
+        }
       };
 
       let pageContenu = 1;
@@ -661,7 +1091,7 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
       }
       const b = $("d-poser");
       if (b) b.onclick = async () => {
-        b.textContent = "…";
+        b.innerHTML = "…";
         try {
           await api("/v1/admin/corpus/" + b.dataset.id, { method: "PATCH",
             body: JSON.stringify({
@@ -669,19 +1099,24 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
               max_excerpt_chars: Number($("d-plafond").value || 0),
               takedown_status: $("d-retrait").value }) });
           $("volet").close(); await afficher(courante);
-        } catch (_) { b.textContent = "Échec"; }
+          annoncer("Droits enregistrés.");
+        } catch (_) {
+          b.innerHTML = ico("alerte", "pt") + "Échec";
+          annoncer("Ces droits n'ont pas pu être enregistrés.", "mauvais");
+        }
       };
     });
   } });
 
-zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rendre() {
+zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage",
+  ico: "depot", aide: "Déposer un ouvrage, lancer une étape du pipeline, suivre la file des travaux.", async rendre() {
   const axes = await api("/v1/admin/axes");
   const env = await api("/v1/admin/travaux?par_page=20&page=" + (this.page || 1));
   this.env = env;
   const enCours = env.lignes.filter((t) => t.etat === "en_cours" || t.etat === "en_attente").length;
   return `<div class="cartes" style="margin-bottom:20px">
     <div class="carte">
-      <h3>Déposer un PDF</h3>
+      <h3>${ico("depot")}Déposer un PDF</h3>
       <p class="aide">Le fichier est écrit là où le pipeline va le chercher, puis son
         ingestion entre dans la file. L'envoi n'est pas reprenable : sur une connexion
         qui coupe, il faut recommencer.</p>
@@ -690,12 +1125,14 @@ zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rend
         ${axes.map((a) => `<option value="${ech(a.slug)}">${ech(a.label)}</option>`).join("")}
       </select></div>
       <div class="champ"><label>fichier</label>
-        <input id="i-fichier" type="file" accept="application/pdf,.pdf"></div>
-      <button class="bouton" id="i-envoyer">Déposer et ingérer</button>
+        <label class="depot" for="i-fichier">${ico("pdf", "pt")}
+          <span id="i-nom">Choisir un PDF</span>
+          <input id="i-fichier" type="file" accept="application/pdf,.pdf"></label></div>
+      <button class="bouton" id="i-envoyer">${ico("depot", "pt")}Déposer et ingérer</button>
       <p class="note" id="i-etat">Cent mégaoctets au maximum.</p>
     </div>
     <div class="carte">
-      <h3>Lancer une étape</h3>
+      <h3>${ico("lancer")}Lancer une étape</h3>
       <p class="aide">Ce n'est pas exécuté ici : l'ouvrier prend le travail dans les
         secondes qui suivent. Un même travail lourd ne s'inscrit pas deux fois.</p>
       <div class="champ"><label>étape</label><select id="i-type">
@@ -705,17 +1142,23 @@ zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rend
         <option value="derive">Produire les dérivés</option>
         <option value="import_data">Importer data/ vers la base</option>
       </select></div>
-      <button class="bouton" id="i-lancer">Mettre dans la file</button>
+      <button class="bouton" id="i-lancer">${ico("lancer", "pt")}Mettre dans la file</button>
       <p class="note" id="i-lancer-etat">${enCours ? nb(enCours) + " travail(aux) en file." : "File vide."}</p>
     </div>
   </div>
-  <h2>La file</h2>` +
+  <h2>${ico("file")}La file</h2>` +
   table([["libelle", "travail"], ["etat", "état", "pastille"],
     ["progression", "avancement", "nombre"], ["ouvrage", "ouvrage", "large"],
     ["demandeur", "demandé par"], ["cree_le", "inscrit", "instant"],
     ["fini_le", "fini", "instant"]], env.lignes, true) + pagination(env);
 },
   async apres() {
+    const choix = $("i-fichier");
+    if (choix) choix.onchange = () => {
+      const f = choix.files[0];
+      $("i-nom").textContent = f
+        ? `${f.name} · ${(f.size / 1048576).toFixed(1)} Mo` : "Choisir un PDF";
+    };
     const envoyer = $("i-envoyer");
     if (envoyer) envoyer.onclick = async () => {
       const f = $("i-fichier").files[0];
@@ -735,30 +1178,34 @@ zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rend
           throw new Error((e.detail || {}).message || "refusé");
         }
         $("i-etat").textContent = "Déposé. L'ingestion est dans la file.";
+        annoncer(`${f.name} déposé. Son ingestion est dans la file.`);
         $("i-fichier").value = "";
         setTimeout(() => afficher(courante), 1200);
       } catch (e) {
         $("i-etat").textContent = e.message || "L'envoi a échoué.";
+        annoncer(e.message || "L'envoi a échoué.", "mauvais");
       } finally { envoyer.disabled = false; }
     };
 
     const lancer = $("i-lancer");
     if (lancer) lancer.onclick = async () => {
-      lancer.textContent = "…";
+      lancer.innerHTML = "…";
       try {
         await api("/v1/admin/travaux", { method: "POST",
           body: JSON.stringify({ type: $("i-type").value }) });
         $("i-lancer-etat").textContent = "Inscrit dans la file.";
+        annoncer("Travail inscrit. L'ouvrier le prend dans les secondes qui suivent.");
         setTimeout(() => afficher(courante), 900);
       } catch (_) {
         $("i-lancer-etat").textContent = "Déjà dans la file, ou refusé.";
-      } finally { lancer.textContent = "Mettre dans la file"; }
+        annoncer("Ce travail est déjà dans la file.", "mauvais");
+      } finally { lancer.innerHTML = ico("lancer", "pt") + "Mettre dans la file"; }
     };
 
     brancherClics(this.env.lignes, async (l) => {
       const d = await api("/v1/admin/travaux/" + l.id);
       ouvrirVolet(d.libelle, `
-        <div class="cartes"><div class="carte"><h3>Le travail</h3>${paires({
+        <div class="cartes"><div class="carte"><h3>${ico("file")}Le travail</h3>${paires({
           état: pastille(d.etat), avancement: d.progression + " %",
           ouvrage: ech(d.ouvrage || ""), "demandé par": ech(d.demandeur || ""),
           inscrit: instant(d.cree_le), commencé: instant(d.commence_le),
@@ -768,12 +1215,12 @@ zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rend
         })}
         <div class="champ" style="margin-top:14px">
           ${["echec", "annule"].includes(d.etat)
-            ? `<button class="bouton" data-relance="${d.id}">Relancer</button>` : ""}
+            ? `<button class="bouton" data-relance="${d.id}">${ico("relance", "pt")}Relancer</button>` : ""}
           ${d.etat === "en_attente"
-            ? `<button class="bouton fin" data-annule="${d.id}">Annuler</button>` : ""}
+            ? `<button class="bouton fin" data-annule="${d.id}">${ico("fermer", "pt")}Annuler</button>` : ""}
         </div></div></div>
-        <h2>Le journal</h2>
-        <div class="contenu"><pre>${ech(d.journal || "Rien encore.")}</pre></div>`);
+        <h2>${ico("file")}Le journal</h2>
+        <div class="contenu"><pre>${ech(d.journal || "Rien encore.")}</pre></div>`, "file");
       const r = $("volet-corps").querySelector("[data-relance]");
       if (r) r.onclick = async () => {
         await api(`/v1/admin/travaux/${r.dataset.relance}/relancer`, { method: "POST" });
@@ -787,11 +1234,12 @@ zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage", async rend
     });
   } });
 
-zone({ cle: "axes", groupe: "Contenu", titre: "Pôles d'apprentissage", async rendre() {
+zone({ cle: "axes", groupe: "Contenu", titre: "Pôles d'apprentissage",
+  ico: "poles", aide: "Créer un pôle d'apprentissage, le renommer, y ranger des ouvrages.", async rendre() {
   const axes = await api("/v1/admin/axes");
   this.axes = axes;
-  return `<div class="cartes" style="margin-bottom:20px"><div class="carte">
-      <h3>Ouvrir un pôle</h3>
+  return `<div class="cartes" style="margin-bottom:20px"><div class="carte seule">
+      <h3>${ico("plus")}Ouvrir un pôle</h3>
       <p class="aide">Un axe nouveau naît vide et se remplit en y rattachant des
         ouvrages. Son centroïde, qui classe automatiquement les nouveaux entrants,
         se calcule une fois qu'il en porte assez.</p>
@@ -800,11 +1248,11 @@ zone({ cle: "axes", groupe: "Contenu", titre: "Pôles d'apprentissage", async re
       <div class="champ"><label>nom</label>
         <input id="a-label" placeholder="Santé publique"></div>
       <div class="champ"><label>description</label><input id="a-desc"></div>
-      <button class="bouton" id="a-creer">Créer l'axe</button>
+      <button class="bouton" id="a-creer">${ico("plus", "pt")}Créer l'axe</button>
       <p class="note" id="a-etat">Le raccourci sert d'adresse publique : minuscules,
         chiffres et tirets, et il ne change plus une fois posé.</p>
     </div></div>
-    <h2>Les ${axes.length} pôles</h2>` +
+    <h2>${ico("poles")}Les ${axes.length} pôles</h2>` +
     table([["slug", "raccourci"], ["label", "nom", "large"],
       ["ouvrages", "ouvrages", "nombre"], ["centroide", "centroïde", "oui"],
       ["premium", "réservé", "oui"], ["description", "description", "large"]], axes);
@@ -812,20 +1260,23 @@ zone({ cle: "axes", groupe: "Contenu", titre: "Pôles d'apprentissage", async re
   async apres() {
     const b = $("a-creer");
     if (b) b.onclick = async () => {
-      b.textContent = "…";
+      b.innerHTML = "…";
       try {
         await api("/v1/admin/axes", { method: "POST", body: JSON.stringify({
           slug: $("a-slug").value.trim(), label: $("a-label").value.trim(),
           description: $("a-desc").value.trim() || null }) });
         $("a-etat").textContent = "Axe créé.";
+        annoncer("Pôle créé. Il reste vide jusqu'à ce qu'on y range un ouvrage.");
         setTimeout(() => afficher(courante), 900);
       } catch (_) {
         $("a-etat").textContent = "Refusé : raccourci déjà pris, ou mal formé.";
-      } finally { b.textContent = "Créer l'axe"; }
+        annoncer("Raccourci déjà pris, ou mal formé.", "mauvais");
+      } finally { b.innerHTML = ico("plus", "pt") + "Créer l'axe"; }
     };
   } });
 
-zone({ cle: "gabarits", groupe: "Contenu", titre: "Messages", async rendre() {
+zone({ cle: "gabarits", groupe: "Contenu", titre: "Messages",
+  ico: "message", aide: "Le texte des courriels transactionnels, modifiable sans déploiement.", async rendre() {
   const liste = await api("/v1/admin/gabarits");
   return `<p class="note" style="margin:0 0 14px">Les messages vivent en base : corriger une
     faute dans un courriel qui part à tous les nouveaux membres ne demande ni construction
@@ -838,7 +1289,7 @@ zone({ cle: "gabarits", groupe: "Contenu", titre: "Messages", async rendre() {
         <option value="false" ${g.actif ? "" : "selected"}>non</option></select></div>
       <div class="champ"><label>objet</label><input data-c="objet" value="${ech(g.objet)}"></div>
       <div class="champ"><label>corps</label><textarea data-c="corps_html">${ech(g.corps_html)}</textarea></div>
-      <button class="bouton" data-poser="${ech(g.code)}">Enregistrer</button>
+      <button class="bouton" data-poser="${ech(g.code)}">${ico("oui", "pt")}Enregistrer</button>
     </div>`).join("") + `</div>`;
 },
   async apres() {
@@ -848,16 +1299,23 @@ zone({ cle: "gabarits", groupe: "Contenu", titre: "Messages", async rendre() {
         carte.querySelectorAll("[data-c]").forEach((c) => {
           corps[c.dataset.c] = c.dataset.c === "actif" ? c.value === "true" : c.value;
         });
-        b.textContent = "…";
+        b.innerHTML = "…";
         try {
           await api("/v1/admin/gabarits/" + b.dataset.poser, { method: "PATCH", body: JSON.stringify(corps) });
-          b.textContent = "Enregistré"; setTimeout(() => (b.textContent = "Enregistrer"), 1600);
-        } catch (_) { b.textContent = "Échec"; setTimeout(() => (b.textContent = "Enregistrer"), 1600); }
+          b.innerHTML = ico("oui", "pt") + "Enregistré";
+          annoncer("Message « " + b.dataset.poser.replace(/_/g, " ") + " » enregistré.");
+          setTimeout(() => (b.innerHTML = ico("oui", "pt") + "Enregistrer"), 1600);
+        } catch (_) {
+          b.innerHTML = ico("alerte", "pt") + "Échec";
+          annoncer("Ce message n'a pas pu être enregistré.", "mauvais");
+          setTimeout(() => (b.innerHTML = ico("oui", "pt") + "Enregistrer"), 1600);
+        }
       };
     });
   } });
 
 zone({ cle: "courriels", groupe: "Contenu", titre: "Journal des envois",
+  ico: "envoi", aide: "Ce qui est parti, ce qui a échoué, et vers qui.",
   filtres: `<select id="f-mail"><option value="">tous</option><option value="envoye">envoyés</option>
     <option value="simule">simulés</option><option value="echec">en échec</option></select>`,
   async rendre() {
@@ -870,12 +1328,15 @@ zone({ cle: "courriels", groupe: "Contenu", titre: "Journal des envois",
       ["le", "quand", "instant"], ["erreur", "erreur", "large"]], env.lignes) + pagination(env);
   } });
 
-zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs", async rendre() {
+zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs",
+  ico: "reglage", aide: "Lancement, maintenance, version minimale. Trois interrupteurs, effet immédiat.", async rendre() {
   const liste = await api("/v1/admin/reglages");
+  const ICONES = { lancement: "etincelle", maintenance: "reglage", version_minimale: "relance" };
   return `<div class="cartes">` + liste.map((r) => {
     const v = r.valeur || {}, actif = v.actif === true, version = r.cle === "version_minimale";
+    const nom = r.cle.replace(/_/g, " ");
     return `<div class="carte ${actif ? "on" : ""}">
-      <h3>${ech(r.cle).replace(/_/g, " ")}</h3>
+      <h3>${ico(ICONES[r.cle] || "reglage")}${ech(nom[0].toUpperCase() + nom.slice(1))}</h3>
       <p class="aide">${ech(r.description || "")}</p>
       ${version
         ? `<div class="champ"><label>version</label><input data-c="version" value="${ech(v.version || "0.0.0")}"></div>`
@@ -883,9 +1344,10 @@ zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs", asyn
              <option value="false" ${actif ? "" : "selected"}>non</option>
              <option value="true" ${actif ? "selected" : ""}>oui</option></select></div>
            <div class="champ"><label>jusqu'au</label>
-             <input data-c="jusqu_au" type="date" value="${String(v.jusqu_au || "").slice(0, 10)}"></div>`}
+             <input data-c="jusqu_au" type="date" lang="fr"
+               value="${String(v.jusqu_au || "").slice(0, 10)}"></div>`}
       <div class="champ"><label>message</label><input data-c="message" value="${ech(v.message || "")}"></div>
-      <button class="bouton" data-reglage="${ech(r.cle)}">Enregistrer</button>
+      <button class="bouton" data-reglage="${ech(r.cle)}">${ico("oui", "pt")}Enregistrer</button>
       <p class="note">Modifié le ${instant(r.modifie_le)}. Effet sous dix secondes.</p></div>`;
   }).join("") + `</div>`;
 },
@@ -898,11 +1360,17 @@ zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs", asyn
           else if (c.dataset.c === "jusqu_au") valeur.jusqu_au = c.value ? c.value + "T23:59:59+00:00" : null;
           else valeur[c.dataset.c] = c.value;
         });
-        b.textContent = "…";
+        b.innerHTML = "…";
         try {
           await api("/v1/admin/reglages/" + b.dataset.reglage, { method: "POST", body: JSON.stringify({ valeur }) });
-          b.textContent = "Enregistré"; setTimeout(() => (b.textContent = "Enregistrer"), 1600);
-        } catch (_) { b.textContent = "Échec"; setTimeout(() => (b.textContent = "Enregistrer"), 1600); }
+          b.innerHTML = ico("oui", "pt") + "Enregistré";
+          annoncer(`Réglage « ${b.dataset.reglage.replace(/_/g, " ")} » enregistré.`);
+          setTimeout(() => (b.innerHTML = ico("oui", "pt") + "Enregistrer"), 1600);
+        } catch (_) {
+          b.innerHTML = ico("alerte", "pt") + "Échec";
+          annoncer("Ce réglage n'a pas pu être enregistré.", "mauvais");
+          setTimeout(() => (b.innerHTML = ico("oui", "pt") + "Enregistrer"), 1600);
+        }
       };
     });
   } });
@@ -944,12 +1412,23 @@ function rendreContenu(kind, c) {
 /* --------------------------------------------------------------- rendu */
 let courante = ZONES[0];
 
+/** La forme de la vue pendant qu'elle charge. Un cadre vide pendant deux
+ *  secondes se lit comme une console qui a lâché ; sa silhouette se lit comme
+ *  une console qui travaille. */
+const squelette = (z) => `<div class="squelette">` +
+  (z.cle === "ensemble"
+    ? `<div class="rang">${'<div class="bloc"></div>'.repeat(4)}</div><div class="bloc haut"></div>`
+    : `<div class="bloc" style="height:44px"></div><div class="bloc haut"></div>`) + `</div>`;
+
 async function afficher(z) {
   courante = z;
   $("titre-zone").textContent = z.titre;
+  $("aide-zone").textContent = z.aide || "";
+  $("ecusson-zone").innerHTML = ico(z.ico || "file");
   $("menu").querySelectorAll("button").forEach((b) =>
     b.setAttribute("aria-current", b.dataset.cle === z.cle));
-  $("zone").innerHTML = `<div class="vide">Chargement…</div>`;
+  $("zone").innerHTML = squelette(z);
+  $("rafraichir").classList.add("tourne");
   try {
     const html = await z.rendre();
     $("zone").innerHTML = (z.filtres ? `<div class="filtres">${z.filtres}</div>` : "") + html;
@@ -969,7 +1448,9 @@ async function afficher(z) {
     brancherPages((n) => { z.page = n; afficher(z); });
     if (z.apres) await z.apres();
   } catch (_) {
-    $("zone").innerHTML = `<div class="tableau"><div class="vide">Impossible de charger cette vue.</div></div>`;
+    $("zone").innerHTML = rienAVoir("Impossible de charger cette vue.", "alerte");
+  } finally {
+    $("rafraichir").classList.remove("tourne");
   }
 }
 $("rafraichir").onclick = () => afficher(courante);
@@ -979,7 +1460,8 @@ function menu() {
   $("menu").innerHTML = ZONES.map((z) => {
     const tete = z.groupe !== groupe ? ((groupe = z.groupe), `<div class="groupe">${z.groupe}</div>`) : "";
     const n = z.alerte ? z.alerte() : 0;
-    return tete + `<button data-cle="${z.cle}" aria-current="false">${z.titre}` +
+    return tete + `<button data-cle="${z.cle}" aria-current="false">` +
+      ico(z.ico || "file") + `<span>${z.titre}</span>` +
       (n ? `<span class="pastille-nav">${nb(n)}</span>` : "") + `</button>`;
   }).join("");
   $("menu").querySelectorAll("button").forEach((b) => {
@@ -990,18 +1472,23 @@ function menu() {
 async function demarrer() {
   try {
     resume = await api("/v1/admin/tableau-de-bord?jours=30");
-    $("connexion").style.display = "none";
+    $("connexion").classList.remove("ouvert");
     $("console").classList.add("ouvert");
-    $("qui").textContent = moi || "";
+    const initiales = (moi || "?").replace(/@.*/, "").split(/[.\-_]/)
+      .map((m) => m[0] || "").join("").slice(0, 2).toUpperCase();
+    $("qui").innerHTML = `<span class="jeton">${ech(initiales)}</span><em>${ech(moi || "")}</em>`;
     const c = resume.corpus;
-    $("pied-barre").textContent =
-      `${nb(c.ouvrages)} ouvrages · ${nb(c.vectorises)}/${nb(c.passages)} vectorisés`;
+    const part = c.passages ? Math.round((c.vectorises / c.passages) * 100) : 0;
+    $("pied-barre").innerHTML =
+      `<div class="ligne"><span>Corpus</span><b>${nb(c.ouvrages)} ouvrages</b></div>` +
+      `<div class="ligne"><span>Vectorisé</span><b>${part} %</b></div>` +
+      `<div class="jauge"><i style="width:${part}%"></i></div>`;
     menu();
     await afficher(ZONES[0]);
   } catch (_) { sortir(); }
 }
 
-if (jeton) demarrer(); else $("connexion").style.display = "";
+if (jeton) demarrer(); else $("connexion").classList.add("ouvert");
 </script>
 </body>
 </html>
