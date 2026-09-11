@@ -35,6 +35,25 @@ changement de mot de passe.
 
 ## Ce qui mérite d'être connu
 
+**L'angle droit se pose au thème, pas écran par écran.** Material dessine ses
+propres formes par défaut, et elles sont toutes arrondies : la pastille en stade
+derrière l'icône active de la barre de navigation, le voile de survol des
+boutons de texte, les extrémités des barres de progression, les boîtes de
+dialogue, les feuilles du bas, les infobulles. Les redresser dans `theme.dart`
+est le seul endroit où la règle tient sans qu'on ait à y penser à chaque écran.
+
+**Chaque ouvrage porte la teinte de son pôle** sur le bord gauche de sa carte,
+la même que sur la vitrine et que le dos de ses volumes sur l'étagère. La
+palette vit dans `Couleurs.poles`, indexée par le préfixe du raccourci, qui ne
+change jamais une fois posé. Une liste de soixante cartes blanches ne dit pas de
+quoi elle est faite.
+
+**On peut revoir l'application sans téléphone.** `flutter build web` puis un
+serveur statique, et la charger dans un cadre de 400 par 844 : les règles de
+mise en page sont les mêmes. Il faut alors ajouter l'origine du serveur à
+`API_CORS_ORIGINS`, sans quoi l'application affiche « Pas de connexion ».
+
+
 **Le routeur n'est pas reconstruit à chaque changement de session.** Il écoute un
 `ChangeNotifier`. Le reconstruire ramenait l'application à sa route initiale, et
 l'utilisateur atterrissait sur l'accueil au lieu du diagnostic après inscription.

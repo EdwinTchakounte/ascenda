@@ -26,6 +26,19 @@ abstract final class Couleurs {
   static const sauge = Color(0xFF7C9A82);
   static const terracotta = Color(0xFFC4704F);
 
+  /// La teinte d'un pôle, celle-là même qui colore sa carte sur la vitrine et
+  /// le dos de ses volumes sur l'étagère. La clé est le préfixe numérique du
+  /// raccourci, qui ne change jamais une fois posé.
+  static const poles = <String, Color>{
+    '01': Color(0xFFC08A2E), '02': Color(0xFF4A6FA5), '03': Color(0xFF5F8A6A),
+    '04': Color(0xFF8A7F9E), '05': Color(0xFFC4704F), '06': Color(0xFF4F8687),
+    '07': Color(0xFFA8752F), '08': Color(0xFF9E6B8A), '09': Color(0xFF6F8F57),
+    '10': Color(0xFF4F7BA0), '11': Color(0xFF7A9450),
+  };
+
+  static Color? pole(String? slug) =>
+      slug != null && slug.length >= 2 ? poles[slug.substring(0, 2)] : null;
+
   static const traitClair = Color(0x140B1435);
   static const traitSombre = Color(0x24E8C070);
 }

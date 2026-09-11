@@ -81,6 +81,7 @@ class Ouvrage {
     this.aFiche = false,
     this.aQuiz = false,
     this.axes = const [],
+    this.axeSlug,
   });
 
   final String id;
@@ -96,6 +97,9 @@ class Ouvrage {
   final bool aFiche;
   final bool aQuiz;
   final List<String> axes;
+
+  /// Le raccourci du premier pôle, qui donne sa teinte à la carte.
+  final String? axeSlug;
 
   String get auteursCourt => auteurs.isEmpty
       ? 'Auteur non renseigné'
@@ -116,6 +120,9 @@ class Ouvrage {
         aFiche: j['a_fiche'] == true,
         aQuiz: j['a_quiz'] == true,
         axes: (j['axes'] as List?)?.map((a) => '${a['label']}').toList() ?? const [],
+        axeSlug: (j['axes'] as List?)?.isNotEmpty == true
+            ? '${(j['axes'] as List).first['slug']}'
+            : null,
       );
 }
 

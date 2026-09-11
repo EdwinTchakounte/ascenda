@@ -232,8 +232,8 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const InvitationCompte(
-                                    raison: "Ces 78 ouvrages sont consultables librement. "
-                                        "Avec un compte, ASCENDA les découpe en séances "
+                                    raison: "Le corpus est consultable librement. "
+                                        "Avec un compte, ASCENDA le découpe en séances "
                                         "que vous pouvez tenir, et vous interroge sur ce "
                                         "que vous lisez.",
                                   ),

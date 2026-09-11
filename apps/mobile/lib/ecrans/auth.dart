@@ -58,20 +58,20 @@ class EcranBienvenue extends StatelessWidget {
                 "Vous n'avez pas besoin\nde plus de livres.",
                 style: t.textTheme.headlineLarge?.copyWith(
                   color: const Color(0xFFF7F4EC),
-                  fontSize: 33,
+                  fontSize: 30,
                 ),
               ),
               Text(
                 "Vous avez besoin\nd'un plan.",
                 style: t.textTheme.headlineLarge?.copyWith(
                   color: Couleurs.orClair,
-                  fontSize: 33,
+                  fontSize: 30,
                 ),
               ),
               const SizedBox(height: 20),
               Text(
                 "Dites où vous en êtes et combien de temps vous avez vraiment. "
-                "ASCENDA découpe 78 ouvrages en séances que vous pouvez tenir, et "
+                "ASCENDA découpe la bibliothèque en séances que vous pouvez tenir, et "
                 "répond à vos questions en citant toujours le livre et la page.",
                 style: t.textTheme.bodyMedium?.copyWith(color: const Color(0xFFB9C1D6)),
               ),

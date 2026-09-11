@@ -114,7 +114,42 @@ abstract final class ThemeAscenda {
         style: TextButton.styleFrom(
           foregroundColor: schema.primary,
           textStyle: GoogleFonts.inter(fontSize: 14.5, fontWeight: FontWeight.w600),
+          // Sans forme déclarée, le voile de survol garde les coins arrondis de
+          // Material : c'est invisible tant qu'on ne survole pas, et très visible
+          // dès qu'on survole.
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         ),
+      ),
+      iconButtonTheme: IconButtonThemeData(
+        style: IconButton.styleFrom(
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        ),
+      ),
+      segmentedButtonTheme: SegmentedButtonThemeData(
+        style: SegmentedButton.styleFrom(
+          shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        ),
+      ),
+      popupMenuTheme: const PopupMenuThemeData(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+      ),
+      menuTheme: const MenuThemeData(
+        style: MenuStyle(
+          shape: WidgetStatePropertyAll(
+            RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+          ),
+        ),
+      ),
+      drawerTheme: const DrawerThemeData(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+      ),
+      checkboxTheme: CheckboxThemeData(
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
@@ -137,6 +172,9 @@ abstract final class ThemeAscenda {
         backgroundColor: schema.surface,
         surfaceTintColor: Colors.transparent,
         indicatorColor: Couleurs.or.withValues(alpha: 0.16),
+        // Sans cela, Material dessine une pastille en stade derrière l'icône
+        // active : la seule forme arrondie qui restait de toute l'application.
+        indicatorShape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         elevation: 0,
         height: 68,
         labelTextStyle: WidgetStateProperty.resolveWith(
@@ -162,7 +200,24 @@ abstract final class ThemeAscenda {
       ),
       dividerTheme: DividerThemeData(color: trait, thickness: 1, space: 1),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
-        color: Couleurs.or, linearMinHeight: 6,
+        color: Couleurs.or,
+        linearMinHeight: 6,
+        // Material 3 arrondit les extrémités des barres de progression.
+        borderRadius: BorderRadius.zero,
+      ),
+      dialogTheme: DialogThemeData(
+        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+        backgroundColor: schema.surface,
+      ),
+      bottomSheetTheme: const BottomSheetThemeData(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+      ),
+      tooltipTheme: TooltipThemeData(
+        decoration: BoxDecoration(color: Couleurs.nuit, borderRadius: BorderRadius.zero),
+        textStyle: GoogleFonts.inter(fontSize: 12, color: const Color(0xFFE6E9F2)),
+      ),
+      switchTheme: SwitchThemeData(
+        thumbColor: WidgetStatePropertyAll(schema.primary),
       ),
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,

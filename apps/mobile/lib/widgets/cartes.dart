@@ -188,11 +188,22 @@ class CarteOuvrage extends StatelessWidget {
       onTap: onTap,
       borderRadius: BorderRadius.zero,
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.fromLTRB(19, 16, 16, 16),
         decoration: BoxDecoration(
           color: t.colorScheme.surface,
           borderRadius: BorderRadius.zero,
-          border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
+          // Le liseré porte la teinte du pôle, la même que sur la vitrine. Une
+          // liste de soixante cartes blanches ne dit pas de quoi elle est
+          // faite ; soixante liserés colorés se lisent d'un coup d'oeil.
+          border: Border(
+            top: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+            right: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+            bottom: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+            left: BorderSide(
+              color: Couleurs.pole(ouvrage.axeSlug) ?? (t.dividerTheme.color ?? Couleurs.traitClair),
+              width: Couleurs.pole(ouvrage.axeSlug) != null ? 3 : 1,
+            ),
+          ),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
