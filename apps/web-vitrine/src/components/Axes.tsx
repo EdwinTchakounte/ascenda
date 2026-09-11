@@ -33,12 +33,12 @@ function Carte({
     <Relief className="h-full">
       <Link
         href={`/bibliotheque?axe=${axe.slug}`}
-        className={`${teinte} group relative flex h-full flex-col rounded-[22px] border border-[var(--trait)] bg-[var(--surface)] p-6 transition-[border-color,box-shadow] duration-300 hover:border-[color-mix(in_srgb,var(--teinte)_45%,transparent)] hover:shadow-[0_24px_48px_color-mix(in_srgb,var(--teinte)_18%,transparent)] sm:p-7`}
+        className={`${teinte} group relative flex h-full flex-col rounded-none border border-[var(--trait)] bg-[var(--surface)] p-6 transition-[border-color,box-shadow] duration-300 hover:border-[color-mix(in_srgb,var(--teinte)_45%,transparent)] hover:shadow-[0_24px_48px_color-mix(in_srgb,var(--teinte)_18%,transparent)] sm:p-7`}
       >
         {/* Le voile de teinte, très bas, qui distingue les pôles sans les crier. */}
         <span
           aria-hidden
-          className="pointer-events-none absolute inset-0 rounded-[22px] opacity-[0.055] transition-opacity duration-300 group-hover:opacity-[0.1]"
+          className="pointer-events-none absolute inset-0 rounded-none opacity-[0.055] transition-opacity duration-300 group-hover:opacity-[0.1]"
           style={{
             background:
               "radial-gradient(120% 100% at 100% 0%, var(--teinte) 0%, transparent 62%)",
@@ -47,7 +47,7 @@ function Carte({
 
         <div className="en-avant relative flex items-start gap-4">
           <span
-            className="grid h-12 w-12 flex-none place-items-center rounded-[16px] transition-colors duration-300"
+            className="grid h-12 w-12 flex-none place-items-center rounded-none transition-colors duration-300"
             style={{
               background: "color-mix(in srgb, var(--teinte) 13%, transparent)",
               color: "var(--teinte)",
@@ -98,7 +98,7 @@ function Carte({
                   >
                     <span
                       aria-hidden
-                      className="mt-[7px] h-[5px] w-[5px] flex-none rounded-full"
+                      className="mt-[7px] h-[5px] w-[5px] flex-none rounded-none"
                       style={{ background: "var(--teinte)" }}
                     />
                     <span className="line-clamp-1">{t}</span>
@@ -124,9 +124,9 @@ function Carte({
         <div className="relative pt-6">
           {/* La part du corpus, en barre. « 17 ouvrages » ne dit rien tant qu'on
               ne sait pas ce que pèsent les autres. */}
-          <span className="block h-[5px] w-full overflow-hidden rounded-full bg-[var(--fond-creux)]">
+          <span className="block h-[5px] w-full overflow-hidden rounded-none bg-[var(--fond-creux)]">
             <span
-              className="block h-full rounded-full transition-[width] duration-500"
+              className="block h-full rounded-none transition-[width] duration-500"
               style={{
                 width: `${Math.max(part * 100, 6)}%`,
                 background:

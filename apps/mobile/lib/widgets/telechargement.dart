@@ -105,7 +105,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.zero,
         border: Border.all(
           color: local != null
               ? Couleurs.sauge.withValues(alpha: 0.4)

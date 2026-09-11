@@ -50,7 +50,7 @@
   --titre-police:"Fraunces",Georgia,"Times New Roman",serif;
   --corps:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
-  --barre:266px; --rayon:14px; --rayon-l:20px;
+  --barre:266px; --rayon:0px; --rayon-l:0px;
 }
 
 @media (prefers-color-scheme:dark){
@@ -95,7 +95,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 a{color:var(--accent);text-underline-offset:2px}
 h1,h2,h3,h4{font-family:var(--titre-police);color:var(--titre);
   letter-spacing:-.015em;text-wrap:balance;font-weight:600}
-:focus-visible{outline:2px solid var(--or);outline-offset:2px;border-radius:6px}
+:focus-visible{outline:2px solid var(--or);outline-offset:2px;border-radius:0}
 ::selection{background:rgba(212,162,63,.28)}
 
 /* Les icônes. Un seul gabarit, la couleur vient du texte autour. */
@@ -113,7 +113,7 @@ h1,h2,h3,h4{font-family:var(--titre-police);color:var(--titre);
   color:#dfe4f0;padding:48px;display:flex;flex-direction:column;
   justify-content:space-between;position:relative;overflow:hidden}
 .enseigne::after{content:"";position:absolute;inset:auto -20% -35% auto;width:70%;
-  aspect-ratio:1;border-radius:50%;background:rgba(212,162,63,.07);filter:blur(10px)}
+  aspect-ratio:1;border-radius:0;background:rgba(212,162,63,.07);filter:blur(10px)}
 .enseigne .marque{display:flex;align-items:center;gap:12px;position:relative;z-index:1}
 .enseigne .marque span{font-weight:600;letter-spacing:.26em;font-size:.78rem;
   color:var(--or-clair)}
@@ -136,7 +136,7 @@ h1,h2,h3,h4{font-family:var(--titre-police);color:var(--titre);
 .guichet .saisie .ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);
   color:var(--sourd)}
 .guichet input{width:100%;padding:11px 13px 11px 38px;border:1px solid var(--trait);
-  border-radius:11px;background:var(--surface);transition:border-color .16s,box-shadow .16s}
+  border-radius:0;background:var(--surface);transition:border-color .16s,box-shadow .16s}
 .guichet input:focus{border-color:var(--or);box-shadow:0 0 0 3px rgba(212,162,63,.16);outline:0}
 
 /* -------------------------------------------------------------- ossature */
@@ -154,7 +154,7 @@ aside nav{display:flex;flex-direction:column;gap:2px;overflow-y:auto;flex:1;
   padding:8px 12px 14px;scrollbar-width:thin;scrollbar-color:#1d2947 transparent}
 aside nav button{background:none;border:0;text-align:left;padding:9px 12px;
   color:#8c97b1;cursor:pointer;font-size:.875rem;display:flex;align-items:center;
-  gap:11px;border-radius:10px;width:100%;position:relative;
+  gap:11px;border-radius:0;width:100%;position:relative;
   transition:background .15s,color .15s}
 aside nav button .ico{color:#5f6c8d;transition:color .15s}
 aside nav button:hover{color:#e6e9f2;background:rgba(255,255,255,.045)}
@@ -163,25 +163,25 @@ aside nav button[aria-current="true"]{color:#f4f1e8;font-weight:600;
   background:linear-gradient(90deg,rgba(212,162,63,.20),rgba(212,162,63,.05))}
 aside nav button[aria-current="true"] .ico{color:var(--or-clair)}
 aside nav button[aria-current="true"]::before{content:"";position:absolute;left:-12px;
-  top:9px;bottom:9px;width:3px;border-radius:0 3px 3px 0;background:var(--or)}
+  top:9px;bottom:9px;width:3px;border-radius:0;background:var(--or)}
 aside nav .groupe{padding:15px 12px 6px;font-size:.64rem;letter-spacing:.16em;
   text-transform:uppercase;color:#4d5876;font-weight:600}
 aside .pastille-nav{margin-left:auto;background:var(--terracotta);color:#fff;
-  border-radius:20px;padding:1px 7px;font-size:.66rem;font-weight:700;
+  border-radius:0;padding:1px 7px;font-size:.66rem;font-weight:700;
   font-variant-numeric:tabular-nums}
 aside .pied{padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.06);
   font-size:.72rem;color:#6d7a9b}
 aside .pied .ligne{display:flex;justify-content:space-between;gap:10px;margin-bottom:7px}
 aside .pied b{color:#b9c1d6;font-weight:600;font-variant-numeric:tabular-nums}
-.jauge{height:4px;border-radius:4px;background:rgba(255,255,255,.08);overflow:hidden}
-.jauge i{display:block;height:100%;border-radius:4px;
+.jauge{height:4px;border-radius:0;background:rgba(255,255,255,.08);overflow:hidden}
+.jauge i{display:block;height:100%;border-radius:0;
   background:linear-gradient(90deg,var(--or-sombre),var(--or-clair))}
 
 main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column}
 .barre-haut{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--fond) 88%,transparent);
   backdrop-filter:blur(10px);border-bottom:1px solid var(--trait);
   padding:13px 26px;display:flex;align-items:center;gap:14px}
-.barre-haut .ecusson{width:38px;height:38px;border-radius:11px;display:grid;
+.barre-haut .ecusson{width:38px;height:38px;border-radius:0;display:grid;
   place-items:center;background:var(--creux);color:var(--accent);flex:none}
 .barre-haut .intitule{min-width:0;flex:1}
 .barre-haut h1{font-size:1.08rem;margin:0;line-height:1.3}
@@ -189,28 +189,28 @@ main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column}
   overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .barre-haut .outils{display:flex;align-items:center;gap:8px}
 .qui{display:flex;align-items:center;gap:9px;padding:4px 12px 4px 5px;
-  border:1px solid var(--trait);border-radius:24px;font-size:.8rem;color:var(--doux);
+  border:1px solid var(--trait);border-radius:0;font-size:.8rem;color:var(--doux);
   max-width:230px}
-.qui .jeton{width:26px;height:26px;border-radius:50%;flex:none;display:grid;
+.qui .jeton{width:26px;height:26px;border-radius:0;flex:none;display:grid;
   place-items:center;background:var(--nuit);color:var(--or-clair);font-size:.68rem;
   font-weight:700;letter-spacing:.02em}
 .qui em{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .zone{padding:24px 26px;flex:1}
 
 /* --------------------------------------------------------------- boutons */
-.bouton{border:0;border-radius:24px;background:var(--or);color:#1a1400;font-weight:600;
+.bouton{border:0;border-radius:0;background:var(--or);color:#1a1400;font-weight:600;
   cursor:pointer;padding:10px 20px;display:inline-flex;align-items:center;gap:8px;
   box-shadow:0 1px 2px rgba(154,113,24,.30);transition:background .15s,transform .1s,box-shadow .15s}
 .bouton:hover{background:var(--or-clair);box-shadow:0 3px 12px rgba(154,113,24,.28)}
 .bouton:active{transform:translateY(1px)}
 .bouton.plein{width:100%;justify-content:center;padding:12px}
 .bouton.fin{background:none;border:1px solid var(--trait);color:var(--doux);
-  padding:6px 14px;border-radius:22px;font-weight:500;font-size:.83rem;box-shadow:none}
+  padding:6px 14px;border-radius:0;font-weight:500;font-size:.83rem;box-shadow:none}
 .bouton.fin:hover{border-color:var(--or);color:var(--accent);background:none;box-shadow:none}
 .bouton.danger{background:var(--terracotta);color:#fff;box-shadow:none}
 .bouton.danger:hover{background:#b0603f}
 .bouton[disabled]{opacity:.5;cursor:default;pointer-events:none}
-.icobouton{width:34px;height:34px;border-radius:50%;border:1px solid var(--trait);
+.icobouton{width:34px;height:34px;border-radius:0;border:1px solid var(--trait);
   background:none;color:var(--doux);cursor:pointer;display:grid;place-items:center;
   flex:none;transition:color .15s,border-color .15s,background .15s}
 .icobouton:hover{color:var(--accent);border-color:var(--or);background:var(--creux)}
@@ -223,12 +223,12 @@ main{min-width:0;padding:0 0 64px;display:flex;flex-direction:column}
    tuiles de taille normale, elles font seulement du vide. */
 .tuiles.serre{grid-template-columns:repeat(auto-fit,minmax(min(178px,100%),272px));
   justify-content:start}
-.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+.tuile{background:var(--surface);border:1px solid var(--trait);border-radius:0;
   padding:15px 16px 16px;position:relative;overflow:hidden;
   transition:border-color .16s,box-shadow .16s,transform .16s}
 .tuile:hover{border-color:var(--trait-fort);box-shadow:var(--ombre);transform:translateY(-1px)}
 .tuile .haut{display:flex;align-items:center;gap:9px;margin-bottom:9px;height:34px}
-.tuile .rond{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+.tuile .rond{width:30px;height:30px;border-radius:0;display:grid;place-items:center;
   background:var(--creux);color:var(--accent);flex:none}
 .tuile span{font-size:.71rem;letter-spacing:.06em;text-transform:uppercase;
   color:var(--doux);font-weight:600;line-height:1.18}
@@ -254,7 +254,7 @@ h2:first-child{margin-top:0}
    contenu dès qu'un réglage se glisse de travers : les barres vides prenaient
    soixante pixels chacune et débordaient la page. Un SVG place ses marques à
    la coordonnée qu'on lui donne, et nulle part ailleurs. */
-.courbe{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+.courbe{background:var(--surface);border:1px solid var(--trait);border-radius:0;
   padding:16px 16px 12px}
 .courbe svg{display:block;width:100%;height:132px}
 .courbe rect.j{fill:url(#or-vertical)}
@@ -269,7 +269,7 @@ h2:first-child{margin-top:0}
   vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round}
 .cles{display:flex;gap:16px;flex-wrap:wrap;font-size:.74rem;color:var(--doux);
   margin-bottom:10px}
-.cles i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;
+.cles i{display:inline-block;width:10px;height:10px;border-radius:0;margin-right:6px;
   vertical-align:-1px}
 
 /* ------------------------------------------------------------- panneaux */
@@ -277,7 +277,7 @@ h2:first-child{margin-top:0}
    n'a plus la place de dire quelque chose. */
 .rangee{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));
   align-items:start}
-.panneau{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+.panneau{background:var(--surface);border:1px solid var(--trait);border-radius:0;
   padding:16px 18px 18px;box-shadow:var(--ombre)}
 .panneau > h3{margin:0 0 3px;font-size:.95rem;display:flex;align-items:center;gap:8px}
 .panneau > h3 .ico{color:var(--accent)}
@@ -293,9 +293,9 @@ h2:first-child{margin-top:0}
 .rang .val{font-size:.85rem;font-weight:600;font-variant-numeric:tabular-nums;
   color:var(--titre)}
 .rang .val small{font-weight:400;color:var(--doux);font-size:.76rem}
-.rang .piste{grid-column:1/-1;height:6px;border-radius:6px;background:var(--creux);
+.rang .piste{grid-column:1/-1;height:6px;border-radius:0;background:var(--creux);
   overflow:hidden}
-.rang .piste i{display:block;height:100%;border-radius:6px;
+.rang .piste i{display:block;height:100%;border-radius:0;
   background:linear-gradient(90deg,var(--or-sombre),var(--or))}
 .rang.pale .piste i{background:linear-gradient(90deg,#5f7f66,var(--sauge))}
 
@@ -307,9 +307,9 @@ h2:first-child{margin-top:0}
 .marche .nom{font-size:.85rem}
 .marche .val{font-size:.95rem;font-weight:600;font-variant-numeric:tabular-nums;
   color:var(--titre);font-family:var(--titre-police)}
-.marche .piste{grid-column:1/-1;height:22px;border-radius:7px;background:var(--creux);
+.marche .piste{grid-column:1/-1;height:22px;border-radius:0;background:var(--creux);
   overflow:hidden;position:relative}
-.marche .piste i{display:block;height:100%;border-radius:7px;
+.marche .piste i{display:block;height:100%;border-radius:0;
   background:linear-gradient(90deg,rgba(212,162,63,.75),rgba(212,162,63,.35))}
 .marche .piste span{position:absolute;inset:0;display:flex;align-items:center;
   padding-left:10px;font-size:.72rem;color:var(--texte);font-variant-numeric:tabular-nums}
@@ -333,14 +333,14 @@ h2:first-child{margin-top:0}
 .beignet ul{list-style:none;margin:0;padding:0;flex:1;min-width:170px;
   display:flex;flex-direction:column;gap:7px}
 .beignet li{display:flex;align-items:center;gap:9px;font-size:.83rem}
-.beignet li i{width:10px;height:10px;border-radius:3px;flex:none}
+.beignet li i{width:10px;height:10px;border-radius:0;flex:none}
 .beignet li b{margin-left:auto;font-variant-numeric:tabular-nums}
 .beignet li span{color:var(--doux);font-size:.76rem;font-variant-numeric:tabular-nums}
 
 /* La bande d'alerte : ce qui demande qu'on s'en occupe, avant tout le reste. */
 .alertes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
 .alertes button{display:flex;align-items:center;gap:9px;border:1px solid rgba(196,112,79,.45);
-  background:var(--mauvais-fond);color:var(--mauvais-texte);border-radius:12px;
+  background:var(--mauvais-fond);color:var(--mauvais-texte);border-radius:0;
   padding:9px 14px;cursor:pointer;font-size:.84rem;transition:transform .12s,box-shadow .15s}
 .alertes button:hover{transform:translateY(-1px);box-shadow:var(--ombre)}
 .alertes button b{font-weight:700;font-variant-numeric:tabular-nums}
@@ -350,7 +350,7 @@ h2:first-child{margin-top:0}
 
 /* L'écart avec la période précédente. Un chiffre seul ne dit pas s'il monte. */
 .delta{display:inline-flex;align-items:center;gap:4px;font-size:.72rem;font-weight:600;
-  padding:1px 7px;border-radius:20px;margin-left:7px;vertical-align:2px}
+  padding:1px 7px;border-radius:0;margin-left:7px;vertical-align:2px}
 .delta.monte{background:var(--bien-fond);color:var(--bien-texte)}
 .delta.baisse{background:var(--mauvais-fond);color:var(--mauvais-texte)}
 .delta.stable{background:var(--creux);color:var(--doux)}
@@ -358,7 +358,7 @@ h2:first-child{margin-top:0}
 /* --------------------------------------------------------------- filtres */
 .filtres{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
 .filtres input,.filtres select{padding:8px 12px;border:1px solid var(--trait);
-  border-radius:11px;background:var(--surface);transition:border-color .16s,box-shadow .16s}
+  border-radius:0;background:var(--surface);transition:border-color .16s,box-shadow .16s}
 .filtres input:focus,.filtres select:focus{border-color:var(--or);outline:0;
   box-shadow:0 0 0 3px rgba(212,162,63,.14)}
 .filtres input{min-width:230px}
@@ -370,7 +370,7 @@ h2:first-child{margin-top:0}
 
 /* -------------------------------------------------------------- tableaux */
 .tableau{overflow-x:auto;background:var(--surface);border:1px solid var(--trait);
-  border-radius:var(--rayon);box-shadow:var(--ombre)}
+  border-radius:0;box-shadow:var(--ombre)}
 table{width:100%;border-collapse:collapse;font-size:.86rem}
 th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--trait);white-space:nowrap}
 th{font-size:.69rem;letter-spacing:.07em;text-transform:uppercase;color:var(--doux);
@@ -385,8 +385,8 @@ td.nombre{text-align:right;font-variant-numeric:tabular-nums}
 td.large{white-space:normal;max-width:420px}
 
 .pastille{display:inline-flex;align-items:center;gap:6px;padding:2px 10px 2px 8px;
-  border-radius:20px;font-size:.73rem;font-weight:600;line-height:1.5}
-.pastille::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;
+  border-radius:0;font-size:.73rem;font-weight:600;line-height:1.5}
+.pastille::before{content:"";width:6px;height:6px;border-radius:0;background:currentColor;
   flex:none;opacity:.85}
 .p-ok{background:var(--bien-fond);color:var(--bien-texte)}
 .p-attente{background:var(--attente-fond);color:var(--attente-texte)}
@@ -399,14 +399,14 @@ td.large{white-space:normal;max-width:420px}
 
 .pages{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82rem;
   color:var(--doux);font-variant-numeric:tabular-nums}
-.pages button{background:var(--surface);border:1px solid var(--trait);border-radius:20px;
+.pages button{background:var(--surface);border:1px solid var(--trait);border-radius:0;
   padding:6px 13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .pages button:disabled{opacity:.4;cursor:default}
 .pages button:not(:disabled):hover{border-color:var(--or);color:var(--accent)}
 
 /* ---------------------------------------------------------------- cartes */
 .cartes{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(310px,100%),1fr))}
-.carte{background:var(--surface);border:1px solid var(--trait);border-radius:var(--rayon);
+.carte{background:var(--surface);border:1px solid var(--trait);border-radius:0;
   padding:18px;box-shadow:var(--ombre)}
 /* Une carte seule dans sa grille s'étire sur toute la largeur, et ses champs
    deviennent des rubans de quinze centimètres pour saisir un raccourci. */
@@ -418,7 +418,7 @@ td.large{white-space:normal;max-width:420px}
 .champ{display:flex;gap:10px;align-items:center;margin-bottom:9px}
 .champ label{font-size:.78rem;color:var(--doux);min-width:96px}
 .champ input,.champ select,.champ textarea{flex:1;min-width:0;padding:8px 11px;
-  border:1px solid var(--trait);border-radius:10px;background:var(--surface);
+  border:1px solid var(--trait);border-radius:0;background:var(--surface);
   transition:border-color .16s,box-shadow .16s}
 .champ input:focus,.champ select:focus,.champ textarea:focus{border-color:var(--or);
   outline:0;box-shadow:0 0 0 3px rgba(212,162,63,.14)}
@@ -428,7 +428,7 @@ td.large{white-space:normal;max-width:420px}
    la langue du navigateur, ce qui mettait un « Choose File » anglais au milieu
    d'une carte française. */
 .champ .depot{flex:1;min-width:0;display:flex;align-items:center;gap:9px;padding:8px 12px;
-  border:1px dashed var(--trait-fort);border-radius:10px;background:var(--surface);
+  border:1px dashed var(--trait-fort);border-radius:0;background:var(--surface);
   cursor:pointer;font-size:.85rem;color:var(--doux);transition:border-color .16s,color .16s}
 .champ .depot:hover{border-color:var(--or);color:var(--accent)}
 .champ .depot .ico{flex:none}
@@ -446,7 +446,7 @@ td.large{white-space:normal;max-width:420px}
   min-width:0;overflow-wrap:anywhere}
 .paire b code{white-space:normal;word-break:break-all}
 
-.contenu{background:var(--creux);border:1px solid var(--trait);border-radius:var(--rayon);
+.contenu{background:var(--creux);border:1px solid var(--trait);border-radius:0;
   padding:16px 18px;margin-bottom:12px}
 .contenu h4{margin:0 0 10px;font-size:.92rem;display:flex;align-items:center;gap:8px}
 .contenu h4 .ico{color:var(--accent)}
@@ -464,7 +464,7 @@ td.large{white-space:normal;max-width:420px}
    la console a lâché. */
 .squelette{display:grid;gap:13px}
 .squelette .bloc{background:var(--surface);border:1px solid var(--trait);
-  border-radius:var(--rayon);height:76px;position:relative;overflow:hidden}
+  border-radius:0;height:76px;position:relative;overflow:hidden}
 .squelette .bloc.haut{height:220px}
 .squelette .bloc::after{content:"";position:absolute;inset:0;transform:translateX(-100%);
   background:linear-gradient(90deg,transparent,color-mix(in srgb,var(--creux) 90%,transparent),transparent);
@@ -473,17 +473,17 @@ td.large{white-space:normal;max-width:420px}
 @keyframes glisser{to{transform:translateX(100%)}}
 
 /* ----------------------------------------------------------------- volet */
-dialog{border:0;border-radius:var(--rayon-l);padding:0;max-width:min(920px,94vw);
+dialog{border:0;border-radius:0;padding:0;max-width:min(920px,94vw);
   width:100%;background:var(--fond);color:var(--texte);box-shadow:var(--ombre-haute)}
 dialog::backdrop{background:var(--voile);backdrop-filter:blur(3px)}
 dialog .tete{display:flex;align-items:center;gap:13px;padding:16px 20px;
   background:var(--nuit);color:#f4f1e8}
-dialog .tete .ecusson{width:34px;height:34px;border-radius:10px;display:grid;
+dialog .tete .ecusson{width:34px;height:34px;border-radius:0;display:grid;
   place-items:center;background:rgba(212,162,63,.16);color:var(--or-clair);flex:none}
 dialog .tete h3{margin:0;font-size:1rem;flex:1;min-width:0;overflow:hidden;
   color:#f4f1e8;text-overflow:ellipsis;white-space:nowrap}
 dialog .tete button{background:none;border:1px solid #2b3a5c;color:#b9c1d6;
-  border-radius:50%;width:32px;height:32px;cursor:pointer;display:grid;place-items:center;
+  border-radius:0;width:32px;height:32px;cursor:pointer;display:grid;place-items:center;
   transition:color .15s,border-color .15s}
 dialog .tete button:hover{color:var(--or-clair);border-color:var(--or-sombre)}
 dialog .corps{padding:20px 22px;max-height:72vh;overflow-y:auto}
@@ -493,7 +493,7 @@ dialog .corps{padding:20px 22px;max-height:72vh;overflow-y:auto}
   flex-direction:column;gap:9px;pointer-events:none}
 .annonce{display:flex;align-items:center;gap:10px;background:var(--surface);
   border:1px solid var(--trait);border-left:3px solid var(--or);
-  border-radius:12px;padding:11px 16px;box-shadow:var(--ombre-haute);font-size:.86rem;
+  border-radius:0;padding:11px 16px;box-shadow:var(--ombre-haute);font-size:.86rem;
   max-width:340px;animation:monter .22s ease both}
 .annonce.mauvais{border-left-color:var(--terracotta)}
 .annonce.mauvais .ico{color:var(--terracotta)}

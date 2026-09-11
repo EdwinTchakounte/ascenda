@@ -105,7 +105,7 @@ export default async function Page({ params }: Params) {
 
           <Link
             href="/commencer"
-            className="mt-10 inline-flex items-center justify-center rounded-full bg-[var(--color-or)] px-7 py-3.5 text-[.98rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
+            className="mt-10 inline-flex items-center justify-center rounded-none bg-[var(--color-or)] px-7 py-3.5 text-[.98rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
           >
             Construire mon plan sur cet axe
           </Link>

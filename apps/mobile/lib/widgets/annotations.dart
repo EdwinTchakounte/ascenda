@@ -46,7 +46,7 @@ class PanneauAnnotations extends ConsumerWidget {
             height: 4,
             decoration: BoxDecoration(
               color: Couleurs.grisChaud.withValues(alpha: 0.3),
-              borderRadius: BorderRadius.circular(4),
+              borderRadius: BorderRadius.zero,
             ),
           ),
           const SizedBox(height: 12),
@@ -228,7 +228,7 @@ class _CarteSurlignage extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(14, 12, 6, 12),
       decoration: BoxDecoration(
         color: teinte.withValues(alpha: 0.09),
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.zero,
         border: Border(left: BorderSide(color: teinte, width: 3)),
       ),
       child: Row(
@@ -280,7 +280,7 @@ class _CarteNote extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.zero,
         border: Border.all(color: Couleurs.traitClair),
       ),
       child: Column(

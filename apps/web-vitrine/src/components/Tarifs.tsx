@@ -86,7 +86,7 @@ export default async function Tarifs() {
           {FORMULES.map((f) => (
             <div
               key={f.code}
-              className={`flex min-w-0 flex-col rounded-[var(--radius-carte)] bg-[var(--surface)] p-6 sm:p-8 ${
+              className={`flex min-w-0 flex-col rounded-none bg-[var(--surface)] p-6 sm:p-8 ${
                 f.mise_en_avant
                   ? "border-2 border-[var(--color-or)] shadow-[var(--shadow-flottante)]"
                   : "border border-[var(--trait)] shadow-[var(--shadow-douce)]"
@@ -95,7 +95,7 @@ export default async function Tarifs() {
               <div className="flex items-baseline justify-between gap-3">
                 <h3 className="text-[1.42rem] font-semibold">{f.nom}</h3>
                 {f.mise_en_avant && (
-                  <span className="rounded-full bg-[rgba(212,162,63,0.14)] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[var(--accent-texte)]">
+                  <span className="rounded-none bg-[rgba(212,162,63,0.14)] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-[var(--accent-texte)]">
                     Recommandé
                   </span>
                 )}
@@ -124,7 +124,7 @@ export default async function Tarifs() {
                         .map((t) => (
                           <span
                             key={t.periode_mois}
-                            className="rounded-full bg-[var(--fond-creux)] px-3 py-1.5 text-[0.78rem] text-[var(--texte-doux)]"
+                            className="rounded-none bg-[var(--fond-creux)] px-3 py-1.5 text-[0.78rem] text-[var(--texte-doux)]"
                           >
                             {t.periode_mois} mois : {montant(t.montant, t.devise)}
                             <span className="ml-1.5 text-[var(--accent-texte)]">
@@ -177,11 +177,11 @@ export default async function Tarifs() {
             {grille.moyens.map((m) => (
               <div
                 key={m.code}
-                className="flex min-w-[220px] flex-1 items-center gap-3 rounded-[var(--radius-douce)] border border-[var(--trait)] bg-[var(--surface)] px-4 py-3.5"
+                className="flex min-w-[220px] flex-1 items-center gap-3 rounded-none border border-[var(--trait)] bg-[var(--surface)] px-4 py-3.5"
               >
                 <span
                   aria-hidden
-                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[0.78rem] font-bold"
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-none text-[0.78rem] font-bold"
                   style={{
                     background: m.code === "mtn" ? "#FFCC00" : "#FF7900",
                     color: m.code === "mtn" ? "#1a1400" : "#fff",

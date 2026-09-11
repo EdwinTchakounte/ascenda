@@ -19,15 +19,26 @@ const NIVEAUX: Record<string, string> = {
 function Carte({ o }: { o: Ouvrage }) {
   // La carte entière est un lien : afficher une fiche sans pouvoir l'ouvrir
   // était le seul cul-de-sac qui restait sur la bibliothèque.
+  //
+  // Le liseré de gauche porte la teinte du pôle, la même que sur les cartes de
+  // parcours et que le dos des volumes de l'étagère. Une grille de soixante
+  // cartes blanches ne dit pas de quoi elle est faite ; une grille de soixante
+  // liserés colorés se lit d'un coup d'oeil.
+  const teinte = o.axes[0] ? `axe-${o.axes[0].slug.slice(0, 2)}` : "";
   return (
-    <li className="flex flex-col rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--surface)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(212,162,63,0.4)] hover:shadow-[var(--shadow-douce)]">
-     <Link href={`/ouvrage/${o.id}`} className="flex flex-1 flex-col p-5">
+    <li className={`${teinte} group relative flex flex-col rounded-none border border-[var(--trait)] bg-[var(--surface)] transition-all duration-200 hover:-translate-y-0.5 hover:border-[rgba(212,162,63,0.4)] hover:shadow-[var(--shadow-douce)]`}>
+     <span
+       aria-hidden
+       className="absolute inset-y-0 left-0 w-[3px] opacity-70 transition-opacity duration-200 group-hover:opacity-100"
+       style={{ background: "var(--teinte, transparent)" }}
+     />
+     <Link href={`/ouvrage/${o.id}`} className="flex flex-1 flex-col p-5 pl-6">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-[1rem] font-semibold leading-snug">{o.titre}</h3>
         {!o.lecture_integrale && (
           <span
             title="Ouvrage non redistribuable : ASCENDA en cite des extraits avec leur page."
-            className="mt-0.5 shrink-0 rounded-full bg-[var(--fond-creux)] px-2 py-0.5 text-[0.66rem] font-medium text-[var(--texte-doux)]"
+            className="mt-0.5 shrink-0 rounded-none bg-[var(--fond-creux)] px-2 py-0.5 text-[0.66rem] font-medium text-[var(--texte-doux)]"
           >
             extraits
           </span>
@@ -50,17 +61,17 @@ function Carte({ o }: { o: Ouvrage }) {
 
       <div className="mt-auto flex flex-wrap items-center gap-1.5 pt-4">
         {o.niveau && (
-          <span className="rounded-full bg-[var(--fond-creux)] px-2.5 py-1 text-[0.72rem] text-[var(--texte-doux)]">
+          <span className="rounded-none bg-[var(--fond-creux)] px-2.5 py-1 text-[0.72rem] text-[var(--texte-doux)]">
             {NIVEAUX[o.niveau] ?? o.niveau}
           </span>
         )}
         {o.duree_min ? (
-          <span className="rounded-full bg-[var(--fond-creux)] px-2.5 py-1 text-[0.72rem] text-[var(--texte-doux)]">
+          <span className="rounded-none bg-[var(--fond-creux)] px-2.5 py-1 text-[0.72rem] text-[var(--texte-doux)]">
             {heures(o.duree_min)}
           </span>
         ) : null}
         {o.pages ? (
-          <span className="rounded-full bg-[var(--fond-creux)] px-2.5 py-1 text-[0.72rem] text-[var(--texte-doux)]">
+          <span className="rounded-none bg-[var(--fond-creux)] px-2.5 py-1 text-[0.72rem] text-[var(--texte-doux)]">
             {o.pages} p.
           </span>
         ) : null}
@@ -106,7 +117,7 @@ export default async function Bibliotheque({
           <nav aria-label="Filtrer par axe" className="flex flex-wrap gap-2 py-8">
             <Link
               href="/bibliotheque"
-              className={`rounded-full border px-4 py-2 text-[0.85rem] transition-colors ${
+              className={`rounded-none border px-4 py-2 text-[0.85rem] transition-colors ${
                 !axe
                   ? "border-[var(--color-or)] bg-[rgba(212,162,63,0.1)] font-medium text-[var(--accent-texte)]"
                   : "border-[var(--trait)] text-[var(--texte-doux)] hover:border-[rgba(212,162,63,0.4)]"
@@ -118,7 +129,7 @@ export default async function Bibliotheque({
               <Link
                 key={a.slug}
                 href={`/bibliotheque?axe=${a.slug}`}
-                className={`flex items-center gap-2 rounded-full border px-4 py-2 text-[0.85rem] transition-colors ${
+                className={`flex items-center gap-2 rounded-none border px-4 py-2 text-[0.85rem] transition-colors ${
                   axe === a.slug
                     ? "border-[var(--color-or)] bg-[rgba(212,162,63,0.1)] font-medium text-[var(--accent-texte)]"
                     : "border-[var(--trait)] text-[var(--texte-doux)] hover:border-[rgba(212,162,63,0.4)]"
@@ -133,7 +144,7 @@ export default async function Bibliotheque({
 
           {indisponible ? (
             /* État vide honnête : on ne fait pas croire que le corpus est vide. */
-            <div className="rounded-[var(--radius-carte)] border border-dashed border-[var(--trait)] px-8 py-16 text-center">
+            <div className="rounded-none border border-dashed border-[var(--trait)] px-8 py-16 text-center">
               <h2 className="text-[1.2rem] font-semibold">Le catalogue n&apos;a pas pu être chargé</h2>
               <p className="mx-auto mt-3 max-w-[52ch] text-[0.94rem] leading-[1.7] text-[var(--texte-doux)]">
                 La bibliothèque est servie par l&apos;API ASCENDA, qui ne répond pas pour le

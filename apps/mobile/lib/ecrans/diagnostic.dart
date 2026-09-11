@@ -139,7 +139,7 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(999),
+              borderRadius: BorderRadius.zero,
               child: LinearProgressIndicator(
                 value: (_index + 1) / questions.length,
                 minHeight: 4,
@@ -216,13 +216,13 @@ class _CarteChoix extends StatelessWidget {
     final t = Theme.of(context);
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.zero,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 160),
         padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
         decoration: BoxDecoration(
           color: choisi ? Couleurs.or.withValues(alpha: 0.1) : t.colorScheme.surface,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.zero,
           border: Border.all(
             color: choisi ? Couleurs.or : (t.dividerTheme.color ?? Couleurs.traitClair),
             width: choisi ? 1.8 : 1,
@@ -296,12 +296,12 @@ class _ChoixAxe extends ConsumerWidget {
                               duration: const Duration(seconds: 6),
                             ),
                           ),
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.zero,
                   child: Container(
                     padding: const EdgeInsets.all(18),
                     decoration: BoxDecoration(
                       color: t.colorScheme.surface,
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.zero,
                       border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
                     ),
                     child: Row(

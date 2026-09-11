@@ -386,7 +386,7 @@ class _Comparaison extends ConsumerWidget {
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 8),
       decoration: BoxDecoration(
         color: Couleurs.ivoireCreuse,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
       ),
       child: Column(
         children: [
@@ -459,7 +459,7 @@ class _CarteEnCours extends StatelessWidget {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: const LinearGradient(colors: [Couleurs.nuit, Couleurs.ardoise]),
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.zero,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -525,14 +525,14 @@ class _CarteFormuleChoix extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 10),
       child: Material(
         color: choisie ? Couleurs.or.withValues(alpha: 0.10) : t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         child: InkWell(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.zero,
           onTap: onTap,
           child: Container(
             padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.zero,
               border: Border.all(
                 color: choisie ? Couleurs.or : Couleurs.traitClair,
                 width: choisie ? 1.6 : 1,
@@ -566,7 +566,7 @@ class _CarteFormuleChoix extends StatelessWidget {
                               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                               decoration: BoxDecoration(
                                 color: Couleurs.sauge.withValues(alpha: 0.18),
-                                borderRadius: BorderRadius.circular(20),
+                                borderRadius: BorderRadius.zero,
                               ),
                               child: Text(
                                 '-$economie %',
@@ -614,14 +614,14 @@ class _CarteOperateur extends StatelessWidget {
     final teinte = moyen.code == 'mtn' ? const Color(0xFFFFCC00) : const Color(0xFFFF6600);
     return Material(
       color: choisi ? teinte.withValues(alpha: 0.12) : t.colorScheme.surface,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.zero,
       child: InkWell(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         onTap: onTap,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.zero,
             border: Border.all(
               color: choisi ? teinte : Couleurs.traitClair,
               width: choisi ? 1.6 : 1,
@@ -633,7 +633,7 @@ class _CarteOperateur extends StatelessWidget {
               Container(
                 width: 34,
                 height: 34,
-                decoration: BoxDecoration(color: teinte, borderRadius: BorderRadius.circular(9)),
+                decoration: BoxDecoration(color: teinte, borderRadius: BorderRadius.zero),
                 child: Center(
                   child: Text(
                     moyen.code == 'mtn' ? 'MTN' : 'OM',
@@ -671,7 +671,7 @@ class _AvisCodeSecret extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
       decoration: BoxDecoration(
         color: Couleurs.ivoireCreuse,
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.zero,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -728,7 +728,7 @@ class _Attente extends StatelessWidget {
             height: 84,
             decoration: BoxDecoration(
               color: teinte.withValues(alpha: 0.14),
-              shape: BoxShape.circle,
+              shape: BoxShape.rectangle,
             ),
             child: Icon(icone, size: 40, color: teinte),
           ),

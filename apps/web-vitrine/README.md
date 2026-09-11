@@ -30,6 +30,15 @@ npm run build && npx next start -p 3251
 
 ## Ce qui mérite d'être connu
 
+**L'angle droit, partout.** Aucune surface n'est arrondie : cartes, boutons,
+champs, pastilles, jetons, barres de progression. Les jetons `--radius-douce` et
+`--radius-carte` valent zéro, et il n'existe plus une seule classe `rounded-`
+ailleurs que sur trois halos, qui sont des lumières floutées et non des
+surfaces. Le parti pris tient parce qu'il ne souffre aucune exception : un seul
+coin arrondi au milieu d'une page à angles droits se voit immédiatement. La même
+règle vaut pour la console et pour l'application mobile, qui partagent ce
+langage.
+
 **La troisième dimension est écrite à la main.** Le hero porte une poussière
 d'étoiles en vraie perspective, les cartes d'axes s'inclinent sous le pointeur,
 et la bibliothèque se présente en étagère tournante. Rien de tout cela ne passe

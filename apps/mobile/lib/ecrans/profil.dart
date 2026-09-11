@@ -47,7 +47,7 @@ class EcranProfil extends ConsumerWidget {
                   height: 58,
                   decoration: BoxDecoration(
                     color: Couleurs.or.withValues(alpha: 0.14),
-                    shape: BoxShape.circle,
+                    shape: BoxShape.rectangle,
                   ),
                   child: Center(
                     child: Text(
@@ -112,7 +112,7 @@ class EcranProfil extends ConsumerWidget {
                   padding: const EdgeInsets.all(18),
                   decoration: BoxDecoration(
                     color: t.colorScheme.surface,
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.zero,
                     border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
                   ),
                   child: Column(
@@ -331,7 +331,7 @@ class _CarteFormule extends ConsumerWidget {
             ? const LinearGradient(colors: [Couleurs.nuit, Couleurs.nuitProfond])
             : null,
         color: premium ? null : t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.zero,
         border: premium
             ? null
             : Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
@@ -460,7 +460,7 @@ class _Compteur extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           ClipRRect(
-            borderRadius: BorderRadius.circular(999),
+            borderRadius: BorderRadius.zero,
             child: LinearProgressIndicator(
               value: part,
               minHeight: 5,
@@ -521,7 +521,7 @@ class _BibliothequeHorsLigne extends ConsumerWidget {
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
             color: t.colorScheme.surface,
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.zero,
             border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
           ),
           child: Column(

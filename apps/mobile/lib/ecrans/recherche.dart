@@ -216,14 +216,14 @@ class _CarteResultat extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         border: Border.all(color: Couleurs.traitClair),
       ),
       child: Material(
         color: Colors.transparent,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         child: InkWell(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.zero,
           // Sans chapitre identifié, on ouvre la fiche de l'ouvrage : mieux
           // vaut arriver sur le livre que sur un écran vide.
           onTap: () => context.push(chapitreId == null

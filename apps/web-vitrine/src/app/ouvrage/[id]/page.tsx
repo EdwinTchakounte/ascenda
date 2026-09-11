@@ -115,7 +115,7 @@ export default async function Page({ params }: Params) {
               <ul className="flex flex-col gap-3">
                 {idees.map((idee, i) => (
                   <li key={i} className="flex gap-3">
-                    <span className="mt-[.55rem] h-[5px] w-[5px] shrink-0 rounded-full bg-[var(--accent-texte)]" />
+                    <span className="mt-[.55rem] h-[5px] w-[5px] shrink-0 rounded-none bg-[var(--accent-texte)]" />
                     <span className="leading-[1.68]">{idee}</span>
                   </li>
                 ))}
@@ -135,7 +135,7 @@ export default async function Page({ params }: Params) {
             </div>
           </section>
 
-          <section className="mb-12 rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--fond-creux)] p-6">
+          <section className="mb-12 rounded-none border border-[var(--trait)] bg-[var(--fond-creux)] p-6">
             <h2 className="mb-2 text-[1.05rem] font-semibold text-[var(--titre)]">
               {f.droits.lecture_integrale ? "Lecture intégrale" : "Extraits cités"}
             </h2>
@@ -150,7 +150,7 @@ export default async function Page({ params }: Params) {
 
           <Link
             href="/commencer"
-            className="inline-flex items-center justify-center rounded-full bg-[var(--color-or)] px-7 py-3.5 text-[.98rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
+            className="inline-flex items-center justify-center rounded-none bg-[var(--color-or)] px-7 py-3.5 text-[.98rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
           >
             Mettre cet ouvrage dans mon plan
           </Link>

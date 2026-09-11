@@ -149,7 +149,7 @@ export default function HeroSlider() {
                 className="group py-2"
               >
                 <span
-                  className={`block h-[3px] rounded-full transition-all duration-500 ${
+                  className={`block h-[3px] rounded-none transition-all duration-500 ${
                     i === index
                       ? "w-10 bg-[var(--color-or)]"
                       : "w-5 bg-[rgba(255,255,255,0.18)] group-hover:bg-[rgba(232,192,112,0.5)]"
@@ -194,7 +194,7 @@ export default function HeroSlider() {
           </CadreDore>
 
           {/* Carte flottante : une vraie séance issue d'un plan généré. */}
-          <div className="en-avant relative mx-auto -mt-16 w-[92%] rounded-[18px] border border-[rgba(232,192,112,0.18)] bg-[rgba(11,20,53,0.92)] p-4 shadow-[0_24px_48px_rgba(0,0,0,0.45)] backdrop-blur-md sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:w-[290px] sm:p-5">
+          <div className="en-avant relative mx-auto -mt-16 w-[92%] rounded-none border border-[rgba(232,192,112,0.18)] bg-[rgba(11,20,53,0.92)] p-4 shadow-[0_24px_48px_rgba(0,0,0,0.45)] backdrop-blur-md sm:absolute sm:-bottom-8 sm:-left-6 sm:mt-0 sm:w-[290px] sm:p-5">
             <p className="oeil text-[0.66rem]">Séance du jour</p>
             <p className="mt-1.5 font-[family-name:var(--font-titre)] text-[1.02rem] leading-snug text-[#f4f1e8]">
               La guerre des intelligences
@@ -203,8 +203,8 @@ export default function HeroSlider() {
               ch. 2, p. 46 à 55 · 28 min
             </p>
             <div className="mt-3 flex items-center gap-2.5">
-              <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-[rgba(255,255,255,0.08)]">
-                <div className="h-full w-[38%] rounded-full bg-[var(--color-or)]" />
+              <div className="h-1.5 flex-1 overflow-hidden rounded-none bg-[rgba(255,255,255,0.08)]">
+                <div className="h-full w-[38%] rounded-none bg-[var(--color-or)]" />
               </div>
               <span className="text-[0.7rem] tabular-nums text-[#8590aa]">38 %</span>
             </div>

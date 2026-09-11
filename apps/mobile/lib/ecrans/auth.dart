@@ -233,7 +233,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                     padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
                       color: Couleurs.terracotta.withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.zero,
                     ),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,

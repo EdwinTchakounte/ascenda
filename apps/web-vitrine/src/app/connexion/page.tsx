@@ -27,14 +27,14 @@ export default function Connexion() {
           {APPLICATION.web && (
             <a
               href={APPLICATION.web}
-              className="inline-flex items-center justify-center rounded-full bg-[var(--color-or)] px-7 py-3.5 text-[0.98rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
+              className="inline-flex items-center justify-center rounded-none bg-[var(--color-or)] px-7 py-3.5 text-[0.98rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
             >
               Ouvrir l&apos;application
             </a>
           )}
           <Link
             href="/commencer"
-            className="inline-flex items-center justify-center rounded-full border border-[var(--trait)] bg-[var(--surface)] px-7 py-3.5 text-[0.98rem] font-medium text-[var(--titre)] transition-colors hover:border-[rgba(212,162,63,0.5)]"
+            className="inline-flex items-center justify-center rounded-none border border-[var(--trait)] bg-[var(--surface)] px-7 py-3.5 text-[0.98rem] font-medium text-[var(--titre)] transition-colors hover:border-[rgba(212,162,63,0.5)]"
           >
             {APPLICATION.web ? "Je n'ai pas encore de compte" : "Comment commencer"}
           </Link>

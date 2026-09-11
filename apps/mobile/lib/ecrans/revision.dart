@@ -73,7 +73,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(999),
+                  borderRadius: BorderRadius.zero,
                   child: LinearProgressIndicator(
                     value: (_index + 1) / liste.length,
                     minHeight: 4,
@@ -96,7 +96,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                           color: _retournee
                               ? Couleurs.or.withValues(alpha: 0.08)
                               : t.colorScheme.surface,
-                          borderRadius: BorderRadius.circular(24),
+                          borderRadius: BorderRadius.zero,
                           border: Border.all(
                             color: _retournee
                                 ? Couleurs.or.withValues(alpha: 0.5)
@@ -190,7 +190,7 @@ class _Fin extends StatelessWidget {
               height: 76,
               decoration: BoxDecoration(
                 color: Couleurs.sauge.withValues(alpha: 0.14),
-                shape: BoxShape.circle,
+                shape: BoxShape.rectangle,
               ),
               child: const Icon(Icons.done_all_rounded, size: 34, color: Couleurs.sauge),
             ),

@@ -121,7 +121,7 @@ class _AucuneSeance extends ConsumerWidget {
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(22),
+        borderRadius: BorderRadius.zero,
         border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
       ),
       child: Column(
@@ -159,12 +159,12 @@ class _CarteRevision extends StatelessWidget {
     final t = Theme.of(context);
     return InkWell(
       onTap: () => context.push('/revision'),
-      borderRadius: BorderRadius.circular(18),
+      borderRadius: BorderRadius.zero,
       child: Container(
         padding: const EdgeInsets.all(18),
         decoration: BoxDecoration(
           color: Couleurs.or.withValues(alpha: 0.09),
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.zero,
         ),
         child: Row(
           children: [
@@ -173,7 +173,7 @@ class _CarteRevision extends StatelessWidget {
               height: 42,
               decoration: BoxDecoration(
                 color: Couleurs.or.withValues(alpha: 0.18),
-                shape: BoxShape.circle,
+                shape: BoxShape.rectangle,
               ),
               child: const Icon(Icons.replay_rounded, size: 21, color: Couleurs.orTexte),
             ),
@@ -221,12 +221,12 @@ class _RaccourcisChronogramme extends ConsumerWidget {
 
         return InkWell(
           onTap: () => context.push('/chronogramme/${c['id']}'),
-          borderRadius: BorderRadius.circular(18),
+          borderRadius: BorderRadius.zero,
           child: Container(
             padding: const EdgeInsets.all(18),
             decoration: BoxDecoration(
               color: t.colorScheme.surface,
-              borderRadius: BorderRadius.circular(18),
+              borderRadius: BorderRadius.zero,
               border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
             ),
             child: Column(
@@ -245,7 +245,7 @@ class _RaccourcisChronogramme extends ConsumerWidget {
                 ),
                 const SizedBox(height: 12),
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(999),
+                  borderRadius: BorderRadius.zero,
                   child: LinearProgressIndicator(
                     value: total == 0 ? 0 : faites / total,
                     minHeight: 6,

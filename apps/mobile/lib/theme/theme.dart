@@ -77,7 +77,7 @@ abstract final class ThemeAscenda {
         elevation: 0,
         margin: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.zero,
           side: BorderSide(color: trait),
         ),
       ),
@@ -98,7 +98,7 @@ abstract final class ThemeAscenda {
           minimumSize: const Size(0, 52),
           padding: const EdgeInsets.symmetric(horizontal: 24),
           textStyle: GoogleFonts.inter(fontSize: 15.5, fontWeight: FontWeight.w600),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(999)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
@@ -107,7 +107,7 @@ abstract final class ThemeAscenda {
           minimumSize: const Size(0, 52),
           side: BorderSide(color: schema.primary.withValues(alpha: 0.4)),
           textStyle: GoogleFonts.inter(fontSize: 15.5, fontWeight: FontWeight.w600),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(999)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         ),
       ),
       textButtonTheme: TextButtonThemeData(
@@ -121,14 +121,14 @@ abstract final class ThemeAscenda {
         fillColor: schema.surfaceContainer,
         contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none,
+          borderRadius: BorderRadius.zero, borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.zero,
           borderSide: BorderSide(color: trait),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.zero,
           borderSide: const BorderSide(color: Couleurs.or, width: 1.6),
         ),
         hintStyle: GoogleFonts.inter(color: Couleurs.grisChaud, fontSize: 14.5),
@@ -158,7 +158,7 @@ abstract final class ThemeAscenda {
         side: BorderSide(color: trait),
         labelStyle: GoogleFonts.inter(fontSize: 12.5, color: corps),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(999)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
       dividerTheme: DividerThemeData(color: trait, thickness: 1, space: 1),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
@@ -168,7 +168,7 @@ abstract final class ThemeAscenda {
         behavior: SnackBarBehavior.floating,
         backgroundColor: Couleurs.nuit,
         contentTextStyle: GoogleFonts.inter(color: const Color(0xFFE6E9F2), fontSize: 14),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
     );
   }

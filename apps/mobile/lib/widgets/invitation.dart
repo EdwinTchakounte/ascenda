@@ -39,7 +39,7 @@ class InvitationCompte extends ConsumerWidget {
         padding: const EdgeInsets.fromLTRB(14, 12, 8, 12),
         decoration: BoxDecoration(
           color: Couleurs.or.withValues(alpha: 0.09),
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.zero,
         ),
         child: Row(
           children: [
@@ -62,7 +62,7 @@ class InvitationCompte extends ConsumerWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.zero,
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -78,7 +78,7 @@ class InvitationCompte extends ConsumerWidget {
               width: 160,
               height: 160,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
+                shape: BoxShape.rectangle,
                 color: Couleurs.or.withValues(alpha: 0.08),
               ),
             ),

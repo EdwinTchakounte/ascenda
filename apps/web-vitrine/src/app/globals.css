@@ -24,8 +24,12 @@
   --font-titre: var(--police-titre), Georgia, "Times New Roman", serif;
   --font-corps: var(--police-corps), system-ui, -apple-system, sans-serif;
 
-  --radius-douce: 12px;
-  --radius-carte: 20px;
+  /* L'angle droit. Aucune surface n'est arrondie : cartes, boutons, champs,
+     pastilles. C'est le parti pris de tout le site, et il tient parce qu'il
+     ne souffre aucune exception. Seuls restent ronds la marque, le beignet de
+     répartition et les halos, qui sont des formes en soi et non des surfaces. */
+  --radius-douce: 0px;
+  --radius-carte: 0px;
 
   --shadow-douce: 0 1px 2px rgba(11, 20, 53, 0.04), 0 8px 24px rgba(11, 20, 53, 0.06);
   --shadow-flottante: 0 2px 4px rgba(11, 20, 53, 0.06), 0 24px 48px rgba(11, 20, 53, 0.12);
@@ -102,7 +106,7 @@
   :focus-visible {
     outline: 2px solid var(--color-or);
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 0;
   }
 }
 
@@ -205,7 +209,7 @@
 .etagere:focus-visible {
   outline: 2px solid var(--color-or);
   outline-offset: 10px;
-  border-radius: 18px;
+  border-radius: 0;
 }
 .etagere-scene {
   position: absolute;
@@ -238,7 +242,7 @@
   padding: 24px 20px 20px 30px;
   display: flex;
   flex-direction: column;
-  border-radius: 3px 11px 11px 3px;
+  border-radius: 0;
   background: linear-gradient(148deg, #182549 0%, #0b1435 52%, #060e26 100%);
   box-shadow:
     0 34px 64px rgba(0, 0, 0, 0.5),
@@ -259,7 +263,7 @@
   top: 0;
   bottom: 0;
   width: 14px;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0;
   background: linear-gradient(180deg, var(--teinte, #d4a23f), rgba(0, 0, 0, 0.55));
   box-shadow: inset -2px 0 6px rgba(0, 0, 0, 0.45);
 }
@@ -290,7 +294,7 @@
     #ddd6c6 0 1px,
     #b3ab99 1px 2.2px
   );
-  border-radius: 1px;
+  border-radius: 0;
 }
 .volume-filet {
   position: absolute;

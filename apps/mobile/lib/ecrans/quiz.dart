@@ -125,7 +125,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(999),
+              borderRadius: BorderRadius.zero,
               child: LinearProgressIndicator(
                 value: (_index + 1) / _questions.length,
                 minHeight: 4,
@@ -216,7 +216,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
             padding: const EdgeInsets.all(22),
             decoration: BoxDecoration(
               color: couleur.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.zero,
             ),
             child: Row(
               children: [
@@ -225,7 +225,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
                   height: 58,
                   decoration: BoxDecoration(
                     color: couleur.withValues(alpha: 0.2),
-                    shape: BoxShape.circle,
+                    shape: BoxShape.rectangle,
                   ),
                   child: Center(
                     child: Text('${c.justes}/${c.total}',
@@ -282,13 +282,13 @@ class _Choix extends StatelessWidget {
     final t = Theme.of(context);
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(16),
+      borderRadius: BorderRadius.zero,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 150),
         padding: const EdgeInsets.all(17),
         decoration: BoxDecoration(
           color: choisi ? Couleurs.or.withValues(alpha: 0.1) : t.colorScheme.surface,
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.zero,
           border: Border.all(
             color: choisi ? Couleurs.or : (t.dividerTheme.color ?? Couleurs.traitClair),
             width: choisi ? 1.8 : 1,
@@ -324,7 +324,7 @@ class _CorrectionQuestion extends StatelessWidget {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.zero,
         border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
       ),
       child: Column(
@@ -358,7 +358,7 @@ class _CorrectionQuestion extends StatelessWidget {
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
                 color: t.colorScheme.surfaceContainer,
-                borderRadius: BorderRadius.circular(13),
+                borderRadius: BorderRadius.zero,
                 border: Border(
                   left: BorderSide(color: Couleurs.or.withValues(alpha: 0.6), width: 3),
                 ),

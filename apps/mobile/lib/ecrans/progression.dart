@@ -264,7 +264,7 @@ class _Anneau extends StatelessWidget {
       padding: const EdgeInsets.all(24),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(22),
+        borderRadius: BorderRadius.zero,
         border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
       ),
       child: Row(
@@ -345,7 +345,7 @@ class _Tuile extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.zero,
         border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
       ),
       child: Column(
@@ -381,7 +381,7 @@ class _Regularite extends ConsumerWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: t.colorScheme.surface,
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.zero,
             border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
           ),
           child: Column(
@@ -403,7 +403,7 @@ class _Regularite extends ConsumerWidget {
                               color: (p['actions'] as int) > 0
                                   ? Couleurs.or
                                   : t.colorScheme.surfaceContainer,
-                              borderRadius: BorderRadius.circular(2),
+                              borderRadius: BorderRadius.zero,
                             ),
                           ),
                         ),
@@ -464,7 +464,7 @@ class _Maitrise extends ConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 7),
                 decoration: BoxDecoration(
                   color: (_couleurs[n.niveau] ?? Couleurs.grisChaud).withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(999),
+                  borderRadius: BorderRadius.zero,
                 ),
                 child: Text(
                   n.terme,

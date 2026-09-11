@@ -60,7 +60,7 @@ export default function Commencer() {
           <ol className="grid gap-8 sm:grid-cols-3">
             {ETAPES.map((e, i) => (
               <li key={e.titre}>
-                <span className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[rgba(212,162,63,0.14)] text-[0.85rem] font-semibold tabular-nums text-[var(--accent-texte)]">
+                <span className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-none bg-[rgba(212,162,63,0.14)] text-[0.85rem] font-semibold tabular-nums text-[var(--accent-texte)]">
                   {i + 1}
                 </span>
                 <h2 className="mb-2 text-[1.05rem] font-semibold leading-snug text-[var(--titre)]">
@@ -141,18 +141,18 @@ function Acces({
   manque: string;
 }) {
   return (
-    <div className="rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--surface)] p-6">
+    <div className="rounded-none border border-[var(--trait)] bg-[var(--surface)] p-6">
       <h3 className="text-[1.02rem] font-semibold text-[var(--titre)]">{titre}</h3>
       <p className="mt-2 text-[0.9rem] leading-[1.65] text-[var(--texte-doux)]">{texte}</p>
       {href ? (
         <a
           href={href}
-          className="mt-5 inline-flex items-center justify-center rounded-full bg-[var(--color-or)] px-6 py-2.5 text-[0.92rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
+          className="mt-5 inline-flex items-center justify-center rounded-none bg-[var(--color-or)] px-6 py-2.5 text-[0.92rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
         >
           {libelle}
         </a>
       ) : (
-        <p className="mt-5 rounded-[var(--radius-douce)] border border-dashed border-[var(--trait)] px-4 py-3 text-[0.85rem] leading-[1.6] text-[var(--texte-doux)]">
+        <p className="mt-5 rounded-none border border-dashed border-[var(--trait)] px-4 py-3 text-[0.85rem] leading-[1.6] text-[var(--texte-doux)]">
           {manque}
         </p>
       )}

@@ -32,7 +32,7 @@ class CompteRenduChapitre extends StatelessWidget {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: Couleurs.or.withValues(alpha: 0.07),
-        borderRadius: BorderRadius.circular(18),
+        borderRadius: BorderRadius.zero,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -104,7 +104,7 @@ class SyntheseOuvrage extends StatelessWidget {
             padding: const EdgeInsets.all(18),
             decoration: BoxDecoration(
               gradient: const LinearGradient(colors: [Couleurs.nuit, Couleurs.ardoise]),
-              borderRadius: BorderRadius.circular(18),
+              borderRadius: BorderRadius.zero,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -223,7 +223,7 @@ class _Puce extends StatelessWidget {
             height: 5,
             decoration: BoxDecoration(
               color: teinte ?? Couleurs.orTexte,
-              shape: BoxShape.circle,
+              shape: BoxShape.rectangle,
             ),
           ),
           Expanded(
@@ -248,7 +248,7 @@ class _Encadre extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(13, 11, 13, 11),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.zero,
         border: Border(left: BorderSide(color: c, width: 3)),
         color: c.withValues(alpha: 0.06),
       ),

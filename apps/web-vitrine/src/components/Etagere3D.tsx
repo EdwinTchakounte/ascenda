@@ -155,7 +155,7 @@ export default function Etagere3D({ ouvrages }: { ouvrages: Dos[] }) {
             <button
               onClick={() => aller(courant - 1)}
               aria-label="Ouvrage précédent"
-              className="grid h-10 w-10 place-items-center rounded-full border border-[rgba(232,192,112,0.28)] text-[var(--color-or-clair)] transition-colors hover:border-[var(--color-or)] hover:bg-[rgba(212,162,63,0.12)]"
+              className="grid h-10 w-10 place-items-center rounded-none border border-[rgba(232,192,112,0.28)] text-[var(--color-or-clair)] transition-colors hover:border-[var(--color-or)] hover:bg-[rgba(212,162,63,0.12)]"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m14.4 5.6-6.4 6.4 6.4 6.4" /></svg>
             </button>
@@ -165,7 +165,7 @@ export default function Etagere3D({ ouvrages }: { ouvrages: Dos[] }) {
             <button
               onClick={() => aller(courant + 1)}
               aria-label="Ouvrage suivant"
-              className="grid h-10 w-10 place-items-center rounded-full border border-[rgba(232,192,112,0.28)] text-[var(--color-or-clair)] transition-colors hover:border-[var(--color-or)] hover:bg-[rgba(212,162,63,0.12)]"
+              className="grid h-10 w-10 place-items-center rounded-none border border-[rgba(232,192,112,0.28)] text-[var(--color-or-clair)] transition-colors hover:border-[var(--color-or)] hover:bg-[rgba(212,162,63,0.12)]"
             >
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="m9.6 5.6 6.4 6.4-6.4 6.4" /></svg>
             </button>

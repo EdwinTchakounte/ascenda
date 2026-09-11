@@ -73,13 +73,13 @@ export function CadreDore({ children }: { children: React.ReactNode }) {
     <div className="relative">
       <div
         aria-hidden
-        className="absolute -inset-2 rounded-[28px] opacity-60 blur-xl"
+        className="absolute -inset-2 rounded-none opacity-60 blur-xl"
         style={{
           background:
             "linear-gradient(135deg, rgba(212,162,63,0.28), transparent 55%, rgba(232,192,112,0.2))",
         }}
       />
-      <div className="relative overflow-hidden rounded-[24px] ring-1 ring-[rgba(232,192,112,0.22)]">
+      <div className="relative overflow-hidden rounded-none ring-1 ring-[rgba(232,192,112,0.22)]">
         {children}
       </div>
     </div>

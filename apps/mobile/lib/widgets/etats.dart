@@ -42,7 +42,7 @@ class EtatMessage extends StatelessWidget {
                 height: 64,
                 decoration: BoxDecoration(
                   color: couleur.withValues(alpha: 0.1),
-                  shape: BoxShape.circle,
+                  shape: BoxShape.rectangle,
                 ),
                 child: Icon(icone, size: 30, color: couleur),
               ),
@@ -116,7 +116,7 @@ class EtatErreur extends StatelessWidget {
 /// Squelette de chargement : des blocs à la forme du contenu attendu, plutôt
 /// qu'un tourniquet centré qui ne dit rien de ce qui arrive.
 class Squelette extends StatefulWidget {
-  const Squelette({super.key, this.hauteur = 16, this.largeur, this.rayon = 8});
+  const Squelette({super.key, this.hauteur = 16, this.largeur, this.rayon = 0});
 
   final double hauteur;
   final double? largeur;
@@ -165,7 +165,7 @@ class SqueletteCarte extends StatelessWidget {
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.zero,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -194,7 +194,7 @@ class BandeauDroits extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
       decoration: BoxDecoration(
         color: Couleurs.or.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.zero,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,

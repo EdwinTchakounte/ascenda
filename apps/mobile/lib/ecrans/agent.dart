@@ -229,9 +229,9 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
                 const SizedBox(width: 10),
                 Material(
                   color: Couleurs.or,
-                  shape: const CircleBorder(),
+                  shape: const RoundedRectangleBorder(),
                   child: InkWell(
-                    customBorder: const CircleBorder(),
+                    customBorder: const RoundedRectangleBorder(),
                     onTap: _attente ? null : () => _envoyer(),
                     child: const SizedBox(
                       width: 52,
@@ -275,12 +275,12 @@ class _Accueil extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 9),
             child: InkWell(
               onTap: () => onChoisi(s),
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.zero,
               child: Container(
                 padding: const EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   color: t.colorScheme.surface,
-                  borderRadius: BorderRadius.circular(14),
+                  borderRadius: BorderRadius.zero,
                   border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
                 ),
                 child: Row(
@@ -321,12 +321,7 @@ class _Bulle extends StatelessWidget {
               color: utilisateur
                   ? Couleurs.or.withValues(alpha: 0.14)
                   : t.colorScheme.surface,
-              borderRadius: BorderRadius.only(
-                topLeft: const Radius.circular(18),
-                topRight: const Radius.circular(18),
-                bottomLeft: Radius.circular(utilisateur ? 18 : 5),
-                bottomRight: Radius.circular(utilisateur ? 5 : 18),
-              ),
+              borderRadius: BorderRadius.zero,
               border: utilisateur
                   ? null
                   : Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
@@ -373,13 +368,13 @@ class _CarteCitation extends StatelessWidget {
       onTap: citation.documentId == null
           ? null
           : () => context.push('/ouvrage/${citation.documentId}'),
-      borderRadius: BorderRadius.circular(14),
+      borderRadius: BorderRadius.zero,
       child: Container(
         width: 230,
         padding: const EdgeInsets.all(13),
         decoration: BoxDecoration(
           color: t.colorScheme.surfaceContainer,
-          borderRadius: BorderRadius.circular(14),
+          borderRadius: BorderRadius.zero,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -392,7 +387,7 @@ class _CarteCitation extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                     decoration: BoxDecoration(
                       color: Couleurs.or.withValues(alpha: 0.2),
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.zero,
                     ),
                     child: Text('${citation.marque}',
                         style: t.textTheme.labelSmall
@@ -440,12 +435,7 @@ class _Reflexion extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 15),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.surface,
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(18),
-                topRight: Radius.circular(18),
-                bottomRight: Radius.circular(18),
-                bottomLeft: Radius.circular(5),
-              ),
+              borderRadius: BorderRadius.zero,
             ),
             child: const SizedBox(
               width: 22,
@@ -508,7 +498,7 @@ class _EcranAgentState extends ConsumerState<EcranAgent> {
       useSafeArea: true,
       backgroundColor: Theme.of(context).colorScheme.surfaceContainerLowest,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: BorderRadius.zero,
       ),
       builder: (_) => FractionallySizedBox(
         heightFactor: 0.8,

@@ -54,7 +54,7 @@ class EcranChronogramme extends ConsumerWidget {
                       ?.copyWith(color: Couleurs.grisChaud, height: 1.6)),
               const SizedBox(height: 18),
               ClipRRect(
-                borderRadius: BorderRadius.circular(999),
+                borderRadius: BorderRadius.zero,
                 child: LinearProgressIndicator(
                   value: c.avancement,
                   minHeight: 7,
@@ -131,7 +131,7 @@ class _BandeauRetard extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: Couleurs.terracotta.withValues(alpha: 0.09),
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
       ),
       child: Row(
         children: [
@@ -223,14 +223,14 @@ class _LigneSeance extends ConsumerWidget {
             context.push('/lecture/${seance.documentId}/${seance.chapitreId}?$params');
           }
         },
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         child: Container(
           padding: const EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: aujourdhui
                 ? Couleurs.or.withValues(alpha: 0.09)
                 : t.colorScheme.surface,
-            borderRadius: BorderRadius.circular(16),
+            borderRadius: BorderRadius.zero,
             border: Border.all(
               color: aujourdhui
                   ? Couleurs.or
@@ -264,7 +264,7 @@ class _LigneSeance extends ConsumerWidget {
                 width: 8,
                 height: 8,
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
+                  shape: BoxShape.rectangle,
                   color: seance.faite
                       ? Couleurs.sauge
                       : passee

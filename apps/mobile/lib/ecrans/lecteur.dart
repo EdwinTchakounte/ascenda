@@ -209,7 +209,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                     InkWell(
                       onTap: () => context.pushReplacement(
                           '/lecture/${widget.documentId}/${suivant['id']}'),
-                      borderRadius: BorderRadius.circular(14),
+                      borderRadius: BorderRadius.zero,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         child: Row(
@@ -294,7 +294,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       useSafeArea: true,
       backgroundColor: Theme.of(context).colorScheme.surfaceContainerLowest,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: BorderRadius.zero,
       ),
       builder: (_) => FractionallySizedBox(
         heightFactor: 0.92,
@@ -408,7 +408,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       useSafeArea: true,
       backgroundColor: Theme.of(context).colorScheme.surfaceContainerLowest,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: BorderRadius.zero,
       ),
       builder: (_) => FractionallySizedBox(
         heightFactor: 0.86,
@@ -452,11 +452,11 @@ class _BoutonRond extends StatelessWidget {
       message: tooltip ?? '',
       child: Material(
         color: t.colorScheme.surface,
-        shape: const CircleBorder(),
+        shape: const RoundedRectangleBorder(),
         elevation: 1,
         child: InkWell(
           onTap: onTap,
-          customBorder: const CircleBorder(),
+          customBorder: const RoundedRectangleBorder(),
           child: SizedBox(width: 52, height: 52, child: Icon(icone, size: 22)),
         ),
       ),

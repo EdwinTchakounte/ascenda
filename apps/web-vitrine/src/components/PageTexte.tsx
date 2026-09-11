@@ -65,7 +65,7 @@ export function Bloc({ titre, children }: { titre: string; children: React.React
  */
 export function ARenseigner({ quoi }: { quoi: string }) {
   return (
-    <p className="my-4 rounded-[var(--radius-douce)] border border-dashed border-[var(--color-terracotta)] bg-[rgba(196,112,79,0.07)] px-4 py-3 text-[0.9rem] leading-[1.6] text-[var(--texte)]">
+    <p className="my-4 rounded-none border border-dashed border-[var(--color-terracotta)] bg-[rgba(196,112,79,0.07)] px-4 py-3 text-[0.9rem] leading-[1.6] text-[var(--texte)]">
       <strong className="font-semibold">À renseigner avant la mise en ligne :</strong> {quoi}
     </p>
   );

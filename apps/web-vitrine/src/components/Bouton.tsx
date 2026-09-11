@@ -13,7 +13,7 @@ type Props = {
  */
 export default function Bouton({ href, children, variante = "or", taille = "normal" }: Props) {
   const base =
-    "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-all duration-200 focus-visible:outline-2";
+    "inline-flex items-center justify-center gap-2 rounded-none font-medium transition-all duration-200 focus-visible:outline-2";
   const dimensions =
     taille === "grand" ? "px-7 py-3.5 text-[0.98rem]" : "px-5 py-2.5 text-[0.9rem]";
 

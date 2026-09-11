@@ -38,11 +38,11 @@ export default function Produit() {
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[1.55fr_1fr] lg:items-center">
           {/* Cadre de navigateur */}
-          <div className="overflow-hidden rounded-[var(--radius-carte)] border border-[var(--trait)] bg-[var(--surface)] shadow-[var(--shadow-flottante)]">
+          <div className="overflow-hidden rounded-none border border-[var(--trait)] bg-[var(--surface)] shadow-[var(--shadow-flottante)]">
             <div className="flex items-center gap-2 border-b border-[var(--trait)] bg-[var(--fond-creux)] px-4 py-3">
-              <span className="h-2.5 w-2.5 rounded-full bg-[rgba(196,112,79,0.5)]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[rgba(212,162,63,0.5)]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-[rgba(124,154,130,0.5)]" />
+              <span className="h-2.5 w-2.5 rounded-none bg-[rgba(196,112,79,0.5)]" />
+              <span className="h-2.5 w-2.5 rounded-none bg-[rgba(212,162,63,0.5)]" />
+              <span className="h-2.5 w-2.5 rounded-none bg-[rgba(124,154,130,0.5)]" />
               <span className="ml-3 text-[0.74rem] text-[var(--texte-doux)]">
                 ascenda · Mon chronogramme
               </span>
@@ -56,7 +56,7 @@ export default function Produit() {
                     70 séances · 5 par semaine · 31 h 40 de lecture
                   </p>
                 </div>
-                <span className="rounded-full bg-[rgba(196,112,79,0.12)] px-3 py-1 text-[0.74rem] font-medium text-[var(--color-terracotta)]">
+                <span className="rounded-none bg-[rgba(196,112,79,0.12)] px-3 py-1 text-[0.74rem] font-medium text-[var(--color-terracotta)]">
                   2 séances de retard
                 </span>
               </div>
@@ -68,7 +68,7 @@ export default function Produit() {
                   return (
                     <li
                       key={l.jour}
-                      className={`flex items-center gap-4 py-3.5 ${actif ? "-mx-3 rounded-[var(--radius-douce)] bg-[rgba(212,162,63,0.08)] px-3" : ""}`}
+                      className={`flex items-center gap-4 py-3.5 ${actif ? "-mx-3 rounded-none bg-[rgba(212,162,63,0.08)] px-3" : ""}`}
                     >
                       <span
                         className={`w-[92px] shrink-0 text-[0.78rem] ${
@@ -80,7 +80,7 @@ export default function Produit() {
                         {l.jour}
                       </span>
                       <span
-                        className={`h-2 w-2 shrink-0 rounded-full ${
+                        className={`h-2 w-2 shrink-0 rounded-none ${
                           fait
                             ? "bg-[var(--color-sauge)]"
                             : actif

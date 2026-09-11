@@ -85,7 +85,7 @@ class FicheOuvrage extends ConsumerWidget {
                   padding: const EdgeInsets.all(18),
                   decoration: BoxDecoration(
                     color: Couleurs.or.withValues(alpha: 0.07),
-                    borderRadius: BorderRadius.circular(18),
+                    borderRadius: BorderRadius.zero,
                     border: Border(
                       left: BorderSide(color: Couleurs.or.withValues(alpha: 0.6), width: 3),
                     ),
@@ -122,7 +122,7 @@ class FicheOuvrage extends ConsumerWidget {
                           margin: const EdgeInsets.only(top: 2),
                           decoration: BoxDecoration(
                             color: Couleurs.or.withValues(alpha: 0.13),
-                            shape: BoxShape.circle,
+                            shape: BoxShape.rectangle,
                           ),
                           child: Center(
                             child: Text('${i + 1}',
@@ -156,12 +156,12 @@ class FicheOuvrage extends ConsumerWidget {
                     padding: const EdgeInsets.only(bottom: 10),
                     child: InkWell(
                       onTap: () => context.push('/ouvrage/${c['ouvrage_id']}'),
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.zero,
                       child: Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
                           color: t.colorScheme.surface,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius: BorderRadius.zero,
                           border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
                         ),
                         child: Column(
@@ -210,7 +210,7 @@ class FicheOuvrage extends ConsumerWidget {
                     // sans donner le moyen de les passer, c'est une vitrine
                     // fermée.
                     child: InkWell(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.zero,
                       onTap: (contenu['questions'] as int? ?? 0) == 0
                           ? null
                           : () => context.push(
@@ -316,7 +316,7 @@ class _Sommaire extends ConsumerWidget {
             for (final c in utiles.take(40))
               InkWell(
                 onTap: () => context.push('/lecture/$documentId/${c['id']}'),
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.zero,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 11, horizontal: 4),
                   child: Row(

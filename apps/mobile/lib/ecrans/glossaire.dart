@@ -237,16 +237,16 @@ class _CarteOccurrence extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
         color: t.colorScheme.surface,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         border: Border.all(
           color: definit ? Couleurs.or.withValues(alpha: 0.5) : Couleurs.traitClair,
         ),
       ),
       child: Material(
         color: Colors.transparent,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.zero,
         child: InkWell(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.zero,
           onTap: () => context.push(chapitreId == null
               ? '/ouvrage/${o['document_id']}'
               : '/lecture/${o['document_id']}/$chapitreId'),
@@ -269,7 +269,7 @@ class _CarteOccurrence extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
                         decoration: BoxDecoration(
                           color: Couleurs.or.withValues(alpha: 0.16),
-                          borderRadius: BorderRadius.circular(20),
+                          borderRadius: BorderRadius.zero,
                         ),
                         child: Text('la définit',
                             style: t.textTheme.labelSmall

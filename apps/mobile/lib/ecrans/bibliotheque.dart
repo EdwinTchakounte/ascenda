@@ -288,12 +288,12 @@ class _Filtre extends StatelessWidget {
       padding: const EdgeInsets.only(right: 8),
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.zero,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
           decoration: BoxDecoration(
             color: actif ? Couleurs.or.withValues(alpha: 0.12) : t.colorScheme.surface,
-            borderRadius: BorderRadius.circular(999),
+            borderRadius: BorderRadius.zero,
             border: Border.all(
               color: actif ? Couleurs.or : (t.dividerTheme.color ?? Couleurs.traitClair),
             ),

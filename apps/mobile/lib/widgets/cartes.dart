@@ -32,7 +32,7 @@ class CarteSeance extends StatelessWidget {
     return Container(
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(24),
+        borderRadius: BorderRadius.zero,
         gradient: const LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -55,7 +55,7 @@ class CarteSeance extends StatelessWidget {
               width: 190,
               height: 190,
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
+                shape: BoxShape.rectangle,
                 color: Couleurs.or.withValues(alpha: 0.07),
               ),
             ),
@@ -81,7 +81,7 @@ class CarteSeance extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                         decoration: BoxDecoration(
                           color: Couleurs.terracotta.withValues(alpha: 0.2),
-                          borderRadius: BorderRadius.circular(999),
+                          borderRadius: BorderRadius.zero,
                         ),
                         child: Text(
                           'en retard',
@@ -154,7 +154,7 @@ class _Etiquette extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
       decoration: BoxDecoration(
         color: Colors.white.withValues(alpha: 0.07),
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.zero,
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -186,12 +186,12 @@ class CarteOuvrage extends StatelessWidget {
     final t = Theme.of(context);
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.zero,
       child: Container(
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
           color: t.colorScheme.surface,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.zero,
           border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
         ),
         child: Column(
@@ -217,7 +217,7 @@ class CarteOuvrage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
                         color: t.colorScheme.surfaceContainer,
-                        borderRadius: BorderRadius.circular(999),
+                        borderRadius: BorderRadius.zero,
                       ),
                       child: Text('extraits', style: t.textTheme.labelSmall),
                     ),
@@ -273,7 +273,7 @@ class _Pilule extends StatelessWidget {
         color: accent
             ? Couleurs.or.withValues(alpha: 0.13)
             : t.colorScheme.surfaceContainer,
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.zero,
       ),
       child: Text(
         texte,
@@ -332,7 +332,7 @@ class PastillesSemaine extends StatelessWidget {
               height: 38,
               decoration: BoxDecoration(
                 color: fond,
-                shape: BoxShape.circle,
+                shape: BoxShape.rectangle,
                 border: aujourdhui ? Border.all(color: Couleurs.or, width: 2) : null,
               ),
               child: Center(child: contenu),
