@@ -48,6 +48,13 @@ palette vit dans `Couleurs.poles`, indexée par le préfixe du raccourci, qui ne
 change jamais une fois posé. Une liste de soixante cartes blanches ne dit pas de
 quoi elle est faite.
 
+**Ce qui se mesure ne se relit pas.** `flutter test` monte les écrans et
+vérifie deux choses qu'une relecture rate : que la marque est bien centrée là où
+elle est seule, et qu'aucune forme du thème n'est arrondie. La seconde compte
+parce que les coins arrondis de Material viennent du framework et non de notre
+code : il n'y a rien à relire, il faut mesurer. La suite du dépôt lance ces
+tests, et le dit et continue si Flutter n'est pas installé.
+
 **On peut revoir l'application sans téléphone.** `flutter build web` puis un
 serveur statique, et la charger dans un cadre de 400 par 844 : les règles de
 mise en page sont les mêmes. Il faut alors ajouter l'origine du serveur à

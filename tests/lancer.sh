@@ -33,6 +33,17 @@ for suite in test_api test_parcours test_revision test_axes test_paiement test_t
   ASCENDA_API="$API" "$PYTHON" "tests/$suite.py" || echec=1
 done
 
+# L'application, si Flutter est installé. Ses vérifications ne touchent ni à la
+# base ni à l'API : elles montent des écrans et mesurent. Sur une machine sans
+# Flutter, on le dit et on continue plutôt que d'échouer.
+echo
+echo "################  application mobile  ################"
+if command -v flutter > /dev/null 2>&1; then
+  (cd apps/mobile && flutter test) || echec=1
+else
+  echo "Flutter absent : suites de l'application non exécutées."
+fi
+
 echo
 if [ "$echec" -eq 0 ]; then
   echo "Toutes les suites passent."
