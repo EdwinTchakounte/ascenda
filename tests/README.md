@@ -1,6 +1,6 @@
 # Vérifications
 
-Neuf suites, précédées de deux vérifications. La première reconstruit la base
+Dix suites, précédées de deux vérifications. La première reconstruit la base
 à partir de rien ; la seconde confronte les appels des applications au schéma de
 l'API. Cinq suites appellent ensuite l'API par HTTP, sur le corpus réel, sans bouchon :
 elles ne remplacent pas des tests unitaires, elles répondent à une autre
@@ -27,6 +27,7 @@ L'API doit tourner. Chaque suite sort en code 1 si une vérification échoue.
 | `test_courriel.py` | Les cinq messages transactionnels et leurs déclencheurs : bienvenue à l'inscription, reçu à la validation d'un paiement, message de rejet, rappel avant échéance sans répétition, avis de fin d'abonnement. Vérifie aussi l'interrupteur d'un gabarit désactivé et le formatage des montants et des dates. Sans clé Brevo, les envois sont journalisés en `simule` : tout est réel sauf la sortie réseau. |
 | `test_mot_de_passe.py` | La réinitialisation, et surtout ce qu'elle refuse : code à usage unique, cinq essais au maximum, expiration, une demande par quart d'heure, aucune fuite sur l'existence d'une adresse, révocation de toutes les sessions, second code annulant le premier, et le code jamais stocké en clair. |
 | `test_enrichissement.py` | La chaîne par laquelle le corpus grandit, sans consommer un jeton : les options que le module par ouvrage passe au moteur existent bien, ce qui est déjà produit n'est pas refait, l'appareil du livre n'est pas facturé, enregistrer remplace au lieu d'empiler, et le coût s'annonce avant de se dépenser. |
+| `test_exploitation.py` | Les trois interrupteurs : période de lancement qui ouvre les plafonds sans changer les plans et se referme d'elle-même à l'échéance, maintenance qui laisse passer les lectures et refuse les écritures en 503, exceptions du webhook de paiement et de la connexion. Elle rend la main quoi qu'il arrive : une suite qui laisserait la maintenance active fermerait le service. |
 
 ## La base se reconstruit à partir de rien
 

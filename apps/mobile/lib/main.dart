@@ -4,6 +4,7 @@ import 'package:intl/date_symbol_data_local.dart';
 
 import 'routes.dart';
 import 'theme/theme.dart';
+import 'widgets/exploitation.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,15 +18,20 @@ class ApplicationAscenda extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return MaterialApp.router(
-      title: 'ASCENDA',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeAscenda.clair,
-      darkTheme: ThemeAscenda.sombre,
-      // Le clair est le défaut : c'est une application de lecture. Le sombre
-      // suit le réglage du téléphone.
-      themeMode: ThemeMode.system,
-      routerConfig: ref.watch(routeurProvider),
+    // Le voile enveloppe tout, y compris les écrans d'authentification : une
+    // mise à jour doit se voir avant qu'on essaie de se connecter, pas après un
+    // échec inexpliqué.
+    return VoileExploitation(
+      enfant: MaterialApp.router(
+        title: 'ASCENDA',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeAscenda.clair,
+        darkTheme: ThemeAscenda.sombre,
+        // Le clair est le défaut : c'est une application de lecture. Le sombre
+        // suit le réglage du téléphone.
+        themeMode: ThemeMode.system,
+        routerConfig: ref.watch(routeurProvider),
+      ),
     );
   }
 }

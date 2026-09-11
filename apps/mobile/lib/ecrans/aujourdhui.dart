@@ -8,6 +8,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
+import '../widgets/exploitation.dart';
 import '../widgets/etats.dart';
 
 /// L'écran d'accueil : ce qu'il y a à faire maintenant, et rien d'autre.
@@ -60,6 +61,9 @@ class EcranAujourdhui extends ConsumerWidget {
               data: (a) => SliverPadding(
                 padding: const EdgeInsets.fromLTRB(20, 4, 20, 32),
                 sliver: SliverList.list(children: [
+                  // Le bandeau de lancement, s'il y a lieu. Il se retire tout
+                  // seul à l'échéance, sans rien à changer dans l'application.
+                  const BandeauLancement(),
                   if (a.seance != null)
                     CarteSeance(
                       seance: a.seance!,

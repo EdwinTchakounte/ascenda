@@ -281,6 +281,30 @@ final axeProvider =
   return await api.get('/axes/$slug', auth: false) as Map<String, dynamic>;
 });
 
+/// L'état d'exploitation : lancement, maintenance, version minimale.
+///
+/// Relu au démarrage et toutes les deux minutes. Publique et sans jeton : une
+/// application qui ne peut pas se connecter doit quand même pouvoir apprendre
+/// pourquoi. Une lecture en échec ne renvoie rien plutôt qu'une erreur : une
+/// panne de ce réglage ne doit pas figer l'écran, ce serait l'inverse de ce
+/// qu'il sert à faire.
+final etatServiceProvider = StreamProvider<Map<String, dynamic>?>((ref) async* {
+  final api = ref.watch(clientApiProvider);
+  Future<Map<String, dynamic>?> lire() async {
+    try {
+      return await api.get('/etat', auth: false) as Map<String, dynamic>;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  yield await lire();
+  while (true) {
+    await Future<void>.delayed(const Duration(minutes: 2));
+    yield await lire();
+  }
+});
+
 /// Recharge tout ce qui dépend de la progression après une action.
 /// Prend un WidgetRef : ces invalidations sont déclenchées depuis les écrans.
 void rafraichirProgression(WidgetRef ref) {

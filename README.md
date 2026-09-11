@@ -183,6 +183,21 @@ en Django. Quatre garanties, toutes vérifiées par des tests :
 Tout laisse une trace dans `payment_event`. L'abonnement se ferme seul à
 échéance : le compte repasse en `free` et les quotas referment l'accès.
 
+## Les trois interrupteurs
+
+Période de lancement, maintenance, version minimale d'application. Ils vivent
+en base et se lisent sur `GET /v1/etat`, publique et sans jeton.
+
+Le lancement ouvre les plafonds d'Ascension à tous **sans changer un seul
+plan** : refermer revient à reculer une date, et on n'aura pas à distinguer
+ensuite ceux qui ont payé de ceux à qui on avait offert. Une date de fin
+referme toute seule.
+
+La maintenance fige l'écran des applications, laisse passer les lectures et
+refuse les écritures en 503. L'écran figé est une courtoisie, le 503 est la
+garantie. Le webhook de Tara et la connexion restent ouverts, pour deux raisons
+expliquées dans [docs/EXPLOITATION.md](docs/EXPLOITATION.md).
+
 ## Courrier transactionnel
 
 Cinq messages par Brevo : bienvenue, reçu de paiement, rejet, rappel à sept

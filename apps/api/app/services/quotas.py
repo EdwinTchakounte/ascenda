@@ -32,9 +32,17 @@ _MESSAGES = {
 
 
 async def quota_for(plan: str, kind: str) -> dict | None:
+    """Les plafonds appliqués, qui ne sont pas toujours ceux de la formule.
+
+    Pendant la période de lancement, tout le monde reçoit les plafonds
+    d'Ascension sans que son plan change. Le passage se fait ici, en un seul
+    endroit, parce que c'est le seul endroit que toutes les routes traversent.
+    """
+    from app.services import exploitation
+
     return await fetch_one(
         "select period, max_value, hard from plan_quota where plan = %s and type = %s",
-        (plan, kind),
+        (await exploitation.plan_effectif(plan), kind),
     )
 
 
@@ -88,9 +96,11 @@ async def record(user_id: str, kind: str, quantity: int = 1, cost_tokens: int = 
 
 async def summary(user: dict) -> list[dict]:
     """État de tous les compteurs du plan : alimente l'écran Compte."""
+    from app.services import exploitation
+
     quotas = await fetch_all(
         "select type, period, max_value, hard from plan_quota where plan = %s order by type",
-        (user["plan"],),
+        (await exploitation.plan_effectif(user["plan"]),),
     )
     out = []
     for q in quotas:

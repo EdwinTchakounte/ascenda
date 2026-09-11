@@ -68,6 +68,66 @@ app.add_middleware(
 )
 
 
+# Ce qui reste joignable pendant une maintenance : la sonde, l'état, la
+# documentation, et le webhook de paiement. Fermer le webhook ferait rejouer
+# Tara en boucle et pourrait faire abandonner un paiement déjà débité.
+_OUVERT_EN_MAINTENANCE = (
+    "/sante",
+    "/v1/etat",
+    "/docs",
+    "/openapi.json",
+    # Tara rejouerait en boucle sur un refus, et pourrait finir par abandonner
+    # un paiement déjà débité. Le webhook reste donc ouvert : il n'écrit que
+    # dans les tables de paiement, qu'on ne migre pas en même temps que le reste.
+    "/v1/paiements/webhook/",
+    # Se connecter et rafraîchir restent possibles. Ces deux routes n'écrivent
+    # que dans `refresh_token`. Les fermer transformerait une maintenance de dix
+    # minutes en vague de reconnexions : les jetons d'accès expirent au bout
+    # d'une demi-heure, et l'utilisateur se retrouverait déconnecté sans
+    # pouvoir revenir, bien après la fin de la mise à jour.
+    "/v1/auth/connexion",
+    "/v1/auth/rafraichir",
+)
+
+
+@app.middleware("http")
+async def garde_maintenance(request: Request, call_next):
+    """Refuse les écritures pendant une mise à jour.
+
+    L'écran figé côté application est une courtoisie ; ce refus est la
+    garantie. Un client qui ignorerait le drapeau, ou qui ne l'a pas encore lu,
+    ne peut pas écrire dans une base qu'on est en train de migrer.
+
+    La lecture reste ouverte : quelqu'un qui lisait un chapitre au moment de la
+    bascule peut le finir.
+    """
+    if request.method in ("GET", "HEAD", "OPTIONS"):
+        return await call_next(request)
+    if request.url.path.startswith(_OUVERT_EN_MAINTENANCE):
+        return await call_next(request)
+
+    from app.services import exploitation
+
+    try:
+        m = await exploitation.maintenance()
+    except Exception:  # noqa: BLE001
+        # Réglages illisibles : on laisse passer. Une panne de lecture ne doit
+        # pas fermer le service.
+        return await call_next(request)
+
+    if m["actif"]:
+        return JSONResponse(
+            status_code=503,
+            headers={"Retry-After": "300"},
+            content={
+                "code": "maintenance",
+                "message": m.get("message") or "ASCENDA est en cours de mise à jour.",
+                "jusqu_au": m.get("jusqu_au"),
+            },
+        )
+    return await call_next(request)
+
+
 @app.exception_handler(Exception)
 async def erreur_inattendue(request: Request, exc: Exception):
     log.exception("Erreur non gérée sur %s %s", request.method, request.url.path)
@@ -89,6 +149,20 @@ async def sante():
     except Exception as exc:  # noqa: BLE001, on veut le message dans la réponse
         base = f"indisponible: {exc}"
     return {"service": "ascenda-api", "version": app.version, "base": base, "env": settings.api_env}
+
+
+@app.get("/v1/etat", tags=["Service"], summary="L'état d'exploitation")
+async def etat():
+    """Ce que les applications lisent pour savoir dans quel monde elles vivent.
+
+    Trois réponses en un appel : sommes-nous en période de lancement, sommes-nous
+    en maintenance, et cette version de l'application est-elle encore acceptée.
+    Publique et sans jeton : une application qui ne peut pas se connecter doit
+    quand même pouvoir apprendre pourquoi.
+    """
+    from app.services import exploitation
+
+    return await exploitation.etat()
 
 
 for r in (

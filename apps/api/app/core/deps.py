@@ -46,7 +46,9 @@ async def optional_user(
 
 
 async def premium_user(user: Annotated[dict, Depends(current_user)]) -> dict:
-    if user["plan"] == "free":
+    from app.services import exploitation
+
+    if await exploitation.plan_effectif(user["plan"]) == "free":
         raise Forbidden(
             "Cette fonction fait partie de l'offre Ascension. "
             "Vous pouvez en profiter en changeant de formule depuis votre compte."

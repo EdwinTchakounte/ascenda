@@ -26,6 +26,26 @@
         }
       }
     },
+    "/v1/etat": {
+      "get": {
+        "tags": [
+          "Service"
+        ],
+        "summary": "L'état d'exploitation",
+        "description": "Ce que les applications lisent pour savoir dans quel monde elles vivent.\n\nTrois réponses en un appel : sommes-nous en période de lancement, sommes-nous\nen maintenance, et cette version de l'application est-elle encore acceptée.\nPublique et sans jeton : une application qui ne peut pas se connecter doit\nquand même pouvoir apprendre pourquoi.",
+        "operationId": "etat_v1_etat_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/auth/inscription": {
       "post": {
         "tags": [
