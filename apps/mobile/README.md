@@ -47,6 +47,12 @@ coupé ne dit pas la même chose qu'un quota atteint ou qu'une fonction payante.
 du corpus n'ont aucun ouvrage découpé en chapitres : les proposer conduirait à un
 échec après six questions.
 
+**La bibliothèque se charge par pages de vingt-quatre.** Elle demandait les
+soixante-dix-huit ouvrages d'un coup, ce qui faisait plusieurs secondes de page
+blanche sur une connexion lente pour des titres que personne ne fait défiler
+jusqu'au bout. Les pages reçues s'empilent : « charger la suite » ajoute sans
+ramener le lecteur en haut. Changer un filtre repart de la première page.
+
 **Une notion n'a d'intérêt que si elle mène au texte.** Le glossaire montre
 d'abord les notions ancrées dans le corpus, avec leur nombre de passages, et
 relègue en fin de liste celles qui viennent des fiches de lecture sans qu'aucun

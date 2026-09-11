@@ -10,3 +10,6 @@ python-multipart==0.0.20
 anthropic==0.83.0
 httpx==0.28.1
 fpdf2==2.8.8
+# Sert le PDF d'origine depuis la console d'administration. Le client officiel
+# est léger : il n'entraîne ni boto3 ni la moitié d'un SDK de nuage.
+minio==7.2.20

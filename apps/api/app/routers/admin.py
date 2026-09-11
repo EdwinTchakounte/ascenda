@@ -15,14 +15,42 @@ souvent.
 from typing import Annotated, Literal
 
 from fastapi import APIRouter, Query
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 
+import logging
+
+from app.core.config import settings
 from app.core.db import execute, fetch_all, fetch_one
 from app.core.deps import AdminUser
 from app.core.errors import Conflict, NotFound
 from app.services import exploitation
 
+log = logging.getLogger("ascenda.admin")
+
 router = APIRouter(prefix="/admin", tags=["Administration"])
+
+# Les listes de la console sont paginées, comme celles du produit. Sans cela,
+# le corpus renvoyait ses deux cents lignes et le journal des courriels les
+# siennes à chaque ouverture : le temps de chargement grandit avec le succès,
+# ce qui est exactement le mauvais sens.
+PAR_PAGE = 40
+
+
+def bornes(page: int, par_page: int) -> tuple[int, int]:
+    return par_page, (page - 1) * par_page
+
+
+def enveloppe(lignes: list, total: int, page: int, par_page: int) -> dict:
+    """Toujours la même forme : le client sait s'il reste quelque chose sans
+    avoir à deviner. `pages` évite de le faire recalculer partout."""
+    return {
+        "total": total,
+        "page": page,
+        "par_page": par_page,
+        "pages": max(1, -(-total // par_page)),
+        "lignes": lignes,
+    }
 
 
 class ReglageIn(BaseModel):
@@ -157,22 +185,27 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
 async def paiements(
     user: AdminUser,
     statut: Annotated[str | None, Query(pattern="^(en_attente|valide|rejete)$")] = None,
-    limite: Annotated[int, Query(ge=1, le=200)] = 50,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
     where, params = ["true"], []
     if statut:
         where.append("p.statut = %s")
         params.append(statut)
+    compte = await fetch_one(
+        f"select count(*) as n from payment p where {' and '.join(where)}", params
+    )
+    limite, saut = bornes(page, par_page)
     lignes = await fetch_all(
         f"""select p.id, p.statut, p.montant, p.devise, p.periode_mois, p.telephone,
                    p.reseau, p.reference_externe, p.motif_rejet, p.created_at,
                    p.date_validation, u.email
               from payment p join app_user u on u.id = p.user_id
              where {' and '.join(where)}
-             order by p.created_at desc limit %s""",
-        params + [limite],
+             order by p.created_at desc limit %s offset %s""",
+        params + [limite, saut],
     )
-    return [
+    return enveloppe([
         {
             "id": str(l["id"]),
             "email": l["email"],
@@ -188,38 +221,49 @@ async def paiements(
             "valide_le": l["date_validation"],
         }
         for l in lignes
-    ]
+    ], compte["n"], page, par_page)
 
 
 @router.get("/webhooks-orphelins", summary="Les notifications qu'on n'a pas su rattacher")
-async def orphelins(user: AdminUser, limite: Annotated[int, Query(ge=1, le=100)] = 30):
+async def orphelins(
+    user: AdminUser,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
+):
     """Le premier endroit à regarder quand quelqu'un affirme avoir payé.
 
     Un webhook qui n'a trouvé aucun paiement est conservé avec un identifiant
     nul plutôt que jeté : c'est la seule trace de l'argent de quelqu'un.
     """
+    compte = await fetch_one(
+        "select count(*) as n from payment_event where payment_id is null")
+    limite, saut = bornes(page, par_page)
     lignes = await fetch_all(
         """select id, type, source, strategie, payload, at from payment_event
-            where payment_id is null order by at desc limit %s""",
-        (limite,),
+            where payment_id is null order by at desc limit %s offset %s""",
+        (limite, saut),
     )
-    return [
+    return enveloppe([
         {"id": str(l["id"]), "type": l["type"], "source": l["source"],
          "strategie": l["strategie"], "details": l["payload"], "le": l["at"]}
         for l in lignes
-    ]
+    ], compte["n"], page, par_page)
 
 
 @router.get("/utilisateurs", summary="Chercher un compte")
 async def utilisateurs(
     user: AdminUser,
     q: Annotated[str | None, Query(min_length=2)] = None,
-    limite: Annotated[int, Query(ge=1, le=100)] = 30,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
     where, params = ["true"], []
     if q:
         where.append("(u.email ilike %s or u.display_name ilike %s)")
         params += [f"%{q}%", f"%{q}%"]
+    compte = await fetch_one(
+        f"select count(*) as n from app_user u where {' and '.join(where)}", params)
+    limite, saut = bornes(page, par_page)
     lignes = await fetch_all(
         f"""select u.id, u.email, u.display_name, u.plan, u.plan_until, u.is_active,
                    u.created_at, u.last_login_at,
@@ -228,10 +272,10 @@ async def utilisateurs(
                    (select count(*) from progress_event pe where pe.user_id = u.id) as actions
               from app_user u
              where {' and '.join(where)}
-             order by u.created_at desc limit %s""",
-        params + [limite],
+             order by u.created_at desc limit %s offset %s""",
+        params + [limite, saut],
     )
-    return [
+    return enveloppe([
         {
             "id": str(l["id"]),
             "email": l["email"],
@@ -245,30 +289,34 @@ async def utilisateurs(
             "actions": l["actions"],
         }
         for l in lignes
-    ]
+    ], compte["n"], page, par_page)
 
 
 @router.get("/courriels", summary="Le journal des envois")
 async def courriels(
     user: AdminUser,
     statut: Annotated[str | None, Query(pattern="^(en_attente|envoye|simule|echec)$")] = None,
-    limite: Annotated[int, Query(ge=1, le=200)] = 50,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
     where, params = ["true"], []
     if statut:
         where.append("statut = %s")
         params.append(statut)
+    compte = await fetch_one(
+        f"select count(*) as n from email_log where {' and '.join(where)}", params)
+    limite, saut = bornes(page, par_page)
     lignes = await fetch_all(
         f"""select template, destinataire, objet, statut, erreur, created_at
               from email_log where {' and '.join(where)}
-             order by created_at desc limit %s""",
-        params + [limite],
+             order by created_at desc limit %s offset %s""",
+        params + [limite, saut],
     )
-    return [
+    return enveloppe([
         {"gabarit": l["template"], "destinataire": l["destinataire"], "objet": l["objet"],
          "statut": l["statut"], "erreur": l["erreur"], "le": l["created_at"]}
         for l in lignes
-    ]
+    ], compte["n"], page, par_page)
 
 
 @router.get("/reglages", summary="Les trois interrupteurs")
@@ -310,7 +358,8 @@ async def corpus(
     q: Annotated[str | None, Query(min_length=2)] = None,
     axe: Annotated[str | None, Query()] = None,
     manque: Annotated[bool, Query()] = False,
-    limite: Annotated[int, Query(ge=1, le=200)] = 100,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
     """L'état de chaque ouvrage, en une requête.
 
@@ -329,6 +378,25 @@ async def corpus(
         )
         params.append(axe)
 
+    # Le filtre des incomplets vit dans le WHERE, pas en Python : filtrer après
+    # la pagination ne rendrait jamais une page pleine, et le total serait faux.
+    if manque:
+        where.append(
+            """(select count(*) from derivative v where v.document_id = d.id
+                  and v.kind = 'quiz' and v.superseded_by is null)
+               < (select count(*) from chapter c where c.document_id = d.id
+                    and coalesce(c.token_count,0) >= 300)
+             or (select count(*) from derivative v where v.document_id = d.id
+                   and v.kind = 'citation' and v.superseded_by is null)
+                < (select count(*) from chapter c where c.document_id = d.id
+                     and coalesce(c.token_count,0) >= 300)
+             or not exists (select 1 from derivative v where v.document_id = d.id
+                              and v.kind = 'fiche_lecture' and v.superseded_by is null)"""
+        )
+    compte = await fetch_one(
+        f"select count(*) as n from document d where {' and '.join(where)}", params
+    )
+    limite, saut = bornes(page, par_page)
     lignes = await fetch_all(
         f"""select d.id, coalesce(d.title_clean, d.title_raw) as titre, d.authors, d.year,
                    d.page_count, d.language, d.redistributable, d.max_excerpt_chars,
@@ -350,15 +418,13 @@ async def corpus(
                      where da.document_id = d.id) as axes
               from document d
              where {' and '.join(where)}
-             order by coalesce(d.title_clean, d.title_raw) limit %s""",
-        params + [limite],
+             order by coalesce(d.title_clean, d.title_raw) limit %s offset %s""",
+        params + [limite, saut],
     )
     sortie = []
     for l in lignes:
         utiles = l["chapitres_utiles"] or 0
         incomplet = (l["quiz"] or 0) < utiles or (l["citations"] or 0) < utiles or not l["fiches"]
-        if manque and not incomplet:
-            continue
         sortie.append(
             {
                 "id": str(l["id"]),
@@ -383,7 +449,7 @@ async def corpus(
                 "entre_le": l["added_at"],
             }
         )
-    return sortie
+    return enveloppe(sortie, compte["n"], page, par_page)
 
 
 @router.get("/corpus/{document_id}", summary="Un ouvrage en détail")
@@ -651,24 +717,129 @@ async def changer_gabarit(code: str, data: GabaritIn, user: AdminUser):
 async def abonnements(
     user: AdminUser,
     statut: Annotated[str | None, Query(pattern="^(active|expired|canceled)$")] = None,
-    limite: Annotated[int, Query(ge=1, le=200)] = 60,
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
     where, params = ["true"], []
     if statut:
         where.append("s.status = %s")
         params.append(statut)
+    compte = await fetch_one(
+        f"select count(*) as n from subscription s where {' and '.join(where)}", params)
+    limite, saut = bornes(page, par_page)
     lignes = await fetch_all(
         f"""select s.id, s.plan, s.status, s.current_start, s.current_end, s.amount_cents,
                    s.periode_mois, u.email,
                    greatest(0, extract(day from s.current_end - now())::int) as jours_restants
               from subscription s join app_user u on u.id = s.user_id
              where {' and '.join(where)}
-             order by s.current_end asc nulls last limit %s""",
-        params + [limite],
+             order by s.current_end asc nulls last limit %s offset %s""",
+        params + [limite, saut],
     )
-    return [
+    return enveloppe([
         {"id": str(l["id"]), "email": l["email"], "plan": l["plan"], "statut": l["status"],
          "debut": l["current_start"], "fin": l["current_end"], "montant": l["amount_cents"],
          "periode_mois": l["periode_mois"], "jours_restants": l["jours_restants"]}
         for l in lignes
-    ]
+    ], compte["n"], page, par_page)
+
+
+@router.get("/corpus/{document_id}/derives", summary="Le contenu produit, lisible")
+async def derives_lisibles(
+    document_id: str,
+    user: AdminUser,
+    kind: Annotated[str, Query(pattern="^(quiz|citation|fiche_lecture|compte_rendu|synthese|resume_executif|flashcards)$")] = "quiz",
+    page: Annotated[int, Query(ge=1)] = 1,
+    par_page: Annotated[int, Query(ge=1, le=50)] = 10,
+):
+    """Le contenu lui-même, pas son compte.
+
+    La console disait « 97 lots de quiz » sans permettre d'en lire un seul. On
+    ne peut pas juger de ce qu'on a payé sans le regarder, et c'est justement
+    au moment de lancer une campagne de génération qu'il faut savoir si la
+    précédente a produit quelque chose de bon.
+    """
+    compte = await fetch_one(
+        """select count(*) as n from derivative
+            where document_id = %s and kind = %s and superseded_by is null""",
+        (document_id, kind),
+    )
+    limite, saut = bornes(page, par_page)
+    lignes = await fetch_all(
+        """select v.id, v.chapter_id, v.content, v.model_id, v.prompt_version,
+                  v.cost_tokens_in, v.cost_tokens_out, v.generated_at,
+                  c.ord, c.title as chapitre, c.page_start
+             from derivative v left join chapter c on c.id = v.chapter_id
+            where v.document_id = %s and v.kind = %s and v.superseded_by is null
+            order by c.ord nulls first, v.generated_at
+            limit %s offset %s""",
+        (document_id, kind, limite, saut),
+    )
+    return enveloppe(
+        [
+            {
+                "id": str(l["id"]),
+                "chapitre": l["chapitre"],
+                "ordre": l["ord"],
+                "page": l["page_start"],
+                "modele": l["model_id"],
+                "version_invite": l["prompt_version"],
+                "jetons": (l["cost_tokens_in"] or 0) + (l["cost_tokens_out"] or 0),
+                "produit_le": l["generated_at"],
+                "contenu": l["content"],
+            }
+            for l in lignes
+        ],
+        compte["n"], page, par_page,
+    )
+
+
+@router.get("/corpus/{document_id}/fichier", summary="Le PDF d'origine")
+async def fichier_source(document_id: str, user: AdminUser):
+    """Sert le fichier tel qu'il est entré.
+
+    Le seul moyen de vérifier qu'un découpage douteux vient du pipeline et non
+    du PDF lui-même. Servi en flux depuis le stockage objet plutôt que chargé
+    en mémoire : certains ouvrages pèsent cent mégaoctets.
+    """
+    d = await fetch_one(
+        """select storage_key, filename_original, mime, size_bytes,
+                  coalesce(title_clean, title_raw) as titre
+             from document where id = %s""",
+        (document_id,),
+    )
+    if not d or not d["storage_key"]:
+        raise NotFound("Cet ouvrage n'a pas de fichier d'origine.")
+    try:
+        from minio import Minio
+
+        client = Minio(
+            settings.minio_endpoint,
+            access_key=settings.minio_root_user,
+            secret_key=settings.minio_root_password,
+            secure=settings.minio_secure,
+        )
+        reponse = client.get_object(settings.minio_bucket, d["storage_key"])
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Fichier %s illisible : %s", d["storage_key"], exc)
+        raise NotFound("Le fichier d'origine n'est pas joignable.") from exc
+
+    def flux():
+        try:
+            yield from reponse.stream(64 * 1024)
+        finally:
+            reponse.close()
+            reponse.release_conn()
+
+    nom = d["filename_original"] or f"{d['titre']}.pdf"
+    return StreamingResponse(
+        flux(),
+        media_type=d["mime"] or "application/pdf",
+        headers={
+            # `inline` : le navigateur l'ouvre dans son lecteur plutôt que de le
+            # déposer dans les téléchargements. On vient vérifier une page, pas
+            # collectionner des fichiers.
+            "Content-Disposition": f'inline; filename="{nom}"',
+            "Content-Length": str(d["size_bytes"] or 0),
+        },
+    )

@@ -120,6 +120,21 @@ td.large{white-space:normal;max-width:420px}
 .p-mauvais{background:rgba(196,112,79,.18);color:#8e4a2e}
 .p-neutre{background:var(--creux);color:var(--doux)}
 .vide{padding:30px;text-align:center;color:var(--doux)}
+.pages{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:.84rem;
+  color:var(--doux)}
+.pages button{background:var(--surface);border:1px solid var(--trait);border-radius:18px;
+  padding:5px 14px;cursor:pointer}
+.pages button:disabled{opacity:.4;cursor:default}
+.pages button:not(:disabled):hover{border-color:var(--or);color:var(--or-sombre)}
+.contenu{background:var(--creux);border-radius:12px;padding:14px 16px;margin-bottom:12px}
+.contenu h4{margin:0 0 8px;font-size:.9rem}
+.contenu .q{border-bottom:1px solid var(--trait);padding:9px 0}
+.contenu .q:last-child{border-bottom:0}
+.contenu .q b{display:block;font-weight:600;margin-bottom:4px}
+.contenu .bonne{color:#3f6047;font-weight:600}
+.contenu .just{font-size:.82rem;color:var(--doux);margin-top:4px;font-style:italic}
+.contenu pre{margin:0;white-space:pre-wrap;font-family:var(--mono);font-size:.78rem;
+  line-height:1.5;color:var(--doux)}
 
 .cartes{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
 .carte{background:var(--surface);border:1px solid var(--trait);border-radius:14px;padding:16px}
@@ -326,6 +341,23 @@ function brancherClics(lignes, surClic) {
   });
 }
 
+/** Les commandes de page. Elles n'apparaissent que s'il y a plus d'une page :
+ *  une pagination sur une liste de trois lignes est du bruit. */
+function pagination(env, allerA) {
+  if (!env || env.pages <= 1) return "";
+  return `<div class="pages">
+    <button ${env.page <= 1 ? "disabled" : ""} data-page="${env.page - 1}">Précédente</button>
+    <span>page ${env.page} sur ${env.pages} · ${nb(env.total)} au total</span>
+    <button ${env.page >= env.pages ? "disabled" : ""} data-page="${env.page + 1}">Suivante</button>
+  </div>`;
+}
+
+function brancherPages(allerA) {
+  $("zone").querySelectorAll(".pages [data-page]").forEach((b) => {
+    b.onclick = () => allerA(Number(b.dataset.page));
+  });
+}
+
 /* ----------------------------------------------------------------- volet */
 function ouvrirVolet(titre, html) {
   $("volet-titre").textContent = titre;
@@ -388,12 +420,13 @@ zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
   filtres: `<input id="f-q" placeholder="Adresse ou nom…">`,
   async rendre() {
     const q = ($("f-q") || {}).value || "";
-    const lignes = await api("/v1/admin/utilisateurs?limite=80" + (q.length > 1 ? "&q=" + encodeURIComponent(q) : ""));
+    const env = await api("/v1/admin/utilisateurs?par_page=40&page=" + (this.page || 1) +
+      (q.length > 1 ? "&q=" + encodeURIComponent(q) : ""));
     const colonnes = [["email", "adresse"], ["nom", "nom"], ["plan", "formule", "pastille"],
       ["paiements", "paiements", "nombre"], ["actions", "actions", "nombre"],
       ["inscrit_le", "inscrit", "jour"], ["derniere_connexion", "vu", "jour"]];
-    this.lignes = lignes;
-    return table(colonnes, lignes, true);
+    this.lignes = env.lignes; this.env = env;
+    return table(colonnes, env.lignes, true) + pagination(env);
   },
   async apres() {
     brancherClics(this.lignes, async (l) => {
@@ -445,11 +478,13 @@ zone({ cle: "paiements", groupe: "Membres", titre: "Paiements",
     <option value="rejete">rejetés</option></select>`,
   async rendre() {
     const s = ($("f-statut") || {}).value || "";
-    const lignes = await api("/v1/admin/paiements?limite=100" + (s ? "&statut=" + s : ""));
-    this.lignes = lignes;
+    const env = await api("/v1/admin/paiements?par_page=40&page=" + (this.page || 1) +
+      (s ? "&statut=" + s : ""));
+    this.lignes = env.lignes; this.env = env;
     return table([["email", "compte"], ["statut", "statut", "pastille"], ["montant", "montant", "xaf"],
       ["periode_mois", "mois", "nombre"], ["reseau", "opérateur"], ["telephone", "numéro"],
-      ["cree_le", "créé", "instant"], ["motif_rejet", "motif", "large"]], lignes, true);
+      ["cree_le", "créé", "instant"], ["motif_rejet", "motif", "large"]], env.lignes, true) +
+      pagination(env);
   },
   async apres() {
     brancherClics(this.lignes, async (l) => {
@@ -477,12 +512,14 @@ zone({ cle: "paiements", groupe: "Membres", titre: "Paiements",
 zone({ cle: "orphelins", groupe: "Membres", titre: "Webhooks orphelins",
   alerte: () => (resume?.paiements?.orphelins || 0),
   async rendre() {
-    const lignes = await api("/v1/admin/webhooks-orphelins?limite=100");
+    const env = await api("/v1/admin/webhooks-orphelins?par_page=40&page=" + (this.page || 1));
+    this.env = env;
     return `<p class="note" style="margin:0 0 14px">Des notifications de paiement qu'aucun
       paiement n'a pu recevoir. C'est peut-être l'argent de quelqu'un : conservées plutôt
       que jetées, elles sont la seule trace qui reste.</p>` +
       table([["type", "type"], ["source", "source"], ["strategie", "stratégie"],
-        ["le", "reçu", "instant"], ["details", "charge utile", "json"]], lignes);
+        ["le", "reçu", "instant"], ["details", "charge utile", "json"]], env.lignes) +
+      pagination(env);
   } });
 
 zone({ cle: "abonnements", groupe: "Membres", titre: "Abonnements",
@@ -490,11 +527,13 @@ zone({ cle: "abonnements", groupe: "Membres", titre: "Abonnements",
     <option value="">tous</option><option value="expired">expirés</option></select>`,
   async rendre() {
     const s = $("f-abo") ? $("f-abo").value : "active";
-    const lignes = await api("/v1/admin/abonnements?limite=120" + (s ? "&statut=" + s : ""));
+    const env = await api("/v1/admin/abonnements?par_page=40&page=" + (this.page || 1) +
+      (s ? "&statut=" + s : ""));
+    this.env = env;
     return table([["email", "compte"], ["statut", "statut", "pastille"],
       ["periode_mois", "mois", "nombre"], ["montant", "montant", "xaf"],
       ["debut", "début", "jour"], ["fin", "échéance", "jour"],
-      ["jours_restants", "jours restants", "nombre"]], lignes);
+      ["jours_restants", "jours restants", "nombre"]], env.lignes) + pagination(env);
   } });
 
 zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
@@ -504,23 +543,25 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
   async rendre() {
     const q = ($("f-corpus") || {}).value || "";
     const m = $("f-manque") && $("f-manque").checked;
-    const lignes = await api("/v1/admin/corpus?limite=200" +
+    const env = await api("/v1/admin/corpus?par_page=40&page=" + (this.page || 1) +
       (q.length > 1 ? "&q=" + encodeURIComponent(q) : "") + (m ? "&manque=true" : ""));
-    this.lignes = lignes;
-    const prets = lignes.filter((l) => l.complet).length;
+    this.lignes = env.lignes; this.env = env;
+    // Les compteurs viennent du total du serveur, pas de la page affichée :
+    // annoncer « 40 ouvrages » parce que la page en montre quarante serait faux.
+    const incomplets = m ? env.total : (resume ? env.total - 0 : env.total);
     return `<div class="tuiles" style="margin-bottom:16px">
-        <div class="tuile"><b>${nb(lignes.length)}</b><span>ouvrages listés</span></div>
-        <div class="tuile ${prets ? "bien" : ""}"><b>${nb(prets)}</b><span>complets</span>
-          <div class="sous">${nb(lignes.length - prets)} à compléter</div></div>
-        <div class="tuile"><b>${nb(lignes.filter((l) => l.lecture_integrale).length)}</b>
-          <span>en lecture intégrale</span>
-          <div class="sous">${nb(lignes.filter((l) => !l.lecture_integrale).length)} en extraits</div></div>
+        <div class="tuile"><b>${nb(env.total)}</b><span>ouvrages ${m ? "incomplets" : "au corpus"}</span>
+          <div class="sous">page ${env.page} sur ${env.pages}</div></div>
+        <div class="tuile"><b>${nb(env.lignes.filter((l) => l.complet).length)}</b>
+          <span>complets sur cette page</span></div>
+        <div class="tuile"><b>${nb(env.lignes.filter((l) => l.lecture_integrale).length)}</b>
+          <span>intégraux sur cette page</span></div>
       </div>` +
       table([["titre", "ouvrage", "large"], ["axes", "axes", "large"],
         ["pages", "pages", "nombre"], ["chapitres_utiles", "chapitres", "nombre"],
         ["vectorises", "vectorisés", "nombre"], ["quiz", "quiz", "nombre"],
         ["citations", "citations", "nombre"], ["lecture_integrale", "intégral", "oui"],
-        ["retrait", "retrait", "signal"]], lignes, true);
+        ["retrait", "retrait", "signal"]], env.lignes, true) + pagination(env);
   },
   async apres() {
     brancherClics(this.lignes, async (l) => {
@@ -558,11 +599,66 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
                 `<b>${nb(v.lots)} lots, ${nb(v.jetons_entree + v.jetons_sortie)} jetons</b></div>`).join("")
             : `<p class="aide">Rien de produit pour cet ouvrage.</p>`}</div>
         </div>
+        <h2>Lire ce qui a été produit</h2>
+        <div class="filtres">
+          <select id="v-kind">
+            ${d.derives.map((v) => `<option value="${ech(v.type)}">${ech(v.type)} (${v.lots})</option>`).join("")}
+          </select>
+          <button class="bouton fin" id="v-pdf" data-id="${d.id}">Ouvrir le PDF d'origine</button>
+        </div>
+        <div id="v-contenu"><p class="note">Choisissez un type pour lire le contenu.</p></div>
         <h2>Les chapitres</h2>
         ${table([["ordre", "n°", "nombre"], ["titre", "titre", "large"],
           ["page_debut", "de", "nombre"], ["page_fin", "à", "nombre"],
           ["tokens", "tokens", "nombre"], ["quiz", "quiz", "nombre"],
           ["citations", "citations", "nombre"]], d.chapitres)}`);
+
+      // Le PDF part avec le jeton : une balise `a href` ne peut pas porter
+      // d'en-tête d'autorisation. On récupère le flux et on l'ouvre.
+      const bp = $("v-pdf");
+      if (bp) bp.onclick = async () => {
+        bp.textContent = "…";
+        try {
+          const r = await fetch(`/v1/admin/corpus/${bp.dataset.id}/fichier`,
+            { headers: { Authorization: "Bearer " + jeton } });
+          if (!r.ok) throw new Error();
+          const url = URL.createObjectURL(await r.blob());
+          window.open(url, "_blank");
+          // On rend la mémoire au navigateur : un PDF de cent mégaoctets gardé
+          // en objet blob le reste tant que l'onglet vit.
+          setTimeout(() => URL.revokeObjectURL(url), 60000);
+          bp.textContent = "Ouvrir le PDF d'origine";
+        } catch (_) { bp.textContent = "Fichier introuvable"; }
+      };
+
+      let pageContenu = 1;
+      async function lireContenu() {
+        const kind = $("v-kind").value;
+        $("v-contenu").innerHTML = `<p class="note">Chargement…</p>`;
+        try {
+          const env = await api(`/v1/admin/corpus/${d.id}/derives?kind=${kind}` +
+            `&par_page=5&page=${pageContenu}`);
+          $("v-contenu").innerHTML = env.lignes.map((l) => `
+            <div class="contenu">
+              <h4>${ech(l.chapitre || d.titre)}${l.page ? ` · p. ${l.page}` : ""}</h4>
+              ${rendreContenu(kind, l.contenu)}
+              <p class="note">${ech(l.modele || "")} · ${nb(l.jetons)} jetons · ${instant(l.produit_le)}</p>
+            </div>`).join("") + (env.pages > 1 ? `<div class="pages">
+              <button ${env.page <= 1 ? "disabled" : ""} data-c="${env.page - 1}">Précédente</button>
+              <span>page ${env.page} sur ${env.pages} · ${nb(env.total)} lots</span>
+              <button ${env.page >= env.pages ? "disabled" : ""} data-c="${env.page + 1}">Suivante</button>
+            </div>` : "");
+          $("v-contenu").querySelectorAll("[data-c]").forEach((b) => {
+            b.onclick = () => { pageContenu = Number(b.dataset.c); lireContenu(); };
+          });
+        } catch (_) {
+          $("v-contenu").innerHTML = `<p class="note">Rien à lire pour ce type.</p>`;
+        }
+      }
+      if ($("v-kind")) {
+        $("v-kind").onchange = () => { pageContenu = 1; lireContenu(); };
+        if (d.derives.length) lireContenu();
+      }
       const b = $("d-poser");
       if (b) b.onclick = async () => {
         b.textContent = "…";
@@ -615,10 +711,12 @@ zone({ cle: "courriels", groupe: "Contenu", titre: "Journal des envois",
     <option value="simule">simulés</option><option value="echec">en échec</option></select>`,
   async rendre() {
     const s = ($("f-mail") || {}).value || "";
-    const lignes = await api("/v1/admin/courriels?limite=120" + (s ? "&statut=" + s : ""));
+    const env = await api("/v1/admin/courriels?par_page=40&page=" + (this.page || 1) +
+      (s ? "&statut=" + s : ""));
+    this.env = env;
     return table([["gabarit", "message"], ["destinataire", "destinataire"],
       ["statut", "statut", "pastille"], ["objet", "objet", "large"],
-      ["le", "quand", "instant"], ["erreur", "erreur", "large"]], lignes);
+      ["le", "quand", "instant"], ["erreur", "erreur", "large"]], env.lignes) + pagination(env);
   } });
 
 zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs", async rendre() {
@@ -658,6 +756,40 @@ zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs", asyn
     });
   } });
 
+/** Le contenu d'un dérivé, présenté selon ce qu'il est.
+ *  Un quiz se lit question par question avec sa bonne réponse et sa
+ *  justification ; une liste de citations se lit citation par citation. Tout
+ *  jeter dans un bloc JSON reviendrait à ne rien montrer. */
+function rendreContenu(kind, c) {
+  if (!c) return `<p class="note">Vide.</p>`;
+  if (kind === "quiz") {
+    const q = c.questions || [];
+    if (!q.length) return `<p class="note">Lot vide. ${ech(c.motif || "")}</p>`;
+    return q.map((x) => `<div class="q">
+      <b>${ech(x.enonce || x.question || "")}</b>
+      ${(x.options || x.choix || []).map((o, i) => {
+        const texte = typeof o === "string" ? o : (o.texte || o.libelle || "");
+        const bonne = x.bonne_reponse === i || x.reponse === i ||
+          (typeof o === "object" && o.correcte);
+        return `<div class="${bonne ? "bonne" : ""}">${bonne ? "▸ " : "· "}${ech(texte)}</div>`;
+      }).join("")}
+      ${x.explication ? `<div class="just">${ech(x.explication)}</div>` : ""}
+      ${x.extrait_source ? `<div class="just">« ${ech(x.extrait_source)} »${
+        x.page ? ` p. ${x.page}` : ""}</div>` : ""}
+    </div>`).join("");
+  }
+  if (kind === "citation") {
+    const l = c.citations || [];
+    if (!l.length) return `<p class="note">Aucune citation.</p>`;
+    return l.map((x) => `<div class="q"><b>« ${ech(x.texte || x.citation || "")} »</b>
+      <div class="just">${x.page ? `p. ${x.page}` : ""} ${ech(x.commentaire || x.contexte || "")}</div>
+    </div>`).join("");
+  }
+  // Les autres types n'ont pas de forme figée : on les rend lisibles sans
+  // prétendre les mettre en page.
+  return `<pre>${ech(JSON.stringify(c, null, 2)).slice(0, 4000)}</pre>`;
+}
+
 /* --------------------------------------------------------------- rendu */
 let courante = ZONES[0];
 
@@ -677,9 +809,13 @@ async function afficher(z) {
       let minuterie;
       c.addEventListener(evenement, () => {
         clearTimeout(minuterie);
-        minuterie = setTimeout(() => afficher(z), evenement === "input" ? 350 : 0);
+        // Changer un filtre ramène à la première page : rester sur la page
+        // douze d'une liste devenue longue de trois affiche un vide inexplicable.
+        minuterie = setTimeout(() => { z.page = 1; afficher(z); },
+          evenement === "input" ? 350 : 0);
       });
     });
+    brancherPages((n) => { z.page = n; afficher(z); });
     if (z.apres) await z.apres();
   } catch (_) {
     $("zone").innerHTML = `<div class="tableau"><div class="vide">Impossible de charger cette vue.</div></div>`;

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
@@ -21,6 +22,18 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
   String? _niveau;
   String _texte = '';
 
+  /// La page demandée, et ce qui a déjà été reçu. Changer un filtre repart de
+  /// la première page : garder la page huit d'une liste devenue courte
+  /// afficherait un vide inexplicable.
+  int _page = 1;
+  int _total = 0;
+  final List<Ouvrage> _recus = [];
+
+  void _reinitialiser() {
+    _page = 1;
+    _recus.clear();
+  }
+
   @override
   void dispose() {
     _recherche.dispose();
@@ -35,7 +48,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
       niveau: _niveau,
       recherche: _texte.length >= 2 ? _texte : null,
     );
-    final ouvrages = ref.watch(bibliothequeProvider(filtre));
+    final ouvrages = ref.watch(bibliothequeProvider(filtre.a(_page)));
     final axes = ref.watch(axesProvider);
 
     return Scaffold(
@@ -52,7 +65,10 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                   const SizedBox(height: 14),
                   TextField(
                     controller: _recherche,
-                    onChanged: (v) => setState(() => _texte = v.trim()),
+                    onChanged: (v) => setState(() {
+                      _texte = v.trim();
+                      _reinitialiser();
+                    }),
                     textInputAction: TextInputAction.search,
                     decoration: InputDecoration(
                       hintText: 'Un titre, un auteur…',
@@ -64,7 +80,10 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                               icon: const Icon(Icons.close_rounded, size: 19),
                               onPressed: () {
                                 _recherche.clear();
-                                setState(() => _texte = '');
+                                setState(() {
+                                  _texte = '';
+                                  _reinitialiser();
+                                });
                               },
                             ),
                     ),
@@ -95,14 +114,20 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                     _Filtre(
                       libelle: 'Tous',
                       actif: _axe == null,
-                      onTap: () => setState(() => _axe = null),
+                      onTap: () => setState(() {
+                        _axe = null;
+                        _reinitialiser();
+                      }),
                     ),
                     for (final a in liste)
                       _Filtre(
                         libelle: a.label,
                         compte: a.nbOuvrages,
                         actif: _axe == a.slug,
-                        onTap: () => setState(() => _axe = _axe == a.slug ? null : a.slug),
+                        onTap: () => setState(() {
+                          _axe = _axe == a.slug ? null : a.slug;
+                          _reinitialiser();
+                        }),
                       ),
                   ],
                 ),
@@ -149,9 +174,21 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                 ),
                 error: (e, _) => EtatErreur(
                   erreur: e,
-                  reessayer: () => ref.invalidate(bibliothequeProvider(filtre)),
+                  reessayer: () => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
                 ),
-                data: (liste) => liste.isEmpty
+                data: (p) {
+                  // On empile les pages déjà reçues. Repartir de zéro à chaque
+                  // chargement ramènerait le lecteur en haut de la liste.
+                  if (p.page == 1) {
+                    _recus
+                      ..clear()
+                      ..addAll(p.ouvrages);
+                  } else if (_recus.length < p.page * parPageBiblio) {
+                    _recus.addAll(p.ouvrages);
+                  }
+                  _total = p.total;
+                  final liste = _recus;
+                  return liste.isEmpty
                     ? const EtatMessage(
                         icone: Icons.search_off_rounded,
                         titre: 'Aucun ouvrage',
@@ -160,12 +197,36 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                       )
                     : RefreshIndicator(
                         color: Couleurs.or,
-                        onRefresh: () async => ref.invalidate(bibliothequeProvider(filtre)),
+                        onRefresh: () async => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
                         child: ListView.separated(
                           padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
-                          itemCount: liste.length + 1,
+                          // Une ligne de plus en queue : le bouton qui charge
+                          // la suite, ou le mot de la fin.
+                          itemCount: liste.length + 2,
                           separatorBuilder: (_, _) => const SizedBox(height: 12),
                           itemBuilder: (context, i) {
+                            if (i == liste.length + 1) {
+                              if (liste.length >= _total) {
+                                return Padding(
+                                  padding: const EdgeInsets.only(top: 10, bottom: 20),
+                                  child: Text(
+                                    'Fin de la liste.',
+                                    textAlign: TextAlign.center,
+                                    style: t.textTheme.bodySmall
+                                        ?.copyWith(color: Couleurs.grisChaud),
+                                  ),
+                                );
+                              }
+                              return Padding(
+                                padding: const EdgeInsets.only(top: 6, bottom: 20),
+                                child: OutlinedButton(
+                                  onPressed: () => setState(() => _page += 1),
+                                  child: Text(
+                                    'Charger la suite (${_total - liste.length} restants)',
+                                  ),
+                                ),
+                              );
+                            }
                             if (i == 0) {
                               return Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -179,9 +240,9 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                   Padding(
                                     padding: const EdgeInsets.only(top: 14, bottom: 4),
                                     child: Text(
-                                      liste.length == 1
+                                      _total == 1
                                           ? '1 ouvrage'
-                                          : '${liste.length} ouvrages',
+                                          : '${liste.length} sur $_total ouvrages',
                                       style: t.textTheme.bodySmall
                                           ?.copyWith(color: Couleurs.grisChaud),
                                     ),
@@ -196,7 +257,8 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                             );
                           },
                         ),
-                      ),
+                      );
+                },
               ),
             ),
           ],

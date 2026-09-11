@@ -84,19 +84,38 @@ async def main():
            f"{tb['paiements']['encaisse']} contre {encaisse['n']}")
 
         print("\n· Les listes")
-        code, liste, _ = appel("GET", "/v1/admin/paiements?statut=valide&limite=5", jeton=jeton_admin)
+        code, env, _ = appel("GET", "/v1/admin/paiements?statut=valide&par_page=5", jeton=jeton_admin)
+        liste = env["lignes"]
         ok("les paiements se filtrent par statut",
            code == 200 and all(p["statut"] == "valide" for p in liste), code)
         ok("chaque ligne porte le compte concerné",
            not liste or all(p.get("email") for p in liste))
 
-        code, orph, _ = appel("GET", "/v1/admin/webhooks-orphelins", jeton=jeton_admin)
-        ok("les webhooks orphelins se listent", code == 200 and isinstance(orph, list), code)
+        print("\n· Les listes sont paginées")
+        # Sans pagination, chaque ouverture de la console renvoyait toutes les
+        # lignes : le temps de chargement grandit avec le succès, ce qui est
+        # exactement le mauvais sens.
+        for chemin in ("utilisateurs", "paiements", "courriels", "abonnements",
+                       "webhooks-orphelins", "corpus"):
+            code, e, _ = appel("GET", f"/v1/admin/{chemin}?par_page=5", jeton=jeton_admin)
+            forme = code == 200 and {"total", "page", "pages", "lignes"} <= set(e)
+            ok(f"{chemin} renvoie une enveloppe paginée",
+               forme and len(e["lignes"]) <= 5, code if not forme else len(e["lignes"]))
 
-        code, gens, _ = appel("GET", "/v1/admin/utilisateurs?limite=5", jeton=jeton_admin)
-        ok("les comptes se listent", code == 200 and isinstance(gens, list), code)
+        code, p1, _ = appel("GET", "/v1/admin/utilisateurs?par_page=3&page=1", jeton=jeton_admin)
+        code, p2, _ = appel("GET", "/v1/admin/utilisateurs?par_page=3&page=2", jeton=jeton_admin)
+        ok("deux pages successives ne se recouvrent pas",
+           not ({l["id"] for l in p1["lignes"]} & {l["id"] for l in p2["lignes"]}))
+        ok("le total ne dépend pas de la page", p1["total"] == p2["total"], f"{p1['total']} {p2['total']}")
+
+        code, orph, _ = appel("GET", "/v1/admin/webhooks-orphelins", jeton=jeton_admin)
+        ok("les webhooks orphelins se listent", code == 200 and "lignes" in orph, code)
+
+        code, gens, _ = appel("GET", "/v1/admin/utilisateurs?par_page=5", jeton=jeton_admin)
+        ok("les comptes se listent", code == 200 and "lignes" in gens, code)
         ok("sans jamais exposer une empreinte de mot de passe",
-           not gens or all("password" not in str(k).lower() for k in gens[0]), list(gens[0]) if gens else "")
+           not gens["lignes"] or all("password" not in str(k).lower() for k in gens["lignes"][0]),
+           list(gens["lignes"][0]) if gens["lignes"] else "")
 
         print("\n· Les interrupteurs se posent depuis le tableau de bord")
         code, avant, _ = appel("GET", "/v1/admin/reglages", jeton=jeton_admin)
@@ -117,16 +136,20 @@ async def main():
         ok("un compte ordinaire ne peut rien poser", code == 403, code)
 
         print("\n· Le contenu du corpus")
-        code, corpus, _ = appel("GET", "/v1/admin/corpus?limite=5", jeton=jeton_admin)
+        code, envc, _ = appel("GET", "/v1/admin/corpus?par_page=5", jeton=jeton_admin)
+        corpus = envc["lignes"]
         ok("le corpus se liste", code == 200 and len(corpus) > 0, code)
         ok("chaque ouvrage porte son état de production",
            not corpus or {"chapitres_utiles", "vectorises", "quiz", "citations", "complet"}
            <= set(corpus[0]), list(corpus[0]) if corpus else "")
 
-        code, incomplets, _ = appel("GET", "/v1/admin/corpus?manque=true&limite=200",
-                                    jeton=jeton_admin)
+        code, inc, _ = appel("GET", "/v1/admin/corpus?manque=true&par_page=40", jeton=jeton_admin)
         ok("le filtre des incomplets ne garde que les incomplets",
-           all(not o["complet"] for o in incomplets), len(incomplets))
+           all(not o["complet"] for o in inc["lignes"]), len(inc["lignes"]))
+        # Le filtre vit dans le WHERE : sans cela, filtrer après la pagination
+        # ne rendrait jamais une page pleine et le total serait faux.
+        ok("et son total est celui des incomplets, pas celui du corpus",
+           inc["total"] < envc["total"], f"{inc['total']} sur {envc['total']}")
 
         un = corpus[0]
         code, detail, _ = appel("GET", f"/v1/admin/corpus/{un['id']}", jeton=jeton_admin)
@@ -152,6 +175,17 @@ async def main():
         code, _, _ = appel("PATCH", f"/v1/admin/corpus/{un['id']}",
                            {"takedown_status": "inventé"}, jeton=jeton_admin)
         ok("un statut de retrait inconnu est refusé", code == 422, code)
+
+        print("\n· Tout se visualise depuis la console")
+        code, contenu, _ = appel("GET", f"/v1/admin/corpus/{un['id']}/derives?kind=quiz&par_page=2",
+                                 jeton=jeton_admin)
+        ok("le contenu produit se lit, pas seulement son compte",
+           code == 200 and "lignes" in contenu and
+           (not contenu["lignes"] or "contenu" in contenu["lignes"][0]), code)
+
+        code, _, _ = appel("GET", f"/v1/admin/corpus/{un['id']}/derives?kind=nimportequoi",
+                           jeton=jeton_admin)
+        ok("un type de dérivé inconnu est refusé", code == 422, code)
 
         print("\n· Les messages se corrigent en base")
         code, gabarits, _ = appel("GET", "/v1/admin/gabarits", jeton=jeton_admin)

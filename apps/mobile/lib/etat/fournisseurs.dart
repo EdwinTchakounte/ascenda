@@ -19,34 +19,65 @@ final axesProvider = FutureProvider<List<Axe>>((ref) async {
 });
 
 class FiltreBiblio {
-  const FiltreBiblio({this.axe, this.niveau, this.recherche});
+  const FiltreBiblio({this.axe, this.niveau, this.recherche, this.page = 1});
   final String? axe;
   final String? niveau;
   final String? recherche;
+
+  /// La page demandée. Elle fait partie de la clé : Riverpod garde une entrée
+  /// par page, et revenir en arrière ne redemande rien au serveur.
+  final int page;
+
+  FiltreBiblio a(int autrePage) =>
+      FiltreBiblio(axe: axe, niveau: niveau, recherche: recherche, page: autrePage);
 
   @override
   bool operator ==(Object other) =>
       other is FiltreBiblio &&
       other.axe == axe &&
       other.niveau == niveau &&
-      other.recherche == recherche;
+      other.recherche == recherche &&
+      other.page == page;
 
   @override
-  int get hashCode => Object.hash(axe, niveau, recherche);
+  int get hashCode => Object.hash(axe, niveau, recherche, page);
 }
 
+/// Une page de la bibliothèque, et de quoi savoir s'il en reste.
+class PageOuvrages {
+  const PageOuvrages({required this.ouvrages, required this.total, required this.page});
+  final List<Ouvrage> ouvrages;
+  final int total;
+  final int page;
+
+  bool get encore => ouvrages.length < total;
+}
+
+/// Combien d'ouvrages par chargement.
+///
+/// Vingt-quatre remplissent deux écrans et pèsent peu. Charger les soixante-dix
+/// huit d'un coup faisait, sur une connexion lente, plusieurs secondes d'attente
+/// devant une page blanche pour des ouvrages que personne ne fait défiler
+/// jusqu'au bout.
+const int parPageBiblio = 24;
+
 final bibliothequeProvider =
-    FutureProvider.autoDispose.family<List<Ouvrage>, FiltreBiblio>((ref, f) async {
+    FutureProvider.autoDispose.family<PageOuvrages, FiltreBiblio>((ref, f) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/bibliotheque', auth: false, params: {
-    'par_page': 60,
+    'par_page': parPageBiblio,
+    'page': f.page,
     if (f.axe != null) 'axe': f.axe,
     if (f.niveau != null) 'niveau': f.niveau,
     if (f.recherche != null && f.recherche!.length >= 2) 'q': f.recherche,
   }) as Map<String, dynamic>;
-  return (j['ouvrages'] as List)
-      .map((e) => Ouvrage.depuisJson(e as Map<String, dynamic>))
-      .toList();
+  return PageOuvrages(
+    ouvrages: (j['ouvrages'] as List)
+        .map((e) => Ouvrage.depuisJson(e as Map<String, dynamic>))
+        .toList(),
+    total: (j['total'] as int?) ?? 0,
+    page: (j['page'] as int?) ?? 1,
+  );
 });
 
 final ficheOuvrageProvider =
