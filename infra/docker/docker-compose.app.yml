@@ -56,6 +56,39 @@ services:
       # et sans effet dans ce cas.
       - ascenda_modeles:/home/ascenda/.cache/huggingface
 
+  # Le chargement du corpus, à la demande.
+  #
+  # L'image de l'API ne porte ni `pipeline/` ni `data/` : elle sert la base,
+  # elle ne la remplit pas. Ce service monte les deux depuis le dépôt cloné sur
+  # le serveur et lance l'import, qui est idempotent. Sans lui, une machine
+  # neuve n'a aucun moyen de charger le corpus, faute de Python hors conteneur.
+  #
+  #   docker compose ... run --rm importeur
+  #   docker compose ... run --rm importeur --verifier    # ce qui bougerait
+  #
+  # `profiles` le tient à l'écart des montées de pile : il ne démarre que
+  # lorsqu'on l'appelle par son nom.
+  importeur:
+    profiles: ["outils"]
+    image: ascenda-api:local
+    build:
+      context: ../..
+      dockerfile: apps/api/Dockerfile
+    depends_on:
+      postgres: {condition: service_healthy}
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      PYTHONPATH: /chantier/pipeline
+    volumes:
+      - ../../pipeline:/chantier/pipeline:ro
+      - ../../data:/chantier/data:ro
+    working_dir: /chantier
+    entrypoint: ["python", "pipeline/derive/importer.py"]
+
   vitrine:
     build:
       context: ../..

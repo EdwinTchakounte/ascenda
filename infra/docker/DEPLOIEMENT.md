@@ -68,11 +68,21 @@ done
 ## 4. Le corpus
 
 La base montée est vide. Le corpus se charge depuis `data/`, qui est la source
-de vérité :
+de vérité. Un serveur n'a que Docker, pas de Python ni de `.venv` : l'import
+passe donc par un service dédié, qui monte `pipeline/` et `data/` depuis le
+dépôt cloné.
 
 ```bash
-.venv/bin/python pipeline/derive/importer.py
+cd infra/docker
+docker compose -f docker-compose.yml -f docker-compose.app.yml \
+  run --rm importeur --verifier    # ce qui bougerait, sans rien écrire
+docker compose -f docker-compose.yml -f docker-compose.app.yml \
+  run --rm importeur               # data/ vers la base
 ```
+
+L'import est idempotent : deux passages consécutifs annoncent « inchangés » sur
+les 4 176 dérivés. Le service reste à l'écart des montées de pile, il ne
+démarre que lorsqu'on l'appelle par son nom.
 
 La vectorisation, elle, se fait hors du conteneur et prend des heures de
 processeur. Sans elle, la recherche reste en plein texte et l'API le dit dans
