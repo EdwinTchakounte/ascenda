@@ -185,7 +185,62 @@ La vectorisation, elle, se fait hors du conteneur et prend des heures de
 processeur. Sans elle, la recherche reste en plein texte et l'API le dit dans
 le champ `mode`. Voir `pipeline/embed/`.
 
-## 5. Déclarer le webhook chez Tara
+## 5. La console, et le premier administrateur
+
+La console d'exploitation voyage avec l'image de l'API : il n'y a rien de plus à
+déployer. Une fois la pile montée, elle est à
+
+```
+https://api.ascenda-books.online/admin
+```
+
+**Mais personne ne peut y entrer.** Sur une base neuve il n'existe aucun compte,
+et le droit d'administration ne se demande par aucune route : c'est voulu, une
+route qui accorde ce droit est une route qu'on attaque. Deux gestes, une seule
+fois :
+
+```bash
+# 1. Créer le compte comme n'importe quel lecteur, par l'API.
+curl -sS -X POST https://api.ascenda-books.online/v1/auth/inscription \
+  -H 'Content-Type: application/json' \
+  -d '{"email":"vous@exemple.com","mot_de_passe":"...","nom":"..."}'
+
+# 2. Lui donner le droit, en base.
+docker exec -i ascenda-postgres psql -U ascenda -d ascenda \
+  -c "update app_user set est_admin = true where email = 'vous@exemple.com';"
+```
+
+Le mot de passe ne passe pas par le `.env` ni par un fichier : il est haché par
+l'API à l'inscription, et personne d'autre que vous ne l'aura vu.
+
+On ne peut pas se retirer son propre droit depuis la console. C'est le moyen le
+plus simple de se verrouiller dehors un dimanche soir.
+
+### Ce qui protège cette adresse
+
+La console est publique au sens où son adresse répond à tout le monde : elle
+sert alors sa page de connexion, et rien d'autre. Le refus opposé à un compte
+ordinaire ne dit même pas qu'un espace d'administration existe.
+
+L'API, elle, ne compte pas les essais de mot de passe ratés. Sans limite, rien
+n'empêche d'en essayer dix mille par minute sur un compte d'administration.
+`infra/nginx/ascenda.conf` pose donc la limite au niveau du nginx : cinq essais
+par minute et par adresse sur les routes qui vérifient un mot de passe, avec une
+réserve de cinq pour ne pas punir quelqu'un qui se trompe deux fois de suite. Le
+reste de l'API est à trente requêtes par seconde, et le webhook de Tara n'est pas
+limité du tout : c'est leur serveur qui appelle, et une notification refusée est
+un paiement qu'on ne rattache pas.
+
+Si vous voulez une serrure de plus, ajoutez dans le bloc de l'API :
+
+```nginx
+location /admin { allow VOTRE.IP.FIXE; deny all; proxy_pass http://ascenda_api; }
+```
+
+Cela suppose une adresse fixe. Sans elle, la limitation d'essais et le mot de
+passe suffisent.
+
+## 6. Déclarer le webhook chez Tara
 
 L'adresse à leur donner :
 
@@ -197,7 +252,7 @@ Elle doit être en HTTPS. Tara ne signe pas ses notifications : la sécurité du
 webhook repose sur le fait que cette adresse est chiffrée et connue d'eux
 seuls, plus la vérification du `businessId` que nous faisons de notre côté.
 
-## 6. Vérifier
+## 7. Vérifier
 
 ```bash
 curl -s https://api.ascenda-books.online/sante
