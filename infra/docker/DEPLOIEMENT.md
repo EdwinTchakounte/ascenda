@@ -124,14 +124,59 @@ l'API gardait son `0.0.0.0:8250` en plus du port local, c'est à dire une API en
 clair ouverte sur Internet. Le défaut a été trouvé au banc d'essai, pas à la
 lecture.
 
-Puis la configuration du nginx en place. `infra/nginx/ascenda.conf` porte les
-trois blocs : la vitrine, l'API avec ses cent mégaoctets de dépôt d'ouvrage et
-ses cinq minutes de délai, et la redirection du clair vers le chiffré.
+### La configuration du nginx, en deux temps
+
+Il y a un piège d'ordre, et il vaut mieux le connaître avant de s'y prendre.
+`ascenda.conf` déclare des `ssl_certificate` qui n'existent pas encore, et nginx
+refuse de recharger sur un certificat introuvable : on ne peut donc pas poser la
+configuration complète d'emblée. Mais sans aucune configuration, le nginx en
+place laisse tomber les noms qu'il ne connaît pas, et la validation d'ACME
+n'aboutit pas non plus. Vérifié sur le serveur : un nom qu'il sert répond 404,
+les nôtres n'obtiennent rien du tout.
+
+**Premier temps**, `ascenda-acme.conf`. Il ne parle qu'en clair, ne sert que le
+chemin de validation, et répond « ASCENDA arrive » au reste. Il passe `nginx -t`
+sans un seul certificat.
 
 ```bash
-docker exec backend-nginx-1 nginx -t        # on vérifie avant de recharger
-docker exec backend-nginx-1 nginx -s reload
+docker cp infra/nginx/ascenda-acme.conf backend-nginx-1:/etc/nginx/conf.d/ascenda.conf
+docker exec backend-nginx-1 nginx -t && docker exec backend-nginx-1 nginx -s reload
+curl http://ascenda-books.online/          # doit répondre « ASCENDA arrive. »
 ```
+
+**Deuxième temps**, les certificats. La commande dépend de la façon dont ce
+serveur les obtient déjà pour ses autres sites : `etat-serveur.sh` le dit. En
+mode webroot, avec le répertoire que le nginx expose :
+
+```bash
+certbot certonly --webroot -w /var/www/certbot \
+  -d ascenda-books.online -d www.ascenda-books.online \
+  -d api.ascenda-books.online \
+  --agree-tos -m contact@ascenda-books.online --no-eff-email
+```
+
+Demandez les trois noms en une fois : trois certificats séparés, c'est trois
+renouvellements à surveiller.
+
+**Troisième temps**, la configuration complète, qui remplace la première.
+
+```bash
+docker cp infra/nginx/ascenda.conf backend-nginx-1:/etc/nginx/conf.d/ascenda.conf
+docker exec backend-nginx-1 nginx -t && docker exec backend-nginx-1 nginx -s reload
+```
+
+Elle porte les trois blocs : la vitrine, l'API avec ses cent mégaoctets de dépôt
+d'ouvrage et ses cinq minutes de délai, la redirection du clair vers le chiffré,
+et les limites d'essais de mot de passe.
+
+Si `ascenda.conf` vise un seul certificat couvrant les trois noms, corrigez les
+chemins `ssl_certificate` du bloc de l'API : certbot range tout sous le premier
+nom demandé.
+
+`docker cp` plutôt qu'un montage : le nginx de ce serveur appartient à un autre
+projet, et on ne touche pas à son compose. La contrepartie est qu'une recréation
+du conteneur efface le fichier. Copiez-le aussi à côté du compose de ce projet
+là, pour qu'il revienne.
 
 Avant tout cela, une commande qui dit comment ce serveur est fait :
 
