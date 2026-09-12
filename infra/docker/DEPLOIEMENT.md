@@ -69,6 +69,12 @@ TARA_API_KEY=...
 TARA_BUSINESS_ID=...
 BREVO_API_KEY=...
 CONTACT_EMAIL=contact@ascenda-books.online
+
+# L'adresse doit être un expéditeur validé chez Brevo, sinon tous les envois
+# sont refusés : pas de reçu, pas de réinitialisation de mot de passe. Les
+# guillemets ne sont pas décoratifs, le chevron fait autrement de cette ligne
+# une redirection dès qu'un script fait `source .env`.
+MAIL_EXPEDITEUR="ASCENDA <ne-pas-repondre@ascenda-books.online>"
 ```
 
 L'API **refuse de démarrer** en `API_ENV=prod` si `JWT_SECRET` est resté à sa

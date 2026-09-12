@@ -49,6 +49,22 @@ services:
       # démarrer s'il est actif alors que API_ENV vaut prod.
       PAIEMENT_TEST_AUTO_VALIDE: "false"
       BREVO_API_KEY: ${BREVO_API_KEY:-}
+      # L'expéditeur des courriels. Il était absent de cette liste : l'exploitant
+      # le posait dans son .env et le conteneur ne le voyait jamais, si bien que
+      # les reçus partaient au nom par défaut. Chez Brevo, un expéditeur non
+      # validé est un envoi refusé, donc pas de reçu et pas de réinitialisation
+      # de mot de passe.
+      MAIL_EXPEDITEUR: ${MAIL_EXPEDITEUR:-}
+      # Les fenêtres du rapprochement des paiements. Réglables sans reconstruire
+      # l'image, parce que c'est le genre de valeur qu'on ajuste en regardant
+      # comment Tara répond en vrai.
+      RECONCILIATION_TIMEOUT_HEURES: ${RECONCILIATION_TIMEOUT_HEURES:-24}
+      RECONCILIATION_PAUSE_SECONDES: ${RECONCILIATION_PAUSE_SECONDES:-60}
+      # Le plafond d'un dépôt d'ouvrage depuis la console. Doit rester en accord
+      # avec le client_max_body_size du nginx placé devant.
+      TAILLE_MAX_IMPORT: ${TAILLE_MAX_IMPORT:-104857600}
+      ACCESS_TOKEN_MINUTES: ${ACCESS_TOKEN_MINUTES:-30}
+      REFRESH_TOKEN_DAYS: ${REFRESH_TOKEN_DAYS:-30}
     ports: ["${API_PORT:-8250}:8250"]
     volumes:
       # Le dossier où la console dépose les PDF reçus, et où le pipeline va les
