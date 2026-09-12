@@ -133,7 +133,8 @@ caisse.
 
 ```bash
 cd infra/docker
-docker compose -f docker-compose.yml \
+docker compose --env-file ../../.env \
+               -f docker-compose.yml \
                -f docker-compose.app.yml \
                -f docker-compose.tls.yml up -d --build
 ```
@@ -148,7 +149,8 @@ comme les autres projets de la machine.
 
 ```bash
 cd infra/docker
-docker compose -f docker-compose.yml \
+docker compose --env-file ../../.env \
+               -f docker-compose.yml \
                -f docker-compose.app.yml \
                -f docker-compose.serveur-partage.yml up -d --build
 ```
@@ -173,6 +175,17 @@ ports quand on superpose deux fichiers, il ne les remplace pas. Sans lui, l'API
 gardait son `0.0.0.0:8250`, c'est à dire une API en clair ouverte sur Internet à
 côté de six projets en production. Le défaut a été trouvé au banc d'essai, pas à
 la lecture.
+
+### `--env-file`, sans quoi rien n'est lu
+
+Compose cherche son `.env` **dans le dossier du premier fichier compose**, donc
+`infra/docker/.env`. Le nôtre est à la racine du dépôt. Sans `--env-file`, toutes
+les variables partent vides, Compose le signale par une quinzaine
+d'avertissements, et la pile monte avec un Postgres sans mot de passe et une API
+sans secret.
+
+Ces avertissements sont la seule chose à lire dans la sortie. S'ils sont là,
+arrêtez : le `--env-file` manque.
 
 ### Le piège du 127.0.0.1 vu d'un conteneur
 
@@ -352,9 +365,9 @@ dépôt cloné.
 
 ```bash
 cd infra/docker
-docker compose -f docker-compose.yml -f docker-compose.app.yml \
+docker compose --env-file ../../.env -f docker-compose.yml -f docker-compose.app.yml \
   run --rm importeur --verifier    # ce qui bougerait, sans rien écrire
-docker compose -f docker-compose.yml -f docker-compose.app.yml \
+docker compose --env-file ../../.env -f docker-compose.yml -f docker-compose.app.yml \
   run --rm importeur               # data/ vers la base
 ```
 

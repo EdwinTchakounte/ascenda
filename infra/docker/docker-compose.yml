@@ -21,7 +21,12 @@ services:
       retries: 10
 
   minio:
-    image: minio/minio:latest
+    # quay.io et non Docker Hub : MinIO y a retiré son dépôt, et un déploiement
+    # tombe sur « repository does not exist », message qui laisse croire à un
+    # défaut d'authentification. Une version figée plutôt que `latest` : un
+    # stockage objet qui change de version tout seul entre deux montées de pile
+    # est une panne qui attend son jour.
+    image: quay.io/minio/minio:RELEASE.2025-04-22T22-12-26Z
     container_name: ascenda-minio
     restart: unless-stopped
     command: server /data --console-address ":9001"
@@ -40,7 +45,7 @@ services:
       retries: 10
 
   minio-init:
-    image: minio/mc:latest
+    image: quay.io/minio/mc:RELEASE.2025-04-16T18-13-26Z
     container_name: ascenda-minio-init
     depends_on:
       minio: {condition: service_healthy}
