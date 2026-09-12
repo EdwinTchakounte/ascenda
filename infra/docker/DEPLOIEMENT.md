@@ -8,9 +8,10 @@ pour qu'un lecteur puisse ouvrir un compte et payer.
 Six étapes, dans cet ordre précis. Deux d'entre elles ne se rattrapent pas.
 
 1. **Les noms d'abord**, parce que la propagation prend de vingt minutes à
-   quelques heures et que Caddy refuse de démarrer sans elle. Posez-les avant
+   quelques heures et que rien ne peut être certifié sans elle. Posez-les avant
    de toucher au serveur.
-2. Le serveur : Docker, le dépôt cloné, le `.env`.
+2. Le dépôt sur le serveur, par une clé de déploiement : il est privé, un clone
+   en HTTPS échoue sans rien dire d'utile. Puis le `.env`.
 3. La pile, puis les migrations, puis le corpus.
 4. **La sauvegarde, avant la première pièce encaissée.** Une base d'utilisateurs
    perdue ne se reconstruit pas, contrairement au corpus et au logiciel.
@@ -51,7 +52,51 @@ longueur.
 Tant qu'elle sort en erreur, ne montez pas la pile : vous perdriez du temps à
 diagnostiquer par la bande ce qu'elle dit en une ligne.
 
-## 2. Le fichier d'environnement
+## 2. Descendre le dépôt sur le serveur
+
+Le dépôt est privé, et il doit le rester : `data/` porte des dérivés d'ouvrages
+non redistribuables. Un `git clone` en HTTPS échoue donc sans rien dire d'utile,
+et le répertoire n'est pas créé.
+
+La bonne façon est une **clé de déploiement en lecture seule**. La clé privée
+naît sur le serveur et n'en sort jamais ; seule la partie publique est collée
+dans GitHub. Un jeton personnel ferait aussi l'affaire, mais il donne accès à
+tous vos dépôts et il finit écrit en clair dans `.git/config`.
+
+```bash
+# 1. sur le serveur : fabriquer la paire
+ssh-keygen -t ed25519 -C "ascenda-deploiement" -f ~/.ssh/ascenda_deploy -N ""
+cat ~/.ssh/ascenda_deploy.pub        # à copier
+```
+
+Collez cette ligne dans GitHub : dépôt → Settings → Deploy keys → Add deploy
+key. Laissez « Allow write access » décoché : le serveur descend le code, il ne
+le remonte jamais.
+
+```bash
+# 2. sur le serveur : dire à ssh quelle clé sert pour ce dépôt
+cat >> ~/.ssh/config <<'EOF'
+Host github-ascenda
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/ascenda_deploy
+  IdentitiesOnly yes
+EOF
+chmod 600 ~/.ssh/config
+
+# 3. vérifier, puis cloner
+ssh -T github-ascenda                # doit répondre : Hi .../ascenda! ...
+mkdir -p /srv && cd /srv
+git clone github-ascenda:EdwinTchakounte/ascenda.git
+cd ascenda
+```
+
+Les mises à jour suivantes tiennent en `git pull`.
+
+Ne mettez jamais `2>/dev/null` sur un `git clone` : c'est précisément le message
+d'erreur qui dit pourquoi il a échoué.
+
+## 3. Le fichier d'environnement
 
 Copiez `.env.example` en `.env` et posez au minimum :
 
@@ -82,7 +127,7 @@ valeur par défaut ou si `PAIEMENT_TEST_AUTO_VALIDE` est vrai. Ce n'est pas une
 précaution excessive : ces deux réglages ouvrent l'un les comptes, l'autre la
 caisse.
 
-## 3. La pile
+## 4. La pile
 
 ### Si le serveur n'héberge que ce projet
 
@@ -213,7 +258,7 @@ for f in ../../db/migrations/*.sql; do
 done
 ```
 
-## 4. Le corpus
+## 5. Le corpus
 
 La base montée est vide. Le corpus se charge depuis `data/`, qui est la source
 de vérité. Un serveur n'a que Docker, pas de Python ni de `.venv` : l'import
@@ -236,7 +281,7 @@ La vectorisation, elle, se fait hors du conteneur et prend des heures de
 processeur. Sans elle, la recherche reste en plein texte et l'API le dit dans
 le champ `mode`. Voir `pipeline/embed/`.
 
-## 5. La console, et le premier administrateur
+## 6. La console, et le premier administrateur
 
 La console d'exploitation voyage avec l'image de l'API : il n'y a rien de plus à
 déployer. Une fois la pile montée, elle est à
@@ -291,7 +336,7 @@ location /admin { allow VOTRE.IP.FIXE; deny all; proxy_pass http://ascenda_api; 
 Cela suppose une adresse fixe. Sans elle, la limitation d'essais et le mot de
 passe suffisent.
 
-## 6. Déclarer le webhook chez Tara
+## 7. Déclarer le webhook chez Tara
 
 L'adresse à leur donner :
 
@@ -303,7 +348,7 @@ Elle doit être en HTTPS. Tara ne signe pas ses notifications : la sécurité du
 webhook repose sur le fait que cette adresse est chiffrée et connue d'eux
 seuls, plus la vérification du `businessId` que nous faisons de notre côté.
 
-## 7. Vérifier
+## 8. Vérifier
 
 ```bash
 curl -s https://api.ascenda-books.online/sante
