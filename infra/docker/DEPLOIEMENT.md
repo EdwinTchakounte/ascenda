@@ -323,13 +323,29 @@ la boucle s'arrête à la première migration qui casse, au lieu d'enchaîner su
 un schéma à moitié posé.
 
 ```bash
-for f in ../../db/migrations/*.sql; do
-  echo "── $(basename "$f")"
-  docker exec -i ascenda-postgres \
-    sh -c 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -v ON_ERROR_STOP=1 -f -' < "$f" \
-    || { echo "ARRÊT sur $(basename "$f")"; break; }
-done
+./infra/scripts/migrer.sh
 ```
+
+Le script pose les douze migrations l'une après l'autre et **s'arrête à la
+première qui casse**, en montrant son erreur, au lieu d'enchaîner et de laisser
+un schéma à moitié posé. Les migrations sont écrites pour être rejouables : après
+correction, on relance sans rien défaire.
+
+Il finit par un récapitulatif, qui est la vraie vérification :
+
+```
+12 migrations posées.
+
+── ce que la base porte maintenant ──
+tables      : 37
+extensions  : vector, pg_trgm, unaccent, uuid-ossp
+ouvrages    : 0
+axes        : 11
+```
+
+Sur une base neuve, `ouvrages` vaut zéro : c'est l'import de `data/` qui les
+apporte, à l'étape suivante. Si les quatre extensions ne sont pas là, la
+recherche et les identifiants ne fonctionneront pas.
 
 ### La mémoire, sur une machine déjà chargée
 
