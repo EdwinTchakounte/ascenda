@@ -78,6 +78,8 @@ caisse.
 
 ## 3. La pile
 
+### Si le serveur n'héberge que ce projet
+
 ```bash
 cd infra/docker
 docker compose -f docker-compose.yml \
@@ -85,9 +87,63 @@ docker compose -f docker-compose.yml \
                -f docker-compose.tls.yml up -d --build
 ```
 
-Le troisième fichier ajoute Caddy et **retire la publication directe des ports**
-de l'API et de la vitrine : sans cela, l'API resterait joignable en clair sur
-8250 et toute la terminaison TLS ne servirait à rien.
+Caddy prend les ports 80 et 443 et demande les certificats lui-même.
+
+### Si le serveur héberge déjà d'autres projets
+
+C'est le cas de `81.0.246.144`, où un nginx tient déjà 80 et 443 pour six
+autres sites. Caddy ne peut pas les prendre : on se place derrière ce nginx,
+comme les autres projets de la machine.
+
+```bash
+cd infra/docker
+docker compose -f docker-compose.yml \
+               -f docker-compose.app.yml \
+               -f docker-compose.serveur-partage.yml up -d --build
+```
+
+Cet assemblage fait trois choses qui comptent :
+
+L'API et la vitrine n'écoutent que sur la boucle locale, en 8260 et 3260. Sans
+le `127.0.0.1:`, Docker ouvre le port sur toutes les interfaces et passe devant
+le pare-feu de la machine.
+
+La base, le stockage objet et Redis ne publient plus rien. En développement on
+les ouvre pour y regarder ; sur un serveur public, un Postgres qui écoute sur
+toutes les interfaces est une base de données ouverte.
+
+Le marqueur `!override` sur les ports n'est pas décoratif. Compose *ajoute* les
+listes quand on superpose deux fichiers, il ne les remplace pas : sans lui,
+l'API gardait son `0.0.0.0:8250` en plus du port local, c'est à dire une API en
+clair ouverte sur Internet. Le défaut a été trouvé au banc d'essai, pas à la
+lecture.
+
+Puis la configuration du nginx en place. `infra/nginx/ascenda.conf` porte les
+trois blocs : la vitrine, l'API avec ses cent mégaoctets de dépôt d'ouvrage et
+ses cinq minutes de délai, et la redirection du clair vers le chiffré.
+
+```bash
+docker exec backend-nginx-1 nginx -t        # on vérifie avant de recharger
+docker exec backend-nginx-1 nginx -s reload
+```
+
+Avant tout cela, une commande qui dit comment ce serveur est fait :
+
+```bash
+./infra/scripts/etat-serveur.sh
+```
+
+Elle ne modifie rien. Elle donne les ports libres, les montages du nginx, les
+noms qu'il sert déjà, où il range ses certificats, et ce que le DNS répond.
+
+
+
+```bash
+cd infra/docker
+docker compose -f docker-compose.yml \
+               -f docker-compose.app.yml \
+               -f docker-compose.tls.yml up -d --build
+```
 
 La pile monte cinq services : Postgres, le stockage objet, l'API, la vitrine et
 **l'ouvrier**. Ce dernier ne répond à personne : il prend les travaux inscrits

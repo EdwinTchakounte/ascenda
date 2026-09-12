@@ -1,0 +1,43 @@
+# ASCENDA sur un serveur qui héberge déjà d'autres projets.
+#
+# Le cas de figure : un nginx tient déjà les ports 80 et 443 pour d'autres
+# sites. Caddy ne peut donc pas les prendre, et `docker-compose.tls.yml` est
+# inutilisable. ASCENDA se place derrière ce nginx, comme les autres projets.
+#
+#   docker compose -f docker-compose.yml \
+#                  -f docker-compose.app.yml \
+#                  -f docker-compose.serveur-partage.yml up -d
+#
+# Deux différences avec la pile locale, et les deux comptent :
+#
+# 1. L'API et la vitrine n'écoutent que sur la boucle locale. Nginx les joint,
+#    personne d'autre. Sans le `127.0.0.1:`, Docker ouvre le port sur toutes les
+#    interfaces et passe devant le pare-feu de la machine, ce qui exposerait
+#    l'API en clair à l'Internet.
+#
+# 2. La base, le stockage objet et Redis ne publient plus rien du tout. En
+#    développement on les ouvre pour y regarder depuis la machine ; sur un
+#    serveur public, un Postgres écoutant sur toutes les interfaces est une base
+#    de données ouverte. Les services se joignent par le réseau du compose, qui
+#    leur suffit.
+#
+# 3. `!override` et non une simple liste : Compose *ajoute* les listes de ports
+#    quand on superpose deux fichiers, il ne les remplace pas. Sans ce marqueur,
+#    l'API aurait gardé son `0.0.0.0:8250` en plus du port local, c'est à dire
+#    une API en clair ouverte sur Internet. Le banc d'essai l'a montré, la
+#    lecture du fichier ne le montrait pas.
+services:
+  api:
+    ports: !override ["127.0.0.1:${API_PORT_HOTE:-8260}:8250"]
+
+  vitrine:
+    ports: !override ["127.0.0.1:${VITRINE_PORT_HOTE:-3260}:3251"]
+
+  postgres:
+    ports: !reset []
+
+  minio:
+    ports: !reset []
+
+  redis:
+    ports: !reset []
