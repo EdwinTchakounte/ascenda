@@ -3,6 +3,20 @@
 Le domaine est **ascenda-books.online**. Ce document dit ce qu'il reste à faire
 pour qu'un lecteur puisse ouvrir un compte et payer.
 
+## L'ordre, et pourquoi
+
+Six étapes, dans cet ordre précis. Deux d'entre elles ne se rattrapent pas.
+
+1. **Les noms d'abord**, parce que la propagation prend de vingt minutes à
+   quelques heures et que Caddy refuse de démarrer sans elle. Posez-les avant
+   de toucher au serveur.
+2. Le serveur : Docker, le dépôt cloné, le `.env`.
+3. La pile, puis les migrations, puis le corpus.
+4. **La sauvegarde, avant la première pièce encaissée.** Une base d'utilisateurs
+   perdue ne se reconstruit pas, contrairement au corpus et au logiciel.
+5. Le webhook chez Tara, qui ne peut être déclaré qu'une fois l'API en HTTPS.
+6. L'APK, en dernier, et seulement une fois que l'API répond.
+
 ## 1. Les noms
 
 Deux enregistrements, chez votre registraire, vers l'adresse IP du serveur.
@@ -151,5 +165,34 @@ construite contre `localhost` ne joindra jamais le serveur, quel que soit le
 réglage côté machine : il faut la reconstruire.
 
 **Les sauvegardes.** Le volume `ascenda_pgdata` porte les comptes, les
-abonnements et la progression. `data/` reconstruit le corpus, pas les
-utilisateurs. Rien dans ce dépôt ne sauvegarde quoi que ce soit.
+abonnements, les paiements et la progression. `data/` reconstruit le corpus, le
+dépôt reconstruit le logiciel, mais rien ne reconstruit un utilisateur.
+
+```bash
+./infra/scripts/sauvegarde.sh                      # vers ./sauvegardes
+DESTINATION=/mnt/disque GARDER=30 ./infra/scripts/sauvegarde.sh
+```
+
+Le script fait un `pg_dump` au format personnalisé et non une copie du volume :
+copier des fichiers sous un moteur qui écrit donne une sauvegarde qui se
+restaure une fois sur deux. Il refuse d'aboutir si l'archive porte moins de dix
+tables, parce qu'une sauvegarde vide qui réussit en silence est pire que pas de
+sauvegarde du tout.
+
+À poser en crontab dès le premier jour, avant d'ouvrir la caisse :
+
+```
+17 3 * * * cd /srv/ascenda && ./infra/scripts/sauvegarde.sh >> /var/log/ascenda-sauvegarde.log 2>&1
+```
+
+La restauration écrase la base en place et demande confirmation :
+
+```bash
+./infra/scripts/restaurer.sh sauvegardes/ascenda_2026-09-12_03h17.dump.gz
+```
+
+Une sauvegarde qu'on n'a jamais restaurée n'est pas une sauvegarde. Celle-ci a
+été essayée : soixante-deux mégaoctets, trente-sept tables, restaurées dans une
+base jetable, mille cent soixante-treize comptes et onze mille quatre cent trois
+segments retrouvés intacts. Refaites cet essai sur le serveur une fois par
+trimestre.
