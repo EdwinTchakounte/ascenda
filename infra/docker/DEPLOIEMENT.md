@@ -326,26 +326,53 @@ un schéma à moitié posé.
 ./infra/scripts/migrer.sh
 ```
 
-Le script pose les douze migrations l'une après l'autre et **s'arrête à la
-première qui casse**, en montrant son erreur, au lieu d'enchaîner et de laisser
-un schéma à moitié posé. Les migrations sont écrites pour être rejouables : après
-correction, on relance sans rien défaire.
+Le script pose trois choses, dans cet ordre : les extensions, le **schéma de
+base**, puis les douze migrations.
+
+Cet ordre n'est pas décoratif. Les migrations sont des *incréments* : la
+première fait un `ALTER TABLE` sur `document`, qui n'existe que si
+`db/schema.pg.sql` a été posé avant. Le guide ne mentionnait pas ce fichier, et
+le premier déploiement s'est arrêté sur « relation document does not exist ». Le
+défaut ne se voyait pas en développement, où la table était là depuis des mois.
+
+Le schéma de base, lui, n'est pas rejouable : ses vingt-cinq `CREATE TABLE` sont
+écrits sans `IF NOT EXISTS`, ce qui est légitime pour un schéma initial. Le
+script regarde donc si `document` existe déjà et l'ignore le cas échéant, au lieu
+de l'apprendre par une erreur.
+
+Il **s'arrête à la première étape qui casse**, en montrant son erreur, au lieu
+d'enchaîner et de laisser un schéma à moitié posé. L'ensemble est rejouable :
+après correction, on relance sans rien défaire.
 
 Il finit par un récapitulatif, qui est la vraie vérification :
 
 ```
+── les fondations ──
+  extensions                   ok
+  schéma de base               ok
+
+── les migrations ──
+  001_editions.sql             ok
+  ...
 12 migrations posées.
 
 ── ce que la base porte maintenant ──
-tables      : 37
+tables      : 36
 extensions  : vector, pg_trgm, unaccent, uuid-ossp
 ouvrages    : 0
-axes        : 11
+axes        : 0
 ```
 
-Sur une base neuve, `ouvrages` vaut zéro : c'est l'import de `data/` qui les
-apporte, à l'étape suivante. Si les quatre extensions ne sont pas là, la
-recherche et les identifiants ne fonctionneront pas.
+Sur une base neuve, `ouvrages` et `axes` valent zéro : c'est l'import de `data/`
+qui les apporte, à l'étape suivante. Si les quatre extensions ne sont pas là, ni
+la recherche ni les identifiants ne fonctionneront.
+
+Pour répéter sur une base jetable sans toucher à celle du service :
+
+```bash
+docker exec ascenda-postgres psql -U ascenda -d postgres -c "create database essai;"
+BASE=essai ./infra/scripts/migrer.sh
+```
 
 ### La mémoire, sur une machine déjà chargée
 
