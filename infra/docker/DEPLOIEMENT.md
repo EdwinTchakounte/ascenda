@@ -33,6 +33,24 @@ Caddy demande ses certificats au démarrage et refuse de partir tant qu'un nom
 ne résout pas. C'est voulu : un certificat sur un nom qu'on ne contrôle pas
 n'existe pas. Attendez la propagation avant de monter la pile.
 
+## Avant de monter la pile
+
+Une commande, sur le serveur, qui vérifie tout ce qui fait échouer un
+déploiement plus loin et plus obscurément :
+
+```bash
+./infra/scripts/preparatifs.sh
+```
+
+Elle contrôle Docker, la mémoire et le disque, la résolution des trois noms vers
+cette machine précisément, les ports 80 et 443, et chaque variable du `.env` :
+celles qui sont vides, celles restées à leur valeur de développement, celles qui
+ne sont pas en HTTPS. Elle ne montre jamais la valeur d'un secret, seulement sa
+longueur.
+
+Tant qu'elle sort en erreur, ne montez pas la pile : vous perdriez du temps à
+diagnostiquer par la bande ce qu'elle dit en une ligne.
+
 ## 2. Le fichier d'environnement
 
 Copiez `.env.example` en `.env` et posez au minimum :
