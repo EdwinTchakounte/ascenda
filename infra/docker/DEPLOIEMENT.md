@@ -189,19 +189,38 @@ docker exec backend-nginx-1 nginx -t && docker exec backend-nginx-1 nginx -s rel
 curl http://ascenda-books.online/          # doit répondre « ASCENDA arrive. »
 ```
 
-**Deuxième temps**, les certificats. La commande dépend de la façon dont ce
-serveur les obtient déjà pour ses autres sites : `etat-serveur.sh` le dit. En
-mode webroot, avec le répertoire que le nginx expose :
+**Deuxième temps**, les certificats. Sur `81.0.246.144`, il n'y a ni certbot
+sur l'hôte ni conteneur certbot permanent : les certificats des autres sites
+vivent dans le volume Docker `backend_certbot_certs`, et ont donc été obtenus
+par un conteneur jetable. On fait pareil.
 
 ```bash
-certbot certonly --webroot -w /var/www/certbot \
-  -d ascenda-books.online -d www.ascenda-books.online \
-  -d api.ascenda-books.online \
-  --agree-tos -m contact@ascenda-books.online --no-eff-email
+docker run --rm \
+  -v backend_certbot_certs:/etc/letsencrypt \
+  -v backend_certbot_www:/var/www/certbot \
+  certbot/certbot certonly --webroot -w /var/www/certbot \
+    -d ascenda-books.online -d www.ascenda-books.online \
+    -d api.ascenda-books.online \
+    --agree-tos -m contact@ascenda-books.online --no-eff-email
 ```
 
-Demandez les trois noms en une fois : trois certificats séparés, c'est trois
-renouvellements à surveiller.
+Les deux volumes sont montés en lecture seule dans le nginx et en écriture ici :
+c'est certbot qui écrit, nginx qui lit.
+
+Demandez les trois noms **en une seule fois**. Certbot range alors tout sous le
+premier nom, `/etc/letsencrypt/live/ascenda-books.online/`, et c'est ce chemin
+que `ascenda.conf` vise pour ses trois blocs. Trois certificats séparés, ce
+serait trois renouvellements à surveiller et des chemins à corriger.
+
+**Le renouvellement.** Ces certificats durent trois mois. Comme il n'y a pas de
+certbot permanent sur cette machine, il faut le programmer :
+
+```
+33 4 * * 1 docker run --rm -v backend_certbot_certs:/etc/letsencrypt -v backend_certbot_www:/var/www/certbot certbot/certbot renew --quiet && docker exec backend-nginx-1 nginx -s reload
+```
+
+Le rechargement du nginx après coup n'est pas facultatif : un certificat
+renouvelé sur le disque n'est pas un certificat servi.
 
 **Troisième temps**, la configuration complète, qui remplace la première.
 
@@ -218,10 +237,22 @@ Si `ascenda.conf` vise un seul certificat couvrant les trois noms, corrigez les
 chemins `ssl_certificate` du bloc de l'API : certbot range tout sous le premier
 nom demandé.
 
-`docker cp` plutôt qu'un montage : le nginx de ce serveur appartient à un autre
-projet, et on ne touche pas à son compose. La contrepartie est qu'une recréation
-du conteneur efface le fichier. Copiez-le aussi à côté du compose de ce projet
-là, pour qu'il revienne.
+`docker cp` plutôt qu'un montage : le nginx de ce serveur appartient au projet
+afrikamode, dont seul `default.conf` est monté depuis l'hôte. Ses deux autres
+fichiers de site, `gathe-finance.conf` et `horus.conf`, ont été copiés de la
+même façon.
+
+**La contrepartie, qu'il faut connaître :** une recréation du conteneur efface
+ces fichiers, et les trois sites concernés tombent en même temps. Gardez donc
+une copie sur l'hôte et un moyen de la remettre :
+
+```bash
+mkdir -p /srv/nginx-sites
+cp /srv/ascenda/infra/nginx/ascenda.conf /srv/nginx-sites/
+# après toute recréation du conteneur :
+for f in /srv/nginx-sites/*.conf; do docker cp "$f" backend-nginx-1:/etc/nginx/conf.d/; done
+docker exec backend-nginx-1 nginx -t && docker exec backend-nginx-1 nginx -s reload
+```
 
 Avant tout cela, une commande qui dit comment ce serveur est fait :
 
@@ -257,6 +288,38 @@ for f in ../../db/migrations/*.sql; do
   docker exec -i ascenda-postgres psql -U ascenda -d ascenda -v ON_ERROR_STOP=1 -f - < "$f"
 done
 ```
+
+### La mémoire, sur une machine déjà chargée
+
+`81.0.246.144` porte onze gigaoctets, dont cinq libres, et fait déjà tourner
+vingt-sept conteneurs. ASCENDA en ajoute cinq. Deux points de vigilance :
+
+**Le modèle de recherche pèse deux gigaoctets.** Il n'est pas dans l'image : il
+se télécharge à la première question posée à la recherche, et se charge en
+mémoire. Sur cette machine, cela consomme d'un coup un tiers de ce qui reste.
+
+L'API est écrite pour s'en passer : elle démarre sans le modèle, et la recherche
+plein texte suffit à faire tourner le produit. Elle le dit dans le champ `mode`
+de ses réponses. Vous pouvez donc ouvrir sans, regarder comment la machine tient,
+et ne brancher la recherche sémantique que si la mémoire le permet.
+
+**La construction de l'image demande environ deux gigaoctets.** Avec cinq libres
+et vingt-sept conteneurs qui tournent, c'est faisable mais serré. Si le build
+échoue en cours, ce n'est pas un défaut du Dockerfile : construisez ailleurs et
+transférez.
+
+```bash
+# sur une machine confortable
+docker save ascenda-api:latest ascenda-vitrine:latest | gzip > ascenda-images.tar.gz
+scp ascenda-images.tar.gz root@81.0.246.144:/srv/
+# sur le serveur
+gunzip -c /srv/ascenda-images.tar.gz | docker load
+```
+
+**Le disque.** Trente-trois gigaoctets libres sur quatre-vingt-seize. Les deux
+images pèsent sept cent cinquante mégaoctets, le cache du modèle deux
+gigaoctets, la base et le stockage objet grandissent avec les lecteurs, et les
+sauvegardes s'accumulent. Posez `GARDER=14` sur la sauvegarde et surveillez.
 
 ## 5. Le corpus
 
