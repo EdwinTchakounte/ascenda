@@ -64,8 +64,12 @@ class Tara(FournisseurPaiement):
     @property
     def simule(self) -> bool:
         """Sans identifiants, on ne fait aucun appel sortant et on renvoie une
-        référence factice. Indispensable en développement, jamais en production
-        (l'API refuse de démarrer en prod si la configuration manque)."""
+        référence factice.
+
+        Indispensable en développement. En production, c'est le service de
+        paiement qui refuse d'initier dans cet état : une référence factice y
+        donnerait à un lecteur le sentiment d'avoir payé sans qu'aucune demande
+        ne parte jamais vers son téléphone."""
         return not (self.cle and self.business_id)
 
     # ------------------------------------------------------------------ payin

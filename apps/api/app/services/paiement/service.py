@@ -98,6 +98,24 @@ async def creer(user: dict, periode_mois: int, plan: str = "premium") -> dict:
 async def initier(paiement: dict, telephone: str, reseau: str) -> dict:
     """Déclenche la demande de paiement sur le téléphone du membre."""
     f = fournisseur(paiement["provider_code"])
+
+    # En production, un fournisseur sans identifiants renvoie une référence
+    # factice : le lecteur voit une demande partir, n'est jamais débité, et son
+    # paiement reste en attente pour toujours. Une caisse qui fait semblant de
+    # fonctionner est pire qu'une caisse fermée, parce qu'elle ne se signale
+    # pas. On refuse donc d'initier, et on le dit.
+    #
+    # Le commentaire de `Tara.simule` affirmait que l'API refusait de démarrer
+    # dans ce cas. C'était faux : rien ne le vérifiait. Refuser le démarrage
+    # serait d'ailleurs excessif, une mise en ligne sans encaissement est un
+    # état légitime le temps d'obtenir les clés.
+    if settings.is_prod and f.simule:
+        raise Conflict(
+            "Le paiement n'est pas encore ouvert. Les abonnements seront "
+            "disponibles très bientôt, et votre compte reste utilisable en "
+            "attendant."
+        )
+
     tel = normaliser_telephone(telephone)
 
     libelle = await fetch_one(

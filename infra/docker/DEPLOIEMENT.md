@@ -399,6 +399,32 @@ location /admin { allow VOTRE.IP.FIXE; deny all; proxy_pass http://ascenda_api; 
 Cela suppose une adresse fixe. Sans elle, la limitation d'essais et le mot de
 passe suffisent.
 
+## Mettre en ligne sans les clés
+
+C'est un état légitime, et il vaut mieux ouvrir avec une caisse fermée qu'avec
+une caisse qui fait semblant. Ce qui se passe alors :
+
+**Le paiement.** Sans `TARA_API_KEY`, le service refuse d'initier en production
+et renvoie « le paiement n'est pas encore ouvert, votre compte reste utilisable
+en attendant ». Il ne renvoie pas de référence factice : un lecteur qui croit
+avoir payé et n'est jamais débité coûte plus cher qu'un bouton indisponible.
+
+**Les courriels.** Sans `BREVO_API_KEY`, chaque envoi est journalisé en mode
+`simule` et n'arrive nulle part. La console le montre dans son journal des
+envois. Conséquence concrète : la réinitialisation de mot de passe est
+inopérante, personne ne reçoit son lien. Dites-le sur la page contact tant que
+la clé manque.
+
+**Les mentions légales.** Elles sont figées à la construction de l'image de la
+vitrine. Les laisser vides maintenant oblige à un `docker compose build vitrine`
+quand vous les aurez, et à remonter le service. Ce n'est pas grave, c'est deux
+minutes, mais autant le savoir.
+
+**Ce qu'il est raisonnable de faire en attendant.** Ouvrir la période de
+lancement depuis la console, vue « Les interrupteurs » : tout le corpus devient
+accessible sans abonnement, ce qui rend l'absence de caisse cohérente plutôt que
+frustrante.
+
 ## 7. Déclarer le webhook chez Tara
 
 L'adresse à leur donner :

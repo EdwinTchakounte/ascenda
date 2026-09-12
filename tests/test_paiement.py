@@ -111,6 +111,35 @@ async def main():
 asyncio.run(main())
 
 _echecs = [x for x in _resultats if not x[0]]
+# ------------------------------------------------------------------ la caisse
+# fermée. Sans identifiants Tara, le fournisseur renvoie une référence factice.
+# En production, cela donnerait à un lecteur le sentiment d'avoir payé sans
+# qu'aucune demande ne parte vers son téléphone. Le service doit refuser.
+async def _caisse_fermee():
+    import app.core.config as conf
+    from app.services.paiement import service as paie
+    from app.core.errors import Conflict
+
+    vrai = conf.settings.api_env
+    try:
+        conf.settings.api_env = "prod"
+        from app.services.paiement.tara import Tara
+        ok("sans clé, le fournisseur est bien en mode simulé", Tara().simule)
+        try:
+            await paie.initier({"id": "0" * 36, "provider_code": "tara",
+                                "plan_cible": "premium", "periode_mois": 1,
+                                "idempotency_key": "essai"}, "690000000", "mtn")
+            ok("en production, une caisse sans clé refuse d'initier", False,
+               "aucune erreur levée : un paiement factice serait parti")
+        except Conflict as exc:
+            ok("en production, une caisse sans clé refuse d'initier",
+               "pas encore ouvert" in str(exc.message if hasattr(exc, "message") else exc))
+    finally:
+        conf.settings.api_env = vrai
+
+
+asyncio.run(_caisse_fermee())
+
 print("\n" + "=" * 92)
 print(f"{len(_resultats) - len(_echecs)} sur {len(_resultats)}")
 if _echecs:
