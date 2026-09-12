@@ -316,11 +316,18 @@ faits depuis la console resteraient éternellement en attente. Il monte
 modèles, et on lui laisse deux minutes pour finir son travail en cours à
 l'arrêt.
 
-Puis les migrations, une seule fois :
+Puis les migrations, une seule fois. Les identifiants sont lus **à l'intérieur**
+du conteneur Postgres, où ils sont déjà posés : cela évite de charger le `.env`
+dans le shell du serveur, ce qui échouerait sur les valeurs entre guillemets. Et
+la boucle s'arrête à la première migration qui casse, au lieu d'enchaîner sur
+un schéma à moitié posé.
 
 ```bash
 for f in ../../db/migrations/*.sql; do
-  docker exec -i ascenda-postgres psql -U ascenda -d ascenda -v ON_ERROR_STOP=1 -f - < "$f"
+  echo "── $(basename "$f")"
+  docker exec -i ascenda-postgres \
+    sh -c 'psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -v ON_ERROR_STOP=1 -f -' < "$f" \
+    || { echo "ARRÊT sur $(basename "$f")"; break; }
 done
 ```
 
