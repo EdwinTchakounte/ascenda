@@ -153,21 +153,43 @@ docker compose -f docker-compose.yml \
                -f docker-compose.serveur-partage.yml up -d --build
 ```
 
-Cet assemblage fait trois choses qui comptent :
+Cet assemblage fait deux choses qui comptent.
 
-L'API et la vitrine n'écoutent que sur la boucle locale, en 8260 et 3260. Sans
-le `127.0.0.1:`, Docker ouvre le port sur toutes les interfaces et passe devant
-le pare-feu de la machine.
+**Aucun port n'est publié sur l'hôte**, pas même sur la boucle locale. Rien
+n'écoute sur la machine, donc rien ne peut être atteint par un autre projet ni
+par un pare-feu mal réglé. Le nginx joint les services par leur nom sur le
+réseau du compose, auquel on le rattache une fois :
 
-La base, le stockage objet et Redis ne publient plus rien. En développement on
-les ouvre pour y regarder ; sur un serveur public, un Postgres qui écoute sur
-toutes les interfaces est une base de données ouverte.
+```bash
+docker network connect ascenda_default backend-nginx-1
+```
 
-Le marqueur `!override` sur les ports n'est pas décoratif. Compose *ajoute* les
-listes quand on superpose deux fichiers, il ne les remplace pas : sans lui,
-l'API gardait son `0.0.0.0:8250` en plus du port local, c'est à dire une API en
-clair ouverte sur Internet. Le défaut a été trouvé au banc d'essai, pas à la
-lecture.
+Cela ne recrée pas le conteneur et ne touche pas au compose de l'autre projet.
+Le rattachement est perdu si ce conteneur est recréé : la commande est à
+rejouer, comme la copie des fichiers de site.
+
+**Le marqueur `!override` n'est pas décoratif.** Compose *ajoute* les listes de
+ports quand on superpose deux fichiers, il ne les remplace pas. Sans lui, l'API
+gardait son `0.0.0.0:8250`, c'est à dire une API en clair ouverte sur Internet à
+côté de six projets en production. Le défaut a été trouvé au banc d'essai, pas à
+la lecture.
+
+### Le piège du 127.0.0.1 vu d'un conteneur
+
+Ma première version faisait viser `127.0.0.1:8260` au nginx. Dans un conteneur,
+cette adresse désigne le conteneur lui-même, pas la machine hôte : la requête ne
+serait jamais arrivée, et le symptôme aurait été un 502 sans explication.
+
+Deuxième piège, trouvé juste après : un bloc `upstream`, ou même un nom écrit en
+clair dans `proxy_pass`, est résolu **au chargement** de la configuration. nginx
+aurait refusé de démarrer tant qu'ASCENDA n'était pas monté, et aurait fait
+tomber les six autres sites avec lui.
+
+La configuration passe donc par une variable et le résolveur interne de Docker,
+ce qui repousse la résolution au moment de la requête. nginx démarre quoi qu'il
+arrive et répond 502 le temps qu'ASCENDA remonte. La contrepartie est qu'il faut
+écrire `$request_uri` soi-même : avec une variable, nginx cesse d'ajouter le
+chemin d'origine.
 
 ### La configuration du nginx, en deux temps
 

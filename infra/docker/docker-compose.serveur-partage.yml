@@ -26,12 +26,21 @@
 #    l'API aurait gardé son `0.0.0.0:8250` en plus du port local, c'est à dire
 #    une API en clair ouverte sur Internet. Le banc d'essai l'a montré, la
 #    lecture du fichier ne le montrait pas.
+#
+# 4. Aucun port n'est publié du tout, pas même sur la boucle locale. Le nginx
+#    joint les services par leur nom sur le réseau du compose, où il est
+#    rattaché une fois pour toutes par
+#      docker network connect ascenda_default backend-nginx-1
+#    C'est plus sûr qu'un port local : rien n'écoute sur l'hôte, donc rien ne
+#    peut être atteint par un autre projet de la machine, ni par un pare-feu mal
+#    réglé. Et cela évite le piège du `127.0.0.1` vu depuis un conteneur, qui
+#    désigne le conteneur lui-même et non la machine.
 services:
   api:
-    ports: !override ["127.0.0.1:${API_PORT_HOTE:-8260}:8250"]
+    ports: !override []
 
   vitrine:
-    ports: !override ["127.0.0.1:${VITRINE_PORT_HOTE:-3260}:3251"]
+    ports: !override []
 
   postgres:
     ports: !reset []
