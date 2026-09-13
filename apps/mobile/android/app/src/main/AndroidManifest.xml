@@ -1,4 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sans cette permission, Android refuse toute connexion à l'application
+         publiée : chaque appel échoue dès la résolution du nom, et l'écran dit
+         « Pas de connexion » alors que le téléphone a du réseau. Flutter ne la
+         déclare que dans les manifestes debug et profile, ce qui la rend
+         invisible pendant le développement. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="ASCENDA"
         android:name="${applicationName}"

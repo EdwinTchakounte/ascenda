@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
+import 'api/reseau.dart';
 import 'routes.dart';
 import 'theme/theme.dart';
 import 'widgets/exploitation.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Les polices sont embarquées dans assets/google_fonts. Sans cette ligne,
+  // google_fonts les téléchargerait au lancement : sans réseau, l'application
+  // s'afficherait dans une police de secours.
+  GoogleFonts.config.allowRuntimeFetching = false;
+  await Reseau.preparer();
   // Les dates s'affichent en français partout : « Sam. 29 août », pas « Sat ».
   await initializeDateFormatting('fr_FR');
   runApp(const ProviderScope(child: ApplicationAscenda()));

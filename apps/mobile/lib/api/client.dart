@@ -5,6 +5,8 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'reseau.dart';
+
 /// Erreur remontée par l'API, avec le message destiné à l'utilisateur.
 class ErreurApi implements Exception {
   ErreurApi(this.message, {this.code = 'erreur', this.statut = 0, this.quota});
@@ -42,7 +44,7 @@ class ClientApi {
             const String.fromEnvironment('API_URL', defaultValue: 'http://localhost:8250');
 
   final String base;
-  final _http = http.Client();
+  final _http = Reseau.client();
 
   static const _cleAcces = 'ascenda_acces';
   static const _cleRefresh = 'ascenda_refresh';
@@ -136,9 +138,21 @@ class ClientApi {
         _ => throw ArgumentError('Méthode inconnue : $methode'),
       };
       r = await envoi.timeout(const Duration(seconds: 25));
-    } on SocketException {
+    } on HandshakeException catch (e) {
+      // Le réseau fonctionne, mais la connexion sécurisée n'a pas abouti. Dire
+      // « pas de connexion » enverrait le lecteur vérifier un réseau qui va
+      // bien. La cause la plus fréquente est une heure du téléphone fausse.
+      debugPrint('Échec TLS vers $base : $e');
+      throw ErreurApi(
+        "La connexion sécurisée au serveur a échoué. Vérifiez que la date et "
+        "l'heure du téléphone sont justes, puis réessayez.",
+        code: 'tls',
+      );
+    } on SocketException catch (e) {
+      debugPrint('Réseau injoignable ($base) : $e');
       throw const HorsLigne();
-    } on http.ClientException {
+    } on http.ClientException catch (e) {
+      debugPrint('Requête interrompue ($base) : $e');
       throw const HorsLigne();
     } catch (e) {
       if (e.toString().contains('TimeoutException')) throw const HorsLigne();

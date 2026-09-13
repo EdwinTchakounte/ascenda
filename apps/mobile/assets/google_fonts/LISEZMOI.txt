@@ -1,0 +1,4 @@
+Inter et Fraunces, sous SIL Open Font License 1.1 (usage commercial, intégration
+et redistribution autorisés). Fichiers rapatriés depuis fonts.gstatic.com et
+vérifiés par leur empreinte sha256 contre la table du paquet google_fonts.
+Inter : https://github.com/rsms/inter · Fraunces : https://github.com/undercasetype/Fraunces
