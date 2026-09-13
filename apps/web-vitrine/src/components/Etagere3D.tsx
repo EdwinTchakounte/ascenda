@@ -141,7 +141,7 @@ export default function Etagere3D({ ouvrages }: { ouvrages: Dos[] }) {
                   <span aria-hidden className="volume-filet" />
                   <p className="volume-axe">{o.axe}</p>
                   <h3 className="volume-titre">{o.titre}</h3>
-                  <p className="volume-auteur">{o.auteur}</p>
+                  {o.auteur && <p className="volume-auteur">{o.auteur}</p>}
                   <span aria-hidden className="volume-lustre" />
                 </article>
               );

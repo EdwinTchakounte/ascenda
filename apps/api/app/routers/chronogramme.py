@@ -6,6 +6,7 @@ from typing import Annotated, Literal
 from fastapi import APIRouter, Query, status
 from pydantic import BaseModel, Field
 
+from app.core.auteurs import auteurs
 from app.core.db import connection, execute, fetch_all, fetch_one
 from app.core.deps import CurrentUser, PremiumUser
 from app.core.errors import Conflict, Forbidden, NotFound
@@ -337,7 +338,7 @@ async def detail(chronogramme_id: str, user: CurrentUser):
                 "ordre": s["ord"],
                 "document_id": str(s["document_id"]) if s["document_id"] else None,
                 "ouvrage": s["ouvrage"],
-                "auteurs": s["authors"] or [],
+                "auteurs": auteurs(s["authors"]),
                 "chapitre_id": str(s["chapter_id"]) if s["chapter_id"] else None,
                 "chapitre": s["chapitre"],
                 "page_debut": s["page_start"],
@@ -398,7 +399,7 @@ async def aujourdhui(user: CurrentUser):
                 "axe_label": seance["axe_label"],
                 "document_id": str(seance["document_id"]) if seance["document_id"] else None,
                 "ouvrage": seance["ouvrage"],
-                "auteurs": seance["authors"] or [],
+                "auteurs": auteurs(seance["authors"]),
                 "chapitre_id": str(seance["chapter_id"]) if seance["chapter_id"] else None,
                 "chapitre": seance["chapitre"],
                 "page_debut": seance["page_start"],

@@ -8,6 +8,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Query
 
+from app.core.auteurs import auteurs
 from app.core.db import execute, fetch_all, fetch_one
 from app.core.deps import CurrentUser, OptionalUser
 from app.core.errors import NotFound
@@ -77,7 +78,7 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
     )
 
     return {
-        "ouvrage": {"id": str(ch["doc_id"]), "titre": ch["doc_titre"], "auteurs": ch["authors"] or []},
+        "ouvrage": {"id": str(ch["doc_id"]), "titre": ch["doc_titre"], "auteurs": auteurs(ch["authors"])},
         "chapitre": {
             "id": str(ch["id"]),
             "ordre": ch["ord"],

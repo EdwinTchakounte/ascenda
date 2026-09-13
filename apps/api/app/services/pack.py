@@ -11,6 +11,7 @@ Deux usages, une seule source.
 Les droits s'appliquent ici comme partout : sur un ouvrage non redistribuable,
 le pack contient la fiche, les citations et les quiz, jamais le texte intégral.
 """
+from app.core.auteurs import auteurs
 from app.core.db import fetch_all, fetch_one
 from app.core.errors import NotFound
 from app.services.droits import droits
@@ -114,7 +115,7 @@ async def construire(document_id: str, *, avec_reponses: bool = False) -> dict:
             "id": str(d["id"]),
             "titre": d["titre"],
             "sous_titre": d["subtitle"],
-            "auteurs": d["authors"] or [],
+            "auteurs": auteurs(d["authors"]),
             "annee": d["year"],
             "editeur": d["publisher"],
             "pages": d["page_count"],

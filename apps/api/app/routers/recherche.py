@@ -9,6 +9,7 @@ from typing import Annotated
 
 from fastapi import APIRouter, Query
 
+from app.core.auteurs import auteurs
 from app.core.db import fetch_all
 from app.services import recherche
 from app.core.deps import OptionalUser
@@ -39,7 +40,7 @@ async def rechercher(
                 "chunk_id": str(l["id"]),
                 "document_id": str(l["document_id"]),
                 "ouvrage": l["ouvrage"],
-                "auteurs": l["authors"] or [],
+                "auteurs": auteurs(l["authors"]),
                 "chapitre_id": str(l["chapter_id"]) if l["chapter_id"] else None,
                 "chapitre": l["chapitre"],
                 "page": l["page_start"],
@@ -68,7 +69,7 @@ async def suggestions(q: Annotated[str, Query(min_length=2)], limite: int = 8):
     )
     return {
         "ouvrages": [
-            {"id": str(o["id"]), "titre": o["titre"], "auteurs": o["authors"] or []} for o in ouvrages
+            {"id": str(o["id"]), "titre": o["titre"], "auteurs": auteurs(o["authors"])} for o in ouvrages
         ],
         "concepts": [
             {"id": str(c["id"]), "terme": c["term"], "definition": c["definition"]} for c in concepts

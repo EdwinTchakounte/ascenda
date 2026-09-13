@@ -8,6 +8,7 @@ afficherait un axe vide au nom de dossier.
 """
 from fastapi import APIRouter
 
+from app.core.auteurs import auteurs
 from app.core.db import fetch_all, fetch_one
 from app.core.deps import OptionalUser
 from app.core.errors import NotFound
@@ -88,7 +89,7 @@ async def detail_axe(slug: str, user: OptionalUser):
             {
                 "id": str(o["id"]),
                 "titre": o["titre"],
-                "auteurs": o["authors"] or [],
+                "auteurs": auteurs(o["authors"]),
                 "annee": o["year"],
                 "pages": o["page_count"],
                 "niveau": o["level"],

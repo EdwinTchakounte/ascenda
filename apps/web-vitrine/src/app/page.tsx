@@ -17,23 +17,31 @@ import { lesOuvrages } from "@/lib/api";
  */
 async function pourLEtagere(): Promise<Dos[]> {
   const { ouvrages } = await lesOuvrages({ par_page: "60" });
-  const vus = new Set<string>();
+  // Une file par parcours, puis un volume de chaque file à tour de rôle : deux
+  // livres voisins sur l'étagère ne viennent jamais du même parcours tant qu'il
+  // en reste d'autres. Les ouvrages dont l'auteur est connu passent devant.
+  const files = new Map<string, Dos[]>();
+  const tries = [...ouvrages].sort((a, b) => Number(b.auteurs.length > 0) - Number(a.auteurs.length > 0));
+  for (const o of tries) {
+    const axe = o.axes[0];
+    if (!axe) continue;
+    const file = files.get(axe.slug) ?? [];
+    file.push({ id: o.id, titre: o.titre, auteur: o.auteurs[0] ?? "", axe: axe.label, slug: axe.slug });
+    files.set(axe.slug, file);
+  }
   const choisis: Dos[] = [];
-  for (const tour of [1, 2, 3]) {
-    for (const o of ouvrages) {
-      if (choisis.length >= 12 || choisis.some((c) => c.id === o.id)) continue;
-      const axe = o.axes[0];
-      if (!axe) continue;
-      if (tour === 1 && vus.has(axe.slug)) continue;
-      vus.add(axe.slug);
-      choisis.push({
-        id: o.id,
-        titre: o.titre,
-        auteur: o.auteurs[0] ?? "Auteur inconnu",
-        axe: axe.label,
-        slug: axe.slug,
-      });
+  while (choisis.length < 12 && [...files.values()].some((f) => f.length > 0)) {
+    for (const file of files.values()) {
+      const o = file.shift();
+      if (o && choisis.length < 12) choisis.push(o);
     }
+  }
+  // L'étagère tourne en boucle : le dernier volume est voisin du premier.
+  const n = choisis.length;
+  if (n > 2 && choisis[n - 1].slug === choisis[0].slug) {
+    const reste = [...files.values()].flat();
+    const autre = reste.find((o) => o.slug !== choisis[0].slug && o.slug !== choisis[1].slug && o.slug !== choisis[n - 2].slug);
+    if (autre) choisis[n - 1] = autre;
   }
   return choisis;
 }

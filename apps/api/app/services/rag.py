@@ -12,6 +12,7 @@ Deux garde-fous non négociables.
 import json
 import logging
 
+from app.core.auteurs import auteurs
 from app.core.config import settings
 from app.services import recherche
 from app.services.droits import tronquer
@@ -61,7 +62,7 @@ async def passages_pertinents(
                 "chunk_id": str(l["id"]),
                 "document_id": str(l["document_id"]),
                 "ouvrage": l["ouvrage"],
-                "auteurs": l["authors"] or [],
+                "auteurs": auteurs(l["authors"]),
                 "chapitre_id": str(l["chapter_id"]) if l["chapter_id"] else None,
                 "chapitre": l["chapitre"],
                 "page": l["page_start"],

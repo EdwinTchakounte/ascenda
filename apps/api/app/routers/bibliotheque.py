@@ -4,6 +4,7 @@ from typing import Annotated, Literal
 from fastapi import APIRouter, Query
 from fastapi.responses import Response
 
+from app.core.auteurs import auteurs
 from app.core.db import execute, fetch_all, fetch_one
 from app.core.deps import OptionalUser
 from app.core.errors import NotFound
@@ -89,7 +90,7 @@ async def lister(
                 "id": str(l["id"]),
                 "titre": l["titre"],
                 "sous_titre": l["subtitle"],
-                "auteurs": l["authors"] or [],
+                "auteurs": auteurs(l["authors"]),
                 "annee": l["year"],
                 "editeur": l["publisher"],
                 "pages": l["page_count"],
@@ -199,7 +200,7 @@ async def fiche(document_id: str, user: OptionalUser):
         "titre": d["titre"],
         "titre_original": d["title_raw"],
         "sous_titre": d["subtitle"],
-        "auteurs": d["authors"] or [],
+        "auteurs": auteurs(d["authors"]),
         "annee": d["year"],
         "editeur": d["publisher"],
         "isbn": d["isbn"],

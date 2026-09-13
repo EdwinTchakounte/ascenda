@@ -22,12 +22,14 @@ export default function Entete() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Navigation principale">
+        {/* Les liens attendent 1024 pixels : sur une tablette en portrait, quatre
+            liens et deux boutons passaient sur deux lignes. */}
+        <nav className="hidden items-center gap-7 lg:flex xl:gap-8" aria-label="Navigation principale">
           {LIENS.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-[0.9rem] text-[#b9c1d6] transition-colors hover:text-[var(--color-or-clair)]"
+              className="whitespace-nowrap text-[0.9rem] text-[#b9c1d6] transition-colors hover:text-[var(--color-or-clair)]"
             >
               {l.texte}
             </Link>
@@ -37,7 +39,7 @@ export default function Entete() {
         <div className="flex items-center gap-3">
           <Link
             href="/connexion"
-            className="hidden text-[0.9rem] text-[#b9c1d6] transition-colors hover:text-[var(--color-or-clair)] sm:block"
+            className="hidden whitespace-nowrap text-[0.9rem] text-[#b9c1d6] transition-colors hover:text-[var(--color-or-clair)] sm:block"
           >
             Se connecter
           </Link>
