@@ -139,6 +139,18 @@
   color: var(--accent-texte);
 }
 
+/* L'apparition au défilement. La classe d'armement n'est posée que par le
+   client, et seulement sur ce qui est encore sous l'écran. */
+.apparition {
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s cubic-bezier(0.22, 0.8, 0.3, 1);
+}
+.apparition-armee {
+  opacity: 0;
+  transform: translate3d(0, 26px, 0);
+}
+
 /* La dérive des carrés de fond. Lente au point qu'on ne la voit pas bouger, on
    s'aperçoit seulement qu'ils n'étaient pas là tout à l'heure. */
 .eclat {

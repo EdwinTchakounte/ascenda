@@ -33,8 +33,10 @@ export default function Pied() {
   return (
     <footer className="border-t border-[rgba(232,192,112,0.12)] bg-[var(--color-nuit)] py-16">
       <div className="cadre">
-        <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
-          <div>
+        {/* Deux colonnes de liens sur téléphone : en une seule, le pied de page
+            tenait sept cents pixels. */}
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 md:grid-cols-[1.4fr_repeat(3,1fr)] md:gap-12">
+          <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5">
               <Logo taille={34} />
               <div>

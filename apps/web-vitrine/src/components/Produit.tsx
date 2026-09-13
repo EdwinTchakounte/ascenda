@@ -73,10 +73,10 @@ export default function Produit() {
                   return (
                     <li
                       key={l.jour}
-                      className={`flex items-center gap-4 py-3.5 ${actif ? "-mx-3 rounded-none bg-[rgba(212,162,63,0.08)] px-3" : ""}`}
+                      className={`flex items-center gap-3 py-3.5 sm:gap-4 ${actif ? "-mx-3 rounded-none bg-[rgba(212,162,63,0.08)] px-3" : ""}`}
                     >
                       <span
-                        className={`w-[92px] shrink-0 text-[0.78rem] ${
+                        className={`hidden w-[92px] shrink-0 text-[0.78rem] sm:inline ${
                           actif
                             ? "font-semibold text-[var(--accent-texte)]"
                             : "text-[var(--texte-doux)]"
@@ -94,14 +94,18 @@ export default function Produit() {
                         }`}
                       />
                       <div className="min-w-0 flex-1">
+                        {/* La date, au-dessus du titre sur téléphone. */}
+                        <p className={`text-[0.72rem] sm:hidden ${actif ? "font-semibold text-[var(--accent-texte)]" : "text-[var(--texte-doux)]"}`}>
+                          {l.jour}
+                        </p>
                         <p
-                          className={`truncate text-[0.92rem] ${
+                          className={`text-[0.92rem] leading-snug sm:truncate ${
                             fait ? "text-[var(--texte-doux)]" : "font-medium"
                           }`}
                         >
                           {l.titre}
                         </p>
-                        <p className="truncate text-[0.78rem] text-[var(--texte-doux)]">{l.detail}</p>
+                        <p className="text-[0.78rem] text-[var(--texte-doux)] sm:truncate">{l.detail}</p>
                       </div>
                       <span className="shrink-0 text-[0.78rem] tabular-nums text-[var(--texte-doux)]">
                         {l.duree} min

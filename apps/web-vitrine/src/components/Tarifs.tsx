@@ -174,7 +174,13 @@ export default async function Tarifs() {
         </div>
 
         {/* Moyens de paiement : les nommer rassure autant que le prix. */}
-        <div className="mx-auto mt-12 max-w-[900px]">
+        {/* Sur téléphone, les deux cartes d'opérateur et leur paragraphe cèdent
+            la place à une ligne : le moyen de paiement n'est pas ce qui décide à
+            s'abonner, il suffit de savoir qu'il est le bon. */}
+        <p className="mx-auto mt-10 max-w-[34ch] text-center text-[0.84rem] leading-[1.6] text-[var(--texte-doux)] sm:hidden">
+          Paiement par mobile money, sans carte bancaire. Rien n&apos;est prélevé sans votre accord.
+        </p>
+        <div className="mx-auto mt-12 hidden max-w-[900px] sm:block">
           <p className="text-center text-[0.82rem] uppercase tracking-[0.14em] text-[var(--texte-doux)]">
             Paiement
           </p>

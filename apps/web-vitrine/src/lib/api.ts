@@ -9,6 +9,22 @@
 
 export const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8250";
 
+/**
+ * L'adresse que le serveur de la vitrine utilise pour ses propres appels.
+ *
+ * En production, la vitrine et l'API sont sur le même réseau Docker. Passer par
+ * l'adresse publique leur faisait faire le tour par Internet et par le nginx
+ * de la machine : un aller-retour inutile, une dépendance au retour réseau vers
+ * sa propre adresse, et surtout la limite de trente requêtes par seconde posée
+ * pour les visiteurs, qui s'applique alors à la vitrine entière quand elle
+ * régénère ses pages. La bibliothèque en ligne affichait zéro ouvrage alors que
+ * l'API en servait soixante-dix-huit.
+ *
+ * Lue à l'exécution et non figée à la construction : elle n'a pas de préfixe
+ * NEXT_PUBLIC_, elle ne quitte jamais le serveur.
+ */
+const API_SERVEUR = process.env.API_INTERNE || API_BASE;
+
 export type Axe = {
   id?: string;
   slug: string;
@@ -54,7 +70,7 @@ const AXES_REPLI: Axe[] = [
 
 async function recuperer<T>(chemin: string, repli: T, revalider = 3600): Promise<T> {
   try {
-    const r = await fetch(`${API_BASE}/v1${chemin}`, { next: { revalidate: revalider } });
+    const r = await fetch(`${API_SERVEUR}/v1${chemin}`, { next: { revalidate: revalider } });
     if (!r.ok) return repli;
     return (await r.json()) as T;
   } catch {
@@ -105,7 +121,7 @@ export type Fiche = {
  */
 export async function laFiche(id: string): Promise<Fiche | null> {
   try {
-    const r = await fetch(`${API_BASE}/v1/bibliotheque/${id}`, { next: { revalidate: 3600 } });
+    const r = await fetch(`${API_SERVEUR}/v1/bibliotheque/${id}`, { next: { revalidate: 3600 } });
     if (!r.ok) return null;
     return (await r.json()) as Fiche;
   } catch {
@@ -122,7 +138,7 @@ export type FicheAxe = {
 
 export async function laFicheAxe(slug: string): Promise<FicheAxe | null> {
   try {
-    const r = await fetch(`${API_BASE}/v1/axes/${slug}`, { next: { revalidate: 3600 } });
+    const r = await fetch(`${API_SERVEUR}/v1/axes/${slug}`, { next: { revalidate: 3600 } });
     if (!r.ok) return null;
     return (await r.json()) as FicheAxe;
   } catch {

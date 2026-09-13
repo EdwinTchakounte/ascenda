@@ -177,6 +177,10 @@ services:
         NEXT_PUBLIC_HEBERGEUR: ${HEBERGEUR:-}
     container_name: ascenda-vitrine
     restart: unless-stopped
+    environment:
+      # Les appels que le serveur de la vitrine fait lui-même passent par le
+      # réseau Docker, pas par Internet et le nginx de la machine.
+      API_INTERNE: http://api:8250
     depends_on: [api]
     ports: ["3251:3251"]
 

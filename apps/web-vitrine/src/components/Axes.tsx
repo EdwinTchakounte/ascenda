@@ -34,7 +34,7 @@ function Carte({
     <Relief className="h-full">
       <Link
         href={`/bibliotheque?axe=${axe.slug}`}
-        className={`${teinte} group relative flex h-full flex-col rounded-none border border-[var(--trait)] bg-[var(--surface)] p-6 transition-[border-color,box-shadow] duration-300 hover:border-[color-mix(in_srgb,var(--teinte)_45%,transparent)] hover:shadow-[0_24px_48px_color-mix(in_srgb,var(--teinte)_18%,transparent)] sm:p-7`}
+        className={`${teinte} group relative flex h-full flex-col rounded-none border border-[var(--trait)] bg-[var(--surface)] p-4 transition-[border-color,box-shadow] duration-300 hover:border-[color-mix(in_srgb,var(--teinte)_45%,transparent)] hover:shadow-[0_24px_48px_color-mix(in_srgb,var(--teinte)_18%,transparent)] sm:p-7`}
       >
         {/* Le voile de teinte, très bas, qui distingue les pôles sans les crier. */}
         <span
@@ -48,22 +48,22 @@ function Carte({
 
         <div className="en-avant relative flex items-start gap-4">
           <span
-            className="grid h-12 w-12 flex-none place-items-center rounded-none transition-colors duration-300"
+            className="grid h-10 w-10 flex-none place-items-center rounded-none transition-colors duration-300 sm:h-12 sm:w-12"
             style={{
               background: "color-mix(in srgb, var(--teinte) 13%, transparent)",
               color: "var(--teinte)",
             }}
           >
-            <IconeAxe slug={axe.slug} className="h-[23px] w-[23px]" />
+            <IconeAxe slug={axe.slug} className="h-5 w-5 sm:h-[23px] sm:w-[23px]" />
           </span>
           <span className="ml-auto text-right">
             <b
-              className="block font-[family-name:var(--font-titre)] text-[1.9rem] font-semibold leading-none tabular-nums"
+              className="block font-[family-name:var(--font-titre)] text-[1.5rem] font-semibold leading-none tabular-nums sm:text-[1.9rem]"
               style={{ color: "var(--teinte)" }}
             >
               {axe.nb_ouvrages}
             </b>
-            <span className="mt-1 block text-[0.7rem] uppercase tracking-[0.09em] text-[var(--texte-doux)]">
+            <span className="mt-1 block text-[0.6rem] uppercase tracking-[0.08em] text-[var(--texte-doux)] sm:text-[0.7rem] sm:tracking-[0.09em]">
               {axe.nb_ouvrages > 1 ? "ouvrages" : "ouvrage"}
             </span>
           </span>
@@ -74,7 +74,7 @@ function Carte({
         <div className={large ? "relative" : "relative flex flex-1 flex-col justify-center"}>
           <h3
             className={`en-avant relative font-semibold leading-snug ${
-              large ? "mt-5 text-[1.35rem] sm:text-[1.5rem]" : "mt-5 text-[1.08rem]"
+              large ? "mt-4 text-[1.2rem] sm:mt-5 sm:text-[1.5rem]" : "mt-3 text-[0.95rem] sm:mt-5 sm:text-[1.08rem]"
             }`}
           >
             {axe.label}
@@ -122,7 +122,7 @@ function Carte({
           </div>
         ) : null}
 
-        <div className="relative pt-6">
+        <div className="relative pt-4 sm:pt-6">
           {/* La part du corpus, en barre. « 17 ouvrages » ne dit rien tant qu'on
               ne sait pas ce que pèsent les autres. */}
           <span className="block h-[5px] w-full overflow-hidden rounded-none bg-[var(--fond-creux)]">
@@ -135,7 +135,9 @@ function Carte({
               }}
             />
           </span>
-          <p className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-[0.82rem] text-[var(--texte-doux)]">
+          {/* Pages et durée restent aux grands écrans : sur deux colonnes de cent
+              soixante pixels, la ligne se coupait en trois morceaux. */}
+          <p className={`mt-3 flex-wrap items-center gap-x-2 gap-y-1 text-[0.82rem] text-[var(--texte-doux)] ${large ? "flex" : "hidden sm:flex"}`}>
             <span className="tabular-nums">{axe.nb_pages.toLocaleString("fr-FR")} pages</span>
             <span className="opacity-40">·</span>
             <span className="tabular-nums">{heures(axe.duree_estimee_min)} de lecture</span>
@@ -191,9 +193,11 @@ export default async function Axes() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
+        {/* Deux colonnes dès le téléphone. En une seule, onze cartes faisaient deux
+            mille quatre cents pixels de défilement. */}
+        <ul className="mt-12 grid grid-cols-2 gap-3 sm:mt-14 sm:gap-5 lg:grid-cols-3">
           {tete ? (
-            <li className="sm:col-span-2">
+            <li className="col-span-2">
               <Apparition className="h-full">
                 <Carte axe={tete} part={tete.nb_ouvrages / plusGros} large apercu={apercu} />
               </Apparition>

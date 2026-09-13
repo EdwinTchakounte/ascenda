@@ -12,19 +12,27 @@ import { join } from "node:path";
  * Le fichier n'est pas versionné : vingt mégaoctets de binaire n'ont rien à
  * faire dans un dépôt de code.
  */
-const FICHIER = "ascenda.apk";
-
 export type Telechargement = { url: string; megaoctets: number } | null;
 
-export function apk(): Telechargement {
+function fichier(nom: string): Telechargement {
   try {
-    const chemin = join(process.cwd(), "public", "telechargements", FICHIER);
-    const info = statSync(chemin);
+    const info = statSync(join(process.cwd(), "public", "telechargements", nom));
     return {
-      url: `/telechargements/${FICHIER}`,
+      url: `/telechargements/${nom}`,
       megaoctets: Math.round((info.size / 1024 / 1024) * 10) / 10,
     };
   } catch {
     return null;
   }
 }
+
+/** L'APK des téléphones actuels (arm64), vingt mégaoctets. */
+export const apk = () => fichier("ascenda.apk");
+
+/**
+ * L'APK des téléphones anciens ou d'entrée de gamme dont le système est en 32
+ * bits : l'APK arm64 ne s'y installe pas. Une APK universelle couvrirait les
+ * deux, mais elle pèse cinquante-cinq mégaoctets, c'est à dire une heure de
+ * téléchargement sur les connexions de beaucoup de nos lecteurs.
+ */
+export const apk32 = () => fichier("ascenda-32bits.apk");

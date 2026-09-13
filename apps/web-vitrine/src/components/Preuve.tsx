@@ -16,13 +16,15 @@ export default function Preuve() {
       <Voile teinte="#8a7f9e" opacite={0.2} className="right-[-10%] top-[10%] h-[400px] w-[520px]" />
 
       <div className="cadre relative">
-        <ul className="grid gap-10 sm:grid-cols-3">
+        {/* Trois colonnes dès le téléphone : empilés, les trois chiffres
+            occupaient quatre cent cinquante pixels pour trois mots. */}
+        <ul className="grid grid-cols-3 gap-3 sm:gap-10">
           {CHIFFRES.map((c) => (
             <li key={c.libelle} className="text-center">
-              <p className="font-[family-name:var(--font-titre)] text-[3.1rem] font-semibold leading-none text-[var(--color-or-clair)] tabular-nums">
+              <p className="font-[family-name:var(--font-titre)] text-[1.9rem] font-semibold leading-none sm:text-[3.1rem] text-[var(--color-or-clair)] tabular-nums">
                 {c.valeur}
               </p>
-              <p className="mt-2.5 text-[0.88rem] uppercase tracking-[0.14em] text-[#8590aa]">
+              <p className="mt-2 text-[0.66rem] uppercase tracking-[0.1em] text-[#8590aa] sm:mt-2.5 sm:text-[0.88rem] sm:tracking-[0.14em]">
                 {c.libelle}
               </p>
             </li>
@@ -52,7 +54,7 @@ export default function Preuve() {
             Dix minutes de diagnostic, et vous repartez avec un plan de lecture daté.
             Vous pouvez l&apos;abandonner, le refaire, le ralentir. Il s&apos;ajuste.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3.5">
+          <div className="mx-auto mt-9 grid max-w-[420px] grid-cols-2 gap-2.5 sm:flex sm:max-w-none sm:justify-center sm:gap-3">
             <Bouton href="/commencer" taille="grand">Faire le diagnostic</Bouton>
             <Bouton href="/bibliotheque" variante="contour" taille="grand">
               Parcourir la bibliothèque

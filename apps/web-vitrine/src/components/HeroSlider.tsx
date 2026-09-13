@@ -129,7 +129,10 @@ export default function HeroSlider() {
             {d.texte}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          {/* Deux colonnes égales sur téléphone, côte à côte : empilés, les deux
+              appels occupaient un tiers de l'écran et le second passait sous la
+              ligne de flottaison. */}
+          <div className="mt-8 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap sm:items-center sm:gap-3">
             <Bouton href="/commencer" taille="grand">
               Commencer gratuitement
             </Bouton>
@@ -138,7 +141,10 @@ export default function HeroSlider() {
             </Bouton>
           </div>
 
-          <p className="mt-5 text-[0.82rem] text-[#8590aa]">
+          {/* Réservé aux grands écrans : sur téléphone, le moyen de paiement
+              n'est pas ce qui décide quelqu'un à commencer, et la ligne coûtait
+              une rangée de plus avant l'image. */}
+          <p className="mt-5 hidden text-[0.82rem] text-[#8590aa] sm:block">
             Sans carte bancaire. Paiement par MTN Mobile Money et Orange Money.
           </p>
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Entete from "@/components/Entete";
 import Pied from "@/components/Pied";
 import { APPLICATION } from "@/lib/editeur";
-import { apk } from "@/lib/telechargements";
+import { apk, apk32 } from "@/lib/telechargements";
 
 export const metadata = {
   title: "Commencer avec ASCENDA",
@@ -34,6 +34,7 @@ export default function Commencer() {
   // servir le fichier depuis le site évite une redirection de plus, et le poids
   // affiché est celui du fichier réel, pas une valeur recopiée à la main.
   const fichier = apk();
+  const ancien = apk32();
   const android = fichier ? fichier.url : APPLICATION.android;
 
   return (
@@ -53,6 +54,30 @@ export default function Commencer() {
               êtes et combien de temps vous avez, puis il construit le plan. Le diagnostic et
               le premier parcours sont gratuits, sans carte bancaire.
             </p>
+
+            {/* Le téléchargement au premier écran. Il était à mille six cents
+                pixels de hauteur sur téléphone, sous trois étapes à lire, alors
+                que c'est ce qu'on vient chercher sur cette page. */}
+            {android ? (
+              <div className="mt-8 grid grid-cols-2 gap-2.5 sm:flex sm:gap-3">
+                <a
+                  href={android}
+                  download
+                  className="inline-flex items-center justify-center gap-2 rounded-none bg-[var(--color-or)] px-3 py-3 text-center text-[0.88rem] font-semibold leading-tight text-[#1a1400] shadow-[0_4px_14px_rgba(212,162,63,0.28)] transition-colors hover:bg-[var(--color-or-clair)] sm:px-7 sm:py-3.5 sm:text-[0.98rem]"
+                >
+                  <svg viewBox="0 0 24 24" aria-hidden="true" className="hidden h-5 w-5 sm:block" fill="currentColor">
+                    <path d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38l-1.87 3.23a11.5 11.5 0 0 0-9.82 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52ZM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z" />
+                  </svg>
+                  Télécharger l&apos;application
+                </a>
+                <a
+                  href="#telecharger"
+                  className="inline-flex items-center justify-center rounded-none border border-[rgba(232,192,112,0.42)] px-3 py-3 text-center text-[0.88rem] font-medium leading-tight text-[var(--color-or-clair)] transition-colors hover:border-[var(--color-or)] hover:bg-[rgba(212,162,63,0.08)] sm:px-7 sm:py-3.5 sm:text-[0.98rem]"
+                >
+                  Comment l&apos;installer
+                </a>
+              </div>
+            ) : null}
           </div>
         </header>
 
@@ -72,45 +97,85 @@ export default function Commencer() {
           </ol>
         </section>
 
-        <section className="border-y border-[var(--trait)] bg-[var(--fond-creux)] py-16">
-          <div className="cadre max-w-[760px]">
-            <h2 className="text-[1.5rem] font-semibold leading-snug text-[var(--titre)]">
-              Ouvrir ASCENDA
-            </h2>
-            <p className="mt-3 text-[0.98rem] leading-[1.72] text-[var(--texte-doux)]">
-              Le diagnostic, le chronogramme et le lecteur vivent dans l&apos;application. Le
-              site que vous lisez est la vitrine : il présente le corpus, il ne le fait pas
-              travailler.
-            </p>
+        {/* Le téléchargement. La carte « dans le navigateur » a disparu : il n'y
+            a pas de version web déployée, et une carte qui annonce ce qui
+            n'existe pas détourne l'attention du seul accès réel. */}
+        <section id="telecharger" className="relative overflow-hidden bg-[var(--color-nuit)] py-16 sm:py-20">
+          <div className="cadre relative max-w-[880px]">
+            <div className="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <p className="oeil text-[var(--color-or-clair)]">L&apos;application</p>
+                <h2 className="mt-3 text-[1.8rem] font-semibold leading-tight text-[#f7f4ec] sm:text-[2.2rem]">
+                  ASCENDA sur votre téléphone
+                </h2>
+                <p className="mt-4 text-[1rem] leading-[1.72] text-[#b9c1d6]">
+                  Le diagnostic, le chronogramme, le lecteur et l&apos;agent vivent dans
+                  l&apos;application. Ce site présente la bibliothèque ; l&apos;application
+                  la fait travailler.
+                </p>
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <Acces
-                titre="Sur Android"
-                texte={
-                  fichier
-                    ? `Le fichier d'installation, ${fichier.megaoctets} Mo, à ouvrir depuis votre téléphone.`
-                    : "Le fichier d'installation, à ouvrir depuis votre téléphone."
-                }
-                href={android}
-                libelle={fichier ? `Télécharger (${fichier.megaoctets} Mo)` : "Télécharger"}
-                manque="L'application n'est pas encore publiée. Le fichier arrivera ici."
-              />
-              <Acces
-                titre="Dans le navigateur"
-                texte="La même application, sans rien installer."
-                href={APPLICATION.web}
-                libelle="Ouvrir"
-                manque="La version web n'est pas encore déployée."
-              />
+                {android ? (
+                  <div className="mt-8">
+                    <a
+                      href={android}
+                      download
+                      className="inline-flex w-full items-center justify-center gap-3 rounded-none bg-[var(--color-or)] px-6 py-3.5 sm:px-7 sm:py-4 text-[1rem] font-semibold text-[#1a1400] shadow-[0_4px_14px_rgba(212,162,63,0.28)] transition-colors hover:bg-[var(--color-or-clair)] sm:w-auto"
+                    >
+                      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5" fill="currentColor">
+                        <path d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38l-1.87 3.23a11.5 11.5 0 0 0-9.82 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52ZM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z" />
+                      </svg>
+                      {/* Le poids passe sous le libellé sur téléphone : sur une ligne,
+                          il se coupait en colonne à côté du texte. */}
+                      <span className="flex flex-col items-start leading-tight sm:flex-row sm:items-baseline sm:gap-2">
+                        <span>Télécharger pour Android</span>
+                        {fichier ? (
+                          <span className="text-[0.82rem] font-normal opacity-70 sm:text-[1rem]">
+                            {fichier.megaoctets.toLocaleString("fr-FR")} Mo
+                          </span>
+                        ) : null}
+                      </span>
+                    </a>
+                    {ancien ? (
+                      <p className="mt-4 text-[0.84rem] leading-[1.6] text-[#8590aa]">
+                        Téléphone ancien ou d&apos;entrée de gamme ? Si l&apos;installation est refusée,{" "}
+                        <a href={ancien.url} download className="text-[var(--color-or-clair)] underline underline-offset-2">
+                          prenez la version 32 bits
+                        </a>{" "}
+                        ({ancien.megaoctets.toLocaleString("fr-FR")} Mo).
+                      </p>
+                    ) : null}
+                  </div>
+                ) : (
+                  <p className="mt-8 rounded-none border border-dashed border-[rgba(232,192,112,0.3)] px-5 py-4 text-[0.92rem] leading-[1.6] text-[#b9c1d6]">
+                    L&apos;application n&apos;est pas encore publiée. Le fichier arrivera ici.
+                  </p>
+                )}
+              </div>
+
+              {/* Comment installer : sans ces trois lignes, Android bloque le
+                  fichier et la personne croit que l'application est cassée. */}
+              <ol className="grid gap-3">
+                {[
+                  ["Téléchargez le fichier", "depuis le téléphone où vous installerez l'application."],
+                  ["Ouvrez-le", "dans vos téléchargements. Android demande d'autoriser l'installation depuis le navigateur : acceptez pour ce fichier."],
+                  ["Créez votre compte", "et passez le diagnostic. Six minutes, gratuit."],
+                ].map(([titre, texte], i) => (
+                  <li key={titre} className="flex gap-4 border border-[rgba(232,192,112,0.14)] bg-[rgba(255,255,255,0.02)] p-4">
+                    <span className="grid h-8 w-8 flex-none place-items-center bg-[rgba(212,162,63,0.16)] text-[0.85rem] font-semibold text-[var(--color-or-clair)]">
+                      {i + 1}
+                    </span>
+                    <p className="text-[0.9rem] leading-[1.55] text-[#b9c1d6]">
+                      <span className="font-semibold text-[#f4f1e8]">{titre}</span> {texte}
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </div>
 
-            <p className="mt-8 text-[0.88rem] leading-[1.7] text-[var(--texte-doux)]">
-              En attendant, la bibliothèque est consultable ici même, sans compte :{" "}
-              <Link
-                href="/bibliotheque"
-                className="text-[var(--accent-texte)] underline underline-offset-2"
-              >
-                les 78 ouvrages et leurs 11 axes
+            <p className="mt-10 text-[0.88rem] leading-[1.7] text-[#8590aa]">
+              En attendant, la bibliothèque se parcourt ici même, sans compte :{" "}
+              <Link href="/bibliotheque" className="text-[var(--color-or-clair)] underline underline-offset-2">
+                ouvrir le catalogue
               </Link>
               .
             </p>
@@ -119,43 +184,5 @@ export default function Commencer() {
       </main>
       <Pied />
     </>
-  );
-}
-
-/**
- * Un accès à l'application. Quand l'adresse n'est pas configurée, la carte le
- * dit au lieu d'afficher un bouton qui ne mène nulle part : c'est exactement ce
- * défaut qui rendait cette page nécessaire.
- */
-function Acces({
-  titre,
-  texte,
-  href,
-  libelle,
-  manque,
-}: {
-  titre: string;
-  texte: string;
-  href: string | null;
-  libelle: string;
-  manque: string;
-}) {
-  return (
-    <div className="rounded-none border border-[var(--trait)] bg-[var(--surface)] p-6">
-      <h3 className="text-[1.02rem] font-semibold text-[var(--titre)]">{titre}</h3>
-      <p className="mt-2 text-[0.9rem] leading-[1.65] text-[var(--texte-doux)]">{texte}</p>
-      {href ? (
-        <a
-          href={href}
-          className="mt-5 inline-flex items-center justify-center rounded-none bg-[var(--color-or)] px-6 py-2.5 text-[0.92rem] font-medium text-[#1a1400] transition-colors hover:bg-[var(--color-or-clair)]"
-        >
-          {libelle}
-        </a>
-      ) : (
-        <p className="mt-5 rounded-none border border-dashed border-[var(--trait)] px-4 py-3 text-[0.85rem] leading-[1.6] text-[var(--texte-doux)]">
-          {manque}
-        </p>
-      )}
-    </div>
   );
 }
