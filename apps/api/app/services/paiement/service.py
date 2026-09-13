@@ -21,7 +21,7 @@ import logging
 from datetime import datetime, timedelta, timezone
 
 from app.core.config import settings
-from app.core.db import connection, fetch_all, fetch_one
+from app.core.db import connection, execute, fetch_all, fetch_one
 from app.core.errors import Conflict, NotFound
 
 from .base import ErreurFournisseur, EvenementWebhook
@@ -85,13 +85,26 @@ async def creer(user: dict, periode_mois: int, plan: str = "premium") -> dict:
     if en_cours and en_cours["periode_mois"] == periode_mois:
         return en_cours
 
+    # Un bon ambassadeur s'applique tout seul, et se voit avant de valider.
+    from app.services import codes
+
+    bon = await codes.bon_disponible(str(user["id"]))
+    montant = tarif["montant"]
+    if bon:
+        montant = codes.montant_reduit(tarif["montant"], bon["pourcent"])
+
     paiement = await fetch_one(
-        """insert into payment (user_id, plan_cible, periode_mois, montant, devise)
-           values (%s, %s, %s, %s, %s) returning *""",
-        (user["id"], plan, periode_mois, tarif["montant"], tarif["devise"]),
+        """insert into payment (user_id, plan_cible, periode_mois, montant, devise,
+                                montant_brut, reduction_pourcent, bon_id)
+           values (%s, %s, %s, %s, %s, %s, %s, %s) returning *""",
+        (user["id"], plan, periode_mois, montant, tarif["devise"],
+         tarif["montant"] if bon else None, bon["pourcent"] if bon else None,
+         bon["id"] if bon else None),
     )
     await tracer(str(paiement["id"]), "cree", "api",
-                 {"periode_mois": periode_mois, "montant": tarif["montant"]})
+                 {"periode_mois": periode_mois, "montant": montant,
+                  **({"montant_brut": tarif["montant"], "reduction_pourcent": bon["pourcent"],
+                      "bon": str(bon["id"])} if bon else {})})
     return paiement
 
 
@@ -238,6 +251,12 @@ async def appliquer(paiement: dict, statut: str, *, source: str,
     await tracer(str(paiement["id"]), statut, source, {"motif": motif}, strategie=strategie)
 
     if statut == "valide":
+        if paiement.get("bon_id"):
+            await execute(
+                """update bon_reduction set utilise_le = now(), payment_id = %s
+                    where id = %s and utilise_le is null""",
+                (paiement["id"], paiement["bon_id"]),
+            )
         abonnement = await ouvrir_abonnement(paiement)
         await _prevenir("paiement_confirme", paiement, abonnement)
     elif statut == "rejete":

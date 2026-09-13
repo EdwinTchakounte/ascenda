@@ -7,6 +7,7 @@ import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../widgets/avantages.dart';
 import '../widgets/cartes.dart';
 import '../widgets/exploitation.dart';
 import '../widgets/etats.dart';
@@ -64,6 +65,7 @@ class EcranAujourdhui extends ConsumerWidget {
                   // Le bandeau de lancement, s'il y a lieu. Il se retire tout
                   // seul à l'échéance, sans rien à changer dans l'application.
                   const BandeauLancement(),
+                  const BandeauRecompense(),
                   if (a.seance != null)
                     CarteSeance(
                       seance: a.seance!,

@@ -8,6 +8,7 @@ import 'ecrans/auth.dart';
 import 'ecrans/axe.dart';
 import 'ecrans/bibliotheque.dart';
 import 'ecrans/chronogramme.dart';
+import 'ecrans/codes.dart';
 import 'ecrans/coque.dart';
 import 'ecrans/demarrage.dart';
 import 'ecrans/diagnostic.dart';
@@ -80,6 +81,7 @@ final routeurProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/bienvenue', builder: (c, s) => const EcranBienvenue()),
       GoRoute(path: '/connexion', builder: (c, s) => const EcranConnexion()),
       GoRoute(path: '/abonnement', builder: (c, s) => const EcranAbonnement()),
+      GoRoute(path: '/codes', builder: (c, s) => const EcranCodes()),
       GoRoute(
         path: '/mot-de-passe-oublie',
         builder: (c, s) => EcranMotDePasseOublie(email: s.uri.queryParameters['email']),

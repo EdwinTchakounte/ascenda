@@ -328,7 +328,7 @@ un schéma à moitié posé.
 ```
 
 Le script pose trois choses, dans cet ordre : les extensions, le **schéma de
-base**, puis les douze migrations.
+base**, puis les treize migrations.
 
 Cet ordre n'est pas décoratif. Les migrations sont des *incréments* : la
 première fait un `ALTER TABLE` sur `document`, qui n'existe que si
@@ -355,7 +355,7 @@ Il finit par un récapitulatif, qui est la vraie vérification :
 ── les migrations ──
   001_editions.sql             ok
   ...
-12 migrations posées.
+13 migrations posées.
 
 ── ce que la base porte maintenant ──
 tables      : 36

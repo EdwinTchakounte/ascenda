@@ -159,7 +159,8 @@ async def main():
 
         print("\n· Les interrupteurs se posent depuis le tableau de bord")
         code, avant, _ = appel("GET", "/v1/admin/reglages", jeton=jeton_admin)
-        ok("les trois réglages se lisent", code == 200 and len(avant) == 3, len(avant) if code == 200 else code)
+        cles = sorted(r["cle"] for r in avant) if code == 200 else code
+        ok("les quatre réglages se lisent", cles == ["lancement", "maintenance", "parrainage", "version_minimale"], cles)
 
         code, _, _ = appel("POST", "/v1/admin/reglages/lancement",
                            {"valeur": {"actif": False, "jusqu_au": None, "message": "Essai"}},

@@ -3,12 +3,12 @@ import json
 from datetime import date, datetime, timedelta, timezone
 from typing import Annotated, Literal
 
-from fastapi import APIRouter, Query, status
+from fastapi import APIRouter, Depends, Query, status
 from pydantic import BaseModel, Field
 
 from app.core.auteurs import auteurs
 from app.core.db import connection, execute, fetch_all, fetch_one
-from app.core.deps import CurrentUser, PremiumUser
+from app.core.deps import CurrentUser, exige
 from app.core.errors import Conflict, Forbidden, NotFound
 from app.services import planner, quotas
 
@@ -207,9 +207,11 @@ async def creer(data: ChronogrammeIn, user: CurrentUser):
         "where slug = %s and slug not like '\\_%%'", (data.axe,))
     if not axe:
         raise NotFound("Cet axe n'existe pas.")
-    if axe["is_premium"] and user["plan"] == "free":
+    from app.services import acces
+
+    if axe["is_premium"] and not await acces.a_droit(user, "axes_reserves"):
         raise Forbidden("Cet axe fait partie de l'offre Ascension.")
-    if data.adaptatif and user["plan"] == "free":
+    if data.adaptatif and not await acces.a_droit(user, "chronogramme_adaptatif"):
         raise Forbidden(
             "La replanification automatique fait partie d'Ascension. "
             "Votre plan reste utilisable, il ne s'ajustera simplement pas tout seul."
@@ -458,7 +460,10 @@ async def marquer(seance_id: str, data: SeanceStatutIn, user: CurrentUser):
 
 
 @router.post("/chronogrammes/{chronogramme_id}/replanifier", summary="Replanifier (Ascension)")
-async def replanifier(chronogramme_id: str, user: PremiumUser):
+async def replanifier(
+    chronogramme_id: str,
+    user: Annotated[dict, Depends(exige("chronogramme_adaptatif"))],
+):
     """Regénère les séances restantes en une nouvelle version, sans toucher à
     l'historique. Le plan précédent passe en « remplacé » : on garde la trace de
     ce qui avait été promis, ce qui est la condition d'un plan honnête.

@@ -69,7 +69,7 @@ class EcranChronogramme extends ConsumerWidget {
                 const SizedBox(height: 18),
                 _BandeauRetard(
                   nombre: c.enRetard,
-                  premium: session.premium,
+                  premium: session.utilisateur?.aAcces('chronogramme_adaptatif') ?? false,
                   onReplanifier: () => _replanifier(context, ref),
                 ),
               ],

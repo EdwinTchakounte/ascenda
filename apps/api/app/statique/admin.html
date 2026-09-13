@@ -599,6 +599,8 @@ code{font-family:var(--mono);font-size:.8em}
 <symbol id="i-graphe" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4.6M16 20v-7.4M21 20H3"></path></symbol>
 <symbol id="i-base" viewBox="0 0 24 24"><ellipse cx="12" cy="5.8" rx="7.6" ry="2.8"></ellipse><path d="M4.4 5.8v12.4c0 1.5 3.4 2.8 7.6 2.8s7.6-1.3 7.6-2.8V5.8"></path><path d="M4.4 12c0 1.5 3.4 2.8 7.6 2.8s7.6-1.3 7.6-2.8"></path></symbol>
 <symbol id="i-etincelle" viewBox="0 0 24 24"><path d="m12 3.2 1.9 5.2 5.2 1.9-5.2 1.9-1.9 5.2-1.9-5.2-5.2-1.9 5.2-1.9z"></path><path d="M18.6 16.4 19.4 18.6l2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"></path></symbol>
+<symbol id="i-ticket" viewBox="0 0 24 24"><path d="M3.2 7.4A1.6 1.6 0 0 1 4.8 5.8h14.4a1.6 1.6 0 0 1 1.6 1.6v2.2a2.4 2.4 0 0 0 0 4.8v2.2a1.6 1.6 0 0 1-1.6 1.6H4.8a1.6 1.6 0 0 1-1.6-1.6v-2.2a2.4 2.4 0 0 0 0-4.8z"></path><path d="M14.6 6v12" stroke-dasharray="1.6 2"></path></symbol>
+<symbol id="i-ambassadeur" viewBox="0 0 24 24"><circle cx="8.5" cy="8" r="3"></circle><path d="M3 19a5.5 5.5 0 0 1 11 0"></path><path d="M17.6 4.6v6M14.6 7.6h6"></path></symbol>
 <symbol id="i-file" viewBox="0 0 24 24"><path d="M9 6.4h11M9 12h11M9 17.6h11"></path><circle cx="4.6" cy="6.4" r="1.5"></circle><circle cx="4.6" cy="12" r="1.5"></circle><circle cx="4.6" cy="17.6" r="1.5"></circle></symbol>
 <symbol id="i-calendrier" viewBox="0 0 24 24"><rect x="3.4" y="5.2" width="17.2" height="15.4" rx="2.2"></rect><path d="M3.4 10h17.2M8.2 3.4v3.4M15.8 3.4v3.4"></path></symbol>
 <symbol id="i-crayon" viewBox="0 0 24 24"><path d="M16.4 3.9a2.1 2.1 0 0 1 3 3L9 17.3l-4 1 1-4z"></path><path d="m14.6 5.7 3.7 3.7"></path></symbol>
@@ -781,7 +783,13 @@ async function api(chemin, options = {}, reessai = true) {
     return api(chemin, options, false);
   }
   if (r.status === 401 || r.status === 403) { sortir(); throw new Error("refuse"); }
-  if (!r.ok) throw new Error("http " + r.status);
+  if (!r.ok) {
+    // Le message de l'API est écrit pour être lu : on le garde pour l'afficher
+    // quand la vue sait quoi en faire.
+    const e = new Error("http " + r.status);
+    try { const c = await r.json(); e.lisible = c?.detail?.message || null; } catch (_) { /* corps vide */ }
+    throw e;
+  }
   return r.status === 204 ? null : r.json();
 }
 
@@ -827,7 +835,9 @@ const ech = (s) => String(s ?? "").replace(/[&<>"]/g, (c) =>
 
 const CLASSES = { valide: "p-ok", envoye: "p-ok", active: "p-ok", none: "p-neutre",
   simule: "p-attente", en_attente: "p-attente", pending: "p-attente",
-  rejete: "p-mauvais", echec: "p-mauvais", removed: "p-mauvais", expired: "p-neutre" };
+  rejete: "p-mauvais", echec: "p-mauvais", removed: "p-mauvais", expired: "p-neutre",
+  actif: "p-ok", programme: "p-attente", expire: "p-neutre", desactive: "p-mauvais",
+  epuise: "p-neutre", disponible: "p-ok", utilise: "p-neutre" };
 const pastille = (v) => v === null || v === undefined || v === ""
   ? "" : `<span class="pastille ${CLASSES[v] || "p-neutre"}">${ech(v)}</span>`;
 
@@ -1170,6 +1180,18 @@ zone({ cle: "comptes", groupe: "Membres", titre: "Comptes",
           <div class="champ" style="margin-top:14px">
             <button class="bouton" data-bascule="is_active" data-v="${!c.actif}">
               ${c.actif ? "Désactiver ce compte" : "Réactiver ce compte"}</button></div></div>
+          <div class="carte"><h3>${ico("ticket")}Accès et parrainage</h3>${paires({
+            "accès": d.acces.complet ? `<span class="pastille p-ok">tout Ascension</span>`
+              : (d.acces.fonctions.length ? ech(d.acces.fonctions.length + " fonction(s)") : "Découverte"),
+            "ouvert par": ech({ abonnement: "abonnement", lancement: "lancement", code: "code d'accès",
+              aucune: "rien" }[d.acces.source] || d.acces.source),
+            "jusqu'au": jour(d.acces.jusqu_au),
+            "code ambassadeur": d.parrainage.code_parrainage ? `<code>${ech(d.parrainage.code_parrainage)}</code>` : "pas encore créé",
+            "venu grâce à": ech(d.parrainage.parrain || ""),
+            "filleuls": nb(d.parrainage.filleuls),
+            "réductions": `${nb(d.parrainage.bons_disponibles)} disponible(s), ${nb(d.parrainage.bons_utilises)} utilisée(s)`,
+          })}${d.codes.length ? d.codes.map((c) => `<div class="paire"><span><code>${ech(c.code)}</code> ${ech(c.niveau)}</span>` +
+              `<b>${c.en_cours ? "jusqu'au " + jour(c.fin) : "terminé"}</b></div>`).join("") : ""}</div>
           <div class="carte"><h3>${ico("paiement")}Paiements</h3>${d.paiements.length
             ? d.paiements.map((p) => `<div class="paire"><span>${jour(p.cree_le)} ${ech(p.reseau || "")}</span>` +
                 `<b>${xaf(p.montant)} ${pastille(p.statut)}</b></div>`).join("")
@@ -1269,6 +1291,161 @@ zone({ cle: "abonnements", groupe: "Membres", titre: "Abonnements",
       ["periode_mois", "mois", "nombre"], ["montant", "montant", "xaf"],
       ["debut", "début", "jour"], ["fin", "échéance", "jour"],
       ["jours_restants", "jours restants", "nombre"]], env.lignes) + pagination(env);
+  } });
+
+/* Les codes d'accès. Le formulaire est en haut parce que c'est le geste qu'on
+ * vient faire ; la liste dessous dit ce que chaque code a produit. */
+const dateFin = (v) => v ? v + "T23:59:59+01:00" : null;
+const dateDebut = (v) => v ? v + "T00:00:00+01:00" : null;
+const NIVEAUX = { complet: "tout Ascension", limite: "limité" };
+
+zone({ cle: "codes", groupe: "Membres", titre: "Codes d'accès",
+  ico: "ticket", aide: "Ouvrir Ascension, en tout ou en partie, pour un temps. Un code expiré ne produit plus rien.",
+  async rendre() {
+    const env = await api("/v1/admin/codes?par_page=40&page=" + (this.page || 1));
+    this.lignes = env.lignes.map((c) => ({ ...c, niveau_l: NIVEAUX[c.niveau],
+      usage: c.max_utilisations ? `${c.utilisations} / ${c.max_utilisations}` : String(c.utilisations) }));
+    this.fonctions = env.fonctions;
+    const actifs = env.lignes.filter((c) => c.statut === "actif");
+    return `<div class="tuiles serre" style="margin-bottom:18px">${[
+        { i: "ticket", l: "Codes actifs", v: nb(actifs.length), s: `sur ${nb(env.total)} créés` },
+        { i: "membres", l: "Accès en cours", v: nb(env.lignes.reduce((a, c) => a + c.en_cours, 0)),
+          s: "lecteurs ouverts par un code" },
+        { i: "oui", l: "Activations", v: nb(env.lignes.reduce((a, c) => a + c.utilisations, 0)), s: "depuis le début" },
+      ].map(tuile).join("")}</div>
+      <div class="cartes" style="margin-bottom:20px"><div class="carte seule">
+      <h3>${ico("plus")}Créer un code</h3>
+      <p class="aide">Le lecteur le saisit à la création de son compte ou dans son profil.
+        La date de fin referme la saisie <b>et</b> les accès déjà ouverts.</p>
+      <div class="champ"><label>code</label><input id="c-code" placeholder="LANCEMENT2026" autocomplete="off"
+        style="text-transform:uppercase;font-family:var(--mono)"></div>
+      <div class="champ"><label>libellé</label><input id="c-libelle" placeholder="Lancement d'ASCENDA"></div>
+      <div class="champ"><label>accès</label><select id="c-niveau">
+        <option value="complet">tout Ascension</option><option value="limite">limité à certaines fonctions</option></select></div>
+      <div id="c-fonctions" style="margin:2px 0 10px 106px;display:none;gap:6px">
+        ${env.fonctions.map((f) => `<label style="display:flex;gap:8px;align-items:center;font-size:.84rem">
+          <input type="checkbox" value="${ech(f.cle)}" style="min-width:auto"> ${ech(f.libelle)}</label>`).join("")}</div>
+      <div class="champ"><label>à partir du</label><input id="c-debut" type="date" lang="fr"></div>
+      <div class="champ"><label>jusqu'au</label><input id="c-fin" type="date" lang="fr"></div>
+      <div class="champ"><label>durée par lecteur</label><input id="c-duree" type="number" min="1" placeholder="jours, facultatif"></div>
+      <div class="champ"><label>utilisations</label><input id="c-max" type="number" min="1" placeholder="illimitées si vide"></div>
+      <button class="bouton" id="c-creer">${ico("plus", "pt")}Créer le code</button>
+      <p class="note" id="c-etat">Sans durée par lecteur, chaque accès court jusqu'à la fin du code.
+        Avec, il s'arrête au premier des deux termes.</p>
+    </div></div>
+    <h2>${ico("ticket")}Les codes</h2>` +
+    table([["code", "code"], ["libelle", "libellé", "large"], ["niveau_l", "accès"],
+      ["statut", "état", "pastille"], ["usage", "activations", "nombre"], ["en_cours", "en cours", "nombre"],
+      ["duree_jours", "jours", "nombre"], ["fin", "fin", "jour"]], this.lignes, true) + pagination(env);
+  },
+  async apres() {
+    const niveau = $("c-niveau"), cases = $("c-fonctions");
+    niveau.onchange = () => { cases.style.display = niveau.value === "limite" ? "grid" : "none"; };
+    $("c-creer").onclick = async () => {
+      const b = $("c-creer");
+      const corps = {
+        code: $("c-code").value.trim(), libelle: $("c-libelle").value.trim(), niveau: niveau.value,
+        fonctions: [...cases.querySelectorAll("input:checked")].map((c) => c.value),
+        debut: dateDebut($("c-debut").value), fin: dateFin($("c-fin").value),
+        duree_jours: Number($("c-duree").value) || null, max_utilisations: Number($("c-max").value) || null,
+      };
+      if (!corps.code || !corps.libelle || !corps.fin) {
+        $("c-etat").textContent = "Code, libellé et date de fin sont nécessaires.";
+        return;
+      }
+      b.innerHTML = "…";
+      try {
+        const c = await api("/v1/admin/codes", { method: "POST", body: JSON.stringify(corps) });
+        annoncer(`Code ${c.code} créé, valable jusqu'au ${jour(c.fin)}.`);
+        await afficher(courante);
+      } catch (e) {
+        $("c-etat").textContent = (e && e.lisible) || "Refusé : vérifiez le code et les dates.";
+        annoncer("Le code n'a pas été créé.", "mauvais");
+      } finally { if ($("c-creer")) $("c-creer").innerHTML = ico("plus", "pt") + "Créer le code"; }
+    };
+    brancherClics(this.lignes, async (l) => {
+      const d = await api("/v1/admin/codes/" + l.id);
+      const libelles = Object.fromEntries((this.fonctions || []).map((f) => [f.cle, f.libelle]));
+      ouvrirVolet(d.code, `
+        <div class="cartes"><div class="carte"><h3>${ico("ticket")}Le code</h3>${paires({
+          libellé: ech(d.libelle), état: pastille(d.statut), accès: ech(NIVEAUX[d.niveau]),
+          "à partir du": jour(d.debut), "jusqu'au": jour(d.fin),
+          "durée par lecteur": d.duree_jours ? d.duree_jours + " jours" : "jusqu'à la fin du code",
+          activations: d.max_utilisations ? `${nb(d.utilisations)} sur ${nb(d.max_utilisations)}` : nb(d.utilisations),
+          "en cours": nb(d.en_cours),
+        })}
+          ${d.niveau === "limite" ? `<p class="aide" style="margin-top:10px">${d.fonctions.map((f) => ech(libelles[f] || f)).join(" · ")}</p>` : ""}
+          <div class="champ" style="margin-top:14px"><label>nouvelle fin</label>
+            <input id="v-fin" type="date" lang="fr" value="${String(d.fin).slice(0, 10)}"></div>
+          <div class="champ">
+            <button class="bouton fin" id="v-prolonger">${ico("calendrier", "pt")}Changer la fin</button>
+            <button class="bouton ${d.actif ? "danger" : ""}" id="v-bascule">${d.actif ? "Désactiver" : "Réactiver"}</button></div>
+          <p class="note">Désactiver referme tout de suite les accès ouverts par ce code.</p></div></div>
+        <h2>${ico("membres")}Qui l'a utilisé</h2>
+        ${d.utilisateurs.length ? `<div class="tableau"><table><thead><tr><th>compte</th><th>activé</th>
+          <th>par</th><th>fin</th><th>état</th></tr></thead><tbody>` +
+          d.utilisateurs.map((u) => `<tr><td>${ech(u.email)}</td><td>${instant(u.active_le)}</td>` +
+            `<td>${ech(u.origine)}</td><td>${jour(u.fin)}</td>` +
+            `<td>${u.en_cours && d.actif ? pastille("actif") : pastille("expire")}</td></tr>`).join("") +
+          `</tbody></table></div>` : `<p class="note">Personne ne l'a encore saisi.</p>`}`, "ticket");
+      const changer = async (corps, texte) => {
+        try {
+          await api("/v1/admin/codes/" + l.id, { method: "PATCH", body: JSON.stringify(corps) });
+          $("volet").close(); annoncer(texte); await afficher(courante);
+        } catch (e) { annoncer((e && e.lisible) || "Ce code n'a pas pu être modifié.", "mauvais"); }
+      };
+      $("v-bascule").onclick = () => changer({ actif: !d.actif },
+        d.actif ? `Code ${d.code} désactivé : ses accès sont refermés.` : `Code ${d.code} réactivé.`);
+      $("v-prolonger").onclick = () => {
+        const v = $("v-fin").value;
+        if (v) changer({ fin: dateFin(v) }, `Code ${d.code} : fin au ${new Date(v).toLocaleDateString("fr-FR")}.`);
+      };
+    });
+  } });
+
+zone({ cle: "ambassadeurs", groupe: "Membres", titre: "Ambassadeurs",
+  ico: "ambassadeur", aide: "Chaque lecteur a un code. Un compte créé avec lui rapporte une réduction à son propriétaire.",
+  async rendre() {
+    const env = await api("/v1/admin/ambassadeurs?par_page=40&page=" + (this.page || 1));
+    const r = env.reglage, t = env.totaux;
+    return `<div class="tuiles serre" style="margin-bottom:18px">${[
+        { i: "ambassadeur", l: "Ambassadeurs", v: nb(t.ambassadeurs), s: "ont fait venir au moins un lecteur" },
+        { i: "membres", l: "Comptes parrainés", v: nb(t.filleuls), s: "créés avec un code ambassadeur" },
+        { i: "ticket", l: "Réductions utilisées", v: nb(t.bons_utilises), s: `sur ${nb(t.bons)} gagnées` },
+        { i: "paiement", l: "Remises accordées", v: xaf(t.remises_accordees), s: "sur des paiements validés" },
+      ].map(tuile).join("")}</div>
+      <div class="cartes" style="margin-bottom:20px"><div class="carte seule ${r.actif ? "on" : ""}">
+        <h3>${ico("reglage")}Le programme</h3>
+        <p class="aide">S'applique aux comptes créés à partir de maintenant. Les réductions déjà gagnées gardent leur taux.</p>
+        <div class="champ"><label>actif</label><select id="p-actif">
+          <option value="true" ${r.actif ? "selected" : ""}>oui</option>
+          <option value="false" ${r.actif ? "" : "selected"}>non, les codes ambassadeurs sont refusés</option></select></div>
+        <div class="champ"><label>réduction</label><input id="p-pourcent" type="number" min="1" max="90" value="${r.pourcent}"> <span>%</span></div>
+        <div class="champ"><label>valable</label><input id="p-validite" type="number" min="1" max="730" value="${r.validite_jours}"> <span>jours</span></div>
+        <button class="bouton" id="p-poser">${ico("oui", "pt")}Enregistrer</button>
+        <p class="note">Une réduction par compte parrainé, appliquée au prochain abonnement de l'ambassadeur,
+          une à la fois. Il est prévenu par courriel et dans l'application.</p>
+      </div></div>
+      <h2>${ico("ambassadeur")}Qui fait venir des lecteurs</h2>` +
+      table([["email", "compte"], ["code", "code"], ["filleuls", "filleuls", "nombre"],
+        ["bons_disponibles", "réductions disponibles", "nombre"], ["bons_utilises", "utilisées", "nombre"],
+        ["dernier", "dernier filleul", "jour"]], env.lignes) + pagination(env);
+  },
+  async apres() {
+    $("p-poser").onclick = async () => {
+      const b = $("p-poser");
+      b.innerHTML = "…";
+      try {
+        await api("/v1/admin/reglages/parrainage", { method: "POST", body: JSON.stringify({ valeur: {
+          actif: $("p-actif").value === "true", pourcent: Number($("p-pourcent").value),
+          validite_jours: Number($("p-validite").value) } }) });
+        annoncer("Programme ambassadeur enregistré.");
+        await afficher(courante);
+      } catch (e) {
+        annoncer((e && e.lisible) || "Réduction entre 1 et 90 %, validité entre 1 et 730 jours.", "mauvais");
+        b.innerHTML = ico("oui", "pt") + "Enregistrer";
+      }
+    };
   } });
 
 zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
@@ -1640,7 +1817,7 @@ zone({ cle: "courriels", groupe: "Contenu", titre: "Journal des envois",
 
 zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs",
   ico: "reglage", aide: "Lancement, maintenance, version minimale. Trois interrupteurs, effet immédiat.", async rendre() {
-  const liste = await api("/v1/admin/reglages");
+  const liste = (await api("/v1/admin/reglages")).filter((r) => r.cle !== "parrainage");
   const ICONES = { lancement: "etincelle", maintenance: "reglage", version_minimale: "relance" };
   return `<div class="cartes">` + liste.map((r) => {
     const v = r.valeur || {}, actif = v.actif === true, version = r.cle === "version_minimale";

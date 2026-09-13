@@ -47,14 +47,35 @@ async def optional_user(
 
 
 async def premium_user(user: Annotated[dict, Depends(current_user)]) -> dict:
-    from app.services import exploitation
+    """Toutes les fonctions d'Ascension : abonnement, lancement ou code complet."""
+    from app.services import acces
 
-    if await exploitation.plan_effectif(user["plan"]) == "free":
+    if not (await acces.etat(user))["complet"]:
         raise Forbidden(
             "Cette fonction fait partie de l'offre Ascension. "
             "Vous pouvez en profiter en changeant de formule depuis votre compte."
         )
     return user
+
+
+def exige(fonction: str):
+    """Une dépendance qui demande une fonction précise, et non tout Ascension.
+
+    Un code limité peut ouvrir la replanification sans ouvrir le reste : la
+    route doit donc demander ce dont elle a besoin, pas une formule.
+    """
+
+    async def verifier(user: Annotated[dict, Depends(current_user)]) -> dict:
+        from app.services import acces
+
+        if not await acces.a_droit(user, fonction):
+            raise Forbidden(
+                "Cette fonction fait partie de l'offre Ascension. "
+                "Un abonnement ou un code d'accès l'ouvre depuis votre profil."
+            )
+        return user
+
+    return verifier
 
 
 async def admin_user(user: Annotated[dict, Depends(current_user)]) -> dict:

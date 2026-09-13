@@ -51,13 +51,19 @@ class SessionNotifier extends StateNotifier<Session> {
     await _ouvrir(j);
   }
 
-  Future<void> inscription(String email, String motDePasse, String? nom) async {
+  /// Ouvre le compte. Renvoie le message à montrer quand un code a été saisi :
+  /// ce qu'il a ouvert, ou pourquoi il n'a pas pu l'être.
+  Future<String?> inscription(String email, String motDePasse, String? nom,
+      {String? code}) async {
     final j = await _api.post('/auth/inscription', auth: false, corps: {
       'email': email.trim(),
       'mot_de_passe': motDePasse,
       if (nom != null && nom.trim().isNotEmpty) 'nom': nom.trim(),
+      if (code != null && code.trim().isNotEmpty) 'code': code.trim(),
     }) as Map<String, dynamic>;
     await _ouvrir(j);
+    final applique = j['code_applique'] as Map<String, dynamic>?;
+    return applique?['message'] as String?;
   }
 
   Future<void> _ouvrir(Map<String, dynamic> j) async {

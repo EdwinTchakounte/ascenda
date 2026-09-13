@@ -142,6 +142,12 @@ final usageProvider = FutureProvider.autoDispose<Map<String, dynamic>>((ref) asy
   return await api.get('/compte/usage') as Map<String, dynamic>;
 });
 
+/// Codes d'accès, code ambassadeur et réductions.
+final codesProvider = FutureProvider.autoDispose<CodesEtAvantages>((ref) async {
+  final api = ref.watch(clientApiProvider);
+  return CodesEtAvantages.depuisJson(await api.get('/codes/moi') as Map<String, dynamic>);
+});
+
 final compteProvider = FutureProvider.autoDispose<Map<String, dynamic>>((ref) async {
   final api = ref.watch(clientApiProvider);
   return await api.get('/compte') as Map<String, dynamic>;
@@ -183,9 +189,10 @@ final notesProvider =
 /// La grille tarifaire. Publique : un visiteur doit pouvoir voir les prix avant
 /// d'ouvrir un compte. Elle ne dépend pas de la session, donc pas d'autoDispose :
 /// la relire à chaque aller-retour vers l'écran d'abonnement n'apporte rien.
-final tarifsProvider = FutureProvider<Tarifs>((ref) async {
+final tarifsProvider = FutureProvider.autoDispose<Tarifs>((ref) async {
   final api = ref.watch(clientApiProvider);
-  final j = await api.get('/paiements/tarifs', auth: false) as Map<String, dynamic>;
+  // Authentifié quand on l'est : le serveur y ajoute la réduction ambassadeur.
+  final j = await api.get('/paiements/tarifs') as Map<String, dynamic>;
   return Tarifs.depuisJson(j);
 });
 

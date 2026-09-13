@@ -12,6 +12,7 @@ Le tableau de bord tient en **un seul appel**. Une page qui en fait douze met
 douze fois plus de temps à dire la même chose, et échoue douze fois plus
 souvent.
 """
+from datetime import datetime, timezone
 from typing import Annotated, Literal
 
 from pathlib import Path
@@ -437,6 +438,15 @@ async def poser_reglage(cle: str, data: ReglageIn, user: AdminUser):
     ligne = await fetch_one("select 1 from reglage where cle = %s", (cle,))
     if not ligne:
         raise NotFound("Ce réglage n'existe pas.")
+    if cle == "parrainage":
+        v = data.valeur
+        try:
+            pourcent, validite = int(v.get("pourcent")), int(v.get("validite_jours"))
+        except (TypeError, ValueError):
+            pourcent = validite = 0
+        if not (1 <= pourcent <= 90 and 1 <= validite <= 730):
+            raise Conflict("Réduction entre 1 et 90 %, validité entre 1 et 730 jours.")
+        data.valeur = {"actif": bool(v.get("actif")), "pourcent": pourcent, "validite_jours": validite}
     import json as _json
 
     await execute(
@@ -677,7 +687,34 @@ async def un_compte(user_id: str, user: AdminUser):
             where pe.user_id = %s order by pe.at desc limit 30""",
         (user_id,),
     )
+    from app.services import acces as service_acces
+
+    parrainage = await fetch_one(
+        """select a.code_parrainage, p.email as parrain,
+                  (select count(*) from app_user f where f.parrain_id = a.id) as filleuls,
+                  (select count(*) from bon_reduction b where b.user_id = a.id
+                      and b.utilise_le is null and b.expire_le > now()) as bons_disponibles,
+                  (select count(*) from bon_reduction b where b.user_id = a.id
+                      and b.utilise_le is not null) as bons_utilises
+             from app_user a left join app_user p on p.id = a.parrain_id where a.id = %s""",
+        (user_id,),
+    )
+    codes_utilises = await fetch_all(
+        """select c.code, c.niveau, u.active_le, least(u.fin, c.fin) as fin, c.actif
+             from code_acces_utilisation u join code_acces c on c.id = u.code_id
+            where u.user_id = %s order by u.active_le desc""",
+        (user_id,),
+    )
+    etat_acces = await service_acces.etat(u)
     return {
+        "acces": {"complet": etat_acces["complet"], "source": etat_acces["source"],
+                  "fonctions": etat_acces["fonctions"], "jusqu_au": etat_acces["jusqu_au"]},
+        "parrainage": parrainage,
+        "codes": [
+            {"code": c["code"], "niveau": c["niveau"], "active_le": c["active_le"], "fin": c["fin"],
+             "en_cours": c["actif"] and c["fin"] > datetime.now(timezone.utc)}
+            for c in codes_utilises
+        ],
         "compte": {
             "id": str(u["id"]), "email": u["email"], "nom": u["display_name"],
             "plan": u["plan"], "plan_depuis": u["plan_since"], "plan_jusqu_au": u["plan_until"],

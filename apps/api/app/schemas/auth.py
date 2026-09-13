@@ -8,6 +8,9 @@ class InscriptionIn(BaseModel):
     email: EmailStr
     mot_de_passe: str = Field(min_length=8, max_length=128)
     nom: str | None = Field(default=None, max_length=120)
+    # Un code d'accès ou un code ambassadeur, facultatif. Vérifié avant que le
+    # compte soit créé : un code refusé ne laisse pas de compte derrière lui.
+    code: str | None = Field(default=None, max_length=40)
 
 
 class ConnexionIn(BaseModel):
@@ -34,11 +37,17 @@ class Utilisateur(BaseModel):
     plan_until: datetime | None = None
     locale: str = "fr"
     cree_le: datetime
+    # L'accès effectif : ce que le compte peut faire aujourd'hui, et pourquoi.
+    # Le plan seul ne le dit plus, un code ou le lancement pouvant ouvrir des
+    # fonctions sans le changer.
+    acces: dict | None = None
 
 
 class SessionOuverte(BaseModel):
     utilisateur: Utilisateur
     jetons: Jetons
+    # Ce que le code saisi à l'inscription a produit, pour le dire au lecteur.
+    code_applique: dict | None = None
 
 
 class ChangerMotDePasseIn(BaseModel):

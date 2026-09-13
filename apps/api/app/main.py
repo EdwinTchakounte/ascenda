@@ -12,10 +12,12 @@ from app.core.config import settings
 from app.core.db import close_pool, fetch_one, open_pool
 from app.routers import (
     admin,
+    admin_codes,
     agent,
     axes,
     bibliotheque,
     chronogramme,
+    codes,
     compte,
     concepts,
     lecteur,
@@ -189,6 +191,7 @@ async def etat():
 
 for r in (
     admin.router,
+    admin_codes.router,
     auth_router.router,
     axes.router,
     bibliotheque.router,
@@ -202,5 +205,6 @@ for r in (
     concepts.router,
     paiement.router,
     compte.router,
+    codes.router,
 ):
     app.include_router(r, prefix="/v1")

@@ -31,18 +31,19 @@ _MESSAGES = {
 }
 
 
-async def quota_for(plan: str, kind: str) -> dict | None:
+async def quota_for(user: dict, kind: str) -> dict | None:
     """Les plafonds appliqués, qui ne sont pas toujours ceux de la formule.
 
-    Pendant la période de lancement, tout le monde reçoit les plafonds
-    d'Ascension sans que son plan change. Le passage se fait ici, en un seul
-    endroit, parce que c'est le seul endroit que toutes les routes traversent.
+    Un abonnement, la période de lancement ou un code d'accès peuvent ouvrir
+    les plafonds d'Ascension sans que le plan du compte change. Le passage se
+    fait ici, en un seul endroit, parce que c'est le seul endroit que toutes les
+    routes traversent.
     """
-    from app.services import exploitation
+    from app.services import acces
 
     return await fetch_one(
         "select period, max_value, hard from plan_quota where plan = %s and type = %s",
-        (await exploitation.plan_effectif(plan), kind),
+        (await acces.plan_pour(user, kind), kind),
     )
 
 
@@ -62,7 +63,7 @@ async def check(user: dict, kind: str, quantity: int = 1) -> dict:
     Retourne l'état du compteur pour que la route puisse le renvoyer au client :
     l'application affiche « 12 questions restantes aujourd'hui » sans second appel.
     """
-    quota = await quota_for(user["plan"], kind)
+    quota = await quota_for(user, kind)
     if quota is None or quota["max_value"] is None:
         return {"type": kind, "limite": None, "utilise": None, "restant": None}
 
@@ -95,19 +96,22 @@ async def record(user_id: str, kind: str, quantity: int = 1, cost_tokens: int = 
 
 
 async def summary(user: dict) -> list[dict]:
-    """État de tous les compteurs du plan : alimente l'écran Compte."""
-    from app.services import exploitation
+    """État de tous les compteurs : alimente l'écran Compte.
 
-    quotas = await fetch_all(
-        "select type, period, max_value, hard from plan_quota where plan = %s order by type",
-        (await exploitation.plan_effectif(user["plan"]),),
-    )
+    Chaque compteur porte le plafond qui lui est réellement appliqué : avec un
+    code qui n'ouvre que les quiz, les quiz affichent la limite d'Ascension et
+    le reste celle de Découverte.
+    """
+    types = await fetch_all("select distinct type from plan_quota order by type")
     out = []
-    for q in quotas:
-        used = await consumed(user["id"], q["type"], q["period"])
+    for t in types:
+        q = await quota_for(user, t["type"])
+        if not q:
+            continue
+        used = await consumed(user["id"], t["type"], q["period"])
         out.append(
             {
-                "type": q["type"],
+                "type": t["type"],
                 "periode": q["period"],
                 "limite": q["max_value"],
                 "utilise": used,

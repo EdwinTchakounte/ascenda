@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
+
+import '../api/modeles.dart';
 
 import '../api/libelles.dart';
 import '../etat/fournisseurs.dart';
@@ -76,6 +79,8 @@ class EcranProfil extends ConsumerWidget {
             ),
             const SizedBox(height: 26),
             _CarteFormule(premium: session.premium),
+            const SizedBox(height: 12),
+            const _EntreeCodes(),
             const SizedBox(height: 26),
             Text('Vos compteurs', style: t.textTheme.titleLarge),
             const SizedBox(height: 4),
@@ -315,6 +320,7 @@ class _CarteFormule extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
     final abonnement = ref.watch(abonnementProvider).valueOrNull;
+    final acces = ref.watch(sessionProvider).utilisateur?.acces;
     // Le descriptif et le nom viennent du serveur, qui les lit dans les mêmes
     // tables que celles appliquant les limites. Recopiés ici, ils finissaient
     // par promettre autre chose que ce qui est réellement accordé. Les valeurs
@@ -368,6 +374,21 @@ class _CarteFormule extends ConsumerWidget {
               height: 1.6,
             ),
           ),
+          if (!premium && acces != null && acces.source != 'aucune') ...[
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                const Icon(Icons.redeem_outlined, size: 17, color: Couleurs.orTexte),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    _accesOffert(acces),
+                    style: t.textTheme.bodySmall?.copyWith(color: Couleurs.orTexte),
+                  ),
+                ),
+              ],
+            ),
+          ],
           if (premium && abonnement != null && abonnement.joursRestants != null) ...[
             const SizedBox(height: 12),
             Row(
@@ -414,6 +435,68 @@ class _CarteFormule extends ConsumerWidget {
                   ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+String _accesOffert(AccesEffectif a) {
+  final fin = a.jusquAu == null ? '' : " jusqu'au ${DateFormat('d MMMM', 'fr_FR').format(a.jusquAu!)}";
+  if (a.source == 'lancement') return 'Période de lancement : tout est ouvert$fin.';
+  if (a.complet) return 'Code actif : tout Ascension est ouvert$fin.';
+  final n = a.fonctions.length;
+  return 'Code actif : $n fonction${n > 1 ? 's' : ''} d\'Ascension ouverte${n > 1 ? 's' : ''}$fin.';
+}
+
+/// L'entrée vers les codes. La pastille compte les réductions gagnées que le
+/// lecteur n'a pas encore vues : c'est la notification dans l'application.
+class _EntreeCodes extends ConsumerWidget {
+  const _EntreeCodes();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final t = Theme.of(context);
+    final nouveaux = ref.watch(codesProvider).valueOrNull?.nouveaux ?? 0;
+    return Material(
+      color: t.colorScheme.surface,
+      child: InkWell(
+        onTap: () async {
+          await context.push('/codes');
+          ref.invalidate(codesProvider);
+        },
+        child: Container(
+          padding: const EdgeInsets.fromLTRB(16, 14, 12, 14),
+          decoration: BoxDecoration(
+            border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
+          ),
+          child: Row(
+            children: [
+              const Icon(Icons.confirmation_number_outlined, size: 22, color: Couleurs.orTexte),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Codes et avantages', style: t.textTheme.titleSmall),
+                    Text(
+                      'Activer un code, partager le vôtre, vos réductions',
+                      style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
+                    ),
+                  ],
+                ),
+              ),
+              if (nouveaux > 0)
+                Container(
+                  key: const Key('pastille-codes'),
+                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                  color: Couleurs.terracotta,
+                  child: Text('$nouveaux',
+                      style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w700)),
+                ),
+              const Icon(Icons.chevron_right_rounded, color: Couleurs.grisChaud),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1620,6 +1620,266 @@
         ]
       }
     },
+    "/v1/admin/codes": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les codes d'accès",
+        "operationId": "lister_v1_admin_codes_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 40,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Créer un code d'accès",
+        "operationId": "creer_v1_admin_codes_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/codes/{code_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Un code et ceux qui l'ont utilisé",
+        "operationId": "un_code_v1_admin_codes__code_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "code_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Désactiver, prolonger ou renommer un code",
+        "description": "Désactiver un code referme aussitôt les accès qu'il avait ouverts.\nAvancer sa date de fin les referme à cette date.",
+        "operationId": "changer_v1_admin_codes__code_id__patch",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "code_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CodeChangeIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/ambassadeurs": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Le programme ambassadeur",
+        "description": "Qui fait venir des lecteurs, et ce que cela coûte en réductions.",
+        "operationId": "ambassadeurs_v1_admin_ambassadeurs_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 40,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/auth/inscription": {
       "post": {
         "tags": [
@@ -4268,7 +4528,7 @@
           "Paiement"
         ],
         "summary": "La grille tarifaire",
-        "description": "Lue en base : la page de tarifs ne peut pas diverger de ce qui est\nréellement facturé.",
+        "description": "Lue en base : la page de tarifs ne peut pas diverger de ce qui est\nréellement facturé.\n\nConnecté, le lecteur qui dispose d'un bon ambassadeur voit en plus le\nmontant réduit : c'est celui qui lui sera demandé, et il doit le lire avant\nde valider, pas le découvrir sur son téléphone.",
         "operationId": "grille_v1_paiements_tarifs_get",
         "responses": {
           "200": {
@@ -4279,7 +4539,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
       }
     },
     "/v1/paiements": {
@@ -4616,6 +4881,94 @@
           }
         }
       }
+    },
+    "/v1/codes/moi": {
+      "get": {
+        "tags": [
+          "Codes et avantages"
+        ],
+        "summary": "Vos codes, vos accès et vos réductions",
+        "description": "Tout ce que l'écran « Codes et avantages » affiche, en un appel.\n\n`nouveaux` compte les réductions gagnées que l'application n'a pas encore\nmontrées : c'est la notification dans l'application, le courriel étant\nl'autre moitié.",
+        "operationId": "mes_codes_v1_codes_moi_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/codes/activer": {
+      "post": {
+        "tags": [
+          "Codes et avantages"
+        ],
+        "summary": "Activer un code d'accès",
+        "operationId": "activer_v1_codes_activer_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActiverIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/codes/bons/vus": {
+      "post": {
+        "tags": [
+          "Codes et avantages"
+        ],
+        "summary": "Marquer les réductions comme vues",
+        "operationId": "bons_vus_v1_codes_bons_vus_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
     }
   },
   "components": {
@@ -4653,6 +5006,21 @@
           "reseau"
         ],
         "title": "AchatIn"
+      },
+      "ActiverIn": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 3,
+            "title": "Code"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code"
+        ],
+        "title": "ActiverIn"
       },
       "AxeIn": {
         "properties": {
@@ -4881,6 +5249,142 @@
         ],
         "title": "ChronogrammeIn"
       },
+      "CodeChangeIn": {
+        "properties": {
+          "libelle": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 120,
+                "minLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Libelle"
+          },
+          "actif": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actif"
+          },
+          "fin": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fin"
+          },
+          "max_utilisations": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Utilisations"
+          }
+        },
+        "type": "object",
+        "title": "CodeChangeIn"
+      },
+      "CodeIn": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 32,
+            "minLength": 4,
+            "title": "Code"
+          },
+          "libelle": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 2,
+            "title": "Libelle"
+          },
+          "niveau": {
+            "type": "string",
+            "enum": [
+              "complet",
+              "limite"
+            ],
+            "title": "Niveau"
+          },
+          "fonctions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Fonctions",
+            "default": []
+          },
+          "debut": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Debut"
+          },
+          "fin": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Fin"
+          },
+          "duree_jours": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 3650.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Duree Jours"
+          },
+          "max_utilisations": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Utilisations"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code",
+          "libelle",
+          "niveau",
+          "fin"
+        ],
+        "title": "CodeIn"
+      },
       "CompteIn": {
         "properties": {
           "is_active": {
@@ -5092,6 +5596,18 @@
               }
             ],
             "title": "Nom"
+          },
+          "code": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 40
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Code"
           }
         },
         "type": "object",
@@ -5458,6 +5974,18 @@
           },
           "jetons": {
             "$ref": "#/components/schemas/Jetons"
+          },
+          "code_applique": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Code Applique"
           }
         },
         "type": "object",
@@ -5605,6 +6133,18 @@
             "type": "string",
             "format": "date-time",
             "title": "Cree Le"
+          },
+          "acces": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Acces"
           }
         },
         "type": "object",

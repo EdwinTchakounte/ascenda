@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field
 
 from app.core.config import settings
 from app.core.db import fetch_all, fetch_one
-from app.core.deps import CurrentUser
+from app.core.deps import CurrentUser, OptionalUser
 from app.core.errors import Forbidden, NotFound
 from app.services.paiement import service
 
@@ -20,19 +20,30 @@ class AchatIn(BaseModel):
 
 
 @router.get("/tarifs", summary="La grille tarifaire")
-async def grille():
+async def grille(user: OptionalUser):
     """Lue en base : la page de tarifs ne peut pas diverger de ce qui est
-    réellement facturé."""
+    réellement facturé.
+
+    Connecté, le lecteur qui dispose d'un bon ambassadeur voit en plus le
+    montant réduit : c'est celui qui lui sera demandé, et il doit le lire avant
+    de valider, pas le découvrir sur son téléphone.
+    """
+    from app.services import codes
+
     lignes = await service.tarifs()
+    bon = await codes.bon_disponible(str(user["id"])) if user else None
     return {
         "moyens": [
             {"code": "mtn", "libelle": "MTN Mobile Money", "operateur": "MTN Cameroun"},
             {"code": "orange", "libelle": "Orange Money", "operateur": "Orange Cameroun"},
         ],
+        "reduction": {"pourcent": bon["pourcent"], "expire_le": bon["expire_le"],
+                      "motif": bon["motif"]} if bon else None,
         "formules": [
             {
                 "periode_mois": t["periode_mois"],
                 "montant": t["montant"],
+                "montant_reduit": codes.montant_reduit(t["montant"], bon["pourcent"]) if bon else None,
                 "devise": t["devise"],
                 "libelle": t["libelle"],
                 "par_mois": round(t["montant"] / t["periode_mois"]),
@@ -141,6 +152,8 @@ def _vue(p: dict) -> dict:
     return {
         "id": str(p["id"]),
         "montant": p["montant"],
+        "montant_brut": p.get("montant_brut"),
+        "reduction_pourcent": p.get("reduction_pourcent"),
         "devise": p["devise"],
         "periode_mois": p["periode_mois"],
         "plan": p["plan_cible"],

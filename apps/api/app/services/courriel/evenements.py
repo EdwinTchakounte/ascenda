@@ -85,6 +85,25 @@ async def paiement_confirme(paiement: dict, abonnement: dict | None) -> str:
     )
 
 
+async def parrainage_recompense(parrain: dict, filleul: dict, bon: dict) -> str:
+    if not parrain.get("email"):
+        return "ignore"
+    return await envoyer(
+        "parrainage_recompense",
+        destinataire=parrain["email"],
+        user_id=str(parrain["id"]),
+        contexte={
+            "prenom": _prenom(parrain.get("display_name"), parrain.get("email")),
+            # Le prénom seul : l'adresse du filleul ne regarde pas l'ambassadeur.
+            "prenom_filleul": ((filleul.get("display_name") or "").strip().split(" ") or [""])[0]
+                              or "Un nouveau lecteur",
+            "pourcent": bon["pourcent"],
+            "expire_le": date_fr(bon["expire_le"]),
+            "code": parrain.get("code_parrainage") or "",
+        },
+    )
+
+
 async def paiement_rejete(paiement: dict) -> str:
     u = await fetch_one("select id, email, display_name from app_user where id = %s",
                         (paiement["user_id"],))

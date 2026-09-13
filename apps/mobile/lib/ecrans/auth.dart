@@ -113,6 +113,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
   final _email = TextEditingController();
   final _motDePasse = TextEditingController();
   final _nom = TextEditingController();
+  final _code = TextEditingController();
 
   bool _inscription = true;
   bool _masque = true;
@@ -124,6 +125,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
     _email.dispose();
     _motDePasse.dispose();
     _nom.dispose();
+    _code.dispose();
     super.dispose();
   }
 
@@ -136,8 +138,17 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
     try {
       final s = ref.read(sessionProvider.notifier);
       if (_inscription) {
-        await s.inscription(_email.text, _motDePasse.text, _nom.text);
-        if (mounted) context.go('/diagnostic');
+        final messageCode =
+            await s.inscription(_email.text, _motDePasse.text, _nom.text, code: _code.text);
+        if (!mounted) return;
+        // Le messager survit à la navigation : le lecteur lit ce que son code
+        // a ouvert en arrivant sur le diagnostic.
+        if (messageCode != null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(messageCode), duration: const Duration(seconds: 6)),
+          );
+        }
+        context.go('/diagnostic');
       } else {
         await s.connexion(_email.text, _motDePasse.text);
         if (mounted) context.go('/aujourdhui');
@@ -231,6 +242,23 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                     return null;
                   },
                 ),
+                if (_inscription) ...[
+                  const SizedBox(height: 14),
+                  TextFormField(
+                    key: const Key('code-inscription'),
+                    controller: _code,
+                    textCapitalization: TextCapitalization.characters,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    textInputAction: TextInputAction.done,
+                    decoration: const InputDecoration(
+                      labelText: "Code d'accès ou d'ambassadeur",
+                      hintText: 'Facultatif',
+                      helperText: "Reçu d'ASCENDA ou d'un lecteur qui vous invite",
+                      prefixIcon: Icon(Icons.confirmation_number_outlined, size: 20),
+                    ),
+                  ),
+                ],
                 if (_erreur != null) ...[
                   const SizedBox(height: 16),
                   Container(

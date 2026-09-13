@@ -27,14 +27,16 @@ from app.schemas.auth import (
     SessionOuverte,
     Utilisateur,
 )
-from app.services import mot_de_passe
+from app.services import codes, mot_de_passe
 
 log = logging.getLogger("ascenda.auth")
 
 router = APIRouter(prefix="/auth", tags=["Authentification"])
 
 
-def _utilisateur(row: dict) -> Utilisateur:
+async def _utilisateur(row: dict) -> Utilisateur:
+    from app.services import acces
+
     return Utilisateur(
         id=str(row["id"]),
         email=row.get("email"),
@@ -43,10 +45,12 @@ def _utilisateur(row: dict) -> Utilisateur:
         plan_until=row.get("plan_until"),
         locale=row.get("locale") or "fr",
         cree_le=row["created_at"],
+        acces=await acces.etat(row),
     )
 
 
-async def _ouvrir_session(user: dict, request: Request) -> SessionOuverte:
+async def _ouvrir_session(user: dict, request: Request,
+                          code_applique: dict | None = None) -> SessionOuverte:
     raw, empreinte, expire = new_refresh_token()
     await execute(
         """insert into refresh_token (user_id, token_hash, expires_at, user_agent, ip)
@@ -61,7 +65,8 @@ async def _ouvrir_session(user: dict, request: Request) -> SessionOuverte:
     )
     await execute("update app_user set last_login_at = now() where id = %s", (user["id"],))
     return SessionOuverte(
-        utilisateur=_utilisateur(user),
+        utilisateur=await _utilisateur(user),
+        code_applique=code_applique,
         jetons=Jetons(
             access_token=create_access_token(user["id"], user["plan"]),
             refresh_token=raw,
@@ -75,6 +80,9 @@ async def inscription(data: InscriptionIn, request: Request):
     email = data.email.lower().strip()
     if await fetch_one("select 1 from app_user where lower(email) = %s", (email,)):
         raise Conflict("Un compte existe déjà avec cette adresse. Essayez de vous connecter.")
+    trouve = None
+    if data.code and codes.normaliser(data.code):
+        trouve = await codes.verifier(data.code)
     user = await fetch_one(
         """insert into app_user (email, display_name, password_hash, plan, email_verified)
            values (%s, %s, %s, 'free', false)
@@ -90,7 +98,20 @@ async def inscription(data: InscriptionIn, request: Request):
     except Exception:  # noqa: BLE001
         log.exception("Courriel de bienvenue non envoyé à %s", email)
 
-    return await _ouvrir_session(user, request)
+    code_applique = None
+    try:
+        await codes.code_ambassadeur(user)
+        if trouve:
+            code_applique = await codes.appliquer_a_l_inscription(user, trouve)
+    except Exception as e:  # noqa: BLE001
+        # Le compte est ouvert : un code qui échoue entre la vérification et
+        # l'écriture (la dernière place d'un code prise entre-temps) ne doit pas
+        # le fermer. On le dit, et le code reste saisissable depuis le profil.
+        log.warning("Code non appliqué à l'inscription de %s : %s", email, e)
+        message = getattr(e, "detail", {}).get("message") if isinstance(getattr(e, "detail", None), dict) else None
+        code_applique = {"type": "refuse", "message": message or "Le code n'a pas pu être appliqué."}
+
+    return await _ouvrir_session(user, request, code_applique)
 
 
 @router.post("/connexion", response_model=SessionOuverte)
@@ -208,7 +229,7 @@ async def reinitialiser_mot_de_passe(data: ReinitialiserIn):
 
 @router.get("/moi", response_model=Utilisateur)
 async def moi(user: CurrentUser):
-    return _utilisateur(user)
+    return await _utilisateur(user)
 
 
 @router.post("/mot-de-passe", status_code=status.HTTP_204_NO_CONTENT)

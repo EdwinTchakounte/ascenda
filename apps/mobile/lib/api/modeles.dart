@@ -13,6 +13,7 @@ class Utilisateur {
     required this.email,
     required this.nom,
     required this.plan,
+    this.acces,
   });
 
   final String id;
@@ -20,14 +21,188 @@ class Utilisateur {
   final String? nom;
   final String plan;
 
+  /// Ce que le compte peut faire aujourd'hui. Le plan ne suffit plus à le
+  /// dire : un code d'accès ou le lancement ouvrent des fonctions sans le
+  /// changer.
+  final AccesEffectif? acces;
+
+  /// Abonné payant. Sert à ce qui concerne l'abonnement lui-même (prolonger,
+  /// échéance), pas à décider si une fonction est ouverte.
   bool get estPremium => plan != 'free';
+
+  /// Tout Ascension est ouvert, quelle qu'en soit la raison.
+  bool get accesComplet => estPremium || (acces?.complet ?? false);
+
+  /// Cette fonction précise est ouverte.
+  bool aAcces(String fonction) =>
+      accesComplet || (acces?.fonctions.contains(fonction) ?? false);
 
   factory Utilisateur.depuisJson(Map<String, dynamic> j) => Utilisateur(
         id: '${j['id']}',
         email: j['email'] as String?,
         nom: j['nom'] as String?,
         plan: '${j['plan'] ?? 'free'}',
+        acces: j['acces'] is Map<String, dynamic>
+            ? AccesEffectif.depuisJson(j['acces'] as Map<String, dynamic>)
+            : null,
       );
+}
+
+/// L'accès effectif et d'où il vient : `abonnement`, `lancement`, `code` ou
+/// `aucune`.
+class AccesEffectif {
+  const AccesEffectif({
+    required this.complet,
+    required this.fonctions,
+    required this.source,
+    required this.jusquAu,
+    required this.codes,
+  });
+
+  final bool complet;
+  final List<String> fonctions;
+  final String source;
+  final DateTime? jusquAu;
+  final List<AccesCode> codes;
+
+  factory AccesEffectif.depuisJson(Map<String, dynamic> j) => AccesEffectif(
+        complet: j['complet'] == true,
+        fonctions: _chaines(j['fonctions']),
+        source: '${j['source'] ?? 'aucune'}',
+        jusquAu: _date(j['jusqu_au']),
+        codes: (j['codes'] as List? ?? [])
+            .map((e) => AccesCode.depuisJson(e as Map<String, dynamic>))
+            .toList(),
+      );
+}
+
+/// Un accès ouvert par un code, tant qu'il court.
+class AccesCode {
+  const AccesCode({
+    required this.code,
+    required this.libelle,
+    required this.niveau,
+    required this.fonctions,
+    required this.fin,
+    required this.joursRestants,
+  });
+
+  final String code;
+  final String libelle;
+
+  /// `complet` ou `limite`.
+  final String niveau;
+  final List<String> fonctions;
+  final DateTime? fin;
+  final int joursRestants;
+
+  bool get complet => niveau == 'complet';
+
+  factory AccesCode.depuisJson(Map<String, dynamic> j) => AccesCode(
+        code: '${j['code']}',
+        libelle: '${j['libelle'] ?? ''}',
+        niveau: '${j['niveau'] ?? 'limite'}',
+        fonctions: _chaines(j['fonctions']),
+        fin: _date(j['fin']),
+        joursRestants: _entier(j['jours_restants']) ?? 0,
+      );
+}
+
+/// Une réduction gagnée par un ambassadeur.
+class BonReduction {
+  const BonReduction({
+    required this.pourcent,
+    required this.statut,
+    required this.expireLe,
+    required this.utiliseLe,
+    required this.gagneLe,
+    required this.filleul,
+    required this.nouveau,
+  });
+
+  final int pourcent;
+
+  /// `disponible`, `utilise` ou `expire`.
+  final String statut;
+  final DateTime? expireLe;
+  final DateTime? utiliseLe;
+  final DateTime? gagneLe;
+
+  /// Le prénom de la personne venue avec le code, et rien de plus.
+  final String? filleul;
+
+  /// Pas encore montré dans l'application.
+  final bool nouveau;
+
+  bool get disponible => statut == 'disponible';
+
+  factory BonReduction.depuisJson(Map<String, dynamic> j) => BonReduction(
+        pourcent: _entier(j['pourcent']) ?? 0,
+        statut: '${j['statut'] ?? 'disponible'}',
+        expireLe: _date(j['expire_le']),
+        utiliseLe: _date(j['utilise_le']),
+        gagneLe: _date(j['gagne_le']),
+        filleul: j['filleul'] as String?,
+        nouveau: j['nouveau'] == true,
+      );
+}
+
+/// Tout ce que montre l'écran « Codes et avantages ».
+class CodesEtAvantages {
+  const CodesEtAvantages({
+    required this.code,
+    required this.programmeActif,
+    required this.pourcent,
+    required this.validiteJours,
+    required this.filleuls,
+    required this.messagePartage,
+    required this.acces,
+    required this.bons,
+    required this.nouveaux,
+    required this.reductionProchaine,
+    required this.libellesFonctions,
+  });
+
+  final String code;
+  final bool programmeActif;
+  final int pourcent;
+  final int validiteJours;
+  final int filleuls;
+  final String messagePartage;
+  final AccesEffectif acces;
+  final List<BonReduction> bons;
+  final int nouveaux;
+
+  /// Le pourcentage qui s'appliquera au prochain paiement, s'il y en a un.
+  final int? reductionProchaine;
+  final Map<String, String> libellesFonctions;
+
+  List<BonReduction> get nouveauxBons => bons.where((b) => b.nouveau).toList();
+
+  String libelle(String fonction) => libellesFonctions[fonction] ?? fonction.replaceAll('_', ' ');
+
+  factory CodesEtAvantages.depuisJson(Map<String, dynamic> j) {
+    final a = j['ambassadeur'] as Map<String, dynamic>? ?? const {};
+    final r = j['reduction_prochaine'] as Map<String, dynamic>?;
+    return CodesEtAvantages(
+      code: '${a['code'] ?? ''}',
+      programmeActif: a['actif'] == true,
+      pourcent: _entier(a['pourcent']) ?? 0,
+      validiteJours: _entier(a['validite_jours']) ?? 0,
+      filleuls: _entier(a['filleuls']) ?? 0,
+      messagePartage: '${a['message_partage'] ?? ''}',
+      acces: AccesEffectif.depuisJson(j['acces'] as Map<String, dynamic>? ?? const {}),
+      bons: (j['bons'] as List? ?? [])
+          .map((e) => BonReduction.depuisJson(e as Map<String, dynamic>))
+          .toList(),
+      nouveaux: _entier(j['nouveaux']) ?? 0,
+      reductionProchaine: r == null ? null : _entier(r['pourcent']),
+      libellesFonctions: {
+        for (final f in (j['fonctions'] as List? ?? []))
+          '${(f as Map)['cle']}': '${f['libelle']}',
+      },
+    );
+  }
 }
 
 class Axe {
@@ -525,6 +700,7 @@ class Formule {
     required this.devise,
     required this.libelle,
     required this.parMois,
+    this.montantReduit,
   });
 
   final int periodeMois;
@@ -532,6 +708,13 @@ class Formule {
   final String devise;
   final String libelle;
   final int parMois;
+
+  /// Le montant après réduction ambassadeur, quand le lecteur en a une.
+  final int? montantReduit;
+
+  /// Ce qui sera réellement demandé.
+  int get montantDu => montantReduit ?? montant;
+  String get montantDuLisible => '${_millier(montantDu)} $devise';
 
   /// « 8 000 FCFA », séparateur d'une espace insécable fine comme il se doit.
   String get montantLisible => '${_millier(montant)} $devise';
@@ -550,6 +733,7 @@ class Formule {
         devise: '${j['devise'] ?? 'XAF'}',
         libelle: '${j['libelle'] ?? ''}',
         parMois: _entier(j['par_mois']) ?? 0,
+        montantReduit: _entier(j['montant_reduit']),
       );
 }
 
@@ -571,10 +755,19 @@ class MoyenPaiement {
 }
 
 class Tarifs {
-  const Tarifs({required this.moyens, required this.formules});
+  const Tarifs({
+    required this.moyens,
+    required this.formules,
+    this.reductionPourcent,
+    this.reductionExpire,
+  });
 
   final List<MoyenPaiement> moyens;
   final List<Formule> formules;
+
+  /// La réduction ambassadeur qui s'appliquera, lue par le serveur.
+  final int? reductionPourcent;
+  final DateTime? reductionExpire;
 
   Formule? get mensuel {
     for (final f in formules) {
@@ -590,6 +783,8 @@ class Tarifs {
         formules: (j['formules'] as List? ?? [])
             .map((e) => Formule.depuisJson(e as Map<String, dynamic>))
             .toList(),
+        reductionPourcent: _entier((j['reduction'] as Map?)?['pourcent']),
+        reductionExpire: _date((j['reduction'] as Map?)?['expire_le']),
       );
 }
 
@@ -605,10 +800,16 @@ class Paiement {
     required this.telephone,
     required this.reseau,
     required this.creeLe,
+    this.montantBrut,
+    this.reductionPourcent,
   });
 
   final String id;
   final int montant;
+
+  /// Le tarif avant réduction, quand une réduction s'est appliquée.
+  final int? montantBrut;
+  final int? reductionPourcent;
   final String devise;
   final int periodeMois;
 
@@ -639,6 +840,8 @@ class Paiement {
         telephone: j['telephone'] as String?,
         reseau: j['reseau'] as String?,
         creeLe: _date(j['cree_le']),
+        montantBrut: _entier(j['montant_brut']),
+        reductionPourcent: _entier(j['reduction_pourcent']),
       );
 }
 

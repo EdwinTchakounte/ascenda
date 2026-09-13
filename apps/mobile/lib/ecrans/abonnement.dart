@@ -117,6 +117,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
 
           Text('Votre formule', style: t.textTheme.titleLarge),
           const SizedBox(height: 10),
+          if (g.reductionPourcent != null) _AvisReduction(tarifs: g),
           for (final f in formules)
             _CarteFormuleChoix(
               formule: f,
@@ -174,7 +175,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
                       height: 20,
                       child: CircularProgressIndicator(strokeWidth: 2.4),
                     )
-                  : Text('Payer ${choisie.montantLisible}'),
+                  : Text('Payer ${choisie.montantDuLisible}'),
             ),
           ),
           const SizedBox(height: 12),
@@ -504,6 +505,42 @@ class _CarteEnCours extends StatelessWidget {
   }
 }
 
+/// La réduction ambassadeur, dite avant le choix de la formule : le montant
+/// barré ne doit pas surprendre, il doit s'expliquer.
+class _AvisReduction extends StatelessWidget {
+  const _AvisReduction({required this.tarifs});
+  final Tarifs tarifs;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final fin = tarifs.reductionExpire;
+    return Container(
+      key: const Key('avis-reduction'),
+      margin: const EdgeInsets.only(bottom: 12),
+      padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+      decoration: BoxDecoration(
+        color: Couleurs.sauge.withValues(alpha: 0.14),
+        border: Border.all(color: Couleurs.sauge.withValues(alpha: 0.45)),
+      ),
+      child: Row(
+        children: [
+          const Icon(Icons.volunteer_activism_outlined, size: 19, color: Color(0xFF476A4E)),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
+              '-${tarifs.reductionPourcent} % grâce à votre code ambassadeur, '
+              'appliqués à ce paiement'
+              '${fin == null ? '' : " (valable jusqu'au ${fin.day}/${fin.month.toString().padLeft(2, '0')}/${fin.year})"}.',
+              style: t.textTheme.bodySmall?.copyWith(color: const Color(0xFF355239), height: 1.5),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class _CarteFormuleChoix extends StatelessWidget {
   const _CarteFormuleChoix({
     required this.formule,
@@ -586,9 +623,22 @@ class _CarteFormuleChoix extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 10),
-                Text(
-                  formule.montantLisible,
-                  style: t.textTheme.titleMedium?.copyWith(color: Couleurs.orTexte),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    if (formule.montantReduit != null)
+                      Text(
+                        formule.montantLisible,
+                        style: t.textTheme.bodySmall?.copyWith(
+                          color: Couleurs.grisChaud,
+                          decoration: TextDecoration.lineThrough,
+                        ),
+                      ),
+                    Text(
+                      formule.montantDuLisible,
+                      style: t.textTheme.titleMedium?.copyWith(color: Couleurs.orTexte),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -764,6 +814,8 @@ class _Attente extends StatelessWidget {
         ],
         const SizedBox(height: 26),
         _LigneRecu('Montant', paiement.montantLisible),
+        if (paiement.reductionPourcent != null)
+          _LigneRecu('Réduction ambassadeur', '-${paiement.reductionPourcent} %'),
         _LigneRecu('Durée', '${paiement.periodeMois} mois'),
         if (paiement.telephone != null) _LigneRecu('Numéro', '+${paiement.telephone}'),
         if (paiement.reseau != null) _LigneRecu('Opérateur', paiement.reseau!),
