@@ -9,6 +9,7 @@ import '../widgets/invitation.dart';
 import '../widgets/telechargement.dart';
 import '../widgets/derives.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// La fiche d'un ouvrage : thèse centrale, idées-force, sommaire, et le
 /// « fait dialoguer avec » qui met en regard les thèses opposées.
@@ -22,7 +23,7 @@ class FicheOuvrage extends ConsumerWidget {
     final t = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Ouvrage')),
+      appBar: AppBar(title: const Texte('Ouvrage')),
       body: fiche.when(
         loading: () => const Padding(
           padding: EdgeInsets.all(20),
@@ -45,7 +46,7 @@ class FicheOuvrage extends ConsumerWidget {
             padding: const EdgeInsets.fromLTRB(20, 8, 20, 40),
             children: [
               if ((d['axes'] as List? ?? []).isNotEmpty) ...[
-                Text(
+                Texte(
                   '${(d['axes'] as List).first['label']}'.toUpperCase(),
                   style: t.textTheme.labelSmall?.copyWith(
                     color: Couleurs.orTexte, fontWeight: FontWeight.w700, letterSpacing: 1.4,
@@ -53,14 +54,14 @@ class FicheOuvrage extends ConsumerWidget {
                 ),
                 const SizedBox(height: 8),
               ],
-              Text('${d['titre']}', style: t.textTheme.headlineMedium?.copyWith(fontSize: 28, height: 1.18)),
+              Texte('${d['titre']}', style: t.textTheme.headlineMedium?.copyWith(fontSize: 28, height: 1.18)),
               if (d['sous_titre'] != null) ...[
                 const SizedBox(height: 6),
-                Text('${d['sous_titre']}',
+                Texte('${d['sous_titre']}',
                     style: t.textTheme.titleMedium?.copyWith(color: Couleurs.grisChaud, fontWeight: FontWeight.w500)),
               ],
               const SizedBox(height: 10),
-              Text(
+              Texte(
                 [
                   if (auteurs.isNotEmpty) auteurs.join(', '),
                   if (d['annee'] != null) '${d['annee']}',
@@ -102,6 +103,21 @@ class FicheOuvrage extends ConsumerWidget {
               ),
               const SizedBox(height: 14),
 
+              if (droits['pdf'] == true) ...[
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton.icon(
+                    style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(50)),
+                    onPressed: () => context.push(
+                      '/pdf/$documentId?titre=${Uri.encodeComponent('${d['titre']}')}',
+                    ),
+                    icon: const Icon(Icons.picture_as_pdf_outlined, size: 20),
+                    label: const Texte('Lire le PDF'),
+                  ),
+                ),
+                const SizedBox(height: 8),
+              ],
+
               if (droits['message'] != null) ...[
                 const SizedBox(height: 8),
                 BandeauDroits(message: '${droits['message']}'),
@@ -122,7 +138,7 @@ class FicheOuvrage extends ConsumerWidget {
                         children: [
                           const Icon(Icons.format_quote_rounded, size: 22, color: Couleurs.or),
                           const SizedBox(width: 6),
-                          Text('THÈSE CENTRALE',
+                          Texte('THÈSE CENTRALE',
                               style: t.textTheme.labelSmall?.copyWith(
                                   color: Couleurs.orTexte,
                                   fontWeight: FontWeight.w700,
@@ -132,7 +148,7 @@ class FicheOuvrage extends ConsumerWidget {
                       const SizedBox(height: 10),
                       // En Fraunces : la thèse d'un livre se lit comme un
                       // extrait, pas comme une notice.
-                      Text('${peda['these_centrale']}',
+                      Texte('${peda['these_centrale']}',
                           style: t.textTheme.titleLarge?.copyWith(
                             fontSize: 17.5,
                             fontWeight: FontWeight.w400,
@@ -146,7 +162,7 @@ class FicheOuvrage extends ConsumerWidget {
 
               if (idees.isNotEmpty) ...[
                 const SizedBox(height: 26),
-                Text('Idées-force', style: t.textTheme.titleLarge),
+                Texte('Idées-force', style: t.textTheme.titleLarge),
                 const SizedBox(height: 12),
                 for (var i = 0; i < idees.length; i++)
                   Padding(
@@ -163,14 +179,14 @@ class FicheOuvrage extends ConsumerWidget {
                             shape: BoxShape.rectangle,
                           ),
                           child: Center(
-                            child: Text('${i + 1}',
+                            child: Texte('${i + 1}',
                                 style: t.textTheme.labelSmall
                                     ?.copyWith(color: Couleurs.orTexte, fontWeight: FontWeight.w700)),
                           ),
                         ),
                         const SizedBox(width: 12),
                         Expanded(
-                          child: Text(
+                          child: Texte(
                             _texteIdee(idees[i]),
                             style: t.textTheme.bodyMedium?.copyWith(height: 1.6),
                           ),
@@ -182,9 +198,9 @@ class FicheOuvrage extends ConsumerWidget {
 
               if (dialogue.isNotEmpty) ...[
                 const SizedBox(height: 20),
-                Text('Fait dialoguer avec', style: t.textTheme.titleLarge),
+                Texte('Fait dialoguer avec', style: t.textTheme.titleLarge),
                 const SizedBox(height: 6),
-                Text(
+                Texte(
                   'Des ouvrages du corpus qui défendent une autre position.',
                   style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                 ),
@@ -205,14 +221,14 @@ class FicheOuvrage extends ConsumerWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('${c['controverse']}',
+                            Texte('${c['controverse']}',
                                 style: t.textTheme.labelMedium
                                     ?.copyWith(color: Couleurs.orTexte)),
                             const SizedBox(height: 6),
-                            Text('${c['ouvrage']}', style: t.textTheme.titleMedium),
+                            Texte('${c['ouvrage']}', style: t.textTheme.titleMedium),
                             if (c['resume'] != null) ...[
                               const SizedBox(height: 6),
-                              Text('${c['resume']}',
+                              Texte('${c['resume']}',
                                   style: t.textTheme.bodySmall
                                       ?.copyWith(color: Couleurs.grisChaud, height: 1.5)),
                             ],
@@ -312,9 +328,9 @@ class _Stat extends StatelessWidget {
     final t = Theme.of(context);
     return Column(
       children: [
-        Text(valeur, style: t.textTheme.headlineSmall?.copyWith(color: Couleurs.orTexte)),
+        Texte(valeur, style: t.textTheme.headlineSmall?.copyWith(color: Couleurs.orTexte)),
         const SizedBox(height: 2),
-        Text(
+        Texte(
           libelle,
           style: t.textTheme.bodySmall?.copyWith(
             color: cliquable ? Couleurs.orTexte : Couleurs.grisChaud,
@@ -349,7 +365,7 @@ class _Sommaire extends ConsumerWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Sommaire', style: t.textTheme.titleLarge),
+            Texte('Sommaire', style: t.textTheme.titleLarge),
             const SizedBox(height: 12),
             for (final c in utiles.take(40))
               InkWell(
@@ -363,14 +379,14 @@ class _Sommaire extends ConsumerWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            Texte(
                               '${c['titre'] ?? 'Chapitre ${c['ordre']}'}',
                               style: t.textTheme.bodyLarge,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
                             const SizedBox(height: 3),
-                            Text(
+                            Texte(
                               [
                                 if (c['page_debut'] != null) 'p. ${c['page_debut']}',
                                 if (c['duree_min'] != null)
@@ -412,8 +428,8 @@ class _Repere extends StatelessWidget {
         children: [
           Icon(icone, size: 18, color: Couleurs.orTexte),
           const SizedBox(height: 6),
-          Text(valeur, style: t.textTheme.titleMedium?.copyWith(fontSize: 14.5), textAlign: TextAlign.center),
-          Text(libelle, style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+          Texte(valeur, style: t.textTheme.titleMedium?.copyWith(fontSize: 14.5), textAlign: TextAlign.center),
+          Texte(libelle, style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
         ],
       ),
     );

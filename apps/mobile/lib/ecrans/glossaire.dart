@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// Le glossaire : les notions du corpus, et où elles sont dites.
 ///
@@ -49,7 +50,7 @@ class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
     final notions = ref.watch(glossaireProvider((axe: widget.axe, q: _q)));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Les notions')),
+      appBar: AppBar(title: const Texte('Les notions')),
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -104,10 +105,10 @@ class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
                       for (final n in ancrees) _LigneNotion(notion: n),
                       if (orphelines.isNotEmpty) ...[
                         const SizedBox(height: 22),
-                        Text('Nommées sans être définies dans le texte',
+                        Texte('Nommées sans être définies dans le texte',
                             style: t.textTheme.titleSmall),
                         const SizedBox(height: 2),
-                        Text(
+                        Texte(
                           "Ces notions viennent des fiches de lecture. Aucun passage "
                           "du corpus ne les emploie, il n'y a donc rien à ouvrir.",
                           style: t.textTheme.bodySmall
@@ -138,8 +139,8 @@ class _LigneNotion extends StatelessWidget {
     final n = notion['occurrences'] as int? ?? 0;
     return ListTile(
       contentPadding: EdgeInsets.zero,
-      title: Text('${notion['terme']}', style: t.textTheme.bodyMedium),
-      subtitle: Text(
+      title: Texte('${notion['terme']}', style: t.textTheme.bodyMedium),
+      subtitle: Texte(
         '${notion['definition'] ?? ''}',
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
@@ -147,7 +148,7 @@ class _LigneNotion extends StatelessWidget {
       ),
       trailing: n == 0
           ? null
-          : Text('$n',
+          : Texte('$n',
               style: t.textTheme.labelSmall?.copyWith(
                 color: Couleurs.orTexte,
                 fontWeight: FontWeight.w600,
@@ -170,7 +171,7 @@ class EcranNotion extends ConsumerWidget {
     final notion = ref.watch(notionProvider(notionId));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Notion')),
+      appBar: AppBar(title: const Texte('Notion')),
       body: SafeArea(
         bottom: false,
         child: notion.when(
@@ -189,20 +190,20 @@ class EcranNotion extends ConsumerWidget {
               padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
               children: [
                 if ('${d['axe_label'] ?? ''}'.isNotEmpty)
-                  Text('${d['axe_label']}'.toUpperCase(),
+                  Texte('${d['axe_label']}'.toUpperCase(),
                       style: t.textTheme.labelSmall?.copyWith(
                         color: Couleurs.orTexte,
                         letterSpacing: 1.1,
                       )),
                 const SizedBox(height: 6),
-                Text('${d['terme']}', style: t.textTheme.headlineSmall),
+                Texte('${d['terme']}', style: t.textTheme.headlineSmall),
                 if ('${d['definition'] ?? ''}'.isNotEmpty) ...[
                   const SizedBox(height: 10),
-                  Text('${d['definition']}',
+                  Texte('${d['definition']}',
                       style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
                 ],
                 const SizedBox(height: 26),
-                Text(
+                Texte(
                   occurrences.isEmpty
                       ? 'Aucun passage repéré'
                       : 'Où le corpus en parle',
@@ -258,7 +259,7 @@ class _CarteOccurrence extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Text('${o['ouvrage'] ?? ''}',
+                      child: Texte('${o['ouvrage'] ?? ''}',
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
                           style: t.textTheme.titleSmall),
@@ -271,7 +272,7 @@ class _CarteOccurrence extends StatelessWidget {
                           color: Couleurs.or.withValues(alpha: 0.16),
                           borderRadius: BorderRadius.zero,
                         ),
-                        child: Text('la définit',
+                        child: Texte('la définit',
                             style: t.textTheme.labelSmall
                                 ?.copyWith(color: Couleurs.orTexte)),
                       ),
@@ -283,7 +284,7 @@ class _CarteOccurrence extends StatelessWidget {
                   children: [
                     if ('${o['chapitre'] ?? ''}'.isNotEmpty)
                       Flexible(
-                        child: Text('${o['chapitre']}',
+                        child: Texte('${o['chapitre']}',
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: t.textTheme.labelSmall
@@ -291,14 +292,14 @@ class _CarteOccurrence extends StatelessWidget {
                       ),
                     if (o['page'] != null) ...[
                       const SizedBox(width: 8),
-                      Text('p. ${o['page']}',
+                      Texte('p. ${o['page']}',
                           style: t.textTheme.labelSmall
                               ?.copyWith(color: Couleurs.orTexte)),
                     ],
                   ],
                 ),
                 const SizedBox(height: 10),
-                Text('${o['extrait'] ?? ''}',
+                Texte('${o['extrait'] ?? ''}',
                     maxLines: 5,
                     overflow: TextOverflow.ellipsis,
                     style: t.textTheme.bodySmall?.copyWith(height: 1.6)),

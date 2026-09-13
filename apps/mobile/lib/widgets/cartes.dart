@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 
 import '../api/modeles.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 String dureeLisible(int minutes) {
   if (minutes < 60) return '$minutes min';
@@ -60,7 +61,7 @@ class CarteSeance extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text(
+                    Texte(
                       'VOTRE SÉANCE DU JOUR',
                       style: t.textTheme.labelSmall?.copyWith(
                         color: Couleurs.orClair,
@@ -70,7 +71,7 @@ class CarteSeance extends StatelessWidget {
                     ),
                     const Spacer(),
                     if (seance.enRetard)
-                      Text(
+                      Texte(
                         'en retard',
                         style: t.textTheme.labelSmall?.copyWith(
                           color: const Color(0xFFE9A489),
@@ -80,7 +81,7 @@ class CarteSeance extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 14),
-                Text(
+                Texte(
                   seance.ouvrage ?? 'Séance de lecture',
                   style: t.textTheme.headlineSmall?.copyWith(
                     color: const Color(0xFFF7F4EC),
@@ -92,7 +93,7 @@ class CarteSeance extends StatelessWidget {
                 ),
                 if (seance.sousTitre != null) ...[
                   const SizedBox(height: 6),
-                  Text(
+                  Texte(
                     seance.sousTitre!,
                     style: t.textTheme.bodyMedium?.copyWith(color: const Color(0xFFB9C1D6)),
                     maxLines: 1,
@@ -116,7 +117,7 @@ class CarteSeance extends StatelessWidget {
                   width: double.infinity,
                   child: FilledButton(
                     onPressed: onCommencer,
-                    child: const Text('Commencer la séance'),
+                    child: const Texte('Commencer la séance'),
                   ),
                 ),
               ],
@@ -140,7 +141,7 @@ class _Etiquette extends StatelessWidget {
       children: [
         Icon(icone, size: 15, color: Couleurs.orClair.withValues(alpha: 0.85)),
         const SizedBox(width: 6),
-        Text(
+        Texte(
           texte,
           style: Theme.of(context).textTheme.labelMedium?.copyWith(color: const Color(0xFFD5DAE6)),
         ),
@@ -190,14 +191,14 @@ class CarteOuvrage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      Texte(
                         ouvrage.titre,
                         style: t.textTheme.titleLarge?.copyWith(fontSize: 16.5, height: 1.28),
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                       ),
                       const SizedBox(height: 4),
-                      Text(
+                      Texte(
                         ouvrage.auteursCourt + (ouvrage.annee != null ? ' · ${ouvrage.annee}' : ''),
                         style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                         maxLines: 1,
@@ -205,7 +206,7 @@ class CarteOuvrage extends StatelessWidget {
                       ),
                       if (ouvrage.these != null) ...[
                         const SizedBox(height: 8),
-                        Text(
+                        Texte(
                           ouvrage.these!,
                           style: t.textTheme.bodySmall?.copyWith(height: 1.55),
                           maxLines: 2,
@@ -216,7 +217,7 @@ class CarteOuvrage extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
+                            child: Texte(
                               reperes.join('  ·  '),
                               style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud),
                               maxLines: 1,
@@ -231,7 +232,7 @@ class CarteOuvrage extends StatelessWidget {
                                 children: [
                                   const Icon(Icons.quiz_outlined, size: 13, color: Couleurs.orTexte),
                                   const SizedBox(width: 3),
-                                  Text('quiz',
+                                  Texte('quiz',
                                       style: t.textTheme.labelSmall?.copyWith(
                                           color: Couleurs.orTexte, fontWeight: FontWeight.w600)),
                                 ],
@@ -248,7 +249,7 @@ class CarteOuvrage extends StatelessWidget {
                                   children: [
                                     const Icon(Icons.format_quote_rounded, size: 13, color: Couleurs.grisChaud),
                                     const SizedBox(width: 2),
-                                    Text('extraits',
+                                    Texte('extraits',
                                         style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
                                   ],
                                 ),
@@ -302,7 +303,7 @@ class _Couverture extends StatelessWidget {
           Center(
             child: Padding(
               padding: const EdgeInsets.only(left: 4),
-              child: Text(
+              child: Texte(
                 lettre,
                 style: Theme.of(context).textTheme.headlineSmall?.copyWith(
                       color: Colors.white.withValues(alpha: 0.92),
@@ -353,11 +354,11 @@ class PastillesSemaine extends StatelessWidget {
                     Icon(Icons.remove_rounded, size: 17, color: Couleurs.terracotta))
                 : prevu
                     ? (Couleurs.or.withValues(alpha: 0.14), Couleurs.or,
-                        Text(noms[i],
+                        Texte(noms[i],
                             style: t.textTheme.labelMedium
                                 ?.copyWith(color: Couleurs.orTexte, fontWeight: FontWeight.w700)))
                     : (Colors.transparent, Colors.transparent,
-                        Text(noms[i],
+                        Texte(noms[i],
                             style: t.textTheme.labelMedium?.copyWith(color: Couleurs.grisChaud)));
 
         return Column(
@@ -375,7 +376,7 @@ class PastillesSemaine extends StatelessWidget {
               child: Center(child: contenu),
             ),
             const SizedBox(height: 6),
-            Text(
+            Texte(
               DateFormat('d').format(jour),
               style: t.textTheme.labelSmall?.copyWith(
                 color: aujourdhui ? Couleurs.orTexte : Couleurs.grisChaud,

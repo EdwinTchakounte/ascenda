@@ -10,6 +10,7 @@ import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// Le chronogramme en vue chronologique. Les séances passées sont en sourdine,
 /// celle du jour en or, les suivantes en contour.
@@ -24,7 +25,7 @@ class EcranChronogramme extends ConsumerWidget {
     final t = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Mon chronogramme')),
+      appBar: AppBar(title: const Texte('Mon chronogramme')),
       body: plan.when(
         loading: () => const Padding(
           padding: EdgeInsets.all(20),
@@ -47,9 +48,9 @@ class EcranChronogramme extends ConsumerWidget {
           return ListView(
             padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
             children: [
-              Text(c.axeLabel, style: t.textTheme.headlineSmall),
+              Texte(c.axeLabel, style: t.textTheme.headlineSmall),
               const SizedBox(height: 8),
-              Text(c.justification,
+              Texte(c.justification,
                   style: t.textTheme.bodySmall
                       ?.copyWith(color: Couleurs.grisChaud, height: 1.6)),
               const SizedBox(height: 18),
@@ -62,7 +63,7 @@ class EcranChronogramme extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 8),
-              Text('${c.faites} séances faites sur ${c.seances.length}',
+              Texte('${c.faites} séances faites sur ${c.seances.length}',
                   style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
 
               if (c.enRetard > 0) ...[
@@ -100,14 +101,14 @@ class EcranChronogramme extends ConsumerWidget {
       rafraichirProgression(ref);
       if (!context.mounted) return;
       messager.showSnackBar(
-        const SnackBar(content: Text('Plan recomposé sur les séances restantes.')),
+        const SnackBar(content: Texte('Plan recomposé sur les séances restantes.')),
       );
       context.pushReplacement('/chronogramme/${j['id']}');
     } on ErreurApi catch (e) {
-      messager.showSnackBar(SnackBar(content: Text(e.message)));
+      messager.showSnackBar(SnackBar(content: Texte(e.message)));
     } catch (_) {
       messager.showSnackBar(
-        const SnackBar(content: Text("La replanification n'a pas abouti.")),
+        const SnackBar(content: Texte("La replanification n'a pas abouti.")),
       );
     }
   }
@@ -139,14 +140,14 @@ class _BandeauRetard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                Texte(
                   nombre == 1
                       ? 'Vous avez 1 séance de retard'
                       : 'Vous avez $nombre séances de retard',
                   style: t.textTheme.titleMedium?.copyWith(fontSize: 15),
                 ),
                 const SizedBox(height: 3),
-                Text(
+                Texte(
                   premium
                       ? "Le plan peut se recomposer sur ce qu'il reste."
                       : "La replanification fait partie d'Ascension.",
@@ -160,7 +161,7 @@ class _BandeauRetard extends StatelessWidget {
           // Pour un membre de la formule Découverte, il ouvre l'abonnement.
           TextButton(
             onPressed: premium ? onReplanifier : () => context.push('/abonnement'),
-            child: Text(premium ? 'Replanifier' : 'Débloquer'),
+            child: Texte(premium ? 'Replanifier' : 'Débloquer'),
           ),
         ],
       ),
@@ -184,7 +185,7 @@ class _EnteteSemaine extends StatelessWidget {
 
     return Row(
       children: [
-        Text(
+        Texte(
           libelle,
           style: t.textTheme.labelLarge?.copyWith(color: Couleurs.orTexte, fontSize: 12.5),
         ),
@@ -244,13 +245,13 @@ class _LigneSeance extends ConsumerWidget {
                 width: 42,
                 child: Column(
                   children: [
-                    Text(
+                    Texte(
                       seance.prevueLe == null
                           ? '-'
                           : DateFormat('E', 'fr_FR').format(seance.prevueLe!),
                       style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud),
                     ),
-                    Text(
+                    Texte(
                       seance.prevueLe == null ? '' : '${seance.prevueLe!.day}',
                       style: t.textTheme.titleMedium?.copyWith(
                         color: aujourdhui ? Couleurs.orTexte : null,
@@ -279,7 +280,7 @@ class _LigneSeance extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    Texte(
                       seance.objectif,
                       style: t.textTheme.bodyMedium?.copyWith(
                         decoration: seance.faite ? TextDecoration.lineThrough : null,
@@ -289,7 +290,7 @@ class _LigneSeance extends ConsumerWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 3),
-                    Text(
+                    Texte(
                       [
                         dureeLisible(seance.dureeMin),
                         if (seance.pages.isNotEmpty) seance.pages,

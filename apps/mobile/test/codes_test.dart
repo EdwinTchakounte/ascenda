@@ -21,6 +21,8 @@ import 'package:ascenda/etat/session.dart';
 import 'package:ascenda/theme/theme.dart';
 import 'package:ascenda/widgets/avantages.dart';
 
+import 'outils.dart';
+
 /// Un client qui n'appelle personne et retient ce qu'on lui a demandé.
 class _ClientMuet extends ClientApi {
   final appels = <String>[];
@@ -172,16 +174,16 @@ void main() {
     await t.pumpWidget(monter(const EcranCodes(), client));
     await t.pumpAndSettle();
 
-    expect(find.text('AWA-7KQ2'), findsOneWidget);
-    expect(find.text("Quiz de l'été"), findsOneWidget);
-    expect(find.text('Accès limité à :'), findsOneWidget);
-    expect(find.text('Export PDF'), findsOneWidget);
-    expect(find.text('3'), findsOneWidget, reason: 'le nombre de lecteurs invités');
+    expect(texte('AWA-7KQ2'), findsOneWidget);
+    expect(texte("Quiz de l'été"), findsOneWidget);
+    expect(texte('Accès limité à :'), findsOneWidget);
+    expect(texte('Export PDF'), findsOneWidget);
+    expect(texte('3'), findsOneWidget, reason: 'le nombre de lecteurs invités');
 
-    await t.scrollUntilVisible(find.text('Grâce à Fanta'), 200,
+    await t.scrollUntilVisible(texte('Grâce à Fanta'), 200,
         scrollable: find.byType(Scrollable).first);
-    expect(find.text('Nouveau'), findsOneWidget);
-    expect(find.text('Grâce à Paul'), findsOneWidget);
+    expect(texte('Nouveau'), findsOneWidget);
+    expect(texte('Grâce à Paul'), findsOneWidget);
     // Montrée une fois, la bonne nouvelle est signalée comme vue.
     expect(client.appels, contains('/codes/bons/vus'));
     // Aucun débordement sur 360 pixels : Flutter lève une exception s'il y en a.
@@ -199,8 +201,8 @@ void main() {
     final client = _ClientMuet();
     await t.pumpWidget(monter(const BandeauRecompense(), client));
     await t.pumpAndSettle();
-    expect(find.textContaining('Fanta a rejoint ASCENDA avec votre code'), findsOneWidget);
-    expect(find.textContaining('-20 %'), findsOneWidget);
+    expect(texteContenant('Fanta a rejoint ASCENDA avec votre code'), findsOneWidget);
+    expect(texteContenant('-20 %'), findsOneWidget);
   });
 
   testWidgets("et disparaît une fois vue", (t) async {
@@ -218,9 +220,9 @@ void main() {
     ));
     await t.pumpAndSettle();
     expect(find.byKey(const Key('code-inscription')), findsOneWidget);
-    await t.ensureVisible(find.text("J'ai déjà un compte"));
+    await t.ensureVisible(texte("J'ai déjà un compte"));
     await t.pumpAndSettle();
-    await t.tap(find.text("J'ai déjà un compte"));
+    await t.tap(texte("J'ai déjà un compte"));
     await t.pumpAndSettle();
     expect(find.byKey(const Key('code-inscription')), findsNothing);
   });

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// L'affichage des textes qu'ASCENDA écrit sur un ouvrage.
 ///
@@ -41,13 +42,13 @@ class CompteRenduChapitre extends StatelessWidget {
             children: [
               const Icon(Icons.summarize_outlined, size: 19, color: Couleurs.orTexte),
               const SizedBox(width: 9),
-              Text('Ce que ce chapitre établit',
+              Texte('Ce que ce chapitre établit',
                   style: t.textTheme.titleSmall?.copyWith(color: Couleurs.orTexte)),
             ],
           ),
           const SizedBox(height: 12),
           if ('${c['resume'] ?? ''}'.isNotEmpty)
-            Text('${c['resume']}', style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
+            Texte('${c['resume']}', style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
           if (points.isNotEmpty) ...[
             const SizedBox(height: 14),
             for (final p in points) _Puce('$p'),
@@ -66,7 +67,7 @@ class CompteRenduChapitre extends StatelessWidget {
           ],
           if (reserves.isNotEmpty) ...[
             const SizedBox(height: 14),
-            Text('Réserves',
+            Texte('Réserves',
                 style: t.textTheme.labelMedium?.copyWith(color: Couleurs.terracotta)),
             const SizedBox(height: 6),
             for (final r in reserves) _Puce('$r', teinte: Couleurs.terracotta),
@@ -98,7 +99,7 @@ class SyntheseOuvrage extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (r != null) ...[
-          Text('En bref', style: t.textTheme.titleLarge),
+          Texte('En bref', style: t.textTheme.titleLarge),
           const SizedBox(height: 10),
           Container(
             padding: const EdgeInsets.all(18),
@@ -110,20 +111,20 @@ class SyntheseOuvrage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if ('${r['en_une_phrase'] ?? ''}'.isNotEmpty)
-                  Text('${r['en_une_phrase']}',
+                  Texte('${r['en_une_phrase']}',
                       style: t.textTheme.titleMedium?.copyWith(
                         color: const Color(0xFFF4F1E8),
                         height: 1.5,
                       )),
                 if ('${r['argument'] ?? ''}'.isNotEmpty) ...[
                   const SizedBox(height: 12),
-                  Text('${r['argument']}',
+                  Texte('${r['argument']}',
                       style: t.textTheme.bodyMedium
                           ?.copyWith(color: const Color(0xFFB9C1D6), height: 1.65)),
                 ],
                 if ('${r['verdict'] ?? ''}'.isNotEmpty) ...[
                   const SizedBox(height: 12),
-                  Text('${r['verdict']}',
+                  Texte('${r['verdict']}',
                       style: t.textTheme.bodySmall?.copyWith(
                         color: Couleurs.orClair,
                         height: 1.6,
@@ -135,7 +136,7 @@ class SyntheseOuvrage extends StatelessWidget {
                     children: [
                       const Icon(Icons.schedule_rounded, size: 15, color: Color(0xFF8E99B4)),
                       const SizedBox(width: 7),
-                      Text('${r['temps_de_lecture_min']} min de lecture',
+                      Texte('${r['temps_de_lecture_min']} min de lecture',
                           style: t.textTheme.labelSmall
                               ?.copyWith(color: const Color(0xFF8E99B4))),
                     ],
@@ -147,10 +148,10 @@ class SyntheseOuvrage extends StatelessWidget {
           const SizedBox(height: 26),
         ],
         if (s != null) ...[
-          Text('La synthèse', style: t.textTheme.titleLarge),
+          Texte('La synthèse', style: t.textTheme.titleLarge),
           const SizedBox(height: 10),
           if ('${s['resume_court'] ?? ''}'.isNotEmpty)
-            Text('${s['resume_court']}',
+            Texte('${s['resume_court']}',
                 style: t.textTheme.bodyMedium?.copyWith(height: 1.68)),
           for (final sec in sections) ...[
             const SizedBox(height: 18),
@@ -158,13 +159,13 @@ class SyntheseOuvrage extends StatelessWidget {
           ],
           if (retenir.isNotEmpty) ...[
             const SizedBox(height: 20),
-            Text('À retenir', style: t.textTheme.titleSmall),
+            Texte('À retenir', style: t.textTheme.titleSmall),
             const SizedBox(height: 8),
             for (final x in retenir) _Puce('$x'),
           ],
           if (questions.isNotEmpty) ...[
             const SizedBox(height: 20),
-            Text('Questions que le livre laisse ouvertes', style: t.textTheme.titleSmall),
+            Texte('Questions que le livre laisse ouvertes', style: t.textTheme.titleSmall),
             const SizedBox(height: 8),
             for (final q in questions) _Puce('$q', teinte: Couleurs.sauge),
           ],
@@ -189,15 +190,15 @@ class _Section extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Text('${section['section'] ?? ''}', style: t.textTheme.titleSmall),
+              child: Texte('${section['section'] ?? ''}', style: t.textTheme.titleSmall),
             ),
             if (pages.isNotEmpty)
-              Text('p. $pages',
+              Texte('p. $pages',
                   style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
           ],
         ),
         const SizedBox(height: 5),
-        Text('${section['contenu'] ?? ''}',
+        Texte('${section['contenu'] ?? ''}',
             style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
       ],
     );
@@ -227,7 +228,7 @@ class _Puce extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Text(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
+            child: Texte(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
           ),
         ],
       ),
@@ -255,9 +256,9 @@ class _Encadre extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(titre, style: t.textTheme.labelMedium?.copyWith(color: c)),
+          Texte(titre, style: t.textTheme.labelMedium?.copyWith(color: c)),
           const SizedBox(height: 5),
-          Text(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
+          Texte(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
         ],
       ),
     );

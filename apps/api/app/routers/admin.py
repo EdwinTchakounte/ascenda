@@ -944,38 +944,12 @@ async def fichier_source(document_id: str, user: AdminUser):
     )
     if not d or not d["storage_key"]:
         raise NotFound("Cet ouvrage n'a pas de fichier d'origine.")
-    try:
-        from minio import Minio
+    from app.services import stockage
 
-        client = Minio(
-            settings.minio_endpoint,
-            access_key=settings.minio_root_user,
-            secret_key=settings.minio_root_password,
-            secure=settings.minio_secure,
-        )
-        reponse = client.get_object(settings.minio_bucket, d["storage_key"])
-    except Exception as exc:  # noqa: BLE001
-        log.warning("Fichier %s illisible : %s", d["storage_key"], exc)
-        raise NotFound("Le fichier d'origine n'est pas joignable.") from exc
-
-    def flux():
-        try:
-            yield from reponse.stream(64 * 1024)
-        finally:
-            reponse.close()
-            reponse.release_conn()
-
-    nom = d["filename_original"] or f"{d['titre']}.pdf"
-    return StreamingResponse(
-        flux(),
-        media_type=d["mime"] or "application/pdf",
-        headers={
-            # `inline` : le navigateur l'ouvre dans son lecteur plutôt que de le
-            # déposer dans les téléchargements. On vient vérifier une page, pas
-            # collectionner des fichiers.
-            "Content-Disposition": f'inline; filename="{nom}"',
-            "Content-Length": str(d["size_bytes"] or 0),
-        },
+    return stockage.servir(
+        d["storage_key"],
+        nom=d["filename_original"] or f"{d['titre']}.pdf",
+        mime=d["mime"],
     )
 
 

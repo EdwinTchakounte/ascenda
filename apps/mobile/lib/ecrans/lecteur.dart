@@ -9,6 +9,7 @@ import '../widgets/annotations.dart';
 import '../widgets/derives.dart';
 import '../widgets/etats.dart';
 import 'agent.dart';
+import '../theme/texte.dart';
 
 /// Le lecteur : plein écran, fond ivoire, serif confortable.
 ///
@@ -131,15 +132,15 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
               ListView(
                 padding: const EdgeInsets.fromLTRB(24, 0, 24, 120),
                 children: [
-                  Text(
+                  Texte(
                     '${ouvrage['titre']}',
                     style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte),
                   ),
                   const SizedBox(height: 8),
-                  Text('${chapitre['titre'] ?? 'Chapitre ${chapitre['ordre']}'}',
+                  Texte('${chapitre['titre'] ?? 'Chapitre ${chapitre['ordre']}'}',
                       style: t.textTheme.headlineSmall),
                   const SizedBox(height: 8),
-                  Text(
+                  Texte(
                     [
                       if (chapitre['page_debut'] != null)
                         'p. ${chapitre['page_debut']}'
@@ -166,6 +167,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                   else
                     for (final p in passages) ...[
                       SelectableText.rich(
+                        textAlign: TextAlign.justify,
                         _teinter(
                           '${p['texte']}',
                           surlignages,
@@ -186,7 +188,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                       if (p['tronque'] == true)
                         Padding(
                           padding: const EdgeInsets.only(top: 6),
-                          child: Text(
+                          child: Texte(
                             'Extrait abrégé.',
                             style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud),
                           ),
@@ -218,11 +220,11 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('Chapitre suivant',
+                                  Texte('Chapitre suivant',
                                       style: t.textTheme.labelSmall
                                           ?.copyWith(color: Couleurs.grisChaud)),
                                   const SizedBox(height: 3),
-                                  Text('${suivant['titre'] ?? ''}',
+                                  Texte('${suivant['titre'] ?? ''}',
                                       style: t.textTheme.titleMedium),
                                 ],
                               ),
@@ -249,7 +251,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                           onPressed: () =>
                               _terminerSeance(widget.livrable, widget.livrableId),
                           icon: const Icon(Icons.check_rounded, size: 19),
-                          label: Text(widget.seanceId != null
+                          label: Texte(widget.seanceId != null
                               ? 'Terminer la séance'
                               : 'Marquer comme lu'),
                         ),
@@ -310,6 +312,9 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   /// autrement) est simplement ignorée : mieux vaut un surlignage qui ne
   /// s'affiche pas qu'un texte qui refuse de s'afficher.
   TextSpan _teinter(String texte, List<Map<String, dynamic>> surlignages, TextStyle? base) {
+    // Même longueur que le texte d'origine : les positions trouvées sur l'un
+    // valent pour l'autre.
+    final affiche = lisible(texte, composes: false);
     final marques = <({int debut, int fin, Color teinte})>[];
     for (final s in surlignages) {
       final citation = '${s['citation'] ?? ''}';
@@ -322,7 +327,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
         teinte: teinteDe(s['couleur'] as String?),
       ));
     }
-    if (marques.isEmpty) return TextSpan(text: texte, style: base);
+    if (marques.isEmpty) return TextSpan(text: affiche, style: base);
 
     marques.sort((a, b) => a.debut.compareTo(b.debut));
     final morceaux = <TextSpan>[];
@@ -332,16 +337,16 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       // le second, plutôt que de produire des indices négatifs.
       if (m.debut < curseur) continue;
       if (m.debut > curseur) {
-        morceaux.add(TextSpan(text: texte.substring(curseur, m.debut), style: base));
+        morceaux.add(TextSpan(text: affiche.substring(curseur, m.debut), style: base));
       }
       morceaux.add(TextSpan(
-        text: texte.substring(m.debut, m.fin),
+        text: affiche.substring(m.debut, m.fin),
         style: base?.copyWith(backgroundColor: m.teinte.withValues(alpha: 0.28)),
       ));
       curseur = m.fin;
     }
     if (curseur < texte.length) {
-      morceaux.add(TextSpan(text: texte.substring(curseur), style: base));
+      morceaux.add(TextSpan(text: affiche.substring(curseur), style: base));
     }
     return TextSpan(children: morceaux);
   }
@@ -360,7 +365,9 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     final entrees = etat.contextMenuButtonItems;
     final selection = etat.textEditingValue.selection;
     if (selection.isValid && !selection.isCollapsed) {
-      final choisi = selection.textInside(etat.textEditingValue.text).trim();
+      // Le texte affiché porte des espaces insécables (voir `lisible`) : la
+      // citation enregistrée garde les espaces du livre.
+      final choisi = selection.textInside(etat.textEditingValue.text).replaceAll('\u00A0', ' ').trim();
       if (choisi.isNotEmpty && choisi.length <= 2000) {
         entrees.insert(
           0,
@@ -392,11 +399,11 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       if (!mounted) return;
       ref.invalidate(surlignagesProvider(widget.documentId));
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('Passage surligné.')));
+          .showSnackBar(const SnackBar(content: Texte('Passage surligné.')));
     } catch (_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Le surlignage n'a pas pu être enregistré.")),
+        const SnackBar(content: Texte("Le surlignage n'a pas pu être enregistré.")),
       );
     }
   }
@@ -429,11 +436,11 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       if (!mounted) return;
       ref.invalidate(notesProvider(widget.documentId));
       ScaffoldMessenger.of(context)
-          .showSnackBar(const SnackBar(content: Text('Note enregistrée.')));
+          .showSnackBar(const SnackBar(content: Texte('Note enregistrée.')));
     } catch (_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("La note n'a pas pu être enregistrée.")),
+        const SnackBar(content: Texte("La note n'a pas pu être enregistrée.")),
       );
     }
   }
@@ -499,14 +506,15 @@ class _PagesSupplementaires extends ConsumerWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(bottom: 14),
-              child: Text(
+              child: Texte(
                 'Suite de la séance, p. $debut à $fin',
                 style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte),
               ),
             ),
             for (final p in passages) ...[
               SelectableText(
-                '${p['texte']}',
+                lisible('${p['texte']}', composes: false),
+                textAlign: TextAlign.justify,
                 style: t.textTheme.bodyLarge?.copyWith(
                   fontFamily: t.textTheme.headlineSmall?.fontFamily,
                   fontSize: taille,

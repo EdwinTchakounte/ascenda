@@ -8,6 +8,7 @@ import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
 import '../widgets/invitation.dart';
+import '../theme/texte.dart';
 
 class EcranBibliotheque extends ConsumerStatefulWidget {
   const EcranBibliotheque({super.key});
@@ -61,7 +62,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Bibliothèque', style: t.textTheme.headlineMedium?.copyWith(fontSize: 30)),
+                  Texte('Bibliothèque', style: t.textTheme.headlineMedium?.copyWith(fontSize: 30)),
                   const SizedBox(height: 14),
                   TextField(
                     controller: _recherche,
@@ -97,7 +98,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         '/recherche?q=${Uri.encodeComponent(_texte)}',
                       ),
                       icon: const Icon(Icons.travel_explore_rounded, size: 18),
-                      label: const Text('Chercher dans le texte des livres'),
+                      label: const Texte('Chercher dans le texte des livres'),
                     ),
                   ),
                 ],
@@ -143,7 +144,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                   child: TextButton.icon(
                     onPressed: () => context.push('/axe/$_axe'),
                     icon: const Icon(Icons.route_outlined, size: 18),
-                    label: const Text("Par où commencer dans cet axe"),
+                    label: const Texte("Par où commencer dans cet axe"),
                   ),
                 ),
               ),
@@ -209,7 +210,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                               if (liste.length >= _total) {
                                 return Padding(
                                   padding: const EdgeInsets.only(top: 10, bottom: 20),
-                                  child: Text(
+                                  child: Texte(
                                     'Fin de la liste.',
                                     textAlign: TextAlign.center,
                                     style: t.textTheme.bodySmall
@@ -221,7 +222,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                 padding: const EdgeInsets.only(top: 6, bottom: 20),
                                 child: OutlinedButton(
                                   onPressed: () => setState(() => _page += 1),
-                                  child: Text(
+                                  child: Texte(
                                     'Charger la suite (${_total - liste.length} restants)',
                                   ),
                                 ),
@@ -239,7 +240,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.only(top: 14, bottom: 4),
-                                    child: Text(
+                                    child: Texte(
                                       _total == 1
                                           ? '1 ouvrage'
                                           : '${liste.length} sur $_total ouvrages',
@@ -306,7 +307,7 @@ class _Filtre extends StatelessWidget {
               bottom: BorderSide(color: actif ? Couleurs.or : Colors.transparent, width: 2),
             ),
           ),
-          child: Text(
+          child: Texte(
             libelle,
             style: t.textTheme.labelLarge?.copyWith(
               fontSize: 13.5,
@@ -331,7 +332,7 @@ class _Filtre extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
+              Texte(
                 libelle,
                 style: t.textTheme.labelLarge?.copyWith(
                   color: actif ? surPlein : encre.withValues(alpha: 0.8),
@@ -341,7 +342,7 @@ class _Filtre extends StatelessWidget {
               ),
               if (compte != null) ...[
                 const SizedBox(width: 7),
-                Text(
+                Texte(
                   '$compte',
                   style: t.textTheme.labelSmall?.copyWith(
                     color: actif ? (sombre ? const Color(0xFF4A3A10) : Couleurs.orClair) : Couleurs.grisChaud,

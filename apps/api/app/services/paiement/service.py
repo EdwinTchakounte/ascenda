@@ -108,7 +108,7 @@ async def creer(user: dict, periode_mois: int, plan: str = "premium") -> dict:
     return paiement
 
 
-async def initier(paiement: dict, telephone: str, reseau: str) -> dict:
+async def initier(paiement: dict, telephone: str, reseau: str | None = None) -> dict:
     """Déclenche la demande de paiement sur le téléphone du membre."""
     f = fournisseur(paiement["provider_code"])
 

@@ -7,6 +7,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// Le diagnostic d'entrée : une question à l'écran, grande, centrée.
 ///
@@ -85,18 +86,18 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
       if (!mounted) return;
       rafraichirProgression(ref);
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('${profil['message']}')),
+        SnackBar(content: Texte('${profil['message']}')),
       );
       context.go('/chronogramme/${chrono['id']}');
     } on ErreurApi catch (e) {
       if (!mounted) return;
       setState(() => _envoi = false);
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message)));
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Texte(e.message)));
     } catch (_) {
       if (!mounted) return;
       setState(() => _envoi = false);
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Le plan n'a pas pu être créé. Réessayez.")),
+        const SnackBar(content: Texte("Le plan n'a pas pu être créé. Réessayez.")),
       );
     }
   }
@@ -131,7 +132,7 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
                 onPressed: () => context.go('/aujourdhui'),
               )
             : BackButton(onPressed: () => setState(() => _index--)),
-        title: Text('${_index + 1} sur ${questions.length}',
+        title: Texte('${_index + 1} sur ${questions.length}',
             style: t.textTheme.labelLarge?.copyWith(color: Couleurs.grisChaud)),
       ),
       body: Column(
@@ -156,12 +157,12 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
                   if (q['ouvrage'] != null)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12),
-                      child: Text(
+                      child: Texte(
                         "D'après ${q['ouvrage']}",
                         style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte),
                       ),
                     ),
-                  Text('${q['question']}', style: t.textTheme.headlineSmall),
+                  Texte('${q['question']}', style: t.textTheme.headlineSmall),
                   const SizedBox(height: 28),
                   for (final c in choix) ...[
                     _CarteChoix(
@@ -194,7 +195,7 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
                       ? const SizedBox(
                           width: 20, height: 20,
                           child: CircularProgressIndicator(strokeWidth: 2.2))
-                      : const Text('Construire mon chronogramme'),
+                      : const Texte('Construire mon chronogramme'),
                 ),
               ),
             ),
@@ -231,7 +232,7 @@ class _CarteChoix extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Text(
+              child: Texte(
                 libelle,
                 style: t.textTheme.bodyLarge?.copyWith(
                   fontWeight: choisi ? FontWeight.w600 : FontWeight.w400,
@@ -268,9 +269,9 @@ class _ChoixAxe extends ConsumerWidget {
         data: (liste) => ListView(
           padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
           children: [
-            Text('Par quoi voulez-vous commencer ?', style: t.textTheme.headlineSmall),
+            Texte('Par quoi voulez-vous commencer ?', style: t.textTheme.headlineSmall),
             const SizedBox(height: 8),
-            Text(
+            Texte(
               "Un axe, ce n'est pas un thème : c'est un centre d'intérêt, un "
               "objectif et le temps que vous avez. Vous pourrez en changer.",
               style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
@@ -287,7 +288,7 @@ class _ChoixAxe extends ConsumerWidget {
                       ? () => onChoisi(a.slug)
                       : () => ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
-                              content: Text(
+                              content: Texte(
                                 "Les ouvrages de « ${a.label} » ne sont pas encore "
                                 "découpés en chapitres : aucun plan de lecture ne "
                                 "peut être composé. Ils restent consultables dans "
@@ -310,9 +311,9 @@ class _ChoixAxe extends ConsumerWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(a.label, style: t.textTheme.titleMedium),
+                              Texte(a.label, style: t.textTheme.titleMedium),
                               const SizedBox(height: 4),
-                              Text(
+                              Texte(
                                 a.parcoursPossible
                                     ? '${a.nbOuvrages} ouvrages · ${a.nbPages} pages'
                                     : 'Consultable, pas encore de parcours',

@@ -74,7 +74,7 @@ class Tara(FournisseurPaiement):
 
     # ------------------------------------------------------------------ payin
 
-    async def initier(self, paiement: dict, *, telephone: str, reseau: str) -> ResultatInitiation:
+    async def initier(self, paiement: dict, *, telephone: str, reseau: str | None = None) -> ResultatInitiation:
         tel = normaliser_telephone(telephone)
         if self.simule:
             log.warning("Tara en mode simulé : aucun appel sortant.")

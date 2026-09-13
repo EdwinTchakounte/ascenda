@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// L'invitation à ouvrir un compte, montrée aux visiteurs seulement.
 ///
@@ -44,7 +45,7 @@ class InvitationCompte extends ConsumerWidget {
         child: Row(
           children: [
             Expanded(
-              child: Text(
+              child: Texte(
                 texte,
                 style: t.textTheme.bodySmall?.copyWith(height: 1.5),
               ),
@@ -52,7 +53,7 @@ class InvitationCompte extends ConsumerWidget {
             const SizedBox(width: 8),
             TextButton(
               onPressed: () => context.push('/connexion'),
-              child: const Text('Créer'),
+              child: const Texte('Créer'),
             ),
           ],
         ),
@@ -92,7 +93,7 @@ class InvitationCompte extends ConsumerWidget {
                   children: [
                     Image.asset('assets/marque/marque-512.png', width: 26, height: 26),
                     const SizedBox(width: 10),
-                    Text(
+                    Texte(
                       'Gratuit, sans carte bancaire',
                       style: t.textTheme.labelSmall?.copyWith(
                         color: Couleurs.orClair,
@@ -103,7 +104,7 @@ class InvitationCompte extends ConsumerWidget {
                   ],
                 ),
                 const SizedBox(height: 12),
-                Text(
+                Texte(
                   texte,
                   style: t.textTheme.bodyMedium
                       ?.copyWith(color: const Color(0xFFD5DBEA), height: 1.6),
@@ -116,14 +117,14 @@ class InvitationCompte extends ConsumerWidget {
                   width: double.infinity,
                   child: FilledButton(
                     onPressed: () => context.push('/connexion'),
-                    child: const Text('Créer mon compte'),
+                    child: const Texte('Créer mon compte'),
                   ),
                 ),
                 const SizedBox(height: 4),
                 Center(
                   child: TextButton(
                     onPressed: () => context.push('/connexion?mode=connexion'),
-                    child: const Text("J'ai déjà un compte"),
+                    child: const Texte("J'ai déjà un compte"),
                   ),
                 ),
               ],

@@ -10,6 +10,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 String _jour(DateTime? d) =>
     d == null ? 'date à confirmer' : DateFormat('d MMMM y', 'fr_FR').format(d);
@@ -67,7 +68,7 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
         ..showSnackBar(
-          SnackBar(content: Text('${j['message'] ?? 'Code activé.'}')),
+          SnackBar(content: Texte('${j['message'] ?? 'Code activé.'}')),
         );
     } on HorsLigne {
       setState(
@@ -95,7 +96,7 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
   Widget build(BuildContext context) {
     final donnees = ref.watch(codesProvider);
     return Scaffold(
-      appBar: AppBar(title: const Text('Codes et avantages')),
+      appBar: AppBar(title: const Texte('Codes et avantages')),
       body: SafeArea(
         bottom: false,
         child: donnees.when(
@@ -158,9 +159,9 @@ class _Saisie extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('Activer un code', style: t.textTheme.titleLarge),
+        Texte('Activer un code', style: t.textTheme.titleLarge),
         const SizedBox(height: 4),
-        Text(
+        Texte(
           "Un code reçu d'ASCENDA ouvre tout ou partie d'Ascension, pour une durée donnée.",
           style: t.textTheme.bodySmall?.copyWith(
             color: Couleurs.grisChaud,
@@ -202,7 +203,7 @@ class _Saisie extends StatelessWidget {
                         height: 18,
                         child: CircularProgressIndicator(strokeWidth: 2.2),
                       )
-                    : const Text('Activer'),
+                    : const Texte('Activer'),
               ),
             ),
           ],
@@ -223,7 +224,7 @@ class _SectionAcces extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('Vos accès', style: t.textTheme.titleLarge),
+        Texte('Vos accès', style: t.textTheme.titleLarge),
         const SizedBox(height: 12),
         if (a.source == 'abonnement')
           _LigneAcces(
@@ -252,7 +253,7 @@ class _SectionAcces extends StatelessWidget {
                 color: t.dividerTheme.color ?? Couleurs.traitClair,
               ),
             ),
-            child: Text(
+            child: Texte(
               "Vous êtes sur l'offre Découverte. Un code ou un abonnement ouvre le reste.",
               style: t.textTheme.bodySmall?.copyWith(
                 color: Couleurs.grisChaud,
@@ -293,9 +294,9 @@ class _LigneAcces extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(titre, style: t.textTheme.titleSmall),
+                Texte(titre, style: t.textTheme.titleSmall),
                 const SizedBox(height: 2),
-                Text(
+                Texte(
                   detail,
                   style: t.textTheme.bodySmall?.copyWith(height: 1.5),
                 ),
@@ -336,12 +337,12 @@ class _CarteCode extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Text(code.libelle, style: t.textTheme.titleSmall),
+                child: Texte(code.libelle, style: t.textTheme.titleSmall),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 color: Couleurs.nuit,
-                child: Text(
+                child: Texte(
                   code.code,
                   style: const TextStyle(
                     color: Couleurs.orClair,
@@ -354,7 +355,7 @@ class _CarteCode extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 6),
-          Text(
+          Texte(
             code.complet ? 'Tout Ascension' : 'Accès limité à :',
             style: t.textTheme.bodySmall?.copyWith(
               color: Couleurs.orTexte,
@@ -375,7 +376,7 @@ class _CarteCode extends StatelessWidget {
                     ),
                     const SizedBox(width: 8),
                     Expanded(
-                      child: Text(
+                      child: Texte(
                         donnees.libelle(f),
                         style: t.textTheme.bodySmall,
                       ),
@@ -396,7 +397,7 @@ class _CarteCode extends StatelessWidget {
               ),
               const SizedBox(width: 6),
               Expanded(
-                child: Text(
+                child: Texte(
                   code.joursRestants == 0
                       ? "Se referme aujourd'hui."
                       : "Jusqu'au ${_jour(code.fin)}, encore ${code.joursRestants} jour"
@@ -423,7 +424,7 @@ class _CarteAmbassadeur extends StatelessWidget {
     if (context.mounted) {
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
-        ..showSnackBar(const SnackBar(content: Text('Code copié.')));
+        ..showSnackBar(const SnackBar(content: Texte('Code copié.')));
     }
   }
 
@@ -436,7 +437,7 @@ class _CarteAmbassadeur extends StatelessWidget {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text(
+            content: Texte(
               "WhatsApp n'est pas disponible : le message est copié.",
             ),
           ),
@@ -471,7 +472,7 @@ class _CarteAmbassadeur extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               Flexible(
-                child: Text(
+                child: Texte(
                   'Votre code ambassadeur',
                   style: t.textTheme.titleMedium?.copyWith(color: clair),
                 ),
@@ -495,7 +496,7 @@ class _CarteAmbassadeur extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 14),
-          Text(
+          Texte(
             donnees.programmeActif
                 ? "Chaque personne qui crée son compte avec ce code vous offre "
                       "${donnees.pourcent} % de réduction sur votre prochain abonnement, "
@@ -511,7 +512,7 @@ class _CarteAmbassadeur extends StatelessWidget {
                 child: OutlinedButton.icon(
                   onPressed: () => _copier(context),
                   icon: const Icon(Icons.copy_rounded, size: 17),
-                  label: const Text('Copier'),
+                  label: const Texte('Copier'),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Couleurs.orClair,
                     side: const BorderSide(color: Color(0x40E8C070)),
@@ -525,7 +526,7 @@ class _CarteAmbassadeur extends StatelessWidget {
                       ? () => _partager(context)
                       : null,
                   icon: const Icon(Icons.send_rounded, size: 17),
-                  label: const Text('Partager'),
+                  label: const Texte('Partager'),
                 ),
               ),
             ],
@@ -565,7 +566,7 @@ class _Chiffre extends StatelessWidget {
     return Expanded(
       child: Column(
         children: [
-          Text(
+          Texte(
             valeur,
             style: const TextStyle(
               color: Color(0xFFF4F1E8),
@@ -574,7 +575,7 @@ class _Chiffre extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 2),
-          Text(
+          Texte(
             libelle,
             textAlign: TextAlign.center,
             style: const TextStyle(color: Color(0xFF8E99B4), fontSize: 11.5),
@@ -595,9 +596,9 @@ class _SectionReductions extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Text('Vos réductions', style: t.textTheme.titleLarge),
+        Texte('Vos réductions', style: t.textTheme.titleLarge),
         const SizedBox(height: 4),
-        Text(
+        Texte(
           "Une par lecteur invité. Elles s'appliquent toutes seules, une par abonnement, "
           "et le montant réduit s'affiche avant de payer.",
           style: t.textTheme.bodySmall?.copyWith(
@@ -607,7 +608,7 @@ class _SectionReductions extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         if (donnees.bons.isEmpty)
-          Text(
+          Texte(
             'Aucune pour le moment. Partagez votre code pour en gagner.',
             style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
           ),
@@ -653,7 +654,7 @@ class _LigneBon extends StatelessWidget {
             color: bon.disponible
                 ? Couleurs.nuit
                 : t.colorScheme.surfaceContainer,
-            child: Text(
+            child: Texte(
               '-${bon.pourcent} %',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -670,7 +671,7 @@ class _LigneBon extends StatelessWidget {
                 Row(
                   children: [
                     Flexible(
-                      child: Text(
+                      child: Texte(
                         bon.filleul == null
                             ? 'Un lecteur invité'
                             : 'Grâce à ${bon.filleul}',
@@ -685,7 +686,7 @@ class _LigneBon extends StatelessWidget {
                           vertical: 2,
                         ),
                         color: Couleurs.or,
-                        child: const Text(
+                        child: const Texte(
                           'Nouveau',
                           style: TextStyle(
                             fontSize: 10.5,
@@ -698,7 +699,7 @@ class _LigneBon extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 2),
-                Text(
+                Texte(
                   texte,
                   style: t.textTheme.labelSmall?.copyWith(color: teinte),
                 ),

@@ -11,10 +11,12 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// L'abonnement Ascension, du choix de la formule à la confirmation.
 ///
-/// Le paiement passe par Tara, qui porte MTN Mobile Money et Orange Money.
+/// Le paiement passe par Tara Money. Le lecteur ne choisit pas d'opérateur :
+/// Tara le reconnaît au numéro, MTN comme Orange.
 /// L'application ne voit jamais le code secret du membre : elle envoie le
 /// numéro, Tara pousse la demande sur le téléphone, le membre valide avec son
 /// code sur son propre appareil. C'est dit à l'écran, parce que la fraude au
@@ -31,7 +33,6 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
   final _formulaire = GlobalKey<FormState>();
 
   int? _periode;
-  String? _reseau;
   bool _envoi = false;
 
   /// Le paiement en cours de validation. Tant qu'il est là, l'écran montre
@@ -57,7 +58,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
     final abonnement = ref.watch(abonnementProvider);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Ascension')),
+      appBar: AppBar(title: const Texte('Ascension')),
       body: SafeArea(
         bottom: false,
         child: grille.when(
@@ -105,7 +106,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
         children: [
           if (a != null && a.actif) _CarteEnCours(abonnement: a),
-          Text(
+          Texte(
             a != null && a.actif ? 'Prolonger votre accès' : 'Ce que change Ascension',
             style: t.textTheme.titleLarge,
           ),
@@ -115,7 +116,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
           const _Comparaison(),
           const SizedBox(height: 26),
 
-          Text('Votre formule', style: t.textTheme.titleLarge),
+          Texte('Votre formule', style: t.textTheme.titleLarge),
           const SizedBox(height: 10),
           if (g.reductionPourcent != null) _AvisReduction(tarifs: g),
           for (final f in formules)
@@ -127,23 +128,10 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
             ),
           const SizedBox(height: 26),
 
-          Text('Votre opérateur', style: t.textTheme.titleLarge),
+          Texte('Votre paiement', style: t.textTheme.titleLarge),
           const SizedBox(height: 10),
-          Row(
-            children: [
-              for (final m in g.moyens) ...[
-                Expanded(
-                  child: _CarteOperateur(
-                    moyen: m,
-                    choisi: _reseau == m.reseau,
-                    onTap: () => setState(() => _reseau = m.reseau),
-                  ),
-                ),
-                if (m != g.moyens.last) const SizedBox(width: 12),
-              ],
-            ],
-          ),
-          const SizedBox(height: 20),
+          const _BandeauTara(),
+          const SizedBox(height: 16),
 
           TextFormField(
             controller: _telephone,
@@ -157,6 +145,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
               prefixText: '+237 ',
               hintText: '6 XX XX XX XX',
               helperText: 'Le numéro qui porte le compte, pas celui du téléphone.',
+              helperMaxLines: 2,
             ),
             validator: _validerTelephone,
           ),
@@ -175,11 +164,11 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
                       height: 20,
                       child: CircularProgressIndicator(strokeWidth: 2.4),
                     )
-                  : Text('Payer ${choisie.montantDuLisible}'),
+                  : Texte('Payer ${choisie.montantDuLisible}'),
             ),
           ),
           const SizedBox(height: 12),
-          Text(
+          Texte(
             "Le paiement est tracé de bout en bout. Si la confirmation tarde, "
             "elle est rattrapée automatiquement dans les vingt-quatre heures et "
             "votre accès s'ouvre sans nouvelle démarche.",
@@ -203,16 +192,11 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
 
   Future<void> _payer(Formule f) async {
     if (!(_formulaire.currentState?.validate() ?? false)) return;
-    if (_reseau == null) {
-      _dire('Choisissez MTN ou Orange avant de payer.');
-      return;
-    }
     setState(() => _envoi = true);
     try {
       final j = await ref.read(clientApiProvider).post('/paiements', corps: {
         'periode_mois': f.periodeMois,
         'telephone': _telephone.text.replaceAll(RegExp(r'\D'), ''),
-        'reseau': _reseau,
       }) as Map<String, dynamic>;
       final p = Paiement.depuisJson(j);
       if (!mounted) return;
@@ -295,7 +279,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
   void _dire(String message) {
     ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
-      ..showSnackBar(SnackBar(content: Text(message)));
+      ..showSnackBar(SnackBar(content: Texte(message)));
   }
 }
 
@@ -324,7 +308,7 @@ class _Avantages extends StatelessWidget {
                 Icon(icone, size: 19, color: Couleurs.orTexte),
                 const SizedBox(width: 12),
                 Expanded(
-                  child: Text(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.5)),
+                  child: Texte(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.5)),
                 ),
               ],
             ),
@@ -396,13 +380,13 @@ class _Comparaison extends ConsumerWidget {
               const Spacer(),
               SizedBox(
                 width: 78,
-                child: Text('${gratuit['nom']}',
+                child: Texte('${gratuit['nom']}',
                     textAlign: TextAlign.end,
                     style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
               ),
               SizedBox(
                 width: 78,
-                child: Text('${paye['nom']}',
+                child: Texte('${paye['nom']}',
                     textAlign: TextAlign.end,
                     style: t.textTheme.labelSmall?.copyWith(color: Couleurs.orTexte)),
               ),
@@ -416,21 +400,21 @@ class _Comparaison extends ConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Text(
+                    child: Texte(
                       '${libelleQuota(type)}, ${periode(type)}',
                       style: t.textTheme.bodySmall?.copyWith(height: 1.45),
                     ),
                   ),
                   SizedBox(
                     width: 78,
-                    child: Text(valeurQuota(limite(gratuit, type)),
+                    child: Texte(valeurQuota(limite(gratuit, type)),
                         textAlign: TextAlign.end,
                         style: t.textTheme.bodySmall
                             ?.copyWith(color: Couleurs.grisChaud)),
                   ),
                   SizedBox(
                     width: 78,
-                    child: Text(valeurQuota(limite(paye, type)),
+                    child: Texte(valeurQuota(limite(paye, type)),
                         textAlign: TextAlign.end,
                         style: t.textTheme.bodySmall?.copyWith(
                           color: Couleurs.orTexte,
@@ -469,12 +453,12 @@ class _CarteEnCours extends StatelessWidget {
             children: [
               const Icon(Icons.workspace_premium_rounded, color: Couleurs.orClair, size: 22),
               const SizedBox(width: 10),
-              Text('Ascension active',
+              Texte('Ascension active',
                   style: t.textTheme.titleMedium?.copyWith(color: const Color(0xFFF4F1E8))),
             ],
           ),
           const SizedBox(height: 10),
-          Text(
+          Texte(
             j == null
                 ? 'Votre accès est ouvert.'
                 : (j == 0
@@ -486,14 +470,14 @@ class _CarteEnCours extends StatelessWidget {
           ),
           if (fin != null) ...[
             const SizedBox(height: 4),
-            Text(
+            Texte(
               'Échéance le ${fin.day.toString().padLeft(2, '0')}/'
               '${fin.month.toString().padLeft(2, '0')}/${fin.year}.',
               style: t.textTheme.bodySmall?.copyWith(color: const Color(0xFF8E99B4)),
             ),
           ],
           const SizedBox(height: 10),
-          Text(
+          Texte(
             'Payer maintenant ajoute la nouvelle période à celle qui reste. '
             'Vous ne perdez aucun jour.',
             style: t.textTheme.bodySmall
@@ -528,7 +512,7 @@ class _AvisReduction extends StatelessWidget {
           const Icon(Icons.volunteer_activism_outlined, size: 19, color: Color(0xFF476A4E)),
           const SizedBox(width: 10),
           Expanded(
-            child: Text(
+            child: Texte(
               '-${tarifs.reductionPourcent} % grâce à votre code ambassadeur, '
               'appliqués à ce paiement'
               '${fin == null ? '' : " (valable jusqu'au ${fin.day}/${fin.month.toString().padLeft(2, '0')}/${fin.year})"}.',
@@ -590,7 +574,7 @@ class _CarteFormuleChoix extends StatelessWidget {
                       Row(
                         children: [
                           Flexible(
-                            child: Text(
+                            child: Texte(
                               formule.libelle.isEmpty
                                   ? '${formule.periodeMois} mois'
                                   : formule.libelle,
@@ -605,7 +589,7 @@ class _CarteFormuleChoix extends StatelessWidget {
                                 color: Couleurs.sauge.withValues(alpha: 0.18),
                                 borderRadius: BorderRadius.zero,
                               ),
-                              child: Text(
+                              child: Texte(
                                 '-$economie %',
                                 style: t.textTheme.labelSmall
                                     ?.copyWith(color: const Color(0xFF476A4E)),
@@ -615,7 +599,7 @@ class _CarteFormuleChoix extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(height: 2),
-                      Text(
+                      Texte(
                         '${formule.parMoisLisible} par mois',
                         style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                       ),
@@ -627,14 +611,14 @@ class _CarteFormuleChoix extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     if (formule.montantReduit != null)
-                      Text(
+                      Texte(
                         formule.montantLisible,
                         style: t.textTheme.bodySmall?.copyWith(
                           color: Couleurs.grisChaud,
                           decoration: TextDecoration.lineThrough,
                         ),
                       ),
-                    Text(
+                    Texte(
                       formule.montantDuLisible,
                       style: t.textTheme.titleMedium?.copyWith(color: Couleurs.orTexte),
                     ),
@@ -649,61 +633,44 @@ class _CarteFormuleChoix extends StatelessWidget {
   }
 }
 
-class _CarteOperateur extends StatelessWidget {
-  const _CarteOperateur({required this.moyen, required this.choisi, required this.onTap});
-
-  final MoyenPaiement moyen;
-  final bool choisi;
-  final VoidCallback onTap;
+/// Un seul moyen de paiement, donc rien à choisir : on dit simplement par où
+/// passe l'argent et que les deux opérateurs sont acceptés.
+class _BandeauTara extends StatelessWidget {
+  const _BandeauTara();
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    // MTN est jaune, Orange est orange : reprendre ces teintes évite au membre
-    // de chercher lequel des deux il tient en main.
-    final teinte = moyen.code == 'mtn' ? const Color(0xFFFFCC00) : const Color(0xFFFF6600);
-    return Material(
-      color: choisi ? teinte.withValues(alpha: 0.12) : t.colorScheme.surface,
-      borderRadius: BorderRadius.zero,
-      child: InkWell(
-        borderRadius: BorderRadius.zero,
-        onTap: onTap,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.zero,
-            border: Border.all(
-              color: choisi ? teinte : Couleurs.traitClair,
-              width: choisi ? 1.6 : 1,
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
+      decoration: BoxDecoration(
+        color: t.colorScheme.surface,
+        border: Border.all(color: Couleurs.traitClair),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 40,
+            height: 40,
+            color: Couleurs.nuitProfond,
+            alignment: Alignment.center,
+            child: const Icon(Icons.phone_iphone_rounded, size: 21, color: Couleurs.orClair),
+          ),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Texte('Tara Money', style: t.textTheme.titleSmall),
+                const SizedBox(height: 2),
+                Texte(
+                  "MTN Mobile Money ou Orange Money : l'opérateur est reconnu à votre numéro.",
+                  style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud, height: 1.45),
+                ),
+              ],
             ),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: 34,
-                height: 34,
-                decoration: BoxDecoration(color: teinte, borderRadius: BorderRadius.zero),
-                child: Center(
-                  child: Text(
-                    moyen.code == 'mtn' ? 'MTN' : 'OM',
-                    style: t.textTheme.labelSmall?.copyWith(
-                      color: moyen.code == 'mtn' ? Couleurs.encre : Colors.white,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(moyen.libelle, style: t.textTheme.titleSmall),
-              const SizedBox(height: 2),
-              Text(
-                moyen.operateur,
-                style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
-              ),
-            ],
-          ),
-        ),
+        ],
       ),
     );
   }
@@ -729,7 +696,7 @@ class _AvisCodeSecret extends StatelessWidget {
           const Icon(Icons.lock_outline_rounded, size: 19, color: Couleurs.grisChaud),
           const SizedBox(width: 12),
           Expanded(
-            child: Text(
+            child: Texte(
               "ASCENDA ne vous demandera jamais votre code secret. La demande "
               "arrive sur votre téléphone et vous la validez vous-même.",
               style: t.textTheme.bodySmall?.copyWith(height: 1.55),
@@ -784,9 +751,9 @@ class _Attente extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 22),
-        Text(titre, textAlign: TextAlign.center, style: t.textTheme.headlineSmall),
+        Texte(titre, textAlign: TextAlign.center, style: t.textTheme.headlineSmall),
         const SizedBox(height: 12),
-        Text(
+        Texte(
           expire
               ? "La confirmation n'est pas encore arrivée. Votre paiement n'est "
                   "pas perdu : le serveur le rattrape automatiquement et votre "
@@ -806,7 +773,7 @@ class _Attente extends StatelessWidget {
           ),
           const SizedBox(height: 14),
           Center(
-            child: Text(
+            child: Texte(
               '${secondes ~/ 60} min ${(secondes % 60).toString().padLeft(2, '0')} s',
               style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
             ),
@@ -818,16 +785,15 @@ class _Attente extends StatelessWidget {
           _LigneRecu('Réduction ambassadeur', '-${paiement.reductionPourcent} %'),
         _LigneRecu('Durée', '${paiement.periodeMois} mois'),
         if (paiement.telephone != null) _LigneRecu('Numéro', '+${paiement.telephone}'),
-        if (paiement.reseau != null) _LigneRecu('Opérateur', paiement.reseau!),
         _LigneRecu('Référence', paiement.id.substring(0, 8)),
         const SizedBox(height: 30),
         SizedBox(
           height: 50,
           child: paiement.valide
-              ? FilledButton(onPressed: onFermer, child: const Text('Commencer'))
+              ? FilledButton(onPressed: onFermer, child: const Texte('Commencer'))
               : OutlinedButton(
                   onPressed: onFermer,
-                  child: Text(paiement.rejete ? 'Réessayer' : 'Fermer'),
+                  child: Texte(paiement.rejete ? 'Réessayer' : 'Fermer'),
                 ),
         ),
       ],
@@ -848,9 +814,9 @@ class _LigneRecu extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(libelle, style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
+          Texte(libelle, style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
           Flexible(
-            child: Text(
+            child: Texte(
               valeur,
               textAlign: TextAlign.right,
               style: t.textTheme.bodyMedium,
@@ -875,7 +841,7 @@ class _Historique extends ConsumerWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Vos paiements', style: t.textTheme.titleLarge),
+            Texte('Vos paiements', style: t.textTheme.titleLarge),
             const SizedBox(height: 10),
             for (final p in liste.take(8))
               Padding(
@@ -896,9 +862,9 @@ class _Historique extends ConsumerWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('${p.periodeMois} mois', style: t.textTheme.bodyMedium),
+                          Texte('${p.periodeMois} mois', style: t.textTheme.bodyMedium),
                           if (p.creeLe != null)
-                            Text(
+                            Texte(
                               '${p.creeLe!.day.toString().padLeft(2, '0')}/'
                               '${p.creeLe!.month.toString().padLeft(2, '0')}/${p.creeLe!.year}',
                               style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
@@ -906,7 +872,7 @@ class _Historique extends ConsumerWidget {
                         ],
                       ),
                     ),
-                    Text(p.montantLisible, style: t.textTheme.bodyMedium),
+                    Texte(p.montantLisible, style: t.textTheme.bodyMedium),
                   ],
                 ),
               ),

@@ -7,6 +7,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// La révision espacée : une carte retournable, deux gestes.
 ///
@@ -49,7 +50,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
     final t = Theme.of(context);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Révision')),
+      appBar: AppBar(title: const Texte('Révision')),
       body: notions.when(
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(aReviserProvider)),
@@ -108,14 +109,14 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             if (n.axe != null)
-                              Text(n.axe!,
+                              Texte(n.axe!,
                                   style: t.textTheme.labelSmall
                                       ?.copyWith(color: Couleurs.orTexte)),
                             const SizedBox(height: 14),
-                            Text(n.terme, style: t.textTheme.headlineSmall),
+                            Texte(n.terme, style: t.textTheme.headlineSmall),
                             if (_retournee) ...[
                               const Divider(height: 34),
-                              Text(
+                              Texte(
                                 n.definition ??
                                     "Cette notion n'a pas encore de définition dans le "
                                         "glossaire. Consultez-la dans son ouvrage d'origine.",
@@ -123,7 +124,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                               ),
                             ] else ...[
                               const SizedBox(height: 20),
-                              Text(
+                              Texte(
                                 'Touchez pour voir la définition.',
                                 style: t.textTheme.bodySmall
                                     ?.copyWith(color: Couleurs.grisChaud),
@@ -144,7 +145,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                       child: OutlinedButton.icon(
                         onPressed: () => _repondre(n, false, liste.length),
                         icon: const Icon(Icons.replay_rounded, size: 18),
-                        label: const Text('À revoir'),
+                        label: const Texte('À revoir'),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: Couleurs.terracotta,
                           side: BorderSide(
@@ -157,7 +158,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                       child: FilledButton.icon(
                         onPressed: () => _repondre(n, true, liste.length),
                         icon: const Icon(Icons.check_rounded, size: 18),
-                        label: const Text('Je savais'),
+                        label: const Texte('Je savais'),
                       ),
                     ),
                   ],
@@ -195,9 +196,9 @@ class _Fin extends StatelessWidget {
               child: const Icon(Icons.done_all_rounded, size: 34, color: Couleurs.sauge),
             ),
             const SizedBox(height: 22),
-            Text('Séance terminée', style: t.textTheme.headlineSmall),
+            Texte('Séance terminée', style: t.textTheme.headlineSmall),
             const SizedBox(height: 10),
-            Text(
+            Texte(
               '$sues notion${sues > 1 ? 's' : ''} sur $total sue'
               '${sues > 1 ? 's' : ''} du premier coup. '
               'Les autres reviendront demain.',
@@ -207,7 +208,7 @@ class _Fin extends StatelessWidget {
             const SizedBox(height: 28),
             FilledButton(
               onPressed: () => context.pop(),
-              child: const Text('Revenir'),
+              child: const Texte('Revenir'),
             ),
           ],
         ),

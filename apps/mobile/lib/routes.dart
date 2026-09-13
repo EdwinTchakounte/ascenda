@@ -23,7 +23,10 @@ import 'ecrans/quiz_ouvrage.dart';
 import 'ecrans/recherche.dart';
 import 'ecrans/revision.dart';
 import 'ecrans/aujourdhui.dart';
+import 'ecrans/lecteur_pdf.dart';
+import 'ecrans/cercle.dart';
 import 'etat/session.dart';
+import 'theme/texte.dart';
 
 final _racine = GlobalKey<NavigatorState>();
 final _coque = GlobalKey<NavigatorState>();
@@ -112,6 +115,19 @@ final routeurProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(
         parentNavigatorKey: _racine,
+        path: '/cercle/ami/:id',
+        builder: (c, s) => EcranConversation(amiId: s.pathParameters['id']!, nom: s.uri.queryParameters['nom']),
+      ),
+      GoRoute(
+        parentNavigatorKey: _racine,
+        path: '/pdf/:doc',
+        builder: (c, s) => EcranLecteurPdf(
+          documentId: s.pathParameters['doc']!,
+          titre: s.uri.queryParameters['titre'],
+        ),
+      ),
+      GoRoute(
+        parentNavigatorKey: _racine,
         path: '/lecture/:doc/:chap',
         builder: (c, s) => EcranLecteur(
           documentId: s.pathParameters['doc']!,
@@ -155,6 +171,9 @@ final routeurProvider = Provider<GoRouter>((ref) {
             GoRoute(path: '/agent', builder: (c, s) => const EcranAgent()),
           ]),
           StatefulShellBranch(routes: [
+            GoRoute(path: '/cercle', builder: (c, s) => const EcranCercle()),
+          ]),
+          StatefulShellBranch(routes: [
             GoRoute(path: '/progression', builder: (c, s) => const EcranProgression()),
           ]),
           StatefulShellBranch(routes: [
@@ -172,12 +191,12 @@ final routeurProvider = Provider<GoRouter>((ref) {
             children: [
               const Icon(Icons.explore_off_outlined, size: 40),
               const SizedBox(height: 16),
-              Text('Cette page n\'existe pas.',
+              Texte('Cette page n\'existe pas.',
                   style: Theme.of(c).textTheme.titleLarge, textAlign: TextAlign.center),
               const SizedBox(height: 20),
               OutlinedButton(
                 onPressed: () => c.go('/aujourdhui'),
-                child: const Text("Revenir à l'accueil"),
+                child: const Texte("Revenir à l'accueil"),
               ),
             ],
           ),

@@ -7,6 +7,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// Le quiz : une question à la fois, puis la correction.
 ///
@@ -117,7 +118,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
           icon: const Icon(Icons.close_rounded),
           onPressed: () => context.pop(),
         ),
-        title: Text('${_index + 1} sur ${_questions.length}',
+        title: Texte('${_index + 1} sur ${_questions.length}',
             style: t.textTheme.labelLarge?.copyWith(color: Couleurs.grisChaud)),
       ),
       body: Column(
@@ -142,12 +143,12 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
                   if (_quiz?['chapitre'] != null)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12),
-                      child: Text(
+                      child: Texte(
                         '${_quiz!['ouvrage']} · ${_quiz!['chapitre']}',
                         style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte),
                       ),
                     ),
-                  Text(q.question, style: t.textTheme.headlineSmall?.copyWith(fontSize: 22)),
+                  Texte(q.question, style: t.textTheme.headlineSmall?.copyWith(fontSize: 22)),
                   const SizedBox(height: 26),
                   for (var i = 0; i < q.choix.length; i++) ...[
                     _Choix(
@@ -169,7 +170,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
                   Expanded(
                     child: OutlinedButton(
                       onPressed: () => setState(() => _index--),
-                      child: const Text('Précédent'),
+                      child: const Texte('Précédent'),
                     ),
                   ),
                 if (_index > 0) const SizedBox(width: 10),
@@ -185,7 +186,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
                         ? const SizedBox(
                             width: 20, height: 20,
                             child: CircularProgressIndicator(strokeWidth: 2.2))
-                        : Text(dernier ? 'Voir ma correction' : 'Suivant'),
+                        : Texte(dernier ? 'Voir ma correction' : 'Suivant'),
                   ),
                 ),
               ],
@@ -207,7 +208,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
           icon: const Icon(Icons.close_rounded),
           onPressed: () => context.pop(),
         ),
-        title: const Text('Correction'),
+        title: const Texte('Correction'),
       ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
@@ -228,7 +229,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
                     shape: BoxShape.rectangle,
                   ),
                   child: Center(
-                    child: Text('${c.justes}/${c.total}',
+                    child: Texte('${c.justes}/${c.total}',
                         style: t.textTheme.titleMedium?.copyWith(color: couleur)),
                   ),
                 ),
@@ -237,12 +238,12 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      Texte(
                         c.reussi ? "C'est acquis" : 'À retravailler',
                         style: t.textTheme.titleLarge?.copyWith(fontSize: 19),
                       ),
                       const SizedBox(height: 4),
-                      Text(
+                      Texte(
                         c.reussi
                             ? "Vous avez bien lu. Les notions ratées reviendront quand même en révision."
                             : "Les notions manquées reviennent en révision espacée dans quelques jours.",
@@ -263,7 +264,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
           const SizedBox(height: 8),
           FilledButton(
             onPressed: () => context.pop(),
-            child: const Text('Terminer'),
+            child: const Texte('Terminer'),
           ),
         ],
       ),
@@ -298,7 +299,7 @@ class _Choix extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Text(libelle, style: t.textTheme.bodyLarge?.copyWith(height: 1.5)),
+              child: Texte(libelle, style: t.textTheme.bodyLarge?.copyWith(height: 1.5)),
             ),
             if (choisi) ...[
               const SizedBox(width: 10),
@@ -340,14 +341,14 @@ class _CorrectionQuestion extends StatelessWidget {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(detail.question,
+                child: Texte(detail.question,
                     style: t.textTheme.titleMedium?.copyWith(fontSize: 15, height: 1.4)),
               ),
             ],
           ),
           if (detail.explication != null) ...[
             const SizedBox(height: 12),
-            Text(
+            Texte(
               detail.explication!,
               style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud, height: 1.6),
             ),
@@ -366,7 +367,7 @@ class _CorrectionQuestion extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  Texte(
                     '« ${detail.extrait!} »',
                     style: t.textTheme.bodySmall?.copyWith(
                       height: 1.6,
@@ -376,7 +377,7 @@ class _CorrectionQuestion extends StatelessWidget {
                   ),
                   if (detail.extraitPage != null || detail.page != null) ...[
                     const SizedBox(height: 8),
-                    Text(
+                    Texte(
                       'p. ${detail.extraitPage ?? detail.page}',
                       style: t.textTheme.labelSmall?.copyWith(color: Couleurs.orTexte),
                     ),

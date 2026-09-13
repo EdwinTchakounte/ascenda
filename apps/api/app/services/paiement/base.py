@@ -42,7 +42,7 @@ class FournisseurPaiement(ABC):
     code: str = ""
 
     @abstractmethod
-    async def initier(self, paiement: dict, *, telephone: str, reseau: str) -> ResultatInitiation:
+    async def initier(self, paiement: dict, *, telephone: str, reseau: str | None = None) -> ResultatInitiation:
         """Doit être idempotent : la même clé ne doit jamais débiter deux fois."""
 
     @abstractmethod

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
@@ -226,6 +227,52 @@ class ClientApi {
       debugPrint('Renouvellement impossible : $e');
       return false;
     }
+  }
+
+  /// Télécharge un fichier en flux, en signalant l'avancement.
+  ///
+  /// Pour les PDF : certains pèsent des dizaines de mégaoctets, et une barre
+  /// qui avance vaut mieux qu'un écran qui semble figé sur une connexion lente.
+  Future<Uint8List> telecharger(
+    String chemin, {
+    void Function(int recu, int? total)? progression,
+  }) async {
+    await _charger();
+    final requete = http.Request('GET', _uri(chemin));
+    if (_acces != null) requete.headers['Authorization'] = 'Bearer $_acces';
+    final http.StreamedResponse r;
+    try {
+      r = await _http.send(requete).timeout(const Duration(seconds: 30));
+    } on SocketException {
+      throw const HorsLigne();
+    } on http.ClientException {
+      throw const HorsLigne();
+    } catch (e) {
+      if (e.toString().contains('TimeoutException')) throw const HorsLigne();
+      rethrow;
+    }
+    if (r.statusCode >= 400) {
+      final corps = await r.stream.bytesToString();
+      dynamic json;
+      try {
+        json = jsonDecode(corps);
+      } catch (_) {}
+      throw _erreur(r.statusCode, json);
+    }
+    final morceaux = BytesBuilder(copy: false);
+    var recu = 0;
+    try {
+      await for (final m in r.stream) {
+        morceaux.add(m);
+        recu += m.length;
+        progression?.call(recu, r.contentLength);
+      }
+    } on http.ClientException {
+      throw const HorsLigne();
+    } on SocketException {
+      throw const HorsLigne();
+    }
+    return morceaux.takeBytes();
   }
 
   Future<dynamic> get(String chemin, {Map<String, dynamic>? params, bool auth = true}) =>

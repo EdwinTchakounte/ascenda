@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../api/client.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// La marque ASCENDA : le vrai logo, pas une approximation.
 ///
@@ -40,66 +41,77 @@ class EcranBienvenue extends StatelessWidget {
     return Scaffold(
       backgroundColor: Couleurs.nuitProfond,
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.fromLTRB(28, 40, 28, 32),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              // Le bloc complet porte déjà le nom et la baseline : les
-              // réécrire à côté ferait doublon.
-              Center(
-                child: Image.asset(
-                  'assets/marque/logo-complet.png',
-                  height: 132,
-                  filterQuality: FilterQuality.medium,
-                  semanticLabel: 'ASCENDA, Learn. Grow. Become.',
+        // Défilable : avec une grande taille de police réglée sur le
+        // téléphone, les boutons ne doivent jamais sortir de l'écran.
+        child: LayoutBuilder(
+          builder: (context, contraintes) => SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(28, 36, 28, 28),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minHeight: contraintes.maxHeight - 64),
+              child: IntrinsicHeight(
+                child: Column(
+                  children: [
+                    // Le bloc complet porte déjà le nom et la baseline.
+                    Image.asset(
+                      'assets/marque/logo-complet.png',
+                      height: 120,
+                      filterQuality: FilterQuality.medium,
+                      semanticLabel: 'ASCENDA, Learn. Grow. Become.',
+                    ),
+                    const Spacer(),
+                    const SizedBox(height: 28),
+                    if (contraintes.maxHeight >= 640) ...[
+                      const _Rayonnage(),
+                      const SizedBox(height: 28),
+                    ],
+                    Texte(
+                      "Lisez avec un plan à votre rythme, validez chaque chapitre par un quiz "
+                      "et posez vos questions à un agent qui cite le livre et la page.",
+                      textAlign: TextAlign.center,
+                      style: t.textTheme.bodyLarge?.copyWith(
+                        color: const Color(0xFFD5DAE6),
+                        height: 1.55,
+                      ),
+                    ),
+                    const Spacer(),
+                    const SizedBox(height: 32),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton(
+                        style: FilledButton.styleFrom(
+                          backgroundColor: Couleurs.or,
+                          foregroundColor: Couleurs.nuitProfond,
+                          minimumSize: const Size.fromHeight(52),
+                        ),
+                        onPressed: () => context.push('/connexion'),
+                        child: const Texte('Créer mon compte'),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton(
+                        // Le thème clair donne une teinte encre, invisible sur
+                        // ce fond de nuit : les couleurs sont posées ici.
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: const Color(0xFFF7F4EC),
+                          side: BorderSide(color: Couleurs.orClair.withValues(alpha: 0.6)),
+                          minimumSize: const Size.fromHeight(52),
+                        ),
+                        onPressed: () => context.go('/bibliotheque'),
+                        child: const Texte('Parcourir la bibliothèque'),
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    TextButton(
+                      style: TextButton.styleFrom(foregroundColor: Couleurs.orClair),
+                      onPressed: () => context.push('/connexion?mode=connexion'),
+                      child: const Texte("J'ai déjà un compte"),
+                    ),
+                  ],
                 ),
               ),
-              const Spacer(),
-              // Seulement s'il y a la place : sur un petit téléphone, le
-              // rayonnage pousserait les boutons hors de l'écran.
-              if (MediaQuery.sizeOf(context).height >= 720) ...[
-                const _Rayonnage(),
-                const SizedBox(height: 34),
-              ],
-              Text(
-                "Vous n'avez pas besoin\nde plus de livres.",
-                style: t.textTheme.headlineLarge?.copyWith(
-                  color: const Color(0xFFF7F4EC),
-                  fontSize: 30,
-                ),
-              ),
-              Text(
-                "Vous avez besoin\nd'un plan.",
-                style: t.textTheme.headlineLarge?.copyWith(
-                  color: Couleurs.orClair,
-                  fontSize: 30,
-                ),
-              ),
-              const SizedBox(height: 20),
-              Text(
-                "Dites où vous en êtes et combien de temps vous avez vraiment. "
-                "ASCENDA découpe la bibliothèque en séances que vous pouvez tenir, et "
-                "répond à vos questions en citant toujours le livre et la page.",
-                style: t.textTheme.bodyMedium?.copyWith(color: const Color(0xFFB9C1D6)),
-              ),
-              const SizedBox(height: 34),
-              SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: () => context.push('/connexion'),
-                  child: const Text('Créer mon compte'),
-                ),
-              ),
-              const SizedBox(height: 10),
-              SizedBox(
-                width: double.infinity,
-                child: TextButton(
-                  onPressed: () => context.go('/bibliotheque'),
-                  child: const Text('Parcourir la bibliothèque'),
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ),
@@ -210,7 +222,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
         // a ouvert en arrivant sur le diagnostic.
         if (messageCode != null) {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(messageCode), duration: const Duration(seconds: 6)),
+            SnackBar(content: Texte(messageCode), duration: const Duration(seconds: 6)),
           );
         }
         context.go('/diagnostic');
@@ -244,12 +256,12 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
               children: [
                 const Center(child: MarqueAscenda(taille: 56)),
                 const SizedBox(height: 26),
-                Text(
+                Texte(
                   _inscription ? 'Créer votre compte' : 'Content de vous revoir',
                   style: t.textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 8),
-                Text(
+                Texte(
                   _inscription
                       ? "Gratuit, sans carte bancaire. Vous choisirez votre axe juste après."
                       : "Reprenez votre chronogramme là où vous l'aviez laissé.",
@@ -339,7 +351,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                             size: 18, color: Couleurs.terracotta),
                         const SizedBox(width: 10),
                         Expanded(
-                          child: Text(
+                          child: Texte(
                             _erreur!,
                             style: t.textTheme.bodySmall
                                 ?.copyWith(color: Couleurs.terracotta, height: 1.45),
@@ -358,7 +370,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                           height: 20,
                           child: CircularProgressIndicator(strokeWidth: 2.2),
                         )
-                      : Text(_inscription ? 'Créer mon compte' : 'Me connecter'),
+                      : Texte(_inscription ? 'Créer mon compte' : 'Me connecter'),
                 ),
                 const SizedBox(height: 6),
                 TextButton(
@@ -368,7 +380,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                             _inscription = !_inscription;
                             _erreur = null;
                           }),
-                  child: Text(_inscription
+                  child: Texte(_inscription
                       ? "J'ai déjà un compte"
                       : "Je n'ai pas encore de compte"),
                 ),
@@ -382,7 +394,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                               '/mot-de-passe-oublie?email='
                               '${Uri.encodeComponent(_email.text.trim())}',
                             ),
-                    child: const Text("J'ai oublié mon mot de passe"),
+                    child: const Texte("J'ai oublié mon mot de passe"),
                   ),
               ],
             ),

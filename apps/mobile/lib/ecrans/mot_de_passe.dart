@@ -5,6 +5,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../api/client.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// Retrouver son mot de passe, en deux temps sur un seul écran.
 ///
@@ -112,7 +113,7 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Mot de passe oublié')),
+      appBar: AppBar(title: const Texte('Mot de passe oublié')),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
@@ -121,12 +122,12 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
+                Texte(
                   _codeDemande ? 'Votre code est parti' : 'Retrouver votre accès',
                   style: t.textTheme.headlineSmall,
                 ),
                 const SizedBox(height: 8),
-                Text(
+                Texte(
                   _codeDemande
                       ? "Si un compte existe à cette adresse, un code à six chiffres "
                           "vient d'y être envoyé. Il est valable trente minutes."
@@ -205,7 +206,7 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
                           height: 20,
                           child: CircularProgressIndicator(strokeWidth: 2.2),
                         )
-                      : Text(_codeDemande ? 'Changer mon mot de passe' : 'Envoyer le code'),
+                      : Texte(_codeDemande ? 'Changer mon mot de passe' : 'Envoyer le code'),
                 ),
 
                 if (_codeDemande) ...[
@@ -218,9 +219,9 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
                               _code.clear();
                               _erreur = null;
                             }),
-                    child: const Text("Corriger l'adresse"),
+                    child: const Texte("Corriger l'adresse"),
                   ),
-                  Text(
+                  Texte(
                     "Le code n'arrive pas ? Regardez dans les indésirables. "
                     "Un nouveau code ne peut être demandé qu'après un quart d'heure.",
                     textAlign: TextAlign.center,
@@ -280,7 +281,7 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
-            content: Text('Mot de passe changé. Reconnectez-vous.'),
+            content: Texte('Mot de passe changé. Reconnectez-vous.'),
           ),
         );
       }
@@ -299,7 +300,7 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     return Scaffold(
-      appBar: AppBar(title: const Text('Mot de passe')),
+      appBar: AppBar(title: const Texte('Mot de passe')),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
@@ -308,12 +309,12 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text(
+                Texte(
                   'Changer votre mot de passe',
                   style: t.textTheme.headlineSmall,
                 ),
                 const SizedBox(height: 8),
-                Text(
+                Texte(
                   "Toutes vos sessions seront fermées, sur cet appareil comme sur "
                   "les autres. C'est ce qu'on attend quand on change un mot de "
                   "passe qu'on croit compromis.",
@@ -361,7 +362,7 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
                           height: 20,
                           child: CircularProgressIndicator(strokeWidth: 2.2),
                         )
-                      : const Text('Changer et me déconnecter'),
+                      : const Texte('Changer et me déconnecter'),
                 ),
               ],
             ),
@@ -391,7 +392,7 @@ class _Alerte extends StatelessWidget {
           const Icon(Icons.error_outline_rounded, size: 18, color: Couleurs.terracotta),
           const SizedBox(width: 10),
           Expanded(
-            child: Text(
+            child: Texte(
               message,
               style: t.textTheme.bodySmall
                   ?.copyWith(color: Couleurs.terracotta, height: 1.45),

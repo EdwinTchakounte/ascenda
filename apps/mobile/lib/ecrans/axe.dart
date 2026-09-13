@@ -6,6 +6,7 @@ import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
 import '../widgets/invitation.dart';
+import '../theme/texte.dart';
 
 /// La fiche d'un axe : ce qu'il contient, dans l'ordre où il le contient.
 ///
@@ -31,7 +32,7 @@ class EcranAxe extends ConsumerWidget {
     final axe = ref.watch(axeProvider(slug));
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Axe de lecture')),
+      appBar: AppBar(title: const Texte('Axe de lecture')),
       body: SafeArea(
         bottom: false,
         child: axe.when(
@@ -59,10 +60,10 @@ class EcranAxe extends ConsumerWidget {
             return ListView(
               padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
               children: [
-                Text('${d['label']}', style: t.textTheme.headlineSmall),
+                Texte('${d['label']}', style: t.textTheme.headlineSmall),
                 if ('${d['description'] ?? ''}'.isNotEmpty) ...[
                   const SizedBox(height: 10),
-                  Text('${d['description']}',
+                  Texte('${d['description']}',
                       style: t.textTheme.bodyMedium
                           ?.copyWith(height: 1.65, color: Couleurs.grisChaud)),
                 ],
@@ -83,9 +84,9 @@ class EcranAxe extends ConsumerWidget {
                   raison: "Créez votre compte et ASCENDA découpe cet axe en séances "
                       "datées, à la mesure du temps dont vous disposez.",
                 ),
-                Text('Dans quel ordre', style: t.textTheme.titleLarge),
+                Texte('Dans quel ordre', style: t.textTheme.titleLarge),
                 const SizedBox(height: 4),
-                Text(
+                Texte(
                   "Du plus accessible au plus exigeant. C'est l'ordre que suit le "
                   "chronogramme, et il compte autant que la liste elle-même.",
                   style: t.textTheme.bodySmall
@@ -102,7 +103,7 @@ class EcranAxe extends ConsumerWidget {
                 OutlinedButton.icon(
                   onPressed: () => context.push('/notions?axe=$slug'),
                   icon: const Icon(Icons.local_offer_outlined, size: 18),
-                  label: const Text('Les notions de cet axe'),
+                  label: const Texte('Les notions de cet axe'),
                 ),
               ],
             );
@@ -124,9 +125,9 @@ class _Mesure extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(valeur,
+        Texte(valeur,
             style: t.textTheme.headlineSmall?.copyWith(color: Couleurs.orTexte)),
-        Text(libelle,
+        Texte(libelle,
             style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
       ],
     );
@@ -157,16 +158,16 @@ class _LigneOuvrage extends StatelessWidget {
         contentPadding: EdgeInsets.zero,
         leading: SizedBox(
           width: 26,
-          child: Text('$rang',
+          child: Texte('$rang',
               textAlign: TextAlign.center,
               style: t.textTheme.titleMedium?.copyWith(
                 color: Couleurs.grisChaud,
                 fontFeatures: const [FontFeature.tabularFigures()],
               )),
         ),
-        title: Text('${o['titre']}',
+        title: Texte('${o['titre']}',
             maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.bodyMedium),
-        subtitle: Text(
+        subtitle: Texte(
           [if (auteurs.isNotEmpty) auteurs, details].where((s) => s.isNotEmpty).join('\n'),
           maxLines: 2,
           overflow: TextOverflow.ellipsis,

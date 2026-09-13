@@ -193,8 +193,8 @@ v("usage", "GET", "/v1/compte/usage", 200, tok=TOK,
   verif=lambda r: any(c["utilise"] > 0 for c in r["compteurs"]) or "aucun compteur")
 
 print("=== PAIEMENT ===")
-p = v("payer", "POST", "/v1/paiements", 201,
-      {"periode_mois": 1, "telephone": "699000123", "reseau": "MTN"}, tok=TOK,
+p = v("payer sans choisir d'opérateur", "POST", "/v1/paiements", 201,
+      {"periode_mois": 1, "telephone": "699000123"}, tok=TOK,
       verif=lambda r: r["telephone"] == "237699000123" or r["telephone"])
 v("période invalide", "POST", "/v1/paiements", 422,
   {"periode_mois": 7, "telephone": "699000123", "reseau": "MTN"}, tok=TOK)

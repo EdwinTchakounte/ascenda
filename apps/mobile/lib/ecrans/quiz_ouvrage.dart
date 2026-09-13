@@ -7,6 +7,7 @@ import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
 import '../widgets/invitation.dart';
+import '../theme/texte.dart';
 
 /// Tous les quiz d'un ouvrage, hors séance.
 ///
@@ -39,7 +40,7 @@ class EcranQuizOuvrage extends ConsumerWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(titre ?? 'Quiz de l\'ouvrage')),
+      appBar: AppBar(title: Texte(titre ?? 'Quiz de l\'ouvrage')),
       body: SafeArea(
         bottom: false,
         child: quiz.when(
@@ -70,7 +71,7 @@ class EcranQuizOuvrage extends ConsumerWidget {
             return ListView(
               padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
               children: [
-                Text(
+                Texte(
                   '${d['total_questions']} questions sur ${lots.length} chapitres',
                   style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
                 ),
@@ -113,9 +114,9 @@ class _LigneQuiz extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 4),
       child: ListTile(
         contentPadding: EdgeInsets.zero,
-        title: Text('${lot['titre'] ?? 'Chapitre'}',
+        title: Texte('${lot['titre'] ?? 'Chapitre'}',
             maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.bodyMedium),
-        subtitle: Text(
+        subtitle: Texte(
           [if (pages.isNotEmpty) pages, '$n question${n > 1 ? 's' : ''}'].join('  ·  '),
           style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
         ),
@@ -150,7 +151,7 @@ class _Pastille extends StatelessWidget {
         color: teinte.withValues(alpha: 0.16),
         borderRadius: BorderRadius.zero,
       ),
-      child: Text(
+      child: Texte(
         '$pourcent %',
         style: Theme.of(context).textTheme.labelSmall?.copyWith(
               color: pourcent >= 80 ? const Color(0xFF476A4E) : Couleurs.orTexte,

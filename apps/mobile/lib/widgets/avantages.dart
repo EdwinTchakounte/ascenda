@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// La bonne nouvelle, sur l'écran d'accueil : quelqu'un a créé son compte
 /// avec votre code, et votre prochain abonnement coûte moins cher.
@@ -39,7 +40,7 @@ class BandeauRecompense extends ConsumerWidget {
           const Icon(Icons.volunteer_activism_outlined, color: Couleurs.orClair, size: 21),
           const SizedBox(width: 12),
           Expanded(
-            child: Text(texte,
+            child: Texte(texte,
                 style: t.textTheme.bodySmall?.copyWith(color: const Color(0xFFF4F1E8), height: 1.5)),
           ),
           TextButton(
@@ -48,7 +49,7 @@ class BandeauRecompense extends ConsumerWidget {
               ref.invalidate(codesProvider);
             },
             style: TextButton.styleFrom(foregroundColor: Couleurs.orClair),
-            child: const Text('Voir'),
+            child: const Texte('Voir'),
           ),
         ],
       ),

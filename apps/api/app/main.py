@@ -12,10 +12,12 @@ from app.core.config import settings
 from app.core.db import close_pool, fetch_one, open_pool
 from app.routers import (
     admin,
+    admin_cercle,
     admin_codes,
     agent,
     axes,
     bibliotheque,
+    cercle,
     chronogramme,
     codes,
     compte,
@@ -134,6 +136,16 @@ async def garde_maintenance(request: Request, call_next):
 
 @app.exception_handler(Exception)
 async def erreur_inattendue(request: Request, exc: Exception):
+    # Un identifiant mal formé dans l'URL (« /bibliotheque/abc ») arrive jusqu'à
+    # PostgreSQL, qui refuse de le lire comme un uuid. Ce n'est pas une panne :
+    # la ressource n'existe pas, et le dire évite une alerte pour rien.
+    import psycopg
+
+    if isinstance(exc, psycopg.errors.InvalidTextRepresentation) and "uuid" in str(exc):
+        return JSONResponse(
+            status_code=404,
+            content={"detail": {"code": "introuvable", "message": "Cette ressource n'existe pas."}},
+        )
     log.exception("Erreur non gérée sur %s %s", request.method, request.url.path)
     return JSONResponse(
         status_code=500,
@@ -206,5 +218,7 @@ for r in (
     paiement.router,
     compte.router,
     codes.router,
+    cercle.router,
+    admin_cercle.router,
 ):
     app.include_router(r, prefix="/v1")

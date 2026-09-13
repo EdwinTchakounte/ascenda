@@ -11,7 +11,7 @@ from fastapi import APIRouter, Query
 from app.core.auteurs import auteurs
 from app.core.db import execute, fetch_all, fetch_one
 from app.core.deps import CurrentUser, OptionalUser
-from app.core.errors import NotFound
+from app.core.errors import Forbidden, NotFound
 from app.services.droits import droits, repartir
 
 router = APIRouter(prefix="/lecteur", tags=["Lecteur"])
@@ -176,4 +176,32 @@ async def signaler_ouverture(document_id: str, user: CurrentUser):
         """insert into progress_event (user_id, document_id, type, payload)
            values (%s, %s, 'opened_doc', '{}'::jsonb)""",
         (user["id"], document_id),
+    )
+
+
+@router.get("/{document_id}/pdf", summary="Le PDF d'un ouvrage redistribuable")
+async def pdf(document_id: str, user: OptionalUser):
+    """Le fichier tel qu'il a été publié, pour le lire page par page.
+
+    Seulement pour les ouvrages dont le texte intégral peut être servi : le PDF
+    d'une œuvre protégée, c'est l'œuvre entière, et la règle de `droits.py`
+    vaut ici comme partout. Les autres ouvrages restent lisibles par extraits.
+    """
+    dr = await droits(document_id)
+    if not dr.texte_integral:
+        raise Forbidden(
+            dr.message() or "Le PDF de cet ouvrage ne peut pas être affiché ici."
+        )
+    d = await fetch_one(
+        """select storage_key, filename_original, mime, size_bytes,
+                  coalesce(title_clean, title_raw) as titre
+             from document where id = %s""",
+        (document_id,),
+    )
+    if not d or not d["storage_key"] or (d["mime"] or "application/pdf") != "application/pdf":
+        raise NotFound("Cet ouvrage n'a pas de PDF à afficher.")
+    from app.services import stockage
+
+    return stockage.servir(
+        d["storage_key"], nom=f"{d['titre']}.pdf", mime="application/pdf"
     )

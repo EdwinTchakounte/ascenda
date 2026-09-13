@@ -7,6 +7,7 @@ import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 class EcranProgression extends ConsumerWidget {
   const EcranProgression({super.key});
@@ -29,7 +30,7 @@ class EcranProgression extends ConsumerWidget {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
             children: [
-              Text('Progression', style: t.textTheme.headlineSmall),
+              Texte('Progression', style: t.textTheme.headlineSmall),
               const SizedBox(height: 20),
               progression.when(
                 loading: () => const SqueletteCarte(lignes: 4),
@@ -88,9 +89,9 @@ class EcranProgression extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              Text('Régularité', style: t.textTheme.titleLarge),
+              Texte('Régularité', style: t.textTheme.titleLarge),
               const SizedBox(height: 4),
-              Text(
+              Texte(
                 "Douze semaines. Ce sont les trous qui comptent, pas les pics.",
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
               ),
@@ -100,23 +101,23 @@ class EcranProgression extends ConsumerWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Text('Carte des notions', style: t.textTheme.titleLarge),
+                    child: Texte('Carte des notions', style: t.textTheme.titleLarge),
                   ),
                   // La carte dit où l'on en est ; le glossaire dit ce qu'il y a
                   // à savoir. L'un sans l'autre laisse le lecteur devant un
                   // constat sans issue.
                   TextButton(
                     onPressed: () => context.push('/notions'),
-                    child: const Text('Toutes les notions'),
+                    child: const Texte('Toutes les notions'),
                   ),
                 ],
               ),
               const SizedBox(height: 8),
               const _Maitrise(),
               const SizedBox(height: 30),
-              Text('Ce que vous avez fait', style: t.textTheme.titleLarge),
+              Texte('Ce que vous avez fait', style: t.textTheme.titleLarge),
               const SizedBox(height: 4),
-              Text(
+              Texte(
                 "Le détail dont sont tirés les chiffres ci-dessus.",
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
               ),
@@ -162,7 +163,7 @@ class _Journal extends ConsumerWidget {
       ),
       data: (lignes) {
         if (lignes.isEmpty) {
-          return Text(
+          return Texte(
             "Rien encore. Votre première séance ouvrira ce journal.",
             style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
           );
@@ -226,10 +227,10 @@ class _LigneJournal extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(recit?.$1 ?? type.replaceAll('_', ' '),
+                Texte(recit?.$1 ?? type.replaceAll('_', ' '),
                     style: t.textTheme.bodyMedium),
                 if ('${evenement['ouvrage'] ?? ''}'.isNotEmpty)
-                  Text('${evenement['ouvrage']}',
+                  Texte('${evenement['ouvrage']}',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
@@ -241,9 +242,9 @@ class _LigneJournal extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               if (precision.isNotEmpty)
-                Text(precision,
+                Texte(precision,
                     style: t.textTheme.labelSmall?.copyWith(color: Couleurs.orTexte)),
-              Text(quand,
+              Texte(quand,
                   style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
             ],
           ),
@@ -288,9 +289,9 @@ class _Anneau extends StatelessWidget {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text('${(progression.avancement * 100).round()}',
+                    Texte('${(progression.avancement * 100).round()}',
                         style: t.textTheme.headlineSmall?.copyWith(fontSize: 24)),
-                    Text('%', style: t.textTheme.labelSmall
+                    Texte('%', style: t.textTheme.labelSmall
                         ?.copyWith(color: Couleurs.grisChaud)),
                   ],
                 ),
@@ -302,24 +303,24 @@ class _Anneau extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                Texte(
                   '${progression.seancesFaites} séance'
                   '${progression.seancesFaites > 1 ? 's' : ''} sur ${progression.seancesTotal}',
                   style: t.textTheme.titleMedium,
                 ),
                 const SizedBox(height: 6),
                 if (progression.enRetard > 0)
-                  Text(
+                  Texte(
                     '${progression.enRetard} en retard',
                     style: t.textTheme.bodySmall?.copyWith(color: Couleurs.terracotta),
                   )
                 else if (progression.seancesTotal > 0)
-                  Text(
+                  Texte(
                     'Vous êtes à jour.',
                     style: t.textTheme.bodySmall?.copyWith(color: Couleurs.sauge),
                   )
                 else
-                  Text(
+                  Texte(
                     'Aucun chronogramme actif.',
                     style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                   ),
@@ -353,9 +354,9 @@ class _Tuile extends StatelessWidget {
         children: [
           Icon(icone, size: 19, color: Couleurs.orTexte),
           const SizedBox(height: 12),
-          Text(valeur, style: t.textTheme.titleLarge?.copyWith(fontSize: 21)),
+          Texte(valeur, style: t.textTheme.titleLarge?.copyWith(fontSize: 21)),
           const SizedBox(height: 2),
-          Text(libelle,
+          Texte(libelle,
               style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
         ],
       ),
@@ -415,9 +416,9 @@ class _Regularite extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text('il y a 12 semaines',
+                  Texte('il y a 12 semaines',
                       style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
-                  Text("aujourd'hui",
+                  Texte("aujourd'hui",
                       style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
                 ],
               ),
@@ -466,7 +467,7 @@ class _Maitrise extends ConsumerWidget {
                   color: (_couleurs[n.niveau] ?? Couleurs.grisChaud).withValues(alpha: 0.12),
                   borderRadius: BorderRadius.zero,
                 ),
-                child: Text(
+                child: Texte(
                   n.terme,
                   style: t.textTheme.labelMedium?.copyWith(
                     color: _couleurs[n.niveau] ?? Couleurs.grisChaud,

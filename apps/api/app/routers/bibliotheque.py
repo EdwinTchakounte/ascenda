@@ -231,6 +231,9 @@ async def fiche(document_id: str, user: OptionalUser):
         "resume_executif": derives.get("resume_executif"),
         "droits": {
             "lecture_integrale": dr.texte_integral,
+            # Le PDF d'origine s'ouvre dans l'application, sous la même règle.
+            "pdf": dr.texte_integral and bool(d["storage_key"])
+                   and (d["mime"] or "application/pdf") == "application/pdf",
             "statut": dr.statut,
             "plafond_extrait": dr.plafond_extrait,
             "message": dr.message(),

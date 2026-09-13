@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// Les quatre teintes que le serveur accepte pour un surlignage.
 ///
@@ -50,7 +51,7 @@ class PanneauAnnotations extends ConsumerWidget {
             ),
           ),
           const SizedBox(height: 12),
-          Text('Vos annotations', style: t.textTheme.titleLarge),
+          Texte('Vos annotations', style: t.textTheme.titleLarge),
           const TabBar(
             tabs: [Tab(text: 'Surlignages'), Tab(text: 'Notes')],
           ),
@@ -134,7 +135,7 @@ Future<String?> editerNote(BuildContext context, {String initial = ''}) {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(initial.isEmpty ? 'Votre note' : 'Corriger la note',
+          Texte(initial.isEmpty ? 'Votre note' : 'Corriger la note',
               style: Theme.of(c).textTheme.titleLarge),
           const SizedBox(height: 14),
           TextField(
@@ -146,7 +147,7 @@ Future<String?> editerNote(BuildContext context, {String initial = ''}) {
           const SizedBox(height: 14),
           FilledButton(
             onPressed: () => Navigator.pop(c, controleur.text.trim()),
-            child: const Text('Enregistrer'),
+            child: const Texte('Enregistrer'),
           ),
         ],
       ),
@@ -158,10 +159,10 @@ Future<bool> _confirmer(BuildContext context, String question) async {
   final oui = await showDialog<bool>(
     context: context,
     builder: (c) => AlertDialog(
-      content: Text(question),
+      content: Texte(question),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Annuler')),
-        FilledButton(onPressed: () => Navigator.pop(c, true), child: const Text('Supprimer')),
+        TextButton(onPressed: () => Navigator.pop(c, false), child: const Texte('Annuler')),
+        FilledButton(onPressed: () => Navigator.pop(c, true), child: const Texte('Supprimer')),
       ],
     ),
   );
@@ -170,7 +171,7 @@ Future<bool> _confirmer(BuildContext context, String question) async {
 
 void _dire(BuildContext context, String message) {
   if (!context.mounted) return;
-  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(message)));
+  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Texte(message)));
 }
 
 class _Liste extends StatelessWidget {
@@ -190,13 +191,13 @@ class _Liste extends StatelessWidget {
       )),
       error: (e, _) => Padding(
         padding: const EdgeInsets.all(24),
-        child: Text("Impossible de charger cette liste.",
+        child: Texte("Impossible de charger cette liste.",
             style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud)),
       ),
       data: (liste) => liste.isEmpty
           ? Padding(
               padding: const EdgeInsets.fromLTRB(32, 40, 32, 32),
-              child: Text(
+              child: Texte(
                 vide,
                 textAlign: TextAlign.center,
                 style: t.textTheme.bodyMedium
@@ -238,11 +239,11 @@ class _CarteSurlignage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${surlignage['citation'] ?? ''}',
+                Texte('${surlignage['citation'] ?? ''}',
                     style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
                 if (page != null) ...[
                   const SizedBox(height: 6),
-                  Text('Page $page',
+                  Texte('Page $page',
                       style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
                 ],
               ],
@@ -288,13 +289,13 @@ class _CarteNote extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(right: 8),
-            child: Text('${note['texte'] ?? note['body'] ?? ''}',
+            child: Texte('${note['texte'] ?? note['body'] ?? ''}',
                 style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
           ),
           Row(
             children: [
               if (page != null)
-                Text('Page $page',
+                Texte('Page $page',
                     style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
               const Spacer(),
               IconButton(

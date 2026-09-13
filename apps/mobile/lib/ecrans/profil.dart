@@ -12,6 +12,7 @@ import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
 import 'auth.dart';
+import '../theme/texte.dart';
 
 class EcranProfil extends ConsumerWidget {
   const EcranProfil({super.key});
@@ -26,7 +27,7 @@ class EcranProfil extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profil'),
+        title: const Texte('Profil'),
         actions: [
           // La déconnexion vit dans la barre du haut, pas au fond d'une page
           // qu'il faut faire défiler. C'est le geste qu'on cherche quand on
@@ -53,7 +54,7 @@ class EcranProfil extends ConsumerWidget {
                     shape: BoxShape.rectangle,
                   ),
                   child: Center(
-                    child: Text(
+                    child: Texte(
                       (u?.nom?.isNotEmpty == true
                               ? u!.nom![0]
                               : (u?.email?[0] ?? 'A'))
@@ -67,9 +68,9 @@ class EcranProfil extends ConsumerWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(u?.nom ?? 'Votre compte', style: t.textTheme.titleLarge),
+                      Texte(u?.nom ?? 'Votre compte', style: t.textTheme.titleLarge),
                       if (u?.email != null)
-                        Text(u!.email!,
+                        Texte(u!.email!,
                             style: t.textTheme.bodySmall
                                 ?.copyWith(color: Couleurs.grisChaud)),
                     ],
@@ -82,9 +83,9 @@ class EcranProfil extends ConsumerWidget {
             const SizedBox(height: 12),
             const _EntreeCodes(),
             const SizedBox(height: 26),
-            Text('Vos compteurs', style: t.textTheme.titleLarge),
+            Texte('Vos compteurs', style: t.textTheme.titleLarge),
             const SizedBox(height: 4),
-            Text(
+            Texte(
               "Ce qui coûte à ASCENDA, c'est d'indexer des documents et de faire "
               "réfléchir l'agent. Le reste est libre.",
               style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
@@ -123,7 +124,7 @@ class EcranProfil extends ConsumerWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Votre profil de lecture', style: t.textTheme.titleMedium),
+                      Texte('Votre profil de lecture', style: t.textTheme.titleMedium),
                       const SizedBox(height: 12),
                       _Ligne(cle: 'Niveau', valeur: _niveau(profil['niveau'])),
                       _Ligne(cle: 'Objectif', valeur: _objectif(profil['objectif'])),
@@ -136,7 +137,7 @@ class EcranProfil extends ConsumerWidget {
                       const SizedBox(height: 8),
                       TextButton(
                         onPressed: () => context.push('/diagnostic'),
-                        child: const Text('Refaire le diagnostic'),
+                        child: const Texte('Refaire le diagnostic'),
                       ),
                     ],
                   ),
@@ -150,8 +151,8 @@ class EcranProfil extends ConsumerWidget {
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: const Icon(Icons.gavel_outlined, size: 21),
-              title: const Text('Droits et citations'),
-              subtitle: Text(
+              title: const Texte('Droits et citations'),
+              subtitle: Texte(
                 'Pourquoi certains ouvrages ne sont pas lisibles ici',
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
               ),
@@ -160,8 +161,8 @@ class EcranProfil extends ConsumerWidget {
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: const Icon(Icons.key_outlined, size: 21),
-              title: const Text('Changer mon mot de passe'),
-              subtitle: Text(
+              title: const Texte('Changer mon mot de passe'),
+              subtitle: Texte(
                 'Ferme toutes vos sessions ouvertes.',
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
               ),
@@ -170,8 +171,8 @@ class EcranProfil extends ConsumerWidget {
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: const Icon(Icons.devices_other_outlined, size: 21),
-              title: const Text('Fermer toutes mes sessions'),
-              subtitle: Text(
+              title: const Texte('Fermer toutes mes sessions'),
+              subtitle: Texte(
                 'Sur un appareil perdu ou prêté, referme tout de suite.',
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
               ),
@@ -180,7 +181,7 @@ class EcranProfil extends ConsumerWidget {
             ListTile(
               contentPadding: EdgeInsets.zero,
               leading: const Icon(Icons.logout_rounded, size: 21, color: Couleurs.terracotta),
-              title: const Text('Se déconnecter',
+              title: const Texte('Se déconnecter',
                   style: TextStyle(color: Couleurs.terracotta)),
               onTap: () => _confirmerDeconnexion(context, ref),
             ),
@@ -190,7 +191,7 @@ class EcranProfil extends ConsumerWidget {
                 children: [
                   const MarqueAscenda(taille: 34),
                   const SizedBox(height: 8),
-                  Text('ASCENDA · Learn. Grow. Become.',
+                  Texte('ASCENDA · Learn. Grow. Become.',
                       style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
                 ],
               ),
@@ -230,14 +231,14 @@ class EcranProfil extends ConsumerWidget {
     final oui = await showDialog<bool>(
       context: context,
       builder: (c) => AlertDialog(
-        title: const Text('Fermer toutes les sessions ?'),
-        content: const Text(
+        title: const Texte('Fermer toutes les sessions ?'),
+        content: const Texte(
           "Tous vos appareils devront se reconnecter, y compris celui-ci. "
           "Votre progression et vos notes sont conservées.",
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Annuler')),
-          FilledButton(onPressed: () => Navigator.pop(c, true), child: const Text('Fermer')),
+          TextButton(onPressed: () => Navigator.pop(c, false), child: const Texte('Annuler')),
+          FilledButton(onPressed: () => Navigator.pop(c, true), child: const Texte('Fermer')),
         ],
       ),
     );
@@ -247,13 +248,13 @@ class EcranProfil extends ConsumerWidget {
       await ref.read(sessionProvider.notifier).deconnexion();
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Toutes vos sessions sont fermées.')),
+          const SnackBar(content: Texte('Toutes vos sessions sont fermées.')),
         );
       }
     } catch (_) {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Les sessions n'ont pas pu être fermées.")),
+          const SnackBar(content: Texte("Les sessions n'ont pas pu être fermées.")),
         );
       }
     }
@@ -263,17 +264,17 @@ class EcranProfil extends ConsumerWidget {
     final oui = await showDialog<bool>(
       context: context,
       builder: (c) => AlertDialog(
-        title: const Text('Se déconnecter'),
-        content: const Text(
+        title: const Texte('Se déconnecter'),
+        content: const Texte(
           "Votre chronogramme, vos notes et votre progression sont conservés. "
           "Vous les retrouverez à la prochaine connexion.",
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Annuler')),
+          TextButton(onPressed: () => Navigator.pop(c, false), child: const Texte('Annuler')),
           FilledButton(
             onPressed: () => Navigator.pop(c, true),
             style: FilledButton.styleFrom(backgroundColor: Couleurs.terracotta),
-            child: const Text('Se déconnecter'),
+            child: const Texte('Se déconnecter'),
           ),
         ],
       ),
@@ -293,9 +294,9 @@ class EcranProfil extends ConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Droits et citations', style: Theme.of(c).textTheme.titleLarge),
+            Texte('Droits et citations', style: Theme.of(c).textTheme.titleLarge),
             const SizedBox(height: 14),
-            Text(
+            Texte(
               "Sur les 78 ouvrages du corpus, 7 sont librement redistribuables : "
               "domaine public, rapports institutionnels, documents sous licence "
               "ouverte. Ceux-là, vous pouvez les lire intégralement ici.\n\n"
@@ -353,7 +354,7 @@ class _CarteFormule extends ConsumerWidget {
                 size: 22,
               ),
               const SizedBox(width: 10),
-              Text(
+              Texte(
                 '${formule?['nom'] ?? (premium ? 'Ascension' : 'Découverte')}',
                 style: t.textTheme.titleLarge?.copyWith(
                   fontSize: 18,
@@ -363,7 +364,7 @@ class _CarteFormule extends ConsumerWidget {
             ],
           ),
           const SizedBox(height: 10),
-          Text(
+          Texte(
             '${formule?['resume'] ?? (premium
                 ? "Vos documents, axes illimités, chronogramme adaptatif, "
                     "synthèses et quiz à la demande."
@@ -381,7 +382,7 @@ class _CarteFormule extends ConsumerWidget {
                 const Icon(Icons.redeem_outlined, size: 17, color: Couleurs.orTexte),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: Texte(
                     _accesOffert(acces),
                     style: t.textTheme.bodySmall?.copyWith(color: Couleurs.orTexte),
                   ),
@@ -402,7 +403,7 @@ class _CarteFormule extends ConsumerWidget {
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: Text(
+                  child: Texte(
                     abonnement.joursRestants == 0
                         ? "Votre accès se referme aujourd'hui."
                         : 'Il vous reste ${abonnement.joursRestants} jour'
@@ -427,11 +428,11 @@ class _CarteFormule extends ConsumerWidget {
                       foregroundColor: Couleurs.orClair,
                       side: const BorderSide(color: Color(0x40E8C070)),
                     ),
-                    child: const Text('Prolonger mon accès'),
+                    child: const Texte('Prolonger mon accès'),
                   )
                 : FilledButton(
                     onPressed: () => context.push('/abonnement'),
-                    child: const Text('Passer à Ascension'),
+                    child: const Texte('Passer à Ascension'),
                   ),
           ),
         ],
@@ -477,8 +478,8 @@ class _EntreeCodes extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Codes et avantages', style: t.textTheme.titleSmall),
-                    Text(
+                    Texte('Codes et avantages', style: t.textTheme.titleSmall),
+                    Texte(
                       'Activer un code, partager le vôtre, vos réductions',
                       style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                     ),
@@ -490,7 +491,7 @@ class _EntreeCodes extends ConsumerWidget {
                   key: const Key('pastille-codes'),
                   padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                   color: Couleurs.terracotta,
-                  child: Text('$nouveaux',
+                  child: Texte('$nouveaux',
                       style: const TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w700)),
                 ),
               const Icon(Icons.chevron_right_rounded, color: Couleurs.grisChaud),
@@ -531,10 +532,10 @@ class _Compteur extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 14),
         child: Row(
           children: [
-            Expanded(child: Text(libelle, style: t.textTheme.bodyMedium)),
+            Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium)),
             const Icon(Icons.lock_outline_rounded, size: 15, color: Couleurs.orTexte),
             const SizedBox(width: 5),
-            Text('avec Ascension',
+            Texte('avec Ascension',
                 style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte, fontWeight: FontWeight.w600)),
           ],
         ),
@@ -551,7 +552,7 @@ class _Compteur extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Expanded(child: Text(libelle, style: t.textTheme.bodyMedium)),
+              Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium)),
               Text.rich(
                 TextSpan(children: [
                   TextSpan(
@@ -574,7 +575,7 @@ class _Compteur extends StatelessWidget {
             color: Couleurs.or,
           ),
           const SizedBox(height: 5),
-          Text(
+          Texte(
             atteint ? 'limite atteinte $periodeTexte' : periodeTexte,
             style: t.textTheme.labelSmall?.copyWith(
               color: atteint ? Couleurs.terracotta : Couleurs.grisChaud,
@@ -599,10 +600,10 @@ class _Ligne extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: Text(cle,
+            child: Texte(cle,
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
           ),
-          Text(valeur, style: t.textTheme.bodyMedium),
+          Texte(valeur, style: t.textTheme.bodyMedium),
         ],
       ),
     );
@@ -641,9 +642,9 @@ class _BibliothequeHorsLigne extends ConsumerWidget {
                   const Icon(Icons.offline_pin_rounded, size: 19, color: Couleurs.sauge),
                   const SizedBox(width: 10),
                   Expanded(
-                    child: Text('Disponible hors ligne', style: t.textTheme.titleMedium),
+                    child: Texte('Disponible hors ligne', style: t.textTheme.titleMedium),
                   ),
-                  Text(poids,
+                  Texte(poids,
                       style: t.textTheme.labelMedium?.copyWith(color: Couleurs.grisChaud)),
                 ],
               ),
@@ -657,10 +658,10 @@ class _BibliothequeHorsLigne extends ConsumerWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(p.titre,
+                            Texte(p.titre,
                                 style: t.textTheme.bodyMedium,
                                 maxLines: 2, overflow: TextOverflow.ellipsis),
-                            Text(
+                            Texte(
                               '${p.compteurs['questions'] ?? 0} questions · ${p.poids}',
                               style: t.textTheme.labelSmall
                                   ?.copyWith(color: Couleurs.grisChaud),

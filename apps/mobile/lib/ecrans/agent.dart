@@ -8,6 +8,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// La conversation avec l'agent.
 ///
@@ -76,7 +77,7 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
     } catch (_) {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text("Cette conversation n'a pas pu être rouverte.")),
+        const SnackBar(content: Texte("Cette conversation n'a pas pu être rouverte.")),
       );
     } finally {
       if (mounted) setState(() => _attente = false);
@@ -175,8 +176,8 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("L'agent", style: t.textTheme.titleLarge),
-                    Text(
+                    Texte("L'agent", style: t.textTheme.titleLarge),
+                    Texte(
                       _restant == null
                           ? 'Il répond en citant le livre et la page.'
                           : '$_restant question${_restant! > 1 ? 's' : ''} restante'
@@ -262,9 +263,9 @@ class _Accueil extends StatelessWidget {
       children: [
         const Icon(Icons.auto_stories_outlined, size: 34, color: Couleurs.orTexte),
         const SizedBox(height: 16),
-        Text('Demandez ce que vous voulez', style: t.textTheme.titleLarge),
+        Texte('Demandez ce que vous voulez', style: t.textTheme.titleLarge),
         const SizedBox(height: 8),
-        Text(
+        Texte(
           "L'agent ne répond que sur les ouvrages du corpus, et il indique "
           "toujours d'où vient sa réponse. S'il ne trouve rien, il le dit.",
           style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
@@ -285,7 +286,7 @@ class _Accueil extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: Text(s, style: t.textTheme.bodyMedium)),
+                    Expanded(child: Texte(s, style: t.textTheme.bodyMedium)),
                     const Icon(Icons.north_east_rounded, size: 16, color: Couleurs.grisChaud),
                   ],
                 ),
@@ -346,7 +347,7 @@ class _Bulle extends StatelessWidget {
           if (message.degrade && !utilisateur)
             Padding(
               padding: const EdgeInsets.only(top: 8),
-              child: Text(
+              child: Texte(
                 'Réponse limitée : la rédaction automatique est indisponible.',
                 style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud),
               ),
@@ -389,12 +390,12 @@ class _CarteCitation extends StatelessWidget {
                       color: Couleurs.or.withValues(alpha: 0.2),
                       borderRadius: BorderRadius.zero,
                     ),
-                    child: Text('${citation.marque}',
+                    child: Texte('${citation.marque}',
                         style: t.textTheme.labelSmall
                             ?.copyWith(color: Couleurs.orTexte, fontWeight: FontWeight.w700)),
                   ),
                 Expanded(
-                  child: Text(
+                  child: Texte(
                     citation.ouvrage,
                     style: t.textTheme.labelMedium?.copyWith(fontWeight: FontWeight.w600),
                     maxLines: 1,
@@ -405,7 +406,7 @@ class _CarteCitation extends StatelessWidget {
             ),
             const SizedBox(height: 6),
             Expanded(
-              child: Text(
+              child: Texte(
                 citation.extrait,
                 style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud, height: 1.4),
                 maxLines: 2,
@@ -413,7 +414,7 @@ class _CarteCitation extends StatelessWidget {
               ),
             ),
             if (citation.page != null)
-              Text('p. ${citation.page}',
+              Texte('p. ${citation.page}',
                   style: t.textTheme.labelSmall?.copyWith(color: Couleurs.orTexte)),
           ],
         ),
@@ -466,7 +467,7 @@ class _EcranAgentState extends ConsumerState<EcranAgent> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Agent'),
+        title: const Texte('Agent'),
         actions: [
           if (_conversation != null)
             IconButton(
@@ -526,7 +527,7 @@ class _Historique extends ConsumerWidget {
     return Column(
       children: [
         const SizedBox(height: 14),
-        Text('Vos conversations', style: t.textTheme.titleLarge),
+        Texte('Vos conversations', style: t.textTheme.titleLarge),
         const SizedBox(height: 8),
         Expanded(
           child: conversations.when(
@@ -556,13 +557,13 @@ class _Historique extends ConsumerWidget {
                       return ListTile(
                         contentPadding: EdgeInsets.zero,
                         leading: const Icon(Icons.chat_bubble_outline_rounded, size: 20),
-                        title: Text('${c['titre'] ?? 'Sans titre'}',
+                        title: Texte('${c['titre'] ?? 'Sans titre'}',
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: t.textTheme.bodyMedium),
                         subtitle: n == null
                             ? null
-                            : Text('$n message${(n as int) > 1 ? 's' : ''}',
+                            : Texte('$n message${(n as int) > 1 ? 's' : ''}',
                                 style: t.textTheme.bodySmall
                                     ?.copyWith(color: Couleurs.grisChaud)),
                         trailing: IconButton(
@@ -585,10 +586,10 @@ class _Historique extends ConsumerWidget {
     final oui = await showDialog<bool>(
       context: context,
       builder: (c) => AlertDialog(
-        content: const Text('Supprimer cette conversation ?'),
+        content: const Texte('Supprimer cette conversation ?'),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Annuler')),
-          FilledButton(onPressed: () => Navigator.pop(c, true), child: const Text('Supprimer')),
+          TextButton(onPressed: () => Navigator.pop(c, false), child: const Texte('Annuler')),
+          FilledButton(onPressed: () => Navigator.pop(c, true), child: const Texte('Supprimer')),
         ],
       ),
     );
@@ -599,7 +600,7 @@ class _Historique extends ConsumerWidget {
     } catch (_) {
       if (context.mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("La conversation n'a pas pu être supprimée.")),
+          const SnackBar(content: Texte("La conversation n'a pas pu être supprimée.")),
         );
       }
     }

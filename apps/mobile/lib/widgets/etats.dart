@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../api/client.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// Les états qui ne sont pas le cas idéal. Ils sont dessinés, pas subis :
 /// beaucoup de nos lecteurs sont sur des connexions intermittentes, et une
@@ -47,16 +48,16 @@ class EtatMessage extends StatelessWidget {
                 child: Icon(icone, size: 30, color: couleur),
               ),
             const SizedBox(height: 20),
-            Text(titre, style: t.textTheme.titleLarge, textAlign: TextAlign.center),
+            Texte(titre, style: t.textTheme.titleLarge, textAlign: TextAlign.center),
             const SizedBox(height: 10),
-            Text(
+            Texte(
               texte,
               style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
               textAlign: TextAlign.center,
             ),
             if (action != null) ...[
               const SizedBox(height: 24),
-              OutlinedButton(onPressed: action, child: Text(libelleAction ?? 'Réessayer')),
+              OutlinedButton(onPressed: action, child: Texte(libelleAction ?? 'Réessayer')),
             ],
           ],
         ),
@@ -202,7 +203,7 @@ class BandeauDroits extends StatelessWidget {
           const Icon(Icons.menu_book_outlined, size: 18, color: Couleurs.orTexte),
           const SizedBox(width: 11),
           Expanded(
-            child: Text(
+            child: Texte(
               message,
               style: Theme.of(context)
                   .textTheme

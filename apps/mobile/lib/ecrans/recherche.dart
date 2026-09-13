@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// La recherche dans le texte des 78 ouvrages.
 ///
@@ -122,7 +123,7 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
                     padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
                     children: [
                       if (ouvrages.isNotEmpty) ...[
-                        Text('Ouvrages', style: t.textTheme.titleSmall),
+                        Texte('Ouvrages', style: t.textTheme.titleSmall),
                         const SizedBox(height: 8),
                         for (final o in ouvrages.take(4))
                           _LigneOuvrage(ouvrage: o),
@@ -131,7 +132,7 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
                       if (liste.isNotEmpty) ...[
                         Row(
                           children: [
-                            Text('Dans le texte', style: t.textTheme.titleSmall),
+                            Texte('Dans le texte', style: t.textTheme.titleSmall),
                             const Spacer(),
                             _Mode(mode: '${d['mode'] ?? ''}'),
                           ],
@@ -166,7 +167,7 @@ class _Mode extends StatelessWidget {
       _ => '',
     };
     if (libelle.isEmpty) return const SizedBox.shrink();
-    return Text(
+    return Texte(
       libelle,
       style: Theme.of(context)
           .textTheme
@@ -187,11 +188,11 @@ class _LigneOuvrage extends StatelessWidget {
     return ListTile(
       contentPadding: EdgeInsets.zero,
       leading: const Icon(Icons.menu_book_outlined, size: 21, color: Couleurs.orTexte),
-      title: Text('${ouvrage['titre']}',
+      title: Texte('${ouvrage['titre']}',
           maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.bodyMedium),
       subtitle: auteurs.isEmpty
           ? null
-          : Text(auteurs,
+          : Texte(auteurs,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
@@ -234,7 +235,7 @@ class _CarteResultat extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${r['ouvrage'] ?? ''}',
+                Texte('${r['ouvrage'] ?? ''}',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: t.textTheme.titleSmall),
@@ -243,7 +244,7 @@ class _CarteResultat extends StatelessWidget {
                   children: [
                     if ('${r['chapitre'] ?? ''}'.isNotEmpty)
                       Flexible(
-                        child: Text('${r['chapitre']}',
+                        child: Texte('${r['chapitre']}',
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: t.textTheme.labelSmall
@@ -251,14 +252,14 @@ class _CarteResultat extends StatelessWidget {
                       ),
                     if (page != null) ...[
                       const SizedBox(width: 8),
-                      Text('p. $page',
+                      Texte('p. $page',
                           style: t.textTheme.labelSmall
                               ?.copyWith(color: Couleurs.orTexte)),
                     ],
                   ],
                 ),
                 const SizedBox(height: 10),
-                Text(
+                Texte(
                   '${r['extrait'] ?? ''}',
                   maxLines: 5,
                   overflow: TextOverflow.ellipsis,

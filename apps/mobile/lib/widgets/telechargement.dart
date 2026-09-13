@@ -6,6 +6,7 @@ import '../api/client.dart';
 import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// Le bloc de téléchargement d'un ouvrage.
 ///
@@ -43,18 +44,18 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       if (!mounted) return;
       final c = pack['compteurs'] as Map;
       messager.showSnackBar(SnackBar(
-        content: Text(
+        content: Texte(
           "Disponible hors ligne : ${c['chapitres']} chapitres, "
           "${c['citations']} citations, ${c['questions']} questions.",
         ),
       ));
     } on HorsLigne {
       messager.showSnackBar(const SnackBar(
-        content: Text("Pas de connexion. Le téléchargement demande du réseau une fois."),
+        content: Texte("Pas de connexion. Le téléchargement demande du réseau une fois."),
       ));
     } catch (_) {
       messager.showSnackBar(const SnackBar(
-        content: Text("Le téléchargement n'a pas abouti. Réessayez."),
+        content: Texte("Le téléchargement n'a pas abouti. Réessayez."),
       ));
     } finally {
       if (mounted) setState(() => _enCours = false);
@@ -67,7 +68,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
     ref.invalidate(packLocalProvider(widget.documentId));
     if (!mounted) return;
     ScaffoldMessenger.of(context)
-        .showSnackBar(const SnackBar(content: Text("Pack retiré de l'appareil.")));
+        .showSnackBar(const SnackBar(content: Texte("Pack retiré de l'appareil.")));
   }
 
   Future<void> _ouvrirPdf() async {
@@ -80,12 +81,12 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       // impression sont déjà là, il n'y a rien à réécrire.
       if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
         messager.showSnackBar(const SnackBar(
-          content: Text("Aucune application ne peut ouvrir le PDF."),
+          content: Texte("Aucune application ne peut ouvrir le PDF."),
         ));
       }
     } catch (_) {
       messager.showSnackBar(const SnackBar(
-        content: Text("L'export PDF n'a pas pu être ouvert."),
+        content: Texte("L'export PDF n'a pas pu être ouvert."),
       ));
     } finally {
       if (mounted) setState(() => _pdfEnCours = false);
@@ -124,7 +125,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
               ),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(
+                child: Texte(
                   local != null ? 'Disponible hors ligne' : 'Emporter cet ouvrage',
                   style: t.textTheme.titleMedium?.copyWith(fontSize: 15),
                 ),
@@ -132,7 +133,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
             ],
           ),
           const SizedBox(height: 8),
-          Text(
+          Texte(
             local != null
                 ? "${local.compteurs['chapitres'] ?? 0} chapitres, "
                     "${local.compteurs['citations'] ?? 0} citations, "
@@ -149,7 +150,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                     ? OutlinedButton.icon(
                         onPressed: _supprimer,
                         icon: const Icon(Icons.delete_outline_rounded, size: 18),
-                        label: const Text('Retirer'),
+                        label: const Texte('Retirer'),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: Couleurs.grisChaud,
                           side: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
@@ -163,7 +164,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                                 width: 16, height: 16,
                                 child: CircularProgressIndicator(strokeWidth: 2))
                             : const Icon(Icons.download_rounded, size: 18),
-                        label: Text(_enCours ? 'En cours' : 'Emporter'),
+                        label: Texte(_enCours ? 'En cours' : 'Emporter'),
                         style: FilledButton.styleFrom(minimumSize: const Size(0, 46)),
                       ),
               ),
@@ -176,7 +177,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                           width: 16, height: 16,
                           child: CircularProgressIndicator(strokeWidth: 2))
                       : const Icon(Icons.picture_as_pdf_outlined, size: 18),
-                  label: const Text('PDF'),
+                  label: const Texte('PDF'),
                   style: OutlinedButton.styleFrom(minimumSize: const Size(0, 46)),
                 ),
               ),

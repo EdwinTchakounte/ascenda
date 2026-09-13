@@ -11,6 +11,7 @@ import '../widgets/avantages.dart';
 import '../widgets/cartes.dart';
 import '../widgets/exploitation.dart';
 import '../widgets/etats.dart';
+import '../theme/texte.dart';
 
 /// L'écran d'accueil : ce qu'il y a à faire maintenant, et rien d'autre.
 class EcranAujourdhui extends ConsumerWidget {
@@ -34,11 +35,11 @@ class EcranAujourdhui extends ConsumerWidget {
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  Texte(
                     _salutation(prenom),
                     style: t.textTheme.titleLarge?.copyWith(fontSize: 19),
                   ),
-                  Text(
+                  Texte(
                     toBeginningOfSentenceCase(
                       DateFormat('EEEE d MMMM', 'fr_FR').format(DateTime.now()),
                     ),
@@ -74,7 +75,7 @@ class EcranAujourdhui extends ConsumerWidget {
                   else
                     _AucuneSeance(),
                   const SizedBox(height: 28),
-                  Text('Votre semaine', style: t.textTheme.titleMedium),
+                  Texte('Votre semaine', style: t.textTheme.titleMedium),
                   const SizedBox(height: 14),
                   PastillesSemaine(jours: a.semaine),
                   if (a.notionsAReviser > 0) ...[
@@ -131,9 +132,9 @@ class _AucuneSeance extends ConsumerWidget {
         children: [
           const Icon(Icons.explore_outlined, size: 30, color: Couleurs.orTexte),
           const SizedBox(height: 14),
-          Text('Aucune séance prévue', style: t.textTheme.titleLarge),
+          Texte('Aucune séance prévue', style: t.textTheme.titleLarge),
           const SizedBox(height: 8),
-          Text(
+          Texte(
             "Créez un chronogramme et ASCENDA vous proposera chaque jour une "
             "séance de lecture à votre mesure.",
             style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
@@ -143,7 +144,7 @@ class _AucuneSeance extends ConsumerWidget {
             width: double.infinity,
             child: FilledButton(
               onPressed: () => context.push('/diagnostic'),
-              child: const Text('Faire le diagnostic'),
+              child: const Texte('Faire le diagnostic'),
             ),
           ),
         ],
@@ -184,12 +185,12 @@ class _CarteRevision extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  Texte(
                     nombre == 1 ? '1 notion à revoir' : '$nombre notions à revoir',
                     style: t.textTheme.titleMedium?.copyWith(fontSize: 15),
                   ),
                   const SizedBox(height: 2),
-                  Text(
+                  Texte(
                     'Cinq minutes suffisent.',
                     style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                   ),
@@ -237,9 +238,9 @@ class _RaccourcisChronogramme extends ConsumerWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Text('${c['axe_label']}', style: t.textTheme.titleMedium),
+                      child: Texte('${c['axe_label']}', style: t.textTheme.titleMedium),
                     ),
-                    Text(
+                    Texte(
                       '$faites / $total',
                       style: t.textTheme.labelLarge?.copyWith(color: Couleurs.orTexte),
                     ),
@@ -256,7 +257,7 @@ class _RaccourcisChronogramme extends ConsumerWidget {
                 ),
                 if (retard > 0) ...[
                   const SizedBox(height: 10),
-                  Text(
+                  Texte(
                     retard == 1
                         ? '1 séance de retard'
                         : '$retard séances de retard',
