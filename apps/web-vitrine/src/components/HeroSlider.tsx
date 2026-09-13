@@ -56,7 +56,7 @@ const MESSAGES: Message[] = [
     oeil: "Le plan s'adapte",
     titre: (
       <>
-        Vous prenez du retard ?{" "}
+        Vous prenez du retard&nbsp;?{" "}
         <span className="text-[var(--color-or-clair)]">Le plan se recompose.</span>
       </>
     ),

@@ -48,7 +48,7 @@ export default function Preuve() {
 
         <div className="mt-16 text-center">
           <h2 className="text-[2rem] font-semibold leading-tight text-[#f7f4ec] sm:text-[2.3rem]">
-            Commencez par une question : où en êtes-vous ?
+            Commencez par une question&nbsp;: où en êtes-vous&nbsp;?
           </h2>
           <p className="mx-auto mt-4 max-w-[54ch] text-[1.02rem] leading-[1.7] text-[#b9c1d6]">
             Dix minutes de diagnostic, et vous repartez avec un plan de lecture daté.
