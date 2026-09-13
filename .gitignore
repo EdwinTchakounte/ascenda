@@ -35,3 +35,9 @@ next-env.d.ts
 .DS_Store
 *.log
 vectorisation.log
+
+# Archives de base : le corpus et les sauvegardes portent du texte d'ouvrages
+# non redistribuables et, pour les sauvegardes, les comptes des lecteurs.
+*.dump
+*.dump.gz
+sauvegardes/
