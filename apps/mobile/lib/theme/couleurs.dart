@@ -39,6 +39,19 @@ abstract final class Couleurs {
   static Color? pole(String? slug) =>
       slug != null && slug.length >= 2 ? poles[slug.substring(0, 2)] : null;
 
-  static const traitClair = Color(0x140B1435);
+  static const traitClair = Color(0x120B1435);
   static const traitSombre = Color(0x24E8C070);
+
+  /// Le fond de page : un papier chaud, plus doux que l'ivoire des cartes.
+  static const papier = Color(0xFFF7F4EE);
+
+  /// Le texte courant. Un bleu nuit adouci se lit plus longtemps qu'un noir.
+  static const encreDouce = Color(0xFF3A4156);
+
+  /// L'ombre des surfaces : large et très légère. Une carte se détache du
+  /// papier sans qu'on ait besoin de l'encadrer.
+  static const List<BoxShadow> ombreDouce = [
+    BoxShadow(color: Color(0x0D0B1435), blurRadius: 24, offset: Offset(0, 8)),
+    BoxShadow(color: Color(0x080B1435), blurRadius: 3, offset: Offset(0, 1)),
+  ];
 }

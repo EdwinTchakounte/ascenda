@@ -44,11 +44,20 @@ class FicheOuvrage extends ConsumerWidget {
           return ListView(
             padding: const EdgeInsets.fromLTRB(20, 8, 20, 40),
             children: [
-              Text('${d['titre']}', style: t.textTheme.headlineSmall),
+              if ((d['axes'] as List? ?? []).isNotEmpty) ...[
+                Text(
+                  '${(d['axes'] as List).first['label']}'.toUpperCase(),
+                  style: t.textTheme.labelSmall?.copyWith(
+                    color: Couleurs.orTexte, fontWeight: FontWeight.w700, letterSpacing: 1.4,
+                  ),
+                ),
+                const SizedBox(height: 8),
+              ],
+              Text('${d['titre']}', style: t.textTheme.headlineMedium?.copyWith(fontSize: 28, height: 1.18)),
               if (d['sous_titre'] != null) ...[
                 const SizedBox(height: 6),
                 Text('${d['sous_titre']}',
-                    style: t.textTheme.titleMedium?.copyWith(color: Couleurs.grisChaud)),
+                    style: t.textTheme.titleMedium?.copyWith(color: Couleurs.grisChaud, fontWeight: FontWeight.w500)),
               ],
               const SizedBox(height: 10),
               Text(
@@ -59,20 +68,39 @@ class FicheOuvrage extends ConsumerWidget {
                 ].join(' · '),
                 style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
               ),
-              const SizedBox(height: 16),
-              Wrap(
-                spacing: 7,
-                runSpacing: 7,
-                children: [
-                  for (final a in (d['axes'] as List? ?? []))
-                    Chip(label: Text('${a['label']}')),
-                  if (peda['niveau'] != null)
-                    Chip(label: Text(niveaux['${peda['niveau']}'] ?? '${peda['niveau']}')),
-                  if (peda['duree_min'] != null)
-                    Chip(label: Text(dureeLisible(peda['duree_min'] as int))),
-                  if (d['pages'] != null) Chip(label: Text('${d['pages']} pages')),
-                ],
+              const SizedBox(height: 20),
+              // Trois repères, sans cadres : ce qu'on veut savoir avant d'ouvrir
+              // un livre tient en trois chiffres.
+              Container(
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                decoration: BoxDecoration(
+                  border: Border.symmetric(
+                    horizontal: BorderSide(color: Couleurs.nuit.withValues(alpha: 0.08)),
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    _Repere(
+                      icone: Icons.signal_cellular_alt_rounded,
+                      valeur: peda['niveau'] != null
+                          ? (niveaux['${peda['niveau']}'] ?? '${peda['niveau']}')
+                          : 'non évalué',
+                      libelle: 'niveau',
+                    ),
+                    _Repere(
+                      icone: Icons.schedule_rounded,
+                      valeur: peda['duree_min'] != null ? dureeLisible(peda['duree_min'] as int) : '-',
+                      libelle: 'de lecture',
+                    ),
+                    _Repere(
+                      icone: Icons.menu_book_outlined,
+                      valeur: d['pages'] != null ? '${d['pages']}' : '-',
+                      libelle: 'pages',
+                    ),
+                  ],
+                ),
               ),
+              const SizedBox(height: 14),
 
               if (droits['message'] != null) ...[
                 const SizedBox(height: 8),
@@ -82,25 +110,35 @@ class FicheOuvrage extends ConsumerWidget {
               if (peda['these_centrale'] != null) ...[
                 const SizedBox(height: 24),
                 Container(
-                  padding: const EdgeInsets.all(18),
+                  padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
                   decoration: BoxDecoration(
-                    color: Couleurs.or.withValues(alpha: 0.07),
-                    borderRadius: BorderRadius.zero,
-                    border: Border(
-                      left: BorderSide(color: Couleurs.or.withValues(alpha: 0.6), width: 3),
-                    ),
+                    color: t.colorScheme.surface,
+                    boxShadow: Couleurs.ombreDouce,
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('THÈSE CENTRALE',
-                          style: t.textTheme.labelSmall?.copyWith(
-                              color: Couleurs.orTexte,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: 1.2)),
+                      Row(
+                        children: [
+                          const Icon(Icons.format_quote_rounded, size: 22, color: Couleurs.or),
+                          const SizedBox(width: 6),
+                          Text('THÈSE CENTRALE',
+                              style: t.textTheme.labelSmall?.copyWith(
+                                  color: Couleurs.orTexte,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 1.3)),
+                        ],
+                      ),
                       const SizedBox(height: 10),
+                      // En Fraunces : la thèse d'un livre se lit comme un
+                      // extrait, pas comme une notice.
                       Text('${peda['these_centrale']}',
-                          style: t.textTheme.bodyLarge?.copyWith(height: 1.65)),
+                          style: t.textTheme.titleLarge?.copyWith(
+                            fontSize: 17.5,
+                            fontWeight: FontWeight.w400,
+                            height: 1.55,
+                            color: t.colorScheme.onSurface,
+                          )),
                     ],
                   ),
                 ),
@@ -355,6 +393,29 @@ class _Sommaire extends ConsumerWidget {
           ],
         );
       },
+    );
+  }
+}
+
+
+class _Repere extends StatelessWidget {
+  const _Repere({required this.icone, required this.valeur, required this.libelle});
+  final IconData icone;
+  final String valeur;
+  final String libelle;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    return Expanded(
+      child: Column(
+        children: [
+          Icon(icone, size: 18, color: Couleurs.orTexte),
+          const SizedBox(height: 6),
+          Text(valeur, style: t.textTheme.titleMedium?.copyWith(fontSize: 14.5), textAlign: TextAlign.center),
+          Text(libelle, style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+        ],
+      ),
     );
   }
 }

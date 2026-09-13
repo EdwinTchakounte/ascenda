@@ -56,6 +56,12 @@ class EcranBienvenue extends StatelessWidget {
                 ),
               ),
               const Spacer(),
+              // Seulement s'il y a la place : sur un petit téléphone, le
+              // rayonnage pousserait les boutons hors de l'écran.
+              if (MediaQuery.sizeOf(context).height >= 720) ...[
+                const _Rayonnage(),
+                const SizedBox(height: 34),
+              ],
               Text(
                 "Vous n'avez pas besoin\nde plus de livres.",
                 style: t.textTheme.headlineLarge?.copyWith(
@@ -101,8 +107,67 @@ class EcranBienvenue extends StatelessWidget {
   }
 }
 
+/// Un rayonnage de dos de livres, aux teintes des parcours : l'accueil dit
+/// d'emblée qu'on entre dans une bibliothèque. Dessiné, pas téléchargé : rien
+/// à charger, rien qui manque sans réseau.
+class _Rayonnage extends StatelessWidget {
+  const _Rayonnage();
+
+  static const _dos = [
+    (h: 108.0, l: 22.0, c: '04'), (h: 124.0, l: 30.0, c: '01'), (h: 96.0, l: 18.0, c: '07'),
+    (h: 132.0, l: 26.0, c: '02'), (h: 114.0, l: 34.0, c: '08'), (h: 102.0, l: 20.0, c: '03'),
+    (h: 128.0, l: 24.0, c: '06'), (h: 90.0, l: 28.0, c: '05'), (h: 118.0, l: 22.0, c: '09'),
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            for (var i = 0; i < _dos.length; i++)
+              Transform.rotate(
+                // Le dernier volume penche, comme sur une vraie étagère.
+                angle: i == _dos.length - 1 ? 0.14 : 0,
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  width: _dos[i].l,
+                  height: _dos[i].h,
+                  margin: const EdgeInsets.symmetric(horizontal: 1.5),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color.lerp(Couleurs.poles[_dos[i].c]!, Colors.black, 0.18)!,
+                        Couleurs.poles[_dos[i].c]!,
+                        Color.lerp(Couleurs.poles[_dos[i].c]!, Colors.black, 0.25)!,
+                      ],
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(height: 1.4, margin: const EdgeInsets.only(top: 12), color: Couleurs.orClair.withValues(alpha: 0.7)),
+                      Container(height: 1.4, margin: const EdgeInsets.only(bottom: 12), color: Couleurs.orClair.withValues(alpha: 0.7)),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        ),
+        Container(height: 6, width: 300, color: Couleurs.or.withValues(alpha: 0.85)),
+      ],
+    );
+  }
+}
+
 class EcranConnexion extends ConsumerStatefulWidget {
-  const EcranConnexion({super.key});
+  const EcranConnexion({super.key, this.connexion = false});
+
+  /// Ouvre l'écran directement sur la connexion. Un lecteur qui touche
+  /// « J'ai déjà un compte » ne doit pas arriver sur un formulaire d'inscription.
+  final bool connexion;
 
   @override
   ConsumerState<EcranConnexion> createState() => _EcranConnexionState();
@@ -115,7 +180,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
   final _nom = TextEditingController();
   final _code = TextEditingController();
 
-  bool _inscription = true;
+  late bool _inscription = !widget.connexion;
   bool _masque = true;
   bool _envoi = false;
   String? _erreur;

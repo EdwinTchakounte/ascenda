@@ -122,7 +122,7 @@ class InvitationCompte extends ConsumerWidget {
                 const SizedBox(height: 4),
                 Center(
                   child: TextButton(
-                    onPressed: () => context.push('/connexion'),
+                    onPressed: () => context.push('/connexion?mode=connexion'),
                     child: const Text("J'ai déjà un compte"),
                   ),
                 ),

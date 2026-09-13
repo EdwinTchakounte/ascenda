@@ -40,55 +40,41 @@ class CarteSeance extends StatelessWidget {
         ),
         boxShadow: [
           BoxShadow(
-            color: Couleurs.nuit.withValues(alpha: 0.28),
-            blurRadius: 28,
-            offset: const Offset(0, 12),
+            color: Couleurs.nuit.withValues(alpha: 0.18),
+            blurRadius: 30,
+            offset: const Offset(0, 14),
           ),
         ],
       ),
       child: Stack(
         children: [
+          // Un filet d'or en tête : la seule touche décorative de la carte.
           Positioned(
-            right: -60,
-            top: -50,
-            child: Container(
-              width: 190,
-              height: 190,
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Couleurs.or.withValues(alpha: 0.07),
-              ),
-            ),
+            left: 0, right: 0, top: 0,
+            child: Container(height: 3, color: Couleurs.or),
           ),
           Padding(
-            padding: const EdgeInsets.all(22),
+            padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
                     Text(
-                      'VOTRE SÉANCE',
+                      'VOTRE SÉANCE DU JOUR',
                       style: t.textTheme.labelSmall?.copyWith(
                         color: Couleurs.orClair,
                         fontWeight: FontWeight.w700,
-                        letterSpacing: 1.3,
+                        letterSpacing: 1.4,
                       ),
                     ),
                     const Spacer(),
                     if (seance.enRetard)
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: Couleurs.terracotta.withValues(alpha: 0.2),
-                          borderRadius: BorderRadius.zero,
-                        ),
-                        child: Text(
-                          'en retard',
-                          style: t.textTheme.labelSmall?.copyWith(
-                            color: const Color(0xFFE9A489),
-                            fontWeight: FontWeight.w600,
-                          ),
+                      Text(
+                        'en retard',
+                        style: t.textTheme.labelSmall?.copyWith(
+                          color: const Color(0xFFE9A489),
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                   ],
@@ -97,8 +83,9 @@ class CarteSeance extends StatelessWidget {
                 Text(
                   seance.ouvrage ?? 'Séance de lecture',
                   style: t.textTheme.headlineSmall?.copyWith(
-                    color: const Color(0xFFF4F1E8),
-                    fontSize: 21,
+                    color: const Color(0xFFF7F4EC),
+                    fontSize: 23,
+                    height: 1.22,
                   ),
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
@@ -112,21 +99,19 @@ class CarteSeance extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
-                const SizedBox(height: 16),
-                Row(
+                const SizedBox(height: 18),
+                Wrap(
+                  spacing: 18,
+                  runSpacing: 8,
                   children: [
                     _Etiquette(icone: Icons.schedule_rounded, texte: dureeLisible(seance.dureeMin)),
-                    if (seance.pages.isNotEmpty) ...[
-                      const SizedBox(width: 8),
+                    if (seance.pages.isNotEmpty)
                       _Etiquette(icone: Icons.menu_book_outlined, texte: seance.pages),
-                    ],
-                    if (seance.livrable == 'quiz') ...[
-                      const SizedBox(width: 8),
-                      const _Etiquette(icone: Icons.quiz_outlined, texte: 'quiz'),
-                    ],
+                    if (seance.livrable == 'quiz')
+                      const _Etiquette(icone: Icons.quiz_outlined, texte: 'suivie d\'un quiz'),
                   ],
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 22),
                 SizedBox(
                   width: double.infinity,
                   child: FilledButton(
@@ -150,31 +135,27 @@ class _Etiquette extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-      decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.07),
-        borderRadius: BorderRadius.zero,
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icone, size: 13, color: const Color(0xFFB9C1D6)),
-          const SizedBox(width: 5),
-          Text(
-            texte,
-            style: Theme.of(context)
-                .textTheme
-                .labelSmall
-                ?.copyWith(color: const Color(0xFFB9C1D6)),
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Icon(icone, size: 15, color: Couleurs.orClair.withValues(alpha: 0.85)),
+        const SizedBox(width: 6),
+        Text(
+          texte,
+          style: Theme.of(context).textTheme.labelMedium?.copyWith(color: const Color(0xFFD5DAE6)),
+        ),
+      ],
     );
   }
 }
 
-/// Carte d'ouvrage dans la bibliothèque.
+/// Carte d'ouvrage dans la bibliothèque : une fiche de livre.
+///
+/// Le corpus n'a pas de couvertures. Plutôt qu'un rectangle gris, la carte
+/// compose une petite couverture à la teinte du parcours, la même que sur la
+/// vitrine et le dos des volumes de l'étagère : soixante livres se reconnaissent
+/// alors d'un coup d'oeil. Pas de cadre, pas d'étiquettes encadrées : une
+/// surface blanche posée sur le papier, et une ligne de repères discrète.
 class CarteOuvrage extends StatelessWidget {
   const CarteOuvrage({super.key, required this.ouvrage, this.onTap});
 
@@ -184,114 +165,157 @@ class CarteOuvrage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.zero,
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(19, 16, 16, 16),
-        decoration: BoxDecoration(
-          color: t.colorScheme.surface,
-          borderRadius: BorderRadius.zero,
-          // Le liseré porte la teinte du pôle, la même que sur la vitrine. Une
-          // liste de soixante cartes blanches ne dit pas de quoi elle est
-          // faite ; soixante liserés colorés se lisent d'un coup d'oeil.
-          border: Border(
-            top: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-            right: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-            bottom: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-            left: BorderSide(
-              color: Couleurs.pole(ouvrage.axeSlug) ?? (t.dividerTheme.color ?? Couleurs.traitClair),
-              width: Couleurs.pole(ouvrage.axeSlug) != null ? 3 : 1,
-            ),
-          ),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
+    final teinte = Couleurs.pole(ouvrage.axeSlug) ?? Couleurs.ardoise;
+    final reperes = [
+      if (ouvrage.niveau != null) niveaux[ouvrage.niveau] ?? ouvrage.niveau!,
+      // Les pages restent sur la fiche : sur une carte étroite, trois repères
+      // et deux marqueurs finissaient coupés par des points de suspension.
+      if (ouvrage.dureeMin != null) dureeLisible(ouvrage.dureeMin!),
+    ];
+    return Material(
+      color: t.colorScheme.surface,
+      child: InkWell(
+        onTap: onTap,
+        child: Ink(
+          decoration: const BoxDecoration(boxShadow: Couleurs.ombreDouce),
+          child: Container(
+            color: t.colorScheme.surface,
+            padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
+            child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                _Couverture(titre: ouvrage.titre, teinte: teinte),
+                const SizedBox(width: 15),
                 Expanded(
-                  child: Text(
-                    ouvrage.titre,
-                    style: t.textTheme.titleMedium?.copyWith(fontSize: 15.5, height: 1.3),
-                    maxLines: 3,
-                    overflow: TextOverflow.ellipsis,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        ouvrage.titre,
+                        style: t.textTheme.titleLarge?.copyWith(fontSize: 16.5, height: 1.28),
+                        maxLines: 3,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        ouvrage.auteursCourt + (ouvrage.annee != null ? ' · ${ouvrage.annee}' : ''),
+                        style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      if (ouvrage.these != null) ...[
+                        const SizedBox(height: 8),
+                        Text(
+                          ouvrage.these!,
+                          style: t.textTheme.bodySmall?.copyWith(height: 1.55),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                      const SizedBox(height: 10),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              reperes.join('  ·  '),
+                              style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          if (ouvrage.aQuiz)
+                            Padding(
+                              padding: const EdgeInsets.only(left: 8),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.quiz_outlined, size: 13, color: Couleurs.orTexte),
+                                  const SizedBox(width: 3),
+                                  Text('quiz',
+                                      style: t.textTheme.labelSmall?.copyWith(
+                                          color: Couleurs.orTexte, fontWeight: FontWeight.w600)),
+                                ],
+                              ),
+                            ),
+                          if (!ouvrage.lectureIntegrale)
+                            Tooltip(
+                              message: "Ouvrage non redistribuable : ASCENDA en cite des "
+                                  "extraits avec leur page.",
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 10),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(Icons.format_quote_rounded, size: 13, color: Couleurs.grisChaud),
+                                    const SizedBox(width: 2),
+                                    Text('extraits',
+                                        style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+                                  ],
+                                ),
+                              ),
+                            ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
-                if (!ouvrage.lectureIntegrale)
-                  Tooltip(
-                    message: "Ouvrage non redistribuable : ASCENDA en cite des "
-                        "extraits avec leur page.",
-                    child: Container(
-                      margin: const EdgeInsets.only(left: 8),
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: t.colorScheme.surfaceContainer,
-                        borderRadius: BorderRadius.zero,
-                      ),
-                      child: Text('extraits', style: t.textTheme.labelSmall),
-                    ),
-                  ),
               ],
             ),
-            const SizedBox(height: 6),
-            Text(
-              ouvrage.auteursCourt + (ouvrage.annee != null ? ' · ${ouvrage.annee}' : ''),
-              style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-            ),
-            if (ouvrage.these != null) ...[
-              const SizedBox(height: 10),
-              Text(
-                ouvrage.these!,
-                style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud, height: 1.55),
-                maxLines: 3,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-            const SizedBox(height: 12),
-            Wrap(
-              spacing: 6,
-              runSpacing: 6,
-              children: [
-                if (ouvrage.niveau != null)
-                  _Pilule(texte: niveaux[ouvrage.niveau] ?? ouvrage.niveau!),
-                if (ouvrage.dureeMin != null) _Pilule(texte: dureeLisible(ouvrage.dureeMin!)),
-                if (ouvrage.pages != null) _Pilule(texte: '${ouvrage.pages} p.'),
-                if (ouvrage.aQuiz) const _Pilule(texte: 'quiz', accent: true),
-              ],
-            ),
-          ],
+          ),
         ),
       ),
     );
   }
 }
 
-class _Pilule extends StatelessWidget {
-  const _Pilule({required this.texte, this.accent = false});
-  final String texte;
-  final bool accent;
+/// Une couverture composée : un aplat à la teinte du parcours, un dos plus
+/// sombre, et l'initiale du titre en Fraunces.
+class _Couverture extends StatelessWidget {
+  const _Couverture({required this.titre, required this.teinte});
+  final String titre;
+  final Color teinte;
 
   @override
   Widget build(BuildContext context) {
-    final t = Theme.of(context);
+    final lettre = titre.trim().isEmpty ? 'A' : titre.trim().characters.first.toUpperCase();
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      width: 58,
+      height: 82,
       decoration: BoxDecoration(
-        color: accent
-            ? Couleurs.or.withValues(alpha: 0.13)
-            : t.colorScheme.surfaceContainer,
-        borderRadius: BorderRadius.zero,
-      ),
-      child: Text(
-        texte,
-        style: t.textTheme.labelSmall?.copyWith(
-          color: accent ? Couleurs.orTexte : Couleurs.grisChaud,
-          fontWeight: accent ? FontWeight.w600 : FontWeight.w500,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color.lerp(teinte, Colors.white, 0.08)!, Color.lerp(teinte, Couleurs.nuit, 0.28)!],
         ),
+        boxShadow: const [BoxShadow(color: Color(0x1F0B1435), blurRadius: 8, offset: Offset(2, 3))],
+      ),
+      child: Stack(
+        children: [
+          Positioned(
+            left: 0, top: 0, bottom: 0,
+            child: Container(width: 5, color: Colors.black.withValues(alpha: 0.16)),
+          ),
+          Positioned(
+            left: 12, right: 8, top: 10,
+            child: Container(height: 1, color: Colors.white.withValues(alpha: 0.35)),
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 4),
+              child: Text(
+                lettre,
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                      color: Colors.white.withValues(alpha: 0.92),
+                      fontSize: 26,
+                    ),
+              ),
+            ),
+          ),
+          Positioned(
+            left: 12, right: 8, bottom: 10,
+            child: Container(height: 1, color: Colors.white.withValues(alpha: 0.35)),
+          ),
+        ],
       ),
     );
   }
@@ -332,7 +356,7 @@ class PastillesSemaine extends StatelessWidget {
                         Text(noms[i],
                             style: t.textTheme.labelMedium
                                 ?.copyWith(color: Couleurs.orTexte, fontWeight: FontWeight.w700)))
-                    : (t.colorScheme.surfaceContainer, Colors.transparent,
+                    : (Colors.transparent, Colors.transparent,
                         Text(noms[i],
                             style: t.textTheme.labelMedium?.copyWith(color: Couleurs.grisChaud)));
 
@@ -344,7 +368,9 @@ class PastillesSemaine extends StatelessWidget {
               decoration: BoxDecoration(
                 color: fond,
                 shape: BoxShape.rectangle,
-                border: aujourdhui ? Border.all(color: Couleurs.or, width: 2) : null,
+                border: aujourdhui
+                    ? Border.all(color: Couleurs.or, width: 1.6)
+                    : Border.all(color: Couleurs.nuit.withValues(alpha: 0.07)),
               ),
               child: Center(child: contenu),
             ),

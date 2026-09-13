@@ -518,42 +518,68 @@ class _Compteur extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    final part = limite == 0 ? 1.0 : (utilise / limite).clamp(0.0, 1.0);
     final periodeTexte = switch (periode) {
       'day' => 'aujourd\'hui',
       'month' => 'ce mois-ci',
       _ => 'au total',
     };
 
+    // Une fonction réservée n'est pas une jauge vide : une barre pleine et
+    // rouge se lisait comme une erreur. On dit simplement ce qui l'ouvre.
+    if (limite == 0) {
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 14),
+        child: Row(
+          children: [
+            Expanded(child: Text(libelle, style: t.textTheme.bodyMedium)),
+            const Icon(Icons.lock_outline_rounded, size: 15, color: Couleurs.orTexte),
+            const SizedBox(width: 5),
+            Text('avec Ascension',
+                style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte, fontWeight: FontWeight.w600)),
+          ],
+        ),
+      );
+    }
+
+    final part = (utilise / limite).clamp(0.0, 1.0);
+    final atteint = utilise >= limite;
     return Padding(
       padding: const EdgeInsets.only(bottom: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Expanded(child: Text(libelle, style: t.textTheme.bodyMedium)),
-              Text(
-                limite == 0 ? 'Ascension' : '$utilise / $limite',
-                style: t.textTheme.labelMedium?.copyWith(
-                  color: limite == 0 ? Couleurs.orTexte : Couleurs.grisChaud,
-                ),
+              Text.rich(
+                TextSpan(children: [
+                  TextSpan(
+                    text: '$utilise',
+                    style: t.textTheme.titleMedium?.copyWith(fontSize: 15),
+                  ),
+                  TextSpan(
+                    text: ' / $limite',
+                    style: t.textTheme.labelMedium?.copyWith(color: Couleurs.grisChaud),
+                  ),
+                ]),
               ),
             ],
           ),
-          const SizedBox(height: 6),
-          ClipRRect(
-            borderRadius: BorderRadius.zero,
-            child: LinearProgressIndicator(
-              value: part,
-              minHeight: 5,
-              backgroundColor: t.colorScheme.surfaceContainer,
-              color: part >= 1 ? Couleurs.terracotta : Couleurs.or,
+          const SizedBox(height: 8),
+          LinearProgressIndicator(
+            value: part,
+            minHeight: 4,
+            backgroundColor: Couleurs.nuit.withValues(alpha: 0.07),
+            color: Couleurs.or,
+          ),
+          const SizedBox(height: 5),
+          Text(
+            atteint ? 'limite atteinte $periodeTexte' : periodeTexte,
+            style: t.textTheme.labelSmall?.copyWith(
+              color: atteint ? Couleurs.terracotta : Couleurs.grisChaud,
             ),
           ),
-          const SizedBox(height: 3),
-          Text(periodeTexte,
-              style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
         ],
       ),
     );

@@ -79,7 +79,10 @@ final routeurProvider = Provider<GoRouter>((ref) {
     routes: [
       GoRoute(path: '/demarrage', builder: (c, s) => const EcranDemarrage()),
       GoRoute(path: '/bienvenue', builder: (c, s) => const EcranBienvenue()),
-      GoRoute(path: '/connexion', builder: (c, s) => const EcranConnexion()),
+      GoRoute(
+        path: '/connexion',
+        builder: (c, s) => EcranConnexion(connexion: s.uri.queryParameters['mode'] == 'connexion'),
+      ),
       GoRoute(path: '/abonnement', builder: (c, s) => const EcranAbonnement()),
       GoRoute(path: '/codes', builder: (c, s) => const EcranCodes()),
       GoRoute(

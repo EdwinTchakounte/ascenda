@@ -19,15 +19,15 @@ abstract final class ThemeAscenda {
       headlineLarge: t.headlineLarge?.copyWith(color: titre, fontWeight: FontWeight.w600, height: 1.18),
       headlineMedium: t.headlineMedium?.copyWith(color: titre, fontWeight: FontWeight.w600, height: 1.2),
       headlineSmall: t.headlineSmall?.copyWith(color: titre, fontWeight: FontWeight.w600, height: 1.25),
-      titleLarge: t.titleLarge?.copyWith(color: titre, fontWeight: FontWeight.w600),
-      titleMedium: c.titleMedium?.copyWith(color: titre, fontWeight: FontWeight.w600),
+      titleLarge: t.titleLarge?.copyWith(color: titre, fontWeight: FontWeight.w600, fontSize: 21, height: 1.25),
+      titleMedium: c.titleMedium?.copyWith(color: titre, fontWeight: FontWeight.w600, fontSize: 15.5),
       titleSmall: c.titleSmall?.copyWith(color: titre, fontWeight: FontWeight.w600),
-      bodyLarge: c.bodyLarge?.copyWith(color: corps, height: 1.6),
-      bodyMedium: c.bodyMedium?.copyWith(color: corps, height: 1.6),
-      bodySmall: c.bodySmall?.copyWith(color: corps, height: 1.5),
-      labelLarge: c.labelLarge?.copyWith(fontWeight: FontWeight.w600),
-      labelMedium: c.labelMedium,
-      labelSmall: c.labelSmall?.copyWith(letterSpacing: 0.9),
+      bodyLarge: c.bodyLarge?.copyWith(color: corps, height: 1.62, fontSize: 16),
+      bodyMedium: c.bodyMedium?.copyWith(color: corps, height: 1.6, fontSize: 14.5),
+      bodySmall: c.bodySmall?.copyWith(color: corps, height: 1.5, fontSize: 12.5),
+      labelLarge: c.labelLarge?.copyWith(fontWeight: FontWeight.w600, letterSpacing: 0.1),
+      labelMedium: c.labelMedium?.copyWith(letterSpacing: 0.2),
+      labelSmall: c.labelSmall?.copyWith(letterSpacing: 0.6),
     );
   }
 
@@ -43,7 +43,7 @@ abstract final class ThemeAscenda {
       error: Couleurs.terracotta,
       outline: Couleurs.grisChaud,
     );
-    return _monter(schema, Couleurs.ivoire, Couleurs.nuit, Couleurs.encre, Couleurs.traitClair);
+    return _monter(schema, Couleurs.papier, Couleurs.nuit, Couleurs.encreDouce, Couleurs.traitClair);
   }
 
   static ThemeData get sombre {
@@ -87,26 +87,29 @@ abstract final class ThemeAscenda {
         elevation: 0,
         centerTitle: false,
         titleTextStyle: GoogleFonts.fraunces(
-          fontSize: 20, fontWeight: FontWeight.w600, color: titre,
+          fontSize: 22, fontWeight: FontWeight.w600, color: titre, letterSpacing: -0.2,
         ),
+        scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: corps),
       ),
       filledButtonTheme: FilledButtonThemeData(
         style: FilledButton.styleFrom(
           backgroundColor: Couleurs.or,
           foregroundColor: const Color(0xFF1A1400),
-          minimumSize: const Size(0, 52),
+          disabledBackgroundColor: Couleurs.or.withValues(alpha: 0.35),
+          minimumSize: const Size(0, 54),
           padding: const EdgeInsets.symmetric(horizontal: 24),
-          textStyle: GoogleFonts.inter(fontSize: 15.5, fontWeight: FontWeight.w600),
+          elevation: 0,
+          textStyle: GoogleFonts.inter(fontSize: 15, fontWeight: FontWeight.w600, letterSpacing: 0.2),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           foregroundColor: schema.primary,
-          minimumSize: const Size(0, 52),
-          side: BorderSide(color: schema.primary.withValues(alpha: 0.4)),
-          textStyle: GoogleFonts.inter(fontSize: 15.5, fontWeight: FontWeight.w600),
+          minimumSize: const Size(0, 54),
+          side: BorderSide(color: schema.primary.withValues(alpha: 0.28)),
+          textStyle: GoogleFonts.inter(fontSize: 15, fontWeight: FontWeight.w600, letterSpacing: 0.2),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         ),
       ),
@@ -152,50 +155,66 @@ abstract final class ThemeAscenda {
         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
       inputDecorationTheme: InputDecorationTheme(
+        // Un champ blanc à filet fin : un aplat beige se lit comme un bloc
+        // désactivé, et une page de six champs beiges comme un formulaire
+        // administratif.
         filled: true,
-        fillColor: schema.surfaceContainer,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
+        fillColor: schema.surface,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 17),
+        floatingLabelStyle: GoogleFonts.inter(color: titre, fontWeight: FontWeight.w600),
+        labelStyle: GoogleFonts.inter(color: Couleurs.grisChaud, fontSize: 14.5),
+        helperStyle: GoogleFonts.inter(color: Couleurs.grisChaud, fontSize: 12),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.zero, borderSide: BorderSide.none,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.zero,
-          borderSide: BorderSide(color: trait),
+          borderSide: BorderSide(color: trait.withValues(alpha: 0.16)),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.zero,
-          borderSide: const BorderSide(color: Couleurs.or, width: 1.6),
+          borderSide: BorderSide(color: titre, width: 1.4),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.zero,
+          borderSide: const BorderSide(color: Couleurs.terracotta),
         ),
         hintStyle: GoogleFonts.inter(color: Couleurs.grisChaud, fontSize: 14.5),
       ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: schema.surface,
         surfaceTintColor: Colors.transparent,
-        indicatorColor: Couleurs.or.withValues(alpha: 0.16),
+        // Pas d'aplat derrière l'onglet actif : la couleur et la graisse
+        // suffisent, et la barre reste légère.
+        indicatorColor: Colors.transparent,
         // Sans cela, Material dessine une pastille en stade derrière l'icône
         // active : la seule forme arrondie qui restait de toute l'application.
         indicatorShape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
         elevation: 0,
-        height: 68,
+        height: 66,
         labelTextStyle: WidgetStateProperty.resolveWith(
           (etats) => GoogleFonts.inter(
             fontSize: 11,
-            fontWeight: etats.contains(WidgetState.selected) ? FontWeight.w600 : FontWeight.w500,
-            color: etats.contains(WidgetState.selected) ? schema.primary : Couleurs.grisChaud,
+            fontWeight: etats.contains(WidgetState.selected) ? FontWeight.w700 : FontWeight.w500,
+            color: etats.contains(WidgetState.selected) ? titre : Couleurs.grisChaud,
           ),
         ),
         iconTheme: WidgetStateProperty.resolveWith(
           (etats) => IconThemeData(
             size: 23,
-            color: etats.contains(WidgetState.selected) ? schema.primary : Couleurs.grisChaud,
+            color: etats.contains(WidgetState.selected) ? schema.primary : Couleurs.grisChaud.withValues(alpha: 0.85),
           ),
         ),
       ),
       chipTheme: ChipThemeData(
-        backgroundColor: schema.surfaceContainer,
-        side: BorderSide(color: trait),
-        labelStyle: GoogleFonts.inter(fontSize: 12.5, color: corps),
-        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        backgroundColor: schema.surface,
+        selectedColor: Couleurs.nuit,
+        secondarySelectedColor: Couleurs.nuit,
+        checkmarkColor: Colors.white,
+        side: BorderSide(color: trait.withValues(alpha: 0.12)),
+        labelStyle: GoogleFonts.inter(fontSize: 13, color: corps, fontWeight: FontWeight.w500),
+        secondaryLabelStyle: GoogleFonts.inter(fontSize: 13, color: Colors.white, fontWeight: FontWeight.w600),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
       dividerTheme: DividerThemeData(color: trait, thickness: 1, space: 1),

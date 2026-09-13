@@ -61,7 +61,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Bibliothèque', style: t.textTheme.headlineSmall),
+                  Text('Bibliothèque', style: t.textTheme.headlineMedium?.copyWith(fontSize: 30)),
                   const SizedBox(height: 14),
                   TextField(
                     controller: _recherche,
@@ -73,7 +73,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                     decoration: InputDecoration(
                       hintText: 'Un titre, un auteur…',
                       prefixIcon: const Icon(Icons.search_rounded, size: 21),
-                      helperText: 'Filtre les titres et les auteurs.',
                       suffixIcon: _texte.isEmpty
                           ? null
                           : IconButton(
@@ -157,6 +156,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                   for (final n in niveaux.entries)
                     _Filtre(
                       libelle: n.value,
+                      souligne: true,
                       actif: _niveau == n.key,
                       onTap: () => setState(() => _niveau = _niveau == n.key ? null : n.key),
                     ),
@@ -274,6 +274,7 @@ class _Filtre extends StatelessWidget {
     required this.actif,
     required this.onTap,
     this.compte,
+    this.souligne = false,
   });
 
   final String libelle;
@@ -281,22 +282,51 @@ class _Filtre extends StatelessWidget {
   final VoidCallback onTap;
   final int? compte;
 
+  /// Les niveaux se lisent comme des onglets soulignés, les parcours comme des
+  /// pastilles : deux familles de filtres qui ne se confondent pas.
+  final bool souligne;
+
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final encre = t.colorScheme.onSurface;
+    // En clair, le filtre actif est à l'encre ; en sombre, un aplat d'encre
+    // disparaîtrait dans le fond, il passe à l'or.
+    final sombre = t.brightness == Brightness.dark;
+    final plein = sombre ? Couleurs.orClair : Couleurs.nuit;
+    final surPlein = sombre ? Couleurs.nuitProfond : Colors.white;
+    if (souligne) {
+      return InkWell(
+        onTap: onTap,
+        child: Container(
+          margin: const EdgeInsets.only(right: 18),
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(color: actif ? Couleurs.or : Colors.transparent, width: 2),
+            ),
+          ),
+          child: Text(
+            libelle,
+            style: t.textTheme.labelLarge?.copyWith(
+              fontSize: 13.5,
+              color: actif ? encre : Couleurs.grisChaud,
+              fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
+            ),
+          ),
+        ),
+      );
+    }
     return Padding(
       padding: const EdgeInsets.only(right: 8),
       child: InkWell(
         onTap: onTap,
-        borderRadius: BorderRadius.zero,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
           decoration: BoxDecoration(
-            color: actif ? Couleurs.or.withValues(alpha: 0.12) : t.colorScheme.surface,
-            borderRadius: BorderRadius.zero,
-            border: Border.all(
-              color: actif ? Couleurs.or : (t.dividerTheme.color ?? Couleurs.traitClair),
-            ),
+            color: actif ? plein : t.colorScheme.surface,
+            border: Border.all(color: actif ? plein : encre.withValues(alpha: 0.12)),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -304,16 +334,18 @@ class _Filtre extends StatelessWidget {
               Text(
                 libelle,
                 style: t.textTheme.labelLarge?.copyWith(
-                  color: actif ? Couleurs.orTexte : Couleurs.grisChaud,
+                  color: actif ? surPlein : encre.withValues(alpha: 0.8),
                   fontSize: 13,
+                  fontWeight: actif ? FontWeight.w600 : FontWeight.w500,
                 ),
               ),
               if (compte != null) ...[
-                const SizedBox(width: 6),
+                const SizedBox(width: 7),
                 Text(
                   '$compte',
                   style: t.textTheme.labelSmall?.copyWith(
-                    color: actif ? Couleurs.orTexte : Couleurs.grisChaud,
+                    color: actif ? (sombre ? const Color(0xFF4A3A10) : Couleurs.orClair) : Couleurs.grisChaud,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
               ],
