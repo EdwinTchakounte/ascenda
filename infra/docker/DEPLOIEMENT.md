@@ -12,7 +12,8 @@ Six étapes, dans cet ordre précis. Deux d'entre elles ne se rattrapent pas.
    de toucher au serveur.
 2. Le dépôt sur le serveur, par une clé de déploiement : il est privé, un clone
    en HTTPS échoue sans rien dire d'utile. Puis le `.env`.
-3. La pile, puis les migrations, puis le corpus.
+3. La pile, puis les migrations, puis le corpus, transféré depuis la machine
+   de travail : `data/` ne porte que les dérivés.
 4. **La sauvegarde, avant la première pièce encaissée.** Une base d'utilisateurs
    perdue ne se reconstruit pas, contrairement au corpus et au logiciel.
 5. Le webhook chez Tara, qui ne peut être déclaré qu'une fois l'API en HTTPS.
@@ -408,26 +409,52 @@ sauvegardes s'accumulent. Posez `GARDER=14` sur la sauvegarde et surveillez.
 
 ## 5. Le corpus
 
-La base montée est vide. Le corpus se charge depuis `data/`, qui est la source
-de vérité. Un serveur n'a que Docker, pas de Python ni de `.venv` : l'import
-passe donc par un service dédié, qui monte `pipeline/` et `data/` depuis le
-dépôt cloné.
+**`data/` ne suffit pas à reconstruire le corpus.** Le guide affirmait le
+contraire, et le premier déploiement l'a démenti : l'importeur a répondu « le
+titre normalisé ne correspond à aucun document » pour chaque fiche.
+
+`data/` ne porte que les dérivés : quiz, citations, fiches. Les ouvrages, leurs
+chapitres et leurs passages vectorisés naissent de l'ingestion des PDF de
+`livres/`, qui ne quittent pas la machine de travail, et de la vectorisation,
+qui demande des heures et deux gigaoctets de modèle. Un serveur neuf ne peut ni
+l'un ni l'autre. On lui transfère donc ces tables.
+
+Sur la machine de travail :
 
 ```bash
-cd infra/docker
-docker compose --env-file ../../.env -f docker-compose.yml -f docker-compose.app.yml \
-  run --rm importeur --verifier    # ce qui bougerait, sans rien écrire
-docker compose --env-file ../../.env -f docker-compose.yml -f docker-compose.app.yml \
-  run --rm importeur               # data/ vers la base
+./infra/scripts/exporter-corpus.sh          # → corpus.dump, 56 Mo
+scp corpus.dump root@81.0.246.144:/srv/ascenda/
 ```
 
-L'import est idempotent : deux passages consécutifs annoncent « inchangés » sur
-les 4 176 dérivés. Le service reste à l'écart des montées de pile, il ne
-démarre que lorsqu'on l'appelle par son nom.
+Sur le serveur :
 
-La vectorisation, elle, se fait hors du conteneur et prend des heures de
-processeur. Sans elle, la recherche reste en plein texte et l'API le dit dans
-le champ `mode`. Voir `pipeline/embed/`.
+```bash
+./infra/scripts/charger-corpus.sh corpus.dump
+```
+
+L'export ne prend que les treize tables du corpus, et vérifie sur l'archive
+elle-même qu'aucune donnée de compte n'y figure : la base de développement porte
+des milliers de comptes et de paiements fabriqués par les tests, et pas un ne
+doit atteindre la production.
+
+Le chargement refuse de s'exécuter si la base porte déjà des ouvrages. Remplacer
+un corpus en place demanderait de vider `document`, et les chronogrammes, les
+séances et la progression des lecteurs y sont rattachés : un effacement en
+cascade les emporterait. Cette décision ne se prend pas dans un script.
+
+Répété sur une base neuve avant de vous le donner : 78 ouvrages, 4 874 chapitres,
+11 403 passages tous vectorisés, 79 rattachements aux pôles, zéro orphelin, les
+mêmes nombres que la base d'origine. Et l'importeur de `data/`, lancé ensuite en
+vérification, trouve les 4 176 dérivés « inchangés » : le dépôt et la base
+disent la même chose.
+
+L'importeur reste utile après coup, pour pousser vers la base un dérivé corrigé
+dans `data/` :
+
+```bash
+docker compose --env-file ../../.env -f docker-compose.yml -f docker-compose.app.yml \
+  --profile outils run --rm importeur --verifier
+```
 
 ## 6. La console, et le premier administrateur
 
