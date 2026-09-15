@@ -1,0 +1,728 @@
+[
+ {
+  "chapitre": "d16679bc",
+  "questions": [
+   {
+    "q": "Combien de temps les graines de Striga hermonthica peuvent-elles rester viables dans le sol ?",
+    "choix": [
+     "Jusqu'à vingt ans",
+     "Jusqu'à cinq ans",
+     "Jusqu'à deux ans",
+     "Jusqu'à dix ans"
+    ],
+    "reponse": 0,
+    "explication": "Le texte cite Striga hermonthica comme exemple de dormance et de longévité des graines : elles peuvent rester viables vingt ans dans le sol.",
+    "niveau": "restitution",
+    "page": 668
+   },
+   {
+    "q": "Au Cameroun, un champ de coton labouré au semis et traité chaque année en pré-levée est devenu envahi par Commelina benghalensis. Quelle démarche le texte rapporte-t-il comme efficace ?",
+    "choix": [
+     "Labourer quatre à cinq semaines avant le semis, puis détruire la levée au semis sans retravailler le sol",
+     "Labourer plus profondément au moment du semis, puis faire quatre sarclages avec évacuation du champ",
+     "Renoncer au labour, semer plus tard et doubler le nombre de traitements de pré-levée",
+     "Labourer juste après le semis, puis enfouir les andains de sarclage au buttage"
+    ],
+    "reponse": 0,
+    "explication": "Le labour précoce provoque une levée massive de C. benghalensis, détruite au semis par un herbicide total sans autre travail du sol ; on est ainsi passé de quatre sarclages à un seul.",
+    "niveau": "application",
+    "page": 670
+   },
+   {
+    "q": "Pourquoi faut-il aussi s'occuper des mauvaises herbes qui apparaissent en fin de cycle, alors que la compétition se joue surtout au début ?",
+    "choix": [
+     "Elles gênent la récolte, en déprécient la qualité et enrichissent le stock de graines du sol",
+     "Elles concurrencent la culture pour l'eau au moment où les grains se remplissent le plus",
+     "Elles empêchent la préparation du sol de la saison suivante en durcissant la surface",
+     "Elles attirent les animaux au pâturage, qui piétinent la culture avant sa récolte"
+    ],
+    "reponse": 0,
+    "explication": "Les espèces de début de cycle font l'essentiel de la compétition, tandis que celles de fin de cycle agissent sur la pénibilité de la récolte, sa dépréciation qualitative et l'augmentation du stock semencier.",
+    "niveau": "comprehension",
+    "page": 671
+   },
+   {
+    "q": "En culture cotonnière en Afrique, quelle perte est estimée si les mauvaises herbes ne sont pas contrôlées pendant le premier mois après le semis ?",
+    "choix": [
+     "Environ 35 %",
+     "Environ 10 %",
+     "Environ 60 %",
+     "Environ 90 %"
+    ],
+    "reponse": 0,
+    "explication": "Le texte évalue ces pertes à 35 % ; le chiffre de 90 % concerne une compétition avec Cyperus rotundus en culture irriguée au Soudan.",
+    "niveau": "restitution",
+    "page": 673
+   },
+   {
+    "q": "Dans quelles situations la concurrence des mauvaises herbes est-elle la plus préjudiciable à la culture ?",
+    "choix": [
+     "Quand le milieu est limitant, par manque d'eau en période sèche ou sur sol dégradé",
+     "Quand les pluies sont abondantes et que le sol est riche en matière organique",
+     "Quand la culture est semée en ligne avec un écartement régulier entre les rangs",
+     "Quand la parcelle vient d'être défrichée et mise en culture pour la première fois"
+    ],
+    "reponse": 0,
+    "explication": "La compétition est d'autant plus importante que les conditions de milieu sont limitantes : faible disponibilité en eau en période sèche ou en nutriments dans les sols dégradés.",
+    "niveau": "comprehension",
+    "page": 674
+   },
+   {
+    "q": "Vous installez une culture dans une région à deux saisons des pluies (climat guinéo-soudanien). À quoi faut-il s'attendre pour le début du cycle ?",
+    "choix": [
+     "Un nettoyage important de la parcelle, car la végétation pousse fort pendant l'inter-culture",
+     "Un enherbement très faible, facile à éliminer par une simple préparation du sol",
+     "Aucun nettoyage, car la saison sèche précédente a détruit toutes les mauvaises herbes",
+     "Un seul sarclage suffisant pour toute la saison, quel que soit l'âge de la parcelle"
+    ],
+    "reponse": 0,
+    "explication": "Dans les régions à deux saisons des pluies, la végétation se développe fortement durant l'inter-culture et les temps de nettoyage sont importants, contrairement aux zones à une seule saison des pluies.",
+    "niveau": "application",
+    "page": 675
+   }
+  ]
+ },
+ {
+  "chapitre": "6d949c11",
+  "questions": [
+   {
+    "q": "Pourquoi les outils à disques favorisent-ils la multiplication d'espèces vivaces comme Imperata cylindrica ou Cyperus rotundus ?",
+    "choix": [
+     "Ils coupent rhizomes, stolons et tubercules, et chaque fragment redonne une plante",
+     "Ils enfouissent les graines trop profondément, ce qui prolonge leur dormance",
+     "Ils tassent le sol en profondeur, ce qui avantage les racines des plantes vivaces",
+     "Ils remontent en surface des graines qui germent aussitôt à la lumière"
+    ],
+    "reponse": 0,
+    "explication": "Chaque fragment de rhizome ou de stolon sectionné par l'outil donne une nouvelle plante, de même que chaque tubercule isolé de ses voisins.",
+    "niveau": "comprehension",
+    "page": 676
+   },
+   {
+    "q": "Quelle quantité minimale de paille faut-il prévoir pour pailler un hectare ?",
+    "choix": [
+     "Au moins sept tonnes",
+     "Au moins deux tonnes",
+     "Au moins quinze tonnes",
+     "Au moins quatre tonnes"
+    ],
+    "reponse": 0,
+    "explication": "L'approvisionnement en paille est la contrainte majeure du paillage : il faut prévoir au moins sept tonnes pour couvrir un hectare.",
+    "niveau": "restitution",
+    "page": 677
+   },
+   {
+    "q": "Après un labour qui a mal enfoui Digitaria horizontalis, les repousses apparaissent dans le champ semé. Quand faire le premier sarclage ?",
+    "choix": [
+     "Dès la première semaine après le semis",
+     "Trois semaines après le semis, comme d'habitude",
+     "Au bout de six semaines, quand la culture couvre le sol",
+     "Juste avant la floraison de la culture"
+    ],
+    "reponse": 0,
+    "explication": "Les repousses des plantes mal enfouies, comme Digitaria horizontalis, imposent un premier sarclage dès la première semaine, alors que le délai normal est de trois semaines.",
+    "niveau": "application",
+    "page": 678
+   },
+   {
+    "q": "Pour une culture annuelle à cycle court (coton, maïs, sorgho), quelle est généralement la période critique de nuisibilité des mauvaises herbes ?",
+    "choix": [
+     "Entre 15 et 60 jours après le semis",
+     "Entre 30 et 90 jours après le semis",
+     "Pendant les 10 premiers jours après le semis",
+     "Entre 60 et 120 jours après le semis"
+    ],
+    "reponse": 0,
+    "explication": "Le texte situe la période critique entre quinze et soixante jours après le semis pour les cultures à cycle court, et entre trente et quatre-vingt-dix jours pour les cultures à cycle long.",
+    "niveau": "restitution",
+    "page": 679
+   },
+   {
+    "q": "Pourquoi un herbicide total à pénétration foliaire appliqué au moment du semis ne risque-t-il pas, en général, d'abîmer la culture ?",
+    "choix": [
+     "Il est inactivé au contact du sol, fixé par les argiles et la matière organique",
+     "Il n'agit que sur les graminées et épargne donc toutes les autres plantes",
+     "Il est lessivé en profondeur par les pluies avant que la culture ne germe",
+     "Il pénètre seulement par les racines déjà développées des mauvaises herbes"
+    ],
+    "reponse": 0,
+    "explication": "Ces produits sont immobilisés au contact du sol par adsorption ou complexation avec les argiles et la matière organique ; tant que la culture n'est pas levée, elle n'est pas touchée, sauf sur sols très sableux et pauvres.",
+    "niveau": "comprehension",
+    "page": 683
+   },
+   {
+    "q": "Que se passe-t-il lorsqu'on emploie toujours le même herbicide sur une parcelle, année après année ?",
+    "choix": [
+     "La flore se réduit à des espèces que ce produit ne détruit pas, souvent une seule",
+     "Le produit devient plus efficace car il s'accumule progressivement dans le sol",
+     "Les mauvaises herbes disparaissent et la parcelle n'a plus besoin de désherbage",
+     "La culture finit par devenir sensible au produit et il faut changer de variété"
+    ],
+    "reponse": 0,
+    "explication": "L'emploi continu des mêmes produits sélectionne des peuplements souvent monospécifiques d'espèces tolérantes ou résistantes, qu'on ne maîtrise qu'en changeant de techniques ou de familles chimiques.",
+    "niveau": "comprehension",
+    "page": 684
+   },
+   {
+    "q": "Un producteur veut appliquer son herbicide avec le pulvérisateur à buses coniques qu'il utilise pour les insecticides. Que conseille le texte ?",
+    "choix": [
+     "Utiliser un appareil adapté, équipé de buses à jet plat, bien réglé et rincé après usage",
+     "Garder son pulvérisateur mais réduire la dose pour éviter de brûler la culture",
+     "Garder son pulvérisateur et marcher plus vite pour mieux répartir la bouillie",
+     "Utiliser plutôt un atomiseur à moteur, qui couvre la parcelle plus rapidement"
+    ],
+    "reponse": 0,
+    "explication": "Les herbicides demandent des appareils à buses à jet plat (pinceau ou miroir), et non les pulvérisateurs à jet conique ou atomiseurs prévus pour les insecticides, avec un réglage et un entretien soignés.",
+    "niveau": "application",
+    "page": 684
+   },
+   {
+    "q": "Contre les vivaces comme Cyperus rotundus, quel travail du sol permet d'exposer les organes de réserve à la sécheresse ?",
+    "choix": [
+     "Un labour de fin de cycle, qui les laisse sécher au soleil en saison sèche",
+     "Un labour aux disques au semis, qui les coupe en petits morceaux",
+     "Un buttage en cours de culture, qui les enfouit sous la terre des rangs",
+     "Un travail superficiel au début des pluies, qui les laisse germer"
+    ],
+    "reponse": 0,
+    "explication": "Le labour de fin de cycle extrait les rhizomes, tubercules ou bulbes du sol et les laisse se dessécher au soleil durant la saison sèche.",
+    "niveau": "restitution",
+    "page": 686
+   },
+   {
+    "q": "Les premières pousses de Striga apparaissent dans votre sorgho. Que faire d'après le texte ?",
+    "choix": [
+     "Les arracher ou sarcler dès maintenant, et recommencer tant qu'il reste des pieds",
+     "Attendre leur floraison pour les arracher toutes en un seul passage",
+     "Les laisser, car le mal est fait sous terre et l'arrachage ne sert plus à rien",
+     "Arracher seulement les plus grands pieds à la récolte du sorgho"
+    ],
+    "reponse": 0,
+    "explication": "Il faut détruire les parties aériennes le plus tôt possible pour limiter la concurrence et surtout empêcher la production de semences, en renouvelant l'opération tant que des pieds subsistent.",
+    "niveau": "application",
+    "page": 687
+   }
+  ]
+ },
+ {
+  "chapitre": "1b407117",
+  "questions": [
+   {
+    "q": "En protection des cultures, qu'appelle-t-on un auxiliaire ?",
+    "choix": [
+     "Un animal prédateur ou parasite qui aide à détruire les ravageurs des cultures",
+     "Une substance ajoutée à un pesticide pour renforcer son action au champ",
+     "Une plante cultivée à côté de la culture principale pour l'ombrager",
+     "Un organisme vivant utilisé comme marqueur de la qualité de l'environnement"
+    ],
+    "reponse": 0,
+    "explication": "Le texte définit l'auxiliaire comme un animal prédateur ou parasite qui, par son mode de vie, concourt à la destruction des ravageurs nuisibles aux cultures.",
+    "niveau": "restitution",
+    "page": 689
+   },
+   {
+    "q": "Qu'est-ce qui distingue un parasitoïde, comme les trichogrammes, d'un simple parasite ?",
+    "choix": [
+     "Il entraîne obligatoirement la mort de l'hôte aux dépens duquel il se développe",
+     "Il se développe toujours à l'extérieur de l'hôte sans jamais y pénétrer",
+     "Il capture des proies vivantes pour alimenter directement sa progéniture",
+     "Il affaiblit l'hôte sans jamais provoquer sa mort au cours de son cycle"
+    ],
+    "reponse": 0,
+    "explication": "Le parasite porte préjudice à son hôte sans entraîner obligatoirement sa mort, alors que le parasitoïde entraîne obligatoirement la mort de l'hôte.",
+    "niveau": "comprehension",
+    "page": 691
+   },
+   {
+    "q": "Un technicien constate des chenilles dans un champ. D'après la notion de seuil économique de nuisibilité, à partir de quand une lutte devient-elle justifiée ?",
+    "choix": [
+     "Quand la perte de rendement ou de qualité dépasse le coût des moyens de lutte",
+     "Dès que la présence des chenilles est constatée sur quelques plants isolés",
+     "Quand une baisse de rendement devient seulement décelable par les statistiques",
+     "Dès que les dégâts sur les feuilles deviennent bien visibles depuis la bordure"
+    ],
+    "reponse": 0,
+    "explication": "Le seuil économique correspond au niveau d'infestation à partir duquel l'effet sur le rendement ou la qualité est supérieur au coût de la lutte ; le simple fait qu'une baisse soit décelable correspond au seuil biologique.",
+    "niveau": "application",
+    "page": 691
+   },
+   {
+    "q": "Après un traitement insecticide contre des chenilles, un producteur observe une pullulation d'acariens sur sa parcelle. Comment le texte nomme-t-il ce type de conséquence ?",
+    "choix": [
+     "Un effet non intentionnel du produit phytopharmaceutique employé",
+     "Une rémanence, c'est-à-dire la persistance d'action du produit",
+     "Une résistance acquise des acariens à la substance active employée",
+     "Une infection, c'est-à-dire une phase qui suit la contamination"
+    ],
+    "reponse": 0,
+    "explication": "Toute action d'un produit autre que celle pour laquelle il est employé est un effet non intentionnel ; le texte cite justement des insecticides qui favorisent les acariens.",
+    "niveau": "application",
+    "page": 690
+   }
+  ]
+ },
+ {
+  "chapitre": "ed8a3b2b",
+  "questions": [
+   {
+    "q": "Dans quel ordre se déroulent les étapes du diagnostic phytosanitaire ?",
+    "choix": [
+     "Décrire l'anomalie, rechercher l'agent causal, puis évaluer les dégâts probables",
+     "Rechercher l'agent causal, décrire l'anomalie, puis choisir un traitement",
+     "Évaluer les dégâts probables, décrire l'anomalie, puis rechercher l'agent causal",
+     "Décrire l'anomalie, évaluer les dégâts probables, puis rechercher l'agent causal"
+    ],
+    "reponse": 0,
+    "explication": "La description est la première étape, la détermination de l'agent causal la deuxième, et l'estimation de l'incidence sur la production la dernière.",
+    "niveau": "restitution",
+    "page": 692
+   },
+   {
+    "q": "Des plants flétris apparaissent dans un champ et un voisin parle déjà de champignon. Que faut-il faire d'abord pour avancer dans le diagnostic ?",
+    "choix": [
+     "Examiner les pluies, les températures et les pratiques culturales récentes",
+     "Traiter tout de suite la parcelle pour éviter que la maladie ne s'étende",
+     "Arracher tous les plants flétris sans chercher davantage la cause du problème",
+     "Attendre la récolte pour mesurer les pertes avant de chercher la cause"
+    ],
+    "reponse": 0,
+    "explication": "Un flétrissement peut venir d'un stress hydrique climatique autant que d'un champignon ; il faut donc considérer les événements survenus avant, notamment climat et pratiques culturales.",
+    "niveau": "application",
+    "page": 692
+   },
+   {
+    "q": "Un champ présente des feuilles très abîmées et d'aspect spectaculaire. Comment décider s'il vaut la peine d'intervenir ?",
+    "choix": [
+     "S'appuyer sur les références reliant le degré d'infestation au rendement",
+     "Intervenir sans attendre, car des dégâts aussi visibles annoncent de fortes pertes",
+     "Se fier à l'aspect général de la culture comparé à celui des champs voisins",
+     "Ne rien faire, car des dégâts visibles sur les feuilles n'ont jamais d'effet"
+    ],
+    "reponse": 0,
+    "explication": "Les pertes ne sont que très indirectement liées à l'aspect visuel : des dégâts spectaculaires peuvent causer peu de pertes, d'où l'intérêt des références sur la relation entre infestation et rendement.",
+    "niveau": "application",
+    "page": 693
+   }
+  ]
+ },
+ {
+  "chapitre": "cc40e487",
+  "questions": [
+   {
+    "q": "Sur quels deux principes repose une stratégie de lutte intégrée ?",
+    "choix": [
+     "Combiner des méthodes peu nuisibles à l'environnement et disposer d'outils d'aide à la décision",
+     "Supprimer tout emploi de pesticides et cultiver uniquement des variétés résistantes",
+     "Traiter selon un calendrier fixe et utiliser les produits les moins coûteux du marché",
+     "Introduire des auxiliaires venus d'ailleurs et pratiquer des rotations très longues"
+    ],
+    "reponse": 0,
+    "explication": "Le texte cite l'intégration de méthodes choisies pour leurs faibles effets sur l'environnement et des outils permettant de décider quand et comment intervenir, grâce aux seuils de nuisibilité et d'intervention.",
+    "niveau": "restitution",
+    "page": 694
+   },
+   {
+    "q": "Pourquoi les variétés résistantes aux insectes sont-elles peu utilisées dans les cultures tropicales ?",
+    "choix": [
+     "La plante affronte un ensemble de ravageurs et la résistance varie selon le milieu",
+     "Les semences de ces variétés sont interdites dans la plupart des pays tropicaux",
+     "Ces variétés donnent toujours des rendements trop faibles pour les paysans",
+     "Les insectes tropicaux ne s'attaquent jamais aux variétés améliorées"
+    ],
+    "reponse": 0,
+    "explication": "Un même caractère peut avoir des effets opposés selon les ravageurs, son expression dépend du milieu, et la culture subit en général un complexe de ravageurs et non un seul.",
+    "niveau": "comprehension",
+    "page": 695
+   },
+   {
+    "q": "Un riziculteur dont la parcelle a souffert de pyriculariose veut apporter une très forte fumure azotée pour relever son rendement. Que conseille le texte ?",
+    "choix": [
+     "Garder une fertilisation équilibrée, car l'excès d'azote accentue la pyriculariose",
+     "Doubler l'azote, car une plante plus vigoureuse ne peut plus être atteinte",
+     "Supprimer toute fertilisation minérale tant que la maladie reste présente",
+     "Remplacer l'azote par un labour superficiel juste avant le repiquage"
+    ],
+    "reponse": 0,
+    "explication": "La fertilisation renforce la vigueur de la plante, mais elle doit être équilibrée : de fortes fumures azotées accentuent la pyriculariose du riz.",
+    "niveau": "application",
+    "page": 697
+   },
+   {
+    "q": "Pourquoi une rotation des cultures limite-t-elle certaines maladies et certains nématodes transmis par le sol ?",
+    "choix": [
+     "Elle introduit des plantes d'autres familles sur lesquelles l'ennemi ne peut proliférer",
+     "Elle enrichit le sol en azote, ce qui tue directement les pathogènes présents",
+     "Elle attire les ennemis du sol vers des plantes que l'on détruit ensuite",
+     "Elle rend le sol plus sec, ce qui empêche les nématodes de se déplacer"
+    ],
+    "reponse": 0,
+    "explication": "Le principe est de rendre défavorables les cycles successifs du pathogène ou du ravageur sur la même parcelle en alternant des familles botaniques différentes.",
+    "niveau": "comprehension",
+    "page": 699
+   },
+   {
+    "q": "Un producteur de niébé subit chaque année des attaques de la punaise Anoplocnemis curvipes. Quelle mesure culturale le texte propose-t-il ?",
+    "choix": [
+     "Entourer les parcelles de niébé de plants de maïs qui attirent et arrêtent la punaise",
+     "Semer le niébé en fortes densités pour que la punaise ne trouve plus de place",
+     "Mélanger plusieurs variétés de niébé aux floraisons décalées dans la parcelle",
+     "Laisser les résidus de la culture précédente pour détourner la punaise du niébé"
+    ],
+    "reponse": 0,
+    "explication": "Le maïs sert de plante piège pour cette punaise, et les attaques sur niébé sont réduites lorsque les parcelles sont entourées de plants de maïs.",
+    "niveau": "application",
+    "page": 700
+   },
+   {
+    "q": "Après la récolte du maïs, des tiges restent au champ et les foreurs (B. fusca) y sont nombreux. Que faire pour réduire les attaques de la campagne suivante ?",
+    "choix": [
+     "Détruire les résidus de récolte où le ravageur accomplit une partie de son cycle",
+     "Laisser les tiges en place pour qu'elles protègent le sol jusqu'aux pluies",
+     "Ressemer du maïs aussitôt sur la même parcelle pour occuper les foreurs",
+     "Couper les tiges et les entasser en bordure du champ jusqu'au prochain semis"
+    ],
+    "reponse": 0,
+    "explication": "La destruction des résidus dans lesquels certains ravageurs accomplissent un ou plusieurs stades réduit les infestations futures ; le texte cite B. fusca dans les tiges de maïs.",
+    "niveau": "application",
+    "page": 701
+   },
+   {
+    "q": "Deux jours après l'application d'une préparation biologique à base de B. thuringiensis, les chenilles mangent encore. Quelle attitude adopter ?",
+    "choix": [
+     "Continuer à surveiller, car la mort survient quelques jours après l'ingestion",
+     "Conclure que le produit est inefficace et changer aussitôt de méthode",
+     "Répéter le jour même l'application avec une dose plus forte de préparation",
+     "Arrêter la surveillance, car les chenilles ayant ingéré le produit ne causent plus de dégâts"
+    ],
+    "reponse": 0,
+    "explication": "Ces insecticides biologiques agissent par ingestion et ne tuent pas immédiatement : le ravageur peut encore causer des dégâts quelques jours, d'où une surveillance attentive, surtout efficace sur les jeunes stades.",
+    "niveau": "application",
+    "page": 703
+   },
+   {
+    "q": "En lutte étagée ciblée sur cotonnier, l'observateur examine 25 plants pris au hasard sur la diagonale et en trouve six attaqués par la chenille S. derogata. Que prévoit la méthode ?",
+    "choix": [
+     "Intervenir aussitôt, car le seuil de cinq plants attaqués est atteint",
+     "Attendre la prochaine pulvérisation du calendrier sans rien changer",
+     "Recompter sur 25 autres plants, car le seuil est fixé à vingt plants attaqués",
+     "Ne rien faire, car seules les chenilles des capsules justifient une intervention"
+    ],
+    "reponse": 0,
+    "explication": "La LEC déclenche une intervention dès cinq plants attaqués par S. derogata ou cinq chenilles carpophages ; le seuil de vingt plants concerne les colonies de pucerons.",
+    "niveau": "application",
+    "page": 705
+   },
+   {
+    "q": "Selon le texte, quelle place donner aux plantes génétiquement modifiées produisant des toxines de B. thuringiensis ?",
+    "choix": [
+     "Un outil parmi d'autres, car des résistances des ravageurs ciblés sont déjà apparues",
+     "La seule solution durable, car ces plantes rendent inutiles toutes les autres mesures",
+     "Une méthode à écarter, car son efficacité contre les chenilles n'a jamais été établie",
+     "Une technique réservée aux denrées stockées, où elle remplace les bio-pesticides"
+    ],
+    "reponse": 0,
+    "explication": "Leur efficacité est reconnue mais des résistances sont avérées : elles doivent compléter les autres techniques et ne jamais être la seule façon de lutter.",
+    "niveau": "comprehension",
+    "page": 706
+   }
+  ]
+ },
+ {
+  "chapitre": "5b822a89",
+  "questions": [
+   {
+    "q": "Parmi ces informations, laquelle doit figurer sur l'étiquette d'un pesticide homologué ?",
+    "choix": [
+     "Les premiers soins à donner en cas d'intoxication",
+     "La liste des cultures sur lesquelles le produit est le plus rentable",
+     "Les résultats des essais menés par le fabricant dans le pays",
+     "La période de l'année où le produit est vendu à prix réduit"
+    ],
+    "reponse": 0,
+    "explication": "Le texte énumère les mentions de l'étiquette : nom, matières actives, homologation, fabricant, conditions de stockage, premiers soins en cas d'intoxication, usages et directives d'utilisation.",
+    "niveau": "restitution",
+    "page": 713
+   },
+   {
+    "q": "Un producteur de tomates a traité sa parcelle et veut savoir combien de temps attendre avant de récolter. Où doit-il chercher cette information en priorité ?",
+    "choix": [
+     "Dans les directives d'utilisation portées sur l'étiquette",
+     "Dans la fiche de vente remise par le revendeur au moment de l'achat",
+     "Dans les conseils donnés oralement lors d'une réunion de village",
+     "Dans le calendrier de traitement utilisé l'année précédente"
+    ],
+    "reponse": 0,
+    "explication": "Les directives d'utilisation de l'étiquette précisent la période d'utilisation, en particulier par rapport à la récolte.",
+    "niveau": "application",
+    "page": 713
+   },
+   {
+    "q": "Selon le texte, quels éléments déterminent principalement la gravité d'une intoxication par un pesticide ?",
+    "choix": [
+     "La toxicité du produit, la quantité absorbée et la durée d'exposition",
+     "La culture traitée, le moment de la journée et la température de l'air",
+     "Le mode d'application, le type de pulvérisateur et la taille de la parcelle",
+     "La couleur du produit, son odeur et la forme de sa formulation"
+    ],
+    "reponse": 0,
+    "explication": "Trois éléments sont cités : la toxicité des matières actives et des autres constituants, la quantité qui pénètre dans le corps et la durée de l'exposition.",
+    "niveau": "restitution",
+    "page": 714
+   },
+   {
+    "q": "Pourquoi le texte met-il en garde contre l'emploi des pyréthrinoïdes à proximité des étangs et des ruches ?",
+    "choix": [
+     "Ils sont très toxiques pour les poissons et ont souvent nui aux abeilles",
+     "Ils rendent l'eau des étangs trop acide pour l'irrigation",
+     "Ils attirent les abeilles vers les cultures non traitées",
+     "Ils perdent toute efficacité au contact de l'humidité"
+    ],
+    "reponse": 0,
+    "explication": "Tous les pyréthrinoïdes sont très toxiques pour les animaux à sang froid, notamment les poissons, et des effets négatifs sur les abeilles ont souvent été notés.",
+    "niveau": "comprehension",
+    "page": 710
+   },
+   {
+    "q": "Pourquoi la plupart des fongicides n'entraînent-ils pas l'apparition de résistances chez les parasites ?",
+    "choix": [
+     "Ils agissent sur plusieurs sites à la fois chez le parasite",
+     "Ils sont toujours appliqués à très faible dose",
+     "Ils se dégradent en quelques heures dans le sol",
+     "Ils pénètrent tous dans la plante par la sève"
+    ],
+    "reponse": 0,
+    "explication": "Plus de 80 % des fongicides agissent sur plusieurs sites du parasite, ce qui les rend peu spécifiques ; ceux qui agissent sur un seul site ont déjà provoqué des résistances.",
+    "niveau": "comprehension",
+    "page": 711
+   },
+   {
+    "q": "Un applicateur a reçu de la bouillie de pesticide sur les bras et les vêtements. Quel geste de premier secours est conseillé ?",
+    "choix": [
+     "Le dévêtir et le laver à grande eau savonneuse sans frotter fort",
+     "Le frotter énergiquement avec de l'essence pour dissoudre le produit",
+     "Le laisser sécher au soleil avant de changer ses vêtements",
+     "Lui faire boire beaucoup d'eau en gardant ses vêtements"
+    ],
+    "reponse": 0,
+    "explication": "Il faut dévêtir la personne et la laver à grande eau savonneuse ; solvants et frottements énergiques sont à éviter car ils favorisent l'absorption du pesticide par la peau.",
+    "niveau": "application",
+    "page": 716
+   },
+   {
+    "q": "Pour quelle raison la plupart des organo-chlorés sont-ils aujourd'hui interdits ?",
+    "choix": [
+     "Leur persistance et leur accumulation dans les sols, les plantes et les graisses",
+     "Leur manque total d'efficacité contre les ravageurs tropicaux",
+     "Leur prix trop élevé pour les petits producteurs",
+     "Leur destruction trop rapide par la lumière du soleil"
+    ],
+    "reponse": 0,
+    "explication": "Le texte explique ces interdictions par leur persistance et les risques d'accumulation dans les sols, les tissus végétaux et les graisses animales.",
+    "niveau": "comprehension",
+    "page": 711
+   },
+   {
+    "q": "Dans un village, quelqu'un propose d'utiliser un insecticide agricole pour pêcher dans la rivière ou conserver le poisson. Que dit le texte de ce type d'usage ?",
+    "choix": [
+     "C'est un détournement inapproprié qui expose à de graves risques",
+     "C'est un usage acceptable si la dose est fortement diluée",
+     "C'est un usage prévu par l'étiquette pour la conservation des denrées",
+     "C'est sans risque si le poisson est lavé avant d'être consommé"
+    ],
+    "reponse": 0,
+    "explication": "Le texte range la pêche, la chasse, la lutte contre les poux et la conservation des poissons parmi les détournements inappropriés, en plus des risques d'intoxication et de résidus.",
+    "niveau": "application",
+    "page": 713
+   },
+   {
+    "q": "Quels symptômes sont communs à la plupart des intoxications aiguës légères par les pesticides ?",
+    "choix": [
+     "Céphalées, nausées, vomissements et douleurs abdominales",
+     "Hémorragies des gencives, du nez et sang dans l'urine",
+     "Coloration jaune de la peau et forte fièvre durable",
+     "Perte de la vue, surdité et paralysie immédiate"
+    ],
+    "reponse": 0,
+    "explication": "Quel que soit le groupe de substances, les intoxications aiguës légères se traduisent le plus souvent par des maux de tête, des nausées, des vomissements et des douleurs abdominales.",
+    "niveau": "restitution",
+    "page": 715
+   }
+  ]
+ },
+ {
+  "chapitre": "6abb91d4",
+  "questions": [
+   {
+    "q": "Pour quelle partie de la plante Derris elliptica est-il cultivé ?",
+    "choix": [
+     "Ses racines, qui contiennent de la roténone",
+     "Ses fleurs rosées, riches en pyréthrine",
+     "Ses graines, dont on extrait une huile",
+     "Ses feuilles, broyées en poudre fine"
+    ],
+    "reponse": 0,
+    "explication": "Le derris est une liane pérenne cultivée pour ses racines, qui renferment de la roténone, un insecticide.",
+    "niveau": "restitution",
+    "page": 1203
+   },
+   {
+    "q": "Pourquoi conseille-t-on de planter le derris dans des sols pas trop argileux ?",
+    "choix": [
+     "Pour pouvoir extraire facilement les racines à la récolte",
+     "Pour augmenter la teneur des feuilles en roténone",
+     "Pour protéger la liane contre les attaques d'insectes",
+     "Pour que les boutures portent davantage de bourgeons"
+    ],
+    "reponse": 0,
+    "explication": "Le produit récolté étant la racine, un sol peu argileux permet de l'arracher plus aisément.",
+    "niveau": "comprehension",
+    "page": 1203
+   },
+   {
+    "q": "Sur une petite exploitation, un planteur veut récolter des racines de derris tout en gardant le plant en terre pour une récolte future. Comment doit-il procéder ?",
+    "choix": [
+     "Ne pas prélever les racines situées à la base du plant",
+     "Arracher tout le plant puis replanter la même souche",
+     "Couper la liane au ras du sol avant de récolter",
+     "Récolter toutes les racines dès la première année"
+    ],
+    "reponse": 0,
+    "explication": "Sur les petites exploitations, lorsque le plant reste en terre pour une récolte future, on laisse les racines de la base ; l'arrachage total suivi de replantation concerne les grandes plantations.",
+    "niveau": "application",
+    "page": 1203
+   }
+  ]
+ },
+ {
+  "chapitre": "7c006dd1",
+  "questions": [
+   {
+    "q": "Quelle substance insecticide contiennent les graines et les feuilles du neem ?",
+    "choix": [
+     "L'azadirachtine",
+     "La roténone",
+     "La pyréthrine",
+     "La téphrosine"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que les graines et feuilles du neem contiennent une substance insecticide appelée azadirachtine.",
+    "niveau": "restitution",
+    "page": 1204
+   },
+   {
+    "q": "Une agricultrice veut protéger son niébé stocké contre les bruchidés avec le neem. Quel usage le texte décrit-il ?",
+    "choix": [
+     "Des graines et feuilles broyées en poudre mêlées aux grains stockés",
+     "Des racines séchées brûlées en fumigation dans le grenier",
+     "Du bois de neem utilisé pour fabriquer les sacs de stockage",
+     "Des fleurs fraîches posées sur le toit du magasin"
+    ],
+    "reponse": 0,
+    "explication": "Les graines et les feuilles broyées en poudre servent d'insecticide pour la conservation des grains, en particulier contre les bruchidés des légumineuses.",
+    "niveau": "application",
+    "page": 1204
+   },
+   {
+    "q": "Pourquoi les graines de neem destinées au semis ne peuvent-elles pas être conservées longtemps ?",
+    "choix": [
+     "Leur durée de vie n'est que d'un mois environ",
+     "Elles germent spontanément dès qu'elles sèchent à l'air",
+     "Elles perdent leur azadirachtine au bout d'une semaine",
+     "Elles sont rapidement dévorées par les bruchidés"
+    ],
+    "reponse": 0,
+    "explication": "Les graines, séchées à l'air puis stockées dans du sable humide, ont une durée de vie d'un mois, ce qui impose de les semer rapidement.",
+    "niveau": "comprehension",
+    "page": 1204
+   }
+  ]
+ },
+ {
+  "chapitre": "49dae4e4",
+  "questions": [
+   {
+    "q": "Dans quelle partie du pyrèthre la pyréthrine est-elle concentrée ?",
+    "choix": [
+     "Dans les fleurs",
+     "Dans les tiges",
+     "Dans les feuilles",
+     "Dans la racine pivotante"
+    ],
+    "reponse": 0,
+    "explication": "Le pyrèthre est cultivé pour ses fleurs, qui contiennent la pyréthrine, alors que tiges et feuilles en renferment très peu.",
+    "niveau": "restitution",
+    "page": 1205
+   },
+   {
+    "q": "Un producteur installe du pyrèthre sur un terrain en pente dans une zone très pluvieuse. Quel mode de plantation le texte conseille-t-il ?",
+    "choix": [
+     "Planter sur billons",
+     "Planter à plat sans travail du sol",
+     "Planter sur planches surélevées",
+     "Planter en association avec des herbes"
+    ],
+    "reponse": 0,
+    "explication": "La culture craint l'hydromorphie et protège mal le sol de l'érosion : on plante sur billons en terrain accidenté, les planches étant réservées au terrain plat.",
+    "niveau": "application",
+    "page": 1205
+   },
+   {
+    "q": "Pourquoi les fleurs de pyrèthre sont-elles séchées à l'ombre ?",
+    "choix": [
+     "Pour ne pas diminuer leur teneur en pyréthrine",
+     "Pour éviter qu'elles soient attaquées par les insectes",
+     "Pour accélérer leur séchage par temps humide",
+     "Pour conserver la couleur blanche des fleurons"
+    ],
+    "reponse": 0,
+    "explication": "Le texte précise que le séchage se fait à l'ombre, à température progressivement croissante, afin de préserver la teneur en pyréthrine.",
+    "niveau": "comprehension",
+    "page": 1206
+   }
+  ]
+ },
+ {
+  "chapitre": "2f0a8bbb",
+  "questions": [
+   {
+    "q": "Quelles substances insecticides contient le tephrosia, et dans quelles parties ?",
+    "choix": [
+     "Téphrosine et roténone, dans toutes les parties",
+     "Azadirachtine, dans les graines seulement",
+     "Pyréthrine, dans les fleurs seulement",
+     "Roténone seule, dans les racines seulement"
+    ],
+    "reponse": 0,
+    "explication": "Toutes les parties du tephrosia renferment de la téphrosine et de la roténone, que l'on extrait en pilant la plante.",
+    "niveau": "restitution",
+    "page": 1206
+   },
+   {
+    "q": "À quoi le tephrosia doit-il sa bonne résistance à la sécheresse ?",
+    "choix": [
+     "À son enracinement profond",
+     "À sa pilosité rousse sur les tiges",
+     "À ses feuilles à huit à quinze folioles",
+     "À sa gousse poilue et plate"
+    ],
+    "reponse": 0,
+    "explication": "Le texte relie directement la bonne résistance à la sécheresse de T. vogelii à la profondeur de son enracinement.",
+    "niveau": "comprehension",
+    "page": 1206
+   },
+   {
+    "q": "Un caféiculteur cherche une plante pour ombrager provisoirement ses jeunes caféiers et fournir de l'engrais vert. Que lui apprend le texte sur le tephrosia ?",
+    "choix": [
+     "Il sert d'ombrage provisoire aux caféiers et son feuillage d'engrais vert",
+     "Il doit être évité car il épuise l'azote du sol des caféiers",
+     "Il ne pousse que sur sols calcaires, loin des plantations",
+     "Il sert uniquement de fourrage pour les chèvres"
+    ],
+    "reponse": 0,
+    "explication": "Le tephrosia est utilisé comme haie vive ou ombrage provisoire pour les caféiers, et son feuillage peut servir d'engrais vert.",
+    "niveau": "application",
+    "page": 1206
+   }
+  ]
+ }
+]
