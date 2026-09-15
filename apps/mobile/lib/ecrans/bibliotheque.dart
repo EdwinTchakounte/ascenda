@@ -119,24 +119,59 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         _reinitialiser();
                       }),
                     ),
-                    for (final a in liste)
-                      _Filtre(
-                        libelle: a.label,
-                        compte: a.nbOuvrages,
-                        actif: _axe == a.slug,
-                        onTap: () => setState(() {
-                          _axe = _axe == a.slug ? null : a.slug;
-                          _reinitialiser();
-                        }),
-                      ),
+                    // Un pôle tient en une pastille ; ses sous-axes s'ouvrent dessous.
+                    for (final g in regrouperParPole(liste))
+                      if (g.estPole)
+                        _Filtre(
+                          libelle: g.poleLabel!,
+                          actif: _axe == g.poleSlug || g.axes.any((a) => a.slug == _axe),
+                          onTap: () => setState(() {
+                            _axe = _axe == g.poleSlug ? null : g.poleSlug;
+                            _reinitialiser();
+                          }),
+                        )
+                      else
+                        _Filtre(
+                          libelle: g.axes.first.label,
+                          compte: g.axes.first.nbOuvrages,
+                          actif: _axe == g.axes.first.slug,
+                          onTap: () => setState(() {
+                            _axe = _axe == g.axes.first.slug ? null : g.axes.first.slug;
+                            _reinitialiser();
+                          }),
+                        ),
                   ],
                 ),
                 orElse: () => const SizedBox.shrink(),
               ),
             ),
+            if (axes.valueOrNull case final liste?)
+              for (final g in regrouperParPole(liste))
+                if (g.estPole && (_axe == g.poleSlug || g.axes.any((a) => a.slug == _axe)))
+                  SizedBox(
+                    height: 48,
+                    child: ListView(
+                      key: const Key('sous-axes'),
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.fromLTRB(20, 4, 20, 8),
+                      children: [
+                        for (final a in g.axes)
+                          _Filtre(
+                            libelle: a.label,
+                            actif: _axe == a.slug,
+                            onTap: () => setState(() {
+                              // Retirer un sous-axe revient au pôle, pas à « Tous ».
+                              _axe = _axe == a.slug ? g.poleSlug : a.slug;
+                              _reinitialiser();
+                            }),
+                          ),
+                      ],
+                    ),
+                  ),
             // Un axe sélectionné devient une porte. Le filtre dit ce qu'on
             // retire ; la fiche d'axe dit dans quel ordre lire ce qui reste.
-            if (_axe != null)
+            // Un pôle n'a pas de fiche à lui : la porte s'ouvre sur un sous-axe.
+            if (_axe != null && !(axes.valueOrNull ?? const <Axe>[]).any((a) => a.poleSlug == _axe))
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(

@@ -77,6 +77,11 @@ async def main():
         prot = slugs.get("12-3-protection-cultures", {})
         ok("« Protection des cultures » ne compte que sa part du livre", 0 < prot.get("nb_pages", 0) < 100,
            f"{prot.get('nb_pages')} pages sur {doc['page_count']}")
+        s, b = call("GET", "/v1/bibliotheque?axe=12-agriculture-elevage&par_page=5")
+        ok("la bibliothèque filtre par pôle", s == 200 and any(o["titre"] == STRUCTURE["titre"] for o in b["ouvrages"]),
+           b.get("total") if s == 200 else s)
+        s, b2 = call("GET", "/v1/bibliotheque?axe=12-3-protection-cultures&par_page=5")
+        ok("et par sous-axe", s == 200 and b2["total"] >= 1, b2.get("total") if s == 200 else s)
         total = sum(a["nb_pages"] for a in sous)
         ok("les six parts ne dépassent pas le livre", total <= doc["page_count"], f"{total} pages")
 

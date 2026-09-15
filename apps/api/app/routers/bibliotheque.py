@@ -29,11 +29,13 @@ async def lister(
     where = ["d.takedown_status = 'none'"]
     params: list = []
     if axe:
+        # Un pôle (« Agriculture et élevage ») filtre sur tous ses sous-axes.
         where.append(
             "exists (select 1 from document_axis da join axis a on a.id = da.axis_id "
-            "where da.document_id = d.id and a.slug = %s)"
+            "left join axis pa on pa.id = a.parent_id "
+            "where da.document_id = d.id and (a.slug = %s or pa.slug = %s))"
         )
-        params.append(axe)
+        params.extend([axe, axe])
     if niveau:
         where.append("p.level = %s")
         params.append(niveau)

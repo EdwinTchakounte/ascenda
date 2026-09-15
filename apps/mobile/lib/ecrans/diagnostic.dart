@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../api/client.dart';
+import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
@@ -277,71 +278,111 @@ class _ChoixAxe extends ConsumerWidget {
               style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
             ),
             const SizedBox(height: 24),
-            for (final a in liste) ...[
-              Opacity(
-                opacity: a.parcoursPossible ? 1 : 0.55,
-                child: InkWell(
-                  // Un axe dont aucun ouvrage n'a de chapitres découpés ne peut
-                  // pas donner de plan : on le dit au lieu d'échouer après six
-                  // questions.
-                  onTap: a.parcoursPossible
-                      ? () => onChoisi(a.slug)
-                      : () => ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              content: Texte(
-                                "Les ouvrages de « ${a.label} » ne sont pas encore "
-                                "découpés en chapitres : aucun plan de lecture ne "
-                                "peut être composé. Ils restent consultables dans "
-                                "la bibliothèque.",
-                              ),
-                              duration: const Duration(seconds: 6),
-                            ),
-                          ),
-                  borderRadius: BorderRadius.zero,
-                  child: Container(
-                    padding: const EdgeInsets.all(18),
-                    decoration: BoxDecoration(
-                      color: t.colorScheme.surface,
-                      borderRadius: BorderRadius.zero,
-                      border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Texte(a.label, style: t.textTheme.titleMedium),
-                              const SizedBox(height: 4),
-                              Texte(
-                                a.parcoursPossible
-                                    ? '${a.nbOuvrages} ouvrages · ${a.nbPages} pages'
-                                    : 'Consultable, pas encore de parcours',
-                                style: t.textTheme.bodySmall?.copyWith(
-                                  color: a.parcoursPossible
-                                      ? Couleurs.grisChaud
-                                      : Couleurs.terracotta,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Icon(
-                          a.parcoursPossible
-                              ? Icons.chevron_right_rounded
-                              : Icons.hourglass_empty_rounded,
-                          color: Couleurs.grisChaud,
-                        ),
-                      ],
-                    ),
-                  ),
+            for (final g in regrouperParPole(liste)) ...[
+              // Un pôle ouvre une section : son nom, puis ses parcours. Six cartes
+              // « Agriculture » à plat, au milieu des axes sur l'IA, se lisaient
+              // comme une liste sans ordre.
+              if (g.estPole) ...[
+                const SizedBox(height: 14),
+                Texte(g.poleLabel!, style: t.textTheme.titleLarge),
+                const SizedBox(height: 4),
+                Texte(
+                  '${g.axes.length} parcours : choisissez celui qui répond à votre activité.',
+                  style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
                 ),
-              ),
-              const SizedBox(height: 10),
+                const SizedBox(height: 12),
+              ],
+              for (final a in g.axes) ...[
+                _CarteAxe(axe: a, dansPole: g.estPole, onChoisi: onChoisi),
+                const SizedBox(height: 10),
+              ],
             ],
           ],
         ),
       ),
     );
+  }
+}
+
+
+class _CarteAxe extends StatelessWidget {
+  const _CarteAxe({required this.axe, required this.onChoisi, this.dansPole = false});
+  final Axe axe;
+  final bool dansPole;
+  final void Function(String slug) onChoisi;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final a = axe;
+    return Opacity(
+      opacity: a.parcoursPossible ? 1 : 0.55,
+      child: InkWell(
+        // Un axe dont aucun ouvrage n'a de chapitres découpés ne peut pas donner
+        // de plan : on le dit au lieu d'échouer après six questions.
+        onTap: a.parcoursPossible
+            ? () => onChoisi(a.slug)
+            : () => ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Texte(
+                      "Les ouvrages de « ${a.label} » ne sont pas encore "
+                      "découpés en chapitres : aucun plan de lecture ne "
+                      "peut être composé. Ils restent consultables dans "
+                      "la bibliothèque.",
+                    ),
+                    duration: const Duration(seconds: 6),
+                  ),
+                ),
+        borderRadius: BorderRadius.zero,
+        child: Container(
+          padding: const EdgeInsets.all(18),
+          decoration: BoxDecoration(
+            color: t.colorScheme.surface,
+            borderRadius: BorderRadius.zero,
+            border: Border(
+              top: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+              right: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+              bottom: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+              // Le filet d'or marque l'appartenance au pôle.
+              left: dansPole
+                  ? const BorderSide(color: Couleurs.or, width: 3)
+                  : BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+            ),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Texte(a.label, style: t.textTheme.titleMedium),
+                    const SizedBox(height: 4),
+                    Texte(
+                      !a.parcoursPossible
+                          ? 'Consultable, pas encore de parcours'
+                          : dansPole
+                              ? '${a.nbPages} pages · ${_heures(a.dureeMin)} de lecture'
+                              : '${a.nbOuvrages} ouvrages · ${a.nbPages} pages',
+                      style: t.textTheme.bodySmall?.copyWith(
+                        color: a.parcoursPossible ? Couleurs.grisChaud : Couleurs.terracotta,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                a.parcoursPossible ? Icons.chevron_right_rounded : Icons.hourglass_empty_rounded,
+                color: Couleurs.grisChaud,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  static String _heures(int minutes) {
+    final h = minutes ~/ 60;
+    return h == 0 ? '$minutes min' : '$h h';
   }
 }

@@ -215,6 +215,8 @@ class Axe {
     required this.premium,
     this.ouvragesExploitables = 0,
     this.parcoursPossible = true,
+    this.poleSlug,
+    this.poleLabel,
   });
 
   final String slug;
@@ -229,6 +231,10 @@ class Axe {
   final int ouvragesExploitables;
   final bool parcoursPossible;
 
+  /// Le pôle qui regroupe cet axe (« Agriculture et élevage »), s'il en a un.
+  final String? poleSlug;
+  final String? poleLabel;
+
   factory Axe.depuisJson(Map<String, dynamic> j) => Axe(
         slug: '${j['slug']}',
         label: '${j['label']}',
@@ -238,7 +244,39 @@ class Axe {
         premium: j['premium'] == true,
         ouvragesExploitables: _entier(j['ouvrages_exploitables']) ?? 0,
         parcoursPossible: j['parcours_possible'] != false,
+        poleSlug: j['pole'] is Map ? '${(j['pole'] as Map)['slug']}' : null,
+        poleLabel: j['pole'] is Map ? '${(j['pole'] as Map)['label']}' : null,
       );
+}
+
+/// Un axe seul, ou un pôle et ses sous-axes, dans l'ordre où l'API les donne.
+class GroupeAxes {
+  const GroupeAxes({required this.axes, this.poleSlug, this.poleLabel});
+  final String? poleSlug;
+  final String? poleLabel;
+  final List<Axe> axes;
+
+  bool get estPole => poleSlug != null;
+}
+
+List<GroupeAxes> regrouperParPole(List<Axe> axes) {
+  final groupes = <GroupeAxes>[];
+  final parPole = <String, List<Axe>>{};
+  for (final a in axes) {
+    if (a.poleSlug == null) {
+      groupes.add(GroupeAxes(axes: [a]));
+      continue;
+    }
+    final liste = parPole[a.poleSlug!];
+    if (liste != null) {
+      liste.add(a);
+    } else {
+      final nouvelle = <Axe>[a];
+      parPole[a.poleSlug!] = nouvelle;
+      groupes.add(GroupeAxes(axes: nouvelle, poleSlug: a.poleSlug, poleLabel: a.poleLabel));
+    }
+  }
+  return groupes;
 }
 
 class Ouvrage {
