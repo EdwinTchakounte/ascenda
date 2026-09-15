@@ -121,8 +121,10 @@ def sections(doc, sommaire: list[dict]) -> list[dict]:
             if plier(titre) in GENERIQUES:
                 porteur = PORTEURS.get(parent["titre"], parent["titre"])
                 lisible = f"{porteur} : {lisible[0].lower()}{lisible[1:]}"
+            # `ligne` : le titre tel qu'imprimé, pour couper la page à cet endroit
+            # (redecouper.py) plutôt qu'au début de la page.
             trouvees.append({"num": "", "titre": lisible, "niveau": parent["niveau"] + 1,
-                             "page": pi + 1, "type": "section", "_parent": parent["num"]})
+                             "page": pi + 1, "type": "section", "ligne": l, "_parent": parent["num"]})
     return trouvees
 
 

@@ -26,6 +26,7 @@
    "niveau": 2,
    "page": 18,
    "type": "section",
+   "ligne": "LE MONDE CHANGE, LES AGRONOMES AUSSI",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -50,6 +51,7 @@
    "niveau": 3,
    "page": 31,
    "type": "section",
+   "ligne": "LA PLACE DES DIAGNOSTICS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -58,6 +60,7 @@
    "niveau": 3,
    "page": 34,
    "type": "section",
+   "ligne": "LES PRINCIPAUX OUTILS DE DIAGNOSTIC",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -66,6 +69,7 @@
    "niveau": 3,
    "page": 36,
    "type": "section",
+   "ligne": "DES OUTILS POUR COLLECTER ET TRAITER L’INFORMATION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -82,6 +86,7 @@
    "niveau": 3,
    "page": 49,
    "type": "section",
+   "ligne": "LES COMPOSANTES DU MILIEU AGRICOLE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -90,6 +95,7 @@
    "niveau": 3,
    "page": 50,
    "type": "section",
+   "ligne": "LES HYPOTHÈSES DU DIAGNOSTIC LOCAL",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -98,6 +104,7 @@
    "niveau": 3,
    "page": 54,
    "type": "section",
+   "ligne": "DU VISIBLE À L’INVISIBLE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -106,6 +113,7 @@
    "niveau": 3,
    "page": 56,
    "type": "section",
+   "ligne": "LES ENTRETIENS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -114,6 +122,7 @@
    "niveau": 3,
    "page": 63,
    "type": "section",
+   "ligne": "LES OUTILS POUR METTRE EN FORME LES INFORMATIONS RECUEILLIES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -122,6 +131,7 @@
    "niveau": 3,
    "page": 71,
    "type": "section",
+   "ligne": "LES ALLERS ET RETOURS ENTRE LES PHASES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -154,6 +164,7 @@
    "niveau": 4,
    "page": 80,
    "type": "section",
+   "ligne": "LES NIVEAUX D’INTERVENTION DU DÉVELOPPEMENT RURAL",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -170,6 +181,7 @@
    "niveau": 4,
    "page": 85,
    "type": "section",
+   "ligne": "LES LIMITES, LES ACTEURS ET LES ÉTAPES DE LA DÉMARCHE PROJET",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -178,6 +190,7 @@
    "niveau": 4,
    "page": 93,
    "type": "section",
+   "ligne": "DES OUTILS POUR L’ACTION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -202,6 +215,7 @@
    "niveau": 4,
    "page": 115,
    "type": "section",
+   "ligne": "DES ORGANISATIONS DIVERSES, EN ÉVOLUTION PERMANENTE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -210,6 +224,7 @@
    "niveau": 4,
    "page": 130,
    "type": "section",
+   "ligne": "QUELQUES AXES DE TRAVAIL POUR RENFORCER LES ORGANISATIONS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -226,6 +241,7 @@
    "niveau": 4,
    "page": 139,
    "type": "section",
+   "ligne": "LA FILIÈRE, UN SYSTÈME AUX DIMENSIONS MULTIPLES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -242,6 +258,7 @@
    "niveau": 4,
    "page": 159,
    "type": "section",
+   "ligne": "QUELQUES DÉFINITIONS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -250,6 +267,7 @@
    "niveau": 4,
    "page": 166,
    "type": "section",
+   "ligne": "DU PROJET À L’INSTITUTION FINANCIÈRE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -258,6 +276,7 @@
    "niveau": 4,
    "page": 170,
    "type": "section",
+   "ligne": "LES SPÉCIFICITÉS DU CRÉDIT RURAL",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -266,6 +285,7 @@
    "niveau": 4,
    "page": 180,
    "type": "section",
+   "ligne": "LA VIABILITÉ DES INSTITUTIONS DE FINANCEMENT RURAL",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -282,6 +302,7 @@
    "niveau": 4,
    "page": 183,
    "type": "section",
+   "ligne": "LA FORMATION DES AGRICULTEURS ET AGRICULTRICES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -290,6 +311,7 @@
    "niveau": 4,
    "page": 192,
    "type": "section",
+   "ligne": "L’INFORMATION ET LA VULGARISATION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -298,6 +320,7 @@
    "niveau": 4,
    "page": 198,
    "type": "section",
+   "ligne": "LES CENTRES DE SERVICES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -322,6 +345,7 @@
    "niveau": 4,
    "page": 206,
    "type": "section",
+   "ligne": "L’ACCÈS À LA TERRE ET AUX RESSOURCES RENOUVELABLES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -330,6 +354,7 @@
    "niveau": 4,
    "page": 223,
    "type": "section",
+   "ligne": "LES ENJEUX FONCIERS D’UN AMÉNAGEMENT",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -346,6 +371,7 @@
    "niveau": 4,
    "page": 227,
    "type": "section",
+   "ligne": "L’HISTOIRE DES NOTIONS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -354,6 +380,7 @@
    "niveau": 4,
    "page": 230,
    "type": "section",
+   "ligne": "UN CANEVAS MÉTHODOLOGIQUE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -362,6 +389,7 @@
    "niveau": 4,
    "page": 235,
    "type": "section",
+   "ligne": "LES ACQUIS, LES LIMITES, LES PERSPECTIVES",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -378,6 +406,7 @@
    "niveau": 4,
    "page": 243,
    "type": "section",
+   "ligne": "LES NOTIONS D’AMÉNAGEMENT ET D’AGRICULTURE DURABLE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -386,6 +415,7 @@
    "niveau": 4,
    "page": 244,
    "type": "section",
+   "ligne": "LES MÉCANISMES ET LES CONSÉQUENCES DE L’ÉROSION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -394,6 +424,7 @@
    "niveau": 4,
    "page": 247,
    "type": "section",
+   "ligne": "LES TECHNIQUES DE CONTRÔLE ET LES AMÉNAGEMENTS ANTI-ÉROSIFS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -410,6 +441,7 @@
    "niveau": 4,
    "page": 261,
    "type": "section",
+   "ligne": "QUELQUES DÉFINITIONS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -418,6 +450,7 @@
    "niveau": 4,
    "page": 262,
    "type": "section",
+   "ligne": "LES MODES D’EXPLOITATION ET DE GESTION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -426,6 +459,7 @@
    "niveau": 4,
    "page": 267,
    "type": "section",
+   "ligne": "DES PRINCIPES DE GESTION DURABLE",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -434,6 +468,7 @@
    "niveau": 4,
    "page": 270,
    "type": "section",
+   "ligne": "DES POLITIQUES ET DES INSTRUMENTS DE GESTION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -450,6 +485,7 @@
    "niveau": 4,
    "page": 277,
    "type": "section",
+   "ligne": "LES DYSFONCTIONNEMENTS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -458,6 +494,7 @@
    "niveau": 4,
    "page": 279,
    "type": "section",
+   "ligne": "L’ÉCONOMIE DE L’IRRIGATION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -466,6 +503,7 @@
    "niveau": 4,
    "page": 282,
    "type": "section",
+   "ligne": "L’ORGANISATION DES IRRIGANTS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -474,6 +512,7 @@
    "niveau": 4,
    "page": 282,
    "type": "section",
+   "ligne": "QUELQUES ENJEUX ESSENTIELS",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -482,6 +521,7 @@
    "niveau": 4,
    "page": 290,
    "type": "section",
+   "ligne": "LES ASPECTS TECHNIQUES D’UN RÉSEAU D’IRRIGATION",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -498,6 +538,7 @@
    "niveau": 4,
    "page": 321,
    "type": "section",
+   "ligne": "DES QUESTIONS À APPROFONDIR",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -522,6 +563,7 @@
    "niveau": 3,
    "page": 335,
    "type": "section",
+   "ligne": "LA DIVERSITÉ DES EXPLOITATIONS AGRICOLES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -538,6 +580,7 @@
    "niveau": 3,
    "page": 351,
    "type": "section",
+   "ligne": "LE FONCTIONNEMENT TECHNIQUE D’UNE EXPLOITATION",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -546,6 +589,7 @@
    "niveau": 3,
    "page": 373,
    "type": "section",
+   "ligne": "LE CALCUL DES PERFORMANCES ÉCONOMIQUES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -586,6 +630,7 @@
    "niveau": 4,
    "page": 415,
    "type": "section",
+   "ligne": "L’AGRICULTURE D’ABATTIS-BRÛLIS",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -594,6 +639,7 @@
    "niveau": 4,
    "page": 421,
    "type": "section",
+   "ligne": "LES ASSOCIATIONS CÉRÉALICULTURE ET ÉLEVAGE SOUS PARC ARBORÉ",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -602,6 +648,7 @@
    "niveau": 4,
    "page": 423,
    "type": "section",
+   "ligne": "LES SYSTÈMES INTENSIFS ASSOCIANT POLYCULTURE ET ÉLEVAGE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -610,6 +657,7 @@
    "niveau": 4,
    "page": 426,
    "type": "section",
+   "ligne": "LA RIZICULTURE INONDÉE DE BAS-FOND ET D’ÉPANDAGE DE CRUES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -618,6 +666,7 @@
    "niveau": 4,
    "page": 429,
    "type": "section",
+   "ligne": "LES PLANTATIONS PÉRENNES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -626,6 +675,7 @@
    "niveau": 4,
    "page": 430,
    "type": "section",
+   "ligne": "L’ÉLEVAGE BOVIN EXTENSIF ET LE RANCHING",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -634,6 +684,7 @@
    "niveau": 4,
    "page": 432,
    "type": "section",
+   "ligne": "LE RECOURS ACCRU AUX INTRANTS CHIMIQUES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -642,6 +693,7 @@
    "niveau": 4,
    "page": 435,
    "type": "section",
+   "ligne": "LA MOTO-MÉCANISATION",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -658,6 +710,7 @@
    "niveau": 4,
    "page": 437,
    "type": "section",
+   "ligne": "LES BASES PHYSIQUES DE L’AGROCLIMATOLOGIE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -666,6 +719,7 @@
    "niveau": 4,
    "page": 441,
    "type": "section",
+   "ligne": "LES PARAMÈTRES CLIMATIQUES ET LES ACTIVITÉS AGRICOLES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -674,6 +728,7 @@
    "niveau": 4,
    "page": 445,
    "type": "section",
+   "ligne": "LA MESURE DES PARAMÈTRES MÉTÉOROLOGIQUES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -682,6 +737,7 @@
    "niveau": 4,
    "page": 448,
    "type": "section",
+   "ligne": "LES CLIMATS DE LA ZONE INTERTROPICALE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -698,6 +754,7 @@
    "niveau": 4,
    "page": 451,
    "type": "section",
+   "ligne": "LA COUVERTURE PÉDOLOGIQUE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -706,6 +763,7 @@
    "niveau": 4,
    "page": 455,
    "type": "section",
+   "ligne": "LES ORGANISATIONS ÉLÉMENTAIRES DU SOL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -714,6 +772,7 @@
    "niveau": 4,
    "page": 474,
    "type": "section",
+   "ligne": "LES PRINCIPAUX TYPES DE SOL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -730,6 +789,7 @@
    "niveau": 4,
    "page": 490,
    "type": "section",
+   "ligne": "LA MISE EN PLACE DES DIFFÉRENTS ORGANES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -738,6 +798,7 @@
    "niveau": 4,
    "page": 491,
    "type": "section",
+   "ligne": "LA CROISSANCE ET LE FONCTIONNEMENT DES ORGANES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -746,6 +807,7 @@
    "niveau": 4,
    "page": 497,
    "type": "section",
+   "ligne": "LES RELATIONS CROISSANCE - DÉVELOPPEMENT",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -770,6 +832,7 @@
    "niveau": 4,
    "page": 506,
    "type": "section",
+   "ligne": "L’ÉLABORATION DES ITINÉRAIRES TECHNIQUES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -778,6 +841,7 @@
    "niveau": 4,
    "page": 514,
    "type": "section",
+   "ligne": "L’IMPORTANT, C’EST LA COHÉRENCE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -794,6 +858,7 @@
    "niveau": 4,
    "page": 519,
    "type": "section",
+   "ligne": "LA PLANIFICATION DU PROCESSUS D’EXPÉRIMENTATION EN MILIEU PAYSAN",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -802,6 +867,7 @@
    "niveau": 4,
    "page": 524,
    "type": "section",
+   "ligne": "LE SUIVI ET L’ÉVALUATION DU DISPOSITIF D’EXPÉRIMENTATION",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -810,6 +876,7 @@
    "niveau": 4,
    "page": 527,
    "type": "section",
+   "ligne": "L’ANALYSE DES RÉSULTATS DE L’EXPÉRIMENTATION",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -818,6 +885,7 @@
    "niveau": 4,
    "page": 531,
    "type": "section",
+   "ligne": "L’UTILISATION ET LA VALORISATION DES RÉSULTATS",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -826,6 +894,7 @@
    "niveau": 4,
    "page": 537,
    "type": "section",
+   "ligne": "UN CAS D’EXPÉRIMENTATION PAYSANNE EN AMÉRIQUE CENTRALE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -834,6 +903,7 @@
    "niveau": 4,
    "page": 539,
    "type": "section",
+   "ligne": "UN ANTIDOTE CONTRE L’INERTIE ET LE SCEPTICISME",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -850,6 +920,7 @@
    "niveau": 4,
    "page": 541,
    "type": "section",
+   "ligne": "LES DÉFINITIONS",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -858,6 +929,7 @@
    "niveau": 4,
    "page": 543,
    "type": "section",
+   "ligne": "LES SUCCESSIONS DE CULTURES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -866,6 +938,7 @@
    "niveau": 4,
    "page": 548,
    "type": "section",
+   "ligne": "LES ASSOCIATIONS CULTURALES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -882,6 +955,7 @@
    "niveau": 4,
    "page": 557,
    "type": "section",
+   "ligne": "LA GESTION DU CYCLE DES CULTURES PÉRENNES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -890,6 +964,7 @@
    "niveau": 4,
    "page": 562,
    "type": "section",
+   "ligne": "LE MATÉRIEL VÉGÉTAL DISPONIBLE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -898,6 +973,7 @@
    "niveau": 4,
    "page": 565,
    "type": "section",
+   "ligne": "LES TRAVAUX D’ENTRETIEN DES CULTURES PÉRENNES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -906,6 +982,7 @@
    "niveau": 4,
    "page": 567,
    "type": "section",
+   "ligne": "LES CARACTÉRISTIQUES DE LA RÉCOLTE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -930,6 +1007,7 @@
    "niveau": 4,
    "page": 571,
    "type": "section",
+   "ligne": "LES OBJECTIFS DE L’AMÉLIORATION DES PLANTES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -938,6 +1016,7 @@
    "niveau": 4,
    "page": 572,
    "type": "section",
+   "ligne": "LES BASES BIOLOGIQUES DE LA REPRODUCTION DES PLANTES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -946,6 +1025,7 @@
    "niveau": 4,
    "page": 573,
    "type": "section",
+   "ligne": "L’AMÉLIORATION GÉNÉTIQUE DES PLANTES CULTIVÉES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -954,6 +1034,7 @@
    "niveau": 4,
    "page": 579,
    "type": "section",
+   "ligne": "LA MULTIPLICATION DE MATÉRIEL VÉGÉTAL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -962,6 +1043,7 @@
    "niveau": 4,
    "page": 585,
    "type": "section",
+   "ligne": "LA PROTECTION, LE CATALOGUE OFFICIEL ET LA CERTIFICATION",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -978,6 +1060,7 @@
    "niveau": 4,
    "page": 587,
    "type": "section",
+   "ligne": "LE RÔLE DES RACINES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -986,6 +1069,7 @@
    "niveau": 4,
    "page": 593,
    "type": "section",
+   "ligne": "LE PROFIL CULTURAL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -994,6 +1078,7 @@
    "niveau": 4,
    "page": 596,
    "type": "section",
+   "ligne": "LA TRANSFORMATION DES PROPRIÉTÉS PHYSIQUES DU SOL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1002,6 +1087,7 @@
    "niveau": 4,
    "page": 599,
    "type": "section",
+   "ligne": "LES OUTILS DE TRAVAIL DU SOL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1018,6 +1104,7 @@
    "niveau": 4,
    "page": 605,
    "type": "section",
+   "ligne": "LES ÉLÉMENTS MINÉRAUX",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1026,6 +1113,7 @@
    "niveau": 4,
    "page": 614,
    "type": "section",
+   "ligne": "LES FORMES ET RÔLES DE LA MATIÈRE ORGANIQUE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1034,6 +1122,7 @@
    "niveau": 4,
    "page": 619,
    "type": "section",
+   "ligne": "LES ENGRAIS ET LES AMENDEMENTS",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1042,6 +1131,7 @@
    "niveau": 4,
    "page": 631,
    "type": "section",
+   "ligne": "LA GESTION DE LA FERTILITÉ",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1058,6 +1148,7 @@
    "niveau": 4,
    "page": 647,
    "type": "section",
+   "ligne": "LE BILAN HYDRIQUE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1066,6 +1157,7 @@
    "niveau": 4,
    "page": 656,
    "type": "section",
+   "ligne": "LES MODES D’AMÉLIORATION DU BILAN HYDRIQUE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1074,6 +1166,7 @@
    "niveau": 4,
    "page": 661,
    "type": "section",
+   "ligne": "DES EXEMPLES AU MALI ET AU SÉNÉGAL",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1090,6 +1183,7 @@
    "niveau": 4,
    "page": 676,
    "type": "section",
+   "ligne": "LA MAÎTRISE DE L’ENHERBEMENT DES CULTURES",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1106,6 +1200,7 @@
    "niveau": 4,
    "page": 689,
    "type": "section",
+   "ligne": "DES DÉFINITIONS UTILES2",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1114,6 +1209,7 @@
    "niveau": 4,
    "page": 692,
    "type": "section",
+   "ligne": "LE DIAGNOSTIC PHYTOSANITAIRE",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1122,6 +1218,7 @@
    "niveau": 4,
    "page": 693,
    "type": "section",
+   "ligne": "LA PROTECTION INTÉGRÉE",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1130,6 +1227,7 @@
    "niveau": 4,
    "page": 707,
    "type": "section",
+   "ligne": "L’UTILISATION DES PESTICIDES",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1146,6 +1244,7 @@
    "niveau": 4,
    "page": 721,
    "type": "section",
+   "ligne": "LE SYSTÈME APRÈS RÉCOLTE DES CÉRÉALES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1154,6 +1253,7 @@
    "niveau": 4,
    "page": 738,
    "type": "section",
+   "ligne": "LE SYSTÈME APRÈS-RÉCOLTE DES RACINES ET TUBERCULES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1162,6 +1262,7 @@
    "niveau": 4,
    "page": 742,
    "type": "section",
+   "ligne": "LE SYSTÈME APRÈS-RÉCOLTE DES FRUITS ET LÉGUMES",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1170,6 +1271,7 @@
    "niveau": 4,
    "page": 748,
    "type": "section",
+   "ligne": "LE SYSTÈME APRÈS-RÉCOLTE DES BANANES ET PLANTAINS29",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1186,6 +1288,7 @@
    "niveau": 4,
    "page": 751,
    "type": "section",
+   "ligne": "L’ÉNERGIE ET SA MESURE",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1194,6 +1297,7 @@
    "niveau": 4,
    "page": 755,
    "type": "section",
+   "ligne": "L’ÉNERGIE ANIMALE 2",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1202,6 +1306,7 @@
    "niveau": 4,
    "page": 765,
    "type": "section",
+   "ligne": "LA MOTORISATION11",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1210,6 +1315,7 @@
    "niveau": 4,
    "page": 772,
    "type": "section",
+   "ligne": "LES ÉNERGIES RENOUVELABLES14",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -1242,6 +1348,7 @@
    "niveau": 4,
    "page": 781,
    "type": "section",
+   "ligne": "LE BLÉ",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1250,6 +1357,7 @@
    "niveau": 4,
    "page": 784,
    "type": "section",
+   "ligne": "LE MAÏS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1258,6 +1366,7 @@
    "niveau": 4,
    "page": 797,
    "type": "section",
+   "ligne": "LE MIL",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1266,6 +1375,7 @@
    "niveau": 4,
    "page": 803,
    "type": "section",
+   "ligne": "LE RIZ",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1274,6 +1384,7 @@
    "niveau": 4,
    "page": 815,
    "type": "section",
+   "ligne": "LE SORGHO6",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1282,6 +1393,7 @@
    "niveau": 4,
    "page": 827,
    "type": "section",
+   "ligne": "LES CÉRÉALES SECONDAIRES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1298,6 +1410,7 @@
    "niveau": 4,
    "page": 835,
    "type": "section",
+   "ligne": "L’ARBRE À PAIN",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1306,6 +1419,7 @@
    "niveau": 4,
    "page": 838,
    "type": "section",
+   "ligne": "LE CANNA COMESTIBLE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1314,6 +1428,7 @@
    "niveau": 4,
    "page": 838,
    "type": "section",
+   "ligne": "L’IGNAME",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1322,6 +1437,7 @@
    "niveau": 4,
    "page": 847,
    "type": "section",
+   "ligne": "LE MANIOC",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1330,6 +1446,7 @@
    "niveau": 4,
    "page": 854,
    "type": "section",
+   "ligne": "LA MARANTA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1338,6 +1455,7 @@
    "niveau": 4,
    "page": 854,
    "type": "section",
+   "ligne": "LA PATATE DOUCE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1346,6 +1464,7 @@
    "niveau": 4,
    "page": 858,
    "type": "section",
+   "ligne": "LA POMME DE TERRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1354,6 +1473,7 @@
    "niveau": 4,
    "page": 862,
    "type": "section",
+   "ligne": "LE SAGOUTIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1362,6 +1482,7 @@
    "niveau": 4,
    "page": 863,
    "type": "section",
+   "ligne": "LE TARO ET LE MACABO",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1378,6 +1499,7 @@
    "niveau": 4,
    "page": 869,
    "type": "section",
+   "ligne": "LE HARICOT",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1386,6 +1508,7 @@
    "niveau": 4,
    "page": 873,
    "type": "section",
+   "ligne": "LE NIÉBÉ1",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1394,6 +1517,7 @@
    "niveau": 4,
    "page": 876,
    "type": "section",
+   "ligne": "LE POIS D’ANGOLE2",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1402,6 +1526,7 @@
    "niveau": 4,
    "page": 878,
    "type": "section",
+   "ligne": "LE POIS DU CAP",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1410,6 +1535,7 @@
    "niveau": 4,
    "page": 879,
    "type": "section",
+   "ligne": "LE VOANDZOU",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1426,6 +1552,7 @@
    "niveau": 4,
    "page": 883,
    "type": "section",
+   "ligne": "L’ARACHIDE1",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1434,6 +1561,7 @@
    "niveau": 4,
    "page": 896,
    "type": "section",
+   "ligne": "LE CARTHAME (DES TEINTURIERS)",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1442,6 +1570,7 @@
    "niveau": 4,
    "page": 897,
    "type": "section",
+   "ligne": "LE COCOTIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1450,6 +1579,7 @@
    "niveau": 4,
    "page": 910,
    "type": "section",
+   "ligne": "LE PALMIER À HUILE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1458,6 +1588,7 @@
    "niveau": 4,
    "page": 922,
    "type": "section",
+   "ligne": "LE SÉSAME",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1466,6 +1597,7 @@
    "niveau": 4,
    "page": 923,
    "type": "section",
+   "ligne": "LE SOJA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1474,6 +1606,7 @@
    "niveau": 4,
    "page": 929,
    "type": "section",
+   "ligne": "LE TOURNESOL",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1490,6 +1623,7 @@
    "niveau": 4,
    "page": 933,
    "type": "section",
+   "ligne": "LES AGRUMES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1498,6 +1632,7 @@
    "niveau": 4,
    "page": 945,
    "type": "section",
+   "ligne": "L’ANACARDIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1506,6 +1641,7 @@
    "niveau": 4,
    "page": 949,
    "type": "section",
+   "ligne": "L’ANANAS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1514,6 +1650,7 @@
    "niveau": 4,
    "page": 956,
    "type": "section",
+   "ligne": "L’AVOCATIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1522,6 +1659,7 @@
    "niveau": 4,
    "page": 964,
    "type": "section",
+   "ligne": "LES BANANIERS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1530,6 +1668,7 @@
    "niveau": 4,
    "page": 979,
    "type": "section",
+   "ligne": "LE LITCHI ET LE RAMBOUTAN",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1538,6 +1677,7 @@
    "niveau": 4,
    "page": 984,
    "type": "section",
+   "ligne": "LE MANGUIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1546,6 +1686,7 @@
    "niveau": 4,
    "page": 990,
    "type": "section",
+   "ligne": "LE PALMIER DATTIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1554,6 +1695,7 @@
    "niveau": 4,
    "page": 998,
    "type": "section",
+   "ligne": "LE PAPAYER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1562,6 +1704,7 @@
    "niveau": 4,
    "page": 1003,
    "type": "section",
+   "ligne": "LES ESPÈCES FRUITIÈRES D’IMPORTANCE SECONDAIRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1578,6 +1721,7 @@
    "niveau": 4,
    "page": 1030,
    "type": "section",
+   "ligne": "L’AIL",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1586,6 +1730,7 @@
    "niveau": 4,
    "page": 1031,
    "type": "section",
+   "ligne": "LES AMARANTES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1594,6 +1739,7 @@
    "niveau": 4,
    "page": 1033,
    "type": "section",
+   "ligne": "L’AUBERGINE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1602,6 +1748,7 @@
    "niveau": 4,
    "page": 1034,
    "type": "section",
+   "ligne": "LA BASELLE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1610,6 +1757,7 @@
    "niveau": 4,
    "page": 1035,
    "type": "section",
+   "ligne": "LA CHAYOTTE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1618,6 +1766,7 @@
    "niveau": 4,
    "page": 1036,
    "type": "section",
+   "ligne": "LES CHOUX CHINOIS : PE-TSAÏ ET PAK-CHOY",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1626,6 +1775,7 @@
    "niveau": 4,
    "page": 1036,
    "type": "section",
+   "ligne": "LES CHOUX EUROPÉENS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1634,6 +1784,7 @@
    "niveau": 4,
    "page": 1038,
    "type": "section",
+   "ligne": "LE CHOU PALMISTE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1642,6 +1793,7 @@
    "niveau": 4,
    "page": 1038,
    "type": "section",
+   "ligne": "L’ÉCHALOTE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1650,6 +1802,7 @@
    "niveau": 4,
    "page": 1039,
    "type": "section",
+   "ligne": "LE GOMBO",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1658,6 +1811,7 @@
    "niveau": 4,
    "page": 1040,
    "type": "section",
+   "ligne": "LA LAITUE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1666,6 +1820,7 @@
    "niveau": 4,
    "page": 1041,
    "type": "section",
+   "ligne": "L’OIGNON",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1674,6 +1829,7 @@
    "niveau": 4,
    "page": 1045,
    "type": "section",
+   "ligne": "LES PIMENTS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1682,6 +1838,7 @@
    "niveau": 4,
    "page": 1046,
    "type": "section",
+   "ligne": "LE POIREAU",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1690,6 +1847,7 @@
    "niveau": 4,
    "page": 1047,
    "type": "section",
+   "ligne": "LE POIVRON",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1698,6 +1856,7 @@
    "niveau": 4,
    "page": 1048,
    "type": "section",
+   "ligne": "LES POUSSES DE BAMBOU",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1706,6 +1865,7 @@
    "niveau": 4,
    "page": 1049,
    "type": "section",
+   "ligne": "LE RADIS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1714,6 +1874,7 @@
    "niveau": 4,
    "page": 1049,
    "type": "section",
+   "ligne": "LA TOMATE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1730,6 +1891,7 @@
    "niveau": 4,
    "page": 1055,
    "type": "section",
+   "ligne": "LE CACAOYER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1738,6 +1900,7 @@
    "niveau": 4,
    "page": 1067,
    "type": "section",
+   "ligne": "LE CAFÉIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1746,6 +1909,7 @@
    "niveau": 4,
    "page": 1080,
    "type": "section",
+   "ligne": "LE GUARANA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1754,6 +1918,7 @@
    "niveau": 4,
    "page": 1081,
    "type": "section",
+   "ligne": "LE KOLATIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1762,6 +1927,7 @@
    "niveau": 4,
    "page": 1083,
    "type": "section",
+   "ligne": "LE MATÉ",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1770,6 +1936,7 @@
    "niveau": 4,
    "page": 1084,
    "type": "section",
+   "ligne": "LE TABAC",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1778,6 +1945,7 @@
    "niveau": 4,
    "page": 1089,
    "type": "section",
+   "ligne": "LE THÉIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1794,6 +1962,7 @@
    "niveau": 4,
    "page": 1095,
    "type": "section",
+   "ligne": "L’ANIS ÉTOILÉ OU BADIANE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1802,6 +1971,7 @@
    "niveau": 4,
    "page": 1096,
    "type": "section",
+   "ligne": "LE CANNELIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1810,6 +1980,7 @@
    "niveau": 4,
    "page": 1097,
    "type": "section",
+   "ligne": "LA CARDAMOME",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1818,6 +1989,7 @@
    "niveau": 4,
    "page": 1098,
    "type": "section",
+   "ligne": "LE CURCUMA OU SAFRAN DES INDES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1826,6 +1998,7 @@
    "niveau": 4,
    "page": 1098,
    "type": "section",
+   "ligne": "LE GINGEMBRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1834,6 +2007,7 @@
    "niveau": 4,
    "page": 1099,
    "type": "section",
+   "ligne": "LE GIROFLIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1842,6 +2016,7 @@
    "niveau": 4,
    "page": 1102,
    "type": "section",
+   "ligne": "LA MUSCADE ET LE MACIS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1850,6 +2025,7 @@
    "niveau": 4,
    "page": 1103,
    "type": "section",
+   "ligne": "LE POIVRIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1858,6 +2034,7 @@
    "niveau": 4,
    "page": 1107,
    "type": "section",
+   "ligne": "LE VANILLIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1874,6 +2051,7 @@
    "niveau": 4,
    "page": 1113,
    "type": "section",
+   "ligne": "LA CANNE À SUCRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1882,6 +2060,7 @@
    "niveau": 4,
    "page": 1126,
    "type": "section",
+   "ligne": "LE PALMIER À SUCRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1906,6 +2085,7 @@
    "niveau": 4,
    "page": 1131,
    "type": "section",
+   "ligne": "LA DIVERSITÉ DES MODES DE PRODUCTION",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1914,6 +2094,7 @@
    "niveau": 4,
    "page": 1134,
    "type": "section",
+   "ligne": "LE CHOIX D’UNE ESPÈCE FOURRAGÈRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1922,6 +2103,7 @@
    "niveau": 4,
    "page": 1134,
    "type": "section",
+   "ligne": "L’ÉTABLISSEMENT ET L’ENTRETIEN DES SURFACES FOURRAGÈRES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1930,6 +2112,7 @@
    "niveau": 4,
    "page": 1137,
    "type": "section",
+   "ligne": "LA PRODUCTION DE SEMENCES FOURRAGÈRES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1938,6 +2121,7 @@
    "niveau": 4,
    "page": 1139,
    "type": "section",
+   "ligne": "L’EXPLOITATION DES PRAIRIES ET LA CONSERVATION DES FOURRAGES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1946,6 +2130,7 @@
    "niveau": 4,
    "page": 1142,
    "type": "section",
+   "ligne": "LA PRODUCTION ET LA CAPACITÉ DE CHARGE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1954,6 +2139,7 @@
    "niveau": 4,
    "page": 1143,
    "type": "section",
+   "ligne": "LES MALADIES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1962,6 +2148,7 @@
    "niveau": 4,
    "page": 1144,
    "type": "section",
+   "ligne": "LES CULTURES FOURRAGÈRES DANS LES SYSTÈMES DE PRODUCTION",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1978,6 +2165,7 @@
    "niveau": 4,
    "page": 1145,
    "type": "section",
+   "ligne": "AESCHYNOMENE HISTRIX",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1986,6 +2174,7 @@
    "niveau": 4,
    "page": 1146,
    "type": "section",
+   "ligne": "ANDROPOGON GAYANUS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1994,6 +2183,7 @@
    "niveau": 4,
    "page": 1147,
    "type": "section",
+   "ligne": "L’ARACHIDE FOURRAGÈRE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2002,6 +2192,7 @@
    "niveau": 4,
    "page": 1149,
    "type": "section",
+   "ligne": "CHAMAECRISTA ROTUNDIFOLIA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2010,6 +2201,7 @@
    "niveau": 4,
    "page": 1149,
    "type": "section",
+   "ligne": "LE DOLIQUE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2018,6 +2210,7 @@
    "niveau": 4,
    "page": 1150,
    "type": "section",
+   "ligne": "L’HERBE DE GUINÉE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2026,6 +2219,7 @@
    "niveau": 4,
    "page": 1151,
    "type": "section",
+   "ligne": "L’HERBE DE PARA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2034,6 +2228,7 @@
    "niveau": 4,
    "page": 1152,
    "type": "section",
+   "ligne": "L’HERBE DE RHODES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2042,6 +2237,7 @@
    "niveau": 4,
    "page": 1153,
    "type": "section",
+   "ligne": "LA LUZERNE DES CARAÏBES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2050,6 +2246,7 @@
    "niveau": 4,
    "page": 1154,
    "type": "section",
+   "ligne": "LE NIÉBÉ4",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2058,6 +2255,7 @@
    "niveau": 4,
    "page": 1155,
    "type": "section",
+   "ligne": "LE POIS D’ANGOLE5",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2066,6 +2264,7 @@
    "niveau": 4,
    "page": 1156,
    "type": "section",
+   "ligne": "LE SORGHO FOURRAGER6",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2090,6 +2289,7 @@
    "niveau": 4,
    "page": 1161,
    "type": "section",
+   "ligne": "LES PRINCIPALES FIBRES TROPICALES",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2098,6 +2298,7 @@
    "niveau": 4,
    "page": 1163,
    "type": "section",
+   "ligne": "L’ABACA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2106,6 +2307,7 @@
    "niveau": 4,
    "page": 1164,
    "type": "section",
+   "ligne": "LE COTONNIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2114,6 +2316,7 @@
    "niveau": 4,
    "page": 1176,
    "type": "section",
+   "ligne": "LE JUTE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2122,6 +2325,7 @@
    "niveau": 4,
    "page": 1177,
    "type": "section",
+   "ligne": "LE KAPOKIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2130,6 +2334,7 @@
    "niveau": 4,
    "page": 1179,
    "type": "section",
+   "ligne": "LE KENAF",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2138,6 +2343,7 @@
    "niveau": 4,
    "page": 1180,
    "type": "section",
+   "ligne": "LA RAMIE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2146,6 +2352,7 @@
    "niveau": 4,
    "page": 1181,
    "type": "section",
+   "ligne": "LE RAPHIA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2154,6 +2361,7 @@
    "niveau": 4,
    "page": 1182,
    "type": "section",
+   "ligne": "LE RÔNIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2162,6 +2370,7 @@
    "niveau": 4,
    "page": 1183,
    "type": "section",
+   "ligne": "LA ROSELLE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2170,6 +2379,7 @@
    "niveau": 4,
    "page": 1184,
    "type": "section",
+   "ligne": "LES ROTINS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2178,6 +2388,7 @@
    "niveau": 4,
    "page": 1185,
    "type": "section",
+   "ligne": "LE SISAL",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2194,6 +2405,7 @@
    "niveau": 4,
    "page": 1189,
    "type": "section",
+   "ligne": "LE GUAYULE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2202,6 +2414,7 @@
    "niveau": 4,
    "page": 1191,
    "type": "section",
+   "ligne": "L’HÉVÉA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2218,6 +2431,7 @@
    "niveau": 4,
    "page": 1203,
    "type": "section",
+   "ligne": "DERRIS ELLIPTICA",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -2226,6 +2440,7 @@
    "niveau": 4,
    "page": 1204,
    "type": "section",
+   "ligne": "LE NEEM",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -2234,6 +2449,7 @@
    "niveau": 4,
    "page": 1205,
    "type": "section",
+   "ligne": "LE PYRÈTHRE",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -2242,6 +2458,7 @@
    "niveau": 4,
    "page": 1206,
    "type": "section",
+   "ligne": "LE TEPHROSIA",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -2258,6 +2475,7 @@
    "niveau": 4,
    "page": 1207,
    "type": "section",
+   "ligne": "L’ALEURITE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2266,6 +2484,7 @@
    "niveau": 4,
    "page": 1208,
    "type": "section",
+   "ligne": "L’ARBRE À ENCENS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2274,6 +2493,7 @@
    "niveau": 4,
    "page": 1209,
    "type": "section",
+   "ligne": "LE BENJOIN",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2282,6 +2502,7 @@
    "niveau": 4,
    "page": 1209,
    "type": "section",
+   "ligne": "LE CAMPHRIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2290,6 +2511,7 @@
    "niveau": 4,
    "page": 1210,
    "type": "section",
+   "ligne": "LA CITRONNELLE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2298,6 +2520,7 @@
    "niveau": 4,
    "page": 1211,
    "type": "section",
+   "ligne": "L’EUCALYPTUS CITRIODORA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2306,6 +2529,7 @@
    "niveau": 4,
    "page": 1211,
    "type": "section",
+   "ligne": "L’EUCALYPTUS GLOBULUS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2314,6 +2538,7 @@
    "niveau": 4,
    "page": 1212,
    "type": "section",
+   "ligne": "LE GÉRANIUM",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2322,6 +2547,7 @@
    "niveau": 4,
    "page": 1213,
    "type": "section",
+   "ligne": "LE JOJOBA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2330,6 +2556,7 @@
    "niveau": 4,
    "page": 1214,
    "type": "section",
+   "ligne": "LE KARITÉ",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2338,6 +2565,7 @@
    "niveau": 4,
    "page": 1216,
    "type": "section",
+   "ligne": "LE LEMONGRASS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2346,6 +2574,7 @@
    "niveau": 4,
    "page": 1217,
    "type": "section",
+   "ligne": "LA MYRRHE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2354,6 +2583,7 @@
    "niveau": 4,
    "page": 1217,
    "type": "section",
+   "ligne": "LE PATCHOULI",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2362,6 +2592,7 @@
    "niveau": 4,
    "page": 1218,
    "type": "section",
+   "ligne": "LA PERVENCHE DE MADAGASCAR",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2370,6 +2601,7 @@
    "niveau": 4,
    "page": 1218,
    "type": "section",
+   "ligne": "LE QUINQUINA",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2378,6 +2610,7 @@
    "niveau": 4,
    "page": 1219,
    "type": "section",
+   "ligne": "LE RICIN",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2386,6 +2619,7 @@
    "niveau": 4,
    "page": 1223,
    "type": "section",
+   "ligne": "LE VÉTIVER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2394,6 +2628,7 @@
    "niveau": 4,
    "page": 1224,
    "type": "section",
+   "ligne": "L’YLANG-YLANG",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2410,6 +2645,7 @@
    "niveau": 4,
    "page": 1227,
    "type": "section",
+   "ligne": "ACACIA DECURRENS",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2418,6 +2654,7 @@
    "niveau": 4,
    "page": 1228,
    "type": "section",
+   "ligne": "LE BOIS DE SANTAL",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2426,6 +2663,7 @@
    "niveau": 4,
    "page": 1229,
    "type": "section",
+   "ligne": "LE CAMPÊCHE",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2434,6 +2672,7 @@
    "niveau": 4,
    "page": 1229,
    "type": "section",
+   "ligne": "LE HENNÉ",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2442,6 +2681,7 @@
    "niveau": 4,
    "page": 1230,
    "type": "section",
+   "ligne": "L’INDIGOTIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2450,6 +2690,7 @@
    "niveau": 4,
    "page": 1231,
    "type": "section",
+   "ligne": "LE PALÉTUVIER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2458,6 +2699,7 @@
    "niveau": 4,
    "page": 1232,
    "type": "section",
+   "ligne": "LE ROCOUYER",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -2490,6 +2732,7 @@
    "niveau": 3,
    "page": 1243,
    "type": "section",
+   "ligne": "LA DIVERSITÉ DES SYSTÈMES D’ÉLEVAGE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2498,6 +2741,7 @@
    "niveau": 3,
    "page": 1248,
    "type": "section",
+   "ligne": "LES DÉFINITIONS DES SYSTÈMES D’ÉLEVAGE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2506,6 +2750,7 @@
    "niveau": 3,
    "page": 1250,
    "type": "section",
+   "ligne": "LES OUTILS DU DIAGNOSTIC8",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2514,6 +2759,7 @@
    "niveau": 3,
    "page": 1255,
    "type": "section",
+   "ligne": "LES MÉTHODES SPÉCIFIQUES",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2530,6 +2776,7 @@
    "niveau": 3,
    "page": 1272,
    "type": "section",
+   "ligne": "LA DÉMARCHE GÉNÉRALE DE DIAGNOSTIC",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2538,6 +2785,7 @@
    "niveau": 3,
    "page": 1275,
    "type": "section",
+   "ligne": "L’ALIMENTATION DES RUMINANTS SUR PARCOURS AGRO-SYLVO-PASTORAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2546,6 +2794,7 @@
    "niveau": 3,
    "page": 1280,
    "type": "section",
+   "ligne": "LES SYSTÈMES PRAIRIAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2554,6 +2803,7 @@
    "niveau": 3,
    "page": 1291,
    "type": "section",
+   "ligne": "L’ALIMENTATION DES RUMINANTS EN STABULATION",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2562,6 +2812,7 @@
    "niveau": 3,
    "page": 1296,
    "type": "section",
+   "ligne": "LES SYSTÈMES D’ALIMENTATION DES MONOGASTRIQUES NON HERBIVORES",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2578,6 +2829,7 @@
    "niveau": 3,
    "page": 1305,
    "type": "section",
+   "ligne": "LA VIANDE ET LES PRODUITS CARNÉS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2586,6 +2838,7 @@
    "niveau": 3,
    "page": 1310,
    "type": "section",
+   "ligne": "LES PRODUITS LAITIERS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2594,6 +2847,7 @@
    "niveau": 3,
    "page": 1313,
    "type": "section",
+   "ligne": "LES AUTRES PRODUITS ANIMAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2610,6 +2864,7 @@
    "niveau": 3,
    "page": 1317,
    "type": "section",
+   "ligne": "L’ÉVOLUTION DE LA DEMANDE EN PRODUITS ANIMAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2618,6 +2873,7 @@
    "niveau": 3,
    "page": 1318,
    "type": "section",
+   "ligne": "L’ÉLEVAGE ET LE DÉVELOPPEMENT DURABLE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2626,6 +2882,7 @@
    "niveau": 3,
    "page": 1318,
    "type": "section",
+   "ligne": "LES PRINCIPAUX IMPACTS DE L’ÉLEVAGE SUR L’ENVIRONNEMENT",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2634,6 +2891,7 @@
    "niveau": 3,
    "page": 1320,
    "type": "section",
+   "ligne": "LES RISQUES ENVIRONNEMENTAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2642,6 +2900,7 @@
    "niveau": 3,
    "page": 1327,
    "type": "section",
+   "ligne": "LES OUTILS D’AIDE À LA DÉCISION",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2658,6 +2917,7 @@
    "niveau": 3,
    "page": 1329,
    "type": "section",
+   "ligne": "LES PRINCIPES DE L’AMÉLIORATION DE LA GESTION DES TROUPEAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2674,6 +2934,7 @@
    "niveau": 3,
    "page": 1359,
    "type": "section",
+   "ligne": "LE DIAGNOSTIC SANITAIRE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2682,6 +2943,7 @@
    "niveau": 3,
    "page": 1362,
    "type": "section",
+   "ligne": "LES MALADIES ET LES STRATÉGIES DE LUTTE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2690,6 +2952,7 @@
    "niveau": 3,
    "page": 1382,
    "type": "section",
+   "ligne": "LA SANTÉ ANIMALE ET LA SANTÉ PUBLIQUE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2698,6 +2961,7 @@
    "niveau": 3,
    "page": 1386,
    "type": "section",
+   "ligne": "L’HYGIÈNE ET LA PROPHYLAXIE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2706,6 +2970,7 @@
    "niveau": 3,
    "page": 1390,
    "type": "section",
+   "ligne": "L’ÉCONOMIE DE LA SANTÉ ANIMALE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2738,6 +3003,7 @@
    "niveau": 4,
    "page": 1399,
    "type": "section",
+   "ligne": "LES PERFORMANCES GÉNÉTIQUES",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2746,6 +3012,7 @@
    "niveau": 4,
    "page": 1402,
    "type": "section",
+   "ligne": "L’ALIMENTATION DES RUMINANTS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2754,6 +3021,7 @@
    "niveau": 4,
    "page": 1421,
    "type": "section",
+   "ligne": "LA REPRODUCTION",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2762,6 +3030,7 @@
    "niveau": 4,
    "page": 1428,
    "type": "section",
+   "ligne": "LE LOGEMENT DES RUMINANTS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2778,6 +3047,7 @@
    "niveau": 4,
    "page": 1431,
    "type": "section",
+   "ligne": "L’ÉLEVAGE BOVIN LAITIER",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2786,6 +3056,7 @@
    "niveau": 4,
    "page": 1441,
    "type": "section",
+   "ligne": "L’ÉLEVAGE DES BOVINS À VIANDE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2794,6 +3065,7 @@
    "niveau": 4,
    "page": 1450,
    "type": "section",
+   "ligne": "L’ÉLEVAGE DES BOVINS DE TRAIT",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2810,6 +3082,7 @@
    "niveau": 4,
    "page": 1461,
    "type": "section",
+   "ligne": "L’ÉLEVAGE OVIN",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2818,6 +3091,7 @@
    "niveau": 4,
    "page": 1467,
    "type": "section",
+   "ligne": "L’ÉLEVAGE CAPRIN",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2826,6 +3100,7 @@
    "niveau": 4,
    "page": 1471,
    "type": "section",
+   "ligne": "L’ÉLEVAGE CAMÉLIN",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2842,6 +3117,7 @@
    "niveau": 4,
    "page": 1477,
    "type": "section",
+   "ligne": "L’ÉLEVAGE DES ÉQUIDÉS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2850,6 +3126,7 @@
    "niveau": 4,
    "page": 1481,
    "type": "section",
+   "ligne": "L’ÉLEVAGE DES LAPINS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2874,6 +3151,7 @@
    "niveau": 4,
    "page": 1491,
    "type": "section",
+   "ligne": "LES RACES, LES SOUCHES, LES CROISEMENTS",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2882,6 +3160,7 @@
    "niveau": 4,
    "page": 1493,
    "type": "section",
+   "ligne": "LES PERFORMANCES",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2890,6 +3169,7 @@
    "niveau": 4,
    "page": 1493,
    "type": "section",
+   "ligne": "LES BÂTIMENTS ET LE MATÉRIEL",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2898,6 +3178,7 @@
    "niveau": 4,
    "page": 1497,
    "type": "section",
+   "ligne": "L’ALIMENTATION",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2906,6 +3187,7 @@
    "niveau": 4,
    "page": 1503,
    "type": "section",
+   "ligne": "LES PATHOLOGIES ET L’HYGIÈNE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2914,6 +3196,7 @@
    "niveau": 4,
    "page": 1520,
    "type": "section",
+   "ligne": "LA CONDUITE ET LA GESTION DES ANIMAUX",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2922,6 +3205,7 @@
    "niveau": 4,
    "page": 1525,
    "type": "section",
+   "ligne": "L’ÉLEVAGE PORCIN TRADITIONNEL",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2938,6 +3222,7 @@
    "niveau": 4,
    "page": 1533,
    "type": "section",
+   "ligne": "L’AVICULTURE DE TYPE INTENSIF",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2946,6 +3231,7 @@
    "niveau": 4,
    "page": 1559,
    "type": "section",
+   "ligne": "L’AVICULTURE TRADITIONNELLE",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2954,6 +3240,7 @@
    "niveau": 4,
    "page": 1569,
    "type": "section",
+   "ligne": "L’ÉLEVAGE DES AUTRES ESPÈCES AVICOLES",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -2978,6 +3265,7 @@
    "niveau": 4,
    "page": 1575,
    "type": "section",
+   "ligne": "LA PRODUCTION PISCICOLE DANS LE MONDE",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -2986,6 +3274,7 @@
    "niveau": 4,
    "page": 1577,
    "type": "section",
+   "ligne": "LES DIFFÉRENTS TYPES DE PISCICULTURE",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -2994,6 +3283,7 @@
    "niveau": 4,
    "page": 1580,
    "type": "section",
+   "ligne": "LES PRINCIPALES ESPÈCES PISCICOLES",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3002,6 +3292,7 @@
    "niveau": 4,
    "page": 1588,
    "type": "section",
+   "ligne": "LA GESTION DES ÉLEVAGES PISCICOLES",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3010,6 +3301,7 @@
    "niveau": 4,
    "page": 1606,
    "type": "section",
+   "ligne": "LES AMÉNAGEMENTS PISCICOLES",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3018,6 +3310,7 @@
    "niveau": 4,
    "page": 1608,
    "type": "section",
+   "ligne": "DES POINTS SENSIBLES LORS DE LA CONCEPTION",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3026,6 +3319,7 @@
    "niveau": 4,
    "page": 1613,
    "type": "section",
+   "ligne": "LES DONNÉES SOCIO-ÉCONOMIQUES",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3034,6 +3328,7 @@
    "niveau": 4,
    "page": 1617,
    "type": "section",
+   "ligne": "LES PERSPECTIVES DE DÉVELOPPEMENT DE L’AQUACULTURE D’EAU DOUCE",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3050,6 +3345,7 @@
    "niveau": 4,
    "page": 1621,
    "type": "section",
+   "ligne": "QUELQUES REPÈRES",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3058,6 +3354,7 @@
    "niveau": 4,
    "page": 1626,
    "type": "section",
+   "ligne": "LES ÉLEVAGES EXTENSIFS DE FAUNE : LE GAME RANCHING",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3066,6 +3363,7 @@
    "niveau": 4,
    "page": 1631,
    "type": "section",
+   "ligne": "LE MINI-ÉLEVAGE",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -3074,6 +3372,7 @@
    "niveau": 4,
    "page": 1640,
    "type": "section",
+   "ligne": "LES AUTRES ÉLEVAGES INTENSIFS",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
