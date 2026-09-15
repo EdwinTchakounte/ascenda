@@ -1,0 +1,137 @@
+[
+ {
+  "chapitre": "cd36328b",
+  "questions": [
+   {
+    "q": "Que dit le texte du lien entre la taille d'une organisation paysanne et son efficacité ?",
+    "choix": [
+     "Il n'y a pas de corrélation automatique entre la taille et l'efficacité dans l'action",
+     "Plus une organisation compte d'adhérents, plus elle est efficace",
+     "Les petites organisations sont toujours plus efficaces que les grandes",
+     "L'efficacité ne dépend que du statut juridique adopté"
+    ],
+    "reponse": 0,
+    "explication": "Le nombre d'adhérents conditionne en partie les ambitions et les moyens d'une organisation, mais le texte précise qu'il n'y a pas de corrélation automatique entre sa taille et son efficacité.",
+    "niveau": "comprehension",
+    "page": 115
+   },
+   {
+    "q": "Un agent veut comprendre les vrais objectifs d'une organisation paysanne de sa zone. Sur quoi le texte conseille-t-il de s'appuyer en priorité ?",
+    "choix": [
+     "La caractérisation précise des activités réellement menées par l'organisation",
+     "Le statut juridique déposé par l'organisation",
+     "Les objectifs officiels inscrits dans ses documents",
+     "Le nombre d'adhérents déclaré par ses responsables"
+    ],
+    "reponse": 0,
+    "explication": "Plus que le statut juridique et les objectifs officiels, la caractérisation précise des activités menées est éclairante à la fois sur les objectifs de l'organisation et sur la marge d'initiative laissée par les pouvoirs publics.",
+    "niveau": "application",
+    "page": 116
+   },
+   {
+    "q": "Quels sont les trois types d'objectifs généralement visés par les regroupements d'organisations de base à des échelles supérieures ?",
+    "choix": [
+     "Économies d'échelle pour l'approvisionnement et la commercialisation, services aux producteurs, accès aux centres de décision",
+     "Obtention d'un statut juridique, ouverture d'un compte bancaire, recrutement de salariés",
+     "Création de coopératives, construction d'infrastructures, distribution de terres",
+     "Formation des élus locaux, gestion des forêts, organisation des marchés villageois"
+    ],
+    "reponse": 0,
+    "explication": "Le texte cite les économies d'échelle en approvisionnement et commercialisation, la mise en place de services nécessaires aux producteurs et l'accès aux centres de décision pour défendre leurs intérêts.",
+    "niveau": "restitution",
+    "page": 117
+   },
+   {
+    "q": "Pourquoi le désengagement des États des fonctions d'appui à l'agriculture a-t-il pu renforcer certaines organisations paysannes ?",
+    "choix": [
+     "Parce qu'il a ouvert un espace d'initiative économique que certaines organisations ont su valoriser",
+     "Parce que l'État a transféré tous ses budgets agricoles aux organisations",
+     "Parce qu'il a amélioré la situation des producteurs les plus vulnérables",
+     "Parce qu'il a supprimé toute concurrence des opérateurs privés"
+    ],
+    "reponse": 0,
+    "explication": "Ce retrait a désorganisé l'environnement de la production et pesé sur les plus vulnérables, mais il a aussi ouvert un espace d'initiative économique que certaines organisations ont pu valoriser.",
+    "niveau": "comprehension",
+    "page": 118
+   },
+   {
+    "q": "Une structure d'appui et une organisation paysanne veulent démarrer une collaboration après deux réunions rapides. Quel risque le texte signale-t-il ?",
+    "choix": [
+     "Des malentendus, faute d'avoir explicité les attentes, les objectifs et les modalités de mise en œuvre et d'évaluation",
+     "Un excès de formalités qui retarde inutilement le début des actions",
+     "La perte du statut juridique de l'organisation paysanne",
+     "Un contrôle trop strict des adhérents sur les responsables"
+    ],
+    "reponse": 0,
+    "explication": "Les collaborations décidées trop vite, sans expliciter les attentes de chacun, les objectifs précis ni les modalités de mise en œuvre et d'évaluation, reposent sur des malentendus qui génèrent ensuite des tensions.",
+    "niveau": "application",
+    "page": 120
+   },
+   {
+    "q": "Le partage des tâches entre un projet et un groupement n'a pas été précisé au départ, et une action échoue. Comment le texte explique-t-il ce type d'échec ?",
+    "choix": [
+     "Chaque partie considère que l'autre est défaillante",
+     "Le bailleur retire automatiquement son financement",
+     "Les adhérents quittent l'organisation par manque d'information",
+     "L'agent de terrain devient seul responsable devant la loi"
+    ],
+    "reponse": 0,
+    "explication": "Dans l'encadré sur les accords hâtifs et flous, un partage préalable imprécis des tâches et des charges peut faire échouer une action, chaque partie considérant que l'autre est défaillante.",
+    "niveau": "comprehension",
+    "page": 121
+   },
+   {
+    "q": "Après un premier diagnostic, un agent veut restituer les résultats aux adhérents d'une organisation paysanne. Qui devrait de préférence faire cette restitution ?",
+    "choix": [
+     "Les responsables de l'organisation eux-mêmes",
+     "L'agent de développement, en tant qu'expert extérieur",
+     "Un consultant indépendant choisi par le bailleur",
+     "Le représentant de l'administration locale"
+    ],
+    "reponse": 0,
+    "explication": "La restitution faite par les responsables de l'OPR favorise l'appropriation du diagnostic et évite que l'intervenant extérieur apparaisse comme un « expert » censé améliorer l'efficacité de l'organisation.",
+    "niveau": "application",
+    "page": 124
+   },
+   {
+    "q": "Quelle durée le texte recommande-t-il pour le premier programme de travail avec une organisation paysanne ?",
+    "choix": [
+     "6 à 12 mois",
+     "2 à 3 mois",
+     "2 à 3 ans",
+     "18 à 24 mois"
+    ],
+    "reponse": 0,
+    "explication": "Il convient de rester modeste et de démarrer avec un programme limité par son contenu et sa durée, de 6 à 12 mois, qui sert de programme test.",
+    "niveau": "restitution",
+    "page": 124
+   },
+   {
+    "q": "Une organisation paysanne demande seulement un appui ponctuel pour la commercialisation de ses produits. Comment l'agent doit-il conduire le diagnostic ?",
+    "choix": [
+     "Limiter le diagnostic au secteur concerné par la demande, sans faire du diagnostic global un préalable",
+     "Réaliser d'abord un diagnostic complet de l'organisation avant toute action",
+     "Renoncer à tout diagnostic puisque la demande est précise",
+     "Confier le diagnostic à une autre organisation paysanne de la zone"
+    ],
+    "reponse": 0,
+    "explication": "Pour une demande d'appui ponctuel et précis, le diagnostic global ne doit pas être un préalable : il reste nécessaire mais limité au secteur concerné, la collaboration pouvant s'élargir ensuite.",
+    "niveau": "application",
+    "page": 127
+   },
+   {
+    "q": "Selon le texte, quelle position un intervenant extérieur doit-il avoir face aux autres collaborations d'une organisation paysanne ?",
+    "choix": [
+     "Aucun intervenant ne peut prétendre à l'exclusivité de la collaboration avec l'organisation",
+     "L'intervenant qui finance le plus doit obtenir l'exclusivité de la collaboration",
+     "L'organisation doit choisir un seul partenaire pour éviter les appuis redondants",
+     "Les autres collaborations doivent être soumises à l'accord préalable de l'intervenant"
+    ],
+    "reponse": 0,
+    "explication": "Le texte affirme qu'aucun intervenant extérieur ne peut prétendre à l'exclusivité ; le choix d'une OPR de diversifier ses collaborations pour limiter sa dépendance doit être respecté.",
+    "niveau": "restitution",
+    "page": 128
+   }
+  ]
+ }
+]

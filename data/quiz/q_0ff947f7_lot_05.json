@@ -1,0 +1,137 @@
+[
+ {
+  "chapitre": "3cbb746a",
+  "questions": [
+   {
+    "q": "Un groupement veut solliciter un bailleur pour financer son projet. Que doit-il faire avant de rédiger son document projet ?",
+    "choix": [
+     "Se renseigner sur les procédures et le plan type exigés par ce bailleur",
+     "Adopter la méthode universelle de rédaction valable pour tous les projets",
+     "Rédiger d'abord le document, puis l'adapter si le bailleur le refuse",
+     "Copier le document d'un projet de même taille déjà financé ailleurs"
+    ],
+    "reponse": 0,
+    "explication": "Les bailleurs imposent presque toujours leurs propres plans types ; les promoteurs doivent donc se renseigner sur leurs procédures avant d'écrire. Le texte précise qu'il n'existe pas de méthode universelle.",
+    "niveau": "application",
+    "page": 93
+   },
+   {
+    "q": "Pour construire un « arbre à objectifs », par quoi commence-t-on ?",
+    "choix": [
+     "Décrire en quelques mots l'objectif principal",
+     "Lister toutes les activités prévues sur le terrain",
+     "Établir le budget détaillé du projet",
+     "Choisir les indicateurs de suivi-évaluation"
+    ],
+    "reponse": 0,
+    "explication": "On commence par décrire l'objectif principal en quelques mots, puis on le décline en deux, trois ou quatre objectifs intermédiaires, eux-mêmes détaillés en sous-objectifs.",
+    "niveau": "restitution",
+    "page": 94
+   },
+   {
+    "q": "Selon le texte, à quelles cinq questions la programmation et la conduite d'un projet doivent-elles répondre ?",
+    "choix": [
+     "Quoi, qui, comment, quand et avec quels moyens",
+     "Pourquoi, où, pour qui, combien de temps et à quel prix",
+     "Quoi, où, pour qui, quand et avec quels partenaires",
+     "Pourquoi, qui, combien, où et avec quels résultats"
+    ],
+    "reponse": 0,
+    "explication": "Le texte cite : qu'est-ce qu'on va faire, qui va le faire, comment, quand et avec quels moyens.",
+    "niveau": "restitution",
+    "page": 96
+   },
+   {
+    "q": "Une équipe projet veut savoir, mois par mois, si elle aura assez d'argent en caisse pour payer ses dépenses. Quel outil doit-elle utiliser ?",
+    "choix": [
+     "Le plan de trésorerie",
+     "L'arbre à objectifs",
+     "Le plan de financement",
+     "L'organigramme du projet"
+    ],
+    "reponse": 0,
+    "explication": "Le plan de trésorerie permet de visualiser la prévision mois par mois des entrées, des sorties et du solde de trésorerie.",
+    "niveau": "application",
+    "page": 98
+   },
+   {
+    "q": "À quel rythme se font en général le bilan en termes de résultats et d'impacts et les réorientations des objectifs d'un projet ?",
+    "choix": [
+     "Annuel ou bisannuel",
+     "Chaque semaine ou chaque quinzaine",
+     "Chaque mois ou chaque trimestre",
+     "Uniquement à la fin du projet"
+    ],
+    "reponse": 0,
+    "explication": "Sauf incident, ces bilans et ajustements se font sur des rythmes annuels ou bisannuels, avec les maîtres d'ouvrage et souvent le bailleur.",
+    "niveau": "restitution",
+    "page": 99
+   },
+   {
+    "q": "Un groupe de producteurs démarre son projet et commet une erreur de gestion que l'accompagnateur avait vue venir. Quelle attitude le texte recommande-t-il ?",
+    "choix": [
+     "Laisser les promoteurs tirer les leçons de leurs erreurs plutôt que conduire le projet à leur place",
+     "Reprendre la gestion du projet pour éviter toute nouvelle erreur",
+     "Suspendre l'accompagnement jusqu'à ce que le groupe soit autonome",
+     "Remplacer les responsables du groupe par des prestataires extérieurs"
+    ],
+    "reponse": 0,
+    "explication": "Le processus d'accompagnement ne peut pas faire l'économie de la méthode des erreurs corrigées : il est souvent plus efficace de laisser les promoteurs tirer les leçons de leurs erreurs.",
+    "niveau": "application",
+    "page": 101
+   },
+   {
+    "q": "Pourquoi l'accompagnateur ne doit-il pas prendre toutes les premières demandes d'un promoteur « pour argent comptant » ?",
+    "choix": [
+     "Parce que personne ne peut demander ce qu'il ne connaît pas ni ce qu'il n'espère pas obtenir",
+     "Parce que les promoteurs exagèrent toujours leurs besoins pour obtenir plus d'argent",
+     "Parce que la demande doit d'abord correspondre à l'offre des prestataires",
+     "Parce que seules les demandes écrites et signées sont recevables"
+    ],
+    "reponse": 0,
+    "explication": "La première demande est le point de départ d'un cheminement commun : elle n'en donne pas forcément la direction définitive, car on ne demande pas ce qu'on ne connaît pas.",
+    "niveau": "comprehension",
+    "page": 102
+   },
+   {
+    "q": "Quelle différence le texte fait-il entre le suivi et l'évaluation ?",
+    "choix": [
+     "Le suivi est un processus continu pour le pilotage régulier, l'évaluation une intervention plus exceptionnelle pour corriger les orientations",
+     "Le suivi est réalisé par des évaluateurs externes, l'évaluation par l'équipe du projet",
+     "Le suivi porte sur l'impact final, l'évaluation sur les dépenses mensuelles",
+     "Le suivi n'a lieu qu'avant le projet, l'évaluation seulement après sa fin"
+    ],
+    "reponse": 0,
+    "explication": "Le suivi collecte et traite des données en continu pour piloter le projet ; l'évaluation est plus exceptionnelle et vise à définir ou corriger ses orientations ou sa stratégie. Les deux sont complémentaires.",
+    "niveau": "comprehension",
+    "page": 104
+   },
+   {
+    "q": "Dans l'exemple d'une vache laitière, lequel de ces éléments est un indicateur et non un simple critère ?",
+    "choix": [
+     "La quantité de lait en litres par lactation",
+     "La production de la vache",
+     "L'âge de la vache",
+     "La valeur de la vache"
+    ],
+    "reponse": 0,
+    "explication": "L'âge et la production sont des critères ; la quantité de lait exprimée en litres par lactation est une donnée quantifiable, donc un indicateur selon le critère production.",
+    "niveau": "comprehension",
+    "page": 108
+   },
+   {
+    "q": "Un projet de développement d'une filière voit ses résultats techniques progresser, mais les revenus des paysans n'augmentent pas. Que doit-il faire d'après le texte ?",
+    "choix": [
+     "Essayer de faire évoluer sa logique d'intervention",
+     "Continuer à l'identique puisque les résultats techniques sont positifs",
+     "Renforcer uniquement la vulgarisation technique auprès des producteurs",
+     "Augmenter seulement le nombre de parcelles d'essai"
+    ],
+    "reponse": 0,
+    "explication": "Si des résultats techniques positifs n'entraînent pas la chaîne vertueuse prévue (production, revenu, évolution du système), le projet devra essayer de faire évoluer sa logique d'intervention.",
+    "niveau": "application",
+    "page": 111
+   }
+  ]
+ }
+]

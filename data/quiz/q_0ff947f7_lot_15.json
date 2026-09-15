@@ -1,0 +1,194 @@
+[
+ {
+  "chapitre": "bcf18e98",
+  "questions": [
+   {
+    "q": "Un maraîcher cultive sur sol sableux des légumes dont les racines explorent 50 cm. L'eau facilement utilisable après irrigation est de 20 mm et la culture consomme 6 mm par jour. Quel rythme d'irrigation le texte conseille-t-il ?",
+    "choix": [
+     "Irriguer tous les 3 jours en apportant 20 à 25 mm",
+     "Irriguer une fois par semaine en apportant 50 mm",
+     "Irriguer tous les 15 jours en apportant 90 mm",
+     "Irriguer chaque jour en apportant 6 mm"
+    ],
+    "reponse": 0,
+    "explication": "Avec seulement 20 mm d'eau facilement utilisable et 6 mm consommés par jour, le texte recommande d'irriguer tous les 3 jours avec 20 ou 25 mm. Une grosse dose hebdomadaire de 50 mm percolerait en partie sous les racines et laisserait les plantes en stress en fin de semaine.",
+    "niveau": "application",
+    "page": 291
+   },
+   {
+    "q": "Pourquoi le texte recommande-t-il de ne pas surdimensionner les canaux en terre et de ne pas les maintenir en eau en permanence ?",
+    "choix": [
+     "Parce que les pertes sont à peu près proportionnelles au périmètre mouillé et à la hauteur d'eau dans le canal",
+     "Parce que les grands canaux en eau favorisent surtout la salinisation de l'eau transportée",
+     "Parce que les canaux larges ralentissent l'eau au point de bloquer toute distribution",
+     "Parce que les canaux pleins empêchent la coordination du tour d'eau entre irrigants"
+    ],
+    "reponse": 0,
+    "explication": "Les pertes dans les canaux en terre dépendent du périmètre mouillé, de la hauteur de l'eau et du type de sol. Un canal trop grand ou toujours plein perd donc davantage d'eau.",
+    "niveau": "comprehension",
+    "page": 290
+   },
+   {
+    "q": "Selon le bilan de salinisation à l'équilibre, que se passe-t-il lorsque la fraction lessivante (l'eau de drainage) représente 20 % de l'eau apportée par l'irrigation ?",
+    "choix": [
+     "Le sol garde une concentration en sel cinq fois plus élevée que l'eau d'irrigation",
+     "Le sol garde une concentration en sel égale à celle de l'eau d'irrigation",
+     "Le sol garde une concentration en sel deux fois plus faible que l'eau d'irrigation",
+     "Le sol se débarrasse entièrement du sel apporté en quelques années"
+    ],
+    "reponse": 0,
+    "explication": "Le sel apporté par l'irrigation n'est exporté que par l'eau de drainage : si celle-ci ne fait que 20 % de l'apport, le sel se concentre cinq fois dans la solution du sol. D'où la nécessité d'ajouter une fraction lessivante aux doses d'irrigation.",
+    "niveau": "comprehension",
+    "page": 293
+   },
+   {
+    "q": "Vous tracez un canal en terre peu compactée sur un sol limoneux de berge. Quelle vitesse moyenne de l'eau ne faut-il pas dépasser pour éviter l'érosion ?",
+    "choix": [
+     "0,4 m/s",
+     "0,8 m/s",
+     "1,2 m/s",
+     "0,1 m/s"
+    ],
+    "reponse": 0,
+    "explication": "Pour les canaux en terre peu compactée sur sols limoneux de berge, le texte recommande de ne pas dépasser 0,4 m/s ; seul un sol argileux bien compacté supporte jusqu'à 0,8 m/s.",
+    "niveau": "application",
+    "page": 298
+   },
+   {
+    "q": "Que faut-il apporter, selon le texte, pour récupérer des sols devenus sodiques, mal structurés et difficiles à drainer ?",
+    "choix": [
+     "Des amendements calciques, du gypse en particulier",
+     "Du sable pour augmenter la perméabilité du sol",
+     "Une lame d'eau permanente sans aucun drainage",
+     "Des engrais azotés à forte dose chaque saison"
+    ],
+    "reponse": 0,
+    "explication": "Les sols sodiques résultent du remplacement progressif des autres ions par le sodium ; pour les récupérer, le texte indique qu'il faut des amendements calciques, notamment du gypse.",
+    "niveau": "restitution",
+    "page": 294
+   }
+  ]
+ },
+ {
+  "chapitre": "3af6ce99",
+  "questions": [
+   {
+    "q": "Quelle part du paysage ouest-africain les bas-fonds représentent-ils ?",
+    "choix": [
+     "2 à 5 %",
+     "10 à 15 %",
+     "20 à 25 %",
+     "Moins de 1 %"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que les bas-fonds représentent 2 à 5 % du paysage ouest-africain, mais qu'ils permettent parfois une culture intensive permanente, voire une double culture.",
+    "niveau": "restitution",
+    "page": 301
+   },
+   {
+    "q": "Pourquoi le texte affirme-t-il qu'aménager un bas-fond n'est pas toujours la panacée ?",
+    "choix": [
+     "Parce qu'on sous-estime souvent les rendements d'avant l'aménagement ou le poids réel des contraintes liées à l'eau",
+     "Parce que les bas-fonds aménagés ne peuvent plus porter de riz ni de maraîchage",
+     "Parce que tout aménagement de bas-fond provoque forcément une salinisation des sols",
+     "Parce que les paysans refusent en général de cultiver les bas-fonds aménagés"
+    ],
+    "reponse": 0,
+    "explication": "Les impacts des aménagements sont souvent plus faibles qu'on ne le croit : on sous-estime les rendements avant aménagement, on surestime la part des contraintes hydrauliques, ou on aménage des sites qui ne s'y prêtent pas.",
+    "niveau": "comprehension",
+    "page": 302
+   },
+   {
+    "q": "Un village d'une zone sèche, où les crues sont fortes, veut construire un ouvrage important en béton dans son bas-fond. Que recommande le texte ?",
+    "choix": [
+     "Faire appel à des spécialistes du génie rural pour les études techniques et le chantier",
+     "Construire l'ouvrage en terre et l'ajuster d'année en année sans étude",
+     "Se contenter d'un peu de topographie et d'une implantation sommaire",
+     "Laisser les paysans aménager sans levé topographique selon leur savoir-faire"
+    ],
+    "reponse": 0,
+    "explication": "En zones sèches à crues fortes, les ouvrages en béton ou en pierres doivent respecter des normes strictes : le recours à des spécialistes est indispensable. L'approche qualitative et progressive vaut pour les zones humides.",
+    "niveau": "application",
+    "page": 307
+   },
+   {
+    "q": "Pourquoi faut-il identifier tous les usages actuels d'un bas-fond (pâturage, raphia, vergers, riz) avant de l'aménager ?",
+    "choix": [
+     "Parce que tout aménagement a un coût d'opportunité qui peut dépasser ses gains",
+     "Parce que la loi interdit d'aménager un bas-fond qui porte plus d'un usage",
+     "Parce que seuls les usages anciens donnent droit à un financement extérieur",
+     "Parce que ces usages déterminent à eux seuls la hauteur de l'ouvrage"
+    ],
+    "reponse": 0,
+    "explication": "La perte des raphiales, l'inondation de vergers ou l'exclusion du bétail peuvent coûter plus que ce que rapporte l'aménagement. Connaître tous les usages évite aussi de se polariser sur le riz.",
+    "niveau": "comprehension",
+    "page": 309
+   },
+   {
+    "q": "Quelle durée de retour sur investissement le texte juge-t-il raisonnable pour des aménagements demandant surtout de la main-d'œuvre, comme les digues filtrantes ?",
+    "choix": [
+     "Trois ou quatre ans",
+     "Un an au maximum",
+     "Cinq à dix ans",
+     "Quinze à vingt ans"
+    ],
+    "reponse": 0,
+    "explication": "Le texte considère raisonnable un retour de trois ou quatre ans pour les aménagements surtout en main-d'œuvre, et de cinq à dix ans maximum pour les digues rizicoles en béton.",
+    "niveau": "restitution",
+    "page": 314
+   },
+   {
+    "q": "En zone guinéenne, une famille veut aménager son bas-fond avec sa propre main-d'œuvre, sans gros investissement monétaire. Comment le texte décrit-il la progression habituelle ?",
+    "choix": [
+     "Drainer la première année, puis planer et faire des casiers par tranches selon la main-d'œuvre disponible",
+     "Construire en une seule saison une digue en béton avant les premières crues",
+     "Creuser d'abord une mare artificielle, puis installer des digues filtrantes",
+     "Aménager toute la surface la première année pour profiter tout de suite du riz"
+    ],
+    "reponse": 0,
+    "explication": "En zone guinéenne, où l'investissement consiste surtout en travail, les paysans aménagent progressivement : drainage la première année, puis planage et casiérage par tranches. Ils sont alors presque totalement autofinancés.",
+    "niveau": "application",
+    "page": 314
+   },
+   {
+    "q": "Comment dispose-t-on une série de digues filtrantes le long d'un bas-fond ?",
+    "choix": [
+     "La base de l'une se trouve à la cote du sommet de la suivante",
+     "Elles sont construites parallèlement à l'axe du bas-fond, le long du lit mineur",
+     "Elles sont espacées d'exactement 100 m, quelle que soit la pente",
+     "Elles sont regroupées à l'aval pour former un seul barrage de retenue"
+    ],
+    "reponse": 0,
+    "explication": "Les digues filtrantes sont construites perpendiculairement à l'axe du bas-fond ou en courbes de niveau, et placées de sorte que la base de l'une soit à la cote du sommet de l'autre.",
+    "niveau": "restitution",
+    "page": 317
+   },
+   {
+    "q": "Un groupement cherche un site pour un seuil rizicole. Quel bas-fond convient le mieux d'après le texte ?",
+    "choix": [
+     "Un bas-fond plat et étroit, dit ruban, à pente longitudinale inférieure à 0,5 %",
+     "Un bas-fond concave à forte pente, qui permet un seuil de plus de deux mètres",
+     "Un bas-fond très large et filtrant, traversé par de fortes crues",
+     "Un bas-fond à pente longitudinale supérieure à 3 % pour évacuer vite l'eau"
+    ],
+    "reponse": 0,
+    "explication": "Les seuils rizicoles sont bien adaptés aux bas-fonds rubans, plats et étroits, à pente inférieure à 0,5 %, où un seuil bas contrôle une grande surface. Dans les bas-fonds concaves ou pentus, il faut monter le seuil (un mètre semble un maximum), ce qui accroît les coûts et noie les zones basses.",
+    "niveau": "application",
+    "page": 319
+   },
+   {
+    "q": "En zone guinéenne (plus de 1 500 mm), pourquoi faut-il se méfier du surdrainage lors de l'aménagement d'un bas-fond ?",
+    "choix": [
+     "Parce que l'aménagement doit contrôler le niveau de la nappe, d'où la consigne de ne pas approfondir le lit mineur et de pouvoir fermer le drain en saison sèche",
+     "Parce que le drainage fait remonter les sels vers la surface des sols, comme on l’observe dans les bas-fonds des zones arides",
+     "Parce qu’un drain trop profond accélère les crues vers l’aval et détruit les digues des aménagements situés plus bas",
+     "Parce que l’entretien de drains profonds coûte chaque année plus cher que le supplément de récolte qu’ils permettent"
+    ],
+    "reponse": 0,
+    "explication": "En zone guinéenne on élimine les excès d'eau, mais les aménagements jouent sur les entrées et sorties pour garder un bon niveau de nappe. Un lit mineur trop approfondi ou un drain toujours ouvert assécherait le bas-fond en saison sèche.",
+    "niveau": "comprehension",
+    "page": 320
+   }
+  ]
+ }
+]

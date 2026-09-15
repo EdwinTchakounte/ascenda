@@ -1,0 +1,235 @@
+[
+ {
+  "chapitre": "8a7dfb77",
+  "questions": [
+   {
+    "q": "Vous voulez reconstituer l’histoire agraire d’un village. Vers qui orienter en priorité vos entretiens ?",
+    "choix": [
+     "Les personnes âgées ou les dépositaires de la mémoire collective familiale ou communautaire",
+     "Les jeunes exploitants qui assurent la gestion quotidienne des parcelles",
+     "Les ouvriers agricoles rencontrés au coin du champ pendant la saison",
+     "Les gardiens d’animaux croisés lors du parcours des unités de paysage"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que l’histoire agraire s’obtient auprès de personnes âgées capables de décrire la vie des générations précédentes ou de dépositaires de la mémoire collective, qui ne sont pas forcément agriculteurs.",
+    "niveau": "application",
+    "page": 56
+   },
+   {
+    "q": "Pourquoi faut-il interroger plusieurs personnes sur un même sujet, selon le principe de la « triangulation » ?",
+    "choix": [
+     "Parce que les informations d’enquête sont une interprétation et un discours sur la réalité, et non son reflet fidèle",
+     "Parce qu’un seul entretien ne dure jamais assez longtemps pour aborder tous les thèmes",
+     "Parce que les agriculteurs refusent souvent de répondre seuls à un enquêteur extérieur",
+     "Parce que les réponses doivent être comptées pour obtenir une moyenne statistique fiable"
+    ],
+    "reponse": 0,
+    "explication": "Ce que disent les enquêtés est un point de vue sur la réalité ; pour ne pas rester prisonnier du discours d’un individu, on confronte des points de vue différents, par exemple ceux des agriculteurs et des éleveurs sur un même espace.",
+    "niveau": "comprehension",
+    "page": 57
+   },
+   {
+    "q": "Lors d’une enquête sur les associations de cultures, vous cherchez à connaître les densités pratiquées. Comment formuler vos questions aux agriculteurs ?",
+    "choix": [
+     "Poser des questions sur les écartements entre les plants plutôt que sur les densités",
+     "Demander directement le nombre de plants par hectare dans chaque parcelle",
+     "Demander la quantité de semences achetée au marché pour la saison",
+     "Estimer soi-même les densités sans interroger les agriculteurs"
+    ],
+    "reponse": 0,
+    "explication": "Le texte précise qu’il faut poser des questions sur les écartements et non sur les densités, et utiliser les unités locales pour que les agriculteurs puissent répondre.",
+    "niveau": "application",
+    "page": 60
+   },
+   {
+    "q": "Pour une espèce animale donnée, quelle est la première information élémentaire à recueillir sur les effectifs élevés ?",
+    "choix": [
+     "La proportion approximative d’exploitations qui pratiquent cet élevage",
+     "Le poids moyen des animaux adultes dans le village",
+     "Le nombre exact de naissances enregistrées dans l’année",
+     "La quantité de lait produite par chaque femelle"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique qu’on cherche d’abord la proportion approximative d’exploitations pratiquant l’élevage, puis une fourchette d’effectif et l’effectif le plus fréquent.",
+    "niveau": "restitution",
+    "page": 61
+   },
+   {
+    "q": "Pourquoi est-il important d’identifier qui gère chaque moyen de production au sein d’une exploitation familiale ?",
+    "choix": [
+     "Une réaffectation des ressources jugée favorable pour l’exploitation vue comme un tout peut nuire à certains de ses membres",
+     "Seul le chef d’exploitation a le droit de répondre aux questions des techniciens",
+     "Les membres de la famille travaillent toujours ensemble sur les mêmes parcelles",
+     "Les surfaces cultivées sont toujours gérées par une seule personne au nom de la famille"
+    ],
+    "reponse": 0,
+    "explication": "Les centres de décision sont souvent multiples ; une proposition pensée pour une gestion centralisée peut se révéler défavorable à un ou plusieurs individus, voire à toute l’exploitation.",
+    "niveau": "comprehension",
+    "page": 62
+   }
+  ]
+ },
+ {
+  "chapitre": "b0b18f05",
+  "questions": [
+   {
+    "q": "Comment appelle-t-on le parcours sur le terrain qui correspond à une coupe de paysage ?",
+    "choix": [
+     "Un transect",
+     "Un zonage",
+     "Un bloc-diagramme",
+     "Un itinéraire technique"
+    ],
+    "reponse": 0,
+    "explication": "La coupe suit en général la ligne de plus grande pente, et le parcours de terrain correspondant est appelé un transect.",
+    "niveau": "restitution",
+    "page": 64
+   },
+   {
+    "q": "Pourquoi faut-il être prudent en utilisant des photographies aériennes de base comme fond de carte ?",
+    "choix": [
+     "Elles sont déformées : l’échelle n’est pas la même au centre et sur les bords",
+     "Elles ne montrent pas les modes de mise en valeur de l’espace",
+     "Elles ne peuvent pas être travaillées avec un calque ou un transparent",
+     "Elles ne permettent aucune esquisse de carte avant le passage sur le terrain"
+    ],
+    "reponse": 0,
+    "explication": "Le texte signale que les photographies aériennes de base sont déformées, d’où la nécessité de corriger l’esquisse après vérification sur le terrain.",
+    "niveau": "comprehension",
+    "page": 65
+   },
+   {
+    "q": "Lors d’une première étude d’un village, vous faites le bilan des ressources fourragères et des besoins du troupeau en saison difficile. Sur quoi faut-il d’abord mettre l’accent ?",
+    "choix": [
+     "Sur la manière dont les éleveurs équilibrent ce bilan : réduire le troupeau, stocker du fourrage, déplacer les animaux...",
+     "Sur le calcul précis, en kilogrammes, du déficit fourrager de chaque exploitation",
+     "Sur la pesée régulière des animaux pour mesurer leur amaigrissement",
+     "Sur la comparaison des rendements fourragers avec ceux d’autres régions"
+    ],
+    "reponse": 0,
+    "explication": "Un bilan est généralement équilibré d’une manière ou d’une autre ; ce qui compte est la façon dont les agriculteurs l’équilibrent, et le qualitatif prime d’abord sur le quantitatif.",
+    "niveau": "application",
+    "page": 70
+   }
+  ]
+ },
+ {
+  "chapitre": "fa986da6",
+  "questions": [
+   {
+    "q": "Avant de lancer un diagnostic dans une zone, quelle question faut-il se poser en premier pour en fixer les limites et les méthodes ?",
+    "choix": [
+     "Un diagnostic, pourquoi ?",
+     "Combien d’exploitations faut-il enquêter ?",
+     "Quel budget le bailleur peut-il accorder ?",
+     "Quelles cartes existent déjà sur la zone ?"
+    ],
+    "reponse": 0,
+    "explication": "Les limites spatiales et temporelles, les échelles et les points de vue dépendent du contexte du diagnostic, ce qui oblige à répondre au préalable à la question « un diagnostic, pourquoi ? ».",
+    "niveau": "application",
+    "page": 71
+   },
+   {
+    "q": "Selon le texte, de quoi dépendent largement la richesse d’un diagnostic et son intérêt pour construire des projets participatifs ?",
+    "choix": [
+     "Des interactions et allers-retours fréquents entre les différentes phases",
+     "Du respect strict de l’ordre des phases, sans retour en arrière",
+     "Du nombre de questionnaires remplis pendant la phase d’enquête",
+     "De la qualité graphique des documents présentés à la restitution"
+    ],
+    "reponse": 0,
+    "explication": "Découper le diagnostic en phases est commode, mais sa richesse vient des allers-retours entre observations, entretiens et échanges de points de vue.",
+    "niveau": "comprehension",
+    "page": 71
+   }
+  ]
+ },
+ {
+  "chapitre": "1ccd5a8d",
+  "questions": [
+   {
+    "q": "À partir de quelle année les institutions de Bretton Woods ont-elles fortement incité les États à limiter leurs interventions directes dans les activités productives ?",
+    "choix": [
+     "1980",
+     "1970",
+     "1990",
+     "2000"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique qu’à partir de 1980 ces institutions ont poussé les États à se retirer des activités productives, ce qui a changé les modalités d’intervention.",
+    "niveau": "restitution",
+    "page": 77
+   },
+   {
+    "q": "Un agent de terrain affirme qu’« il n’y a pas de politique agricole » dans son pays et se concentre uniquement sur son projet. Quelle attitude le texte recommande-t-il ?",
+    "choix": [
+     "Rechercher les documents qui fixent les orientations et le cadre juridique ou fiscal, et en tenir compte",
+     "Poursuivre les activités du projet sans se soucier des orientations de l’État",
+     "Attendre que l’État publie un plan complet avant de lancer toute action",
+     "Élaborer seul une politique agricole locale propre au projet"
+    ],
+    "reponse": 0,
+    "explication": "Il existe souvent un minimum de documents politiques (droit associatif, fiscalité locale...) ; si l’action reste locale, la réflexion doit s’élargir aux orientations fixées par l’État.",
+    "niveau": "application",
+    "page": 79
+   },
+   {
+    "q": "Pourquoi une politique agricole, bien qu’elle soit une politique sectorielle dotée d’une certaine autonomie, subit-elle des contraintes ?",
+    "choix": [
+     "Parce qu’elle doit rester cohérente avec la politique économique globale et la stratégie de développement à long terme du pays",
+     "Parce qu’elle doit être approuvée projet par projet par chaque bailleur de fonds",
+     "Parce que l’État doit y reprendre en main toutes les activités en amont et en aval de la production",
+     "Parce qu’elle ne peut porter que sur les filières d’exportation"
+    ],
+    "reponse": 0,
+    "explication": "Le texte précise que la politique agricole est une composante de la stratégie de développement du pays et doit être cohérente avec la politique économique globale, ce qui lui impose des contraintes.",
+    "niveau": "comprehension",
+    "page": 78
+   }
+  ]
+ },
+ {
+  "chapitre": "39f86c7b",
+  "questions": [
+   {
+    "q": "Une organisation prépare un projet de développement agricole. D’après l’expérience rapportée par le texte, quelle approche a le plus de chances de réussir ?",
+    "choix": [
+     "Commencer petit et grandir progressivement, dans un processus d’apprentissage durable",
+     "Intervenir massivement sur une durée courte avec un plan rigide",
+     "Fixer une stratégie définitive dès le départ et ne jamais la réviser",
+     "Couvrir d’emblée toute la région avec un programme unique"
+    ],
+    "reponse": 0,
+    "explication": "Les projets réussis sont en général ceux qui ont suivi un processus d’apprentissage dans la durée en commençant petit, et non ceux fondés sur une planification rigide et une intervention massive limitée dans le temps.",
+    "niveau": "application",
+    "page": 81
+   },
+   {
+    "q": "Pourquoi le niveau villageois n’a-t-il pas été retenu comme niveau distinct entre l’exploitation et la petite région ?",
+    "choix": [
+     "La gestion des ressources naturelles impose souvent de raisonner à l’échelle de la petite région, à cause des bassins versants et de l’élevage transhumant",
+     "Les villages sont trop nombreux et trop petits pour qu’on puisse y mener des diagnostics détaillés à chaque fois",
+     "Les décisions agricoles se prennent presque toutes au sein de l’exploitation, sans concertation entre les villages voisins",
+     "Les services de l’État ne reconnaissent pas les villages comme des interlocuteurs pour la gestion des ressources"
+    ],
+    "reponse": 0,
+    "explication": "Outre la simplification, l’expérience de la gestion de terroir montre les interrelations entre communautés au niveau des bassins versants, notamment pour l’eau, et l’importance de la transhumance.",
+    "niveau": "comprehension",
+    "page": 81
+   },
+   {
+    "q": "Quels sont, du local au global, les niveaux d’intervention retenus dans le tableau des types d’intervention en milieu rural ?",
+    "choix": [
+     "Productions, exploitations, petite région, nation",
+     "Parcelles, villages, provinces, continent",
+     "Familles, lignages, communautés, État",
+     "Cultures, filières, marchés, bailleurs"
+    ],
+    "reponse": 0,
+    "explication": "Le texte énumère quatre niveaux successifs : productions (cultures et élevage), exploitations (familles paysannes), petite région et nation.",
+    "niveau": "restitution",
+    "page": 81
+   }
+  ]
+ }
+]

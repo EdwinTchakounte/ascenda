@@ -1,0 +1,72 @@
+[
+ {
+  "chapitre": "470a8aae",
+  "questions": [
+   {
+    "q": "Dans un projet, qui est le maître d’ouvrage ?",
+    "choix": [
+     "Celui qui engage et finance le projet et en sera le propriétaire",
+     "Celui qui trace les plans et suit l’exécution des travaux",
+     "L’entreprise ou l’artisan qui réalise les travaux",
+     "L’organisme qui gère l’infrastructure une fois construite"
+    ],
+    "reponse": 0,
+    "explication": "Le maître d’ouvrage engage et finance le projet, en choisit les grandes caractéristiques et en confie la conception et le contrôle à un maître d’œuvre.",
+    "niveau": "restitution",
+    "page": 87
+   },
+   {
+    "q": "Un périmètre irrigué vient d’être terminé et l’association des irriguants organise désormais le tour d’eau et l’entretien des ouvrages. Quel rôle joue-t-elle dans le projet ?",
+    "choix": [
+     "L’exploitant du périmètre",
+     "Le maître d’ouvrage délégué",
+     "Le maître d’œuvre",
+     "L’appui à maître d’ouvrage"
+    ],
+    "reponse": 0,
+    "explication": "Dans l’exemple de Marébou, l’association chargée du tour d’eau et de l’entretien une fois l’aménagement achevé est l’exploitant du périmètre.",
+    "niveau": "application",
+    "page": 89
+   },
+   {
+    "q": "Pourquoi le modèle classique de projet des bailleurs a-t-il été critiqué pour accompagner des acteurs locaux ?",
+    "choix": [
+     "Sa durée trop courte et sa planification rigide ne convenaient pas à des acteurs qui progressent à leur rythme en tirant les leçons de l’expérience",
+     "Son budget trop détaillé et ses contrôles financiers décourageaient les acteurs locaux de proposer leurs propres actions",
+     "Il confiait dès le départ toute la maîtrise d’ouvrage à des acteurs locaux encore peu organisés et sans expérience",
+     "Il visait surtout la formation des cadres nationaux et négligeait la construction d’infrastructures durables"
+    ],
+    "reponse": 0,
+    "explication": "Adapté aux infrastructures, ce modèle avait un pas de temps trop court et une planification trop contraignante pour des acteurs locaux progressant sur un mode itératif.",
+    "niveau": "comprehension",
+    "page": 86
+   },
+   {
+    "q": "Que signifie l’idée selon laquelle « l’art du projet consiste à perdre du temps au départ pour en gagner à l’arrivée » ?",
+    "choix": [
+     "Une longue phase de réflexion et d’exploration permet souvent d’aller plus vite aux étapes ultérieures",
+     "Il vaut mieux retarder le démarrage pour attendre de meilleurs financements",
+     "Un projet clefs en main proposé par une structure d’appui fait toujours gagner du temps",
+     "La phase de mise en œuvre doit être la plus courte possible"
+    ],
+    "reponse": 0,
+    "explication": "Prendre le temps de mûrir l’idée, de voir ailleurs et d’entendre plusieurs sons de cloche facilite ensuite les étapes suivantes de l’opération.",
+    "niveau": "comprehension",
+    "page": 90
+   },
+   {
+    "q": "Pendant la mise en œuvre d’un aménagement, vous constatez des écarts entre les prévisions et les réalisations. Que retenir du texte pour les gérer ?",
+    "choix": [
+     "Les déceler le plus tôt possible grâce au suivi-évaluation, car les réajustements sont alors plus faciles",
+     "Les ignorer tant que le projet n’est pas terminé pour respecter le plan initial",
+     "Arrêter le projet, car un bon projet doit se dérouler exactement comme prévu",
+     "Attendre l’évaluation finale pour en discuter avec les partenaires"
+    ],
+    "reponse": 0,
+    "explication": "Des écarts apparaissent presque toujours ; les réajustements sont d’autant plus faciles qu’ils sont décelés tôt, d’où la nécessité d’outils de suivi-évaluation.",
+    "niveau": "application",
+    "page": 91
+   }
+  ]
+ }
+]

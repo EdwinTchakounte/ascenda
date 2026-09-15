@@ -1,0 +1,24 @@
+[
+{"chapitre": "278d82e3", "questions": [
+{"q": "Quelle quantité de résidus de culture suffit, en semis direct sur mulch pailleux, à réduire très significativement le ruissellement ?",
+ "choix": ["De l'ordre de 1 à 1,5 t/ha", "De l'ordre de 5 à 6 t/ha", "De l'ordre de 10 t/ha", "De l'ordre de 0,1 à 0,2 t/ha"],
+ "reponse": 0, "explication": "Le texte indique que de faibles quantités de résidus, de l'ordre de 1 à 1,5 t/ha, freinent l'écoulement et maintiennent une bonne infiltration en surface.", "niveau": "restitution", "page": 658},
+{"q": "En région semi-aride où l'on n'observe jamais de drainage sous la zone racinaire, quel effet a une technique qui augmente seulement la profondeur d'enracinement ?",
+ "choix": ["Aucun effet sur la satisfaction des besoins en eau, si elle n'agit pas sur l'infiltration ou l'évaporation", "Un fort gain de rendement, car la réserve utile racinaire augmente", "Une hausse importante des pertes minérales par lessivage", "Une réduction nette du ruissellement de surface"],
+ "reponse": 0, "explication": "Sans drainage, toute l'eau infiltrée reste déjà disponible ; agrandir la réserve sans agir sur l'infiltration ou l'évaporation ne change donc pas le taux de satisfaction des besoins en eau.", "niveau": "comprehension", "page": 657},
+{"q": "Un producteur pratique l'irrigation de complément par aspersion. Entre quelles bornes le texte conseille-t-il de maintenir le stock en eau du sol ?",
+ "choix": ["Entre environ 50 % et 80 % de la réserve utile totale", "Entre environ 10 % et 30 % de la réserve utile totale", "Toujours au-dessus de 100 % de la réserve utile totale", "Entre environ 80 % et 100 % de la réserve utile totale"],
+ "reponse": 0, "explication": "Sous 50 % de la réserve utile, le stress devient très contraignant, et au-dessus de 80 % l'eau ajoutée influe peu sur la productivité ; ces bornes laissent au sol la place de stocker les pluies et réduisent le drainage.", "niveau": "application", "page": 660}
+]},
+{"chapitre": "78b046e0", "questions": [
+{"q": "Pour un maïs de 120 jours dans la région de Bamako, quelle période de semis les simulations désignent-elles comme la plus favorable pour l'alimentation en eau ?",
+ "choix": ["Entre le 21 mai et le 1er juin", "Entre le 11 et le 16 mai", "Entre le 15 et le 26 juin", "Au début du mois de juillet"],
+ "reponse": 0, "explication": "Le rapport ETR/ETM du cycle passe par un maximum pour les semis entre le 21 mai et le 1er juin ; plus tôt ou plus tard, le risque de manque d'eau augmente.", "niveau": "restitution", "page": 661},
+{"q": "Pourquoi la variété locale de mil NKK est-elle jugée la mieux adaptée à la zone de Bankass, au Mali ?",
+ "choix": ["Elle dépasse Sanio en rendement moyen et varie moins d'une année à l'autre que Souna", "Elle a le cycle le plus long et résiste le mieux au ruissellement", "Elle n'est pas photosensible et garde un cycle constant de 90 jours", "Elle donne le rendement moyen le plus faible mais le plus régulier"],
+ "reponse": 0, "explication": "Les simulations donnent à NKK un rendement moyen supérieur à Sanio et équivalent à Souna, avec un écart-type interannuel plus faible que Souna.", "niveau": "comprehension", "page": 662},
+{"q": "Un agriculteur du sud Mali veut aménager son champ en billons pour mieux retenir l'eau de pluie. Quelle précaution le texte juge-t-il indispensable ?",
+ "choix": ["Faire suivre aux billons les courbes de niveau, sinon l'eau s'accumule dans les points bas et provoque de l'érosion", "Orienter les billons dans le sens de la pente pour évacuer l'eau rapidement", "Recouvrir les billons de cailloux comme pour les cordons pierreux", "Construire les billons uniquement après la récolte, en saison sèche"],
+ "reponse": 0, "explication": "Le texte précise que les billons doivent suivre les courbes de niveau, faute de quoi l'eau se concentre dans les points bas et des départs d'érosion en rigole ou ravine sont à craindre.", "niveau": "application", "page": 665}
+]}
+]
