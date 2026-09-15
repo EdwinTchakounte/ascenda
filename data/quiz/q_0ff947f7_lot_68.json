@@ -1,0 +1,59 @@
+[
+ {
+  "chapitre": "b803a60d",
+  "questions": [
+   {
+    "q": "En élevage traditionnel, pourquoi faut-il porter l'effort d'alimentation d'abord sur la truie en lactation ?",
+    "choix": [
+     "Couvrir ses besoins améliore son lait, le sevrage et le retour en chaleur",
+     "Cette période est celle où l'aliment coûte le moins cher",
+     "Les porcs en croissance se nourrissent seuls de déchets",
+     "La truie allaitante supporte mal les rations trop riches"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que couvrir les besoins de la truie allaitante réduit sa perte de poids, améliore sa production laitière, le poids des porcelets au sevrage et la venue des chaleurs.",
+    "niveau": "comprehension",
+    "page": 1526
+   },
+   {
+    "q": "Une ration prévoit 1 kg de tourteau d'arachide, introuvable ce mois-ci. Par quelle quantité de tourteau de coprah le remplacer ?",
+    "choix": [
+     "2,5 kg de tourteau de coprah",
+     "1 kg de tourteau de coprah",
+     "0,5 kg de tourteau de coprah",
+     "4 kg de tourteau de coprah"
+    ],
+    "reponse": 0,
+    "explication": "L'équivalence approximative donnée est : 1 kg de tourteau d'arachide = 1 kg de tourteau de coton = 2,5 kg de tourteau de coprah, ce qui préserve l'équilibre de la ration.",
+    "niveau": "application",
+    "page": 1526
+   },
+   {
+    "q": "Un éleveur remarque un porc qui semble malade. Que doit-il faire en premier d'après le texte ?",
+    "choix": [
+     "Isoler l'animal, appeler le vétérinaire et éviter d'aller dans d'autres porcheries",
+     "Attendre quelques jours pour voir si l'animal se rétablit seul",
+     "Vendre rapidement l'animal au marché le plus proche",
+     "Laisser l'animal avec les autres et surveiller le troupeau"
+    ],
+    "reponse": 0,
+    "explication": "En cas de doute, il faut isoler l'animal malade, appeler le vétérinaire, éviter les déplacements et visites, puis nettoyer et désinfecter la porcherie ; attendre le dernier moment est souvent trop tard.",
+    "niveau": "application",
+    "page": 1528
+   },
+   {
+    "q": "Quelle surface le texte prévoit-il par porc dans les cases collectives d'engraissement d'une porcherie traditionnelle ?",
+    "choix": [
+     "3 m2 par porc",
+     "1 m2 par porc",
+     "10 m2 par porc",
+     "6 m2 par porc"
+    ],
+    "reponse": 0,
+    "explication": "Parmi les principes de construction, les cases collectives d'engraissement doivent offrir 3 m2 par porc, contre 10 m2 par truie allaitante en case individuelle.",
+    "niveau": "restitution",
+    "page": 1530
+   }
+  ]
+ }
+]

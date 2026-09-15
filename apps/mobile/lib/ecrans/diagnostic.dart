@@ -362,7 +362,7 @@ class _CarteAxe extends StatelessWidget {
                           ? 'Consultable, pas encore de parcours'
                           : dansPole
                               ? '${a.nbPages} pages · ${_heures(a.dureeMin)} de lecture'
-                              : '${a.nbOuvrages} ouvrages · ${a.nbPages} pages',
+                              : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${a.nbPages} pages',
                       style: t.textTheme.bodySmall?.copyWith(
                         color: a.parcoursPossible ? Couleurs.grisChaud : Couleurs.terracotta,
                       ),
@@ -381,8 +381,10 @@ class _CarteAxe extends StatelessWidget {
     );
   }
 
+  /// Arrondie à l'heure la plus proche, comme la fiche d'axe : 214 minutes
+  /// font « 4 h » sur les deux écrans, et non « 3 h » ici et « 4 h » là.
   static String _heures(int minutes) {
-    final h = minutes ~/ 60;
-    return h == 0 ? '$minutes min' : '$h h';
+    final h = (minutes / 60).round();
+    return minutes < 60 ? '$minutes min' : '$h h';
   }
 }

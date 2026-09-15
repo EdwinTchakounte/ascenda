@@ -1,0 +1,563 @@
+[
+ {
+  "chapitre": "d82128f6",
+  "questions": [
+   {
+    "q": "Un groupement veut installer un périmètre maraîcher. Selon le Mémento, quel terrain faut-il choisir en priorité ?",
+    "choix": [
+     "Un terrain proche d'un centre de consommation, fertile, facile à aménager et irrigable en eau douce",
+     "Un terrain éloigné des villes pour limiter les vols, même sans accès facile à l'eau",
+     "Un terrain en pente forte, peu fertile, que l'on enrichira progressivement",
+     "Un terrain inondable en saison des pluies, pour économiser l'irrigation"
+    ],
+    "reponse": 0,
+    "explication": "Le texte recommande un terrain proche d'un centre de consommation accessible, à fertilité potentielle élevée, d'aménagement facile et irrigable avec un approvisionnement facile en eau douce.",
+    "niveau": "application",
+    "page": 1027
+   },
+   {
+    "q": "Pourquoi, en climat tropical et équatorial, les cultures légumières sont-elles plus faciles à conduire en altitude ?",
+    "choix": [
+     "Parce que les zones d'altitude sont plus fraîches et que ces légumes y sont mieux adaptés",
+     "Parce que les sols d'altitude sont toujours plus riches en phosphore",
+     "Parce que les ravageurs sont totalement absents au-dessus de 500 m",
+     "Parce que l'irrigation y devient inutile toute l'année"
+    ],
+    "reponse": 0,
+    "explication": "Les légumes réagissent fortement à la température : ceux qui sont à la limite de leur adaptation poussent mieux en période fraîche, d'où l'intérêt des zones d'altitude plus fraîches.",
+    "niveau": "comprehension",
+    "page": 1027
+   },
+   {
+    "q": "D'après le Mémento, quelle surface maximale de cultures légumières un actif peut-il conduire ?",
+    "choix": [
+     "Quinze ares",
+     "Cinquante ares",
+     "Un hectare",
+     "Cinq ares"
+    ],
+    "reponse": 0,
+    "explication": "Les cultures légumières demandent en moyenne 1 000 journées de travail par hectare ; on ne peut donc dépasser quinze ares de culture par actif.",
+    "niveau": "restitution",
+    "page": 1028
+   }
+  ]
+ },
+ {
+  "chapitre": "9856a756",
+  "questions": [
+   {
+    "q": "Comment faut-il planter les caïeux d'ail ?",
+    "choix": [
+     "Tuniqués, la pointe en l'air, affleurant à la surface du sol",
+     "Épluchés, la pointe vers le bas, enterrés à 10 cm",
+     "Couchés à plat, recouverts d'une épaisse couche de paillis",
+     "Tuniqués, la pointe en l'air, enterrés à 15 cm de profondeur"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que l'on plante les caïeux tuniqués, pointe en l'air, affleurant à la surface du sol.",
+    "niveau": "restitution",
+    "page": 1030
+   },
+   {
+    "q": "Un producteur a conservé ses caïeux d'ail à une température élevée avant plantation. Quel risque court-il selon le Mémento ?",
+    "choix": [
+     "Obtenir une récolte de bulbes peu remplis",
+     "Obtenir une production à bulbes éclatés",
+     "Voir toutes les hampes florales fleurir abondamment",
+     "Voir le cycle raccourcir à moins de deux mois"
+    ],
+    "reponse": 0,
+    "explication": "Des caïeux conservés à température élevée peuvent donner des bulbes peu remplis, alors que ceux conservés au froid (0 à 5°C) peuvent donner des bulbes éclatés.",
+    "niveau": "application",
+    "page": 1030
+   }
+  ]
+ },
+ {
+  "chapitre": "fbb0196c",
+  "questions": [
+   {
+    "q": "Pourquoi les amarantes produisent-elles beaucoup de matière sèche et de protéines par unité de surface ?",
+    "choix": [
+     "Parce qu'elles ont une photosynthèse de type C4",
+     "Parce qu'elles fixent l'azote de l'air grâce à leurs racines",
+     "Parce qu'elles sont grimpantes et occupent l'espace en hauteur",
+     "Parce qu'elles ne sont jamais attaquées par les chenilles"
+    ],
+    "reponse": 0,
+    "explication": "Le texte explique que les amarantes, comme la baselle, ont une photosynthèse de type C4 qui engendre une forte production de matière sèche et de protéines.",
+    "niveau": "comprehension",
+    "page": 1031
+   },
+   {
+    "q": "Une maraîchère veut récolter ses amarantes en une seule fois, vingt jours après le repiquage. Quel espacement doit-elle adopter ?",
+    "choix": [
+     "10 cm entre plants, soit 100 plants/m2",
+     "20 cm entre plants, sur des lignes espacées de 40 cm",
+     "20 cm entre plants, pour des récoltes échelonnées",
+     "40 cm entre plants, sur des lignes espacées de 60 cm"
+    ],
+    "reponse": 0,
+    "explication": "Pour une récolte vingt jours après repiquage, les plants sont espacés de 10 cm (100 plants/m2) ; les écartements plus larges servent aux récoltes échelonnées ou tardives.",
+    "niveau": "application",
+    "page": 1032
+   },
+   {
+    "q": "Pourquoi est-il important de récolter les amarantes par temps ensoleillé ?",
+    "choix": [
+     "Pour que les sections de tige puissent sécher, les tiges étant très sensibles aux pourritures",
+     "Pour que les feuilles accumulent davantage de sucres avant la vente",
+     "Pour éviter que les nématodes à galles ne remontent dans les tiges",
+     "Pour que les graines mûrissent avant l'arrachage des plants"
+    ],
+    "reponse": 0,
+    "explication": "Les tiges d'amarante sont très sensibles aux pourritures (Pithium, Choanephora) ; récolter par temps ensoleillé permet aux sections de tige de sécher.",
+    "niveau": "comprehension",
+    "page": 1032
+   }
+  ]
+ },
+ {
+  "chapitre": "b5c1fd2b",
+  "questions": [
+   {
+    "q": "Un agriculteur prépare une parcelle d'aubergines. Quel précédent cultural doit-il éviter ?",
+    "choix": [
+     "Une solanacée ou une cucurbitacée",
+     "Du maïs",
+     "Une céréale à paille",
+     "Une jachère désherbée"
+    ],
+    "reponse": 0,
+    "explication": "Le Mémento conseille une rotation avec le maïs ou une céréale à paille et proscrit les précédents solanaceae et cucurbitaceae.",
+    "niveau": "application",
+    "page": 1033
+   },
+   {
+    "q": "Contre les pourritures des fruits d'aubergine dues aux Phytophtora, quelle mesure le Mémento conseille-t-il ?",
+    "choix": [
+     "Éviter le contact des fruits avec la terre",
+     "Récolter les fruits uniquement après maturité physiologique",
+     "Planter en altitude plutôt qu'en plaine",
+     "Supprimer toute rotation avec les céréales"
+    ],
+    "reponse": 0,
+    "explication": "Pour les pourritures dues aux Phytophtora, le texte recommande d'éviter le contact des fruits avec la terre ; le tuteurage et le palissage sont d'ailleurs fréquents.",
+    "niveau": "restitution",
+    "page": 1033
+   }
+  ]
+ },
+ {
+  "chapitre": "5704a529",
+  "questions": [
+   {
+    "q": "Pourquoi une baselle cultivée sous des jours de plus de treize heures ne fleurit-elle pas ?",
+    "choix": [
+     "Parce que c'est une plante de jours courts",
+     "Parce que c'est une plante de jours longs",
+     "Parce qu'elle a besoin d'une période froide pour fleurir",
+     "Parce que ses fleurs avortent toujours sous les tropiques"
+    ],
+    "reponse": 0,
+    "explication": "La baselle est une plante de jours courts : elle ne fleurit pas si la longueur du jour excède treize heures.",
+    "niveau": "comprehension",
+    "page": 1034
+   },
+   {
+    "q": "Un producteur de baselle constate des problèmes de nématodes des racines. Quelle pratique le Mémento suggère-t-il pour limiter leur prolifération ?",
+    "choix": [
+     "Cultiver la baselle sur une courte période",
+     "Allonger la culture sur support pendant six mois",
+     "Doubler l'apport de compost à la plantation",
+     "Repiquer les plants plus serrés sur la ligne"
+    ],
+    "reponse": 0,
+    "explication": "La baselle est très peu sensible aux parasites sauf aux nématodes des racines ; une culture sur une courte période permet d'éviter leur prolifération.",
+    "niveau": "application",
+    "page": 1034
+   }
+  ]
+ },
+ {
+  "chapitre": "dd39b9d1",
+  "questions": [
+   {
+    "q": "Comment plante-t-on la chayotte ?",
+    "choix": [
+     "On plante le fruit entier ayant commencé à germer, enterré à moitié",
+     "On sème les graines extraites du fruit en pépinière",
+     "On repique des boutures de tiges de 30 cm",
+     "On plante des tubercules prélevés sur les racines"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que l'on plante le fruit entier qui a commencé à germer, dans le sens de la longueur, en l'enterrant à moitié.",
+    "niveau": "restitution",
+    "page": 1035
+   },
+   {
+    "q": "Où installer de préférence une plantation de chayotte en climat tropical ?",
+    "choix": [
+     "Entre 500 et 2 000 m d'altitude, à l'abri des lieux trop ventés, sur sol bien drainé",
+     "En plaine chaude où les nuits dépassent 22°C, sur sol humide",
+     "En bord de mer très exposé au vent, sur sol argileux",
+     "Au-dessus de 2 500 m, où la température reste sous 20°C"
+    ],
+    "reponse": 0,
+    "explication": "La chayotte est cultivée de préférence entre 500 et 2 000 m ; elle entre en repos si la nuit dépasse 22°C, se développe mal sous 20°C, craint les lieux trop ventés et demande des sols bien drainés.",
+    "niveau": "application",
+    "page": 1035
+   }
+  ]
+ },
+ {
+  "chapitre": "e34c8ff4",
+  "questions": [
+   {
+    "q": "Pourquoi conseille-t-on de semer les choux en couches stérilisées ?",
+    "choix": [
+     "Parce que les semis sont vulnérables à certains champignons comme Pythium et le Rhizoctone brun",
+     "Parce que les graines de chou ne germent pas dans un sol contenant de la matière organique",
+     "Parce que les chenilles pondent uniquement dans les sols non stérilisés",
+     "Parce que la stérilisation remplace la fumure azotée"
+    ],
+    "reponse": 0,
+    "explication": "Le texte justifie les couches stérilisées par la vulnérabilité des semis à certains champignons : Pythium et Rhizoctone brun.",
+    "niveau": "comprehension",
+    "page": 1037
+   },
+   {
+    "q": "En pépinière de choux, comment obtenir environ quarante plants par mètre linéaire ?",
+    "choix": [
+     "Semer des graines tous les 2 cm sur des lignes distantes de 10 cm",
+     "Semer des graines tous les 10 cm sur des lignes distantes de 2 cm",
+     "Semer à la volée puis éclaircir à 5 cm",
+     "Semer des graines tous les 5 cm sur des lignes distantes de 20 cm"
+    ],
+    "reponse": 0,
+    "explication": "En pépinière, on sème en lignes distantes de 10 cm des graines tous les 2 cm afin d'obtenir quarante plants par mètre linéaire.",
+    "niveau": "application",
+    "page": 1037
+   },
+   {
+    "q": "À quel stade les besoins en eau du chou pommé doivent-ils surtout être satisfaits ?",
+    "choix": [
+     "Pendant le stade de la pommaison",
+     "Pendant la germination en pépinière",
+     "Juste avant le repiquage",
+     "Après la récolte, pour la repousse"
+    ],
+    "reponse": 0,
+    "explication": "Le Mémento précise que les besoins en eau du chou pommé doivent être satisfaits essentiellement pendant la pommaison.",
+    "niveau": "restitution",
+    "page": 1037
+   }
+  ]
+ },
+ {
+  "chapitre": "2881779a",
+  "questions": [
+   {
+    "q": "Pourquoi l'échalote est-elle traditionnellement cultivée là où la production de graines d'oignon est difficile ?",
+    "choix": [
+     "Parce qu'elle fleurit rarement et qu'un bulbe replanté donne surtout de nouveaux bulbes",
+     "Parce qu'elle produit des graines en abondance même en climat équatorial",
+     "Parce qu'elle supporte des nuits supérieures à 22°C",
+     "Parce qu'elle n'est pas sensible à la longueur du jour"
+    ],
+    "reponse": 0,
+    "explication": "Chez l'échalote, un bulbe replanté donne une majorité de nouveaux bulbes et la plante fleurit rarement : elle se multiplie donc sans graines.",
+    "niveau": "comprehension",
+    "page": 1038
+   },
+   {
+    "q": "Une maraîchère récolte l'échalote. Quand doit-elle arracher la totalité des bulbes ?",
+    "choix": [
+     "Lorsque le feuillage jaunit, par temps sec",
+     "Dès la levée des premières feuilles, par temps pluvieux",
+     "Juste après la floraison, quel que soit le temps",
+     "Lorsque le feuillage est encore bien vert, après une pluie"
+    ],
+    "reponse": 0,
+    "explication": "La totalité des bulbes est arrachée quand le feuillage jaunit, par temps sec pour éviter les risques de pourriture.",
+    "niveau": "application",
+    "page": 1039
+   }
+  ]
+ },
+ {
+  "chapitre": "c93c3f8d",
+  "questions": [
+   {
+    "q": "Quand récolte-t-on les fruits du gombo ?",
+    "choix": [
+     "Immatures, trois à cinq jours après la floraison",
+     "Mûrs et secs, un mois après la floraison",
+     "Juste avant la floraison, avec les boutons",
+     "Quand les capsules s'ouvrent et libèrent les graines"
+    ],
+    "reponse": 0,
+    "explication": "Le gombo est une plante annuelle dont les capsules sont récoltées immatures, trois à cinq jours après la floraison.",
+    "niveau": "restitution",
+    "page": 1039
+   },
+   {
+    "q": "Un producteur d'Afrique de l'Ouest sème son gombo. Quel dispositif le Mémento indique-t-il ?",
+    "choix": [
+     "En début de saison des pluies, trois à quatre graines par poquet, 20 à 40 cm sur la ligne et 50 à 60 cm entre lignes",
+     "En pleine saison sèche, une graine par poquet, 5 cm sur la ligne et 20 cm entre lignes",
+     "En fin de saison des pluies, dix graines par poquet, 1 m sur la ligne et 2 m entre lignes",
+     "En pépinière ombragée, avec repiquage au stade quatre feuilles à 10 cm en tous sens"
+    ],
+    "reponse": 0,
+    "explication": "En Afrique de l'Ouest, le gombo est semé en début de saison des pluies, à 20 à 40 cm sur la ligne pour des lignes espacées de 50 à 60 cm, avec trois à quatre graines par poquet (7 à 10 kg de semences par hectare).",
+    "niveau": "application",
+    "page": 1040
+   }
+  ]
+ },
+ {
+  "chapitre": "f8ae1cdd",
+  "questions": [
+   {
+    "q": "Pourquoi la laitue risque-t-elle de ne pas pommer en plaine tropicale chaude ?",
+    "choix": [
+     "Parce qu'entre 21 et 27°C de moyenne journalière elle ne pomme pas et monte à graine",
+     "Parce que les jours y sont trop longs pour elle",
+     "Parce que les sols tropicaux sont trop riches en calcium",
+     "Parce que ses graines ne germent qu'au-dessus de 30°C"
+    ],
+    "reponse": 0,
+    "explication": "D'origine tempérée, la laitue a un optimum de 13 à 18°C ; entre 21 et 27°C de température moyenne journalière, elle ne pomme pas et monte à graine.",
+    "niveau": "comprehension",
+    "page": 1040
+   },
+   {
+    "q": "La température du sol d'une pépinière de laitue dépasse 30°C. Que faut-il faire selon le Mémento ?",
+    "choix": [
+     "Ombrager la pépinière, car la germination est inhibée",
+     "Semer plus dense pour compenser les pertes",
+     "Apporter une forte fumure azotée",
+     "Arrêter l'arrosage pour réchauffer les graines"
+    ],
+    "reponse": 0,
+    "explication": "Au-delà de 30°C dans le sol, la germination des graines de laitue est inhibée ; le texte recommande d'ombrager les pépinières.",
+    "niveau": "application",
+    "page": 1040
+   }
+  ]
+ },
+ {
+  "chapitre": "4b8b4e99",
+  "questions": [
+   {
+    "q": "Quel signe marque le début de la maturation du bulbe d'oignon ?",
+    "choix": [
+     "L'affaissement des limbes des feuilles les plus anciennes, appelé tombaison",
+     "L'apparition de la hampe florale au centre de la plante",
+     "Le jaunissement des racines",
+     "L'ouverture des ombelles"
+    ],
+    "reponse": 0,
+    "explication": "Le début de la maturation du bulbe est signalé par l'affaissement des limbes des feuilles les plus anciennes : la tombaison.",
+    "niveau": "restitution",
+    "page": 1042
+   },
+   {
+    "q": "Pourquoi la pépinière est-elle la pratique la plus répandue pour l'oignon en zone tropicale ?",
+    "choix": [
+     "Elle économise la semence et permet de maîtriser le désherbage et le peuplement aux jeunes stades",
+     "Elle supprime tout besoin d'irrigation après la transplantation",
+     "Elle donne systématiquement une récolte plus précoce que les bulbilles",
+     "Elle évite toute rotation avec les céréales"
+    ],
+    "reponse": 0,
+    "explication": "Le texte explique que la pépinière économise la quantité de semence et permet de maîtriser le désherbage pendant les jeunes stades et le peuplement.",
+    "niveau": "comprehension",
+    "page": 1043
+   },
+   {
+    "q": "Un producteur récolte ses oignons destinés à une longue conservation, mais il pleut. Que doit-il faire ?",
+    "choix": [
+     "Pratiquer impérativement un séchage artificiel",
+     "Stocker directement les bulbes humides en abri fermé",
+     "Laisser les bulbes au champ sous la pluie plusieurs jours",
+     "Replanter les bulbes pour les récolter plus tard"
+    ],
+    "reponse": 0,
+    "explication": "Pour une longue conservation, la récolte se fait à maturité complète et un séchage accroît la durée de conservation ; si la récolte est faite par temps humide, un séchage artificiel est impératif.",
+    "niveau": "application",
+    "page": 1044
+   }
+  ]
+ },
+ {
+  "chapitre": "804ef404",
+  "questions": [
+   {
+    "q": "Quelles températures sont optimales pour la plante de piment ?",
+    "choix": [
+     "Environ 28°C le jour et 18°C la nuit",
+     "Environ 18°C le jour et 10°C la nuit",
+     "Environ 35°C le jour et 28°C la nuit",
+     "Environ 22°C le jour et 22°C la nuit"
+    ],
+    "reponse": 0,
+    "explication": "Le Mémento indique que des températures de l'ordre de 28°C le jour et 18°C la nuit sont optimales, et que des moyennes inférieures à 18°C contrarient la croissance.",
+    "niveau": "restitution",
+    "page": 1045
+   },
+   {
+    "q": "Pour limiter les accidents physiologiques du piment, comment conduire la fertilisation azotée ?",
+    "choix": [
+     "La réduire avant la première mise à fruit, puis la soutenir en fonction de la charge en fruits",
+     "La forcer dès le repiquage, puis l'arrêter à la floraison",
+     "L'apporter en une seule fois avant le semis",
+     "La supprimer entièrement pendant tout le cycle"
+    ],
+    "reponse": 0,
+    "explication": "Le texte recommande une fertilisation azotée réduite avant la première mise à fruit, puis soutenue en liaison avec la charge en fruits, avec des apports d'eau réguliers et sans excès.",
+    "niveau": "application",
+    "page": 1045
+   }
+  ]
+ },
+ {
+  "chapitre": "b3b32fbf",
+  "questions": [
+   {
+    "q": "En climat équatorial, à partir de quelle altitude la culture du poireau est-elle envisageable ?",
+    "choix": [
+     "Au-dessus de 1 000 m",
+     "Au-dessus de 200 m",
+     "Au-dessus de 2 500 m",
+     "À toutes les altitudes, y compris en plaine"
+    ],
+    "reponse": 0,
+    "explication": "Culture de climat tempéré (optimum 12 à 16°C), le poireau n'est envisageable en climat équatorial qu'au-dessus de 1 000 m.",
+    "niveau": "restitution",
+    "page": 1046
+   },
+   {
+    "q": "Au moment du repiquage, à quoi reconnaît-on qu'un plant de poireau est prêt, et comment le prépare-t-on ?",
+    "choix": [
+     "Il atteint la taille d'un crayon ; on raccourcit le feuillage et on coupe les racines à 1 cm",
+     "Il porte une première fleur ; on le repique avec sa motte intacte",
+     "Il mesure 50 cm ; on le repique sans aucune préparation",
+     "Il a quatre feuilles ; on supprime toutes les racines"
+    ],
+    "reponse": 0,
+    "explication": "Les plants sont repiqués quand ils atteignent la taille d'un crayon, en plants habillés : feuillage raccourci et racines coupées à 1 cm.",
+    "niveau": "application",
+    "page": 1047
+   }
+  ]
+ },
+ {
+  "chapitre": "9470a1a5",
+  "questions": [
+   {
+    "q": "Quel est le zéro végétatif du poivron ?",
+    "choix": [
+     "14°C",
+     "10°C",
+     "18°C",
+     "22°C"
+    ],
+    "reponse": 0,
+    "explication": "Le Mémento indique que le zéro végétatif du poivron est de 14°C, son développement optimal se situant entre 16 et 26°C.",
+    "niveau": "restitution",
+    "page": 1047
+   },
+   {
+    "q": "Un maraîcher conduit une pépinière de poivrons. Au bout de combien de temps et à quel écartement peut-il repiquer ?",
+    "choix": [
+     "Après quarante à cinquante jours, à 60 x 60 cm",
+     "Après dix à quinze jours, à 20 x 20 cm",
+     "Après quatre mois, à 1 m x 1 m",
+     "Après trois semaines, à 30 x 15 cm"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que les plants de poivron peuvent être repiqués au bout de quarante à cinquante jours à un écartement de 60 x 60 cm, avec un léger ombrage si nécessaire.",
+    "niveau": "application",
+    "page": 1048
+   }
+  ]
+ },
+ {
+  "chapitre": "1a73b6e9",
+  "questions": [
+   {
+    "q": "Comment se multiplie le bambou cultivé pour ses pousses ?",
+    "choix": [
+     "Par éclat de touffes ou par rhizome",
+     "Uniquement par graines semées en pépinière",
+     "Par greffage sur un porte-greffe résistant",
+     "Par boutures de feuilles"
+    ],
+    "reponse": 0,
+    "explication": "Le texte précise que la multiplication du bambou se fait par éclat de touffes ou par rhizome.",
+    "niveau": "restitution",
+    "page": 1048
+   },
+   {
+    "q": "Pourquoi certaines pousses de bambou ne doivent-elles être consommées qu'après cuisson ?",
+    "choix": [
+     "Parce que seules les pousses d'espèces non amères se mangent crues, les autres exigeant une cuisson",
+     "Parce que toutes les pousses sont toxiques crues quelle que soit l'espèce",
+     "Parce que la cuisson est nécessaire pour découper les grosses pousses",
+     "Parce que les pousses crues ne se conservent pas au vinaigre"
+    ],
+    "reponse": 0,
+    "explication": "On consomme les turions d'espèces non amères, crus ou cuits, mais le texte précise que certaines pousses ne peuvent être consommées qu'après cuisson.",
+    "niveau": "comprehension",
+    "page": 1048
+   }
+  ]
+ },
+ {
+  "chapitre": "ed518eb8",
+  "questions": [
+   {
+    "q": "Pourquoi un faible rayonnement lumineux associé à des journées chaudes et des nuits tièdes nuit-il à la tomate ?",
+    "choix": [
+     "Il réduit les fleurs par bouquet, affecte la fécondation et conduit à l'avortement des fleurs et des fruits",
+     "Il déclenche la floraison trop tôt sous l'effet du photopériodisme",
+     "Il fait éclater les fruits par excès de sucre",
+     "Il empêche la germination des graines en pépinière"
+    ],
+    "reponse": 0,
+    "explication": "La tomate est exigeante en lumière : un faible rayonnement réduit le nombre de fleurs et affecte la fécondation ; combiné à des jours chauds et des nuits tièdes (écart inférieur à 10°C), il fait avorter fleurs et fruits.",
+    "niveau": "comprehension",
+    "page": 1050
+   },
+   {
+    "q": "Un maraîcher plante des tomates en saison humide. Quelle densité le Mémento indique-t-il ?",
+    "choix": [
+     "18 000 plants à l'hectare",
+     "25 000 plants à l'hectare",
+     "35 000 plants à l'hectare",
+     "45 000 plants à l'hectare"
+    ],
+    "reponse": 0,
+    "explication": "La densité varie de 18 000 plants en saison humide à 25 000 en saison sèche, voire 35 000 pour les variétés de conserve.",
+    "niveau": "application",
+    "page": 1051
+   },
+   {
+    "q": "Des tomates sont destinées au marché de frais. À quel stade faut-il les récolter ?",
+    "choix": [
+     "Au stade tournant, lors du passage du vert au rose",
+     "Totalement rouges et très mûres",
+     "Encore entièrement vertes et dures",
+     "Dès la chute des pétales de la fleur"
+    ],
+    "reponse": 0,
+    "explication": "Pour le marché de frais, la récolte se fait tous les deux à trois jours au stade tournant ; les tomates industrielles sont, elles, récoltées rouges.",
+    "niveau": "application",
+    "page": 1052
+   }
+  ]
+ }
+]

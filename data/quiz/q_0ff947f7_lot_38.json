@@ -1,0 +1,230 @@
+[
+ {
+  "chapitre": "eeb227bb",
+  "questions": [
+   {
+    "q": "Pourquoi les surfaces cultivées en éleusine diminuent-elles au Congo démocratique, au Burundi et au Rwanda ?",
+    "choix": [
+     "À cause du travail qu'exigent le désherbage, la récolte et le vannage",
+     "À cause de fortes attaques d'insectes sur les grains stockés",
+     "À cause de la mauvaise résistance de la plante aux excès d'eau",
+     "À cause de la chute du prix de l'éleusine sur les marchés"
+    ],
+    "reponse": 0,
+    "explication": "La quantité de travail nécessaire pour désherber, récolter et vanner fait reculer l'éleusine, dont le prix augmente au point d'en faire une céréale de fête.",
+    "niveau": "comprehension",
+    "page": 828
+   },
+   {
+    "q": "Un paysan de savane a une parcelle sableuse et pauvre, avec des pluies faibles. Quelle céréale secondaire le texte présente-t-il comme adaptée à ces conditions ?",
+    "choix": [
+     "Le fonio, qui pousse là où rien d'autre ne pousse",
+     "L'éleusine, qui résiste bien à la sécheresse",
+     "Le millet indigène, qui préfère les zones humides",
+     "Le panic, adventice commune des champs de riz"
+    ],
+    "reponse": 0,
+    "explication": "Le fonio tolère des sols pauvres, sableux ou latéritiques et se développe dès un minimum de pluies, alors que l'éleusine résiste mal à la sécheresse.",
+    "niveau": "application",
+    "page": 828
+   },
+   {
+    "q": "Dans un champ de fonio dont les graines arrivent à maturité, quelle précaution le texte juge-t-il indispensable ?",
+    "choix": [
+     "Surveiller la culture pour limiter les attaques d'oiseaux",
+     "Faire plusieurs sarclages rapprochés",
+     "Apporter un complément d'azote",
+     "Repiquer les plants dans les zones vides"
+    ],
+    "reponse": 0,
+    "explication": "La surveillance au moment de la maturation des graines est indispensable pour limiter les attaques d'oiseaux ; le fonio demande par ailleurs peu de désherbage.",
+    "niveau": "application",
+    "page": 829
+   },
+   {
+    "q": "En Éthiopie, quel rôle le teff peut-il jouer lorsque les cultures principales (blé, sorgho, maïs) ne produisent pas ?",
+    "choix": [
+     "Culture de secours et de soudure, semée tardivement et peu exigeante en soins",
+     "Culture fourragère de saison des pluies pour le bétail",
+     "Culture de rente destinée surtout à l'exportation",
+     "Culture d'engrais vert enfouie avant le semis suivant"
+    ],
+    "reponse": 0,
+    "explication": "Le teff, à cycle court et maturité rapide, peut être semé comme culture de secours et sert alors de culture de soudure qui demande peu de soins et résiste aux maladies.",
+    "niveau": "restitution",
+    "page": 832
+   }
+  ]
+ },
+ {
+  "chapitre": "6c4b0620",
+  "questions": [
+   {
+    "q": "Comment multiplie-t-on l'arbre à pain véritable, dont les fruits n'ont pas de graines ?",
+    "choix": [
+     "Par marcottage ou bouturage à partir des racines",
+     "Par semis de graines fraîchement récoltées",
+     "Par greffage sur châtaignier tropical",
+     "Par bouturage de rameaux feuillés"
+    ],
+    "reponse": 0,
+    "explication": "Seul le châtaignier tropical se multiplie par graines ; l'arbre à pain sans graine se multiplie par marcottes ou boutures de racines.",
+    "niveau": "restitution",
+    "page": 836
+   },
+   {
+    "q": "Un planteur prépare un verger d'arbres à pain. Quelle densité le texte conseille-t-il ?",
+    "choix": [
+     "84 arbres/ha, à 7,5 m sur la ligne et 12 m entre les lignes",
+     "400 arbres/ha, à 5 m en tous sens",
+     "200 arbres/ha, à 7,5 m sur la ligne et 7,5 m entre les lignes",
+     "40 arbres/ha, à 12 m sur la ligne et 20 m entre les lignes"
+    ],
+    "reponse": 0,
+    "explication": "La densité conseillée est de 84 arbres/ha, dans des trous de 90 cm de large et 40 cm de profondeur enrichis en matière organique.",
+    "niveau": "application",
+    "page": 837
+   },
+   {
+    "q": "Un producteur veut des arbres à pain qui entrent vite en production. Quel matériel de plantation choisir d'après le texte ?",
+    "choix": [
+     "Des marcottes de racines, qui produisent au bout de trois ans",
+     "Des boutures de racines, qui produisent au bout de trois ans",
+     "Des marcottes de racines, qui produisent au bout de cinq ans",
+     "Des boutures de racines, qui produisent dès la deuxième année"
+    ],
+    "reponse": 0,
+    "explication": "Les arbres issus de marcottes de racines produisent au bout de trois ans, contre cinq ans pour ceux issus de boutures de racines.",
+    "niveau": "application",
+    "page": 837
+   }
+  ]
+ },
+ {
+  "chapitre": "302678d5",
+  "questions": [
+   {
+    "q": "Un paysan veut cultiver l'igname sur un sol hydromorphe. Que recommande le texte ?",
+    "choix": [
+     "Planter sur de grandes buttes d'un mètre ou plus",
+     "Planter à plat sans travail du sol",
+     "Planter sur de petits billons de 20 cm",
+     "Éviter toute plantation sur ce type de sol"
+    ],
+    "reponse": 0,
+    "explication": "L'igname Dcr demande des sols légers et bien drainés ; sur sols hydromorphes, elle doit être plantée sur butte de grande taille, un mètre ou plus.",
+    "niveau": "application",
+    "page": 841
+   },
+   {
+    "q": "Un producteur vise des tubercules moyens de 1 à 2 kg pour la vente. Comment conduire la plantation ?",
+    "choix": [
+     "Densité forte (6 000 à 15 000 plants/ha) et petites buttes de 35 à 50 cm",
+     "Densité faible (3 à 4 000 buttes/ha) et grosses buttes d'un mètre",
+     "Densité faible (3 à 4 000 buttes/ha) et petites buttes de 35 à 50 cm",
+     "Densité forte (6 000 à 15 000 plants/ha) et grosses buttes d'un mètre"
+    ],
+    "reponse": 0,
+    "explication": "Les tubercules moyens, plus recherchés en production commerciale, s'obtiennent avec des densités plus fortes et des buttes plus petites ; les gros tubercules demandent l'inverse.",
+    "niveau": "application",
+    "page": 842
+   },
+   {
+    "q": "Pourquoi préférer de petits tubercules entiers à des fragments de gros tubercules comme semenceaux d'igname ?",
+    "choix": [
+     "Ils ont une vigueur et une précocité supérieures",
+     "Ils ne nécessitent pas de buttage",
+     "Ils résistent mieux aux nématodes du sol",
+     "Ils donnent toujours des tubercules plus gros"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que les tubercules entiers ont une vigueur et une précocité supérieures à celles des fragments.",
+    "niveau": "comprehension",
+    "page": 842
+   },
+   {
+    "q": "À quelle période l'igname est-elle la plus sensible à la concurrence des mauvaises herbes ?",
+    "choix": [
+     "Entre un et trois mois après la levée",
+     "Dans les deux semaines suivant la plantation",
+     "Entre cinq et six mois après la levée",
+     "Juste avant la sénescence de l'appareil aérien"
+    ],
+    "reponse": 0,
+    "explication": "La sensibilité aux adventices est maximale entre un et trois mois après la levée ; trois à quatre sarclages peuvent être nécessaires en culture continue.",
+    "niveau": "restitution",
+    "page": 842
+   },
+   {
+    "q": "Dans la conduite en double récolte des ignames Dcr précoces, à quoi sert surtout la seconde récolte ?",
+    "choix": [
+     "À la replantation",
+     "À la vente en frais sur les marchés urbains",
+     "À la fabrication de cossettes",
+     "À l'alimentation des animaux"
+    ],
+    "reponse": 0,
+    "explication": "La première récolte, immature, se conserve mal mais est très appréciée ; la seconde, obtenue sur la repousse, est surtout destinée à la replantation.",
+    "niveau": "comprehension",
+    "page": 845
+   }
+  ]
+ },
+ {
+  "chapitre": "b145fd49",
+  "questions": [
+   {
+    "q": "Sur un sol lourd et argileux, comment installer une bouture de manioc ?",
+    "choix": [
+     "Horizontalement, sous 4 à 15 cm de terre",
+     "Verticalement, enfoncée aux deux tiers",
+     "À l'oblique, base coupée en biseau",
+     "Verticalement, enfoncée sur toute sa longueur"
+    ],
+    "reponse": 0,
+    "explication": "Sur sols lourds argileux, où les racines risquent l'excès d'eau, la bouture se plante horizontalement ; la plantation oblique ou verticale convient aux sols légers sableux.",
+    "niveau": "application",
+    "page": 851
+   },
+   {
+    "q": "Pourquoi faut-il éviter un excès d'azote par rapport au potassium dans la fumure du manioc ?",
+    "choix": [
+     "Les parties aériennes se développent alors au détriment des tubercules",
+     "Les boutures ne parviennent plus à émettre de racines",
+     "Les racines deviennent plus sensibles à la mosaïque",
+     "Le sol s'acidifie et bloque l'absorption du phosphore"
+    ],
+    "reponse": 0,
+    "explication": "Le texte recommande 30 à 60 kg d'azote en évitant l'excès par rapport à K, car sinon les parties aériennes se développent au détriment des tubercules.",
+    "niveau": "comprehension",
+    "page": 851
+   },
+   {
+    "q": "Un producteur hésite sur la période d'arrachage de son manioc. Que conseille le texte ?",
+    "choix": [
+     "Arracher en saison sèche, quand la teneur en matière sèche des racines est la plus élevée",
+     "Arracher en saison des pluies, car l'arrachage y est moins pénible et la qualité meilleure",
+     "Arracher à n'importe quel moment, la qualité des racines ne variant pas",
+     "Arracher en début de saison des pluies, juste après la reprise de croissance"
+    ],
+    "reponse": 0,
+    "explication": "L'arrachage est plus pénible en saison sèche, mais c'est la meilleure période car la teneur en matière sèche des racines y est la plus élevée.",
+    "niveau": "application",
+    "page": 852
+   },
+   {
+    "q": "Parmi ces facteurs, lequel diminue le taux d'acide cyanhydrique du manioc ?",
+    "choix": [
+     "L'apport de potassium",
+     "Le stress hydrique",
+     "L'apport d'azote",
+     "Le prolongement du cycle cultural"
+    ],
+    "reponse": 0,
+    "explication": "Le stress hydrique, l'apport d'azote et l'allongement du cycle élèvent le taux d'acide cyanhydrique, alors que l'apport de potassium le réduit.",
+    "niveau": "restitution",
+    "page": 853
+   }
+  ]
+ }
+]

@@ -164,6 +164,7 @@ void main() {
 
     expect(texte('58'), findsOneWidget, reason: 'les pages lues, pas les 1 698 du livre');
     expect(texte('4 h'), findsOneWidget, reason: '214 minutes, pas 90 heures');
+    expect(texte('ouvrage'), findsOneWidget, reason: 'au singulier pour un seul livre');
     expect(texteContenant('58 pages lues sur 1698'), findsOneWidget);
     expect(texte('Ce que ce parcours en lit'), findsOneWidget);
     expect(texte('Le diagnostic phytosanitaire'), findsOneWidget);

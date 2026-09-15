@@ -76,7 +76,7 @@ class EcranAxe extends ConsumerWidget {
                   spacing: 26,
                   runSpacing: 12,
                   children: [
-                    _Mesure(valeur: '${ouvrages.length}', libelle: 'ouvrages'),
+                    _Mesure(valeur: '${ouvrages.length}', libelle: ouvrages.length > 1 ? 'ouvrages' : 'ouvrage'),
                     _Mesure(valeur: '$pages', libelle: 'pages'),
                     if (minutes > 0)
                       _Mesure(valeur: '${(minutes / 60).round()} h', libelle: 'de lecture'),

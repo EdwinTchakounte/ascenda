@@ -1,0 +1,207 @@
+[
+ {
+  "chapitre": "fef8903b",
+  "questions": [
+   {
+    "q": "Quelle part des superficies rizicoles l'Afrique consacre-t-elle à la riziculture pluviale, sans submersion ?",
+    "choix": [
+     "40 %",
+     "12 %",
+     "55 %",
+     "23 %"
+    ],
+    "reponse": 0,
+    "explication": "La riziculture pluviale représente 12 % des superficies mondiales, mais 40 % en Afrique.",
+    "niveau": "restitution",
+    "page": 807
+   },
+   {
+    "q": "Pourquoi les systèmes traditionnels de riz pluvial sur abattis-brûlis sont-ils de moins en moins productifs ?",
+    "choix": [
+     "Parce que la durée des jachères se raccourcit",
+     "Parce que les variétés utilisées sont trop précoces",
+     "Parce que la lame d'eau n'y est pas maîtrisée",
+     "Parce que le repiquage y a été abandonné"
+    ],
+    "reponse": 0,
+    "explication": "Le raccourcissement des jachères fait tomber les rendements de 2 t/ha à 1 t/ha dans ces systèmes itinérants.",
+    "niveau": "comprehension",
+    "page": 807
+   },
+   {
+    "q": "Un riziculteur veut repiquer un hectare de rizière. Quelle surface de pépinière doit-il préparer ?",
+    "choix": [
+     "400 m2",
+     "100 m2",
+     "1 000 m2",
+     "2 500 m2"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique qu'il faut 400 m2 de pépinière pour un hectare de rizière, soit un rapport de 1 à 25.",
+    "niveau": "application",
+    "page": 808
+   },
+   {
+    "q": "Un riziculteur dispose de plants en pépinière depuis 45 jours. Que doit-il savoir avant de les repiquer ?",
+    "choix": [
+     "L'optimum est de 20 à 30 jours, et au-delà le potentiel de production baisse",
+     "Des plants plus âgés tallent davantage et donnent un meilleur rendement",
+     "L'âge des plants n'influe que sur la date de la reprise",
+     "Il faut au moins 40 jours pour que les plants supportent le repiquage"
+    ],
+    "reponse": 0,
+    "explication": "L'âge optimal des plants au repiquage est de vingt à trente jours ; au-delà, l'âge est négativement corrélé au potentiel de production.",
+    "niveau": "application",
+    "page": 809
+   },
+   {
+    "q": "Dans une rizière désherbée à la main, à quel moment faire la première intervention de désherbage ?",
+    "choix": [
+     "Quinze à trente jours après la levée ou le repiquage",
+     "Juste avant la floraison du riz",
+     "Soixante jours après le repiquage",
+     "Au moment de l'assèchement de la rizière"
+    ],
+    "reponse": 0,
+    "explication": "Deux désherbages sont souvent nécessaires : le premier quinze à trente jours après la levée ou le repiquage, le second vingt à trente jours plus tard, car l'efficacité dépend de la précocité.",
+    "niveau": "restitution",
+    "page": 810
+   },
+   {
+    "q": "Parmi ces conditions, laquelle favorise la pyriculariose du riz ?",
+    "choix": [
+     "Des doses élevées d'azote",
+     "Une humidité de l'air très faible",
+     "Un sol maintenu constamment submergé",
+     "Un apport important de potassium"
+    ],
+    "reponse": 0,
+    "explication": "La pyriculariose est favorisée par une forte humidité de l'air, la sécheresse du sol et des doses élevées d'azote ; la résistance variétale reste la base de la lutte.",
+    "niveau": "comprehension",
+    "page": 810
+   },
+   {
+    "q": "Quel est le principal objectif de l'étuvage domestique du paddy ?",
+    "choix": [
+     "Réduire le taux de brisure au décorticage",
+     "Rendre le riz plus collant à la cuisson",
+     "Éliminer les graines d'adventices du lot",
+     "Raccourcir la durée du séchage au champ"
+    ],
+    "reponse": 0,
+    "explication": "L'étuvage, trempage dans l'eau chaude suivi d'un séchage, vise surtout à réduire les brisures au décorticage ; il améliore aussi la valeur nutritive du riz.",
+    "niveau": "comprehension",
+    "page": 813
+   }
+  ]
+ },
+ {
+  "chapitre": "84c19e40",
+  "questions": [
+   {
+    "q": "Qu'est-ce qui explique en partie la rusticité et la résistance à la sécheresse du sorgho ?",
+    "choix": [
+     "Un système racinaire puissant qui descend jusqu'à 2 m",
+     "Des feuilles étroites qui limitent la transpiration",
+     "Un tallage très abondant chez toutes les variétés",
+     "Une graine fortement dormante qui attend la pluie"
+    ],
+    "reponse": 0,
+    "explication": "Le sorgho a des racines capables de descendre rapidement jusqu'à 2 m pour extraire l'eau et les éléments minéraux.",
+    "niveau": "comprehension",
+    "page": 817
+   },
+   {
+    "q": "Quel est l'inconvénient de la couche brune (testa) riche en tanins présente dans certains grains de sorgho ?",
+    "choix": [
+     "Elle donne de l'amertume et diminue la digestibilité",
+     "Elle rend les grains plus sensibles aux oiseaux",
+     "Elle augmente les attaques de moisissures",
+     "Elle réduit le poids de 1 000 graines"
+    ],
+    "reponse": 0,
+    "explication": "La testa protège des moisissures et des oiseaux, mais colore les préparations, leur donne de l'amertume et diminue leur digestibilité.",
+    "niveau": "restitution",
+    "page": 817
+   },
+   {
+    "q": "Un paysan multiplie ses propres semences d'une variété fixée de sorgho. Quelle précaution doit-il prendre ?",
+    "choix": [
+     "Isoler la parcelle d'au moins 100 mètres des autres sorghos et épurer tôt les hors-types",
+     "Semer la parcelle au milieu d'autres champs de sorgho pour la pollinisation",
+     "Laisser tous les plants hors-types jusqu'à la récolte",
+     "Isoler la parcelle d'au moins 10 mètres seulement"
+    ],
+    "reponse": 0,
+    "explication": "La production semencière demande d'isoler les parcelles de multiplication d'au moins 100 mètres et d'épurer les plantes hors types le plus tôt possible.",
+    "niveau": "application",
+    "page": 818
+   },
+   {
+    "q": "Un éleveur veut faire pâturer des repousses de sorgho après une coupe. Quel risque doit-il prendre en compte ?",
+    "choix": [
+     "Un empoisonnement du bétail par l'acide cyanhydrique issu de la durrhine",
+     "Une météorisation due à l'excès de sucres dans les tiges",
+     "Une carence en phosphore des animaux",
+     "Une diarrhée due aux tanins concentrés dans les jeunes feuilles"
+    ],
+    "reponse": 0,
+    "explication": "Les jeunes plantes et repousses de certaines variétés contiennent de la durrhine, qui produit de l'acide cyanhydrique pendant la digestion ; la toxicité disparaît à la floraison.",
+    "niveau": "application",
+    "page": 820
+   },
+   {
+    "q": "Avec une variété locale photopériodique de sorgho, que se passe-t-il si le paysan sème plus tôt ?",
+    "choix": [
+     "Le cycle végétatif s'allonge et la floraison reste à une date presque fixe",
+     "La floraison est avancée d'autant que le semis",
+     "Le cycle raccourcit et la récolte tombe en pleine saison des pluies",
+     "La plante ne fleurit pas et reste au stade végétatif"
+    ],
+    "reponse": 0,
+    "explication": "Ces variétés fleurissent à une date relativement fixe calée sur la fin des pluies : plus le semis est précoce, plus le cycle est long (90 à 160 jours).",
+    "niveau": "comprehension",
+    "page": 820
+   },
+   {
+    "q": "Pourquoi déconseille-t-on de cultiver sorgho après sorgho sur les sols sableux ?",
+    "choix": [
+     "Les toxines sécrétées par les racines en fin de cycle freinent la culture suivante",
+     "Le sorgho épuise totalement le potassium des sols sableux",
+     "Le striga ne se développe que dans ces sols après sorgho",
+     "Les sols sableux retiennent trop d'eau pour un second sorgho"
+    ],
+    "reponse": 0,
+    "explication": "Les toxines racinaires du sorgho ont un effet dépressif sur la culture suivante, surtout quand l'activité biologique du sol est faible, comme dans les sols sableux ; un semis retardé permet de les éviter.",
+    "niveau": "comprehension",
+    "page": 821
+   },
+   {
+    "q": "En culture intensifiée semée en poquets, quand et comment démarier le sorgho ?",
+    "choix": [
+     "Une dizaine de jours après la levée, en laissant trois pieds par poquet",
+     "Un mois après la levée, en laissant un seul pied par poquet",
+     "Au début de la montaison, en laissant cinq pieds par poquet",
+     "Juste avant la floraison, en laissant deux pieds par poquet"
+    ],
+    "reponse": 0,
+    "explication": "Le démariage doit intervenir rapidement, une dizaine de jours après la levée, en laissant trois pieds par poquet, en même temps que le premier sarclage.",
+    "niveau": "application",
+    "page": 822
+   },
+   {
+    "q": "Un agriculteur vise 2 t/ha de sorgho. Quelle quantité d'azote le texte recommande-t-il d'apporter ?",
+    "choix": [
+     "35 à 45 kg/ha de N",
+     "20 à 30 kg/ha de N",
+     "80 à 100 kg/ha de N",
+     "10 à 15 kg/ha de N"
+    ],
+    "reponse": 0,
+    "explication": "Pour produire 2 t/ha, il faut apporter 35 à 45 kg/ha de N, valorisés seulement si le phosphore assimilable est suffisant.",
+    "niveau": "application",
+    "page": 822
+   }
+  ]
+ }
+]

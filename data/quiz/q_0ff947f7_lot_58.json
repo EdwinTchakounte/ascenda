@@ -1,0 +1,217 @@
+[
+ {
+  "chapitre": "060a8bb5",
+  "questions": [
+   {
+    "q": "Pourquoi le Mémento estime-t-il que la ration est mieux valorisée en stabulation qu'au pâturage ?",
+    "choix": [
+     "Les animaux dépensent moins d'énergie à se déplacer et les refus et le gaspillage sont moindres",
+     "Les fourrages distribués à l'auge sont toujours plus riches que l'herbe du pâturage",
+     "Les animaux enfermés mangent davantage car ils n'ont rien d'autre à faire",
+     "La stabulation supprime tout besoin de complémentation en aliments concentrés"
+    ],
+    "reponse": 0,
+    "explication": "Le texte explique qu'en stabulation les animaux dépensent moins d'énergie pour leurs déplacements et que les refus et le gaspillage sont moindres, d'où une meilleure valorisation de la ration.",
+    "niveau": "comprehension",
+    "page": 1292
+   },
+   {
+    "q": "Quel taux de refus le Mémento juge-t-il souhaitable de ne pas dépasser sur un fourrage grossier distribué en stabulation, comme la paille ou le foin ?",
+    "choix": [
+     "10 à 20 % du fourrage distribué",
+     "1 à 2 % du fourrage distribué",
+     "30 à 40 % du fourrage distribué",
+     "50 à 60 % du fourrage distribué"
+    ],
+    "reponse": 0,
+    "explication": "Le texte recommande de limiter à 10 ou 20 % les refus sur un fourrage grossier comme la paille ou le foin, ces refus pouvant par ailleurs servir de litière pour le fumier.",
+    "niveau": "restitution",
+    "page": 1294
+   },
+   {
+    "q": "Dans une étable entravée sans abreuvoir permanent, que recommande le Mémento pour l'abreuvement des vaches laitières ?",
+    "choix": [
+     "Donner accès à de l'eau propre plusieurs fois par jour, surtout en saison chaude",
+     "Abreuver une seule fois le soir, après la traite, pour limiter les souillures",
+     "Remplacer l'eau par des fourrages verts riches en eau pendant la saison sèche",
+     "Laisser les animaux sans eau le matin pour stimuler leur appétit"
+    ],
+    "reponse": 0,
+    "explication": "Il faut que de l'eau propre soit accessible en permanence ; faute d'équipement permanent, les animaux doivent y avoir accès plusieurs fois par jour, surtout les laitières et en saison chaude.",
+    "niveau": "application",
+    "page": 1295
+   }
+  ]
+ },
+ {
+  "chapitre": "3e563fcf",
+  "questions": [
+   {
+    "q": "Pourquoi, en climat chaud, la ration des porcs et volailles doit-elle être plus concentrée en protéines, acides aminés, minéraux et vitamines ?",
+    "choix": [
+     "Parce que la chaleur, aggravée par l'humidité, diminue la quantité d'aliment ingérée",
+     "Parce que la chaleur augmente fortement l'appétit des animaux à croissance rapide",
+     "Parce que les matières premières locales sont plus riches qu'en pays tempéré",
+     "Parce que les animaux boivent moins et doivent trouver l'eau dans l'aliment"
+    ],
+    "reponse": 0,
+    "explication": "L'ingestion est généralement diminuée par la chaleur, effet accru par l'humidité ; la plus faible quantité consommée doit donc contenir tous les éléments nutritifs nécessaires.",
+    "niveau": "comprehension",
+    "page": 1298
+   },
+   {
+    "q": "Un petit fabricant d'aliment pour volailles utilise un son de riz dont la qualité varie beaucoup selon le moulin. Quelle précaution le Mémento conseille-t-il ?",
+    "choix": [
+     "Ne pas utiliser en trop grande quantité les matières premières les plus variables",
+     "Augmenter la part de ce son pour compenser sa faible valeur moyenne",
+     "Se fier à une seule table de composition pour garder une formule stable",
+     "Traiter tous les sons de riz comme une seule et même matière première"
+    ],
+    "reponse": 0,
+    "explication": "Parmi les stratégies proposées, le texte recommande de ne pas utiliser en trop grande quantité les matières premières les plus variables, afin qu'une erreur d'estimation ait des conséquences limitées ; il conseille aussi de distinguer son artisanal et son industriel.",
+    "niveau": "application",
+    "page": 1299
+   },
+   {
+    "q": "Quelle part du coût de production des porcs et volailles l'alimentation représente-t-elle généralement selon le Mémento ?",
+    "choix": [
+     "Entre 70 et 80 %",
+     "Entre 20 et 30 %",
+     "Entre 40 et 50 %",
+     "Entre 90 et 95 %"
+    ],
+    "reponse": 0,
+    "explication": "Le texte indique que l'alimentation représente généralement entre 70 et 80 % du coût de production des espèces non herbivores, car elle utilise des matières premières de forte valeur et des additifs coûteux.",
+    "niveau": "restitution",
+    "page": 1300
+   },
+   {
+    "q": "Pourquoi les petites unités de fabrication préfèrent-elles incorporer un prémélange minéral et vitaminique moins concentré, à 0,5 % ou plus, plutôt qu'un premix très concentré à 0,1 % ?",
+    "choix": [
+     "Pour éviter un mélange hétérogène qui provoquerait des carences ou des excès chez certains animaux",
+     "Parce que le premix concentré est interdit dans les petites unités de fabrication",
+     "Parce que le premix moins concentré apporte davantage d'énergie à la ration",
+     "Pour réduire le coût total de l'aliment, le premix dilué étant gratuit"
+    ],
+    "reponse": 0,
+    "explication": "Dans les unités de capacité modeste, une très petite quantité de premix risque d'être mal répartie, si bien que certains animaux souffrent de carences ou d'excès ; on préfère donc un premix moins concentré incorporé à plus forte dose.",
+    "niveau": "comprehension",
+    "page": 1300
+   },
+   {
+    "q": "Un aviculteur stocke du tourteau et du son gras dans un magasin chaud le jour et frais la nuit. Que recommande le Mémento pour limiter les moisissures ?",
+    "choix": [
+     "Un local bien isolé et bien ventilé, un roulement rapide et des produits peu humides au départ",
+     "Un local fermé hermétiquement sans aération, pour empêcher l'entrée de l'air humide",
+     "Un stockage de longue durée en gros volumes, pour profiter des prix bas",
+     "Une humidification régulière des sacs, pour éviter le rancissement des matières grasses"
+    ],
+    "reponse": 0,
+    "explication": "Les variations de température provoquent une condensation qui favorise les moisissures ; le texte conseille un local isolé et ventilé, un roulement rapide et des produits sains et peu humides, et de surveiller les matières riches en huile.",
+    "niveau": "application",
+    "page": 1303
+   },
+   {
+    "q": "Dans un élevage de poules pondeuses, pourquoi le Mémento conseille-t-il d'apporter exactement la quantité d'aliment nécessaire, contrairement au poulet de chair ?",
+    "choix": [
+     "Tout excédent est une perte économique et nuit à la ponte en engraissant les poules",
+     "Les pondeuses ne régulent jamais leur appétit et meurent si elles mangent trop",
+     "L'aliment des pondeuses est trop pauvre pour être distribué à volonté",
+     "Le rationnement rend les œufs plus gros et augmente leur prix de vente"
+    ],
+    "reponse": 0,
+    "explication": "Chez la pondeuse, toute quantité supplémentaire serait une perte économique et nuirait à la production par engraissement, alors que le poulet de chair doit consommer au maximum.",
+    "niveau": "comprehension",
+    "page": 1304
+   }
+  ]
+ },
+ {
+  "chapitre": "d745dc6d",
+  "questions": [
+   {
+    "q": "Quel espace par animal le Mémento indique-t-il pour les porcs dans un véhicule de transport vers l'abattoir ?",
+    "choix": [
+     "0,5 à 0,7 m2 par porc",
+     "0,3 à 0,4 m2 par porc",
+     "1,4 à 1,6 m2 par porc",
+     "2,1 à 2,3 m2 par porc"
+    ],
+    "reponse": 0,
+    "explication": "Le texte donne 0,5 à 0,7 m2 pour les porcs, contre 0,3 à 0,4 m2 pour les petits ruminants, 1,4 à 1,6 m2 pour les bovins de plus de 1 an et 2,1 à 2,3 m2 pour les chevaux.",
+    "niveau": "restitution",
+    "page": 1306
+   },
+   {
+    "q": "Pourquoi le Mémento recommande-t-il idéalement une diète de 24 h avant l'abattage ?",
+    "choix": [
+     "Pour réduire la contamination de la viande après la saignée et le volume des contenus gastriques",
+     "Pour augmenter le poids de la carcasse et donc le prix payé à l'éleveur",
+     "Pour que la viande devienne plus tendre sans passage en chambre froide",
+     "Pour éviter que les animaux ne s'agitent pendant le transport en camion"
+    ],
+    "reponse": 0,
+    "explication": "La diète de 24 h réduit les risques de contamination de la viande après la saignée et le volume des contenus gastriques ; ce repos diminue aussi le stress du transport et permet l'inspection ante-mortem.",
+    "niveau": "comprehension",
+    "page": 1306
+   },
+   {
+    "q": "Lors d'un abattage au village, quelle pratique le Mémento demande-t-il d'éviter pour l'hygiène de la viande ?",
+    "choix": [
+     "Essuyer les carcasses avec des chiffons humides et laisser la viande toucher le sol",
+     "Abattre des animaux propres dans un local débarrassé du matériel inutile",
+     "Confier l'égorgement à une personne expérimentée munie d'instruments efficaces",
+     "Limiter l'usage de l'eau pendant le dépeçage de l'animal"
+    ],
+    "reponse": 0,
+    "explication": "Parmi les manœuvres contraires à l'hygiène, le texte cite l'essuyage des carcasses avec des chiffons humides, le contact direct entre la viande et le sol et l'utilisation d'instruments non nettoyés.",
+    "niveau": "application",
+    "page": 1308
+   }
+  ]
+ },
+ {
+  "chapitre": "717e9d61",
+  "questions": [
+   {
+    "q": "Pourquoi, en Afrique, le lait est-il souvent consommé sous forme acidifiée ou caillée ?",
+    "choix": [
+     "Pour faciliter sa conservation là où la chaîne du froid est rarement disponible",
+     "Parce que le lait cru est toujours chargé de germes à la sortie de la mamelle",
+     "Parce que le lait caillé contient plus de matières grasses que le lait frais",
+     "Pour obtenir directement du lait en poudre sans équipement de laiterie"
+    ],
+    "reponse": 0,
+    "explication": "Le texte précise que le lait est souvent consommé acidifié ou caillé afin d'en faciliter la conservation, la chaîne du froid étant rarement disponible.",
+    "niveau": "comprehension",
+    "page": 1310
+   },
+   {
+    "q": "Une éleveuse veut améliorer l'hygiène de la traite de ses vaches au campement. Quelle pratique le Mémento recommande-t-il ?",
+    "choix": [
+     "Attacher la queue de la vache et utiliser un récipient métallique ou en plastique facile à nettoyer",
+     "Traire dans une calebasse traditionnelle, plus saine qu'un récipient en plastique",
+     "Éloigner le veau de sa mère et laisser les membres postérieurs libres",
+     "Éviter de laver les trayons pour ne pas mouiller le lait pendant la traite"
+    ],
+    "reponse": 0,
+    "explication": "Le texte conseille d'attacher la queue, dont le toupet peut contaminer le lait, et de préférer un récipient métallique ou en plastique facilement nettoyable à la calebasse, après s'être lavé les mains et avoir nettoyé les trayons.",
+    "niveau": "application",
+    "page": 1311
+   },
+   {
+    "q": "À l'arrivée en laiterie, quel temps de réduction au bleu de méthylène correspond à un lait de bonne qualité (hors saison chaude) selon le Tableau 1 ?",
+    "choix": [
+     "Plus de 4 h",
+     "Moins de 2 h",
+     "Entre 2 h et 4 h",
+     "Moins de 1 h 30"
+    ],
+    "reponse": 0,
+    "explication": "Le Tableau 1 attribue la note 3, bonne qualité, à un temps de réduction supérieur à 4 h (plus de 3 h en saison chaude) ; moins de 2 h correspond à un lait contaminé.",
+    "niveau": "restitution",
+    "page": 1311
+   }
+  ]
+ }
+]
