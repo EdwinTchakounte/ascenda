@@ -158,13 +158,25 @@ async def erreur_inattendue(request: Request, exc: Exception):
 
 @app.get("/sante", tags=["Service"])
 async def sante():
-    """Vérifie que l'API répond et que la base est joignable."""
+    """Vérifie que l'API répond et que la base est joignable.
+
+    Répond 503 sans base : un répartiteur ou la sonde Docker retire alors
+    l'instance au lieu de lui envoyer des requêtes qui échoueront toutes. Les
+    disjoncteurs sont donnés par leur seul état ; le détail, qui peut porter un
+    message d'erreur de fournisseur, est réservé à la console.
+    """
+    from app.services.resilience import DISJONCTEURS
+
     try:
         await fetch_one("select 1 as ok")
         base = "ok"
     except Exception as exc:  # noqa: BLE001, on veut le message dans la réponse
-        base = f"indisponible: {exc}"
-    return {"service": "ascenda-api", "version": app.version, "base": base, "env": settings.api_env}
+        base = f"indisponible: {type(exc).__name__}"
+    corps = {
+        "service": "ascenda-api", "version": app.version, "base": base, "env": settings.api_env,
+        "dependances": {nom: d.vue()["etat"] for nom, d in DISJONCTEURS.items()},
+    }
+    return JSONResponse(corps, status_code=200 if base == "ok" else 503)
 
 
 @app.get("/admin", include_in_schema=False)

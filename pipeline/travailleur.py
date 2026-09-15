@@ -18,6 +18,7 @@ import os
 import signal
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -30,6 +31,17 @@ if not Path(PYTHON).exists():
     PYTHON = sys.executable
 
 REPOS = 5  # secondes entre deux regards à la file, quand elle est vide
+
+# Le signe de vie lu par la sonde Docker : la boucle et le battement le touchent.
+# Un fichier plutôt qu'un port : l'ouvrier n'écoute rien, et n'a pas à le faire.
+SIGNE_DE_VIE = Path(os.getenv("SIGNE_DE_VIE", "/tmp/ouvrier-vivant"))
+
+
+def signaler_vie() -> None:
+    try:
+        SIGNE_DE_VIE.touch()
+    except OSError:
+        pass
 
 # Ce que chaque type lance. La même table que côté API, recopiée ici parce que
 # l'ouvrier ne dépend pas du code de l'API : il ne partage avec elle que la base.
@@ -66,7 +78,7 @@ def prendre(conn):
     """
     with conn.cursor() as cur:
         cur.execute(
-            """update travail set etat = 'en_cours', started_at = now()
+            """update travail set etat = 'en_cours', started_at = now(), battement = now()
                 where id = (select id from travail where etat = 'en_attente'
                              order by created_at limit 1
                              for update skip locked)
@@ -100,6 +112,39 @@ def avancer(conn, travail_id, journal, progression):
             ((journal or "")[-20000:], min(99, progression), travail_id),
         )
     conn.commit()
+
+
+BATTEMENT_S = 30
+
+
+class Battement(threading.Thread):
+    """Signale toutes les trente secondes que le travail est vivant.
+
+    Un fil à part, avec sa propre connexion : pendant qu'un script charge un
+    modèle de deux gigaoctets sans rien écrire, la boucle principale est bloquée
+    sur sa sortie et ne peut rien signaler. Sans signal, la veille de l'API sait
+    qu'un travail « en cours » depuis plusieurs minutes est orphelin (ouvrier tué,
+    conteneur redémarré) et le remet en file.
+    """
+
+    def __init__(self, travail_id):
+        super().__init__(daemon=True)
+        self.travail_id = travail_id
+        self.fin = threading.Event()
+
+    def run(self):
+        conn = pg()
+        try:
+            while not self.fin.wait(BATTEMENT_S):
+                signaler_vie()
+                with conn.cursor() as cur:
+                    cur.execute("update travail set battement = now() where id = %s and etat = 'en_cours'",
+                                (self.travail_id,))
+                conn.commit()
+        except Exception as exc:  # noqa: BLE001 - un battement manqué ne doit pas tuer le travail
+            print(f"   battement interrompu : {exc}", flush=True)
+        finally:
+            conn.close()
 
 
 def executer(conn, travail) -> tuple[str, str, str | None]:
@@ -181,7 +226,24 @@ def main():
     print(f"Ouvrier ASCENDA. Python : {PYTHON}", flush=True)
     fait = 0
     while not _arret:
-        travail = prendre(conn)
+        signaler_vie()
+        try:
+            travail = prendre(conn)
+        except Exception as exc:  # noqa: BLE001
+            # Base redémarrée, réseau coupé : on attend et on se reconnecte au
+            # lieu de mourir. Docker relancerait le conteneur, mais en perdant
+            # une minute et en remplissant le journal de traces identiques.
+            print(f"File injoignable ({type(exc).__name__}), nouvel essai dans 15 s.", flush=True)
+            time.sleep(15)
+            try:
+                conn.close()
+            except Exception:  # noqa: BLE001
+                pass
+            try:
+                conn = pg()
+            except Exception:  # noqa: BLE001
+                pass
+            continue
         if not travail:
             if a.une_fois:
                 print("File vide.", flush=True)
@@ -189,7 +251,12 @@ def main():
             time.sleep(REPOS)
             continue
 
-        etat, journal, erreur = executer(conn, travail)
+        battement = Battement(travail[0])
+        battement.start()
+        try:
+            etat, journal, erreur = executer(conn, travail)
+        finally:
+            battement.fin.set()
         solder(conn, travail[0], etat, journal, erreur)
         fait += 1
         print(f"   {etat}" + (f" : {erreur}" if erreur else ""), flush=True)

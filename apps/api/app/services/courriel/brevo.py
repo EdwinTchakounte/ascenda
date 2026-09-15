@@ -11,6 +11,8 @@ import httpx
 
 from app.core.config import settings
 
+from app.services.resilience import CircuitOuvert, disjoncteur
+
 from .base import ErreurCourriel, FournisseurCourriel, ResultatEnvoi
 
 log = logging.getLogger("ascenda.courriel.brevo")
@@ -59,6 +61,16 @@ class Brevo(FournisseurCourriel):
             "htmlContent": html,
             "textContent": texte,
         }
+        # Sous disjoncteur : si Brevo est tombé, on ne fait pas attendre quinze
+        # secondes chaque lecteur qui déclenche un courriel. Seules les pannes
+        # (délai, réseau, 5xx, 429) comptent ; un refus d'adresse n'en est pas une.
+        try:
+            return await disjoncteur("brevo").appeler(
+                self._poster, charge, compte_comme_echec=lambda exc: getattr(exc, "rejouable", True))
+        except CircuitOuvert as exc:
+            raise ErreurCourriel(f"Brevo jugé indisponible : {exc}", rejouable=True) from exc
+
+    async def _poster(self, charge: dict) -> ResultatEnvoi:
         try:
             async with httpx.AsyncClient(timeout=self.DELAI) as client:
                 r = await client.post(

@@ -839,7 +839,9 @@ const CLASSES = { valide: "p-ok", envoye: "p-ok", active: "p-ok", none: "p-neutr
   rejete: "p-mauvais", echec: "p-mauvais", removed: "p-mauvais", expired: "p-neutre",
   actif: "p-ok", programme: "p-attente", expire: "p-neutre", desactive: "p-mauvais",
   epuise: "p-neutre", disponible: "p-ok", utilise: "p-neutre",
-  masque: "p-mauvais", ignore: "p-neutre" };
+  masque: "p-mauvais", ignore: "p-neutre", abandonne: "p-mauvais",
+  ferme: "p-ok", ouvert: "p-mauvais", demi_ouvert: "p-attente",
+  critique: "p-mauvais", attention: "p-attente", info: "p-neutre" };
 const pastille = (v) => v === null || v === undefined || v === ""
   ? "" : `<span class="pastille ${CLASSES[v] || "p-neutre"}">${ech(v)}</span>`;
 
@@ -1887,6 +1889,61 @@ zone({ cle: "courriels", groupe: "Contenu", titre: "Journal des envois",
     return table([["gabarit", "message"], ["destinataire", "destinataire"],
       ["statut", "statut", "pastille"], ["objet", "objet", "large"],
       ["le", "quand", "instant"], ["erreur", "erreur", "large"]], env.lignes) + pagination(env);
+  } });
+
+zone({ cle: "sante", groupe: "Exploitation", titre: "Santé",
+  ico: "bouclier", aide: "Ce que la veille surveille toutes les cinq minutes. Un incident ouvert vous a été signalé par courriel, une seule fois.",
+  async rendre() {
+    const e = await api("/v1/admin/sante");
+    const ouverts = e.incidents.filter((i) => !i.clos_le), clos = e.incidents.filter((i) => i.clos_le);
+    const coupes = e.disjoncteurs.filter((d) => d.etat !== "ferme").length;
+    const s = e.sauvegarde, ageH = s ? Math.round((Date.now() - new Date(s.fini_le)) / 36e5) : null;
+    const depuis = (sec) => sec == null ? "jamais" : sec < 90 ? `il y a ${sec} s` : `il y a ${Math.round(sec / 60)} min`;
+    const NOMS = { tara: "Tara (paiement)", brevo: "Brevo (courriels)", anthropic: "Anthropic (agent)" };
+    return `<div class="tuiles serre" style="margin-bottom:18px">${[
+        { i: "alerte", l: "Incidents ouverts", v: nb(ouverts.length), s: `${nb(clos.length)} refermés sur 7 jours`,
+          c: ouverts.length ? "alerte" : "" },
+        { i: "bouclier", l: "Dépendances coupées", v: `${coupes} / ${e.disjoncteurs.length}`, s: "disjoncteurs ouverts",
+          c: coupes ? "alerte" : "" },
+        { i: "envoi", l: "Courriels en file", v: nb(e.courriels.en_file),
+          s: `${nb(e.courriels.rattrapes_7j)} rattrapés, ${nb(e.courriels.abandonnes_7j)} abandonnés sur 7 j` },
+        { i: "base", l: "Dernière sauvegarde", v: s ? `${ageH} h` : "aucune",
+          s: s ? `${ech(s.fichier)}` : "le script n'a encore rien inscrit", c: !s || ageH > 26 ? "alerte" : "" },
+      ].map(tuile).join("")}</div>
+      <div class="champ" style="margin-bottom:18px">
+        <button class="bouton" id="s-veille">${ico("relance", "pt")}Passer la veille maintenant</button>
+        <span class="note">Après une réparation, l'incident se referme sans attendre le prochain tour.</span></div>
+      <h2>${ico("alerte")}Incidents en cours</h2>
+      ${ouverts.length ? ouverts.map((i) => `<div class="carte seule" style="margin-bottom:12px">
+        <h3>${pastille(i.gravite)} ${ech(i.titre)}</h3>
+        ${paires({ "ouvert le": instant(i.ouvert_le), "vu encore": instant(i.vu_le),
+          "alerte envoyée": i.alerte_envoyee_le ? instant(i.alerte_envoyee_le) : "non" })}
+      </div>`).join("") : rienAVoir("Rien ne demande votre attention.", "oui")}
+      <h2>${ico("bouclier")}Dépendances</h2>
+      <div class="cartes">${e.disjoncteurs.map((d) => `<div class="carte">
+        <h3>${pastille(d.etat)} ${ech(NOMS[d.nom] || d.nom)}</h3>
+        ${paires({ "échecs d'affilée": nb(d.echecs_consecutifs), "coupures depuis le démarrage": nb(d.ouvertures),
+          "nouvel essai": d.reessai_dans_s == null ? "" : `dans ${d.reessai_dans_s} s`,
+          "dernier échec": ech(d.dernier_echec || "") })}</div>`).join("")}</div>
+      <h2>${ico("horloge")}Tâches périodiques</h2>
+      ${paires({ "réconciliation": depuis(e.ordonnanceur.reconciliation), "abonnements": depuis(e.ordonnanceur.abonnements),
+        "file des courriels": depuis(e.ordonnanceur.courriels), "veille": depuis(e.ordonnanceur.veille),
+        "travaux en cours": nb(e.travaux.en_cours), "travaux en attente": nb(e.travaux.en_attente),
+        "travaux repris sur 7 j": nb(e.travaux.repris_7j) })}
+      <h2>${ico("calendrier")}Refermés sur 7 jours</h2>` +
+      table([["gravite", "gravité", "pastille"], ["titre", "incident", "large"], ["ouvert_le", "ouvert", "instant"],
+        ["clos_le", "refermé", "instant"]], clos);
+  },
+  async apres() {
+    $("s-veille").onclick = async () => {
+      const b = $("s-veille");
+      b.innerHTML = "…";
+      try {
+        const r = await api("/v1/admin/sante/veille", { method: "POST" });
+        annoncer(`Veille passée : ${r.ouverts.length} ouvert(s), ${r.refermes.length} refermé(s).`);
+        await afficher(courante);
+      } catch (e) { annoncer((e && e.lisible) || "La veille n'a pas pu passer.", "mauvais"); }
+    };
   } });
 
 zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs",

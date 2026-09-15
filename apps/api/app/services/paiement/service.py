@@ -369,6 +369,15 @@ async def reconcilier(taille: int = 100, pause: float | None = None) -> dict:
             bilan["abandonnes"] += 1
             continue
 
+        from app.services.resilience import OUVERT, disjoncteur
+
+        if disjoncteur("tara").vue()["etat"] == OUVERT:
+            # Tara est jugée indisponible : insister ne ferait qu'user ses
+            # quotas. Les paiements restants passeront au prochain tour.
+            bilan["reportes"] = len(en_attente) - i
+            await tracer(None, "reconciliation_reportee", "reconciliation",
+                         {"restants": bilan["reportes"], "cause": disjoncteur("tara").dernier_echec})
+            break
         if i:
             # Tara supporte mal les rafales : environ trois appels par minute.
             # La pause est paramétrable pour que les vérifications n'aient pas

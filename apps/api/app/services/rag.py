@@ -127,7 +127,9 @@ async def repondre(
 
     from anthropic import AsyncAnthropic
 
-    client = AsyncAnthropic(api_key=settings.anthropic_api_key)
+    # 45 s au plus et une seule reprise : le client attend dix minutes par défaut,
+    # et chaque question bloquée tient une connexion de l'API.
+    client = AsyncAnthropic(api_key=settings.anthropic_api_key, timeout=45.0, max_retries=1)
     messages = []
     for h in (historique or [])[-6:]:
         messages.append({"role": h["role"], "content": h["body"]})
@@ -138,7 +140,10 @@ async def repondre(
         }
     )
     try:
-        reponse = await client.messages.create(
+        from app.services.resilience import disjoncteur
+
+        reponse = await disjoncteur("anthropic").appeler(
+            client.messages.create,
             model=settings.agent_model,
             max_tokens=1400,
             system=SYSTEME,

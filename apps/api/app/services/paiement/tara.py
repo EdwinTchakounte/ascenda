@@ -21,6 +21,7 @@ from typing import Any
 import httpx
 
 from app.core.config import settings
+from app.services.resilience import CircuitOuvert, avec_reprises, disjoncteur
 
 from .base import ErreurFournisseur, EvenementWebhook, FournisseurPaiement, ResultatInitiation
 
@@ -119,13 +120,16 @@ class Tara(FournisseurPaiement):
             # Le mode simulé ne valide jamais tout seul : la confirmation passe
             # par la route de développement prévue à cet effet.
             return "en_attente"
-        donnees = await self._poster(
+        # Une lecture : on peut la rejouer sans risque, avec des pauses croissantes.
+        donnees = await avec_reprises(
+            self._poster,
             "/api/tara/transactions/status",
             {
                 "apiKey": self.cle,
                 "businessId": self.business_id,
                 "productId": str(paiement["idempotency_key"]),
             },
+            essais=3, base=1.0, rejouable=lambda exc: getattr(exc, "rejouable", False),
         )
         return STATUTS.get((donnees.get("status") or "").upper(), "en_attente")
 
@@ -167,6 +171,21 @@ class Tara(FournisseurPaiement):
         return f"{settings.public_base_url.rstrip('/')}/paiement/retour"
 
     async def _poster(self, chemin: str, charge: dict) -> dict:
+        """Appel à Tara sous disjoncteur.
+
+        `initier` n'est jamais rejoué automatiquement : un délai dépassé ne dit
+        pas si la demande est déjà partie vers le téléphone du lecteur, et la
+        rejouer pourrait lui en envoyer deux.
+        """
+        try:
+            return await disjoncteur("tara").appeler(
+                self._poster_brut, chemin, charge,
+                compte_comme_echec=lambda exc: getattr(exc, "rejouable", True))
+        except CircuitOuvert as exc:
+            raise ErreurFournisseur(
+                "Le service de paiement est momentanément indisponible.", rejouable=True) from exc
+
+    async def _poster_brut(self, chemin: str, charge: dict) -> dict:
         try:
             async with httpx.AsyncClient(timeout=self.DELAI) as client:
                 r = await client.post(f"{self.BASE}{chemin}", json=charge)

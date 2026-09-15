@@ -47,6 +47,15 @@ gzip -f "$FICHIER"
 POIDS=$(du -h "$FICHIER.gz" | cut -f1)
 echo "Fait : $FICHIER.gz ($POIDS, $TABLES tables)"
 
+# La veille de l'API lit cette table : si la dernière ligne a plus de 26 heures,
+# elle ouvre un incident et prévient les administrateurs. Une tâche programmée
+# qui s'arrête en silence (disque plein, crontab effacée) se voit donc le
+# lendemain, pas le jour où l'on a besoin de restaurer.
+OCTETS=$(stat -c %s "$FICHIER.gz")
+docker exec "$CONTENEUR" psql -U "${POSTGRES_USER:-ascenda}" -d "${POSTGRES_DB:-ascenda}" -q -c \
+  "insert into sauvegarde (fichier, octets) values ('$(basename "$FICHIER.gz")', $OCTETS)" \
+  || echo "Sauvegarde faite, mais non inscrite en base : la veille la croira absente." >&2
+
 # Le stockage objet porte les PDF d'origine. Ils sont lourds et se retrouvent
 # dans `livres/`, donc on ne les sauvegarde pas ici : c'est un choix, pas un
 # oubli. Si `livres/` n'existe plus nulle part, il faudra les ajouter.

@@ -1138,3 +1138,18 @@ async def importer_ouvrage(
         demande_par=str(user["id"]),
     )
     return {**await travaux.un(str(t["id"])), "fichier": nom, "octets": taille}
+
+
+@router.get("/sante", summary="Incidents, disjoncteurs, files et sauvegarde")
+async def sante_detaillee(user: AdminUser):
+    from app.services import veille
+
+    return await veille.etat()
+
+
+@router.post("/sante/veille", summary="Passer la veille maintenant")
+async def passer_veille(user: AdminUser):
+    """Utile après une réparation : l'incident se referme sans attendre cinq minutes."""
+    from app.services import veille
+
+    return await veille.passer()

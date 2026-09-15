@@ -4,7 +4,9 @@ Trois choses doivent tourner sans qu'on y pense :
 
 - la **réconciliation** repêche les paiements dont la notification s'est perdue ;
 - la **fermeture** coupe l'accès des abonnements arrivés à terme ;
-- la **relance** prévient ceux dont l'abonnement se termine bientôt.
+- la **relance** prévient ceux dont l'abonnement se termine bientôt ;
+- la **file des courriels** renvoie ce que Brevo a refusé passagèrement ;
+- la **veille** ouvre et referme les incidents, et alerte les administrateurs.
 
 Ils tournent dans le processus de l'API plutôt que dans un ordonnanceur séparé :
 à cette échelle, un conteneur de moins vaut mieux qu'une brique de plus. Le jour
@@ -14,9 +16,11 @@ déjà posé ci-dessous.
 """
 import asyncio
 import logging
+import time
 from datetime import datetime, timezone
 
 from app.core.db import connection
+from app.services import veille
 from app.services.paiement import service
 
 log = logging.getLogger("ascenda.ordonnanceur")
@@ -24,9 +28,13 @@ log = logging.getLogger("ascenda.ordonnanceur")
 # Identifiants arbitraires mais stables des verrous consultatifs.
 VERROU_RECONCILIATION = 815_001
 VERROU_ABONNEMENTS = 815_002
+VERROU_VEILLE = 815_003
+VERROU_COURRIELS = 815_004
 
 PERIODE_RECONCILIATION = 15 * 60      # un quart d'heure
 PERIODE_ABONNEMENTS = 60 * 60         # une heure
+PERIODE_VEILLE = 5 * 60               # cinq minutes
+PERIODE_COURRIELS = 2 * 60            # deux minutes
 
 
 async def _avec_verrou(cle: int, travail) -> dict | None:
@@ -46,6 +54,7 @@ async def boucle_reconciliation() -> None:
         await asyncio.sleep(PERIODE_RECONCILIATION)
         try:
             bilan = await _avec_verrou(VERROU_RECONCILIATION, service.reconcilier)
+            veille.PASSAGES["reconciliation"] = time.monotonic()
             if bilan and bilan["examines"]:
                 log.info("Réconciliation : %s", bilan)
         except asyncio.CancelledError:
@@ -60,6 +69,7 @@ async def boucle_abonnements() -> None:
     while True:
         try:
             bilan = await _avec_verrou(VERROU_ABONNEMENTS, service.fermer_echus)
+            veille.PASSAGES["abonnements"] = time.monotonic()
             if bilan and bilan["expires"]:
                 log.info("Abonnements arrivés à terme : %s", bilan)
 
@@ -79,6 +89,22 @@ async def boucle_abonnements() -> None:
         await asyncio.sleep(PERIODE_ABONNEMENTS)
 
 
+async def _boucle(nom: str, periode: int, verrou: int, travail, attente_initiale: int = 30) -> None:
+    """Une boucle périodique qui ne s'arrête jamais sur une erreur."""
+    await asyncio.sleep(attente_initiale)
+    while True:
+        try:
+            bilan = await _avec_verrou(verrou, travail)
+            veille.PASSAGES[nom] = time.monotonic()
+            if bilan and any(bilan.get(k) for k in ("ouverts", "refermes", "envoyes", "abandonnes")):
+                log.info("%s : %s", nom, bilan)
+        except asyncio.CancelledError:
+            raise
+        except Exception:  # noqa: BLE001
+            log.exception("%s en échec, reprise au prochain tour.", nom)
+        await asyncio.sleep(periode)
+
+
 def demarrer() -> list[asyncio.Task]:
     log.info("Ordonnanceur démarré (réconciliation toutes les %s min, "
              "abonnements toutes les %s min).",
@@ -86,7 +112,16 @@ def demarrer() -> list[asyncio.Task]:
     return [
         asyncio.create_task(boucle_reconciliation(), name="reconciliation"),
         asyncio.create_task(boucle_abonnements(), name="abonnements"),
+        asyncio.create_task(_boucle("courriels", PERIODE_COURRIELS, VERROU_COURRIELS, _reprendre_courriels),
+                            name="courriels"),
+        asyncio.create_task(_boucle("veille", PERIODE_VEILLE, VERROU_VEILLE, veille.passer), name="veille"),
     ]
+
+
+async def _reprendre_courriels() -> dict:
+    from app.services.courriel import service as courriel
+
+    return await courriel.reprendre()
 
 
 async def arreter(taches: list[asyncio.Task]) -> None:
