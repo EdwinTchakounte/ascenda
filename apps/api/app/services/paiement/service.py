@@ -223,44 +223,61 @@ async def rattacher(evenement: EvenementWebhook) -> tuple[dict | None, str | Non
 
 async def appliquer(paiement: dict, statut: str, *, source: str,
                     strategie: str | None = None, motif: str | None = None) -> bool:
-    """Pose le statut d'un paiement. Idempotent : un paiement déjà validé ne
-    l'est pas deux fois, et n'ouvre donc pas deux fois l'abonnement.
+    """Pose le statut d'un paiement. Idempotent, y compris sous concurrence.
+
+    La notification de Tara et la réconciliation peuvent arriver à la même
+    seconde sur le même paiement. Vérifier le statut sur la ligne lue plus tôt
+    ne suffisait pas : les deux voyaient « en attente » et validaient, et
+    l'abonnement était prolongé deux fois. Le changement est désormais
+    conditionnel dans la base (`where statut <> 'valide'`) : une seule écriture
+    gagne, l'autre ne trouve plus rien à changer.
+
+    Statut, bon de réduction et abonnement s'écrivent dans une même transaction :
+    un paiement ne peut plus être validé sans que l'accès soit ouvert.
 
     Retourne True si quelque chose a changé.
     """
     if paiement["statut"] == statut:
         await tracer(str(paiement["id"]), f"deja_{statut}", source, strategie=strategie)
         return False
-    if paiement["statut"] == "valide":
-        # Un paiement validé ne redevient pas en attente ni rejeté sur la foi
-        # d'une notification tardive.
-        await tracer(str(paiement["id"]), "changement_refuse", source,
-                     {"vers": statut}, strategie=strategie)
-        return False
 
+    abonnement = None
     async with connection() as conn:
-        await conn.execute(
+        cur = await conn.execute(
             """update payment
                   set statut = %s, motif_rejet = %s,
                       date_validation = case when %s = 'valide' then now() else null end,
                       updated_at = now()
-                where id = %s""",
-            (statut, motif, statut, paiement["id"]),
+                where id = %s and statut <> 'valide' and statut <> %s
+            returning *""",
+            (statut, motif, statut, paiement["id"], statut),
         )
+        ecrit = await cur.fetchone()
+        if ecrit is not None and statut == "valide":
+            if ecrit.get("bon_id"):
+                await conn.execute(
+                    """update bon_reduction set utilise_le = now(), payment_id = %s
+                        where id = %s and utilise_le is null""",
+                    (ecrit["id"], ecrit["bon_id"]),
+                )
+            abonnement = await ouvrir_abonnement(ecrit, conn=conn)
+
+    if ecrit is None:
+        # Quelqu'un est passé avant : la notification ou la réconciliation a
+        # déjà posé ce statut, ou le paiement est validé et ne se défait pas.
+        actuel = await fetch_one("select statut from payment where id = %s", (paiement["id"],))
+        evenement = f"deja_{statut}" if actuel and actuel["statut"] == statut else "changement_refuse"
+        await tracer(str(paiement["id"]), evenement, source, {"vers": statut}, strategie=strategie)
+        return False
 
     await tracer(str(paiement["id"]), statut, source, {"motif": motif}, strategie=strategie)
-
-    if statut == "valide":
-        if paiement.get("bon_id"):
-            await execute(
-                """update bon_reduction set utilise_le = now(), payment_id = %s
-                    where id = %s and utilise_le is null""",
-                (paiement["id"], paiement["bon_id"]),
-            )
-        abonnement = await ouvrir_abonnement(paiement)
-        await _prevenir("paiement_confirme", paiement, abonnement)
+    if abonnement is not None:
+        await tracer(str(paiement["id"]), "abonnement_ouvert", "systeme",
+                     {"jusqu_au": abonnement["current_end"].isoformat(),
+                      "jours": int(ecrit["periode_mois"] or 1) * 30})
+        await _prevenir("paiement_confirme", ecrit, abonnement)
     elif statut == "rejete":
-        await _prevenir("paiement_rejete", {**paiement, "motif_rejet": motif}, None)
+        await _prevenir("paiement_rejete", {**ecrit, "motif_rejet": motif}, None)
     return True
 
 
@@ -378,57 +395,67 @@ async def reconcilier(taille: int = 100, pause: float | None = None) -> dict:
 
 # -------------------------------------------------------------- abonnement
 
-async def ouvrir_abonnement(paiement: dict) -> dict:
+async def ouvrir_abonnement(paiement: dict, conn=None) -> dict:
     """Ouvre ou prolonge l'abonnement, puis passe le compte au plan payé.
 
     Prolonger plutôt que remplacer : un membre qui paie avant l'échéance ne doit
     pas perdre les jours qui lui restaient.
+
+    La ligne du membre est verrouillée le temps de lire l'échéance et de la
+    repousser : deux paiements validés à la même seconde partaient sinon de la
+    même échéance, et l'un des deux mois payés disparaissait.
     """
+    if conn is None:
+        async with connection() as propre:
+            abonnement = await ouvrir_abonnement(paiement, conn=propre)
+        await tracer(str(paiement["id"]), "abonnement_ouvert", "systeme",
+                     {"jusqu_au": abonnement["current_end"].isoformat(),
+                      "jours": int(paiement["periode_mois"] or 1) * 30})
+        return abonnement
+
     mois = int(paiement["periode_mois"] or 1)
     jours = mois * 30
 
-    courant = await fetch_one(
+    await conn.execute("select id from app_user where id = %s for update", (paiement["user_id"],))
+    cur = await conn.execute(
         """select * from subscription
            where user_id = %s and status = 'active' and current_end > now()
            order by current_end desc limit 1""",
         (paiement["user_id"],),
     )
+    courant = await cur.fetchone()
     depart = courant["current_end"] if courant else datetime.now(timezone.utc)
     fin = depart + timedelta(days=jours)
 
-    async with connection() as conn:
-        if courant:
-            cur = await conn.execute(
-                """update subscription
-                      set current_end = %s, periode_mois = %s, amount_cents = %s
-                    where id = %s returning *""",
-                (fin, mois, paiement["montant"], courant["id"]),
-            )
-        else:
-            cur = await conn.execute(
-                """insert into subscription (user_id, plan, provider, provider_ref, status,
-                                             current_start, current_end, amount_cents,
-                                             currency, periode_mois)
-                   values (%s, %s, %s, %s, 'active', now(), %s, %s, %s, %s) returning *""",
-                (paiement["user_id"], paiement["plan_cible"], paiement["provider_code"],
-                 paiement["reference_externe"], fin, paiement["montant"],
-                 paiement["devise"], mois),
-            )
-        abonnement = await cur.fetchone()
-
-        await conn.execute(
-            """update payment set subscription_id = %s, nb_jours_couverts = %s where id = %s""",
-            (abonnement["id"], jours, paiement["id"]),
+    if courant:
+        cur = await conn.execute(
+            """update subscription
+                  set current_end = %s, periode_mois = %s, amount_cents = %s
+                where id = %s returning *""",
+            (fin, mois, paiement["montant"], courant["id"]),
         )
-        await conn.execute(
-            """update app_user set plan = %s, plan_since = coalesce(plan_since, now()),
-                                   plan_until = %s
-                where id = %s""",
-            (paiement["plan_cible"], fin, paiement["user_id"]),
+    else:
+        cur = await conn.execute(
+            """insert into subscription (user_id, plan, provider, provider_ref, status,
+                                         current_start, current_end, amount_cents,
+                                         currency, periode_mois)
+               values (%s, %s, %s, %s, 'active', now(), %s, %s, %s, %s) returning *""",
+            (paiement["user_id"], paiement["plan_cible"], paiement["provider_code"],
+             paiement["reference_externe"], fin, paiement["montant"],
+             paiement["devise"], mois),
         )
+    abonnement = await cur.fetchone()
 
-    await tracer(str(paiement["id"]), "abonnement_ouvert", "systeme",
-                 {"jusqu_au": fin.isoformat(), "jours": jours})
+    await conn.execute(
+        """update payment set subscription_id = %s, nb_jours_couverts = %s where id = %s""",
+        (abonnement["id"], jours, paiement["id"]),
+    )
+    await conn.execute(
+        """update app_user set plan = %s, plan_since = coalesce(plan_since, now()),
+                               plan_until = %s
+            where id = %s""",
+        (paiement["plan_cible"], fin, paiement["user_id"]),
+    )
     return abonnement
 
 

@@ -85,6 +85,33 @@ async def main():
     a2 = await fetch_one("select * from subscription where user_id=%s order by current_end desc", (u["id"],))
     ok("abonnement prolonge, pas remplace", (a2["current_end"] - fin1).days == 30, f"+{(a2['current_end']-fin1).days} jours")
 
+    print("\n· Concurrence : notification et reconciliation a la meme seconde")
+    import asyncio as _aio
+    u = await utilisateur("course"); p = await paiement_en_attente(u, "237693333444")
+    ligne = await fetch_one("select * from payment where id=%s", (p["id"],))
+    # Les deux lisent le meme paiement « en attente », puis appliquent ensemble.
+    r = await _aio.gather(
+        service.appliquer(dict(ligne), "valide", source="webhook", strategie="cle_idempotence"),
+        service.appliquer(dict(ligne), "valide", source="reconciliation", strategie="interrogation"),
+    )
+    a = await fetch_all("select * from subscription where user_id=%s", (u["id"],))
+    jours = (a[0]["current_end"] - datetime.now(timezone.utc)).days if a else None
+    ok("une seule des deux ecritures gagne", sorted(r) == [False, True], r)
+    ok("un seul abonnement, prolonge une seule fois", len(a) == 1 and jours in (29, 30), (len(a), jours))
+
+    print("\n· Concurrence : deux paiements du meme lecteur valides ensemble")
+    u = await utilisateur("deux"); pa = await paiement_en_attente(u, "237693333555")
+    pb = await paiement_en_attente(u, "237693333556")
+    la = await fetch_one("select * from payment where id=%s", (pa["id"],))
+    lb = await fetch_one("select * from payment where id=%s", (pb["id"],))
+    await _aio.gather(
+        service.appliquer(dict(la), "valide", source="webhook"),
+        service.appliquer(dict(lb), "valide", source="webhook"),
+    )
+    a = await fetch_one("select current_end from subscription where user_id=%s order by current_end desc limit 1", (u["id"],))
+    jours = (a["current_end"] - datetime.now(timezone.utc)).days
+    ok("les deux mois payes sont comptes", jours in (59, 60), f"{jours} jours")
+
     print("\n· Fermeture a echeance")
     u = await utilisateur("exp")
     async with connection() as c:
