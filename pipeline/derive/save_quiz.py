@@ -67,8 +67,14 @@ for i, bloc in enumerate(lot):
 if erreurs:
     print("\n".join(erreurs[:20])); sys.exit(f"\n{len(erreurs)} erreur(s), rien enregistré")
 
+# Les rédacteurs mettent la bonne réponse en premier : on mélange les choix à
+# l'enregistrement, de façon déterministe (même outil que pour le corpus).
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "apps" / "api"))
+from app.outils.melanger_choix import MARQUE, melanger  # noqa: E402
+
 with conn.cursor() as cur:
     for cid, qs, motif in resolus:
+        qs = melanger(qs, str(cid))
         if a.force:
             cur.execute("""update derivative set superseded_by=id
                            where chapter_id=%s and kind='quiz' and superseded_by is null""", (cid,))
@@ -76,6 +82,6 @@ with conn.cursor() as cur:
                          model_id, prompt_version, cost_tokens_in, cost_tokens_out)
                        values (%s,%s,'quiz',%s,%s,'qcm-v1',0,0)""",
                     (doc, cid, json.dumps({"questions": qs, "motif": motif} if motif
-                                          else {"questions": qs}, ensure_ascii=False), a.model))
+                                          else {"questions": qs, MARQUE: True}, ensure_ascii=False), a.model))
 conn.commit()
 print(f"{len(resolus)} chapitres, {total} questions enregistrées")

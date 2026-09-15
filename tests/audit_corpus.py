@@ -94,6 +94,24 @@ async def main(ecrire: bool) -> int:
         dire(f"  - {' / '.join(g)}")
     dire()
 
+    # ---------------------------------------------------------------- quiz
+    rangs = await fetch_all(
+        """select q->>'reponse' as rang, count(*) as n
+             from derivative d, jsonb_array_elements(d.content->'questions') q
+            where d.kind = 'quiz' and d.superseded_by is null group by 1""")
+    total_q = sum(r["n"] for r in rangs) or 1
+    dominant = max(rangs, key=lambda r: r["n"]) if rangs else None
+    part = (dominant["n"] / total_q) if dominant else 0
+    dire("## Quiz")
+    dire()
+    dire(f"- Position de la bonne réponse : " + ", ".join(
+        f"choix {int(r['rang']) + 1} {round(100 * r['n'] / total_q)} %" for r in sorted(rangs, key=lambda r: r["rang"])))
+    if part > 0.4:
+        # Au-delà, cocher toujours la même case suffit à réussir : le quiz ne mesure plus rien.
+        dire(f"- **Bonne réponse trop souvent au même rang** ({round(100 * part)} %) : lancer app.outils.melanger_choix")
+        bloquants += 1
+    dire()
+
     # ----------------------------------------------------------- chapitres
     casses, replis, appareil = [], Counter(), []
     for c in chapitres:

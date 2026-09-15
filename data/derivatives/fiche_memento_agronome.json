@@ -1,0 +1,63 @@
+{
+ "titre_normalise": "Mémento de l'agronome",
+ "auteurs": ["CIRAD", "GRET", "Ministère des Affaires étrangères"],
+ "annee": 2002,
+ "type_ouvrage": "manuel",
+ "niveau": "intermediaire",
+ "public_cible": "Techniciens, ingénieurs, formateurs et cadres associatifs du développement rural dans les pays francophones du Sud, et quiconque doit conseiller des agriculteurs sans avoir forcément une formation agronomique complète. Ouvrage de référence de 1 698 pages, rédigé par plus de 150 auteurs, organisé en sept parties : diagnostics, environnement des exploitations, exploitation agricole, agriculture générale, agriculture spéciale (fiche par culture), élevage et zootechnie spéciale.",
+ "these_centrale": "Aider un agriculteur ne consiste plus à diffuser des recettes techniques, mais à raisonner à partir d'un diagnostic de la situation réelle : l'exploitation dans sa diversité, son environnement économique et social, et les savoirs des paysans. Le Mémento fournit donc à la fois des références techniques, dont chaque rédacteur précise le domaine de validité, et des méthodes pour diagnostiquer, intervenir et accompagner l'innovation.",
+ "idees_force": [
+  {
+   "titre": "Un outil d'aide au raisonnement, pas un recueil de recettes",
+   "explication": "L'édition 2002 est rédigée « dans une optique d'aide au raisonnement » : les recettes se révèlent souvent inadaptées à la diversité des situations de terrain. Il a été demandé à chaque rédacteur de préciser le contexte et le domaine de validité des informations qu'il donne, pour éviter qu'une référence soit appliquée là où elle ne vaut pas.",
+   "page": 14
+  },
+  {
+   "titre": "Le développement accompagne des changements sociaux",
+   "explication": "On a longtemps cru qu'agir pour le développement revenait à diffuser des techniques. Les révolutions technologiques transforment les modes de vie et l'organisation des sociétés : le métier de l'agronome consiste désormais à accompagner des changements sociaux, dans un paysage où l'État s'est retiré et où organisations paysannes, ONG et collectivités territoriales ont pris le relais.",
+   "page": 18
+  },
+  {
+   "titre": "Le diagnostic précède toujours l'action",
+   "explication": "Les démarches « descendantes », qui réservaient la décision aux bailleurs, aux États et à leurs experts, ont échoué. Les méthodes participatives qui les remplacent ont leurs limites (naïveté, recueil d'opinion confondu avec l'aide au jugement), mais toutes insistent sur les phases de diagnostic qui doivent impérativement précéder les actions. D'où la première partie du livre, consacrée aux diagnostics.",
+   "page": 23
+  },
+  {
+   "titre": "Penser par filière ou par territoire, jamais la technique seule",
+   "explication": "Améliorer une technique de production isolément ne suffit plus. Les approches « filières » cherchent à la fois une meilleure production et une meilleure valorisation, en renforçant les organisations de producteurs et l'efficacité de toute la chaîne. Les approches territoriales visent les conditions de vie des ruraux dans leur ensemble. Les deux se combinent.",
+   "page": 23
+  },
+  {
+   "titre": "« Agronomiquement correct » ne veut pas dire « approprié »",
+   "explication": "Les échecs ont longtemps été imputés à la vulgarisation. Le livre admet que la qualité des références elles-mêmes peut être en cause, que la diffusion d'une innovation n'est pas qu'une affaire d'information et de démonstration, et que les paysans inventent et diffusent eux aussi des références. Accompagner l'innovation, c'est valoriser ces savoirs.",
+   "page": 24
+  },
+  {
+   "titre": "Protéger les cultures en utilisant moins de pesticides",
+   "explication": "Après une période de très fort usage, les limites des pesticides sont établies : disparition des auxiliaires, résistances des ravageurs, pollution, intoxications. Réduire leur emploi suppose de savoir analyser correctement un problème phytosanitaire au champ et de connaître les méthodes alternatives : c'est le sens de la protection intégrée.",
+   "page": 689
+  }
+ ],
+ "concepts_cles": [
+  {"terme": "Itinéraire technique", "definition": "La suite logique et ordonnée des opérations culturales appliquées à une culture, de la préparation du sol à la récolte, raisonnée en fonction d'un objectif de production et des contraintes de l'exploitation."},
+  {"terme": "Diagnostic participatif", "definition": "Analyse d'une situation agricole ou rurale menée avec les populations concernées, pour que leurs initiatives et leurs contraintes orientent l'action plutôt que l'inverse."},
+  {"terme": "Approche filière", "definition": "Démarche qui améliore ensemble la production et la valorisation d'un produit, du producteur au consommateur, en renforçant la position des producteurs dans la chaîne."},
+  {"terme": "Approche territoriale", "definition": "Démarche qui vise l'amélioration des conditions de vie des ruraux sur un territoire donné, et pas seulement les revenus agricoles."},
+  {"terme": "Protection intégrée", "definition": "Gestion des bioagresseurs qui combine diagnostic au champ et méthodes alternatives (variétés, pratiques culturales, auxiliaires) pour limiter le recours aux pesticides."},
+  {"terme": "Autorisation de mise sur le marché (AMM)", "definition": "Acte administratif par lequel l'autorité compétente autorise la vente d'un produit phytopharmaceutique sur son territoire, pour une durée limitée et renouvelable."},
+  {"terme": "Auxiliaire", "definition": "Animal prédateur ou parasite qui contribue, par son mode de vie, à détruire les ravageurs des cultures."},
+  {"terme": "Système d'élevage", "definition": "L'ensemble organisé des animaux, des ressources et des pratiques d'un éleveur, analysé comme un tout pour raisonner l'amélioration de l'alimentation, de la génétique et de la santé."}
+ ],
+ "a_lire_si": "Vous conseillez ou accompagnez des producteurs en zone tropicale, vous montez un projet agricole, ou vous cherchez une référence fiable sur une culture, un élevage, un sol ou une démarche de diagnostic. Les fiches par culture (maïs, manioc, cacaoyer, tomate…) et par espèce animale se consultent indépendamment.",
+ "a_eviter_si": "Vous cherchez une liste de produits et de doses à appliquer telle quelle : l'édition date de 2002, et plusieurs matières actives citées ont été interdites depuis. Toute recommandation de traitement doit être vérifiée contre la liste d'homologation en vigueur dans votre pays.",
+ "prerequis": [
+  "Notions de base de biologie végétale et animale",
+  "Familiarité avec le vocabulaire du développement rural (projet, filière, organisation paysanne)"
+ ],
+ "controverses": [
+  "Le livre défend les démarches participatives tout en reconnaissant qu'elles ont parfois confondu recueil d'opinion et aide au jugement, et qu'elles butent sur des fonctionnements sociaux très hiérarchisés.",
+  "L'usage des pesticides : l'ouvrage prône leur réduction mais cite des matières actives que la réglementation a interdites après 2002, ce qui impose de le lire avec les listes d'homologation actuelles.",
+  "La mondialisation et la libéralisation : le texte expose le débat entre ceux qui y voient une source de richesse et ceux qui dénoncent l'aggravation des inégalités et la concurrence subie par les agricultures du Sud."
+ ],
+ "confiance": 0.8
+}

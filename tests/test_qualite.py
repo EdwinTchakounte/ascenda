@@ -128,6 +128,18 @@ ok("le livre est couvert de la première à la dernière page",
    s[0]["page_start"] == 1 and s[-1]["page_end"] == 57, [(x["page_start"], x["page_end"]) for x in s])
 
 print("\n" + "=" * 92)
+print("\n· Quiz")
+from app.outils.melanger_choix import melanger  # noqa: E402
+
+qs = [{"q": f"Question {i}", "choix": [f"juste {i}", "faux a", "faux b", "faux c"], "reponse": 0} for i in range(200)]
+m = melanger(qs, "lot-essai")
+ok("la bonne réponse suit son texte", all(x["choix"][x["reponse"]] == f"juste {i}" for i, x in enumerate(m)))
+ok("le mélange est reproductible", melanger(qs, "lot-essai") == m)
+from collections import Counter as _C  # noqa: E402
+rangs = _C(x["reponse"] for x in m)
+ok("aucune position ne domine", max(rangs.values()) / len(m) < 0.4, dict(rangs))
+ok("les questions et explications ne changent pas", [x["q"] for x in m] == [x["q"] for x in qs])
+
 _echecs = [x for x in _resultats if not x[0]]
 print(f"{len(_resultats) - len(_echecs)} sur {len(_resultats)}")
 if _echecs:
