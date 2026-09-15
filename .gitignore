@@ -41,3 +41,6 @@ vectorisation.log
 *.dump
 *.dump.gz
 sauvegardes/
+# Archives d'ouvrage (transferer_ouvrage) : même texte protégé, mêmes règles.
+transfert/
+*.json.gz
