@@ -14,6 +14,7 @@ from app.core.db import fetch_all
 from app.services import recherche
 from app.core.deps import OptionalUser
 from app.services.droits import tronquer
+from app.services.passages import extrait as passage_extrait
 
 router = APIRouter(prefix="/recherche", tags=["Recherche"])
 
@@ -34,7 +35,7 @@ async def rechercher(
         # Un extrait de recherche est court par nature ; on applique quand même
         # le plafond de l'ouvrage, et jamais plus de 400 caractères ici.
         budget = 10_000 if l["redistributable"] else min(400, int(l["max_excerpt_chars"] or 0))
-        extrait, _ = tronquer(l["text"], max(budget, 0))
+        extrait, _ = tronquer(passage_extrait(l["text"]), max(budget, 0))
         resultats.append(
             {
                 "chunk_id": str(l["id"]),

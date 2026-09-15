@@ -124,6 +124,7 @@ final routeurProvider = Provider<GoRouter>((ref) {
         builder: (c, s) => EcranLecteurPdf(
           documentId: s.pathParameters['doc']!,
           titre: s.uri.queryParameters['titre'],
+          page: int.tryParse(s.uri.queryParameters['page'] ?? ''),
         ),
       ),
       GoRoute(

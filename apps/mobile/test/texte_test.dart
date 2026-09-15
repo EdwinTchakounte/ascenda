@@ -38,13 +38,15 @@ void main() {
 
   test("une ligne trop courte pour être justifiée sans trous reste alignée à gauche", () {
     final long = 'x' * 120;
-    expect(Texte.alignement(long, const TextStyle(fontSize: 14), null, largeur: 412), TextAlign.justify);
+    expect(Texte.alignement(long, const TextStyle(fontSize: 14), null, largeur: 600), TextAlign.justify);
+    expect(Texte.alignement(long, const TextStyle(fontSize: 14), null, largeur: 412), isNull,
+        reason: 'sur un téléphone courant, la ligne est trop courte pour être justifiée sans trous');
     expect(Texte.alignement(long, const TextStyle(fontSize: 16), null, largeur: 412), isNull);
     expect(Texte.alignement(long, const TextStyle(fontSize: 14), null, largeur: 320), isNull);
   });
 
   testWidgets("un paragraphe est justifié, un titre ne l'est pas", (t) async {
-    t.view.physicalSize = const Size(412, 900);
+    t.view.physicalSize = const Size(600, 900);
     t.view.devicePixelRatio = 1;
     addTearDown(t.view.reset);
     const long = "Ce qui coûte à ASCENDA, c'est d'indexer des documents et de faire "

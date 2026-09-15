@@ -87,9 +87,9 @@ class Texte extends StatelessWidget {
   /// Au-delà, un texte de corps court sur plusieurs lignes dans un téléphone.
   static const seuilJustification = 90;
 
-  /// Sans césure, une ligne justifiée de moins de 45 signes se creuse de
+  /// Sans césure, une ligne justifiée de moins de 52 signes se creuse de
   /// trous : on ne justifie que si la ligne en porte assez.
-  static const signesMinimum = 45;
+  static const signesMinimum = 52;
 
   static TextAlign? alignement(String texte, TextStyle? style, int? maxLines, {double largeur = 360}) {
     // Un texte borné en lignes est un titre ou un aperçu coupé par « … » :

@@ -9,6 +9,7 @@ from app.core.deps import CurrentUser, OptionalUser
 from app.core.errors import NotFound
 from app.services import srs
 from app.services.droits import tronquer
+from app.services.passages import extrait as passage_extrait
 
 router = APIRouter(prefix="/concepts", tags=["Concepts & révision"])
 
@@ -110,7 +111,7 @@ async def detail(concept_id: str, user: OptionalUser):
                 "page": o["page_start"],
                 "definition": o["is_definition"],
                 "extrait": tronquer(
-                    o["text"],
+                    passage_extrait(o["text"]),
                     600 if o["redistributable"] else min(300, int(o["max_excerpt_chars"] or 0)),
                 )[0],
             }

@@ -112,7 +112,9 @@ class FicheOuvrage extends ConsumerWidget {
                       '/pdf/$documentId?titre=${Uri.encodeComponent('${d['titre']}')}',
                     ),
                     icon: const Icon(Icons.picture_as_pdf_outlined, size: 20),
-                    label: const Texte('Lire le PDF'),
+                    label: Texte(droits['pdf_octets'] is int && (droits['pdf_octets'] as int) > 0
+                        ? 'Lire le PDF · ${tailleLisible(droits['pdf_octets'] as int)}'
+                        : 'Lire le PDF'),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -434,4 +436,11 @@ class _Repere extends StatelessWidget {
       ),
     );
   }
+}
+
+/// « 2,7 Mo », « 92 Mo », « 540 Ko » : ce qu'un forfait mobile va payer.
+String tailleLisible(int octets) {
+  if (octets < 1000000) return '${(octets / 1000).round()} Ko';
+  final mo = octets / 1000000;
+  return mo < 10 ? '${mo.toStringAsFixed(1).replaceAll('.', ',')} Mo' : '${mo.round()} Mo';
 }

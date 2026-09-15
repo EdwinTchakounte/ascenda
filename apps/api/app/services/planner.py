@@ -11,6 +11,7 @@ reproductible, explicable et gratuit. Un LLM sert à rédiger, pas à ordonnance
 from datetime import date, timedelta
 
 from app.core.db import fetch_all
+from app.services.titres import est_appareil, est_repli
 
 # Un token vaut environ 0,75 mot. La vitesse par défaut est prudente : mieux vaut
 # un plan tenu qu'un plan flatteur.
@@ -26,10 +27,30 @@ ORDRE_NIVEAU = {"debutant": 0, "intermediaire": 1, "avance": 2, None: 1}
 SEANCE_MIN_RATIO = 0.5
 
 
-def minutes_de(tokens: int | None, wpm: int) -> int:
-    if not tokens:
+# Une page presque vide (diapositive, proverbe, illustration) se regarde quand
+# même : on compte au moins l'équivalent de 60 jetons par page, soit une
+# quinzaine de secondes. Sans ce plancher, seize pages de proverbes faisaient
+# une séance de deux minutes. Plus haut, il gonflait ces mêmes livres : le
+# texte y est complet, simplement court.
+JETONS_PAR_PAGE_PLANCHER = 60
+
+
+def minutes_de(tokens: int | None, wpm: int, pages: int | None = None) -> int:
+    t = tokens or 0
+    if pages and pages > 0 and t < pages * JETONS_PAR_PAGE_PLANCHER:
+        t = pages * JETONS_PAR_PAGE_PLANCHER
+    if not t:
         return 0
-    return max(1, round(tokens * MOTS_PAR_TOKEN / max(80, wpm)))
+    return max(1, round(t * MOTS_PAR_TOKEN / max(80, wpm)))
+
+
+def minutes_estimees(jetons: int | None, pages: int | None, wpm: int = VITESSE_DEFAUT_WPM) -> int:
+    """La durée de lecture d'un ouvrage entier, par la même règle que les séances.
+
+    La fiche et le chronogramme doivent dire la même chose : un livre annoncé
+    « 19 min » dont le plan compte trois heures se lit comme une erreur.
+    """
+    return minutes_de(jetons, wpm, pages)
 
 
 async def ouvrages_de_l_axe(axis_id: str, niveau: str | None) -> list[dict]:
@@ -96,6 +117,10 @@ async def chapitres_de_plusieurs(document_ids: list[str]) -> dict[str, list[dict
     )
     par_doc: dict[str, list[dict]] = {d: [] for d in document_ids}
     for l in lignes:
+        # Couverture, copyright, sommaire : repérés par leur titre quand la
+        # campagne des quiz ne les a pas déjà marqués.
+        if est_appareil(l["title"]):
+            continue
         par_doc.setdefault(str(l["document_id"]), []).append(l)
     return par_doc
 
@@ -108,7 +133,7 @@ async def chapitres_de(document_id: str) -> list[dict]:
     et enregistrés comme lots vides motivés : 178 chapitres à ce jour. Plutôt que
     de redécouvrir la même chose par heuristique, on relit ce marquage.
     """
-    return await fetch_all(
+    lignes = await fetch_all(
         """select c.id, c.ord, c.title, c.page_start, c.page_end, c.token_count,
                   (select dv.id from derivative dv
                     where dv.chapter_id = c.id and dv.kind = 'quiz'
@@ -127,6 +152,7 @@ async def chapitres_de(document_id: str) -> list[dict]:
            order by c.ord""",
         (document_id, TOKENS_MIN_CHAPITRE),
     )
+    return [l for l in lignes if not est_appareil(l["title"])]
 
 
 def _decouper(chapitre: dict, minutes: int, duree_seance: int) -> list[dict]:
@@ -209,35 +235,81 @@ def _creneaux(debut: date, jours: list[int], combien: int) -> list[date]:
 
 
 def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
-    """Regroupe les unités trop courtes avec la suivante du même ouvrage.
+    """Regroupe les chapitres voisins d'un même ouvrage en séances pleines.
 
     Un chronogramme qui propose « 2 min » puis « 3 min » puis « 11 min » n'est pas
     un plan de travail : c'est le découpage interne du livre exposé tel quel. On
-    agrège tant qu'on reste sous la durée de séance visée.
+    remplit donc chaque séance avec les chapitres suivants tant qu'on reste près de
+    la durée visée, puis on rattache à la séance précédente la queue trop courte
+    d'un ouvrage (un épilogue de deux minutes ne fait pas une séance).
     """
     plancher = max(5, round(duree_seance * SEANCE_MIN_RATIO))
+
+    def absorber(cible: dict, u: dict) -> None:
+        cible["minutes"] += u["minutes"]
+        cible["page_end"] = u["page_end"] or cible["page_end"]
+        cible["chapitres_groupes"] = cible.get("chapitres_groupes", 1) + 1
+        cible["repli"] = cible.get("repli") or est_repli(u["chapitre"]) or est_repli(cible["chapitre"])
+        # Le quiz du chapitre le plus substantiel devient le livrable de la séance.
+        if u["quiz_id"] and not cible["quiz_id"]:
+            cible["quiz_id"] = u["quiz_id"]
+            cible["chapter_id"] = u["chapter_id"]
+
     fusionnees: list[dict] = []
     for u in unites:
         precedente = fusionnees[-1] if fusionnees else None
-        peut_fusionner = (
-            precedente is not None
-            and precedente["minutes"] < plancher
-            and precedente["document_id"] == u["document_id"]
-            and precedente["minutes"] + u["minutes"] <= duree_seance * 1.3
-            and not precedente.get("fraction")
-            and not u.get("fraction")
-        )
-        if peut_fusionner:
-            precedente["minutes"] += u["minutes"]
-            precedente["page_end"] = u["page_end"] or precedente["page_end"]
-            precedente["chapitres_groupes"] = precedente.get("chapitres_groupes", 1) + 1
-            # Le quiz du chapitre le plus substantiel devient le livrable de la séance.
-            if u["quiz_id"] and not precedente["quiz_id"]:
-                precedente["quiz_id"] = u["quiz_id"]
-                precedente["chapter_id"] = u["chapter_id"]
+        meme_livre = precedente is not None and precedente["document_id"] == u["document_id"]
+        entiers = precedente is not None and not precedente.get("fraction") and not u.get("fraction")
+        if meme_livre and entiers and (
+            precedente["minutes"] + u["minutes"] <= duree_seance * 1.15
+            or (precedente["minutes"] < plancher and precedente["minutes"] + u["minutes"] <= duree_seance * 1.3)
+        ):
+            absorber(precedente, u)
         else:
             fusionnees.append(dict(u))
-    return fusionnees
+
+    # Une séance d'ouverture trop courte (une préface avant un long chapitre
+    # découpé) rejoint la séance qui la suit.
+    avant: list[dict] = []
+    i = 0
+    while i < len(fusionnees):
+        u = fusionnees[i]
+        suivante = fusionnees[i + 1] if i + 1 < len(fusionnees) else None
+        if (
+            u["minutes"] < plancher and suivante is not None
+            and suivante["document_id"] == u["document_id"]
+            and u["minutes"] + suivante["minutes"] <= duree_seance * 1.7
+        ):
+            fusion = dict(u)
+            if u.get("fraction") or suivante.get("fraction"):
+                fusion.pop("fraction", None)
+                fusion["repli"] = True
+            absorber(fusion, suivante)
+            avant.append(fusion)
+            i += 2
+            continue
+        avant.append(u)
+        i += 1
+    fusionnees = avant
+
+    # La queue d'un ouvrage : trop courte, elle rejoint la séance d'avant.
+    resultat: list[dict] = []
+    for i, u in enumerate(fusionnees):
+        suivante = fusionnees[i + 1] if i + 1 < len(fusionnees) else None
+        fin_de_livre = suivante is None or suivante["document_id"] != u["document_id"]
+        precedente = resultat[-1] if resultat else None
+        if (
+            fin_de_livre and u["minutes"] < plancher and precedente is not None
+            and precedente["document_id"] == u["document_id"]
+            and precedente["minutes"] + u["minutes"] <= duree_seance * 1.5
+        ):
+            if precedente.get("fraction") or u.get("fraction"):
+                precedente.pop("fraction", None)
+                precedente["repli"] = True  # on nomme alors la séance par ses pages
+            absorber(precedente, u)
+        else:
+            resultat.append(u)
+    return resultat
 
 
 def construire(
@@ -258,7 +330,8 @@ def construire(
     unites: list[dict] = []
     for o in ouvrages:
         for ch in chapitres_par_doc.get(str(o["id"]), []):
-            m = minutes_de(ch["token_count"], wpm)
+            pages = (ch["page_end"] - ch["page_start"] + 1) if ch["page_start"] and ch["page_end"] else None
+            m = minutes_de(ch["token_count"], wpm, pages)
             if m == 0:
                 continue
             for part in _decouper(ch, m, duree_seance):
@@ -291,17 +364,7 @@ def construire(
     dates = _creneaux(debut, jours, len(unites))
     for i, u in enumerate(unites):
         jour = dates[i]
-        titre_chap = u["chapitre"] or f"Chapitre {u['chapter_id'][:8]}"
-        fraction = u.get("fraction")
-        # Quand le chapitre porte le titre de l'ouvrage (fréquent sur les pages
-        # de garde), l'énoncer deux fois n'apprend rien au lecteur.
-        meme_titre = _meme_titre(titre_chap, u["ouvrage"])
-        objectif = u["ouvrage"] if meme_titre else f"{u['ouvrage']} : {titre_chap}"
-        if fraction:
-            objectif += f" ({fraction[0]}/{fraction[1]})"
-        elif u.get("chapitres_groupes", 1) > 1:
-            n = u["chapitres_groupes"] - 1
-            objectif += f" et {n} chapitre suivant" if n == 1 else f" et {n} chapitres suivants"
+        objectif = libelle_seance(u)
         seances.append(
             {
                 "ord": i,
@@ -317,20 +380,76 @@ def construire(
             }
         )
 
-    total_min = sum(s["duration_min"] for s in seances)
-    # Les ouvrages effectivement touchés, pas ceux qui étaient candidats :
-    # annoncer seize titres pour un plan qui n'en couvre que quatre serait faux.
+    return seances, justification_plan(
+        seances, jours, duree_seance=duree_seance, wpm=wpm,
+        candidats=len(ouvrages), tronque=tronque,
+    )
+
+
+def libelle_seance(u: dict) -> str:
+    """Ce que dit la carte de séance. Il ne doit jamais contredire ses pages.
+
+    Un chapitre sans vrai titre porte le nom de ses pages : regroupé avec le
+    suivant, « Pages 2 à 66 et 1 chapitre suivant » pour une séance qui va de la
+    page 2 à la page 197 se lisait comme une erreur. On nomme alors la séance par
+    ses pages réelles.
+    """
+    ouvrage = u["ouvrage"]
+    titre = u["chapitre"]
+    pages = (
+        f"pages {u['page_start']} à {u['page_end']}"
+        if u.get("page_start") and u.get("page_end") and u["page_end"] != u["page_start"]
+        else (f"page {u['page_start']}" if u.get("page_start") else None)
+    )
+    groupes = u.get("chapitres_groupes", 1)
+    fraction = u.get("fraction")
+    if not titre or est_repli(titre) or u.get("repli"):
+        return f"{ouvrage} : {pages}" if pages else ouvrage
+    # Quand le chapitre porte le titre de l'ouvrage (fréquent sur les pages de
+    # garde), l'énoncer deux fois n'apprend rien au lecteur.
+    base = ouvrage if _meme_titre(titre, ouvrage) else f"{ouvrage} : {titre}"
+    if fraction:
+        return f"{base} ({fraction[0]}/{fraction[1]})"
+    if groupes > 1:
+        n = groupes - 1
+        return f"{base}, et le chapitre suivant" if n == 1 else f"{base}, et les {n} chapitres suivants"
+    return base
+
+
+JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+
+
+def _duree(minutes: int) -> str:
+    h, m = divmod(minutes, 60)
+    return f"{m} min" if not h else (f"{h} h" if not m else f"{h} h {m:02d}")
+
+
+def justification_plan(
+    seances: list[dict], jours: list[int], *, duree_seance: int, wpm: int, candidats: int, tronque: bool
+) -> str:
+    """L'en-tête du plan, en chiffres qui se recoupent.
+
+    L'ancien texte annonçait « 60 séances d'environ 30 min » et « 22 h 08 au
+    total » : 60 fois 30 minutes font 30 heures. La durée annoncée est désormais
+    la moyenne réelle des séances, et le total la somme de ces mêmes séances.
+    """
+    if not seances:
+        return "Aucune séance n'a pu être composée avec ce temps disponible."
+    n = len(seances)
+    total = sum(s["duration_min"] for s in seances)
+    moyenne = round(total / n)
+    semaines = max(1, -(-n // len(jours)))
     touches = len({s["document_id"] for s in seances})
-    justification = (
-        f"{len(seances)} séances d'environ {duree_seance} min, "
-        f"{seances_par_semaine} par semaine, "
-        f"sur {touches} ouvrage{'s' if touches > 1 else ''}, "
-        f"{total_min // 60} h {total_min % 60:02d} de lecture au total, "
-        f"à {wpm} mots par minute."
+    noms = ", ".join(JOURS[j] for j in jours[:-1]) + (" et " if len(jours) > 1 else "") + JOURS[jours[-1]]
+    texte = (
+        f"{n} séances sur {semaines} semaine{'s' if semaines > 1 else ''}, chaque {noms}. "
+        f"Chaque séance dure {moyenne} min en moyenne, pour {_duree(total)} de lecture au total, "
+        f"estimées à {wpm} mots par minute. "
+        f"Le plan parcourt {touches} ouvrage{'s' if touches > 1 else ''}"
+        + (f" sur les {candidats} de l'axe." if candidats > touches else ".")
     )
     if tronque:
-        justification += (
-            " Le plan a été ramené à ce qui tient avant l'échéance : "
-            "il couvre le début du parcours, pas la totalité de l'axe."
+        texte += (
+            " Il s'arrête à votre échéance : repoussez-la pour couvrir la suite du parcours."
         )
-    return seances, justification
+    return texte

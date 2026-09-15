@@ -280,15 +280,27 @@ class _LigneSeance extends ConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // L'ouvrage sur une ligne, ce qu'on y lit sur la suivante :
+                    // un libellé d'un seul tenant coupait le chapitre sous le
+                    // titre du livre.
                     Texte(
-                      seance.objectif,
+                      seance.ouvrage ?? seance.objectif,
                       style: t.textTheme.bodyMedium?.copyWith(
                         decoration: seance.faite ? TextDecoration.lineThrough : null,
                         decorationThickness: 1,
                       ),
-                      maxLines: 2,
+                      maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
+                    if (seance.partie != null) ...[
+                      const SizedBox(height: 1),
+                      Texte(
+                        seance.partie!,
+                        style: t.textTheme.bodySmall?.copyWith(color: Couleurs.encreDouce),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
                     const SizedBox(height: 3),
                     Texte(
                       [

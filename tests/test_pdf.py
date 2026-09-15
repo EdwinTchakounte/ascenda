@@ -56,9 +56,18 @@ for f in libres:
     ok(f"{f['titre'][:60]} : PDF complet",
        st == 200 and corps[:5] == b"%PDF-" and b"%%EOF" in corps[-64:] and annonce == len(corps),
        (st, len(corps), annonce))
+    ok(f"{f['titre'][:60]} : la fiche annonce sa taille réelle",
+       f["droits"].get("pdf_octets") == len(corps), (f["droits"].get("pdf_octets"), len(corps)))
+    _, sommaire, _ = appel("GET", f"/v1/bibliotheque/{f['id']}/sommaire")
+    chapitres = sommaire.get("chapitres", sommaire) if isinstance(sommaire, dict) else sommaire
+    if chapitres:
+        _, lec, _ = appel("GET", f"/v1/lecteur/{f['id']}/chapitre/{chapitres[0]['id']}")
+        ok(f"{f['titre'][:60]} : le lecteur propose d'ouvrir la page dans le PDF",
+           lec["droits"].get("pdf") is True, lec["droits"])
 
 print("\n· Les ouvrages protégés")
 for f in proteges[:5]:
+    ok(f"{f['titre'][:60]} : ni taille ni PDF annoncés", f["droits"].get("pdf_octets") is None)
     st, _, corps = fichier(f["id"])
     ok(f"{f['titre'][:60]} : refusé, avec l'explication",
        st == 403 and b"%PDF" not in corps and "redistribuable".encode() in corps, (st, corps[:80]))

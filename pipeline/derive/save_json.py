@@ -30,7 +30,11 @@ with conn.cursor() as cur:
         cur.execute("""insert into document_pedagogy (document_id, level, doc_type, target_audience,
                          central_thesis, key_ideas, reading_time_min)
                        values (%s,%s,%s,%s,%s,%s,
-                         (select round(page_count*1.6) from document where id=%s))
+                         -- Même règle que le chronogramme (planner.minutes_estimees) :
+                         -- le texte extrait, avec un plancher de 60 jetons par page.
+                         (select round(greatest(coalesce(sum(k.token_count), 0), d.page_count * 60) * 0.75 / 200)
+                            from document d left join chunk k on k.document_id = d.id
+                           where d.id = %s group by d.page_count))
                        on conflict (document_id) do update set level=excluded.level,
                          doc_type=excluded.doc_type, target_audience=excluded.target_audience,
                          central_thesis=excluded.central_thesis, key_ideas=excluded.key_ideas,

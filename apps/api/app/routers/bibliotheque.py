@@ -234,6 +234,9 @@ async def fiche(document_id: str, user: OptionalUser):
             # Le PDF d'origine s'ouvre dans l'application, sous la même règle.
             "pdf": dr.texte_integral and bool(d["storage_key"])
                    and (d["mime"] or "application/pdf") == "application/pdf",
+            # La taille du fichier : un PDF de 90 Mo ne se télécharge pas sur un
+            # forfait mobile sans prévenir.
+            "pdf_octets": d["size_bytes"] if dr.texte_integral else None,
             "statut": dr.statut,
             "plafond_extrait": dr.plafond_extrait,
             "message": dr.message(),

@@ -1,0 +1,13 @@
+{
+  "_lisez-moi": "Corrections de métadonnées vérifiées dans le fichier de chaque ouvrage (page de copyright, dépôt légal, page de titre). Clé : titre de l'ouvrage. Rien n'est déduit d'une date de création de fichier ni deviné.",
+  "L'Afrique en 200 proverbes": {"year": 2020, "publisher": "Éditions First"},
+  "L'Afrique noire précoloniale (retraduction automatique de l'édition américaine)": {"authors": ["Cheikh Anta Diop"], "year": 1987},
+  "La guerre des intelligences (éd. 2017)": {"authors": ["Laurent Alexandre"], "publisher": "JC Lattès"},
+  "L'IA au service de tous. Comment utiliser l'intelligence artificielle pour gagner du temps, de l'argent et améliorer votre vie": {"year": 2025},
+  "L'intelligence artificielle en pratique avec Python. Recherche, optimisation, apprentissage": {"year": 2023},
+  "L'intelligence artificielle n'existe pas (autre export)": {"authors": ["Luc Julia", "Ondine Khayat"], "publisher": "Éditions First"},
+  "Cheikh Anta Diop et l'histoire de la religion africaine : les sources cosmo-théologiques philosophiques africaines des religions révélées": {"authors": []},
+  "La Chute": {"language": "fr"},
+  "Intelligence artificielle et éducation. Apports de la recherche et enjeux pour les politiques publiques": {"authors": ["Direction du numérique pour l'éducation"], "publisher": "Ministère de l'Éducation nationale"},
+  "Sous la cendre le feu": {"publisher": "L'Harmattan"}
+}

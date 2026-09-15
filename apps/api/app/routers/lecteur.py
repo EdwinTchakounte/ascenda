@@ -13,17 +13,39 @@ from app.core.db import execute, fetch_all, fetch_one
 from app.core.deps import CurrentUser, OptionalUser
 from app.core.errors import Forbidden, NotFound
 from app.services.droits import droits, repartir
+from app.services.passages import lisibles
 
 router = APIRouter(prefix="/lecteur", tags=["Lecteur"])
 
 
-def _rendu(passages: list[dict], budget: int) -> tuple[list[dict], bool]:
-    textes = repartir(budget, [p["text"] for p in passages])
+async def _precedent(document_id: str, passages: list[dict]) -> str | None:
+    """Le passage qui précède le premier : sa fin est reprise au début de celui-ci."""
+    if not passages:
+        return None
+    ligne = await fetch_one(
+        "select text from chunk where document_id = %s and ord = %s", (document_id, passages[0]["ord"] - 1))
+    return ligne["text"] if ligne else None
+
+
+def _rendu(passages: list[dict], budget: int, precedent: str | None = None) -> tuple[list[dict], bool]:
+    # Le nettoyage passe avant le plafond de droits : la reprise d'un passage sur
+    # l'autre ne doit pas consommer le budget d'extrait.
+    propres = lisibles([p["text"] for p in passages], precedent)
+    # Un passage qui n'était que la reprise du précédent n'a plus rien à dire.
+    gardes = [(p, t) for p, t in zip(passages, propres) if t.strip()]
+    passages, propres = [p for p, _ in gardes], [t for _, t in gardes]
+    textes = repartir(budget, propres)
     tronque = False
     sortie = []
-    for p, t in zip(passages, textes):
-        coupe = len(t) < len(p["text"])
+    precedent_coupe = False
+    for p, t, propre in zip(passages, textes, propres):
+        coupe = len(t) < len(propre)
         tronque = tronque or coupe
+        # Après un extrait abrégé, le passage suivant reprend en cours de phrase :
+        # on le signale plutôt que de laisser croire à une coquille.
+        if t and precedent_coupe and t[:1].islower():
+            t = f"…{t}"
+        precedent_coupe = coupe
         sortie.append(
             {
                 "id": str(p["id"]),
@@ -42,7 +64,8 @@ def _rendu(passages: list[dict], budget: int) -> tuple[list[dict], bool]:
 async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
     ch = await fetch_one(
         """select c.id, c.ord, c.title, c.page_start, c.page_end, c.token_count,
-                  d.id as doc_id, coalesce(d.title_clean, d.title_raw) as doc_titre, d.authors
+                  d.id as doc_id, coalesce(d.title_clean, d.title_raw) as doc_titre, d.authors,
+                  case when coalesce(d.mime, 'application/pdf') = 'application/pdf' then d.storage_key end as storage_key
            from chapter c join document d on d.id = c.document_id
            where c.id = %s and c.document_id = %s""",
         (chapter_id, document_id),
@@ -56,7 +79,7 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
            from chunk where chapter_id = %s order by ord""",
         (chapter_id,),
     )
-    rendus, tronque = _rendu(passages, dr.budget())
+    rendus, tronque = _rendu(passages, dr.budget(), await _precedent(document_id, passages))
 
     voisins = await fetch_all(
         """select id, ord, title from chapter
@@ -90,6 +113,8 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
         "passages": rendus,
         "droits": {
             "lecture_integrale": dr.texte_integral,
+            # Le PDF d'origine s'ouvre à la page du chapitre, sous la même règle.
+            "pdf": dr.texte_integral and bool(ch["storage_key"]),
             "tronque": tronque,
             "message": dr.message(),
         },
@@ -120,7 +145,7 @@ async def pages(
     )
     if not passages:
         raise NotFound("Aucun passage pour cette plage de pages.")
-    rendus, tronque = _rendu(passages, dr.budget())
+    rendus, tronque = _rendu(passages, dr.budget(), await _precedent(document_id, passages))
     return {
         "document_id": document_id,
         "page_debut": debut,

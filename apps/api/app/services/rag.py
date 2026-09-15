@@ -16,6 +16,7 @@ from app.core.auteurs import auteurs
 from app.core.config import settings
 from app.services import recherche
 from app.services.droits import tronquer
+from app.services.passages import extrait
 
 log = logging.getLogger("ascenda.rag")
 
@@ -53,7 +54,7 @@ async def passages_pertinents(
     passages = []
     for i, l in enumerate(lignes, start=1):
         budget = 1800 if l["redistributable"] else min(700, int(l["max_excerpt_chars"] or 0))
-        texte, coupe = tronquer(l["text"], budget)
+        texte, coupe = tronquer(extrait(l["text"]), budget)
         if not texte:
             continue  # plafond à zéro : cet ouvrage ne peut rien fournir au contexte
         passages.append(

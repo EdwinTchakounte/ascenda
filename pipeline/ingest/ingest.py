@@ -85,7 +85,11 @@ def build_chunks(pages, chapters):
             token_count=int(len(text) / CHARS_PER_TOKEN),
             content_hash=hashlib.sha256(text.encode()).hexdigest(),
         ))
+        # La reprise commence sur un début de mot : coupée au caractère près,
+        # elle ouvrait le passage suivant sur un fragment (« ère Les textes… »).
         tail = text[-ovl:] if len(text) > ovl else ""
+        espace = tail.find(" ")
+        tail = tail[espace + 1:] if 0 <= espace < 40 else tail
         buf = [tail] if tail else []
         buf_pages = [max(buf_pages)] if tail else []
 
@@ -96,6 +100,8 @@ def build_chunks(pages, chapters):
         key = c["key"] if c else None
         if key != buf_chap:
             flush()
+            # Un chapitre ne commence pas par la fin du précédent.
+            buf, buf_pages = [], []
             buf_chap = key
         buf.append(txt)
         buf_pages.append(i)

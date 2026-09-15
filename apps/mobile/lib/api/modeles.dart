@@ -350,7 +350,25 @@ class Seance {
     String net(String? x) =>
         (x ?? '').replaceAll('\u2019', "'").trim().toLowerCase();
     if (chapitre == null || net(chapitre) == net(ouvrage)) return null;
-    return chapitre;
+    // Un chapitre sans vrai titre porte le nom de ses pages : la carte les
+    // affiche déjà, les répéter en sous-titre n'apprend rien.
+    if (_nomDePages.hasMatch(chapitre!.trim())) return null;
+    return partie ?? chapitre;
+  }
+
+  static final _nomDePages = RegExp(r'^[Pp]ages? \d+( à \d+)?$');
+
+  /// Ce que la séance lit dans l'ouvrage : le libellé sans le titre du livre.
+  ///
+  /// Les titres d'ouvrage sont longs (« Cheikh Anta Diop et l'histoire de la
+  /// religion africaine : les sources… ») : affiché en entier, le libellé
+  /// coupait justement la partie utile, le chapitre ou les pages.
+  String? get partie {
+    final o = ouvrage;
+    if (o == null || !objectif.startsWith('$o : ')) return null;
+    final reste = objectif.substring(o.length + 3).trim();
+    if (reste.isEmpty || _nomDePages.hasMatch(reste)) return null;
+    return reste;
   }
 
   String get pages => pageDebut == null

@@ -87,6 +87,18 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       appBar: AppBar(
         backgroundColor: t.colorScheme.surfaceContainerLowest,
         actions: [
+          if (lecture.valueOrNull?['droits']?['pdf'] == true)
+            IconButton(
+              tooltip: 'Voir cette page dans le PDF',
+              icon: const Icon(Icons.picture_as_pdf_outlined),
+              onPressed: () {
+                final d = lecture.valueOrNull!;
+                final page = d['chapitre']?['page_debut'];
+                context.push('/pdf/${widget.documentId}'
+                    '?titre=${Uri.encodeComponent('${d['ouvrage']?['titre'] ?? ''}')}'
+                    '${page != null ? '&page=$page' : ''}');
+              },
+            ),
           IconButton(
             tooltip: 'Taille du texte',
             icon: const Icon(Icons.text_fields_rounded),
@@ -167,7 +179,9 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                   else
                     for (final p in passages) ...[
                       SelectableText.rich(
-                        textAlign: TextAlign.justify,
+                        textAlign: Texte.alignement('${p['texte']}', TextStyle(fontSize: _taille), null,
+                                largeur: MediaQuery.sizeOf(context).width) ??
+                            TextAlign.start,
                         _teinter(
                           '${p['texte']}',
                           surlignages,
@@ -514,7 +528,9 @@ class _PagesSupplementaires extends ConsumerWidget {
             for (final p in passages) ...[
               SelectableText(
                 lisible('${p['texte']}', composes: false),
-                textAlign: TextAlign.justify,
+                textAlign: Texte.alignement('${p['texte']}', TextStyle(fontSize: taille), null,
+                        largeur: MediaQuery.sizeOf(context).width) ??
+                    TextAlign.start,
                 style: t.textTheme.bodyLarge?.copyWith(
                   fontFamily: t.textTheme.headlineSmall?.fontFamily,
                   fontSize: taille,
