@@ -36,7 +36,12 @@ left join document_pedagogy p on p.document_id = d.id
 -- que ceux-là : pages, durée et chapitres. Sans bornes, l'ouvrage entier.
 left join lateral (
   select count(*) filter (where coalesce(c.token_count, 0) >= 300) as n,
-         case when bool_or(b.borne) then sum(greatest(c.page_end - c.page_start + 1, 0)) end as pages,
+         case when bool_or(b.borne) then (
+           -- Pages distinctes : plusieurs fiches commencent souvent sur la même page.
+           select count(distinct g) from chapter c3
+             join axis_chapter ac3 on ac3.chapter_id = c3.id and ac3.axis_id = a.id
+             cross join generate_series(c3.page_start, greatest(c3.page_end, c3.page_start)) g
+            where c3.document_id = d.id) end as pages,
          case when bool_or(b.borne) then round(sum(coalesce(c.token_count, 0)) * 0.75 / 200) end as minutes
     from chapter c
     cross join lateral (select exists (select 1 from axis_chapter ac join chapter c2 on c2.id = ac.chapter_id

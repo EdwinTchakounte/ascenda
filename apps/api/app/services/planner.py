@@ -274,6 +274,9 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
         return a["page_start"] - 3 <= b["page_start"] <= a["page_end"] + 3
 
     def absorber(cible: dict, u: dict) -> None:
+        for t in u.get("titres") or []:
+            if t not in (cible.get("titres") or []):
+                cible.setdefault("titres", []).append(t)
         cible["minutes"] += u["minutes"]
         cible["page_end"] = u["page_end"] or cible["page_end"]
         cible["chapitres_groupes"] = cible.get("chapitres_groupes", 1) + 1
@@ -309,10 +312,10 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
             and suivante["document_id"] == u["document_id"] and contigus(u, suivante)
             and u["minutes"] + suivante["minutes"] <= duree_seance * 1.7
         ):
-            fusion = dict(u)
+            fusion = dict(u, titres=list(u.get("titres") or []))
             if u.get("fraction") or suivante.get("fraction"):
                 fusion.pop("fraction", None)
-                fusion["repli"] = True
+                fusion["mixte"] = True
             absorber(fusion, suivante)
             avant.append(fusion)
             i += 2
@@ -334,7 +337,7 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
         ):
             if precedente.get("fraction") or u.get("fraction"):
                 precedente.pop("fraction", None)
-                precedente["repli"] = True  # on nomme alors la séance par ses pages
+                precedente["mixte"] = True  # les titres portent alors « (début) » ou « (fin) »
             absorber(precedente, u)
         else:
             resultat.append(u)
@@ -373,6 +376,7 @@ def construire(
                         "quiz_id": str(ch["quiz_id"]) if ch["quiz_id"] else None,
                         "lecture_integrale": o["redistributable"],
                         "borne": bool(ch.get("borne")),
+                        "titres": [_titre_de_part(ch["title"], part.get("fraction"))],
                         **part,
                     }
                 )
@@ -416,6 +420,24 @@ def construire(
     )
 
 
+def _titre_de_part(titre: str | None, fraction: tuple | None) -> str | None:
+    """Le titre d'un morceau de chapitre, tel qu'il se lit dans une séance groupée."""
+    if not titre or not fraction:
+        return titre
+    i, n = fraction
+    return f"{titre} ({'début' if i == 1 else 'fin' if i == n else 'suite'})"
+
+
+def _enumerer(titres: list[str]) -> str:
+    # Le point-virgule plutôt que « et » : bien des titres en contiennent déjà un
+    # (« Les bâtiments et le matériel »).
+    return " ; ".join(titres)
+
+
+# Au-delà, la liste des titres ne tient plus sur une carte de séance.
+TITRES_MAX, SIGNES_MAX = 4, 90
+
+
 def libelle_seance(u: dict) -> str:
     """Ce que dit la carte de séance. Il ne doit jamais contredire ses pages.
 
@@ -433,7 +455,25 @@ def libelle_seance(u: dict) -> str:
     )
     groupes = u.get("chapitres_groupes", 1)
     fraction = u.get("fraction")
+    titres = [t for t in (u.get("titres") or []) if t]
     if not titre or est_repli(titre) or u.get("repli"):
+        return f"{ouvrage} : {pages}" if pages else ouvrage
+    # Des sections regroupées se nomment toutes quand elles tiennent sur la carte :
+    # « L'élevage ovin ; L'élevage caprin » plutôt que « L'élevage ovin, et le
+    # chapitre suivant », qui cache la chèvre à qui la cherche.
+    if len(titres) > 1 and not any(est_repli(t) for t in titres):
+        # Autant de titres que la carte en tient, puis le compte du reste :
+        # « Le gombo ; La laitue ; L'oignon et 4 autres ».
+        pris: list[str] = []
+        for t in titres[:TITRES_MAX]:
+            if len(" ; ".join(pris + [t])) > SIGNES_MAX and pris:
+                break
+            pris.append(t)
+        reste = len(titres) - len(pris)
+        if not reste:
+            return f"{ouvrage} : {_enumerer(pris)}"
+        return f"{ouvrage} : {_enumerer(pris)} et {reste} autre{'s' if reste > 1 else ''}"
+    if u.get("mixte"):
         return f"{ouvrage} : {pages}" if pages else ouvrage
     # Quand le chapitre porte le titre de l'ouvrage (fréquent sur les pages de
     # garde), l'énoncer deux fois n'apprend rien au lecteur.

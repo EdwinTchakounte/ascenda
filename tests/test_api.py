@@ -55,11 +55,11 @@ v("openapi", "GET", "/openapi.json", 200, verif=lambda r: len(r["paths"]) > 40 o
 v("docs", "GET", "/docs", 200)
 
 print("=== PUBLIC, sans compte ===")
-v("axes", "GET", "/v1/axes", 200, verif=lambda r: len(r) == 11 or f"{len(r)} axes")
+v("axes", "GET", "/v1/axes", 200, verif=lambda r: len(r) == 17 or f"{len(r)} axes")  # 11 axes et les 6 sous-axes du pôle Agriculture
 v("axe inexistant", "GET", "/v1/axes/inconnu", 404)
 v("détail axe", "GET", "/v1/axes/07-afrique-histoire-pensee", 200,
   verif=lambda r: len(r["ouvrages"]) == 10 or f"{len(r['ouvrages'])} ouvrages")
-v("bibliothèque", "GET", "/v1/bibliotheque?par_page=5", 200, verif=lambda r: r["total"] == 78 or r["total"])
+v("bibliothèque", "GET", "/v1/bibliotheque?par_page=5", 200, verif=lambda r: r["total"] == 79 or r["total"])
 v("filtres", "GET", "/v1/bibliotheque/filtres", 200)
 v("filtre niveau", "GET", "/v1/bibliotheque?niveau=debutant&par_page=3", 200,
   verif=lambda r: all(o["niveau"] == "debutant" for o in r["ouvrages"]) or "niveau non filtré")

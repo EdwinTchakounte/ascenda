@@ -56,6 +56,14 @@ async def main():
                 where c.document_id = %s and c.title = 'Le maïs'""", (D,))
         ok("la fiche du maïs est sous « Les céréales », page PDF 784", mais and mais["parent"] == "Les céréales" and mais["page_start"] == 784, mais)
         ok("page PDF 784 = page imprimée 780", STRUCTURE["decalage_pages"] == 4)
+        for titre, slug in (("Le diagnostic phytosanitaire", "12-3-protection-cultures"),
+                            ("Les maladies et les stratégies de lutte", "12-5-elevage-sante-animale"),
+                            ("L’élevage ovin", "12-5-elevage-sante-animale"), ("Le blé", "12-4-cultures-plantes"),
+                            ("Les principales espèces piscicoles", "12-6-pisciculture-petits-elevages")):
+            r = await fetch_one(
+                """select a.slug from chapter c join axis_chapter ac on ac.chapter_id = c.id join axis a on a.id = ac.axis_id
+                    where c.document_id = %s and c.title = %s""", (D, titre))
+            ok(f"« {titre} » est une section de {slug}", r and r["slug"] == slug, r)
         orphelins = await fetch_one("select count(*) as n, max(page_end) as fin from chunk where document_id = %s and chapter_id is null", (D,))
         ok("seules les pages de garde n'ont pas de chapitre", (orphelins["fin"] or 0) <= 12, orphelins)
 

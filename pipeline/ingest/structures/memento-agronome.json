@@ -10,19 +10,27 @@
  "editeur": "CIRAD, GRET, ministère des Affaires étrangères",
  "langue": "fr",
  "decalage_pages": 4,
- "note": "Structure tirée du sommaire imprimé (pages imprimées + 4 = pages PDF) et des fiches repérées dans le texte. axe = sous-axe du pôle Agriculture et élevage ; null = hors parcours (glossaire, adresses, index, sommaire des cédéroms).",
+ "note": "Produit par memento_agronome.py. page = page du PDF (imprimée + 4). axe = sous-axe du pôle Agriculture et élevage ; null = hors parcours.",
  "chapitres": [
   {
    "num": "",
-   "titre": "INTRODUCTION",
+   "titre": "Introduction",
    "niveau": 1,
    "page": 13,
    "type": "sommaire",
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Le monde change, les agronomes aussi",
+   "niveau": 2,
+   "page": 18,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "1",
-   "titre": "LES DIAGNOSTICS : COMPRENDRE POUR AGIR",
+   "titre": "Les diagnostics : comprendre pour agir",
    "niveau": 1,
    "page": 29,
    "type": "sommaire",
@@ -37,6 +45,30 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "La place des diagnostics",
+   "niveau": 3,
+   "page": 31,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les principaux outils de diagnostic",
+   "niveau": 3,
+   "page": 34,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Des outils pour collecter et traiter l’information",
+   "niveau": 3,
+   "page": 36,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "1.2",
    "titre": "Le diagnostic local des activités paysannes",
    "niveau": 2,
@@ -45,8 +77,56 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Les composantes du milieu agricole",
+   "niveau": 3,
+   "page": 49,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les hypothèses du diagnostic local",
+   "niveau": 3,
+   "page": 50,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Du visible à l’invisible",
+   "niveau": 3,
+   "page": 54,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les entretiens",
+   "niveau": 3,
+   "page": 56,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les outils pour mettre en forme les informations recueillies",
+   "niveau": 3,
+   "page": 63,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les allers et retours entre les phases",
+   "niveau": 3,
+   "page": 71,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2",
-   "titre": "INTERVENIR SUR L’ENVIRONNEMENT DES EXPLOITATIONS",
+   "titre": "Intervenir sur l’environnement des exploitations",
    "niveau": 1,
    "page": 73,
    "type": "sommaire",
@@ -69,11 +149,35 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Les niveaux d’intervention du développement rural",
+   "niveau": 4,
+   "page": 80,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2.1.2",
    "titre": "La démarche projet",
    "niveau": 3,
    "page": 85,
    "type": "sommaire",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les limites, les acteurs et les étapes de la démarche projet",
+   "niveau": 4,
+   "page": 85,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Des outils pour l’action",
+   "niveau": 4,
+   "page": 93,
+   "type": "section",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -93,11 +197,35 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Des organisations diverses, en évolution permanente",
+   "niveau": 4,
+   "page": 115,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Quelques axes de travail pour renforcer les organisations",
+   "niveau": 4,
+   "page": 130,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2.2.2",
    "titre": "Les filières agricoles et alimentaires",
    "niveau": 3,
    "page": 139,
    "type": "sommaire",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "La filière, un système aux dimensions multiples",
+   "niveau": 4,
+   "page": 139,
+   "type": "section",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -109,11 +237,67 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Quelques définitions",
+   "niveau": 4,
+   "page": 159,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Du projet à l’institution financière",
+   "niveau": 4,
+   "page": 166,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les spécificités du crédit rural",
+   "niveau": 4,
+   "page": 170,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "La viabilité des institutions de financement rural",
+   "niveau": 4,
+   "page": 180,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2.2.4",
    "titre": "La formation, l’information, les centres de services",
    "niveau": 3,
    "page": 183,
    "type": "sommaire",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "La formation des agriculteurs et agricultrices",
+   "niveau": 4,
+   "page": 183,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "L’information et la vulgarisation",
+   "niveau": 4,
+   "page": 192,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les centres de services",
+   "niveau": 4,
+   "page": 198,
+   "type": "section",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -133,11 +317,51 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "L’accès à la terre et aux ressources renouvelables",
+   "niveau": 4,
+   "page": 206,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les enjeux fonciers d’un aménagement",
+   "niveau": 4,
+   "page": 223,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2.3.2",
    "titre": "La gestion des terroirs",
    "niveau": 3,
    "page": 227,
    "type": "sommaire",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "L’histoire des notions",
+   "niveau": 4,
+   "page": 227,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Un canevas méthodologique",
+   "niveau": 4,
+   "page": 230,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les acquis, les limites, les perspectives",
+   "niveau": 4,
+   "page": 235,
+   "type": "section",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -149,11 +373,67 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Les notions d’aménagement et d’agriculture durable",
+   "niveau": 4,
+   "page": 243,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les mécanismes et les conséquences de l’érosion",
+   "niveau": 4,
+   "page": 244,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les techniques de contrôle et les aménagements anti-érosifs",
+   "niveau": 4,
+   "page": 247,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2.3.4",
    "titre": "La gestion des forêts et des pâturages",
    "niveau": 3,
    "page": 261,
    "type": "sommaire",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Quelques définitions",
+   "niveau": 4,
+   "page": 261,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les modes d’exploitation et de gestion",
+   "niveau": 4,
+   "page": 262,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Des principes de gestion durable",
+   "niveau": 4,
+   "page": 267,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Des politiques et des instruments de gestion",
+   "niveau": 4,
+   "page": 270,
+   "type": "section",
    "axe": "12-1-developpement-rural"
   },
   {
@@ -165,6 +445,46 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Les dysfonctionnements",
+   "niveau": 4,
+   "page": 277,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "L’économie de l’irrigation",
+   "niveau": 4,
+   "page": 279,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "L’organisation des irrigants",
+   "niveau": 4,
+   "page": 282,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Quelques enjeux essentiels",
+   "niveau": 4,
+   "page": 282,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
+   "num": "",
+   "titre": "Les aspects techniques d’un réseau d’irrigation",
+   "niveau": 4,
+   "page": 290,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "2.3.6",
    "titre": "Aménager les bas-fonds : l’exemple de l’Afrique de l’Ouest",
    "niveau": 3,
@@ -173,8 +493,16 @@
    "axe": "12-1-developpement-rural"
   },
   {
+   "num": "",
+   "titre": "Des questions à approfondir",
+   "niveau": 4,
+   "page": 321,
+   "type": "section",
+   "axe": "12-1-developpement-rural"
+  },
+  {
    "num": "3",
-   "titre": "ACCOMPAGNER LE DÉVELOPPEMENT DES EXPLOITATIONS AGRICOLES",
+   "titre": "Accompagner le développement des exploitations agricoles",
    "niveau": 1,
    "page": 323,
    "type": "sommaire",
@@ -189,11 +517,35 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "La diversité des exploitations agricoles",
+   "niveau": 3,
+   "page": 335,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "3.2",
    "titre": "Analyser le fonctionnement d’une exploitation",
    "niveau": 2,
    "page": 349,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le fonctionnement technique d’une exploitation",
+   "niveau": 3,
+   "page": 351,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le calcul des performances économiques",
+   "niveau": 3,
+   "page": 373,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -206,7 +558,7 @@
   },
   {
    "num": "64",
-   "titre": "AGRICULTURE GÉNÉRALE",
+   "titre": "Agriculture générale",
    "niveau": 1,
    "page": 411,
    "type": "sommaire",
@@ -229,11 +581,107 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "L’agriculture d’abattis-brûlis",
+   "niveau": 4,
+   "page": 415,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les associations céréaliculture et élevage sous parc arboré",
+   "niveau": 4,
+   "page": 421,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les systèmes intensifs associant polyculture et élevage",
+   "niveau": 4,
+   "page": 423,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La riziculture inondée de bas-fond et d’épandage de crues",
+   "niveau": 4,
+   "page": 426,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les plantations pérennes",
+   "niveau": 4,
+   "page": 429,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage bovin extensif et le ranching",
+   "niveau": 4,
+   "page": 430,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le recours accru aux intrants chimiques",
+   "niveau": 4,
+   "page": 432,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La moto-mécanisation",
+   "niveau": 4,
+   "page": 435,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.1.2",
    "titre": "Le climat et la production végétale",
    "niveau": 3,
    "page": 437,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les bases physiques de l’agroclimatologie",
+   "niveau": 4,
+   "page": 437,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les paramètres climatiques et les activités agricoles",
+   "niveau": 4,
+   "page": 441,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La mesure des paramètres météorologiques",
+   "niveau": 4,
+   "page": 445,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les climats de la zone intertropicale",
+   "niveau": 4,
+   "page": 448,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -245,11 +693,59 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "La couverture pédologique",
+   "niveau": 4,
+   "page": 451,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les organisations élémentaires du sol",
+   "niveau": 4,
+   "page": 455,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les principaux types de sol",
+   "niveau": 4,
+   "page": 474,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.1.4",
    "titre": "Le fonctionnement d’un peuplement végétal cultivé",
    "niveau": 3,
    "page": 487,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La mise en place des différents organes",
+   "niveau": 4,
+   "page": 490,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La croissance et le fonctionnement des organes",
+   "niveau": 4,
+   "page": 491,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les relations croissance - développement",
+   "niveau": 4,
+   "page": 497,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -269,11 +765,75 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "L’élaboration des itinéraires techniques",
+   "niveau": 4,
+   "page": 506,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "L’important, c’est la cohérence",
+   "niveau": 4,
+   "page": 514,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.2.2",
    "titre": "L’expérimentation en milieu paysan",
    "niveau": 3,
    "page": 515,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La planification du processus d’expérimentation en milieu paysan",
+   "niveau": 4,
+   "page": 519,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le suivi et l’évaluation du dispositif d’expérimentation",
+   "niveau": 4,
+   "page": 524,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "L’analyse des résultats de l’expérimentation",
+   "niveau": 4,
+   "page": 527,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "L’utilisation et la valorisation des résultats",
+   "niveau": 4,
+   "page": 531,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Un cas d’expérimentation paysanne en Amérique centrale",
+   "niveau": 4,
+   "page": 537,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Un antidote contre l’inertie et le scepticisme",
+   "niveau": 4,
+   "page": 539,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -285,11 +845,67 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "Les définitions",
+   "niveau": 4,
+   "page": 541,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les successions de cultures",
+   "niveau": 4,
+   "page": 543,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les associations culturales",
+   "niveau": 4,
+   "page": 548,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.2.4",
    "titre": "Les cultures pérennes et les systèmes agroforestiers",
    "niveau": 3,
    "page": 557,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La gestion du cycle des cultures pérennes",
+   "niveau": 4,
+   "page": 557,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le matériel végétal disponible",
+   "niveau": 4,
+   "page": 562,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les travaux d’entretien des cultures pérennes",
+   "niveau": 4,
+   "page": 565,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les caractéristiques de la récolte",
+   "niveau": 4,
+   "page": 567,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -309,11 +925,83 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "Les objectifs de l’amélioration des plantes",
+   "niveau": 4,
+   "page": 571,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les bases biologiques de la reproduction des plantes",
+   "niveau": 4,
+   "page": 572,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "L’amélioration génétique des plantes cultivées",
+   "niveau": 4,
+   "page": 573,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La multiplication de matériel végétal",
+   "niveau": 4,
+   "page": 579,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La protection, le catalogue officiel et la certification",
+   "niveau": 4,
+   "page": 585,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.3.2",
    "titre": "L’amélioration des propriétés physiques du sol",
    "niveau": 3,
    "page": 587,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le rôle des racines",
+   "niveau": 4,
+   "page": 587,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le profil cultural",
+   "niveau": 4,
+   "page": 593,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La transformation des propriétés physiques du sol",
+   "niveau": 4,
+   "page": 596,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les outils de travail du sol",
+   "niveau": 4,
+   "page": 599,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -325,11 +1013,67 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "Les éléments minéraux",
+   "niveau": 4,
+   "page": 605,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les formes et rôles de la matière organique",
+   "niveau": 4,
+   "page": 614,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les engrais et les amendements",
+   "niveau": 4,
+   "page": 619,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La gestion de la fertilité",
+   "niveau": 4,
+   "page": 631,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.3.4",
    "titre": "La gestion de l’eau",
    "niveau": 3,
    "page": 647,
    "type": "sommaire",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le bilan hydrique",
+   "niveau": 4,
+   "page": 647,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les modes d’amélioration du bilan hydrique",
+   "niveau": 4,
+   "page": 656,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Des exemples au Mali et au Sénégal",
+   "niveau": 4,
+   "page": 661,
+   "type": "section",
    "axe": "12-2-agronomie-exploitation"
   },
   {
@@ -341,11 +1085,51 @@
    "axe": "12-3-protection-cultures"
   },
   {
+   "num": "",
+   "titre": "La maîtrise de l’enherbement des cultures",
+   "niveau": 4,
+   "page": 676,
+   "type": "section",
+   "axe": "12-3-protection-cultures"
+  },
+  {
    "num": "4.3.6",
    "titre": "La protection contre les maladies et les ravageurs",
    "niveau": 3,
    "page": 689,
    "type": "sommaire",
+   "axe": "12-3-protection-cultures"
+  },
+  {
+   "num": "",
+   "titre": "Des définitions utiles",
+   "niveau": 4,
+   "page": 689,
+   "type": "section",
+   "axe": "12-3-protection-cultures"
+  },
+  {
+   "num": "",
+   "titre": "Le diagnostic phytosanitaire",
+   "niveau": 4,
+   "page": 692,
+   "type": "section",
+   "axe": "12-3-protection-cultures"
+  },
+  {
+   "num": "",
+   "titre": "La protection intégrée",
+   "niveau": 4,
+   "page": 693,
+   "type": "section",
+   "axe": "12-3-protection-cultures"
+  },
+  {
+   "num": "",
+   "titre": "L’utilisation des pesticides",
+   "niveau": 4,
+   "page": 707,
+   "type": "section",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -357,6 +1141,38 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "Le système après récolte des céréales",
+   "niveau": 4,
+   "page": 721,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le système après-récolte des racines et tubercules",
+   "niveau": 4,
+   "page": 738,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le système après-récolte des fruits et légumes",
+   "niveau": 4,
+   "page": 742,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Le système après-récolte des bananes et plantains",
+   "niveau": 4,
+   "page": 748,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "4.3.8",
    "titre": "La traction animale et la motorisation",
    "niveau": 3,
@@ -365,8 +1181,40 @@
    "axe": "12-2-agronomie-exploitation"
   },
   {
+   "num": "",
+   "titre": "L’énergie et sa mesure",
+   "niveau": 4,
+   "page": 751,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "L’énergie animale",
+   "niveau": 4,
+   "page": 755,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "La motorisation",
+   "niveau": 4,
+   "page": 765,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
+   "num": "",
+   "titre": "Les énergies renouvelables",
+   "niveau": 4,
+   "page": 772,
+   "type": "section",
+   "axe": "12-2-agronomie-exploitation"
+  },
+  {
    "num": "5",
-   "titre": "AGRICULTURE SPÉCIALE",
+   "titre": "Agriculture spéciale",
    "niveau": 1,
    "page": 777,
    "type": "sommaire",
@@ -393,7 +1241,7 @@
    "titre": "Le blé",
    "niveau": 4,
    "page": 781,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -401,7 +1249,7 @@
    "titre": "Le maïs",
    "niveau": 4,
    "page": 784,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -409,7 +1257,7 @@
    "titre": "Le mil",
    "niveau": 4,
    "page": 797,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -417,7 +1265,7 @@
    "titre": "Le riz",
    "niveau": 4,
    "page": 803,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -425,7 +1273,15 @@
    "titre": "Le sorgho",
    "niveau": 4,
    "page": 815,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "Les céréales secondaires",
+   "niveau": 4,
+   "page": 827,
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -441,7 +1297,7 @@
    "titre": "L’arbre à pain",
    "niveau": 4,
    "page": 835,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -449,7 +1305,7 @@
    "titre": "Le canna comestible",
    "niveau": 4,
    "page": 838,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -457,7 +1313,7 @@
    "titre": "L’igname",
    "niveau": 4,
    "page": 838,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -465,7 +1321,7 @@
    "titre": "Le manioc",
    "niveau": 4,
    "page": 847,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -473,7 +1329,7 @@
    "titre": "La maranta",
    "niveau": 4,
    "page": 854,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -481,7 +1337,7 @@
    "titre": "La patate douce",
    "niveau": 4,
    "page": 854,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -489,7 +1345,7 @@
    "titre": "La pomme de terre",
    "niveau": 4,
    "page": 858,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -497,7 +1353,15 @@
    "titre": "Le sagoutier",
    "niveau": 4,
    "page": 862,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "Le taro et le macabo",
+   "niveau": 4,
+   "page": 863,
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -513,7 +1377,7 @@
    "titre": "Le haricot",
    "niveau": 4,
    "page": 869,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -521,7 +1385,7 @@
    "titre": "Le niébé",
    "niveau": 4,
    "page": 873,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -529,7 +1393,7 @@
    "titre": "Le pois d’Angole",
    "niveau": 4,
    "page": 876,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -537,7 +1401,7 @@
    "titre": "Le pois du Cap",
    "niveau": 4,
    "page": 878,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -545,7 +1409,7 @@
    "titre": "Le voandzou",
    "niveau": 4,
    "page": 879,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -561,7 +1425,7 @@
    "titre": "L’arachide",
    "niveau": 4,
    "page": 883,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -569,7 +1433,7 @@
    "titre": "Le carthame (des teinturiers)",
    "niveau": 4,
    "page": 896,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -577,7 +1441,7 @@
    "titre": "Le cocotier",
    "niveau": 4,
    "page": 897,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -585,7 +1449,7 @@
    "titre": "Le palmier à huile",
    "niveau": 4,
    "page": 910,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -593,7 +1457,7 @@
    "titre": "Le sésame",
    "niveau": 4,
    "page": 922,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -601,7 +1465,7 @@
    "titre": "Le soja",
    "niveau": 4,
    "page": 923,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -609,7 +1473,7 @@
    "titre": "Le tournesol",
    "niveau": 4,
    "page": 929,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -625,7 +1489,7 @@
    "titre": "Les agrumes",
    "niveau": 4,
    "page": 933,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -633,7 +1497,7 @@
    "titre": "L’anacardier",
    "niveau": 4,
    "page": 945,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -641,7 +1505,7 @@
    "titre": "L’ananas",
    "niveau": 4,
    "page": 949,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -649,7 +1513,7 @@
    "titre": "L’avocatier",
    "niveau": 4,
    "page": 956,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -657,7 +1521,7 @@
    "titre": "Les bananiers",
    "niveau": 4,
    "page": 964,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -665,7 +1529,7 @@
    "titre": "Le litchi et le ramboutan",
    "niveau": 4,
    "page": 979,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -673,7 +1537,7 @@
    "titre": "Le manguier",
    "niveau": 4,
    "page": 984,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -681,7 +1545,7 @@
    "titre": "Le palmier dattier",
    "niveau": 4,
    "page": 990,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -689,7 +1553,7 @@
    "titre": "Le papayer",
    "niveau": 4,
    "page": 998,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -697,7 +1561,7 @@
    "titre": "Les espèces fruitières d’importance secondaire",
    "niveau": 4,
    "page": 1003,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -713,7 +1577,7 @@
    "titre": "L’ail",
    "niveau": 4,
    "page": 1030,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -721,7 +1585,7 @@
    "titre": "Les amarantes",
    "niveau": 4,
    "page": 1031,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -729,7 +1593,7 @@
    "titre": "L’aubergine",
    "niveau": 4,
    "page": 1033,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -737,7 +1601,7 @@
    "titre": "La baselle",
    "niveau": 4,
    "page": 1034,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -745,7 +1609,7 @@
    "titre": "La chayotte",
    "niveau": 4,
    "page": 1035,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -753,7 +1617,7 @@
    "titre": "Les choux chinois : pe-tsaï et pak-choy",
    "niveau": 4,
    "page": 1036,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -761,7 +1625,7 @@
    "titre": "Les choux européens",
    "niveau": 4,
    "page": 1036,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -769,7 +1633,7 @@
    "titre": "Le chou palmiste",
    "niveau": 4,
    "page": 1038,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -777,7 +1641,7 @@
    "titre": "L’échalote",
    "niveau": 4,
    "page": 1038,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -785,7 +1649,7 @@
    "titre": "Le gombo",
    "niveau": 4,
    "page": 1039,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -793,7 +1657,7 @@
    "titre": "La laitue",
    "niveau": 4,
    "page": 1040,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -801,7 +1665,7 @@
    "titre": "L’oignon",
    "niveau": 4,
    "page": 1041,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -809,7 +1673,7 @@
    "titre": "Les piments",
    "niveau": 4,
    "page": 1045,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -817,7 +1681,7 @@
    "titre": "Le poireau",
    "niveau": 4,
    "page": 1046,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -825,7 +1689,7 @@
    "titre": "Le poivron",
    "niveau": 4,
    "page": 1047,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -833,7 +1697,7 @@
    "titre": "Les pousses de bambou",
    "niveau": 4,
    "page": 1048,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -841,7 +1705,7 @@
    "titre": "Le radis",
    "niveau": 4,
    "page": 1049,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -849,7 +1713,7 @@
    "titre": "La tomate",
    "niveau": 4,
    "page": 1049,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -865,7 +1729,7 @@
    "titre": "Le cacaoyer",
    "niveau": 4,
    "page": 1055,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -873,7 +1737,7 @@
    "titre": "Le caféier",
    "niveau": 4,
    "page": 1067,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -881,7 +1745,7 @@
    "titre": "Le guarana",
    "niveau": 4,
    "page": 1080,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -889,7 +1753,7 @@
    "titre": "Le kolatier",
    "niveau": 4,
    "page": 1081,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -897,7 +1761,7 @@
    "titre": "Le maté",
    "niveau": 4,
    "page": 1083,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -905,7 +1769,7 @@
    "titre": "Le tabac",
    "niveau": 4,
    "page": 1084,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -913,7 +1777,7 @@
    "titre": "Le théier",
    "niveau": 4,
    "page": 1089,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -929,7 +1793,7 @@
    "titre": "L’anis étoilé ou badiane",
    "niveau": 4,
    "page": 1095,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -937,7 +1801,7 @@
    "titre": "Le cannelier",
    "niveau": 4,
    "page": 1096,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -945,7 +1809,7 @@
    "titre": "La cardamome",
    "niveau": 4,
    "page": 1097,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -953,7 +1817,7 @@
    "titre": "Le curcuma ou safran des Indes",
    "niveau": 4,
    "page": 1098,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -961,7 +1825,7 @@
    "titre": "Le gingembre",
    "niveau": 4,
    "page": 1098,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -969,7 +1833,7 @@
    "titre": "Le giroflier",
    "niveau": 4,
    "page": 1099,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -977,7 +1841,7 @@
    "titre": "La muscade et le macis",
    "niveau": 4,
    "page": 1102,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -985,7 +1849,7 @@
    "titre": "Le poivrier",
    "niveau": 4,
    "page": 1103,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -993,7 +1857,7 @@
    "titre": "Le vanillier",
    "niveau": 4,
    "page": 1107,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1009,7 +1873,7 @@
    "titre": "La canne à sucre",
    "niveau": 4,
    "page": 1113,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1017,7 +1881,7 @@
    "titre": "Le palmier à sucre",
    "niveau": 4,
    "page": 1126,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1041,7 +1905,47 @@
    "titre": "La diversité des modes de production",
    "niveau": 4,
    "page": 1131,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "Le choix d’une espèce fourragère",
+   "niveau": 4,
+   "page": 1134,
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "L’établissement et l’entretien des surfaces fourragères",
+   "niveau": 4,
+   "page": 1134,
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "La production de semences fourragères",
+   "niveau": 4,
+   "page": 1137,
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "L’exploitation des prairies et la conservation des fourrages",
+   "niveau": 4,
+   "page": 1139,
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "La production et la capacité de charge",
+   "niveau": 4,
+   "page": 1142,
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1049,7 +1953,15 @@
    "titre": "Les maladies",
    "niveau": 4,
    "page": 1143,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
+   "titre": "Les cultures fourragères dans les systèmes de production",
+   "niveau": 4,
+   "page": 1144,
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1065,7 +1977,7 @@
    "titre": "Aeschynomene histrix",
    "niveau": 4,
    "page": 1145,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1073,7 +1985,7 @@
    "titre": "Andropogon gayanus",
    "niveau": 4,
    "page": 1146,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1081,7 +1993,7 @@
    "titre": "L’arachide fourragère",
    "niveau": 4,
    "page": 1147,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1089,7 +2001,7 @@
    "titre": "Chamaecrista rotundifolia",
    "niveau": 4,
    "page": 1149,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1097,7 +2009,7 @@
    "titre": "Le dolique",
    "niveau": 4,
    "page": 1149,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1105,7 +2017,7 @@
    "titre": "L’herbe de Guinée",
    "niveau": 4,
    "page": 1150,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1113,7 +2025,7 @@
    "titre": "L’herbe de Para",
    "niveau": 4,
    "page": 1151,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1121,7 +2033,7 @@
    "titre": "L’herbe de Rhodes",
    "niveau": 4,
    "page": 1152,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1129,7 +2041,7 @@
    "titre": "La luzerne des Caraïbes",
    "niveau": 4,
    "page": 1153,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1137,7 +2049,7 @@
    "titre": "Le niébé",
    "niveau": 4,
    "page": 1154,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1145,7 +2057,7 @@
    "titre": "Le pois d’Angole",
    "niveau": 4,
    "page": 1155,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1153,7 +2065,7 @@
    "titre": "Le sorgho fourrager",
    "niveau": 4,
    "page": 1156,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1174,10 +2086,18 @@
   },
   {
    "num": "",
+   "titre": "Les principales fibres tropicales",
+   "niveau": 4,
+   "page": 1161,
+   "type": "section",
+   "axe": "12-4-cultures-plantes"
+  },
+  {
+   "num": "",
    "titre": "L’abaca",
    "niveau": 4,
    "page": 1163,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1185,7 +2105,7 @@
    "titre": "Le cotonnier",
    "niveau": 4,
    "page": 1164,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1193,7 +2113,7 @@
    "titre": "Le jute",
    "niveau": 4,
    "page": 1176,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1201,7 +2121,7 @@
    "titre": "Le kapokier",
    "niveau": 4,
    "page": 1177,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1209,7 +2129,7 @@
    "titre": "Le kenaf",
    "niveau": 4,
    "page": 1179,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1217,7 +2137,7 @@
    "titre": "La ramie",
    "niveau": 4,
    "page": 1180,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1225,7 +2145,7 @@
    "titre": "Le raphia",
    "niveau": 4,
    "page": 1181,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1233,7 +2153,7 @@
    "titre": "Le rônier",
    "niveau": 4,
    "page": 1182,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1241,7 +2161,7 @@
    "titre": "La roselle",
    "niveau": 4,
    "page": 1183,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1249,7 +2169,7 @@
    "titre": "Les rotins",
    "niveau": 4,
    "page": 1184,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1257,7 +2177,7 @@
    "titre": "Le sisal",
    "niveau": 4,
    "page": 1185,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1273,7 +2193,7 @@
    "titre": "Le guayule",
    "niveau": 4,
    "page": 1189,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1281,7 +2201,7 @@
    "titre": "L’hévéa",
    "niveau": 4,
    "page": 1191,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1297,7 +2217,7 @@
    "titre": "Derris elliptica",
    "niveau": 4,
    "page": 1203,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1305,7 +2225,15 @@
    "titre": "Le neem",
    "niveau": 4,
    "page": 1204,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-3-protection-cultures"
+  },
+  {
+   "num": "",
+   "titre": "Le pyrèthre",
+   "niveau": 4,
+   "page": 1205,
+   "type": "section",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1313,7 +2241,7 @@
    "titre": "Le tephrosia",
    "niveau": 4,
    "page": 1206,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-3-protection-cultures"
   },
   {
@@ -1329,7 +2257,7 @@
    "titre": "L’aleurite",
    "niveau": 4,
    "page": 1207,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1337,7 +2265,7 @@
    "titre": "L’arbre à encens",
    "niveau": 4,
    "page": 1208,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1345,7 +2273,7 @@
    "titre": "Le benjoin",
    "niveau": 4,
    "page": 1209,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1353,7 +2281,7 @@
    "titre": "Le camphrier",
    "niveau": 4,
    "page": 1209,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1361,7 +2289,7 @@
    "titre": "La citronnelle",
    "niveau": 4,
    "page": 1210,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1369,7 +2297,7 @@
    "titre": "L’eucalyptus citriodora",
    "niveau": 4,
    "page": 1211,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1377,7 +2305,7 @@
    "titre": "L’eucalyptus globulus",
    "niveau": 4,
    "page": 1211,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1385,7 +2313,7 @@
    "titre": "Le géranium",
    "niveau": 4,
    "page": 1212,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1393,7 +2321,7 @@
    "titre": "Le jojoba",
    "niveau": 4,
    "page": 1213,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1401,7 +2329,7 @@
    "titre": "Le karité",
    "niveau": 4,
    "page": 1214,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1409,7 +2337,7 @@
    "titre": "Le lemongrass",
    "niveau": 4,
    "page": 1216,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1417,7 +2345,7 @@
    "titre": "La myrrhe",
    "niveau": 4,
    "page": 1217,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1425,7 +2353,7 @@
    "titre": "Le patchouli",
    "niveau": 4,
    "page": 1217,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1433,7 +2361,7 @@
    "titre": "La pervenche de Madagascar",
    "niveau": 4,
    "page": 1218,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1441,7 +2369,7 @@
    "titre": "Le quinquina",
    "niveau": 4,
    "page": 1218,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1449,7 +2377,7 @@
    "titre": "Le ricin",
    "niveau": 4,
    "page": 1219,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1457,7 +2385,7 @@
    "titre": "Le vétiver",
    "niveau": 4,
    "page": 1223,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1465,7 +2393,7 @@
    "titre": "L’ylang-ylang",
    "niveau": 4,
    "page": 1224,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1481,7 +2409,7 @@
    "titre": "Acacia decurrens",
    "niveau": 4,
    "page": 1227,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1489,7 +2417,7 @@
    "titre": "Le bois de santal",
    "niveau": 4,
    "page": 1228,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1497,7 +2425,7 @@
    "titre": "Le campêche",
    "niveau": 4,
    "page": 1229,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1505,7 +2433,7 @@
    "titre": "Le henné",
    "niveau": 4,
    "page": 1229,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1513,7 +2441,7 @@
    "titre": "L’indigotier",
    "niveau": 4,
    "page": 1230,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1521,7 +2449,7 @@
    "titre": "Le palétuvier",
    "niveau": 4,
    "page": 1231,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1529,7 +2457,7 @@
    "titre": "Le rocouyer",
    "niveau": 4,
    "page": 1232,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-4-cultures-plantes"
   },
   {
@@ -1542,7 +2470,7 @@
   },
   {
    "num": "6",
-   "titre": "L’ÉLEVAGE",
+   "titre": "L’élevage",
    "niveau": 1,
    "page": 1241,
    "type": "sommaire",
@@ -1557,11 +2485,83 @@
    "axe": "12-5-elevage-sante-animale"
   },
   {
+   "num": "",
+   "titre": "La diversité des systèmes d’élevage",
+   "niveau": 3,
+   "page": 1243,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les définitions des systèmes d’élevage",
+   "niveau": 3,
+   "page": 1248,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les outils du diagnostic",
+   "niveau": 3,
+   "page": 1250,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les méthodes spécifiques",
+   "niveau": 3,
+   "page": 1255,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
    "num": "6.2",
    "titre": "Le diagnostic des systèmes d’alimentation",
    "niveau": 2,
    "page": 1271,
    "type": "sommaire",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "La démarche générale de diagnostic",
+   "niveau": 3,
+   "page": 1272,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’alimentation des ruminants sur parcours agro-sylvo-pastoraux",
+   "niveau": 3,
+   "page": 1275,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les systèmes prairiaux",
+   "niveau": 3,
+   "page": 1280,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’alimentation des ruminants en stabulation",
+   "niveau": 3,
+   "page": 1291,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les systèmes d’alimentation des monogastriques non herbivores",
+   "niveau": 3,
+   "page": 1296,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1573,11 +2573,75 @@
    "axe": "12-5-elevage-sante-animale"
   },
   {
+   "num": "",
+   "titre": "La viande et les produits carnés",
+   "niveau": 3,
+   "page": 1305,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les produits laitiers",
+   "niveau": 3,
+   "page": 1310,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les autres produits animaux",
+   "niveau": 3,
+   "page": 1313,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
    "num": "6.4",
    "titre": "L’élevage et l’environnement",
    "niveau": 2,
    "page": 1317,
    "type": "sommaire",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’évolution de la demande en produits animaux",
+   "niveau": 3,
+   "page": 1317,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage et le développement durable",
+   "niveau": 3,
+   "page": 1318,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les principaux impacts de l’élevage sur l’environnement",
+   "niveau": 3,
+   "page": 1318,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les risques environnementaux",
+   "niveau": 3,
+   "page": 1320,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les outils d’aide à la décision",
+   "niveau": 3,
+   "page": 1327,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1589,6 +2653,14 @@
    "axe": "12-5-elevage-sante-animale"
   },
   {
+   "num": "",
+   "titre": "Les principes de l’amélioration de la gestion des troupeaux",
+   "niveau": 3,
+   "page": 1329,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
    "num": "6.6",
    "titre": "La santé animale",
    "niveau": 2,
@@ -1597,8 +2669,48 @@
    "axe": "12-5-elevage-sante-animale"
   },
   {
+   "num": "",
+   "titre": "Le diagnostic sanitaire",
+   "niveau": 3,
+   "page": 1359,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "Les maladies et les stratégies de lutte",
+   "niveau": 3,
+   "page": 1362,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "La santé animale et la santé publique",
+   "niveau": 3,
+   "page": 1382,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’hygiène et la prophylaxie",
+   "niveau": 3,
+   "page": 1386,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’économie de la santé animale",
+   "niveau": 3,
+   "page": 1390,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
    "num": "7",
-   "titre": "ZOOTECHNIE SPÉCIALE",
+   "titre": "Zootechnie spéciale",
    "niveau": 1,
    "page": 1395,
    "type": "sommaire",
@@ -1622,10 +2734,26 @@
   },
   {
    "num": "",
+   "titre": "Les performances génétiques",
+   "niveau": 4,
+   "page": 1399,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
    "titre": "L’alimentation des ruminants",
    "niveau": 4,
    "page": 1402,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "La reproduction",
+   "niveau": 4,
+   "page": 1421,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1633,7 +2761,7 @@
    "titre": "Le logement des ruminants",
    "niveau": 4,
    "page": 1428,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1649,7 +2777,7 @@
    "titre": "L’élevage bovin laitier",
    "niveau": 4,
    "page": 1431,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1657,7 +2785,15 @@
    "titre": "L’élevage des bovins à viande",
    "niveau": 4,
    "page": 1441,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage des bovins de trait",
+   "niveau": 4,
+   "page": 1450,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1670,10 +2806,26 @@
   },
   {
    "num": "",
+   "titre": "L’élevage ovin",
+   "niveau": 4,
+   "page": 1461,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage caprin",
+   "niveau": 4,
+   "page": 1467,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
    "titre": "L’élevage camélin",
    "niveau": 4,
    "page": 1471,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1689,7 +2841,15 @@
    "titre": "L’élevage des équidés",
    "niveau": 4,
    "page": 1477,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage des lapins",
+   "niveau": 4,
+   "page": 1481,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1710,10 +2870,18 @@
   },
   {
    "num": "",
+   "titre": "Les races, les souches, les croisements",
+   "niveau": 4,
+   "page": 1491,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
    "titre": "Les performances",
    "niveau": 4,
    "page": 1493,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1721,7 +2889,15 @@
    "titre": "Les bâtiments et le matériel",
    "niveau": 4,
    "page": 1493,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’alimentation",
+   "niveau": 4,
+   "page": 1497,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1729,7 +2905,23 @@
    "titre": "Les pathologies et l’hygiène",
    "niveau": 4,
    "page": 1503,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "La conduite et la gestion des animaux",
+   "niveau": 4,
+   "page": 1520,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage porcin traditionnel",
+   "niveau": 4,
+   "page": 1525,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1745,7 +2937,23 @@
    "titre": "L’aviculture de type intensif",
    "niveau": 4,
    "page": 1533,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’aviculture traditionnelle",
+   "niveau": 4,
+   "page": 1559,
+   "type": "section",
+   "axe": "12-5-elevage-sante-animale"
+  },
+  {
+   "num": "",
+   "titre": "L’élevage des autres espèces avicoles",
+   "niveau": 4,
+   "page": 1569,
+   "type": "section",
    "axe": "12-5-elevage-sante-animale"
   },
   {
@@ -1766,10 +2974,34 @@
   },
   {
    "num": "",
+   "titre": "La production piscicole dans le monde",
+   "niveau": 4,
+   "page": 1575,
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
    "titre": "Les différents types de pisciculture",
    "niveau": 4,
    "page": 1577,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "Les principales espèces piscicoles",
+   "niveau": 4,
+   "page": 1580,
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "La gestion des élevages piscicoles",
+   "niveau": 4,
+   "page": 1588,
+   "type": "section",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -1777,7 +3009,23 @@
    "titre": "Les aménagements piscicoles",
    "niveau": 4,
    "page": 1606,
-   "type": "fiche",
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "Des points sensibles lors de la conception",
+   "niveau": 4,
+   "page": 1608,
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "Les données socio-économiques",
+   "niveau": 4,
+   "page": 1613,
+   "type": "section",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -1785,7 +3033,7 @@
    "titre": "Les perspectives de développement de l’aquaculture d’eau douce",
    "niveau": 4,
    "page": 1617,
-   "type": "fiche",
+   "type": "section",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
@@ -1798,15 +3046,39 @@
   },
   {
    "num": "",
-   "titre": "Le mini-élevage",
+   "titre": "Quelques repères",
    "niveau": 4,
-   "page": 1631,
-   "type": "fiche",
+   "page": 1621,
+   "type": "section",
    "axe": "12-6-pisciculture-petits-elevages"
   },
   {
    "num": "",
-   "titre": "ANNEXES",
+   "titre": "Les élevages extensifs de faune : le game ranching",
+   "niveau": 4,
+   "page": 1626,
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "Le mini-élevage",
+   "niveau": 4,
+   "page": 1631,
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "Les autres élevages intensifs",
+   "niveau": 4,
+   "page": 1640,
+   "type": "section",
+   "axe": "12-6-pisciculture-petits-elevages"
+  },
+  {
+   "num": "",
+   "titre": "Annexes",
    "niveau": 1,
    "page": 1651,
    "type": "sommaire",
