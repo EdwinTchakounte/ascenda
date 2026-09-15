@@ -20,26 +20,40 @@ router = APIRouter(prefix="/axes", tags=["Axes"])
 # n'invite pas l'utilisateur dans une impasse.
 _AXE_SQL = """
 select a.id, a.slug, a.label, a.description, a.sort_order, a.is_premium,
+       pa.slug                                as pole_slug,
+       pa.label                               as pole_label,
        count(d.id)                            as nb_ouvrages,
-       coalesce(sum(d.page_count), 0)         as nb_pages,
-       coalesce(sum(p.reading_time_min), 0)   as minutes_lecture,
+       coalesce(sum(coalesce(u.pages, d.page_count)), 0) as nb_pages,
+       coalesce(sum(coalesce(u.minutes, p.reading_time_min)), 0) as minutes_lecture,
        coalesce(sum(u.n), 0)                  as chapitres_utiles,
        count(d.id) filter (where u.n > 0)     as ouvrages_exploitables
 from axis a
+left join axis pa             on pa.id = a.parent_id
 left join document_axis da    on da.axis_id = a.id
 left join document d          on d.id = da.document_id and d.takedown_status = 'none'
 left join document_pedagogy p on p.document_id = d.id
+-- Un ouvrage borné à certains chapitres pour cet axe (axis_chapter) ne compte
+-- que ceux-là : pages, durée et chapitres. Sans bornes, l'ouvrage entier.
 left join lateral (
-  select count(*) as n from chapter c
-   where c.document_id = d.id and coalesce(c.token_count, 0) >= 300
+  select count(*) filter (where coalesce(c.token_count, 0) >= 300) as n,
+         case when bool_or(b.borne) then sum(greatest(c.page_end - c.page_start + 1, 0)) end as pages,
+         case when bool_or(b.borne) then round(sum(coalesce(c.token_count, 0)) * 0.75 / 200) end as minutes
+    from chapter c
+    cross join lateral (select exists (select 1 from axis_chapter ac join chapter c2 on c2.id = ac.chapter_id
+                                        where ac.axis_id = a.id and c2.document_id = d.id) as borne) b
+   where c.document_id = d.id
+     and (not b.borne or exists (select 1 from axis_chapter ac where ac.axis_id = a.id and ac.chapter_id = c.id))
 ) u on true
 where a.slug not like '\\_%'
-group by a.id
+  -- Un pôle regroupe des sous-axes et n'a pas d'ouvrage à lui : il n'est pas un
+  -- parcours. Ses sous-axes le nomment dans `pole`.
+  and not exists (select 1 from axis enfant where enfant.parent_id = a.id)
+group by a.id, pa.slug, pa.label
 order by a.sort_order, a.label
 """
 
 
-@router.get("", summary="Liste des 11 axes")
+@router.get("", summary="Les axes, avec leur pôle")
 async def lister_axes(user: OptionalUser):
     lignes = await fetch_all(_AXE_SQL)
     return [
@@ -49,6 +63,7 @@ async def lister_axes(user: OptionalUser):
             "label": l["label"],
             "description": l["description"],
             "premium": l["is_premium"],
+            "pole": {"slug": l["pole_slug"], "label": l["pole_label"]} if l["pole_slug"] else None,
             "nb_ouvrages": l["nb_ouvrages"],
             "nb_pages": int(l["nb_pages"] or 0),
             "duree_estimee_min": int(l["minutes_lecture"] or 0),

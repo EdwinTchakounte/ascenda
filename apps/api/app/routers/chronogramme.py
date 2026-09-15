@@ -228,7 +228,7 @@ async def creer(data: ChronogrammeIn, user: CurrentUser):
     ouvrages = await planner.ouvrages_de_l_axe(str(axe["id"]), niveau)
     if not ouvrages:
         raise NotFound("Aucun ouvrage exploitable dans cet axe pour le moment.")
-    chapitres = await planner.chapitres_de_plusieurs([str(o["id"]) for o in ouvrages])
+    chapitres = await planner.chapitres_de_plusieurs([str(o["id"]) for o in ouvrages], str(axe["id"]))
 
     seances, justification = planner.construire(
         ouvrages, chapitres,

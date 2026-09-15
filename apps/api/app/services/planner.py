@@ -66,7 +66,11 @@ async def ouvrages_de_l_axe(axis_id: str, niveau: str | None) -> list[dict]:
                   p.level, p.doc_type_norm, p.reading_time_min, p.central_thesis,
                   da.weight,
                   (select count(*) from chapter c
-                    where c.document_id = d.id and coalesce(c.token_count, 0) >= %s) as nb_chapitres
+                    where c.document_id = d.id and coalesce(c.token_count, 0) >= %s
+                      and (not exists (select 1 from axis_chapter ac join chapter c2 on c2.id = ac.chapter_id
+                                        where ac.axis_id = da.axis_id and c2.document_id = d.id)
+                           or exists (select 1 from axis_chapter ac
+                                       where ac.axis_id = da.axis_id and ac.chapter_id = c.id))) as nb_chapitres
            from document_axis da
            join document d on d.id = da.document_id
            left join document_pedagogy p on p.document_id = d.id
@@ -86,8 +90,13 @@ async def ouvrages_de_l_axe(axis_id: str, niveau: str | None) -> list[dict]:
     return [o for o in sorted(lignes, key=cle) if o["nb_chapitres"] > 0]
 
 
-async def chapitres_de_plusieurs(document_ids: list[str]) -> dict[str, list[dict]]:
+async def chapitres_de_plusieurs(document_ids: list[str], axis_id: str | None = None) -> dict[str, list[dict]]:
     """Les chapitres de plusieurs ouvrages en une seule requête.
+
+    Avec `axis_id`, un ouvrage borné à certains chapitres pour cet axe
+    (`axis_chapter`) ne donne que ceux-là : le Mémento de l'agronome nourrit six
+    sous-axes, chacun avec sa part du livre. Un ouvrage sans bornes pour l'axe
+    donne tous ses chapitres, comme avant.
 
     Charger ouvrage par ouvrage faisait dix-huit allers-retours pour un axe de
     dix-sept titres. Avec 3 870 chapitres exploitables au corpus, cela chiffrait
@@ -98,6 +107,9 @@ async def chapitres_de_plusieurs(document_ids: list[str]) -> dict[str, list[dict
     lignes = await fetch_all(
         """select c.document_id, c.id, c.ord, c.title, c.page_start, c.page_end,
                   c.token_count,
+                  (%s::uuid is not null and exists (
+                      select 1 from axis_chapter ac join chapter c2 on c2.id = ac.chapter_id
+                       where ac.axis_id = %s::uuid and c2.document_id = c.document_id)) as borne,
                   (select dv.id from derivative dv
                     where dv.chapter_id = c.id and dv.kind = 'quiz'
                       and dv.superseded_by is null
@@ -106,6 +118,10 @@ async def chapitres_de_plusieurs(document_ids: list[str]) -> dict[str, list[dict
              from chapter c
             where c.document_id = any(%s)
               and coalesce(c.token_count, 0) >= %s
+              and (%s::uuid is null
+                   or not exists (select 1 from axis_chapter ac join chapter c2 on c2.id = ac.chapter_id
+                                   where ac.axis_id = %s::uuid and c2.document_id = c.document_id)
+                   or exists (select 1 from axis_chapter ac where ac.axis_id = %s::uuid and ac.chapter_id = c.id))
               and not exists (
                     select 1 from derivative dv
                      where dv.chapter_id = c.id and dv.kind = 'quiz'
@@ -113,7 +129,7 @@ async def chapitres_de_plusieurs(document_ids: list[str]) -> dict[str, list[dict
                        and jsonb_array_length(dv.content->'questions') = 0
                        and dv.content ? 'motif')
             order by c.document_id, c.ord""",
-        (document_ids, TOKENS_MIN_CHAPITRE),
+        (axis_id, axis_id, document_ids, TOKENS_MIN_CHAPITRE, axis_id, axis_id, axis_id),
     )
     par_doc: dict[str, list[dict]] = {d: [] for d in document_ids}
     for l in lignes:
@@ -245,6 +261,18 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
     """
     plancher = max(5, round(duree_seance * SEANCE_MIN_RATIO))
 
+    def contigus(a: dict, b: dict) -> bool:
+        """Deux unités qui se suivent dans le livre. Un axe borné à certains
+        chapitres (le Mémento de l'agronome) laisse des trous : fusionner par-dessus
+        ferait lire « p. 713 à 1206 » pour une demi-heure."""
+        # Seuls les ouvrages bornés ont des trous. Ailleurs, l'ordre des chapitres
+        # ne suit pas toujours celui des pages, et la fusion reste celle d'avant.
+        if not (a.get("borne") and b.get("borne")):
+            return True
+        if a["page_end"] is None or b["page_start"] is None:
+            return True
+        return a["page_start"] - 3 <= b["page_start"] <= a["page_end"] + 3
+
     def absorber(cible: dict, u: dict) -> None:
         cible["minutes"] += u["minutes"]
         cible["page_end"] = u["page_end"] or cible["page_end"]
@@ -258,7 +286,8 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
     fusionnees: list[dict] = []
     for u in unites:
         precedente = fusionnees[-1] if fusionnees else None
-        meme_livre = precedente is not None and precedente["document_id"] == u["document_id"]
+        meme_livre = (precedente is not None and precedente["document_id"] == u["document_id"]
+                      and contigus(precedente, u))
         entiers = precedente is not None and not precedente.get("fraction") and not u.get("fraction")
         if meme_livre and entiers and (
             precedente["minutes"] + u["minutes"] <= duree_seance * 1.15
@@ -277,7 +306,7 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
         suivante = fusionnees[i + 1] if i + 1 < len(fusionnees) else None
         if (
             u["minutes"] < plancher and suivante is not None
-            and suivante["document_id"] == u["document_id"]
+            and suivante["document_id"] == u["document_id"] and contigus(u, suivante)
             and u["minutes"] + suivante["minutes"] <= duree_seance * 1.7
         ):
             fusion = dict(u)
@@ -300,7 +329,7 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
         precedente = resultat[-1] if resultat else None
         if (
             fin_de_livre and u["minutes"] < plancher and precedente is not None
-            and precedente["document_id"] == u["document_id"]
+            and precedente["document_id"] == u["document_id"] and contigus(precedente, u)
             and precedente["minutes"] + u["minutes"] <= duree_seance * 1.5
         ):
             if precedente.get("fraction") or u.get("fraction"):
@@ -343,6 +372,7 @@ def construire(
                         "chapitre": ch["title"],
                         "quiz_id": str(ch["quiz_id"]) if ch["quiz_id"] else None,
                         "lecture_integrale": o["redistributable"],
+                        "borne": bool(ch.get("borne")),
                         **part,
                     }
                 )

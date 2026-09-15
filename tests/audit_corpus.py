@@ -124,10 +124,14 @@ async def main(ecrire: bool) -> int:
          "séances de 30 min, sans échéance.")
     dire()
     densite = {str(d["id"]): (d["jetons"] or 0) / max(1, d["page_count"] or 1) for d in docs}
-    axes = await fetch_all("select id, slug, label from axis where slug not like '\\_%%' order by sort_order")
+    # Un pôle regroupe des sous-axes et n'est pas un parcours : on simule ses sous-axes,
+    # chacun borné à ses chapitres (axis_chapter), comme le fait l'API.
+    axes = await fetch_all("""select id, slug, label from axis a where slug not like '\\_%%'
+                                 and not exists (select 1 from axis e where e.parent_id = a.id)
+                               order by sort_order""")
     for a in axes:
         ouvrages = await planner.ouvrages_de_l_axe(str(a["id"]), "intermediaire")
-        chaps = await planner.chapitres_de_plusieurs([str(o["id"]) for o in ouvrages])
+        chaps = await planner.chapitres_de_plusieurs([str(o["id"]) for o in ouvrages], str(a["id"]))
         seances, justification = planner.construire(
             ouvrages, chaps, debut=date(2026, 9, 14), fin=None, minutes_semaine=150, duree_seance=30)
         defauts = Counter()
