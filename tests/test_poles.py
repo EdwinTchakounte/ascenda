@@ -64,6 +64,11 @@ async def main():
                 """select a.slug from chapter c join axis_chapter ac on ac.chapter_id = c.id join axis a on a.id = ac.axis_id
                     where c.document_id = %s and c.title = %s""", (D, titre))
             ok(f"« {titre} » est une section de {slug}", r and r["slug"] == slug, r)
+        parties = {c["num"]: c["axe"] for c in STRUCTURE["chapitres"] if c["niveau"] == 1 and c["num"]}
+        attendu = {"1": "12-1-developpement-rural", "2": "12-1-developpement-rural", "3": "12-2-agronomie-exploitation",
+                   "4": "12-2-agronomie-exploitation", "5": "12-4-cultures-plantes", "6": "12-5-elevage-sante-animale",
+                   "7": "12-5-elevage-sante-animale"}
+        ok("chaque partie du livre est dans le bon sous-axe", parties == attendu, parties)
         orphelins = await fetch_one("select count(*) as n, max(page_end) as fin from chunk where document_id = %s and chapter_id is null", (D,))
         ok("seules les pages de garde n'ont pas de chapitre", (orphelins["fin"] or 0) <= 12, orphelins)
 
@@ -82,6 +87,15 @@ async def main():
            b.get("total") if s == 200 else s)
         s, b2 = call("GET", "/v1/bibliotheque?axe=12-3-protection-cultures&par_page=5")
         ok("et par sous-axe", s == 200 and b2["total"] >= 1, b2.get("total") if s == 200 else s)
+        s, det = call("GET", "/v1/axes/12-3-protection-cultures")
+        per = det["ouvrages"][0]["perimetre"] if s == 200 else {}
+        noms = [x["titre"] for x in per.get("sections", [])]
+        ok("la fiche d'axe donne la part lue, pas le livre", per.get("pages") == prot.get("nb_pages"), per.get("pages"))
+        ok("… et ses sections, titre du chapitre compris", "La lutte contre les mauvaises herbes" in noms
+           and "Le diagnostic phytosanitaire" in noms, noms)
+        s, el = call("GET", "/v1/axes/12-5-elevage-sante-animale")
+        ok("l'élevage ne contient pas l'agriculture générale",
+           not any(x["titre"] == "Agriculture générale" for x in el["ouvrages"][0]["perimetre"]["sections"]))
         total = sum(a["nb_pages"] for a in sous)
         ok("les six parts ne dépassent pas le livre", total <= doc["page_count"], f"{total} pages")
 

@@ -99,12 +99,15 @@ async def detail_axe(slug: str, user: OptionalUser):
            order by da.weight desc, p.level nulls last, titre""",
         (axe["id"],),
     )
+    perimetres = await _perimetres(axe["id"])
+    pole = await fetch_one("select slug, label from axis where id = %s", (axe["parent_id"],)) if axe["parent_id"] else None
     return {
         "id": str(axe["id"]),
         "slug": axe["slug"],
         "label": axe["label"],
         "description": axe["description"],
         "premium": axe["is_premium"],
+        "pole": {"slug": pole["slug"], "label": pole["label"]} if pole else None,
         "ouvrages": [
             {
                 "id": str(o["id"]),
@@ -116,7 +119,65 @@ async def detail_axe(slug: str, user: OptionalUser):
                 "type": o["doc_type"],
                 "duree_min": o["reading_time_min"],
                 "lecture_integrale": o["redistributable"],
+                # Un ouvrage borné pour cet axe : ce qu'il en lit, pas le livre entier.
+                "perimetre": perimetres.get(str(o["id"])),
             }
             for o in ouvrages
         ],
     }
+
+
+# En deçà, une liste de sections ne dit pas grand-chose : on descend d'un niveau.
+SECTIONS_MIN = 6
+
+
+async def _perimetres(axis_id) -> dict[str, dict]:
+    """La part de chaque ouvrage borné qu'un axe lit : pages, durée et sections.
+
+    Les sections montrées sont les plus hautes du périmètre ; tant qu'elles sont
+    moins de six, on descend d'un niveau, pour que « Élevage et santé animale »
+    montre « L'élevage bovin », « L'aviculture »… plutôt que « Zootechnie
+    spéciale » seule.
+    """
+    lignes = await fetch_all(
+        """select c.document_id, c.id, c.parent_id, c.ord, c.title, c.page_start, c.page_end,
+                  coalesce(c.token_count, 0) as jetons
+             from axis_chapter ac join chapter c on c.id = ac.chapter_id
+            where ac.axis_id = %s
+            order by c.document_id, c.ord""",
+        (axis_id,),
+    )
+    par_doc: dict[str, list[dict]] = {}
+    for l in lignes:
+        par_doc.setdefault(str(l["document_id"]), []).append(l)
+    resultat = {}
+    for doc, chapitres in par_doc.items():
+        ids = {c["id"] for c in chapitres}
+        enfants: dict = {}
+        for c in chapitres:
+            if c["parent_id"] in ids:
+                enfants.setdefault(c["parent_id"], []).append(c)
+
+        def descendants(c) -> int:
+            return sum(1 + descendants(e) for e in enfants.get(c["id"], []))
+
+        niveau = [c for c in chapitres if c["parent_id"] not in ids]
+        # On ne remplace une section que par au moins deux sous-sections : une
+        # seule effacerait le titre qui dit ce qu'on lit (« La lutte contre les
+        # mauvaises herbes » devenait « La maîtrise de l'enherbement »).
+        while len(niveau) < SECTIONS_MIN and any(len(enfants.get(c["id"], [])) >= 2 for c in niveau):
+            niveau = [e for c in niveau for e in (enfants[c["id"]] if len(enfants.get(c["id"], [])) >= 2 else [c])]
+        pages = set()
+        for c in chapitres:
+            if c["page_start"]:
+                pages.update(range(c["page_start"], max(c["page_end"] or c["page_start"], c["page_start"]) + 1))
+        resultat[doc] = {
+            "pages": len(pages),
+            "duree_min": round(sum(c["jetons"] for c in chapitres) * 0.75 / 200),
+            "sections": [
+                {"chapitre_id": str(c["id"]), "titre": c["title"], "page_debut": c["page_start"],
+                 "page_fin": max(c["page_end"] or c["page_start"], c["page_start"]), "sous_sections": descendants(c)}
+                for c in niveau
+            ],
+        }
+    return resultat

@@ -63,7 +63,10 @@ def casse(titre: str) -> str:
 def lire_sommaire(doc) -> list[dict]:
     texte = "\n".join(l.strip() for p in PAGES_SOMMAIRE for l in doc[p].get_text().splitlines())
     entrees = []
-    motif = r"^((?:\d\s?\.?\s?)+\d?\.?|INTRODUCTION|ANNEXES)\s*(.*?)\s*(?:\.\s?){3,}\s*\n?\s*(\d{1,4})\s*$"
+    # Des espaces et non `\s` dans le numéro : `\s` franchit les lignes, et le folio
+    # « 6 » en bas d'une page du sommaire se collait au « 4 » de la partie
+    # suivante, qui devenait « 64 » et partait dans l'élevage.
+    motif = r"^((?:\d[ \t]?\.?[ \t]?)+\d?\.?|INTRODUCTION|ANNEXES)[ \t]*(.*?)\s*(?:\.\s?){3,}\s*\n?\s*(\d{1,4})\s*$"
     for num, titre, page in re.findall(motif, texte, re.M):
         n = re.sub(r"\s", "", num).rstrip(".")
         if n == "43":                      # « 4 3. Modifier les itinéraires techniques »
@@ -133,6 +136,9 @@ def main() -> None:
     sommaire = lire_sommaire(doc)
     if len(sommaire) != 89:
         sys.exit(f"Sommaire : {len(sommaire)} entrées lues, 89 attendues. Rien n'est écrit.")
+    mal_formes = [e for e in sommaire if e["num"] and not re.fullmatch(r"(A[1-4]|[1-7](\.\d){0,2})", e["num"])]
+    if mal_formes:
+        sys.exit(f"Numéros de sommaire mal lus : {[(e['num'], e['titre']) for e in mal_formes]}. Rien n'est écrit.")
     tout = sorted(sommaire + sections(doc, sommaire), key=lambda e: (e["page"], e["type"] != "sommaire", e["niveau"]))
     for e in tout:
         num = e["num"] if e["type"] == "sommaire" else e.pop("_parent")

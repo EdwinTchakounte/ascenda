@@ -54,8 +54,12 @@ class EcranAxe extends ConsumerWidget {
                 if (ra != rb) return ra.compareTo(rb);
                 return (a['pages'] as int? ?? 0).compareTo(b['pages'] as int? ?? 0);
               });
-            final pages = ouvrages.fold<int>(0, (s, o) => s + (o['pages'] as int? ?? 0));
-            final minutes = ouvrages.fold<int>(0, (s, o) => s + (o['duree_min'] as int? ?? 0));
+            // Un ouvrage borné (le Mémento de l'agronome dans « Protection des
+            // cultures ») compte pour la part que l'axe en lit, pas pour ses 1 698 pages.
+            int part(Map<String, dynamic> o, String cle, String cleLivre) =>
+                (o['perimetre'] as Map?)?[cle] as int? ?? o[cleLivre] as int? ?? 0;
+            final pages = ouvrages.fold<int>(0, (s, o) => s + part(o, 'pages', 'pages'));
+            final minutes = ouvrages.fold<int>(0, (s, o) => s + part(o, 'duree_min', 'duree_min'));
 
             return ListView(
               padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
@@ -146,13 +150,18 @@ class _LigneOuvrage extends StatelessWidget {
     final t = Theme.of(context);
     final o = ouvrage;
     final auteurs = ((o['auteurs'] as List?) ?? []).join(', ');
+    final perimetre = o['perimetre'] as Map<String, dynamic>?;
+    final sections = ((perimetre?['sections'] as List?) ?? []).cast<Map<String, dynamic>>();
     final details = [
       ?niveau,
-      if (o['pages'] != null) '${o['pages']} pages',
+      if (perimetre != null)
+        '${perimetre['pages']} pages lues sur ${o['pages']}'
+      else if (o['pages'] != null)
+        '${o['pages']} pages',
       if (o['lecture_integrale'] == false) 'extraits',
     ].join('  ·  ');
 
-    return Padding(
+    final ligne = Padding(
       padding: const EdgeInsets.only(bottom: 2),
       child: ListTile(
         contentPadding: EdgeInsets.zero,
@@ -175,6 +184,47 @@ class _LigneOuvrage extends StatelessWidget {
         ),
         onTap: () => context.push('/ouvrage/${o['id']}'),
       ),
+    );
+    if (sections.isEmpty) return ligne;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        ligne,
+        Padding(
+          padding: const EdgeInsets.only(left: 42, bottom: 8),
+          child: Texte('Ce que ce parcours en lit',
+              style: t.textTheme.labelLarge?.copyWith(color: Couleurs.orTexte)),
+        ),
+        for (final sec in sections)
+          InkWell(
+            onTap: () => context.push(
+              '/lecture/${o['id']}/${sec['chapitre_id']}'
+              '?page_debut=${sec['page_debut']}&page_fin=${sec['page_fin']}',
+            ),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(42, 7, 0, 7),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Expanded(
+                    child: Texte('${sec['titre']}', style: t.textTheme.bodyMedium),
+                  ),
+                  const SizedBox(width: 10),
+                  Texte(
+                    (sec['sous_sections'] as int? ?? 0) > 0
+                        ? '${sec['sous_sections']} section${sec['sous_sections'] == 1 ? '' : 's'}'
+                        : 'p. ${sec['page_debut']}',
+                    style: t.textTheme.bodySmall?.copyWith(
+                      color: Couleurs.grisChaud,
+                      fontFeatures: const [FontFeature.tabularFigures()],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        const SizedBox(height: 10),
+      ],
     );
   }
 }

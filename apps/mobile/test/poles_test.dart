@@ -11,7 +11,9 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:ascenda/api/client.dart';
 import 'package:ascenda/api/modeles.dart';
+import 'package:ascenda/ecrans/axe.dart';
 import 'package:ascenda/ecrans/bibliotheque.dart';
+import 'package:ascenda/etat/fournisseurs.dart';
 import 'package:ascenda/etat/session.dart';
 import 'package:ascenda/theme/theme.dart';
 
@@ -120,5 +122,53 @@ void main() {
     await t.pumpAndSettle();
     expect(client.filtres.last, '12-agriculture-elevage');
     expect(t.takeException(), isNull);
+  });
+
+  testWidgets("la fiche d'un sous-axe montre la part du livre qu'il lit", (t) async {
+    t.view.physicalSize = const Size(360, 780);
+    t.view.devicePixelRatio = 1;
+    addTearDown(t.view.reset);
+    final detail = {
+      'slug': '12-3-protection-cultures',
+      'label': 'Protection des cultures',
+      'description': 'Reconnaître maladies, ravageurs et mauvaises herbes, et choisir une lutte raisonnée.',
+      'pole': {'slug': '12-agriculture-elevage', 'label': 'Agriculture et élevage'},
+      'ouvrages': [
+        {
+          'id': 'd1',
+          'titre': "Mémento de l'agronome",
+          'auteurs': ['CIRAD', 'GRET', 'Ministère des Affaires étrangères'],
+          'pages': 1698,
+          'duree_min': 5443,
+          'lecture_integrale': false,
+          'perimetre': {
+            'pages': 58,
+            'duree_min': 214,
+            'sections': [
+              {'chapitre_id': 'c1', 'titre': 'La lutte contre les mauvaises herbes', 'page_debut': 667, 'page_fin': 675, 'sous_sections': 1},
+              {'chapitre_id': 'c2', 'titre': 'Le diagnostic phytosanitaire', 'page_debut': 692, 'page_fin': 692, 'sous_sections': 0},
+              {'chapitre_id': 'c3', 'titre': 'L’utilisation des pesticides', 'page_debut': 707, 'page_fin': 720, 'sous_sections': 0},
+            ],
+          },
+        },
+      ],
+    };
+    await t.pumpWidget(ProviderScope(
+      overrides: [
+        clientApiProvider.overrideWithValue(_ClientFaux()),
+        axeProvider('12-3-protection-cultures').overrideWith((ref) async => detail),
+      ],
+      child: MaterialApp(theme: ThemeAscenda.clair, home: const EcranAxe(slug: '12-3-protection-cultures')),
+    ));
+    await t.pumpAndSettle();
+
+    expect(texte('58'), findsOneWidget, reason: 'les pages lues, pas les 1 698 du livre');
+    expect(texte('4 h'), findsOneWidget, reason: '214 minutes, pas 90 heures');
+    expect(texteContenant('58 pages lues sur 1698'), findsOneWidget);
+    expect(texte('Ce que ce parcours en lit'), findsOneWidget);
+    expect(texte('Le diagnostic phytosanitaire'), findsOneWidget);
+    expect(texte('p. 692'), findsOneWidget);
+    expect(texte('1 section'), findsOneWidget, reason: 'au singulier');
+    expect(t.takeException(), isNull, reason: 'rien ne déborde à 360 pixels');
   });
 }
