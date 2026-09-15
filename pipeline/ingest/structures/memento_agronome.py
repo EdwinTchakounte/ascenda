@@ -49,6 +49,9 @@ PROPRES = {
 
 
 def plier(s: str) -> str:
+    # L'apostrophe courbe disparaîtrait à la conversion ASCII et collerait les mots
+    # (« lalimentation ») : on la remplace d'abord par une espace.
+    s = s.replace("’", " ").replace("'", " ")
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s)).strip()
 
@@ -58,6 +61,18 @@ def casse(titre: str) -> str:
     bas = titre.lower()
     bas = re.sub(r"[a-zà-ÿœ\-]+", lambda m: PROPRES.get(m.group(0), m.group(0)), bas)
     return bas[0].upper() + bas[1:]
+
+
+# Des titres de section qui ne disent rien hors de leur chapitre : dans un plan
+# ou une recherche, « Quelques définitions » revient deux fois sans qu'on sache de
+# quoi. On les préfixe du titre de leur parent : « Le crédit rural : quelques
+# définitions ».
+GENERIQUES = {"quelques definitions", "les definitions", "des definitions utiles", "les maladies",
+              "l alimentation", "la reproduction", "les performances", "quelques reperes"}
+
+
+# Un parent lui-même générique ne nomme rien : on remonte d'un cran.
+PORTEURS = {"Les caractéristiques générales": "Les cultures fourragères"}
 
 
 def lire_sommaire(doc) -> list[dict]:
@@ -102,7 +117,11 @@ def sections(doc, sommaire: list[dict]) -> list[dict]:
                 continue
             if plier(titre) in plier(parent["titre"]) and abs(parent["page"] - (pi + 1)) <= 2:
                 continue                    # le titre du chapitre répété en tête
-            trouvees.append({"num": "", "titre": casse(titre), "niveau": parent["niveau"] + 1,
+            lisible = casse(titre)
+            if plier(titre) in GENERIQUES:
+                porteur = PORTEURS.get(parent["titre"], parent["titre"])
+                lisible = f"{porteur} : {lisible[0].lower()}{lisible[1:]}"
+            trouvees.append({"num": "", "titre": lisible, "niveau": parent["niveau"] + 1,
                              "page": pi + 1, "type": "section", "_parent": parent["num"]})
     return trouvees
 

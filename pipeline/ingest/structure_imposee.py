@@ -60,6 +60,11 @@ def appliquer(conn, doc_id, structure: dict) -> dict:
         if len(ids) != len(chapitres_json):
             raise SystemExit(f"{len(ids)} chapitres en base pour {len(chapitres_json)} décrits : rien n'est rattaché.")
 
+        # Les titres relus : la structure peut les corriger sans réingérer.
+        for cid, c in zip(ids, chapitres_json):
+            cur.execute("update chapter set title = %s where id = %s and title is distinct from %s",
+                        (c["titre"], cid, c["titre"]))
+
         # La hiérarchie : chaque chapitre a pour parent le dernier de niveau inférieur.
         pile: list[tuple[int, object]] = []
         for cid, c in zip(ids, chapitres_json):
