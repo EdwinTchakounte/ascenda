@@ -7,6 +7,7 @@ import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
+import 'ui.dart';
 
 /// Le bloc de téléchargement d'un ouvrage.
 ///
@@ -115,97 +116,129 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final packs = ref.watch(packsProvider);
     final local = packs.maybeWhen(
       data: (m) => m[widget.documentId],
       orElse: () => null,
     );
+    final garde = local != null;
+    final teinte = garde ? p.succes : p.accentTexte;
 
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: t.colorScheme.surface,
-        borderRadius: BorderRadius.zero,
-        border: Border.all(
-          color: local != null
-              ? Couleurs.sauge.withValues(alpha: 0.4)
-              : (t.dividerTheme.color ?? Couleurs.traitClair),
-        ),
-      ),
+    return Surface(
+      padding: EdgeInsets.zero,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Row(
-            children: [
-              Icon(
-                local != null ? Icons.offline_pin_rounded : Icons.download_rounded,
-                size: 20,
-                color: local != null ? Couleurs.sauge : Couleurs.orTexte,
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Texte(
-                  local != null ? 'Disponible hors ligne' : 'Emporter cet ouvrage',
-                  style: t.textTheme.titleMedium?.copyWith(fontSize: 15),
+          // Un bandeau teinté en tête : vert quand l'ouvrage est déjà sur le
+          // téléphone, doré quand il reste à emporter. L'état se lit avant le
+          // texte.
+          Container(
+            padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+            color: teinte.withValues(alpha: p.sombre ? 0.14 : 0.08),
+            child: Row(
+              children: [
+                IconePastille(
+                  garde ? Icons.offline_pin_rounded : Icons.download_for_offline_rounded,
+                  couleur: teinte,
+                  taille: 44,
                 ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Texte(
-            local != null
-                ? "${local.compteurs['chapitres'] ?? 0} chapitres, "
-                    "${local.compteurs['citations'] ?? 0} citations, "
-                    "${local.compteurs['questions'] ?? 0} questions. ${local.poids} sur l'appareil."
-                : widget.integral
-                    ? "Le texte intégral et le PDF${widget.pdfOctets != null ? ' (${(widget.pdfOctets! / 1048576).toStringAsFixed(0)} Mo)' : ''}, "
-                        "les quiz et le plan, lisibles sans réseau. Gardés chiffrés : ils ne "
-                        "s'ouvrent que dans ASCENDA."
-                    : "Fiche, idées-force, citations avec leurs pages, quiz et plan de "
-                        "lecture. Tout reste utilisable sans réseau, y compris les quiz.",
-            style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud, height: 1.55),
-          ),
-          const SizedBox(height: 14),
-          Row(
-            children: [
-              Expanded(
-                child: local != null
-                    ? OutlinedButton.icon(
-                        onPressed: _supprimer,
-                        icon: const Icon(Icons.delete_outline_rounded, size: 18),
-                        label: const Texte('Retirer'),
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: Couleurs.grisChaud,
-                          side: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-                          minimumSize: const Size(0, 46),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Texte(
+                        garde ? 'Disponible hors ligne' : 'Emporter cet ouvrage',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: t.textTheme.titleLarge?.copyWith(fontSize: 18),
+                      ),
+                      if (garde) ...[
+                        const SizedBox(height: 2),
+                        Texte(
+                          local.poids,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: t.textTheme.labelMedium?.copyWith(color: p.succes, fontWeight: FontWeight.w600),
                         ),
-                      )
-                    : FilledButton.icon(
-                        onPressed: _enCours ? null : _telecharger,
-                        icon: _enCours
+                      ],
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(18, 14, 18, 18),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Texte(
+                  garde
+                      ? "${local.compteurs['chapitres'] ?? 0} chapitres, "
+                          "${local.compteurs['citations'] ?? 0} citations, "
+                          "${local.compteurs['questions'] ?? 0} questions. ${local.poids} sur l'appareil."
+                      : widget.integral
+                          ? "Le texte intégral et le PDF${widget.pdfOctets != null ? ' (${(widget.pdfOctets! / 1048576).toStringAsFixed(0)} Mo)' : ''}, "
+                              "les quiz et le plan, lisibles sans réseau. Gardés chiffrés : ils ne "
+                              "s'ouvrent que dans ASCENDA."
+                          : "Fiche, idées-force, citations avec leurs pages, quiz et plan de "
+                              "lecture. Tout reste utilisable sans réseau, y compris les quiz.",
+                  style: t.textTheme.bodySmall?.copyWith(color: p.texte, height: 1.55),
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  children: [
+                    Expanded(
+                      child: garde
+                          ? OutlinedButton.icon(
+                              onPressed: _supprimer,
+                              icon: const Icon(Icons.delete_outline_rounded, size: 18),
+                              label: const Texte('Retirer', maxLines: 1, overflow: TextOverflow.ellipsis),
+                              style: OutlinedButton.styleFrom(
+                                foregroundColor: p.attenue,
+                                side: BorderSide(color: p.trait),
+                                minimumSize: const Size(0, 48),
+                                padding: const EdgeInsets.symmetric(horizontal: 12),
+                              ),
+                            )
+                          : FilledButton.icon(
+                              onPressed: _enCours ? null : _telecharger,
+                              icon: _enCours
+                                  ? SizedBox(
+                                      width: 16, height: 16,
+                                      child: CircularProgressIndicator(strokeWidth: 2, color: p.surAccent))
+                                  : const Icon(Icons.download_rounded, size: 18),
+                              label: Texte(_enCours ? 'En cours' : 'Emporter',
+                                  maxLines: 1, overflow: TextOverflow.ellipsis),
+                              style: FilledButton.styleFrom(
+                                minimumSize: const Size(0, 48),
+                                padding: const EdgeInsets.symmetric(horizontal: 12),
+                              ),
+                            ),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: OutlinedButton.icon(
+                        onPressed: _pdfEnCours ? null : _ouvrirPdf,
+                        icon: _pdfEnCours
                             ? const SizedBox(
                                 width: 16, height: 16,
                                 child: CircularProgressIndicator(strokeWidth: 2))
-                            : const Icon(Icons.download_rounded, size: 18),
-                        label: Texte(_enCours ? 'En cours' : 'Emporter'),
-                        style: FilledButton.styleFrom(minimumSize: const Size(0, 46)),
+                            : const Icon(Icons.picture_as_pdf_outlined, size: 18),
+                        // Le compagnon de lecture (fiche, citations, quiz), jamais le livre.
+                        label: const Texte('Compagnon', maxLines: 1, overflow: TextOverflow.ellipsis),
+                        style: OutlinedButton.styleFrom(
+                          minimumSize: const Size(0, 48),
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                        ),
                       ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: _pdfEnCours ? null : _ouvrirPdf,
-                  icon: _pdfEnCours
-                      ? const SizedBox(
-                          width: 16, height: 16,
-                          child: CircularProgressIndicator(strokeWidth: 2))
-                      : const Icon(Icons.picture_as_pdf_outlined, size: 18),
-                  // Le compagnon de lecture (fiche, citations, quiz), jamais le livre.
-                  label: const Texte('Compagnon'),
-                  style: OutlinedButton.styleFrom(minimumSize: const Size(0, 46)),
+                    ),
+                  ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

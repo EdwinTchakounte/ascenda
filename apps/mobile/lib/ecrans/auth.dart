@@ -6,6 +6,7 @@ import '../api/client.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
+import '../widgets/ui.dart';
 
 /// La marque ASCENDA : le vrai logo, pas une approximation.
 ///
@@ -32,91 +33,139 @@ class MarqueAscenda extends StatelessWidget {
   }
 }
 
+/// L'accueil des visiteurs.
+///
+/// Il garde les couleurs fixes de la marque (le bleu nuit et l'or du logo)
+/// quel que soit le thème choisi : c'est la couverture du livre, elle ne
+/// change pas avec la lampe du lecteur. Les teintes viennent donc de
+/// [Palette.nuit], jamais de la palette courante.
 class EcranBienvenue extends StatelessWidget {
   const EcranBienvenue({super.key});
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    const nuit = Palette.nuit;
     return Scaffold(
-      backgroundColor: Couleurs.nuitProfond,
-      body: SafeArea(
-        // Défilable : avec une grande taille de police réglée sur le
-        // téléphone, les boutons ne doivent jamais sortir de l'écran.
-        child: LayoutBuilder(
-          builder: (context, contraintes) => SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(28, 36, 28, 28),
-            child: ConstrainedBox(
-              constraints: BoxConstraints(minHeight: contraintes.maxHeight - 64),
-              child: IntrinsicHeight(
-                child: Column(
-                  children: [
-                    // Le bloc complet porte déjà le nom et la baseline.
-                    Image.asset(
-                      'assets/marque/logo-complet.png',
-                      height: 120,
-                      filterQuality: FilterQuality.medium,
-                      semanticLabel: 'ASCENDA, Learn. Grow. Become.',
-                    ),
-                    const Spacer(),
-                    const SizedBox(height: 28),
-                    if (contraintes.maxHeight >= 640) ...[
-                      const _Rayonnage(),
-                      const SizedBox(height: 28),
-                    ],
-                    Texte(
-                      "Lisez avec un plan à votre rythme, validez chaque chapitre par un quiz "
-                      "et posez vos questions à un agent qui cite le livre et la page.",
-                      textAlign: TextAlign.center,
-                      style: t.textTheme.bodyLarge?.copyWith(
-                        color: const Color(0xFFD5DAE6),
-                        height: 1.55,
-                      ),
-                    ),
-                    const Spacer(),
-                    const SizedBox(height: 32),
-                    SizedBox(
-                      width: double.infinity,
-                      child: FilledButton(
-                        style: FilledButton.styleFrom(
-                          backgroundColor: Couleurs.or,
-                          foregroundColor: Couleurs.nuitProfond,
-                          minimumSize: const Size.fromHeight(52),
+      backgroundColor: Couleurs.marqueNuit,
+      body: Stack(
+        children: [
+          // Deux lueurs très basses : l'or du logo en haut, un bleu plus
+          // profond en bas. Le fond cesse d'être un aplat sans devenir un décor.
+          Positioned(
+            top: -140,
+            left: 0,
+            right: 0,
+            child: _Lueur(couleur: Couleurs.marqueOr.withValues(alpha: 0.14), taille: 420),
+          ),
+          Positioned(
+            bottom: -160,
+            left: -120,
+            child: _Lueur(couleur: nuit.heros.withValues(alpha: 0.55), taille: 380),
+          ),
+          SafeArea(
+            // Défilable : avec une grande taille de police réglée sur le
+            // téléphone, les boutons ne doivent jamais sortir de l'écran.
+            child: LayoutBuilder(
+              builder: (context, contraintes) => SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(28, 36, 28, 28),
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(minHeight: contraintes.maxHeight - 64),
+                  child: IntrinsicHeight(
+                    child: Column(
+                      children: [
+                        // Le bloc complet porte déjà le nom et la baseline.
+                        Image.asset(
+                          'assets/marque/logo-complet.png',
+                          height: 120,
+                          filterQuality: FilterQuality.medium,
+                          semanticLabel: 'ASCENDA, Learn. Grow. Become.',
                         ),
-                        onPressed: () => context.push('/connexion'),
-                        child: const Texte('Créer mon compte'),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    SizedBox(
-                      width: double.infinity,
-                      child: OutlinedButton(
-                        // Le thème clair donne une teinte encre, invisible sur
-                        // ce fond de nuit : les couleurs sont posées ici.
-                        style: OutlinedButton.styleFrom(
-                          foregroundColor: const Color(0xFFF7F4EC),
-                          side: BorderSide(color: Couleurs.orClair.withValues(alpha: 0.6)),
-                          minimumSize: const Size.fromHeight(52),
+                        const Spacer(),
+                        const SizedBox(height: 28),
+                        if (contraintes.maxHeight >= 640) ...[
+                          const _Rayonnage(),
+                          const SizedBox(height: 28),
+                        ],
+                        Texte(
+                          "Lisez avec un plan à votre rythme, validez chaque chapitre par un quiz "
+                          "et posez vos questions à un agent qui cite le livre et la page.",
+                          textAlign: TextAlign.center,
+                          style: t.textTheme.bodyLarge?.copyWith(
+                            color: nuit.texte,
+                            height: 1.55,
+                          ),
                         ),
-                        onPressed: () => context.go('/bibliotheque'),
-                        child: const Texte('Parcourir la bibliothèque'),
-                      ),
+                        const Spacer(),
+                        const SizedBox(height: 32),
+                        SizedBox(
+                          width: double.infinity,
+                          child: FilledButton(
+                            style: FilledButton.styleFrom(
+                              backgroundColor: Couleurs.marqueOr,
+                              foregroundColor: nuit.surAccent,
+                              minimumSize: const Size.fromHeight(56),
+                              shape: const RoundedRectangleBorder(borderRadius: Rayons.carte),
+                            ),
+                            onPressed: () => context.push('/connexion'),
+                            child: const Texte('Créer mon compte'),
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        SizedBox(
+                          width: double.infinity,
+                          child: OutlinedButton(
+                            // Le thème clair donne une teinte encre, invisible sur
+                            // ce fond de nuit : les couleurs sont posées ici.
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: nuit.encre,
+                              backgroundColor: nuit.surHeros.withValues(alpha: 0.05),
+                              side: BorderSide(color: nuit.accentSurHeros.withValues(alpha: 0.45)),
+                              minimumSize: const Size.fromHeight(56),
+                              shape: const RoundedRectangleBorder(borderRadius: Rayons.carte),
+                            ),
+                            onPressed: () => context.go('/bibliotheque'),
+                            child: const Texte('Parcourir la bibliothèque'),
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        TextButton(
+                          style: TextButton.styleFrom(foregroundColor: nuit.accentSurHeros),
+                          onPressed: () => context.push('/connexion?mode=connexion'),
+                          child: const Texte("J'ai déjà un compte"),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 4),
-                    TextButton(
-                      style: TextButton.styleFrom(foregroundColor: Couleurs.orClair),
-                      onPressed: () => context.push('/connexion?mode=connexion'),
-                      child: const Texte("J'ai déjà un compte"),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
+}
+
+/// Une lueur ronde qui s'efface vers ses bords.
+class _Lueur extends StatelessWidget {
+  const _Lueur({required this.couleur, required this.taille});
+  final Color couleur;
+  final double taille;
+
+  @override
+  Widget build(BuildContext context) => IgnorePointer(
+        child: Center(
+          child: Container(
+            width: taille,
+            height: taille,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: RadialGradient(colors: [couleur, couleur.withValues(alpha: 0)]),
+            ),
+          ),
+        ),
+      );
 }
 
 /// Un rayonnage de dos de livres, aux teintes des parcours : l'accueil dit
@@ -133,6 +182,7 @@ class _Rayonnage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const nuit = Palette.nuit;
     return Column(
       children: [
         Row(
@@ -149,6 +199,8 @@ class _Rayonnage extends StatelessWidget {
                   height: _dos[i].h,
                   margin: const EdgeInsets.symmetric(horizontal: 1.5),
                   decoration: BoxDecoration(
+                    // Des dos arrondis en tête, posés à plat sur l'étagère.
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(5), bottom: Radius.circular(2)),
                     gradient: LinearGradient(
                       colors: [
                         Color.lerp(Couleurs.poles[_dos[i].c]!, Colors.black, 0.18)!,
@@ -160,15 +212,36 @@ class _Rayonnage extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(height: 1.4, margin: const EdgeInsets.only(top: 12), color: Couleurs.orClair.withValues(alpha: 0.7)),
-                      Container(height: 1.4, margin: const EdgeInsets.only(bottom: 12), color: Couleurs.orClair.withValues(alpha: 0.7)),
+                      Container(
+                        height: 1.4,
+                        margin: const EdgeInsets.only(top: 12),
+                        color: nuit.accentSurHeros.withValues(alpha: 0.7),
+                      ),
+                      Container(
+                        height: 1.4,
+                        margin: const EdgeInsets.only(bottom: 12),
+                        color: nuit.accentSurHeros.withValues(alpha: 0.7),
+                      ),
                     ],
                   ),
                 ),
               ),
           ],
         ),
-        Container(height: 6, width: 300, color: Couleurs.or.withValues(alpha: 0.85)),
+        Container(
+          height: 6,
+          width: 300,
+          decoration: BoxDecoration(
+            borderRadius: Rayons.pilule,
+            gradient: LinearGradient(
+              colors: [
+                Couleurs.marqueOr.withValues(alpha: 0.2),
+                Couleurs.marqueOr.withValues(alpha: 0.9),
+                Couleurs.marqueOr.withValues(alpha: 0.2),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
@@ -244,28 +317,54 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Scaffold(
       appBar: AppBar(leading: BackButton(onPressed: () => context.go('/bienvenue'))),
       body: SafeArea(
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
+          padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
           child: Form(
             key: _formulaire,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const Center(child: MarqueAscenda(taille: 56)),
-                const SizedBox(height: 26),
-                Texte(
-                  _inscription ? 'Créer votre compte' : 'Content de vous revoir',
-                  style: t.textTheme.headlineMedium,
+                // La marque dans un médaillon : un disque creux cerclé d'or,
+                // qui la pose sans la noyer quel que soit le thème.
+                Center(
+                  child: Container(
+                    width: 92,
+                    height: 92,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: p.surface,
+                      border: Border.all(color: p.accentTexte.withValues(alpha: 0.28), width: 1.4),
+                      boxShadow: p.ombreCarte,
+                    ),
+                    child: const MarqueAscenda(taille: 56),
+                  ),
                 ),
-                const SizedBox(height: 8),
-                Texte(
-                  _inscription
-                      ? "Gratuit, sans carte bancaire. Vous choisirez votre axe juste après."
-                      : "Reprenez votre chronogramme là où vous l'aviez laissé.",
-                  style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
+                const SizedBox(height: 24),
+                AnimatedSwitcher(
+                  duration: const Duration(milliseconds: 220),
+                  child: Column(
+                    key: ValueKey(_inscription),
+                    children: [
+                      Texte(
+                        _inscription ? 'Créer votre compte' : 'Content de vous revoir',
+                        textAlign: TextAlign.center,
+                        style: t.textTheme.headlineMedium,
+                      ),
+                      const SizedBox(height: 8),
+                      Texte(
+                        _inscription
+                            ? "Gratuit, sans carte bancaire. Vous choisirez votre axe juste après."
+                            : "Reprenez votre chronogramme là où vous l'aviez laissé.",
+                        textAlign: TextAlign.center,
+                        style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.5),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 28),
                 if (_inscription) ...[
@@ -275,6 +374,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                     decoration: const InputDecoration(
                       labelText: 'Votre nom',
                       hintText: 'Facultatif',
+                      prefixIcon: Icon(Icons.person_outline_rounded, size: 20),
                     ),
                   ),
                   const SizedBox(height: 14),
@@ -284,7 +384,10 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                   keyboardType: TextInputType.emailAddress,
                   autocorrect: false,
                   textInputAction: TextInputAction.next,
-                  decoration: const InputDecoration(labelText: 'Adresse électronique'),
+                  decoration: const InputDecoration(
+                    labelText: 'Adresse électronique',
+                    prefixIcon: Icon(Icons.alternate_email_rounded, size: 20),
+                  ),
                   validator: (v) {
                     final s = (v ?? '').trim();
                     if (s.isEmpty) return 'Indiquez votre adresse.';
@@ -303,6 +406,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                   decoration: InputDecoration(
                     labelText: 'Mot de passe',
                     helperText: _inscription ? 'Au moins 8 caractères' : null,
+                    prefixIcon: const Icon(Icons.lock_outline_rounded, size: 20),
                     suffixIcon: IconButton(
                       icon: Icon(_masque
                           ? Icons.visibility_outlined
@@ -338,28 +442,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                 ],
                 if (_erreur != null) ...[
                   const SizedBox(height: 16),
-                  Container(
-                    padding: const EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: Couleurs.terracotta.withValues(alpha: 0.1),
-                      borderRadius: BorderRadius.zero,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Icon(Icons.error_outline_rounded,
-                            size: 18, color: Couleurs.terracotta),
-                        const SizedBox(width: 10),
-                        Expanded(
-                          child: Texte(
-                            _erreur!,
-                            style: t.textTheme.bodySmall
-                                ?.copyWith(color: Couleurs.terracotta, height: 1.45),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  AlerteFormulaire(_erreur!),
                 ],
                 const SizedBox(height: 26),
                 FilledButton(
@@ -372,7 +455,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                         )
                       : Texte(_inscription ? 'Créer mon compte' : 'Me connecter'),
                 ),
-                const SizedBox(height: 6),
+                const SizedBox(height: 10),
                 TextButton(
                   onPressed: _envoi
                       ? null
@@ -388,6 +471,7 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                 // inscription n'aurait aucun sens, il n'y a rien à retrouver.
                 if (!_inscription)
                   TextButton(
+                    style: TextButton.styleFrom(foregroundColor: p.attenue),
                     onPressed: _envoi
                         ? null
                         : () => context.push(
@@ -404,3 +488,4 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
     );
   }
 }
+

@@ -5,13 +5,18 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
+import 'ui.dart';
 
 /// Les quatre teintes que le serveur accepte pour un surlignage.
 ///
 /// La liste vit ici et dans la contrainte de l'API. Elle est courte et stable :
 /// une palette libre produirait, au bout de six mois, des surlignages de
 /// quarante nuances dont aucune ne veut rien dire.
-const Map<String, Color> teintesSurlignage = {
+///
+/// Relue à chaque appel : une table figée au premier accès garderait les
+/// teintes du thème d'alors, et un surlignage fait en Ivoire resterait pâle une
+/// fois passé en Nuit.
+Map<String, Color> get teintesSurlignage => {
   'or': Couleurs.or,
   'sauge': Couleurs.sauge,
   'terracotta': Couleurs.terracotta,
@@ -37,24 +42,49 @@ class PanneauAnnotations extends ConsumerWidget {
     final notes = ref.watch(notesProvider(documentId));
     final surlignages = ref.watch(surlignagesProvider(documentId));
 
+    final p = context.palette;
+    final nbSurlignages = surlignages.valueOrNull?.length;
+    final nbNotes = notes.valueOrNull?.length;
+
+    // La poignée de la feuille vient du thème (`showDragHandle`) : la dessiner
+    // ici aussi en montrait deux.
     return DefaultTabController(
       length: 2,
       child: Column(
         children: [
-          const SizedBox(height: 10),
-          Container(
-            width: 38,
-            height: 4,
-            decoration: BoxDecoration(
-              color: Couleurs.grisChaud.withValues(alpha: 0.3),
-              borderRadius: BorderRadius.zero,
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
+            child: Row(
+              children: [
+                const IconePastille(Icons.bookmarks_rounded, taille: 40),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Texte('Vos annotations',
+                      maxLines: 1, overflow: TextOverflow.ellipsis, style: t.textTheme.titleLarge),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 12),
-          Texte('Vos annotations', style: t.textTheme.titleLarge),
-          const TabBar(
-            tabs: [Tab(text: 'Surlignages'), Tab(text: 'Notes')],
+          // Deux onglets en segments arrondis : l'onglet actif est une pilule
+          // dorée, dans le langage des filtres du reste de l'application.
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.all(4),
+            decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.pilule),
+            child: TabBar(
+              indicator: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
+              indicatorSize: TabBarIndicatorSize.tab,
+              dividerColor: Colors.transparent,
+              labelColor: p.surAccent,
+              unselectedLabelColor: p.texte,
+              splashBorderRadius: Rayons.pilule,
+              tabs: [
+                Tab(height: 40, text: nbSurlignages == null ? 'Surlignages' : 'Surlignages ($nbSurlignages)'),
+                Tab(height: 40, text: nbNotes == null ? 'Notes' : 'Notes ($nbNotes)'),
+              ],
+            ),
           ),
+          const SizedBox(height: 6),
           Expanded(
             child: TabBarView(
               children: [
@@ -130,24 +160,37 @@ Future<String?> editerNote(BuildContext context, {String initial = ''}) {
     context: context,
     isScrollControlled: true,
     builder: (c) => Padding(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, MediaQuery.of(c).viewInsets.bottom + 20),
+      padding: EdgeInsets.fromLTRB(20, 0, 20, MediaQuery.of(c).viewInsets.bottom + 20),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Texte(initial.isEmpty ? 'Votre note' : 'Corriger la note',
-              style: Theme.of(c).textTheme.titleLarge),
-          const SizedBox(height: 14),
+          Row(
+            children: [
+              IconePastille(initial.isEmpty ? Icons.edit_note_rounded : Icons.edit_outlined, taille: 40),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Texte(initial.isEmpty ? 'Votre note' : 'Corriger la note',
+                    maxLines: 1, overflow: TextOverflow.ellipsis, style: Theme.of(c).textTheme.titleLarge),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
           TextField(
             controller: controleur,
             autofocus: true,
-            maxLines: 6,
-            decoration: const InputDecoration(hintText: 'Ce que vous voulez retenir…'),
+            minLines: 4,
+            maxLines: 8,
+            decoration: InputDecoration(
+              hintText: 'Ce que vous voulez retenir…',
+              fillColor: c.palette.surfaceCreuse,
+            ),
           ),
-          const SizedBox(height: 14),
-          FilledButton(
+          const SizedBox(height: 16),
+          FilledButton.icon(
             onPressed: () => Navigator.pop(c, controleur.text.trim()),
-            child: const Texte('Enregistrer'),
+            icon: const Icon(Icons.check_rounded, size: 19),
+            label: const Texte('Enregistrer'),
           ),
         ],
       ),
@@ -183,32 +226,48 @@ class _Liste extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final t = Theme.of(context);
     return contenu.when(
       loading: () => const Center(child: Padding(
         padding: EdgeInsets.all(32),
         child: CircularProgressIndicator(strokeWidth: 2.4),
       )),
-      error: (e, _) => Padding(
-        padding: const EdgeInsets.all(24),
-        child: Texte("Impossible de charger cette liste.",
-            style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud)),
-      ),
+      error: (e, _) => const _Vide(icone: Icons.cloud_off_rounded, texte: "Impossible de charger cette liste."),
       data: (liste) => liste.isEmpty
-          ? Padding(
-              padding: const EdgeInsets.fromLTRB(32, 40, 32, 32),
-              child: Texte(
-                vide,
-                textAlign: TextAlign.center,
-                style: t.textTheme.bodyMedium
-                    ?.copyWith(color: Couleurs.grisChaud, height: 1.6),
-              ),
-            )
+          ? _Vide(icone: Icons.bookmark_border_rounded, texte: vide)
           : ListView.builder(
-              padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+              padding: const EdgeInsets.fromLTRB(20, 14, 20, 32),
               itemCount: liste.length,
-              itemBuilder: (_, i) => construire(liste[i]),
+              itemBuilder: (_, i) => Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: construire(liste[i]),
+              ),
             ),
+    );
+  }
+}
+
+/// Une liste vide ou en échec, dite avec une icône plutôt qu'une ligne nue.
+class _Vide extends StatelessWidget {
+  const _Vide({required this.icone, required this.texte});
+  final IconData icone;
+  final String texte;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(36, 44, 36, 32),
+      child: Column(
+        children: [
+          IconePastille(icone, couleur: p.attenue, taille: 56),
+          const SizedBox(height: 16),
+          Texte(
+            texte,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.6),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -222,36 +281,43 @@ class _CarteSurlignage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final teinte = teinteDe(surlignage['couleur'] as String?);
     final page = surlignage['page'];
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.fromLTRB(14, 12, 6, 12),
-      decoration: BoxDecoration(
-        color: teinte.withValues(alpha: 0.09),
-        borderRadius: BorderRadius.zero,
-        border: Border(left: BorderSide(color: teinte, width: 3)),
-      ),
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(16, 14, 4, 10),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Le trait de la teinte choisie, arrondi, en marge de la citation.
+          Container(
+            width: 4,
+            height: 44,
+            margin: const EdgeInsets.only(top: 3, right: 14),
+            decoration: BoxDecoration(color: teinte, borderRadius: Rayons.pilule),
+          ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // En Fraunces, comme dans le lecteur : c'est le texte du livre.
                 Texte('${surlignage['citation'] ?? ''}',
-                    style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
+                    style: t.textTheme.bodyMedium?.copyWith(
+                      fontFamily: t.textTheme.headlineSmall?.fontFamily,
+                      fontSize: 15,
+                      color: p.encre,
+                      height: 1.6,
+                    )),
                 if (page != null) ...[
-                  const SizedBox(height: 6),
-                  Texte('Page $page',
-                      style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+                  const SizedBox(height: 10),
+                  Pastille('Page $page', icone: Icons.menu_book_outlined, couleur: p.attenue),
                 ],
               ],
             ),
           ),
           IconButton(
             icon: const Icon(Icons.delete_outline_rounded, size: 19),
-            color: Couleurs.grisChaud,
+            color: p.attenue,
             tooltip: 'Retirer',
             onPressed: onSupprimer,
           ),
@@ -275,38 +341,42 @@ class _CarteNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final page = note['page'];
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      padding: const EdgeInsets.fromLTRB(14, 12, 6, 6),
-      decoration: BoxDecoration(
-        color: t.colorScheme.surface,
-        borderRadius: BorderRadius.zero,
-        border: Border.all(color: Couleurs.traitClair),
-      ),
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(16, 16, 6, 6),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8),
-            child: Texte('${note['texte'] ?? note['body'] ?? ''}',
-                style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const IconePastille(Icons.sticky_note_2_outlined, taille: 34),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 10, top: 5),
+                  child: Texte('${note['texte'] ?? note['body'] ?? ''}',
+                      style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
+                ),
+              ),
+            ],
           ),
+          const SizedBox(height: 4),
           Row(
             children: [
-              if (page != null)
-                Texte('Page $page',
-                    style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+              const SizedBox(width: 46),
+              if (page != null) Pastille('Page $page', icone: Icons.menu_book_outlined, couleur: p.attenue),
               const Spacer(),
               IconButton(
                 icon: const Icon(Icons.edit_outlined, size: 18),
-                color: Couleurs.grisChaud,
+                color: p.attenue,
                 tooltip: 'Corriger',
                 onPressed: onModifier,
               ),
               IconButton(
                 icon: const Icon(Icons.delete_outline_rounded, size: 19),
-                color: Couleurs.grisChaud,
+                color: p.attenue,
                 tooltip: 'Supprimer',
                 onPressed: onSupprimer,
               ),

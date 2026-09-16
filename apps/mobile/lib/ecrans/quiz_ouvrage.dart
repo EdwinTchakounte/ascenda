@@ -4,9 +4,10 @@ import 'package:go_router/go_router.dart';
 
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../widgets/etats.dart';
 import '../widgets/invitation.dart';
+import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// Tous les quiz d'un ouvrage, hors séance.
@@ -24,6 +25,7 @@ class EcranQuizOuvrage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
+    final p = context.palette;
     final quiz = ref.watch(quizOuvrageProvider(documentId));
     final session = ref.watch(sessionProvider);
     final historique = session.etat == EtatSession.connecte
@@ -40,7 +42,7 @@ class EcranQuizOuvrage extends ConsumerWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Texte(titre ?? 'Quiz de l\'ouvrage')),
+      appBar: AppBar(title: Texte(titre ?? 'Quiz de l\'ouvrage', maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: SafeArea(
         bottom: false,
         child: quiz.when(
@@ -68,24 +70,72 @@ class EcranQuizOuvrage extends ConsumerWidget {
                     "Elles arriveront avec les prochaines mises à jour du corpus.",
               );
             }
+            final connecte = session.etat == EtatSession.connecte;
+            // Les chapitres déjà tentés, comptés sur les scores déjà chargés.
+            final tentes = lots.where((c) => meilleurs.containsKey('${c['chapitre_id']}')).length;
             return ListView(
-              padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+              padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
               children: [
-                Texte(
-                  '${d['total_questions']} questions sur ${lots.length} chapitres',
-                  style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
+                SurfaceHeros(
+                  child: Row(
+                    children: [
+                      IconePastille(Icons.quiz_rounded, couleur: p.accentSurHeros, taille: 50),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text.rich(
+                              TextSpan(children: [
+                                TextSpan(text: '${d['total_questions']}'),
+                                TextSpan(
+                                  text: ' questions',
+                                  style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux),
+                                ),
+                              ]),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1.1),
+                            ),
+                            const SizedBox(height: 4),
+                            Texte(
+                              'sur ${lots.length} chapitres',
+                              style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+                            ),
+                            if (tentes > 0) ...[
+                              const SizedBox(height: 10),
+                              Jauge(
+                                valeur: tentes / lots.length,
+                                hauteur: 6,
+                                piste: p.surHeros.withValues(alpha: 0.12),
+                              ),
+                              const SizedBox(height: 6),
+                              Texte(
+                                '$tentes déjà tenté${tentes > 1 ? 's' : ''}',
+                                style: t.textTheme.labelSmall?.copyWith(color: p.surHerosDoux),
+                              ),
+                            ],
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 16),
+                const SizedBox(height: 18),
                 const InvitationCompte(
                   compact: true,
                   raison: "Créez votre compte pour passer ces quiz et garder vos scores.",
                 ),
-                for (final c in lots)
+                const SizedBox(height: 4),
+                for (var i = 0; i < lots.length; i++) ...[
                   _LigneQuiz(
-                    lot: c,
-                    score: meilleurs['${c['chapitre_id']}'],
-                    connecte: session.etat == EtatSession.connecte,
+                    numero: i + 1,
+                    lot: lots[i],
+                    score: meilleurs['${lots[i]['chapitre_id']}'],
+                    connecte: connecte,
                   ),
+                  const SizedBox(height: 12),
+                ],
               ],
             );
           },
@@ -96,8 +146,9 @@ class EcranQuizOuvrage extends ConsumerWidget {
 }
 
 class _LigneQuiz extends StatelessWidget {
-  const _LigneQuiz({required this.lot, required this.score, required this.connecte});
+  const _LigneQuiz({required this.numero, required this.lot, required this.score, required this.connecte});
 
+  final int numero;
   final Map<String, dynamic> lot;
   final num? score;
   final bool connecte;
@@ -105,26 +156,57 @@ class _LigneQuiz extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final n = lot['nb_questions'] as int? ?? 0;
     final pages = lot['page_debut'] == null
         ? ''
         : 'p. ${lot['page_debut']}${lot['page_fin'] != null ? ' à ${lot['page_fin']}' : ''}';
 
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 4),
-      child: ListTile(
-        contentPadding: EdgeInsets.zero,
-        title: Texte('${lot['titre'] ?? 'Chapitre'}',
-            maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.bodyMedium),
-        subtitle: Texte(
-          [if (pages.isNotEmpty) pages, '$n question${n > 1 ? 's' : ''}'].join('  ·  '),
-          style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
-        ),
-        trailing: score == null
-            ? const Icon(Icons.chevron_right_rounded, size: 22)
-            : _Pastille(score: score!),
-        enabled: connecte,
+    // Sans compte, la ligne reste lisible mais en retrait : l'invitation
+    // au-dessus dit pourquoi on ne peut pas l'ouvrir.
+    return Opacity(
+      opacity: connecte ? 1 : 0.55,
+      child: Surface(
+        padding: const EdgeInsets.fromLTRB(14, 14, 12, 14),
         onTap: connecte ? () => context.push('/quiz/${lot['quiz_id']}') : null,
+        child: Row(
+          children: [
+            Container(
+              width: 42,
+              height: 42,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(color: p.accentVoile, borderRadius: Rayons.moyen),
+              child: Texte(
+                '$numero',
+                style: t.textTheme.titleMedium?.copyWith(
+                  color: p.accentTexte,
+                  fontFamily: t.textTheme.headlineSmall?.fontFamily,
+                ),
+              ),
+            ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Texte('${lot['titre'] ?? 'Chapitre'}',
+                      maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium?.copyWith(fontSize: 15)),
+                  const SizedBox(height: 3),
+                  Texte(
+                    [if (pages.isNotEmpty) pages, '$n question${n > 1 ? 's' : ''}'].join('  ·  '),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 8),
+            score == null
+                ? Icon(connecte ? Icons.chevron_right_rounded : Icons.lock_outline_rounded, size: 22, color: p.attenue)
+                : _Pastille(score: score!),
+          ],
+        ),
       ),
     );
   }
@@ -141,23 +223,15 @@ class _Pastille extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final p = context.palette;
     final pourcent = (score <= 1 ? score * 100 : score).round();
     final teinte = pourcent >= 80
-        ? Couleurs.sauge
-        : (pourcent >= 50 ? Couleurs.or : Couleurs.terracotta);
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: BoxDecoration(
-        color: teinte.withValues(alpha: 0.16),
-        borderRadius: BorderRadius.zero,
-      ),
-      child: Texte(
-        '$pourcent %',
-        style: Theme.of(context).textTheme.labelSmall?.copyWith(
-              color: pourcent >= 80 ? const Color(0xFF476A4E) : Couleurs.orTexte,
-              fontWeight: FontWeight.w600,
-            ),
-      ),
+        ? p.succes
+        : (pourcent >= 50 ? p.accentTexte : p.alerte);
+    return Pastille(
+      '$pourcent %',
+      icone: pourcent >= 80 ? Icons.star_rounded : null,
+      couleur: teinte,
     );
   }
 }

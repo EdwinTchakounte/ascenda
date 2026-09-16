@@ -1,8 +1,10 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../api/client.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../theme/texte.dart';
 
 /// Les états qui ne sont pas le cas idéal. Ils sont dessinés, pas subis :
@@ -30,37 +32,80 @@ class EtatMessage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    final couleur = teinte ?? Couleurs.grisChaud;
+    final p = context.palette;
+    final couleur = teinte ?? p.accentTexte;
     return Center(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 40),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            if (icone != null)
-              Container(
-                width: 64,
-                height: 64,
-                decoration: BoxDecoration(
-                  color: couleur.withValues(alpha: 0.1),
-                  shape: BoxShape.rectangle,
-                ),
-                child: Icon(icone, size: 30, color: couleur),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              if (icone != null) ...[
+                _GrandePastille(icone: icone!, couleur: couleur),
+                const SizedBox(height: 22),
+              ],
+              Texte(
+                titre,
+                style: t.textTheme.headlineSmall?.copyWith(fontSize: 23),
+                textAlign: TextAlign.center,
               ),
-            const SizedBox(height: 20),
-            Texte(titre, style: t.textTheme.titleLarge, textAlign: TextAlign.center),
-            const SizedBox(height: 10),
-            Texte(
-              texte,
-              style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
-              textAlign: TextAlign.center,
-            ),
-            if (action != null) ...[
-              const SizedBox(height: 24),
-              OutlinedButton(onPressed: action, child: Texte(libelleAction ?? 'Réessayer')),
+              const SizedBox(height: 10),
+              Texte(
+                texte,
+                style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.6),
+                textAlign: TextAlign.center,
+              ),
+              if (action != null) ...[
+                const SizedBox(height: 26),
+                FilledButton(
+                  onPressed: action,
+                  style: FilledButton.styleFrom(
+                    minimumSize: const Size(0, 48),
+                    padding: const EdgeInsets.symmetric(horizontal: 26),
+                    shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                  ),
+                  child: Texte(libelleAction ?? 'Réessayer'),
+                ),
+              ],
             ],
-          ],
+          ),
         ),
+      ),
+    );
+  }
+}
+
+/// L'icône d'un état : une pastille arrondie posée dans un halo de sa teinte.
+class _GrandePastille extends StatelessWidget {
+  const _GrandePastille({required this.icone, required this.couleur});
+  final IconData icone;
+  final Color couleur;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return Container(
+      width: 104,
+      height: 104,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: RadialGradient(
+          colors: [couleur.withValues(alpha: p.sombre ? 0.16 : 0.10), couleur.withValues(alpha: 0)],
+        ),
+      ),
+      child: Container(
+        width: 72,
+        height: 72,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: couleur.withValues(alpha: p.sombre ? 0.18 : 0.11),
+          borderRadius: BorderRadius.circular(24),
+          border: Border.all(color: couleur.withValues(alpha: 0.16)),
+        ),
+        child: Icon(icone, size: 34, color: couleur),
       ),
     );
   }
@@ -76,9 +121,11 @@ class EtatErreur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final p = context.palette;
     if (erreur is HorsLigne) {
       return EtatMessage(
         icone: Icons.cloud_off_rounded,
+        teinte: p.attenue,
         titre: 'Pas de connexion',
         texte: "ASCENDA n'a pas pu joindre le serveur. Vérifiez votre réseau : "
             "vos notes et votre progression sont conservées.",
@@ -95,7 +142,7 @@ class EtatErreur extends StatelessWidget {
         icone: e.estQuota
             ? Icons.hourglass_bottom_rounded
             : (e.estPremium ? Icons.workspace_premium_outlined : Icons.error_outline_rounded),
-        teinte: e.estQuota || e.estPremium ? Couleurs.or : Couleurs.terracotta,
+        teinte: e.estQuota || e.estPremium ? p.accentTexte : p.alerte,
         titre: e.estQuota
             ? 'Limite atteinte'
             : (e.estPremium ? 'Réservé à Ascension' : "Ça n'a pas fonctionné"),
@@ -106,7 +153,7 @@ class EtatErreur extends StatelessWidget {
     }
     return EtatMessage(
       icone: Icons.error_outline_rounded,
-      teinte: Couleurs.terracotta,
+      teinte: p.alerte,
       titre: "Une erreur est survenue",
       texte: "Réessayez dans un instant. Si cela persiste, redémarrez l'application.",
       action: reessayer,
@@ -116,6 +163,9 @@ class EtatErreur extends StatelessWidget {
 
 /// Squelette de chargement : des blocs à la forme du contenu attendu, plutôt
 /// qu'un tourniquet centré qui ne dit rien de ce qui arrive.
+///
+/// Sans [rayon] explicite, le bloc prend un arrondi doux proportionné à sa
+/// hauteur : aucune arête vive, même quand l'appelant n'y a pas pensé.
 class Squelette extends StatefulWidget {
   const Squelette({super.key, this.hauteur = 16, this.largeur, this.rayon = 0});
 
@@ -141,15 +191,17 @@ class _SqueletteState extends State<Squelette> with SingleTickerProviderStateMix
 
   @override
   Widget build(BuildContext context) {
-    final base = Theme.of(context).colorScheme.surfaceContainer;
+    final p = context.palette;
+    final base = p.surfaceCreuse;
+    final rayon = widget.rayon > 0 ? widget.rayon : math.min(widget.hauteur / 2, 10.0);
     return AnimatedBuilder(
       animation: _c,
       builder: (context, _) => Container(
         height: widget.hauteur,
         width: widget.largeur,
         decoration: BoxDecoration(
-          color: Color.lerp(base, base.withValues(alpha: 0.45), _c.value),
-          borderRadius: BorderRadius.circular(widget.rayon),
+          color: Color.lerp(base, base.withValues(alpha: 0.45), Curves.easeInOut.transform(_c.value)),
+          borderRadius: BorderRadius.circular(rayon),
         ),
       ),
     );
@@ -162,20 +214,38 @@ class SqueletteCarte extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final p = context.palette;
     return Container(
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.surface,
-        borderRadius: BorderRadius.zero,
+        color: p.surface,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: p.trait),
+        boxShadow: p.ombreCarte,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Squelette(hauteur: 20, largeur: 190),
-          const SizedBox(height: 14),
+          // L'amorce d'une ligne de liste : la pastille, puis le titre.
+          const Row(
+            children: [
+              Squelette(hauteur: 42, largeur: 42, rayon: 13),
+              SizedBox(width: 14),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: FractionallySizedBox(widthFactor: 0.7, child: Squelette(hauteur: 18)),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 16),
           for (var i = 0; i < lignes; i++) ...[
-            Squelette(hauteur: 12, largeur: i.isEven ? double.infinity : 220),
-            const SizedBox(height: 9),
+            FractionallySizedBox(
+              widthFactor: i.isEven ? 1 : 0.72,
+              child: const Squelette(hauteur: 12),
+            ),
+            if (i < lignes - 1) const SizedBox(height: 10),
           ],
         ],
       ),
@@ -190,25 +260,33 @@ class BandeauDroits extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final p = context.palette;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),
-      padding: const EdgeInsets.fromLTRB(14, 13, 14, 13),
+      padding: const EdgeInsets.fromLTRB(12, 12, 16, 12),
       decoration: BoxDecoration(
-        color: Couleurs.or.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.zero,
+        color: p.accentVoile,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: p.accentTexte.withValues(alpha: 0.18)),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.menu_book_outlined, size: 18, color: Couleurs.orTexte),
-          const SizedBox(width: 11),
+          Container(
+            width: 34,
+            height: 34,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(color: p.surface.withValues(alpha: 0.7), borderRadius: Rayons.petit),
+            child: Icon(Icons.menu_book_rounded, size: 18, color: p.accentTexte),
+          ),
+          const SizedBox(width: 12),
           Expanded(
-            child: Texte(
-              message,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodySmall
-                  ?.copyWith(color: Couleurs.grisChaud, height: 1.5),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 1),
+              child: Texte(
+                message,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(color: p.texte, height: 1.5),
+              ),
             ),
           ),
         ],

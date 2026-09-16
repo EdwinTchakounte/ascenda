@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 import '../etat/fournisseurs.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// La recherche dans le texte des 78 ouvrages.
@@ -60,6 +61,7 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final assez = _requete.length >= 3;
     final resultats = ref.watch(rechercheProvider(_requete));
     final suggestions = ref.watch(suggestionsProvider(_requete));
@@ -67,24 +69,41 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: 0,
-        title: TextField(
-          controller: _champ,
-          autofocus: widget.initiale == null,
-          onChanged: _saisie,
-          onSubmitted: (v) => setState(() => _requete = v.trim()),
-          textInputAction: TextInputAction.search,
-          decoration: InputDecoration(
-            hintText: 'Une idée, une question, un nom…',
-            border: InputBorder.none,
-            suffixIcon: _champ.text.isEmpty
-                ? null
-                : IconButton(
-                    icon: const Icon(Icons.close_rounded, size: 19),
-                    onPressed: () {
-                      _champ.clear();
-                      setState(() => _requete = '');
-                    },
-                  ),
+        toolbarHeight: 64,
+        // Le champ en pilule creusée dans la barre : l'écran entier est une
+        // question, elle mérite d'être le premier objet visible.
+        title: Padding(
+          padding: const EdgeInsets.only(right: 16),
+          child: TextField(
+            controller: _champ,
+            autofocus: widget.initiale == null,
+            onChanged: _saisie,
+            onSubmitted: (v) => setState(() => _requete = v.trim()),
+            textInputAction: TextInputAction.search,
+            style: t.textTheme.bodyLarge?.copyWith(color: p.encre, height: 1.3),
+            decoration: InputDecoration(
+              hintText: 'Une idée, une question, un nom…',
+              filled: true,
+              fillColor: p.surfaceCreuse,
+              isDense: true,
+              contentPadding: const EdgeInsets.symmetric(horizontal: 4, vertical: 13),
+              prefixIcon: Icon(Icons.search_rounded, size: 21, color: p.attenue),
+              border: const OutlineInputBorder(borderRadius: Rayons.pilule, borderSide: BorderSide.none),
+              enabledBorder: const OutlineInputBorder(borderRadius: Rayons.pilule, borderSide: BorderSide.none),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: Rayons.pilule,
+                borderSide: BorderSide(color: p.accentTexte.withValues(alpha: 0.6), width: 1.4),
+              ),
+              suffixIcon: _champ.text.isEmpty
+                  ? null
+                  : IconButton(
+                      icon: const Icon(Icons.close_rounded, size: 19),
+                      onPressed: () {
+                        _champ.clear();
+                        setState(() => _requete = '');
+                      },
+                    ),
+            ),
           ),
         ),
       ),
@@ -120,25 +139,30 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
                     );
                   }
                   return ListView(
-                    padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 36),
                     children: [
                       if (ouvrages.isNotEmpty) ...[
-                        Texte('Ouvrages', style: t.textTheme.titleSmall),
-                        const SizedBox(height: 8),
-                        for (final o in ouvrages.take(4))
+                        const TitreSection('Ouvrages'),
+                        const SizedBox(height: 12),
+                        for (final o in ouvrages.take(4)) ...[
                           _LigneOuvrage(ouvrage: o),
-                        const SizedBox(height: 22),
+                          const SizedBox(height: 10),
+                        ],
+                        const SizedBox(height: 18),
                       ],
                       if (liste.isNotEmpty) ...[
                         Row(
                           children: [
-                            Texte('Dans le texte', style: t.textTheme.titleSmall),
-                            const Spacer(),
+                            const Expanded(child: TitreSection('Dans le texte')),
+                            const SizedBox(width: 8),
                             _Mode(mode: '${d['mode'] ?? ''}'),
                           ],
                         ),
-                        const SizedBox(height: 10),
-                        for (final r in liste) _CarteResultat(resultat: r),
+                        const SizedBox(height: 12),
+                        for (final r in liste) ...[
+                          _CarteResultat(resultat: r),
+                          const SizedBox(height: 12),
+                        ],
                       ],
                     ],
                   );
@@ -167,12 +191,10 @@ class _Mode extends StatelessWidget {
       _ => '',
     };
     if (libelle.isEmpty) return const SizedBox.shrink();
-    return Texte(
+    return Pastille(
       libelle,
-      style: Theme.of(context)
-          .textTheme
-          .labelSmall
-          ?.copyWith(color: Couleurs.grisChaud),
+      icone: mode == 'plein_texte' ? Icons.text_fields_rounded : Icons.auto_awesome_outlined,
+      couleur: context.palette.attenue,
     );
   }
 }
@@ -184,19 +206,35 @@ class _LigneOuvrage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final auteurs = ((ouvrage['auteurs'] as List?) ?? []).join(', ');
-    return ListTile(
-      contentPadding: EdgeInsets.zero,
-      leading: const Icon(Icons.menu_book_outlined, size: 21, color: Couleurs.orTexte),
-      title: Texte('${ouvrage['titre']}',
-          maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.bodyMedium),
-      subtitle: auteurs.isEmpty
-          ? null
-          : Texte(auteurs,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
+    return Surface(
       onTap: () => context.push('/ouvrage/${ouvrage['id']}'),
+      padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
+      child: Row(
+        children: [
+          const IconePastille(Icons.menu_book_rounded, taille: 42),
+          const SizedBox(width: 14),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Texte('${ouvrage['titre']}',
+                    maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium),
+                if (auteurs.isNotEmpty) ...[
+                  const SizedBox(height: 2),
+                  Texte(auteurs,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
+                ],
+              ],
+            ),
+          ),
+          const SizedBox(width: 4),
+          Icon(Icons.chevron_right_rounded, size: 22, color: p.attenue),
+        ],
+      ),
     );
   }
 }
@@ -208,67 +246,64 @@ class _CarteResultat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final r = resultat;
     final page = r['page'];
     final chapitreId = r['chapitre_id'];
     final documentId = '${r['document_id']}';
 
-    return Container(
-      margin: const EdgeInsets.only(bottom: 12),
-      decoration: BoxDecoration(
-        color: t.colorScheme.surface,
-        borderRadius: BorderRadius.zero,
-        border: Border.all(color: Couleurs.traitClair),
-      ),
-      child: Material(
-        color: Colors.transparent,
-        borderRadius: BorderRadius.zero,
-        child: InkWell(
-          borderRadius: BorderRadius.zero,
-          // Sans chapitre identifié, on ouvre la fiche de l'ouvrage : mieux
-          // vaut arriver sur le livre que sur un écran vide.
-          onTap: () => context.push(chapitreId == null
-              ? '/ouvrage/$documentId'
-              : '/lecture/$documentId/$chapitreId'),
-          child: Padding(
-            padding: const EdgeInsets.all(15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Texte('${r['ouvrage'] ?? ''}',
+    return Surface(
+      // Sans chapitre identifié, on ouvre la fiche de l'ouvrage : mieux
+      // vaut arriver sur le livre que sur un écran vide.
+      onTap: () => context.push(chapitreId == null
+          ? '/ouvrage/$documentId'
+          : '/lecture/$documentId/$chapitreId'),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: Texte('${r['ouvrage'] ?? ''}',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: t.textTheme.titleSmall),
-                const SizedBox(height: 3),
-                Row(
-                  children: [
-                    if ('${r['chapitre'] ?? ''}'.isNotEmpty)
-                      Flexible(
-                        child: Texte('${r['chapitre']}',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: t.textTheme.labelSmall
-                                ?.copyWith(color: Couleurs.grisChaud)),
-                      ),
-                    if (page != null) ...[
-                      const SizedBox(width: 8),
-                      Texte('p. $page',
-                          style: t.textTheme.labelSmall
-                              ?.copyWith(color: Couleurs.orTexte)),
-                    ],
-                  ],
-                ),
-                const SizedBox(height: 10),
-                Texte(
-                  '${r['extrait'] ?? ''}',
-                  maxLines: 5,
-                  overflow: TextOverflow.ellipsis,
-                  style: t.textTheme.bodySmall?.copyWith(height: 1.6),
-                ),
+                    style: t.textTheme.titleMedium),
+              ),
+              if (page != null) ...[
+                const SizedBox(width: 10),
+                Pastille('p. $page'),
               ],
+            ],
+          ),
+          if ('${r['chapitre'] ?? ''}'.isNotEmpty) ...[
+            const SizedBox(height: 3),
+            Texte('${r['chapitre']}',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: t.textTheme.labelSmall?.copyWith(color: p.attenue)),
+          ],
+          const SizedBox(height: 12),
+          // L'extrait sur un aplat en retrait, en Fraunces : c'est la voix du
+          // livre, distincte des libellés de l'application.
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+            decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.moyen),
+            child: Texte(
+              '${r['extrait'] ?? ''}',
+              maxLines: 5,
+              overflow: TextOverflow.ellipsis,
+              style: t.textTheme.bodySmall?.copyWith(
+                fontFamily: t.textTheme.headlineSmall?.fontFamily,
+                fontSize: 13.5,
+                color: p.texte,
+                height: 1.6,
+              ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }

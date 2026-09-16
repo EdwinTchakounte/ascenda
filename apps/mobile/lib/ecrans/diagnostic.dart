@@ -8,6 +8,7 @@ import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/etats.dart';
+import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// Le diagnostic d'entrée : une question à l'écran, grande, centrée.
@@ -124,6 +125,7 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
     final cle = '${q['cle']}';
     final choix = (q['choix'] as List).cast<Map<String, dynamic>>();
     final t = Theme.of(context);
+    final p = context.palette;
 
     return Scaffold(
       appBar: AppBar(
@@ -133,38 +135,28 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
                 onPressed: () => context.go('/aujourdhui'),
               )
             : BackButton(onPressed: () => setState(() => _index--)),
-        title: Texte('${_index + 1} sur ${questions.length}',
-            style: t.textTheme.labelLarge?.copyWith(color: Couleurs.grisChaud)),
+        centerTitle: true,
+        title: Pastille('Étape ${_index + 1} sur ${questions.length}', icone: Icons.explore_rounded),
       ),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: ClipRRect(
-              borderRadius: BorderRadius.zero,
-              child: LinearProgressIndicator(
-                value: (_index + 1) / questions.length,
-                minHeight: 4,
-                backgroundColor: t.colorScheme.surfaceContainer,
-              ),
-            ),
+            padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
+            child: _Etapes(total: questions.length, courante: _index),
           ),
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(24, 40, 24, 24),
+              padding: const EdgeInsets.fromLTRB(20, 32, 20, 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   if (q['ouvrage'] != null)
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 12),
-                      child: Texte(
-                        "D'après ${q['ouvrage']}",
-                        style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte),
-                      ),
+                      padding: const EdgeInsets.only(bottom: 10),
+                      child: Surtitre("D'après ${q['ouvrage']}"),
                     ),
-                  Texte('${q['question']}', style: t.textTheme.headlineSmall),
-                  const SizedBox(height: 28),
+                  Texte('${q['question']}', style: t.textTheme.headlineSmall?.copyWith(fontSize: 25)),
+                  const SizedBox(height: 26),
                   for (final c in choix) ...[
                     _CarteChoix(
                       libelle: '${c['libelle']}',
@@ -179,29 +171,82 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
                         });
                       },
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 12),
                   ],
                 ],
               ),
             ),
           ),
           if (_index == questions.length - 1)
-            SafeArea(
-              minimum: const EdgeInsets.fromLTRB(24, 0, 24, 20),
-              child: SizedBox(
-                width: double.infinity,
-                child: FilledButton(
-                  onPressed: (_reponses.length < questions.length || _envoi) ? null : _terminer,
-                  child: _envoi
-                      ? const SizedBox(
-                          width: 20, height: 20,
-                          child: CircularProgressIndicator(strokeWidth: 2.2))
-                      : const Texte('Construire mon chronogramme'),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: p.fond,
+                border: Border(top: BorderSide(color: p.trait)),
+              ),
+              child: SafeArea(
+                top: false,
+                minimum: const EdgeInsets.fromLTRB(20, 14, 20, 20),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: (_reponses.length < questions.length || _envoi) ? null : _terminer,
+                    child: _envoi
+                        ? SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2.2, color: p.surAccent))
+                        : const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Flexible(
+                                child: Texte('Construire mon chronogramme',
+                                    maxLines: 1, overflow: TextOverflow.ellipsis),
+                              ),
+                              SizedBox(width: 8),
+                              Icon(Icons.auto_awesome_rounded, size: 18),
+                            ],
+                          ),
+                  ),
                 ),
               ),
             ),
         ],
       ),
+    );
+  }
+}
+
+/// La progression du questionnaire en segments : une étape par question, ce
+/// qui dit mieux qu'une barre combien il en reste. Au delà de douze, les
+/// segments deviennent trop fins et la jauge continue reprend la main.
+class _Etapes extends StatelessWidget {
+  const _Etapes({required this.total, required this.courante});
+  final int total;
+  final int courante;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    if (total > 12) return Jauge(valeur: (courante + 1) / total);
+    return Row(
+      children: [
+        for (var i = 0; i < total; i++) ...[
+          if (i > 0) const SizedBox(width: 5),
+          Expanded(
+            child: AnimatedContainer(
+              duration: const Duration(milliseconds: 240),
+              height: 7,
+              decoration: BoxDecoration(
+                borderRadius: Rayons.pilule,
+                color: i <= courante ? null : p.surfaceCreuse,
+                gradient: i <= courante
+                    ? LinearGradient(colors: [p.accent, p.accentSurHeros])
+                    : null,
+              ),
+            ),
+          ),
+        ],
+      ],
     );
   }
 }
@@ -216,33 +261,50 @@ class _CarteChoix extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.zero,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 160),
-        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 18),
-        decoration: BoxDecoration(
-          color: choisi ? Couleurs.or.withValues(alpha: 0.1) : t.colorScheme.surface,
-          borderRadius: BorderRadius.zero,
-          border: Border.all(
-            color: choisi ? Couleurs.or : (t.dividerTheme.color ?? Couleurs.traitClair),
-            width: choisi ? 1.8 : 1,
-          ),
-        ),
-        child: Row(
-          children: [
-            Expanded(
-              child: Texte(
-                libelle,
-                style: t.textTheme.bodyLarge?.copyWith(
-                  fontWeight: choisi ? FontWeight.w600 : FontWeight.w400,
-                  height: 1.45,
+    final p = context.palette;
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 160),
+      decoration: BoxDecoration(
+        color: choisi ? Color.alphaBlend(p.accentVoile, p.surface) : p.surface,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: choisi ? p.accent : p.trait, width: choisi ? 1.8 : 1),
+        boxShadow: choisi ? null : p.ombreCarte,
+      ),
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: Rayons.carte,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: Row(
+              children: [
+                // Le témoin de sélection, rond comme un bouton radio.
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 160),
+                  width: 24,
+                  height: 24,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: choisi ? p.accent : null,
+                    border: Border.all(color: choisi ? p.accent : p.attenue.withValues(alpha: 0.5), width: 2),
+                  ),
+                  child: choisi ? Icon(Icons.check_rounded, size: 15, color: p.surAccent) : null,
                 ),
-              ),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Texte(
+                    libelle,
+                    style: t.textTheme.bodyLarge?.copyWith(
+                      color: p.encre,
+                      fontWeight: choisi ? FontWeight.w600 : FontWeight.w400,
+                      height: 1.45,
+                    ),
+                  ),
+                ),
+              ],
             ),
-            if (choisi) const Icon(Icons.check_circle_rounded, color: Couleurs.or, size: 21),
-          ],
+          ),
         ),
       ),
     );
@@ -257,6 +319,7 @@ class _ChoixAxe extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final axes = ref.watch(axesProvider);
     final t = Theme.of(context);
+    final p = context.palette;
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -268,33 +331,43 @@ class _ChoixAxe extends ConsumerWidget {
         loading: () => const Center(child: CircularProgressIndicator()),
         error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(axesProvider)),
         data: (liste) => ListView(
-          padding: const EdgeInsets.fromLTRB(24, 8, 24, 32),
+          padding: const EdgeInsets.fromLTRB(20, 4, 20, 32),
           children: [
-            Texte('Par quoi voulez-vous commencer ?', style: t.textTheme.headlineSmall),
-            const SizedBox(height: 8),
-            Texte(
-              "Un axe, ce n'est pas un thème : c'est un centre d'intérêt, un "
-              "objectif et le temps que vous avez. Vous pourrez en changer.",
-              style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
+            SurfaceHeros(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  IconePastille(Icons.explore_rounded, couleur: p.accentSurHeros, taille: 50),
+                  const SizedBox(height: 16),
+                  Surtitre('Diagnostic', couleur: p.accentSurHeros),
+                  const SizedBox(height: 6),
+                  Texte('Par quoi voulez-vous commencer ?',
+                      style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25)),
+                  const SizedBox(height: 8),
+                  Texte(
+                    "Un axe, ce n'est pas un thème : c'est un centre d'intérêt, un "
+                    "objectif et le temps que vous avez. Vous pourrez en changer.",
+                    style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+                  ),
+                ],
+              ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 26),
             for (final g in regrouperParPole(liste)) ...[
               // Un pôle ouvre une section : son nom, puis ses parcours. Six cartes
               // « Agriculture » à plat, au milieu des axes sur l'IA, se lisaient
               // comme une liste sans ordre.
               if (g.estPole) ...[
                 const SizedBox(height: 14),
-                Texte(g.poleLabel!, style: t.textTheme.titleLarge),
-                const SizedBox(height: 4),
-                Texte(
-                  '${g.axes.length} parcours : choisissez celui qui répond à votre activité.',
-                  style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
+                TitreSection(
+                  g.poleLabel!,
+                  sousTitre: '${g.axes.length} parcours : choisissez celui qui répond à votre activité.',
                 ),
                 const SizedBox(height: 12),
               ],
               for (final a in g.axes) ...[
                 _CarteAxe(axe: a, dansPole: g.estPole, onChoisi: onChoisi),
-                const SizedBox(height: 10),
+                const SizedBox(height: 12),
               ],
             ],
           ],
@@ -314,10 +387,14 @@ class _CarteAxe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final a = axe;
+    // La teinte du pôle, celle de ses couvertures ; l'or à défaut.
+    final teinte = Couleurs.pole(a.poleSlug ?? a.slug) ?? p.accentTexte;
     return Opacity(
       opacity: a.parcoursPossible ? 1 : 0.55,
-      child: InkWell(
+      child: Surface(
+        padding: const EdgeInsets.fromLTRB(14, 14, 10, 14),
         // Un axe dont aucun ouvrage n'a de chapitres découpés ne peut pas donner
         // de plan : on le dit au lieu d'échouer après six questions.
         onTap: a.parcoursPossible
@@ -333,49 +410,42 @@ class _CarteAxe extends StatelessWidget {
                     duration: const Duration(seconds: 6),
                   ),
                 ),
-        borderRadius: BorderRadius.zero,
-        child: Container(
-          padding: const EdgeInsets.all(18),
-          decoration: BoxDecoration(
-            color: t.colorScheme.surface,
-            borderRadius: BorderRadius.zero,
-            border: Border(
-              top: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-              right: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-              bottom: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-              // Le filet d'or marque l'appartenance au pôle.
-              left: dansPole
-                  ? const BorderSide(color: Couleurs.or, width: 3)
-                  : BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
+        child: Row(
+          children: [
+            // La pastille teintée marque l'appartenance au pôle.
+            IconePastille(
+              dansPole ? Icons.route_rounded : Icons.auto_stories_rounded,
+              couleur: teinte,
+              taille: 44,
             ),
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Texte(a.label, style: t.textTheme.titleMedium),
-                    const SizedBox(height: 4),
-                    Texte(
-                      !a.parcoursPossible
-                          ? 'Consultable, pas encore de parcours'
-                          : dansPole
-                              ? '${a.nbPages} pages · ${_heures(a.dureeMin)} de lecture'
-                              : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${a.nbPages} pages',
-                      style: t.textTheme.bodySmall?.copyWith(
-                        color: a.parcoursPossible ? Couleurs.grisChaud : Couleurs.terracotta,
-                      ),
+            const SizedBox(width: 14),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Texte(a.label, style: t.textTheme.titleMedium, maxLines: 3, overflow: TextOverflow.ellipsis),
+                  const SizedBox(height: 4),
+                  Texte(
+                    !a.parcoursPossible
+                        ? 'Consultable, pas encore de parcours'
+                        : dansPole
+                            ? '${a.nbPages} pages · ${_heures(a.dureeMin)} de lecture'
+                            : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${a.nbPages} pages',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.textTheme.bodySmall?.copyWith(
+                      color: a.parcoursPossible ? p.attenue : p.alerte,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-              Icon(
-                a.parcoursPossible ? Icons.chevron_right_rounded : Icons.hourglass_empty_rounded,
-                color: Couleurs.grisChaud,
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(width: 6),
+            Icon(
+              a.parcoursPossible ? Icons.chevron_right_rounded : Icons.hourglass_empty_rounded,
+              color: p.attenue,
+            ),
+          ],
         ),
       ),
     );

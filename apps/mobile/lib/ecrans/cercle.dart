@@ -13,6 +13,7 @@ import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
 import '../widgets/etats.dart';
+import '../widgets/ui.dart' hide Pastille;
 
 /// Le cercle de lecteurs : ses amis, ce qu'ils lisent, et de quoi se tenir
 /// mutuellement au rythme.
@@ -50,6 +51,7 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final moi = ref.watch(cercleMoiProvider);
     final amis = ref.watch(amisProvider);
     final demandes = ref.watch(demandesProvider).valueOrNull ?? const Demandes();
@@ -59,7 +61,9 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
     _marquerVus(recus);
 
     return Scaffold(
+      appBar: AppBar(title: const Texte('Mon cercle')),
       body: SafeArea(
+        top: false,
         bottom: false,
         child: moi.when(
           loading: () => const Padding(padding: EdgeInsets.all(20), child: SqueletteCarte(lignes: 5)),
@@ -67,37 +71,39 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
           data: (m) => RefreshIndicator(
             onRefresh: _rafraichir,
             child: ListView(
-              padding: const EdgeInsets.fromLTRB(20, 16, 20, 40),
+              padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
               children: [
-                Texte('Mon cercle', style: t.textTheme.headlineMedium),
-                const SizedBox(height: 4),
                 Texte(
                   "Lire à plusieurs tient mieux dans la durée. Suivez vos amis, "
                   "encouragez-les, écrivez-leur.",
-                  style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
+                  style: t.textTheme.bodyMedium?.copyWith(color: p.attenue),
                 ),
                 const SizedBox(height: 18),
                 _CarteCode(moi: m),
 
                 if (demandes.recues.isNotEmpty) ...[
-                  const _Titre('Demandes'),
+                  _Titre('Demandes', compte: demandes.recues.length),
                   for (final d in demandes.recues) _LigneDemande(demande: d),
                 ],
 
                 if (nouveaux.isNotEmpty) ...[
-                  const _Titre('Pour vous'),
+                  _Titre('Pour vous', compte: nouveaux.length),
                   for (final e in nouveaux) _CarteEncouragement(encouragement: e),
                 ],
 
                 const _Titre('Fil de lecture'),
                 fil.when(
                   loading: () => const SqueletteCarte(lignes: 3),
-                  error: (e, _) => _Discret("Le fil n'a pas pu se charger. Tirez vers le bas pour réessayer."),
+                  error: (e, _) => const _Discret(
+                    "Le fil n'a pas pu se charger. Tirez vers le bas pour réessayer.",
+                    icone: Icons.wifi_off_rounded,
+                  ),
                   data: (evenements) => evenements.isEmpty
                       ? const _Discret(
                           "Rien encore ces quatorze derniers jours. Les séances et les quiz de vos amis "
-                          "apparaîtront ici.")
-                      : Column(children: [for (final e in evenements.take(20)) _LigneFil(evenement: e)]),
+                          "apparaîtront ici.",
+                          icone: Icons.auto_stories_outlined)
+                      : _Fil(evenements: evenements.take(20).toList()),
                 ),
 
                 const _Titre('Mes amis'),
@@ -107,12 +113,12 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
                   data: (liste) => liste.isEmpty
                       ? const _Discret(
                           "Votre cercle est vide pour l'instant. Partagez votre code, ou ajoutez celui "
-                          "d'un ami : l'amitié commence dès qu'il accepte.")
+                          "d'un ami : l'amitié commence dès qu'il accepte.",
+                          icone: Icons.group_add_outlined)
                       : Column(children: [for (final a in liste) _LigneAmi(ami: a)]),
                 ),
                 if (demandes.envoyees.isNotEmpty) ...[
-                  const SizedBox(height: 8),
-                  _Discret('En attente de réponse : ${demandes.envoyees.map((d) => d.lecteur.nom).join(', ')}.'),
+                  _EnAttente('En attente de réponse : ${demandes.envoyees.map((d) => d.lecteur.nom).join(', ')}.'),
                 ],
 
                 const _Titre('Confidentialité'),
@@ -126,47 +132,125 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
   }
 }
 
+/// Le titre d'une section du cercle, avec le nombre d'éléments en pastille.
 class _Titre extends StatelessWidget {
-  const _Titre(this.texte);
+  const _Titre(this.texte, {this.compte});
+  final String texte;
+  final int? compte;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final p = context.palette;
+    return Padding(
+      padding: const EdgeInsets.only(top: 24, bottom: 12),
+      child: Row(
+        children: [
+          Flexible(child: Texte(texte, style: t.textTheme.titleLarge?.copyWith(fontSize: 20))),
+          if (compte != null) ...[
+            const SizedBox(width: 10),
+            Container(
+              constraints: const BoxConstraints(minWidth: 24),
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+              decoration: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
+              alignment: Alignment.center,
+              child: Texte('$compte',
+                  style: t.textTheme.labelSmall?.copyWith(color: p.surAccent, fontWeight: FontWeight.w700)),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+/// Une remarque en ligne, sous une liste : pas de bloc, une icône et le texte.
+class _EnAttente extends StatelessWidget {
+  const _EnAttente(this.texte);
   final String texte;
 
   @override
-  Widget build(BuildContext context) => Padding(
-        padding: const EdgeInsets.only(top: 28, bottom: 10),
-        child: Texte(texte, style: Theme.of(context).textTheme.titleLarge),
-      );
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 2),
+            child: Icon(Icons.hourglass_empty_rounded, size: 16, color: p.attenue),
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Texte(texte, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: p.attenue)),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
+/// Un message discret : état vide ou petite remarque, en bloc creusé.
 class _Discret extends StatelessWidget {
-  const _Discret(this.texte);
+  const _Discret(this.texte, {this.icone});
   final String texte;
+  final IconData? icone;
 
   @override
-  Widget build(BuildContext context) => Texte(
-        texte,
-        style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud, height: 1.55),
-      );
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
+      decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.carte),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (icone != null) ...[
+            Icon(icone, size: 20, color: p.attenue),
+            const SizedBox(width: 12),
+          ],
+          Expanded(
+            child: Texte(
+              texte,
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.55),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
-class Pastille extends StatelessWidget {
-  const Pastille({super.key, required this.lecteur, this.taille = 42});
+class AvatarLecteur extends StatelessWidget {
+  const AvatarLecteur({super.key, required this.lecteur, this.taille = 42});
   final Lecteur lecteur;
   final double taille;
 
   @override
   Widget build(BuildContext context) {
     // Une teinte stable par lecteur, prise dans celles des pôles : un visage se
-    // reconnaît à sa couleur avant son nom.
+    // reconnaît à sa couleur avant son nom. Les teintes de pôle sont fixes,
+    // l'initiale est donc blanche dans tous les thèmes.
     final teintes = Couleurs.poles.values.toList();
     final teinte = teintes[lecteur.id.codeUnits.fold(0, (a, b) => a + b) % teintes.length];
     return Container(
       width: taille,
       height: taille,
       alignment: Alignment.center,
-      color: teinte.withValues(alpha: 0.16),
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color.lerp(teinte, Colors.white, 0.18)!, teinte],
+        ),
+        boxShadow: [BoxShadow(color: teinte.withValues(alpha: 0.28), blurRadius: 8, offset: const Offset(0, 3))],
+      ),
       child: Texte(
         lecteur.initiale,
-        style: TextStyle(color: teinte, fontWeight: FontWeight.w700, fontSize: taille * 0.42),
+        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: taille * 0.42),
       ),
     );
   }
@@ -193,24 +277,58 @@ class _CarteCode extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
-    return Container(
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 18),
-      color: Couleurs.nuit,
+    final p = context.palette;
+    return SurfaceHeros(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Texte('Votre code ASCENDA',
-              style: t.textTheme.labelLarge?.copyWith(color: const Color(0xFFB9C1D6), letterSpacing: 0.6)),
-          const SizedBox(height: 10),
-          FittedBox(
-            fit: BoxFit.scaleDown,
-            child: SelectableText(
-              moi.code,
-              key: const Key('code-cercle'),
-              style: const TextStyle(
-                color: Couleurs.orClair, fontSize: 28, fontWeight: FontWeight.w700, letterSpacing: 4),
+          Row(
+            children: [
+              IconePastille(Icons.diversity_3_rounded, couleur: p.accentSurHeros, taille: 44),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Surtitre('Votre code ASCENDA', couleur: p.accentSurHeros),
+                    const SizedBox(height: 2),
+                    Texte(
+                      'À transmettre à vos amis',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 18),
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            decoration: BoxDecoration(
+              color: p.surHeros.withValues(alpha: 0.07),
+              borderRadius: Rayons.carte,
+              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.28)),
+            ),
+            child: Center(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: SelectableText(
+                  moi.code,
+                  key: const Key('code-cercle'),
+                  style: t.textTheme.headlineMedium?.copyWith(
+                    color: p.accentSurHeros,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 4,
+                  ),
+                ),
+              ),
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
           Row(
             children: [
               Expanded(
@@ -219,8 +337,10 @@ class _CarteCode extends ConsumerWidget {
                   icon: const Icon(Icons.send_rounded, size: 17),
                   label: const Texte('Inviter'),
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: Couleurs.orClair,
-                    side: const BorderSide(color: Color(0x40E8C070)),
+                    foregroundColor: p.surHeros,
+                    minimumSize: const Size(0, 48),
+                    shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                    side: BorderSide(color: p.accentSurHeros.withValues(alpha: 0.4)),
                   ),
                 ),
               ),
@@ -230,6 +350,12 @@ class _CarteCode extends ConsumerWidget {
                   onPressed: () => _ajouter(context, ref),
                   icon: const Icon(Icons.person_add_alt_1_rounded, size: 18),
                   label: const Texte('Ajouter'),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: p.accent,
+                    foregroundColor: p.surAccent,
+                    minimumSize: const Size(0, 48),
+                    shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                  ),
                 ),
               ),
             ],
@@ -298,19 +424,29 @@ class _DialogueAjoutState extends ConsumerState<_DialogueAjout> {
 
   @override
   Widget build(BuildContext context) {
+    final p = context.palette;
     return AlertDialog(
-      title: const Texte('Ajouter un ami'),
+      icon: const IconePastille(Icons.person_add_alt_1_rounded, taille: 52),
+      title: const Texte('Ajouter un ami', textAlign: TextAlign.center),
       content: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Texte("Saisissez le code ASCENDA qu'il vous a transmis."),
-          const SizedBox(height: 14),
+          Texte("Saisissez le code ASCENDA qu'il vous a transmis.",
+              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: p.attenue)),
+          const SizedBox(height: 16),
           TextField(
             controller: _code,
             autofocus: true,
             textCapitalization: TextCapitalization.characters,
-            decoration: InputDecoration(labelText: 'Code', hintText: 'AWA-7KQ2', errorText: _erreur, errorMaxLines: 3),
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(letterSpacing: 2),
+            decoration: InputDecoration(
+              labelText: 'Code',
+              hintText: 'AWA-7KQ2',
+              prefixIcon: const Icon(Icons.tag_rounded),
+              errorText: _erreur,
+              errorMaxLines: 3,
+            ),
             onSubmitted: (_) => _envoyer(),
           ),
         ],
@@ -349,31 +485,45 @@ class _LigneDemande extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
-    return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(14),
-      decoration: const BoxDecoration(color: Colors.white, boxShadow: Couleurs.ombreDouce),
-      child: Row(
-        children: [
-          Pastille(lecteur: demande.lecteur),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Texte(demande.lecteur.nom, style: t.textTheme.titleSmall),
-                Texte('veut rejoindre votre cercle',
-                    style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
-              ],
+    final p = context.palette;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Surface(
+        padding: const EdgeInsets.fromLTRB(16, 14, 8, 14),
+        child: Row(
+          children: [
+            AvatarLecteur(lecteur: demande.lecteur, taille: 44),
+            const SizedBox(width: 13),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Texte(demande.lecteur.nom,
+                      maxLines: 1, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium),
+                  const SizedBox(height: 1),
+                  Texte('veut rejoindre votre cercle',
+                      style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
+                ],
+              ),
             ),
-          ),
-          IconButton(
-            tooltip: 'Refuser',
-            onPressed: () => _repondre(context, ref, false),
-            icon: const Icon(Icons.close_rounded, color: Couleurs.grisChaud),
-          ),
-          FilledButton(onPressed: () => _repondre(context, ref, true), child: const Texte('Accepter')),
-        ],
+            IconButton(
+              tooltip: 'Refuser',
+              onPressed: () => _repondre(context, ref, false),
+              style: IconButton.styleFrom(backgroundColor: p.surfaceCreuse),
+              icon: Icon(Icons.close_rounded, color: p.attenue, size: 20),
+            ),
+            const SizedBox(width: 6),
+            FilledButton(
+              onPressed: () => _repondre(context, ref, true),
+              style: FilledButton.styleFrom(
+                minimumSize: const Size(0, 40),
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+              ),
+              child: const Texte('Accepter'),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -386,33 +536,58 @@ class _CarteEncouragement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final e = encouragement;
-    return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
-      decoration: BoxDecoration(
-        color: Couleurs.or.withValues(alpha: 0.09),
-        border: const Border(left: BorderSide(color: Couleurs.or, width: 3)),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(iconeGenre(e.genre), color: Couleurs.orTexte, size: 22),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Texte('« ${e.message} »', style: t.textTheme.bodyLarge?.copyWith(height: 1.45)),
-                const SizedBox(height: 6),
-                Texte(
-                  [e.auteur.nom, if (e.ouvrage != null) e.ouvrage!, ilYA(e.le)].join(' · '),
-                  style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
-                ),
-              ],
-            ),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          borderRadius: Rayons.carte,
+          boxShadow: p.ombreCarte,
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              Color.alphaBlend(p.accentVoile, p.surface),
+              p.surface,
+            ],
           ),
-        ],
+          border: Border.all(color: p.accentTexte.withValues(alpha: 0.22)),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconePastille(iconeGenre(e.genre), taille: 44),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Texte('« ${e.message} »',
+                        style: t.textTheme.titleLarge?.copyWith(fontSize: 17.5, height: 1.4, fontWeight: FontWeight.w500)),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        AvatarLecteur(lecteur: e.auteur, taille: 20),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Texte(
+                            [e.auteur.nom, if (e.ouvrage != null) e.ouvrage!, ilYA(e.le)].join(' · '),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -428,6 +603,28 @@ IconData iconeGenre(String genre) => switch (genre) {
       _ => Icons.menu_book_outlined,
     };
 
+/// Le fil : une seule carte, les événements l'un sous l'autre, séparés d'un filet.
+class _Fil extends StatelessWidget {
+  const _Fil({required this.evenements});
+  final List<EvenementFil> evenements;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return Surface(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+      child: Column(
+        children: [
+          for (var i = 0; i < evenements.length; i++) ...[
+            if (i > 0) Divider(height: 1, thickness: 1, indent: 50, color: p.trait),
+            _LigneFil(evenement: evenements[i]),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
 class _LigneFil extends ConsumerWidget {
   const _LigneFil({required this.evenement});
   final EvenementFil evenement;
@@ -435,13 +632,14 @@ class _LigneFil extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
+    final p = context.palette;
     final e = evenement;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 14),
+      padding: const EdgeInsets.symmetric(vertical: 12),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Pastille(lecteur: e.lecteur, taille: 38),
+          AvatarLecteur(lecteur: e.lecteur, taille: 38),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
@@ -449,34 +647,57 @@ class _LigneFil extends ConsumerWidget {
               children: [
                 Text.rich(
                   TextSpan(children: [
-                    TextSpan(text: e.lecteur.nom, style: const TextStyle(fontWeight: FontWeight.w700)),
+                    TextSpan(text: e.lecteur.nom, style: TextStyle(fontWeight: FontWeight.w700, color: p.encre)),
                     TextSpan(text: ' ${lisible(e.texte)}'),
                   ]),
-                  style: t.textTheme.bodyMedium,
+                  style: t.textTheme.bodyMedium?.copyWith(height: 1.45),
                 ),
-                if (e.ouvrage != null)
-                  Texte(e.ouvrage!,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: t.textTheme.bodySmall?.copyWith(color: Couleurs.orTexte)),
-                Texte(ilYA(e.le), style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+                if (e.ouvrage != null) ...[
+                  const SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Icon(Icons.menu_book_rounded, size: 13, color: p.accentTexte),
+                      const SizedBox(width: 5),
+                      Expanded(
+                        child: Texte(e.ouvrage!,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: t.textTheme.bodySmall?.copyWith(color: p.accentTexte, fontWeight: FontWeight.w600)),
+                      ),
+                    ],
+                  ),
+                ],
+                const SizedBox(height: 6),
+                Row(
+                  children: [
+                    Flexible(
+                      child: Texte(ilYA(e.le),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: t.textTheme.labelSmall?.copyWith(color: p.attenue)),
+                    ),
+                    if (e.encourage) ...[
+                      const SizedBox(width: 8),
+                      Icon(Icons.check_circle_rounded, size: 15, color: p.succes, semanticLabel: 'Encouragé'),
+                    ],
+                    const Spacer(),
+                    if (!e.encourage)
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.symmetric(horizontal: 14),
+                          minimumSize: const Size(0, 34),
+                          foregroundColor: p.accentTexte,
+                          side: BorderSide(color: p.accentTexte.withValues(alpha: 0.45)),
+                          shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                        ),
+                        onPressed: () => encourager(context, ref, e.lecteur, evenement: e),
+                        child: const Texte('Encourager'),
+                      ),
+                  ],
+                ),
               ],
             ),
           ),
-          const SizedBox(width: 8),
-          e.encourage
-              ? const Padding(
-                  padding: EdgeInsets.only(top: 6),
-                  child: Icon(Icons.check_rounded, size: 20, color: Couleurs.sauge, semanticLabel: 'Encouragé'),
-                )
-              : OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    minimumSize: const Size(0, 36),
-                  ),
-                  onPressed: () => encourager(context, ref, e.lecteur, evenement: e),
-                  child: const Texte('Encourager'),
-                ),
         ],
       ),
     );
@@ -490,43 +711,59 @@ class _LigneAmi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final l = ami.lecture;
     final resume = !l.partage
         ? "ne partage pas son activité"
         : l.seancesSemaine == 0
             ? (l.derniereActivite != null ? 'dernière lecture ${ilYA(l.derniereActivite)}' : 'pas encore de séance')
             : '${l.seancesSemaine} séance${l.seancesSemaine > 1 ? 's' : ''} · ${l.minutesSemaine} min cette semaine';
-    return InkWell(
-      onTap: () => context.push('/cercle/ami/${ami.lecteur.id}?nom=${Uri.encodeComponent(ami.lecteur.nom)}'),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Surface(
+        padding: const EdgeInsets.fromLTRB(14, 12, 12, 12),
+        onTap: () => context.push('/cercle/ami/${ami.lecteur.id}?nom=${Uri.encodeComponent(ami.lecteur.nom)}'),
         child: Row(
           children: [
-            Pastille(lecteur: ami.lecteur),
-            const SizedBox(width: 12),
+            AvatarLecteur(lecteur: ami.lecteur, taille: 46),
+            const SizedBox(width: 14),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Texte(ami.lecteur.nom, style: t.textTheme.titleSmall),
-                  Texte(resume, style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
-                  if (l.partage && l.lit != null)
-                    Texte('lit ${l.lit}',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: t.textTheme.bodySmall?.copyWith(color: Couleurs.orTexte)),
+                  Texte(ami.lecteur.nom, maxLines: 1, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium),
+                  const SizedBox(height: 2),
+                  Texte(resume, style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
+                  if (l.partage && l.lit != null) ...[
+                    const SizedBox(height: 2),
+                    Row(
+                      children: [
+                        Icon(Icons.auto_stories_rounded, size: 13, color: p.accentTexte),
+                        const SizedBox(width: 5),
+                        Expanded(
+                          child: Texte('lit ${l.lit}',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: t.textTheme.bodySmall?.copyWith(color: p.accentTexte, fontWeight: FontWeight.w600)),
+                        ),
+                      ],
+                    ),
+                  ],
                 ],
               ),
             ),
+            const SizedBox(width: 8),
             if (ami.nonLus > 0)
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                color: Couleurs.or,
+                constraints: const BoxConstraints(minWidth: 26, minHeight: 26),
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
                 child: Texte('${ami.nonLus}',
-                    style: t.textTheme.labelSmall?.copyWith(color: Couleurs.nuitProfond, fontWeight: FontWeight.w700)),
+                    style: t.textTheme.labelSmall?.copyWith(color: p.surAccent, fontWeight: FontWeight.w700)),
               )
             else
-              const Icon(Icons.chevron_right_rounded, color: Couleurs.grisChaud),
+              Icon(Icons.chevron_right_rounded, color: p.attenue),
           ],
         ),
       ),
@@ -547,22 +784,31 @@ class _PartageState extends ConsumerState<_Partage> {
 
   @override
   Widget build(BuildContext context) {
-    return SwitchListTile(
-      contentPadding: EdgeInsets.zero,
-      value: _actif,
-      title: const Texte('Montrer ma lecture à mes amis'),
-      subtitle: const Texte(
-        "Vos séances et vos quiz apparaissent dans leur fil. Vos notes, vos réponses et "
-        "vos échanges restent privés dans tous les cas.",
+    final p = context.palette;
+    return Surface(
+      padding: EdgeInsets.zero,
+      child: SwitchListTile(
+        contentPadding: const EdgeInsets.fromLTRB(16, 2, 12, 2),
+        value: _actif,
+        secondary: IconePastille(_actif ? Icons.visibility_outlined : Icons.visibility_off_outlined, taille: 40),
+        title: const Texte('Montrer ma lecture à mes amis'),
+        subtitle: Padding(
+          padding: const EdgeInsets.only(top: 4),
+          child: Texte(
+            "Vos séances et vos quiz apparaissent dans leur fil. Vos notes, vos réponses et "
+            "vos échanges restent privés dans tous les cas.",
+            style: Theme.of(context).textTheme.bodySmall?.copyWith(color: p.attenue),
+          ),
+        ),
+        onChanged: (v) async {
+          setState(() => _actif = v);
+          try {
+            await ref.read(clientApiProvider).patch('/cercle/preferences', corps: {'partage_activite': v});
+          } catch (_) {
+            if (mounted) setState(() => _actif = !v);
+          }
+        },
       ),
-      onChanged: (v) async {
-        setState(() => _actif = v);
-        try {
-          await ref.read(clientApiProvider).patch('/cercle/preferences', corps: {'partage_activite': v});
-        } catch (_) {
-          if (mounted) setState(() => _actif = !v);
-        }
-      },
     );
   }
 }
@@ -640,48 +886,125 @@ class _FeuilleEncouragementState extends ConsumerState<_FeuilleEncouragement> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Padding(
-      padding: EdgeInsets.fromLTRB(20, 20, 20, 20 + MediaQuery.viewInsetsOf(context).bottom),
+      padding: EdgeInsets.fromLTRB(20, 0, 20, 20 + MediaQuery.viewInsetsOf(context).bottom),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Texte('Encourager ${widget.ami.nom}', style: t.textTheme.titleLarge),
-            if (widget.evenement != null) ...[
-              const SizedBox(height: 4),
-              Texte('${widget.ami.nom} ${widget.evenement!.texte}',
-                  style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
-            ],
-            const SizedBox(height: 14),
-            RadioGroup<String>(
-              groupValue: _genre,
-              onChanged: (v) => setState(() => _genre = v ?? _genre),
-              child: Column(
-                children: [
-                  for (final (cle, libelle) in _genres)
-                    RadioListTile<String>(
-                      contentPadding: EdgeInsets.zero,
-                      value: cle,
-                      title: Texte(libelle),
-                      secondary: Icon(iconeGenre(cle), color: Couleurs.orTexte),
-                    ),
-                ],
-              ),
+            Row(
+              children: [
+                AvatarLecteur(lecteur: widget.ami, taille: 44),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Texte('Encourager ${widget.ami.nom}',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: t.textTheme.headlineSmall?.copyWith(fontSize: 22)),
+                      if (widget.evenement != null) ...[
+                        const SizedBox(height: 2),
+                        Texte('${widget.ami.nom} ${widget.evenement!.texte}',
+                            style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
+                      ],
+                    ],
+                  ),
+                ),
+              ],
             ),
+            const SizedBox(height: 18),
+            for (final (cle, libelle) in _genres) ...[
+              _ChoixGenre(
+                icone: iconeGenre(cle),
+                libelle: libelle,
+                choisi: _genre == cle,
+                onTap: () => setState(() => _genre = cle),
+              ),
+              const SizedBox(height: 10),
+            ],
+            const SizedBox(height: 6),
             TextField(
               controller: _mot,
               maxLength: 280,
               minLines: 1,
               maxLines: 3,
+              textCapitalization: TextCapitalization.sentences,
               decoration: InputDecoration(labelText: 'Un mot à vous (facultatif)', errorText: _erreur),
             ),
             const SizedBox(height: 8),
             SizedBox(
               width: double.infinity,
-              child: FilledButton(onPressed: _envoi ? null : _envoyer, child: const Texte('Envoyer')),
+              child: FilledButton(
+                onPressed: _envoi ? null : _envoyer,
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size(0, 52),
+                  shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                ),
+                child: const Texte('Envoyer'),
+              ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// Un message prêt à envoyer, choisi d'une touche : la carte s'allume en or.
+class _ChoixGenre extends StatelessWidget {
+  const _ChoixGenre({required this.icone, required this.libelle, required this.choisi, required this.onTap});
+
+  final IconData icone;
+  final String libelle;
+  final bool choisi;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final p = context.palette;
+    return Semantics(
+      selected: choisi,
+      button: true,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 180),
+        decoration: BoxDecoration(
+          color: choisi ? Color.alphaBlend(p.accentVoile, p.surface) : p.surface,
+          borderRadius: Rayons.carte,
+          border: Border.all(color: choisi ? p.accentTexte : p.trait, width: choisi ? 1.6 : 1),
+        ),
+        child: Material(
+          type: MaterialType.transparency,
+          child: InkWell(
+            borderRadius: Rayons.carte,
+            onTap: onTap,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(12, 12, 14, 12),
+              child: Row(
+                children: [
+                  IconePastille(icone, taille: 38),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Texte(libelle,
+                        style: t.textTheme.bodyMedium?.copyWith(
+                          color: p.encre,
+                          fontWeight: choisi ? FontWeight.w600 : FontWeight.w400,
+                        )),
+                  ),
+                  const SizedBox(width: 8),
+                  Icon(
+                    choisi ? Icons.check_circle_rounded : Icons.radio_button_unchecked_rounded,
+                    size: 22,
+                    color: choisi ? p.accentTexte : p.attenue.withValues(alpha: 0.6),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );
@@ -761,7 +1084,8 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
     final ok = await showDialog<bool>(
       context: context,
       builder: (c) => AlertDialog(
-        title: const Texte('Signaler ce message'),
+        icon: Icon(Icons.flag_outlined, color: c.palette.alerte),
+        title: const Texte('Signaler ce message', textAlign: TextAlign.center),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -824,20 +1148,24 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final conv = ref.watch(conversationProvider(widget.amiId));
     final ami = conv.valueOrNull?.ami ?? Lecteur(id: widget.amiId, nom: widget.nom ?? 'Conversation');
 
     return Scaffold(
       appBar: AppBar(
+        titleSpacing: 0,
         title: Row(
           children: [
-            Pastille(lecteur: ami, taille: 32),
-            const SizedBox(width: 10),
+            AvatarLecteur(lecteur: ami, taille: 36),
+            const SizedBox(width: 12),
             Flexible(child: Texte(ami.nom, maxLines: 1, overflow: TextOverflow.ellipsis)),
           ],
         ),
         actions: [
           PopupMenuButton<String>(
+            icon: const Icon(Icons.more_vert_rounded),
+            shape: const RoundedRectangleBorder(borderRadius: Rayons.moyen),
             onSelected: (c) => _menu(c, ami),
             itemBuilder: (_) => const [
               PopupMenuItem(value: 'encourager', child: Texte('Encourager')),
@@ -865,7 +1193,7 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
                       )
                     : ListView.builder(
                         reverse: true,
-                        padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+                        padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
                         itemCount: c.messages.length,
                         itemBuilder: (_, i) {
                           final m = c.messages[c.messages.length - 1 - i];
@@ -874,45 +1202,22 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
                       ),
               ),
             ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(12, 8, 8, 8),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                border: Border(top: BorderSide(color: Couleurs.traitClair)),
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller: _saisie,
-                      minLines: 1,
-                      maxLines: 5,
-                      maxLength: 2000,
-                      textCapitalization: TextCapitalization.sentences,
-                      decoration: const InputDecoration(
-                        hintText: 'Votre message',
-                        counterText: '',
-                        border: InputBorder.none,
-                        enabledBorder: InputBorder.none,
-                        focusedBorder: InputBorder.none,
-                        filled: false,
-                      ),
-                    ),
-                  ),
-                  IconButton.filled(
-                    tooltip: 'Envoyer',
-                    onPressed: _envoi ? null : _envoyer,
-                    icon: const Icon(Icons.arrow_upward_rounded),
-                    style: IconButton.styleFrom(backgroundColor: Couleurs.or, foregroundColor: Couleurs.nuitProfond),
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
+              child: ZoneMessage(
+                controleur: _saisie,
+                attente: _envoi,
+                lignesMax: 5,
+                longueurMax: 2000,
+                onEnvoyer: _envoyer,
               ),
             ),
             if (conv.hasValue)
               Padding(
-                padding: const EdgeInsets.only(bottom: 4),
+                padding: const EdgeInsets.only(bottom: 6, left: 20, right: 20),
                 child: Texte('Appui long sur un message reçu pour le signaler.',
-                    style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+                    textAlign: TextAlign.center,
+                    style: t.textTheme.labelSmall?.copyWith(color: p.attenue)),
               ),
           ],
         ),
@@ -929,6 +1234,7 @@ class _Bulle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final m = message;
     return Align(
       alignment: m.deMoi ? Alignment.centerRight : Alignment.centerLeft,
@@ -937,23 +1243,40 @@ class _Bulle extends StatelessWidget {
         child: Container(
           constraints: BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width * 0.78),
           margin: const EdgeInsets.symmetric(vertical: 4),
-          padding: const EdgeInsets.fromLTRB(14, 10, 14, 8),
+          padding: const EdgeInsets.fromLTRB(15, 10, 15, 8),
           decoration: BoxDecoration(
-            color: m.deMoi ? Couleurs.nuit : Colors.white,
-            boxShadow: m.deMoi ? null : Couleurs.ombreDouce,
+            color: m.deMoi ? null : p.surface,
+            gradient: m.deMoi ? p.degradeHeros : null,
+            borderRadius: BorderRadius.only(
+              topLeft: const Radius.circular(22),
+              topRight: const Radius.circular(22),
+              bottomLeft: Radius.circular(m.deMoi ? 22 : 6),
+              bottomRight: Radius.circular(m.deMoi ? 6 : 22),
+            ),
+            border: m.deMoi ? null : Border.all(color: p.trait),
+            boxShadow: m.deMoi
+                ? [BoxShadow(color: p.heros.withValues(alpha: 0.22), blurRadius: 12, offset: const Offset(0, 4))]
+                : p.ombreCarte,
           ),
           child: Column(
             crossAxisAlignment: m.deMoi ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: [
               Texte(m.texte,
                   textAlign: TextAlign.start,
-                  style: t.textTheme.bodyMedium?.copyWith(
-                      color: m.deMoi ? const Color(0xFFF7F4EC) : Couleurs.encreDouce, height: 1.45)),
+                  style: t.textTheme.bodyMedium?.copyWith(color: m.deMoi ? p.surHeros : p.texte, height: 1.45)),
               const SizedBox(height: 4),
-              Texte(
-                [ilYA(m.le), if (m.deMoi && m.lu) 'lu'].join(' · '),
-                style: t.textTheme.labelSmall
-                    ?.copyWith(color: m.deMoi ? const Color(0xFF9AA3B8) : Couleurs.grisChaud),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Texte(
+                    ilYA(m.le),
+                    style: t.textTheme.labelSmall?.copyWith(color: m.deMoi ? p.surHerosDoux : p.attenue),
+                  ),
+                  if (m.deMoi && m.lu) ...[
+                    const SizedBox(width: 4),
+                    Icon(Icons.done_all_rounded, size: 14, color: p.accentSurHeros, semanticLabel: 'lu'),
+                  ],
+                ],
               ),
             ],
           ),

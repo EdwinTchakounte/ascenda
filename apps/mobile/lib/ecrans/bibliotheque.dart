@@ -10,6 +10,7 @@ import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
 import '../widgets/invitation.dart';
+import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 class EcranBibliotheque extends ConsumerStatefulWidget {
@@ -60,52 +61,74 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              padding: const EdgeInsets.fromLTRB(6, 6, 0, 0),
+              child: Row(
                 children: [
-                  Texte('Bibliothèque', style: t.textTheme.headlineMedium?.copyWith(fontSize: 30)),
-                  const SizedBox(height: 14),
-                  TextField(
-                    controller: _recherche,
-                    onChanged: (v) => setState(() {
-                      _texte = v.trim();
-                      _reinitialiser();
-                    }),
-                    textInputAction: TextInputAction.search,
-                    decoration: InputDecoration(
-                      hintText: 'Un titre, un auteur…',
-                      prefixIcon: const Icon(Icons.search_rounded, size: 21),
-                      suffixIcon: _texte.isEmpty
-                          ? null
-                          : IconButton(
-                              icon: const Icon(Icons.close_rounded, size: 19),
-                              onPressed: () {
-                                _recherche.clear();
-                                setState(() {
-                                  _texte = '';
-                                  _reinitialiser();
-                                });
-                              },
-                            ),
+                  const BoutonMenu(),
+                  const SizedBox(width: 4),
+                  Expanded(
+                    child: Texte('Bibliothèque', style: t.textTheme.headlineMedium?.copyWith(fontSize: 28)),
+                  ),
+                  const AvatarCompte(),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(borderRadius: Rayons.moyen, boxShadow: context.palette.ombreCarte),
+                      child: TextField(
+                        controller: _recherche,
+                        onChanged: (v) => setState(() {
+                          _texte = v.trim();
+                          _reinitialiser();
+                        }),
+                        textInputAction: TextInputAction.search,
+                        decoration: InputDecoration(
+                          hintText: 'Un titre, un auteur…',
+                          prefixIcon: const Icon(Icons.search_rounded, size: 22),
+                          suffixIcon: _texte.isEmpty
+                              ? null
+                              : IconButton(
+                                  icon: const Icon(Icons.close_rounded, size: 19),
+                                  onPressed: () {
+                                    _recherche.clear();
+                                    setState(() {
+                                      _texte = '';
+                                      _reinitialiser();
+                                    });
+                                  },
+                                ),
+                        ),
+                      ),
                     ),
                   ),
-                  // Le champ ci-dessus ne regarde que les titres et les
-                  // auteurs. Chercher dans le texte des ouvrages est un autre
-                  // geste, et il mérite d'être proposé plutôt que deviné.
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: TextButton.icon(
-                      onPressed: () => context.push(
-                        '/recherche?q=${Uri.encodeComponent(_texte)}',
+                  const SizedBox(width: 10),
+                  // Chercher dans le texte des ouvrages est un autre geste que
+                  // chercher un titre : il a son propre bouton, bien visible.
+                  Tooltip(
+                    message: 'Chercher dans le texte des livres',
+                    child: Material(
+                      color: context.palette.heros,
+                      borderRadius: Rayons.moyen,
+                      child: InkWell(
+                        borderRadius: Rayons.moyen,
+                        onTap: () => context.push('/recherche?q=${Uri.encodeComponent(_texte)}'),
+                        child: SizedBox(
+                          width: 56,
+                          height: 56,
+                          child: Icon(Icons.manage_search_rounded, color: context.palette.accentSurHeros, size: 26),
+                        ),
                       ),
-                      icon: const Icon(Icons.travel_explore_rounded, size: 18),
-                      label: const Texte('Chercher dans le texte des livres'),
                     ),
                   ),
                 ],
               ),
             ),
+            const SizedBox(height: 4),
             SizedBox(
               height: 56,
               child: axes.maybeWhen(
@@ -331,29 +354,27 @@ class _Filtre extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    final encre = t.colorScheme.onSurface;
-    // En clair, le filtre actif est à l'encre ; en sombre, un aplat d'encre
-    // disparaîtrait dans le fond, il passe à l'or.
-    final sombre = t.brightness == Brightness.dark;
-    final plein = sombre ? Couleurs.orClair : Couleurs.nuit;
-    final surPlein = sombre ? Couleurs.nuitProfond : Colors.white;
+    final p = context.palette;
     if (souligne) {
-      return InkWell(
-        onTap: onTap,
-        child: Container(
-          margin: const EdgeInsets.only(right: 18),
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(color: actif ? Couleurs.or : Colors.transparent, width: 2),
+      return Padding(
+        padding: const EdgeInsets.only(right: 6),
+        child: InkWell(
+          borderRadius: Rayons.pilule,
+          onTap: onTap,
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
+            decoration: BoxDecoration(
+              color: actif ? p.accentVoile : Colors.transparent,
+              borderRadius: Rayons.pilule,
             ),
-          ),
-          child: Texte(
-            libelle,
-            style: t.textTheme.labelLarge?.copyWith(
-              fontSize: 13.5,
-              color: actif ? encre : Couleurs.grisChaud,
-              fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
+            child: Texte(
+              libelle,
+              style: t.textTheme.labelLarge?.copyWith(
+                fontSize: 13,
+                color: actif ? p.accentTexte : p.attenue,
+                fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
+              ),
             ),
           ),
         ),
@@ -362,13 +383,16 @@ class _Filtre extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 8),
       child: InkWell(
+        borderRadius: Rayons.pilule,
         onTap: onTap,
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 180),
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
           decoration: BoxDecoration(
-            color: actif ? plein : t.colorScheme.surface,
-            border: Border.all(color: actif ? plein : encre.withValues(alpha: 0.12)),
+            color: actif ? p.encre : p.surface,
+            borderRadius: Rayons.pilule,
+            border: Border.all(color: actif ? p.encre : p.trait),
+            boxShadow: actif ? [BoxShadow(color: p.encre.withValues(alpha: 0.18), blurRadius: 10, offset: const Offset(0, 3))] : null,
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -376,18 +400,25 @@ class _Filtre extends StatelessWidget {
               Texte(
                 libelle,
                 style: t.textTheme.labelLarge?.copyWith(
-                  color: actif ? surPlein : encre.withValues(alpha: 0.8),
+                  color: actif ? p.fond : p.texte,
                   fontSize: 13,
                   fontWeight: actif ? FontWeight.w600 : FontWeight.w500,
                 ),
               ),
               if (compte != null) ...[
                 const SizedBox(width: 7),
-                Texte(
-                  '$compte',
-                  style: t.textTheme.labelSmall?.copyWith(
-                    color: actif ? (sombre ? const Color(0xFF4A3A10) : Couleurs.orClair) : Couleurs.grisChaud,
-                    fontWeight: FontWeight.w600,
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+                  decoration: BoxDecoration(
+                    color: actif ? p.accent : p.surfaceCreuse,
+                    borderRadius: Rayons.pilule,
+                  ),
+                  child: Texte(
+                    '$compte',
+                    style: t.textTheme.labelSmall?.copyWith(
+                      color: actif ? p.surAccent : p.attenue,
+                      fontWeight: FontWeight.w700,
+                    ),
                   ),
                 ),
               ],
@@ -417,7 +448,7 @@ class _LivresEmportes extends ConsumerWidget {
       children: [
         Row(
           children: [
-            const Icon(Icons.cloud_off_rounded, size: 18, color: Couleurs.grisChaud),
+            Icon(Icons.cloud_off_rounded, size: 18, color: Couleurs.grisChaud),
             const SizedBox(width: 8),
             Expanded(
               child: Texte('Pas de connexion. Vos ouvrages emportés restent lisibles.',
@@ -441,7 +472,7 @@ class _LivresEmportes extends ConsumerWidget {
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.offline_pin_rounded, size: 20, color: Couleurs.sauge),
+                      Icon(Icons.offline_pin_rounded, size: 20, color: Couleurs.sauge),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
@@ -455,7 +486,7 @@ class _LivresEmportes extends ConsumerWidget {
                           ],
                         ),
                       ),
-                      const Icon(Icons.chevron_right_rounded, size: 20, color: Couleurs.grisChaud),
+                      Icon(Icons.chevron_right_rounded, size: 20, color: Couleurs.grisChaud),
                     ],
                   ),
                 ),

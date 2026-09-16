@@ -6,9 +6,10 @@ import 'package:pdfrx/pdfrx.dart';
 
 import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../theme/texte.dart';
 import '../widgets/etats.dart';
+import '../widgets/ui.dart';
 
 /// Lire le PDF d'origine d'un ouvrage, page par page, dans l'application.
 ///
@@ -82,20 +83,44 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Scaffold(
-      backgroundColor: Couleurs.papier,
+      backgroundColor: p.fond,
       appBar: AppBar(
-        title: Texte(widget.titre ?? 'Lecture', maxLines: 1, overflow: TextOverflow.ellipsis),
+        backgroundColor: p.fond,
+        title: Texte(widget.titre ?? 'Lecture',
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: t.appBarTheme.titleTextStyle?.copyWith(fontSize: 18)),
         actions: [
           if (_pages > 0)
-            TextButton(
-              // Toucher le compteur ouvre « aller à la page » : dans un livre de
-              // 700 pages, faire défiler jusqu'à la page 412 n'est pas une option.
-              onPressed: _allerA,
-              child: Texte('$_page / $_pages',
-                  style: t.textTheme.labelLarge?.copyWith(color: Couleurs.encreDouce)),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: TextButton(
+                // Toucher le compteur ouvre « aller à la page » : dans un livre de
+                // 700 pages, faire défiler jusqu'à la page 412 n'est pas une option.
+                onPressed: _allerA,
+                style: TextButton.styleFrom(
+                  backgroundColor: p.surfaceCreuse,
+                  shape: const StadiumBorder(),
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  minimumSize: const Size(0, 36),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.tag_rounded, size: 15, color: p.accentTexte),
+                    const SizedBox(width: 4),
+                    Texte('$_page / $_pages',
+                        style: t.textTheme.labelLarge?.copyWith(
+                          color: p.encre,
+                          fontFeatures: const [FontFeature.tabularFigures()],
+                        )),
+                  ],
+                ),
+              ),
             ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 12),
         ],
       ),
       body: SafeArea(top: false, child: _corps(t)),
@@ -134,8 +159,10 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
       return EtatErreur(erreur: e!, reessayer: _ouvrir);
     }
     final parametres = PdfViewerParams(
-      backgroundColor: Couleurs.papier,
-      margin: 10,
+      // Les pages blanches du PDF posées sur un fond en retrait du thème : la
+      // page se détache sans éblouir, de jour comme de nuit.
+      backgroundColor: context.palette.surfaceCreuse,
+      margin: 12,
       calculateInitialPageNumber: (document, controleur) =>
           widget.page?.clamp(1, document.pages.length),
       // Une réglette sur le bord droit, qui porte le numéro de page : on
@@ -146,10 +173,19 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
           orientation: ScrollbarOrientation.right,
           thumbSize: const Size(48, 30),
           thumbBuilder: (context, taille, page, controleur) => Container(
-            color: Couleurs.nuit,
+            decoration: BoxDecoration(
+              color: context.palette.heros,
+              borderRadius: const BorderRadius.horizontal(left: Radius.circular(15)),
+              boxShadow: context.palette.ombreCarte,
+            ),
             alignment: Alignment.center,
             child: Texte(page == null ? '' : '$page',
-                style: const TextStyle(color: Couleurs.orClair, fontSize: 12, fontWeight: FontWeight.w600)),
+                style: TextStyle(
+                  color: context.palette.accentSurHeros,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                  fontFeatures: const [FontFeature.tabularFigures()],
+                )),
           ),
         ),
       ],
@@ -189,30 +225,49 @@ class _Telechargement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final part = (total != null && total! > 0) ? recu / total! : null;
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 40),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(Icons.picture_as_pdf_outlined, size: 40, color: Couleurs.orTexte),
-            const SizedBox(height: 16),
-            Texte('Préparation du PDF', style: t.textTheme.titleMedium),
-            const SizedBox(height: 14),
-            LinearProgressIndicator(value: part, minHeight: 4),
-            const SizedBox(height: 10),
-            Texte(
-              total != null ? '${_mo(recu)} sur ${_mo(total!)}' : _mo(recu),
-              style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Surface(
+            padding: const EdgeInsets.fromLTRB(24, 28, 24, 24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const IconePastille(Icons.picture_as_pdf_outlined, taille: 64),
+                const SizedBox(height: 18),
+                Texte('Préparation du PDF',
+                    textAlign: TextAlign.center, style: t.textTheme.titleLarge),
+                const SizedBox(height: 18),
+                // Tant que la taille est inconnue, la barre défile sans valeur :
+                // une jauge figée à zéro ferait croire à un blocage.
+                if (part != null)
+                  Jauge(valeur: part, hauteur: 8)
+                else
+                  const ClipRRect(
+                    borderRadius: Rayons.pilule,
+                    child: LinearProgressIndicator(minHeight: 8),
+                  ),
+                const SizedBox(height: 10),
+                Texte(
+                  total != null ? '${_mo(recu)} sur ${_mo(total!)}' : _mo(recu),
+                  style: t.textTheme.labelLarge?.copyWith(
+                    color: p.encre,
+                    fontFeatures: const [FontFeature.tabularFigures()],
+                  ),
+                ),
+                const SizedBox(height: 14),
+                Texte(
+                  "Gardé sur le téléphone ensuite : la prochaine ouverture se fera sans réseau.",
+                  textAlign: TextAlign.center,
+                  style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
+                ),
+              ],
             ),
-            const SizedBox(height: 6),
-            Texte(
-              "Gardé sur le téléphone ensuite : la prochaine ouverture se fera sans réseau.",
-              textAlign: TextAlign.center,
-              style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud),
-            ),
-          ],
+          ),
         ),
       ),
     );

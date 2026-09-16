@@ -5,8 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../widgets/etats.dart';
+import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// Le quiz : une question à la fois, puis la correction.
@@ -108,6 +109,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
 
   Widget _ecranQuestion() {
     final t = Theme.of(context);
+    final p = context.palette;
     final q = _questions[_index];
     final choisi = _reponses[q.index];
     final dernier = _index == _questions.length - 1;
@@ -118,78 +120,93 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
           icon: const Icon(Icons.close_rounded),
           onPressed: () => context.pop(),
         ),
-        title: Texte('${_index + 1} sur ${_questions.length}',
-            style: t.textTheme.labelLarge?.copyWith(color: Couleurs.grisChaud)),
+        centerTitle: true,
+        title: Pastille('Question ${_index + 1} sur ${_questions.length}', icone: Icons.quiz_rounded),
       ),
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: ClipRRect(
-              borderRadius: BorderRadius.zero,
-              child: LinearProgressIndicator(
-                value: (_index + 1) / _questions.length,
-                minHeight: 4,
-                backgroundColor: t.colorScheme.surfaceContainer,
-              ),
-            ),
+            padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
+            child: Jauge(valeur: (_index + 1) / _questions.length),
           ),
           Expanded(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(24, 32, 24, 24),
+              padding: const EdgeInsets.fromLTRB(20, 28, 20, 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   if (_quiz?['chapitre'] != null)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 12),
-                      child: Texte(
+                      child: Surtitre(
                         '${_quiz!['ouvrage']} · ${_quiz!['chapitre']}',
-                        style: t.textTheme.labelMedium?.copyWith(color: Couleurs.orTexte),
                       ),
                     ),
-                  Texte(q.question, style: t.textTheme.headlineSmall?.copyWith(fontSize: 22)),
+                  Texte(q.question, style: t.textTheme.headlineSmall?.copyWith(fontSize: 24)),
                   const SizedBox(height: 26),
                   for (var i = 0; i < q.choix.length; i++) ...[
-                    _Choix(
+                    _CarteChoix(
+                      lettre: _lettre(i),
                       libelle: q.choix[i],
-                      choisi: choisi == i,
+                      etat: choisi == i ? _EtatChoix.choisi : _EtatChoix.neutre,
                       onTap: () => setState(() => _reponses[q.index] = i),
                     ),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 12),
                   ],
                 ],
               ),
             ),
           ),
-          SafeArea(
-            minimum: const EdgeInsets.fromLTRB(24, 0, 24, 18),
-            child: Row(
-              children: [
-                if (_index > 0)
+          DecoratedBox(
+            decoration: BoxDecoration(
+              color: p.fond,
+              border: Border(top: BorderSide(color: p.trait)),
+            ),
+            child: SafeArea(
+              top: false,
+              minimum: const EdgeInsets.fromLTRB(20, 14, 20, 18),
+              child: Row(
+                children: [
+                  if (_index > 0)
+                    Expanded(
+                      child: OutlinedButton.icon(
+                        onPressed: () => setState(() => _index--),
+                        icon: const Icon(Icons.arrow_back_rounded, size: 18),
+                        label: const Texte('Précédent', maxLines: 1, overflow: TextOverflow.ellipsis),
+                      ),
+                    ),
+                  if (_index > 0) const SizedBox(width: 10),
                   Expanded(
-                    child: OutlinedButton(
-                      onPressed: () => setState(() => _index--),
-                      child: const Texte('Précédent'),
+                    flex: 2,
+                    child: FilledButton(
+                      onPressed: choisi == null || _envoi
+                          ? null
+                          : dernier
+                              ? _corriger
+                              : () => setState(() => _index++),
+                      child: _envoi
+                          ? SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: CircularProgressIndicator(strokeWidth: 2.2, color: p.surAccent))
+                          : Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Flexible(
+                                  child: Texte(
+                                    dernier ? 'Voir ma correction' : 'Suivant',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                const SizedBox(width: 8),
+                                Icon(dernier ? Icons.done_all_rounded : Icons.arrow_forward_rounded, size: 18),
+                              ],
+                            ),
                     ),
                   ),
-                if (_index > 0) const SizedBox(width: 10),
-                Expanded(
-                  flex: 2,
-                  child: FilledButton(
-                    onPressed: choisi == null || _envoi
-                        ? null
-                        : dernier
-                            ? _corriger
-                            : () => setState(() => _index++),
-                    child: _envoi
-                        ? const SizedBox(
-                            width: 20, height: 20,
-                            child: CircularProgressIndicator(strokeWidth: 2.2))
-                        : Texte(dernier ? 'Voir ma correction' : 'Suivant'),
-                  ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ],
@@ -199,8 +216,9 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
 
   Widget _ecranCorrection() {
     final t = Theme.of(context);
+    final p = context.palette;
     final c = _correction!;
-    final couleur = c.reussi ? Couleurs.sauge : Couleurs.terracotta;
+    final part = c.total == 0 ? 0.0 : c.justes / c.total;
 
     return Scaffold(
       appBar: AppBar(
@@ -213,99 +231,189 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
         children: [
-          Container(
-            padding: const EdgeInsets.all(22),
-            decoration: BoxDecoration(
-              color: couleur.withValues(alpha: 0.1),
-              borderRadius: BorderRadius.zero,
-            ),
-            child: Row(
+          SurfaceHeros(
+            padding: const EdgeInsets.fromLTRB(22, 26, 22, 24),
+            child: Column(
               children: [
-                Container(
-                  width: 58,
-                  height: 58,
-                  decoration: BoxDecoration(
-                    color: couleur.withValues(alpha: 0.2),
-                    shape: BoxShape.rectangle,
-                  ),
-                  child: Center(
-                    child: Texte('${c.justes}/${c.total}',
-                        style: t.textTheme.titleMedium?.copyWith(color: couleur)),
-                  ),
-                ),
-                const SizedBox(width: 16),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                SizedBox(
+                  width: 120,
+                  height: 120,
+                  child: Stack(
+                    alignment: Alignment.center,
                     children: [
-                      Texte(
-                        c.reussi ? "C'est acquis" : 'À retravailler',
-                        style: t.textTheme.titleLarge?.copyWith(fontSize: 19),
+                      SizedBox.expand(
+                        child: CircularProgressIndicator(
+                          value: part,
+                          strokeWidth: 10,
+                          strokeCap: StrokeCap.round,
+                          color: c.reussi ? p.accentSurHeros : p.surHerosDoux,
+                          backgroundColor: p.surHeros.withValues(alpha: 0.12),
+                        ),
                       ),
-                      const SizedBox(height: 4),
-                      Texte(
-                        c.reussi
-                            ? "Vous avez bien lu. Les notions ratées reviendront quand même en révision."
-                            : "Les notions manquées reviennent en révision espacée dans quelques jours.",
-                        style: t.textTheme.bodySmall
-                            ?.copyWith(color: Couleurs.grisChaud, height: 1.5),
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text.rich(
+                            TextSpan(children: [
+                              TextSpan(text: '${c.justes}'),
+                              TextSpan(
+                                text: '/${c.total}',
+                                style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux),
+                              ),
+                            ]),
+                            style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1),
+                          ),
+                          const SizedBox(height: 4),
+                          Texte('${(c.score * 100).round()} %',
+                              style: t.textTheme.labelMedium?.copyWith(color: p.surHerosDoux)),
+                        ],
                       ),
                     ],
                   ),
                 ),
+                const SizedBox(height: 18),
+                Surtitre(c.reussi ? 'Bravo' : 'Encore un effort', couleur: p.accentSurHeros),
+                const SizedBox(height: 6),
+                Texte(
+                  c.reussi ? "C'est acquis" : 'À retravailler',
+                  textAlign: TextAlign.center,
+                  style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25),
+                ),
+                const SizedBox(height: 8),
+                Texte(
+                  c.reussi
+                      ? "Vous avez bien lu. Les notions ratées reviendront quand même en révision."
+                      : "Les notions manquées reviennent en révision espacée dans quelques jours.",
+                  textAlign: TextAlign.center,
+                  style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux, height: 1.5),
+                ),
               ],
             ),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 26),
+          TitreSection(
+            'Question par question',
+            sousTitre: '${c.justes} juste${c.justes > 1 ? 's' : ''}, '
+                '${c.total - c.justes} à revoir',
+          ),
+          const SizedBox(height: 12),
           for (final d in c.details) ...[
-            _CorrectionQuestion(detail: d),
-            const SizedBox(height: 14),
+            _CorrectionQuestion(
+              detail: d,
+              choix: _questions.where((q) => q.index == d.index).firstOrNull?.choix ?? const [],
+            ),
+            const SizedBox(height: 12),
           ],
-          const SizedBox(height: 8),
-          FilledButton(
+          const SizedBox(height: 12),
+          FilledButton.icon(
             onPressed: () => context.pop(),
-            child: const Texte('Terminer'),
+            icon: const Icon(Icons.check_rounded, size: 20),
+            label: const Texte('Terminer'),
           ),
         ],
       ),
     );
   }
+
+  static String _lettre(int i) => i < 26 ? String.fromCharCode(65 + i) : '${i + 1}';
 }
 
-class _Choix extends StatelessWidget {
-  const _Choix({required this.libelle, required this.choisi, required this.onTap});
+/// L'état d'une carte de choix : neutre, choisie pendant le quiz, ou marquée
+/// juste ou fausse dans la correction.
+enum _EtatChoix { neutre, choisi, juste, faux }
+
+/// Un choix en carte arrondie : sa lettre dans une puce, son libellé, et une
+/// couleur qui dit son état sans qu'il faille lire l'icône.
+class _CarteChoix extends StatelessWidget {
+  const _CarteChoix({
+    required this.lettre,
+    required this.libelle,
+    required this.etat,
+    this.onTap,
+    this.compact = false,
+  });
+
+  final String lettre;
   final String libelle;
-  final bool choisi;
-  final VoidCallback onTap;
+  final _EtatChoix etat;
+  final VoidCallback? onTap;
+  final bool compact;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.zero,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 150),
-        padding: const EdgeInsets.all(17),
-        decoration: BoxDecoration(
-          color: choisi ? Couleurs.or.withValues(alpha: 0.1) : t.colorScheme.surface,
-          borderRadius: BorderRadius.zero,
-          border: Border.all(
-            color: choisi ? Couleurs.or : (t.dividerTheme.color ?? Couleurs.traitClair),
-            width: choisi ? 1.8 : 1,
-          ),
-        ),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: Texte(libelle, style: t.textTheme.bodyLarge?.copyWith(height: 1.5)),
+    final p = context.palette;
+    final teinte = switch (etat) {
+      _EtatChoix.neutre => null,
+      _EtatChoix.choisi => p.accent,
+      _EtatChoix.juste => p.succes,
+      _EtatChoix.faux => p.alerte,
+    };
+    final icone = switch (etat) {
+      _EtatChoix.neutre => null,
+      _EtatChoix.choisi => Icons.check_circle_rounded,
+      _EtatChoix.juste => Icons.check_circle_rounded,
+      _EtatChoix.faux => Icons.cancel_rounded,
+    };
+    final fond = teinte == null
+        ? p.surface
+        : Color.alphaBlend(teinte.withValues(alpha: p.sombre ? 0.16 : 0.10), p.surface);
+
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 180),
+      curve: Curves.easeOut,
+      decoration: BoxDecoration(
+        color: fond,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: teinte ?? p.trait, width: teinte == null ? 1 : 1.8),
+        boxShadow: etat == _EtatChoix.neutre && !compact ? p.ombreCarte : null,
+      ),
+      child: Material(
+        type: MaterialType.transparency,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: Rayons.carte,
+          child: Padding(
+            padding: EdgeInsets.all(compact ? 12 : 15),
+            child: Row(
+              children: [
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 180),
+                  width: compact ? 30 : 36,
+                  height: compact ? 30 : 36,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: teinte ?? p.surfaceCreuse,
+                    borderRadius: Rayons.petit,
+                  ),
+                  child: Texte(
+                    lettre,
+                    style: t.textTheme.titleSmall?.copyWith(
+                      color: teinte == null
+                          ? p.attenue
+                          : (etat == _EtatChoix.choisi ? p.surAccent : p.surface),
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+                SizedBox(width: compact ? 12 : 14),
+                Expanded(
+                  child: Texte(
+                    libelle,
+                    style: (compact ? t.textTheme.bodyMedium : t.textTheme.bodyLarge)?.copyWith(
+                      height: 1.45,
+                      color: p.encre,
+                      fontWeight: etat == _EtatChoix.neutre ? FontWeight.w400 : FontWeight.w600,
+                    ),
+                  ),
+                ),
+                if (icone != null) ...[
+                  const SizedBox(width: 10),
+                  Icon(icone, color: etat == _EtatChoix.choisi ? p.accentTexte : teinte, size: 22),
+                ],
+              ],
             ),
-            if (choisi) ...[
-              const SizedBox(width: 10),
-              const Icon(Icons.check_circle_rounded, color: Couleurs.or, size: 21),
-            ],
-          ],
+          ),
         ),
       ),
     );
@@ -313,75 +421,102 @@ class _Choix extends StatelessWidget {
 }
 
 class _CorrectionQuestion extends StatelessWidget {
-  const _CorrectionQuestion({required this.detail});
+  const _CorrectionQuestion({required this.detail, required this.choix});
   final CorrectionQuestion detail;
+
+  /// Les choix de la question, tels que chargés avec le quiz : ils permettent
+  /// de rappeler la réponse donnée et la bonne sans nouvel appel.
+  final List<String> choix;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    final couleur = detail.juste ? Couleurs.sauge : Couleurs.terracotta;
+    final p = context.palette;
+    final couleur = detail.juste ? p.succes : p.alerte;
+    String? libelle(int? i) => i != null && i >= 0 && i < choix.length ? choix[i] : null;
+    final donnee = libelle(detail.votreReponse);
+    final bonne = libelle(detail.bonneReponse);
 
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: t.colorScheme.surface,
-        borderRadius: BorderRadius.zero,
-        border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
-      ),
+    return Surface(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Icon(
-                detail.juste ? Icons.check_circle_rounded : Icons.cancel_rounded,
-                color: couleur,
-                size: 20,
+              IconePastille(
+                detail.juste ? Icons.check_rounded : Icons.close_rounded,
+                couleur: couleur,
+                taille: 34,
               ),
-              const SizedBox(width: 10),
+              const SizedBox(width: 12),
               Expanded(
-                child: Texte(detail.question,
-                    style: t.textTheme.titleMedium?.copyWith(fontSize: 15, height: 1.4)),
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Texte(detail.question,
+                      style: t.textTheme.titleMedium?.copyWith(fontSize: 15, height: 1.4)),
+                ),
               ),
             ],
           ),
+          if (donnee != null && !detail.juste) ...[
+            const SizedBox(height: 14),
+            _CarteChoix(
+              lettre: _EcranQuizState._lettre(detail.votreReponse!),
+              libelle: donnee,
+              etat: _EtatChoix.faux,
+              compact: true,
+            ),
+          ],
+          if (bonne != null) ...[
+            SizedBox(height: donnee != null && !detail.juste ? 8 : 14),
+            _CarteChoix(
+              lettre: _EcranQuizState._lettre(detail.bonneReponse!),
+              libelle: bonne,
+              etat: _EtatChoix.juste,
+              compact: true,
+            ),
+          ],
           if (detail.explication != null) ...[
-            const SizedBox(height: 12),
+            const SizedBox(height: 14),
             Texte(
               detail.explication!,
-              style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud, height: 1.6),
+              style: t.textTheme.bodyMedium?.copyWith(color: p.texte, height: 1.6),
             ),
           ],
           if (detail.extrait != null) ...[
             const SizedBox(height: 14),
             Container(
-              padding: const EdgeInsets.all(14),
+              padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
               decoration: BoxDecoration(
-                color: t.colorScheme.surfaceContainer,
-                borderRadius: BorderRadius.zero,
-                border: Border(
-                  left: BorderSide(color: Couleurs.or.withValues(alpha: 0.6), width: 3),
-                ),
+                color: p.surfaceCreuse,
+                borderRadius: Rayons.moyen,
               ),
-              child: Column(
+              child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Texte(
-                    '« ${detail.extrait!} »',
-                    style: t.textTheme.bodySmall?.copyWith(
-                      height: 1.6,
-                      fontFamily: t.textTheme.headlineSmall?.fontFamily,
-                      fontSize: 13.5,
+                  Icon(Icons.format_quote_rounded, size: 20, color: p.accentTexte),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Texte(
+                          '« ${detail.extrait!} »',
+                          style: t.textTheme.bodySmall?.copyWith(
+                            height: 1.6,
+                            color: p.texte,
+                            fontFamily: t.textTheme.headlineSmall?.fontFamily,
+                            fontSize: 13.5,
+                          ),
+                        ),
+                        if (detail.extraitPage != null || detail.page != null) ...[
+                          const SizedBox(height: 8),
+                          Pastille('p. ${detail.extraitPage ?? detail.page}', icone: Icons.menu_book_rounded),
+                        ],
+                      ],
                     ),
                   ),
-                  if (detail.extraitPage != null || detail.page != null) ...[
-                    const SizedBox(height: 8),
-                    Texte(
-                      'p. ${detail.extraitPage ?? detail.page}',
-                      style: t.textTheme.labelSmall?.copyWith(color: Couleurs.orTexte),
-                    ),
-                  ],
                 ],
               ),
             ),

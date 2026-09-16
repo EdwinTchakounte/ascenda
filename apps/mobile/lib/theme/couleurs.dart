@@ -1,30 +1,40 @@
 import 'package:flutter/material.dart';
 
-/// La palette d'ASCENDA, tirée du logo : un « A » doré sur bleu nuit.
+import 'palette.dart';
+
+export 'palette.dart';
+
+/// Les couleurs d'ASCENDA, lues dans le thème choisi.
 ///
-/// L'or est un rehaut. Il marque le CTA, la progression et l'élément actif ;
-/// il ne couvre jamais une surface entière. Le fond de lecture est ivoire et
-/// non blanc pur : on lit dessus pendant des heures.
+/// Les noms d'origine (l'or, le bleu nuit, le gris chaud) restent, mais chacun
+/// désigne désormais un rôle de la [Palette] en vigueur : en thème Sépia,
+/// « nuit » est le brun profond des cartes de mise en avant, et « grisChaud »
+/// le texte secondaire de ce thème. Un nouvel écran lit plutôt
+/// `context.palette`, qui dit le rôle au lieu de la teinte.
 abstract final class Couleurs {
-  static const nuitProfond = Color(0xFF050D22);
-  static const nuit = Color(0xFF0B1435);
-  static const ardoise = Color(0xFF223454);
-  static const surfaceSombre = Color(0xFF101C3D);
+  static Palette get _p => Palette.courante;
 
-  static const or = Color(0xFFD4A23F);
-  static const orClair = Color(0xFFE8C070);
+  /// Le fond profond des cartes de mise en avant, et sa fin de dégradé.
+  static Color get nuit => _p.heros;
+  static Color get nuitProfond => _p.herosFin;
+  static Color get ardoise => Color.lerp(_p.heros, _p.herosFin, 0.5)!;
+  static Color get surfaceSombre => _p.herosFin;
 
-  /// L'or vire trop clair pour du texte sur ivoire : cette teinte assombrie
-  /// passe le contraste AA sans renoncer à l'accent.
-  static const orTexte = Color(0xFF9A7118);
+  static Color get or => _p.accent;
 
-  static const ivoire = Color(0xFFFAF8F4);
-  static const ivoireCreuse = Color(0xFFF2EEE6);
-  static const encre = Color(0xFF1A1F2E);
-  static const grisChaud = Color(0xFF6B7280);
+  /// L'or lisible sur une carte de mise en avant.
+  static Color get orClair => _p.accentSurHeros;
 
-  static const sauge = Color(0xFF7C9A82);
-  static const terracotta = Color(0xFFC4704F);
+  /// L'or lisible comme texte sur le fond et les cartes.
+  static Color get orTexte => _p.accentTexte;
+
+  static Color get ivoire => _p.surface;
+  static Color get ivoireCreuse => _p.surfaceCreuse;
+  static Color get encre => _p.encre;
+  static Color get grisChaud => _p.attenue;
+
+  static Color get sauge => _p.succes;
+  static Color get terracotta => _p.alerte;
 
   /// La teinte d'un pôle, celle-là même qui colore sa carte sur la vitrine et
   /// le dos de ses volumes sur l'étagère. La clé est le préfixe numérique du
@@ -33,25 +43,22 @@ abstract final class Couleurs {
     '01': Color(0xFFC08A2E), '02': Color(0xFF4A6FA5), '03': Color(0xFF5F8A6A),
     '04': Color(0xFF8A7F9E), '05': Color(0xFFC4704F), '06': Color(0xFF4F8687),
     '07': Color(0xFFA8752F), '08': Color(0xFF9E6B8A), '09': Color(0xFF6F8F57),
-    '10': Color(0xFF4F7BA0), '11': Color(0xFF7A9450),
+    '10': Color(0xFF4F7BA0), '11': Color(0xFF7A9450), '12': Color(0xFF3F7D4E),
   };
 
   static Color? pole(String? slug) =>
       slug != null && slug.length >= 2 ? poles[slug.substring(0, 2)] : null;
 
-  static const traitClair = Color(0x120B1435);
-  static const traitSombre = Color(0x24E8C070);
+  static Color get traitClair => _p.trait;
+  static Color get traitSombre => _p.trait;
 
-  /// Le fond de page : un papier chaud, plus doux que l'ivoire des cartes.
-  static const papier = Color(0xFFF7F4EE);
+  static Color get papier => _p.fond;
+  static Color get encreDouce => _p.texte;
 
-  /// Le texte courant. Un bleu nuit adouci se lit plus longtemps qu'un noir.
-  static const encreDouce = Color(0xFF3A4156);
+  static List<BoxShadow> get ombreDouce => _p.ombreCarte;
 
-  /// L'ombre des surfaces : large et très légère. Une carte se détache du
-  /// papier sans qu'on ait besoin de l'encadrer.
-  static const List<BoxShadow> ombreDouce = [
-    BoxShadow(color: Color(0x0D0B1435), blurRadius: 24, offset: Offset(0, 8)),
-    BoxShadow(color: Color(0x080B1435), blurRadius: 3, offset: Offset(0, 1)),
-  ];
+  /// Les couleurs de la marque elle-même, qui ne suivent aucun thème : l'écran
+  /// de démarrage et le logo.
+  static const marqueNuit = Color(0xFF050D22);
+  static const marqueOr = Color(0xFFD4A23F);
 }

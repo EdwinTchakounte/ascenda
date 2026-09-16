@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import '../api/modeles.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
+import 'ui.dart';
 
 String dureeLisible(int minutes) {
   if (minutes < 60) return '$minutes min';
@@ -30,97 +31,52 @@ class CarteSeance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.zero,
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Couleurs.nuit, Couleurs.nuitProfond],
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Couleurs.nuit.withValues(alpha: 0.18),
-            blurRadius: 30,
-            offset: const Offset(0, 14),
-          ),
-        ],
-      ),
-      child: Stack(
+    final p = context.palette;
+    return SurfaceHeros(
+      padding: const EdgeInsets.fromLTRB(22, 22, 22, 22),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Un filet d'or en tête : la seule touche décorative de la carte.
-          Positioned(
-            left: 0, right: 0, top: 0,
-            child: Container(height: 3, color: Couleurs.or),
+          Row(
+            children: [
+              Pastille('Séance du jour', icone: Icons.wb_twilight_rounded, couleur: p.accentSurHeros),
+              const Spacer(),
+              if (seance.enRetard) Pastille('en retard', couleur: const Color(0xFFF0A585)),
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Texte(
-                      'VOTRE SÉANCE DU JOUR',
-                      style: t.textTheme.labelSmall?.copyWith(
-                        color: Couleurs.orClair,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.4,
-                      ),
-                    ),
-                    const Spacer(),
-                    if (seance.enRetard)
-                      Texte(
-                        'en retard',
-                        style: t.textTheme.labelSmall?.copyWith(
-                          color: const Color(0xFFE9A489),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                  ],
-                ),
-                const SizedBox(height: 14),
-                Texte(
-                  seance.ouvrage ?? 'Séance de lecture',
-                  style: t.textTheme.headlineSmall?.copyWith(
-                    color: const Color(0xFFF7F4EC),
-                    fontSize: 23,
-                    height: 1.22,
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                if (seance.sousTitre != null) ...[
-                  const SizedBox(height: 6),
-                  Texte(
-                    seance.sousTitre!,
-                    style: t.textTheme.bodyMedium?.copyWith(color: const Color(0xFFB9C1D6)),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-                const SizedBox(height: 18),
-                Wrap(
-                  spacing: 18,
-                  runSpacing: 8,
-                  children: [
-                    _Etiquette(icone: Icons.schedule_rounded, texte: dureeLisible(seance.dureeMin)),
-                    if (seance.pages.isNotEmpty)
-                      _Etiquette(icone: Icons.menu_book_outlined, texte: seance.pages),
-                    if (seance.livrable == 'quiz')
-                      const _Etiquette(icone: Icons.quiz_outlined, texte: 'suivie d\'un quiz'),
-                  ],
-                ),
-                const SizedBox(height: 22),
-                SizedBox(
-                  width: double.infinity,
-                  child: FilledButton(
-                    onPressed: onCommencer,
-                    child: const Texte('Commencer la séance'),
-                  ),
-                ),
-              ],
+          const SizedBox(height: 18),
+          Texte(
+            seance.ouvrage ?? 'Séance de lecture',
+            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25, height: 1.18),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          if (seance.sousTitre != null) ...[
+            const SizedBox(height: 6),
+            Texte(
+              seance.sousTitre!,
+              style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+          const SizedBox(height: 18),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              _Etiquette(icone: Icons.schedule_rounded, texte: dureeLisible(seance.dureeMin)),
+              if (seance.pages.isNotEmpty) _Etiquette(icone: Icons.menu_book_outlined, texte: seance.pages),
+              if (seance.livrable == 'quiz') const _Etiquette(icone: Icons.quiz_outlined, texte: 'suivie d\'un quiz'),
+            ],
+          ),
+          const SizedBox(height: 22),
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: onCommencer,
+              icon: const Icon(Icons.play_arrow_rounded, size: 22),
+              label: const Texte('Commencer la séance'),
             ),
           ),
         ],
@@ -136,16 +92,22 @@ class _Etiquette extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Icon(icone, size: 15, color: Couleurs.orClair.withValues(alpha: 0.85)),
-        const SizedBox(width: 6),
-        Texte(
-          texte,
-          style: Theme.of(context).textTheme.labelMedium?.copyWith(color: const Color(0xFFD5DAE6)),
-        ),
-      ],
+    final p = context.palette;
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      decoration: BoxDecoration(
+        color: p.surHeros.withValues(alpha: 0.10),
+        borderRadius: Rayons.pilule,
+        border: Border.all(color: p.surHeros.withValues(alpha: 0.10)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icone, size: 14, color: p.accentSurHeros),
+          const SizedBox(width: 6),
+          Texte(texte, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: p.surHeros)),
+        ],
+      ),
     );
   }
 }
@@ -173,16 +135,10 @@ class CarteOuvrage extends StatelessWidget {
       // et deux marqueurs finissaient coupés par des points de suspension.
       if (ouvrage.dureeMin != null) dureeLisible(ouvrage.dureeMin!),
     ];
-    return Material(
-      color: t.colorScheme.surface,
-      child: InkWell(
-        onTap: onTap,
-        child: Ink(
-          decoration: const BoxDecoration(boxShadow: Couleurs.ombreDouce),
-          child: Container(
-            color: t.colorScheme.surface,
-            padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
-            child: Row(
+    return Surface(
+      onTap: onTap,
+      padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
+      child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _Couverture(titre: ouvrage.titre, teinte: teinte),
@@ -230,7 +186,7 @@ class CarteOuvrage extends StatelessWidget {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  const Icon(Icons.quiz_outlined, size: 13, color: Couleurs.orTexte),
+                                  Icon(Icons.quiz_outlined, size: 13, color: Couleurs.orTexte),
                                   const SizedBox(width: 3),
                                   Texte('quiz',
                                       style: t.textTheme.labelSmall?.copyWith(
@@ -247,7 +203,7 @@ class CarteOuvrage extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    const Icon(Icons.format_quote_rounded, size: 13, color: Couleurs.grisChaud),
+                                    Icon(Icons.format_quote_rounded, size: 13, color: Couleurs.grisChaud),
                                     const SizedBox(width: 2),
                                     Texte('extraits',
                                         style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
@@ -262,9 +218,6 @@ class CarteOuvrage extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-        ),
-      ),
     );
   }
 }
@@ -282,7 +235,9 @@ class _Couverture extends StatelessWidget {
     return Container(
       width: 58,
       height: 82,
+      clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
+        borderRadius: const BorderRadius.horizontal(left: Radius.circular(4), right: Radius.circular(9)),
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -348,7 +303,7 @@ class PastillesSemaine extends StatelessWidget {
 
         final (Color fond, Color trait, Widget contenu) = fait
             ? (Couleurs.sauge.withValues(alpha: 0.18), Couleurs.sauge,
-                const Icon(Icons.check_rounded, size: 17, color: Couleurs.sauge))
+                Icon(Icons.check_rounded, size: 17, color: Couleurs.sauge))
             : manque
                 ? (Couleurs.terracotta.withValues(alpha: 0.14), Couleurs.terracotta,
                     Icon(Icons.remove_rounded, size: 17, color: Couleurs.terracotta))
@@ -363,17 +318,27 @@ class PastillesSemaine extends StatelessWidget {
 
         return Column(
           children: [
-            Container(
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 250),
               width: 38,
               height: 38,
               decoration: BoxDecoration(
-                color: fond,
-                shape: BoxShape.rectangle,
+                color: aujourdhui && !fait && !manque ? context.palette.accent : fond,
+                shape: BoxShape.circle,
                 border: aujourdhui
-                    ? Border.all(color: Couleurs.or, width: 1.6)
-                    : Border.all(color: Couleurs.nuit.withValues(alpha: 0.07)),
+                    ? null
+                    : Border.all(color: trait == Colors.transparent ? context.palette.trait : trait.withValues(alpha: 0.35)),
+                boxShadow: aujourdhui
+                    ? [BoxShadow(color: context.palette.accent.withValues(alpha: 0.35), blurRadius: 10, offset: const Offset(0, 3))]
+                    : null,
               ),
-              child: Center(child: contenu),
+              child: Center(
+                child: aujourdhui && !fait && !manque
+                    ? Texte(noms[i],
+                        style: t.textTheme.labelMedium
+                            ?.copyWith(color: context.palette.surAccent, fontWeight: FontWeight.w700))
+                    : contenu,
+              ),
             ),
             const SizedBox(height: 6),
             Texte(

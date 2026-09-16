@@ -3,8 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../theme/texte.dart';
+import 'ui.dart';
 
 /// L'invitation à ouvrir un compte, montrée aux visiteurs seulement.
 ///
@@ -34,23 +35,27 @@ class InvitationCompte extends ConsumerWidget {
         "Créez votre compte et ASCENDA construit votre plan de lecture : des "
             "séances datées, des quiz corrigés, un agent qui cite ses sources.";
 
+    final p = context.palette;
     if (compact) {
       return Container(
         margin: const EdgeInsets.only(bottom: 14),
-        padding: const EdgeInsets.fromLTRB(14, 12, 8, 12),
+        padding: const EdgeInsets.fromLTRB(12, 12, 6, 12),
         decoration: BoxDecoration(
-          color: Couleurs.or.withValues(alpha: 0.09),
-          borderRadius: BorderRadius.zero,
+          color: p.accentVoile,
+          borderRadius: Rayons.carte,
+          border: Border.all(color: p.accentTexte.withValues(alpha: 0.22)),
         ),
         child: Row(
           children: [
+            IconePastille(Icons.person_add_alt_1_rounded, taille: 38, fond: p.surface.withValues(alpha: p.sombre ? 0.3 : 0.75)),
+            const SizedBox(width: 12),
             Expanded(
               child: Texte(
                 texte,
-                style: t.textTheme.bodySmall?.copyWith(height: 1.5),
+                style: t.textTheme.bodySmall?.copyWith(color: p.encre, height: 1.5),
               ),
             ),
-            const SizedBox(width: 8),
+            const SizedBox(width: 4),
             TextButton(
               onPressed: () => context.push('/connexion'),
               child: const Texte('Créer'),
@@ -60,74 +65,51 @@ class InvitationCompte extends ConsumerWidget {
       );
     }
 
-    return Container(
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.zero,
-        gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Couleurs.nuit, Couleurs.nuitProfond],
-        ),
-      ),
-      child: Stack(
+    return SurfaceHeros(
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 14),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Positioned(
-            right: -50,
-            top: -40,
-            child: Container(
-              width: 160,
-              height: 160,
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                color: Couleurs.or.withValues(alpha: 0.08),
+          Row(
+            children: [
+              Container(
+                width: 38,
+                height: 38,
+                padding: const EdgeInsets.all(6),
+                decoration: BoxDecoration(
+                  color: p.surHeros.withValues(alpha: 0.08),
+                  borderRadius: Rayons.moyen,
+                ),
+                child: Image.asset('assets/marque/marque-512.png'),
               ),
+              const SizedBox(width: 12),
+              Expanded(child: Surtitre('Gratuit, sans carte bancaire', couleur: p.accentSurHeros)),
+            ],
+          ),
+          const SizedBox(height: 14),
+          Texte(
+            texte,
+            style: t.textTheme.bodyMedium?.copyWith(color: p.surHeros, height: 1.6),
+          ),
+          const SizedBox(height: 18),
+          // Empilés plutôt que côte à côte : sur un écran de 320 px, deux
+          // boutons sur une ligne laissent si peu de place que « Créer
+          // mon compte » se coupait en quatre lignes dans sa pastille.
+          SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              onPressed: () => context.push('/connexion'),
+              icon: const Icon(Icons.arrow_forward_rounded, size: 20),
+              iconAlignment: IconAlignment.end,
+              label: const Texte('Créer mon compte'),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Image.asset('assets/marque/marque-512.png', width: 26, height: 26),
-                    const SizedBox(width: 10),
-                    Texte(
-                      'Gratuit, sans carte bancaire',
-                      style: t.textTheme.labelSmall?.copyWith(
-                        color: Couleurs.orClair,
-                        fontWeight: FontWeight.w700,
-                        letterSpacing: 1.1,
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                Texte(
-                  texte,
-                  style: t.textTheme.bodyMedium
-                      ?.copyWith(color: const Color(0xFFD5DBEA), height: 1.6),
-                ),
-                const SizedBox(height: 16),
-                // Empilés plutôt que côte à côte : sur un écran de 320 px, deux
-                // boutons sur une ligne laissent si peu de place que « Créer
-                // mon compte » se coupait en quatre lignes dans sa pastille.
-                SizedBox(
-                  width: double.infinity,
-                  child: FilledButton(
-                    onPressed: () => context.push('/connexion'),
-                    child: const Texte('Créer mon compte'),
-                  ),
-                ),
-                const SizedBox(height: 4),
-                Center(
-                  child: TextButton(
-                    onPressed: () => context.push('/connexion?mode=connexion'),
-                    child: const Texte("J'ai déjà un compte"),
-                  ),
-                ),
-              ],
+          const SizedBox(height: 4),
+          Center(
+            child: TextButton(
+              style: TextButton.styleFrom(foregroundColor: p.accentSurHeros),
+              onPressed: () => context.push('/connexion?mode=connexion'),
+              child: const Texte("J'ai déjà un compte"),
             ),
           ),
         ],

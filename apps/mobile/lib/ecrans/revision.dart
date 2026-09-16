@@ -5,8 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../widgets/etats.dart';
+import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// La révision espacée : une carte retournable, deux gestes.
@@ -48,6 +49,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
   Widget build(BuildContext context) {
     final notions = ref.watch(aReviserProvider);
     final t = Theme.of(context);
+    final p = context.palette;
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Révision')),
@@ -56,9 +58,9 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
         error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(aReviserProvider)),
         data: (liste) {
           if (liste.isEmpty) {
-            return const EtatMessage(
+            return EtatMessage(
               icone: Icons.check_circle_outline_rounded,
-              teinte: Couleurs.sauge,
+              teinte: p.succes,
               titre: 'Rien à revoir',
               texte: "Vos notions sont à jour. Elles reviendront d'elles-mêmes "
                   "quand il sera temps.",
@@ -72,84 +74,52 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
           return Column(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.zero,
-                  child: LinearProgressIndicator(
-                    value: (_index + 1) / liste.length,
-                    minHeight: 4,
-                    backgroundColor: t.colorScheme.surfaceContainer,
-                  ),
+                padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
+                child: Row(
+                  children: [
+                    Expanded(child: Jauge(valeur: (_index + 1) / liste.length)),
+                    const SizedBox(width: 12),
+                    Texte('${_index + 1} / ${liste.length}',
+                        style: t.textTheme.labelMedium?.copyWith(color: p.attenue, fontWeight: FontWeight.w600)),
+                  ],
                 ),
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(24),
+                  padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
                   child: GestureDetector(
                     onTap: () => setState(() => _retournee = !_retournee),
                     child: AnimatedSwitcher(
                       duration: const Duration(milliseconds: 220),
-                      child: Container(
-                        key: ValueKey(_retournee),
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(28),
-                        decoration: BoxDecoration(
-                          color: _retournee
-                              ? Couleurs.or.withValues(alpha: 0.08)
-                              : t.colorScheme.surface,
-                          borderRadius: BorderRadius.zero,
-                          border: Border.all(
-                            color: _retournee
-                                ? Couleurs.or.withValues(alpha: 0.5)
-                                : (t.dividerTheme.color ?? Couleurs.traitClair),
-                          ),
+                      transitionBuilder: (enfant, anim) => FadeTransition(
+                        opacity: anim,
+                        child: ScaleTransition(
+                          scale: Tween(begin: 0.97, end: 1.0).animate(anim),
+                          child: enfant,
                         ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            if (n.axe != null)
-                              Texte(n.axe!,
-                                  style: t.textTheme.labelSmall
-                                      ?.copyWith(color: Couleurs.orTexte)),
-                            const SizedBox(height: 14),
-                            Texte(n.terme, style: t.textTheme.headlineSmall),
-                            if (_retournee) ...[
-                              const Divider(height: 34),
-                              Texte(
-                                n.definition ??
-                                    "Cette notion n'a pas encore de définition dans le "
-                                        "glossaire. Consultez-la dans son ouvrage d'origine.",
-                                style: t.textTheme.bodyLarge?.copyWith(height: 1.68),
-                              ),
-                            ] else ...[
-                              const SizedBox(height: 20),
-                              Texte(
-                                'Touchez pour voir la définition.',
-                                style: t.textTheme.bodySmall
-                                    ?.copyWith(color: Couleurs.grisChaud),
-                              ),
-                            ],
-                          ],
-                        ),
+                      ),
+                      child: _CarteNotion(
+                        key: ValueKey('${n.conceptId}-$_retournee'),
+                        notion: n,
+                        retournee: _retournee,
                       ),
                     ),
                   ),
                 ),
               ),
               SafeArea(
-                minimum: const EdgeInsets.fromLTRB(24, 0, 24, 18),
+                top: false,
+                minimum: const EdgeInsets.fromLTRB(20, 0, 20, 18),
                 child: Row(
                   children: [
                     Expanded(
                       child: OutlinedButton.icon(
                         onPressed: () => _repondre(n, false, liste.length),
                         icon: const Icon(Icons.replay_rounded, size: 18),
-                        label: const Texte('À revoir'),
+                        label: const Texte('À revoir', maxLines: 1, overflow: TextOverflow.ellipsis),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: Couleurs.terracotta,
-                          side: BorderSide(
-                              color: Couleurs.terracotta.withValues(alpha: 0.45)),
+                          foregroundColor: p.alerte,
+                          side: BorderSide(color: p.alerte.withValues(alpha: 0.45)),
                         ),
                       ),
                     ),
@@ -158,7 +128,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                       child: FilledButton.icon(
                         onPressed: () => _repondre(n, true, liste.length),
                         icon: const Icon(Icons.check_rounded, size: 18),
-                        label: const Texte('Je savais'),
+                        label: const Texte('Je savais', maxLines: 1, overflow: TextOverflow.ellipsis),
                       ),
                     ),
                   ],
@@ -172,6 +142,101 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
   }
 }
 
+/// La carte d'une notion : le terme au recto, la définition au verso.
+class _CarteNotion extends StatelessWidget {
+  const _CarteNotion({super.key, required this.notion, required this.retournee});
+  final Notion notion;
+  final bool retournee;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final p = context.palette;
+    final n = notion;
+
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: retournee ? Color.alphaBlend(p.accentVoile, p.surface) : p.surface,
+        borderRadius: Rayons.grand,
+        border: Border.all(color: retournee ? p.accent.withValues(alpha: 0.55) : p.trait, width: retournee ? 1.5 : 1),
+        boxShadow: p.ombreCarte,
+      ),
+      child: ClipRRect(
+        borderRadius: Rayons.grand,
+        child: Stack(
+          children: [
+            // Un grand signe en filigrane, pour que le recto ne soit pas un
+            // rectangle vide autour d'un mot.
+            Positioned(
+              right: -30,
+              bottom: -30,
+              child: Icon(
+                retournee ? Icons.menu_book_rounded : Icons.lightbulb_rounded,
+                size: 170,
+                color: p.accentTexte.withValues(alpha: p.sombre ? 0.07 : 0.05),
+              ),
+            ),
+            SingleChildScrollView(
+              padding: const EdgeInsets.all(26),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      IconePastille(
+                        retournee ? Icons.menu_book_rounded : Icons.lightbulb_rounded,
+                        taille: 44,
+                      ),
+                      const Spacer(),
+                      Pastille(retournee ? 'Définition' : 'Notion', couleur: p.attenue),
+                    ],
+                  ),
+                  const SizedBox(height: 22),
+                  if (n.axe != null) ...[
+                    Surtitre(n.axe!),
+                    const SizedBox(height: 8),
+                  ],
+                  Texte(n.terme, style: t.textTheme.headlineMedium?.copyWith(fontSize: retournee ? 24 : 30)),
+                  if (retournee) ...[
+                    const SizedBox(height: 16),
+                    Container(
+                      width: 44,
+                      height: 3,
+                      decoration: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
+                    ),
+                    const SizedBox(height: 16),
+                    Texte(
+                      n.definition ??
+                          "Cette notion n'a pas encore de définition dans le "
+                              "glossaire. Consultez-la dans son ouvrage d'origine.",
+                      style: t.textTheme.bodyLarge?.copyWith(height: 1.68, color: p.texte),
+                    ),
+                  ] else ...[
+                    const SizedBox(height: 28),
+                    Row(
+                      children: [
+                        Icon(Icons.touch_app_rounded, size: 18, color: p.attenue),
+                        const SizedBox(width: 8),
+                        Expanded(
+                          child: Texte(
+                            'Touchez pour voir la définition.',
+                            style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _Fin extends StatelessWidget {
   const _Fin({required this.sues, required this.total});
   final int sues;
@@ -180,37 +245,57 @@ class _Fin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(32),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Container(
-              width: 76,
-              height: 76,
-              decoration: BoxDecoration(
-                color: Couleurs.sauge.withValues(alpha: 0.14),
-                shape: BoxShape.rectangle,
+      child: SingleChildScrollView(
+        padding: const EdgeInsets.all(20),
+        child: SurfaceHeros(
+          padding: const EdgeInsets.fromLTRB(24, 30, 24, 24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconePastille(Icons.done_all_rounded, couleur: p.accentSurHeros, taille: 72),
+              const SizedBox(height: 20),
+              Surtitre('Révision', couleur: p.accentSurHeros),
+              const SizedBox(height: 6),
+              Texte('Séance terminée',
+                  textAlign: TextAlign.center,
+                  style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 26)),
+              const SizedBox(height: 16),
+              Text.rich(
+                TextSpan(children: [
+                  TextSpan(text: '$sues'),
+                  TextSpan(
+                    text: ' / $total',
+                    style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux),
+                  ),
+                ]),
+                style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1),
               ),
-              child: const Icon(Icons.done_all_rounded, size: 34, color: Couleurs.sauge),
-            ),
-            const SizedBox(height: 22),
-            Texte('Séance terminée', style: t.textTheme.headlineSmall),
-            const SizedBox(height: 10),
-            Texte(
-              '$sues notion${sues > 1 ? 's' : ''} sur $total sue'
-              '${sues > 1 ? 's' : ''} du premier coup. '
-              'Les autres reviendront demain.',
-              style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 28),
-            FilledButton(
-              onPressed: () => context.pop(),
-              child: const Texte('Revenir'),
-            ),
-          ],
+              const SizedBox(height: 10),
+              Jauge(
+                valeur: total == 0 ? 0 : sues / total,
+                hauteur: 6,
+                piste: p.surHeros.withValues(alpha: 0.12),
+              ),
+              const SizedBox(height: 14),
+              Texte(
+                '$sues notion${sues > 1 ? 's' : ''} sur $total sue'
+                '${sues > 1 ? 's' : ''} du premier coup. '
+                'Les autres reviendront demain.',
+                style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 24),
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () => context.pop(),
+                  child: const Texte('Revenir'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

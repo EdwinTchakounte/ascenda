@@ -14,6 +14,7 @@ import 'ecrans/demarrage.dart';
 import 'ecrans/diagnostic.dart';
 import 'ecrans/fiche_ouvrage.dart';
 import 'ecrans/glossaire.dart';
+import 'ecrans/hors_ligne.dart';
 import 'ecrans/lecteur.dart';
 import 'ecrans/mot_de_passe.dart';
 import 'ecrans/profil.dart';
@@ -73,6 +74,7 @@ final routeurProvider = Provider<GoRouter>((ref) {
             chemin.startsWith('/ouvrage') ||
             chemin.startsWith('/mot-de-passe-oublie') ||
             chemin.startsWith('/recherche') ||
+            chemin.startsWith('/hors-ligne') ||
             chemin.startsWith('/notion') ||
             chemin.startsWith('/axe/');
         return (surAuth || libre) ? null : '/bienvenue';
@@ -153,6 +155,10 @@ final routeurProvider = Provider<GoRouter>((ref) {
         path: '/chronogramme/:id',
         builder: (c, s) => EcranChronogramme(chronogrammeId: s.pathParameters['id']!),
       ),
+      // Hors de la barre d'onglets : ouverts depuis le tiroir, en plein écran.
+      GoRoute(parentNavigatorKey: _racine, path: '/profil', builder: (c, s) => const EcranProfil()),
+      GoRoute(parentNavigatorKey: _racine, path: '/cercle', builder: (c, s) => const EcranCercle()),
+      GoRoute(parentNavigatorKey: _racine, path: '/hors-ligne', builder: (c, s) => const EcranHorsLigne()),
       GoRoute(
         parentNavigatorKey: _racine,
         path: '/revision',
@@ -172,13 +178,7 @@ final routeurProvider = Provider<GoRouter>((ref) {
             GoRoute(path: '/agent', builder: (c, s) => const EcranAgent()),
           ]),
           StatefulShellBranch(routes: [
-            GoRoute(path: '/cercle', builder: (c, s) => const EcranCercle()),
-          ]),
-          StatefulShellBranch(routes: [
             GoRoute(path: '/progression', builder: (c, s) => const EcranProgression()),
-          ]),
-          StatefulShellBranch(routes: [
-            GoRoute(path: '/profil', builder: (c, s) => const EcranProfil()),
           ]),
         ],
       ),

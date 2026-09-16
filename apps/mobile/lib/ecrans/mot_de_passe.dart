@@ -4,8 +4,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../api/client.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../theme/texte.dart';
+import '../widgets/ui.dart';
 
 /// Retrouver son mot de passe, en deux temps sur un seul écran.
 ///
@@ -112,6 +113,7 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Scaffold(
       appBar: AppBar(title: const Texte('Mot de passe oublié')),
       body: SafeArea(
@@ -122,28 +124,27 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Texte(
-                  _codeDemande ? 'Votre code est parti' : 'Retrouver votre accès',
-                  style: t.textTheme.headlineSmall,
-                ),
-                const SizedBox(height: 8),
-                Texte(
-                  _codeDemande
+                _EnTete(
+                  icone: _codeDemande ? Icons.mark_email_read_outlined : Icons.lock_reset_rounded,
+                  etape: _codeDemande ? 2 : 1,
+                  titre: _codeDemande ? 'Votre code est parti' : 'Retrouver votre accès',
+                  texte: _codeDemande
                       ? "Si un compte existe à cette adresse, un code à six chiffres "
                           "vient d'y être envoyé. Il est valable trente minutes."
                       : "Indiquez l'adresse de votre compte. Nous y envoyons un code "
                           "à six chiffres.",
-                  style: t.textTheme.bodyMedium
-                      ?.copyWith(color: Couleurs.grisChaud, height: 1.55),
                 ),
-                const SizedBox(height: 26),
+                const SizedBox(height: 28),
 
                 TextFormField(
                   controller: _email,
                   enabled: !_codeDemande,
                   keyboardType: TextInputType.emailAddress,
                   autocorrect: false,
-                  decoration: const InputDecoration(labelText: 'Adresse électronique'),
+                  decoration: const InputDecoration(
+                    labelText: 'Adresse électronique',
+                    prefixIcon: Icon(Icons.alternate_email_rounded, size: 20),
+                  ),
                 ),
 
                 if (_codeDemande) ...[
@@ -153,14 +154,15 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
                     keyboardType: TextInputType.number,
                     autofocus: true,
                     textAlign: TextAlign.center,
-                    style: t.textTheme.headlineSmall?.copyWith(letterSpacing: 10),
+                    style: t.textTheme.headlineSmall?.copyWith(letterSpacing: 10, color: p.encre),
                     inputFormatters: [
                       FilteringTextInputFormatter.allow(RegExp(r'[0-9 ]')),
                       LengthLimitingTextInputFormatter(7),
                     ],
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       labelText: 'Code reçu',
                       hintText: '000000',
+                      fillColor: p.surfaceCreuse,
                     ),
                     validator: (v) {
                       final chiffres = (v ?? '').replaceAll(RegExp(r'\D'), '');
@@ -177,6 +179,7 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
                     decoration: InputDecoration(
                       labelText: 'Nouveau mot de passe',
                       helperText: 'Au moins 8 caractères',
+                      prefixIcon: const Icon(Icons.lock_outline_rounded, size: 20),
                       suffixIcon: IconButton(
                         icon: Icon(_masque
                             ? Icons.visibility_outlined
@@ -194,7 +197,7 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
 
                 if (_erreur != null) ...[
                   const SizedBox(height: 16),
-                  _Alerte(_erreur!),
+                  AlerteFormulaire(_erreur!),
                 ],
 
                 const SizedBox(height: 26),
@@ -221,12 +224,24 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
                             }),
                     child: const Texte("Corriger l'adresse"),
                   ),
-                  Texte(
-                    "Le code n'arrive pas ? Regardez dans les indésirables. "
-                    "Un nouveau code ne peut être demandé qu'après un quart d'heure.",
-                    textAlign: TextAlign.center,
-                    style: t.textTheme.bodySmall
-                        ?.copyWith(color: Couleurs.grisChaud, height: 1.5),
+                  const SizedBox(height: 10),
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+                    decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.moyen),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(Icons.info_outline_rounded, size: 18, color: p.attenue),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Texte(
+                            "Le code n'arrive pas ? Regardez dans les indésirables. "
+                            "Un nouveau code ne peut être demandé qu'après un quart d'heure.",
+                            style: t.textTheme.bodySmall?.copyWith(color: p.attenue, height: 1.5),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ],
@@ -298,7 +313,6 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
 
   @override
   Widget build(BuildContext context) {
-    final t = Theme.of(context);
     return Scaffold(
       appBar: AppBar(title: const Texte('Mot de passe')),
       body: SafeArea(
@@ -309,23 +323,21 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Texte(
-                  'Changer votre mot de passe',
-                  style: t.textTheme.headlineSmall,
+                const _EnTete(
+                  icone: Icons.key_rounded,
+                  titre: 'Changer votre mot de passe',
+                  texte: "Toutes vos sessions seront fermées, sur cet appareil comme sur "
+                      "les autres. C'est ce qu'on attend quand on change un mot de "
+                      "passe qu'on croit compromis.",
                 ),
-                const SizedBox(height: 8),
-                Texte(
-                  "Toutes vos sessions seront fermées, sur cet appareil comme sur "
-                  "les autres. C'est ce qu'on attend quand on change un mot de "
-                  "passe qu'on croit compromis.",
-                  style: t.textTheme.bodyMedium
-                      ?.copyWith(color: Couleurs.grisChaud, height: 1.55),
-                ),
-                const SizedBox(height: 26),
+                const SizedBox(height: 28),
                 TextFormField(
                   controller: _ancien,
                   obscureText: true,
-                  decoration: const InputDecoration(labelText: 'Mot de passe actuel'),
+                  decoration: const InputDecoration(
+                    labelText: 'Mot de passe actuel',
+                    prefixIcon: Icon(Icons.lock_outline_rounded, size: 20),
+                  ),
                   validator: (v) =>
                       (v ?? '').isEmpty ? 'Indiquez votre mot de passe actuel.' : null,
                 ),
@@ -338,6 +350,7 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
                   decoration: InputDecoration(
                     labelText: 'Nouveau mot de passe',
                     helperText: 'Au moins 8 caractères',
+                    prefixIcon: const Icon(Icons.key_outlined, size: 20),
                     suffixIcon: IconButton(
                       icon: Icon(_masque
                           ? Icons.visibility_outlined
@@ -351,12 +364,13 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
                 ),
                 if (_erreur != null) ...[
                   const SizedBox(height: 16),
-                  _Alerte(_erreur!),
+                  AlerteFormulaire(_erreur!),
                 ],
                 const SizedBox(height: 26),
-                FilledButton(
+                FilledButton.icon(
                   onPressed: _envoi ? null : _valider,
-                  child: _envoi
+                  icon: _envoi ? const SizedBox.shrink() : const Icon(Icons.logout_rounded, size: 19),
+                  label: _envoi
                       ? const SizedBox(
                           width: 20,
                           height: 20,
@@ -373,33 +387,58 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
   }
 }
 
-class _Alerte extends StatelessWidget {
-  const _Alerte(this.message);
-  final String message;
+/// L'en-tête d'un écran de mot de passe : une grande icône sur voile doré,
+/// l'étape s'il y en a, le titre en Fraunces et son explication.
+class _EnTete extends StatelessWidget {
+  const _EnTete({required this.icone, required this.titre, required this.texte, this.etape});
+
+  final IconData icone;
+  final String titre;
+  final String texte;
+
+  /// L'étape en cours sur deux, ou rien pour un écran en un temps.
+  final int? etape;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    return Container(
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: Couleurs.terracotta.withValues(alpha: 0.1),
-        borderRadius: BorderRadius.zero,
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Icon(Icons.error_outline_rounded, size: 18, color: Couleurs.terracotta),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Texte(
-              message,
-              style: t.textTheme.bodySmall
-                  ?.copyWith(color: Couleurs.terracotta, height: 1.45),
-            ),
+    final p = context.palette;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          children: [
+            IconePastille(icone, taille: 56),
+            const Spacer(),
+            if (etape != null) Pastille('Étape $etape sur 2', icone: Icons.timeline_rounded),
+          ],
+        ),
+        const SizedBox(height: 20),
+        Texte(titre, style: t.textTheme.headlineSmall),
+        const SizedBox(height: 8),
+        Texte(texte, style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.55)),
+        if (etape != null) ...[
+          const SizedBox(height: 18),
+          Row(
+            children: [
+              for (var i = 1; i <= 2; i++) ...[
+                if (i > 1) const SizedBox(width: 6),
+                Expanded(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 260),
+                    height: 4,
+                    decoration: BoxDecoration(
+                      borderRadius: Rayons.pilule,
+                      color: i <= etape! ? p.accent : p.surfaceCreuse,
+                    ),
+                  ),
+                ),
+              ],
+            ],
           ),
         ],
-      ),
+      ],
     );
   }
 }
+

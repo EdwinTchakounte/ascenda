@@ -1,5 +1,5 @@
 // Ce que ce fichier vérifie : que la marque est bien centrée là où elle est
-// seule, et à angle droit partout.
+// seule, et que chaque forme du thème est déclarée et arrondie avec douceur.
 //
 // Deux contrôles qu'aucune relecture ne remplace. Un `Center` oublié se voit
 // à l'écran, mais seulement si on regarde cet écran là ; ici il se voit à
@@ -48,7 +48,7 @@ void main() {
     expect(_decentrage(t, find.byType(Image).first), lessThan(2));
   });
 
-  testWidgets("aucune forme arrondie ne subsiste au thème", (t) async {
+  testWidgets("chaque forme du thème est déclarée et doucement arrondie", (t) async {
     final theme = ThemeAscenda.clair;
     final formes = <String, OutlinedBorder?>{
       'bouton plein': theme.filledButtonTheme.style?.shape?.resolve({}),
@@ -65,7 +65,8 @@ void main() {
       expect(forme, isNotNull, reason: '$nom : aucune forme déclarée, Material arrondira');
       expect(forme, isA<RoundedRectangleBorder>(), reason: '$nom');
       final r = (forme! as RoundedRectangleBorder).borderRadius.resolve(TextDirection.ltr);
-      expect(r, BorderRadius.zero, reason: '$nom : coins arrondis');
+      final rayon = [r.topLeft.x, r.topRight.x, r.bottomLeft.x, r.bottomRight.x].reduce((a, b) => a > b ? a : b);
+      expect(rayon, greaterThanOrEqualTo(10), reason: '$nom : angle droit, hors du langage de l\'application');
     });
   });
 }

@@ -3,8 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../etat/fournisseurs.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../theme/texte.dart';
+import 'ui.dart';
 
 /// La bonne nouvelle, sur l'écran d'accueil : quelqu'un a créé son compte
 /// avec votre code, et votre prochain abonnement coûte moins cher.
@@ -28,27 +29,31 @@ class BandeauRecompense extends ConsumerWidget {
         : "${c.nouveaux} lecteurs ont rejoint ASCENDA avec votre code. "
             "Vos réductions vous attendent.";
 
+    final p = context.palette;
     return Container(
       key: const Key('bandeau-recompense'),
       margin: const EdgeInsets.only(bottom: 16),
-      padding: const EdgeInsets.fromLTRB(15, 13, 8, 13),
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(colors: [Couleurs.nuit, Couleurs.nuitProfond]),
+      padding: const EdgeInsets.fromLTRB(12, 12, 6, 12),
+      decoration: BoxDecoration(
+        color: Color.alphaBlend(p.accentVoile, p.surface),
+        borderRadius: Rayons.carte,
+        border: Border.all(color: p.accentTexte.withValues(alpha: 0.30)),
+        boxShadow: p.ombreCarte,
       ),
       child: Row(
         children: [
-          const Icon(Icons.volunteer_activism_outlined, color: Couleurs.orClair, size: 21),
+          IconePastille(Icons.volunteer_activism_rounded, taille: 42, fond: p.accent.withValues(alpha: p.sombre ? 0.22 : 0.18)),
           const SizedBox(width: 12),
           Expanded(
             child: Texte(texte,
-                style: t.textTheme.bodySmall?.copyWith(color: const Color(0xFFF4F1E8), height: 1.5)),
+                style: t.textTheme.bodySmall?.copyWith(color: p.encre, height: 1.5)),
           ),
           TextButton(
             onPressed: () async {
               await context.push('/codes');
               ref.invalidate(codesProvider);
             },
-            style: TextButton.styleFrom(foregroundColor: Couleurs.orClair),
+            style: TextButton.styleFrom(foregroundColor: p.accentTexte),
             child: const Texte('Voir'),
           ),
         ],

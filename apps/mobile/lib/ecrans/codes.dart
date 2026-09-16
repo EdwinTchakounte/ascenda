@@ -8,9 +8,10 @@ import '../api/client.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../widgets/etats.dart';
 import '../theme/texte.dart';
+import '../widgets/ui.dart';
 
 String _jour(DateTime? d) =>
     d == null ? 'date à confirmer' : DateFormat('d MMMM y', 'fr_FR').format(d);
@@ -113,7 +114,7 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
               (_) => _signalerVus(c),
             );
             return RefreshIndicator(
-              color: Couleurs.or,
+              color: context.palette.accent,
               onRefresh: () async => ref.invalidate(codesProvider),
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
@@ -124,7 +125,7 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
                     erreur: _erreur,
                     onActiver: _activer,
                   ),
-                  const SizedBox(height: 28),
+                  const SizedBox(height: 26),
                   _SectionAcces(donnees: c),
                   const SizedBox(height: 28),
                   _CarteAmbassadeur(donnees: c),
@@ -156,59 +157,78 @@ class _Saisie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Texte('Activer un code', style: t.textTheme.titleLarge),
-        const SizedBox(height: 4),
-        Texte(
-          "Un code reçu d'ASCENDA ouvre tout ou partie d'Ascension, pour une durée donnée.",
-          style: t.textTheme.bodySmall?.copyWith(
-            color: Couleurs.grisChaud,
-            height: 1.5,
+    final p = context.palette;
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(18, 18, 18, 18),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const IconePastille(Icons.confirmation_number_rounded, taille: 46),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Texte('Activer un code', style: t.textTheme.titleLarge?.copyWith(fontSize: 20)),
+                    const SizedBox(height: 4),
+                    Texte(
+                      "Un code reçu d'ASCENDA ouvre tout ou partie d'Ascension, pour une durée donnée.",
+                      style: t.textTheme.bodySmall?.copyWith(color: p.attenue, height: 1.5),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-        ),
-        const SizedBox(height: 14),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              child: TextField(
-                key: const Key('saisie-code'),
-                controller: controleur,
-                textCapitalization: TextCapitalization.characters,
-                autocorrect: false,
-                enableSuggestions: false,
-                textInputAction: TextInputAction.done,
-                onSubmitted: (_) => onActiver(),
-                style: const TextStyle(
-                  letterSpacing: 1.5,
-                  fontWeight: FontWeight.w600,
-                ),
-                decoration: InputDecoration(
-                  hintText: 'Votre code',
-                  errorText: erreur,
-                  errorMaxLines: 3,
+          const SizedBox(height: 16),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Expanded(
+                child: TextField(
+                  key: const Key('saisie-code'),
+                  controller: controleur,
+                  textCapitalization: TextCapitalization.characters,
+                  autocorrect: false,
+                  enableSuggestions: false,
+                  textInputAction: TextInputAction.done,
+                  onSubmitted: (_) => onActiver(),
+                  style: t.textTheme.titleMedium?.copyWith(
+                    color: p.encre,
+                    letterSpacing: 2.2,
+                    fontWeight: FontWeight.w700,
+                  ),
+                  decoration: InputDecoration(
+                    hintText: 'Votre code',
+                    fillColor: p.surfaceCreuse,
+                    prefixIcon: const Icon(Icons.key_rounded, size: 20),
+                    errorText: erreur,
+                    errorMaxLines: 3,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(width: 10),
-            SizedBox(
-              height: 52,
-              child: FilledButton(
-                onPressed: envoi ? null : onActiver,
-                child: envoi
-                    ? const SizedBox(
-                        width: 18,
-                        height: 18,
-                        child: CircularProgressIndicator(strokeWidth: 2.2),
-                      )
-                    : const Texte('Activer'),
+              const SizedBox(width: 10),
+              SizedBox(
+                height: 56,
+                child: FilledButton(
+                  style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 18)),
+                  onPressed: envoi ? null : onActiver,
+                  child: envoi
+                      ? const SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(strokeWidth: 2.2),
+                        )
+                      : const Texte('Activer'),
+                ),
               ),
-            ),
-          ],
-        ),
-      ],
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
@@ -220,11 +240,12 @@ class _SectionAcces extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final a = donnees.acces;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Texte('Vos accès', style: t.textTheme.titleLarge),
+        const TitreSection('Vos accès'),
         const SizedBox(height: 12),
         if (a.source == 'abonnement')
           _LigneAcces(
@@ -234,7 +255,7 @@ class _SectionAcces extends StatelessWidget {
           ),
         if (a.source == 'lancement')
           _LigneAcces(
-            icone: Icons.celebration_outlined,
+            icone: Icons.celebration_rounded,
             titre: 'Période de lancement',
             detail: a.jusquAu == null
                 ? 'Tout ASCENDA est ouvert à tous.'
@@ -242,23 +263,22 @@ class _SectionAcces extends StatelessWidget {
           ),
         for (final code in a.codes) ...[
           _CarteCode(code: code, donnees: donnees),
-          const SizedBox(height: 10),
+          const SizedBox(height: 12),
         ],
         if (a.source == 'aucune')
-          Container(
+          Surface(
             padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: t.colorScheme.surface,
-              border: Border.all(
-                color: t.dividerTheme.color ?? Couleurs.traitClair,
-              ),
-            ),
-            child: Texte(
-              "Vous êtes sur l'offre Découverte. Un code ou un abonnement ouvre le reste.",
-              style: t.textTheme.bodySmall?.copyWith(
-                color: Couleurs.grisChaud,
-                height: 1.5,
-              ),
+            child: Row(
+              children: [
+                IconePastille(Icons.explore_rounded, couleur: p.attenue, taille: 40),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Texte(
+                    "Vous êtes sur l'offre Découverte. Un code ou un abonnement ouvre le reste.",
+                    style: t.textTheme.bodySmall?.copyWith(color: p.texte, height: 1.5),
+                  ),
+                ),
+              ],
             ),
           ),
       ],
@@ -266,6 +286,7 @@ class _SectionAcces extends StatelessWidget {
   }
 }
 
+/// Un accès ouvert pour tous les usages : sur voile doré, sans ombre.
 class _LigneAcces extends StatelessWidget {
   const _LigneAcces({
     required this.icone,
@@ -279,26 +300,28 @@ class _LigneAcces extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 12),
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Couleurs.or.withValues(alpha: 0.10),
-        border: Border.all(color: Couleurs.or.withValues(alpha: 0.35)),
+        color: p.accentVoile,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: p.accentTexte.withValues(alpha: 0.28)),
       ),
       child: Row(
         children: [
-          Icon(icone, color: Couleurs.orTexte, size: 22),
-          const SizedBox(width: 12),
+          IconePastille(icone, taille: 44, fond: p.surface.withValues(alpha: p.sombre ? 0.35 : 0.8)),
+          const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Texte(titre, style: t.textTheme.titleSmall),
+                Texte(titre, style: t.textTheme.titleSmall?.copyWith(color: p.encre)),
                 const SizedBox(height: 2),
                 Texte(
                   detail,
-                  style: t.textTheme.bodySmall?.copyWith(height: 1.5),
+                  style: t.textTheme.bodySmall?.copyWith(color: p.texte, height: 1.5),
                 ),
               ],
             ),
@@ -317,83 +340,91 @@ class _CarteCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final bientot = code.joursRestants <= 3;
-    return Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: t.colorScheme.surface,
-        border: Border(
-          left: const BorderSide(color: Couleurs.or, width: 3),
-          top: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-          right: BorderSide(color: t.dividerTheme.color ?? Couleurs.traitClair),
-          bottom: BorderSide(
-            color: t.dividerTheme.color ?? Couleurs.traitClair,
-          ),
-        ),
-      ),
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
+              const IconePastille(Icons.lock_open_rounded, taille: 40),
+              const SizedBox(width: 12),
               Expanded(
-                child: Texte(code.libelle, style: t.textTheme.titleSmall),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                color: Couleurs.nuit,
-                child: Texte(
-                  code.code,
-                  style: const TextStyle(
-                    color: Couleurs.orClair,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 1,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 6),
-          Texte(
-            code.complet ? 'Tout Ascension' : 'Accès limité à :',
-            style: t.textTheme.bodySmall?.copyWith(
-              color: Couleurs.orTexte,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          if (!code.complet) ...[
-            const SizedBox(height: 6),
-            for (final f in code.fonctions)
-              Padding(
-                padding: const EdgeInsets.only(bottom: 4),
-                child: Row(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Icon(
-                      Icons.check_rounded,
-                      size: 16,
-                      color: Couleurs.sauge,
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Texte(
-                        donnees.libelle(f),
-                        style: t.textTheme.bodySmall,
+                    Texte(code.libelle, style: t.textTheme.titleSmall?.copyWith(color: p.encre)),
+                    const SizedBox(height: 2),
+                    Texte(
+                      code.complet ? 'Tout Ascension' : 'Accès limité à :',
+                      style: t.textTheme.bodySmall?.copyWith(
+                        color: p.accentTexte,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ],
                 ),
               ),
+              const SizedBox(width: 8),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                decoration: BoxDecoration(
+                  color: p.surfaceCreuse,
+                  borderRadius: Rayons.pilule,
+                  border: Border.all(color: p.trait),
+                ),
+                child: Texte(
+                  code.code,
+                  style: t.textTheme.labelSmall?.copyWith(
+                    color: p.encre,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          if (!code.complet) ...[
+            const SizedBox(height: 12),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                for (final f in code.fonctions)
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(8, 5, 11, 5),
+                    decoration: BoxDecoration(
+                      color: p.succes.withValues(alpha: p.sombre ? 0.16 : 0.10),
+                      borderRadius: Rayons.pilule,
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.check_rounded, size: 15, color: p.succes),
+                        const SizedBox(width: 5),
+                        Flexible(
+                          child: Texte(
+                            donnees.libelle(f),
+                            style: t.textTheme.labelMedium?.copyWith(color: p.encre),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+              ],
+            ),
           ],
+          const SizedBox(height: 14),
+          Divider(height: 1, color: p.trait),
           const SizedBox(height: 10),
           Row(
             children: [
               Icon(
-                bientot
-                    ? Icons.hourglass_bottom_rounded
-                    : Icons.event_available_outlined,
+                bientot ? Icons.hourglass_bottom_rounded : Icons.event_available_rounded,
                 size: 16,
-                color: bientot ? Couleurs.terracotta : Couleurs.grisChaud,
+                color: bientot ? p.alerte : p.attenue,
               ),
               const SizedBox(width: 6),
               Expanded(
@@ -403,7 +434,7 @@ class _CarteCode extends StatelessWidget {
                       : "Jusqu'au ${_jour(code.fin)}, encore ${code.joursRestants} jour"
                             "${code.joursRestants > 1 ? 's' : ''}.",
                   style: t.textTheme.labelSmall?.copyWith(
-                    color: bientot ? Couleurs.terracotta : Couleurs.grisChaud,
+                    color: bientot ? p.alerte : p.attenue,
                   ),
                 ),
               ),
@@ -449,48 +480,53 @@ class _CarteAmbassadeur extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    const clair = Color(0xFFF4F1E8);
-    const doux = Color(0xFFB9C1D6);
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Couleurs.nuit, Couleurs.nuitProfond],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
+    final p = context.palette;
+    return SurfaceHeros(
+      padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              const Icon(
-                Icons.volunteer_activism_outlined,
-                color: Couleurs.orClair,
-                size: 20,
-              ),
-              const SizedBox(width: 10),
-              Flexible(
-                child: Texte(
-                  'Votre code ambassadeur',
-                  style: t.textTheme.titleMedium?.copyWith(color: clair),
+              IconePastille(Icons.volunteer_activism_rounded, couleur: p.accentSurHeros, taille: 44),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Surtitre('Ambassadeur', couleur: p.accentSurHeros),
+                    const SizedBox(height: 2),
+                    Texte(
+                      'Votre code ambassadeur',
+                      style: t.textTheme.titleLarge?.copyWith(color: p.surHeros, fontSize: 19),
+                    ),
+                  ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 16),
-          Center(
-            child: FittedBox(
-              fit: BoxFit.scaleDown,
-              child: SelectableText(
-                donnees.code,
-                key: const Key('code-ambassadeur'),
-                style: const TextStyle(
-                  color: Couleurs.orClair,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w700,
-                  letterSpacing: 4,
+          const SizedBox(height: 18),
+          // Le code dans un cartouche, comme un billet qu'on tend.
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            decoration: BoxDecoration(
+              color: p.surHeros.withValues(alpha: 0.07),
+              borderRadius: Rayons.carte,
+              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.35), width: 1.2),
+            ),
+            child: Center(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                child: SelectableText(
+                  donnees.code,
+                  key: const Key('code-ambassadeur'),
+                  style: t.textTheme.headlineMedium?.copyWith(
+                    color: p.accentSurHeros,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 4,
+                  ),
                 ),
               ),
             ),
@@ -503,7 +539,7 @@ class _CarteAmbassadeur extends StatelessWidget {
                       "valable ${donnees.validiteJours} jours."
                 : "Le programme ambassadeur est suspendu pour le moment. Votre code reste le vôtre.",
             textAlign: TextAlign.center,
-            style: t.textTheme.bodySmall?.copyWith(color: doux, height: 1.6),
+            style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux, height: 1.6),
           ),
           const SizedBox(height: 16),
           Row(
@@ -514,8 +550,8 @@ class _CarteAmbassadeur extends StatelessWidget {
                   icon: const Icon(Icons.copy_rounded, size: 17),
                   label: const Texte('Copier'),
                   style: OutlinedButton.styleFrom(
-                    foregroundColor: Couleurs.orClair,
-                    side: const BorderSide(color: Color(0x40E8C070)),
+                    foregroundColor: p.accentSurHeros,
+                    side: BorderSide(color: p.accentSurHeros.withValues(alpha: 0.35)),
                   ),
                 ),
               ),
@@ -532,21 +568,24 @@ class _CarteAmbassadeur extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          const Divider(color: Color(0x24E8C070), height: 1),
-          const SizedBox(height: 14),
           Row(
             children: [
-              _Chiffre(
-                valeur: '${donnees.filleuls}',
-                libelle: donnees.filleuls > 1
-                    ? 'lecteurs invités'
-                    : 'lecteur invité',
+              Expanded(
+                child: _Chiffre(
+                  valeur: '${donnees.filleuls}',
+                  libelle: donnees.filleuls > 1
+                      ? 'lecteurs invités'
+                      : 'lecteur invité',
+                ),
               ),
-              _Chiffre(
-                valeur: donnees.reductionProchaine == null
-                    ? '0 %'
-                    : '-${donnees.reductionProchaine} %',
-                libelle: 'sur le prochain abonnement',
+              const SizedBox(width: 10),
+              Expanded(
+                child: _Chiffre(
+                  valeur: donnees.reductionProchaine == null
+                      ? '0 %'
+                      : '-${donnees.reductionProchaine} %',
+                  libelle: 'sur le prochain abonnement',
+                ),
               ),
             ],
           ),
@@ -556,6 +595,7 @@ class _CarteAmbassadeur extends StatelessWidget {
   }
 }
 
+/// Un chiffre de la carte ambassadeur, dans son petit bloc translucide.
 class _Chiffre extends StatelessWidget {
   const _Chiffre({required this.valeur, required this.libelle});
   final String valeur;
@@ -563,22 +603,25 @@ class _Chiffre extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    final t = Theme.of(context);
+    final p = context.palette;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
+      decoration: BoxDecoration(
+        color: p.surHeros.withValues(alpha: 0.06),
+        borderRadius: Rayons.moyen,
+      ),
       child: Column(
         children: [
           Texte(
             valeur,
-            style: const TextStyle(
-              color: Color(0xFFF4F1E8),
-              fontSize: 22,
-              fontWeight: FontWeight.w700,
-            ),
+            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 24),
           ),
           const SizedBox(height: 2),
           Texte(
             libelle,
             textAlign: TextAlign.center,
-            style: const TextStyle(color: Color(0xFF8E99B4), fontSize: 11.5),
+            style: t.textTheme.labelSmall?.copyWith(color: p.surHerosDoux, fontSize: 11.5),
           ),
         ],
       ),
@@ -593,26 +636,37 @@ class _SectionReductions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Texte('Vos réductions', style: t.textTheme.titleLarge),
-        const SizedBox(height: 4),
-        Texte(
-          "Une par lecteur invité. Elles s'appliquent toutes seules, une par abonnement, "
-          "et le montant réduit s'affiche avant de payer.",
-          style: t.textTheme.bodySmall?.copyWith(
-            color: Couleurs.grisChaud,
-            height: 1.5,
-          ),
+        const TitreSection(
+          'Vos réductions',
+          sousTitre: "Une par lecteur invité. Elles s'appliquent toutes seules, une par abonnement, "
+              "et le montant réduit s'affiche avant de payer.",
         ),
         const SizedBox(height: 12),
         if (donnees.bons.isEmpty)
-          Texte(
-            'Aucune pour le moment. Partagez votre code pour en gagner.',
-            style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.carte),
+            child: Row(
+              children: [
+                IconePastille(Icons.redeem_rounded, couleur: p.attenue, taille: 40),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Texte(
+                    'Aucune pour le moment. Partagez votre code pour en gagner.',
+                    style: t.textTheme.bodyMedium?.copyWith(color: p.attenue),
+                  ),
+                ),
+              ],
+            ),
           ),
-        for (final b in donnees.bons) _LigneBon(bon: b),
+        for (final b in donnees.bons) ...[
+          _LigneBon(bon: b),
+          const SizedBox(height: 10),
+        ],
       ],
     );
   }
@@ -625,45 +679,55 @@ class _LigneBon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final (texte, teinte) = switch (bon.statut) {
       'disponible' => (
         "Disponible jusqu'au ${_jour(bon.expireLe)}",
-        Couleurs.sauge,
+        p.succes,
       ),
-      'utilise' => ('Utilisée le ${_jour(bon.utiliseLe)}', Couleurs.grisChaud),
-      _ => ('Expirée le ${_jour(bon.expireLe)}', Couleurs.grisChaud),
+      'utilise' => ('Utilisée le ${_jour(bon.utiliseLe)}', p.attenue),
+      _ => ('Expirée le ${_jour(bon.expireLe)}', p.attenue),
     };
     return Container(
-      margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.all(14),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: bon.nouveau
-            ? Couleurs.or.withValues(alpha: 0.08)
-            : t.colorScheme.surface,
+        color: bon.nouveau ? Color.alphaBlend(p.accentVoile, p.surface) : p.surface,
+        borderRadius: Rayons.carte,
         border: Border.all(
-          color: bon.nouveau
-              ? Couleurs.or.withValues(alpha: 0.5)
-              : (t.dividerTheme.color ?? Couleurs.traitClair),
+          color: bon.nouveau ? p.accent.withValues(alpha: 0.6) : p.trait,
+          width: bon.nouveau ? 1.4 : 1,
         ),
+        boxShadow: p.ombreCarte,
       ),
       child: Row(
         children: [
+          // Le talon du bon : le pourcentage, en grand sur le dégradé profond
+          // tant qu'il sert encore.
           Container(
-            width: 58,
-            padding: const EdgeInsets.symmetric(vertical: 8),
-            color: bon.disponible
-                ? Couleurs.nuit
-                : t.colorScheme.surfaceContainer,
-            child: Texte(
-              '-${bon.pourcent} %',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: bon.disponible ? Couleurs.orClair : Couleurs.grisChaud,
-                fontWeight: FontWeight.w700,
+            width: 66,
+            height: 56,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              gradient: bon.disponible ? p.degradeHeros : null,
+              color: bon.disponible ? null : p.surfaceCreuse,
+              borderRadius: Rayons.moyen,
+            ),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 6),
+                child: Texte(
+                  '-${bon.pourcent} %',
+                  textAlign: TextAlign.center,
+                  style: t.textTheme.titleMedium?.copyWith(
+                    color: bon.disponible ? p.accentSurHeros : p.attenue,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -675,33 +739,44 @@ class _LigneBon extends StatelessWidget {
                         bon.filleul == null
                             ? 'Un lecteur invité'
                             : 'Grâce à ${bon.filleul}',
-                        style: t.textTheme.titleSmall,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: t.textTheme.titleSmall?.copyWith(color: p.encre),
                       ),
                     ),
                     if (bon.nouveau) ...[
                       const SizedBox(width: 8),
                       Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 6,
-                          vertical: 2,
-                        ),
-                        color: Couleurs.or,
-                        child: const Texte(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                        decoration: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
+                        child: Texte(
                           'Nouveau',
-                          style: TextStyle(
+                          style: t.textTheme.labelSmall?.copyWith(
                             fontSize: 10.5,
                             fontWeight: FontWeight.w700,
-                            color: Color(0xFF1A1400),
+                            color: p.surAccent,
                           ),
                         ),
                       ),
                     ],
                   ],
                 ),
-                const SizedBox(height: 2),
-                Texte(
-                  texte,
-                  style: t.textTheme.labelSmall?.copyWith(color: teinte),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Container(
+                      width: 6,
+                      height: 6,
+                      decoration: BoxDecoration(color: teinte, shape: BoxShape.circle),
+                    ),
+                    const SizedBox(width: 6),
+                    Expanded(
+                      child: Texte(
+                        texte,
+                        style: t.textTheme.labelSmall?.copyWith(color: teinte),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

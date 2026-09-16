@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../theme/couleurs.dart';
+import '../theme/palette.dart';
 import '../theme/texte.dart';
+import 'ui.dart';
 
 /// L'affichage des textes qu'ASCENDA écrit sur un ouvrage.
 ///
@@ -24,53 +25,69 @@ class CompteRenduChapitre extends StatelessWidget {
     final c = contenu;
     if (c == null) return const SizedBox.shrink();
     final t = Theme.of(context);
+    final p = context.palette;
     final points = (c['points_cles'] as List?)?.cast<dynamic>() ?? const [];
     final reserves = (c['reserves'] as List?)?.cast<dynamic>() ?? const [];
     final afrique = '${c['pour_le_lecteur_africain'] ?? ''}'.trim();
 
+    // Un voile doré posé sur le papier de lecture, pas une carte blanche : le
+    // compte rendu accompagne le texte sans rompre la page, dans les quatre
+    // thèmes.
     return Container(
-      margin: const EdgeInsets.only(top: 8, bottom: 24),
-      padding: const EdgeInsets.all(18),
+      margin: const EdgeInsets.only(top: 8, bottom: 28),
+      padding: const EdgeInsets.fromLTRB(18, 18, 18, 16),
       decoration: BoxDecoration(
-        color: Couleurs.or.withValues(alpha: 0.07),
-        borderRadius: BorderRadius.zero,
+        color: p.accentVoile,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: p.accentTexte.withValues(alpha: 0.16)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              const Icon(Icons.summarize_outlined, size: 19, color: Couleurs.orTexte),
-              const SizedBox(width: 9),
-              Texte('Ce que ce chapitre établit',
-                  style: t.textTheme.titleSmall?.copyWith(color: Couleurs.orTexte)),
+              IconePastille(Icons.summarize_outlined, taille: 34, fond: p.surface.withValues(alpha: 0.7)),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Texte('Ce que ce chapitre établit',
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.textTheme.titleLarge?.copyWith(fontSize: 17, color: p.encre)),
+              ),
             ],
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 14),
           if ('${c['resume'] ?? ''}'.isNotEmpty)
             Texte('${c['resume']}', style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
           if (points.isNotEmpty) ...[
             const SizedBox(height: 14),
-            for (final p in points) _Puce('$p'),
+            for (final x in points) _Puce('$x'),
           ],
           if ('${c['a_retenir'] ?? ''}'.isNotEmpty) ...[
-            const SizedBox(height: 14),
-            _Encadre(titre: 'À retenir', texte: '${c['a_retenir']}'),
+            const SizedBox(height: 12),
+            _Encadre(titre: 'À retenir', texte: '${c['a_retenir']}', icone: Icons.push_pin_outlined),
           ],
           if (afrique.isNotEmpty) ...[
-            const SizedBox(height: 12),
+            const SizedBox(height: 10),
             _Encadre(
               titre: 'Depuis le continent',
               texte: afrique,
-              teinte: Couleurs.sauge,
+              teinte: p.succes,
+              icone: Icons.public_rounded,
             ),
           ],
           if (reserves.isNotEmpty) ...[
             const SizedBox(height: 14),
-            Texte('Réserves',
-                style: t.textTheme.labelMedium?.copyWith(color: Couleurs.terracotta)),
-            const SizedBox(height: 6),
-            for (final r in reserves) _Puce('$r', teinte: Couleurs.terracotta),
+            Row(
+              children: [
+                Icon(Icons.error_outline_rounded, size: 15, color: p.alerte),
+                const SizedBox(width: 6),
+                Texte('Réserves',
+                    style: t.textTheme.labelMedium?.copyWith(color: p.alerte, fontWeight: FontWeight.w600)),
+              ],
+            ),
+            const SizedBox(height: 8),
+            for (final r in reserves) _Puce('$r', teinte: p.alerte),
           ],
         ],
       ),
@@ -89,6 +106,7 @@ class SyntheseOuvrage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (synthese == null && resumeExecutif == null) return const SizedBox.shrink();
     final t = Theme.of(context);
+    final p = context.palette;
     final r = resumeExecutif;
     final s = synthese;
     final sections = (s?['resume_structure'] as List?)?.cast<dynamic>() ?? const [];
@@ -96,81 +114,135 @@ class SyntheseOuvrage extends StatelessWidget {
     final questions = (s?['questions_ouvertes'] as List?)?.cast<dynamic>() ?? const [];
 
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         if (r != null) ...[
-          Texte('En bref', style: t.textTheme.titleLarge),
-          const SizedBox(height: 10),
-          Container(
-            padding: const EdgeInsets.all(18),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(colors: [Couleurs.nuit, Couleurs.ardoise]),
-              borderRadius: BorderRadius.zero,
-            ),
+          const TitreSection('En bref'),
+          const SizedBox(height: 12),
+          // La seule carte de mise en avant de la fiche : l'ouvrage en une
+          // phrase est ce qu'on retient si l'on ne lit rien d'autre.
+          SurfaceHeros(
+            padding: const EdgeInsets.fromLTRB(22, 22, 22, 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                if ('${r['en_une_phrase'] ?? ''}'.isNotEmpty)
+                if ('${r['en_une_phrase'] ?? ''}'.isNotEmpty) ...[
+                  Surtitre("L'ouvrage en une phrase", couleur: p.accentSurHeros),
+                  const SizedBox(height: 10),
                   Texte('${r['en_une_phrase']}',
-                      style: t.textTheme.titleMedium?.copyWith(
-                        color: const Color(0xFFF4F1E8),
-                        height: 1.5,
+                      style: t.textTheme.titleLarge?.copyWith(
+                        color: p.surHeros,
+                        fontSize: 19,
+                        fontWeight: FontWeight.w500,
+                        height: 1.42,
                       )),
+                ],
                 if ('${r['argument'] ?? ''}'.isNotEmpty) ...[
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 14),
                   Texte('${r['argument']}',
-                      style: t.textTheme.bodyMedium
-                          ?.copyWith(color: const Color(0xFFB9C1D6), height: 1.65)),
+                      style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux, height: 1.65)),
                 ],
                 if ('${r['verdict'] ?? ''}'.isNotEmpty) ...[
-                  const SizedBox(height: 12),
-                  Texte('${r['verdict']}',
-                      style: t.textTheme.bodySmall?.copyWith(
-                        color: Couleurs.orClair,
-                        height: 1.6,
-                      )),
+                  const SizedBox(height: 14),
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+                    decoration: BoxDecoration(
+                      color: p.surHeros.withValues(alpha: 0.08),
+                      borderRadius: Rayons.moyen,
+                      border: Border.all(color: p.surHeros.withValues(alpha: 0.10)),
+                    ),
+                    child: Texte('${r['verdict']}',
+                        style: t.textTheme.bodySmall?.copyWith(color: p.accentSurHeros, height: 1.6)),
+                  ),
                 ],
                 if (r['temps_de_lecture_min'] != null) ...[
-                  const SizedBox(height: 12),
-                  Row(
-                    children: [
-                      const Icon(Icons.schedule_rounded, size: 15, color: Color(0xFF8E99B4)),
-                      const SizedBox(width: 7),
-                      Texte('${r['temps_de_lecture_min']} min de lecture',
-                          style: t.textTheme.labelSmall
-                              ?.copyWith(color: const Color(0xFF8E99B4))),
-                    ],
-                  ),
+                  const SizedBox(height: 14),
+                  Pastille('${r['temps_de_lecture_min']} min de lecture',
+                      icone: Icons.schedule_rounded, couleur: p.surHerosDoux),
                 ],
               ],
             ),
           ),
-          const SizedBox(height: 26),
+          const SizedBox(height: 28),
         ],
         if (s != null) ...[
-          Texte('La synthèse', style: t.textTheme.titleLarge),
-          const SizedBox(height: 10),
-          if ('${s['resume_court'] ?? ''}'.isNotEmpty)
-            Texte('${s['resume_court']}',
-                style: t.textTheme.bodyMedium?.copyWith(height: 1.68)),
-          for (final sec in sections) ...[
-            const SizedBox(height: 18),
-            _Section(section: sec as Map<String, dynamic>),
-          ],
+          const TitreSection('La synthèse'),
+          const SizedBox(height: 12),
+          Surface(
+            padding: const EdgeInsets.fromLTRB(18, 18, 18, 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                if ('${s['resume_court'] ?? ''}'.isNotEmpty) ...[
+                  Texte('${s['resume_court']}', style: t.textTheme.bodyMedium?.copyWith(height: 1.68)),
+                  const SizedBox(height: 4),
+                ],
+                for (var i = 0; i < sections.length; i++) ...[
+                  if (i > 0 || '${s['resume_court'] ?? ''}'.isNotEmpty) ...[
+                    const SizedBox(height: 12),
+                    Divider(height: 1, color: p.trait),
+                    const SizedBox(height: 14),
+                  ],
+                  _Section(section: sections[i] as Map<String, dynamic>),
+                ],
+                const SizedBox(height: 8),
+              ],
+            ),
+          ),
           if (retenir.isNotEmpty) ...[
-            const SizedBox(height: 20),
-            Texte('À retenir', style: t.textTheme.titleSmall),
-            const SizedBox(height: 8),
-            for (final x in retenir) _Puce('$x'),
+            const SizedBox(height: 14),
+            _Bloc(
+              titre: 'À retenir',
+              icone: Icons.push_pin_outlined,
+              teinte: p.accentTexte,
+              points: [for (final x in retenir) '$x'],
+            ),
           ],
           if (questions.isNotEmpty) ...[
-            const SizedBox(height: 20),
-            Texte('Questions que le livre laisse ouvertes', style: t.textTheme.titleSmall),
-            const SizedBox(height: 8),
-            for (final q in questions) _Puce('$q', teinte: Couleurs.sauge),
+            const SizedBox(height: 14),
+            _Bloc(
+              titre: 'Questions que le livre laisse ouvertes',
+              icone: Icons.help_outline_rounded,
+              teinte: p.succes,
+              points: [for (final q in questions) '$q'],
+            ),
           ],
         ],
       ],
+    );
+  }
+}
+
+/// Une liste de points sous un titre et son icône, sur une surface.
+class _Bloc extends StatelessWidget {
+  const _Bloc({required this.titre, required this.icone, required this.teinte, required this.points});
+  final String titre;
+  final IconData icone;
+  final Color teinte;
+  final List<String> points;
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(18, 16, 18, 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              IconePastille(icone, couleur: teinte, taille: 32),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Texte(titre,
+                    maxLines: 2, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          for (final x in points) _Puce(x, teinte: teinte),
+        ],
+      ),
     );
   }
 }
@@ -182,6 +254,7 @@ class _Section extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final pages = '${section['pages'] ?? ''}'.trim();
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,16 +263,17 @@ class _Section extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
-              child: Texte('${section['section'] ?? ''}', style: t.textTheme.titleSmall),
+              child: Texte('${section['section'] ?? ''}',
+                  style: t.textTheme.titleLarge?.copyWith(fontSize: 16, height: 1.3)),
             ),
-            if (pages.isNotEmpty)
-              Texte('p. $pages',
-                  style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
+            if (pages.isNotEmpty) ...[
+              const SizedBox(width: 10),
+              Pastille('p. $pages', couleur: p.attenue),
+            ],
           ],
         ),
-        const SizedBox(height: 5),
-        Texte('${section['contenu'] ?? ''}',
-            style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
+        const SizedBox(height: 6),
+        Texte('${section['contenu'] ?? ''}', style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
       ],
     );
   }
@@ -214,17 +288,17 @@ class _Puce extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     return Padding(
-      padding: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.only(bottom: 9),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            margin: const EdgeInsets.only(top: 7, right: 10),
-            width: 5,
-            height: 5,
+            margin: const EdgeInsets.only(top: 8, right: 12, left: 2),
+            width: 6,
+            height: 6,
             decoration: BoxDecoration(
-              color: teinte ?? Couleurs.orTexte,
-              shape: BoxShape.rectangle,
+              color: teinte ?? context.palette.accentTexte,
+              shape: BoxShape.circle,
             ),
           ),
           Expanded(
@@ -237,27 +311,40 @@ class _Puce extends StatelessWidget {
 }
 
 class _Encadre extends StatelessWidget {
-  const _Encadre({required this.titre, required this.texte, this.teinte});
+  const _Encadre({required this.titre, required this.texte, required this.icone, this.teinte});
   final String titre;
   final String texte;
+  final IconData icone;
   final Color? teinte;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    final c = teinte ?? Couleurs.orTexte;
+    final p = context.palette;
+    final c = teinte ?? p.accentTexte;
     return Container(
-      padding: const EdgeInsets.fromLTRB(13, 11, 13, 11),
+      padding: const EdgeInsets.fromLTRB(14, 12, 14, 13),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.zero,
-        border: Border(left: BorderSide(color: c, width: 3)),
-        color: c.withValues(alpha: 0.06),
+        borderRadius: Rayons.moyen,
+        color: p.surface.withValues(alpha: p.sombre ? 0.55 : 0.75),
+        border: Border.all(color: c.withValues(alpha: 0.18)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Texte(titre, style: t.textTheme.labelMedium?.copyWith(color: c)),
-          const SizedBox(height: 5),
+          Row(
+            children: [
+              Icon(icone, size: 15, color: c),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Texte(titre,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.textTheme.labelMedium?.copyWith(color: c, fontWeight: FontWeight.w700)),
+              ),
+            ],
+          ),
+          const SizedBox(height: 6),
           Texte(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
         ],
       ),
