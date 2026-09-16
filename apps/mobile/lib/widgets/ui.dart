@@ -37,7 +37,19 @@ class AvatarCompte extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final p = context.palette;
-    final u = ref.watch(sessionProvider).utilisateur;
+    final session = ref.watch(sessionProvider);
+    final u = session.utilisateur;
+    // Sans compte, pas d'initiale inventée : une porte vers la connexion.
+    if (!session.connecte && ouvrirProfil) {
+      return Padding(
+        padding: const EdgeInsets.only(right: 8),
+        child: IconButton(
+          tooltip: 'Se connecter',
+          icon: Icon(Icons.account_circle_outlined, size: taille * 0.78, color: p.texte),
+          onPressed: () => context.go('/bienvenue'),
+        ),
+      );
+    }
     final initiale = (u?.nom?.trim().isNotEmpty == true ? u!.nom!.trim()[0] : (u?.email?[0] ?? 'A')).toUpperCase();
     final disque = Container(
       width: taille,

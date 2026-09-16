@@ -548,8 +548,9 @@ class _CarteAmbassadeur extends StatelessWidget {
                 child: OutlinedButton.icon(
                   onPressed: () => _copier(context),
                   icon: const Icon(Icons.copy_rounded, size: 17),
-                  label: const Texte('Copier'),
+                  label: const Texte('Copier', maxLines: 1),
                   style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
                     foregroundColor: p.accentSurHeros,
                     side: BorderSide(color: p.accentSurHeros.withValues(alpha: 0.35)),
                   ),
@@ -561,8 +562,11 @@ class _CarteAmbassadeur extends StatelessWidget {
                   onPressed: donnees.programmeActif
                       ? () => _partager(context)
                       : null,
+                  // Le rembourrage du thème (24) coupait « Partager » en deux boutons
+                  // côte à côte sur un écran de 360 px.
+                  style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 12)),
                   icon: const Icon(Icons.send_rounded, size: 17),
-                  label: const Texte('Partager'),
+                  label: const Texte('Partager', maxLines: 1),
                 ),
               ),
             ],
