@@ -91,3 +91,18 @@ CurrentUser = Annotated[dict, Depends(current_user)]
 OptionalUser = Annotated[dict | None, Depends(optional_user)]
 PremiumUser = Annotated[dict, Depends(premium_user)]
 AdminUser = Annotated[dict, Depends(admin_user)]
+
+
+# Les clients qui peuvent recevoir un ouvrage réservé à l'application. L'en-tête
+# est posé par l'application mobile ; la version web et la vitrine ne l'envoient
+# pas. Il ne vaut pas authentification, qui reste le jeton et l'abonnement : il
+# empêche qu'un navigateur serve de visionneuse à un ouvrage qui ne doit se lire
+# que dans l'application.
+CLIENTS_APPLICATION = {"android", "ios"}
+
+
+def client_application(request: Request) -> bool:
+    return request.headers.get("x-ascenda-client", "").lower() in CLIENTS_APPLICATION
+
+
+ClientApplication = Annotated[bool, Depends(client_application)]

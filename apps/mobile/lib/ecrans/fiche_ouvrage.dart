@@ -296,7 +296,12 @@ class FicheOuvrage extends ConsumerWidget {
               ),
 
               const SizedBox(height: 26),
-              BlocTelechargement(documentId: documentId, titre: '${d['titre']}'),
+              BlocTelechargement(
+                documentId: documentId,
+                titre: '${d['titre']}',
+                integral: d['droits']?['hors_ligne_integral'] == true,
+                pdfOctets: d['droits']?['pdf_octets'] as int?,
+              ),
 
               const SizedBox(height: 26),
               _Sommaire(documentId: documentId, lectureIntegrale: lecture),

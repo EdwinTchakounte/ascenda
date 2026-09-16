@@ -1,6 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../api/client.dart';
 import '../api/modeles.dart';
+import 'hors_ligne.dart';
 import 'session.dart';
 
 /// Les lectures de données. Chaque famille est indexée par ce qui la
@@ -83,14 +85,30 @@ final bibliothequeProvider =
 final ficheOuvrageProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, id) async {
   final api = ref.watch(clientApiProvider);
-  return await api.get('/bibliotheque/$id', auth: false) as Map<String, dynamic>;
+  // Avec le jeton s'il y en a un : les droits d'un ouvrage réservé à
+  // l'application dépendent du lecteur (lecture intégrale, PDF, hors ligne).
+  try {
+    return await api.get('/bibliotheque/$id') as Map<String, dynamic>;
+  } on HorsLigne {
+    // Sans réseau, un ouvrage emporté s'ouvre depuis son pack.
+    final depot = ref.read(depotHorsLigneProvider);
+    final pack = await depot.lire(id);
+    if (pack == null) rethrow;
+    return ficheHorsLigne(pack, pdf: await depot.aPdf(id));
+  }
 });
 
 final sommaireProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, String>((ref, id) async {
   final api = ref.watch(clientApiProvider);
-  final j = await api.get('/bibliotheque/$id/sommaire', auth: false) as List;
-  return j.cast<Map<String, dynamic>>();
+  try {
+    final j = await api.get('/bibliotheque/$id/sommaire', auth: false) as List;
+    return j.cast<Map<String, dynamic>>();
+  } on HorsLigne {
+    final pack = await ref.read(depotHorsLigneProvider).lire(id);
+    if (pack == null) rethrow;
+    return sommaireHorsLigne(pack);
+  }
 });
 
 final chronogrammesProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((ref) async {
@@ -157,8 +175,24 @@ final compteProvider = FutureProvider.autoDispose<Map<String, dynamic>>((ref) as
 final lectureProvider = FutureProvider.autoDispose
     .family<Map<String, dynamic>, ({String documentId, String chapitreId})>((ref, cle) async {
   final api = ref.watch(clientApiProvider);
-  return await api.get('/lecteur/${cle.documentId}/chapitre/${cle.chapitreId}', auth: false)
-      as Map<String, dynamic>;
+  // Avec le jeton : un abonné lit en entier un ouvrage réservé à l'application.
+  // Sans réseau, le texte vient du pack hors ligne, s'il a été emporté.
+  try {
+    return await api.get('/lecteur/${cle.documentId}/chapitre/${cle.chapitreId}')
+        as Map<String, dynamic>;
+  } on HorsLigne {
+    final pack = await ref.read(depotHorsLigneProvider).lire(cle.documentId);
+    if (pack?['lecture_expiree'] == true) {
+      throw ErreurApi(
+        "Le texte emporté a expiré. Reconnectez-vous une fois : ASCENDA vérifie "
+        "votre abonnement et le rend lisible hors ligne pour trente jours de plus.",
+        code: 'hors_ligne_expire',
+      );
+    }
+    final hors = pack == null ? null : chapitreHorsLigne(pack, cle.chapitreId);
+    if (hors == null) rethrow;
+    return hors;
+  }
 });
 
 /// Lecture par plage de pages : une séance qui regroupe plusieurs chapitres
@@ -167,7 +201,7 @@ final lecturePagesProvider = FutureProvider.autoDispose
     .family<Map<String, dynamic>, ({String documentId, int debut, int fin})>((ref, cle) async {
   final api = ref.watch(clientApiProvider);
   return await api.get('/lecteur/${cle.documentId}/pages',
-      auth: false, params: {'debut': cle.debut, 'fin': cle.fin}) as Map<String, dynamic>;
+      params: {'debut': cle.debut, 'fin': cle.fin}) as Map<String, dynamic>;
 });
 
 final citationsProvider =

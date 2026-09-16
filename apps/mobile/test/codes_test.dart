@@ -247,6 +247,9 @@ class _ClientInscription extends ClientApi {
   Future<void> enregistrerJetons(String acces, String refresh) async {}
 
   @override
+  Future<void> garderProfil(Map<String, dynamic> j) async {}
+
+  @override
   Future<dynamic> post(String chemin, {Object? corps, bool auth = true}) async {
     this.corps = corps as Map<String, dynamic>?;
     return {

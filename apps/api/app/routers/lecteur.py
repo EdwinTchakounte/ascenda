@@ -10,7 +10,7 @@ from fastapi import APIRouter, Query
 
 from app.core.auteurs import auteurs
 from app.core.db import execute, fetch_all, fetch_one
-from app.core.deps import CurrentUser, OptionalUser
+from app.core.deps import CurrentUser, OptionalUser, ClientApplication
 from app.core.errors import Forbidden, NotFound
 from app.services.droits import droits, repartir
 from app.services.passages import lisibles
@@ -61,7 +61,7 @@ def _rendu(passages: list[dict], budget: int, precedent: str | None = None) -> t
 
 
 @router.get("/{document_id}/chapitre/{chapter_id}", summary="Le texte d'un chapitre")
-async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
+async def chapitre(document_id: str, chapter_id: str, user: OptionalUser, client_app: ClientApplication):
     ch = await fetch_one(
         """select c.id, c.ord, c.title, c.page_start, c.page_end, c.token_count,
                   d.id as doc_id, coalesce(d.title_clean, d.title_raw) as doc_titre, d.authors,
@@ -73,7 +73,7 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
     if not ch:
         raise NotFound("Ce chapitre n'existe pas dans cet ouvrage.")
 
-    dr = await droits(document_id)
+    dr = await droits(document_id, user, client_app)
     passages = await fetch_all(
         """select id, ord, page_start, page_end, text, token_count
            from chunk where chapter_id = %s order by ord""",
@@ -115,6 +115,8 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
             "lecture_integrale": dr.texte_integral,
             # Le PDF d'origine s'ouvre à la page du chapitre, sous la même règle.
             "pdf": dr.texte_integral and bool(ch["storage_key"]),
+            # Réservé à l'application : ni export ni partage côté client.
+            "application_seulement": dr.lecture_application and not dr.redistributable,
             "tronque": tronque,
             "message": dr.message(),
         },
@@ -131,10 +133,11 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser):
 async def pages(
     document_id: str,
     user: OptionalUser,
+    client_app: ClientApplication,
     debut: Annotated[int, Query(ge=1)] = 1,
     fin: Annotated[int | None, Query(ge=1)] = None,
 ):
-    dr = await droits(document_id)
+    dr = await droits(document_id, user, client_app)
     fin = fin or debut + 9
     passages = await fetch_all(
         """select id, ord, page_start, page_end, text, token_count
@@ -204,15 +207,15 @@ async def signaler_ouverture(document_id: str, user: CurrentUser):
     )
 
 
-@router.get("/{document_id}/pdf", summary="Le PDF d'un ouvrage redistribuable")
-async def pdf(document_id: str, user: OptionalUser):
+@router.get("/{document_id}/pdf", summary="Le PDF d'un ouvrage lisible en entier")
+async def pdf(document_id: str, user: OptionalUser, client_app: ClientApplication):
     """Le fichier tel qu'il a été publié, pour le lire page par page.
 
     Seulement pour les ouvrages dont le texte intégral peut être servi : le PDF
     d'une œuvre protégée, c'est l'œuvre entière, et la règle de `droits.py`
     vaut ici comme partout. Les autres ouvrages restent lisibles par extraits.
     """
-    dr = await droits(document_id)
+    dr = await droits(document_id, user, client_app)
     if not dr.texte_integral:
         raise Forbidden(
             dr.message() or "Le PDF de cet ouvrage ne peut pas être affiché ici."
@@ -227,6 +230,11 @@ async def pdf(document_id: str, user: OptionalUser):
         raise NotFound("Cet ouvrage n'a pas de PDF à afficher.")
     from app.services import stockage
 
-    return stockage.servir(
+    reponse = stockage.servir(
         d["storage_key"], nom=f"{d['titre']}.pdf", mime="application/pdf"
     )
+    if dr.lecture_application and not dr.redistributable:
+        # Ni cache intermédiaire ni copie de navigateur : l'application le garde
+        # elle-même, chiffré, dans son espace privé.
+        reponse.headers["Cache-Control"] = "private, no-store"
+    return reponse

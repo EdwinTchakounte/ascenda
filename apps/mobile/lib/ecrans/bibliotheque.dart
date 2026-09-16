@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../api/client.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
+import '../etat/hors_ligne.dart';
 import '../theme/couleurs.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
@@ -208,10 +210,14 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                   separatorBuilder: (_, _) => const SizedBox(height: 12),
                   itemBuilder: (_, _) => const SqueletteCarte(lignes: 2),
                 ),
-                error: (e, _) => EtatErreur(
-                  erreur: e,
-                  reessayer: () => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
-                ),
+                error: (e, _) => e is HorsLigne
+                    ? _LivresEmportes(
+                        reessayer: () => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
+                      )
+                    : EtatErreur(
+                        erreur: e,
+                        reessayer: () => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
+                      ),
                 data: (p) {
                   // On empile les pages déjà reçues. Repartir de zéro à chaque
                   // chargement ramènerait le lecteur en haut de la liste.
@@ -389,6 +395,74 @@ class _Filtre extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+
+/// Sans réseau, la bibliothèque montre ce qui a été emporté. Sans cela, un
+/// ouvrage gardé sur l'appareil n'avait aucune porte d'entrée en zone blanche.
+class _LivresEmportes extends ConsumerWidget {
+  const _LivresEmportes({required this.reessayer});
+  final VoidCallback reessayer;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final t = Theme.of(context);
+    final packs = ref.watch(packsProvider).valueOrNull ?? {};
+    if (packs.isEmpty) return EtatErreur(erreur: const HorsLigne(), reessayer: reessayer);
+
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+      children: [
+        Row(
+          children: [
+            const Icon(Icons.cloud_off_rounded, size: 18, color: Couleurs.grisChaud),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Texte('Pas de connexion. Vos ouvrages emportés restent lisibles.',
+                  style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud)),
+            ),
+            TextButton(onPressed: reessayer, child: const Texte('Réessayer')),
+          ],
+        ),
+        const SizedBox(height: 12),
+        for (final p in packs.values)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: Material(
+              color: t.colorScheme.surface,
+              child: InkWell(
+                onTap: () => context.push('/ouvrage/${p.documentId}'),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.offline_pin_rounded, size: 20, color: Couleurs.sauge),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Texte(p.titre,
+                                style: t.textTheme.titleMedium, maxLines: 2, overflow: TextOverflow.ellipsis),
+                            const SizedBox(height: 3),
+                            Texte('${p.compteurs['chapitres'] ?? 0} chapitres · ${p.poids}',
+                                style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
+                          ],
+                        ),
+                      ),
+                      const Icon(Icons.chevron_right_rounded, size: 20, color: Couleurs.grisChaud),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
+      ],
     );
   }
 }

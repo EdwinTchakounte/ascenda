@@ -17,9 +17,21 @@ from app.core.errors import NotFound
 from app.services.droits import droits
 
 
-async def construire(document_id: str, *, avec_reponses: bool = False) -> dict:
+# Le texte intégral emporté hors ligne vaut ce temps-là au plus : au-delà,
+# l'application le masque jusqu'à la prochaine connexion, qui vérifie que
+# l'abonnement court toujours.
+VALIDITE_HORS_LIGNE_JOURS = 30
+
+
+async def construire(document_id: str, *, avec_reponses: bool = False, avec_texte: bool = False,
+                     acces_jusqu_au=None) -> dict:
     """Assemble le pack. `avec_reponses` n'est vrai que pour l'usage hors ligne :
-    sans elles, l'application ne pourrait pas corriger un quiz sans réseau."""
+    sans elles, l'application ne pourrait pas corriger un quiz sans réseau.
+
+    `avec_texte` ajoute le texte de chaque chapitre, pour la lecture hors ligne.
+    Seule la route du pack le demande, et seulement quand les droits de ce
+    lecteur, depuis l'application, l'autorisent. L'export PDF ne le demande
+    jamais : il reste un compagnon de lecture, pas le livre."""
     d = await fetch_one(
         """select d.id, coalesce(d.title_clean, d.title_raw) as titre, d.subtitle,
                   d.authors, d.year, d.publisher, d.page_count, d.language,
@@ -109,8 +121,42 @@ async def construire(document_id: str, *, avec_reponses: bool = False) -> dict:
             }
         )
 
+    lecture = None
+    if avec_texte:
+        from app.services.passages import lisibles
+
+        passages = await fetch_all(
+            """select chapter_id, page_start, page_end, text from chunk
+                where document_id = %s and chapter_id is not null order by ord""",
+            (document_id,),
+        )
+        par_chapitre: dict[str, list[dict]] = {}
+        for p in passages:
+            par_chapitre.setdefault(str(p["chapter_id"]), []).append(p)
+        lecture = []
+        for cid, ps in par_chapitre.items():
+            textes = lisibles([p["text"] for p in ps])
+            lecture.append({
+                "chapitre_id": cid,
+                "passages": [
+                    {"page_debut": p["page_start"], "page_fin": p["page_end"], "texte": t}
+                    for p, t in zip(ps, textes) if t
+                ],
+            })
+
+    valable = None
+    if lecture is not None:
+        from datetime import datetime, timedelta, timezone
+
+        valable = datetime.now(timezone.utc) + timedelta(days=VALIDITE_HORS_LIGNE_JOURS)
+        if acces_jusqu_au is not None:
+            valable = min(valable, acces_jusqu_au)
+
     return {
         "version": 1,
+        # Le texte des chapitres, quand ce lecteur peut le garder hors ligne.
+        "lecture": lecture,
+        "lecture_valable_jusqu_au": valable.isoformat() if valable else None,
         "ouvrage": {
             "id": str(d["id"]),
             "titre": d["titre"],

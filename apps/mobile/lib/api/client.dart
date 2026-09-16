@@ -49,6 +49,7 @@ class ClientApi {
 
   static const _cleAcces = 'ascenda_acces';
   static const _cleRefresh = 'ascenda_refresh';
+  static const _cleProfil = 'ascenda_profil';
 
   String? _acces;
   String? _refresh;
@@ -77,6 +78,26 @@ class ClientApi {
     final p = await SharedPreferences.getInstance();
     await p.remove(_cleAcces);
     await p.remove(_cleRefresh);
+    await p.remove(_cleProfil);
+  }
+
+  /// Le dernier profil reçu du serveur. Il sert à rouvrir la session sans
+  /// réseau : un lecteur qui a emporté un ouvrage doit pouvoir le lire en zone
+  /// blanche, pas retomber sur l'écran d'accueil.
+  Future<void> garderProfil(Map<String, dynamic> j) async {
+    final p = await SharedPreferences.getInstance();
+    await p.setString(_cleProfil, jsonEncode(j));
+  }
+
+  Future<Map<String, dynamic>?> profilGarde() async {
+    final p = await SharedPreferences.getInstance();
+    final brut = p.getString(_cleProfil);
+    if (brut == null) return null;
+    try {
+      return jsonDecode(brut) as Map<String, dynamic>;
+    } catch (_) {
+      return null;
+    }
   }
 
   /// Révoque le jeton de rafraîchissement côté serveur.
@@ -107,6 +128,15 @@ class ClientApi {
     return _refresh != null;
   }
 
+  /// Qui appelle. Un ouvrage réservé à l'application ne se sert en entier qu'aux
+  /// clients mobiles : la version web ne reçoit que des extraits.
+  static String get client {
+    if (kIsWeb) return 'web';
+    if (Platform.isAndroid) return 'android';
+    if (Platform.isIOS) return 'ios';
+    return 'bureau';
+  }
+
   Uri _uri(String chemin, [Map<String, dynamic>? params]) {
     final q = params?.entries
         .where((e) => e.value != null)
@@ -124,7 +154,7 @@ class ClientApi {
     bool rejoue = true,
   }) async {
     await _charger();
-    final entetes = <String, String>{'Content-Type': 'application/json'};
+    final entetes = <String, String>{'Content-Type': 'application/json', 'X-Ascenda-Client': client};
     if (authentifie && _acces != null) entetes['Authorization'] = 'Bearer $_acces';
 
     http.Response r;
@@ -238,7 +268,7 @@ class ClientApi {
     void Function(int recu, int? total)? progression,
   }) async {
     await _charger();
-    final requete = http.Request('GET', _uri(chemin));
+    final requete = http.Request('GET', _uri(chemin))..headers['X-Ascenda-Client'] = client;
     if (_acces != null) requete.headers['Authorization'] = 'Bearer $_acces';
     final http.StreamedResponse r;
     try {

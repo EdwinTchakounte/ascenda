@@ -5,9 +5,13 @@
          déclare que dans les manifestes debug et profile, ce qui la rend
          invisible pendant le développement. -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Pas de sauvegarde : voir res/xml/regles_extraction.xml. -->
     <application
         android:label="ASCENDA"
         android:name="${applicationName}"
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:dataExtractionRules="@xml/regles_extraction"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

@@ -18,10 +18,19 @@ class Droits:
     statut: str
     plafond_extrait: int
     takedown: str
+    # Ouvrage lisible en entier dans l'application seulement (migration 019).
+    lecture_application: bool = False
+    # Ce lecteur, depuis ce client, y a droit : abonné et application mobile.
+    ouvert_ici: bool = False
 
     @property
     def texte_integral(self) -> bool:
-        return self.redistributable and self.takedown == "none"
+        return self.takedown == "none" and (self.redistributable or (self.lecture_application and self.ouvert_ici))
+
+    @property
+    def hors_ligne_integral(self) -> bool:
+        """Le texte peut partir dans le pack hors ligne de l'application."""
+        return self.texte_integral
 
     @property
     def retire(self) -> bool:
@@ -31,13 +40,18 @@ class Droits:
         """Nombre de caractères de texte d'œuvre servables en une réponse."""
         if self.retire:
             return 0
-        return 10_000_000 if self.redistributable else max(0, self.plafond_extrait)
+        return 10_000_000 if self.texte_integral else max(0, self.plafond_extrait)
 
     def message(self) -> str | None:
         if self.retire:
             return "Cet ouvrage a été retiré de la bibliothèque à la demande de son ayant droit."
         if self.texte_integral:
             return None
+        if self.lecture_application:
+            return (
+                "Cet ouvrage se lit en entier dans l'application, avec l'offre Ascension, "
+                "et hors ligne. Ici, ASCENDA en cite des extraits courts avec leur page."
+            )
         if self.plafond_extrait <= 0:
             return (
                 "Le texte de cet ouvrage ne peut pas être affiché ici. "
@@ -50,20 +64,34 @@ class Droits:
         )
 
 
-async def droits(document_id: str) -> Droits:
+async def droits(document_id: str, user: dict | None = None, client_application: bool = False) -> Droits:
+    """Les droits d'un ouvrage, pour ce lecteur et ce client.
+
+    Sans lecteur ni client, ce sont les droits publics : c'est ce que voient la
+    recherche, l'agent et l'export, qui ne restituent jamais qu'un extrait d'un
+    ouvrage réservé à l'application.
+    """
     row = await fetch_one(
-        """select id, redistributable, copyright_status, max_excerpt_chars, takedown_status
+        """select id, redistributable, copyright_status, max_excerpt_chars, takedown_status,
+                  lecture_application
            from document where id = %s""",
         (document_id,),
     )
     if not row:
         raise NotFound("Cet ouvrage n'existe pas dans la bibliothèque.")
+    ouvert = False
+    if row["lecture_application"] and user and client_application:
+        from app.services import acces
+
+        ouvert = await acces.a_droit(user, "lecture_application")
     return Droits(
         document_id=str(row["id"]),
         redistributable=bool(row["redistributable"]),
         statut=row["copyright_status"],
         plafond_extrait=int(row["max_excerpt_chars"] or 0),
         takedown=row["takedown_status"],
+        lecture_application=bool(row["lecture_application"]),
+        ouvert_ici=ouvert,
     )
 
 

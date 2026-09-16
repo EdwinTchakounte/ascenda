@@ -655,18 +655,21 @@ class _BibliothequeHorsLigne extends ConsumerWidget {
                   child: Row(
                     children: [
                       Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Texte(p.titre,
-                                style: t.textTheme.bodyMedium,
-                                maxLines: 2, overflow: TextOverflow.ellipsis),
-                            Texte(
-                              '${p.compteurs['questions'] ?? 0} questions · ${p.poids}',
-                              style: t.textTheme.labelSmall
-                                  ?.copyWith(color: Couleurs.grisChaud),
-                            ),
-                          ],
+                        child: InkWell(
+                          onTap: () => context.push('/ouvrage/${p.documentId}'),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Texte(p.titre,
+                                  style: t.textTheme.bodyMedium,
+                                  maxLines: 2, overflow: TextOverflow.ellipsis),
+                              Texte(
+                                '${p.compteurs['questions'] ?? 0} questions · ${p.poids}',
+                                style: t.textTheme.labelSmall
+                                    ?.copyWith(color: Couleurs.grisChaud),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       IconButton(

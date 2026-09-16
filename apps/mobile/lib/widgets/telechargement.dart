@@ -17,10 +17,21 @@ import '../theme/texte.dart';
 ///   fonction qui change l'usage réel sur une connexion intermittente.
 /// - **PDF** : le même contenu, mis en page, pour imprimer ou partager.
 class BlocTelechargement extends ConsumerStatefulWidget {
-  const BlocTelechargement({super.key, required this.documentId, required this.titre});
+  const BlocTelechargement({
+    super.key,
+    required this.documentId,
+    required this.titre,
+    this.integral = false,
+    this.pdfOctets,
+  });
 
   final String documentId;
   final String titre;
+
+  /// Ce lecteur peut emporter le texte intégral et le PDF (ouvrage réservé à
+  /// l'application, lecteur abonné). Ils sont gardés chiffrés dans l'application.
+  final bool integral;
+  final int? pdfOctets;
 
   @override
   ConsumerState<BlocTelechargement> createState() => _BlocTelechargementState();
@@ -36,17 +47,25 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
     try {
       final api = ref.read(clientApiProvider);
       final depot = ref.read(depotHorsLigneProvider);
-      final pack = await api.get('/bibliotheque/${widget.documentId}/pack', auth: false)
-          as Map<String, dynamic>;
+      final pack = await api.get('/bibliotheque/${widget.documentId}/pack') as Map<String, dynamic>;
       await depot.enregistrer(widget.documentId, pack);
+      // Le PDF part avec le texte quand le lecteur peut les emporter : lire hors
+      // ligne, c'est aussi pouvoir retrouver une figure ou un tableau.
+      if (pack['lecture'] != null && widget.integral && !await depot.aPdf(widget.documentId)) {
+        final octets = await api.telecharger('/lecteur/${widget.documentId}/pdf');
+        await depot.enregistrerPdf(widget.documentId, octets);
+      }
       ref.invalidate(packsProvider);
       ref.invalidate(packLocalProvider(widget.documentId));
       if (!mounted) return;
       final c = pack['compteurs'] as Map;
       messager.showSnackBar(SnackBar(
         content: Texte(
-          "Disponible hors ligne : ${c['chapitres']} chapitres, "
-          "${c['citations']} citations, ${c['questions']} questions.",
+          pack['lecture'] != null
+              ? "Lisible hors ligne dans ASCENDA : texte intégral, PDF et "
+                  "${c['questions']} questions, gardés chiffrés sur ce téléphone."
+              : "Disponible hors ligne : ${c['chapitres']} chapitres, "
+                  "${c['citations']} citations, ${c['questions']} questions.",
         ),
       ));
     } on HorsLigne {
@@ -138,8 +157,12 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                 ? "${local.compteurs['chapitres'] ?? 0} chapitres, "
                     "${local.compteurs['citations'] ?? 0} citations, "
                     "${local.compteurs['questions'] ?? 0} questions. ${local.poids} sur l'appareil."
-                : "Fiche, idées-force, citations avec leurs pages, quiz et plan de "
-                    "lecture. Tout reste utilisable sans réseau, y compris les quiz.",
+                : widget.integral
+                    ? "Le texte intégral et le PDF${widget.pdfOctets != null ? ' (${(widget.pdfOctets! / 1048576).toStringAsFixed(0)} Mo)' : ''}, "
+                        "les quiz et le plan, lisibles sans réseau. Gardés chiffrés : ils ne "
+                        "s'ouvrent que dans ASCENDA."
+                    : "Fiche, idées-force, citations avec leurs pages, quiz et plan de "
+                        "lecture. Tout reste utilisable sans réseau, y compris les quiz.",
             style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud, height: 1.55),
           ),
           const SizedBox(height: 14),
@@ -177,7 +200,8 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                           width: 16, height: 16,
                           child: CircularProgressIndicator(strokeWidth: 2))
                       : const Icon(Icons.picture_as_pdf_outlined, size: 18),
-                  label: const Texte('PDF'),
+                  // Le compagnon de lecture (fiche, citations, quiz), jamais le livre.
+                  label: const Texte('Compagnon'),
                   style: OutlinedButton.styleFrom(minimumSize: const Size(0, 46)),
                 ),
               ),

@@ -29,6 +29,7 @@ FONCTIONS: dict[str, str] = {
     "chronogramme_adaptatif": "Chronogramme adaptatif et replanification",
     "doc_uploaded": "Import de vos propres documents",
     "axes_reserves": "Parcours réservés à Ascension",
+    "lecture_application": "Lecture intégrale et hors ligne des ouvrages réservés",
 }
 
 # Un compteur de quota qui n'a pas sa propre entrée au catalogue suit celle dont

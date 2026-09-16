@@ -6,7 +6,7 @@ from fastapi.responses import Response
 
 from app.core.auteurs import auteurs
 from app.core.db import execute, fetch_all, fetch_one
-from app.core.deps import OptionalUser
+from app.core.deps import OptionalUser, ClientApplication
 from app.core.errors import NotFound
 from app.services import export_pdf, pack as service_pack
 from app.services.droits import droits
@@ -135,7 +135,7 @@ async def filtres():
 
 
 @router.get("/{document_id}", summary="Fiche d'un ouvrage")
-async def fiche(document_id: str, user: OptionalUser):
+async def fiche(document_id: str, user: OptionalUser, client_app: ClientApplication):
     d = await fetch_one(
         """select d.*, coalesce(d.title_clean, d.title_raw) as titre,
                   p.level, p.doc_type, p.doc_type_norm, p.target_audience, p.reading_time_min,
@@ -148,7 +148,7 @@ async def fiche(document_id: str, user: OptionalUser):
     if not d:
         raise NotFound("Cet ouvrage n'existe pas dans la bibliothèque.")
 
-    dr = await droits(document_id)
+    dr = await droits(document_id, user, client_app)
     axes = await fetch_all(
         """select a.slug, a.label, da.weight, da.assigned_by
            from document_axis da join axis a on a.id = da.axis_id
@@ -239,6 +239,10 @@ async def fiche(document_id: str, user: OptionalUser):
             # La taille du fichier : un PDF de 90 Mo ne se télécharge pas sur un
             # forfait mobile sans prévenir.
             "pdf_octets": d["size_bytes"] if dr.texte_integral else None,
+            # Lisible en entier dans l'application seulement : pas d'export du
+            # livre, et un hors-ligne gardé chiffré par l'application.
+            "application_seulement": dr.lecture_application and not dr.redistributable,
+            "hors_ligne_integral": dr.hors_ligne_integral,
             "statut": dr.statut,
             "plafond_extrait": dr.plafond_extrait,
             "message": dr.message(),
@@ -296,14 +300,23 @@ async def sommaire(document_id: str, user: OptionalUser):
 
 
 @router.get("/{document_id}/pack", summary="Le pack complet d'un ouvrage")
-async def pack_complet(document_id: str, user: OptionalUser):
+async def pack_complet(document_id: str, user: OptionalUser, client_app: ClientApplication):
     """Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel.
 
     Destiné au téléchargement hors ligne : l'application le garde sur le
     téléphone et reste utilisable sans réseau, y compris pour passer les quiz.
     Les réponses sont donc incluses, sans quoi rien ne se corrige hors ligne.
     """
-    p = await service_pack.construire(document_id, avec_reponses=True)
+    # Le texte intégral n'y entre que pour un lecteur qui peut le lire, depuis
+    # l'application : c'est elle qui le garde chiffré pour la lecture hors ligne.
+    dr = await droits(document_id, user, client_app)
+    jusqu = None
+    if dr.hors_ligne_integral and user and not dr.redistributable:
+        from app.services import acces
+
+        jusqu = (await acces.etat(user)).get("jusqu_au")
+    p = await service_pack.construire(document_id, avec_reponses=True, avec_texte=dr.hors_ligne_integral,
+                                      acces_jusqu_au=jusqu)
     if user:
         await execute(
             """insert into progress_event (user_id, document_id, type, payload)

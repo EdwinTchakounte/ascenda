@@ -36,10 +36,20 @@ class SessionNotifier extends StateNotifier<Session> {
     }
     try {
       final j = await _api.get('/auth/moi') as Map<String, dynamic>;
+      await _api.garderProfil(j);
       state = Session(etat: EtatSession.connecte, utilisateur: Utilisateur.depuisJson(j));
     } catch (e) {
       debugPrint('Session non reprise : $e');
-      await _api.oublierJetons();
+      // Seul un refus du serveur ferme la session. Sans réseau, ou si le
+      // serveur répond mal, les jetons restent : on rouvre avec le dernier
+      // profil connu, et le serveur tranchera au retour du réseau.
+      final refusee = e is ErreurApi && e.estAuth || !await _api.aUneSession;
+      final profil = refusee ? null : await _api.profilGarde();
+      if (profil != null) {
+        state = Session(etat: EtatSession.connecte, utilisateur: Utilisateur.depuisJson(profil));
+        return;
+      }
+      if (refusee) await _api.oublierJetons();
       state = const Session(etat: EtatSession.deconnecte);
     }
   }
@@ -69,6 +79,7 @@ class SessionNotifier extends StateNotifier<Session> {
   Future<void> _ouvrir(Map<String, dynamic> j) async {
     final jetons = j['jetons'] as Map<String, dynamic>;
     await _api.enregistrerJetons('${jetons['access_token']}', '${jetons['refresh_token']}');
+    await _api.garderProfil(j['utilisateur'] as Map<String, dynamic>);
     state = Session(
       etat: EtatSession.connecte,
       utilisateur: Utilisateur.depuisJson(j['utilisateur'] as Map<String, dynamic>),
@@ -86,6 +97,7 @@ class SessionNotifier extends StateNotifier<Session> {
   Future<void> rafraichirUtilisateur() async {
     try {
       final j = await _api.get('/auth/moi') as Map<String, dynamic>;
+      await _api.garderProfil(j);
       state = Session(etat: EtatSession.connecte, utilisateur: Utilisateur.depuisJson(j));
     } catch (_) {
       // Un échec ici ne doit pas déconnecter : l'état précédent reste valable.

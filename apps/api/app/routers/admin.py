@@ -71,6 +71,8 @@ class DroitsIn(BaseModel):
     redistributable: bool | None = None
     max_excerpt_chars: int | None = Field(default=None, ge=0, le=1_000_000)
     takedown_status: Literal["none", "pending", "removed"] | None = None
+    # Lisible en entier dans l'application seulement, par un abonné (migration 019).
+    lecture_application: bool | None = None
 
 
 class GabaritIn(BaseModel):
