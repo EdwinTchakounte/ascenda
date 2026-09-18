@@ -56,3 +56,9 @@ transfert/
 
 # Les règles d'agent de Next.js, réécrites à chaque « next dev ».
 apps/web-vitrine/AGENTS.md
+
+# Portage .NET : ce que le SDK produit
+apps/mobile-dotnet/**/bin/
+apps/mobile-dotnet/**/obj/
+apps/mobile-dotnet/paquet/
+apps/mobile-dotnet/resultats/
