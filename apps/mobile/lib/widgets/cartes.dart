@@ -201,7 +201,7 @@ class CarteOuvrage extends StatelessWidget {
                               child: Row(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  Icon(Icons.quiz_outlined, size: 13, color: Couleurs.orTexte),
+                                  IconeAscenda(Icone.question, taille: 14, couleur: Couleurs.orTexte),
                                   const SizedBox(width: 3),
                                   Texte('quiz',
                                       style: t.textTheme.labelSmall?.copyWith(
@@ -218,7 +218,7 @@ class CarteOuvrage extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Icon(Icons.format_quote_rounded, size: 13, color: Couleurs.grisChaud),
+                                    IconeAscenda(Icone.page, taille: 13, couleur: Couleurs.grisChaud),
                                     const SizedBox(width: 2),
                                     Texte('extraits',
                                         style: t.textTheme.labelSmall?.copyWith(color: Couleurs.grisChaud)),
@@ -263,10 +263,10 @@ class PastillesSemaine extends StatelessWidget {
 
         final (Color fond, Color trait, Widget contenu) = fait
             ? (Couleurs.sauge.withValues(alpha: 0.18), Couleurs.sauge,
-                Icon(Icons.check_rounded, size: 17, color: Couleurs.sauge))
+                Coche(taille: 18, couleur: Couleurs.sauge))
             : manque
                 ? (Couleurs.terracotta.withValues(alpha: 0.14), Couleurs.terracotta,
-                    Icon(Icons.remove_rounded, size: 17, color: Couleurs.terracotta))
+                    Croix(taille: 15, couleur: Couleurs.terracotta))
                 : prevu
                     ? (Couleurs.or.withValues(alpha: 0.14), Couleurs.or,
                         Texte(noms[i],

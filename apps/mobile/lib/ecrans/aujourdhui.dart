@@ -205,82 +205,89 @@ class _Elan extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final prog = ref.watch(progressionProvider).valueOrNull;
     if (prog == null) return const SizedBox.shrink();
-    final p = context.palette;
     final heures = prog.minutesLues ~/ 60;
-    return Row(
-      children: [
-        Expanded(
-          child: _Chiffre(
-            icone: Icons.schedule_rounded,
-            valeur: prog.minutesLues < 60 ? '${prog.minutesLues}' : '$heures',
-            unite: prog.minutesLues < 60 ? 'min' : 'h',
-            libelle: 'de lecture',
-            couleur: p.accentTexte,
-          ),
+    // Trois chiffres sur une seule bande, séparés par des filets : c'est la
+    // ligne de repères d'une page de titre, pas trois tuiles d'application.
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(8, 16, 8, 14),
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Expanded(
+              child: _Chiffre(
+                valeur: prog.minutesLues < 60 ? prog.minutesLues : heures,
+                unite: prog.minutesLues < 60 ? 'min' : 'h',
+                libelle: 'de lecture',
+              ),
+            ),
+            const _FiletVertical(),
+            Expanded(
+              child: _Chiffre(
+                valeur: prog.seancesFaites,
+                libelle: prog.seancesFaites > 1 ? 'séances faites' : 'séance faite',
+              ),
+            ),
+            const _FiletVertical(),
+            Expanded(
+              child: _Chiffre(
+                valeur: prog.notionsMaitrisees,
+                libelle: prog.notionsMaitrisees > 1 ? 'notions acquises' : 'notion acquise',
+              ),
+            ),
+          ],
         ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: _Chiffre(
-            icone: Icons.task_alt_rounded,
-            valeur: '${prog.seancesFaites}',
-            libelle: prog.seancesFaites > 1 ? 'séances faites' : 'séance faite',
-            couleur: p.succes,
-          ),
-        ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: _Chiffre(
-            icone: Icons.psychology_alt_outlined,
-            valeur: '${prog.notionsMaitrisees}',
-            libelle: prog.notionsMaitrisees > 1 ? 'notions acquises' : 'notion acquise',
-            couleur: Couleurs.poles['02']!,
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
 
+class _FiletVertical extends StatelessWidget {
+  const _FiletVertical();
+
+  @override
+  Widget build(BuildContext context) => Container(
+        width: 1,
+        margin: const EdgeInsets.symmetric(vertical: 2),
+        color: context.palette.encre.withValues(alpha: context.palette.sombre ? 0.20 : 0.12),
+      );
+}
+
 class _Chiffre extends StatelessWidget {
-  const _Chiffre({required this.icone, required this.valeur, required this.libelle, required this.couleur, this.unite});
-  final IconData icone;
-  final String valeur;
+  const _Chiffre({required this.valeur, required this.libelle, this.unite});
+  final int valeur;
   final String? unite;
   final String libelle;
-  final Color couleur;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     final p = context.palette;
-    return Surface(
-      padding: const EdgeInsets.fromLTRB(14, 14, 10, 14),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          IconePastille(icone, couleur: couleur, taille: 34),
-          const SizedBox(height: 12),
-          Text.rich(
-            TextSpan(children: [
-              WidgetSpan(
-                alignment: PlaceholderAlignment.baseline,
-                baseline: TextBaseline.alphabetic,
-                child: CompteurAnime(
-                  double.tryParse(valeur.replaceAll(',', '.')) ?? 0,
-                  style: t.textTheme.headlineSmall?.copyWith(fontSize: 24, height: 1),
-                ),
-              ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CompteurAnime(valeur, style: t.textTheme.headlineSmall?.copyWith(fontSize: 27, height: 1)),
               if (unite != null)
-                TextSpan(text: ' $unite', style: t.textTheme.labelLarge?.copyWith(color: p.attenue)),
-            ]),
-            style: t.textTheme.headlineSmall?.copyWith(fontSize: 24, height: 1),
+                Texte(' $unite',
+                    style: t.textTheme.labelMedium?.copyWith(color: p.attenue, letterSpacing: 0.4)),
+            ],
           ),
-          const SizedBox(height: 4),
-          Texte(libelle,
-              style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.1, height: 1.25),
-              maxLines: 2),
-        ],
-      ),
+        ),
+        const SizedBox(height: 6),
+        Texte(
+          libelle.toUpperCase(),
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1.1, height: 1.25),
+        ),
+      ],
     );
   }
 }

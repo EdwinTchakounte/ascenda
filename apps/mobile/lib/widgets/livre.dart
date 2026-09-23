@@ -14,6 +14,47 @@ import '../theme/texte.dart';
 /// titre garde le sien : la teinte et les ornements sont tirés du titre, donc
 /// toujours les mêmes pour un même livre.
 
+/// Ce qu'on peut écrire sur un dos de cette hauteur.
+///
+/// Sur un volume de vignette, un titre entier ne tient pas : il se coupait au
+/// milieu d'un mot, ce qu'aucun imprimeur ne ferait. On s'arrête donc au mot,
+/// et les points de suspension disent la suite.
+String titreSurDos(String titre, double hauteur) {
+  final maximum = (hauteur / 4.6).round();
+  if (titre.length <= maximum) return titre;
+  final mots = titre.split(' ');
+  final garde = <String>[];
+  var n = 0;
+  for (final mot in mots) {
+    if (garde.isNotEmpty && n + 1 + mot.length > maximum) break;
+    garde.add(mot);
+    n += (garde.length > 1 ? 1 : 0) + mot.length;
+  }
+  return '${garde.join(' ')}…';
+}
+
+/// Le corps du titre sur un dos, en pixels.
+///
+/// Un dos donne deux contraintes : sa hauteur borne la longueur d'une ligne, son
+/// épaisseur borne le nombre de lignes. Le mot le plus long décide du reste :
+/// sans lui, « l'intelligence » se coupait en deux, ce qu'aucun imprimeur ne
+/// ferait. On essaie donc du plus grand au plus petit et on garde le premier
+/// corps qui tient dans les deux sens.
+double corpsSurDos(String titre, {required double hauteur, required double largeur}) {
+  const large = 0.58;   // largeur moyenne d'un signe en Fraunces, en parts du corps
+  const interligne = 1.22;
+  final dispoLigne = hauteur * 0.68;
+  final dispoLignes = largeur * 0.68;
+  final motLong = titre.split(RegExp(r'[ \u2019\-]')).fold<int>(3, (m, x) => x.length > m ? x.length : m);
+  for (var corps = largeur * 0.26; corps > 6; corps -= 0.5) {
+    final signesParLigne = dispoLigne / (corps * large);
+    if (motLong > signesParLigne) continue;
+    final lignes = (titre.length / signesParLigne).ceil();
+    if (lignes * corps * interligne <= dispoLignes) return corps;
+  }
+  return 6;
+}
+
 /// Une graine stable tirée du titre : deux lancements donnent le même volume.
 int _graine(String titre) => titre.codeUnits.fold(7, (a, c) => (a * 31 + c) & 0x7fffffff);
 
@@ -51,6 +92,8 @@ class DosLivre extends StatelessWidget {
     final l = largeur ?? 46 + (h % 5) * 6.0;
     final sombre = Color.lerp(teinte, Colors.black, 0.42)!;
     final clair = Color.lerp(teinte, Colors.white, 0.10)!;
+    final court = titreSurDos(titre, hauteur);
+    final corps = corpsSurDos(court, hauteur: hauteur, largeur: l);
 
     return Semantics(
       label: titre,
@@ -81,24 +124,36 @@ class DosLivre extends StatelessWidget {
                   painter: _Dos(teinte: teinte, graine: h),
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: l * 0.16, vertical: hauteur * 0.16),
-                    child: RotatedBox(
-                      quarterTurns: 3,
-                      child: Center(
-                        child: Texte(
-                          titre,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                          textAlign: TextAlign.center,
-                          style: t.textTheme.titleMedium?.copyWith(
-                            color: Colors.white.withValues(alpha: 0.95),
-                            fontSize: l * 0.26,
-                            height: 1.15,
-                            letterSpacing: 0.2,
-                            shadows: [Shadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 2)],
+                      child: RotatedBox(
+                        quarterTurns: 3,
+                        child: Center(
+                          // Le corps suit la longueur du titre : « La Planète
+                          // invisible » tient en deux lignes là où un titre de
+                          // cinq mots en demande trois, sans jamais couper un
+                          // mot en deux.
+                          // Le corps calculé tient dans presque tous les cas ;
+                          // l'ajustement rattrape le reste en réduisant, jamais
+                          // en rognant une ligne.
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: SizedBox(
+                              width: hauteur * 0.68,
+                              child: Texte(
+                                court,
+                                maxLines: 3,
+                                textAlign: TextAlign.center,
+                                style: t.textTheme.titleMedium?.copyWith(
+                                  color: Colors.white.withValues(alpha: 0.95),
+                                  fontSize: corps,
+                                  height: 1.18,
+                                  letterSpacing: 0,
+                                  shadows: [Shadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 2)],
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
-                    ),
                   ),
                 ),
               ),
@@ -229,15 +284,24 @@ class CouvertureLivre extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Texte(
-                        titre,
-                        textAlign: TextAlign.center,
-                        maxLines: 4,
-                        overflow: TextOverflow.ellipsis,
-                        style: t.textTheme.titleLarge?.copyWith(
-                          color: or,
-                          fontSize: hauteur * 0.072,
-                          height: 1.2,
+                      // Le titre s'ajuste au cadre : sur une couverture, un mot
+                      // coupé en deux se voit comme une faute d'impression.
+                      Flexible(
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints(maxWidth: largeur - hauteur * 0.24),
+                            child: Texte(
+                              titre,
+                              textAlign: TextAlign.center,
+                              maxLines: 5,
+                              style: t.textTheme.titleLarge?.copyWith(
+                                color: or,
+                                fontSize: hauteur * 0.075,
+                                height: 1.18,
+                              ),
+                            ),
+                          ),
                         ),
                       ),
                       if (auteurs != null && auteurs!.isNotEmpty) ...[

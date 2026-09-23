@@ -287,3 +287,79 @@ class Fleuron extends StatelessWidget {
     );
   }
 }
+
+
+/// Une coche tracée à la plume, en deux temps. Elle remplace la coche de
+/// Material partout où l'on marque quelque chose comme fait : c'est le geste
+/// d'un lecteur qui coche son cahier.
+class Coche extends StatelessWidget {
+  const Coche({super.key, this.taille = 20, this.couleur, this.epaisseur = 2.2});
+  final double taille;
+  final Color? couleur;
+  final double epaisseur;
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+        width: taille,
+        height: taille,
+        child: CustomPaint(
+          painter: _Trace(couleur ?? context.palette.succes, epaisseur, croix: false),
+        ),
+      );
+}
+
+/// La croix qui répond à la coche : ce qui manque, ce qui est faux.
+class Croix extends StatelessWidget {
+  const Croix({super.key, this.taille = 20, this.couleur, this.epaisseur = 2.2});
+  final double taille;
+  final Color? couleur;
+  final double epaisseur;
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+        width: taille,
+        height: taille,
+        child: CustomPaint(
+          painter: _Trace(couleur ?? context.palette.alerte, epaisseur, croix: true),
+        ),
+      );
+}
+
+class _Trace extends CustomPainter {
+  _Trace(this.couleur, this.epaisseur, {required this.croix});
+  final Color couleur;
+  final double epaisseur;
+  final bool croix;
+
+  @override
+  void paint(Canvas canvas, Size t) {
+    final p = Paint()
+      ..color = couleur
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = epaisseur
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+    canvas.scale(t.width / 24, t.height / 24);
+    if (croix) {
+      canvas.drawPath(
+        Path()
+          ..moveTo(6, 6)
+          ..lineTo(18, 18)
+          ..moveTo(18, 6)
+          ..lineTo(6, 18),
+        p,
+      );
+    } else {
+      canvas.drawPath(
+        Path()
+          ..moveTo(4.5, 12.5)
+          ..lineTo(10, 18)
+          ..lineTo(19.5, 6),
+        p,
+      );
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _Trace a) => a.couleur != couleur || a.croix != croix || a.epaisseur != epaisseur;
+}
