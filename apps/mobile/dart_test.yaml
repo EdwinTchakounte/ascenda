@@ -1,0 +1,8 @@
+# Le banc de capture n'est pas un test de non-régression : ses images changent à
+# chaque retouche de design, et un écart de rendu entre deux machines ferait
+# échouer la suite pour rien. Il reste donc hors de `flutter test`.
+#
+#   flutter test test/apercu_test.dart --run-skipped --update-goldens
+tags:
+  apercu:
+    skip: "banc de capture : flutter test test/apercu_test.dart --run-skipped --update-goldens"

@@ -78,7 +78,7 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
             data: (m) => RefreshIndicator(
               onRefresh: _rafraichir,
               child: ListView(
-                padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
+                padding: const EdgeInsets.fromLTRB(20, 4, 20, 12),
                 children: [
                   Texte(
                     "Lire à plusieurs tient mieux dans la durée. Suivez vos amis, "
@@ -936,8 +936,8 @@ class _FeuilleEncouragementState extends ConsumerState<_FeuilleEncouragement> {
           children: [
             Row(
               children: [
-                AvatarLecteur(lecteur: widget.ami, taille: 44),
-                const SizedBox(width: 14),
+                AvatarLecteur(lecteur: widget.ami, taille: 38),
+                const SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -945,7 +945,7 @@ class _FeuilleEncouragementState extends ConsumerState<_FeuilleEncouragement> {
                       Texte('Encourager ${widget.ami.nom}',
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
-                          style: t.textTheme.headlineSmall?.copyWith(fontSize: 22)),
+                          style: t.textTheme.titleLarge?.copyWith(fontSize: 19)),
                       if (widget.evenement != null) ...[
                         const SizedBox(height: 2),
                         Texte('${widget.ami.nom} ${widget.evenement!.texte}',
@@ -956,7 +956,7 @@ class _FeuilleEncouragementState extends ConsumerState<_FeuilleEncouragement> {
                 ),
               ],
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 14),
             for (final (cle, libelle) in _genres) ...[
               _ChoixGenre(
                 icone: iconeGenre(cle),
@@ -964,9 +964,9 @@ class _FeuilleEncouragementState extends ConsumerState<_FeuilleEncouragement> {
                 choisi: _genre == cle,
                 onTap: () => setState(() => _genre = cle),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
             ],
-            const SizedBox(height: 6),
+            const SizedBox(height: 4),
             TextField(
               controller: _mot,
               maxLength: 280,
@@ -1023,7 +1023,7 @@ class _ChoixGenre extends StatelessWidget {
             borderRadius: Rayons.carte,
             onTap: onTap,
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 14, 12),
+              padding: const EdgeInsets.fromLTRB(12, 9, 14, 9),
               child: Row(
                 children: [
                   IconePastille(icone, taille: 38),

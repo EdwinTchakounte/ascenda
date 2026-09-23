@@ -27,7 +27,24 @@ import 'ecrans/aujourdhui.dart';
 import 'ecrans/lecteur_pdf.dart';
 import 'ecrans/cercle.dart';
 import 'etat/session.dart';
+import 'theme/mouvement.dart';
 import 'theme/texte.dart';
+
+/// Ouvrir un livre, c'est tourner une page : les écrans de lecture entrent en
+/// glissant depuis la droite, au lieu du fondu vertical de Material.
+CustomTransitionPage<void> _pageTournee(GoRouterState etat, Widget page) => CustomTransitionPage(
+      key: etat.pageKey,
+      child: page,
+      transitionDuration: Duree.ample,
+      reverseTransitionDuration: Duree.moyen,
+      transitionsBuilder: (contexte, animation, secondaire, enfant) {
+        final t = CurvedAnimation(parent: animation, curve: courbeDouce);
+        return SlideTransition(
+          position: Tween(begin: const Offset(0.18, 0), end: Offset.zero).animate(t),
+          child: FadeTransition(opacity: t, child: enfant),
+        );
+      },
+    );
 
 final _racine = GlobalKey<NavigatorState>();
 final _coque = GlobalKey<NavigatorState>();
@@ -113,7 +130,7 @@ final routeurProvider = Provider<GoRouter>((ref) {
       GoRoute(
         parentNavigatorKey: _racine,
         path: '/ouvrage/:id',
-        builder: (c, s) => FicheOuvrage(documentId: s.pathParameters['id']!),
+        pageBuilder: (c, s) => _pageTournee(s, FicheOuvrage(documentId: s.pathParameters['id']!)),
       ),
       GoRoute(
         parentNavigatorKey: _racine,
@@ -123,16 +140,21 @@ final routeurProvider = Provider<GoRouter>((ref) {
       GoRoute(
         parentNavigatorKey: _racine,
         path: '/pdf/:doc',
-        builder: (c, s) => EcranLecteurPdf(
-          documentId: s.pathParameters['doc']!,
-          titre: s.uri.queryParameters['titre'],
-          page: int.tryParse(s.uri.queryParameters['page'] ?? ''),
+        pageBuilder: (c, s) => _pageTournee(
+          s,
+          EcranLecteurPdf(
+            documentId: s.pathParameters['doc']!,
+            titre: s.uri.queryParameters['titre'],
+            page: int.tryParse(s.uri.queryParameters['page'] ?? ''),
+          ),
         ),
       ),
       GoRoute(
         parentNavigatorKey: _racine,
         path: '/lecture/:doc/:chap',
-        builder: (c, s) => EcranLecteur(
+        pageBuilder: (c, s) => _pageTournee(
+          s,
+          EcranLecteur(
           documentId: s.pathParameters['doc']!,
           chapitreId: s.pathParameters['chap']!,
           seanceId: s.uri.queryParameters['seance'],
@@ -140,6 +162,7 @@ final routeurProvider = Provider<GoRouter>((ref) {
           livrableId: s.uri.queryParameters['livrable_id'],
           pageDebut: int.tryParse(s.uri.queryParameters['page_debut'] ?? ''),
           pageFin: int.tryParse(s.uri.queryParameters['page_fin'] ?? ''),
+          ),
         ),
       ),
       GoRoute(

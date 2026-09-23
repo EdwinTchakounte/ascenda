@@ -14,18 +14,24 @@ abstract final class ThemeAscenda {
     final t = GoogleFonts.frauncesTextTheme(base);
     final c = GoogleFonts.interTextTheme(base);
     return base.copyWith(
-      displayLarge: t.displayLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1),
-      displayMedium: t.displayMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -0.8),
-      displaySmall: t.displaySmall?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -0.6),
-      headlineLarge: t.headlineLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, height: 1.15, letterSpacing: -0.5),
-      headlineMedium: t.headlineMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, height: 1.18, letterSpacing: -0.4),
-      headlineSmall: t.headlineSmall?.copyWith(color: p.encre, fontWeight: FontWeight.w600, height: 1.22, letterSpacing: -0.2),
-      titleLarge: t.titleLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, fontSize: 21, height: 1.25),
-      titleMedium: c.titleMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, fontSize: 15.5),
+      // L'échelle d'un livre : un titre de page franc, des intertitres nets, un
+      // corps de lecture confortable. Les titres sont serrés (Fraunces respire
+      // d'elle-même), les petites capitales largement espacées.
+      displayLarge: t.displayLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1.2),
+      displayMedium: t.displayMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1),
+      displaySmall: t.displaySmall?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -0.8),
+      headlineLarge: t.headlineLarge?.copyWith(
+          color: p.encre, fontWeight: FontWeight.w600, fontSize: 36, height: 1.1, letterSpacing: -0.9),
+      headlineMedium: t.headlineMedium?.copyWith(
+          color: p.encre, fontWeight: FontWeight.w600, fontSize: 30, height: 1.14, letterSpacing: -0.7),
+      headlineSmall: t.headlineSmall?.copyWith(
+          color: p.encre, fontWeight: FontWeight.w600, fontSize: 25, height: 1.2, letterSpacing: -0.45),
+      titleLarge: t.titleLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, fontSize: 22, height: 1.24, letterSpacing: -0.3),
+      titleMedium: c.titleMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, fontSize: 16, letterSpacing: -0.1),
       titleSmall: c.titleSmall?.copyWith(color: p.encre, fontWeight: FontWeight.w600),
-      bodyLarge: c.bodyLarge?.copyWith(color: p.texte, height: 1.62, fontSize: 16),
-      bodyMedium: c.bodyMedium?.copyWith(color: p.texte, height: 1.58, fontSize: 14.5),
-      bodySmall: c.bodySmall?.copyWith(color: p.texte, height: 1.5, fontSize: 12.5),
+      bodyLarge: c.bodyLarge?.copyWith(color: p.texte, height: 1.64, fontSize: 16.5),
+      bodyMedium: c.bodyMedium?.copyWith(color: p.texte, height: 1.6, fontSize: 15),
+      bodySmall: c.bodySmall?.copyWith(color: p.texte, height: 1.52, fontSize: 13),
       labelLarge: c.labelLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: 0.1),
       labelMedium: c.labelMedium?.copyWith(color: p.texte, letterSpacing: 0.2),
       labelSmall: c.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.6),
@@ -81,7 +87,7 @@ abstract final class ThemeAscenda {
         elevation: 0,
         centerTitle: false,
         titleTextStyle: GoogleFonts.fraunces(
-          fontSize: 22, fontWeight: FontWeight.w600, color: p.encre, letterSpacing: -0.3,
+          fontSize: 25, fontWeight: FontWeight.w600, color: p.encre, letterSpacing: -0.5,
         ),
         scrolledUnderElevation: 0,
         iconTheme: IconThemeData(color: p.encre),
@@ -196,21 +202,24 @@ abstract final class ThemeAscenda {
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: p.surface,
         surfaceTintColor: Colors.transparent,
-        indicatorColor: p.accentVoile,
+        // Aucune pastille derrière l'onglet actif : la coque dessine un filet
+        // d'or sous l'onglet retenu, comme un signet glissé dans la page.
+        indicatorColor: Colors.transparent,
         indicatorShape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
         elevation: 0,
-        height: 70,
+        height: 74,
         labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
         labelTextStyle: WidgetStateProperty.resolveWith(
           (etats) => inter(
-            fontSize: 11.5,
+            fontSize: 11,
             fontWeight: etats.contains(WidgetState.selected) ? FontWeight.w700 : FontWeight.w500,
+            letterSpacing: etats.contains(WidgetState.selected) ? 1.1 : 0.8,
             color: etats.contains(WidgetState.selected) ? p.encre : p.attenue,
           ),
         ),
         iconTheme: WidgetStateProperty.resolveWith(
           (etats) => IconThemeData(
-            size: 24,
+            size: 25,
             color: etats.contains(WidgetState.selected) ? p.accentTexte : p.attenue,
           ),
         ),

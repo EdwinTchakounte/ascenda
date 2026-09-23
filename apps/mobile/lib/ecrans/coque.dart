@@ -51,20 +51,46 @@ class CoqueAscenda extends ConsumerWidget {
         ),
         child: ClipRRect(
           borderRadius: const BorderRadius.vertical(top: Radius.circular(26)),
-          child: NavigationBar(
-            backgroundColor: Colors.transparent,
-            selectedIndex: coque.currentIndex,
-            animationDuration: const Duration(milliseconds: 380),
-            onDestinationSelected: (i) => coque.goBranch(i, initialLocation: i == coque.currentIndex),
-            destinations: [
-              for (final (i, o) in _onglets.indexed)
-                NavigationDestination(
-                  icon: IconeAscenda(o.icone, taille: 25, couleur: p.attenue),
-                  selectedIcon: IconeAscenda(o.icone, taille: 25, couleur: p.accentTexte, pleine: true, epaisseur: 1.9),
-                  label: o.libelle,
-                  tooltip: o.libelle,
-                  key: ValueKey('onglet-$i'),
+          child: Stack(
+            children: [
+              // Le signet : un filet d'or glissé sous l'onglet ouvert. Il se
+              // déplace d'un onglet à l'autre au lieu d'apparaître et de
+              // disparaître, si bien qu'on suit des yeux où l'on va.
+              AnimatedAlign(
+                duration: const Duration(milliseconds: 320),
+                curve: Curves.easeOutCubic,
+                alignment: Alignment(-1 + 2 * coque.currentIndex / (_onglets.length - 1), -1),
+                child: FractionallySizedBox(
+                  widthFactor: 1 / _onglets.length,
+                  child: Center(
+                    child: Container(
+                      width: 46,
+                      height: 3,
+                      decoration: BoxDecoration(
+                        color: p.accent,
+                        borderRadius: const BorderRadius.vertical(bottom: Radius.circular(3)),
+                        boxShadow: [BoxShadow(color: p.accent.withValues(alpha: 0.45), blurRadius: 8)],
+                      ),
+                    ),
+                  ),
                 ),
+              ),
+              NavigationBar(
+                backgroundColor: Colors.transparent,
+                selectedIndex: coque.currentIndex,
+                animationDuration: const Duration(milliseconds: 380),
+                onDestinationSelected: (i) => coque.goBranch(i, initialLocation: i == coque.currentIndex),
+                destinations: [
+                  for (final (i, o) in _onglets.indexed)
+                    NavigationDestination(
+                      icon: IconeAscenda(o.icone, taille: 25, couleur: p.attenue),
+                      selectedIcon: IconeAscenda(o.icone, taille: 25, couleur: p.accentTexte, pleine: true, epaisseur: 1.9),
+                      label: o.libelle,
+                      tooltip: o.libelle,
+                      key: ValueKey('onglet-$i'),
+                    ),
+                ],
+              ),
             ],
           ),
         ),

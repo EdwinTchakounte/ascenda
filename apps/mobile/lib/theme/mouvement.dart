@@ -149,25 +149,3 @@ class _RespireState extends State<Respire> with SingleTickerProviderStateMixin {
     );
   }
 }
-
-/// La page qui se tourne : la transition des écrans de lecture.
-///
-/// Un glissement horizontal accompagné d'une ombre portée, comme une page qu'on
-/// soulève. Material propose un fondu vertical, excellent mais anonyme.
-class PageQuiTourne extends PageRouteBuilder {
-  PageQuiTourne({required this.page, super.settings})
-      : super(
-          transitionDuration: Duree.ample,
-          reverseTransitionDuration: Duree.moyen,
-          pageBuilder: (_, _, _) => page,
-          transitionsBuilder: (context, animation, secondaire, enfant) {
-            final t = CurvedAnimation(parent: animation, curve: courbeDouce);
-            return SlideTransition(
-              position: Tween(begin: const Offset(0.18, 0), end: Offset.zero).animate(t),
-              child: FadeTransition(opacity: t, child: enfant),
-            );
-          },
-        );
-
-  final Widget page;
-}

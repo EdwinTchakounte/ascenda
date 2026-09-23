@@ -43,23 +43,36 @@ class EcranAujourdhui extends ConsumerWidget {
               floating: true,
               leading: const BoutonMenu(),
               titleSpacing: 4,
-              toolbarHeight: 68,
+              toolbarHeight: 74,
+              // Le haut de l'accueil est une page de titre : la date en petites
+              // capitales, la salutation en grand, un filet dessous.
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Texte(
                     toBeginningOfSentenceCase(
                       DateFormat('EEEE d MMMM', 'fr_FR').format(DateTime.now()),
-                    ),
-                    style: t.textTheme.labelMedium?.copyWith(color: p.attenue),
+                    ).toUpperCase(),
+                    style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1.4),
                   ),
+                  const SizedBox(height: 2),
                   Texte(
                     _salutation(prenom),
-                    style: t.textTheme.titleLarge?.copyWith(fontSize: 21),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: t.textTheme.headlineSmall?.copyWith(fontSize: 26),
                   ),
                 ],
               ),
               actions: const [AvatarCompte()],
+              bottom: PreferredSize(
+                preferredSize: const Size.fromHeight(10),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 8),
+                  child: Filet(redouble: true),
+                ),
+              ),
             ),
             donnees.when(
               loading: () => const SliverPadding(

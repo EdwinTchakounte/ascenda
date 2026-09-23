@@ -99,16 +99,32 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
+                    // Une ligne à remplir, pas une boîte : le champ est un filet
+                    // d'encre sur le papier, dans l'esprit d'un bulletin de prêt.
+                    child: Container(
+                      decoration: BoxDecoration(
+                        border: Border(bottom: BorderSide(color: p.encre.withValues(alpha: 0.32), width: 1.4)),
+                      ),
+                      child: TextField(
                       controller: _recherche,
                       onChanged: (v) => setState(() {
                         _texte = v.trim();
                         _reinitialiser();
                       }),
                       textInputAction: TextInputAction.search,
+                      style: t.textTheme.titleMedium?.copyWith(fontSize: 17),
                       decoration: InputDecoration(
                         hintText: 'Un titre, un auteur…',
-                        prefixIcon: IconeAscenda(Icone.loupe, taille: 20, couleur: p.attenue),
+                        filled: false,
+                        border: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        contentPadding: const EdgeInsets.fromLTRB(2, 10, 2, 8),
+                        prefixIconConstraints: const BoxConstraints(minWidth: 0, minHeight: 0),
+                        prefixIcon: Padding(
+                          padding: const EdgeInsets.only(right: 12),
+                          child: IconeAscenda(Icone.loupe, taille: 21, couleur: p.attenue),
+                        ),
                         suffixIcon: _texte.isEmpty
                             ? null
                             : IconButton(
@@ -121,6 +137,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                   });
                                 },
                               ),
+                      ),
                       ),
                     ),
                   ),
