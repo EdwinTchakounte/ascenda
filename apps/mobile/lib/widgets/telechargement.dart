@@ -6,10 +6,17 @@ import '../api/client.dart';
 import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
+import 'livre.dart';
 import 'ui.dart';
 
 /// Le bloc de téléchargement d'un ouvrage.
+///
+/// Emporter un livre, c'est le poser sur son étagère : le bloc montre donc le
+/// dos du volume, et le signet sort quand il est là.
 ///
 /// Deux gestes distincts, pour deux besoins distincts.
 ///
@@ -42,6 +49,62 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
   bool _enCours = false;
   bool _pdfEnCours = false;
 
+  /// Ce que le PDF emporté pèse. Nul quand il n'y en a pas ; [_pdfSansTaille]
+  /// dit qu'il y en a un mais qu'on ne sait pas le mesurer.
+  int? _pdfOctetsLocal;
+  bool _pdfSansTaille = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _mesurerPdf();
+  }
+
+  /// La taille du PDF gardé sur l'appareil.
+  ///
+  /// Le pack compte le texte, les quiz et les citations, jamais le PDF : la
+  /// taille annoncée était donc toujours trop basse pour un ouvrage emporté
+  /// avec son PDF. On la complète ici, sans rien lire du fichier : le dépôt
+  /// donne le chemin du PDF en clair (les ouvrages libres), dont la taille se
+  /// lit exactement ; pour un ouvrage réservé, le PDF vit chiffré dans le
+  /// coffre et le dépôt n'en donne pas le fichier, on retombe alors sur la
+  /// taille annoncée par le serveur, qui est celle du fichier à peu de chose
+  /// près. Sans l'une ni l'autre, on ne compte rien et on le dit.
+  Future<void> _mesurerPdf() async {
+    final depot = ref.read(depotHorsLigneProvider);
+    int? octets;
+    var sansTaille = false;
+    try {
+      if (await depot.aPdf(widget.documentId)) {
+        final clair = await depot.fichierPdfClair(widget.documentId);
+        if (clair != null && await clair.exists()) {
+          octets = await clair.length();
+        } else if (widget.pdfOctets != null) {
+          octets = widget.pdfOctets;
+        } else {
+          sansTaille = true;
+        }
+      }
+    } catch (_) {
+      // Une mesure impossible ne doit rien casser : on n'annonce alors que le
+      // poids du pack.
+    }
+    if (!mounted) return;
+    setState(() {
+      _pdfOctetsLocal = octets;
+      _pdfSansTaille = sansTaille;
+    });
+  }
+
+  /// Ce que l'ouvrage occupe réellement : le pack, et le PDF s'il est là.
+  String _tailleSurAppareil(PackHorsLigne local) {
+    final total = local.octets + (_pdfOctetsLocal ?? 0);
+    final poids = total < 1024 * 1024
+        ? '${(total / 1024).round()} Ko'
+        : '${(total / (1024 * 1024)).toStringAsFixed(1).replaceAll('.', ',')} Mo';
+    return _pdfSansTaille ? '$poids, plus le PDF' : poids;
+  }
+
   Future<void> _telecharger() async {
     setState(() => _enCours = true);
     final messager = ScaffoldMessenger.of(context);
@@ -58,6 +121,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       }
       ref.invalidate(packsProvider);
       ref.invalidate(packLocalProvider(widget.documentId));
+      await _mesurerPdf();
       if (!mounted) return;
       final c = pack['compteurs'] as Map;
       messager.showSnackBar(SnackBar(
@@ -86,6 +150,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
     await ref.read(depotHorsLigneProvider).supprimer(widget.documentId);
     ref.invalidate(packsProvider);
     ref.invalidate(packLocalProvider(widget.documentId));
+    await _mesurerPdf();
     if (!mounted) return;
     ScaffoldMessenger.of(context)
         .showSnackBar(const SnackBar(content: Texte("Pack retiré de l'appareil.")));
@@ -132,41 +197,49 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
         children: [
           // Un bandeau teinté en tête : vert quand l'ouvrage est déjà sur le
           // téléphone, doré quand il reste à emporter. L'état se lit avant le
-          // texte.
-          Container(
-            padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
-            color: teinte.withValues(alpha: p.sombre ? 0.14 : 0.08),
-            child: Row(
-              children: [
-                IconePastille(
-                  garde ? Icons.offline_pin_rounded : Icons.download_for_offline_rounded,
-                  couleur: teinte,
-                  taille: 44,
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Texte(
-                        garde ? 'Disponible hors ligne' : 'Emporter cet ouvrage',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: t.textTheme.titleLarge?.copyWith(fontSize: 18),
-                      ),
-                      if (garde) ...[
-                        const SizedBox(height: 2),
-                        Texte(
-                          local.poids,
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: t.textTheme.labelMedium?.copyWith(color: p.succes, fontWeight: FontWeight.w600),
+          // texte, et le volume se pose sur l'étagère quand l'emport aboutit :
+          // la clé change avec l'état, l'apparition rejoue une fois.
+          Apparition(
+            key: ValueKey(garde),
+            echelle: garde,
+            depuis: 10,
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+              color: teinte.withValues(alpha: p.sombre ? 0.14 : 0.08),
+              child: Row(
+                children: [
+                  // Le dos du volume, signet dehors une fois emporté.
+                  DosLivre(titre: widget.titre, hauteur: 62, largeur: 26, marque: garde),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        EtiquetteCrochet(
+                          garde ? 'sur votre étagère' : 'à emporter',
+                          couleur: teinte,
                         ),
+                        const SizedBox(height: 8),
+                        Texte(
+                          garde ? 'Disponible hors ligne' : 'Emporter cet ouvrage',
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: t.textTheme.titleLarge?.copyWith(fontSize: 18),
+                        ),
+                        if (garde) ...[
+                          const SizedBox(height: 3),
+                          Texte(
+                            _tailleSurAppareil(local),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: t.textTheme.labelMedium?.copyWith(color: p.succes, fontWeight: FontWeight.w600),
+                          ),
+                        ],
                       ],
-                    ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Padding(
@@ -178,7 +251,8 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                   garde
                       ? "${local.compteurs['chapitres'] ?? 0} chapitres, "
                           "${local.compteurs['citations'] ?? 0} citations, "
-                          "${local.compteurs['questions'] ?? 0} questions. ${local.poids} sur l'appareil."
+                          "${local.compteurs['questions'] ?? 0} questions. "
+                          "Sur l'appareil : ${_tailleSurAppareil(local)}."
                       : widget.integral
                           ? "Le texte intégral et le PDF${widget.pdfOctets != null ? ' (${(widget.pdfOctets! / 1048576).toStringAsFixed(0)} Mo)' : ''}, "
                               "les quiz et le plan, lisibles sans réseau. Gardés chiffrés : ils ne "
@@ -209,7 +283,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                                   ? SizedBox(
                                       width: 16, height: 16,
                                       child: CircularProgressIndicator(strokeWidth: 2, color: p.surAccent))
-                                  : const Icon(Icons.download_rounded, size: 18),
+                                  : IconeAscenda(Icone.signet, taille: 18, couleur: p.surAccent),
                               label: Texte(_enCours ? 'En cours' : 'Emporter',
                                   maxLines: 1, overflow: TextOverflow.ellipsis),
                               style: FilledButton.styleFrom(
@@ -226,7 +300,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                             ? const SizedBox(
                                 width: 16, height: 16,
                                 child: CircularProgressIndicator(strokeWidth: 2))
-                            : const Icon(Icons.picture_as_pdf_outlined, size: 18),
+                            : IconeAscenda(Icone.page, taille: 18, couleur: p.accentTexte),
                         // Le compagnon de lecture (fiche, citations, quiz), jamais le livre.
                         label: const Texte('Compagnon', maxLines: 1, overflow: TextOverflow.ellipsis),
                         style: OutlinedButton.styleFrom(

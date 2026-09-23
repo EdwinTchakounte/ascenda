@@ -1,6 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
+import '../theme/icones.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
 import 'ui.dart';
 
@@ -46,7 +50,17 @@ class CompteRenduChapitre extends StatelessWidget {
         children: [
           Row(
             children: [
-              IconePastille(Icons.summarize_outlined, taille: 34, fond: p.surface.withValues(alpha: 0.7)),
+              Container(
+                width: 34,
+                height: 34,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: p.surface.withValues(alpha: 0.7),
+                  borderRadius: BorderRadius.circular(11),
+                  border: Border.all(color: p.accentTexte.withValues(alpha: 0.26)),
+                ),
+                child: IconeAscenda(Icone.cahier, taille: 18, couleur: p.accentTexte),
+              ),
               const SizedBox(width: 12),
               Expanded(
                 child: Texte('Ce que ce chapitre établit',
@@ -56,6 +70,8 @@ class CompteRenduChapitre extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 12),
+          const Filet(redouble: true),
           const SizedBox(height: 14),
           if ('${c['resume'] ?? ''}'.isNotEmpty)
             Texte('${c['resume']}', style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
@@ -65,7 +81,7 @@ class CompteRenduChapitre extends StatelessWidget {
           ],
           if ('${c['a_retenir'] ?? ''}'.isNotEmpty) ...[
             const SizedBox(height: 12),
-            _Encadre(titre: 'À retenir', texte: '${c['a_retenir']}', icone: Icons.push_pin_outlined),
+            _Encadre(titre: 'À retenir', texte: '${c['a_retenir']}', icone: Icone.signet),
           ],
           if (afrique.isNotEmpty) ...[
             const SizedBox(height: 10),
@@ -73,14 +89,14 @@ class CompteRenduChapitre extends StatelessWidget {
               titre: 'Depuis le continent',
               texte: afrique,
               teinte: p.succes,
-              icone: Icons.public_rounded,
+              icone: Icone.pousse,
             ),
           ],
           if (reserves.isNotEmpty) ...[
             const SizedBox(height: 14),
             Row(
               children: [
-                Icon(Icons.error_outline_rounded, size: 15, color: p.alerte),
+                IconeAscenda(Icone.question, taille: 15, couleur: p.alerte),
                 const SizedBox(width: 6),
                 Texte('Réserves',
                     style: t.textTheme.labelMedium?.copyWith(color: p.alerte, fontWeight: FontWeight.w600)),
@@ -193,7 +209,7 @@ class SyntheseOuvrage extends StatelessWidget {
             const SizedBox(height: 14),
             _Bloc(
               titre: 'À retenir',
-              icone: Icons.push_pin_outlined,
+              icone: Icone.signet,
               teinte: p.accentTexte,
               points: [for (final x in retenir) '$x'],
             ),
@@ -202,7 +218,7 @@ class SyntheseOuvrage extends StatelessWidget {
             const SizedBox(height: 14),
             _Bloc(
               titre: 'Questions que le livre laisse ouvertes',
-              icone: Icons.help_outline_rounded,
+              icone: Icone.question,
               teinte: p.succes,
               points: [for (final q in questions) '$q'],
             ),
@@ -217,13 +233,14 @@ class SyntheseOuvrage extends StatelessWidget {
 class _Bloc extends StatelessWidget {
   const _Bloc({required this.titre, required this.icone, required this.teinte, required this.points});
   final String titre;
-  final IconData icone;
+  final Icone icone;
   final Color teinte;
   final List<String> points;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     return Surface(
       padding: const EdgeInsets.fromLTRB(18, 16, 18, 8),
       child: Column(
@@ -231,7 +248,17 @@ class _Bloc extends StatelessWidget {
         children: [
           Row(
             children: [
-              IconePastille(icone, couleur: teinte, taille: 32),
+              Container(
+                width: 32,
+                height: 32,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: teinte.withValues(alpha: p.sombre ? 0.16 : 0.09),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: teinte.withValues(alpha: 0.3)),
+                ),
+                child: IconeAscenda(icone, taille: 17, couleur: teinte),
+              ),
               const SizedBox(width: 12),
               Expanded(
                 child: Texte(titre,
@@ -239,6 +266,8 @@ class _Bloc extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 12),
+          const Filet(),
           const SizedBox(height: 12),
           for (final x in points) _Puce(x, teinte: teinte),
         ],
@@ -266,13 +295,18 @@ class _Section extends StatelessWidget {
               child: Texte('${section['section'] ?? ''}',
                   style: t.textTheme.titleLarge?.copyWith(fontSize: 16, height: 1.3)),
             ),
+            // Le folio, comme en tête d'une page de livre.
             if (pages.isNotEmpty) ...[
               const SizedBox(width: 10),
-              Pastille('p. $pages', couleur: p.attenue),
+              Padding(
+                padding: const EdgeInsets.only(top: 3),
+                child: Texte('p. $pages',
+                    style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1)),
+              ),
             ],
           ],
         ),
-        const SizedBox(height: 6),
+        const SizedBox(height: 8),
         Texte('${section['contenu'] ?? ''}', style: t.textTheme.bodyMedium?.copyWith(height: 1.65)),
       ],
     );
@@ -292,13 +326,14 @@ class _Puce extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Un losange d'encre plutôt qu'un point : la puce du typographe.
           Container(
-            margin: const EdgeInsets.only(top: 8, right: 12, left: 2),
+            margin: const EdgeInsets.only(top: 9, right: 12, left: 2),
             width: 6,
             height: 6,
-            decoration: BoxDecoration(
-              color: teinte ?? context.palette.accentTexte,
-              shape: BoxShape.circle,
+            child: Transform.rotate(
+              angle: pi / 4,
+              child: ColoredBox(color: teinte ?? context.palette.accentTexte),
             ),
           ),
           Expanded(
@@ -314,7 +349,7 @@ class _Encadre extends StatelessWidget {
   const _Encadre({required this.titre, required this.texte, required this.icone, this.teinte});
   final String titre;
   final String texte;
-  final IconData icone;
+  final Icone icone;
   final Color? teinte;
 
   @override
@@ -334,17 +369,18 @@ class _Encadre extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(icone, size: 15, color: c),
-              const SizedBox(width: 6),
+              IconeAscenda(icone, taille: 15, couleur: c),
+              const SizedBox(width: 7),
               Expanded(
-                child: Texte(titre,
+                child: Texte(titre.toUpperCase(),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: t.textTheme.labelMedium?.copyWith(color: c, fontWeight: FontWeight.w700)),
+                    style: t.textTheme.labelSmall
+                        ?.copyWith(color: c, fontWeight: FontWeight.w700, letterSpacing: 1.3)),
               ),
             ],
           ),
-          const SizedBox(height: 6),
+          const SizedBox(height: 7),
           Texte(texte, style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
         ],
       ),

@@ -6,13 +6,21 @@ import '../api/client.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/hors_ligne.dart';
-import '../theme/couleurs.dart';
+import '../theme/icones.dart';
+import '../theme/palette.dart';
+import '../theme/papier.dart';
+import '../theme/texte.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
 import '../widgets/invitation.dart';
+import '../widgets/livre.dart';
 import '../widgets/ui.dart';
-import '../theme/texte.dart';
 
+/// La bibliothèque : une salle de lecture, pas une liste de résultats.
+///
+/// L'écran s'ouvre sur le rayon des volumes, puis donne les fiches. Les filtres
+/// sont des étiquettes d'encre au-dessus d'un filet : ce qui trie le fonds se
+/// lit comme l'appareil d'un catalogue, pas comme une barre d'outils.
 class EcranBibliotheque extends ConsumerStatefulWidget {
   const EcranBibliotheque({super.key});
 
@@ -38,6 +46,17 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
     _recus.clear();
   }
 
+  /// Le titre courant de la page : ce que le lecteur regarde en ce moment.
+  /// Un pôle sélectionné porte son nom, pas celui de son premier sous-axe.
+  String _libelleFiltre(List<Axe> liste) {
+    if (_axe == null) return 'Tout le fonds';
+    for (final a in liste) {
+      if (a.slug == _axe) return a.label;
+      if (a.poleSlug == _axe) return a.poleLabel ?? a.label;
+    }
+    return 'Sélection';
+  }
+
   @override
   void dispose() {
     _recherche.dispose();
@@ -47,6 +66,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
+    final p = context.palette;
     final filtre = FiltreBiblio(
       axe: _axe,
       niveau: _niveau,
@@ -54,6 +74,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
     );
     final ouvrages = ref.watch(bibliothequeProvider(filtre.a(_page)));
     final axes = ref.watch(axesProvider);
+    final listeAxes = axes.valueOrNull ?? const <Axe>[];
 
     return Scaffold(
       body: SafeArea(
@@ -78,41 +99,39 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
               child: Row(
                 children: [
                   Expanded(
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(borderRadius: Rayons.moyen, boxShadow: context.palette.ombreCarte),
-                      child: TextField(
-                        controller: _recherche,
-                        onChanged: (v) => setState(() {
-                          _texte = v.trim();
-                          _reinitialiser();
-                        }),
-                        textInputAction: TextInputAction.search,
-                        decoration: InputDecoration(
-                          hintText: 'Un titre, un auteur…',
-                          prefixIcon: const Icon(Icons.search_rounded, size: 22),
-                          suffixIcon: _texte.isEmpty
-                              ? null
-                              : IconButton(
-                                  icon: const Icon(Icons.close_rounded, size: 19),
-                                  onPressed: () {
-                                    _recherche.clear();
-                                    setState(() {
-                                      _texte = '';
-                                      _reinitialiser();
-                                    });
-                                  },
-                                ),
-                        ),
+                    child: TextField(
+                      controller: _recherche,
+                      onChanged: (v) => setState(() {
+                        _texte = v.trim();
+                        _reinitialiser();
+                      }),
+                      textInputAction: TextInputAction.search,
+                      decoration: InputDecoration(
+                        hintText: 'Un titre, un auteur…',
+                        prefixIcon: IconeAscenda(Icone.loupe, taille: 20, couleur: p.attenue),
+                        suffixIcon: _texte.isEmpty
+                            ? null
+                            : IconButton(
+                                icon: const Icon(Icons.close_rounded, size: 19),
+                                onPressed: () {
+                                  _recherche.clear();
+                                  setState(() {
+                                    _texte = '';
+                                    _reinitialiser();
+                                  });
+                                },
+                              ),
                       ),
                     ),
                   ),
                   const SizedBox(width: 10),
                   // Chercher dans le texte des ouvrages est un autre geste que
                   // chercher un titre : il a son propre bouton, bien visible.
+                  // La page ouverte plutôt que la loupe : on cherche dedans.
                   Tooltip(
                     message: 'Chercher dans le texte des livres',
                     child: Material(
-                      color: context.palette.heros,
+                      color: p.heros,
                       borderRadius: Rayons.moyen,
                       child: InkWell(
                         borderRadius: Rayons.moyen,
@@ -120,7 +139,9 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         child: SizedBox(
                           width: 56,
                           height: 56,
-                          child: Icon(Icons.manage_search_rounded, color: context.palette.accentSurHeros, size: 26),
+                          child: Center(
+                            child: IconeAscenda(Icone.page, taille: 25, couleur: p.accentSurHeros),
+                          ),
                         ),
                       ),
                     ),
@@ -196,20 +217,20 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
             // Un axe sélectionné devient une porte. Le filtre dit ce qu'on
             // retire ; la fiche d'axe dit dans quel ordre lire ce qui reste.
             // Un pôle n'a pas de fiche à lui : la porte s'ouvre sur un sous-axe.
-            if (_axe != null && !(axes.valueOrNull ?? const <Axe>[]).any((a) => a.poleSlug == _axe))
+            if (_axe != null && !listeAxes.any((a) => a.poleSlug == _axe))
               Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding: const EdgeInsets.only(left: 12),
                   child: TextButton.icon(
                     onPressed: () => context.push('/axe/$_axe'),
-                    icon: const Icon(Icons.route_outlined, size: 18),
+                    icon: IconeAscenda(Icone.boussole, taille: 18, couleur: p.accentTexte),
                     label: const Texte("Par où commencer dans cet axe"),
                   ),
                 ),
               ),
             SizedBox(
-              height: 46,
+              height: 44,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -224,11 +245,15 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                 ],
               ),
             ),
-            const SizedBox(height: 6),
+            // Le filet qui ferme l'appareil de tri : dessous commence le fonds.
+            const Padding(
+              padding: EdgeInsets.fromLTRB(20, 2, 20, 0),
+              child: Filet(redouble: true),
+            ),
             Expanded(
               child: ouvrages.when(
                 loading: () => ListView.separated(
-                  padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+                  padding: const EdgeInsets.fromLTRB(20, 14, 20, 24),
                   itemCount: 5,
                   separatorBuilder: (_, _) => const SizedBox(height: 12),
                   itemBuilder: (_, _) => const SqueletteCarte(lignes: 2),
@@ -241,30 +266,25 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         erreur: e,
                         reessayer: () => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
                       ),
-                data: (p) {
+                data: (page) {
                   // On empile les pages déjà reçues. Repartir de zéro à chaque
                   // chargement ramènerait le lecteur en haut de la liste.
-                  if (p.page == 1) {
+                  if (page.page == 1) {
                     _recus
                       ..clear()
-                      ..addAll(p.ouvrages);
-                  } else if (_recus.length < p.page * parPageBiblio) {
-                    _recus.addAll(p.ouvrages);
+                      ..addAll(page.ouvrages);
+                  } else if (_recus.length < page.page * parPageBiblio) {
+                    _recus.addAll(page.ouvrages);
                   }
-                  _total = p.total;
+                  _total = page.total;
                   final liste = _recus;
                   return liste.isEmpty
-                    ? const EtatMessage(
-                        icone: Icons.search_off_rounded,
-                        titre: 'Aucun ouvrage',
-                        texte: "Aucun titre ne correspond à ces critères. "
-                            "Essayez un autre axe ou effacez la recherche.",
-                      )
+                    ? const _RayonVide()
                     : RefreshIndicator(
-                        color: Couleurs.or,
+                        color: p.accent,
                         onRefresh: () async => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
                         child: ListView.separated(
-                          padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+                          padding: const EdgeInsets.fromLTRB(20, 14, 20, 24),
                           // Une ligne de plus en queue : le bouton qui charge
                           // la suite, ou le mot de la fin.
                           itemCount: liste.length + 2,
@@ -273,12 +293,17 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                             if (i == liste.length + 1) {
                               if (liste.length >= _total) {
                                 return Padding(
-                                  padding: const EdgeInsets.only(top: 10, bottom: 20),
-                                  child: Texte(
-                                    'Fin de la liste.',
-                                    textAlign: TextAlign.center,
-                                    style: t.textTheme.bodySmall
-                                        ?.copyWith(color: Couleurs.grisChaud),
+                                  padding: const EdgeInsets.only(top: 16, bottom: 20),
+                                  child: Column(
+                                    children: [
+                                      const Fleuron(),
+                                      const SizedBox(height: 10),
+                                      Texte(
+                                        'Fin de la liste.',
+                                        textAlign: TextAlign.center,
+                                        style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
+                                      ),
+                                    ],
                                   ),
                                 );
                               }
@@ -302,16 +327,34 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                         "que vous pouvez tenir, et vous interroge sur ce "
                                         "que vous lisez.",
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 14, bottom: 4),
-                                    child: Texte(
-                                      _total == 1
-                                          ? '1 ouvrage'
-                                          : '${liste.length} sur $_total ouvrages',
-                                      style: t.textTheme.bodySmall
-                                          ?.copyWith(color: Couleurs.grisChaud),
+                                  // Le rayon en tête : on reconnaît un fonds à
+                                  // ses dos avant de lire ses notices. Sous
+                                  // trois volumes, une tablette presque vide
+                                  // ferait pauvre : on passe aux fiches.
+                                  if (liste.length >= 3) ...[
+                                    const SizedBox(height: 14),
+                                    Rayon(
+                                      volumes: [
+                                        for (final o in liste.take(14))
+                                          (
+                                            titre: o.titre,
+                                            axeSlug: o.axeSlug,
+                                            marque: false,
+                                            onTap: () => context.push('/ouvrage/${o.id}'),
+                                          ),
+                                      ],
+                                      hauteur: 138,
+                                      padding: EdgeInsets.zero,
                                     ),
+                                  ],
+                                  const SizedBox(height: 16),
+                                  TitreCourant(
+                                    _libelleFiltre(listeAxes),
+                                    folio: _total == 1
+                                        ? '1 ouvrage'
+                                        : '${liste.length} sur $_total ouvrages',
                                   ),
+                                  const SizedBox(height: 2),
                                 ],
                               );
                             }
@@ -333,6 +376,8 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
   }
 }
 
+/// Un filtre : une étiquette d'encre pour les parcours, une petite capitale
+/// soulignée pour les niveaux. Deux familles qui ne se confondent pas.
 class _Filtre extends StatelessWidget {
   const _Filtre({
     required this.libelle,
@@ -347,8 +392,8 @@ class _Filtre extends StatelessWidget {
   final VoidCallback onTap;
   final int? compte;
 
-  /// Les niveaux se lisent comme des onglets soulignés, les parcours comme des
-  /// pastilles : deux familles de filtres qui ne se confondent pas.
+  /// Les niveaux se lisent comme les titres courants d'un catalogue, les
+  /// parcours comme des étiquettes collées sur une boîte d'archives.
   final bool souligne;
 
   @override
@@ -357,23 +402,37 @@ class _Filtre extends StatelessWidget {
     final p = context.palette;
     if (souligne) {
       return Padding(
-        padding: const EdgeInsets.only(right: 6),
+        padding: const EdgeInsets.only(right: 4),
         child: InkWell(
-          borderRadius: Rayons.pilule,
+          borderRadius: Rayons.petit,
           onTap: onTap,
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 200),
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
-            decoration: BoxDecoration(
-              color: actif ? p.accentVoile : Colors.transparent,
-              borderRadius: Rayons.pilule,
-            ),
-            child: Texte(
-              libelle,
-              style: t.textTheme.labelLarge?.copyWith(
-                fontSize: 13,
-                color: actif ? p.accentTexte : p.attenue,
-                fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(8, 8, 8, 6),
+            // Le filet prend la largeur du mot : dans une rangée qui défile,
+            // une colonne étirée réclamerait une largeur infinie.
+            child: IntrinsicWidth(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Texte(
+                    libelle.toUpperCase(),
+                    style: t.textTheme.labelSmall?.copyWith(
+                      fontSize: 11.5,
+                      letterSpacing: 1.4,
+                      color: actif ? p.accentTexte : p.attenue,
+                      fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
+                    ),
+                  ),
+                  const SizedBox(height: 5),
+                  // Le filet sous le niveau retenu : la marque d'un onglet de
+                  // catalogue, sans pastille ni ombre.
+                  AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    height: 1.6,
+                    color: actif ? p.accentTexte : p.encre.withValues(alpha: 0.10),
+                  ),
+                ],
               ),
             ),
           ),
@@ -383,16 +442,15 @@ class _Filtre extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 8),
       child: InkWell(
-        borderRadius: Rayons.pilule,
+        borderRadius: Rayons.petit,
         onTap: onTap,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
           decoration: BoxDecoration(
-            color: actif ? p.encre : p.surface,
-            borderRadius: Rayons.pilule,
-            border: Border.all(color: actif ? p.encre : p.trait),
-            boxShadow: actif ? [BoxShadow(color: p.encre.withValues(alpha: 0.18), blurRadius: 10, offset: const Offset(0, 3))] : null,
+            color: actif ? p.encre : Colors.transparent,
+            borderRadius: Rayons.petit,
+            border: Border.all(color: actif ? p.encre : p.encre.withValues(alpha: 0.28)),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -402,23 +460,26 @@ class _Filtre extends StatelessWidget {
                 style: t.textTheme.labelLarge?.copyWith(
                   color: actif ? p.fond : p.texte,
                   fontSize: 13,
+                  letterSpacing: 0.2,
                   fontWeight: actif ? FontWeight.w600 : FontWeight.w500,
                 ),
               ),
               if (compte != null) ...[
-                const SizedBox(width: 7),
+                const SizedBox(width: 8),
+                // Le nombre d'ouvrages comme un folio : chiffres tabulaires,
+                // séparés du libellé par un filet vertical.
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
-                  decoration: BoxDecoration(
-                    color: actif ? p.accent : p.surfaceCreuse,
-                    borderRadius: Rayons.pilule,
-                  ),
-                  child: Texte(
-                    '$compte',
-                    style: t.textTheme.labelSmall?.copyWith(
-                      color: actif ? p.surAccent : p.attenue,
-                      fontWeight: FontWeight.w700,
-                    ),
+                  width: 1,
+                  height: 13,
+                  color: (actif ? p.fond : p.encre).withValues(alpha: 0.30),
+                ),
+                const SizedBox(width: 8),
+                Texte(
+                  '$compte',
+                  style: t.textTheme.labelSmall?.copyWith(
+                    color: actif ? p.fond : p.accentTexte,
+                    fontWeight: FontWeight.w700,
+                    fontFeatures: const [FontFeature.tabularFigures()],
                   ),
                 ),
               ],
@@ -430,9 +491,51 @@ class _Filtre extends StatelessWidget {
   }
 }
 
+/// Le fonds ne rend rien : un carton de catalogue, pas une icône barrée.
+class _RayonVide extends StatelessWidget {
+  const _RayonVide();
+
+  @override
+  Widget build(BuildContext context) {
+    final t = Theme.of(context);
+    final p = context.palette;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 40),
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 420),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Fleuron(taille: 30),
+              const SizedBox(height: 26),
+              Texte(
+                'Aucun ouvrage',
+                textAlign: TextAlign.center,
+                style: t.textTheme.headlineSmall?.copyWith(fontSize: 23),
+              ),
+              const SizedBox(height: 12),
+              Texte(
+                "Aucun titre ne correspond à ces critères. "
+                "Essayez un autre axe ou effacez la recherche.",
+                textAlign: TextAlign.center,
+                style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.6),
+              ),
+              const SizedBox(height: 26),
+              const Fleuron(taille: 30),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
 
 /// Sans réseau, la bibliothèque montre ce qui a été emporté. Sans cela, un
 /// ouvrage gardé sur l'appareil n'avait aucune porte d'entrée en zone blanche.
+///
+/// Les volumes emportés gardent leur dos : en zone blanche, on retrouve le
+/// livre qu'on a commencé à l'endroit exact où il se rangeait avant.
 class _LivresEmportes extends ConsumerWidget {
   const _LivresEmportes({required this.reessayer});
   final VoidCallback reessayer;
@@ -440,56 +543,72 @@ class _LivresEmportes extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
+    final p = context.palette;
     final packs = ref.watch(packsProvider).valueOrNull ?? {};
     if (packs.isEmpty) return EtatErreur(erreur: const HorsLigne(), reessayer: reessayer);
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(20, 8, 20, 24),
+      padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
       children: [
-        Row(
-          children: [
-            Icon(Icons.cloud_off_rounded, size: 18, color: Couleurs.grisChaud),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Texte('Pas de connexion. Vos ouvrages emportés restent lisibles.',
-                  style: t.textTheme.bodyMedium?.copyWith(color: Couleurs.grisChaud)),
-            ),
-            TextButton(onPressed: reessayer, child: const Texte('Réessayer')),
-          ],
-        ),
+        const EtiquetteCrochet('sans réseau'),
         const SizedBox(height: 12),
-        for (final p in packs.values)
+        Texte(
+          'Pas de connexion. Vos ouvrages emportés restent lisibles.',
+          style: t.textTheme.bodyMedium?.copyWith(color: p.texte, height: 1.5),
+        ),
+        Align(
+          alignment: Alignment.centerLeft,
+          child: TextButton(onPressed: reessayer, child: const Texte('Réessayer')),
+        ),
+        const SizedBox(height: 10),
+        TitreCourant(
+          'sur l\'appareil',
+          folio: packs.length == 1 ? '1 volume' : '${packs.length} volumes',
+        ),
+        const SizedBox(height: 14),
+        for (final pack in packs.values)
           Padding(
             padding: const EdgeInsets.only(bottom: 12),
-            child: Material(
-              color: t.colorScheme.surface,
-              child: InkWell(
-                onTap: () => context.push('/ouvrage/${p.documentId}'),
-                child: Container(
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: t.dividerTheme.color ?? Couleurs.traitClair),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(Icons.offline_pin_rounded, size: 20, color: Couleurs.sauge),
-                      const SizedBox(width: 12),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+            child: Surface(
+              onTap: () => context.push('/ouvrage/${pack.documentId}'),
+              padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Le signet dépasse : ce volume est sur l'appareil.
+                  DosLivre(titre: pack.titre, hauteur: 78, largeur: 36, marque: true),
+                  const SizedBox(width: 16),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Texte(
+                          pack.titre,
+                          style: t.textTheme.titleLarge?.copyWith(fontSize: 16.5, height: 1.28),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        const SizedBox(height: 8),
+                        const Filet(),
+                        const SizedBox(height: 8),
+                        Row(
                           children: [
-                            Texte(p.titre,
-                                style: t.textTheme.titleMedium, maxLines: 2, overflow: TextOverflow.ellipsis),
-                            const SizedBox(height: 3),
-                            Texte('${p.compteurs['chapitres'] ?? 0} chapitres · ${p.poids}',
-                                style: t.textTheme.bodySmall?.copyWith(color: Couleurs.grisChaud)),
+                            IconeAscenda(Icone.signet, taille: 14, couleur: p.succes),
+                            const SizedBox(width: 7),
+                            Expanded(
+                              child: Texte(
+                                '${pack.compteurs['chapitres'] ?? 0} chapitres · ${pack.poids}',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: t.textTheme.labelSmall?.copyWith(color: p.attenue),
+                              ),
+                            ),
                           ],
                         ),
-                      ),
-                      Icon(Icons.chevron_right_rounded, size: 20, color: Couleurs.grisChaud),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
           ),

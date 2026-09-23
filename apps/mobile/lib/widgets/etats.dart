@@ -1,11 +1,13 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+
 import 'package:go_router/go_router.dart';
 
 import '../api/client.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
+import 'illustrations.dart';
 
 /// Les états qui ne sont pas le cas idéal. Ils sont dessinés, pas subis :
 /// beaucoup de nos lecteurs sont sur des connexions intermittentes, et une
@@ -17,6 +19,7 @@ class EtatMessage extends StatelessWidget {
     required this.titre,
     required this.texte,
     this.icone,
+    this.scene,
     this.action,
     this.libelleAction,
     this.teinte,
@@ -25,6 +28,10 @@ class EtatMessage extends StatelessWidget {
   final String titre;
   final String texte;
   final IconData? icone;
+
+  /// Une scène dessinée, préférée à l'icône quand elle est fournie : un écran
+  /// vide raconte un moment de lecture, pas un code d'erreur.
+  final Scene? scene;
   final VoidCallback? action;
   final String? libelleAction;
   final Color? teinte;
@@ -42,7 +49,10 @@ class EtatMessage extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              if (icone != null) ...[
+              if (scene != null) ...[
+                Illustration(scene!, taille: 172, accent: couleur),
+                const SizedBox(height: 18),
+              ] else if (icone != null) ...[
                 _GrandePastille(icone: icone!, couleur: couleur),
                 const SizedBox(height: 22),
               ],
@@ -124,6 +134,7 @@ class EtatErreur extends StatelessWidget {
     final p = context.palette;
     if (erreur is HorsLigne) {
       return EtatMessage(
+        scene: Scene.sansReseau,
         icone: Icons.cloud_off_rounded,
         teinte: p.attenue,
         titre: 'Pas de connexion',

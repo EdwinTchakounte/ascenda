@@ -6,16 +6,23 @@ import '../api/client.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
 import '../widgets/etats.dart';
+import '../widgets/illustrations.dart';
+import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
 /// La conversation avec l'agent.
 ///
-/// Chaque réponse porte ses citations sous forme de cartes cliquables
-/// « Ouvrage, p. 47 ». C'est la règle du produit : on ne répond jamais sans
-/// dire d'où vient la réponse.
+/// Ce n'est pas une messagerie, c'est une correspondance : on écrit un billet,
+/// il revient une page avec, en pied, les volumes consultés. Chaque réponse
+/// porte donc ses citations sous forme de fiches « dos du volume, p. 47 ».
+/// C'est la règle du produit : on ne répond jamais sans dire d'où vient la
+/// réponse.
 class PanneauAgent extends ConsumerStatefulWidget {
   const PanneauAgent({
     super.key,
@@ -191,9 +198,10 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Texte("L'agent", style: t.textTheme.titleLarge?.copyWith(fontSize: 19)),
-                    const SizedBox(height: 1),
+                    const SizedBox(height: 2),
                     Row(
                       children: [
+                        // Le point d'encre qui dit si la plume est encore chargée.
                         Container(
                           width: 7,
                           height: 7,
@@ -202,7 +210,7 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
                             color: _restant == 0 ? p.alerte : p.succes,
                           ),
                         ),
-                        const SizedBox(width: 6),
+                        const SizedBox(width: 7),
                         Expanded(
                           child: Texte(
                             _restant == null
@@ -211,7 +219,7 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
                                     '${_restant! > 1 ? 's' : ''} aujourd\'hui',
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
-                            style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
+                            style: t.textTheme.labelMedium?.copyWith(color: p.attenue, letterSpacing: 0.3),
                           ),
                         ),
                       ],
@@ -228,7 +236,8 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
             ],
           ),
         ),
-        Divider(height: 1, color: p.trait),
+        // Un filet d'imprimeur sépare l'en-tête de la correspondance.
+        const Padding(padding: EdgeInsets.symmetric(horizontal: 20), child: Filet(redouble: true)),
         Expanded(
           child: _messages.isEmpty
               ? _Accueil(suggestions: _suggestions, onChoisi: _envoyer)
@@ -260,7 +269,10 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
   }
 }
 
-/// Le visage de l'agent : une étincelle dorée dans un disque.
+/// Le cachet de l'agent : la plume frappée sur un carré d'encre.
+///
+/// Un disque à l'étincelle ferait un assistant de plus ; ici c'est une main qui
+/// écrit, et elle signe ses pages du même cachet d'un bout à l'autre.
 class _AvatarAgent extends StatelessWidget {
   const _AvatarAgent({this.taille = 30});
   final double taille;
@@ -272,12 +284,37 @@ class _AvatarAgent extends StatelessWidget {
       width: taille,
       height: taille,
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
         gradient: p.degradeHeros,
+        borderRadius: BorderRadius.circular(taille * 0.26),
+        border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.45)),
         boxShadow: [BoxShadow(color: p.heros.withValues(alpha: 0.25), blurRadius: 8, offset: const Offset(0, 3))],
       ),
       alignment: Alignment.center,
-      child: Icon(Icons.auto_awesome_rounded, size: taille * 0.5, color: p.accentSurHeros),
+      child: IconeAscenda(Icone.plume, taille: taille * 0.56, couleur: p.accentSurHeros),
+    );
+  }
+}
+
+/// Une vignette d'encre : l'icône dessinée dans un cadre filetté.
+class _Vignette extends StatelessWidget {
+  const _Vignette(this.icone, {this.taille = 40});
+  final Icone icone;
+  final double taille;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    final c = p.accentTexte;
+    return Container(
+      width: taille,
+      height: taille,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: c.withValues(alpha: p.sombre ? 0.16 : 0.09),
+        borderRadius: BorderRadius.circular(taille * 0.3),
+        border: Border.all(color: c.withValues(alpha: 0.32)),
+      ),
+      child: IconeAscenda(icone, taille: taille * 0.52, couleur: c),
     );
   }
 }
@@ -292,56 +329,61 @@ class _Accueil extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return ListView(
-      padding: const EdgeInsets.fromLTRB(20, 22, 20, 24),
+      padding: const EdgeInsets.fromLTRB(20, 18, 20, 24),
       children: [
-        SurfaceHeros(
+        // La lampe allumée sur la table : la lecture attend qu'on lui parle.
+        Apparition(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconePastille(Icons.auto_stories_rounded, couleur: p.accentSurHeros, taille: 48),
-              const SizedBox(height: 16),
-              Surtitre('Agent de lecture', couleur: p.accentSurHeros),
-              const SizedBox(height: 6),
+              const Illustration(Scene.lampe, taille: 196),
+              const SizedBox(height: 14),
+              const EtiquetteCrochet("l'agent de lecture"),
+              const SizedBox(height: 14),
               Texte(
                 'Demandez ce que vous voulez',
-                style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 24),
+                textAlign: TextAlign.center,
+                style: t.textTheme.headlineSmall?.copyWith(fontSize: 24, height: 1.2),
               ),
               const SizedBox(height: 10),
               Texte(
                 "L'agent ne répond que sur les ouvrages du corpus, et il indique "
                 "toujours d'où vient sa réponse. S'il ne trouve rien, il le dit.",
-                style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+                textAlign: TextAlign.center,
+                style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.6),
               ),
-              const SizedBox(height: 16),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  Pastille('Livre et page cités', icone: Icons.format_quote_rounded, couleur: p.accentSurHeros),
-                  Pastille('Corpus seulement', icone: Icons.verified_outlined, couleur: p.surHeros),
-                ],
-              ),
+              const SizedBox(height: 20),
+              const Fleuron(),
             ],
           ),
         ),
         if (suggestions.isNotEmpty) ...[
-          const SizedBox(height: 26),
-          const TitreSection('Pour commencer', sousTitre: 'Touchez une question pour la poser.'),
-          const SizedBox(height: 12),
-          for (final s in suggestions)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: Surface(
-                padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
-                onTap: () => onChoisi(s),
-                child: Row(
-                  children: [
-                    const IconePastille(Icons.lightbulb_outline_rounded, taille: 38),
-                    const SizedBox(width: 13),
-                    Expanded(child: Texte(s, style: t.textTheme.bodyMedium?.copyWith(color: p.encre))),
-                    const SizedBox(width: 8),
-                    Icon(Icons.north_east_rounded, size: 17, color: p.accentTexte),
-                  ],
+          const SizedBox(height: 22),
+          TitreCourant(
+            'pour commencer',
+            folio: suggestions.length > 1 ? '${suggestions.length} questions' : '1 question',
+          ),
+          const SizedBox(height: 14),
+          // Chaque question est une fiche à tirer du casier : on la touche, elle
+          // part telle quelle.
+          for (final (i, s) in suggestions.indexed)
+            Apparition(
+              rang: i + 1,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: Surface(
+                  padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
+                  onTap: () => onChoisi(s),
+                  child: Row(
+                    children: [
+                      const _Vignette(Icone.question, taille: 38),
+                      const SizedBox(width: 13),
+                      Expanded(
+                        child: Texte(s, style: t.textTheme.bodyMedium?.copyWith(color: p.encre, height: 1.5)),
+                      ),
+                      const SizedBox(width: 8),
+                      IconeAscenda(Icone.fleche, taille: 18, couleur: p.accentTexte),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -362,9 +404,11 @@ class _Bulle extends StatelessWidget {
     final utilisateur = message.deLUtilisateur;
     final largeurMax = MediaQuery.of(context).size.width * (utilisateur ? 0.8 : 0.76);
 
+    // Le billet du lecteur est écrit à l'or ; la réponse arrive sur une feuille
+    // de papier, bordée d'un filet d'encre. Deux mains, deux papiers.
     final bulle = Container(
       constraints: BoxConstraints(maxWidth: largeurMax),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      padding: const EdgeInsets.fromLTRB(16, 13, 16, 13),
       decoration: BoxDecoration(
         gradient: utilisateur
             ? LinearGradient(
@@ -375,12 +419,14 @@ class _Bulle extends StatelessWidget {
             : null,
         color: utilisateur ? null : p.surface,
         borderRadius: BorderRadius.only(
-          topLeft: const Radius.circular(22),
-          topRight: const Radius.circular(22),
-          bottomLeft: Radius.circular(utilisateur ? 22 : 6),
-          bottomRight: Radius.circular(utilisateur ? 6 : 22),
+          topLeft: const Radius.circular(16),
+          topRight: const Radius.circular(16),
+          bottomLeft: Radius.circular(utilisateur ? 16 : 5),
+          bottomRight: Radius.circular(utilisateur ? 5 : 16),
         ),
-        border: utilisateur ? null : Border.all(color: p.trait),
+        border: utilisateur
+            ? null
+            : Border.all(color: p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12)),
         boxShadow: utilisateur
             ? [BoxShadow(color: p.accent.withValues(alpha: 0.22), blurRadius: 14, offset: const Offset(0, 5))]
             : p.ombreCarte,
@@ -388,7 +434,7 @@ class _Bulle extends StatelessWidget {
       child: SelectableText(
         message.texte,
         style: t.textTheme.bodyMedium?.copyWith(
-          height: 1.62,
+          height: 1.68,
           color: utilisateur ? p.surAccent : p.texte,
         ),
       ),
@@ -414,26 +460,21 @@ class _Bulle extends StatelessWidget {
               children: [
                 bulle,
                 if (message.citations.isNotEmpty) ...[
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 14),
+                  // Les volumes consultés, en pied de page : le dos du livre, le
+                  // passage, le folio.
                   Padding(
-                    padding: const EdgeInsets.only(left: 4),
-                    child: Row(
-                      children: [
-                        Icon(Icons.format_quote_rounded, size: 15, color: p.accentTexte),
-                        const SizedBox(width: 4),
-                        Expanded(
-                          child: Surtitre(
-                            message.citations.length > 1
-                                ? '${message.citations.length} sources'
-                                : '1 source',
-                          ),
-                        ),
-                      ],
+                    padding: const EdgeInsets.only(right: 4),
+                    child: TitreCourant(
+                      'ce que dit le corpus',
+                      folio: message.citations.length > 1
+                          ? '${message.citations.length} sources'
+                          : '1 source',
                     ),
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 12),
                   SizedBox(
-                    height: 118,
+                    height: 138,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
                       clipBehavior: Clip.none,
@@ -480,58 +521,75 @@ class _CarteCitation extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     final p = context.palette;
+    // La fiche d'une source : le dos du volume, le passage, le folio. On
+    // reconnaît le livre avant d'avoir lu son titre.
     return SizedBox(
-      width: 232,
+      width: 252,
       child: Surface(
         ombre: false,
-        rayon: const BorderRadius.all(Radius.circular(18)),
-        padding: const EdgeInsets.fromLTRB(13, 12, 13, 11),
+        rayon: Rayons.moyen,
+        padding: const EdgeInsets.fromLTRB(12, 12, 13, 12),
         onTap: citation.documentId == null
             ? null
             : () => context.push('/ouvrage/${citation.documentId}'),
-        child: Column(
+        child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Container(
-                  width: 22,
-                  height: 22,
-                  margin: const EdgeInsets.only(right: 8),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(color: p.accentVoile, shape: BoxShape.circle),
-                  child: citation.marque != null
-                      ? Texte('${citation.marque}',
-                          style: t.textTheme.labelSmall
-                              ?.copyWith(color: p.accentTexte, fontWeight: FontWeight.w700, letterSpacing: 0))
-                      : Icon(Icons.menu_book_rounded, size: 12, color: p.accentTexte),
-                ),
-                Expanded(
-                  child: Texte(
-                    citation.ouvrage,
-                    style: t.textTheme.labelMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 7),
+            DosLivre(titre: citation.ouvrage, hauteur: 104, largeur: 28),
+            const SizedBox(width: 12),
             Expanded(
-              child: Texte(
-                citation.extrait,
-                style: t.textTheme.bodySmall?.copyWith(color: p.attenue, height: 1.4),
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      if (citation.marque != null) ...[
+                        Texte('${citation.marque}.',
+                            style: t.textTheme.labelSmall?.copyWith(
+                              color: p.accentTexte,
+                              fontWeight: FontWeight.w700,
+                              letterSpacing: 0,
+                            )),
+                        const SizedBox(width: 5),
+                      ],
+                      Expanded(
+                        child: Texte(
+                          citation.ouvrage,
+                          style: t.textTheme.labelMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 7),
+                  Expanded(
+                    child: Texte(
+                      citation.extrait,
+                      style: t.textTheme.bodySmall?.copyWith(
+                        fontFamily: t.textTheme.headlineSmall?.fontFamily,
+                        fontSize: 12.5,
+                        color: p.attenue,
+                        height: 1.45,
+                      ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  if (citation.page != null) ...[
+                    const Filet(),
+                    const SizedBox(height: 5),
+                    Texte('p. ${citation.page}',
+                        style: t.textTheme.labelSmall?.copyWith(
+                          color: p.accentTexte,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 1,
+                        )),
+                  ],
+                ],
               ),
             ),
-            if (citation.page != null)
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                decoration: BoxDecoration(color: p.accentVoile, borderRadius: Rayons.pilule),
-                child: Texte('p. ${citation.page}',
-                    style: t.textTheme.labelSmall?.copyWith(color: p.accentTexte, fontWeight: FontWeight.w600)),
-              ),
           ],
         ),
       ),
@@ -539,7 +597,8 @@ class _CarteCitation extends StatelessWidget {
   }
 }
 
-/// L'agent réfléchit : trois points qui respirent dans une bulle.
+/// L'agent réfléchit : trois gouttes d'encre qui s'allument tour à tour, sur la
+/// feuille qui va recevoir la réponse.
 class _Reflexion extends StatefulWidget {
   const _Reflexion();
 
@@ -574,12 +633,12 @@ class _ReflexionState extends State<_Reflexion> with SingleTickerProviderStateMi
             decoration: BoxDecoration(
               color: p.surface,
               borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(22),
-                topRight: Radius.circular(22),
-                bottomRight: Radius.circular(22),
-                bottomLeft: Radius.circular(6),
+                topLeft: Radius.circular(16),
+                topRight: Radius.circular(16),
+                bottomRight: Radius.circular(16),
+                bottomLeft: Radius.circular(5),
               ),
-              border: Border.all(color: p.trait),
+              border: Border.all(color: p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12)),
               boxShadow: p.ombreCarte,
             ),
             child: Semantics(
@@ -700,7 +759,7 @@ class _Historique extends ConsumerWidget {
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 6),
           child: Row(
             children: [
-              const IconePastille(Icons.history_rounded, taille: 44),
+              const _Vignette(Icone.cahier, taille: 44),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
@@ -719,6 +778,7 @@ class _Historique extends ConsumerWidget {
             ],
           ),
         ),
+        const Padding(padding: EdgeInsets.fromLTRB(20, 12, 20, 0), child: Filet(redouble: true)),
         Expanded(
           child: conversations.when(
             loading: () => ListView.separated(
@@ -733,7 +793,7 @@ class _Historique extends ConsumerWidget {
             ),
             data: (liste) => liste.isEmpty
                 ? const EtatMessage(
-                    icone: Icons.forum_outlined,
+                    scene: Scene.pageBlanche,
                     titre: 'Aucune conversation',
                     texte: "Vos échanges avec l'agent s'accumuleront ici, avec leurs "
                         "sources, pour que vous puissiez y revenir.",
@@ -750,7 +810,7 @@ class _Historique extends ConsumerWidget {
                         onTap: () => onOuvrir('${c['id']}'),
                         child: Row(
                           children: [
-                            const IconePastille(Icons.chat_bubble_outline_rounded, taille: 40),
+                            const _Vignette(Icone.plume, taille: 40),
                             const SizedBox(width: 13),
                             Expanded(
                               child: Column(
@@ -763,7 +823,8 @@ class _Historique extends ConsumerWidget {
                                   if (n != null) ...[
                                     const SizedBox(height: 3),
                                     Texte('$n message${(n as int) > 1 ? 's' : ''}',
-                                        style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
+                                        style: t.textTheme.labelSmall
+                                            ?.copyWith(color: p.attenue, letterSpacing: 0.6)),
                                   ],
                                 ],
                               ),

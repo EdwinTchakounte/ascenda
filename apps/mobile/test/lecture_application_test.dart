@@ -123,6 +123,16 @@ void main() {
       expect(await depot().aPdf('doc-1'), isTrue);
     });
 
+    test("le PDF d'un ouvrage libre reste en clair, et « retirer » l'efface aussi", () async {
+      final d = depot();
+      final clair = await d.fichierPdfClair('doc-2');
+      await clair!.writeAsBytes(utf8.encode('%PDF-1.4 un ouvrage libre'));
+      expect(await d.aPdf('doc-2'), isTrue, reason: 'le clair compte comme présent');
+      await d.supprimer('doc-2');
+      expect(await clair.exists(), isFalse);
+      expect(await d.aPdf('doc-2'), isFalse);
+    });
+
     test('retirer efface le pack et le PDF', () async {
       await depot().enregistrer('doc-1', _pack());
       await depot().enregistrerPdf('doc-1', [1, 2, 3]);

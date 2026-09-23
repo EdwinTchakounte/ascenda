@@ -9,16 +9,22 @@ import '../api/libelles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../widgets/etats.dart';
 import '../widgets/selecteur_theme.dart';
 import '../widgets/ui.dart';
 import 'auth.dart';
 import '../theme/texte.dart';
 
-/// Le profil : le compte et sa formule en tête, puis les compteurs, le thème,
-/// le profil de lecture et les réglages. Une page poussée depuis le tiroir ou
-/// l'avatar, avec son retour.
+/// Le profil : la page de garde du lecteur.
+///
+/// Son initiale y est frappée comme un ex-libris, sa formule tient dans un
+/// cartouche, ses compteurs se remplissent comme des jauges d'imprimeur et ses
+/// réglages se suivent, séparés par des filets. La page se ferme sur un
+/// fleuron et la marque, comme un volume se ferme sur son achevé d'imprimer.
 class EcranProfil extends ConsumerWidget {
   const EcranProfil({super.key});
 
@@ -45,159 +51,195 @@ class EcranProfil extends ConsumerWidget {
           const SizedBox(width: 6),
         ],
       ),
-      body: SafeArea(
-        bottom: false,
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
-          children: [
-            _EnTeteCompte(premium: session.premium),
-            const SizedBox(height: 14),
-            const _EntreeCodes(),
-            const SizedBox(height: 28),
-            const TitreSection(
-              'Vos compteurs',
-              sousTitre: "Ce qui coûte à ASCENDA, c'est d'indexer des documents et de faire "
-                  "réfléchir l'agent. Le reste est libre.",
-            ),
-            const SizedBox(height: 12),
-            usage.when(
-              loading: () => const Squelette(hauteur: 120, rayon: 20),
-              error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(usageProvider)),
-              data: (u) {
-                final compteurs = [
-                  for (final c in (u['compteurs'] as List).cast<Map<String, dynamic>>())
-                    if (c['limite'] != null) c,
-                ];
-                if (compteurs.isEmpty) return const SizedBox.shrink();
-                return Surface(
-                  padding: const EdgeInsets.fromLTRB(18, 18, 18, 4),
-                  child: Column(
-                    children: [
-                      for (final c in compteurs)
-                        _Compteur(
-                          libelle: libellesQuota[c['type']] ?? '${c['type']}',
-                          utilise: c['utilise'] as int? ?? 0,
-                          limite: c['limite'] as int,
-                          periode: '${c['periode']}',
-                        ),
-                    ],
-                  ),
-                );
-              },
-            ),
-            const SizedBox(height: 28),
-            const TitreSection('Apparence', sousTitre: 'Le thème de lecture, ou automatique selon le téléphone.'),
-            const SizedBox(height: 12),
-            const Surface(
-              padding: EdgeInsets.fromLTRB(14, 18, 14, 14),
-              child: SelecteurTheme(),
-            ),
-            compte.when(
-              loading: () => const SizedBox.shrink(),
-              error: (_, _) => const SizedBox.shrink(),
-              data: (c) {
-                final profil = c['profil'] as Map<String, dynamic>?;
-                if (profil == null) return const SizedBox.shrink();
-                return Padding(
-                  padding: const EdgeInsets.only(top: 28),
+      // Le grain du papier : le profil s'ouvre hors de la coque, il ne l'hérite
+      // donc pas du tiroir.
+      body: FondPapier(
+        child: SafeArea(
+          bottom: false,
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
+            children: [
+              // La page se pose bloc par bloc, une fois, à l'ouverture.
+              Apparition(child: _EnTeteCompte(premium: session.premium)),
+              const SizedBox(height: 14),
+              const Apparition(rang: 1, child: _EntreeCodes()),
+              const SizedBox(height: 28),
+              const Apparition(
+                rang: 2,
+                child: TitreSection(
+                  'Vos compteurs',
+                  sousTitre: "Ce qui coûte à ASCENDA, c'est d'indexer des documents et de faire "
+                      "réfléchir l'agent. Le reste est libre.",
+                ),
+              ),
+              const SizedBox(height: 12),
+              Apparition(
+                rang: 2,
+                child: usage.when(
+                  loading: () => const Squelette(hauteur: 120, rayon: 20),
+                  error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(usageProvider)),
+                  data: (u) {
+                    final compteurs = [
+                      for (final c in (u['compteurs'] as List).cast<Map<String, dynamic>>())
+                        if (c['limite'] != null) c,
+                    ];
+                    if (compteurs.isEmpty) return const SizedBox.shrink();
+                    return Surface(
+                      padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          for (var i = 0; i < compteurs.length; i++) ...[
+                            if (i > 0) ...[
+                              const SizedBox(height: 14),
+                              const Filet(),
+                              const SizedBox(height: 14),
+                            ],
+                            _Compteur(
+                              libelle: libellesQuota[compteurs[i]['type']] ?? '${compteurs[i]['type']}',
+                              utilise: compteurs[i]['utilise'] as int? ?? 0,
+                              limite: compteurs[i]['limite'] as int,
+                              periode: '${compteurs[i]['periode']}',
+                            ),
+                          ],
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 28),
+              const Apparition(
+                rang: 3,
+                child: TitreSection('Apparence', sousTitre: 'Le papier de lecture, ou automatique selon le téléphone.'),
+              ),
+              const SizedBox(height: 12),
+              const Apparition(
+                rang: 3,
+                child: Surface(
+                  padding: EdgeInsets.fromLTRB(14, 18, 14, 16),
+                  child: SelecteurTheme(),
+                ),
+              ),
+              compte.when(
+                loading: () => const SizedBox.shrink(),
+                error: (_, _) => const SizedBox.shrink(),
+                data: (c) {
+                  final profil = c['profil'] as Map<String, dynamic>?;
+                  if (profil == null) return const SizedBox.shrink();
+                  return Apparition(
+                    rang: 4,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 28),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          const TitreSection('Votre profil de lecture'),
+                          const SizedBox(height: 12),
+                          Surface(
+                            padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                _Ligne(
+                                  icone: Icone.pousse,
+                                  cle: 'Niveau',
+                                  valeur: _niveau(profil['niveau']),
+                                ),
+                                const _FiletLigne(retrait: 38),
+                                _Ligne(
+                                  icone: Icone.boussole,
+                                  cle: 'Objectif',
+                                  valeur: _objectif(profil['objectif']),
+                                ),
+                                const _FiletLigne(retrait: 38),
+                                _Ligne(
+                                  icone: Icone.soleil,
+                                  cle: 'Temps hebdomadaire',
+                                  valeur: profil['minutes_semaine'] == null
+                                      ? 'non renseigné'
+                                      : '${((profil['minutes_semaine'] as int) / 60).round()} h par semaine',
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(height: 10),
+                          Align(
+                            alignment: Alignment.centerLeft,
+                            child: TextButton.icon(
+                              onPressed: () => context.push('/diagnostic'),
+                              icon: const Icon(Icons.refresh_rounded, size: 18),
+                              label: const Texte('Refaire le diagnostic'),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 28),
+              const Apparition(rang: 5, child: TitreSection('Sur cet appareil')),
+              const SizedBox(height: 12),
+              const Apparition(rang: 5, child: _EntreeHorsLigne()),
+              const SizedBox(height: 28),
+              const Apparition(rang: 6, child: TitreSection('Compte et sécurité')),
+              const SizedBox(height: 12),
+              Apparition(
+                rang: 6,
+                child: Surface(
+                  padding: const EdgeInsets.fromLTRB(14, 4, 12, 4),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const TitreSection('Votre profil de lecture'),
-                      const SizedBox(height: 12),
-                      Surface(
-                        padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
-                        child: Column(
-                          children: [
-                            _Ligne(
-                              icone: Icons.signal_cellular_alt_rounded,
-                              cle: 'Niveau',
-                              valeur: _niveau(profil['niveau']),
-                            ),
-                            Divider(height: 1, color: p.trait),
-                            _Ligne(
-                              icone: Icons.flag_outlined,
-                              cle: 'Objectif',
-                              valeur: _objectif(profil['objectif']),
-                            ),
-                            Divider(height: 1, color: p.trait),
-                            _Ligne(
-                              icone: Icons.schedule_rounded,
-                              cle: 'Temps hebdomadaire',
-                              valeur: profil['minutes_semaine'] == null
-                                  ? 'non renseigné'
-                                  : '${((profil['minutes_semaine'] as int) / 60).round()} h par semaine',
-                            ),
-                          ],
-                        ),
+                      _LigneReglage(
+                        icone: Icone.page,
+                        titre: 'Droits et citations',
+                        detail: 'Pourquoi certains ouvrages ne sont pas lisibles ici',
+                        onTap: () => _expliquerDroits(context),
                       ),
-                      const SizedBox(height: 10),
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: TextButton.icon(
-                          onPressed: () => context.push('/diagnostic'),
-                          icon: const Icon(Icons.refresh_rounded, size: 18),
-                          label: const Texte('Refaire le diagnostic'),
-                        ),
+                      const _FiletLigne(),
+                      _LigneReglage(
+                        icone: Icone.clef,
+                        titre: 'Changer mon mot de passe',
+                        detail: 'Ferme toutes vos sessions ouvertes.',
+                        onTap: () => context.push('/mot-de-passe'),
+                      ),
+                      const _FiletLigne(),
+                      _LigneReglage(
+                        icone: Icone.lecteur,
+                        titre: 'Fermer toutes mes sessions',
+                        detail: 'Sur un appareil perdu ou prêté, referme tout de suite.',
+                        onTap: () => _fermerPartout(context, ref),
+                      ),
+                      const _FiletLigne(),
+                      _LigneReglage(
+                        icone: Icone.fleche,
+                        titre: 'Se déconnecter',
+                        couleur: p.alerte,
+                        onTap: () => _confirmerDeconnexion(context, ref),
                       ),
                     ],
                   ),
-                );
-              },
-            ),
-            const SizedBox(height: 28),
-            const TitreSection('Sur cet appareil'),
-            const SizedBox(height: 12),
-            const _EntreeHorsLigne(),
-            const SizedBox(height: 28),
-            const TitreSection('Compte et sécurité'),
-            const SizedBox(height: 12),
-            Surface(
-              padding: EdgeInsets.zero,
-              child: Column(
-                children: [
-                  _LigneReglage(
-                    icone: Icons.gavel_rounded,
-                    titre: 'Droits et citations',
-                    detail: 'Pourquoi certains ouvrages ne sont pas lisibles ici',
-                    onTap: () => _expliquerDroits(context),
-                  ),
-                  const _Filet(),
-                  _LigneReglage(
-                    icone: Icons.key_rounded,
-                    titre: 'Changer mon mot de passe',
-                    detail: 'Ferme toutes vos sessions ouvertes.',
-                    onTap: () => context.push('/mot-de-passe'),
-                  ),
-                  const _Filet(),
-                  _LigneReglage(
-                    icone: Icons.devices_other_rounded,
-                    titre: 'Fermer toutes mes sessions',
-                    detail: 'Sur un appareil perdu ou prêté, referme tout de suite.',
-                    onTap: () => _fermerPartout(context, ref),
-                  ),
-                  const _Filet(),
-                  _LigneReglage(
-                    icone: Icons.logout_rounded,
-                    titre: 'Se déconnecter',
-                    couleur: p.alerte,
-                    onTap: () => _confirmerDeconnexion(context, ref),
-                  ),
-                ],
+                ),
               ),
-            ),
-            const SizedBox(height: 34),
-            Center(
-              child: Column(
-                children: [
-                  const MarqueAscenda(taille: 34),
-                  const SizedBox(height: 8),
-                  Texte('ASCENDA · Learn. Grow. Become.',
-                      style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.6)),
-                ],
+              const SizedBox(height: 32),
+              // L'achevé d'imprimer : le fleuron, la marque, la devise.
+              Apparition(
+                rang: 7,
+                child: Column(
+                  children: [
+                    const Fleuron(),
+                    const SizedBox(height: 18),
+                    const MarqueAscenda(taille: 34),
+                    const SizedBox(height: 8),
+                    Texte('ASCENDA · Learn. Grow. Become.',
+                        style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.6)),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -297,10 +339,24 @@ class EcranProfil extends ConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const IconePastille(Icons.gavel_rounded, taille: 48),
+            const EtiquetteCrochet('droits et citations'),
+            const SizedBox(height: 18),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Lettrine('D', taille: 54),
+                const SizedBox(width: 14),
+                Expanded(
+                  child: Texte(
+                    'Ce qui se lit ici, et ce qui se lit sur votre exemplaire',
+                    style: Theme.of(c).textTheme.titleLarge?.copyWith(fontSize: 19, height: 1.25),
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 16),
-            Texte('Droits et citations', style: Theme.of(c).textTheme.titleLarge),
-            const SizedBox(height: 14),
+            const Filet(redouble: true),
+            const SizedBox(height: 16),
             Texte(
               "Sur les 78 ouvrages du corpus, 7 sont librement redistribuables : "
               "domaine public, rapports institutionnels, documents sous licence "
@@ -318,8 +374,9 @@ class EcranProfil extends ConsumerWidget {
   }
 }
 
-/// L'en-tête du compte : l'initiale, le nom, l'adresse, puis la formule en
-/// cours et ce qui la prolonge. La seule carte de mise en avant de la page.
+/// L'en-tête du compte : l'initiale frappée comme un ex-libris, le nom, puis
+/// la formule en cours dans son cartouche. La seule carte de mise en avant de
+/// la page.
 class _EnTeteCompte extends ConsumerWidget {
   const _EnTeteCompte({required this.premium});
   final bool premium;
@@ -340,24 +397,22 @@ class _EnTeteCompte extends ConsumerWidget {
           (f) => f?['code'] == (premium ? 'premium' : 'free'),
           orElse: () => null,
         );
+    // La même initiale que sur l'avatar des onglets, mais frappée dans un
+    // cadre à l'encre plutôt que posée dans un disque.
+    final initiale =
+        (u?.nom?.trim().isNotEmpty == true ? u!.nom!.trim()[0] : (u?.email?[0] ?? 'A')).toUpperCase();
 
     return SurfaceHeros(
-      padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          EtiquetteCrochet('page de garde', couleur: p.accentSurHeros),
+          const SizedBox(height: 18),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              DecoratedBox(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.35), width: 2),
-                ),
-                child: const Padding(
-                  padding: EdgeInsets.all(3),
-                  child: AvatarCompte(taille: 62, ouvrirProfil: false),
-                ),
-              ),
+              Lettrine(initiale, taille: 62, couleur: p.accentSurHeros),
               const SizedBox(width: 16),
               Expanded(
                 child: Column(
@@ -365,12 +420,12 @@ class _EnTeteCompte extends ConsumerWidget {
                   children: [
                     Texte(
                       u?.nom ?? 'Votre compte',
-                      maxLines: 1,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 23),
+                      style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 23, height: 1.15),
                     ),
                     if (u?.email != null) ...[
-                      const SizedBox(height: 2),
+                      const SizedBox(height: 4),
                       Texte(
                         u!.email!,
                         maxLines: 1,
@@ -383,23 +438,27 @@ class _EnTeteCompte extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 18),
+          Filet(redouble: true, couleur: p.surHeros.withValues(alpha: 0.22)),
+          const SizedBox(height: 16),
+          // Le cartouche de la formule : un cadre d'or, comme la mention
+          // portée au dos d'un volume.
           Container(
-            padding: const EdgeInsets.fromLTRB(14, 14, 14, 14),
+            padding: const EdgeInsets.fromLTRB(14, 13, 14, 14),
             decoration: BoxDecoration(
-              color: p.surHeros.withValues(alpha: 0.07),
-              borderRadius: Rayons.carte,
-              border: Border.all(color: p.surHeros.withValues(alpha: 0.10)),
+              color: p.surHeros.withValues(alpha: 0.06),
+              borderRadius: Rayons.moyen,
+              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.32)),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    IconePastille(
-                      premium ? Icons.workspace_premium_rounded : Icons.explore_rounded,
+                    IconeAscenda(
+                      premium ? Icone.sceau : Icone.boussole,
+                      taille: 26,
                       couleur: p.accentSurHeros,
-                      taille: 38,
                     ),
                     const SizedBox(width: 12),
                     Expanded(
@@ -420,6 +479,8 @@ class _EnTeteCompte extends ConsumerWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
+                Filet(couleur: p.surHeros.withValues(alpha: 0.14)),
+                const SizedBox(height: 10),
                 Texte(
                   '${formule?['resume'] ?? (premium
                       ? "Vos documents, axes illimités, chronogramme adaptatif, "
@@ -431,7 +492,7 @@ class _EnTeteCompte extends ConsumerWidget {
                 if (!premium && acces != null && acces.source != 'aucune') ...[
                   const SizedBox(height: 10),
                   _MentionHeros(
-                    icone: Icons.redeem_rounded,
+                    icone: Icone.jeton,
                     texte: _accesOffert(acces),
                     couleur: p.accentSurHeros,
                   ),
@@ -439,9 +500,7 @@ class _EnTeteCompte extends ConsumerWidget {
                 if (premium && abonnement != null && abonnement.joursRestants != null) ...[
                   const SizedBox(height: 10),
                   _MentionHeros(
-                    icone: abonnement.bientotEchu
-                        ? Icons.notification_important_rounded
-                        : Icons.event_available_rounded,
+                    icone: abonnement.bientotEchu ? Icone.soleil : Icone.signet,
                     texte: abonnement.joursRestants == 0
                         ? "Votre accès se referme aujourd'hui."
                         : 'Il vous reste ${abonnement.joursRestants} jour'
@@ -478,10 +537,11 @@ class _EnTeteCompte extends ConsumerWidget {
   }
 }
 
-/// Une précision sur la carte du compte : icône et texte de même teinte.
+/// Une précision sur la carte du compte : icône à la plume et texte de même
+/// teinte.
 class _MentionHeros extends StatelessWidget {
   const _MentionHeros({required this.icone, required this.texte, required this.couleur});
-  final IconData icone;
+  final Icone icone;
   final String texte;
   final Color couleur;
 
@@ -491,7 +551,7 @@ class _MentionHeros extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 1),
-            child: Icon(icone, size: 17, color: couleur),
+            child: IconeAscenda(icone, taille: 17, couleur: couleur),
           ),
           const SizedBox(width: 8),
           Expanded(
@@ -522,9 +582,9 @@ class _EntreeCodes extends ConsumerWidget {
     final p = context.palette;
     final nouveaux = ref.watch(codesProvider).valueOrNull?.nouveaux ?? 0;
     return Surface(
-      padding: EdgeInsets.zero,
+      padding: const EdgeInsets.fromLTRB(14, 4, 12, 4),
       child: _LigneReglage(
-        icone: Icons.confirmation_number_rounded,
+        icone: Icone.jeton,
         titre: 'Codes et avantages',
         detail: 'Activer un code, partager le vôtre, vos réductions',
         onTap: () async {
@@ -575,9 +635,9 @@ class _EntreeHorsLigne extends ConsumerWidget {
       }
     }
     return Surface(
-      padding: EdgeInsets.zero,
+      padding: const EdgeInsets.fromLTRB(14, 4, 12, 4),
       child: _LigneReglage(
-        icone: Icons.offline_pin_rounded,
+        icone: Icone.signet,
         couleurIcone: p.succes,
         titre: 'Livres hors ligne',
         detail: detail,
@@ -587,7 +647,8 @@ class _EntreeHorsLigne extends ConsumerWidget {
   }
 }
 
-/// Une ligne de réglage : icône sur voile, titre et détail, chevron.
+/// Une ligne de réglage : l'icône tracée à la plume, le titre et son détail,
+/// le chevron. Rien n'est encadré : ce sont des lignes de cahier.
 class _LigneReglage extends StatelessWidget {
   const _LigneReglage({
     required this.icone,
@@ -599,7 +660,7 @@ class _LigneReglage extends StatelessWidget {
     this.suffixe,
   });
 
-  final IconData icone;
+  final Icone icone;
   final String titre;
   final String? detail;
   final VoidCallback onTap;
@@ -616,11 +677,16 @@ class _LigneReglage extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(14, 12, 10, 12),
+        padding: const EdgeInsets.symmetric(vertical: 13),
         child: Row(
           children: [
-            IconePastille(icone, couleur: couleur ?? couleurIcone, taille: 40),
-            const SizedBox(width: 14),
+            SizedBox(
+              width: 34,
+              child: Center(
+                child: IconeAscenda(icone, taille: 23, couleur: couleur ?? couleurIcone ?? p.accentTexte),
+              ),
+            ),
+            const SizedBox(width: 12),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -632,7 +698,7 @@ class _LigneReglage extends StatelessWidget {
                     style: t.textTheme.titleSmall?.copyWith(color: couleur ?? p.encre),
                   ),
                   if (detail != null) ...[
-                    const SizedBox(height: 2),
+                    const SizedBox(height: 3),
                     Texte(
                       detail!,
                       maxLines: 2,
@@ -645,7 +711,7 @@ class _LigneReglage extends StatelessWidget {
             ),
             if (suffixe != null) ...[const SizedBox(width: 8), suffixe!],
             const SizedBox(width: 4),
-            Icon(Icons.chevron_right_rounded, color: couleur ?? p.attenue),
+            Icon(Icons.chevron_right_rounded, size: 21, color: couleur ?? p.attenue),
           ],
         ),
       ),
@@ -653,15 +719,19 @@ class _LigneReglage extends StatelessWidget {
   }
 }
 
-/// Le filet entre deux lignes d'un groupe, aligné sur le texte.
-class _Filet extends StatelessWidget {
-  const _Filet();
+/// Le filet entre deux lignes d'un groupe, en retrait sous l'icône.
+class _FiletLigne extends StatelessWidget {
+  const _FiletLigne({this.retrait = 46});
+
+  /// Le filet part sous le texte, pas sous l'icône.
+  final double retrait;
 
   @override
   Widget build(BuildContext context) =>
-      Divider(height: 1, thickness: 1, indent: 68, endIndent: 14, color: context.palette.trait);
+      Padding(padding: EdgeInsets.only(left: retrait), child: const Filet());
 }
 
+/// Un compteur : le libellé, la mesure, et la jauge qui se remplit.
 class _Compteur extends StatelessWidget {
   const _Compteur({
     required this.libelle,
@@ -688,62 +758,52 @@ class _Compteur extends StatelessWidget {
     // Une fonction réservée n'est pas une jauge vide : une barre pleine et
     // rouge se lisait comme une erreur. On dit simplement ce qui l'ouvre.
     if (limite == 0) {
-      return Padding(
-        padding: const EdgeInsets.only(bottom: 14),
-        child: Row(
-          children: [
-            Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium?.copyWith(color: p.texte))),
-            const SizedBox(width: 8),
-            const Pastille('avec Ascension', icone: Icons.lock_outline_rounded),
-          ],
-        ),
+      return Row(
+        children: [
+          Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium?.copyWith(color: p.texte))),
+          const SizedBox(width: 8),
+          const Pastille('avec Ascension', icone: Icons.lock_outline_rounded),
+        ],
       );
     }
 
     final part = (utilise / limite).clamp(0.0, 1.0);
     final atteint = utilise >= limite;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium?.copyWith(color: p.texte))),
-              const SizedBox(width: 8),
-              Text.rich(
-                TextSpan(children: [
-                  TextSpan(
-                    text: '$utilise',
-                    style: t.textTheme.titleLarge?.copyWith(fontSize: 19, color: atteint ? p.alerte : p.encre),
-                  ),
-                  TextSpan(
-                    text: ' / $limite',
-                    style: t.textTheme.labelMedium?.copyWith(color: p.attenue),
-                  ),
-                ]),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Jauge(valeur: part, couleur: atteint ? p.alerte : null),
-          const SizedBox(height: 6),
-          Texte(
-            atteint ? 'limite atteinte $periodeTexte' : periodeTexte,
-            style: t.textTheme.labelSmall?.copyWith(
-              color: atteint ? p.alerte : p.attenue,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium?.copyWith(color: p.texte))),
+            const SizedBox(width: 8),
+            // Le chiffre monte jusqu'à sa valeur : on voit ce qu'on a consommé.
+            CompteurAnime(
+              utilise,
+              style: t.textTheme.titleLarge?.copyWith(fontSize: 19, color: atteint ? p.alerte : p.encre),
             ),
+            Texte(' / $limite', style: t.textTheme.labelMedium?.copyWith(color: p.attenue)),
+          ],
+        ),
+        const SizedBox(height: 8),
+        Jauge(valeur: part, couleur: atteint ? p.alerte : null),
+        const SizedBox(height: 6),
+        Texte(
+          atteint ? 'limite atteinte $periodeTexte' : periodeTexte,
+          style: t.textTheme.labelSmall?.copyWith(
+            color: atteint ? p.alerte : p.attenue,
+            letterSpacing: 0.4,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
 
+/// Une ligne du profil de lecture : la clé à gauche, la réponse à droite.
 class _Ligne extends StatelessWidget {
   const _Ligne({required this.icone, required this.cle, required this.valeur});
-  final IconData icone;
+  final Icone icone;
   final String cle;
   final String valeur;
 
@@ -752,10 +812,13 @@ class _Ligne extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 11),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: Row(
         children: [
-          Icon(icone, size: 18, color: p.accentTexte),
+          SizedBox(
+            width: 26,
+            child: Center(child: IconeAscenda(icone, taille: 19, couleur: p.accentTexte)),
+          ),
           const SizedBox(width: 12),
           Expanded(
             child: Texte(cle, style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),

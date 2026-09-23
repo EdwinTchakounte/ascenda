@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../etat/session.dart';
+import '../theme/icones.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
 import 'ui.dart';
 
@@ -39,7 +41,7 @@ class InvitationCompte extends ConsumerWidget {
     if (compact) {
       return Container(
         margin: const EdgeInsets.only(bottom: 14),
-        padding: const EdgeInsets.fromLTRB(12, 12, 6, 12),
+        padding: const EdgeInsets.fromLTRB(14, 12, 6, 12),
         decoration: BoxDecoration(
           color: p.accentVoile,
           borderRadius: Rayons.carte,
@@ -47,8 +49,8 @@ class InvitationCompte extends ConsumerWidget {
         ),
         child: Row(
           children: [
-            IconePastille(Icons.person_add_alt_1_rounded, taille: 38, fond: p.surface.withValues(alpha: p.sombre ? 0.3 : 0.75)),
-            const SizedBox(width: 12),
+            IconeAscenda(Icone.lecteur, taille: 24, couleur: p.accentTexte),
+            const SizedBox(width: 14),
             Expanded(
               child: Texte(
                 texte,
@@ -86,6 +88,8 @@ class InvitationCompte extends ConsumerWidget {
               Expanded(child: Surtitre('Gratuit, sans carte bancaire', couleur: p.accentSurHeros)),
             ],
           ),
+          const SizedBox(height: 14),
+          Filet(couleur: p.surHeros.withValues(alpha: 0.18)),
           const SizedBox(height: 14),
           Texte(
             texte,

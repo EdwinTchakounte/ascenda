@@ -4,7 +4,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/icones.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
+import 'illustrations.dart';
 import 'ui.dart';
 
 /// Les quatre teintes que le serveur accepte pour un surlignage.
@@ -27,6 +30,9 @@ Color teinteDe(String? code) => teintesSurlignage[code] ?? Couleurs.or;
 
 /// Le panneau des annotations d'un ouvrage : ce qu'on a surligné, ce qu'on a
 /// noté, et de quoi le corriger ou l'effacer.
+///
+/// Ce sont des notes en marge, pas des fiches d'application : chacune garde sa
+/// marge à l'encre, sa citation en Fraunces et son folio.
 ///
 /// Jusqu'ici on pouvait écrire une note et plus jamais y toucher. Une note
 /// fausse qu'on ne peut pas corriger vaut moins que pas de note du tout : on
@@ -56,7 +62,7 @@ class PanneauAnnotations extends ConsumerWidget {
             padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
             child: Row(
               children: [
-                const IconePastille(Icons.bookmarks_rounded, taille: 40),
+                _Vignette(Icone.encrier, couleur: p.accentTexte),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Texte('Vos annotations',
@@ -91,6 +97,7 @@ class PanneauAnnotations extends ConsumerWidget {
                 _Liste(
                   contenu: surlignages,
                   vide: "Sélectionnez un passage dans le texte pour le surligner.",
+                  scene: Scene.pageBlanche,
                   construire: (s) => _CarteSurlignage(
                     surlignage: s,
                     onSupprimer: () => _supprimerSurlignage(context, ref, '${s['id']}'),
@@ -99,6 +106,7 @@ class PanneauAnnotations extends ConsumerWidget {
                 _Liste(
                   contenu: notes,
                   vide: "Aucune note sur cet ouvrage pour l'instant.",
+                  scene: Scene.pageBlanche,
                   construire: (n) => _CarteNote(
                     note: n,
                     onModifier: () => _modifierNote(context, ref, n),
@@ -167,7 +175,7 @@ Future<String?> editerNote(BuildContext context, {String initial = ''}) {
         children: [
           Row(
             children: [
-              IconePastille(initial.isEmpty ? Icons.edit_note_rounded : Icons.edit_outlined, taille: 40),
+              _Vignette(Icone.plume, couleur: c.palette.accentTexte),
               const SizedBox(width: 12),
               Expanded(
                 child: Texte(initial.isEmpty ? 'Votre note' : 'Corriger la note',
@@ -175,7 +183,9 @@ Future<String?> editerNote(BuildContext context, {String initial = ''}) {
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
+          const Filet(redouble: true),
+          const SizedBox(height: 14),
           TextField(
             controller: controleur,
             autofocus: true,
@@ -218,10 +228,13 @@ void _dire(BuildContext context, String message) {
 }
 
 class _Liste extends StatelessWidget {
-  const _Liste({required this.contenu, required this.vide, required this.construire});
+  const _Liste({required this.contenu, required this.vide, required this.scene, required this.construire});
 
   final AsyncValue<List<Map<String, dynamic>>> contenu;
   final String vide;
+
+  /// La scène qui raconte l'absence : une page encore blanche.
+  final Scene scene;
   final Widget Function(Map<String, dynamic>) construire;
 
   @override
@@ -231,9 +244,9 @@ class _Liste extends StatelessWidget {
         padding: EdgeInsets.all(32),
         child: CircularProgressIndicator(strokeWidth: 2.4),
       )),
-      error: (e, _) => const _Vide(icone: Icons.cloud_off_rounded, texte: "Impossible de charger cette liste."),
+      error: (e, _) => const _Vide(scene: Scene.sansReseau, texte: "Impossible de charger cette liste."),
       data: (liste) => liste.isEmpty
-          ? _Vide(icone: Icons.bookmark_border_rounded, texte: vide)
+          ? _Vide(scene: scene, texte: vide)
           : ListView.builder(
               padding: const EdgeInsets.fromLTRB(20, 14, 20, 32),
               itemCount: liste.length,
@@ -246,21 +259,22 @@ class _Liste extends StatelessWidget {
   }
 }
 
-/// Une liste vide ou en échec, dite avec une icône plutôt qu'une ligne nue.
+/// Une liste vide ou en échec, dite par une scène dessinée plutôt qu'une ligne
+/// nue : une page blanche est un moment de la lecture, pas une panne.
 class _Vide extends StatelessWidget {
-  const _Vide({required this.icone, required this.texte});
-  final IconData icone;
+  const _Vide({required this.scene, required this.texte});
+  final Scene scene;
   final String texte;
 
   @override
   Widget build(BuildContext context) {
     final p = context.palette;
     return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(36, 44, 36, 32),
+      padding: const EdgeInsets.fromLTRB(36, 36, 36, 32),
       child: Column(
         children: [
-          IconePastille(icone, couleur: p.attenue, taille: 56),
-          const SizedBox(height: 16),
+          Illustration(scene, taille: 168),
+          const SizedBox(height: 18),
           Texte(
             texte,
             textAlign: TextAlign.center,
@@ -268,6 +282,30 @@ class _Vide extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// Une vignette d'encre : l'icône dessinée dans un cadre filetté.
+class _Vignette extends StatelessWidget {
+  const _Vignette(this.icone, {required this.couleur, this.taille = 40});
+  final Icone icone;
+  final Color couleur;
+  final double taille;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return Container(
+      width: taille,
+      height: taille,
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: couleur.withValues(alpha: p.sombre ? 0.16 : 0.09),
+        borderRadius: BorderRadius.circular(taille * 0.3),
+        border: Border.all(color: couleur.withValues(alpha: 0.32)),
+      ),
+      child: IconeAscenda(icone, taille: taille * 0.52, couleur: couleur),
     );
   }
 }
@@ -285,11 +323,12 @@ class _CarteSurlignage extends StatelessWidget {
     final teinte = teinteDe(surlignage['couleur'] as String?);
     final page = surlignage['page'];
     return Surface(
-      padding: const EdgeInsets.fromLTRB(16, 14, 4, 10),
+      padding: const EdgeInsets.fromLTRB(16, 14, 4, 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Le trait de la teinte choisie, arrondi, en marge de la citation.
+          // Le trait de la teinte choisie, en marge de la citation : c'est la
+          // marque laissée dans la page.
           Container(
             width: 4,
             height: 44,
@@ -310,7 +349,11 @@ class _CarteSurlignage extends StatelessWidget {
                     )),
                 if (page != null) ...[
                   const SizedBox(height: 10),
-                  Pastille('Page $page', icone: Icons.menu_book_outlined, couleur: p.attenue),
+                  const Filet(),
+                  const SizedBox(height: 6),
+                  Texte('p. $page',
+                      style: t.textTheme.labelSmall
+                          ?.copyWith(color: p.attenue, letterSpacing: 1)),
                 ],
               ],
             ),
@@ -343,6 +386,8 @@ class _CarteNote extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     final page = note['page'];
+    // Une note écrite en marge : le filet de la marge à gauche, la main du
+    // lecteur à droite.
     return Surface(
       padding: const EdgeInsets.fromLTRB(16, 16, 6, 6),
       child: Column(
@@ -351,22 +396,26 @@ class _CarteNote extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const IconePastille(Icons.sticky_note_2_outlined, taille: 34),
+              _Vignette(Icone.encrier, couleur: p.accentTexte, taille: 34),
               const SizedBox(width: 12),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 10, top: 5),
+                  padding: const EdgeInsets.only(right: 10, top: 4),
                   child: Texte('${note['texte'] ?? note['body'] ?? ''}',
                       style: t.textTheme.bodyMedium?.copyWith(height: 1.6)),
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 4),
+          const SizedBox(height: 10),
+          const Padding(padding: EdgeInsets.only(left: 46, right: 10), child: Filet()),
+          const SizedBox(height: 2),
           Row(
             children: [
               const SizedBox(width: 46),
-              if (page != null) Pastille('Page $page', icone: Icons.menu_book_outlined, couleur: p.attenue),
+              if (page != null)
+                Texte('p. $page',
+                    style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1)),
               const Spacer(),
               IconButton(
                 icon: const Icon(Icons.edit_outlined, size: 18),

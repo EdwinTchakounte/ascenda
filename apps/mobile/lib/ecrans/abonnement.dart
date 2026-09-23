@@ -9,8 +9,12 @@ import '../api/libelles.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../widgets/etats.dart';
+import '../widgets/illustrations.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
@@ -60,25 +64,29 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Ascension')),
-      body: SafeArea(
-        bottom: false,
-        child: grille.when(
-          loading: () => const Padding(
-            padding: EdgeInsets.all(20),
-            child: SqueletteCarte(lignes: 5),
+      // Le grain du papier : l'écran s'ouvre hors de la coque, il ne l'hérite
+      // donc pas du tiroir.
+      body: FondPapier(
+        child: SafeArea(
+          bottom: false,
+          child: grille.when(
+            loading: () => const Padding(
+              padding: EdgeInsets.all(20),
+              child: SqueletteCarte(lignes: 5),
+            ),
+            error: (e, _) => EtatErreur(
+              erreur: e,
+              reessayer: () => ref.invalidate(tarifsProvider),
+            ),
+            data: (g) => _encours != null
+                ? _Attente(
+                    paiement: _encours!,
+                    secondes: _secondes,
+                    limite: _limiteAttente,
+                    onFermer: _abandonnerAttente,
+                  )
+                : _formulaireAchat(g, abonnement.valueOrNull),
           ),
-          error: (e, _) => EtatErreur(
-            erreur: e,
-            reessayer: () => ref.invalidate(tarifsProvider),
-          ),
-          data: (g) => _encours != null
-              ? _Attente(
-                  paiement: _encours!,
-                  secondes: _secondes,
-                  limite: _limiteAttente,
-                  onFermer: _abandonnerAttente,
-                )
-              : _formulaireAchat(g, abonnement.valueOrNull),
         ),
       ),
     );
@@ -107,30 +115,36 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
         children: [
-          _CarteOffre(abonnement: a != null && a.actif ? a : null, formules: formules),
+          // La page d'offre se pose bloc par bloc, une fois, à l'ouverture.
+          Apparition(
+            child: _CarteOffre(abonnement: a != null && a.actif ? a : null, formules: formules),
+          ),
           const SizedBox(height: 26),
-          const TitreSection("Ce qui s'ouvre avec Ascension"),
+          const Apparition(rang: 1, child: TitreSection("Ce qui s'ouvre avec Ascension")),
           const SizedBox(height: 12),
-          const _Avantages(),
+          const Apparition(rang: 1, child: _Avantages()),
           const SizedBox(height: 12),
-          const _Comparaison(),
+          const Apparition(rang: 2, child: _Comparaison()),
           const SizedBox(height: 28),
 
-          const TitreSection('Votre formule'),
+          const Apparition(rang: 3, child: TitreSection('Votre formule')),
           const SizedBox(height: 12),
-          if (g.reductionPourcent != null) _AvisReduction(tarifs: g),
+          if (g.reductionPourcent != null) Apparition(rang: 3, child: _AvisReduction(tarifs: g)),
           for (final f in formules)
-            _CarteFormuleChoix(
-              formule: f,
-              mensuelle: mensuelle,
-              choisie: f.periodeMois == choisie.periodeMois,
-              onTap: () => setState(() => _periode = f.periodeMois),
+            Apparition(
+              rang: 3,
+              child: _CarteFormuleChoix(
+                formule: f,
+                mensuelle: mensuelle,
+                choisie: f.periodeMois == choisie.periodeMois,
+                onTap: () => setState(() => _periode = f.periodeMois),
+              ),
             ),
           const SizedBox(height: 18),
 
-          const TitreSection('Votre paiement'),
+          const Apparition(rang: 4, child: TitreSection('Votre paiement')),
           const SizedBox(height: 12),
-          const _BandeauTara(),
+          const Apparition(rang: 4, child: _BandeauTara()),
           const SizedBox(height: 16),
 
           TextFormField(
@@ -190,7 +204,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 2),
-                child: Icon(Icons.verified_user_outlined, size: 16, color: p.succes),
+                child: IconeAscenda(Icone.sceau, taille: 16, couleur: p.succes),
               ),
               const SizedBox(width: 8),
               Expanded(
@@ -203,7 +217,9 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
               ),
             ],
           ),
-          const SizedBox(height: 28),
+          const SizedBox(height: 26),
+          const Fleuron(),
+          const SizedBox(height: 26),
           const _Historique(),
         ],
       ),
@@ -329,49 +345,75 @@ class _CarteOffre extends StatelessWidget {
     final a = abonnement;
     final meilleure = formules.reduce((x, y) => y.parMois < x.parMois ? y : x);
     return SurfaceHeros(
-      padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
+      padding: const EdgeInsets.fromLTRB(22, 20, 22, 22),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              IconePastille(Icons.workspace_premium_rounded, couleur: p.accentSurHeros, taille: 50),
+              EtiquetteCrochet('ascension', couleur: p.accentSurHeros),
               const Spacer(),
               if (a != null)
-                Pastille('Ascension active', icone: Icons.check_rounded, couleur: p.accentSurHeros),
+                Pastille('Accès ouvert', icone: Icons.check_rounded, couleur: p.accentSurHeros),
             ],
           ),
           const SizedBox(height: 18),
-          Surtitre('Ascension', couleur: p.accentSurHeros),
-          const SizedBox(height: 8),
-          Texte(
-            a != null ? 'Prolonger votre accès' : 'Ce que change Ascension',
-            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 26),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              IconeAscenda(Icone.sceau, taille: 40, couleur: p.accentSurHeros),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Texte(
+                  a != null ? 'Prolonger votre accès' : 'Ce que change Ascension',
+                  style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25, height: 1.15),
+                ),
+              ),
+            ],
           ),
           if (a == null && meilleure.parMois > 0) ...[
+            const SizedBox(height: 16),
+            Filet(redouble: true, couleur: p.surHeros.withValues(alpha: 0.22)),
             const SizedBox(height: 14),
-            if (formules.length > 1)
-              Texte('À partir de', style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux)),
-            Wrap(
-              crossAxisAlignment: WrapCrossAlignment.end,
-              spacing: 6,
-              children: [
-                Texte(
-                  meilleure.parMoisLisible,
-                  style: t.textTheme.headlineMedium?.copyWith(color: p.accentSurHeros, fontSize: 30),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
-                  child: Texte(
-                    'par mois',
-                    style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux),
+            // Le prix dans son cartouche d'or : le chiffre en Fraunces, son
+            // unité en petit. Il vient du serveur, jamais d'ici.
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
+              decoration: BoxDecoration(
+                color: p.surHeros.withValues(alpha: 0.06),
+                borderRadius: Rayons.moyen,
+                border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.32)),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (formules.length > 1)
+                    Surtitre('À partir de', couleur: p.surHerosDoux),
+                  const SizedBox(height: 4),
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.end,
+                    spacing: 6,
+                    children: [
+                      Texte(
+                        meilleure.parMoisLisible,
+                        style: t.textTheme.headlineMedium?.copyWith(color: p.accentSurHeros, fontSize: 32),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 6),
+                        child: Texte(
+                          'par mois',
+                          style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
           if (a != null) ...[
-            const SizedBox(height: 14),
+            const SizedBox(height: 16),
             _EtatAbonnement(abonnement: a),
           ],
         ],
@@ -404,10 +446,10 @@ class _EtatAbonnement extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(
-                abonnement.bientotEchu ? Icons.notification_important_rounded : Icons.event_available_rounded,
-                size: 18,
-                color: abonnement.bientotEchu ? p.accentSurHeros : p.surHeros,
+              IconeAscenda(
+                abonnement.bientotEchu ? Icone.soleil : Icone.signet,
+                taille: 18,
+                couleur: abonnement.bientotEchu ? p.accentSurHeros : p.surHeros,
               ),
               const SizedBox(width: 8),
               Expanded(
@@ -451,11 +493,11 @@ class _Avantages extends StatelessWidget {
   const _Avantages();
 
   static const _lignes = [
-    (Icons.auto_stories_rounded, 'Les 78 ouvrages, sans plafond de citation sur ceux qui le permettent'),
-    (Icons.hub_rounded, 'Tous les axes, et autant de chronogrammes que vous voulez'),
-    (Icons.event_repeat_rounded, 'La replanification quand la semaine ne se passe pas comme prévu'),
-    (Icons.forum_rounded, "L'agent sans limite de questions, sources et pages à l'appui"),
-    (Icons.download_for_offline_rounded, 'Le pack hors ligne et les exports PDF'),
+    (Icone.volumes, 'Les 78 ouvrages, sans plafond de citation sur ceux qui le permettent'),
+    (Icone.boussole, 'Tous les axes, et autant de chronogrammes que vous voulez'),
+    (Icone.cahier, 'La replanification quand la semaine ne se passe pas comme prévu'),
+    (Icone.plume, "L'agent sans limite de questions, sources et pages à l'appui"),
+    (Icone.signet, 'Le pack hors ligne et les exports PDF'),
   ];
 
   @override
@@ -463,25 +505,31 @@ class _Avantages extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return Surface(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+      padding: const EdgeInsets.fromLTRB(16, 14, 16, 14),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           for (var i = 0; i < _lignes.length; i++) ...[
-            if (i > 0) Divider(height: 1, indent: 54, color: p.trait),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: Row(
-                children: [
-                  IconePastille(_lignes[i].$1, taille: 40),
-                  const SizedBox(width: 14),
-                  Expanded(
-                    child: Texte(
-                      _lignes[i].$2,
-                      style: t.textTheme.bodyMedium?.copyWith(color: p.encre, height: 1.45),
-                    ),
+            if (i > 0) ...[
+              const SizedBox(height: 11),
+              const Padding(padding: EdgeInsets.only(left: 38), child: Filet()),
+              const SizedBox(height: 11),
+            ],
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 1),
+                  child: IconeAscenda(_lignes[i].$1, taille: 22, couleur: p.accentTexte),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Texte(
+                    _lignes[i].$2,
+                    style: t.textTheme.bodyMedium?.copyWith(color: p.encre, height: 1.45),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ],
@@ -585,9 +633,9 @@ class _Comparaison extends ConsumerWidget {
                 ),
                 const SizedBox(height: 4),
                 for (var i = 0; i < types.length; i++) ...[
-                  if (i > 0) Padding(
-                    padding: const EdgeInsets.only(right: colonne * 2),
-                    child: Divider(height: 1, color: p.trait),
+                  if (i > 0) const Padding(
+                    padding: EdgeInsets.only(right: colonne * 2),
+                    child: Filet(),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 9),
@@ -650,8 +698,8 @@ class _AvisReduction extends StatelessWidget {
       ),
       child: Row(
         children: [
-          IconePastille(Icons.volunteer_activism_rounded, couleur: p.succes, taille: 38),
-          const SizedBox(width: 12),
+          IconeAscenda(Icone.plume, taille: 24, couleur: p.succes),
+          const SizedBox(width: 14),
           Expanded(
             child: Texte(
               '-${tarifs.reductionPourcent} % grâce à votre code ambassadeur, '
@@ -712,18 +760,20 @@ class _CarteFormuleChoix extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(14, 16, 16, 16),
                 child: Row(
                   children: [
-                    // La coche : un disque d'or plein pour la formule choisie,
-                    // un simple cercle pour les autres.
+                    // La case à cocher d'une fiche : un carré à l'encre, rempli
+                    // d'or quand la formule est retenue.
                     AnimatedContainer(
                       duration: const Duration(milliseconds: 220),
-                      width: 26,
-                      height: 26,
+                      width: 24,
+                      height: 24,
                       decoration: BoxDecoration(
-                        shape: BoxShape.circle,
                         color: choisie ? p.accent : Colors.transparent,
-                        border: Border.all(color: choisie ? p.accent : p.attenue.withValues(alpha: 0.5), width: 1.6),
+                        border: Border.all(
+                          color: choisie ? p.accent : p.encre.withValues(alpha: 0.35),
+                          width: 1.4,
+                        ),
                       ),
-                      child: choisie ? Icon(Icons.check_rounded, size: 17, color: p.surAccent) : null,
+                      child: choisie ? Icon(Icons.check_rounded, size: 16, color: p.surAccent) : null,
                     ),
                     const SizedBox(width: 14),
                     Expanded(
@@ -803,7 +853,7 @@ class _BandeauTara extends StatelessWidget {
             height: 46,
             decoration: BoxDecoration(gradient: p.degradeHeros, borderRadius: Rayons.moyen),
             alignment: Alignment.center,
-            child: Icon(Icons.phone_iphone_rounded, size: 22, color: p.accentSurHeros),
+            child: IconeAscenda(Icone.jeton, taille: 24, couleur: p.accentSurHeros),
           ),
           const SizedBox(width: 14),
           Expanded(
@@ -842,8 +892,8 @@ class _AvisCodeSecret extends StatelessWidget {
       ),
       child: Row(
         children: [
-          IconePastille(Icons.shield_outlined, couleur: p.encre, taille: 36, fond: p.surface),
-          const SizedBox(width: 12),
+          IconeAscenda(Icone.sceau, taille: 24, couleur: p.encre),
+          const SizedBox(width: 14),
           Expanded(
             child: Texte(
               "ASCENDA ne vous demandera jamais votre code secret. La demande "
@@ -878,38 +928,36 @@ class _Attente extends StatelessWidget {
     final p = context.palette;
     final expire = secondes >= limite && paiement.enAttente;
 
-    final (icone, teinte, titre) = paiement.valide
-        ? (Icons.check_circle_rounded, p.succes, 'Paiement confirmé')
+    // Une scène dessinée plutôt qu'un pictogramme : le laurier quand c'est
+    // gagné, la lampe tant qu'on attend. Un refus garde son signe franc.
+    final (scene, teinte, titre) = paiement.valide
+        ? (Scene.laurier, p.succes, 'Paiement confirmé')
         : paiement.rejete
-            ? (Icons.cancel_rounded, p.alerte, "Paiement non abouti")
+            ? (null, p.alerte, "Paiement non abouti")
             : expire
-                ? (Icons.schedule_rounded, p.accentTexte, 'Confirmation en attente')
-                : (Icons.smartphone_rounded, p.accentTexte, 'Validez sur votre téléphone');
+                ? (Scene.lampe, p.accentTexte, 'Confirmation en attente')
+                : (Scene.lampe, p.accentTexte, 'Validez sur votre téléphone');
 
     return ListView(
-      padding: const EdgeInsets.fromLTRB(20, 36, 20, 32),
+      padding: const EdgeInsets.fromLTRB(20, 32, 20, 32),
       children: [
         Center(
-          child: Container(
-            width: 112,
-            height: 112,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: teinte.withValues(alpha: p.sombre ? 0.10 : 0.06),
-            ),
-            child: Container(
-              width: 80,
-              height: 80,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: teinte.withValues(alpha: p.sombre ? 0.20 : 0.13),
-              ),
-              child: Icon(icone, size: 40, color: teinte),
-            ),
-          ),
+          child: scene == null
+              ? Container(
+                  width: 96,
+                  height: 96,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: teinte.withValues(alpha: p.sombre ? 0.18 : 0.11),
+                  ),
+                  child: Icon(Icons.close_rounded, size: 42, color: teinte),
+                )
+              : Illustration(scene, taille: 186, accent: teinte),
         ),
-        const SizedBox(height: 22),
+        const SizedBox(height: 20),
+        Center(child: EtiquetteCrochet('paiement', couleur: teinte)),
+        const SizedBox(height: 14),
         Texte(titre, textAlign: TextAlign.center, style: t.textTheme.headlineSmall),
         const SizedBox(height: 12),
         Texte(
@@ -950,15 +998,17 @@ class _Attente extends StatelessWidget {
           const SizedBox(height: 24),
         ],
         Surface(
-          padding: const EdgeInsets.fromLTRB(18, 10, 18, 10),
+          padding: const EdgeInsets.fromLTRB(18, 14, 18, 14),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              TitreCourant('reçu', folio: paiement.id.substring(0, 8)),
+              const SizedBox(height: 4),
               _LigneRecu('Montant', paiement.montantLisible),
               if (paiement.reductionPourcent != null)
                 _LigneRecu('Réduction ambassadeur', '-${paiement.reductionPourcent} %'),
               _LigneRecu('Durée', '${paiement.periodeMois} mois'),
               if (paiement.telephone != null) _LigneRecu('Numéro', '+${paiement.telephone}'),
-              _LigneRecu('Référence', paiement.id.substring(0, 8)),
             ],
           ),
         ),
@@ -1024,23 +1074,28 @@ class _Historique extends ConsumerWidget {
             const TitreSection('Vos paiements'),
             const SizedBox(height: 12),
             Surface(
-              padding: const EdgeInsets.fromLTRB(14, 6, 16, 6),
+              padding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   for (var i = 0; i < affiches.length; i++) ...[
-                    if (i > 0) Divider(height: 1, indent: 50, color: pal.trait),
+                    if (i > 0) ...[
+                      const SizedBox(height: 10),
+                      const Padding(padding: EdgeInsets.only(left: 34), child: Filet()),
+                      const SizedBox(height: 10),
+                    ],
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 2),
                       child: Row(
                         children: [
-                          IconePastille(
+                          Icon(
                             affiches[i].valide
                                 ? Icons.check_rounded
                                 : (affiches[i].rejete ? Icons.close_rounded : Icons.schedule_rounded),
-                            couleur: affiches[i].valide
+                            size: 20,
+                            color: affiches[i].valide
                                 ? pal.succes
                                 : (affiches[i].rejete ? pal.alerte : pal.attenue),
-                            taille: 36,
                           ),
                           const SizedBox(width: 14),
                           Expanded(

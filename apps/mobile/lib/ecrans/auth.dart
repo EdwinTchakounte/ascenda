@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../api/client.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
@@ -85,7 +86,19 @@ class EcranBienvenue extends StatelessWidget {
                         const SizedBox(height: 28),
                         if (contraintes.maxHeight >= 640) ...[
                           const _Rayonnage(),
-                          const SizedBox(height: 28),
+                          const SizedBox(height: 24),
+                          // Le titre courant de la couverture : petites
+                          // capitales d'or, comme sur un dos de volume.
+                          Texte(
+                            'ATELIER DE LECTURE',
+                            textAlign: TextAlign.center,
+                            style: t.textTheme.labelSmall?.copyWith(
+                              color: Couleurs.marqueOr.withValues(alpha: 0.75),
+                              letterSpacing: 3.2,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          const SizedBox(height: 22),
                         ],
                         Texte(
                           "Lisez avec un plan à votre rythme, validez chaque chapitre par un quiz "
@@ -320,167 +333,180 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
     final p = context.palette;
     return Scaffold(
       appBar: AppBar(leading: BackButton(onPressed: () => context.go('/bienvenue'))),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
-          child: Form(
-            key: _formulaire,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                // La marque dans un médaillon : un disque creux cerclé d'or,
-                // qui la pose sans la noyer quel que soit le thème.
-                Center(
-                  child: Container(
-                    width: 92,
-                    height: 92,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: p.surface,
-                      border: Border.all(color: p.accentTexte.withValues(alpha: 0.28), width: 1.4),
-                      boxShadow: p.ombreCarte,
+      body: FondPapier(
+        child: SafeArea(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
+            child: Form(
+              key: _formulaire,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  // La marque dans son cartouche : une plaque de titre à double
+                  // filet d'or, qui la pose sans la noyer quel que soit le thème.
+                  Center(
+                    child: Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: p.surface,
+                        border: Border.all(color: p.accentTexte.withValues(alpha: 0.40), width: 1.4),
+                        boxShadow: p.ombreCarte,
+                      ),
+                      child: Container(
+                        width: 82,
+                        height: 82,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: p.accentTexte.withValues(alpha: 0.22)),
+                        ),
+                        child: const MarqueAscenda(taille: 54),
+                      ),
                     ),
-                    child: const MarqueAscenda(taille: 56),
                   ),
-                ),
-                const SizedBox(height: 24),
-                AnimatedSwitcher(
-                  duration: const Duration(milliseconds: 220),
-                  child: Column(
-                    key: ValueKey(_inscription),
-                    children: [
-                      Texte(
-                        _inscription ? 'Créer votre compte' : 'Content de vous revoir',
-                        textAlign: TextAlign.center,
-                        style: t.textTheme.headlineMedium,
-                      ),
-                      const SizedBox(height: 8),
-                      Texte(
-                        _inscription
-                            ? "Gratuit, sans carte bancaire. Vous choisirez votre axe juste après."
-                            : "Reprenez votre chronogramme là où vous l'aviez laissé.",
-                        textAlign: TextAlign.center,
-                        style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.5),
-                      ),
-                    ],
+                  const SizedBox(height: 22),
+                  AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 220),
+                    child: Column(
+                      key: ValueKey(_inscription),
+                      children: [
+                        Center(
+                          child: EtiquetteCrochet(_inscription ? 'nouveau lecteur' : 'retour au rayon'),
+                        ),
+                        const SizedBox(height: 14),
+                        Texte(
+                          _inscription ? 'Créer votre compte' : 'Content de vous revoir',
+                          textAlign: TextAlign.center,
+                          style: t.textTheme.headlineMedium,
+                        ),
+                        const SizedBox(height: 8),
+                        Texte(
+                          _inscription
+                              ? "Gratuit, sans carte bancaire. Vous choisirez votre axe juste après."
+                              : "Reprenez votre chronogramme là où vous l'aviez laissé.",
+                          textAlign: TextAlign.center,
+                          style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.5),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(height: 28),
-                if (_inscription) ...[
+                  const SizedBox(height: 22),
+                  const Fleuron(),
+                  const SizedBox(height: 22),
+                  if (_inscription) ...[
+                    TextFormField(
+                      controller: _nom,
+                      textInputAction: TextInputAction.next,
+                      decoration: const InputDecoration(
+                        labelText: 'Votre nom',
+                        hintText: 'Facultatif',
+                        prefixIcon: Icon(Icons.person_outline_rounded, size: 20),
+                      ),
+                    ),
+                    const SizedBox(height: 14),
+                  ],
                   TextFormField(
-                    controller: _nom,
+                    controller: _email,
+                    keyboardType: TextInputType.emailAddress,
+                    autocorrect: false,
                     textInputAction: TextInputAction.next,
                     decoration: const InputDecoration(
-                      labelText: 'Votre nom',
-                      hintText: 'Facultatif',
-                      prefixIcon: Icon(Icons.person_outline_rounded, size: 20),
+                      labelText: 'Adresse électronique',
+                      prefixIcon: Icon(Icons.alternate_email_rounded, size: 20),
                     ),
+                    validator: (v) {
+                      final s = (v ?? '').trim();
+                      if (s.isEmpty) return 'Indiquez votre adresse.';
+                      if (!s.contains('@') || !s.contains('.')) {
+                        return "Cette adresse ne semble pas valide.";
+                      }
+                      return null;
+                    },
                   ),
-                  const SizedBox(height: 14),
-                ],
-                TextFormField(
-                  controller: _email,
-                  keyboardType: TextInputType.emailAddress,
-                  autocorrect: false,
-                  textInputAction: TextInputAction.next,
-                  decoration: const InputDecoration(
-                    labelText: 'Adresse électronique',
-                    prefixIcon: Icon(Icons.alternate_email_rounded, size: 20),
-                  ),
-                  validator: (v) {
-                    final s = (v ?? '').trim();
-                    if (s.isEmpty) return 'Indiquez votre adresse.';
-                    if (!s.contains('@') || !s.contains('.')) {
-                      return "Cette adresse ne semble pas valide.";
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 14),
-                TextFormField(
-                  controller: _motDePasse,
-                  obscureText: _masque,
-                  textInputAction: TextInputAction.done,
-                  onFieldSubmitted: (_) => _valider(),
-                  decoration: InputDecoration(
-                    labelText: 'Mot de passe',
-                    helperText: _inscription ? 'Au moins 8 caractères' : null,
-                    prefixIcon: const Icon(Icons.lock_outline_rounded, size: 20),
-                    suffixIcon: IconButton(
-                      icon: Icon(_masque
-                          ? Icons.visibility_outlined
-                          : Icons.visibility_off_outlined),
-                      onPressed: () => setState(() => _masque = !_masque),
-                      tooltip: _masque ? 'Afficher' : 'Masquer',
-                    ),
-                  ),
-                  validator: (v) {
-                    if ((v ?? '').isEmpty) return 'Indiquez un mot de passe.';
-                    if (_inscription && v!.length < 8) {
-                      return 'Huit caractères au minimum.';
-                    }
-                    return null;
-                  },
-                ),
-                if (_inscription) ...[
                   const SizedBox(height: 14),
                   TextFormField(
-                    key: const Key('code-inscription'),
-                    controller: _code,
-                    textCapitalization: TextCapitalization.characters,
-                    autocorrect: false,
-                    enableSuggestions: false,
+                    controller: _motDePasse,
+                    obscureText: _masque,
                     textInputAction: TextInputAction.done,
-                    decoration: const InputDecoration(
-                      labelText: "Code d'accès ou d'ambassadeur",
-                      hintText: 'Facultatif',
-                      helperText: "Reçu d'ASCENDA ou d'un lecteur qui vous invite",
-                      prefixIcon: Icon(Icons.confirmation_number_outlined, size: 20),
+                    onFieldSubmitted: (_) => _valider(),
+                    decoration: InputDecoration(
+                      labelText: 'Mot de passe',
+                      helperText: _inscription ? 'Au moins 8 caractères' : null,
+                      prefixIcon: const Icon(Icons.lock_outline_rounded, size: 20),
+                      suffixIcon: IconButton(
+                        icon: Icon(_masque
+                            ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined),
+                        onPressed: () => setState(() => _masque = !_masque),
+                        tooltip: _masque ? 'Afficher' : 'Masquer',
+                      ),
                     ),
+                    validator: (v) {
+                      if ((v ?? '').isEmpty) return 'Indiquez un mot de passe.';
+                      if (_inscription && v!.length < 8) {
+                        return 'Huit caractères au minimum.';
+                      }
+                      return null;
+                    },
                   ),
-                ],
-                if (_erreur != null) ...[
-                  const SizedBox(height: 16),
-                  AlerteFormulaire(_erreur!),
-                ],
-                const SizedBox(height: 26),
-                FilledButton(
-                  onPressed: _envoi ? null : _valider,
-                  child: _envoi
-                      ? const SizedBox(
-                          width: 20,
-                          height: 20,
-                          child: CircularProgressIndicator(strokeWidth: 2.2),
-                        )
-                      : Texte(_inscription ? 'Créer mon compte' : 'Me connecter'),
-                ),
-                const SizedBox(height: 10),
-                TextButton(
-                  onPressed: _envoi
-                      ? null
-                      : () => setState(() {
-                            _inscription = !_inscription;
-                            _erreur = null;
-                          }),
-                  child: Texte(_inscription
-                      ? "J'ai déjà un compte"
-                      : "Je n'ai pas encore de compte"),
-                ),
-                // Le lien n'apparaît qu'en connexion : le proposer pendant une
-                // inscription n'aurait aucun sens, il n'y a rien à retrouver.
-                if (!_inscription)
+                  if (_inscription) ...[
+                    const SizedBox(height: 14),
+                    TextFormField(
+                      key: const Key('code-inscription'),
+                      controller: _code,
+                      textCapitalization: TextCapitalization.characters,
+                      autocorrect: false,
+                      enableSuggestions: false,
+                      textInputAction: TextInputAction.done,
+                      decoration: const InputDecoration(
+                        labelText: "Code d'accès ou d'ambassadeur",
+                        hintText: 'Facultatif',
+                        helperText: "Reçu d'ASCENDA ou d'un lecteur qui vous invite",
+                        prefixIcon: Icon(Icons.confirmation_number_outlined, size: 20),
+                      ),
+                    ),
+                  ],
+                  if (_erreur != null) ...[
+                    const SizedBox(height: 16),
+                    AlerteFormulaire(_erreur!),
+                  ],
+                  const SizedBox(height: 26),
+                  FilledButton(
+                    onPressed: _envoi ? null : _valider,
+                    child: _envoi
+                        ? const SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(strokeWidth: 2.2),
+                          )
+                        : Texte(_inscription ? 'Créer mon compte' : 'Me connecter'),
+                  ),
+                  const SizedBox(height: 10),
                   TextButton(
-                    style: TextButton.styleFrom(foregroundColor: p.attenue),
                     onPressed: _envoi
                         ? null
-                        : () => context.push(
-                              '/mot-de-passe-oublie?email='
-                              '${Uri.encodeComponent(_email.text.trim())}',
-                            ),
-                    child: const Texte("J'ai oublié mon mot de passe"),
+                        : () => setState(() {
+                              _inscription = !_inscription;
+                              _erreur = null;
+                            }),
+                    child: Texte(_inscription
+                        ? "J'ai déjà un compte"
+                        : "Je n'ai pas encore de compte"),
                   ),
-              ],
+                  // Le lien n'apparaît qu'en connexion : le proposer pendant une
+                  // inscription n'aurait aucun sens, il n'y a rien à retrouver.
+                  if (!_inscription)
+                    TextButton(
+                      style: TextButton.styleFrom(foregroundColor: p.attenue),
+                      onPressed: _envoi
+                          ? null
+                          : () => context.push(
+                                '/mot-de-passe-oublie?email='
+                                '${Uri.encodeComponent(_email.text.trim())}',
+                              ),
+                      child: const Texte("J'ai oublié mon mot de passe"),
+                    ),
+                ],
+              ),
             ),
           ),
         ),

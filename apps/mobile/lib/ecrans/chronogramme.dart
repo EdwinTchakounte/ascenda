@@ -7,14 +7,17 @@ import '../api/client.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../widgets/cartes.dart';
 import '../widgets/etats.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le chronogramme en vue chronologique. Les séances faites sont en sourdine et
-/// marquées en vert, celle du jour en or, les retards en terracotta.
+/// Le chronogramme en vue chronologique : le cahier des séances, semaine après
+/// semaine. Les séances faites sont cochées à l'encre et en sourdine, celle du
+/// jour en or, les retards en terracotta.
 class EcranChronogramme extends ConsumerWidget {
   const EcranChronogramme({super.key, required this.chronogrammeId});
   final String chronogrammeId;
@@ -28,87 +31,120 @@ class EcranChronogramme extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Mon chronogramme')),
-      body: plan.when(
-        loading: () => const Padding(
-          padding: EdgeInsets.all(20),
-          child: SqueletteCarte(lignes: 5),
-        ),
-        error: (e, _) => EtatErreur(
-          erreur: e,
-          reessayer: () => ref.invalidate(chronogrammeProvider(chronogrammeId)),
-        ),
-        data: (c) {
-          // Regroupement par semaine : douze cartes valent mieux que soixante-dix lignes.
-          final parSemaine = <String, List<Seance>>{};
-          for (final s in c.seances) {
-            final d = s.prevueLe ?? DateTime.now();
-            final lundi = d.subtract(Duration(days: d.weekday - 1));
-            parSemaine.putIfAbsent(DateFormat('yyyy-MM-dd').format(lundi), () => []).add(s);
-          }
-          final semaines = parSemaine.keys.toList()..sort();
+      body: FondPapier(
+        child: plan.when(
+          loading: () => const Padding(
+            padding: EdgeInsets.all(20),
+            child: SqueletteCarte(lignes: 5),
+          ),
+          error: (e, _) => EtatErreur(
+            erreur: e,
+            reessayer: () => ref.invalidate(chronogrammeProvider(chronogrammeId)),
+          ),
+          data: (c) {
+            // Regroupement par semaine : douze cartes valent mieux que soixante-dix lignes.
+            final parSemaine = <String, List<Seance>>{};
+            for (final s in c.seances) {
+              final d = s.prevueLe ?? DateTime.now();
+              final lundi = d.subtract(Duration(days: d.weekday - 1));
+              parSemaine.putIfAbsent(DateFormat('yyyy-MM-dd').format(lundi), () => []).add(s);
+            }
+            final semaines = parSemaine.keys.toList()..sort();
+            // Le rang d'entrée court d'une semaine à l'autre : la page se pose
+            // ligne à ligne, puis s'arrête de compter.
+            var rang = 1;
 
-          return ListView(
-            padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-            children: [
-              SurfaceHeros(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
+            return ListView(
+              padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+              children: [
+                Apparition(
+                  child: SurfaceHeros(
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        IconePastille(Icons.route_rounded, couleur: p.accentSurHeros, taille: 46),
-                        const Spacer(),
-                        Text.rich(
-                          TextSpan(children: [
-                            TextSpan(text: '${(c.avancement * 100).round()}'),
-                            TextSpan(
-                              text: ' %',
-                              style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: EtiquetteCrochet('plan de lecture', couleur: p.accentSurHeros),
                             ),
-                          ]),
-                          style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.baseline,
+                              textBaseline: TextBaseline.alphabetic,
+                              children: [
+                                CompteurAnime(
+                                  (c.avancement * 100).round(),
+                                  style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1),
+                                ),
+                                Texte(' %',
+                                    style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux)),
+                              ],
+                            ),
+                          ],
                         ),
+                        const SizedBox(height: 16),
+                        Surtitre('Chronogramme', couleur: p.accentSurHeros),
+                        const SizedBox(height: 6),
+                        Texte(c.axeLabel, style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 24)),
+                        const SizedBox(height: 8),
+                        Texte(c.justification,
+                            style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux, height: 1.6)),
+                        const SizedBox(height: 18),
+                        Jauge(valeur: c.avancement, piste: p.surHeros.withValues(alpha: 0.12)),
+                        const SizedBox(height: 10),
+                        Texte('${c.faites} séances faites sur ${c.seances.length}',
+                            style: t.textTheme.labelMedium?.copyWith(color: p.surHerosDoux)),
                       ],
                     ),
-                    const SizedBox(height: 16),
-                    Surtitre('Chronogramme', couleur: p.accentSurHeros),
-                    const SizedBox(height: 6),
-                    Texte(c.axeLabel, style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 24)),
-                    const SizedBox(height: 8),
-                    Texte(c.justification,
-                        style: t.textTheme.bodySmall?.copyWith(color: p.surHerosDoux, height: 1.6)),
-                    const SizedBox(height: 18),
-                    Jauge(valeur: c.avancement, piste: p.surHeros.withValues(alpha: 0.12)),
-                    const SizedBox(height: 10),
-                    Texte('${c.faites} séances faites sur ${c.seances.length}',
-                        style: t.textTheme.labelMedium?.copyWith(color: p.surHerosDoux)),
-                  ],
+                  ),
                 ),
-              ),
 
-              if (c.enRetard > 0) ...[
-                const SizedBox(height: 14),
-                _BandeauRetard(
-                  nombre: c.enRetard,
-                  premium: session.utilisateur?.aAcces('chronogramme_adaptatif') ?? false,
-                  onReplanifier: () => _replanifier(context, ref),
-                ),
-              ],
-
-              const SizedBox(height: 26),
-              for (final cle in semaines) ...[
-                _EnteteSemaine(lundi: DateTime.parse(cle), seances: parSemaine[cle]!),
-                const SizedBox(height: 12),
-                for (final s in parSemaine[cle]!) ...[
-                  _LigneSeance(seance: s, chronogrammeId: chronogrammeId),
-                  const SizedBox(height: 10),
+                if (c.enRetard > 0) ...[
+                  const SizedBox(height: 14),
+                  Apparition(
+                    rang: 1,
+                    child: _BandeauRetard(
+                      nombre: c.enRetard,
+                      premium: session.utilisateur?.aAcces('chronogramme_adaptatif') ?? false,
+                      onReplanifier: () => _replanifier(context, ref),
+                    ),
+                  ),
                 ],
-                const SizedBox(height: 16),
+
+                const SizedBox(height: 26),
+                for (final cle in semaines) ...[
+                  Apparition(
+                    rang: rang < 8 ? rang++ : 8,
+                    child: _EnteteSemaine(lundi: DateTime.parse(cle), seances: parSemaine[cle]!),
+                  ),
+                  const SizedBox(height: 12),
+                  // Une feuille par semaine : les séances y sont des lignes
+                  // séparées par des filets, comme un cahier réglé.
+                  Surface(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        for (var i = 0; i < parSemaine[cle]!.length; i++)
+                          Apparition(
+                            rang: rang < 8 ? rang++ : 8,
+                            child: _LigneSeance(
+                              seance: parSemaine[cle]![i],
+                              chronogrammeId: chronogrammeId,
+                              derniere: i == parSemaine[cle]!.length - 1,
+                            ),
+                          ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 22),
+                ],
+                const SizedBox(height: 4),
+                const Fleuron(),
               ],
-            ],
-          );
-        },
+            );
+          },
+        ),
       ),
     );
   }
@@ -190,6 +226,8 @@ class _BandeauRetard extends StatelessWidget {
   }
 }
 
+/// Le titre courant d'une semaine : son libellé entre crochets, un filet, et le
+/// compte des séances tenues en guise de folio.
 class _EnteteSemaine extends StatelessWidget {
   const _EnteteSemaine({required this.lundi, required this.seances});
   final DateTime lundi;
@@ -197,6 +235,7 @@ class _EnteteSemaine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = Theme.of(context);
     final p = context.palette;
     final dimanche = lundi.add(const Duration(days: 6));
     final memeMois = lundi.month == dimanche.month;
@@ -210,15 +249,18 @@ class _EnteteSemaine extends StatelessWidget {
     return Row(
       children: [
         Flexible(
-          child: Surtitre(libelle, couleur: complete ? p.succes : p.accentTexte),
+          child: EtiquetteCrochet(libelle, couleur: complete ? p.succes : p.accentTexte),
         ),
         const SizedBox(width: 12),
-        Expanded(child: Container(height: 1, color: p.trait)),
+        const Expanded(child: Filet()),
         const SizedBox(width: 12),
-        Pastille(
+        Texte(
           '$faites/${seances.length}',
-          icone: complete ? Icons.check_rounded : null,
-          couleur: complete ? p.succes : p.attenue,
+          style: t.textTheme.labelSmall?.copyWith(
+            color: complete ? p.succes : p.attenue,
+            letterSpacing: 1,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ],
     );
@@ -226,9 +268,10 @@ class _EnteteSemaine extends StatelessWidget {
 }
 
 class _LigneSeance extends ConsumerWidget {
-  const _LigneSeance({required this.seance, required this.chronogrammeId});
+  const _LigneSeance({required this.seance, required this.chronogrammeId, required this.derniere});
   final Seance seance;
   final String chronogrammeId;
+  final bool derniere;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -239,35 +282,23 @@ class _LigneSeance extends ConsumerWidget {
     final passee = !seance.faite && seance.prevueLe != null && !aujourdhui &&
         seance.prevueLe!.isBefore(DateUtils.dateOnly(DateTime.now()));
 
-    // L'état se lit à trois endroits qui disent la même chose : la puce de
-    // date, la pastille et le contour. Faite en vert, du jour en or, en
-    // retard en terracotta, à venir en neutre.
+    // L'état se lit à trois endroits qui disent la même chose : la case cochée,
+    // la date et la pastille. Faite en vert, du jour en or, en retard en
+    // terracotta, à venir en neutre.
     final teinte = seance.faite
         ? p.succes
         : passee
             ? p.alerte
             : aujourdhui
-                ? p.accent
+                ? p.accentTexte
                 : null;
 
     return Opacity(
       opacity: seance.faite ? 0.72 : 1,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          borderRadius: Rayons.carte,
-          boxShadow: aujourdhui ? p.ombreCarte : null,
-        ),
-        child: Material(
-          color: aujourdhui ? Color.alphaBlend(p.accentVoile, p.surface) : p.surface,
-          shape: RoundedRectangleBorder(
-            borderRadius: Rayons.carte,
-            side: BorderSide(
-              color: aujourdhui ? p.accent : p.trait,
-              width: aujourdhui ? 1.6 : 1,
-            ),
-          ),
-          clipBehavior: Clip.antiAlias,
-          child: InkWell(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          InkWell(
             onTap: () {
               if (seance.documentId != null && seance.chapitreId != null) {
                 final params = {
@@ -281,18 +312,18 @@ class _LigneSeance extends ConsumerWidget {
               }
             },
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(12, 12, 14, 12),
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
               child: Row(
                 children: [
-                  Container(
-                    width: 50,
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    decoration: BoxDecoration(
-                      color: aujourdhui
-                          ? p.accent
-                          : (teinte ?? p.attenue).withValues(alpha: p.sombre ? 0.16 : 0.10),
-                      borderRadius: Rayons.moyen,
-                    ),
+                  // La case du cahier : cochée à l'encre quand la séance est
+                  // tenue, ouverte tant qu'elle ne l'est pas.
+                  _CaseACocher(
+                    cochee: seance.faite,
+                    couleur: teinte ?? p.attenue,
+                  ),
+                  const SizedBox(width: 12),
+                  SizedBox(
+                    width: 38,
                     child: Column(
                       children: [
                         Texte(
@@ -300,9 +331,7 @@ class _LigneSeance extends ConsumerWidget {
                               ? '-'
                               : DateFormat('E', 'fr_FR').format(seance.prevueLe!),
                           maxLines: 1,
-                          style: t.textTheme.labelSmall?.copyWith(
-                            color: aujourdhui ? p.surAccent : (teinte ?? p.attenue),
-                          ),
+                          style: t.textTheme.labelSmall?.copyWith(color: teinte ?? p.attenue),
                         ),
                         Texte(
                           seance.prevueLe == null ? '' : '${seance.prevueLe!.day}',
@@ -310,13 +339,13 @@ class _LigneSeance extends ConsumerWidget {
                           style: t.textTheme.titleLarge?.copyWith(
                             fontSize: 19,
                             height: 1.1,
-                            color: aujourdhui ? p.surAccent : p.encre,
+                            color: aujourdhui ? p.accentTexte : p.encre,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(width: 14),
+                  const SizedBox(width: 12),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -349,9 +378,7 @@ class _LigneSeance extends ConsumerWidget {
                           runSpacing: 4,
                           crossAxisAlignment: WrapCrossAlignment.center,
                           children: [
-                            if (seance.faite)
-                              Pastille('Faite', icone: Icons.check_rounded, couleur: p.succes)
-                            else if (passee)
+                            if (passee)
                               Pastille('En retard', icone: Icons.schedule_rounded, couleur: p.alerte)
                             else if (aujourdhui)
                               Pastille("Aujourd'hui", icone: Icons.play_arrow_rounded),
@@ -372,8 +399,61 @@ class _LigneSeance extends ConsumerWidget {
               ),
             ),
           ),
-        ),
+          if (!derniere) const Filet(),
+        ],
       ),
     );
   }
+}
+
+/// Une case à cocher tracée à la plume : le cadre à l'encre, et la coche par
+/// dessus quand la séance est tenue.
+class _CaseACocher extends StatelessWidget {
+  const _CaseACocher({required this.cochee, required this.couleur});
+  final bool cochee;
+  final Color couleur;
+
+  /// Le côté de la case : celui d'une case de cahier, sous le texte courant.
+  static const cote = 22.0;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return Container(
+      width: cote,
+      height: cote,
+      decoration: BoxDecoration(
+        color: cochee ? couleur.withValues(alpha: p.sombre ? 0.16 : 0.10) : null,
+        border: Border.all(color: couleur.withValues(alpha: cochee ? 0.55 : 0.40), width: 1.3),
+      ),
+      child: cochee ? CustomPaint(painter: _CochePeinte(couleur)) : null,
+    );
+  }
+}
+
+class _CochePeinte extends CustomPainter {
+  _CochePeinte(this.couleur);
+  final Color couleur;
+
+  @override
+  void paint(Canvas canvas, Size t) {
+    canvas.scale(t.width / 24, t.height / 24);
+    final plume = Paint()
+      ..color = couleur
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.6
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+    // Une coche qui dépasse du cadre, comme une main la trace.
+    canvas.drawPath(
+      Path()
+        ..moveTo(4, 12.5)
+        ..lineTo(9.5, 18.5)
+        ..lineTo(21, 4),
+      plume,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _CochePeinte a) => a.couleur != couleur;
 }

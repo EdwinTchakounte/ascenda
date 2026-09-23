@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -5,12 +7,16 @@ import 'package:go_router/go_router.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../widgets/etats.dart';
+import '../widgets/illustrations.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le quiz : une question à la fois, puis la correction.
+/// Le quiz : une question à la fois, posée sur le papier, puis la correction.
 ///
 /// L'écran de correction ne se contente pas de dire juste ou faux : il donne
 /// l'explication et l'extrait du livre qui la fonde, avec sa page. C'est ce
@@ -100,7 +106,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
     if (_erreur != null && _correction == null) {
       return Scaffold(
         appBar: AppBar(),
-        body: EtatErreur(erreur: _erreur!, reessayer: _charger),
+        body: FondPapier(child: EtatErreur(erreur: _erreur!, reessayer: _charger)),
       );
     }
     if (_correction != null) return _ecranCorrection();
@@ -113,6 +119,10 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
     final q = _questions[_index];
     final choisi = _reponses[q.index];
     final dernier = _index == _questions.length - 1;
+    final entete = [
+      if (_quiz?['ouvrage'] != null) '${_quiz!['ouvrage']}',
+      if (_quiz?['chapitre'] != null) '${_quiz!['chapitre']}',
+    ].join(' · ');
 
     return Scaffold(
       appBar: AppBar(
@@ -121,95 +131,107 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
           onPressed: () => context.pop(),
         ),
         centerTitle: true,
-        title: Pastille('Question ${_index + 1} sur ${_questions.length}', icone: Icons.quiz_rounded),
+        title: EtiquetteCrochet('question ${_index + 1} sur ${_questions.length}'),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
-            child: Jauge(valeur: (_index + 1) / _questions.length),
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 28, 20, 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  if (_quiz?['chapitre'] != null)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 12),
-                      child: Surtitre(
-                        '${_quiz!['ouvrage']} · ${_quiz!['chapitre']}',
-                      ),
-                    ),
-                  Texte(q.question, style: t.textTheme.headlineSmall?.copyWith(fontSize: 24)),
-                  const SizedBox(height: 26),
-                  for (var i = 0; i < q.choix.length; i++) ...[
-                    _CarteChoix(
-                      lettre: _lettre(i),
-                      libelle: q.choix[i],
-                      etat: choisi == i ? _EtatChoix.choisi : _EtatChoix.neutre,
-                      onTap: () => setState(() => _reponses[q.index] = i),
-                    ),
-                    const SizedBox(height: 12),
-                  ],
-                ],
-              ),
+      body: FondPapier(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
+              child: Jauge(valeur: (_index + 1) / _questions.length),
             ),
-          ),
-          DecoratedBox(
-            decoration: BoxDecoration(
-              color: p.fond,
-              border: Border(top: BorderSide(color: p.trait)),
-            ),
-            child: SafeArea(
-              top: false,
-              minimum: const EdgeInsets.fromLTRB(20, 14, 20, 18),
-              child: Row(
-                children: [
-                  if (_index > 0)
-                    Expanded(
-                      child: OutlinedButton.icon(
-                        onPressed: () => setState(() => _index--),
-                        icon: const Icon(Icons.arrow_back_rounded, size: 18),
-                        label: const Texte('Précédent', maxLines: 1, overflow: TextOverflow.ellipsis),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(20, 26, 20, 24),
+                // La page change avec la question : elle se repose, une fois,
+                // à chaque tour de page.
+                child: KeyedSubtree(
+                  key: ValueKey(q.index),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      if (_quiz?['chapitre'] != null) ...[
+                        TitreCourant(entete, folio: 'q. ${_index + 1} / ${_questions.length}'),
+                        const SizedBox(height: 20),
+                      ],
+                      Apparition(
+                        child: Texte(q.question, style: t.textTheme.headlineSmall?.copyWith(fontSize: 24)),
                       ),
-                    ),
-                  if (_index > 0) const SizedBox(width: 10),
-                  Expanded(
-                    flex: 2,
-                    child: FilledButton(
-                      onPressed: choisi == null || _envoi
-                          ? null
-                          : dernier
-                              ? _corriger
-                              : () => setState(() => _index++),
-                      child: _envoi
-                          ? SizedBox(
-                              width: 20,
-                              height: 20,
-                              child: CircularProgressIndicator(strokeWidth: 2.2, color: p.surAccent))
-                          : Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Flexible(
-                                  child: Texte(
-                                    dernier ? 'Voir ma correction' : 'Suivant',
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                                const SizedBox(width: 8),
-                                Icon(dernier ? Icons.done_all_rounded : Icons.arrow_forward_rounded, size: 18),
-                              ],
-                            ),
-                    ),
+                      const SizedBox(height: 26),
+                      for (var i = 0; i < q.choix.length; i++) ...[
+                        Apparition(
+                          rang: i + 1,
+                          child: _CarteChoix(
+                            lettre: _lettre(i),
+                            libelle: q.choix[i],
+                            etat: choisi == i ? _EtatChoix.choisi : _EtatChoix.neutre,
+                            onTap: () => setState(() => _reponses[q.index] = i),
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                      ],
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
-          ),
-        ],
+            DecoratedBox(
+              decoration: BoxDecoration(
+                color: p.fond,
+                border: Border(top: BorderSide(color: p.trait)),
+              ),
+              child: SafeArea(
+                top: false,
+                minimum: const EdgeInsets.fromLTRB(20, 14, 20, 18),
+                child: Row(
+                  children: [
+                    if (_index > 0)
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          onPressed: () => setState(() => _index--),
+                          icon: Transform.rotate(
+                            angle: pi,
+                            child: const IconeAscenda(Icone.fleche, taille: 18),
+                          ),
+                          label: const Texte('Précédent', maxLines: 1, overflow: TextOverflow.ellipsis),
+                        ),
+                      ),
+                    if (_index > 0) const SizedBox(width: 10),
+                    Expanded(
+                      flex: 2,
+                      child: FilledButton(
+                        onPressed: choisi == null || _envoi
+                            ? null
+                            : dernier
+                                ? _corriger
+                                : () => setState(() => _index++),
+                        child: _envoi
+                            ? SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CircularProgressIndicator(strokeWidth: 2.2, color: p.surAccent))
+                            : Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Flexible(
+                                    child: Texte(
+                                      dernier ? 'Voir ma correction' : 'Suivant',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  IconeAscenda(dernier ? Icone.sceau : Icone.fleche, taille: 18),
+                                ],
+                              ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -228,89 +250,103 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
         ),
         title: const Texte('Correction'),
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
-        children: [
-          SurfaceHeros(
-            padding: const EdgeInsets.fromLTRB(22, 26, 22, 24),
-            child: Column(
-              children: [
-                SizedBox(
-                  width: 120,
-                  height: 120,
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      SizedBox.expand(
-                        child: CircularProgressIndicator(
-                          value: part,
-                          strokeWidth: 10,
-                          strokeCap: StrokeCap.round,
-                          color: c.reussi ? p.accentSurHeros : p.surHerosDoux,
-                          backgroundColor: p.surHeros.withValues(alpha: 0.12),
+      body: FondPapier(
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
+          children: [
+            // Le résultat se pose en grand : c'est le moment qu'on retient
+            // d'une séance de lecture.
+            Apparition(
+              echelle: true,
+              child: SurfaceHeros(
+                padding: const EdgeInsets.fromLTRB(22, 24, 22, 24),
+                child: Column(
+                  children: [
+                    Illustration(
+                      c.reussi ? Scene.laurier : Scene.lampe,
+                      taille: 168,
+                      couleur: p.surHeros.withValues(alpha: 0.85),
+                      accent: p.accentSurHeros,
+                    ),
+                    const SizedBox(height: 14),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.alphabetic,
+                      children: [
+                        CompteurAnime(
+                          c.justes,
+                          style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1),
                         ),
-                      ),
-                      Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Text.rich(
-                            TextSpan(children: [
-                              TextSpan(text: '${c.justes}'),
-                              TextSpan(
-                                text: '/${c.total}',
-                                style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux),
-                              ),
-                            ]),
-                            style: t.textTheme.headlineMedium?.copyWith(color: p.surHeros, height: 1),
-                          ),
-                          const SizedBox(height: 4),
-                          Texte('${(c.score * 100).round()} %',
-                              style: t.textTheme.labelMedium?.copyWith(color: p.surHerosDoux)),
-                        ],
-                      ),
-                    ],
-                  ),
+                        Texte('/${c.total}',
+                            style: t.textTheme.titleMedium?.copyWith(color: p.surHerosDoux)),
+                        const SizedBox(width: 14),
+                        CompteurAnime(
+                          (c.score * 100).round(),
+                          suffixe: ' %',
+                          style: t.textTheme.labelMedium?.copyWith(color: p.surHerosDoux),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Jauge(
+                      valeur: part,
+                      hauteur: 6,
+                      piste: p.surHeros.withValues(alpha: 0.12),
+                      couleur: c.reussi ? null : p.surHerosDoux,
+                    ),
+                    const SizedBox(height: 18),
+                    EtiquetteCrochet(c.reussi ? 'bravo' : 'encore un effort',
+                        couleur: p.accentSurHeros),
+                    const SizedBox(height: 10),
+                    Texte(
+                      c.reussi ? "C'est acquis" : 'À retravailler',
+                      textAlign: TextAlign.center,
+                      style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25),
+                    ),
+                    const SizedBox(height: 8),
+                    Texte(
+                      c.reussi
+                          ? "Vous avez bien lu. Les notions ratées reviendront quand même en révision."
+                          : "Les notions manquées reviennent en révision espacée dans quelques jours.",
+                      textAlign: TextAlign.center,
+                      style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux, height: 1.5),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 18),
-                Surtitre(c.reussi ? 'Bravo' : 'Encore un effort', couleur: p.accentSurHeros),
-                const SizedBox(height: 6),
-                Texte(
-                  c.reussi ? "C'est acquis" : 'À retravailler',
-                  textAlign: TextAlign.center,
-                  style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25),
-                ),
-                const SizedBox(height: 8),
-                Texte(
-                  c.reussi
-                      ? "Vous avez bien lu. Les notions ratées reviendront quand même en révision."
-                      : "Les notions manquées reviennent en révision espacée dans quelques jours.",
-                  textAlign: TextAlign.center,
-                  style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux, height: 1.5),
-                ),
-              ],
+              ),
             ),
-          ),
-          const SizedBox(height: 26),
-          TitreSection(
-            'Question par question',
-            sousTitre: '${c.justes} juste${c.justes > 1 ? 's' : ''}, '
-                '${c.total - c.justes} à revoir',
-          ),
-          const SizedBox(height: 12),
-          for (final d in c.details) ...[
-            _CorrectionQuestion(
-              detail: d,
-              choix: _questions.where((q) => q.index == d.index).firstOrNull?.choix ?? const [],
+            const SizedBox(height: 26),
+            Apparition(
+              rang: 1,
+              child: TitreSection(
+                'Question par question',
+                sousTitre: '${c.justes} juste${c.justes > 1 ? 's' : ''}, '
+                    '${c.total - c.justes} à revoir',
+              ),
             ),
             const SizedBox(height: 12),
+            for (var i = 0; i < c.details.length; i++) ...[
+              Apparition(
+                rang: 2 + i,
+                child: _CorrectionQuestion(
+                  detail: c.details[i],
+                  choix: _questions.where((q) => q.index == c.details[i].index).firstOrNull?.choix ??
+                      const [],
+                ),
+              ),
+              const SizedBox(height: 12),
+            ],
+            const SizedBox(height: 12),
+            FilledButton.icon(
+              onPressed: () => context.pop(),
+              icon: const IconeAscenda(Icone.signet, taille: 18),
+              label: const Texte('Terminer'),
+            ),
+            const SizedBox(height: 26),
+            const Fleuron(),
           ],
-          const SizedBox(height: 12),
-          FilledButton.icon(
-            onPressed: () => context.pop(),
-            icon: const Icon(Icons.check_rounded, size: 20),
-            label: const Texte('Terminer'),
-          ),
-        ],
+        ),
       ),
     );
   }
@@ -322,8 +358,8 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
 /// juste ou fausse dans la correction.
 enum _EtatChoix { neutre, choisi, juste, faux }
 
-/// Un choix en carte arrondie : sa lettre dans une puce, son libellé, et une
-/// couleur qui dit son état sans qu'il faille lire l'icône.
+/// Un choix en fiche : sa lettre dans un cadre d'encre, son libellé, et une
+/// couleur qui dit son état sans qu'il faille lire la marque.
 class _CarteChoix extends StatelessWidget {
   const _CarteChoix({
     required this.lettre,
@@ -345,57 +381,39 @@ class _CarteChoix extends StatelessWidget {
     final p = context.palette;
     final teinte = switch (etat) {
       _EtatChoix.neutre => null,
-      _EtatChoix.choisi => p.accent,
+      _EtatChoix.choisi => p.accentTexte,
       _EtatChoix.juste => p.succes,
       _EtatChoix.faux => p.alerte,
     };
-    final icone = switch (etat) {
-      _EtatChoix.neutre => null,
-      _EtatChoix.choisi => Icons.check_circle_rounded,
-      _EtatChoix.juste => Icons.check_circle_rounded,
-      _EtatChoix.faux => Icons.cancel_rounded,
-    };
     final fond = teinte == null
         ? p.surface
-        : Color.alphaBlend(teinte.withValues(alpha: p.sombre ? 0.16 : 0.10), p.surface);
+        : Color.alphaBlend(teinte.withValues(alpha: p.sombre ? 0.16 : 0.09), p.surface);
 
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 180),
-      curve: Curves.easeOut,
+      duration: Duree.bref,
+      curve: courbeDouce,
       decoration: BoxDecoration(
         color: fond,
-        borderRadius: Rayons.carte,
-        border: Border.all(color: teinte ?? p.trait, width: teinte == null ? 1 : 1.8),
-        boxShadow: etat == _EtatChoix.neutre && !compact ? p.ombreCarte : null,
+        borderRadius: Rayons.moyen,
+        border: Border.all(
+          color: teinte ?? p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12),
+          width: teinte == null ? 1 : 1.6,
+        ),
+        boxShadow: etat == _EtatChoix.neutre && !compact
+            ? [BoxShadow(color: p.ombre.withValues(alpha: p.sombre ? 0.30 : 0.05), blurRadius: 14, offset: const Offset(0, 5))]
+            : null,
       ),
       child: Material(
         type: MaterialType.transparency,
         child: InkWell(
           onTap: onTap,
-          borderRadius: Rayons.carte,
+          borderRadius: Rayons.moyen,
           child: Padding(
             padding: EdgeInsets.all(compact ? 12 : 15),
             child: Row(
               children: [
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 180),
-                  width: compact ? 30 : 36,
-                  height: compact ? 30 : 36,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                    color: teinte ?? p.surfaceCreuse,
-                    borderRadius: Rayons.petit,
-                  ),
-                  child: Texte(
-                    lettre,
-                    style: t.textTheme.titleSmall?.copyWith(
-                      color: teinte == null
-                          ? p.attenue
-                          : (etat == _EtatChoix.choisi ? p.surAccent : p.surface),
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
+                // La lettre du choix, dans le cadre d'une lettrine.
+                Lettrine(lettre, taille: compact ? 30 : 38, couleur: teinte ?? p.attenue),
                 SizedBox(width: compact ? 12 : 14),
                 Expanded(
                   child: Texte(
@@ -407,9 +425,9 @@ class _CarteChoix extends StatelessWidget {
                     ),
                   ),
                 ),
-                if (icone != null) ...[
+                if (etat != _EtatChoix.neutre) ...[
                   const SizedBox(width: 10),
-                  Icon(icone, color: etat == _EtatChoix.choisi ? p.accentTexte : teinte, size: 22),
+                  _MarqueEncre(juste: etat != _EtatChoix.faux, couleur: teinte!),
                 ],
               ],
             ),
@@ -418,6 +436,71 @@ class _CarteChoix extends StatelessWidget {
       ),
     );
   }
+}
+
+/// La marque du correcteur : une coche ou une croix, tracée à la plume.
+class _MarqueEncre extends StatelessWidget {
+  const _MarqueEncre({required this.juste, required this.couleur, this.taille = 22});
+  final bool juste;
+  final Color couleur;
+  final double taille;
+
+  @override
+  Widget build(BuildContext context) {
+    // Le trait se pose au moment où la marque apparaît : un geste bref, une
+    // seule fois.
+    final rapide = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
+    return SizedBox(
+      width: taille,
+      height: taille,
+      child: TweenAnimationBuilder<double>(
+        tween: Tween(begin: 0, end: 1),
+        duration: rapide ? Duration.zero : Duree.moyen,
+        curve: courbeDouce,
+        builder: (_, v, _) => CustomPaint(painter: _MarquePeinte(juste, couleur, v)),
+      ),
+    );
+  }
+}
+
+class _MarquePeinte extends CustomPainter {
+  _MarquePeinte(this.juste, this.couleur, this.avance);
+  final bool juste;
+  final Color couleur;
+  final double avance;
+
+  @override
+  void paint(Canvas canvas, Size t) {
+    canvas.scale(t.width / 24, t.height / 24);
+    final plume = Paint()
+      ..color = couleur
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2.4
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+    final v = avance.clamp(0.0, 1.0);
+    if (juste) {
+      // Une coche en deux temps : la descente, puis la remontée.
+      final a = Offset(4, 13), b = Offset(9.5, 18.5), c = Offset(20, 6);
+      final t1 = (v / 0.4).clamp(0.0, 1.0);
+      canvas.drawLine(a, Offset.lerp(a, b, t1)!, plume);
+      if (v > 0.4) {
+        final t2 = ((v - 0.4) / 0.6).clamp(0.0, 1.0);
+        canvas.drawLine(b, Offset.lerp(b, c, t2)!, plume);
+      }
+    } else {
+      final t1 = (v / 0.5).clamp(0.0, 1.0);
+      canvas.drawLine(const Offset(6, 6), Offset.lerp(const Offset(6, 6), const Offset(18, 18), t1)!, plume);
+      if (v > 0.5) {
+        final t2 = ((v - 0.5) / 0.5).clamp(0.0, 1.0);
+        canvas.drawLine(const Offset(18, 6), Offset.lerp(const Offset(18, 6), const Offset(6, 18), t2)!, plume);
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _MarquePeinte a) =>
+      a.juste != juste || a.couleur != couleur || a.avance != avance;
 }
 
 class _CorrectionQuestion extends StatelessWidget {
@@ -444,10 +527,15 @@ class _CorrectionQuestion extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconePastille(
-                detail.juste ? Icons.check_rounded : Icons.close_rounded,
-                couleur: couleur,
-                taille: 34,
+              Container(
+                width: 34,
+                height: 34,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: couleur.withValues(alpha: p.sombre ? 0.14 : 0.08),
+                  border: Border.all(color: couleur.withValues(alpha: 0.42)),
+                ),
+                child: _MarqueEncre(juste: detail.juste, couleur: couleur, taille: 20),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -486,39 +574,39 @@ class _CorrectionQuestion extends StatelessWidget {
           ],
           if (detail.extrait != null) ...[
             const SizedBox(height: 14),
-            Container(
-              padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
-              decoration: BoxDecoration(
-                color: p.surfaceCreuse,
-                borderRadius: Rayons.moyen,
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Icon(Icons.format_quote_rounded, size: 20, color: p.accentTexte),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Texte(
-                          '« ${detail.extrait!} »',
-                          style: t.textTheme.bodySmall?.copyWith(
-                            height: 1.6,
-                            color: p.texte,
-                            fontFamily: t.textTheme.headlineSmall?.fontFamily,
-                            fontSize: 13.5,
-                          ),
+            const Filet(redouble: true),
+            const SizedBox(height: 14),
+            // L'extrait qui fonde la réponse : une citation en exergue, avec
+            // son folio, comme dans la marge d'un livre.
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(width: 2, height: 46, color: p.accentTexte.withValues(alpha: 0.55)),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Texte(
+                        '« ${detail.extrait!} »',
+                        style: t.textTheme.bodySmall?.copyWith(
+                          height: 1.6,
+                          color: p.texte,
+                          fontFamily: t.textTheme.headlineSmall?.fontFamily,
+                          fontSize: 13.5,
                         ),
-                        if (detail.extraitPage != null || detail.page != null) ...[
-                          const SizedBox(height: 8),
-                          Pastille('p. ${detail.extraitPage ?? detail.page}', icone: Icons.menu_book_rounded),
-                        ],
+                      ),
+                      if (detail.extraitPage != null || detail.page != null) ...[
+                        const SizedBox(height: 8),
+                        Texte(
+                          'p. ${detail.extraitPage ?? detail.page}',
+                          style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1),
+                        ),
                       ],
-                    ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ],

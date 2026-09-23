@@ -8,8 +8,12 @@ import '../api/client.dart';
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../widgets/etats.dart';
+import '../widgets/illustrations.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
@@ -22,6 +26,10 @@ String _jour(DateTime? d) =>
 /// L'ordre suit ce qu'on vient chercher. On arrive ici avec un code reçu, donc
 /// la saisie d'abord ; ensuite ce qui est ouvert et jusqu'à quand ; enfin son
 /// propre code, qui est ce qu'on revient consulter pour le partager.
+///
+/// Tout y prend la forme du papier : le champ de saisie est un bon à remplir,
+/// le code ambassadeur un billet qu'on tend, les réductions des coupons avec
+/// leur talon et leur ligne de perforation.
 class EcranCodes extends ConsumerStatefulWidget {
   const EcranCodes({super.key});
 
@@ -98,43 +106,47 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
     final donnees = ref.watch(codesProvider);
     return Scaffold(
       appBar: AppBar(title: const Texte('Codes et avantages')),
-      body: SafeArea(
-        bottom: false,
-        child: donnees.when(
-          loading: () => const Padding(
-            padding: EdgeInsets.all(20),
-            child: SqueletteCarte(lignes: 5),
+      // Le grain du papier : l'écran s'ouvre hors de la coque, il ne l'hérite
+      // donc pas du tiroir.
+      body: FondPapier(
+        child: SafeArea(
+          bottom: false,
+          child: donnees.when(
+            loading: () => const Padding(
+              padding: EdgeInsets.all(20),
+              child: SqueletteCarte(lignes: 5),
+            ),
+            error: (e, _) => EtatErreur(
+              erreur: e,
+              reessayer: () => ref.invalidate(codesProvider),
+            ),
+            data: (c) {
+              WidgetsBinding.instance.addPostFrameCallback(
+                (_) => _signalerVus(c),
+              );
+              return RefreshIndicator(
+                color: context.palette.accent,
+                onRefresh: () async => ref.invalidate(codesProvider),
+                child: ListView(
+                  padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
+                  children: [
+                    _Saisie(
+                      controleur: _saisie,
+                      envoi: _envoi,
+                      erreur: _erreur,
+                      onActiver: _activer,
+                    ),
+                    const SizedBox(height: 26),
+                    _SectionAcces(donnees: c),
+                    const SizedBox(height: 28),
+                    _CarteAmbassadeur(donnees: c),
+                    const SizedBox(height: 28),
+                    _SectionReductions(donnees: c),
+                  ],
+                ),
+              );
+            },
           ),
-          error: (e, _) => EtatErreur(
-            erreur: e,
-            reessayer: () => ref.invalidate(codesProvider),
-          ),
-          data: (c) {
-            WidgetsBinding.instance.addPostFrameCallback(
-              (_) => _signalerVus(c),
-            );
-            return RefreshIndicator(
-              color: context.palette.accent,
-              onRefresh: () async => ref.invalidate(codesProvider),
-              child: ListView(
-                padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
-                children: [
-                  _Saisie(
-                    controleur: _saisie,
-                    envoi: _envoi,
-                    erreur: _erreur,
-                    onActiver: _activer,
-                  ),
-                  const SizedBox(height: 26),
-                  _SectionAcces(donnees: c),
-                  const SizedBox(height: 28),
-                  _CarteAmbassadeur(donnees: c),
-                  const SizedBox(height: 28),
-                  _SectionReductions(donnees: c),
-                ],
-              ),
-            );
-          },
         ),
       ),
     );
@@ -163,17 +175,20 @@ class _Saisie extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          const EtiquetteCrochet('bon à remplir'),
+          const SizedBox(height: 16),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const IconePastille(Icons.confirmation_number_rounded, taille: 46),
+              IconeAscenda(Icone.jeton, taille: 30, couleur: p.accentTexte),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Texte('Activer un code', style: t.textTheme.titleLarge?.copyWith(fontSize: 20)),
-                    const SizedBox(height: 4),
+                    Texte('Activer un code',
+                        style: t.textTheme.headlineSmall?.copyWith(fontSize: 21, height: 1.15)),
+                    const SizedBox(height: 5),
                     Texte(
                       "Un code reçu d'ASCENDA ouvre tout ou partie d'Ascension, pour une durée donnée.",
                       style: t.textTheme.bodySmall?.copyWith(color: p.attenue, height: 1.5),
@@ -184,48 +199,67 @@ class _Saisie extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: TextField(
-                  key: const Key('saisie-code'),
-                  controller: controleur,
-                  textCapitalization: TextCapitalization.characters,
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  textInputAction: TextInputAction.done,
-                  onSubmitted: (_) => onActiver(),
-                  style: t.textTheme.titleMedium?.copyWith(
-                    color: p.encre,
-                    letterSpacing: 2.2,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  decoration: InputDecoration(
-                    hintText: 'Votre code',
-                    fillColor: p.surfaceCreuse,
-                    prefixIcon: const Icon(Icons.key_rounded, size: 20),
-                    errorText: erreur,
-                    errorMaxLines: 3,
-                  ),
-                ),
+          const Filet(redouble: true),
+          const SizedBox(height: 16),
+          // Le champ est la ligne pointillée du bon : un cadre à l'encre, les
+          // lettres espacées comme on les recopie d'un courriel.
+          Container(
+            decoration: BoxDecoration(
+              color: p.surfaceCreuse,
+              borderRadius: Rayons.moyen,
+              border: Border.all(color: p.accentTexte.withValues(alpha: 0.35)),
+            ),
+            child: TextField(
+              key: const Key('saisie-code'),
+              controller: controleur,
+              textCapitalization: TextCapitalization.characters,
+              autocorrect: false,
+              enableSuggestions: false,
+              textInputAction: TextInputAction.done,
+              textAlign: TextAlign.center,
+              onSubmitted: (_) => onActiver(),
+              style: t.textTheme.titleLarge?.copyWith(
+                color: p.encre,
+                fontSize: 21,
+                letterSpacing: 3.4,
+                fontWeight: FontWeight.w700,
               ),
-              const SizedBox(width: 10),
-              SizedBox(
-                height: 56,
-                child: FilledButton(
-                  style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 18)),
-                  onPressed: envoi ? null : onActiver,
-                  child: envoi
-                      ? const SizedBox(
-                          width: 18,
-                          height: 18,
-                          child: CircularProgressIndicator(strokeWidth: 2.2),
-                        )
-                      : const Texte('Activer'),
+              decoration: InputDecoration(
+                hintText: 'VOTRE CODE',
+                hintStyle: t.textTheme.titleMedium?.copyWith(
+                  color: p.attenue,
+                  letterSpacing: 3.4,
+                  fontWeight: FontWeight.w600,
                 ),
+                filled: false,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
+                border: InputBorder.none,
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none,
+                errorBorder: InputBorder.none,
+                focusedErrorBorder: InputBorder.none,
               ),
-            ],
+            ),
+          ),
+          // Le motif du refus se lit sous le bon, dans l'alerte commune à
+          // tous les formulaires, et non en petit sous un champ.
+          if (erreur != null) ...[
+            const SizedBox(height: 12),
+            AlerteFormulaire(erreur!),
+          ],
+          const SizedBox(height: 14),
+          SizedBox(
+            height: 52,
+            child: FilledButton(
+              onPressed: envoi ? null : onActiver,
+              child: envoi
+                  ? const SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(strokeWidth: 2.2),
+                    )
+                  : const Texte('Activer ce code'),
+            ),
           ),
         ],
       ),
@@ -249,13 +283,13 @@ class _SectionAcces extends StatelessWidget {
         const SizedBox(height: 12),
         if (a.source == 'abonnement')
           _LigneAcces(
-            icone: Icons.workspace_premium_rounded,
+            icone: Icone.sceau,
             titre: 'Abonnement Ascension',
             detail: "Tout est ouvert jusqu'au ${_jour(a.jusquAu)}.",
           ),
         if (a.source == 'lancement')
           _LigneAcces(
-            icone: Icons.celebration_rounded,
+            icone: Icone.soleil,
             titre: 'Période de lancement',
             detail: a.jusquAu == null
                 ? 'Tout ASCENDA est ouvert à tous.'
@@ -270,7 +304,7 @@ class _SectionAcces extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Row(
               children: [
-                IconePastille(Icons.explore_rounded, couleur: p.attenue, taille: 40),
+                IconeAscenda(Icone.boussole, taille: 26, couleur: p.attenue),
                 const SizedBox(width: 14),
                 Expanded(
                   child: Texte(
@@ -293,7 +327,7 @@ class _LigneAcces extends StatelessWidget {
     required this.titre,
     required this.detail,
   });
-  final IconData icone;
+  final Icone icone;
   final String titre;
   final String detail;
 
@@ -311,7 +345,7 @@ class _LigneAcces extends StatelessWidget {
       ),
       child: Row(
         children: [
-          IconePastille(icone, taille: 44, fond: p.surface.withValues(alpha: p.sombre ? 0.35 : 0.8)),
+          IconeAscenda(icone, taille: 28, couleur: p.accentTexte),
           const SizedBox(width: 14),
           Expanded(
             child: Column(
@@ -349,7 +383,7 @@ class _CarteCode extends StatelessWidget {
         children: [
           Row(
             children: [
-              const IconePastille(Icons.lock_open_rounded, taille: 40),
+              IconeAscenda(Icone.clef, taille: 26, couleur: p.accentTexte),
               const SizedBox(width: 12),
               Expanded(
                 child: Column(
@@ -417,14 +451,14 @@ class _CarteCode extends StatelessWidget {
             ),
           ],
           const SizedBox(height: 14),
-          Divider(height: 1, color: p.trait),
+          const Filet(),
           const SizedBox(height: 10),
           Row(
             children: [
-              Icon(
-                bientot ? Icons.hourglass_bottom_rounded : Icons.event_available_rounded,
-                size: 16,
-                color: bientot ? p.alerte : p.attenue,
+              IconeAscenda(
+                bientot ? Icone.soleil : Icone.signet,
+                taille: 16,
+                couleur: bientot ? p.alerte : p.attenue,
               ),
               const SizedBox(width: 6),
               Expanded(
@@ -482,50 +516,51 @@ class _CarteAmbassadeur extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return SurfaceHeros(
-      padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
+      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              IconePastille(Icons.volunteer_activism_rounded, couleur: p.accentSurHeros, taille: 44),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Surtitre('Ambassadeur', couleur: p.accentSurHeros),
-                    const SizedBox(height: 2),
-                    Texte(
-                      'Votre code ambassadeur',
-                      style: t.textTheme.titleLarge?.copyWith(color: p.surHeros, fontSize: 19),
-                    ),
-                  ],
-                ),
-              ),
+              EtiquetteCrochet('ambassadeur', couleur: p.accentSurHeros),
+              const Spacer(),
+              IconeAscenda(Icone.plume, taille: 24, couleur: p.accentSurHeros),
             ],
           ),
-          const SizedBox(height: 18),
-          // Le code dans un cartouche, comme un billet qu'on tend.
+          const SizedBox(height: 16),
+          Texte(
+            'Votre code ambassadeur',
+            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 22, height: 1.15),
+          ),
+          const SizedBox(height: 16),
+          // Le code dans un cartouche à double filet, comme un billet qu'on
+          // tend : le cadre extérieur d'or, le cadre intérieur plus pâle.
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            padding: const EdgeInsets.all(5),
             decoration: BoxDecoration(
               color: p.surHeros.withValues(alpha: 0.07),
               borderRadius: Rayons.carte,
-              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.35), width: 1.2),
+              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.45), width: 1.2),
             ),
-            child: Center(
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                child: SelectableText(
-                  donnees.code,
-                  key: const Key('code-ambassadeur'),
-                  style: t.textTheme.headlineMedium?.copyWith(
-                    color: p.accentSurHeros,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 4,
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
+              decoration: BoxDecoration(
+                borderRadius: Rayons.moyen,
+                border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.22)),
+              ),
+              child: Center(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: SelectableText(
+                    donnees.code,
+                    key: const Key('code-ambassadeur'),
+                    style: t.textTheme.headlineMedium?.copyWith(
+                      color: p.accentSurHeros,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 4,
+                    ),
                   ),
                 ),
               ),
@@ -576,7 +611,7 @@ class _CarteAmbassadeur extends StatelessWidget {
             children: [
               Expanded(
                 child: _Chiffre(
-                  valeur: '${donnees.filleuls}',
+                  nombre: donnees.filleuls,
                   libelle: donnees.filleuls > 1
                       ? 'lecteurs invités'
                       : 'lecteur invité',
@@ -600,15 +635,19 @@ class _CarteAmbassadeur extends StatelessWidget {
 }
 
 /// Un chiffre de la carte ambassadeur, dans son petit bloc translucide.
+/// Un nombre monte jusqu'à sa valeur ; un montant déjà écrit se pose tel quel.
 class _Chiffre extends StatelessWidget {
-  const _Chiffre({required this.valeur, required this.libelle});
-  final String valeur;
+  const _Chiffre({this.valeur, this.nombre, required this.libelle})
+      : assert(valeur != null || nombre != null);
+  final String? valeur;
+  final int? nombre;
   final String libelle;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     final p = context.palette;
+    final style = t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 24);
     return Container(
       padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
       decoration: BoxDecoration(
@@ -617,10 +656,7 @@ class _Chiffre extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Texte(
-            valeur,
-            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 24),
-          ),
+          nombre != null ? CompteurAnime(nombre!, style: style) : Texte(valeur!, style: style),
           const SizedBox(height: 2),
           Texte(
             libelle,
@@ -651,18 +687,16 @@ class _SectionReductions extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         if (donnees.bons.isEmpty)
-          Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.carte),
-            child: Row(
+          Surface(
+            padding: const EdgeInsets.fromLTRB(16, 20, 16, 22),
+            child: Column(
               children: [
-                IconePastille(Icons.redeem_rounded, couleur: p.attenue, taille: 40),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Texte(
-                    'Aucune pour le moment. Partagez votre code pour en gagner.',
-                    style: t.textTheme.bodyMedium?.copyWith(color: p.attenue),
-                  ),
+                const Illustration(Scene.graine, taille: 132),
+                const SizedBox(height: 14),
+                Texte(
+                  'Aucune pour le moment. Partagez votre code pour en gagner.',
+                  textAlign: TextAlign.center,
+                  style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.55),
                 ),
               ],
             ),
@@ -708,7 +742,7 @@ class _LigneBon extends StatelessWidget {
           // Le talon du bon : le pourcentage, en grand sur le dégradé profond
           // tant qu'il sert encore.
           Container(
-            width: 66,
+            width: 62,
             height: 56,
             alignment: Alignment.center,
             decoration: BoxDecoration(
@@ -731,7 +765,10 @@ class _LigneBon extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 14),
+          const SizedBox(width: 10),
+          // La ligne de perforation : c'est là qu'on détacherait le talon.
+          const _Perforation(hauteur: 52),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -789,4 +826,40 @@ class _LigneBon extends StatelessWidget {
       ),
     );
   }
+}
+
+/// La ligne de perforation d'un coupon : des tirets verticaux, comme sur un
+/// carnet à souches.
+class _Perforation extends StatelessWidget {
+  const _Perforation({required this.hauteur});
+  final double hauteur;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    return SizedBox(
+      width: 1,
+      height: hauteur,
+      child: CustomPaint(painter: _Pointilles(p.encre.withValues(alpha: p.sombre ? 0.30 : 0.20))),
+    );
+  }
+}
+
+class _Pointilles extends CustomPainter {
+  _Pointilles(this.couleur);
+  final Color couleur;
+
+  @override
+  void paint(Canvas canvas, Size t) {
+    final pinceau = Paint()
+      ..color = couleur
+      ..strokeWidth = 1
+      ..strokeCap = StrokeCap.round;
+    for (var y = 0.0; y < t.height; y += 6) {
+      canvas.drawLine(Offset(0.5, y), Offset(0.5, (y + 3).clamp(0, t.height)), pinceau);
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _Pointilles autre) => autre.couleur != couleur;
 }

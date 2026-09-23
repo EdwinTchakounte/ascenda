@@ -7,11 +7,16 @@ import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
+import '../theme/papier.dart';
 import '../widgets/etats.dart';
+import '../widgets/illustrations.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le diagnostic d'entrée : une question à l'écran, grande, centrée.
+/// Le diagnostic d'entrée : un questionnaire d'atelier, une question par page,
+/// grande et centrée, avec ses étapes numérotées en tête.
 ///
 /// Le questionnaire vient du serveur, y compris les sondes tirées des vrais
 /// quiz de l'axe. Rien n'est codé en dur ici : ajouter une question se fait
@@ -117,7 +122,7 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
     if (_erreur != null) {
-      return Scaffold(body: EtatErreur(erreur: _erreur!, reessayer: _charger));
+      return Scaffold(body: FondPapier(child: EtatErreur(erreur: _erreur!, reessayer: _charger)));
     }
 
     final questions = _questions!;
@@ -136,89 +141,103 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
               )
             : BackButton(onPressed: () => setState(() => _index--)),
         centerTitle: true,
-        title: Pastille('Étape ${_index + 1} sur ${questions.length}', icone: Icons.explore_rounded),
+        title: EtiquetteCrochet('étape ${_index + 1} sur ${questions.length}'),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 4, 20, 0),
-            child: _Etapes(total: questions.length, courante: _index),
-          ),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 32, 20, 24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  if (q['ouvrage'] != null)
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 10),
-                      child: Surtitre("D'après ${q['ouvrage']}"),
-                    ),
-                  Texte('${q['question']}', style: t.textTheme.headlineSmall?.copyWith(fontSize: 25)),
-                  const SizedBox(height: 26),
-                  for (final c in choix) ...[
-                    _CarteChoix(
-                      libelle: '${c['libelle']}',
-                      choisi: _reponses[cle] == c['valeur'],
-                      onTap: () {
-                        setState(() => _reponses[cle] = c['valeur']);
-                        Future.delayed(const Duration(milliseconds: 180), () {
-                          if (!mounted) return;
-                          if (_index < questions.length - 1) {
-                            setState(() => _index++);
-                          }
-                        });
-                      },
-                    ),
-                    const SizedBox(height: 12),
-                  ],
-                ],
-              ),
+      body: FondPapier(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(20, 6, 20, 0),
+              child: _Etapes(total: questions.length, courante: _index),
             ),
-          ),
-          if (_index == questions.length - 1)
-            DecoratedBox(
-              decoration: BoxDecoration(
-                color: p.fond,
-                border: Border(top: BorderSide(color: p.trait)),
-              ),
-              child: SafeArea(
-                top: false,
-                minimum: const EdgeInsets.fromLTRB(20, 14, 20, 20),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: FilledButton(
-                    onPressed: (_reponses.length < questions.length || _envoi) ? null : _terminer,
-                    child: _envoi
-                        ? SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(strokeWidth: 2.2, color: p.surAccent))
-                        : const Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Flexible(
-                                child: Texte('Construire mon chronogramme',
-                                    maxLines: 1, overflow: TextOverflow.ellipsis),
-                              ),
-                              SizedBox(width: 8),
-                              Icon(Icons.auto_awesome_rounded, size: 18),
-                            ],
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.fromLTRB(20, 28, 20, 24),
+                // Une page par question : elle se pose une fois, puis laisse
+                // la place à la suivante.
+                child: KeyedSubtree(
+                  key: ValueKey(cle),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      TitreCourant(
+                        q['ouvrage'] != null ? "d'après ${q['ouvrage']}" : 'questionnaire',
+                        folio: 'étape ${_index + 1} / ${questions.length}',
+                      ),
+                      const SizedBox(height: 20),
+                      Apparition(
+                        child: Texte('${q['question']}',
+                            style: t.textTheme.headlineSmall?.copyWith(fontSize: 25)),
+                      ),
+                      const SizedBox(height: 26),
+                      for (var i = 0; i < choix.length; i++) ...[
+                        Apparition(
+                          rang: i + 1,
+                          child: _CarteChoix(
+                            libelle: '${choix[i]['libelle']}',
+                            choisi: _reponses[cle] == choix[i]['valeur'],
+                            onTap: () {
+                              setState(() => _reponses[cle] = choix[i]['valeur']);
+                              Future.delayed(const Duration(milliseconds: 180), () {
+                                if (!mounted) return;
+                                if (_index < questions.length - 1) {
+                                  setState(() => _index++);
+                                }
+                              });
+                            },
                           ),
+                        ),
+                        const SizedBox(height: 12),
+                      ],
+                    ],
                   ),
                 ),
               ),
             ),
-        ],
+            if (_index == questions.length - 1)
+              DecoratedBox(
+                decoration: BoxDecoration(
+                  color: p.fond,
+                  border: Border(top: BorderSide(color: p.trait)),
+                ),
+                child: SafeArea(
+                  top: false,
+                  minimum: const EdgeInsets.fromLTRB(20, 14, 20, 20),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: FilledButton(
+                      onPressed: (_reponses.length < questions.length || _envoi) ? null : _terminer,
+                      child: _envoi
+                          ? SizedBox(
+                              width: 20,
+                              height: 20,
+                              child: CircularProgressIndicator(strokeWidth: 2.2, color: p.surAccent))
+                          : const Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Flexible(
+                                  child: Texte('Construire mon chronogramme',
+                                      maxLines: 1, overflow: TextOverflow.ellipsis),
+                                ),
+                                SizedBox(width: 8),
+                                IconeAscenda(Icone.boussole, taille: 18),
+                              ],
+                            ),
+                    ),
+                  ),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }
 }
 
-/// La progression du questionnaire en segments : une étape par question, ce
-/// qui dit mieux qu'une barre combien il en reste. Au delà de douze, les
-/// segments deviennent trop fins et la jauge continue reprend la main.
+/// La progression du questionnaire, étape par étape : des cases numérotées,
+/// encrées à mesure qu'on avance. Au delà de huit, les numéros deviennent
+/// illisibles et les segments reprennent la main ; au delà de douze, la jauge
+/// continue.
 class _Etapes extends StatelessWidget {
   const _Etapes({required this.total, required this.courante});
   final int total;
@@ -226,31 +245,68 @@ class _Etapes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final t = Theme.of(context);
     final p = context.palette;
     if (total > 12) return Jauge(valeur: (courante + 1) / total);
+    if (total > 8) {
+      return Row(
+        children: [
+          for (var i = 0; i < total; i++) ...[
+            if (i > 0) const SizedBox(width: 5),
+            Expanded(
+              child: AnimatedContainer(
+                duration: Duree.moyen,
+                curve: courbeDouce,
+                height: 7,
+                decoration: BoxDecoration(
+                  borderRadius: Rayons.pilule,
+                  color: i <= courante ? null : p.surfaceCreuse,
+                  gradient: i <= courante
+                      ? LinearGradient(colors: [p.accent, p.accentSurHeros])
+                      : null,
+                ),
+              ),
+            ),
+          ],
+        ],
+      );
+    }
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        for (var i = 0; i < total; i++) ...[
-          if (i > 0) const SizedBox(width: 5),
-          Expanded(
-            child: AnimatedContainer(
-              duration: const Duration(milliseconds: 240),
-              height: 7,
-              decoration: BoxDecoration(
-                borderRadius: Rayons.pilule,
-                color: i <= courante ? null : p.surfaceCreuse,
-                gradient: i <= courante
-                    ? LinearGradient(colors: [p.accent, p.accentSurHeros])
-                    : null,
+        for (var i = 0; i < total; i++)
+          AnimatedContainer(
+            duration: Duree.moyen,
+            curve: courbeDouce,
+            width: 26,
+            height: 26,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: i < courante
+                  ? p.accentTexte.withValues(alpha: p.sombre ? 0.20 : 0.12)
+                  : (i == courante ? p.accent : null),
+              border: Border.all(
+                color: i <= courante ? p.accentTexte : p.encre.withValues(alpha: p.sombre ? 0.24 : 0.16),
+                width: i == courante ? 1.6 : 1.2,
+              ),
+            ),
+            child: Texte(
+              '${i + 1}',
+              style: t.textTheme.labelSmall?.copyWith(
+                color: i == courante
+                    ? p.surAccent
+                    : (i < courante ? p.accentTexte : p.attenue),
+                fontWeight: FontWeight.w700,
+                fontFamily: t.textTheme.headlineSmall?.fontFamily,
               ),
             ),
           ),
-        ],
       ],
     );
   }
 }
 
+/// Une réponse en fiche : la case d'atelier à gauche, le libellé à droite.
 class _CarteChoix extends StatelessWidget {
   const _CarteChoix({required this.libelle, required this.choisi, required this.onTap});
 
@@ -263,34 +319,30 @@ class _CarteChoix extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return AnimatedContainer(
-      duration: const Duration(milliseconds: 160),
+      duration: Duree.bref,
+      curve: courbeDouce,
       decoration: BoxDecoration(
         color: choisi ? Color.alphaBlend(p.accentVoile, p.surface) : p.surface,
-        borderRadius: Rayons.carte,
-        border: Border.all(color: choisi ? p.accent : p.trait, width: choisi ? 1.8 : 1),
-        boxShadow: choisi ? null : p.ombreCarte,
+        borderRadius: Rayons.moyen,
+        border: Border.all(
+          color: choisi ? p.accentTexte : p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12),
+          width: choisi ? 1.6 : 1,
+        ),
+        boxShadow: choisi
+            ? null
+            : [BoxShadow(color: p.ombre.withValues(alpha: p.sombre ? 0.30 : 0.05), blurRadius: 14, offset: const Offset(0, 5))],
       ),
       child: Material(
         type: MaterialType.transparency,
         child: InkWell(
           onTap: onTap,
-          borderRadius: Rayons.carte,
+          borderRadius: Rayons.moyen,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             child: Row(
               children: [
-                // Le témoin de sélection, rond comme un bouton radio.
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 160),
-                  width: 24,
-                  height: 24,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: choisi ? p.accent : null,
-                    border: Border.all(color: choisi ? p.accent : p.attenue.withValues(alpha: 0.5), width: 2),
-                  ),
-                  child: choisi ? Icon(Icons.check_rounded, size: 15, color: p.surAccent) : null,
-                ),
+                // Le témoin de sélection : une case cochée à la plume.
+                _CaseAtelier(cochee: choisi),
                 const SizedBox(width: 14),
                 Expanded(
                   child: Texte(
@@ -311,6 +363,54 @@ class _CarteChoix extends StatelessWidget {
   }
 }
 
+/// La case d'un questionnaire d'atelier : un cadre à l'encre, coché au trait.
+class _CaseAtelier extends StatelessWidget {
+  const _CaseAtelier({required this.cochee});
+  final bool cochee;
+
+  @override
+  Widget build(BuildContext context) {
+    final p = context.palette;
+    final c = cochee ? p.accentTexte : p.attenue;
+    return AnimatedContainer(
+      duration: Duree.bref,
+      curve: courbeDouce,
+      width: 24,
+      height: 24,
+      decoration: BoxDecoration(
+        color: cochee ? c.withValues(alpha: p.sombre ? 0.18 : 0.11) : null,
+        border: Border.all(color: c.withValues(alpha: cochee ? 0.7 : 0.45), width: 1.4),
+      ),
+      child: cochee ? CustomPaint(painter: _CochePeinte(c)) : null,
+    );
+  }
+}
+
+class _CochePeinte extends CustomPainter {
+  _CochePeinte(this.couleur);
+  final Color couleur;
+
+  @override
+  void paint(Canvas canvas, Size t) {
+    canvas.scale(t.width / 24, t.height / 24);
+    canvas.drawPath(
+      Path()
+        ..moveTo(4, 12.5)
+        ..lineTo(9.5, 18.5)
+        ..lineTo(21, 4),
+      Paint()
+        ..color = couleur
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.6
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _CochePeinte a) => a.couleur != couleur;
+}
+
 class _ChoixAxe extends ConsumerWidget {
   const _ChoixAxe({required this.onChoisi});
   final void Function(String slug) onChoisi;
@@ -327,50 +427,75 @@ class _ChoixAxe extends ConsumerWidget {
           onPressed: () => context.go('/aujourdhui'),
         ),
       ),
-      body: axes.when(
-        loading: () => const Center(child: CircularProgressIndicator()),
-        error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(axesProvider)),
-        data: (liste) => ListView(
-          padding: const EdgeInsets.fromLTRB(20, 4, 20, 32),
-          children: [
-            SurfaceHeros(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  IconePastille(Icons.explore_rounded, couleur: p.accentSurHeros, taille: 50),
-                  const SizedBox(height: 16),
-                  Surtitre('Diagnostic', couleur: p.accentSurHeros),
-                  const SizedBox(height: 6),
-                  Texte('Par quoi voulez-vous commencer ?',
-                      style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25)),
-                  const SizedBox(height: 8),
-                  Texte(
-                    "Un axe, ce n'est pas un thème : c'est un centre d'intérêt, un "
-                    "objectif et le temps que vous avez. Vous pourrez en changer.",
-                    style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+      body: FondPapier(
+        child: axes.when(
+          loading: () => const Center(child: CircularProgressIndicator()),
+          error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(axesProvider)),
+          data: (liste) {
+            // Le rang d'entrée court d'un pôle à l'autre, puis s'arrête de
+            // compter : la dernière carte ne doit pas se faire attendre.
+            var rang = 1;
+            int suivant() => rang < 7 ? rang++ : 7;
+            return ListView(
+              padding: const EdgeInsets.fromLTRB(20, 4, 20, 32),
+              children: [
+                Apparition(
+                  child: SurfaceHeros(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Illustration(
+                            Scene.graine,
+                            taille: 150,
+                            couleur: p.surHeros.withValues(alpha: 0.85),
+                            accent: p.accentSurHeros,
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+                        EtiquetteCrochet('diagnostic', couleur: p.accentSurHeros),
+                        const SizedBox(height: 10),
+                        Texte('Par quoi voulez-vous commencer ?',
+                            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25)),
+                        const SizedBox(height: 8),
+                        Texte(
+                          "Un axe, ce n'est pas un thème : c'est un centre d'intérêt, un "
+                          "objectif et le temps que vous avez. Vous pourrez en changer.",
+                          style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+                        ),
+                      ],
+                    ),
                   ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 26),
-            for (final g in regrouperParPole(liste)) ...[
-              // Un pôle ouvre une section : son nom, puis ses parcours. Six cartes
-              // « Agriculture » à plat, au milieu des axes sur l'IA, se lisaient
-              // comme une liste sans ordre.
-              if (g.estPole) ...[
-                const SizedBox(height: 14),
-                TitreSection(
-                  g.poleLabel!,
-                  sousTitre: '${g.axes.length} parcours : choisissez celui qui répond à votre activité.',
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 26),
+                for (final g in regrouperParPole(liste)) ...[
+                  // Un pôle ouvre une section : son nom, puis ses parcours. Six cartes
+                  // « Agriculture » à plat, au milieu des axes sur l'IA, se lisaient
+                  // comme une liste sans ordre.
+                  if (g.estPole) ...[
+                    const SizedBox(height: 14),
+                    Apparition(
+                      rang: suivant(),
+                      child: TitreSection(
+                        g.poleLabel!,
+                        sousTitre: '${g.axes.length} parcours : choisissez celui qui répond à votre activité.',
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
+                  for (final a in g.axes) ...[
+                    Apparition(
+                      rang: suivant(),
+                      child: _CarteAxe(axe: a, dansPole: g.estPole, onChoisi: onChoisi),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
+                ],
+                const SizedBox(height: 14),
+                const Fleuron(),
               ],
-              for (final a in g.axes) ...[
-                _CarteAxe(axe: a, dansPole: g.estPole, onChoisi: onChoisi),
-                const SizedBox(height: 12),
-              ],
-            ],
-          ],
+            );
+          },
         ),
       ),
     );
@@ -412,11 +537,20 @@ class _CarteAxe extends StatelessWidget {
                 ),
         child: Row(
           children: [
-            // La pastille teintée marque l'appartenance au pôle.
-            IconePastille(
-              dansPole ? Icons.route_rounded : Icons.auto_stories_rounded,
-              couleur: teinte,
-              taille: 44,
+            // Le cachet teinté marque l'appartenance au pôle.
+            Container(
+              width: 44,
+              height: 44,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: teinte.withValues(alpha: p.sombre ? 0.16 : 0.10),
+                border: Border.all(color: teinte.withValues(alpha: 0.42)),
+              ),
+              child: IconeAscenda(
+                dansPole ? Icone.boussole : Icone.volumes,
+                taille: 23,
+                couleur: teinte,
+              ),
             ),
             const SizedBox(width: 14),
             Expanded(
@@ -441,10 +575,9 @@ class _CarteAxe extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 6),
-            Icon(
-              a.parcoursPossible ? Icons.chevron_right_rounded : Icons.hourglass_empty_rounded,
-              color: p.attenue,
-            ),
+            a.parcoursPossible
+                ? IconeAscenda(Icone.fleche, taille: 20, couleur: p.attenue)
+                : Icon(Icons.hourglass_empty_rounded, color: p.attenue),
           ],
         ),
       ),

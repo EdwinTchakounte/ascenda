@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../etat/session.dart';
+import '../theme/icones.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
@@ -21,7 +22,7 @@ class BoutonMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       tooltip: 'Menu',
-      icon: const Icon(Icons.menu_rounded, size: 26),
+      icon: const IconeAscenda(Icone.cahier, taille: 26),
       onPressed: () => cleCoque.currentState?.openDrawer(),
     );
   }
@@ -45,7 +46,7 @@ class AvatarCompte extends ConsumerWidget {
         padding: const EdgeInsets.only(right: 8),
         child: IconButton(
           tooltip: 'Se connecter',
-          icon: Icon(Icons.account_circle_outlined, size: taille * 0.78, color: p.texte),
+          icon: IconeAscenda(Icone.lecteur, taille: taille * 0.8, couleur: p.texte),
           onPressed: () => context.go('/bienvenue'),
         ),
       );
@@ -93,7 +94,7 @@ class Surface extends StatelessWidget {
     this.padding = const EdgeInsets.all(18),
     this.onTap,
     this.couleur,
-    this.rayon = Rayons.carte,
+    this.rayon = Rayons.moyen,
     this.ombre = true,
   });
 
@@ -110,11 +111,18 @@ class Surface extends StatelessWidget {
     return DecoratedBox(
       decoration: BoxDecoration(
         borderRadius: rayon,
-        boxShadow: ombre ? p.ombreCarte : null,
+        boxShadow: ombre
+            ? [BoxShadow(color: p.ombre.withValues(alpha: p.sombre ? 0.30 : 0.05), blurRadius: 14, offset: const Offset(0, 5))]
+            : null,
       ),
       child: Material(
         color: couleur ?? p.surface,
-        shape: RoundedRectangleBorder(borderRadius: rayon, side: BorderSide(color: p.trait)),
+        // Un filet d'encre plutôt qu'un contour effacé : la fiche est posée sur
+        // le papier, elle ne flotte pas dedans.
+        shape: RoundedRectangleBorder(
+          borderRadius: rayon,
+          side: BorderSide(color: p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12)),
+        ),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
           onTap: onTap,

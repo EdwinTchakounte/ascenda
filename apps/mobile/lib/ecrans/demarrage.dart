@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../theme/couleurs.dart';
+import '../theme/texte.dart';
 
 /// L'écran des premières secondes.
 ///
@@ -48,13 +49,34 @@ class EcranDemarrage extends StatelessWidget {
                   filterQuality: FilterQuality.medium,
                   semanticLabel: 'ASCENDA, Learn. Grow. Become.',
                 ),
-                const SizedBox(height: 40),
+                const SizedBox(height: 26),
+                // Le titre courant d'une page de livre : petites capitales
+                // entre deux filets d'or.
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _FiletOr(largeur: 26),
+                    const SizedBox(width: 12),
+                    Texte(
+                      'ATELIER DE LECTURE',
+                      style: TextStyle(
+                        color: Couleurs.marqueOr.withValues(alpha: 0.85),
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w700,
+                        letterSpacing: 3.4,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    _FiletOr(largeur: 26),
+                  ],
+                ),
+                const SizedBox(height: 34),
                 SizedBox(
                   width: 120,
                   child: ClipRRect(
                     borderRadius: Rayons.pilule,
                     child: LinearProgressIndicator(
-                      minHeight: 3,
+                      minHeight: 2,
                       color: Couleurs.marqueOr,
                       backgroundColor: nuit.surHeros.withValues(alpha: 0.08),
                     ),
@@ -67,4 +89,17 @@ class EcranDemarrage extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Un court filet d'or, de part et d'autre du titre courant.
+class _FiletOr extends StatelessWidget {
+  const _FiletOr({required this.largeur});
+  final double largeur;
+
+  @override
+  Widget build(BuildContext context) => Container(
+        width: largeur,
+        height: 1,
+        color: Couleurs.marqueOr.withValues(alpha: 0.5),
+      );
 }

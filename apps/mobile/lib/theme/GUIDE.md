@@ -38,6 +38,47 @@ champs, puces carrées), `carte` 20 (cartes), `grand` 28 (carte de mise en
 avant, dialogues), `pilule` (pastilles, jauges, filtres). Aucun
 `BorderRadius.zero`, aucun `BoxShape.rectangle` sans rayon.
 
+## La matière : papier, encre, volumes (`lib/theme/papier.dart`, `lib/widgets/livre.dart`)
+
+L'application est un atelier de lecture, pas un tableau de bord. Ce qui la
+distingue :
+
+- `FondPapier` : le grain du papier, dessiné, derrière chaque page. La coque
+  l'applique aux onglets ; un écran ouvert en plein (fiche, lecteur) l'ajoute
+  lui-même.
+- `Filet()` et `Filet(redouble: true)` : les séparations sont des filets
+  d'imprimeur, pas des `Divider` gris.
+- `EtiquetteCrochet('séance du jour')` : le surtitre entre crochets, en petites
+  capitales espacées.
+- `Lettrine('A')` : la première lettre d'un chapitre ou d'une exergue.
+- `TitreCourant('Mémento de l'agronome', folio: 'p. 244')` : l'en-tête d'une
+  page de livre.
+- `Fleuron()` : l'ornement qui clôt une section.
+- `DosLivre`, `CouvertureLivre`, `Rayon` : un ouvrage se montre comme un volume,
+  teinté par son pôle, avec ses nerfs et son filet doré. Jamais un rectangle
+  gris, jamais une initiale dans un carré.
+
+## Les icônes (`lib/theme/icones.dart`)
+
+`IconeAscenda(Icone.volumes, taille: 24)`. Dix-huit dessins à la plume : soleil,
+volumes, plume, pousse, cahier, lecteur, loupe, signet, page, cercle, cartes,
+clef, sceau, jeton, boussole, question, encrier, fleche. Material n'est employé
+que lorsque aucune de ces valeurs ne convient.
+
+## Le mouvement (`lib/theme/mouvement.dart`)
+
+- `Apparition(rang: i, child:)` : l'écran se pose bloc par bloc, une seule fois.
+- `CompteurAnime(valeur)` : un chiffre monte jusqu'à sa valeur.
+- `Respire(child:)` : une pulsation lente, un élément par écran au plus.
+- Rien ne dépasse 420 ms, et tout s'efface sous le réglage « animations
+  réduites » du téléphone.
+
+## Les scènes dessinées (`lib/widgets/illustrations.dart`)
+
+`Illustration(Scene.rayonVide, taille: 172)`, et `EtatMessage(..., scene:)`.
+Un écran vide raconte un moment de lecture : rayon vide, lampe, graine, cercle
+vide, sans réseau, laurier, page blanche, loupe vide.
+
 ## Briques (`lib/widgets/ui.dart`)
 
 - `Surface` : la carte standard (arrondi 20, ombre légère, filet), `onTap` optionnel.

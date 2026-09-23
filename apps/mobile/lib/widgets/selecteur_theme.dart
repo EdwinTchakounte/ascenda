@@ -5,11 +5,17 @@ import '../etat/apparence.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// Le choix du thème : cinq vignettes, chacune un aperçu de son ambiance.
+/// Le choix du thème : cinq échantillons de papier, chacun un aperçu de son
+/// ambiance.
+///
+/// Une pastille ronde ne dit rien du papier qu'on choisit. Ici chaque vignette
+/// est une petite page : le fond du thème, quelques lignes de texte à l'encre,
+/// le bandeau profond des cartes de mise en avant et le point d'or. On choisit
+/// une matière, pas une couleur.
 class SelecteurTheme extends ConsumerWidget {
   const SelecteurTheme({super.key, this.compact = false});
 
-  /// Dans le tiroir : vignettes plus petites, sur une ligne.
+  /// Dans le tiroir : échantillons plus petits, sur une ligne.
   final bool compact;
 
   @override
@@ -19,13 +25,13 @@ class SelecteurTheme extends ConsumerWidget {
       (id: Apparence.automatique, nom: 'Auto', clair: Palette.ivoire, sombre: Palette.nuit),
       for (final p in Palette.tous) (id: p.id, nom: p.nom, clair: p, sombre: p),
     ];
-    final taille = compact ? 46.0 : 58.0;
+    final taille = compact ? 40.0 : 50.0;
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         for (final o in options)
-          _Vignette(
+          _Echantillon(
             nom: o.nom,
             clair: o.clair,
             sombre: o.sombre,
@@ -38,8 +44,8 @@ class SelecteurTheme extends ConsumerWidget {
   }
 }
 
-class _Vignette extends StatelessWidget {
-  const _Vignette({
+class _Echantillon extends StatelessWidget {
+  const _Echantillon({
     required this.nom,
     required this.clair,
     required this.sombre,
@@ -71,32 +77,54 @@ class _Vignette extends StatelessWidget {
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 220),
+              curve: Curves.easeOut,
               width: taille,
-              height: taille,
-              padding: const EdgeInsets.all(3),
+              // La proportion d'une page, pas celle d'un jeton.
+              height: taille * 1.3,
+              padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: actif ? p.accent : p.trait, width: actif ? 2.4 : 1.2),
+                borderRadius: Rayons.petit,
+                color: actif ? p.accent.withValues(alpha: 0.16) : Colors.transparent,
+                border: Border.all(
+                  color: actif ? p.accent : p.encre.withValues(alpha: p.sombre ? 0.30 : 0.20),
+                  width: actif ? 1.8 : 1,
+                ),
               ),
-              child: ClipOval(
+              child: ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(6)),
                 child: CustomPaint(
-                  painter: _Apercu(clair: clair, sombre: sombre, auto: auto),
-                  child: Center(
-                    child: actif
-                        ? Icon(Icons.check_rounded, size: taille * 0.36, color: auto ? clair.accent : sombre.accentSurHeros)
-                        : null,
-                  ),
+                  painter: _Feuille(clair: clair, sombre: sombre, auto: auto),
+                  child: actif
+                      ? Center(
+                          child: Icon(
+                            Icons.check_rounded,
+                            size: taille * 0.42,
+                            color: auto ? clair.accentTexte : clair.accentSurHeros,
+                            shadows: [
+                              BoxShadow(color: clair.herosFin.withValues(alpha: 0.6), blurRadius: 6),
+                            ],
+                          ),
+                        )
+                      : null,
                 ),
               ),
             ),
-            const SizedBox(height: 6),
-            Texte(
-              nom,
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                    color: actif ? p.encre : p.attenue,
-                    fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
-                    letterSpacing: 0.2,
-                  ),
+            const SizedBox(height: 7),
+            // Le nom ne déborde jamais de son échantillon : sur un écran
+            // étroit ou en grande police, cinq vignettes tiennent la ligne.
+            SizedBox(
+              width: taille,
+              child: Texte(
+                nom,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                      color: actif ? p.encre : p.attenue,
+                      fontWeight: actif ? FontWeight.w700 : FontWeight.w500,
+                      letterSpacing: actif ? 0.4 : 0.2,
+                    ),
+              ),
             ),
           ],
         ),
@@ -105,37 +133,71 @@ class _Vignette extends StatelessWidget {
   }
 }
 
-/// Un disque : le fond du thème, sa carte profonde en diagonale, un point d'or.
-/// Pour « Auto », une moitié Ivoire et une moitié Nuit.
-class _Apercu extends CustomPainter {
-  _Apercu({required this.clair, required this.sombre, required this.auto});
+/// Une page du thème : son papier, ses lignes d'encre, son bandeau profond et
+/// son point d'or. Pour « Auto », la feuille est déchirée en diagonale, moitié
+/// Ivoire, moitié Nuit.
+class _Feuille extends CustomPainter {
+  _Feuille({required this.clair, required this.sombre, required this.auto});
   final Palette clair;
   final Palette sombre;
   final bool auto;
 
   @override
   void paint(Canvas canvas, Size s) {
-    final r = Offset.zero & s;
     if (auto) {
-      canvas.drawRect(r, Paint()..color = clair.fond);
+      _page(canvas, s, clair);
       final moitie = Path()
         ..moveTo(s.width, 0)
         ..lineTo(s.width, s.height)
         ..lineTo(0, s.height)
         ..close();
-      canvas.drawPath(moitie, Paint()..color = sombre.fond);
-    } else {
-      canvas.drawRect(r, Paint()..color = clair.fond);
-      final diag = Path()
-        ..moveTo(s.width * 0.35, s.height)
-        ..lineTo(s.width, s.height * 0.35)
-        ..lineTo(s.width, s.height)
-        ..close();
-      canvas.drawPath(diag, Paint()..shader = clair.degradeHeros.createShader(r));
+      canvas.save();
+      canvas.clipPath(moitie);
+      _page(canvas, s, sombre);
+      canvas.restore();
+      return;
     }
-    canvas.drawCircle(Offset(s.width * 0.3, s.height * 0.3), s.width * 0.09, Paint()..color = clair.accent);
+    _page(canvas, s, clair);
+  }
+
+  /// Le rendu d'une page dans une palette donnée, à l'échelle de la vignette.
+  void _page(Canvas canvas, Size s, Palette p) {
+    canvas.drawRect(Offset.zero & s, Paint()..color = p.fond);
+
+    // Trois lignes de texte à l'encre, la dernière plus courte : la page est
+    // écrite, on ne cherche pas à la lire.
+    final encre = Paint()
+      ..color = p.texte.withValues(alpha: 0.55)
+      ..strokeWidth = s.height * 0.035
+      ..strokeCap = StrokeCap.round;
+    final marge = s.width * 0.16;
+    for (var i = 0; i < 3; i++) {
+      final y = s.height * (0.16 + i * 0.13);
+      final fin = s.width - marge * (i == 2 ? 2.4 : 1);
+      canvas.drawLine(Offset(marge, y), Offset(fin, y), encre);
+    }
+
+    // Le bandeau profond du bas : la carte de mise en avant du thème.
+    final bandeau = Rect.fromLTWH(0, s.height * 0.58, s.width, s.height * 0.42);
+    canvas.drawRect(bandeau, Paint()..shader = p.degradeHeros.createShader(bandeau));
+
+    // Le point d'or, posé sur le bandeau comme sur la carte.
+    canvas.drawCircle(
+      Offset(s.width * 0.28, s.height * 0.79),
+      s.width * 0.11,
+      Paint()..color = p.accentSurHeros,
+    );
+    canvas.drawLine(
+      Offset(s.width * 0.46, s.height * 0.79),
+      Offset(s.width * 0.80, s.height * 0.79),
+      Paint()
+        ..color = p.surHerosDoux.withValues(alpha: 0.8)
+        ..strokeWidth = s.height * 0.032
+        ..strokeCap = StrokeCap.round,
+    );
   }
 
   @override
-  bool shouldRepaint(covariant _Apercu old) => old.clair != clair || old.sombre != sombre;
+  bool shouldRepaint(covariant _Feuille autre) =>
+      autre.clair != clair || autre.sombre != sombre || autre.auto != auto;
 }

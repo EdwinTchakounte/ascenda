@@ -5,12 +5,17 @@ import 'package:intl/intl.dart';
 
 import '../api/modeles.dart';
 import '../etat/fournisseurs.dart';
+import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
 import '../widgets/avantages.dart';
 import '../widgets/cartes.dart';
 import '../widgets/exploitation.dart';
 import '../widgets/etats.dart';
+import '../theme/icones.dart';
+import '../theme/mouvement.dart';
+import '../theme/papier.dart';
+import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
@@ -71,38 +76,43 @@ class EcranAujourdhui extends ConsumerWidget {
               data: (a) => SliverPadding(
                 padding: const EdgeInsets.fromLTRB(20, 6, 20, 36),
                 sliver: SliverList.list(children: [
+                  // L'accueil se pose bloc par bloc : on voit la page se
+                  // construire, une fois, à l'ouverture.
+
                   // Le bandeau de lancement, s'il y a lieu. Il se retire tout
                   // seul à l'échéance, sans rien à changer dans l'application.
                   const BandeauLancement(),
                   const BandeauRecompense(),
-                  if (a.seance != null)
-                    CarteSeance(
-                      seance: a.seance!,
-                      onCommencer: () => _ouvrirSeance(context, a),
-                    )
-                  else
-                    const _AucuneSeance(),
+                  Apparition(
+                    child: a.seance != null
+                        ? CarteSeance(seance: a.seance!, onCommencer: () => _ouvrirSeance(context, a))
+                        : const _AucuneSeance(),
+                  ),
                   const SizedBox(height: 22),
-                  const _Elan(),
+                  const Apparition(rang: 1, child: _Elan()),
                   const SizedBox(height: 26),
-                  const TitreSection('Votre semaine'),
+                  const Apparition(rang: 2, child: TitreSection('Votre semaine')),
                   const SizedBox(height: 12),
-                  Surface(
-                    padding: const EdgeInsets.fromLTRB(14, 16, 14, 14),
-                    child: PastillesSemaine(jours: a.semaine),
+                  Apparition(
+                    rang: 2,
+                    child: Surface(
+                      padding: const EdgeInsets.fromLTRB(14, 16, 14, 14),
+                      child: PastillesSemaine(jours: a.semaine),
+                    ),
                   ),
                   if (a.notionsAReviser > 0) ...[
                     const SizedBox(height: 14),
-                    _CarteRevision(nombre: a.notionsAReviser),
+                    Apparition(rang: 3, child: _CarteRevision(nombre: a.notionsAReviser)),
                   ],
                   const SizedBox(height: 14),
-                  const _RaccourcisChronogramme(),
+                  const Apparition(rang: 3, child: _RaccourcisChronogramme()),
                   const SizedBox(height: 26),
-                  const TitreSection('Accès rapides'),
+                  const Apparition(rang: 4, child: _Rayon()),
+                  const Apparition(rang: 5, child: TitreSection('Accès rapides')),
                   const SizedBox(height: 12),
-                  const _AccesRapides(),
+                  const Apparition(rang: 5, child: _AccesRapides()),
                   const SizedBox(height: 28),
-                  const _Poles(),
+                  const Apparition(rang: 6, child: _Poles()),
                 ]),
               ),
             ),
@@ -142,30 +152,42 @@ class _AucuneSeance extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     final p = context.palette;
-    return SurfaceHeros(
-      padding: const EdgeInsets.fromLTRB(22, 24, 22, 22),
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(22, 20, 22, 22),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          IconePastille(Icons.explore_rounded, couleur: p.accentSurHeros, taille: 50),
-          const SizedBox(height: 18),
-          Surtitre('Votre parcours', couleur: p.accentSurHeros),
-          const SizedBox(height: 8),
-          Texte('Aucune séance prévue',
-              style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25)),
-          const SizedBox(height: 8),
-          Texte(
-            "Créez un chronogramme et ASCENDA vous proposera chaque jour une "
-            "séance de lecture à votre mesure.",
-            style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
+          const EtiquetteCrochet('votre parcours'),
+          const SizedBox(height: 16),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Lettrine('A', taille: 58),
+              const SizedBox(width: 16),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Texte('Aucune séance prévue',
+                        style: t.textTheme.headlineSmall?.copyWith(fontSize: 23, height: 1.15)),
+                    const SizedBox(height: 6),
+                    Texte(
+                      "Dites à ASCENDA ce que vous voulez apprendre : il découpe les ouvrages en séances que vous pouvez tenir.",
+                      style: t.textTheme.bodyMedium?.copyWith(color: p.attenue),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
-          const SizedBox(height: 22),
+          const SizedBox(height: 18),
+          const Filet(redouble: true),
+          const SizedBox(height: 16),
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: () => context.push('/diagnostic'),
-              icon: const Icon(Icons.arrow_forward_rounded, size: 20),
-              iconAlignment: IconAlignment.end,
+              icon: const IconeAscenda(Icone.boussole, taille: 20, couleur: Color(0xFF1A1400)),
               label: const Texte('Faire le diagnostic'),
             ),
           ),
@@ -240,7 +262,14 @@ class _Chiffre extends StatelessWidget {
           const SizedBox(height: 12),
           Text.rich(
             TextSpan(children: [
-              TextSpan(text: valeur),
+              WidgetSpan(
+                alignment: PlaceholderAlignment.baseline,
+                baseline: TextBaseline.alphabetic,
+                child: CompteurAnime(
+                  double.tryParse(valeur.replaceAll(',', '.')) ?? 0,
+                  style: t.textTheme.headlineSmall?.copyWith(fontSize: 24, height: 1),
+                ),
+              ),
               if (unite != null)
                 TextSpan(text: ' $unite', style: t.textTheme.labelLarge?.copyWith(color: p.attenue)),
             ]),
@@ -392,6 +421,39 @@ class _AccesRapides extends StatelessWidget {
               ],
             ),
           ),
+      ],
+    );
+  }
+}
+
+/// Le rayon : les volumes du corpus, posés sur une tablette.
+class _Rayon extends ConsumerWidget {
+  const _Rayon();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final page = ref.watch(bibliothequeProvider(const FiltreBiblio())).valueOrNull;
+    final emportes = ref.watch(packsProvider).valueOrNull ?? const {};
+    if (page == null || page.ouvrages.isEmpty) return const SizedBox.shrink();
+    final volumes = <({String titre, String? axeSlug, bool marque, VoidCallback? onTap})>[
+      for (final o in page.ouvrages.take(14))
+        (
+          titre: o.titre,
+          axeSlug: o.axeSlug,
+          marque: emportes.containsKey(o.id),
+          onTap: () => context.push('/ouvrage/${o.id}'),
+        ),
+    ];
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TitreSection('Votre rayon',
+            sousTitre: '${page.total} ouvrages dans la bibliothèque',
+            action: 'Tout voir',
+            onAction: () => context.go('/bibliotheque')),
+        const SizedBox(height: 10),
+        Rayon(volumes: volumes, padding: EdgeInsets.zero),
+        const SizedBox(height: 22),
       ],
     );
   }

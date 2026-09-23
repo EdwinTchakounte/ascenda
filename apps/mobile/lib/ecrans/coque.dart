@@ -5,7 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../etat/cercle.dart';
 import '../etat/hors_ligne.dart';
 import '../etat/session.dart';
+import '../theme/icones.dart';
 import '../theme/palette.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
 import '../widgets/selecteur_theme.dart';
 import '../widgets/ui.dart';
@@ -24,10 +26,10 @@ class CoqueAscenda extends ConsumerWidget {
   final StatefulNavigationShell coque;
 
   static const _onglets = [
-    (icone: Icons.wb_twilight_outlined, iconeActive: Icons.wb_twilight_rounded, libelle: 'Accueil'),
-    (icone: Icons.auto_stories_outlined, iconeActive: Icons.auto_stories_rounded, libelle: 'Livres'),
-    (icone: Icons.forum_outlined, iconeActive: Icons.forum_rounded, libelle: 'Agent'),
-    (icone: Icons.insights_outlined, iconeActive: Icons.insights_rounded, libelle: 'Progrès'),
+    (icone: Icone.soleil, libelle: 'Le jour'),
+    (icone: Icone.volumes, libelle: 'Les livres'),
+    (icone: Icone.plume, libelle: "L'agent"),
+    (icone: Icone.pousse, libelle: 'Le chemin'),
   ];
 
   @override
@@ -37,7 +39,7 @@ class CoqueAscenda extends ConsumerWidget {
       key: cleCoque,
       drawer: const TiroirAscenda(),
       drawerEdgeDragWidth: 28,
-      body: coque,
+      body: FondPapier(child: coque),
       bottomNavigationBar: DecoratedBox(
         decoration: BoxDecoration(
           color: p.surface,
@@ -55,11 +57,13 @@ class CoqueAscenda extends ConsumerWidget {
             animationDuration: const Duration(milliseconds: 380),
             onDestinationSelected: (i) => coque.goBranch(i, initialLocation: i == coque.currentIndex),
             destinations: [
-              for (final o in _onglets)
+              for (final (i, o) in _onglets.indexed)
                 NavigationDestination(
-                  icon: Icon(o.icone),
-                  selectedIcon: Icon(o.iconeActive),
+                  icon: IconeAscenda(o.icone, taille: 25, couleur: p.attenue),
+                  selectedIcon: IconeAscenda(o.icone, taille: 25, couleur: p.accentTexte, pleine: true, epaisseur: 1.9),
                   label: o.libelle,
+                  tooltip: o.libelle,
+                  key: ValueKey('onglet-$i'),
                 ),
             ],
           ),
@@ -118,13 +122,12 @@ class TiroirAscenda extends ConsumerWidget {
                                     const SizedBox(height: 6),
                                     Pastille(
                                       u?.accesComplet == true ? 'Ascension' : 'Formule gratuite',
-                                      icone: u?.accesComplet == true ? Icons.workspace_premium_rounded : Icons.eco_outlined,
                                       couleur: p.accentSurHeros,
                                     ),
                                   ],
                                 ),
                               ),
-                              Icon(Icons.chevron_right_rounded, color: p.surHerosDoux),
+                              IconeAscenda(Icone.fleche, taille: 20, couleur: p.surHerosDoux),
                             ],
                           )
                         : Column(
@@ -149,9 +152,9 @@ class TiroirAscenda extends ConsumerWidget {
                   const SizedBox(height: 18),
                   if (connecte) ...[
                     const _Rubrique('Mon espace'),
-                    _Entree(icone: Icons.person_outline_rounded, libelle: 'Profil et compte', onTap: () => aller('/profil')),
+                    _Entree(icone: Icone.lecteur, libelle: 'Profil et compte', onTap: () => aller('/profil')),
                     _Entree(
-                      icone: Icons.diversity_3_outlined,
+                      icone: Icone.cercle,
                       libelle: 'Cercle de lecture',
                       compteur: attente,
                       onTap: () {
@@ -159,9 +162,9 @@ class TiroirAscenda extends ConsumerWidget {
                         aller('/cercle');
                       },
                     ),
-                    _Entree(icone: Icons.style_outlined, libelle: 'Révisions', onTap: () => aller('/revision')),
+                    _Entree(icone: Icone.cartes, libelle: 'Révisions', onTap: () => aller('/revision')),
                     _Entree(
-                      icone: Icons.explore_outlined,
+                      icone: Icone.boussole,
                       libelle: 'Nouveau parcours',
                       detail: 'Refaire le diagnostic',
                       onTap: () => aller('/diagnostic'),
@@ -169,22 +172,22 @@ class TiroirAscenda extends ConsumerWidget {
                   ],
                   const _Rubrique('Bibliothèque'),
                   _Entree(
-                    icone: Icons.download_done_rounded,
+                    icone: Icone.signet,
                     libelle: 'Livres hors ligne',
                     detail: emportes == 0 ? null : '$emportes sur l\'appareil',
                     onTap: () => aller('/hors-ligne'),
                   ),
-                  _Entree(icone: Icons.lightbulb_outline_rounded, libelle: 'Notions clés', onTap: () => aller('/notions')),
-                  _Entree(icone: Icons.manage_search_rounded, libelle: 'Chercher dans les livres', onTap: () => aller('/recherche')),
+                  _Entree(icone: Icone.clef, libelle: 'Notions clés', onTap: () => aller('/notions')),
+                  _Entree(icone: Icone.loupe, libelle: 'Chercher dans les livres', onTap: () => aller('/recherche')),
                   if (connecte) ...[
                     const _Rubrique('Ascension'),
                     _Entree(
-                      icone: Icons.workspace_premium_outlined,
+                      icone: Icone.sceau,
                       libelle: 'Offre Ascension',
                       accent: true,
                       onTap: () => aller('/abonnement'),
                     ),
-                    _Entree(icone: Icons.confirmation_number_outlined, libelle: 'Codes et avantages', onTap: () => aller('/codes')),
+                    _Entree(icone: Icone.jeton, libelle: 'Codes et avantages', onTap: () => aller('/codes')),
                   ],
                   const _Rubrique('Apparence'),
                   const Padding(
@@ -212,7 +215,7 @@ class TiroirAscenda extends ConsumerWidget {
                         await ref.read(sessionProvider.notifier).deconnexion();
                       },
                       style: TextButton.styleFrom(foregroundColor: p.alerte),
-                      icon: const Icon(Icons.logout_rounded, size: 18),
+                      icon: const IconeAscenda(Icone.fleche, taille: 18),
                       label: const Texte('Sortir'),
                     ),
                 ],
@@ -232,7 +235,13 @@ class _Rubrique extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
         padding: const EdgeInsets.fromLTRB(12, 14, 12, 6),
-        child: Surtitre(titre, couleur: context.palette.attenue),
+        child: Row(
+          children: [
+            Surtitre(titre, couleur: context.palette.attenue),
+            const SizedBox(width: 10),
+            const Expanded(child: Filet()),
+          ],
+        ),
       );
 }
 
@@ -246,7 +255,7 @@ class _Entree extends StatelessWidget {
     this.accent = false,
   });
 
-  final IconData icone;
+  final Icone icone;
   final String libelle;
   final String? detail;
   final int compteur;
@@ -269,7 +278,16 @@ class _Entree extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
             child: Row(
               children: [
-                IconePastille(icone, taille: 38, couleur: accent ? p.accentTexte : p.texte),
+                Container(
+                  width: 38,
+                  height: 38,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: (accent ? p.accentTexte : p.texte).withValues(alpha: 0.28)),
+                    color: (accent ? p.accentTexte : p.texte).withValues(alpha: p.sombre ? 0.10 : 0.05),
+                  ),
+                  child: IconeAscenda(icone, taille: 21, couleur: accent ? p.accentTexte : p.texte),
+                ),
                 const SizedBox(width: 14),
                 Expanded(
                   child: Column(

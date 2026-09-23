@@ -4,6 +4,9 @@ import 'package:intl/intl.dart';
 import '../api/modeles.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
+import '../theme/icones.dart';
+import '../theme/papier.dart';
+import 'livre.dart';
 import 'ui.dart';
 
 String dureeLisible(int minutes) {
@@ -32,51 +35,72 @@ class CarteSeance extends StatelessWidget {
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     final p = context.palette;
-    return SurfaceHeros(
-      padding: const EdgeInsets.fromLTRB(22, 22, 22, 22),
+    final titre = seance.ouvrage ?? 'Séance de lecture';
+    return Surface(
+      padding: const EdgeInsets.fromLTRB(20, 18, 20, 20),
+      rayon: Rayons.moyen,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Pastille('Séance du jour', icone: Icons.wb_twilight_rounded, couleur: p.accentSurHeros),
+              EtiquetteCrochet(seance.enRetard ? 'séance en retard' : 'séance du jour',
+                  couleur: seance.enRetard ? p.alerte : p.accentTexte),
               const Spacer(),
-              if (seance.enRetard) Pastille('en retard', couleur: const Color(0xFFF0A585)),
+              Texte(dureeLisible(seance.dureeMin),
+                  style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1)),
             ],
           ),
-          const SizedBox(height: 18),
-          Texte(
-            seance.ouvrage ?? 'Séance de lecture',
-            style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 25, height: 1.18),
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-          ),
-          if (seance.sousTitre != null) ...[
-            const SizedBox(height: 6),
-            Texte(
-              seance.sousTitre!,
-              style: t.textTheme.bodyMedium?.copyWith(color: p.surHerosDoux),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
-          const SizedBox(height: 18),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
+          const SizedBox(height: 14),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              _Etiquette(icone: Icons.schedule_rounded, texte: dureeLisible(seance.dureeMin)),
-              if (seance.pages.isNotEmpty) _Etiquette(icone: Icons.menu_book_outlined, texte: seance.pages),
-              if (seance.livrable == 'quiz') const _Etiquette(icone: Icons.quiz_outlined, texte: 'suivie d\'un quiz'),
+              // Le volume du jour, posé sur la feuille.
+              DosLivre(titre: titre, hauteur: 132, largeur: 44, marque: true),
+              const SizedBox(width: 18),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Texte(
+                      titre,
+                      style: t.textTheme.headlineSmall?.copyWith(fontSize: 23, height: 1.18),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    if (seance.sousTitre != null) ...[
+                      const SizedBox(height: 6),
+                      Texte(
+                        seance.sousTitre!,
+                        style: t.textTheme.bodyMedium?.copyWith(color: p.attenue),
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ],
+                    const SizedBox(height: 12),
+                    const Filet(redouble: true),
+                    const SizedBox(height: 10),
+                    Wrap(
+                      spacing: 14,
+                      runSpacing: 6,
+                      children: [
+                        if (seance.pages.isNotEmpty) _Etiquette(icone: Icone.page, texte: seance.pages),
+                        if (seance.livrable == 'quiz') const _Etiquette(icone: Icone.question, texte: 'puis un quiz'),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
-          const SizedBox(height: 22),
+          const SizedBox(height: 18),
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
               onPressed: onCommencer,
-              icon: const Icon(Icons.play_arrow_rounded, size: 22),
-              label: const Texte('Commencer la séance'),
+              icon: const IconeAscenda(Icone.fleche, taille: 20, couleur: Color(0xFF1A1400)),
+              iconAlignment: IconAlignment.end,
+              label: const Texte('Ouvrir le livre'),
             ),
           ),
         ],
@@ -87,27 +111,19 @@ class CarteSeance extends StatelessWidget {
 
 class _Etiquette extends StatelessWidget {
   const _Etiquette({required this.icone, required this.texte});
-  final IconData icone;
+  final Icone icone;
   final String texte;
 
   @override
   Widget build(BuildContext context) {
     final p = context.palette;
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-      decoration: BoxDecoration(
-        color: p.surHeros.withValues(alpha: 0.10),
-        borderRadius: Rayons.pilule,
-        border: Border.all(color: p.surHeros.withValues(alpha: 0.10)),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icone, size: 14, color: p.accentSurHeros),
-          const SizedBox(width: 6),
-          Texte(texte, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: p.surHeros)),
-        ],
-      ),
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        IconeAscenda(icone, taille: 17, couleur: p.accentTexte),
+        const SizedBox(width: 7),
+        Texte(texte, style: Theme.of(context).textTheme.labelMedium?.copyWith(color: p.texte)),
+      ],
     );
   }
 }
@@ -128,7 +144,6 @@ class CarteOuvrage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
-    final teinte = Couleurs.pole(ouvrage.axeSlug) ?? Couleurs.ardoise;
     final reperes = [
       if (ouvrage.niveau != null) niveaux[ouvrage.niveau] ?? ouvrage.niveau!,
       // Les pages restent sur la fiche : sur une carte étroite, trois repères
@@ -141,7 +156,7 @@ class CarteOuvrage extends StatelessWidget {
       child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                _Couverture(titre: ouvrage.titre, teinte: teinte),
+                DosLivre(titre: ouvrage.titre, axeSlug: ouvrage.axeSlug, hauteur: 104, largeur: 48),
                 const SizedBox(width: 15),
                 Expanded(
                   child: Column(
@@ -218,61 +233,6 @@ class CarteOuvrage extends StatelessWidget {
                 ),
               ],
             ),
-    );
-  }
-}
-
-/// Une couverture composée : un aplat à la teinte du parcours, un dos plus
-/// sombre, et l'initiale du titre en Fraunces.
-class _Couverture extends StatelessWidget {
-  const _Couverture({required this.titre, required this.teinte});
-  final String titre;
-  final Color teinte;
-
-  @override
-  Widget build(BuildContext context) {
-    final lettre = titre.trim().isEmpty ? 'A' : titre.trim().characters.first.toUpperCase();
-    return Container(
-      width: 58,
-      height: 82,
-      clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.horizontal(left: Radius.circular(4), right: Radius.circular(9)),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [Color.lerp(teinte, Colors.white, 0.08)!, Color.lerp(teinte, Couleurs.nuit, 0.28)!],
-        ),
-        boxShadow: const [BoxShadow(color: Color(0x1F0B1435), blurRadius: 8, offset: Offset(2, 3))],
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-            left: 0, top: 0, bottom: 0,
-            child: Container(width: 5, color: Colors.black.withValues(alpha: 0.16)),
-          ),
-          Positioned(
-            left: 12, right: 8, top: 10,
-            child: Container(height: 1, color: Colors.white.withValues(alpha: 0.35)),
-          ),
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 4),
-              child: Texte(
-                lettre,
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                      color: Colors.white.withValues(alpha: 0.92),
-                      fontSize: 26,
-                    ),
-              ),
-            ),
-          ),
-          Positioned(
-            left: 12, right: 8, bottom: 10,
-            child: Container(height: 1, color: Colors.white.withValues(alpha: 0.35)),
-          ),
-        ],
-      ),
     );
   }
 }

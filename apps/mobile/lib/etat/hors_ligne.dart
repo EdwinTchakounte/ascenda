@@ -206,15 +206,36 @@ class DepotHorsLigne {
     }
   }
 
+  /// Le PDF d'un ouvrage libre, gardé tel quel.
+  ///
+  /// Un ouvrage libre n'a rien à cacher : le chiffrer obligerait à le relire en
+  /// entier en mémoire pour l'ouvrir, ce qui coûte cher sur un gros PDF. Il vit
+  /// donc en clair, dans un dossier à part de celui du coffre, et le lecteur
+  /// l'ouvre page par page depuis le disque.
+  Future<File?> fichierPdfClair(String documentId) async {
+    if (kIsWeb) return null;
+    final base = await (_racine?.call() ?? getApplicationSupportDirectory());
+    final d = Directory('${base.path}/pdf/libres');
+    if (!await d.exists()) await d.create(recursive: true);
+    return File('${d.path}/$documentId.pdf');
+  }
+
+  /// Vrai si le PDF est sur l'appareil, sous l'une ou l'autre forme.
   Future<bool> aPdf(String documentId) async {
     final f = await _fichierPdf(documentId);
-    return f != null && await f.exists();
+    if (f != null && await f.exists()) return true;
+    final clair = await fichierPdfClair(documentId);
+    return clair != null && await clair.exists();
   }
 
   Future<void> supprimer(String documentId) async {
     final d = await _dossier();
     final pdf = await _fichierPdf(documentId);
     if (pdf != null && await pdf.exists()) await pdf.delete();
+    // Le PDF en clair d'un ouvrage libre part aussi : « retirer de l'appareil »
+    // doit rendre la place, quelle que soit la forme du fichier.
+    final clair = await fichierPdfClair(documentId);
+    if (clair != null && await clair.exists()) await clair.delete();
     if (d != null) {
       for (final nom in ['$documentId.json', '$documentId.bin']) {
         final f = File('${d.path}/$nom');

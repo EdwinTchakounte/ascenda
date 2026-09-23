@@ -11,15 +11,20 @@ import '../api/client.dart';
 import '../etat/cercle.dart';
 import '../etat/session.dart';
 import '../theme/couleurs.dart';
+import '../theme/icones.dart';
+import '../theme/papier.dart';
 import '../theme/texte.dart';
 import '../widgets/etats.dart';
+import '../widgets/illustrations.dart';
 import '../widgets/ui.dart' hide Pastille;
 
 /// Le cercle de lecteurs : ses amis, ce qu'ils lisent, et de quoi se tenir
 /// mutuellement au rythme.
 ///
 /// On n'y cherche personne : on partage son code, on ajoute celui d'un ami.
-/// C'est un cercle de gens qui se connaissent, pas un réseau public.
+/// C'est un cercle de gens qui se connaissent, pas un réseau public. La page se
+/// tient donc comme un registre d'atelier : un cartouche en tête, des sections
+/// en petites capitales, et les activités portées l'une sous l'autre.
 class EcranCercle extends ConsumerStatefulWidget {
   const EcranCercle({super.key});
 
@@ -62,68 +67,71 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Mon cercle')),
-      body: SafeArea(
-        top: false,
-        bottom: false,
-        child: moi.when(
-          loading: () => const Padding(padding: EdgeInsets.all(20), child: SqueletteCarte(lignes: 5)),
-          error: (e, _) => EtatErreur(erreur: e, reessayer: _rafraichir),
-          data: (m) => RefreshIndicator(
-            onRefresh: _rafraichir,
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
-              children: [
-                Texte(
-                  "Lire à plusieurs tient mieux dans la durée. Suivez vos amis, "
-                  "encouragez-les, écrivez-leur.",
-                  style: t.textTheme.bodyMedium?.copyWith(color: p.attenue),
-                ),
-                const SizedBox(height: 18),
-                _CarteCode(moi: m),
-
-                if (demandes.recues.isNotEmpty) ...[
-                  _Titre('Demandes', compte: demandes.recues.length),
-                  for (final d in demandes.recues) _LigneDemande(demande: d),
-                ],
-
-                if (nouveaux.isNotEmpty) ...[
-                  _Titre('Pour vous', compte: nouveaux.length),
-                  for (final e in nouveaux) _CarteEncouragement(encouragement: e),
-                ],
-
-                const _Titre('Fil de lecture'),
-                fil.when(
-                  loading: () => const SqueletteCarte(lignes: 3),
-                  error: (e, _) => const _Discret(
-                    "Le fil n'a pas pu se charger. Tirez vers le bas pour réessayer.",
-                    icone: Icons.wifi_off_rounded,
+      // Le grain du papier : le cercle s'ouvre hors de la coque.
+      body: FondPapier(
+        child: SafeArea(
+          top: false,
+          bottom: false,
+          child: moi.when(
+            loading: () => const Padding(padding: EdgeInsets.all(20), child: SqueletteCarte(lignes: 5)),
+            error: (e, _) => EtatErreur(erreur: e, reessayer: _rafraichir),
+            data: (m) => RefreshIndicator(
+              onRefresh: _rafraichir,
+              child: ListView(
+                padding: const EdgeInsets.fromLTRB(20, 4, 20, 28),
+                children: [
+                  Texte(
+                    "Lire à plusieurs tient mieux dans la durée. Suivez vos amis, "
+                    "encouragez-les, écrivez-leur.",
+                    style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.5),
                   ),
-                  data: (evenements) => evenements.isEmpty
-                      ? const _Discret(
-                          "Rien encore ces quatorze derniers jours. Les séances et les quiz de vos amis "
-                          "apparaîtront ici.",
-                          icone: Icons.auto_stories_outlined)
-                      : _Fil(evenements: evenements.take(20).toList()),
-                ),
+                  const SizedBox(height: 16),
+                  _CarteCode(moi: m),
 
-                const _Titre('Mes amis'),
-                amis.when(
-                  loading: () => const SqueletteCarte(lignes: 3),
-                  error: (e, _) => EtatErreur(erreur: e, reessayer: _rafraichir),
-                  data: (liste) => liste.isEmpty
-                      ? const _Discret(
-                          "Votre cercle est vide pour l'instant. Partagez votre code, ou ajoutez celui "
-                          "d'un ami : l'amitié commence dès qu'il accepte.",
-                          icone: Icons.group_add_outlined)
-                      : Column(children: [for (final a in liste) _LigneAmi(ami: a)]),
-                ),
-                if (demandes.envoyees.isNotEmpty) ...[
-                  _EnAttente('En attente de réponse : ${demandes.envoyees.map((d) => d.lecteur.nom).join(', ')}.'),
+                  if (demandes.recues.isNotEmpty) ...[
+                    _Titre('demandes', compte: demandes.recues.length),
+                    for (final d in demandes.recues) _LigneDemande(demande: d),
+                  ],
+
+                  if (nouveaux.isNotEmpty) ...[
+                    _Titre('pour vous', compte: nouveaux.length),
+                    for (final e in nouveaux) _CarteEncouragement(encouragement: e),
+                  ],
+
+                  const _Titre('fil de lecture'),
+                  fil.when(
+                    loading: () => const SqueletteCarte(lignes: 3),
+                    error: (e, _) => const _Discret(
+                      "Le fil n'a pas pu se charger. Tirez vers le bas pour réessayer.",
+                      scene: Scene.sansReseau,
+                    ),
+                    data: (evenements) => evenements.isEmpty
+                        ? const _Discret(
+                            "Rien encore ces quatorze derniers jours. Les séances et les quiz de vos amis "
+                            "apparaîtront ici.",
+                            scene: Scene.pageBlanche)
+                        : _Fil(evenements: evenements.take(20).toList()),
+                  ),
+
+                  const _Titre('mes amis'),
+                  amis.when(
+                    loading: () => const SqueletteCarte(lignes: 3),
+                    error: (e, _) => EtatErreur(erreur: e, reessayer: _rafraichir),
+                    data: (liste) => liste.isEmpty
+                        ? const _Discret(
+                            "Votre cercle est vide pour l'instant. Partagez votre code, ou ajoutez celui "
+                            "d'un ami : l'amitié commence dès qu'il accepte.",
+                            scene: Scene.cercleVide)
+                        : Column(children: [for (final a in liste) _LigneAmi(ami: a)]),
+                  ),
+                  if (demandes.envoyees.isNotEmpty) ...[
+                    _EnAttente('En attente de réponse : ${demandes.envoyees.map((d) => d.lecteur.nom).join(', ')}.'),
+                  ],
+
+                  const _Titre('confidentialité'),
+                  _Partage(actif: m.partageActivite),
                 ],
-
-                const _Titre('Confidentialité'),
-                _Partage(actif: m.partageActivite),
-              ],
+              ),
             ),
           ),
         ),
@@ -132,7 +140,8 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
   }
 }
 
-/// Le titre d'une section du cercle, avec le nombre d'éléments en pastille.
+/// Le titre d'une section du registre : petites capitales entre crochets, le
+/// nombre d'éléments en folio à droite, et le filet d'imprimeur dessous.
 class _Titre extends StatelessWidget {
   const _Titre(this.texte, {this.compte});
   final String texte;
@@ -143,21 +152,26 @@ class _Titre extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return Padding(
-      padding: const EdgeInsets.only(top: 24, bottom: 12),
-      child: Row(
+      padding: const EdgeInsets.only(top: 22, bottom: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Flexible(child: Texte(texte, style: t.textTheme.titleLarge?.copyWith(fontSize: 20))),
-          if (compte != null) ...[
-            const SizedBox(width: 10),
-            Container(
-              constraints: const BoxConstraints(minWidth: 24),
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-              decoration: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
-              alignment: Alignment.center,
-              child: Texte('$compte',
-                  style: t.textTheme.labelSmall?.copyWith(color: p.surAccent, fontWeight: FontWeight.w700)),
-            ),
-          ],
+          Row(
+            children: [
+              Flexible(child: EtiquetteCrochet(texte)),
+              if (compte != null) ...[
+                const Spacer(),
+                Texte('$compte',
+                    style: t.textTheme.labelSmall?.copyWith(
+                      color: p.accentTexte,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 1,
+                    )),
+              ],
+            ],
+          ),
+          const SizedBox(height: 8),
+          const Filet(redouble: true),
         ],
       ),
     );
@@ -179,7 +193,7 @@ class _EnAttente extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 2),
-            child: Icon(Icons.hourglass_empty_rounded, size: 16, color: p.attenue),
+            child: IconeAscenda(Icone.signet, taille: 15, couleur: p.attenue),
           ),
           const SizedBox(width: 8),
           Expanded(
@@ -191,31 +205,35 @@ class _EnAttente extends StatelessWidget {
   }
 }
 
-/// Un message discret : état vide ou petite remarque, en bloc creusé.
+/// Un bloc creusé qui dit ce qui manque : un cercle encore vide, un fil sans
+/// activité, un serveur qui n'a pas répondu.
+///
+/// La scène raconte le moment plutôt qu'elle ne le constate : une icône grise
+/// ne dit rien à quelqu'un qui vient d'arriver.
 class _Discret extends StatelessWidget {
-  const _Discret(this.texte, {this.icone});
+  const _Discret(this.texte, {required this.scene});
   final String texte;
-  final IconData? icone;
+  final Scene scene;
 
   @override
   Widget build(BuildContext context) {
     final p = context.palette;
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(14, 14, 16, 14),
-      decoration: BoxDecoration(color: p.surfaceCreuse, borderRadius: Rayons.carte),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 16),
+      decoration: BoxDecoration(
+        color: p.surfaceCreuse,
+        borderRadius: Rayons.carte,
+        border: Border.all(color: p.encre.withValues(alpha: p.sombre ? 0.18 : 0.09)),
+      ),
+      child: Column(
         children: [
-          if (icone != null) ...[
-            Icon(icone, size: 20, color: p.attenue),
-            const SizedBox(width: 12),
-          ],
-          Expanded(
-            child: Texte(
-              texte,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.55),
-            ),
+          Illustration(scene, taille: 150),
+          const SizedBox(height: 12),
+          Texte(
+            texte,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.55),
           ),
         ],
       ),
@@ -284,14 +302,24 @@ class _CarteCode extends ConsumerWidget {
         children: [
           Row(
             children: [
-              IconePastille(Icons.diversity_3_rounded, couleur: p.accentSurHeros, taille: 44),
+              Container(
+                width: 44,
+                height: 44,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: p.accentSurHeros.withValues(alpha: 0.14),
+                  borderRadius: BorderRadius.circular(13),
+                  border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.32)),
+                ),
+                child: IconeAscenda(Icone.cercle, taille: 23, couleur: p.accentSurHeros),
+              ),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Surtitre('Votre code ASCENDA', couleur: p.accentSurHeros),
-                    const SizedBox(height: 2),
+                    EtiquetteCrochet('votre code ASCENDA', couleur: p.accentSurHeros),
+                    const SizedBox(height: 4),
                     Texte(
                       'À transmettre à vos amis',
                       maxLines: 1,
@@ -303,29 +331,37 @@ class _CarteCode extends ConsumerWidget {
               ),
             ],
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: 16),
+          // Le code frappé dans un cartouche : deux filets d'or, rien d'autre.
+          // C'est un objet à recopier, pas un champ de formulaire.
           Container(
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            padding: const EdgeInsets.fromLTRB(16, 13, 16, 13),
             decoration: BoxDecoration(
               color: p.surHeros.withValues(alpha: 0.07),
-              borderRadius: Rayons.carte,
-              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.28)),
+              border: Border.all(color: p.accentSurHeros.withValues(alpha: 0.5), width: 1.2),
+              borderRadius: Rayons.petit,
             ),
-            child: Center(
-              child: FittedBox(
-                fit: BoxFit.scaleDown,
-                child: SelectableText(
-                  moi.code,
-                  key: const Key('code-cercle'),
-                  style: t.textTheme.headlineMedium?.copyWith(
-                    color: p.accentSurHeros,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 4,
+            child: Column(
+              children: [
+                SizedBox(width: 90, child: Filet(couleur: p.accentSurHeros.withValues(alpha: 0.45))),
+                const SizedBox(height: 10),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: SelectableText(
+                    moi.code,
+                    key: const Key('code-cercle'),
+                    style: t.textTheme.headlineMedium?.copyWith(
+                      color: p.accentSurHeros,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w700,
+                      letterSpacing: 4,
+                    ),
                   ),
                 ),
-              ),
+                const SizedBox(height: 10),
+                SizedBox(width: 90, child: Filet(couleur: p.accentSurHeros.withValues(alpha: 0.45))),
+              ],
             ),
           ),
           const SizedBox(height: 16),
@@ -603,20 +639,20 @@ IconData iconeGenre(String genre) => switch (genre) {
       _ => Icons.menu_book_outlined,
     };
 
-/// Le fil : une seule carte, les événements l'un sous l'autre, séparés d'un filet.
+/// Le fil : un registre d'atelier. Une seule feuille, les activités portées
+/// l'une sous l'autre, séparées d'un filet d'imprimeur.
 class _Fil extends StatelessWidget {
   const _Fil({required this.evenements});
   final List<EvenementFil> evenements;
 
   @override
   Widget build(BuildContext context) {
-    final p = context.palette;
     return Surface(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
       child: Column(
         children: [
           for (var i = 0; i < evenements.length; i++) ...[
-            if (i > 0) Divider(height: 1, thickness: 1, indent: 50, color: p.trait),
+            if (i > 0) const Padding(padding: EdgeInsets.only(left: 50), child: Filet()),
             _LigneFil(evenement: evenements[i]),
           ],
         ],
@@ -656,8 +692,8 @@ class _LigneFil extends ConsumerWidget {
                   const SizedBox(height: 5),
                   Row(
                     children: [
-                      Icon(Icons.menu_book_rounded, size: 13, color: p.accentTexte),
-                      const SizedBox(width: 5),
+                      IconeAscenda(Icone.volumes, taille: 14, couleur: p.accentTexte),
+                      const SizedBox(width: 6),
                       Expanded(
                         child: Texte(e.ouvrage!,
                             maxLines: 1,
@@ -674,11 +710,15 @@ class _LigneFil extends ConsumerWidget {
                       child: Texte(ilYA(e.le),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: t.textTheme.labelSmall?.copyWith(color: p.attenue)),
+                          style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.6)),
                     ),
                     if (e.encourage) ...[
                       const SizedBox(width: 8),
-                      Icon(Icons.check_circle_rounded, size: 15, color: p.succes, semanticLabel: 'Encouragé'),
+                      // Le sceau apposé : cette activité a déjà reçu son mot.
+                      Semantics(
+                        label: 'Encouragé',
+                        child: IconeAscenda(Icone.sceau, taille: 16, couleur: p.succes),
+                      ),
                     ],
                     const Spacer(),
                     if (!e.encourage)
@@ -738,8 +778,8 @@ class _LigneAmi extends StatelessWidget {
                     const SizedBox(height: 2),
                     Row(
                       children: [
-                        Icon(Icons.auto_stories_rounded, size: 13, color: p.accentTexte),
-                        const SizedBox(width: 5),
+                        IconeAscenda(Icone.signet, taille: 14, couleur: p.accentTexte),
+                        const SizedBox(width: 6),
                         Expanded(
                           child: Texte('lit ${l.lit}',
                               maxLines: 1,
@@ -1175,51 +1215,53 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
           ),
         ],
       ),
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: conv.when(
-                skipLoadingOnRefresh: true,
-                loading: () => const Center(child: CircularProgressIndicator()),
-                error: (e, _) => EtatErreur(
-                    erreur: e, reessayer: () => ref.invalidate(conversationProvider(widget.amiId))),
-                data: (c) => c.messages.isEmpty
-                    ? EtatMessage(
-                        icone: Icons.forum_outlined,
-                        titre: 'Écrivez à ${c.ami.nom}',
-                        texte: "Où en êtes-vous de vos lectures ? Une question sur un chapitre, un livre "
-                            "à conseiller : c'est l'endroit.",
-                      )
-                    : ListView.builder(
-                        reverse: true,
-                        padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
-                        itemCount: c.messages.length,
-                        itemBuilder: (_, i) {
-                          final m = c.messages[c.messages.length - 1 - i];
-                          return _Bulle(message: m, onSignaler: m.deMoi ? null : () => _signaler(m));
-                        },
-                      ),
+      body: FondPapier(
+        child: SafeArea(
+          child: Column(
+            children: [
+              Expanded(
+                child: conv.when(
+                  skipLoadingOnRefresh: true,
+                  loading: () => const Center(child: CircularProgressIndicator()),
+                  error: (e, _) => EtatErreur(
+                      erreur: e, reessayer: () => ref.invalidate(conversationProvider(widget.amiId))),
+                  data: (c) => c.messages.isEmpty
+                      ? EtatMessage(
+                          scene: Scene.pageBlanche,
+                          titre: 'Écrivez à ${c.ami.nom}',
+                          texte: "Où en êtes-vous de vos lectures ? Une question sur un chapitre, un livre "
+                              "à conseiller : c'est l'endroit.",
+                        )
+                      : ListView.builder(
+                          reverse: true,
+                          padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
+                          itemCount: c.messages.length,
+                          itemBuilder: (_, i) {
+                            final m = c.messages[c.messages.length - 1 - i];
+                            return _Bulle(message: m, onSignaler: m.deMoi ? null : () => _signaler(m));
+                          },
+                        ),
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
-              child: ZoneMessage(
-                controleur: _saisie,
-                attente: _envoi,
-                lignesMax: 5,
-                longueurMax: 2000,
-                onEnvoyer: _envoyer,
-              ),
-            ),
-            if (conv.hasValue)
               Padding(
-                padding: const EdgeInsets.only(bottom: 6, left: 20, right: 20),
-                child: Texte('Appui long sur un message reçu pour le signaler.',
-                    textAlign: TextAlign.center,
-                    style: t.textTheme.labelSmall?.copyWith(color: p.attenue)),
+                padding: const EdgeInsets.fromLTRB(14, 6, 14, 6),
+                child: ZoneMessage(
+                  controleur: _saisie,
+                  attente: _envoi,
+                  lignesMax: 5,
+                  longueurMax: 2000,
+                  onEnvoyer: _envoyer,
+                ),
               ),
-          ],
+              if (conv.hasValue)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 6, left: 20, right: 20),
+                  child: Texte('Appui long sur un message reçu pour le signaler.',
+                      textAlign: TextAlign.center,
+                      style: t.textTheme.labelSmall?.copyWith(color: p.attenue)),
+                ),
+            ],
+          ),
         ),
       ),
     );
@@ -1244,16 +1286,18 @@ class _Bulle extends StatelessWidget {
           constraints: BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width * 0.78),
           margin: const EdgeInsets.symmetric(vertical: 4),
           padding: const EdgeInsets.fromLTRB(15, 10, 15, 8),
+          // Un billet plié : trois coins arrondis, le quatrième presque vif, du
+          // côté de celui qui l'a écrit.
           decoration: BoxDecoration(
             color: m.deMoi ? null : p.surface,
             gradient: m.deMoi ? p.degradeHeros : null,
             borderRadius: BorderRadius.only(
-              topLeft: const Radius.circular(22),
-              topRight: const Radius.circular(22),
-              bottomLeft: Radius.circular(m.deMoi ? 22 : 6),
-              bottomRight: Radius.circular(m.deMoi ? 6 : 22),
+              topLeft: const Radius.circular(16),
+              topRight: const Radius.circular(16),
+              bottomLeft: Radius.circular(m.deMoi ? 16 : 5),
+              bottomRight: Radius.circular(m.deMoi ? 5 : 16),
             ),
-            border: m.deMoi ? null : Border.all(color: p.trait),
+            border: m.deMoi ? null : Border.all(color: p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12)),
             boxShadow: m.deMoi
                 ? [BoxShadow(color: p.heros.withValues(alpha: 0.22), blurRadius: 12, offset: const Offset(0, 4))]
                 : p.ombreCarte,

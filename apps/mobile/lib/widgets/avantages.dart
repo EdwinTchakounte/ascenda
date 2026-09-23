@@ -3,9 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../etat/fournisseurs.dart';
+import '../theme/icones.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
-import 'ui.dart';
 
 /// La bonne nouvelle, sur l'écran d'accueil : quelqu'un a créé son compte
 /// avec votre code, et votre prochain abonnement coûte moins cher.
@@ -30,10 +30,10 @@ class BandeauRecompense extends ConsumerWidget {
             "Vos réductions vous attendent.";
 
     final p = context.palette;
+    // Un bon posé sur la page : le filet d'or à gauche fait la souche.
     return Container(
       key: const Key('bandeau-recompense'),
       margin: const EdgeInsets.only(bottom: 16),
-      padding: const EdgeInsets.fromLTRB(12, 12, 6, 12),
       decoration: BoxDecoration(
         color: Color.alphaBlend(p.accentVoile, p.surface),
         borderRadius: Rayons.carte,
@@ -42,11 +42,16 @@ class BandeauRecompense extends ConsumerWidget {
       ),
       child: Row(
         children: [
-          IconePastille(Icons.volunteer_activism_rounded, taille: 42, fond: p.accent.withValues(alpha: p.sombre ? 0.22 : 0.18)),
+          Container(width: 3, height: 58, color: p.accentTexte.withValues(alpha: 0.55)),
+          const SizedBox(width: 13),
+          IconeAscenda(Icone.jeton, taille: 24, couleur: p.accentTexte),
           const SizedBox(width: 12),
           Expanded(
-            child: Texte(texte,
-                style: t.textTheme.bodySmall?.copyWith(color: p.encre, height: 1.5)),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              child: Texte(texte,
+                  style: t.textTheme.bodySmall?.copyWith(color: p.encre, height: 1.5)),
+            ),
           ),
           TextButton(
             onPressed: () async {

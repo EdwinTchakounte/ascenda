@@ -305,6 +305,65 @@ class ClientApi {
     return morceaux.takeBytes();
   }
 
+  /// Télécharge un fichier directement sur le disque, sans jamais le tenir en
+  /// entier en mémoire.
+  ///
+  /// [telecharger] accumule tout avant de rendre les octets : sur un PDF de
+  /// quatre-vingt-dix mégaoctets, cela suffit à faire fermer l'application sur
+  /// un téléphone d'entrée de gamme. Ici, chaque morceau reçu part dans le
+  /// fichier et est relâché. L'écriture se fait dans un fichier provisoire,
+  /// renommé à la fin : une coupure ne laisse jamais un fichier à moitié écrit
+  /// qu'on croirait complet.
+  Future<File> telechargerVers(
+    String chemin,
+    File cible, {
+    void Function(int recu, int? total)? progression,
+  }) async {
+    await _charger();
+    final requete = http.Request('GET', _uri(chemin))..headers['X-Ascenda-Client'] = client;
+    if (_acces != null) requete.headers['Authorization'] = 'Bearer $_acces';
+    final http.StreamedResponse r;
+    try {
+      r = await _http.send(requete).timeout(const Duration(seconds: 30));
+    } on SocketException {
+      throw const HorsLigne();
+    } on http.ClientException {
+      throw const HorsLigne();
+    } catch (e) {
+      if (e.toString().contains('TimeoutException')) throw const HorsLigne();
+      rethrow;
+    }
+    if (r.statusCode >= 400) {
+      final corps = await r.stream.bytesToString();
+      dynamic json;
+      try {
+        json = jsonDecode(corps);
+      } catch (_) {}
+      throw _erreur(r.statusCode, json);
+    }
+    final provisoire = File('${cible.path}.part');
+    final sortie = provisoire.openWrite();
+    var recu = 0;
+    try {
+      await for (final morceau in r.stream) {
+        sortie.add(morceau);
+        recu += morceau.length;
+        progression?.call(recu, r.contentLength);
+      }
+      await sortie.flush();
+      await sortie.close();
+    } on SocketException {
+      await sortie.close();
+      if (await provisoire.exists()) await provisoire.delete();
+      throw const HorsLigne();
+    } on http.ClientException {
+      await sortie.close();
+      if (await provisoire.exists()) await provisoire.delete();
+      throw const HorsLigne();
+    }
+    return provisoire.rename(cible.path);
+  }
+
   Future<dynamic> get(String chemin, {Map<String, dynamic>? params, bool auth = true}) =>
       _envoyer('GET', chemin, params: params, authentifie: auth);
 

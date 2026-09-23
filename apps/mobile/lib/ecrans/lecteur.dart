@@ -4,15 +4,22 @@ import 'package:go_router/go_router.dart';
 
 import '../etat/fournisseurs.dart';
 import '../etat/session.dart';
-import '../theme/couleurs.dart';
+import '../theme/icones.dart';
+import '../theme/palette.dart';
+import '../theme/papier.dart';
+import '../theme/texte.dart';
 import '../widgets/annotations.dart';
 import '../widgets/derives.dart';
 import '../widgets/etats.dart';
 import '../widgets/ui.dart';
 import 'agent.dart';
-import '../theme/texte.dart';
+import 'lecteur_pdf.dart';
 
-/// Le lecteur : plein écran, sur le papier du thème choisi, serif confortable.
+/// Le lecteur : une page de livre, pas un écran d'application.
+///
+/// Le texte est posé sur le papier du thème, entre des marges de livre, sous le
+/// titre courant de l'ouvrage et son folio. Il s'ouvre sur une lettrine et se
+/// referme sur un fleuron, comme un chapitre imprimé.
 ///
 /// Sur les 71 ouvrages non redistribuables, le serveur ne renvoie que des
 /// extraits plafonnés. On le dit clairement plutôt que de laisser croire à un
@@ -45,6 +52,9 @@ class EcranLecteur extends ConsumerStatefulWidget {
   @override
   ConsumerState<EcranLecteur> createState() => _EcranLecteurState();
 }
+
+/// Une lettre, pour savoir si un passage peut porter une lettrine.
+final _lettre = RegExp(r'\p{L}', unicode: true);
 
 class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   double _taille = 18;
@@ -99,306 +109,402 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     final largeur = MediaQuery.sizeOf(context).width;
     final marge = largeur > 728 ? (largeur - 680) / 2 : 26.0;
 
-    return Scaffold(
-      backgroundColor: p.fond,
-      appBar: AppBar(
-        backgroundColor: p.fond,
-        toolbarHeight: 52,
-        actionsIconTheme: IconThemeData(color: p.attenue, size: 22),
-        actions: [
-          if (lecture.valueOrNull?['droits']?['pdf'] == true)
-            IconButton(
-              tooltip: 'Voir cette page dans le PDF',
-              icon: const Icon(Icons.picture_as_pdf_outlined),
-              color: p.attenue,
-              onPressed: () {
-                final d = lecture.valueOrNull!;
-                final page = d['chapitre']?['page_debut'];
-                context.push('/pdf/${widget.documentId}'
-                    '?titre=${Uri.encodeComponent('${d['ouvrage']?['titre'] ?? ''}')}'
-                    '${page != null ? '&page=$page' : ''}');
-              },
+    // Le grain du papier sous toute la page, barre du haut comprise : la
+    // page n'est pas coupée en deux.
+    return FondPapier(
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          toolbarHeight: 52,
+          leading: IconButton(
+            tooltip: 'Retour',
+            // La flèche du kit, retournée : la même plume que le reste de la page.
+            icon: Transform.scale(
+              scaleX: -1,
+              child: IconeAscenda(Icone.fleche, taille: 21, couleur: p.attenue),
             ),
-          IconButton(
-            tooltip: 'Taille du texte',
-            icon: const Icon(Icons.text_fields_rounded),
-            color: p.attenue,
-            onPressed: () => setState(() => _taille = _taille >= 22 ? 16 : _taille + 2),
+            onPressed: () => Navigator.of(context).maybePop(),
           ),
-          IconButton(
-            tooltip: "Demander à l'agent",
-            icon: const Icon(Icons.forum_outlined),
-            color: p.attenue,
-            onPressed: () => _ouvrirAgent(context),
-          ),
-          const SizedBox(width: 6),
-        ],
-      ),
-      body: lecture.when(
-        loading: () => Padding(
-          padding: EdgeInsets.fromLTRB(marge, 16, marge, 24),
-          child: const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Squelette(hauteur: 12, largeur: 140),
-              SizedBox(height: 14),
-              Squelette(hauteur: 28, largeur: 260),
-              SizedBox(height: 28),
-              Squelette(hauteur: 14),
-              SizedBox(height: 12),
-              Squelette(hauteur: 14),
-              SizedBox(height: 12),
-              Squelette(hauteur: 14, largeur: 200),
-            ],
-          ),
+          actions: [
+            if (lecture.valueOrNull?['droits']?['pdf'] == true)
+              IconButton(
+                tooltip: 'Voir cette page dans le PDF',
+                icon: IconeAscenda(Icone.page, taille: 21, couleur: p.attenue),
+                onPressed: () {
+                  final d = lecture.valueOrNull!;
+                  final page = d['chapitre']?['page_debut'];
+                  // Le lecteur de PDF ne reçoit que l'identifiant : on lui passe
+                  // au passage ce que le chapitre dit des droits de l'ouvrage,
+                  // pour qu'il sache s'il doit garder le fichier chiffré.
+                  reservesConnus[widget.documentId] =
+                      d['droits']?['application_seulement'] == true;
+                  context.push('/pdf/${widget.documentId}'
+                      '?titre=${Uri.encodeComponent('${d['ouvrage']?['titre'] ?? ''}')}'
+                      '${page != null ? '&page=$page' : ''}');
+                },
+              ),
+            IconButton(
+              tooltip: 'Taille du texte',
+              // Deux A de la police de lecture : le bouton montre ce qu'il règle.
+              icon: Texte('Aa',
+                  style: t.textTheme.titleLarge
+                      ?.copyWith(fontSize: 17, height: 1, color: p.attenue)),
+              onPressed: () => setState(() => _taille = _taille >= 22 ? 16 : _taille + 2),
+            ),
+            IconButton(
+              tooltip: "Demander à l'agent",
+              icon: IconeAscenda(Icone.plume, taille: 21, couleur: p.attenue),
+              onPressed: () => _ouvrirAgent(context),
+            ),
+            const SizedBox(width: 6),
+          ],
         ),
-        error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(lectureProvider(cle))),
-        data: (d) {
-          final ouvrage = d['ouvrage'] as Map<String, dynamic>;
-          final chapitre = d['chapitre'] as Map<String, dynamic>;
-          final droits = d['droits'] as Map<String, dynamic>;
-          final passages = (d['passages'] as List).cast<Map<String, dynamic>>();
-          final suivant = d['suivant'] as Map<String, dynamic>?;
-          // Une liste vide si l'appel échoue : ne pas pouvoir teinter le texte
-          // ne doit pas empêcher de le lire.
-          final surlignages =
-              ref.watch(surlignagesProvider(widget.documentId)).valueOrNull ?? const [];
-          final style = _styleLecture(t, p);
+        body: lecture.when(
+          loading: () => Padding(
+            padding: EdgeInsets.fromLTRB(marge, 16, marge, 24),
+            child: const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Squelette(hauteur: 12, largeur: 140),
+                SizedBox(height: 14),
+                Squelette(hauteur: 28, largeur: 260),
+                SizedBox(height: 28),
+                Squelette(hauteur: 14),
+                SizedBox(height: 12),
+                Squelette(hauteur: 14),
+                SizedBox(height: 12),
+                Squelette(hauteur: 14, largeur: 200),
+              ],
+            ),
+          ),
+          error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(lectureProvider(cle))),
+          data: (d) {
+            final ouvrage = d['ouvrage'] as Map<String, dynamic>;
+            final chapitre = d['chapitre'] as Map<String, dynamic>;
+            final droits = d['droits'] as Map<String, dynamic>;
+            final passages = (d['passages'] as List).cast<Map<String, dynamic>>();
+            final suivant = d['suivant'] as Map<String, dynamic>?;
+            // Une liste vide si l'appel échoue : ne pas pouvoir teinter le texte
+            // ne doit pas empêcher de le lire.
+            final surlignages =
+                ref.watch(surlignagesProvider(widget.documentId)).valueOrNull ?? const [];
+            final style = _styleLecture(t, p);
 
-          return Stack(
-            children: [
-              ListView(
-                padding: EdgeInsets.fromLTRB(marge, 6, marge, 136),
-                children: [
-                  Texte(
-                    '${ouvrage['titre']}'.toUpperCase(),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: t.textTheme.labelSmall?.copyWith(
-                      color: p.accentTexte,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 1.2,
-                    ),
-                  ),
-                  const SizedBox(height: 12),
-                  Texte('${chapitre['titre'] ?? 'Chapitre ${chapitre['ordre']}'}',
-                      style: t.textTheme.headlineMedium?.copyWith(fontSize: 27, height: 1.2)),
-                  const SizedBox(height: 14),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: [
-                      if (chapitre['page_debut'] != null)
-                        Pastille(
-                          'p. ${chapitre['page_debut']}'
-                          '${chapitre['page_fin'] != null ? ' à ${chapitre['page_fin']}' : ''}',
-                          icone: Icons.menu_book_outlined,
-                          couleur: p.attenue,
-                        ),
-                      if (chapitre['duree_min'] != null)
-                        Pastille('${chapitre['duree_min']} min', icone: Icons.schedule_rounded, couleur: p.attenue),
+            return Stack(
+              children: [
+                ListView(
+                  padding: EdgeInsets.fromLTRB(marge, 6, marge, 136),
+                  children: [
+                    // Le titre courant et son folio : on sait toujours quel
+                    // ouvrage on tient, et à quelles pages on est.
+                    TitreCourant('${ouvrage['titre']}', folio: _folio(chapitre)),
+                    const SizedBox(height: 24),
+                    Texte('${chapitre['titre'] ?? 'Chapitre ${chapitre['ordre']}'}',
+                        style: t.textTheme.headlineMedium?.copyWith(fontSize: 27, height: 1.2)),
+                    if (chapitre['duree_min'] != null) ...[
+                      const SizedBox(height: 14),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: EtiquetteCrochet('${chapitre['duree_min']} min de lecture'),
+                      ),
                     ],
-                  ),
-                  const SizedBox(height: 22),
-                  // Un court filet doré : la fin de l'en-tête et le début du
-                  // texte, comme l'ornement sous un titre de chapitre.
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Container(
-                      width: 44,
-                      height: 3,
-                      decoration: BoxDecoration(color: p.accent, borderRadius: Rayons.pilule),
+                    const SizedBox(height: 20),
+                    // Le filet d'imprimeur qui ferme l'en-tête et ouvre le texte.
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: SizedBox(width: 92, child: Filet(redouble: true)),
                     ),
-                  ),
 
-                  if (droits['message'] != null) ...[
-                    const SizedBox(height: 10),
-                    BandeauDroits(message: '${droits['message']}'),
-                  ],
+                    if (droits['message'] != null) ...[
+                      const SizedBox(height: 10),
+                      BandeauDroits(message: '${droits['message']}'),
+                    ],
 
-                  const SizedBox(height: 22),
-                  CompteRenduChapitre(
-                    contenu: d['compte_rendu'] as Map<String, dynamic>?,
-                  ),
-                  if (passages.isEmpty)
-                    const EtatMessage(
-                      icone: Icons.menu_book_outlined,
-                      titre: 'Pas de texte à afficher',
-                      texte: "Ce chapitre ne comporte pas de passage lisible ici. "
-                          "Le sommaire et les quiz de l'ouvrage restent disponibles.",
-                    )
-                  else
-                    for (final x in passages) ...[
-                      SelectableText.rich(
-                        textAlign: Texte.alignement('${x['texte']}', TextStyle(fontSize: _taille), null,
-                                largeur: MediaQuery.sizeOf(context).width) ??
-                            TextAlign.start,
-                        _teinter(
-                          '${x['texte']}',
+                    const SizedBox(height: 22),
+                    CompteRenduChapitre(
+                      contenu: d['compte_rendu'] as Map<String, dynamic>?,
+                    ),
+                    if (passages.isEmpty)
+                      const EtatMessage(
+                        icone: Icons.menu_book_outlined,
+                        titre: 'Pas de texte à afficher',
+                        texte: "Ce chapitre ne comporte pas de passage lisible ici. "
+                            "Le sommaire et les quiz de l'ouvrage restent disponibles.",
+                      )
+                    else
+                      for (final (i, x) in passages.indexed) ...[
+                        _passage(
+                          context,
+                          x,
+                          chapitre,
                           surlignages,
                           style,
+                          lettrine: i == 0,
                         ),
-                        contextMenuBuilder: (c, etat) => _menuTexte(
-                          c,
-                          etat,
-                          '${x['texte']}',
-                          x['page_debut'] as int? ?? chapitre['page_debut'] as int?,
-                          '${x['id'] ?? ''}',
-                        ),
-                      ),
-                      if (x['tronque'] == true)
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8),
-                          child: Row(
-                            children: [
-                              Icon(Icons.more_horiz_rounded, size: 16, color: p.attenue),
-                              const SizedBox(width: 6),
-                              Texte(
-                                'Extrait abrégé.',
-                                style: t.textTheme.labelSmall?.copyWith(color: p.attenue, fontStyle: FontStyle.italic),
-                              ),
-                            ],
-                          ),
-                        ),
-                      const SizedBox(height: 24),
-                    ],
-
-                  // Complément : le reste de la plage de la séance, quand elle
-                  // regroupe plusieurs chapitres.
-                  if (_debordement(chapitre) case (final debut, final fin))
-                    _PagesSupplementaires(
-                      documentId: widget.documentId,
-                      debut: debut,
-                      fin: fin,
-                      style: style,
-                    ),
-
-                  if (suivant != null) ...[
-                    const SizedBox(height: 16),
-                    Surface(
-                      onTap: () => context.pushReplacement(
-                          '/lecture/${widget.documentId}/${suivant['id']}'),
-                      padding: const EdgeInsets.fromLTRB(18, 16, 14, 16),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                        if (x['tronque'] == true)
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: Row(
                               children: [
-                                Texte('Chapitre suivant',
-                                    style: t.textTheme.labelSmall?.copyWith(
-                                      color: p.accentTexte,
-                                      fontWeight: FontWeight.w700,
-                                      letterSpacing: 0.8,
-                                    )),
-                                const SizedBox(height: 4),
-                                Texte('${suivant['titre'] ?? ''}',
-                                    maxLines: 2,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: t.textTheme.titleLarge?.copyWith(fontSize: 17)),
+                                SizedBox(
+                                  width: 26,
+                                  child: Filet(couleur: p.attenue.withValues(alpha: 0.7)),
+                                ),
+                                const SizedBox(width: 8),
+                                Texte(
+                                  'Extrait abrégé.',
+                                  style: t.textTheme.labelSmall?.copyWith(color: p.attenue, fontStyle: FontStyle.italic),
+                                ),
                               ],
                             ),
                           ),
-                          const SizedBox(width: 12),
-                          Container(
-                            width: 42,
-                            height: 42,
-                            decoration: BoxDecoration(color: p.accent, shape: BoxShape.circle),
-                            child: Icon(Icons.arrow_forward_rounded, size: 21, color: p.surAccent),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ],
-              ),
+                        const SizedBox(height: 24),
+                      ],
 
-              // Le texte s'efface sous la barre d'actions au lieu d'être coupé
-              // net par elle.
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                height: 120,
-                child: IgnorePointer(
-                  child: DecoratedBox(
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        colors: [p.fond.withValues(alpha: 0), p.fond.withValues(alpha: 0.94)],
+                    // Complément : le reste de la plage de la séance, quand elle
+                    // regroupe plusieurs chapitres.
+                    if (_debordement(chapitre) case (final debut, final fin))
+                      _PagesSupplementaires(
+                        documentId: widget.documentId,
+                        debut: debut,
+                        fin: fin,
+                        style: style,
+                      ),
+
+                    // Le fleuron qui clôt le chapitre, avant la porte du suivant.
+                    if (passages.isNotEmpty) ...[
+                      const SizedBox(height: 6),
+                      const Fleuron(),
+                    ],
+
+                    if (suivant != null) ...[
+                      const SizedBox(height: 22),
+                      Surface(
+                        onTap: () => context.pushReplacement(
+                            '/lecture/${widget.documentId}/${suivant['id']}'),
+                        padding: const EdgeInsets.fromLTRB(18, 16, 14, 16),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const EtiquetteCrochet('chapitre suivant'),
+                                  const SizedBox(height: 8),
+                                  Texte('${suivant['titre'] ?? ''}',
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: t.textTheme.titleLarge?.copyWith(fontSize: 17)),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Container(
+                              width: 42,
+                              height: 42,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(color: p.accent, shape: BoxShape.circle),
+                              child: IconeAscenda(Icone.fleche, taille: 20, couleur: p.surAccent),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+
+                // Le texte s'efface sous la barre d'actions au lieu d'être coupé
+                // net par elle.
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  height: 120,
+                  child: IgnorePointer(
+                    child: DecoratedBox(
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          begin: Alignment.topCenter,
+                          end: Alignment.bottomCenter,
+                          colors: [p.fond.withValues(alpha: 0), p.fond.withValues(alpha: 0.94)],
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
 
-              // Barre d'actions basse, flottante et arrondie.
-              Positioned(
-                left: 16,
-                right: 16,
-                bottom: 16,
-                child: SafeArea(
-                  child: Center(
-                    child: ConstrainedBox(
-                      constraints: const BoxConstraints(maxWidth: 520),
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: p.surface,
-                          borderRadius: Rayons.pilule,
-                          border: Border.all(color: p.trait),
-                          boxShadow: p.ombreCarte,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(6),
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: FilledButton.icon(
-                                  onPressed: () =>
-                                      _terminerSeance(widget.livrable, widget.livrableId),
-                                  style: FilledButton.styleFrom(
-                                    minimumSize: const Size(0, 50),
-                                    padding: const EdgeInsets.symmetric(horizontal: 14),
-                                    shape: const StadiumBorder(),
-                                  ),
-                                  icon: const Icon(Icons.check_rounded, size: 19),
-                                  // Sous 360 px, le libellé complet ne tient pas à côté
-                                  // des deux boutons ronds : on garde le verbe.
-                                  label: Texte(
-                                    MediaQuery.sizeOf(context).width < 360
-                                        ? (widget.seanceId != null ? 'Terminer' : 'Lu')
-                                        : (widget.seanceId != null ? 'Terminer la séance' : 'Marquer comme lu'),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
+                // Barre d'actions basse, flottante et arrondie.
+                Positioned(
+                  left: 16,
+                  right: 16,
+                  bottom: 16,
+                  child: SafeArea(
+                    child: Center(
+                      child: ConstrainedBox(
+                        constraints: const BoxConstraints(maxWidth: 520),
+                        // Une réglette posée sur la page plutôt qu'une pilule
+                        // flottante : le filet d'encre, et les outils de l'atelier.
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            color: p.surface,
+                            borderRadius: Rayons.moyen,
+                            border: Border.all(
+                                color: p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12)),
+                            boxShadow: p.ombreCarte,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(6),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: FilledButton.icon(
+                                    onPressed: () =>
+                                        _terminerSeance(widget.livrable, widget.livrableId),
+                                    style: FilledButton.styleFrom(
+                                      minimumSize: const Size(0, 50),
+                                      padding: const EdgeInsets.symmetric(horizontal: 14),
+                                      shape: const RoundedRectangleBorder(borderRadius: Rayons.petit),
+                                    ),
+                                    // Le sceau : la séance se clôt comme on cachette
+                                    // une page lue.
+                                    icon: IconeAscenda(Icone.sceau, taille: 19, couleur: p.surAccent),
+                                    // Sous 360 px, le libellé complet ne tient pas à côté
+                                    // des deux outils : on garde le verbe.
+                                    label: Texte(
+                                      MediaQuery.sizeOf(context).width < 360
+                                          ? (widget.seanceId != null ? 'Terminer' : 'Lu')
+                                          : (widget.seanceId != null ? 'Terminer la séance' : 'Marquer comme lu'),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const SizedBox(width: 6),
-                              _BoutonRond(
-                                icone: Icons.edit_note_rounded,
-                                tooltip: 'Prendre une note',
-                                onTap: () => _prendreNote(chapitre['page_debut'] as int?),
-                              ),
-                              const SizedBox(width: 6),
-                              _BoutonRond(
-                                icone: Icons.bookmarks_outlined,
-                                tooltip: 'Vos annotations',
-                                onTap: _ouvrirAnnotations,
-                              ),
-                            ],
+                                const SizedBox(width: 6),
+                                _BoutonOutil(
+                                  icone: Icone.encrier,
+                                  tooltip: 'Prendre une note',
+                                  onTap: () => _prendreNote(chapitre['page_debut'] as int?),
+                                ),
+                                const SizedBox(width: 6),
+                                _BoutonOutil(
+                                  icone: Icone.signet,
+                                  tooltip: 'Vos annotations',
+                                  onTap: _ouvrirAnnotations,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          );
-        },
+              ],
+            );
+          },
+        ),
       ),
     );
+  }
+
+  /// Le folio du chapitre : la plage de pages qu'il occupe dans l'ouvrage.
+  String? _folio(Map<String, dynamic> chapitre) {
+    final debut = chapitre['page_debut'];
+    if (debut == null) return null;
+    final fin = chapitre['page_fin'];
+    return fin == null ? 'p. $debut' : 'p. $debut à $fin';
+  }
+
+  /// Un passage du chapitre, sélectionnable et surlignable.
+  ///
+  /// Le premier porte la lettrine : sa lettre initiale passe dans le cadre à
+  /// l'encre, et le texte lui garde sa place en tête de la première ligne.
+  Widget _passage(
+    BuildContext context,
+    Map<String, dynamic> x,
+    Map<String, dynamic> chapitre,
+    List<Map<String, dynamic>> surlignages,
+    TextStyle? style, {
+    required bool lettrine,
+  }) {
+    final texte = '${x['texte']}';
+    final corps = _teinter(texte, surlignages, style);
+    final initiale = lettrine ? _initiale(texte) : null;
+    // La lettrine tient exactement sur la première ligne : plus haute, elle
+    // mordrait sur la deuxième, que le texte ne peut pas décaler.
+    final cote = _taille * 1.75;
+
+    final page = SelectableText.rich(
+      textAlign: Texte.alignement(texte, TextStyle(fontSize: _taille), null,
+              largeur: MediaQuery.sizeOf(context).width) ??
+          TextAlign.start,
+      initiale == null ? corps : _placeALaLettrine(corps, style, cote),
+      contextMenuBuilder: (c, etat) => _menuTexte(
+        c,
+        etat,
+        texte,
+        x['page_debut'] as int? ?? chapitre['page_debut'] as int?,
+        '${x['id'] ?? ''}',
+      ),
+    );
+    if (initiale == null) return page;
+    return Stack(
+      children: [
+        page,
+        Positioned(
+          left: 0,
+          top: 0,
+          child: IgnorePointer(child: Lettrine(initiale, taille: cote)),
+        ),
+      ],
+    );
+  }
+
+  /// La lettre qui ouvre un passage, quand il en ouvre bien un par une lettre :
+  /// un passage qui commence par un guillemet ou un chiffre n'a pas de lettrine.
+  String? _initiale(String texte) =>
+      texte.isNotEmpty && _lettre.hasMatch(texte[0]) ? texte[0] : null;
+
+  /// Le texte du premier passage, moins sa lettre initiale, précédé de la place
+  /// qu'il réserve à la lettrine sur sa première ligne.
+  ///
+  /// La lettre n'est pas retirée du texte d'origine : les positions des
+  /// surlignages, calculées dessus, restent justes.
+  TextSpan _placeALaLettrine(TextSpan corps, TextStyle? base, double cote) {
+    final espaces = ' ' * _espacesPour(cote + 10, base);
+    final enfants = corps.children;
+    if (enfants == null) {
+      return TextSpan(text: espaces + '${corps.text}'.substring(1), style: corps.style ?? base);
+    }
+    final premier = enfants.first as TextSpan;
+    final debut = premier.text ?? '';
+    return TextSpan(children: [
+      TextSpan(text: espaces, style: base),
+      if (debut.length > 1) TextSpan(text: debut.substring(1), style: premier.style),
+      ...enfants.skip(1),
+    ]);
+  }
+
+  /// Combien d'espaces couvrent une largeur, dans le style de lecture.
+  ///
+  /// Mesurées entre deux lettres : une espace finale ne compte pas dans la
+  /// largeur d'un texte. Arrondi au-dessus, la lettrine garde sa place quoi
+  /// qu'il arrive.
+  int _espacesPour(double largeur, TextStyle? style) {
+    double mesure(String texte) {
+      final peintre = TextPainter(
+        text: TextSpan(text: texte, style: style),
+        textDirection: TextDirection.ltr,
+      )..layout();
+      final l = peintre.width;
+      peintre.dispose();
+      return l;
+    }
+
+    final espace = mesure('n n') - mesure('nn');
+    if (espace <= 0) return 6;
+    return (largeur / espace).ceil();
   }
 
   /// La part de la séance qui dépasse le chapitre affiché, s'il y en a une.
@@ -570,9 +676,10 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   }
 }
 
-class _BoutonRond extends StatelessWidget {
-  const _BoutonRond({required this.icone, required this.onTap, this.tooltip});
-  final IconData icone;
+/// Un outil de la réglette basse : une icône à la plume sur un creux de papier.
+class _BoutonOutil extends StatelessWidget {
+  const _BoutonOutil({required this.icone, required this.onTap, this.tooltip});
+  final Icone icone;
   final VoidCallback onTap;
   final String? tooltip;
 
@@ -583,11 +690,15 @@ class _BoutonRond extends StatelessWidget {
       message: tooltip ?? '',
       child: Material(
         color: p.surfaceCreuse,
-        shape: const CircleBorder(),
+        shape: const RoundedRectangleBorder(borderRadius: Rayons.petit),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
           onTap: onTap,
-          child: SizedBox(width: 50, height: 50, child: Icon(icone, size: 22, color: p.encre)),
+          child: SizedBox(
+            width: 50,
+            height: 50,
+            child: Center(child: IconeAscenda(icone, taille: 22, couleur: p.encre)),
+          ),
         ),
       ),
     );
@@ -613,7 +724,6 @@ class _PagesSupplementaires extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final p = context.palette;
     final suite = ref.watch(
       lecturePagesProvider((documentId: documentId, debut: debut, fin: fin)),
     );
@@ -629,26 +739,11 @@ class _PagesSupplementaires extends ConsumerWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // La suite reprend comme une nouvelle page du même livre : son
+            // titre courant, son folio, son filet.
             Padding(
-              padding: const EdgeInsets.only(top: 4, bottom: 18),
-              child: Row(
-                children: [
-                  Icon(Icons.south_rounded, size: 15, color: p.accentTexte),
-                  const SizedBox(width: 6),
-                  Flexible(
-                    child: Texte(
-                      'Suite de la séance, p. $debut à $fin',
-                      maxLines: 2,
-                      style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                            color: p.accentTexte,
-                            fontWeight: FontWeight.w600,
-                          ),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(child: Divider(height: 1, color: p.trait)),
-                ],
-              ),
+              padding: const EdgeInsets.only(top: 8, bottom: 20),
+              child: TitreCourant('suite de la séance', folio: 'p. $debut à $fin'),
             ),
             for (final x in passages) ...[
               SelectableText(
