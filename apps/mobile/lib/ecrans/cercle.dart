@@ -82,7 +82,7 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
                 children: [
                   Texte(
                     "Lire à plusieurs tient mieux dans la durée. Suivez vos amis, "
-                    "encouragez-les, écrivez-leur.",
+                    "encouragez-les et écrivez-leur.",
                     style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.5),
                   ),
                   const SizedBox(height: 16),
@@ -371,10 +371,11 @@ class _CarteCode extends ConsumerWidget {
                 child: OutlinedButton.icon(
                   onPressed: () => _inviter(context),
                   icon: const Icon(Icons.send_rounded, size: 17),
-                  label: const Texte('Inviter'),
+                  label: const Texte('Inviter', maxLines: 1, overflow: TextOverflow.ellipsis),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: p.surHeros,
                     minimumSize: const Size(0, 48),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
                     side: BorderSide(color: p.accentSurHeros.withValues(alpha: 0.4)),
                   ),
@@ -385,11 +386,12 @@ class _CarteCode extends ConsumerWidget {
                 child: FilledButton.icon(
                   onPressed: () => _ajouter(context, ref),
                   icon: const Icon(Icons.person_add_alt_1_rounded, size: 18),
-                  label: const Texte('Ajouter'),
+                  label: const Texte('Ajouter', maxLines: 1, overflow: TextOverflow.ellipsis),
                   style: FilledButton.styleFrom(
                     backgroundColor: p.accent,
                     foregroundColor: p.surAccent,
                     minimumSize: const Size(0, 48),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
                   ),
                 ),
@@ -525,38 +527,59 @@ class _LigneDemande extends ConsumerWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Surface(
-        padding: const EdgeInsets.fromLTRB(16, 14, 8, 14),
-        child: Row(
+        padding: const EdgeInsets.fromLTRB(16, 14, 16, 12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            AvatarLecteur(lecteur: demande.lecteur, taille: 44),
-            const SizedBox(width: 13),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Texte(demande.lecteur.nom,
-                      maxLines: 1, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium),
-                  const SizedBox(height: 1),
-                  Texte('veut rejoindre votre cercle',
-                      style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
-                ],
-              ),
+            Row(
+              children: [
+                AvatarLecteur(lecteur: demande.lecteur, taille: 44),
+                const SizedBox(width: 13),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Texte(demande.lecteur.nom,
+                          maxLines: 1, overflow: TextOverflow.ellipsis, style: t.textTheme.titleMedium),
+                      const SizedBox(height: 1),
+                      Texte('veut rejoindre votre cercle',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: t.textTheme.bodySmall?.copyWith(color: p.attenue)),
+                    ],
+                  ),
+                ),
+              ],
             ),
-            IconButton(
-              tooltip: 'Refuser',
-              onPressed: () => _repondre(context, ref, false),
-              style: IconButton.styleFrom(backgroundColor: p.surfaceCreuse),
-              icon: Icon(Icons.close_rounded, color: p.attenue, size: 20),
-            ),
-            const SizedBox(width: 6),
-            FilledButton(
-              onPressed: () => _repondre(context, ref, true),
-              style: FilledButton.styleFrom(
-                minimumSize: const Size(0, 40),
-                padding: const EdgeInsets.symmetric(horizontal: 14),
-                shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
-              ),
-              child: const Texte('Accepter'),
+            const SizedBox(height: 12),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () => _repondre(context, ref, false),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: p.attenue,
+                      minimumSize: const Size(0, 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      side: BorderSide(color: p.trait),
+                      shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                    ),
+                    child: const Texte('Refuser', maxLines: 1, overflow: TextOverflow.ellipsis),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: FilledButton(
+                    onPressed: () => _repondre(context, ref, true),
+                    style: FilledButton.styleFrom(
+                      minimumSize: const Size(0, 40),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      shape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
+                    ),
+                    child: const Texte('Accepter', maxLines: 1, overflow: TextOverflow.ellipsis),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

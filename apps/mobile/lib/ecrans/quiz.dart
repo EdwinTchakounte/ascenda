@@ -119,9 +119,12 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
     final q = _questions[_index];
     final choisi = _reponses[q.index];
     final dernier = _index == _questions.length - 1;
+    // Le chapitre d'abord, l'ouvrage ensuite : sur une seule ligne coupée par
+    // une ellipse, le titre du livre prenait toute la place et ne laissait que
+    // quatre lettres au chapitre, qui est pourtant ce qu'on travaille.
     final entete = [
-      if (_quiz?['ouvrage'] != null) '${_quiz!['ouvrage']}',
       if (_quiz?['chapitre'] != null) '${_quiz!['chapitre']}',
+      if (_quiz?['ouvrage'] != null) '${_quiz!['ouvrage']}',
     ].join(' · ');
 
     return Scaffold(

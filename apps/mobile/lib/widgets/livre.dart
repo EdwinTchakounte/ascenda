@@ -41,11 +41,13 @@ String titreSurDos(String titre, double hauteur) {
 /// ferait. On essaie donc du plus grand au plus petit et on garde le premier
 /// corps qui tient dans les deux sens.
 double corpsSurDos(String titre, {required double hauteur, required double largeur}) {
-  const large = 0.58;   // largeur moyenne d'un signe en Fraunces, en parts du corps
+  const large = 0.62;   // largeur moyenne d'un signe en Fraunces, en parts du corps
   const interligne = 1.22;
-  final dispoLigne = hauteur * 0.68;
+  // Le texte reste à l'intérieur du filet doré, qui court de 0,175 à 0,825 de
+  // la hauteur du dos : sinon la dernière lettre chevauche le cadre.
+  final dispoLigne = hauteur * 0.60;
   final dispoLignes = largeur * 0.68;
-  final motLong = titre.split(RegExp(r'[ \u2019\-]')).fold<int>(3, (m, x) => x.length > m ? x.length : m);
+  final motLong = titre.split(RegExp(r"[ \u2019'\-]")).fold<int>(3, (m, x) => x.length > m ? x.length : m);
   for (var corps = largeur * 0.26; corps > 6; corps -= 0.5) {
     final signesParLigne = dispoLigne / (corps * large);
     if (motLong > signesParLigne) continue;
@@ -134,11 +136,15 @@ class DosLivre extends StatelessWidget {
                           // Le corps calculé tient dans presque tous les cas ;
                           // l'ajustement rattrape le reste en réduisant, jamais
                           // en rognant une ligne.
+                          // Un `Text` brut, et non `Texte` : la règle qui lie le
+                          // dernier mot au précédent par une espace insécable
+                          // rend service dans un paragraphe, mais allonge la
+                          // ligne d'un dos, où elle finissait rognée.
                           child: FittedBox(
                             fit: BoxFit.scaleDown,
                             child: SizedBox(
-                              width: hauteur * 0.68,
-                              child: Texte(
+                              width: hauteur * 0.60,
+                              child: Text(
                                 court,
                                 maxLines: 3,
                                 textAlign: TextAlign.center,

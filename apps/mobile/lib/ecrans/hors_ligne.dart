@@ -91,7 +91,7 @@ class EcranHorsLigne extends ConsumerWidget {
                         ],
                       ),
                       const SizedBox(height: 12),
-                      TitreCourant('sur cet appareil, chiffrés', folio: _poids(total)),
+                      TitreCourant('sur cet appareil, chiffrés', folio: poidsLisible(total)),
                       const SizedBox(height: 16),
                     ],
                   ),
@@ -161,6 +161,4 @@ class EcranHorsLigne extends ConsumerWidget {
     );
   }
 
-  static String _poids(int o) =>
-      o < 1024 * 1024 ? '${(o / 1024).round()} Ko' : '${(o / (1024 * 1024)).toStringAsFixed(1).replaceAll('.', ',')} Mo';
 }

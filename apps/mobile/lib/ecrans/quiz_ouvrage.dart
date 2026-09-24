@@ -223,7 +223,7 @@ class _LigneQuiz extends StatelessWidget {
                             style: t.textTheme.titleMedium?.copyWith(fontSize: 15)),
                         const SizedBox(height: 3),
                         Texte(
-                          [if (pages.isNotEmpty) pages, '$n question${n > 1 ? 's' : ''}'].join('  ·  '),
+                          [if (pages.isNotEmpty) pages, '${millier(n)} question${n > 1 ? 's' : ''}'].join('  ·  '),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
                           style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.6),

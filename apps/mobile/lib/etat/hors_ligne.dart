@@ -19,6 +19,11 @@ import 'session.dart';
 /// préférences, qui sont relues en entier à chaque accès. Sur le web, où le
 /// système de fichiers n'existe pas, on retombe sur les préférences.
 
+/// Un poids de fichier, écrit en français.
+String poidsLisible(int octets) => octets < 1024 * 1024
+    ? '${(octets / 1024).round()} Ko'
+    : '${(octets / (1024 * 1024)).toStringAsFixed(1).replaceAll('.', ',')} Mo';
+
 class PackHorsLigne {
   const PackHorsLigne({
     required this.documentId,
@@ -34,9 +39,8 @@ class PackHorsLigne {
   final int octets;
   final Map<String, int> compteurs;
 
-  String get poids => octets < 1024 * 1024
-      ? '${(octets / 1024).round()} Ko'
-      : '${(octets / (1024 * 1024)).toStringAsFixed(1)} Mo';
+  /// « 9,7 Mo » : la virgule, comme partout ailleurs dans l'application.
+  String get poids => poidsLisible(octets);
 
   Map<String, dynamic> versJson() => {
         'document_id': documentId,

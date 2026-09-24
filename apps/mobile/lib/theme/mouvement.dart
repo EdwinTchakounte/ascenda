@@ -88,7 +88,23 @@ class _ApparitionState extends State<Apparition> with SingleTickerProviderStateM
   }
 }
 
-/// Un nombre qui monte jusqu'à sa valeur.
+/// « 1698 » devient « 1 698 » : une espace insécable sépare les milliers, et le
+/// nombre ne se coupe jamais en fin de ligne.
+///
+/// L'espace fine serait la bonne, mais aucune de nos polices ne la dessine :
+/// elle s'affiche à zéro et les chiffres restent collés. C'est donc l'insécable
+/// ordinaire, celle des montants.
+String millier(num n) {
+  final chiffres = n.round().abs().toString();
+  final tampon = StringBuffer(n < 0 ? '-' : '');
+  for (var i = 0; i < chiffres.length; i++) {
+    if (i > 0 && (chiffres.length - i) % 3 == 0) tampon.write('\u00A0');
+    tampon.write(chiffres[i]);
+  }
+  return tampon.toString();
+}
+
+/// Un nombre qui monte jusqu'à sa valeur, milliers séparés.
 class CompteurAnime extends StatelessWidget {
   const CompteurAnime(
     this.valeur, {
@@ -107,7 +123,10 @@ class CompteurAnime extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String texte(double v) => v.toStringAsFixed(decimales).replaceAll('.', ',') + suffixe;
+    String texte(double v) => (decimales == 0
+            ? millier(v)
+            : v.toStringAsFixed(decimales).replaceAll('.', ',')) +
+        suffixe;
     if (_reduites(context)) return Text(texte(valeur.toDouble()), style: style);
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0, end: valeur.toDouble()),

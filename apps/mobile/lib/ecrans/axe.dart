@@ -311,9 +311,9 @@ class _LigneOuvrage extends StatelessWidget {
     final details = [
       ?niveau,
       if (perimetre != null)
-        '${perimetre['pages']} pages lues sur ${o['pages']}'
+        '${millier(perimetre['pages'] as num)} pages lues sur ${millier(o['pages'] as num)}'
       else if (o['pages'] != null)
-        '${o['pages']} pages',
+        '${millier(o['pages'] as num)} pages',
       if (o['lecture_integrale'] == false) 'extraits',
     ].join('  ·  ');
 

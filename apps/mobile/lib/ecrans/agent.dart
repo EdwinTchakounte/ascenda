@@ -253,8 +253,10 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
         ),
         SafeArea(
           top: false,
+          // Une marge basse franche : la correspondance s'arrête net avant le
+          // champ, elle ne vient pas mourir dessous.
           child: Padding(
-            padding: EdgeInsets.fromLTRB(14, 6, 14, clavier ? 8 : 14),
+            padding: EdgeInsets.fromLTRB(14, 10, 14, clavier ? 8 : 14),
             child: ZoneMessage(
               controleur: _saisie,
               attente: _attente,
@@ -329,16 +331,16 @@ class _Accueil extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     return ListView(
-      padding: const EdgeInsets.fromLTRB(20, 18, 20, 24),
+      padding: const EdgeInsets.fromLTRB(20, 10, 20, 28),
       children: [
         // La lampe allumée sur la table : la lecture attend qu'on lui parle.
         Apparition(
           child: Column(
             children: [
-              const Illustration(Scene.lampe, taille: 196),
-              const SizedBox(height: 14),
+              const Illustration(Scene.lampe, taille: 142),
+              const SizedBox(height: 12),
               const EtiquetteCrochet("l'agent de lecture"),
-              const SizedBox(height: 14),
+              const SizedBox(height: 12),
               Texte(
                 'Demandez ce que vous voulez',
                 textAlign: TextAlign.center,
@@ -351,18 +353,18 @@ class _Accueil extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: t.textTheme.bodyMedium?.copyWith(color: p.attenue, height: 1.6),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 14),
               const Fleuron(),
             ],
           ),
         ),
         if (suggestions.isNotEmpty) ...[
-          const SizedBox(height: 22),
+          const SizedBox(height: 16),
           TitreCourant(
             'pour commencer',
             folio: suggestions.length > 1 ? '${suggestions.length} questions' : '1 question',
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 12),
           // Chaque question est une fiche à tirer du casier : on la touche, elle
           // part telle quelle.
           for (final (i, s) in suggestions.indexed)

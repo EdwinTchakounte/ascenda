@@ -297,10 +297,12 @@ class _CarteResultat extends StatelessWidget {
               style: t.textTheme.titleMedium),
           const SizedBox(height: 6),
           // Le titre courant d'une page de livre : le chapitre à gauche, le
-          // folio à droite, le filet dessous.
+          // folio à droite, le filet dessous. Le folio porte son blanc devant
+          // lui : un chapitre long est coupé par une ellipse, et « …p. 245 »
+          // se lisait d'un seul tenant.
           TitreCourant(
             '${r['chapitre'] ?? ''}'.isNotEmpty ? '${r['chapitre']}' : 'dans le texte',
-            folio: page != null ? 'p. $page' : null,
+            folio: page != null ? '\u00A0\u00A0p. $page' : null,
           ),
           const SizedBox(height: 12),
           // L'extrait en exergue, marge à l'encre d'or, en Fraunces : c'est la

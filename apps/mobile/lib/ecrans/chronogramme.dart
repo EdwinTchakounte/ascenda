@@ -246,23 +246,33 @@ class _EnteteSemaine extends StatelessWidget {
     final faites = seances.where((s) => s.faite).length;
     final complete = faites == seances.length;
 
-    return Row(
-      children: [
-        Flexible(
-          child: EtiquetteCrochet(libelle, couleur: complete ? p.succes : p.accentTexte),
-        ),
-        const SizedBox(width: 12),
-        const Expanded(child: Filet()),
-        const SizedBox(width: 12),
-        Texte(
-          '$faites/${seances.length}',
-          style: t.textTheme.labelSmall?.copyWith(
-            color: complete ? p.succes : p.attenue,
-            letterSpacing: 1,
-            fontWeight: FontWeight.w700,
+    // L'étiquette passe avant le filet. Partagée en parts égales avec lui,
+    // elle cédait la moitié de la ligne et la semaine se coupait dès
+    // « 31 août au 6 … » : elle prend maintenant ce qu'il lui faut, le filet
+    // se contente du reste. Les 64 points réservés sont les deux espaces de
+    // 12, le folio (« 3/3 ») et de quoi tracer un filet, même court.
+    return LayoutBuilder(
+      builder: (context, contraintes) => Row(
+        children: [
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              maxWidth: contraintes.maxWidth > 64 ? contraintes.maxWidth - 64 : contraintes.maxWidth,
+            ),
+            child: EtiquetteCrochet(libelle, couleur: complete ? p.succes : p.accentTexte),
           ),
-        ),
-      ],
+          const SizedBox(width: 12),
+          const Expanded(child: Filet()),
+          const SizedBox(width: 12),
+          Texte(
+            '$faites/${seances.length}',
+            style: t.textTheme.labelSmall?.copyWith(
+              color: complete ? p.succes : p.attenue,
+              letterSpacing: 1,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -365,9 +375,16 @@ class _LigneSeance extends ConsumerWidget {
                         ),
                         if (seance.partie != null) ...[
                           const SizedBox(height: 1),
+                          // La rature porte sur la séance entière, l'ouvrage et
+                          // le chapitre : barrer le seul titre laissait la ligne
+                          // à moitié corrigée.
                           Texte(
                             seance.partie!,
-                            style: t.textTheme.bodySmall?.copyWith(color: p.texte),
+                            style: t.textTheme.bodySmall?.copyWith(
+                              color: p.texte,
+                              decoration: seance.faite ? TextDecoration.lineThrough : null,
+                              decorationThickness: 1,
+                            ),
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),

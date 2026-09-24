@@ -563,8 +563,8 @@ class _CarteAxe extends StatelessWidget {
                     !a.parcoursPossible
                         ? 'Consultable, pas encore de parcours'
                         : dansPole
-                            ? '${a.nbPages} pages · ${_heures(a.dureeMin)} de lecture'
-                            : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${a.nbPages} pages',
+                            ? '${millier(a.nbPages)} pages · ${_heures(a.dureeMin)} de lecture'
+                            : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${millier(a.nbPages)} pages',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: t.textTheme.bodySmall?.copyWith(

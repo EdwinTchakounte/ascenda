@@ -243,8 +243,12 @@ class TitreCourant extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
             ),
-            if (folio != null)
+            if (folio != null) ...[
+              // Sans cette espace, un titre coupé collait à son folio :
+              // « LES CONSÉQU…p. 245 ».
+              const SizedBox(width: 14),
               Texte(folio!, style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1)),
+            ],
           ],
         ),
         const SizedBox(height: 6),

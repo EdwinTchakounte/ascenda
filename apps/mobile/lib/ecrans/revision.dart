@@ -92,19 +92,29 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                   ),
                 ),
                 Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
-                    child: GestureDetector(
-                      onTap: () => setState(() => _retournee = !_retournee),
-                      // Chaque notion est une fiche neuve : elle se pose, puis
-                      // elle se retourne sur elle-même.
-                      child: KeyedSubtree(
-                        key: ValueKey(n.conceptId),
-                        child: Apparition(
-                          child: _Retournement(
-                            retournee: _retournee,
-                            recto: _FaceNotion(notion: n, retournee: false),
-                            verso: _FaceNotion(notion: n, retournee: true),
+                  // La fiche se taille sur son texte et se pose au milieu de la
+                  // page. Une définition longue fait défiler la page ; une
+                  // notion courte ne laisse plus un carton vide aux deux tiers.
+                  child: LayoutBuilder(
+                    builder: (context, contraintes) => SingleChildScrollView(
+                      padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
+                      child: ConstrainedBox(
+                        constraints: BoxConstraints(minHeight: contraintes.maxHeight - 42),
+                        child: Center(
+                          child: GestureDetector(
+                            onTap: () => setState(() => _retournee = !_retournee),
+                            // Chaque notion est une fiche neuve : elle se pose,
+                            // puis elle se retourne sur elle-même.
+                            child: KeyedSubtree(
+                              key: ValueKey(n.conceptId),
+                              child: Apparition(
+                                child: _Retournement(
+                                  retournee: _retournee,
+                                  recto: _FaceNotion(notion: n, retournee: false),
+                                  verso: _FaceNotion(notion: n, retournee: true),
+                                ),
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -185,6 +195,19 @@ class _Retournement extends StatelessWidget {
   }
 }
 
+/// Un raccourci d'axe (« 12-agriculture-elevage ») rendu lisible.
+///
+/// La liste à réviser renvoie parfois l'axe sans son libellé : le numéro
+/// d'ordre tombe, les traits d'union redeviennent des espaces, la première
+/// lettre passe en capitale. Un libellé déjà écrit en clair n'est pas touché.
+String _axeLisible(String axe) {
+  if (!_raccourciAxe.hasMatch(axe)) return axe;
+  final mots = axe.substring(axe.indexOf('-') + 1).replaceAll('-', ' ');
+  return mots.isEmpty ? axe : '${mots[0].toUpperCase()}${mots.substring(1)}';
+}
+
+final _raccourciAxe = RegExp(r'^\d+(-[a-z0-9]+)+$');
+
 /// Une face de la fiche : le terme au recto, la définition au verso.
 class _FaceNotion extends StatelessWidget {
   const _FaceNotion({required this.notion, required this.retournee});
@@ -217,31 +240,33 @@ class _FaceNotion extends StatelessWidget {
             // Un signe en filigrane, pour que la fiche ne soit pas un
             // rectangle vide autour d'un mot.
             Positioned(
-              right: -24,
-              bottom: -24,
+              right: -18,
+              bottom: -18,
               child: IconeAscenda(
                 retournee ? Icone.volumes : Icone.cartes,
-                taille: 168,
+                taille: 118,
                 epaisseur: 1.1,
                 couleur: p.accentTexte.withValues(alpha: p.sombre ? 0.09 : 0.07),
               ),
             ),
-            SingleChildScrollView(
+            Padding(
               padding: const EdgeInsets.fromLTRB(24, 22, 24, 24),
               child: Column(
+                mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
                       EtiquetteCrochet(retournee ? 'définition' : 'notion'),
-                      const Spacer(),
+                      const SizedBox(width: 12),
                       if (n.axe != null)
-                        Flexible(
+                        Expanded(
                           child: Texte(
-                            n.axe!,
+                            _axeLisible(n.axe!),
                             maxLines: 1,
+                            textAlign: TextAlign.right,
                             overflow: TextOverflow.ellipsis,
-                            style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1),
+                            style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.8),
                           ),
                         ),
                     ],
@@ -274,7 +299,11 @@ class _FaceNotion extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 28),
+                    const SizedBox(height: 22),
+                    const Filet(redouble: true),
+                    const SizedBox(height: 14),
+                    // Le pied de la fiche : la consigne à gauche, le compte des
+                    // passages à droite, comme un folio.
                     Row(
                       children: [
                         IconeAscenda(Icone.cartes, taille: 18, couleur: p.attenue),
@@ -285,6 +314,15 @@ class _FaceNotion extends StatelessWidget {
                             style: t.textTheme.bodySmall?.copyWith(color: p.attenue),
                           ),
                         ),
+                        if (n.revisions > 0) ...[
+                          const SizedBox(width: 10),
+                          Texte(
+                            n.revisions > 1 ? 'revue ${n.revisions} fois' : 'revue une fois',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 0.6),
+                          ),
+                        ],
                       ],
                     ),
                   ],

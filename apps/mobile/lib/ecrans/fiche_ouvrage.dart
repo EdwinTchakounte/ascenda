@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../etat/fournisseurs.dart';
 import '../theme/icones.dart';
+import '../theme/mouvement.dart';
 import '../theme/palette.dart';
 import '../theme/papier.dart';
 import '../theme/texte.dart';
@@ -80,7 +81,7 @@ class FicheOuvrage extends ConsumerWidget {
                       ? (niveaux['${peda['niveau']}'] ?? '${peda['niveau']}')
                       : 'non évalué',
                   duree: peda['duree_min'] != null ? dureeLisible(peda['duree_min'] as int) : '-',
-                  pages: d['pages'] != null ? '${d['pages']}' : '-',
+                  pages: d['pages'] != null ? millier(d['pages'] as num) : '-',
                 ),
                 const SizedBox(height: 22),
 
@@ -186,7 +187,7 @@ class FicheOuvrage extends ConsumerWidget {
                     Expanded(
                       child: _Stat(
                         icone: Icone.volumes,
-                        valeur: '${contenu['chapitres'] ?? 0}',
+                        valeur: millier(contenu['chapitres'] as num? ?? 0),
                         libelle: 'chapitres',
                       ),
                     ),
@@ -197,7 +198,7 @@ class FicheOuvrage extends ConsumerWidget {
                       // fermée.
                       child: _Stat(
                         icone: Icone.question,
-                        valeur: '${contenu['questions'] ?? 0}',
+                        valeur: millier(questions),
                         libelle: 'questions',
                         onTap: questions == 0
                             ? null
@@ -649,7 +650,7 @@ class _SommaireState extends ConsumerState<_Sommaire> {
                       detail: [
                         if (utiles[i]['duree_min'] != null) dureeLisible(utiles[i]['duree_min'] as int),
                         if ((utiles[i]['nb_questions'] as int? ?? 0) > 0)
-                          '${utiles[i]['nb_questions']} questions',
+                          '${millier(utiles[i]['nb_questions'] as num)} questions',
                       ].join(' · '),
                       onTap: () => context.push('/lecture/${widget.documentId}/${utiles[i]['id']}'),
                     ),

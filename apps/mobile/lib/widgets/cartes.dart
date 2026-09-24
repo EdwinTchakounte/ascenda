@@ -249,6 +249,9 @@ class PastillesSemaine extends StatelessWidget {
     final lundi = DateTime.now().subtract(Duration(days: DateTime.now().weekday - 1));
     final noms = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
+    // Chaque jour prend le septième de la largeur : sur un écran de 320 points,
+    // sept pastilles de 38 pixels réclamaient 266 pixels dans une rangée qui en
+    // offrait 252, et la semaine débordait.
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(7, (i) {
@@ -276,12 +279,13 @@ class PastillesSemaine extends StatelessWidget {
                         Texte(noms[i],
                             style: t.textTheme.labelMedium?.copyWith(color: Couleurs.grisChaud)));
 
-        return Column(
+        return Expanded(
+          child: Column(
           children: [
             AnimatedContainer(
               duration: const Duration(milliseconds: 250),
-              width: 38,
-              height: 38,
+              width: 36,
+              height: 36,
               decoration: BoxDecoration(
                 color: aujourdhui && !fait && !manque ? context.palette.accent : fond,
                 shape: BoxShape.circle,
@@ -309,6 +313,7 @@ class PastillesSemaine extends StatelessWidget {
               ),
             ),
           ],
+          ),
         );
       }),
     );

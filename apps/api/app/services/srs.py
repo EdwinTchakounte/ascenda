@@ -142,7 +142,7 @@ async def enregistrer_echecs(
 async def a_reviser(user_id: str, limite: int = 20) -> list[dict]:
     lignes = await fetch_all(
         """select c.id, c.term, c.definition, cm.ease, cm.interval_days,
-                  cm.repetitions, cm.next_review_at, a.slug as axe
+                  cm.repetitions, cm.next_review_at, a.slug as axe, a.label as axe_label
            from concept_mastery cm
            join concept c on c.id = cm.concept_id
            left join axis a on a.id = c.axis_id
@@ -156,6 +156,10 @@ async def a_reviser(user_id: str, limite: int = 20) -> list[dict]:
             "terme": l["term"],
             "definition": l["definition"],
             "axe": l["axe"],
+            # Le libellé en clair, faute de quoi l'application affiche le
+            # raccourci : « 12-agriculture-elevage » au lieu d'« Agriculture et
+            # élevage ». La fiche d'une notion le renvoie déjà.
+            "axe_label": l["axe_label"],
             "facilite": round(float(l["ease"]), 2),
             "intervalle_jours": l["interval_days"],
             "revisions": l["repetitions"],

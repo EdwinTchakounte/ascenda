@@ -17,8 +17,11 @@ import '../widgets/illustrations.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
-String _jour(DateTime? d) =>
-    d == null ? 'date à confirmer' : DateFormat('d MMMM y', 'fr_FR').format(d);
+/// « 1er décembre 2026 » : en français, le premier du mois porte son rang, les
+/// autres quantièmes s'écrivent en chiffres simples.
+String _jour(DateTime? d) => d == null
+    ? 'date à confirmer'
+    : '${d.day == 1 ? '1er' : d.day} ${DateFormat('MMMM y', 'fr_FR').format(d)}';
 
 /// Codes et avantages : ce qu'un code a ouvert, le code à partager, et les
 /// réductions qu'il a rapportées.
