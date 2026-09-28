@@ -9,6 +9,9 @@ moment de la construction et annonce leur poids : rien à configurer.
 | `ascenda-32bits.apk` | les téléphones anciens ou d'entrée de gamme (armeabi-v7a) | 24 Mo |
 | `ascenda-universelle.apk` | le secours : quand l'installation est refusée | 55 Mo |
 
+L'adresse de l'API est figée à la construction : sans `--dart-define`, l'APK
+appelle `localhost` et ne joindra jamais le serveur.
+
 L'APK arm64 reste celle qu'on propose en premier. Nos lecteurs paient leur
 mégaoctet, et cinquante-cinq mégaoctets sur une connexion lente, c'est une
 heure.
@@ -37,8 +40,14 @@ faut désinstaller avant de revenir à l'arm64.
 Depuis `apps/mobile`, avec le numéro de construction de `pubspec.yaml` :
 
 ```bash
-flutter build apk --release --split-per-abi
-flutter build apk --release --build-number=3011   # l'universelle
+flutter build apk --release --split-per-abi \
+  --dart-define=API_URL=https://api.ascenda-books.online
+
+# L'universelle : numéro de construction décalé de 3000, et sans x86, que
+# personne ne porte dans sa poche.
+flutter build apk --release --build-number=3011 \
+  --target-platform android-arm,android-arm64 \
+  --dart-define=API_URL=https://api.ascenda-books.online
 ```
 
 Puis, depuis ce dossier :
