@@ -116,11 +116,11 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
         """select
              count(*) as total,
              count(*) filter (where created_at >= date_trunc('day', now())) as aujourdhui,
-             count(*) filter (where created_at >= now() - make_interval(days => %s)) as periode,
+             count(*) filter (where created_at >= date_trunc('day', now()) - make_interval(days => %s - 1)) as periode,
              -- La période précédente de même longueur. Un chiffre seul ne dit
              -- pas s'il monte : c'est la comparaison qui informe.
-             count(*) filter (where created_at >= now() - make_interval(days => %s * 2)
-                                and created_at <  now() - make_interval(days => %s)) as precedent,
+             count(*) filter (where created_at >= date_trunc('day', now()) - make_interval(days => %s * 2 - 1)
+                                and created_at <  date_trunc('day', now()) - make_interval(days => %s - 1)) as precedent,
              count(*) filter (where plan <> 'free') as abonnes,
              count(*) filter (where not is_active) as desactives
            from app_user""",
@@ -143,10 +143,10 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
              count(*) filter (where statut = 'rejete') as rejetes,
              coalesce(sum(montant) filter (where statut = 'valide'), 0) as encaisse,
              coalesce(sum(montant) filter (where statut = 'valide'
-                and created_at >= now() - make_interval(days => %s)), 0) as encaisse_periode,
+                and created_at >= date_trunc('day', now()) - make_interval(days => %s - 1)), 0) as encaisse_periode,
              coalesce(sum(montant) filter (where statut = 'valide'
-                and created_at >= now() - make_interval(days => %s * 2)
-                and created_at <  now() - make_interval(days => %s)), 0) as encaisse_precedent,
+                and created_at >= date_trunc('day', now()) - make_interval(days => %s * 2 - 1)
+                and created_at <  date_trunc('day', now()) - make_interval(days => %s - 1)), 0) as encaisse_precedent,
              coalesce(round(avg(montant) filter (where statut = 'valide')), 0) as panier_moyen
            from payment""",
         (jours, jours, jours),
@@ -170,7 +170,7 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
              count(*) filter (where statut = 'envoye') as envoyes,
              count(*) filter (where statut = 'simule') as simules,
              count(*) filter (where statut = 'echec') as echecs,
-             count(*) filter (where created_at >= now() - make_interval(days => %s)) as periode
+             count(*) filter (where created_at >= date_trunc('day', now()) - make_interval(days => %s - 1)) as periode
            from email_log""",
         (jours,),
     )
@@ -228,7 +228,7 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
     axes_choisis = await fetch_all(
         """select a.label, a.slug,
                   count(*) as choix,
-                  count(*) filter (where ua.created_at >= now() - make_interval(days => %s)) as periode
+                  count(*) filter (where ua.created_at >= date_trunc('day', now()) - make_interval(days => %s - 1)) as periode
              from user_axis ua join axis a on a.id = ua.axis_id
             group by a.id, a.label, a.slug
             order by choix desc limit 8""",

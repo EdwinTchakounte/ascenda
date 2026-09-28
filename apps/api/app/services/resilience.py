@@ -127,10 +127,19 @@ DISJONCTEURS: dict[str, Disjoncteur] = {
     "tara": Disjoncteur("tara", seuil=3, pause=120.0),
     "brevo": Disjoncteur("brevo", seuil=5, pause=60.0),
     "anthropic": Disjoncteur("anthropic", seuil=3, pause=90.0),
+    "openai": Disjoncteur("openai", seuil=3, pause=90.0),
 }
 
 
 def disjoncteur(nom: str) -> Disjoncteur:
+    """Le disjoncteur d'une dépendance, créé à la volée si elle est nouvelle.
+
+    Un fournisseur ajouté depuis la console ne doit pas faire tomber l'appel sur
+    une erreur de clé de dictionnaire : il obtient un disjoncteur au même
+    réglage que les autres.
+    """
+    if nom not in DISJONCTEURS:
+        DISJONCTEURS[nom] = Disjoncteur(nom, seuil=3, pause=90.0)
     return DISJONCTEURS[nom]
 
 

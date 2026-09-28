@@ -16,6 +16,11 @@ _PERIOD_SQL = {
     "total": "true",
 }
 
+# Les compteurs qui se comptent en jetons et non en actes. Une question coûte
+# entre trois mille et dix mille jetons selon les passages retenus : compter les
+# questions ne dit rien de la facture, compter les jetons la dit exactement.
+_EN_JETONS = {"agent_tokens"}
+
 # Message adapté au compteur : dire ce qui est atteint et quoi faire ensuite.
 _MESSAGES = {
     "agent_question": "Vous avez posé toutes vos questions du jour ({max}). "
@@ -28,6 +33,8 @@ _MESSAGES = {
     "chronogram_active": "L'offre Découverte permet un chronogramme à la fois. "
                          "Terminez ou archivez le vôtre, ou passez à Ascension.",
     "export_pdf": "L'export PDF fait partie d'Ascension.",
+    "agent_tokens": "Vous avez atteint le volume de réponses inclus. "
+                    "Il se recharge au début du mois, ou passez à Ascension.",
 }
 
 
@@ -41,18 +48,40 @@ async def quota_for(user: dict, kind: str) -> dict | None:
     """
     from app.services import acces
 
-    return await fetch_one(
+    quota = await fetch_one(
         "select period, max_value, hard from plan_quota where plan = %s and type = %s",
         (await acces.plan_pour(user, kind), kind),
     )
+    if kind != "agent_tokens":
+        return quota
+
+    # Un code d'accès peut porter son propre plafond de jetons. On applique le
+    # plus serré des deux, et on compte depuis l'activation du code.
+    borne = await acces.plafond_jetons(str(user["id"]))
+    if not borne:
+        return quota
+    du_plan = quota["max_value"] if quota and quota["max_value"] is not None else None
+    if du_plan is not None and du_plan <= borne["plafond"]:
+        return quota
+    return {"period": "total", "max_value": borne["plafond"], "hard": True,
+            "depuis": borne["depuis"], "code": borne["code"]}
 
 
-async def consumed(user_id: str, kind: str, period: str) -> int:
-    where = _PERIOD_SQL.get(period, "true")
+async def consumed(user_id: str, kind: str, period: str, depuis=None) -> int:
+    """Ce qui a déjà été consommé sur la fenêtre.
+
+    `depuis` remplace la fenêtre quand le plafond vient d'un code d'accès : on
+    compte à partir de son activation, pas à partir du premier du mois.
+    """
+    colonne = "cost_tokens" if kind in _EN_JETONS else "quantity"
+    if depuis is not None:
+        where, params = "at >= %s", (user_id, kind, depuis)
+    else:
+        where, params = _PERIOD_SQL.get(period, "true"), (user_id, kind)
     row = await fetch_one(
-        f"""select coalesce(sum(quantity), 0) as n from usage_event
+        f"""select coalesce(sum({colonne}), 0) as n from usage_event
             where user_id = %s and type = %s and {where}""",
-        (user_id, kind),
+        params,
     )
     return int(row["n"]) if row else 0
 
@@ -67,12 +96,18 @@ async def check(user: dict, kind: str, quantity: int = 1) -> dict:
     if quota is None or quota["max_value"] is None:
         return {"type": kind, "limite": None, "utilise": None, "restant": None}
 
-    used = await consumed(user["id"], kind, quota["period"])
+    used = await consumed(user["id"], kind, quota["period"], quota.get("depuis"))
     limite = int(quota["max_value"])
     if used + quantity > limite:
-        message = _MESSAGES.get(kind, "Vous avez atteint la limite de votre formule.").format(
-            max=limite
-        )
+        if quota.get("code"):
+            # Un plafond porté par un code ne se recharge pas au mois : dire le
+            # contraire enverrait le lecteur attendre une date qui ne viendra pas.
+            message = (f"Le volume inclus dans le code {quota['code']} est épuisé "
+                       f"({limite} jetons).")
+        else:
+            message = _MESSAGES.get(kind, "Vous avez atteint la limite de votre formule.").format(
+                max=limite
+            )
         if quota["hard"]:
             raise QuotaExceeded(
                 message,
@@ -108,7 +143,7 @@ async def summary(user: dict) -> list[dict]:
         q = await quota_for(user, t["type"])
         if not q:
             continue
-        used = await consumed(user["id"], t["type"], q["period"])
+        used = await consumed(user["id"], t["type"], q["period"], q.get("depuis"))
         out.append(
             {
                 "type": t["type"],

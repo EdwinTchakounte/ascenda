@@ -13,6 +13,7 @@ from app.core.db import close_pool, fetch_one, open_pool
 from app.routers import (
     admin,
     admin_cercle,
+    admin_agent,
     admin_codes,
     agent,
     axes,
@@ -216,6 +217,7 @@ async def etat():
 for r in (
     admin.router,
     admin_codes.router,
+    admin_agent.router,
     auth_router.router,
     axes.router,
     bibliotheque.router,

@@ -31,8 +31,16 @@ export const apk = () => fichier("ascenda.apk");
 
 /**
  * L'APK des téléphones anciens ou d'entrée de gamme dont le système est en 32
- * bits : l'APK arm64 ne s'y installe pas. Une APK universelle couvrirait les
- * deux, mais elle pèse cinquante-cinq mégaoctets, c'est à dire une heure de
- * téléchargement sur les connexions de beaucoup de nos lecteurs.
+ * bits : l'APK arm64 ne s'y installe pas.
  */
 export const apk32 = () => fichier("ascenda-32bits.apk");
+
+/**
+ * Le secours : toutes les architectures dans un seul fichier.
+ *
+ * Android refuse une APK dont l'architecture ne correspond pas au téléphone, et
+ * il annonce « le package semble non valide », ce qui ne dit à personne qu'il
+ * fallait l'autre fichier. Celle-ci s'installe partout. Elle n'est pas proposée
+ * en premier parce qu'elle pèse le double : nos lecteurs paient leur mégaoctet.
+ */
+export const apkUniverselle = () => fichier("ascenda-universelle.apk");

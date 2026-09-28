@@ -34,7 +34,7 @@ FONCTIONS: dict[str, str] = {
 
 # Un compteur de quota qui n'a pas sa propre entrée au catalogue suit celle dont
 # il dépend : le traitement des scans ne sert à rien sans l'import.
-_COMPTEUR_VERS_FONCTION = {"ocr_pages": "doc_uploaded"}
+_COMPTEUR_VERS_FONCTION = {"ocr_pages": "doc_uploaded", "agent_tokens": "agent_question"}
 
 
 def fonction_du_compteur(compteur: str) -> str:
@@ -110,6 +110,31 @@ async def etat(user: dict) -> dict:
 async def a_droit(user: dict, fonction: str) -> bool:
     e = await etat(user)
     return e["complet"] or fonction_du_compteur(fonction) in e["fonctions"]
+
+
+async def plafond_jetons(user_id: str) -> dict | None:
+    """Le plafond de jetons porté par un code d'accès, s'il y en a un.
+
+    Un code peut borner ce qu'il coûte, indépendamment de la formule qu'il
+    ouvre : c'est ce qu'il faut pour un code offert à une promotion ou à un
+    partenaire. Le compte part de l'activation et ne se remet pas à zéro chaque
+    mois, sinon le plafond ne bornerait rien.
+
+    Quand plusieurs codes en portent un, on retient le plus serré : c'est celui
+    qui protège.
+    """
+    lignes = await fetch_all(
+        """select c.code, c.plafond_tokens, u.active_le
+             from code_acces_utilisation u join code_acces c on c.id = u.code_id
+            where u.user_id = %s and c.actif and c.plafond_tokens is not null
+              and least(u.fin, c.fin) > now()
+            order by c.plafond_tokens""",
+        (user_id,),
+    )
+    if not lignes:
+        return None
+    l = lignes[0]
+    return {"code": l["code"], "plafond": int(l["plafond_tokens"]), "depuis": l["active_le"]}
 
 
 async def plan_pour(user: dict, compteur: str) -> str:

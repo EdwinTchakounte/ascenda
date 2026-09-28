@@ -26,6 +26,8 @@ class CodeIn(BaseModel):
     fin: datetime
     duree_jours: int | None = Field(default=None, gt=0, le=3650)
     max_utilisations: int | None = Field(default=None, gt=0)
+    # Le coût total que ce code s'autorise, compté depuis chaque activation.
+    plafond_tokens: int | None = Field(default=None, gt=0, le=1_000_000_000)
 
     @field_validator("code")
     @classmethod
@@ -38,6 +40,7 @@ class CodeChangeIn(BaseModel):
     actif: bool | None = None
     fin: datetime | None = None
     max_utilisations: int | None = Field(default=None, gt=0)
+    plafond_tokens: int | None = Field(default=None, gt=0, le=1_000_000_000)
 
 
 def _utc(d: datetime) -> datetime:
@@ -68,6 +71,7 @@ def _vue(c: dict) -> dict:
         "fin": c["fin"],
         "duree_jours": c["duree_jours"],
         "max_utilisations": c["max_utilisations"],
+        "plafond_tokens": c["plafond_tokens"],
         "utilisations": c["utilisations"],
         "en_cours": c["en_cours"],
         "actif": c["actif"],
@@ -121,10 +125,10 @@ async def creer(data: CodeIn, user: AdminUser):
         raise Conflict("Ce code existe déjà.")
     cree = await fetch_one(
         """insert into code_acces (code, libelle, niveau, fonctions, debut, fin, duree_jours,
-                                   max_utilisations, cree_par)
-           values (%s, %s, %s, %s, %s, %s, %s, %s, %s) returning id""",
+                                   max_utilisations, plafond_tokens, cree_par)
+           values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s) returning id""",
         (data.code, data.libelle.strip(), data.niveau, fonctions, debut, fin,
-         data.duree_jours, data.max_utilisations, user["id"]),
+         data.duree_jours, data.max_utilisations, data.plafond_tokens, user["id"]),
     )
     return _vue(await fetch_one(_SELECT + " where c.id = %s", (cree["id"],)))
 

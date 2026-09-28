@@ -1,5 +1,10 @@
 """L'agent : répondre en citant toujours l'ouvrage et la page.
 
+Le fournisseur du modèle, son modèle et sa clé se règlent depuis la console
+(`app/services/fournisseurs.py`). Deux fournisseurs peuvent être posés : le
+second est appelé quand le disjoncteur du premier est ouvert, et la réponse
+dégradée ne sert plus que si les deux sont tombés.
+
 Deux garde-fous non négociables.
 
 1. L'agent ne répond que sur ce qu'il a lu. Le contexte est constitué de passages
@@ -107,9 +112,13 @@ async def repondre(
             "tokens_in": 0,
             "tokens_out": 0,
             "degrade": False,
+            "modele": None,
         }
 
-    if not settings.anthropic_api_key:
+    from app.services import fournisseurs
+
+    prets = await fournisseurs.actifs()
+    if not prets:
         lignes = [
             f"[{p['n']}] {p['ouvrage']}" + (f", p. {p['page']}" if p["page"] else "")
             for p in passages
@@ -123,13 +132,9 @@ async def repondre(
             "tokens_in": 0,
             "tokens_out": 0,
             "degrade": True,
+            "modele": None,
         }
 
-    from anthropic import AsyncAnthropic
-
-    # 45 s au plus et une seule reprise : le client attend dix minutes par défaut,
-    # et chaque question bloquée tient une connexion de l'API.
-    client = AsyncAnthropic(api_key=settings.anthropic_api_key, timeout=45.0, max_retries=1)
     messages = []
     for h in (historique or [])[-6:]:
         messages.append({"role": h["role"], "content": h["body"]})
@@ -139,35 +144,90 @@ async def repondre(
             "content": f"PASSAGES\n\n{_contexte(passages)}\n\n---\n\nQUESTION\n{question}",
         }
     )
-    try:
-        from app.services.resilience import disjoncteur
 
-        reponse = await disjoncteur("anthropic").appeler(
-            client.messages.create,
-            model=settings.agent_model,
-            max_tokens=1400,
-            system=SYSTEME,
-            messages=messages,
-        )
-    except Exception as exc:  # noqa: BLE001
-        log.warning("Appel au modèle impossible : %s", exc)
-        return {
-            "reponse": (
-                "L'assistant est momentanément indisponible. Les passages trouvés "
-                "dans le corpus restent affichés sous cette réponse."
-            ),
-            "tokens_in": 0,
-            "tokens_out": 0,
-            "degrade": True,
-        }
+    from app.services.resilience import disjoncteur
 
+    dernier = None
+    for f in prets:
+        appel = _APPELS[f["code"]]
+        try:
+            return await disjoncteur(f["code"]).appeler(appel, f, messages)
+        except Exception as exc:  # noqa: BLE001
+            dernier = exc
+            log.warning("Fournisseur %s indisponible : %s", f["code"], exc)
+
+    log.warning("Aucun fournisseur n'a répondu : %s", dernier)
+    return {
+        "reponse": (
+            "L'assistant est momentanément indisponible. Les passages trouvés "
+            "dans le corpus restent affichés sous cette réponse."
+        ),
+        "tokens_in": 0,
+        "tokens_out": 0,
+        "degrade": True,
+        "modele": None,
+    }
+
+
+async def _anthropic(f: dict, messages: list[dict]) -> dict:
+    from anthropic import AsyncAnthropic
+
+    # 45 s au plus et une seule reprise : le client attend dix minutes par défaut,
+    # et chaque question bloquée tient une connexion de l'API.
+    client = AsyncAnthropic(api_key=f["cle"], timeout=45.0, max_retries=1)
+    reponse = await client.messages.create(
+        model=f["modele"],
+        max_tokens=f["max_tokens"],
+        system=SYSTEME,
+        messages=messages,
+    )
     texte = "".join(b.text for b in reponse.content if getattr(b, "type", "") == "text")
     return {
         "reponse": texte.strip(),
         "tokens_in": reponse.usage.input_tokens,
         "tokens_out": reponse.usage.output_tokens,
         "degrade": False,
+        "modele": f["modele"],
     }
+
+
+async def _openai(f: dict, messages: list[dict]) -> dict:
+    """Appel direct en HTTP, sans SDK supplémentaire.
+
+    Le client officiel embarquerait une dépendance de plus pour une seule
+    requête, alors que `httpx` est déjà là pour Tara et Brevo. Les modèles
+    récents refusent `max_tokens` et attendent `max_completion_tokens` : on
+    envoie le nom que le modèle demandé accepte.
+    """
+    import httpx
+
+    modele = f["modele"]
+    recent = modele.startswith(("gpt-5", "o1", "o3", "o4"))
+    corps = {
+        "model": modele,
+        "messages": [{"role": "system", "content": SYSTEME}, *messages],
+        ("max_completion_tokens" if recent else "max_tokens"): f["max_tokens"],
+    }
+    async with httpx.AsyncClient(timeout=45.0) as client:
+        r = await client.post(
+            "https://api.openai.com/v1/chat/completions",
+            headers={"Authorization": f"Bearer {f['cle']}"},
+            json=corps,
+        )
+    if r.status_code >= 400:
+        raise RuntimeError(f"OpenAI {r.status_code} : {r.text[:200]}")
+    data = r.json()
+    usage = data.get("usage") or {}
+    return {
+        "reponse": (data["choices"][0]["message"].get("content") or "").strip(),
+        "tokens_in": int(usage.get("prompt_tokens") or 0),
+        "tokens_out": int(usage.get("completion_tokens") or 0),
+        "degrade": False,
+        "modele": modele,
+    }
+
+
+_APPELS = {"anthropic": _anthropic, "openai": _openai}
 
 
 def citations_utilisees(reponse: str, passages: list[dict]) -> list[dict]:

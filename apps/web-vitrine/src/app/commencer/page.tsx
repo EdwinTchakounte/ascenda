@@ -3,7 +3,7 @@ import Link from "next/link";
 import Entete from "@/components/Entete";
 import Pied from "@/components/Pied";
 import { APPLICATION } from "@/lib/editeur";
-import { apk, apk32 } from "@/lib/telechargements";
+import { apk, apk32, apkUniverselle } from "@/lib/telechargements";
 
 export const metadata = {
   title: "Commencer avec ASCENDA",
@@ -35,6 +35,7 @@ export default function Commencer() {
   // affiché est celui du fichier réel, pas une valeur recopiée à la main.
   const fichier = apk();
   const ancien = apk32();
+  const universelle = apkUniverselle();
   const android = fichier ? fichier.url : APPLICATION.android;
 
   return (
@@ -135,13 +136,31 @@ export default function Commencer() {
                         ) : null}
                       </span>
                     </a>
-                    {ancien ? (
+                    {ancien || universelle ? (
                       <p className="mt-4 text-[0.84rem] leading-[1.6] text-[#8590aa]">
-                        Téléphone ancien ou d&apos;entrée de gamme ? Si l&apos;installation est refusée,{" "}
-                        <a href={ancien.url} download className="text-[var(--color-or-clair)] underline underline-offset-2">
-                          prenez la version 32 bits
-                        </a>{" "}
-                        ({ancien.megaoctets.toLocaleString("fr-FR")} Mo).
+                        {/* « Le package semble non valide » veut dire, neuf fois sur dix,
+                            que le téléphone n'a pas le processeur de ce fichier là. Le
+                            message d'Android ne le dit pas : la page le dit à sa place. */}
+                        Android répond que le fichier n&apos;est pas valide ?{" "}
+                        {ancien ? (
+                          <>
+                            Sur un téléphone ancien ou d&apos;entrée de gamme,{" "}
+                            <a href={ancien.url} download className="text-[var(--color-or-clair)] underline underline-offset-2">
+                              prenez la version 32 bits
+                            </a>{" "}
+                            ({ancien.megaoctets.toLocaleString("fr-FR")} Mo).{" "}
+                          </>
+                        ) : null}
+                        {universelle ? (
+                          <>
+                            Dans le doute,{" "}
+                            <a href={universelle.url} download className="text-[var(--color-or-clair)] underline underline-offset-2">
+                              la version universelle
+                            </a>{" "}
+                            ({universelle.megaoctets.toLocaleString("fr-FR")} Mo) s&apos;installe sur tous les
+                            téléphones.
+                          </>
+                        ) : null}
                       </p>
                     ) : null}
                   </div>

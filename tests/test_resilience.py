@@ -358,7 +358,10 @@ async def sonde():
         r = await c.get(f"{API}/sante")
         d = r.json()
         ok("200 et base joignable", r.status_code == 200 and d["base"] == "ok", r.status_code)
-        ok("l'état des dépendances, sans détail", set(d.get("dependances", {})) == {"tara", "brevo", "anthropic"}
+        # Le second fournisseur de modèle a rejoint la liste : la sonde dit
+        # l'état de chaque dépendance externe, et il y en a désormais quatre.
+        ok("l'état des dépendances, sans détail",
+           set(d.get("dependances", {})) == {"tara", "brevo", "anthropic", "openai"}
            and all(v in ("ferme", "ouvert", "demi_ouvert") for v in d["dependances"].values()), d.get("dependances"))
         r = await c.get(f"{API}/v1/admin/sante")
         ok("le détail est réservé à la console", r.status_code in (401, 403), r.status_code)

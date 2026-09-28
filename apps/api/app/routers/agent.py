@@ -52,6 +52,14 @@ async def poser(data: QuestionIn, user: CurrentUser):
         axe=data.axe,
         limite=8,
     )
+
+    # Le volume, vérifié avant d'appeler le modèle et non après : une fois la
+    # réponse rédigée, elle est facturée, et refuser de la rendre ne rembourse
+    # rien. L'estimation vaut le contexte à envoyer (quatre caractères par jeton,
+    # l'ordre de grandeur usuel en français) plus la réponse à écrire.
+    estimation = sum(len(p["texte"]) for p in passages) // 4 + 1400
+    jetons = await quotas.check(user, "agent_tokens", quantity=estimation)
+
     resultat = await rag.repondre(data.question, passages, historique)
     citations = rag.citations_utilisees(resultat["reponse"], passages)
 
@@ -65,7 +73,7 @@ async def poser(data: QuestionIn, user: CurrentUser):
                                     cost_tokens_in, cost_tokens_out)
                values (%s, 'assistant', %s, %s::jsonb, %s, %s, %s) returning id, at""",
             (conversation_id, resultat["reponse"], json.dumps(citations),
-             None if resultat["degrade"] else "claude", resultat["tokens_in"], resultat["tokens_out"]),
+             resultat.get("modele"), resultat["tokens_in"], resultat["tokens_out"]),
         )).fetchone()
         await conn.execute(
             "update conversation set last_at = now() where id = %s", (conversation_id,)
@@ -93,6 +101,11 @@ async def poser(data: QuestionIn, user: CurrentUser):
         "quota": {
             "restant": None if restant is None else max(0, restant - 1),
             "limite": compteur.get("limite"),
+            "jetons": {
+                "limite": jetons.get("limite"),
+                "utilise": jetons.get("utilise"),
+                "periode": jetons.get("periode"),
+            },
         },
         "le": msg["at"],
     }
