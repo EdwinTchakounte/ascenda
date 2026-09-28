@@ -147,7 +147,11 @@ h1,h2,h3,h4{font-family:var(--titre-police);color:var(--titre);
 
 /* -------------------------------------------------------------- ossature */
 #console{display:none;min-height:100%}
-#console.ouvert{display:grid;grid-template-columns:var(--barre) 1fr}
+/* La colonne de gauche est peinte par la grille elle-même, et non par la barre.
+   Sans cela, `aside` haute d'un écran laissait une bande claire sous le menu dès
+   qu'on faisait défiler une vue longue : la console avait l'air cassée. */
+#console.ouvert{display:grid;grid-template-columns:var(--barre) 1fr;
+  background:linear-gradient(90deg,var(--nuit-profond) 0 var(--barre),transparent var(--barre))}
 
 /* La barre reste nuit dans les deux thèmes : c'est l'ancre de la marque, et
    une console qui change entièrement de couleur la nuit se reconnaît moins. */
@@ -170,10 +174,10 @@ aside nav button[aria-current="true"]{color:#f4f1e8;font-weight:600;
 aside nav button[aria-current="true"] .ico{color:var(--or-clair)}
 aside nav button[aria-current="true"]::before{content:"";position:absolute;left:-12px;
   top:9px;bottom:9px;width:3px;border-radius:0;background:var(--or)}
-aside nav .groupe{padding:15px 12px 6px;font-size:.64rem;letter-spacing:.16em;
+aside nav .groupe{padding:15px 12px 6px;font-size:.72rem;letter-spacing:.14em;
   text-transform:uppercase;color:#4d5876;font-weight:600}
 aside .pastille-nav{margin-left:auto;background:var(--terracotta);color:#fff;
-  border-radius:0;padding:1px 7px;font-size:.66rem;font-weight:700;
+  border-radius:0;padding:1px 7px;font-size:.72rem;font-weight:700;
   font-variant-numeric:tabular-nums}
 aside .pied{padding:14px 20px 18px;border-top:1px solid rgba(255,255,255,.06);
   font-size:.72rem;color:#6d7a9b}
@@ -210,7 +214,7 @@ main::after{content:"";position:absolute;top:-120px;left:50%;width:min(980px,90%
   border:1px solid var(--trait);border-radius:0;font-size:.8rem;color:var(--doux);
   max-width:230px}
 .qui .jeton{width:26px;height:26px;border-radius:0;flex:none;display:grid;
-  place-items:center;background:var(--nuit);color:var(--or-clair);font-size:.68rem;
+  place-items:center;background:var(--nuit);color:var(--or-clair);font-size:.72rem;
   font-weight:700;letter-spacing:.02em}
 .qui em{font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .zone{padding:24px 26px;flex:1}
@@ -346,7 +350,7 @@ h2:first-child{margin-top:0}
 .beignet .coeur b{position:absolute;inset:0;display:grid;place-content:center;
   font-family:var(--titre-police);font-size:1.5rem;color:var(--titre);
   font-variant-numeric:tabular-nums;line-height:1.05;text-align:center}
-.beignet .coeur b small{display:block;font-family:var(--corps);font-size:.66rem;
+.beignet .coeur b small{display:block;font-family:var(--corps);font-size:.72rem;
   letter-spacing:.06em;text-transform:uppercase;color:var(--doux);font-weight:600}
 .beignet ul{list-style:none;margin:0;padding:0;flex:1;min-width:170px;
   display:flex;flex-direction:column;gap:7px}
@@ -531,7 +535,7 @@ code{font-family:var(--mono);font-size:.8em}
   .marque-guichet{display:flex}
 }
 @media (max-width:860px){
-  #console.ouvert{grid-template-columns:1fr}
+  #console.ouvert{grid-template-columns:1fr;background:none}
   aside{position:static;height:auto;flex-direction:row;align-items:center;
     overflow-x:auto;padding:0;border-right:0;min-width:0;
     border-bottom:1px solid rgba(255,255,255,.07)}
@@ -794,8 +798,9 @@ async function api(chemin, options = {}, reessai = true) {
   return r.status === 204 ? null : r.json();
 }
 
-function sortir() {
+function sortir(silencieux = true) {
   jeton = renouveau = null;
+  if (silencieux) { const e = $("erreur"); if (e) e.innerHTML = ""; }
   try {
     localStorage.removeItem("ascenda_admin");
     localStorage.removeItem("ascenda_admin_r");
@@ -825,7 +830,10 @@ $("entrer").onclick = async () => {
 $("mdp").addEventListener("keydown", (e) => { if (e.key === "Enter") $("entrer").click(); });
 
 /* ---------------------------------------------------------------- format */
-const nb = (n) => (n ?? 0).toLocaleString("fr-FR");
+/* L'espace fine insécable de la locale française (U+202F) n'existe pas dans
+   Fraunces : les grands nombres des tuiles s'affichaient collés, « 1087000 XAF »
+   au lieu de « 1 087 000 XAF ». L'insécable ordinaire est dessinée partout. */
+const nb = (n) => (n ?? 0).toLocaleString("fr-FR").replace(/\u202f/g, "\u00a0");
 const xaf = (n) => nb(n) + " XAF";
 const jour = (s) => s ? new Date(s).toLocaleDateString("fr-FR",
   { day: "2-digit", month: "2-digit", year: "2-digit" }) : "";
@@ -2103,7 +2111,15 @@ async function demarrer() {
       `<div class="jauge"><i style="width:${part}%"></i></div>`;
     menu();
     await afficher(ZONES[0]);
-  } catch (_) { sortir(); }
+  } catch (e) {
+    // Revenir au formulaire sans rien dire, c'est ce qui donnait l'impression
+    // d'une console qui refuse sans raison. On nomme la cause.
+    sortir(false);
+    $("erreur").innerHTML = ico("alerte", "pt") + "<span>" + (e && e.message === "refuse"
+      ? "Ce compte existe, mais il ne porte pas le droit d'administration."
+      : "La console n'a pas pu charger le tableau de bord. Réessayez dans un instant.")
+      + "</span>";
+  }
 }
 
 if (jeton) demarrer(); else $("connexion").classList.add("ouvert");
