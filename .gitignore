@@ -44,3 +44,6 @@ sauvegardes/
 # Archives d'ouvrage (transferer_ouvrage) : même texte protégé, mêmes règles.
 transfert/
 *.json.gz
+
+# L'export brut de Figma : les quinze PDF séparés. Seul le document réuni est versionné.
+/ASCENDA, maquettes mobile/
