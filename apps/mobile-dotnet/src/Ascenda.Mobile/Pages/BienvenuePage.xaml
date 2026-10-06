@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ascenda.Mobile.Pages.BienvenuePage"
+             BackgroundColor="{StaticResource HerosFin}"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False">
+
+  <Grid RowDefinitions="*,Auto" Padding="26,56,26,36" RowSpacing="18">
+
+    <VerticalStackLayout Grid.Row="0" Spacing="16" VerticalOptions="Center">
+      <Image Source="logo.png" HeightRequest="128" />
+      <Label Text="ATELIER DE LECTURE" Style="{StaticResource Crochet}"
+             TextColor="{StaticResource AccentSurHeros}" HorizontalOptions="Center" />
+      <Label HorizontalTextAlignment="Center" TextColor="{StaticResource SurHeros}"
+             Text="Lisez avec un plan à votre rythme, validez chaque chapitre par un quiz et posez vos questions à un agent qui cite le livre et la page." />
+    </VerticalStackLayout>
+
+    <VerticalStackLayout Grid.Row="1" Spacing="10">
+      <Button Text="Créer mon compte" Clicked="SurInscription" />
+      <Button Text="Parcourir la bibliothèque" Style="{StaticResource Contour}"
+              TextColor="{StaticResource SurHeros}" BorderColor="{StaticResource SurHerosDoux}"
+              Clicked="SurVisite" />
+      <Button Text="J'ai déjà un compte" Style="{StaticResource Lien}"
+              TextColor="{StaticResource AccentSurHeros}" Clicked="SurConnexion" />
+    </VerticalStackLayout>
+
+  </Grid>
+
+</ContentPage>

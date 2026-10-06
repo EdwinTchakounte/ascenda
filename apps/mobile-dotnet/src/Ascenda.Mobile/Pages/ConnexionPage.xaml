@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ascenda.Mobile.Pages.ConnexionPage"
+             Title="" Shell.TabBarIsVisible="False">
+
+  <ScrollView>
+    <VerticalStackLayout Padding="26,12,26,36" Spacing="14">
+
+      <Border Style="{StaticResource Carte}" Padding="6" HorizontalOptions="Center"
+              StrokeShape="Rectangle" Stroke="{StaticResource Accent}">
+        <Image Source="marque.png" HeightRequest="76" WidthRequest="76" />
+      </Border>
+
+      <Label Text="{Binding Etiquette}" Style="{StaticResource Crochet}"
+             HorizontalOptions="Center" />
+      <Label Text="{Binding Titre}" Style="{StaticResource Titre}" HorizontalOptions="Center" />
+      <Label Text="{Binding Chapeau}" Style="{StaticResource Attenue}"
+             HorizontalTextAlignment="Center" />
+
+      <BoxView Style="{StaticResource Filet}" Margin="0,8" />
+
+      <Entry Placeholder="Votre nom" Text="{Binding Nom}" IsVisible="{Binding Inscription}" />
+      <Entry Placeholder="Adresse électronique" Keyboard="Email" Text="{Binding Email}" />
+      <Entry Placeholder="Mot de passe" IsPassword="True" Text="{Binding MotDePasse}" />
+      <Label Text="Au moins 8 caractères" Style="{StaticResource Attenue}" FontSize="12"
+             IsVisible="{Binding Inscription}" />
+      <Entry Placeholder="Code d'accès ou d'ambassadeur" Text="{Binding Code}"
+             IsVisible="{Binding Inscription}" />
+
+      <Label Text="{Binding Erreur}" IsVisible="{Binding EnEchec}"
+             TextColor="{StaticResource Alerte}" FontSize="13" />
+
+      <Button Text="{Binding LibelleAction}" Command="{Binding ValiderCommand}"
+              IsEnabled="{Binding Occupe, Converter={StaticResource Inverse}}" />
+      <ActivityIndicator IsRunning="{Binding Occupe}" IsVisible="{Binding Occupe}"
+                         Color="{StaticResource Accent}" />
+      <Button Style="{StaticResource Lien}" Command="{Binding BasculerCommand}"
+              Text="{Binding LibelleBascule}" />
+
+    </VerticalStackLayout>
+  </ScrollView>
+
+</ContentPage>

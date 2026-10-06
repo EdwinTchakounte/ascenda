@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:modeles="clr-namespace:Ascenda.Noyau.Modeles;assembly=Ascenda.Noyau"
+             x:Class="Ascenda.Mobile.Pages.AgentPage"
+             Title="L'agent">
+
+  <Grid RowDefinitions="Auto,*,Auto" Padding="20,12,20,16" RowSpacing="12">
+
+    <VerticalStackLayout Grid.Row="0" Spacing="2">
+      <Label Text="L'AGENT DE LECTURE" Style="{StaticResource Crochet}" />
+      <Label Text="Il répond en citant le livre et la page." Style="{StaticResource Attenue}" />
+    </VerticalStackLayout>
+
+    <CollectionView Grid.Row="1" ItemsSource="{Binding Echanges}" SelectionMode="None">
+      <CollectionView.ItemTemplate>
+        <DataTemplate x:DataType="modeles:Echange">
+          <Border Style="{StaticResource Carte}" Margin="0,0,0,10"
+                  BackgroundColor="{Binding Teinte}">
+            <VerticalStackLayout Spacing="6">
+              <Label Text="{Binding Auteur}" Style="{StaticResource Crochet}" />
+              <Label Text="{Binding Texte}" />
+              <Label Text="{Binding Sources}" Style="{StaticResource Crochet}"
+                     IsVisible="{Binding ASources}" />
+            </VerticalStackLayout>
+          </Border>
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
+
+    <Grid Grid.Row="2" ColumnDefinitions="*,Auto" ColumnSpacing="10">
+      <Entry Grid.Column="0" Placeholder="Posez votre question…" Text="{Binding Question}" />
+      <Button Grid.Column="1" Text="Envoyer" WidthRequest="110"
+              Command="{Binding DemanderCommand}"
+              IsEnabled="{Binding Occupe, Converter={StaticResource Inverse}}" />
+    </Grid>
+
+  </Grid>
+
+</ContentPage>

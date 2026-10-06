@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:modeles="clr-namespace:Ascenda.Noyau.Modeles;assembly=Ascenda.Noyau"
+             x:Class="Ascenda.Mobile.Pages.BibliothequePage"
+             Title="Les livres">
+
+  <Grid RowDefinitions="Auto,Auto,Auto,*" Padding="20,12,20,0" RowSpacing="10">
+
+    <Label Grid.Row="0" Text="Bibliothèque" Style="{StaticResource Titre}" />
+    <SearchBar Grid.Row="1" Placeholder="Un titre, un auteur…" Text="{Binding Recherche}"
+               SearchCommand="{Binding ChargerCommand}"
+               TextColor="{StaticResource Encre}"
+               PlaceholderColor="{StaticResource Attenue}" />
+    <Label Grid.Row="2" Text="{Binding Compteur}" Style="{StaticResource Crochet}" />
+
+    <CollectionView Grid.Row="3" ItemsSource="{Binding Ouvrages}" SelectionMode="None">
+      <CollectionView.ItemTemplate>
+        <DataTemplate x:DataType="modeles:Ouvrage">
+          <Border Style="{StaticResource Carte}" Margin="0,0,0,10">
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="14">
+              <Border Grid.Column="0" WidthRequest="46" HeightRequest="66" Padding="0"
+                      BackgroundColor="{StaticResource SurfaceCreuse}"
+                      Stroke="{StaticResource Trait}" StrokeShape="RoundRectangle 4" />
+              <VerticalStackLayout Grid.Column="1" Spacing="3">
+                <Label Text="{Binding Titre}" Style="{StaticResource TitreCarte}" FontSize="17" />
+                <Label Text="{Binding Signature}" Style="{StaticResource Attenue}" />
+                <Label Text="{Binding Resume}" Style="{StaticResource Crochet}" />
+              </VerticalStackLayout>
+            </Grid>
+          </Border>
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
+
+  </Grid>
+
+</ContentPage>

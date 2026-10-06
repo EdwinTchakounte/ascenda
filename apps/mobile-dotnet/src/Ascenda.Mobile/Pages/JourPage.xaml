@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:modeles="clr-namespace:Ascenda.Noyau.Modeles;assembly=Ascenda.Noyau"
+             x:Class="Ascenda.Mobile.Pages.JourPage"
+             Title="Le jour">
+
+  <RefreshView IsRefreshing="{Binding Occupe}" Command="{Binding ChargerCommand}">
+    <ScrollView>
+      <VerticalStackLayout Padding="20,12,20,28" Spacing="16">
+
+        <VerticalStackLayout Spacing="2">
+          <Label Text="{Binding Quantieme}" Style="{StaticResource Crochet}" />
+          <Label Text="{Binding Salutation}" Style="{StaticResource Titre}" />
+        </VerticalStackLayout>
+        <BoxView Style="{StaticResource Filet}" />
+
+        <Border Style="{StaticResource Carte}"
+                IsVisible="{Binding Seance, Converter={StaticResource NonNul}}">
+          <VerticalStackLayout Spacing="10">
+            <Grid ColumnDefinitions="*,Auto">
+              <Label Grid.Column="0" Text="SÉANCE DU JOUR" Style="{StaticResource Crochet}" />
+              <Label Grid.Column="1" Text="{Binding Seance.DureeMin, StringFormat='{0} min'}"
+                     Style="{StaticResource Attenue}" />
+            </Grid>
+            <Label Text="{Binding Seance.Ouvrage}" Style="{StaticResource TitreCarte}" />
+            <Label Text="{Binding Seance.Chapitre}" Style="{StaticResource Attenue}" />
+            <BoxView Style="{StaticResource Filet}" />
+            <Grid ColumnDefinitions="Auto,Auto" ColumnSpacing="18">
+              <Label Grid.Column="0" Text="{Binding Seance.Pages}" Style="{StaticResource Attenue}" />
+              <Label Grid.Column="1" Text="{Binding Seance.Livrable, StringFormat='puis un {0}'}"
+                     Style="{StaticResource Attenue}" />
+            </Grid>
+            <Button Text="Ouvrir le livre" Command="{Binding OuvrirCommand}" Margin="0,6,0,0" />
+          </VerticalStackLayout>
+        </Border>
+
+        <Border Style="{StaticResource Carte}"
+                IsVisible="{Binding Progression, Converter={StaticResource NonNul}}">
+          <Grid ColumnDefinitions="*,Auto,*,Auto,*" ColumnSpacing="10">
+            <VerticalStackLayout Grid.Column="0">
+              <Label Text="{Binding Progression.HeuresLues}" Style="{StaticResource Chiffre}" />
+              <Label Text="DE LECTURE" Style="{StaticResource Crochet}"
+                     HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+            <BoxView Grid.Column="1" WidthRequest="1" Color="{StaticResource Trait}" />
+            <VerticalStackLayout Grid.Column="2">
+              <Label Text="{Binding Progression.Faites}" Style="{StaticResource Chiffre}" />
+              <Label Text="SÉANCES FAITES" Style="{StaticResource Crochet}"
+                     HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+            <BoxView Grid.Column="3" WidthRequest="1" Color="{StaticResource Trait}" />
+            <VerticalStackLayout Grid.Column="4">
+              <Label Text="{Binding Progression.NotionsSuivies}" Style="{StaticResource Chiffre}" />
+              <Label Text="NOTIONS" Style="{StaticResource Crochet}"
+                     HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+          </Grid>
+        </Border>
+
+        <Label Text="Votre semaine" Style="{StaticResource TitreCarte}" />
+        <CollectionView ItemsSource="{Binding Semaine}" HeightRequest="76">
+          <CollectionView.ItemsLayout>
+            <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" />
+          </CollectionView.ItemsLayout>
+          <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="modeles:JourSemaine">
+              <VerticalStackLayout WidthRequest="42" Spacing="4">
+                <Label Text="{Binding Initiale}" Style="{StaticResource Crochet}"
+                       HorizontalTextAlignment="Center" />
+                <Border HeightRequest="42" WidthRequest="42" Padding="0"
+                        StrokeShape="RoundRectangle 21"
+                        BackgroundColor="{Binding Teinte}" Stroke="{StaticResource Trait}">
+                  <Label Text="{Binding Quantieme}" HorizontalTextAlignment="Center"
+                         VerticalTextAlignment="Center" FontSize="13" />
+                </Border>
+              </VerticalStackLayout>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Border Style="{StaticResource Carte}" IsVisible="{Binding ARevoir}">
+          <Grid ColumnDefinitions="*,Auto">
+            <VerticalStackLayout Grid.Column="0">
+              <Label Text="{Binding NotionsARevoir, StringFormat='{0} notions à revoir'}" />
+              <Label Text="Cinq minutes suffisent." Style="{StaticResource Attenue}" />
+            </VerticalStackLayout>
+            <Label Grid.Column="1" Text="→" TextColor="{StaticResource AccentTexte}"
+                   VerticalTextAlignment="Center" />
+          </Grid>
+        </Border>
+
+        <Label IsVisible="{Binding RienAFaire}" Style="{StaticResource Attenue}"
+               Text="Rien n'est prévu aujourd'hui. Ouvrez la bibliothèque pour commencer un parcours." />
+        <Label Text="{Binding Erreur}" IsVisible="{Binding EnEchec}"
+               TextColor="{StaticResource Alerte}" />
+
+      </VerticalStackLayout>
+    </ScrollView>
+  </RefreshView>
+
+</ContentPage>

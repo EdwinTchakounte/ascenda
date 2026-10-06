@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vues="clr-namespace:Ascenda.Noyau.VuesModeles;assembly=Ascenda.Noyau"
+             x:Class="Ascenda.Mobile.Pages.QuizPage"
+             Title="" Shell.TabBarIsVisible="False">
+
+  <Grid RowDefinitions="Auto,Auto,*,Auto" Padding="20,10,20,24" RowSpacing="12">
+
+    <Label Grid.Row="0" Text="{Binding Rang}" Style="{StaticResource Crochet}"
+           HorizontalOptions="Center" />
+    <ProgressBar Grid.Row="1" Progress="{Binding Avancement}"
+                 ProgressColor="{StaticResource Accent}" />
+
+    <ScrollView Grid.Row="2">
+      <VerticalStackLayout Spacing="14">
+        <Label Text="{Binding Sujet.Chapitre}" Style="{StaticResource Crochet}" />
+        <Label Text="{Binding Question.Enonce}" Style="{StaticResource Titre}" FontSize="21" />
+
+        <CollectionView ItemsSource="{Binding Propositions}" SelectionMode="None">
+          <CollectionView.ItemTemplate>
+            <DataTemplate x:DataType="vues:Proposition">
+              <Border Style="{StaticResource Carte}" Margin="0,0,0,9" Padding="14"
+                      Stroke="{Binding Contour}">
+                <Border.GestureRecognizers>
+                  <TapGestureRecognizer Tapped="SurChoix" CommandParameter="{Binding Index}" />
+                </Border.GestureRecognizers>
+                <Grid ColumnDefinitions="34,*" ColumnSpacing="12">
+                  <Label Grid.Column="0" Text="{Binding Lettre}" Style="{StaticResource Crochet}"
+                         VerticalTextAlignment="Center" />
+                  <Label Grid.Column="1" Text="{Binding Texte}" />
+                </Grid>
+              </Border>
+            </DataTemplate>
+          </CollectionView.ItemTemplate>
+        </CollectionView>
+      </VerticalStackLayout>
+    </ScrollView>
+
+    <Grid Grid.Row="3" ColumnDefinitions="Auto,*" ColumnSpacing="10">
+      <Button Grid.Column="0" Text="Précédent" Style="{StaticResource Lien}"
+              Command="{Binding ReculerCommand}" />
+      <Button Grid.Column="1" Text="{Binding LibelleSuivant}" Command="{Binding AvancerCommand}"
+              IsEnabled="{Binding PeutAvancer}" />
+    </Grid>
+
+  </Grid>
+
+</ContentPage>

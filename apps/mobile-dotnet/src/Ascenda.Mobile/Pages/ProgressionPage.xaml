@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ascenda.Mobile.Pages.ProgressionPage"
+             Title="Le chemin">
+
+  <ScrollView>
+    <VerticalStackLayout Padding="20" Spacing="14">
+      <Label Text="Progression" Style="{StaticResource Titre}" />
+
+      <Border Style="{StaticResource Carte}">
+        <VerticalStackLayout Spacing="10">
+          <Label Text="CARNET DE BORD" Style="{StaticResource Etiquette}" />
+          <ProgressBar Progress="{Binding Progression.Avancement}"
+                       ProgressColor="{StaticResource Or}" />
+          <Label Style="{StaticResource Attenue}"
+                 Text="{Binding Progression.Faites, StringFormat='{0} séances faites'}" />
+          <Label Style="{StaticResource Attenue}"
+                 Text="{Binding Progression.HeuresLues, StringFormat='{0} de lecture'}" />
+          <Label Style="{StaticResource Attenue}"
+                 Text="{Binding Progression.NotionsARevoir, StringFormat='{0} notions à revoir'}" />
+        </VerticalStackLayout>
+      </Border>
+
+      <Label Text="{Binding Erreur}" IsVisible="{Binding EnEchec}" TextColor="#A6392F" />
+    </VerticalStackLayout>
+  </ScrollView>
+
+</ContentPage>
