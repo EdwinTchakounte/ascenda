@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+  <Style TargetType="Page" ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor" Value="{StaticResource Fond}" />
+    <Setter Property="Padding" Value="0" />
+  </Style>
+
+  <Style TargetType="Shell" ApplyToDerivedTypes="True">
+    <Setter Property="Shell.BackgroundColor" Value="{StaticResource Fond}" />
+    <Setter Property="Shell.ForegroundColor" Value="{StaticResource Encre}" />
+    <Setter Property="Shell.TitleColor" Value="{StaticResource Encre}" />
+    <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Surface}" />
+    <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource AccentTexte}" />
+    <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource Attenue}" />
+  </Style>
+
+  <!-- Le titre d'un écran : la serif de la marque, jamais en gras appuyé -->
+  <Style x:Key="Titre" TargetType="Label">
+    <Setter Property="FontFamily" Value="Fraunces" />
+    <Setter Property="FontSize" Value="26" />
+    <Setter Property="TextColor" Value="{StaticResource Encre}" />
+  </Style>
+
+  <Style x:Key="TitreCarte" TargetType="Label">
+    <Setter Property="FontFamily" Value="Fraunces" />
+    <Setter Property="FontSize" Value="20" />
+    <Setter Property="TextColor" Value="{StaticResource Encre}" />
+  </Style>
+
+  <!-- L'étiquette entre crochets, reprise de l'application Flutter -->
+  <Style x:Key="Crochet" TargetType="Label">
+    <Setter Property="FontFamily" Value="InterGras" />
+    <Setter Property="FontSize" Value="11" />
+    <Setter Property="CharacterSpacing" Value="2.4" />
+    <Setter Property="TextColor" Value="{StaticResource AccentTexte}" />
+  </Style>
+
+  <Style TargetType="Label">
+    <Setter Property="FontFamily" Value="Inter" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="TextColor" Value="{StaticResource Texte}" />
+    <Setter Property="LineHeight" Value="1.45" />
+  </Style>
+
+  <Style x:Key="Attenue" TargetType="Label">
+    <Setter Property="FontFamily" Value="Inter" />
+    <Setter Property="FontSize" Value="13.5" />
+    <Setter Property="TextColor" Value="{StaticResource Attenue}" />
+    <Setter Property="LineHeight" Value="1.45" />
+  </Style>
+
+  <Style x:Key="Chiffre" TargetType="Label">
+    <Setter Property="FontFamily" Value="Fraunces" />
+    <Setter Property="FontSize" Value="24" />
+    <Setter Property="TextColor" Value="{StaticResource Encre}" />
+    <Setter Property="HorizontalTextAlignment" Value="Center" />
+  </Style>
+
+  <Style x:Key="Carte" TargetType="Border">
+    <Setter Property="BackgroundColor" Value="{StaticResource Surface}" />
+    <Setter Property="Stroke" Value="{StaticResource Trait}" />
+    <Setter Property="StrokeThickness" Value="1" />
+    <Setter Property="Padding" Value="18" />
+    <Setter Property="StrokeShape" Value="RoundRectangle 14" />
+  </Style>
+
+  <Style x:Key="Heros" TargetType="Border">
+    <Setter Property="BackgroundColor" Value="{StaticResource Heros}" />
+    <Setter Property="Stroke" Value="{StaticResource Heros}" />
+    <Setter Property="Padding" Value="22" />
+    <Setter Property="StrokeShape" Value="RoundRectangle 18" />
+  </Style>
+
+  <Style TargetType="Button">
+    <Setter Property="BackgroundColor" Value="{StaticResource Accent}" />
+    <Setter Property="TextColor" Value="{StaticResource Encre}" />
+    <Setter Property="FontFamily" Value="InterGras" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="HeightRequest" Value="52" />
+    <Setter Property="CornerRadius" Value="26" />
+  </Style>
+
+  <Style x:Key="Contour" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="Transparent" />
+    <Setter Property="TextColor" Value="{StaticResource Encre}" />
+    <Setter Property="BorderColor" Value="{StaticResource Trait}" />
+    <Setter Property="BorderWidth" Value="1" />
+    <Setter Property="FontFamily" Value="InterGras" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="HeightRequest" Value="52" />
+    <Setter Property="CornerRadius" Value="26" />
+  </Style>
+
+  <Style x:Key="Lien" TargetType="Button">
+    <Setter Property="BackgroundColor" Value="Transparent" />
+    <Setter Property="TextColor" Value="{StaticResource AccentTexte}" />
+    <Setter Property="FontFamily" Value="InterGras" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="HeightRequest" Value="44" />
+  </Style>
+
+  <Style TargetType="Entry">
+    <Setter Property="FontFamily" Value="Inter" />
+    <Setter Property="FontSize" Value="15" />
+    <Setter Property="TextColor" Value="{StaticResource Encre}" />
+    <Setter Property="PlaceholderColor" Value="{StaticResource Attenue}" />
+    <Setter Property="BackgroundColor" Value="{StaticResource Surface}" />
+    <Setter Property="HeightRequest" Value="52" />
+  </Style>
+
+  <Style x:Key="Filet" TargetType="BoxView">
+    <Setter Property="Color" Value="{StaticResource Trait}" />
+    <Setter Property="HeightRequest" Value="1" />
+  </Style>
+
+</ResourceDictionary>
