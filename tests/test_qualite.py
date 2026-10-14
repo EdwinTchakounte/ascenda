@@ -83,6 +83,14 @@ ok("avec un auxiliaire, le participe est rendu", acc.accentuer("Il est configure
 ok("le mode sûr ne touche pas un homographe", acc.accentuer_sur("Ça marche, la qualite suit") == "Ça marche, la qualité suit",
    acc.accentuer_sur("Ça marche, la qualite suit"))
 ok("une phrase déjà accentuée n'est pas jugée sans accents", not sans_accents("Quelle inquiétude exprime-t-il dans sa préface ?"))
+for phrase in ["Le texte cite une cité grecque. L'auteur cite ses sources, et la cité répond."] * 6:
+    acc.apprendre(phrase)
+ok("le mode sûr laisse « cite » au présent",
+   acc.accentuer_sur("Le texte cite l'intégration de méthodes") == "Le texte cite l'intégration de méthodes",
+   acc.accentuer_sur("Le texte cite l'intégration de méthodes"))
+ok("le mode sûr laisse « cite » dans un verbe inversé",
+   "cite-t-il" in acc.accentuer_sur("Quelles sources cite-t-il dans sa préface ?"),
+   acc.accentuer_sur("Quelles sources cite-t-il dans sa préface ?"))
 
 print("\n· Séances")
 u = {"ouvrage": "L'Afrique en 200 proverbes", "chapitre": "Pages 2 à 66", "page_start": 2, "page_end": 197,

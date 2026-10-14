@@ -21,7 +21,7 @@ _AUXILIAIRES = {"est", "sont", "a", "ont", "ete", "etait", "etaient", "etre", "a
 
 # Deux mots français distincts, avec et sans accent : le mode sûr ne les touche
 # jamais, seul le contexte peut trancher (« ça marche », « le marché »).
-_HOMOGRAPHES = {"marche", "marches", "cote", "cotes", "tache", "taches", "peche", "peches", "foret", "forets",
+_HOMOGRAPHES = {"cite", "cites", "marche", "marches", "cote", "cotes", "tache", "taches", "peche", "peches", "foret", "forets",
                 "jeune", "jeunes", "mur", "murs", "pale", "sur", "sure", "du", "des", "la", "ou", "a", "mais",
                 "colle", "cree", "crees", "retraite", "legue", "roder", "boite", "chasse", "cure", "interesse",
                 "presente", "presentes", "reserve", "reserves", "separe", "age", "ages"}
