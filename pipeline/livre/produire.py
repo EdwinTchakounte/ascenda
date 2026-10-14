@@ -1,29 +1,4 @@
-"""Le module par ouvrage : de la source au corpus servi.
-
-Un seul point d'entrée pour amener un livre à l'état complet. La chaîne se
-déroule dans l'ordre où les étapes dépendent les unes des autres :
-
-    ingestion → chapitres → passages → vecteurs
-                                     → fiche de lecture
-                                     → citations · quiz · comptes rendus
-                                     → synthèse · résumé exécutif
-
-Trois règles qui gouvernent tout le module.
-
-**Reprenable.** Chaque étape regarde ce qui existe et ne produit que le manque.
-Interrompre le traitement ne perd que l'appel en cours.
-
-**`data/` d'abord.** Ce qui est produit est écrit en JSON dans `data/`, puis
-importé en base. La base reste reconstructible ; c'est ce qui permet de la
-perdre sans perdre le travail.
-
-**Le coût est tracé.** Chaque dérivé porte ses jetons consommés. Sans cela, le
-prix de l'abonnement se devine au lieu de se calculer.
-
-    python3 pipeline/livre/produire.py --doc 753e4ca2 --plan
-    python3 pipeline/livre/produire.py --doc 753e4ca2 --etapes citation,compte_rendu
-    python3 pipeline/livre/produire.py --tous --etapes resume_executif --limite 5
-"""
+"""Le module par ouvrage : de la source au corpus servi."""
 import argparse
 import os
 import subprocess
@@ -50,12 +25,6 @@ ORDRE = [
     "resume_executif",
 ]
 
-# Les flashcards ne sont pas planifiées par défaut : aucun écran ne les lit, et
-# la révision espacée fonctionne déjà sur les notions ancrées dans le texte. Le
-# schéma et la consigne existent, on les produira le jour où un écran les
-# attendra. Les demander explicitement reste possible :
-#
-#     produire.py --doc 753e4ca2 --etapes flashcards
 HORS_PLAN = {"flashcards"}
 
 # Ce qui n'a pas besoin du modèle de langage.
@@ -87,11 +56,6 @@ def etape_derive(doc_id: str, kind: str, e: dict, sec: bool) -> str:
         return "déjà fait"
     if not os.getenv("ANTHROPIC_API_KEY"):
         return "clé absente"
-    # derive.py porte déjà les schémas, la construction d'invite, le mode batch
-    # et le suivi des coûts. On l'appelle plutôt que de le réécrire.
-    # `--sync` : sans mode, derive.py se contente d'afficher la liste. Le mode
-    # batch est réservé aux campagnes sur tout le corpus, où il vaut la moitié
-    # du prix contre un délai pouvant aller à vingt-quatre heures.
     code = executer(
         [PYTHON, "pipeline/derive/derive.py", "--doc", doc_id[:8], "--kind", kind, "--sync"],
         sec,

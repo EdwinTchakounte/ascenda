@@ -1,9 +1,4 @@
-"""Le contrat d'un fournisseur d'envoi de courriel.
-
-Même forme que pour le paiement : une interface étroite, un mode simulé quand
-la configuration manque, et des erreurs qui disent si l'on peut rejouer. Un
-courriel qui ne part pas ne doit jamais faire tomber ce qui l'a déclenché.
-"""
+"""Le contrat d'un fournisseur d'envoi de courriel."""
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 

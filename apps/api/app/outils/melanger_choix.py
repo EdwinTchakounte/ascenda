@@ -1,22 +1,4 @@
-"""Mélanger l'ordre des réponses des quiz.
-
-Les questions ont été rédigées avec la bonne réponse en premier : 11 308 sur
-11 540. Rien ne les mélangeait ensuite, ni l'API, ni le pack hors ligne, ni
-l'application. Un lecteur qui cochait toujours la première case réussissait
-presque tout, et la révision espacée ne voyait jamais ses lacunes.
-
-On mélange une fois, dans la base, les choix et l'indice de la bonne réponse
-ensemble. Tout ce qui lit un quiz (correction, diagnostic, export PDF, pack hors
-ligne) lit les deux au même endroit et reste donc cohérent. Le texte des
-questions ne change pas : une question déjà passée reste la même question.
-
-Le mélange est déterministe (graine tirée de l'identifiant du dérivé et du rang
-de la question) et marqué dans le contenu : rejouer l'outil ne remélange rien.
-Le contenu d'avant est gardé dans `content_source` s'il n'y est pas déjà.
-
-    python -m app.outils.melanger_choix --essai
-    python -m app.outils.melanger_choix
-"""
+"""Mélanger l'ordre des réponses des quiz."""
 import argparse
 import asyncio
 import hashlib

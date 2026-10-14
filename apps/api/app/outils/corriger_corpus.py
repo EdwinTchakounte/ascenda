@@ -1,17 +1,4 @@
-"""Corrige ce que le lecteur voit du corpus, sans toucher au texte des livres.
-
-Trois corrections, toutes rejouables :
-
-1. Les titres de chapitre cassés deviennent lisibles (voir `services/titres.py`).
-   L'original est gardé dans `chapter.title_source`.
-2. La durée de lecture d'une fiche est recalculée par la même règle que les
-   séances du chronogramme (`planner.minutes_estimees`).
-3. Les séances déjà planifiées reprennent un libellé fidèle à leurs pages, et
-   chaque plan un en-tête dont les chiffres se recoupent.
-
-    python -m app.outils.corriger_corpus            # applique
-    python -m app.outils.corriger_corpus --essai    # montre sans écrire
-"""
+"""Corrige ce que le lecteur voit du corpus, sans toucher au texte des livres."""
 import asyncio
 import json
 import re
@@ -45,9 +32,6 @@ async def titres(essai: bool) -> int:
         traduction = releves.get(str(c["ord"]))
         neuf = traduction or titre_lisible(source, page_start=c["page_start"], page_end=c["page_end"],
                                            precedent=precedent, texte=c["texte"])
-        # Dans un livre dont on a retrouvé les chapitres, une section nommée par
-        # ses pages juste après un chapitre titré en est la suite : « Pages 153
-        # à 160 » entre les chapitres XV et XVI, c'est la fin du chapitre XV.
         if (not traduction and releves and re.fullmatch(r"Pages? \d+( à \d+)?", neuf or "")
                 and precedent and precedent.startswith("Chapitre") and suites < 3):
             base = re.sub(r"\s*\(suite\)$", "", precedent)
@@ -98,13 +82,7 @@ async def durees(essai: bool) -> int:
 
 
 async def accents(essai: bool) -> int:
-    """Rend leurs accents aux quiz et aux commentaires de citations écrits sans.
-
-    Seuls les champs rédigés sont retouchés : l'énoncé, les choix et
-    l'explication d'une question ; le thème et la portée d'une citation. Le texte
-    cité, copié du livre, n'est jamais modifié. L'original est gardé dans
-    `derivative.content_source`, et chaque passage repart de cet original.
-    """
+    """Rend leurs accents aux quiz et aux commentaires de citations écrits sans."""
     from app.outils.accents import Accentueur, sans_accents
 
     lots = await fetch_all(
@@ -257,9 +235,6 @@ async def seances(essai: bool) -> tuple[int, int]:
             1 for p in debuts.get(s["document_id"], [])
             if s["page_start"] and s["page_end"] and s["page_start"] < p <= s["page_end"]
         )
-        # Seuls les libellés de l'ancien planificateur sont réécrits : un plan
-        # composé depuis la correction a déjà le bon, et le recalculer ici (sans
-        # le détail du regroupement) le rendrait moins précis.
         ancien = (
             re.search(r" et \d+ chapitres? suivants?$", s["objective"] or "")
             or re.search(r" : Pages \d+ à \d+", s["objective"] or "")

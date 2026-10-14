@@ -1,17 +1,4 @@
-"""Audit de qualité du corpus et des chronogrammes qu'il produit.
-
-Ce que le lecteur voit vient de ces données : un titre de chapitre coupé en
-plein mot, une séance de deux minutes pour seize pages ou une durée de lecture
-dix fois trop courte se lisent comme des erreurs d'ASCENDA, quelle que soit
-leur origine. Cet audit les compte, livre par livre, et simule un chronogramme
-sur chaque axe pour voir ce qu'un lecteur recevrait.
-
-    .venv/bin/python tests/audit_corpus.py            # rapport à l'écran
-    .venv/bin/python tests/audit_corpus.py --rapport  # et docs/qualite/audit-corpus.md
-
-Sortie en échec s'il reste une anomalie bloquante : un défaut que le lecteur
-voit dans son plan.
-"""
+"""Audit de qualité du corpus et des chronogrammes qu'il produit."""
 import asyncio
 import re
 import sys

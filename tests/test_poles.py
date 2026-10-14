@@ -1,14 +1,4 @@
-"""Vérifie les pôles d'axes et les périmètres de chapitres (migration 018).
-
-Le Mémento de l'agronome nourrit six sous-axes du pôle Agriculture et élevage,
-chacun avec sa seule part du livre. On vérifie :
-
-- le pôle n'est pas proposé comme parcours, ses sous-axes le nomment ;
-- chaque sous-axe ne compte que ses chapitres ;
-- un chronogramme sur « Protection des cultures » ne fait lire que ses pages ;
-- les ouvrages sans périmètre donnent les mêmes chapitres qu'avant ;
-- la structure du livre : hiérarchie, droits, pages imprimées.
-"""
+"""Vérifie les pôles d'axes et les périmètres de chapitres (migration 018)."""
 import asyncio, json, os, random, string, sys, urllib.error, urllib.request
 from pathlib import Path
 

@@ -1,18 +1,4 @@
-"""Vectorisation du corpus ASCENDA.
-
-Pourquoi maintenant : le LLM ne sert plus qu'aux questions directes de
-l'utilisateur. Tout le reste est produit une fois et servi depuis la base. Pour
-que ces questions trouvent leur réponse, il faut chercher sur le sens et non sur
-les mots : « sur quoi les auteurs se contredisent-ils » ne partage aucun terme
-avec les passages qui y répondent.
-
-Le modèle est `intfloat/multilingual-e5-large` : 1024 dimensions, ce que le
-schéma attend depuis le premier jour, et entraîné sur une centaine de langues,
-dont le français, ce qui compte pour un corpus francophone.
-
-Rejouable : on ne recalcule que les chunks dont le vecteur manque ou dont le
-`content_hash` a changé. Interrompre le script ne perd que le lot en cours.
-"""
+"""Vectorisation du corpus ASCENDA."""
 import argparse
 import sys
 import time
@@ -82,13 +68,7 @@ def vectoriser(lot_taille: int, document: str | None, tout: bool, modele_nom: st
     t0 = time.time()
     for debut in range(0, len(restants), lot_taille):
         lot = restants[debut : debut + lot_taille]
-        # e5-large ne lit que 512 jetons : passer 8 000 caractères revient à
-        # faire tokeniser deux mille jetons pour en jeter les trois quarts.
-        # 1 800 caractères couvrent la fenêtre du modèle avec de la marge.
         textes = [PREFIXE_PASSAGE + (c["text"] or "")[:1800] for c in lot]
-        # Des lots plus larges occupent mieux les douze cœurs : la couche BLAS
-        # travaille sur des matrices plus grandes pour le même nombre de
-        # passages.
         vecteurs = modele.encode(
             textes, batch_size=32, show_progress_bar=False, normalize_embeddings=True
         )
@@ -115,11 +95,7 @@ def vectoriser(lot_taille: int, document: str | None, tout: bool, modele_nom: st
 
 
 def creer_index() -> None:
-    """L'index HNSW ne se crée qu'une fois les vecteurs présents.
-
-    Le construire sur une table vide serait inutile, et le reconstruire à chaque
-    lot coûterait plus cher que tout le reste.
-    """
+    """L'index HNSW ne se crée qu'une fois les vecteurs présents."""
     with pg() as conn:
         n = conn.execute("select count(*) from chunk where embedding is not null").fetchone()[0]
         if n == 0:
@@ -135,11 +111,7 @@ def creer_index() -> None:
 
 
 def centroides_axes() -> None:
-    """Le centroïde d'un axe est la moyenne des vecteurs de ses ouvrages.
-
-    Il sert à classer automatiquement un document importé : on compare son
-    vecteur aux onze centroïdes et on propose les trois axes les plus proches.
-    """
+    """Le centroïde d'un axe est la moyenne des vecteurs de ses ouvrages."""
     with pg() as conn:
         conn.execute(
             """update axis a

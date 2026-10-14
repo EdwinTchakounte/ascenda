@@ -1,8 +1,4 @@
-"""Le parcours complet d'un utilisateur, du compte au contenu.
-
-On ne vérifie pas des routes : on vérifie qu'une personne peut faire ce que le
-produit lui promet, dans l'ordre où elle le fera.
-"""
+"""Le parcours complet d'un utilisateur, du compte au contenu."""
 import json, random, string, sys, urllib.error, urllib.request
 
 import os
@@ -175,11 +171,6 @@ else:
     print("\nAucun blocage : le parcours va du compte au contenu sans interruption.")
 
 
-# --- verdict
-#
-# Une étape peut échouer sans que le produit soit inutilisable : la rédaction
-# automatique de l'agent demande une clé d'API, et son absence ne casse aucun
-# parcours. On la signale, on ne fait pas échouer la suite pour autant.
 import sys as _sys
 _ecarts = [l for l in _resultats if not l[0]]
 print("\n" + "=" * 92)

@@ -1,17 +1,4 @@
-"""Audit des PDF lisibles dans l'application.
-
-Le lecteur PDF montre le fichier d'origine, et tout le reste de l'application
-parle en pages de ce même fichier : « p. 47 à 63 » dans une séance, « p. 12 »
-dans une citation de l'agent. Si la page 47 du plan n'est pas la page 47 du PDF,
-le lecteur se perd. Cet audit vérifie, pour chaque ouvrage dont le PDF s'ouvre :
-
-- que le fichier se télécharge en entier et s'ouvre ;
-- que son nombre de pages est celui de la base ;
-- que le texte d'un passage tiré au hasard se trouve bien à la page annoncée ;
-- quelles pages n'ont aucune couche de texte (illustrations, ou scan sans OCR).
-
-    .venv/bin/python tests/audit_pdf.py
-"""
+"""Audit des PDF lisibles dans l'application."""
 import os
 import re
 import subprocess

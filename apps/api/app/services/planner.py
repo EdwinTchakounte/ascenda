@@ -1,13 +1,4 @@
-"""Construction du chronogramme.
-
-Le principe : un axe n'est pas un thème, c'est un thème + un objectif + une
-contrainte de temps. Le planificateur part de cette contrainte et non du corpus.
-Il choisit les ouvrages, découpe leurs chapitres en séances de durée à peu près
-constante, puis pose ces séances sur des dates réelles.
-
-Ce qu'il ne fait pas : appeler un modèle de langage. Le plan doit être
-reproductible, explicable et gratuit. Un LLM sert à rédiger, pas à ordonnancer.
-"""
+"""Construction du chronogramme."""
 from datetime import date, timedelta
 
 from app.core.db import fetch_all
@@ -27,11 +18,6 @@ ORDRE_NIVEAU = {"debutant": 0, "intermediaire": 1, "avance": 2, None: 1}
 SEANCE_MIN_RATIO = 0.5
 
 
-# Une page presque vide (diapositive, proverbe, illustration) se regarde quand
-# même : on compte au moins l'équivalent de 60 jetons par page, soit une
-# quinzaine de secondes. Sans ce plancher, seize pages de proverbes faisaient
-# une séance de deux minutes. Plus haut, il gonflait ces mêmes livres : le
-# texte y est complet, simplement court.
 JETONS_PAR_PAGE_PLANCHER = 60
 
 
@@ -45,21 +31,12 @@ def minutes_de(tokens: int | None, wpm: int, pages: int | None = None) -> int:
 
 
 def minutes_estimees(jetons: int | None, pages: int | None, wpm: int = VITESSE_DEFAUT_WPM) -> int:
-    """La durée de lecture d'un ouvrage entier, par la même règle que les séances.
-
-    La fiche et le chronogramme doivent dire la même chose : un livre annoncé
-    « 19 min » dont le plan compte trois heures se lit comme une erreur.
-    """
+    """La durée de lecture d'un ouvrage entier, par la même règle que les séances."""
     return minutes_de(jetons, wpm, pages)
 
 
 async def ouvrages_de_l_axe(axis_id: str, niveau: str | None) -> list[dict]:
-    """Ordonne les ouvrages : d'abord le niveau de l'utilisateur, puis ce qui monte.
-
-    Un lecteur qui se déclare débutant ne commence pas par Bostrom. On accepte
-    toutefois de le mener plus haut dans le même parcours : c'est l'intérêt d'un
-    chronogramme sur douze semaines.
-    """
+    """Ordonne les ouvrages : d'abord le niveau de l'utilisateur, puis ce qui monte."""
     lignes = await fetch_all(
         """select d.id, coalesce(d.title_clean, d.title_raw) as titre, d.authors,
                   d.page_count, d.redistributable,
@@ -91,17 +68,7 @@ async def ouvrages_de_l_axe(axis_id: str, niveau: str | None) -> list[dict]:
 
 
 async def chapitres_de_plusieurs(document_ids: list[str], axis_id: str | None = None) -> dict[str, list[dict]]:
-    """Les chapitres de plusieurs ouvrages en une seule requête.
-
-    Avec `axis_id`, un ouvrage borné à certains chapitres pour cet axe
-    (`axis_chapter`) ne donne que ceux-là : le Mémento de l'agronome nourrit six
-    sous-axes, chacun avec sa part du livre. Un ouvrage sans bornes pour l'axe
-    donne tous ses chapitres, comme avant.
-
-    Charger ouvrage par ouvrage faisait dix-huit allers-retours pour un axe de
-    dix-sept titres. Avec 3 870 chapitres exploitables au corpus, cela chiffrait
-    à une seconde et demie pour composer un plan.
-    """
+    """Les chapitres de plusieurs ouvrages en une seule requête."""
     if not document_ids:
         return {}
     lignes = await fetch_all(
@@ -142,13 +109,7 @@ async def chapitres_de_plusieurs(document_ids: list[str], axis_id: str | None = 
 
 
 async def chapitres_de(document_id: str) -> list[dict]:
-    """Les chapitres réellement lisibles d'un ouvrage.
-
-    On écarte l'appareil : sommaire, bibliographie, index, colophon, quatrième de
-    couverture. La campagne de génération des quiz les a déjà identifiés un par un
-    et enregistrés comme lots vides motivés : 178 chapitres à ce jour. Plutôt que
-    de redécouvrir la même chose par heuristique, on relit ce marquage.
-    """
+    """Les chapitres réellement lisibles d'un ouvrage."""
     lignes = await fetch_all(
         """select c.id, c.ord, c.title, c.page_start, c.page_end, c.token_count,
                   (select dv.id from derivative dv
@@ -172,12 +133,7 @@ async def chapitres_de(document_id: str) -> list[dict]:
 
 
 def _decouper(chapitre: dict, minutes: int, duree_seance: int) -> list[dict]:
-    """Un chapitre long devient plusieurs séances, découpées par pages.
-
-    On coupe sur les pages plutôt que sur les tokens : « lire p. 47 à 63 » est une
-    consigne qu'un lecteur peut suivre sur son exemplaire papier, pas « lire
-    1 800 tokens ».
-    """
+    """Un chapitre long devient plusieurs séances, découpées par pages."""
     if minutes <= duree_seance * 1.4:
         return [{"minutes": minutes, "page_start": chapitre["page_start"], "page_end": chapitre["page_end"]}]
 
@@ -201,11 +157,7 @@ def _decouper(chapitre: dict, minutes: int, duree_seance: int) -> list[dict]:
 
 
 def _jours_de_lecture(minutes_semaine: int, duree_seance: int) -> list[int]:
-    """Répartit les séances de la semaine sur des jours espacés.
-
-    Trois séances tombent lundi, mercredi, samedi, pas lundi, mardi, mercredi :
-    l'espacement sert la mémorisation autant que le confort.
-    """
+    """Répartit les séances de la semaine sur des jours espacés."""
     n = max(1, min(7, round(minutes_semaine / max(10, duree_seance))))
     grilles = {
         1: [1], 2: [1, 4], 3: [0, 2, 5], 4: [0, 1, 3, 5],
@@ -215,12 +167,7 @@ def _jours_de_lecture(minutes_semaine: int, duree_seance: int) -> list[int]:
 
 
 def _meme_titre(a: str | None, b: str | None) -> bool:
-    """Compare deux titres sans se laisser arrêter par la typographie.
-
-    Le corpus mélange apostrophe droite et courbe : sans normalisation,
-    « Comment l'IA... » et « Comment l’IA... » passent pour deux titres
-    différents et la séance répète le nom de l'ouvrage.
-    """
+    """Compare deux titres sans se laisser arrêter par la typographie."""
     def net(x: str | None) -> str:
         return (x or "").replace("\u2019", "'").replace("\u00a0", " ").strip().casefold()
 
@@ -228,11 +175,7 @@ def _meme_titre(a: str | None, b: str | None) -> bool:
 
 
 def _creneaux(debut: date, jours: list[int], combien: int) -> list[date]:
-    """Les dates de séance à partir d'aujourd'hui, sans empiler la semaine entamée.
-
-    Commencer un samedi ne doit pas faire tomber les cinq séances de la semaine
-    le jour même : on saute les créneaux déjà passés et on reprend au suivant.
-    """
+    """Les dates de séance à partir d'aujourd'hui, sans empiler la semaine entamée."""
     dates: list[date] = []
     lundi = debut - timedelta(days=debut.weekday())
     semaine = 0
@@ -251,14 +194,7 @@ def _creneaux(debut: date, jours: list[int], combien: int) -> list[date]:
 
 
 def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
-    """Regroupe les chapitres voisins d'un même ouvrage en séances pleines.
-
-    Un chronogramme qui propose « 2 min » puis « 3 min » puis « 11 min » n'est pas
-    un plan de travail : c'est le découpage interne du livre exposé tel quel. On
-    remplit donc chaque séance avec les chapitres suivants tant qu'on reste près de
-    la durée visée, puis on rattache à la séance précédente la queue trop courte
-    d'un ouvrage (un épilogue de deux minutes ne fait pas une séance).
-    """
+    """Regroupe les chapitres voisins d'un même ouvrage en séances pleines."""
     plancher = max(5, round(duree_seance * SEANCE_MIN_RATIO))
 
     def contigus(a: dict, b: dict) -> bool:
@@ -439,13 +375,7 @@ TITRES_MAX, SIGNES_MAX = 4, 90
 
 
 def libelle_seance(u: dict) -> str:
-    """Ce que dit la carte de séance. Il ne doit jamais contredire ses pages.
-
-    Un chapitre sans vrai titre porte le nom de ses pages : regroupé avec le
-    suivant, « Pages 2 à 66 et 1 chapitre suivant » pour une séance qui va de la
-    page 2 à la page 197 se lisait comme une erreur. On nomme alors la séance par
-    ses pages réelles.
-    """
+    """Ce que dit la carte de séance. Il ne doit jamais contredire ses pages."""
     ouvrage = u["ouvrage"]
     titre = u["chapitre"]
     pages = (
@@ -458,9 +388,6 @@ def libelle_seance(u: dict) -> str:
     titres = [t for t in (u.get("titres") or []) if t]
     if not titre or est_repli(titre) or u.get("repli"):
         return f"{ouvrage} : {pages}" if pages else ouvrage
-    # Des sections regroupées se nomment toutes quand elles tiennent sur la carte :
-    # « L'élevage ovin ; L'élevage caprin » plutôt que « L'élevage ovin, et le
-    # chapitre suivant », qui cache la chèvre à qui la cherche.
     if len(titres) > 1 and not any(est_repli(t) for t in titres):
         # Autant de titres que la carte en tient, puis le compte du reste :
         # « Le gombo ; La laitue ; L'oignon et 4 autres ».
@@ -497,12 +424,7 @@ def _duree(minutes: int) -> str:
 def justification_plan(
     seances: list[dict], jours: list[int], *, duree_seance: int, wpm: int, candidats: int, tronque: bool
 ) -> str:
-    """L'en-tête du plan, en chiffres qui se recoupent.
-
-    L'ancien texte annonçait « 60 séances d'environ 30 min » et « 22 h 08 au
-    total » : 60 fois 30 minutes font 30 heures. La durée annoncée est désormais
-    la moyenne réelle des séances, et le total la somme de ces mêmes séances.
-    """
+    """L'en-tête du plan, en chiffres qui se recoupent."""
     if not seances:
         return "Aucune séance n'a pu être composée avec ce temps disponible."
     n = len(seances)

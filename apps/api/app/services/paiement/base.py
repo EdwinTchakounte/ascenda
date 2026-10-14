@@ -1,9 +1,4 @@
-"""Contrat d'un fournisseur de paiement.
-
-Repris presque tel quel du module `mail+paiement`, qui l'avait éprouvé en
-production. Le garder abstrait coûte peu et évite de recâbler tout le service
-le jour où un second fournisseur s'ajoute.
-"""
+"""Contrat d'un fournisseur de paiement."""
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from typing import Any

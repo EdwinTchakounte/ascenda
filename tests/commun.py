@@ -1,10 +1,4 @@
-"""Socle partagé des suites de vérification.
-
-Ces suites appellent l'API comme le ferait l'application : par HTTP, sur des
-données réelles, sans bouchon. Elles ne remplacent pas des tests unitaires,
-elles répondent à une autre question : « est-ce qu'un utilisateur peut faire ce
-que le produit lui promet, aujourd'hui, sur ce corpus ».
-"""
+"""Socle partagé des suites de vérification."""
 import json
 import os
 import random

@@ -1,14 +1,4 @@
-"""Saisir un code : code d'accès ou code ambassadeur.
-
-Le lecteur n'a qu'un champ à remplir. On cherche d'abord un code d'accès, puis
-un code ambassadeur. Les deux ne se ressemblent pas pour rien : un code
-ambassadeur porte un tiret et quatre caractères tirés d'un alphabet sans
-lettres ambiguës, un code d'accès est choisi par l'équipe.
-
-Vérifier et appliquer sont deux gestes séparés. À l'inscription, on vérifie
-avant de créer le compte : un code mal recopié doit pouvoir se corriger sans
-laisser derrière lui un compte ouvert sans le code.
-"""
+"""Saisir un code : code d'accès ou code ambassadeur."""
 import logging
 import re
 import secrets
@@ -134,9 +124,6 @@ async def _poser_acces(user: dict, code: dict, origine: str) -> dict:
     maintenant = datetime.now(timezone.utc)
     async with connection() as conn:
         async with conn.transaction():
-            # Le verrou sur la ligne du code sérialise les activations : deux
-            # personnes qui saisissent en même temps la dernière place d'un
-            # code limité ne la prennent pas toutes les deux.
             cur = await conn.execute("select * from code_acces where id = %s for update", (code["id"],))
             frais = await cur.fetchone()
             await _verifier_acces(frais, str(user["id"]))
@@ -199,12 +186,7 @@ async def _parrainer(filleul: dict, parrain: dict) -> dict:
 # ------------------------------------------------------------ les réductions
 
 async def bon_disponible(user_id: str) -> dict | None:
-    """Le bon qui s'appliquera au prochain paiement : celui qui expire le premier.
-
-    Un bon déjà engagé dans un paiement en attente n'est pas disponible : sans
-    cette règle, deux paiements lancés coup sur coup profiteraient du même bon.
-    Un paiement rejeté ou expiré le libère.
-    """
+    """Le bon qui s'appliquera au prochain paiement : celui qui expire le premier."""
     return await fetch_one(
         """select b.* from bon_reduction b
             where b.user_id = %s and b.utilise_le is null and b.expire_le > now()

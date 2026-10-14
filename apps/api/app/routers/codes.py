@@ -19,12 +19,7 @@ def _prenom(nom: str | None) -> str | None:
 
 @router.get("/moi", summary="Vos codes, vos accès et vos réductions")
 async def mes_codes(user: CurrentUser):
-    """Tout ce que l'écran « Codes et avantages » affiche, en un appel.
-
-    `nouveaux` compte les réductions gagnées que l'application n'a pas encore
-    montrées : c'est la notification dans l'application, le courriel étant
-    l'autre moitié.
-    """
+    """Tout ce que l'écran « Codes et avantages » affiche, en un appel."""
     code = await codes.code_ambassadeur(user)
     reglage = await exploitation.parrainage()
     bons = await fetch_all(

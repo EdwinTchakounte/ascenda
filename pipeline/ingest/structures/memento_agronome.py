@@ -1,25 +1,5 @@
 #!/usr/bin/env python3
-"""Produit `memento-agronome.json`, la structure du Mémento de l'agronome.
-
-Le PDF n'a pas de signets. Trois sources, dans cet ordre :
-
-1. **Le sommaire imprimé** (pages 9 à 11 du PDF) : parties, chapitres et
-   sous-chapitres, avec leur page imprimée. Page du PDF = page imprimée + 4.
-2. **Les sections titrées en capitales** dans le texte : « LE DIAGNOSTIC
-   PHYTOSANITAIRE », « LE MAÏS », « L'ÉLEVAGE OVIN ». Elles se rangent sous
-   l'entrée du sommaire qui les précède. Ce sont les entrées qui comptent pour un
-   producteur : une culture, une espèce, un diagnostic.
-3. **Les fiches fourragères**, titrées par leur nom latin en capitales.
-
-Sont écartés : les pages de couverture des parties (leur titre y est coupé en
-morceaux capitalisés), un titre qui répète celui de sa section, et les annexes
-sans lecture (adresses de 2002, index, sommaire des cédéroms).
-
-Le JSON produit se relit, se corrige à la main si besoin, puis s'applique :
-
-    .venv/bin/python pipeline/ingest/structures/memento_agronome.py
-    .venv/bin/python pipeline/ingest/structure_imposee.py pipeline/ingest/structures/memento-agronome.json --force
-"""
+"""Produit `memento-agronome.json`, la structure du Mémento de l'agronome."""
 import json
 import re
 import sys
@@ -63,10 +43,6 @@ def casse(titre: str) -> str:
     return bas[0].upper() + bas[1:]
 
 
-# Des titres de section qui ne disent rien hors de leur chapitre : dans un plan
-# ou une recherche, « Quelques définitions » revient deux fois sans qu'on sache de
-# quoi. On les préfixe du titre de leur parent : « Le crédit rural : quelques
-# définitions ».
 GENERIQUES = {"quelques definitions", "les definitions", "des definitions utiles", "les maladies",
               "l alimentation", "la reproduction", "les performances", "quelques reperes"}
 
@@ -78,9 +54,6 @@ PORTEURS = {"Les caractéristiques générales": "Les cultures fourragères"}
 def lire_sommaire(doc) -> list[dict]:
     texte = "\n".join(l.strip() for p in PAGES_SOMMAIRE for l in doc[p].get_text().splitlines())
     entrees = []
-    # Des espaces et non `\s` dans le numéro : `\s` franchit les lignes, et le folio
-    # « 6 » en bas d'une page du sommaire se collait au « 4 » de la partie
-    # suivante, qui devenait « 64 » et partait dans l'élevage.
     motif = r"^((?:\d[ \t]?\.?[ \t]?)+\d?\.?|INTRODUCTION|ANNEXES)[ \t]*(.*?)\s*(?:\.\s?){3,}\s*\n?\s*(\d{1,4})\s*$"
     for num, titre, page in re.findall(motif, texte, re.M):
         n = re.sub(r"\s", "", num).rstrip(".")

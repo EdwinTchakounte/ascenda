@@ -1,22 +1,4 @@
-"""La réinitialisation de mot de passe par code.
-
-Un code à six chiffres plutôt qu'un lien : l'application est mobile, et il
-n'existe ni site déployé ni lien profond pour rattraper un clic depuis une boîte
-de courriel. Un code se recopie à la main et fonctionne partout, y compris quand
-on lit ses courriels sur un autre appareil que celui où l'application tourne.
-
-Cinq protections, chacune contre une attaque précise :
-
-- le code est **stocké haché** : lire la table ne donne pas la main sur les comptes ;
-- il **expire en trente minutes**, le temps d'aller chercher un courriel ;
-- il ne sert **qu'une fois** ;
-- **cinq essais** au maximum, sinon un million de combinaisons se parcourt vite ;
-- une demande **par quart d'heure** et par compte, pour qu'on ne puisse pas
-  noyer quelqu'un sous les courriels depuis son adresse.
-
-Et la règle qui gouverne les réponses : **on ne dit jamais si une adresse a un
-compte**. La route répond la même chose dans tous les cas.
-"""
+"""La réinitialisation de mot de passe par code."""
 import hashlib
 import logging
 import secrets
@@ -42,21 +24,12 @@ def _normaliser(code: str) -> str:
 
 
 def nouveau_code() -> str:
-    """Six chiffres tirés d'une source cryptographique.
-
-    `secrets` et non `random` : le second est prévisible pour qui a vu quelques
-    tirages, ce qui suffirait à fabriquer le code du voisin.
-    """
+    """Six chiffres tirés d'une source cryptographique."""
     return f"{secrets.randbelow(1_000_000):06d}"
 
 
 async def demander(email: str) -> tuple[dict, str] | None:
-    """Prépare un code. Retourne (utilisateur, code) ou None.
-
-    None couvre trois cas que l'appelant ne doit pas distinguer : l'adresse est
-    inconnue, le compte est désactivé, ou une demande est déjà partie il y a
-    moins d'un quart d'heure.
-    """
+    """Prépare un code. Retourne (utilisateur, code) ou None."""
     user = await fetch_one(
         "select id, email, display_name, is_active from app_user where lower(email) = %s",
         (email.lower().strip(),),
@@ -83,11 +56,7 @@ async def demander(email: str) -> tuple[dict, str] | None:
 
 
 async def reinitialiser(email: str, code: str, nouveau: str) -> dict | None:
-    """Pose le nouveau mot de passe. Retourne l'utilisateur, ou None si refusé.
-
-    Toutes les sessions sont fermées : quelqu'un qui réinitialise le fait
-    souvent parce qu'il craint que son compte soit déjà entre d'autres mains.
-    """
+    """Pose le nouveau mot de passe. Retourne l'utilisateur, ou None si refusé."""
     chiffres = _normaliser(code)
     user = await fetch_one(
         "select id, email, display_name, is_active from app_user where lower(email) = %s",

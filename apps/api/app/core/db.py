@@ -1,9 +1,4 @@
-"""Accès Postgres : un pool asynchrone, des requêtes SQL écrites à la main.
-
-Le pipeline d'ingestion parle déjà à cette base en SQL direct. Introduire un ORM
-ici obligerait à décrire une deuxième fois un schéma qui existe déjà et qui fait
-autorité (db/schema.pg.sql). On garde donc le SQL, avec des aides de lecture.
-"""
+"""Accès Postgres : un pool asynchrone, des requêtes SQL écrites à la main."""
 from contextlib import asynccontextmanager
 from typing import Any, Sequence
 

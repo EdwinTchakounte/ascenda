@@ -1,10 +1,4 @@
-"""La console : suivre le cercle de lecteurs et traiter les signalements.
-
-Le suivi des échanges se fait sur les volumes et les relations, pas sur le
-contenu. Les messages privés entre lecteurs ne se lisent pas depuis la console,
-sauf un message qu'un lecteur a lui-même signalé : c'est alors lui qui le porte
-à la connaissance de la modération.
-"""
+"""La console : suivre le cercle de lecteurs et traiter les signalements."""
 from typing import Annotated, Literal
 from uuid import UUID
 

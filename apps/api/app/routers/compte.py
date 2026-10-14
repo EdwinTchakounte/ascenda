@@ -148,9 +148,6 @@ async def formules():
         {
             "code": "premium",
             "nom": "Ascension",
-            # Le prix d'entrée, lu dans la grille tarifaire. Il valait `None`,
-            # ce qui obligeait chaque écran à écrire un montant de son côté :
-            # exactement la divergence que cette route est censée empêcher.
             "prix": (tarif or {}).get("montant"),
             "devise": (tarif or {}).get("devise", "XAF"),
             "periode_mois": (tarif or {}).get("periode_mois"),

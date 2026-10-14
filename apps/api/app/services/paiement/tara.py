@@ -1,19 +1,4 @@
-"""Tara mobile money : MTN et Orange au Cameroun.
-
-Porté depuis `mail+paiement/paiement/payments/providers/tara.py`, qui tourne en
-production. Le seul changement est technique : `requests` devient `httpx` pour
-rester asynchrone, et la configuration vient de nos réglages. Les points durs
-sont conservés mot pour mot, parce qu'ils viennent de l'expérience et non de la
-documentation :
-
-- les points d'accès sont sur `dklo.co`, pas sur `taramoney.com` ;
-- `productPrice` est un entier, jamais une chaîne ;
-- le téléphone se donne en `2376XXXXXXXX`, sans le plus ;
-- `network` est laissé vide : Tara déduit l'opérateur du préfixe ;
-- au Cameroun il n'y a ni page hébergée ni identifiant de transaction en
-  retour, seulement une notification poussée sur le téléphone ;
-- Tara ne signe pas ses webhooks. On vérifie donc le `businessId`.
-"""
+"""Tara mobile money : MTN et Orange au Cameroun."""
 import json
 import logging
 from typing import Any
@@ -64,13 +49,7 @@ class Tara(FournisseurPaiement):
 
     @property
     def simule(self) -> bool:
-        """Sans identifiants, on ne fait aucun appel sortant et on renvoie une
-        référence factice.
-
-        Indispensable en développement. En production, c'est le service de
-        paiement qui refuse d'initier dans cet état : une référence factice y
-        donnerait à un lecteur le sentiment d'avoir payé sans qu'aucune demande
-        ne parte jamais vers son téléphone."""
+        """Sans identifiants, on ne fait aucun appel sortant et on renvoie une référence factice."""
         return not (self.cle and self.business_id)
 
     # ------------------------------------------------------------------ payin
@@ -136,10 +115,10 @@ class Tara(FournisseurPaiement):
     # ---------------------------------------------------------------- webhook
 
     def lire_webhook(self, corps: bytes) -> EvenementWebhook:
-        """Tara ne signe pas ses webhooks : ni HMAC, ni en-tête de signature.
-        La sécurité tient au HTTPS et au fait que l'URL n'est connue que d'eux.
-        On ajoute une vérification du `businessId` : deviner l'URL ne suffit
-        alors plus, il faut aussi connaître notre identifiant marchand."""
+        """Tara ne signe pas ses webhooks : ni HMAC, ni en-tête de signature. La sécurité tient au
+        HTTPS et au fait que l'URL n'est connue que d'eux. On ajoute une vérification du
+        `businessId` : deviner l'URL ne suffit alors plus, il faut aussi connaître notre.
+        """
         try:
             charge: dict[str, Any] = json.loads(corps.decode("utf-8") or "{}")
         except (ValueError, UnicodeDecodeError) as exc:
@@ -152,9 +131,6 @@ class Tara(FournisseurPaiement):
             )
 
         return EvenementWebhook(
-            # `productId` est notre clé. `collectionId` est l'identifiant interne
-            # de Tara : on le garde en secours pour les anciens webhooks qui ne
-            # propageaient pas productId, jamais comme clé principale.
             cle_idempotence=str(charge.get("productId") or charge.get("collectionId") or ""),
             statut=STATUTS.get((charge.get("status") or "").upper(), "en_attente"),
             reference_fournisseur=str(charge.get("paymentId") or ""),
@@ -171,12 +147,7 @@ class Tara(FournisseurPaiement):
         return f"{settings.public_base_url.rstrip('/')}/paiement/retour"
 
     async def _poster(self, chemin: str, charge: dict) -> dict:
-        """Appel à Tara sous disjoncteur.
-
-        `initier` n'est jamais rejoué automatiquement : un délai dépassé ne dit
-        pas si la demande est déjà partie vers le téléphone du lecteur, et la
-        rejouer pourrait lui en envoyer deux.
-        """
+        """Appel à Tara sous disjoncteur."""
         try:
             return await disjoncteur("tara").appeler(
                 self._poster_brut, chemin, charge,

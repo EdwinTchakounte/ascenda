@@ -1,12 +1,4 @@
-"""Enregistre un lot de QCM de chapitre rédigés en session.
-
-Format attendu : une liste d'objets
-  [{"chapitre": "<8 premiers caractères de l'uuid>",
-    "questions": [{"q": ..., "choix": [4 items], "reponse": 0..3,
-                   "explication": ..., "niveau": ..., "page": 12}, ...]}]
-
-  python3 pipeline/derive/save_quiz.py --doc <uuid> --file lot.json
-"""
+"""Enregistre un lot de QCM de chapitre rédigés en session."""
 import sys, json, argparse
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

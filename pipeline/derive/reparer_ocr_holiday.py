@@ -1,18 +1,4 @@
-"""Répare l'OCR chiffré de « L'obstacle est le chemin » (Ryan Holiday).
-
-Le PDF source rend certains passages dans une police de substitution dont
-l'encodage décale chaque caractère de 29 positions vers le bas : l'espace
-devient 0x03, la virgule 0x0f, « t » devient « W », et les caractères
-accentués atterrissent sur des minuscules. La transformation est réversible.
-
-Deux cas se présentent. Les caractères de contrôle et les mots contenant un
-accent ou une ligature sont reconnaissables sans ambiguïté. Les mots chiffrés
-faits uniquement de lettres, eux, ressemblent à des mots en capitales
-légitimes : on tranche en comparant la vraisemblance française des deux
-lectures, à l'aide d'un modèle de bigrammes appris sur le reste du corpus.
-
-  python3 pipeline/derive/reparer_ocr_holiday.py --doc <prefixe> [--appliquer]
-"""
+"""Répare l'OCR chiffré de « L'obstacle est le chemin » (Ryan Holiday)."""
 import sys, re, math, argparse, unicodedata, collections
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -103,9 +89,6 @@ def reparer(texte, n, total, mots):
         if corps < 2:
             # une seule capitale : il faut une attestation écrasante pour trancher
             return rendre() if fc > 20 * fu + 50 else garder()
-        # plusieurs capitales plus une lettre d'accent : aucun mot français
-        # ordinaire n'a cette forme, sauf s'il est attesté tel quel
-        # un mot coupé en fin de ligne se juge sur le mot entier
         coupe = re.match(r"-\n([a-zà-ÿ]+)", m.string[m.end():])
         if coupe:
             q = coupe.group(1)

@@ -138,10 +138,6 @@ async def main():
 asyncio.run(main())
 
 _echecs = [x for x in _resultats if not x[0]]
-# ------------------------------------------------------------------ la caisse
-# fermée. Sans identifiants Tara, le fournisseur renvoie une référence factice.
-# En production, cela donnerait à un lecteur le sentiment d'avoir payé sans
-# qu'aucune demande ne parte vers son téléphone. Le service doit refuser.
 async def _caisse_fermee():
     import app.core.config as conf
     from app.services.paiement import service as paie

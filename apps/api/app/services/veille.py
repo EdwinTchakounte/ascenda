@@ -1,15 +1,4 @@
-"""La veille : ce qui reste en panne se signale, une fois.
-
-Toutes les cinq minutes, une série de contrôles regarde l'état réel de la base
-et des dépendances. Chaque contrôle qui constate un problème ouvre (ou garde
-ouvert) un incident identifié par une clé stable ; un problème qui disparaît
-referme son incident. Les administrateurs reçoivent un courriel à l'ouverture et
-un autre à la fermeture, jamais un par passage : une alerte qui sonne toutes les
-cinq minutes finit filtrée, et la suivante n'est plus lue.
-
-La veille répare aussi ce qu'elle sait réparer sans risque : un travail orphelin
-(ouvrier tué en plein travail) est remis en file, deux fois au plus.
-"""
+"""La veille : ce qui reste en panne se signale, une fois."""
 import logging
 import time
 from dataclasses import dataclass
@@ -204,9 +193,6 @@ async def passer() -> dict:
                 })
             await execute("update incident set alerte_envoyee_le = now() where id = %s", (ligne["id"],))
 
-    # Un contrôle qui n'a pas pu regarder ne dit pas que tout va bien : on ne
-    # referme rien sur un passage incomplet, sans quoi une base qui hoquette
-    # enverrait un « Résolu » pour une panne toujours là.
     if incomplet:
         return {"ouverts": ouverts, "gardes": gardes, "refermes": [], "incomplet": True}
     actifs = [c.cle for c in constats]

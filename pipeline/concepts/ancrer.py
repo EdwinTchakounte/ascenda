@@ -1,21 +1,4 @@
-"""Ancre les notions du glossaire dans le texte du corpus.
-
-Les 610 concepts viennent des fiches de lecture : ils portent un terme et une
-définition, mais rien ne disait où ils apparaissent. `concept_occurrence` était
-vide, avec deux conséquences que personne ne voyait :
-
-- la **révision espacée ne programmait jamais rien**. Elle cherche les notions
-  citées dans une question ratée, en les restreignant aux concepts présents dans
-  l'ouvrage. Sans occurrence, la restriction élimine tout ;
-- la fiche d'une notion ne montrait aucun passage du corpus.
-
-L'ancrage est déterministe : on cherche le terme dans le texte, sans modèle de
-langage. Une occurrence est marquée « définition » quand le terme est suivi
-d'une tournure définitoire, ce qui la fait remonter en tête.
-
-    python3 pipeline/concepts/ancrer.py --verifier
-    python3 pipeline/concepts/ancrer.py
-"""
+"""Ancre les notions du glossaire dans le texte du corpus."""
 import argparse
 import sys
 from pathlib import Path

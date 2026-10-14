@@ -1,10 +1,4 @@
-"""Recherche ancrée : tout résultat porte son ouvrage, son chapitre et sa page.
-
-Les embeddings ne sont pas encore calculés sur le corpus (0 / 11 395 chunks).
-La recherche s'appuie donc sur tsvector français, qui répond en millisecondes.
-Le jour où les vecteurs existent, `mode=semantique` s'ajoute ici sans changer
-le contrat de sortie : c'est pourquoi la réponse porte déjà un champ `mode`.
-"""
+"""Recherche ancrée : tout résultat porte son ouvrage, son chapitre et sa page."""
 from typing import Annotated
 
 from fastapi import APIRouter, Query

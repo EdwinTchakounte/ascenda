@@ -1,19 +1,4 @@
-"""Ce qu'un lecteur peut faire, en un seul endroit.
-
-Trois sources ouvrent les fonctions d'Ascension, et elles se lisent toutes ici :
-
-- l'abonnement payé, qui ouvre tout ;
-- la période de lancement, qui ouvre tout à tout le monde ;
-- les codes d'accès, qui ouvrent tout ou une liste de fonctions, pour un temps.
-
-Aucune ne change le plan porté par le compte. C'est ce qui permet de refermer
-un code ou un lancement sans rien basculer, et de toujours distinguer ceux qui
-ont payé de ceux à qui l'on a offert.
-
-Les routes ne demandent jamais « ce compte est-il premium ». Elles demandent
-« ce compte a-t-il droit à cette fonction », et la réponse tient compte des
-trois sources.
-"""
+"""Ce qu'un lecteur peut faire, en un seul endroit."""
 from datetime import datetime, timezone
 
 from app.core.db import fetch_all
@@ -42,12 +27,7 @@ def fonction_du_compteur(compteur: str) -> str:
 
 
 async def codes_actifs(user_id: str) -> list[dict]:
-    """Les accès en cours ouverts par un code, du plus large au plus court.
-
-    Un accès cesse à la première de deux dates : sa propre fin, ou celle du
-    code. Un code désactivé depuis la console ne produit plus rien, même pour
-    ceux qui l'avaient déjà saisi.
-    """
+    """Les accès en cours ouverts par un code, du plus large au plus court."""
     lignes = await fetch_all(
         """select c.code, c.libelle, c.niveau, c.fonctions, u.active_le,
                   least(u.fin, c.fin) as fin
@@ -74,12 +54,7 @@ async def codes_actifs(user_id: str) -> list[dict]:
 
 
 async def etat(user: dict) -> dict:
-    """L'accès effectif, tel que l'application doit l'afficher.
-
-    `source` dit d'où vient l'ouverture la plus large : `abonnement`,
-    `lancement`, `code`, ou `aucune`. `jusqu_au` est la date à laquelle cette
-    ouverture se referme, quand on la connaît.
-    """
+    """L'accès effectif, tel que l'application doit l'afficher."""
     from app.services import exploitation
 
     if user.get("plan") and user["plan"] != "free":
@@ -113,16 +88,7 @@ async def a_droit(user: dict, fonction: str) -> bool:
 
 
 async def plafond_jetons(user_id: str) -> dict | None:
-    """Le plafond de jetons porté par un code d'accès, s'il y en a un.
-
-    Un code peut borner ce qu'il coûte, indépendamment de la formule qu'il
-    ouvre : c'est ce qu'il faut pour un code offert à une promotion ou à un
-    partenaire. Le compte part de l'activation et ne se remet pas à zéro chaque
-    mois, sinon le plafond ne bornerait rien.
-
-    Quand plusieurs codes en portent un, on retient le plus serré : c'est celui
-    qui protège.
-    """
+    """Le plafond de jetons porté par un code d'accès, s'il y en a un."""
     lignes = await fetch_all(
         """select c.code, c.plafond_tokens, u.active_le
              from code_acces_utilisation u join code_acces c on c.id = u.code_id

@@ -1,22 +1,4 @@
-"""Enregistre un lot de citations de chapitre rédigées en session.
-
-Une citation n'a de valeur que si elle est authentique. Le script refuse donc
-tout lot dont une seule citation ne se retrouve pas, mot pour mot, dans le texte
-du chapitre. La comparaison ignore la ponctuation, les espaces et la casse :
-l'OCR du corpus coupe les mots en fin de ligne et sème des espaces parasites,
-mais la suite des lettres, elle, ne ment pas.
-
-Format attendu : une liste d'objets
-  [{"chapitre": "<8 premiers caractères de l'uuid>",
-    "citations": [{"texte": ..., "page": 42, "axe": "<slug d'axe>",
-                   "theme": ..., "portee": ...}, ...]}]
-
-Un chapitre sans citation exploitable se déclare explicitement, pour que le
-registre reste honnête :
-  {"chapitre": "...", "citations": [], "motif": "<raison>"}
-
-  python3 pipeline/derive/save_citations.py --doc <uuid> --file lot.json
-"""
+"""Enregistre un lot de citations de chapitre rédigées en session."""
 import sys, json, re, argparse, unicodedata
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

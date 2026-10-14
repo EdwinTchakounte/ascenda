@@ -82,9 +82,9 @@ QUESTIONS_PROFIL = [
 
 @router.get("/diagnostic", summary="Le questionnaire d'entrée")
 async def diagnostic(axe: Annotated[str | None, Query(description="slug d'axe")] = None):
-    """Six questions de profil, puis jusqu'à quatre questions tirées des quiz
-    réels de l'axe choisi. Sonder la connaissance sur le corpus lui-même vaut
-    mieux que la faire déclarer : le lecteur se surestime ou se sous-estime.
+    """Six questions de profil, puis jusqu'à quatre questions tirées des quiz réels de l'axe
+    choisi. Sonder la connaissance sur le corpus lui-même vaut mieux que la faire déclarer :
+    le lecteur se surestime ou se sous-estime.
     """
     sondage = []
     if axe:
@@ -464,9 +464,9 @@ async def replanifier(
     chronogramme_id: str,
     user: Annotated[dict, Depends(exige("chronogramme_adaptatif"))],
 ):
-    """Regénère les séances restantes en une nouvelle version, sans toucher à
-    l'historique. Le plan précédent passe en « remplacé » : on garde la trace de
-    ce qui avait été promis, ce qui est la condition d'un plan honnête.
+    """Regénère les séances restantes en une nouvelle version, sans toucher à l'historique. Le
+    plan précédent passe en « remplacé » : on garde la trace de ce qui avait été promis, ce
+    qui est la condition d'un plan honnête.
     """
     c = await fetch_one(
         """select c.*, ua.id as user_axis_id, ua.axis_id

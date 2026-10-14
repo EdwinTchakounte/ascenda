@@ -1,23 +1,4 @@
-"""Le réglage de l'agent depuis la console, et les plafonds de jetons.
-
-Ce qui doit tenir :
-
-- une clé posée depuis la console est chiffrée en base, jamais relue en clair,
-  et la console n'en voit que les quatre derniers caractères ;
-- activer un fournisseur sans clé est refusé ;
-- retirer la clé coupe le fournisseur ;
-- le modèle et le plafond de réponse se changent sans redéploiement ;
-- un plafond de jetons se change depuis la console et s'applique ;
-- un plafond de jetons dépassé bloque la question suivante, avant l'appel au
-  modèle et non après ;
-- un code d'accès peut porter son propre plafond, compté depuis l'activation,
-  et c'est le plus serré des deux qui s'applique ;
-- la console sait ce que l'agent a coûté.
-
-Les appels passent par HTTP comme ceux de l'application. La consommation est
-écrite directement en base : poser deux cents questions au modèle n'est pas un
-test, c'est une facture.
-"""
+"""Le réglage de l'agent depuis la console, et les plafonds de jetons."""
 import asyncio
 import sys
 import uuid

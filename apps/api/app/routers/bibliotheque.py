@@ -226,9 +226,6 @@ async def fiche(document_id: str, user: OptionalUser, client_app: ClientApplicat
             "idees_force": d["key_ideas"] or [],
         },
         "fiche_lecture": fiche_lecture["content"] if fiche_lecture else None,
-        # Nos textes, pas ceux de l'auteur : une synthèse et un résumé exécutif
-        # sont des oeuvres dérivées que nous écrivons. Le plafond de citation ne
-        # les gouverne pas, il ne gouverne que les extraits littéraux.
         "synthese": derives.get("synthese"),
         "resume_executif": derives.get("resume_executif"),
         "droits": {
@@ -301,12 +298,7 @@ async def sommaire(document_id: str, user: OptionalUser):
 
 @router.get("/{document_id}/pack", summary="Le pack complet d'un ouvrage")
 async def pack_complet(document_id: str, user: OptionalUser, client_app: ClientApplication):
-    """Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel.
-
-    Destiné au téléchargement hors ligne : l'application le garde sur le
-    téléphone et reste utilisable sans réseau, y compris pour passer les quiz.
-    Les réponses sont donc incluses, sans quoi rien ne se corrige hors ligne.
-    """
+    """Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel."""
     # Le texte intégral n'y entre que pour un lecteur qui peut le lire, depuis
     # l'application : c'est elle qui le garde chiffré pour la lecture hors ligne.
     dr = await droits(document_id, user, client_app)
@@ -332,12 +324,7 @@ async def export(
     user: OptionalUser,
     complet: Annotated[bool, Query(description="toutes les citations et questions")] = False,
 ):
-    """Le même pack, mis en page pour être imprimé ou partagé.
-
-    Par défaut, un compagnon de lecture d'une dizaine de pages. `complet=true`
-    rend l'intégralité, ce qui peut représenter plus de quarante pages et
-    plusieurs secondes de fabrication.
-    """
+    """Le même pack, mis en page pour être imprimé ou partagé."""
     p = await service_pack.construire(document_id, avec_reponses=True)
     octets = export_pdf.produire(p, complet=complet)
     nom = _nom_fichier(p["ouvrage"]["titre"])

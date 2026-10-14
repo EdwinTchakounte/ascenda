@@ -1,9 +1,4 @@
-"""Le module d'extension : déposer un ouvrage, étendre les pôles, suivre les travaux.
-
-C'est par lui que le corpus grandira. Ce qui est vérifié ici n'est pas qu'il
-marche une fois, mais qu'il refuse ce qu'il doit refuser : un fichier qui n'est
-pas un PDF, un chemin qui sort du corpus, un travail lourd inscrit deux fois.
-"""
+"""Le module d'extension : déposer un ouvrage, étendre les pôles, suivre les travaux."""
 import asyncio
 import sys
 import uuid
@@ -125,9 +120,6 @@ async def main():
         await execute("delete from axis where slug = %s", (slug,))
 
         print("\n· La zone de dépôt reste hors de la vue du lecteur")
-        # `_a-classer` est créé par l'ingestion pour les fichiers non classés.
-        # S'il remontait aux routes publiques, la bibliothèque afficherait un
-        # axe vide portant un nom de dossier.
         await execute(
             """insert into axis (slug, label) values ('_essai-depot', 'Dépôt d''essai')
                on conflict (slug) do nothing""")
@@ -150,9 +142,6 @@ async def main():
         ok("la console, elle, voit tout", code == 200 and len(axes_console) >= 11, code)
 
         print("\n· L'ouvrier sait quoi lancer")
-        # Les deux tables doivent nommer les mêmes travaux : l'API inscrit, et
-        # l'ouvrier exécute. Une divergence produirait un travail inscrit que
-        # personne ne sait faire, éternellement en attente.
         sys.path.insert(0, str(RACINE / "pipeline"))
         import importlib.util
         spec = importlib.util.spec_from_file_location(

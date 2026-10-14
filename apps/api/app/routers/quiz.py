@@ -1,9 +1,4 @@
-"""Quiz : 2 342 lots déjà générés, servis sans jamais livrer la réponse au client.
-
-La correction se fait ici. L'écran de correction montre la bonne réponse,
-l'explication et la page du livre qui la justifie. C'est ce qui distingue un
-quiz de lecture d'un questionnaire de culture générale.
-"""
+"""Quiz : 2 342 lots déjà générés, servis sans jamais livrer la réponse au client."""
 from typing import Annotated
 
 from fastapi import APIRouter, Query

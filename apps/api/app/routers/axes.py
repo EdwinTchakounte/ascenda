@@ -1,11 +1,4 @@
-"""Les axes : la porte d'entrée de la bibliothèque et du chronogramme.
-
-Un axe dont le raccourci commence par un tiret bas est une zone de dépôt, pas
-un pôle d'apprentissage : `_a-classer` reçoit les ouvrages déposés par la
-console avant qu'un humain ne décide où ils vont. Ces zones restent visibles
-dans la console et invisibles partout ailleurs, sans quoi la bibliothèque
-afficherait un axe vide au nom de dossier.
-"""
+"""Les axes : la porte d'entrée de la bibliothèque et du chronogramme."""
 from fastapi import APIRouter
 
 from app.core.auteurs import auteurs
@@ -15,9 +8,6 @@ from app.core.errors import NotFound
 
 router = APIRouter(prefix="/axes", tags=["Axes"])
 
-# `chapitres_utiles` conditionne tout : sans structure de chapitres, le
-# planificateur n'a rien à découper en séances. On l'expose pour que l'interface
-# n'invite pas l'utilisateur dans une impasse.
 _AXE_SQL = """
 select a.id, a.slug, a.label, a.description, a.sort_order, a.is_premium,
        pa.slug                                as pole_slug,
@@ -132,13 +122,7 @@ SECTIONS_MIN = 6
 
 
 async def _perimetres(axis_id) -> dict[str, dict]:
-    """La part de chaque ouvrage borné qu'un axe lit : pages, durée et sections.
-
-    Les sections montrées sont les plus hautes du périmètre ; tant qu'elles sont
-    moins de six, on descend d'un niveau, pour que « Élevage et santé animale »
-    montre « L'élevage bovin », « L'aviculture »… plutôt que « Zootechnie
-    spéciale » seule.
-    """
+    """La part de chaque ouvrage borné qu'un axe lit : pages, durée et sections."""
     lignes = await fetch_all(
         """select c.document_id, c.id, c.parent_id, c.ord, c.title, c.page_start, c.page_end,
                   coalesce(c.token_count, 0) as jetons
@@ -162,9 +146,6 @@ async def _perimetres(axis_id) -> dict[str, dict]:
             return sum(1 + descendants(e) for e in enfants.get(c["id"], []))
 
         niveau = [c for c in chapitres if c["parent_id"] not in ids]
-        # On ne remplace une section que par au moins deux sous-sections : une
-        # seule effacerait le titre qui dit ce qu'on lit (« La lutte contre les
-        # mauvaises herbes » devenait « La maîtrise de l'enherbement »).
         while len(niveau) < SECTIONS_MIN and any(len(enfants.get(c["id"], [])) >= 2 for c in niveau):
             niveau = [e for c in niveau for e in (enfants[c["id"]] if len(enfants.get(c["id"], [])) >= 2 else [c])]
         pages = set()

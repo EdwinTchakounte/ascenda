@@ -1,18 +1,4 @@
-"""Les titres de chapitre, tels qu'un lecteur doit pouvoir les lire.
-
-Le découpage en chapitres vient de l'extraction des PDF. Quand un livre n'a pas
-de table des matières exploitable, le pipeline nomme ses parties par leurs pages
-(« Pages 66 à 197 ») : c'est un repli honnête. Mais l'extraction laisse aussi
-passer de vrais défauts, qu'un lecteur prend pour des erreurs d'ASCENDA :
-
-- un numéro de page pris pour un titre (« -7- ») ;
-- un bandeau de mise en page (« suite de la page précédente », « chapitre ») ;
-- un titre coupé en plein mot à la fin d'une ligne (« …de l'in- ») ;
-- un séparateur resté en fin de titre (« BIOGRAPHIE - DAVID GRUSON - »).
-
-Ce module les reconnaît et propose un titre lisible. La correction elle-même est
-écrite en base par `app.outils.corriger_chapitres`, qui garde l'original.
-"""
+"""Les titres de chapitre, tels qu'un lecteur doit pouvoir les lire."""
 import re
 import unicodedata
 
@@ -63,13 +49,7 @@ def est_titre_casse(titre: str | None) -> bool:
 
 
 def completer_mot_coupe(titre: str, texte: str | None) -> str | None:
-    """Retrouve la fin d'un titre coupé dans le texte du chapitre.
-
-    « Que pouvons-nous attendre du développement de l'in- » se lit en entier
-    dans les premières lignes du chapitre, où la coupure n'est qu'un retour à la
-    ligne. On cherche le début du titre et on prend la suite jusqu'à la fin du
-    mot. Sans correspondance sûre, on ne devine rien.
-    """
+    """Retrouve la fin d'un titre coupé dans le texte du chapitre."""
     if not texte:
         return None
     debut = titre.rstrip("-").strip()

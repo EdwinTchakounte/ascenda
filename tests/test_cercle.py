@@ -1,19 +1,4 @@
-"""Le cercle de lecteurs, de bout en bout.
-
-Ce qui doit tenir :
-
-- on ajoute un lecteur par son code, jamais par son nom, et l'amitié n'existe
-  qu'acceptée ; deux demandes croisées se rejoignent ;
-- on n'écrit et on n'encourage qu'un ami ; un identifiant quelconque ne dit
-  même pas si le compte existe ;
-- le fil ne montre que les amis qui partagent leur activité ;
-- un blocage coupe tout, et ne se révèle pas ;
-- on ne signale que ce qu'on a reçu, et la console ne lit que ce qui est
-  signalé ; un message masqué disparaît des deux côtés ;
-- les plafonds quotidiens arrêtent un robot sans gêner un lecteur.
-
-Les appels passent par HTTP comme ceux de l'application.
-"""
+"""Le cercle de lecteurs, de bout en bout."""
 import asyncio
 import sys
 import uuid

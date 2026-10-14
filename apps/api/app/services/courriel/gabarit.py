@@ -1,15 +1,4 @@
-"""L'habillage commun des courriels.
-
-Pourquoi le gabarit vit ici et non en base : le corps de chaque message est en
-base, court et modifiable (`<p>`, `<ul>`, `<a>`), mais l'enveloppe visuelle
-demande du CSS en ligne et une structure en tableaux pour survivre à Gmail,
-Outlook et Apple Mail. La mettre en base reviendrait à demander à quelqu'un de
-corriger du HTML de courriel dans une cellule de texte.
-
-Aucune image n'est référencée. La plupart des clients bloquent les images
-distantes par défaut : un en-tête qui n'est qu'un logo devient alors un carré
-vide. Le nom est donc composé en typographie, et il s'affiche toujours.
-"""
+"""L'habillage commun des courriels."""
 
 _ENVELOPPE = """\
 <!DOCTYPE html>
@@ -72,11 +61,7 @@ def envelopper(code: str, objet: str, corps_html: str) -> str:
 
 
 def rendre(gabarit: str, contexte: dict) -> str:
-    """Remplace les {jetons}. Un jeton manquant ne doit pas empêcher l'envoi.
-
-    Un courriel de confirmation de paiement amputé d'une variable reste plus
-    utile qu'un courriel jamais parti.
-    """
+    """Remplace les {jetons}. Un jeton manquant ne doit pas empêcher l'envoi."""
     try:
         return gabarit.format(**contexte)
     except (KeyError, IndexError, ValueError):

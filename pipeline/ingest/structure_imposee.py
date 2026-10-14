@@ -1,30 +1,5 @@
 #!/usr/bin/env python3
-"""Ingère un ouvrage selon une structure relue à la main.
-
-Certains PDF n'ont pas de signets mais un sommaire imprimé fiable. Plutôt que de
-deviner les chapitres (`structure.py`), on les décrit dans un fichier JSON de
-`pipeline/ingest/structures/`, versionné et relisible :
-
-    {
-      "fichier": "Memento-de-l-Agronome_C@Moriarty.pdf",
-      "titre": "...", "auteurs": [...], "annee": 2002, "editeur": "...",
-      "chapitres": [
-        {"num": "4.3.6", "titre": "...", "niveau": 3, "page": 689, "axe": "12-3-protection-cultures"},
-        ...
-      ]
-    }
-
-`page` est la page du PDF, pas la page imprimée. `axe` range le chapitre dans un
-sous-axe ; `null` le laisse hors des parcours (index, adresses). Un ouvrage peut
-ainsi nourrir plusieurs axes, chacun avec ses seuls chapitres (`axis_chapter`).
-
-L'ingestion elle-même reste celle de `ingest.py` : mêmes passages, mêmes pages,
-même stockage. Ce script lui fournit le sommaire, puis pose ce qu'elle ne sait
-pas faire : la hiérarchie des chapitres, leur volume, les axes et les métadonnées.
-
-    python3 pipeline/ingest/structure_imposee.py pipeline/ingest/structures/memento-agronome.json --plan
-    python3 pipeline/ingest/structure_imposee.py pipeline/ingest/structures/memento-agronome.json
-"""
+"""Ingère un ouvrage selon une structure relue à la main."""
 import argparse
 import json
 import sys
@@ -96,9 +71,6 @@ def appliquer(conn, doc_id, structure: dict) -> dict:
             cur.execute("""insert into document_axis (document_id, axis_id, weight, assigned_by, confidence)
                            select %s, id, 1.0, 'curator', 1.0 from axis where slug = %s""", (doc_id, slug))
 
-        # La durée de lecture, avec la formule du reste du corpus (derive/save_json.py) :
-        # 0,75 mot par jeton, 200 mots par minute, au moins 60 jetons par page.
-        # La fiche de lecture, produite plus tard, la gardera.
         cur.execute("""insert into document_pedagogy (document_id, reading_time_min)
                        select d.id, round(greatest(coalesce(sum(k.token_count), 0), d.page_count * 60) * 0.75 / 200)
                          from document d left join chunk k on k.document_id = d.id

@@ -1,18 +1,4 @@
-"""Lecture intégrale dans l'application seulement (migration 019).
-
-Le Mémento de l'agronome est protégé : il se lit en entier, texte et PDF, mais
-seulement par un abonné, depuis l'application mobile, et hors ligne dans
-l'espace chiffré de l'application. On vérifie chaque combinaison :
-
-- sans compte, compte gratuit, abonné depuis le web : extraits seulement, PDF refusé,
-  pack sans texte ;
-- abonné depuis l'application : texte entier, PDF servi sans cache, pack avec le
-  texte de chaque chapitre ;
-- un code d'accès complet (STARTER) ouvre comme un abonnement ;
-- l'export PDF ne contient jamais le texte du livre ;
-- les livres libres ne changent pas ;
-- la console peut poser ou retirer le régime.
-"""
+"""Lecture intégrale dans l'application seulement (migration 019)."""
 import asyncio
 import json
 import sys
@@ -144,7 +130,9 @@ async def main():
 
         print("\n· Code d'accès complet")
         email2, jeton2, _ = compte_neuf("lecture-code")
-        code = await fetch_one("select id from code_acces where niveau = 'complet' and actif order by created_at limit 1")
+        code = await fetch_one("""select id from code_acces
+                                  where niveau = 'complet' and actif and fin > now()
+                                  order by created_at limit 1""")
         if code:
             u = await fetch_one("select id from app_user where email = %s", (email2,))
             await execute("""insert into code_acces_utilisation (code_id, user_id, fin, origine)

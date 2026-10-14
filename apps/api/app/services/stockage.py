@@ -1,10 +1,4 @@
-"""Le stockage objet (MinIO) : servir un fichier d'origine en flux.
-
-Deux usages le partagent : la console, qui vérifie un découpage douteux contre
-le PDF, et le lecteur, qui ouvre le PDF d'un ouvrage redistribuable. Le fichier
-est servi en flux plutôt que chargé en mémoire : certains ouvrages pèsent cent
-mégaoctets.
-"""
+"""Le stockage objet (MinIO) : servir un fichier d'origine en flux."""
 import logging
 
 from fastapi.responses import StreamingResponse
@@ -42,9 +36,6 @@ def servir(storage_key: str, *, nom: str, mime: str | None) -> StreamingResponse
         # déposer dans les téléchargements.
         "Content-Disposition": f"inline; filename*=UTF-8''{_encoder(nom)}",
     }
-    # La taille vient du stockage, pas de la base : `size_bytes` a été relevé à
-    # l'import et ne correspond pas toujours à l'objet réellement stocké. Un
-    # Content-Length faux coupe la réponse en plein milieu.
     reelle = reponse.headers.get("Content-Length")
     if reelle:
         entetes["Content-Length"] = reelle

@@ -1,21 +1,4 @@
-"""Recherche hybride : les mots et le sens.
-
-Deux voies complémentaires, et non concurrentes.
-
-- Le **plein texte** (`tsvector` français) trouve les occurrences exactes. C'est
-  imbattable sur un nom propre, une date, un terme technique.
-- Le **vecteur** trouve ce qui parle de la même chose sans employer les mêmes
-  mots. C'est la seule voie qui répond à « sur quoi les auteurs se
-  contredisent-ils », qui ne partage aucun terme avec les passages utiles.
-
-Les deux classements sont fusionnés par rang réciproque : un passage bien placé
-dans l'une des deux listes remonte, sans qu'il faille calibrer des poids entre
-deux scores qui n'ont pas la même échelle.
-
-Tant que les vecteurs ne sont pas calculés, la recherche reste en plein texte et
-le champ `mode` de la réponse le dit. Rien à changer côté client le jour où les
-vecteurs arrivent.
-"""
+"""Recherche hybride : les mots et le sens."""
 import asyncio
 import logging
 from functools import lru_cache
@@ -38,11 +21,7 @@ _modele_tente = False
 
 
 def _charger_modele():
-    """Charge le modèle à la première question, jamais au démarrage.
-
-    L'API doit pouvoir démarrer sur une machine sans le modèle : la recherche
-    plein texte suffit à faire tourner le produit.
-    """
+    """Charge le modèle à la première question, jamais au démarrage."""
     global _modele, _modele_tente
     if _modele is not None or _modele_tente:
         return _modele
@@ -63,10 +42,6 @@ def _cache_disponibilite() -> dict:
     return {"verifie": False, "disponible": False}
 
 
-# Part du corpus qu'il faut avoir vectorisée pour que la voie sémantique serve.
-# En dessous, elle ne voit qu'une fraction des passages et remonte du bruit tout
-# en se présentant comme « hybride » : mieux vaut le plein texte, qui couvre
-# l'ensemble et ne ment pas sur ce qu'il fait.
 SEUIL_VECTORISATION = 0.95
 
 
@@ -94,14 +69,7 @@ async def vecteurs_disponibles() -> bool:
 
 
 async def prechauffer() -> None:
-    """Charge le modèle en fond, dès le démarrage, si le corpus est vectorisé.
-
-    Le chargement prend une quarantaine de secondes. Laissé au premier appel,
-    c'est le premier lecteur qui les paie, et il conclut que la recherche ne
-    marche pas. La tâche est lancée après le démarrage et dans un fil séparé :
-    l'API répond normalement pendant ce temps, et une machine sans le modèle se
-    contente d'un avertissement au journal.
-    """
+    """Charge le modèle en fond, dès le démarrage, si le corpus est vectorisé."""
     try:
         if not await vecteurs_disponibles():
             return
@@ -121,19 +89,6 @@ def oublier_disponibilite() -> None:
 # l'appareil éditorial.
 TOKENS_MIN_CHAPITRE = 300
 
-# L'appareil est déjà identifié en base par un lot de quiz vide, posé un par un
-# pendant la campagne de génération : 178 chapitres. On relit ce marquage plutôt
-# que de redécouvrir la même chose par heuristique, comme le fait déjà le
-# planificateur.
-#
-# Sans ce filtre, la recherche sémantique remontait des sommaires en tête de
-# résultats. Le vecteur ne sait pas qu'un sommaire ne se lit pas.
-#
-# `est_liminaire` complète le marquage au niveau du passage : une page de
-# copyright vit souvent dans un chapitre par ailleurs lisible, que le
-# marquage par chapitre laisse donc passer. La colonne est posée une fois
-# par la migration 009, plutôt que par une condition textuelle qui ruinerait
-# l'index HNSW à chaque requête.
 _SANS_APPAREIL = """
     and not k.est_liminaire
     and not exists (
@@ -172,11 +127,6 @@ async def _plein_texte(requete: str, where: str, params: list, limite: int) -> l
 
 
 async def _semantique(requete: str, where: str, params: list, limite: int) -> list[dict]:
-    # Le chargement pèse deux gigaoctets et l'encodage occupe le processeur
-    # pendant des centaines de millisecondes. Sur la boucle d'évènements, la
-    # première recherche gelait toute l'API : soixante secondes pendant
-    # lesquelles aucune autre requête n'était servie. Les deux partent donc dans
-    # un fil d'exécution séparé.
     modele = await asyncio.to_thread(_charger_modele)
     if modele is None:
         return []
@@ -197,13 +147,7 @@ async def _semantique(requete: str, where: str, params: list, limite: int) -> li
 
 
 def _fusionner(listes: list[list[dict]], limite: int) -> list[str]:
-    """Fusion par rang réciproque.
-
-    On additionne 1 / (k + rang) sur chaque liste. Un passage présent dans les
-    deux remonte devant un passage excellent dans une seule, ce qui est
-    exactement ce qu'on veut : la convergence des deux méthodes est le meilleur
-    signal disponible.
-    """
+    """Fusion par rang réciproque."""
     points: dict[str, float] = {}
     for liste in listes:
         for rang, ligne in enumerate(liste, start=1):

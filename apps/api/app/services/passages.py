@@ -1,33 +1,11 @@
-"""Le texte des passages, tel qu'un lecteur doit le lire.
-
-L'ingestion découpe chaque livre en passages d'environ 750 jetons qui se
-chevauchent : chaque passage reprend les 330 derniers caractères du précédent,
-coupés au caractère près. Ce recouvrement sert la recherche (une idée à cheval
-sur deux passages reste trouvable), mais affiché tel quel il produit trois
-défauts visibles :
-
-- un chapitre commence par la fin du chapitre précédent, au milieu d'un mot
-  (« ère Les textes générés par l'IA… ») ;
-- entre deux passages, une phrase entière apparaît deux fois ;
-- le texte garde les retours à la ligne de la mise en page du PDF, et les mots
-  coupés en fin de ligne (« amé-\\nnagement »).
-
-On ne réingère pas le corpus pour autant : les vecteurs, les quiz et les
-citations sont rattachés aux passages existants. On corrige à l'affichage, avec
-le passage précédent sous la main.
-"""
+"""Le texte des passages, tel qu'un lecteur doit le lire."""
 import re
 
 _DEBUT_FRAGMENT = re.compile(r"^[a-zà-ÿ’']")
 
 
 def sans_reprise(precedent: str | None, texte: str) -> str:
-    """Retire du début de `texte` ce qui répète la fin de `precedent`.
-
-    L'ingestion recopie la fin du passage précédent en tête du suivant : on
-    cherche donc cette fin au tout début du passage, de la plus longue à la plus
-    courte.
-    """
+    """Retire du début de `texte` ce qui répète la fin de `precedent`."""
     if not precedent:
         return texte
     fin = precedent.rstrip()
@@ -45,13 +23,7 @@ _DEBUT_BLOC = re.compile(r"^([-•–—*]|\d+[.)]|[A-ZÀ-Ý])")
 
 
 def replier(texte: str) -> str:
-    """Recolle les lignes que la mise en page du PDF a coupées.
-
-    Une ligne qui ne finit pas une phrase se prolonge sur la suivante ; un mot
-    coupé par un trait d'union en fin de ligne est recollé. Les paragraphes
-    (ligne vide) et les lignes qui finissent une phrase avant une majuscule ou une
-    puce restent des retours à la ligne.
-    """
+    """Recolle les lignes que la mise en page du PDF a coupées."""
     # Les numéros de page imprimés (« – 161 – ») ne sont pas du texte à lire.
     lignes = [l.strip() for l in texte.replace("\r", "").split("\n")
               if not re.fullmatch(r"[-–—]?\s*\d{1,4}\s*[-–—]?", l.strip()) or not l.strip()]
@@ -85,12 +57,7 @@ _MOTS_FRANCAIS = {"le", "la", "les", "des", "et", "est", "une", "dans", "que", "
 
 
 def sans_reste_etranger(texte: str) -> str:
-    """Retire les paragraphes restés dans la langue d'origine d'un livre traduit.
-
-    Deux passages du corpus portent un paragraphe allemand au milieu du texte
-    français, oubli de la traduction du fichier source. On ne le montre pas : un
-    lecteur le prendrait pour une erreur d'affichage.
-    """
+    """Retire les paragraphes restés dans la langue d'origine d'un livre traduit."""
     gardes = []
     for paragraphe in texte.split("\n"):
         mots = re.findall(r"[a-zäöüßéèàçâêîôûœ]+", paragraphe.lower())
@@ -114,10 +81,6 @@ def lisibles(textes: list[str], precedent: str | None = None) -> list[str]:
 
 
 def extrait(texte: str) -> str:
-    """Un passage isolé (résultat de recherche, source de l'agent), recollé.
-
-    Sans le passage précédent, on ne sait pas retirer la reprise ; on signale
-    seulement par « … » un début qui tombe au milieu d'une phrase.
-    """
+    """Un passage isolé (résultat de recherche, source de l'agent), recollé."""
     t = replier(texte)
     return f"…{t}" if _DEBUT_FRAGMENT.match(t) else t

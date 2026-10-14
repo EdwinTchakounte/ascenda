@@ -1,9 +1,4 @@
-"""Le tableau de bord d'exploitation, et surtout ce qu'il refuse.
-
-Un espace d'administration donne accès aux comptes et aux paiements de tout le
-monde. Ce qui est vérifié ici tient en deux moitiés : les chiffres qu'il
-affiche sont justes, et personne n'y entre sans le droit.
-"""
+"""Le tableau de bord d'exploitation, et surtout ce qu'il refuse."""
 import asyncio
 import sys
 import uuid
@@ -64,10 +59,6 @@ async def main():
                        "corpus", "courbe", "exploitation", "activite", "ouvrages",
                        "axes_choisis", "entonnoir", "plans"}, list(tb))
 
-        # La somme de la courbe doit égaler le compteur de la période. C'est ce
-        # qui manquait : une double jointure multipliait les comptes par le
-        # nombre de paiements du jour, et la courbe annonçait cent six mille
-        # inscriptions pour sept cent quatre-vingt-neuf comptes.
         somme = sum(p["comptes"] for p in tb["courbe"])
         ok("la courbe s'accorde au compteur de la période",
            somme == tb["comptes"]["periode"], f"{somme} contre {tb['comptes']['periode']}")
@@ -132,9 +123,6 @@ async def main():
            not liste or all(p.get("email") for p in liste))
 
         print("\n· Les listes sont paginées")
-        # Sans pagination, chaque ouverture de la console renvoyait toutes les
-        # lignes : le temps de chargement grandit avec le succès, ce qui est
-        # exactement le mauvais sens.
         for chemin in ("utilisateurs", "paiements", "courriels", "abonnements",
                        "webhooks-orphelins", "corpus"):
             code, e, _ = appel("GET", f"/v1/admin/{chemin}?par_page=5", jeton=jeton_admin)
@@ -238,10 +226,6 @@ async def main():
         ok("un gabarit inconnu est refusé", code == 404, code)
 
         print("\n· On ne peut pas se verrouiller dehors")
-        # On vise le compte de la suite, et lui seul. Viser « le premier
-        # administrateur venu » retirait son droit à un vrai compte, et la
-        # console refusait d'ouvrir au passage suivant. Une suite ne doit pas
-        # pouvoir abîmer ce sur quoi elle tourne.
         mien = await fetch_one("select id from app_user where email = %s", (email_admin,))
         code, _, _ = appel("PATCH", f"/v1/admin/utilisateurs/{mien['id']}",
                            {"est_admin": False}, jeton=jeton_admin)

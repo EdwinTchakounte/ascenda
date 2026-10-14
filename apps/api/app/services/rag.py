@@ -1,19 +1,4 @@
-"""L'agent : répondre en citant toujours l'ouvrage et la page.
-
-Le fournisseur du modèle, son modèle et sa clé se règlent depuis la console
-(`app/services/fournisseurs.py`). Deux fournisseurs peuvent être posés : le
-second est appelé quand le disjoncteur du premier est ouvert, et la réponse
-dégradée ne sert plus que si les deux sont tombés.
-
-Deux garde-fous non négociables.
-
-1. L'agent ne répond que sur ce qu'il a lu. Le contexte est constitué de passages
-   réels du corpus ; s'il n'y en a pas, il le dit au lieu de composer une réponse
-   plausible. C'est exactement le défaut que le corpus lui-même documente.
-2. Le contexte respecte les droits. Sur les 71 ouvrages non redistribuables, les
-   passages sont plafonnés avant d'atteindre le modèle : ce qui n'entre pas dans
-   le contexte ne peut pas ressortir dans la réponse.
-"""
+"""L'agent : répondre en citant toujours l'ouvrage et la page."""
 import json
 import logging
 
@@ -47,11 +32,7 @@ async def passages_pertinents(
     axe: str | None = None,
     limite: int = 8,
 ) -> list[dict]:
-    """Le contexte de l'agent, cherché sur les mots et sur le sens.
-
-    C'est ici que la recherche sémantique compte le plus : une question posée
-    avec les mots de l'utilisateur ne reprend presque jamais ceux du livre.
-    """
+    """Le contexte de l'agent, cherché sur les mots et sur le sens."""
     lignes, _mode = await recherche.chercher(
         question, document_id=document_id, axe=axe, limite=limite
     )
@@ -96,12 +77,7 @@ async def repondre(
     passages: list[dict],
     historique: list[dict] | None = None,
 ) -> dict:
-    """Retourne {reponse, tokens_in, tokens_out, degrade}.
-
-    Sans clé d'API, on ne fabrique pas une réponse : on renvoie les passages
-    trouvés en le disant. Une bibliothèque qui montre ses sources reste utile ;
-    un assistant qui invente ne l'est pas.
-    """
+    """Retourne {reponse, tokens_in, tokens_out, degrade}."""
     if not passages:
         return {
             "reponse": (
@@ -192,13 +168,7 @@ async def _anthropic(f: dict, messages: list[dict]) -> dict:
 
 
 async def _openai(f: dict, messages: list[dict]) -> dict:
-    """Appel direct en HTTP, sans SDK supplémentaire.
-
-    Le client officiel embarquerait une dépendance de plus pour une seule
-    requête, alors que `httpx` est déjà là pour Tara et Brevo. Les modèles
-    récents refusent `max_tokens` et attendent `max_completion_tokens` : on
-    envoie le nom que le modèle demandé accepte.
-    """
+    """Appel direct en HTTP, sans SDK supplémentaire."""
     import httpx
 
     modele = f["modele"]
@@ -231,12 +201,7 @@ _APPELS = {"anthropic": _anthropic, "openai": _openai}
 
 
 def citations_utilisees(reponse: str, passages: list[dict]) -> list[dict]:
-    """Ne renvoie au client que les passages effectivement cités.
-
-    Afficher huit sources sous une réponse qui en utilise deux dilue la preuve.
-    Si le modèle n'a marqué aucune référence, on renvoie tout : mieux vaut trop
-    de sources que le soupçon d'une réponse sans source.
-    """
+    """Ne renvoie au client que les passages effectivement cités."""
     cites = {p["n"] for p in passages if f"[{p['n']}]" in reponse}
     retenus = [p for p in passages if p["n"] in cites] or passages
     return [

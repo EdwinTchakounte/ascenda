@@ -1,9 +1,4 @@
-"""Compteurs d'usage et quotas.
-
-Le principe posé au modèle de données : `usage_event` est un journal append-only,
-et `plan_quota` est éditable en base sans redéploiement. Un quota `hard` bloque ;
-un quota souple laisse passer en signalant le dépassement dans la réponse.
-"""
+"""Compteurs d'usage et quotas."""
 from datetime import datetime, timezone
 
 from app.core.db import execute, fetch_all, fetch_one
@@ -16,9 +11,6 @@ _PERIOD_SQL = {
     "total": "true",
 }
 
-# Les compteurs qui se comptent en jetons et non en actes. Une question coûte
-# entre trois mille et dix mille jetons selon les passages retenus : compter les
-# questions ne dit rien de la facture, compter les jetons la dit exactement.
 _EN_JETONS = {"agent_tokens"}
 
 # Message adapté au compteur : dire ce qui est atteint et quoi faire ensuite.
@@ -39,13 +31,7 @@ _MESSAGES = {
 
 
 async def quota_for(user: dict, kind: str) -> dict | None:
-    """Les plafonds appliqués, qui ne sont pas toujours ceux de la formule.
-
-    Un abonnement, la période de lancement ou un code d'accès peuvent ouvrir
-    les plafonds d'Ascension sans que le plan du compte change. Le passage se
-    fait ici, en un seul endroit, parce que c'est le seul endroit que toutes les
-    routes traversent.
-    """
+    """Les plafonds appliqués, qui ne sont pas toujours ceux de la formule."""
     from app.services import acces
 
     quota = await fetch_one(
@@ -68,11 +54,7 @@ async def quota_for(user: dict, kind: str) -> dict | None:
 
 
 async def consumed(user_id: str, kind: str, period: str, depuis=None) -> int:
-    """Ce qui a déjà été consommé sur la fenêtre.
-
-    `depuis` remplace la fenêtre quand le plafond vient d'un code d'accès : on
-    compte à partir de son activation, pas à partir du premier du mois.
-    """
+    """Ce qui a déjà été consommé sur la fenêtre."""
     colonne = "cost_tokens" if kind in _EN_JETONS else "quantity"
     if depuis is not None:
         where, params = "at >= %s", (user_id, kind, depuis)
@@ -87,11 +69,7 @@ async def consumed(user_id: str, kind: str, period: str, depuis=None) -> int:
 
 
 async def check(user: dict, kind: str, quantity: int = 1) -> dict:
-    """Vérifie avant d'agir. Lève QuotaExceeded si le plafond est dur.
-
-    Retourne l'état du compteur pour que la route puisse le renvoyer au client :
-    l'application affiche « 12 questions restantes aujourd'hui » sans second appel.
-    """
+    """Vérifie avant d'agir. Lève QuotaExceeded si le plafond est dur."""
     quota = await quota_for(user, kind)
     if quota is None or quota["max_value"] is None:
         return {"type": kind, "limite": None, "utilise": None, "restant": None}
@@ -131,12 +109,7 @@ async def record(user_id: str, kind: str, quantity: int = 1, cost_tokens: int = 
 
 
 async def summary(user: dict) -> list[dict]:
-    """État de tous les compteurs : alimente l'écran Compte.
-
-    Chaque compteur porte le plafond qui lui est réellement appliqué : avec un
-    code qui n'ouvre que les quiz, les quiz affichent la limite d'Ascension et
-    le reste celle de Découverte.
-    """
+    """État de tous les compteurs : alimente l'écran Compte."""
     types = await fetch_all("select distinct type from plan_quota order by type")
     out = []
     for t in types:

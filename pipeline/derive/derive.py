@@ -1,12 +1,4 @@
-"""Génération des dérivés pédagogiques ASCENDA.
-
-Chaque dérivé est ancré : idées-force, quiz et flashcards portent la page et
-l'extrait littéral qui les justifient. Rien n'est produit « de mémoire ».
-
-Deux modes :
-  --sync   quelques documents, immédiat (mise au point des prompts)
-  --batch  tout le corpus via l'API Batches (50 % du prix, < 24 h)
-"""
+"""Génération des dérivés pédagogiques ASCENDA."""
 import sys, os, json, argparse, time
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -37,9 +29,6 @@ CONSIGNES = {
   "resume_executif": "Produis le résumé exécutif de cet ouvrage : ce qu'un lecteur pressé doit en retenir, et ce qu'il perd à ne pas le lire en entier.",
 }
 
-# Tarif du modèle, en dollars par million de jetons. À vérifier chez Anthropic
-# avant de s'engager sur un budget : ces valeurs servent à donner un ordre de
-# grandeur, pas à établir une facture. Le mode batch coûte la moitié.
 TARIF_ENTREE = float(os.getenv("TARIF_ENTREE", "15"))
 TARIF_SORTIE = float(os.getenv("TARIF_SORTIE", "75"))
 # Sortie moyenne observée par dérivé. Réévaluée dès qu'un lot réel a tourné :
@@ -103,18 +92,7 @@ def build_prompt(conn, doc_id, kind, chapter_id=None, niveau="intermediaire"):
 
 # ------------------------------------------------------------------ stockage
 def save(conn, doc_id, chapter_id, kind, level, data, usage):
-    """Enregistre un dérivé et retire de la circulation celui qu'il remplace.
-
-    La colonne `superseded_by` existait sans que rien ne la pose : régénérer un
-    quiz aurait dû créer un second lot actif à côté du premier. En pratique
-    l'index unique partiel `ux_derivative_naturelle` le refusait, et la
-    régénération échouait purement et simplement.
-
-    On retire donc l'ancien de la circulation avant d'insérer le nouveau, puis
-    on le fait pointer vers son remplaçant. Le tout dans une seule transaction :
-    à aucun moment le corpus ne se retrouve sans dérivé pour cette cible, et un
-    échec en cours de route ne laisse rien à moitié fait.
-    """
+    """Enregistre un dérivé et retire de la circulation celui qu'il remplace."""
     with conn.cursor() as cur:
         cur.execute("""select id from derivative
                         where kind = %s and superseded_by is null
@@ -123,9 +101,6 @@ def save(conn, doc_id, chapter_id, kind, level, data, usage):
                     (kind, doc_id, chapter_id))
         anciens = [r[0] for r in cur.fetchall()]
         if anciens:
-            # Marqueur provisoire : l'index n'accepte qu'un actif par cible, il
-            # faut donc libérer la place avant d'insérer. Le pointeur définitif
-            # est posé juste après, quand l'identifiant du nouveau existe.
             cur.execute("update derivative set superseded_by = id where id = any(%s)", (anciens,))
 
         cur.execute("""insert into derivative (document_id, chapter_id, kind, level, content,
@@ -229,23 +204,11 @@ def collect(conn, state_file):
 # Ce qui se produit une fois par ouvrage. Le reste se produit par chapitre.
 PAR_OUVRAGE = {"fiche_lecture", "synthese", "resume_executif"}
 
-# En deçà, un chapitre est de l'appareil : sommaire, colophon, index, quatrième
-# de couverture. Le planificateur ne les programme jamais en séance ; produire
-# un quiz dessus, c'est payer pour un contenu que personne ne verra. Le seuil
-# est celui du planificateur et de `pipeline/livre/etat.py` : les trois vues du
-# corpus doivent compter la même chose, sinon un ouvrage n'atteint jamais
-# l'état « complet ».
 TOKENS_MIN_CHAPITRE = 300
 
 
 def pick_jobs(conn, kinds, limit=0, only=None, doc=None, refaire=False):
-    """Les dérivés qui restent à produire.
-
-    Sans `refaire`, ce qui existe déjà est écarté. C'était le défaut le plus
-    coûteux du module : la sélection ne regardait jamais la table `derivative`,
-    et relancer pour combler les quiz manquants aurait régénéré les deux mille
-    trois cents déjà produits, au tarif plein.
-    """
+    """Les dérivés qui restent à produire."""
     jobs = []
     with conn.cursor() as cur:
         cur.execute("""select d.id, d.title_clean from document d
@@ -295,12 +258,7 @@ def _existe(conn, doc_id, chapter_id, kind) -> bool:
 
 
 def estimer(conn, jobs) -> None:
-    """Ce que la campagne va coûter, avant de la lancer.
-
-    Les jetons d'entrée sont comptés exactement : le contexte est assemblé de
-    la même façon qu'à l'exécution. Ceux de sortie sont estimés, faute de
-    savoir à l'avance ce que le modèle écrira.
-    """
+    """Ce que la campagne va coûter, avant de la lancer."""
     entree = 0
     vides = 0
     for j in jobs:
@@ -321,9 +279,6 @@ def estimer(conn, jobs) -> None:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kinds", default="fiche_lecture")
-    # Alias au singulier : c'est ainsi que le module par ouvrage appelle, et
-    # l'absence de cet alias faisait échouer la chaîne entière avant le premier
-    # appel au modèle.
     ap.add_argument("--kind", dest="kinds")
     ap.add_argument("--doc", help="préfixe d'identifiant d'ouvrage")
     ap.add_argument("--refaire", action="store_true",

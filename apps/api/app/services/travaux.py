@@ -1,13 +1,4 @@
-"""La file des travaux longs.
-
-Ingérer un ouvrage prend des minutes, l'OCR des heures. L'API ne fait
-qu'inscrire ce qu'il y a à faire ; un ouvrier séparé le prend et l'exécute.
-
-Deux raisons de séparer. Une requête HTTP qui dure dix minutes est une requête
-qui échoue : le navigateur abandonne, le proxy coupe, et celui qui a déposé le
-fichier ne sait pas si son travail a commencé. Et l'image de l'API ne porte pas
-le pipeline, délibérément : elle sert la base, elle ne la fabrique pas.
-"""
+"""La file des travaux longs."""
 import json
 import logging
 from typing import Any
@@ -55,12 +46,7 @@ RECETTES: dict[str, dict[str, Any]] = {
 async def inscrire(type_: str, charge: dict | None = None,
                    document_id: str | None = None,
                    demande_par: str | None = None) -> dict:
-    """Met un travail dans la file.
-
-    Un même travail lourd déjà en attente n'est pas inscrit deux fois : deux
-    vectorisations en parallèle se disputeraient le processeur et la base pour
-    faire deux fois le même ouvrage.
-    """
+    """Met un travail dans la file."""
     if type_ not in RECETTES:
         raise ValueError(f"Type de travail inconnu : {type_}")
 
@@ -115,11 +101,7 @@ async def un(travail_id: str) -> dict | None:
 
 
 async def annuler(travail_id: str) -> bool:
-    """Annule un travail qui n'a pas encore commencé.
-
-    Un travail en cours ne s'annule pas d'ici : il tourne dans un autre
-    processus, et le tuer à mi-parcours laisserait la base à moitié écrite.
-    """
+    """Annule un travail qui n'a pas encore commencé."""
     ligne = await fetch_one(
         """update travail set etat = 'annule', finished_at = now()
             where id = %s and etat = 'en_attente' returning id""",

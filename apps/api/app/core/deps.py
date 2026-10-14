@@ -59,11 +59,7 @@ async def premium_user(user: Annotated[dict, Depends(current_user)]) -> dict:
 
 
 def exige(fonction: str):
-    """Une dépendance qui demande une fonction précise, et non tout Ascension.
-
-    Un code limité peut ouvrir la replanification sans ouvrir le reste : la
-    route doit donc demander ce dont elle a besoin, pas une formule.
-    """
+    """Une dépendance qui demande une fonction précise, et non tout Ascension."""
 
     async def verifier(user: Annotated[dict, Depends(current_user)]) -> dict:
         from app.services import acces
@@ -93,11 +89,6 @@ PremiumUser = Annotated[dict, Depends(premium_user)]
 AdminUser = Annotated[dict, Depends(admin_user)]
 
 
-# Les clients qui peuvent recevoir un ouvrage réservé à l'application. L'en-tête
-# est posé par l'application mobile ; la version web et la vitrine ne l'envoient
-# pas. Il ne vaut pas authentification, qui reste le jeton et l'abonnement : il
-# empêche qu'un navigateur serve de visionneuse à un ouvrage qui ne doit se lire
-# que dans l'application.
 CLIENTS_APPLICATION = {"android", "ios"}
 
 

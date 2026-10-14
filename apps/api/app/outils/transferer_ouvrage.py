@@ -1,26 +1,4 @@
-"""Transférer un ouvrage d'une base à l'autre, avec ses identifiants.
-
-`exporter-corpus.sh` transporte tout le corpus d'un coup et refuse une base qui
-a déjà des ouvrages : il sert à monter un serveur neuf. Ajouter un ouvrage à un
-serveur en service est un autre besoin. Réingérer le PDF sur le serveur ne
-suffit pas : les chapitres y recevraient d'autres identifiants, et les quiz,
-citations et fiches rédigés sur la machine de travail, rattachés aux chapitres
-d'ici, ne s'y rattacheraient plus.
-
-Ce qui part, dans une archive JSON compressée : l'ouvrage, sa pédagogie, ses
-chapitres, ses passages (avec leurs vecteurs), ses rattachements aux axes et ses
-dérivés. Les axes voyagent par leur raccourci (`12-3-protection-cultures`) :
-leurs identifiants diffèrent d'une base à l'autre. Ce qui ne part jamais :
-comptes, séances, progression, notes.
-
-À l'import, tout se fait dans une transaction. Un ouvrage déjà présent n'est
-remplacé qu'avec `--remplacer`, et seulement si aucun lecteur n'y a encore de
-séance, de note ou de surlignage : le remplacement efface en cascade.
-
-    python -m app.outils.transferer_ouvrage exporter 0ff947f7 memento.json.gz
-    python -m app.outils.transferer_ouvrage importer memento.json.gz --essai
-    python -m app.outils.transferer_ouvrage importer memento.json.gz --pdf /tmp/Memento.pdf
-"""
+"""Transférer un ouvrage d'une base à l'autre, avec ses identifiants."""
 import argparse
 import asyncio
 import gzip
@@ -94,10 +72,7 @@ async def inserer(conn, table: str, lignes: list[dict]) -> None:
 
 
 def deposer_pdf(chemin: str, storage_key: str) -> None:
-    """Le PDF d'origine dans le stockage objet, à la clé que porte l'ouvrage.
-
-    La console le sert depuis là ; l'API ne l'expose au lecteur que si les
-    droits de l'ouvrage le permettent."""
+    """Le PDF d'origine dans le stockage objet, à la clé que porte l'ouvrage."""
     from minio import Minio
 
     from app.core.config import settings

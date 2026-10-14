@@ -1,8 +1,4 @@
-"""Ingestion ASCENDA : fichier -> MinIO + document/chapter/chunk dans Postgres.
-
-Tout est déterministe (aucun appel LLM) : sha256, pages, texte, TOC, chunks.
-Rejouable : un document déjà ingéré à la PIPELINE_VERSION courante est ignoré.
-"""
+"""Ingestion ASCENDA : fichier -> MinIO + document/chapter/chunk dans Postgres."""
 import sys, os, re, json, uuid, hashlib, argparse, traceback
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -220,9 +216,6 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--force", action="store_true")
     ap.add_argument("--limit", type=int, default=0)
-    # Un seul fichier, chemin relatif à livres/. La console dépose un ouvrage
-    # et demande son ingestion : ratisser tout le dossier ferait entrer au
-    # passage les .ocr.pdf posés à côté des originaux, qui sont des doublons.
     ap.add_argument("--fichier", help="n'ingérer que ce fichier (relatif à livres/)")
     args = ap.parse_args()
 

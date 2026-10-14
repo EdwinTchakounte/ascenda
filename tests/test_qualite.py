@@ -1,15 +1,4 @@
-"""Les règles qui rendent le corpus lisible : titres, passages, séances.
-
-Chaque cas vient d'un défaut constaté dans l'application :
-
-- « Pages 2 à 66 et 1 chapitre suivant » pour une séance allant de la page 2 à 197 ;
-- « 60 séances d'environ 30 min » et « 22 h 08 au total » dans le même en-tête ;
-- une séance de 2 minutes pour 16 pages d'un livre au texte mal extrait ;
-- un chapitre ouvert sur la fin du précédent, au milieu d'un mot ;
-- des titres « suite de la page précédente », « -7- », « PIA3_Страница_177_1L ».
-
-Fonctions pures : pas d'API ni de base.
-"""
+"""Les règles qui rendent le corpus lisible : titres, passages, séances."""
 import sys
 from pathlib import Path
 

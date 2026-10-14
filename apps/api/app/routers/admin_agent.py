@@ -1,16 +1,4 @@
-"""La console : régler l'agent, sa clé, son modèle et ce qu'il a le droit de coûter.
-
-Trois écrans, trois questions.
-
-- **Le fournisseur.** Quel service répond, avec quel modèle, quelle clé, et dans
-  quel ordre quand il y en a deux. La clé entre ici et n'en ressort jamais : on
-  en voit la présence et les quatre derniers caractères.
-- **Les plafonds.** `plan_quota` était déjà éditable en base ; il l'est
-  désormais depuis la console, y compris le plafond de jetons par formule.
-- **La consommation.** Ce qui a réellement été dépensé, par formule et par
-  compte, pour savoir si un plafond est trop serré ou trop large avant qu'un
-  lecteur ou une facture ne le dise.
-"""
+"""La console : régler l'agent, sa clé, son modèle et ce qu'il a le droit de coûter."""
 from typing import Annotated, Literal
 
 from fastapi import APIRouter, Query
@@ -54,12 +42,7 @@ def _vue(f: dict) -> dict:
 
 @router.get("/agent", summary="Le réglage de l'agent")
 async def lire_agent(user: AdminUser):
-    """Les fournisseurs et les plafonds de jetons, en un appel.
-
-    `prets` dit ce qui répondrait maintenant : un fournisseur actif dont la clé
-    ne se déchiffre plus n'y figure pas, et la console peut le signaler au lieu
-    de laisser croire que tout va bien.
-    """
+    """Les fournisseurs et les plafonds de jetons, en un appel."""
     liste = await fournisseurs.tous()
     prets = [f["code"] for f in await fournisseurs.actifs()]
     plafonds = await fetch_all(
@@ -79,11 +62,7 @@ async def lire_agent(user: AdminUser):
 
 @router.put("/agent/{code}", summary="Régler un fournisseur")
 async def regler_agent(code: str, data: FournisseurIn, user: AdminUser):
-    """Pose le modèle, la clé et l'ordre d'appel sans redéployer.
-
-    On refuse d'activer un fournisseur sans clé : l'activation serait sans effet
-    et ferait croire à un secours qui n'existe pas.
-    """
+    """Pose le modèle, la clé et l'ordre d'appel sans redéployer."""
     if code not in fournisseurs.CODES:
         raise NotFound("Ce fournisseur n'existe pas.")
     ligne = await fetch_one(
@@ -100,11 +79,7 @@ async def regler_agent(code: str, data: FournisseurIn, user: AdminUser):
 
 @router.delete("/agent/{code}/cle", status_code=204, summary="Retirer une clé")
 async def retirer_cle(code: str, user: AdminUser):
-    """Retire la clé et coupe le fournisseur, d'un seul geste.
-
-    C'est ce qu'on fait quand une clé a fuité : la retirer sans couper laisserait
-    un fournisseur actif sans moyen d'appeler, donc des questions en échec.
-    """
+    """Retire la clé et coupe le fournisseur, d'un seul geste."""
     if code not in fournisseurs.CODES:
         raise NotFound("Ce fournisseur n'existe pas.")
     await fournisseurs.retirer_cle(code)
@@ -127,11 +102,7 @@ async def changer_quota(
     plan: str, type_: str, periode: Literal["day", "month", "total"],
     data: QuotaIn, user: AdminUser,
 ):
-    """Change un plafond en base, sans redéploiement.
-
-    `limite` nulle vaut illimité, et c'est la seule façon d'exprimer « ne compte
-    pas » : mettre un très grand nombre laisserait un plafond quelque part.
-    """
+    """Change un plafond en base, sans redéploiement."""
     ligne = await fetch_one(
         "select 1 from plan_quota where plan = %s and type = %s and period = %s",
         (plan, type_, periode),
@@ -151,11 +122,7 @@ async def changer_quota(
 
 @router.get("/agent/consommation", summary="Ce que l'agent a coûté")
 async def consommation(user: AdminUser, jours: Annotated[int, Query(ge=1, le=365)] = 30):
-    """Les jetons dépensés sur la période, en tout, par formule et par compte.
-
-    C'est la mesure qui manque pour régler un plafond : sans elle, on choisit un
-    nombre au hasard et on le découvre trop serré le jour où quelqu'un travaille.
-    """
+    """Les jetons dépensés sur la période, en tout, par formule et par compte."""
     fenetre = "u.at >= now() - make_interval(days => %s)"
     total = await fetch_one(
         f"""select coalesce(sum(u.cost_tokens), 0) as jetons, count(*) as questions

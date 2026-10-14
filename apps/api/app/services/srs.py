@@ -1,9 +1,4 @@
-"""Répétition espacée (SM-2 simplifié).
-
-Ce que l'utilisateur rate revient ; ce qu'il maîtrise s'éloigne. L'intervalle
-double à chaque succès, module par une facilité `ease` qui descend quand on
-échoue et remonte doucement quand on réussit.
-"""
+"""Répétition espacée (SM-2 simplifié)."""
 from datetime import datetime, timedelta, timezone
 
 from app.core.db import execute, fetch_all, fetch_one
@@ -12,19 +7,7 @@ EASE_MIN, EASE_MAX = 1.3, 2.8
 
 
 async def _concepts_de(texte: str, document_id: str | None) -> list[str]:
-    """Repère les notions en jeu dans une question ratée.
-
-    Deux corrections tirées de l'observation : la version initiale ne trouvait
-    presque jamais rien, et la révision espacée ne programmait donc rien.
-
-    - Elle ne lisait que l'énoncé. Une question porte souvent sur une notion que
-      seule l'explication nomme. On lit maintenant l'ensemble.
-    - Elle exigeait que la notion soit ancrée dans cet ouvrage précis. Or un
-      quiz peut parfaitement interroger sur « l'apprentissage supervisé » dans
-      un livre dont le glossaire ne contient pas ce terme. La restriction est
-      devenue une préférence : on privilégie les notions du livre, on accepte
-      les autres à défaut.
-    """
+    """Repère les notions en jeu dans une question ratée."""
     if not texte or len(texte) < 10:
         return []
 
@@ -49,12 +32,7 @@ async def _concepts_de(texte: str, document_id: str | None) -> list[str]:
 
 
 async def _concepts_du_chapitre(chapter_id: str | None, limite: int = 2) -> list[str]:
-    """Repli : les notions les plus présentes dans le chapitre raté.
-
-    Quand aucun terme du glossaire n'apparaît dans l'énoncé, on ne peut pas
-    laisser la révision espacée sans matière : rater un chapitre doit toujours
-    ramener quelque chose à revoir.
-    """
+    """Repli : les notions les plus présentes dans le chapitre raté."""
     if not chapter_id:
         return []
     lignes = await fetch_all(
@@ -87,13 +65,6 @@ async def programmer(user_id: str, concept_id: str, reussi: bool) -> dict:
         interval = 1 if reps == 1 else (3 if reps == 2 else max(1, round(interval * ease)))
         prochaine = maintenant + timedelta(days=interval)
     else:
-        # Un échec ne remet pas à zéro le compteur de révisions : il rend la
-        # notion un peu plus « difficile » et la ramène tout de suite.
-        #
-        # Tout de suite, et non le lendemain : c'est juste après avoir raté une
-        # question qu'on est disposé à revoir la notion. La programmer à demain
-        # laissait l'écran d'accueil annoncer « 0 notion à revoir » au moment
-        # précis où il y en avait.
         reps = 0
         ease = max(EASE_MIN, ease - 0.25)
         interval = 1
@@ -116,11 +87,7 @@ async def enregistrer_echecs(
     echecs: list[dict],
     chapter_id: str | None = None,
 ) -> int:
-    """Programme la révision de ce qui a été raté.
-
-    On lit l'énoncé et l'explication : la notion en jeu est souvent nommée dans
-    la seconde plutôt que dans le premier.
-    """
+    """Programme la révision de ce qui a été raté."""
     vus: set[str] = set()
     for e in echecs:
         texte = " ".join(
@@ -156,9 +123,6 @@ async def a_reviser(user_id: str, limite: int = 20) -> list[dict]:
             "terme": l["term"],
             "definition": l["definition"],
             "axe": l["axe"],
-            # Le libellé en clair, faute de quoi l'application affiche le
-            # raccourci : « 12-agriculture-elevage » au lieu d'« Agriculture et
-            # élevage ». La fiche d'une notion le renvoie déjà.
             "axe_label": l["axe_label"],
             "facilite": round(float(l["ease"]), 2),
             "intervalle_jours": l["interval_days"],

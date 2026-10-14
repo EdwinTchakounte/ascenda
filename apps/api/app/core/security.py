@@ -1,9 +1,4 @@
-"""Mots de passe (argon2) et jetons (JWT).
-
-Deux jetons : un access court porté par l'en-tête Authorization, un refresh long
-stocké haché en base. Révoquer une session revient alors à marquer une ligne,
-sans changer le secret global ni déconnecter tout le monde.
-"""
+"""Mots de passe (argon2) et jetons (JWT)."""
 import hashlib
 import secrets
 from datetime import datetime, timedelta, timezone

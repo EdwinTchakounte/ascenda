@@ -40,9 +40,6 @@ def sha256_file(p: Path, buf=1 << 20) -> str:
             h.update(b)
     return h.hexdigest()
 
-# ---- Nettoyage bibliographique -------------------------------------------------
-# Les noms de fichiers du corpus sont pollués : préfixes de librairie, tags de
-# téléchargement, suffixes de doublon. On garde toujours title_raw intact.
 NOISE = [
     r"\(z-?library[^)]*\)", r"\(z-lib\.org\)", r"\(PDFDrive\)", r"@\w+FR", r"@lechat",
     r"z-library\.sk", r"1lib\.sk", r"z-lib\.sk", r"\bEBOOK\b", r"_epub\b",

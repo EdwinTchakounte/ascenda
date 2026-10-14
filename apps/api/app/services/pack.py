@@ -1,37 +1,18 @@
-"""Le pack d'un ouvrage : tout ce qu'ASCENDA en sait, en un seul objet.
-
-Deux usages, une seule source.
-
-- **Hors ligne.** L'application rapatrie le pack et le garde sur le téléphone.
-  Fiche, idées-force, citations avec leurs pages, quiz jouables, plan de
-  lecture : tout reste utilisable sans réseau. Sur une connexion intermittente,
-  c'est cette fonction qui décide de l'usage réel.
-- **Export PDF.** Le même pack, mis en page pour être imprimé ou partagé.
-
-Les droits s'appliquent ici comme partout : sur un ouvrage non redistribuable,
-le pack contient la fiche, les citations et les quiz, jamais le texte intégral.
-"""
+"""Le pack d'un ouvrage : tout ce qu'ASCENDA en sait, en un seul objet."""
 from app.core.auteurs import auteurs
 from app.core.db import fetch_all, fetch_one
 from app.core.errors import NotFound
 from app.services.droits import droits
 
 
-# Le texte intégral emporté hors ligne vaut ce temps-là au plus : au-delà,
-# l'application le masque jusqu'à la prochaine connexion, qui vérifie que
-# l'abonnement court toujours.
 VALIDITE_HORS_LIGNE_JOURS = 30
 
 
 async def construire(document_id: str, *, avec_reponses: bool = False, avec_texte: bool = False,
                      acces_jusqu_au=None) -> dict:
-    """Assemble le pack. `avec_reponses` n'est vrai que pour l'usage hors ligne :
-    sans elles, l'application ne pourrait pas corriger un quiz sans réseau.
-
-    `avec_texte` ajoute le texte de chaque chapitre, pour la lecture hors ligne.
-    Seule la route du pack le demande, et seulement quand les droits de ce
-    lecteur, depuis l'application, l'autorisent. L'export PDF ne le demande
-    jamais : il reste un compagnon de lecture, pas le livre."""
+    """Assemble le pack. `avec_reponses` n'est vrai que pour l'usage hors ligne : sans elles,
+    l'application ne pourrait pas corriger un quiz sans réseau.
+    """
     d = await fetch_one(
         """select d.id, coalesce(d.title_clean, d.title_raw) as titre, d.subtitle,
                   d.authors, d.year, d.publisher, d.page_count, d.language,
@@ -105,10 +86,6 @@ async def construire(document_id: str, *, avec_reponses: bool = False, avec_text
                 "page": q.get("page"),
             }
             if avec_reponses:
-                # Sans la réponse et l'explication, un quiz hors ligne ne se
-                # corrige pas. On les livre donc, en assumant qu'un lecteur qui
-                # ouvre le fichier peut les lire : c'est un outil de travail,
-                # pas un examen surveillé.
                 question["reponse"] = q.get("reponse")
                 question["explication"] = q.get("explication")
             questions.append(question)

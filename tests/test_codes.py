@@ -1,19 +1,4 @@
-"""Codes d'accès et programme ambassadeur, de bout en bout.
-
-Ce qui doit tenir :
-
-- un code complet ouvre tout Ascension, un code limité seulement ses fonctions ;
-- tout code s'arrête : à sa durée, à sa date de fin, ou quand on le désactive,
-  et à ce moment les plafonds redeviennent ceux de Découverte ;
-- un code refusé à l'inscription ne laisse pas de compte derrière lui ;
-- un compte créé avec un code ambassadeur rapporte un bon à son propriétaire,
-  qui en est prévenu par courriel et dans l'application ;
-- le bon réduit le prochain abonnement, une seule fois, et un paiement rejeté
-  le rend.
-
-Les appels passent par HTTP comme ceux de l'application. Les dates sont
-déplacées directement en base : attendre trente jours n'est pas un test.
-"""
+"""Codes d'accès et programme ambassadeur, de bout en bout."""
 import asyncio
 import sys
 import uuid

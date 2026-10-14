@@ -1,27 +1,4 @@
-"""Reconstitue la structure des ouvrages dépourvus de table des matières.
-
-L'ingestion tire les chapitres du sommaire interne du PDF. Vingt-sept fichiers
-sur soixante-dix-huit n'en ont pas : leur texte et leurs passages sont bien en
-base, mais sans un seul chapitre. Or le planificateur découpe des chapitres.
-Résultat, deux axes entiers ne pouvaient produire aucun parcours, dont
-« Afrique, histoire et pensée », dix ouvrages, zéro exploitable.
-
-Deux voies, dans cet ordre.
-
-**Les marqueurs sûrs.** « CHAPITRE 3 », « DEUXIÈME PARTIE », « INTRODUCTION »,
-un chiffre romain suivi d'un titre. On écarte volontairement le simple
-tout-majuscules : sur ce corpus il attrape les pages de garde, les ISBN et les
-noms d'éditeur bien plus souvent que des titres.
-
-**Le découpage par pages, à défaut.** Des sections d'environ 2 500 jetons,
-soit une demi-heure de lecture, nommées « Pages 24 à 41 ». Ce n'est pas un
-sommaire et cela ne prétend pas l'être : c'est une consigne qu'un lecteur peut
-suivre sur son exemplaire, ce que le titre annonce sans détour.
-
-    python3 pipeline/ingest/structure.py --plan
-    python3 pipeline/ingest/structure.py --doc cd15e3b9
-    python3 pipeline/ingest/structure.py --tous
-"""
+"""Reconstitue la structure des ouvrages dépourvus de table des matières."""
 import argparse
 import re
 import sys
@@ -104,13 +81,7 @@ def par_marqueurs(morceaux: list[dict]) -> list[dict] | None:
 
 
 def marqueurs_credibles(sections: list[dict], morceaux: list[dict]) -> bool:
-    """Un découpage par marqueurs n'est retenu que s'il ressemble à un sommaire.
-
-    Sur ce corpus, la détection produisait 184 sections pour un livre de
-    48 chapitres, avec des titres répétés et des « Section 1 » en série : les
-    listes numérotées du texte étaient prises pour des têtes de chapitre. Mieux
-    vaut un découpage par pages, honnêtement nommé, qu'un faux sommaire.
-    """
+    """Un découpage par marqueurs n'est retenu que s'il ressemble à un sommaire."""
     if len(sections) < 3:
         return False
 

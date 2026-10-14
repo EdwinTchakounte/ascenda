@@ -1,21 +1,4 @@
-"""Encaissement, rattachement, réconciliation, abonnement.
-
-La discipline vient du module `mail+paiement`, où elle a été durcie en
-production. Les quatre points qui comptent :
-
-1. **Une clé d'idempotence par paiement.** Rejouer un webhook ne crédite jamais
-   deux fois.
-2. **Un rattachement en cascade.** Tara ne renvoie pas toujours notre
-   `productId`. Sans repli, un membre paie et rien ne se passe.
-3. **Une réconciliation périodique.** Un webhook peut se perdre. On interroge
-   alors le fournisseur, et on abandonne au bout de 24 heures plutôt que de
-   laisser un paiement en attente indéfiniment.
-4. **Un webhook qui répond toujours 200.** Sinon Tara rejoue en boucle. L'échec
-   est journalisé, pas renvoyé.
-
-Tout ce qui touche un paiement laisse une ligne dans `payment_event`. C'est ce
-qui permet de répondre à « pourquoi ce paiement a-t-il été validé ».
-"""
+"""Encaissement, rattachement, réconciliation, abonnement."""
 import json
 import logging
 from datetime import datetime, timedelta, timezone
@@ -72,9 +55,6 @@ async def creer(user: dict, periode_mois: int, plan: str = "premium") -> dict:
     if not tarif:
         raise NotFound("Cette formule n'est pas proposée.")
 
-    # Un paiement déjà en attente pour le même utilisateur est réutilisé plutôt
-    # que dupliqué : deux popups de paiement sur un téléphone, c'est un débit
-    # de trop.
     en_cours = await fetch_one(
         """select * from payment
            where user_id = %s and statut = 'en_attente'
@@ -112,16 +92,6 @@ async def initier(paiement: dict, telephone: str, reseau: str | None = None) -> 
     """Déclenche la demande de paiement sur le téléphone du membre."""
     f = fournisseur(paiement["provider_code"])
 
-    # En production, un fournisseur sans identifiants renvoie une référence
-    # factice : le lecteur voit une demande partir, n'est jamais débité, et son
-    # paiement reste en attente pour toujours. Une caisse qui fait semblant de
-    # fonctionner est pire qu'une caisse fermée, parce qu'elle ne se signale
-    # pas. On refuse donc d'initier, et on le dit.
-    #
-    # Le commentaire de `Tara.simule` affirmait que l'API refusait de démarrer
-    # dans ce cas. C'était faux : rien ne le vérifiait. Refuser le démarrage
-    # serait d'ailleurs excessif, une mise en ligne sans encaissement est un
-    # état légitime le temps d'obtenir les clés.
     if settings.is_prod and f.simule:
         raise Conflict(
             "Le paiement n'est pas encore ouvert. Les abonnements seront "
@@ -176,12 +146,7 @@ async def initier(paiement: dict, telephone: str, reseau: str | None = None) -> 
 # -------------------------------------------------------------- rattachement
 
 async def rattacher(evenement: EvenementWebhook) -> tuple[dict | None, str | None]:
-    """Retrouve le paiement visé par une notification.
-
-    Trois stratégies en cascade, dans cet ordre. La troisième n'est pas un
-    raffinement : c'est la seule qui fonctionne quand Tara ne propage pas notre
-    `productId`, ce qui arrive en pratique.
-    """
+    """Retrouve le paiement visé par une notification."""
     # 1. Notre clé d'idempotence, renvoyée sous `productId`.
     cle = (evenement.cle_idempotence or "").strip()
     if len(cle) == 36 and cle.count("-") == 4:
@@ -223,20 +188,7 @@ async def rattacher(evenement: EvenementWebhook) -> tuple[dict | None, str | Non
 
 async def appliquer(paiement: dict, statut: str, *, source: str,
                     strategie: str | None = None, motif: str | None = None) -> bool:
-    """Pose le statut d'un paiement. Idempotent, y compris sous concurrence.
-
-    La notification de Tara et la réconciliation peuvent arriver à la même
-    seconde sur le même paiement. Vérifier le statut sur la ligne lue plus tôt
-    ne suffisait pas : les deux voyaient « en attente » et validaient, et
-    l'abonnement était prolongé deux fois. Le changement est désormais
-    conditionnel dans la base (`where statut <> 'valide'`) : une seule écriture
-    gagne, l'autre ne trouve plus rien à changer.
-
-    Statut, bon de réduction et abonnement s'écrivent dans une même transaction :
-    un paiement ne peut plus être validé sans que l'accès soit ouvert.
-
-    Retourne True si quelque chose a changé.
-    """
+    """Pose le statut d'un paiement. Idempotent, y compris sous concurrence."""
     if paiement["statut"] == statut:
         await tracer(str(paiement["id"]), f"deja_{statut}", source, strategie=strategie)
         return False
@@ -282,12 +234,7 @@ async def appliquer(paiement: dict, statut: str, *, source: str,
 
 
 async def _prevenir(evenement: str, paiement: dict, abonnement: dict | None) -> None:
-    """Écrit au membre, sans jamais faire tomber ce qui a déclenché l'envoi.
-
-    Cette fonction est appelée depuis le webhook de paiement. Une panne du
-    service de courriel ne doit pas empêcher un abonnement de s'ouvrir : le
-    membre a payé, le reçu est second.
-    """
+    """Écrit au membre, sans jamais faire tomber ce qui a déclenché l'envoi."""
     try:
         from app.services.courriel import evenements
 
@@ -302,13 +249,7 @@ async def _prevenir(evenement: str, paiement: dict, abonnement: dict | None) -> 
 # ------------------------------------------------------------------ webhook
 
 async def traiter_webhook(corps: bytes, code: str = "tara") -> dict:
-    """Toujours renvoyer 200, quoi qu'il arrive.
-
-    Un code d'erreur ferait rejouer Tara en boucle sans rien résoudre. Ce qui ne
-    passe pas est journalisé, et un webhook non rattaché est conservé avec un
-    `payment_id` nul : c'est la première chose à regarder quand un membre
-    affirme avoir payé.
-    """
+    """Toujours renvoyer 200, quoi qu'il arrive."""
     f = fournisseur(code)
     try:
         evenement = f.lire_webhook(corps)
@@ -340,14 +281,7 @@ async def traiter_webhook(corps: bytes, code: str = "tara") -> dict:
 # ----------------------------------------------------------- réconciliation
 
 async def reconcilier(taille: int = 100, pause: float | None = None) -> dict:
-    """Repêche les paiements restés en attente.
-
-    Un webhook peut se perdre. On interroge alors le fournisseur. Au bout de
-    24 heures sans réponse, on abandonne : laisser un paiement en attente
-    indéfiniment empêche le membre d'en relancer un.
-
-    Tara supporte mal les rafales : on espace les appels.
-    """
+    """Repêche les paiements restés en attente."""
     import asyncio
 
     limite = datetime.now(timezone.utc) - timedelta(hours=settings.reconciliation_timeout_heures)
@@ -379,9 +313,6 @@ async def reconcilier(taille: int = 100, pause: float | None = None) -> dict:
                          {"restants": bilan["reportes"], "cause": disjoncteur("tara").dernier_echec})
             break
         if i:
-            # Tara supporte mal les rafales : environ trois appels par minute.
-            # La pause est paramétrable pour que les vérifications n'aient pas
-            # à l'attendre.
             await asyncio.sleep(
                 settings.reconciliation_pause_secondes if pause is None else pause
             )
@@ -405,15 +336,7 @@ async def reconcilier(taille: int = 100, pause: float | None = None) -> dict:
 # -------------------------------------------------------------- abonnement
 
 async def ouvrir_abonnement(paiement: dict, conn=None) -> dict:
-    """Ouvre ou prolonge l'abonnement, puis passe le compte au plan payé.
-
-    Prolonger plutôt que remplacer : un membre qui paie avant l'échéance ne doit
-    pas perdre les jours qui lui restaient.
-
-    La ligne du membre est verrouillée le temps de lire l'échéance et de la
-    repousser : deux paiements validés à la même seconde partaient sinon de la
-    même échéance, et l'un des deux mois payés disparaissait.
-    """
+    """Ouvre ou prolonge l'abonnement, puis passe le compte au plan payé."""
     if conn is None:
         async with connection() as propre:
             abonnement = await ouvrir_abonnement(paiement, conn=propre)
@@ -469,11 +392,7 @@ async def ouvrir_abonnement(paiement: dict, conn=None) -> dict:
 
 
 async def fermer_echus() -> dict:
-    """Ferme les abonnements arrivés à terme.
-
-    Le compte repasse en `free`, et les quotas referment l'accès d'eux-mêmes :
-    ils lisent déjà le plan. Il n'y a donc rien d'autre à couper.
-    """
+    """Ferme les abonnements arrivés à terme."""
     async with connection() as conn:
         cur = await conn.execute(
             """update subscription set status = 'expired', closed_at = now()

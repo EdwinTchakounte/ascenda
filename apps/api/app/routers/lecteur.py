@@ -1,9 +1,4 @@
-"""Lecteur : le texte servi passage par passage, sous contrôle de droits.
-
-Pour les 7 ouvrages redistribuables, le chapitre est rendu en entier. Pour les
-71 autres, le lecteur reçoit des extraits plafonnés et un message qui explique
-pourquoi, plutôt qu'une page vide sans raison.
-"""
+"""Lecteur : le texte servi passage par passage, sous contrôle de droits."""
 from typing import Annotated
 
 from fastapi import APIRouter, Query
@@ -89,10 +84,6 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser, client
     prec = next((v for v in voisins if v["ord"] == (ch["ord"] or 0) - 1), None)
     suiv = next((v for v in voisins if v["ord"] == (ch["ord"] or 0) + 1), None)
 
-    # Le compte rendu voyage avec le chapitre plutôt que dans un appel à part :
-    # sur une connexion mobile, un aller-retour de moins vaut mieux qu'une
-    # charge utile un peu plus grosse. Il est nul tant qu'il n'a pas été produit,
-    # et l'application ne montre alors simplement rien.
     cr = await fetch_one(
         """select content from derivative
             where chapter_id = %s and kind = 'compte_rendu' and superseded_by is null
@@ -120,9 +111,6 @@ async def chapitre(document_id: str, chapter_id: str, user: OptionalUser, client
             "tronque": tronque,
             "message": dr.message(),
         },
-        # Notre texte, pas celui de l'auteur : un compte rendu est une oeuvre
-        # dérivée que nous écrivons. Il n'est donc pas soumis au plafond de
-        # citation, qui ne gouverne que les extraits littéraux.
         "compte_rendu": (cr or {}).get("content"),
         "precedent": {"id": str(prec["id"]), "titre": prec["title"]} if prec else None,
         "suivant": {"id": str(suiv["id"]), "titre": suiv["title"]} if suiv else None,
@@ -209,12 +197,7 @@ async def signaler_ouverture(document_id: str, user: CurrentUser):
 
 @router.get("/{document_id}/pdf", summary="Le PDF d'un ouvrage lisible en entier")
 async def pdf(document_id: str, user: OptionalUser, client_app: ClientApplication):
-    """Le fichier tel qu'il a été publié, pour le lire page par page.
-
-    Seulement pour les ouvrages dont le texte intégral peut être servi : le PDF
-    d'une œuvre protégée, c'est l'œuvre entière, et la règle de `droits.py`
-    vaut ici comme partout. Les autres ouvrages restent lisibles par extraits.
-    """
+    """Le fichier tel qu'il a été publié, pour le lire page par page."""
     dr = await droits(document_id, user, client_app)
     if not dr.texte_integral:
         raise Forbidden(

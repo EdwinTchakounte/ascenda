@@ -1,17 +1,4 @@
-"""Le tableau de bord d'exploitation.
-
-Ce qu'on veut savoir chaque matin : combien de comptes ouverts hier, combien de
-paiements passés, lesquels sont restés en chemin, combien d'abonnements
-arrivent à échéance, et si les courriels partent.
-
-Tout est déjà en base : `payment_event` trace chaque étape de chaque paiement,
-`email_log` chaque message, `progress_event` chaque action de lecture. Ces
-routes ne calculent rien de neuf, elles rassemblent.
-
-Le tableau de bord tient en **un seul appel**. Une page qui en fait douze met
-douze fois plus de temps à dire la même chose, et échoue douze fois plus
-souvent.
-"""
+"""Le tableau de bord d'exploitation."""
 from datetime import datetime, timezone
 from typing import Annotated, Literal
 
@@ -33,10 +20,6 @@ log = logging.getLogger("ascenda.admin")
 
 router = APIRouter(prefix="/admin", tags=["Administration"])
 
-# Les listes de la console sont paginées, comme celles du produit. Sans cela,
-# le corpus renvoyait ses deux cents lignes et le journal des courriels les
-# siennes à chaque ouverture : le temps de chargement grandit avec le succès,
-# ce qui est exactement le mauvais sens.
 PAR_PAGE = 40
 
 
@@ -61,12 +44,7 @@ class ReglageIn(BaseModel):
 
 
 class DroitsIn(BaseModel):
-    """Ce qu'on peut changer sur un ouvrage depuis le tableau de bord.
-
-    Uniquement ses droits. Le titre, les auteurs et le texte viennent du
-    pipeline et de `data/` : les corriger ici les ferait diverger de leur
-    source, et le prochain import les écraserait sans prévenir.
-    """
+    """Ce qu'on peut changer sur un ouvrage depuis le tableau de bord."""
 
     redistributable: bool | None = None
     max_excerpt_chars: int | None = Field(default=None, ge=0, le=1_000_000)
@@ -174,13 +152,6 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
            from email_log""",
         (jours,),
     )
-    # La courbe des inscriptions, un point par jour. `generate_series` remplit
-    # les jours vides : une courbe qui saute les zéros ment sur la pente.
-    # Deux sous-requêtes par jour, et non deux jointures.
-    #
-    # Joindre `app_user` et `payment` sur le même jour produit leur produit
-    # cartésien : un jour à 116 comptes et 42 paiements donnait 4 872 comptes.
-    # La courbe annonçait 106 731 inscriptions là où la base en portait 789.
     courbe = await fetch_all(
         """select d::date as jour,
                   (select count(*) from app_user u
@@ -199,9 +170,6 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
             order by d""",
         (jours,),
     )
-    # Ce que les gens font, et non seulement combien ils sont. Cinq types
-    # d'événements suffisent à dire si la plateforme est lue ou seulement
-    # ouverte.
     activite = await fetch_all(
         """select type, count(*) as n, count(distinct user_id) as personnes
              from progress_event
@@ -209,9 +177,6 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
             group by type order by n desc""",
         (jours,),
     )
-    # Les ouvrages les plus programmés. C'est la mesure la plus honnête de ce
-    # qui sert : un ouvrage qu'on ouvre une fois pèse moins qu'un ouvrage que
-    # le planificateur place dans des dizaines de parcours.
     ouvrages = await fetch_all(
         """select coalesce(nullif(d.title_clean, ''), d.title_raw) as titre,
                   count(*) as seances,
@@ -330,11 +295,7 @@ async def orphelins(
     page: Annotated[int, Query(ge=1)] = 1,
     par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
-    """Le premier endroit à regarder quand quelqu'un affirme avoir payé.
-
-    Un webhook qui n'a trouvé aucun paiement est conservé avec un identifiant
-    nul plutôt que jeté : c'est la seule trace de l'argent de quelqu'un.
-    """
+    """Le premier endroit à regarder quand quelqu'un affirme avoir payé."""
     compte = await fetch_one(
         "select count(*) as n from payment_event where payment_id is null")
     limite, saut = bornes(page, par_page)
@@ -431,12 +392,7 @@ async def lire_reglages(user: AdminUser):
 
 @router.post("/reglages/{cle}", summary="Actionner un interrupteur")
 async def poser_reglage(cle: str, data: ReglageIn, user: AdminUser):
-    """Bascule un réglage sans passer par SQL.
-
-    C'est tout l'intérêt du tableau de bord : ouvrir une période de lancement ou
-    lever une maintenance depuis un téléphone, à l'heure où l'on n'a pas de
-    terminal sous la main.
-    """
+    """Bascule un réglage sans passer par SQL."""
     ligne = await fetch_one("select 1 from reglage where cle = %s", (cle,))
     if not ligne:
         raise NotFound("Ce réglage n'existe pas.")
@@ -470,12 +426,7 @@ async def corpus(
     page: Annotated[int, Query(ge=1)] = 1,
     par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
-    """L'état de chaque ouvrage, en une requête.
-
-    Ce qu'on veut voir : ce qui est entré, ce qui est vectorisé, ce qui est
-    dérivé, et ce qui manque. `manque=true` ne garde que les ouvrages
-    incomplets, qui sont ceux sur lesquels il reste de l'argent à dépenser.
-    """
+    """L'état de chaque ouvrage, en une requête."""
     where, params = ["true"], []
     if q:
         where.append("(coalesce(d.title_clean, d.title_raw) ilike %s or d.authors::text ilike %s)")
@@ -630,17 +581,7 @@ async def un_ouvrage(document_id: str, user: AdminUser):
 
 @router.patch("/corpus/{document_id}", summary="Changer les droits d'un ouvrage")
 async def changer_droits(document_id: str, data: DroitsIn, user: AdminUser):
-    """Seuls les droits se changent ici.
-
-    Le titre, les auteurs et le texte viennent du pipeline et de `data/` : les
-    corriger depuis cette page les ferait diverger de leur source, et le
-    prochain import les écraserait sans prévenir.
-
-    Poser `takedown_status` à autre chose que `none` retire immédiatement
-    l'ouvrage de partout : bibliothèque, recherche, réponses de l'agent, plans
-    de lecture déjà construits. C'est le geste qu'on fait quand un ayant droit
-    écrit, et il n'a pas besoin d'être réversible pour être utile.
-    """
+    """Seuls les droits se changent ici."""
     champs = {k: v for k, v in data.model_dump(exclude_none=True).items()}
     if not champs:
         raise NotFound("Rien à changer.")
@@ -751,15 +692,7 @@ async def un_compte(user_id: str, user: AdminUser):
 
 @router.patch("/utilisateurs/{user_id}", summary="Désactiver un compte, ou donner le droit")
 async def changer_compte(user_id: str, data: CompteIn, user: AdminUser):
-    """Deux leviers, et rien d'autre.
-
-    Désactiver un compte le ferme sans l'effacer : sa progression reste, et on
-    peut revenir dessus. Donner le droit d'administration se fait ici ou en
-    SQL, mais jamais depuis l'application.
-
-    On ne peut pas se retirer soi-même le droit : c'est le moyen le plus simple
-    de se verrouiller dehors un dimanche soir.
-    """
+    """Deux leviers, et rien d'autre."""
     champs = data.model_dump(exclude_none=True)
     if not champs:
         raise NotFound("Rien à changer.")
@@ -778,11 +711,7 @@ async def changer_compte(user_id: str, data: CompteIn, user: AdminUser):
 
 @router.get("/paiements/{paiement_id}", summary="Un paiement et son journal")
 async def un_paiement(paiement_id: str, user: AdminUser):
-    """Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».
-
-    Chaque étape y est : la création, l'envoi au fournisseur, la notification,
-    la stratégie qui a permis de la rattacher, ou l'abandon.
-    """
+    """Le journal est la réponse à « j'ai payé mais rien ne s'est passé »."""
     p = await fetch_one(
         """select p.*, u.email from payment p join app_user u on u.id = p.user_id
             where p.id = %s""",
@@ -888,13 +817,7 @@ async def derives_lisibles(
     page: Annotated[int, Query(ge=1)] = 1,
     par_page: Annotated[int, Query(ge=1, le=50)] = 10,
 ):
-    """Le contenu lui-même, pas son compte.
-
-    La console disait « 97 lots de quiz » sans permettre d'en lire un seul. On
-    ne peut pas juger de ce qu'on a payé sans le regarder, et c'est justement
-    au moment de lancer une campagne de génération qu'il faut savoir si la
-    précédente a produit quelque chose de bon.
-    """
+    """Le contenu lui-même, pas son compte."""
     compte = await fetch_one(
         """select count(*) as n from derivative
             where document_id = %s and kind = %s and superseded_by is null""",
@@ -932,12 +855,7 @@ async def derives_lisibles(
 
 @router.get("/corpus/{document_id}/fichier", summary="Le PDF d'origine")
 async def fichier_source(document_id: str, user: AdminUser):
-    """Sert le fichier tel qu'il est entré.
-
-    Le seul moyen de vérifier qu'un découpage douteux vient du pipeline et non
-    du PDF lui-même. Servi en flux depuis le stockage objet plutôt que chargé
-    en mémoire : certains ouvrages pèsent cent mégaoctets.
-    """
+    """Sert le fichier tel qu'il est entré."""
     d = await fetch_one(
         """select storage_key, filename_original, mime, size_bytes,
                   coalesce(title_clean, title_raw) as titre
@@ -976,12 +894,7 @@ async def axes_admin(user: AdminUser):
 
 @router.post("/axes", status_code=201, summary="Ouvrir un pôle d'apprentissage")
 async def creer_axe(data: AxeIn, user: AdminUser):
-    """Un axe nouveau naît vide, et c'est normal.
-
-    Il se remplit en y rattachant des ouvrages. Son centroïde, qui sert au
-    classement automatique des nouveaux entrants, se calcule une fois qu'il en
-    porte assez : `pipeline/embed/embed.py --centroides`.
-    """
+    """Un axe nouveau naît vide, et c'est normal."""
     if await fetch_one("select 1 from axis where slug = %s", (data.slug,)):
         raise Conflict("Un axe porte déjà ce raccourci.")
     ligne = await fetch_one(
@@ -1060,12 +973,7 @@ async def un_travail(travail_id: str, user: AdminUser):
 
 @router.post("/travaux", status_code=201, summary="Mettre un travail dans la file")
 async def inscrire_travail(data: TravailIn, user: AdminUser):
-    """Lance une étape du pipeline sans ouvrir un terminal.
-
-    Ce n'est pas exécuté ici : l'ouvrier prendra le travail dans les secondes
-    qui suivent. Une requête HTTP qui dure dix heures est une requête qui
-    échoue.
-    """
+    """Lance une étape du pipeline sans ouvrir un terminal."""
     try:
         t = await travaux.inscrire(
             data.type, data.charge, data.document_id, str(user["id"])
@@ -1099,15 +1007,7 @@ async def importer_ouvrage(
     fichier: Annotated[UploadFile, File()],
     axe: Annotated[str | None, Form()] = None,
 ):
-    """Reçoit un PDF et inscrit son ingestion dans la file.
-
-    Le fichier est écrit dans `livres/` sous l'axe demandé, là où le pipeline
-    va le chercher. On l'écrit par morceaux : un ouvrage de cent mégaoctets
-    chargé en mémoire ferait tomber un conteneur à deux cents.
-
-    L'envoi n'est pas reprenable. Sur une connexion qui coupe, il faut
-    recommencer : c'est une limite assumée, et la console le dit.
-    """
+    """Reçoit un PDF et inscrit son ingestion dans la file."""
     nom = Path(fichier.filename or "sans-nom.pdf").name
     if not nom.lower().endswith(".pdf"):
         raise Conflict("Seuls les fichiers PDF sont acceptés.")

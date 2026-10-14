@@ -1,16 +1,4 @@
-"""Le cercle de lecteurs : amitiés, encouragements, échanges, fil d'activité.
-
-Trois règles tiennent l'ensemble, et elles sont vérifiées ici plutôt que dans
-chaque route :
-
-- on n'écrit qu'à un ami, c'est-à-dire une amitié acceptée des deux côtés ;
-- un blocage, dans un sens ou dans l'autre, coupe tout : demande, message,
-  encouragement, et l'amitié elle-même ;
-- un lecteur qui ne partage pas son activité n'apparaît dans aucun fil.
-
-On trouve un lecteur par son code ASCENDA, jamais par son nom ni son adresse :
-personne ne peut parcourir les comptes.
-"""
+"""Le cercle de lecteurs : amitiés, encouragements, échanges, fil d'activité."""
 from datetime import datetime, timedelta, timezone
 
 from app.core.db import connection, execute, fetch_all, fetch_one
@@ -87,11 +75,7 @@ async def exiger_ami(user_id: str, ami_id: str) -> dict:
 # ----------------------------------------------------------------- amitiés
 
 async def demander(user: dict, code_brut: str) -> dict:
-    """Envoie une demande d'ami à partir d'un code ASCENDA.
-
-    Si l'autre lecteur nous avait déjà envoyé une demande, on l'accepte : deux
-    personnes qui veulent être amies n'ont pas à attendre l'une l'autre.
-    """
+    """Envoie une demande d'ami à partir d'un code ASCENDA."""
     code = codes.normaliser(code_brut)
     cible = await fetch_one(
         "select id, display_name from app_user where code_parrainage = %s and is_active", (code,))
@@ -274,11 +258,7 @@ async def demandes(user: dict) -> dict:
 
 
 async def fil(user: dict, jours: int = 14, limite: int = 60) -> list[dict]:
-    """Ce que les amis ont lu ces derniers jours, du plus récent au plus ancien.
-
-    Un événement porte déjà les encouragements qu'on lui a envoyés : l'écran
-    montre « encouragé » plutôt que d'inviter à le refaire.
-    """
+    """Ce que les amis ont lu ces derniers jours, du plus récent au plus ancien."""
     lignes = await fetch_all(
         """with mes_amis as (
                select case when demandeur_id = %(moi)s then destinataire_id else demandeur_id end as id
@@ -452,4 +432,3 @@ async def compteurs(user: dict) -> dict:
         {"moi": user["id"]},
     )
     return {**l, "total": l["demandes"] + l["messages"] + l["encouragements"]}
-

@@ -1,13 +1,4 @@
-"""Le courrier transactionnel, sans clé Brevo et sans réseau.
-
-Cinq messages doivent partir aux cinq bons moments : bienvenue, paiement
-confirmé, paiement rejeté, échéance proche, abonnement terminé. Sans
-BREVO_API_KEY le fournisseur est en mode simulé, mais tout le reste est réel :
-le gabarit est lu en base, les jetons sont remplacés, la trace est écrite.
-
-Cette suite parle à la base et au service, pas à l'API par HTTP : ce qu'elle
-vérifie, ce sont les déclenchements, et ils ne passent pas tous par une route.
-"""
+"""Le courrier transactionnel, sans clé Brevo et sans réseau."""
 import asyncio
 import sys
 import uuid

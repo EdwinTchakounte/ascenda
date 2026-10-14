@@ -37,9 +37,6 @@ class Utilisateur(BaseModel):
     plan_until: datetime | None = None
     locale: str = "fr"
     cree_le: datetime
-    # L'accès effectif : ce que le compte peut faire aujourd'hui, et pourquoi.
-    # Le plan seul ne le dit plus, un code ou le lancement pouvant ouvrir des
-    # fonctions sans le changer.
     acces: dict | None = None
 
 

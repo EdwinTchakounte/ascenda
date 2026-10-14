@@ -1,10 +1,4 @@
-"""Le garde-fou de droits, en un seul endroit.
-
-Sur 78 ouvrages, 7 seulement sont redistribuables. Pour les 71 autres, servir le
-texte intégral exposerait directement le projet. La règle, posée à la couche 7 du
-modèle de données : on cite un extrait court avec sa référence, on ne restitue
-pas l'œuvre. Tout ce qui renvoie du texte de livre passe par ici.
-"""
+"""Le garde-fou de droits, en un seul endroit."""
 from dataclasses import dataclass
 
 from app.core.db import fetch_one
@@ -65,12 +59,7 @@ class Droits:
 
 
 async def droits(document_id: str, user: dict | None = None, client_application: bool = False) -> Droits:
-    """Les droits d'un ouvrage, pour ce lecteur et ce client.
-
-    Sans lecteur ni client, ce sont les droits publics : c'est ce que voient la
-    recherche, l'agent et l'export, qui ne restituent jamais qu'un extrait d'un
-    ouvrage réservé à l'application.
-    """
+    """Les droits d'un ouvrage, pour ce lecteur et ce client."""
     row = await fetch_one(
         """select id, redistributable, copyright_status, max_excerpt_chars, takedown_status,
                   lecture_application

@@ -1,15 +1,4 @@
-"""Le fournisseur Tara, sans réseau et sans identifiants.
-
-Les autres suites appellent l'API par HTTP sur des données réelles. Celle-ci
-fait l'inverse : elle isole le seul morceau du système que nous ne pourrons pas
-essayer en vrai avant d'avoir un compte marchand ouvert.
-
-Ce qui est vérifié ici tient en une phrase : le jour où Tara appellera notre
-webhook, saurons-nous lire ce qu'il envoie. Les charges utiles reproduisent
-celles observées en production sur l'implémentation dont ce fournisseur est
-porté, y compris les cas tordus (pas de `productId`, statut inconnu, corps
-illisible), parce que ce sont eux qui font perdre de l'argent.
-"""
+"""Le fournisseur Tara, sans réseau et sans identifiants."""
 import sys
 from pathlib import Path
 

@@ -1,24 +1,5 @@
 #!/usr/bin/env python3
-"""Redécoupe les passages d'un ouvrage structuré, au titre près et sur place.
-
-L'ingestion range chaque page entière dans un chapitre. Quand une section
-commence au milieu d'une page (« LE RADIS » sous la fin de « Le poireau »), la
-fin de la section précédente part dans la suivante, et une fiche courte qui tient
-en un tiers de page n'a aucun passage à elle. Sur le Mémento de l'agronome, les
-rédacteurs de quiz l'ont signalé presque à chaque lot.
-
-Ce script coupe chaque page à la ligne du titre (champ `ligne` de la structure,
-ou début du titre pour les entrées du sommaire), puis reconstruit les passages
-avec les mêmes règles que l'ingestion (environ 750 jetons, reprise de 100 jetons
-commencée sur un mot, jamais à cheval sur deux chapitres).
-
-Il travaille **sur place** : le document et ses chapitres gardent leurs
-identifiants, donc leurs quiz, citations et séances. Seuls les passages sont
-remplacés ; leurs vecteurs sont à recalculer ensuite (embed.py --doc).
-
-    python3 pipeline/ingest/redecouper.py pipeline/ingest/structures/memento-agronome.json --plan
-    python3 pipeline/ingest/redecouper.py pipeline/ingest/structures/memento-agronome.json
-"""
+"""Redécoupe les passages d'un ouvrage structuré, au titre près et sur place."""
 import argparse
 import hashlib
 import json

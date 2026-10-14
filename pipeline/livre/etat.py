@@ -1,12 +1,4 @@
-"""L'état de production d'un ouvrage, et du corpus entier.
-
-Le module par ouvrage commence par savoir ce qui existe. Sans cet inventaire on
-relance des générations déjà faites, ce qui coûte des jetons pour rien, ou on
-croit un livre complet alors qu'il lui manque la moitié de ses chapitres.
-
-    python3 pipeline/livre/etat.py               # le corpus, une ligne par ouvrage
-    python3 pipeline/livre/etat.py --doc 753e4ca2  # le détail d'un ouvrage
-"""
+"""L'état de production d'un ouvrage, et du corpus entier."""
 import argparse
 import sys
 from pathlib import Path
@@ -14,11 +6,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import pg  # noqa: E402
 
-# Les dérivés attendus pour qu'un ouvrage soit complet, et leur portée.
-# Ce qu'un ouvrage doit porter pour être dit complet. Les flashcards n'y sont
-# pas : aucun écran ne les lit, et compter comme manquant ce que personne
-# n'attend rendait tout le corpus perpétuellement incomplet. Elles restent
-# productibles à la demande.
 ATTENDUS = {
     "fiche_lecture":   "ouvrage",
     "resume_executif": "ouvrage",

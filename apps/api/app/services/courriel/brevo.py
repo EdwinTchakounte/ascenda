@@ -1,9 +1,4 @@
-"""Brevo, pour le courrier transactionnel.
-
-Un seul point d'accès nous suffit : `POST /v3/smtp/email`. Nous n'utilisons pas
-les gabarits hébergés chez Brevo, parce qu'un gabarit qui vit ailleurs que dans
-notre base est un gabarit qu'on ne peut ni relire ni corriger depuis ici.
-"""
+"""Brevo, pour le courrier transactionnel."""
 import logging
 import re
 
@@ -61,9 +56,6 @@ class Brevo(FournisseurCourriel):
             "htmlContent": html,
             "textContent": texte,
         }
-        # Sous disjoncteur : si Brevo est tombé, on ne fait pas attendre quinze
-        # secondes chaque lecteur qui déclenche un courriel. Seules les pannes
-        # (délai, réseau, 5xx, 429) comptent ; un refus d'adresse n'en est pas une.
         try:
             return await disjoncteur("brevo").appeler(
                 self._poster, charge, compte_comme_echec=lambda exc: getattr(exc, "rejouable", True))

@@ -1,15 +1,4 @@
-"""Vérifie que ce qui échoue se reprend, et que ce qui reste en panne se signale.
-
-- le disjoncteur : ouverture au seuil, refus sans appel, essai unique, refermeture ;
-- un refus métier ne coupe pas le service pour tout le monde ;
-- les reprises espacées d'une lecture, et jamais d'une opération non rejouable ;
-- la file des courriels : panne passagère, renvoi, abandon au cinquième essai ;
-- un secret n'est jamais mis en file ;
-- un travail orphelin est remis en file, puis abandonné ;
-- la veille : un incident ouvert une fois, une seule alerte, refermé avec son avis ;
-- la sauvegarde trop ancienne ouvre un incident ;
-- la sonde de santé.
-"""
+"""Vérifie que ce qui échoue se reprend, et que ce qui reste en panne se signale."""
 import asyncio, sys, uuid
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -267,9 +256,6 @@ async def veille_incidents():
 
     vrais = veille.CONTROLES
     veille.CONTROLES = [controle]
-    # La veille de l'API qui tourne passe elle aussi toutes les cinq minutes, avec
-    # les vrais contrôles : elle refermerait l'incident d'essai. On prend son
-    # verrou pour la durée du test, comme le ferait une seconde instance.
     import psycopg
     from app.core.config import settings
     from app.services.ordonnanceur import VERROU_VEILLE

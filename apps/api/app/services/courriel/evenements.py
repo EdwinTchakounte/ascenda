@@ -1,9 +1,4 @@
-"""Les moments où ASCENDA écrit à quelqu'un.
-
-Un seul endroit pour cinq messages. Les appelants (l'inscription, le paiement,
-l'ordonnanceur) n'ont pas à savoir comment on formate un montant ni une date :
-ils annoncent ce qui vient de se produire.
-"""
+"""Les moments où ASCENDA écrit à quelqu'un."""
 import logging
 from datetime import datetime
 
@@ -43,11 +38,7 @@ def montant_fr(valeur: int | None, devise: str = "XAF") -> str:
 
 
 def _prenom(nom: str | None, email: str | None) -> str:
-    """Le prénom, ou à défaut quelque chose qui ne sonne pas comme un publipostage.
-
-    Écrire « Bonjour ,  » parce que le nom est vide est le premier signe qu'un
-    message est automatique et mal fini.
-    """
+    """Le prénom, ou à défaut quelque chose qui ne sonne pas comme un publipostage."""
     if nom and nom.strip():
         return nom.strip().split()[0]
     return "et bienvenue"
@@ -134,11 +125,7 @@ async def abonnement_echu(user_id: str, fin: datetime | None) -> str:
 
 
 async def rappels_echeance() -> dict:
-    """Prévient ceux dont l'accès se referme sous une semaine.
-
-    Appelé par l'ordonnanceur. Ne lève jamais : un rappel manqué ne doit pas
-    empêcher la fermeture des abonnements échus, qui tourne dans le même cycle.
-    """
+    """Prévient ceux dont l'accès se referme sous une semaine."""
     bilan = {"candidats": 0, "envoyes": 0, "deja": 0}
     try:
         lignes = await fetch_all(

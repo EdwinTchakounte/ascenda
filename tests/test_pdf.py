@@ -1,12 +1,5 @@
-"""Le PDF dans le lecteur : servi entier pour les ouvrages redistribuables,
-refusé pour les autres.
-
-Ce qui doit tenir :
-
-- la fiche dit si le PDF peut s'ouvrir, et ne le promet que là où il s'ouvre ;
-- un ouvrage redistribuable renvoie le fichier complet, octet pour octet ;
-- un ouvrage protégé renvoie un refus qui explique pourquoi, jamais le fichier ;
-- un identifiant inconnu ou mal formé répond « introuvable », pas une erreur.
+"""Le PDF dans le lecteur : servi entier pour les ouvrages redistribuables, refusé pour les
+autres.
 """
 import sys
 import urllib.request

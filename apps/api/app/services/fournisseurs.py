@@ -1,19 +1,4 @@
-"""Les fournisseurs de modèle : leur réglage, leur clé, leur ordre d'appel.
-
-Le principe : ce qui doit pouvoir changer un dimanche soir ne vit pas dans une
-image Docker. Le modèle, la clé et l'ordre d'appel sont en base, posés depuis la
-console, et l'API les relit sans redémarrer.
-
-La clé est chiffrée en AES-256-GCM. La clé de chiffrement n'est pas stockée :
-elle est dérivée de `JWT_SECRET` par HKDF, donc une copie de la base sans le
-fichier d'environnement ne donne rien. En sens inverse, changer `JWT_SECRET`
-rend les clés illisibles : c'est voulu, et la console le dit alors clairement au
-lieu d'appeler un fournisseur avec une clé fausse.
-
-Rien ici ne renvoie jamais une clé en clair vers le client. La console en voit
-la présence et les quatre derniers caractères, ce qui suffit à savoir laquelle
-est posée.
-"""
+"""Les fournisseurs de modèle : leur réglage, leur clé, leur ordre d'appel."""
 import logging
 import os
 import time
@@ -25,9 +10,6 @@ log = logging.getLogger("ascenda.fournisseurs")
 
 CODES = ("anthropic", "openai")
 
-# Un cache très court : la configuration est lue à chaque question, et une
-# question par seconde ne doit pas valoir une requête de plus. Trente secondes
-# suffisent à ce qu'un changement posé depuis la console se voie tout de suite.
 _DUREE_CACHE = 30.0
 _cache: tuple[float, list[dict]] | None = None
 
@@ -80,12 +62,7 @@ async def tous() -> list[dict]:
 
 
 async def actifs() -> list[dict]:
-    """Ceux qu'on peut réellement appeler, dans l'ordre, clé déchiffrée.
-
-    Sans aucun fournisseur actif en base, on retombe sur la clé du fichier
-    d'environnement : une installation qui n'a jamais ouvert la console continue
-    de fonctionner exactement comme avant.
-    """
+    """Ceux qu'on peut réellement appeler, dans l'ordre, clé déchiffrée."""
     global _cache
     if _cache and time.monotonic() - _cache[0] < _DUREE_CACHE:
         return _cache[1]

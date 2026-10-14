@@ -1,11 +1,4 @@
-"""Solde les chapitres d'appareil éditorial (copyright, sommaire, index, éloges).
-
-Ces pages passent le seuil de tokens sans porter la moindre matière
-interrogeable. On les enregistre comme quiz vides motivés plutôt que de les
-laisser gonfler indéfiniment le reste à faire.
-
-  python3 pipeline/derive/mark_appareil.py [--doc <uuid>] [--appliquer]
-"""
+"""Solde les chapitres d'appareil éditorial (copyright, sommaire, index, éloges)."""
 import sys, re, json, argparse
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

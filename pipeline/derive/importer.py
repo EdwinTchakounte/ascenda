@@ -1,18 +1,4 @@
-"""Import de `data/` vers la base, rejouable.
-
-`data/` est la source de vérité : 592 fichiers JSON produits en session, qui
-survivent à la base. La base n'est que la couche de service. Cet import doit
-donc pouvoir être rejoué autant de fois qu'on veut sans rien dupliquer et sans
-rien perdre.
-
-Le principe : chaque dérivé a une clé naturelle (document, chapitre, type) et
-une empreinte de contenu. Inchangé, on saute. Changé, on remplace. Absent, on
-insère. Rien d'autre.
-
-    python3 pipeline/derive/importer.py --verifier   # état des lieux, sans écrire
-    python3 pipeline/derive/importer.py              # import complet
-    python3 pipeline/derive/importer.py --doc 753e4ca2
-"""
+"""Import de `data/` vers la base, rejouable."""
 import argparse
 import hashlib
 import json
@@ -138,10 +124,10 @@ def importer_lots(conn, ref, dossier, motif, kind, cle_liste, bilan, doc_filtre,
 
 
 def importer_fiches(conn, ref, bilan, doc_filtre, ecrire):
-    """La fiche porte son `document_id` : le rattachement ne dépend donc pas du
-    titre, qui peut diverger entre le fichier et la base. À défaut d'identifiant,
-    on retombe sur le titre normalisé, et les cas non résolus sont signalés,
-    jamais devinés."""
+    """La fiche porte son `document_id` : le rattachement ne dépend donc pas du titre, qui peut
+    diverger entre le fichier et la base. À défaut d'identifiant, on retombe sur le titre
+    normalisé, et les cas non résolus sont signalés, jamais devinés.
+    """
     non_resolues = []
     for f in sorted((DATA / "derivatives").glob("fiche_*.json")):
         contenu = json.loads(f.read_text())
@@ -164,13 +150,7 @@ def importer_fiches(conn, ref, bilan, doc_filtre, ecrire):
 
 
 def exporter(conn, ref, doc_filtre) -> None:
-    """Écrit dans `data/` les dérivés qui n'existent qu'en base.
-
-    Sans cela, `data/` ne suffit pas à reconstruire la base, et l'affirmation
-    « data est la source de vérité » serait fausse. Les enregistrements vides
-    motivés, produits directement en base lors du marquage de l'appareil
-    éditorial, en font partie.
-    """
+    """Écrit dans `data/` les dérivés qui n'existent qu'en base."""
     condition = "d.source_file is null and d.superseded_by is null"
     params: list = []
     if doc_filtre:

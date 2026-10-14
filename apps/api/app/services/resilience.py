@@ -1,23 +1,4 @@
-"""Tenir quand une dépendance externe tombe : disjoncteurs et reprises.
-
-ASCENDA dépend de trois services qu'il ne contrôle pas : Tara pour encaisser,
-Brevo pour écrire, Anthropic pour rédiger les réponses de l'agent. Quand l'un
-ralentit ou tombe, deux dégâts sont à éviter :
-
-- **l'effet d'accumulation** : chaque requête attend son délai maximal, les
-  connexions s'épuisent, et c'est toute l'API qui ne répond plus ;
-- **l'acharnement** : relancer sans fin un service déjà à genoux l'empêche de
-  se relever, et nous fait bannir.
-
-Le disjoncteur répond au premier : après `seuil` échecs d'affilée, il s'ouvre et
-refuse aussitôt, sans appel réseau, pendant `pause` secondes. Il laisse ensuite
-passer un seul appel d'essai (demi-ouvert) : réussi, il se referme ; raté, il
-repart pour une pause. L'état vit dans le processus : chaque instance de l'API
-juge pour elle-même, ce qui suffit à protéger ses propres connexions.
-
-Les reprises espacées répondent au second, pour ce qui peut attendre (un
-courriel) : 1 min, 5 min, 30 min, 2 h, 6 h, puis abandon signalé.
-"""
+"""Tenir quand une dépendance externe tombe : disjoncteurs et reprises."""
 import asyncio
 import logging
 import random
@@ -88,12 +69,7 @@ class Disjoncteur:
         log.warning("Disjoncteur %s ouvert pour %s s : %s", self.nom, self.pause, self.dernier_echec)
 
     async def appeler(self, fonction, *args, compte_comme_echec=lambda exc: True, **kwargs):
-        """Exécute `fonction` sous la protection du disjoncteur.
-
-        `compte_comme_echec` distingue une panne du service (délai dépassé,
-        erreur 5xx) d'un refus métier (numéro invalide) : un lecteur qui se
-        trompe de numéro ne doit pas couper la caisse pour tout le monde.
-        """
+        """Exécute `fonction` sous la protection du disjoncteur."""
         self.avant_appel()
         try:
             resultat = await fonction(*args, **kwargs)
@@ -132,12 +108,7 @@ DISJONCTEURS: dict[str, Disjoncteur] = {
 
 
 def disjoncteur(nom: str) -> Disjoncteur:
-    """Le disjoncteur d'une dépendance, créé à la volée si elle est nouvelle.
-
-    Un fournisseur ajouté depuis la console ne doit pas faire tomber l'appel sur
-    une erreur de clé de dictionnaire : il obtient un disjoncteur au même
-    réglage que les autres.
-    """
+    """Le disjoncteur d'une dépendance, créé à la volée si elle est nouvelle."""
     if nom not in DISJONCTEURS:
         DISJONCTEURS[nom] = Disjoncteur(nom, seuil=3, pause=90.0)
     return DISJONCTEURS[nom]
@@ -151,11 +122,7 @@ PALIERS_COURRIEL = [timedelta(minutes=1), timedelta(minutes=5), timedelta(minute
 
 def prochaine_tentative(tentatives: int, maintenant: datetime | None = None,
                         paliers: list[timedelta] = PALIERS_COURRIEL) -> datetime | None:
-    """La date du prochain essai après `tentatives` échecs, ou None pour abandonner.
-
-    Un aléa de plus ou moins 10 % évite que cent messages en échec à la même
-    minute repartent tous à la même seconde.
-    """
+    """La date du prochain essai après `tentatives` échecs, ou None pour abandonner."""
     if tentatives > len(paliers):
         return None
     base = paliers[tentatives - 1]
@@ -165,12 +132,7 @@ def prochaine_tentative(tentatives: int, maintenant: datetime | None = None,
 
 async def avec_reprises(fonction, *args, essais: int = 3, base: float = 0.5,
                         rejouable=lambda exc: True, **kwargs):
-    """Rejoue un appel sans effet de bord (une lecture) avec des pauses croissantes.
-
-    À réserver aux opérations idempotentes : interroger le statut d'un paiement
-    oui, déclencher une demande de paiement non, puisqu'un délai dépassé ne dit
-    pas si la demande est partie vers le téléphone du lecteur.
-    """
+    """Rejoue un appel sans effet de bord (une lecture) avec des pauses croissantes."""
     for essai in range(1, essais + 1):
         try:
             return await fonction(*args, **kwargs)

@@ -1,18 +1,5 @@
 #!/usr/bin/env python3
-"""L'ouvrier : il prend les travaux de la file et les exécute.
-
-Un processus séparé de l'API, pour deux raisons. Une requête HTTP qui dure dix
-minutes est une requête qui échoue, et l'image de l'API ne porte pas le
-pipeline : elle sert la base, elle ne la fabrique pas. L'ouvrier, lui, a les
-deux sous la main.
-
-Il prend un travail à la fois. Sur une machine à seize gigaoctets partagés avec
-PostgreSQL et l'API, deux vectorisations en parallèle ne vont pas deux fois plus
-vite : elles se disputent le processeur et finissent toutes les deux en retard.
-
-    python3 pipeline/travailleur.py            # tourne jusqu'à ce qu'on l'arrête
-    python3 pipeline/travailleur.py --une-fois # prend un travail et sort
-"""
+"""L'ouvrier : il prend les travaux de la file et les exécute."""
 import argparse
 import os
 import signal
@@ -71,11 +58,7 @@ signal.signal(signal.SIGINT, _stop)
 
 
 def prendre(conn):
-    """Réserve le plus ancien travail en attente.
-
-    `for update skip locked` : deux ouvriers peuvent tourner sans jamais
-    prendre le même travail, et sans qu'aucun n'attende l'autre.
-    """
+    """Réserve le plus ancien travail en attente."""
     with conn.cursor() as cur:
         cur.execute(
             """update travail set etat = 'en_cours', started_at = now(), battement = now()
@@ -101,11 +84,7 @@ def solder(conn, travail_id, etat, journal, erreur=None, progression=100):
 
 
 def avancer(conn, travail_id, journal, progression):
-    """Écrit l'avancement pendant l'exécution.
-
-    Sans cela, un travail de dix heures reste à zéro pour cent jusqu'à la fin,
-    et on ne sait pas le distinguer d'un travail bloqué.
-    """
+    """Écrit l'avancement pendant l'exécution."""
     with conn.cursor() as cur:
         cur.execute(
             "update travail set journal = %s, progression = %s where id = %s",
@@ -118,14 +97,7 @@ BATTEMENT_S = 30
 
 
 class Battement(threading.Thread):
-    """Signale toutes les trente secondes que le travail est vivant.
-
-    Un fil à part, avec sa propre connexion : pendant qu'un script charge un
-    modèle de deux gigaoctets sans rien écrire, la boucle principale est bloquée
-    sur sa sortie et ne peut rien signaler. Sans signal, la veille de l'API sait
-    qu'un travail « en cours » depuis plusieurs minutes est orphelin (ouvrier tué,
-    conteneur redémarré) et le remet en file.
-    """
+    """Signale toutes les trente secondes que le travail est vivant."""
 
     def __init__(self, travail_id):
         super().__init__(daemon=True)
@@ -161,9 +133,6 @@ def executer(conn, travail) -> tuple[str, str, str | None]:
     if type_ == "derive" and (charge or {}).get("kind"):
         args += ["--kind", charge["kind"]]
     if type_ == "ingestion":
-        # Un dépôt vise son fichier. Sans cela, l'ingestion ratissait tout
-        # `livres/` et faisait entrer les `.ocr.pdf` posés à côté des
-        # originaux, c'est à dire sept doublons d'un coup.
         f = (charge or {}).get("fichier")
         axe = (charge or {}).get("axe") or "_a-classer"
         if f:
@@ -199,11 +168,7 @@ def executer(conn, travail) -> tuple[str, str, str | None]:
 
 
 def _progres(lignes: list[str]) -> int:
-    """Un pourcentage tiré de la sortie du script, quand il en donne un.
-
-    Les scripts du pipeline écrivent « 1408/11275 (12 %) ». On lit le dernier
-    qui passe plutôt que d'inventer une barre de progression fictive.
-    """
+    """Un pourcentage tiré de la sortie du script, quand il en donne un."""
     import re
 
     for ligne in reversed(lignes[-40:]):
@@ -230,9 +195,6 @@ def main():
         try:
             travail = prendre(conn)
         except Exception as exc:  # noqa: BLE001
-            # Base redémarrée, réseau coupé : on attend et on se reconnecte au
-            # lieu de mourir. Docker relancerait le conteneur, mais en perdant
-            # une minute et en remplissant le journal de traces identiques.
             print(f"File injoignable ({type(exc).__name__}), nouvel essai dans 15 s.", flush=True)
             time.sleep(15)
             try:

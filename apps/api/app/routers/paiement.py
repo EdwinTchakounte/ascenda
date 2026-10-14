@@ -23,13 +23,7 @@ class AchatIn(BaseModel):
 
 @router.get("/tarifs", summary="La grille tarifaire")
 async def grille(user: OptionalUser):
-    """Lue en base : la page de tarifs ne peut pas diverger de ce qui est
-    réellement facturé.
-
-    Connecté, le lecteur qui dispose d'un bon ambassadeur voit en plus le
-    montant réduit : c'est celui qui lui sera demandé, et il doit le lire avant
-    de valider, pas le découvrir sur son téléphone.
-    """
+    """Lue en base : la page de tarifs ne peut pas diverger de ce qui est réellement facturé."""
     from app.services import codes
 
     lignes = await service.tarifs()
@@ -59,11 +53,7 @@ async def grille(user: OptionalUser):
 
 @router.post("", status_code=status.HTTP_201_CREATED, summary="Payer un abonnement")
 async def payer(data: AchatIn, user: CurrentUser):
-    """Crée le paiement puis déclenche la demande sur le téléphone.
-
-    Le membre valide avec son code mobile money. La confirmation arrive ensuite
-    par notification du fournisseur, ou à défaut par la réconciliation.
-    """
+    """Crée le paiement puis déclenche la demande sur le téléphone."""
     paiement = await service.creer(user, data.periode_mois)
     paiement = await service.initier(paiement, data.telephone, data.reseau)
     return _vue(paiement)
@@ -101,12 +91,7 @@ async def suivre(paiement_id: str, user: CurrentUser):
 
 @router.post("/webhook/tara", summary="Notification de Tara")
 async def webhook(request: Request):
-    """Répond toujours 200.
-
-    Un code d'erreur ferait rejouer Tara en boucle sans rien résoudre. Ce qui ne
-    passe pas est journalisé dans `payment_event`, avec un paiement nul quand le
-    rattachement a échoué.
-    """
+    """Répond toujours 200."""
     return await service.traiter_webhook(await request.body(), "tara")
 
 

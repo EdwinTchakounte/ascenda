@@ -1,9 +1,4 @@
-"""Détecte les couches texte corrompues (police sans table ToUnicode).
-
-chars_per_page ne suffit pas : un PDF peut produire beaucoup de caractères
-et n'être que du bruit. On mesure la part de lettres et la fréquence des mots
-français courants — un texte réel en contient toujours.
-"""
+"""Détecte les couches texte corrompues (police sans table ToUnicode)."""
 import sys, re, argparse
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

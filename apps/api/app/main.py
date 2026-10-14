@@ -75,23 +75,12 @@ app.add_middleware(
 )
 
 
-# Ce qui reste joignable pendant une maintenance : la sonde, l'état, la
-# documentation, et le webhook de paiement. Fermer le webhook ferait rejouer
-# Tara en boucle et pourrait faire abandonner un paiement déjà débité.
 _OUVERT_EN_MAINTENANCE = (
     "/sante",
     "/v1/etat",
     "/docs",
     "/openapi.json",
-    # Tara rejouerait en boucle sur un refus, et pourrait finir par abandonner
-    # un paiement déjà débité. Le webhook reste donc ouvert : il n'écrit que
-    # dans les tables de paiement, qu'on ne migre pas en même temps que le reste.
     "/v1/paiements/webhook/",
-    # Se connecter et rafraîchir restent possibles. Ces deux routes n'écrivent
-    # que dans `refresh_token`. Les fermer transformerait une maintenance de dix
-    # minutes en vague de reconnexions : les jetons d'accès expirent au bout
-    # d'une demi-heure, et l'utilisateur se retrouverait déconnecté sans
-    # pouvoir revenir, bien après la fin de la mise à jour.
     "/v1/auth/connexion",
     "/v1/auth/rafraichir",
 )
@@ -99,15 +88,7 @@ _OUVERT_EN_MAINTENANCE = (
 
 @app.middleware("http")
 async def garde_maintenance(request: Request, call_next):
-    """Refuse les écritures pendant une mise à jour.
-
-    L'écran figé côté application est une courtoisie ; ce refus est la
-    garantie. Un client qui ignorerait le drapeau, ou qui ne l'a pas encore lu,
-    ne peut pas écrire dans une base qu'on est en train de migrer.
-
-    La lecture reste ouverte : quelqu'un qui lisait un chapitre au moment de la
-    bascule peut le finir.
-    """
+    """Refuse les écritures pendant une mise à jour."""
     if request.method in ("GET", "HEAD", "OPTIONS"):
         return await call_next(request)
     if request.url.path.startswith(_OUVERT_EN_MAINTENANCE):
@@ -137,9 +118,6 @@ async def garde_maintenance(request: Request, call_next):
 
 @app.exception_handler(Exception)
 async def erreur_inattendue(request: Request, exc: Exception):
-    # Un identifiant mal formé dans l'URL (« /bibliotheque/abc ») arrive jusqu'à
-    # PostgreSQL, qui refuse de le lire comme un uuid. Ce n'est pas une panne :
-    # la ressource n'existe pas, et le dire évite une alerte pour rien.
     import psycopg
 
     if isinstance(exc, psycopg.errors.InvalidTextRepresentation) and "uuid" in str(exc):
@@ -159,13 +137,7 @@ async def erreur_inattendue(request: Request, exc: Exception):
 
 @app.get("/sante", tags=["Service"])
 async def sante():
-    """Vérifie que l'API répond et que la base est joignable.
-
-    Répond 503 sans base : un répartiteur ou la sonde Docker retire alors
-    l'instance au lieu de lui envoyer des requêtes qui échoueront toutes. Les
-    disjoncteurs sont donnés par leur seul état ; le détail, qui peut porter un
-    message d'erreur de fournisseur, est réservé à la console.
-    """
+    """Vérifie que l'API répond et que la base est joignable."""
     from app.services.resilience import DISJONCTEURS
 
     try:
@@ -182,17 +154,7 @@ async def sante():
 
 @app.get("/admin", include_in_schema=False)
 async def page_admin():
-    """Le tableau de bord d'exploitation, servi par l'API elle-même.
-
-    Une page, pas une application. La faire vivre dans la vitrine aurait obligé
-    celle-ci à porter une session, alors qu'elle n'a délibérément rien à savoir
-    de personne ; en faire un troisième déploiement aurait ajouté une brique à
-    surveiller pour un écran qu'on ouvre le matin. Elle voyage donc avec l'image
-    de l'API, sans construction ni dépendance.
-
-    Elle n'est pas indexable et ne donne rien sans un compte porteur du droit
-    d'administration, qui se pose à la main en base.
-    """
+    """Le tableau de bord d'exploitation, servi par l'API elle-même."""
     return FileResponse(
         Path(__file__).parent / "statique" / "admin.html",
         media_type="text/html; charset=utf-8",
@@ -202,13 +164,7 @@ async def page_admin():
 
 @app.get("/v1/etat", tags=["Service"], summary="L'état d'exploitation")
 async def etat():
-    """Ce que les applications lisent pour savoir dans quel monde elles vivent.
-
-    Trois réponses en un appel : sommes-nous en période de lancement, sommes-nous
-    en maintenance, et cette version de l'application est-elle encore acceptée.
-    Publique et sans jeton : une application qui ne peut pas se connecter doit
-    quand même pouvoir apprendre pourquoi.
-    """
+    """Ce que les applications lisent pour savoir dans quel monde elles vivent."""
     from app.services import exploitation
 
     return await exploitation.etat()

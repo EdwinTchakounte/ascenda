@@ -104,9 +104,6 @@ async def inscription(data: InscriptionIn, request: Request):
         if trouve:
             code_applique = await codes.appliquer_a_l_inscription(user, trouve)
     except Exception as e:  # noqa: BLE001
-        # Le compte est ouvert : un code qui échoue entre la vérification et
-        # l'écriture (la dernière place d'un code prise entre-temps) ne doit pas
-        # le fermer. On le dit, et le code reste saisissable depuis le profil.
         log.warning("Code non appliqué à l'inscription de %s : %s", email, e)
         message = getattr(e, "detail", {}).get("message") if isinstance(getattr(e, "detail", None), dict) else None
         code_applique = {"type": "refuse", "message": message or "Le code n'a pas pu être appliqué."}
@@ -137,12 +134,7 @@ async def connexion(data: ConnexionIn, request: Request):
 
 @router.post("/rafraichir", response_model=Jetons)
 async def rafraichir(data: RafraichirIn):
-    """Rotation du refresh : l'ancien jeton est révoqué à l'usage.
-
-    Une connexion irrégulière peut faire échouer la réponse après révocation ;
-    le client doit alors repasser par /auth/connexion. C'est le prix d'une
-    rotation stricte, et c'est le bon compromis pour un jeton de 60 jours.
-    """
+    """Rotation du refresh : l'ancien jeton est révoqué à l'usage."""
     empreinte = hash_refresh_token(data.refresh_token)
     ligne = await fetch_one(
         """select rt.id, rt.user_id, rt.expires_at, rt.revoked_at, u.plan, u.is_active
@@ -188,11 +180,7 @@ async def deconnexion_partout(user: CurrentUser):
 @router.post("/mot-de-passe-oublie", status_code=status.HTTP_204_NO_CONTENT,
              summary="Demander un code de réinitialisation")
 async def mot_de_passe_oublie(data: MotDePasseOublieIn):
-    """Répond toujours 204, que l'adresse existe ou non.
-
-    Distinguer les deux cas transformerait cette route en annuaire : on
-    saurait, adresse par adresse, qui a un compte chez nous.
-    """
+    """Répond toujours 204, que l'adresse existe ou non."""
     resultat = await mot_de_passe.demander(data.email)
     if resultat:
         user, code = resultat

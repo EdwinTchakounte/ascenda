@@ -53,10 +53,6 @@ async def poser(data: QuestionIn, user: CurrentUser):
         limite=8,
     )
 
-    # Le volume, vérifié avant d'appeler le modèle et non après : une fois la
-    # réponse rédigée, elle est facturée, et refuser de la rendre ne rembourse
-    # rien. L'estimation vaut le contexte à envoyer (quatre caractères par jeton,
-    # l'ordre de grandeur usuel en français) plus la réponse à écrire.
     estimation = sum(len(p["texte"]) for p in passages) // 4 + 1400
     jetons = await quotas.check(user, "agent_tokens", quantity=estimation)
 
@@ -184,12 +180,7 @@ async def suggestions(
     document_id: Annotated[str | None, Query()] = None,
     chapitre_id: Annotated[str | None, Query()] = None,
 ):
-    """Des questions tirées du contenu réel plutôt qu'une liste générique.
-
-    On s'appuie sur les thèmes des citations retenues et sur les idées-force de
-    la fiche : ce sont les objets sur lesquels l'agent aura effectivement de quoi
-    répondre.
-    """
+    """Des questions tirées du contenu réel plutôt qu'une liste générique."""
     propositions: list[str] = []
     if chapitre_id:
         lignes = await fetch_all(

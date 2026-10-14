@@ -1,19 +1,4 @@
-"""Les travaux périodiques.
-
-Trois choses doivent tourner sans qu'on y pense :
-
-- la **réconciliation** repêche les paiements dont la notification s'est perdue ;
-- la **fermeture** coupe l'accès des abonnements arrivés à terme ;
-- la **relance** prévient ceux dont l'abonnement se termine bientôt ;
-- la **file des courriels** renvoie ce que Brevo a refusé passagèrement ;
-- la **veille** ouvre et referme les incidents, et alerte les administrateurs.
-
-Ils tournent dans le processus de l'API plutôt que dans un ordonnanceur séparé :
-à cette échelle, un conteneur de moins vaut mieux qu'une brique de plus. Le jour
-où plusieurs instances tourneront en parallèle, il faudra un verrou pour qu'une
-seule exécute le travail. Le verrou consultatif de PostgreSQL suffit, et il est
-déjà posé ci-dessous.
-"""
+"""Les travaux périodiques."""
 import asyncio
 import logging
 import time
@@ -73,9 +58,6 @@ async def boucle_abonnements() -> None:
             if bilan and bilan["expires"]:
                 log.info("Abonnements arrivés à terme : %s", bilan)
 
-            # Les rappels ne dépendent pas des fermetures. Ils étaient jusqu'ici
-            # dans le `if` ci-dessus : un jour où rien n'expirait, personne
-            # n'était prévenu de son échéance à venir.
             if bilan is not None:
                 from app.services.courriel import evenements
 

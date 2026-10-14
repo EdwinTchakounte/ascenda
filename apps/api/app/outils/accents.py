@@ -1,16 +1,4 @@
-"""Rendre ses accents à un texte français écrit sans.
-
-Les questions de quiz, leurs explications et les commentaires de citations ont
-été rédigés sans accents (« Quelle inquietude … exprime-t-il dans sa preface ? »).
-Les citations elles-mêmes, copiées du livre, sont justes. On ne régénère rien :
-une question déjà passée par un lecteur doit rester la même question.
-
-La méthode s'appuie sur le corpus : les onze mille passages des livres disent
-comment chaque mot s'écrit en français, et dans quel voisinage. Pour un mot sans
-accent qui a des variantes accentuées dans les livres, on retient la variante la
-plus probable compte tenu du mot précédent et du mot suivant : « a » devient
-« à » devant « partir », reste « a » après « il ».
-"""
+"""Rendre ses accents à un texte français écrit sans."""
 import math
 import re
 import unicodedata
@@ -85,14 +73,8 @@ class Accentueur:
         choix = max(variantes, key=score)
         if choix == bas:
             return mot
-        # La forme sans accent existe aussi en français (« invente », « plagie »,
-        # « a », « ou ») : on ne la change que si le contexte le dit nettement.
-        # « a » et « ou » se tranchent au contexte seul : « à l'école », « où elle ».
         if bas not in ("a", "ou") and variantes.get(bas, 0) >= 5 and score(choix) < score(bas) + 1.5:
             return mot
-        # Un participe suivi d'un article, sans auxiliaire avant : c'est un verbe
-        # au présent (« la jeunesse invente un nouveau rapport »). Avec un
-        # auxiliaire (« il est configuré en fonction »), le participe reste.
         if (choix.endswith(("é", "és")) and bas.endswith(("e", "es")) and suivant
                 and plier(suivant) in _ARTICLES
                 and not (precedent and plier(precedent) in _AUXILIAIRES)):
@@ -121,9 +103,6 @@ class Accentueur:
             return mot
         total = sum(variantes.values())
         choix, n = variantes.most_common(1)[0]
-        # Les livres eux-mêmes contiennent des passages sans accents (« donnees »
-        # y paraît 232 fois contre 5 245 « données ») : on tolère la forme nue
-        # jusqu'au quart des occurrences, pourvu qu'une seule variante domine.
         if choix == bas or variantes.get(bas, 0) > total * 0.25 or n < total * 0.7 or total < 5:
             return mot
         if mot.isupper() and len(mot) > 1:
@@ -149,12 +128,7 @@ class Accentueur:
 
 
 def sans_accents(texte: str) -> bool:
-    """Une phrase assez longue pour en juger, et qui n'a aucun accent.
-
-    Les lots de quiz mélangent des questions accentuées et d'autres non : on
-    juge phrase par phrase. Une phrase qui porte déjà un accent a été écrite avec,
-    et la retoucher risquerait d'y introduire une erreur sur « a » ou « ou ».
-    """
+    """Une phrase assez longue pour en juger, et qui n'a aucun accent."""
     lettres = [c for c in texte if c.isalpha()]
     return len(lettres) >= 25 and all(c == plier(c) or c.lower() == "œ" for c in lettres if c.lower() == c) \
         and all(plier(c).upper() == c or not c.isupper() for c in lettres)

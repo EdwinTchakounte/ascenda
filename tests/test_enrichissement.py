@@ -1,17 +1,4 @@
-"""La chaîne d'enrichissement, sans appeler le modèle.
-
-Ce module est celui par lequel le corpus grandit : chaque ouvrage ajouté devra
-passer par lui. Ce qu'on vérifie ici n'est donc pas la qualité de ce que le
-modèle écrit, mais les quatre propriétés sans lesquelles une chaîne de
-génération ne se réutilise pas.
-
-- Elle **s'appelle** : les options que le module par ouvrage passe existent.
-- Elle **ne refait pas** ce qui est déjà produit.
-- Elle **remplace** au lieu d'empiler.
-- Elle **annonce son coût** avant de le dépenser.
-
-Rien ici ne consomme un jeton : on s'arrête juste avant l'appel au modèle.
-"""
+"""La chaîne d'enrichissement, sans appeler le modèle."""
 import subprocess
 import sys
 import uuid
@@ -45,10 +32,6 @@ for kind in sorted(derive.SCHEMAS):
        "" if a_consigne else "consigne manquante")
 
 print("\n· Le module par ouvrage sait appeler le moteur")
-# La régression qui a rendu le module inutilisable : produire.py passait --doc
-# et --kind, que derive.py ne connaissait pas. argparse sortait en code 2 avant
-# le premier appel au modèle, et personne ne l'a vu parce que le contrôle de
-# clé s'arrêtait juste avant.
 r = subprocess.run(
     [PYTHON, "pipeline/derive/derive.py", "--doc", "0000", "--kind", "quiz", "--estimer"],
     capture_output=True, text=True, cwd=RACINE,

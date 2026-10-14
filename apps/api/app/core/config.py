@@ -5,15 +5,7 @@ from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 def _racine() -> Path:
-    """La racine du dépôt, ou le répertoire de travail dans une image.
-
-    En développement le fichier vit dans apps/api/app/core/, à quatre niveaux
-    de la racine. Dans l'image Docker le code est copié à plat sous /app et ces
-    quatre niveaux n'existent pas : la remontée levait IndexError et le
-    conteneur mourait avant d'ouvrir le premier port. On remonte donc tant
-    qu'il y a un parent, et on s'arrête au premier répertoire qui porte un
-    .env ou un .git.
-    """
+    """La racine du dépôt, ou le répertoire de travail dans une image."""
     depart = Path(__file__).resolve()
     for candidat in depart.parents:
         if (candidat / ".env").is_file() or (candidat / ".git").exists():
@@ -41,9 +33,6 @@ class Settings(BaseSettings):
     api_env: str = "dev"
     api_cors_origins: str = "http://localhost:3251,http://localhost:3250,http://localhost:8250"
 
-    # ---- jetons
-    # En production, JWT_SECRET doit être posé dans le .env : la valeur par défaut
-    # ne sert qu'au développement local et l'API refuse de démarrer sans elle en prod.
     jwt_secret: str = "dev-secret-a-remplacer"
     jwt_algorithm: str = "HS256"
     access_token_minutes: int = 30
@@ -57,18 +46,9 @@ class Settings(BaseSettings):
     # de la colonne `chunk.embedding`.
     embed_model: str = "intfloat/multilingual-e5-large"
 
-    # ---- import d'ouvrages
-    # Où le pipeline va chercher les PDF. La console y dépose ce qu'on lui
-    # donne, dans un sous-dossier par axe.
     dossier_livres: str = str(ROOT / "livres")
-    # Cent mégaoctets : au delà, c'est un scan qui n'a pas été compressé, et il
-    # vaut mieux le dire tout de suite que de le découvrir après vingt minutes
-    # d'envoi sur une connexion lente.
     taille_max_import: int = 100 * 1024 * 1024
 
-    # ---- paiement
-    # Sans identifiants, le fournisseur passe en mode simulé : utile en
-    # développement, refusé en production par la vérification ci-dessous.
     tara_api_key: str = ""
     tara_business_id: str = ""
     public_base_url: str = "http://localhost:8250"

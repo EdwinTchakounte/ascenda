@@ -1,11 +1,4 @@
-"""Extrait un lot de chapitres in extenso pour la rédaction de QCM.
-
-Contrairement à pack.py, qui échantillonne tout un ouvrage, ce script sort
-des chapitres entiers et consécutifs : on ne peut pas écrire une question
-honnête sur un passage qu'on n'a pas lu en entier.
-
-  python3 pipeline/derive/pack_quiz.py --doc <uuid> [--from 0] [--budget 14000]
-"""
+"""Extrait un lot de chapitres in extenso pour la rédaction de QCM."""
 import sys, re, argparse
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

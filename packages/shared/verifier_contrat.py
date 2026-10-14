@@ -1,16 +1,4 @@
-"""Vérifie que les applications appellent des routes qui existent.
-
-Le contrat entre l'API et ses deux clients n'est écrit nulle part : la vitrine
-et l'application composent leurs URL dans le code. Renommer une route casse donc
-silencieusement un écran, et personne ne le voit avant un utilisateur.
-
-Ce script relève les chemins appelés dans le code Dart et TypeScript, puis les
-confronte au schéma de l'API. Il ne remplace pas des types partagés : il attrape
-la panne la plus fréquente, et il coûte deux secondes.
-
-    python3 packages/shared/verifier_contrat.py
-    python3 packages/shared/verifier_contrat.py --figer   # met à jour openapi.json
-"""
+"""Vérifie que les applications appellent des routes qui existent."""
 import argparse
 import json
 import re
@@ -22,16 +10,6 @@ RACINE = Path(__file__).resolve().parents[2]
 CONTRAT = RACINE / "packages" / "shared" / "openapi.json"
 API = "http://127.0.0.1:8250"
 
-# Les appels sont écrits sous plusieurs formes selon le langage :
-#   api.get('/bibliotheque/$id/pack')        Dart
-#   recuperer<...>("/axes", ...)             TypeScript
-#   call("GET", "/v1/axes")                  scripts de vérification
-# Le premier motif n'exigeait que le receveur soit nommé `api`. Les écrans qui
-# écrivent `ref.read(clientApiProvider).post('/paiements')` passaient donc
-# inaperçus : la vérification annonçait « aucune dérive » sans avoir regardé
-# leurs appels. On accepte maintenant n'importe quel receveur, en exigeant en
-# échange que le chemin commence par une barre oblique, ce qui écarte les
-# `push('/ecran')` du routeur et les appels qui ne visent pas l'API.
 APPELS = [
     re.compile(r"""\.(?:get|post|put|patch|delete)\(\s*['"](/[^'"]*)['"]"""),
     re.compile(r"""_uri\(\s*['"](/[^'"]*)['"]"""),
@@ -40,11 +18,7 @@ APPELS = [
 
 
 def normaliser(chemin: str) -> str:
-    """Ramène une URL composée à la forme du schéma.
-
-    « /bibliotheque/$id/pack » et « /bibliotheque/{document_id}/pack » désignent
-    la même route : on remplace toute portion variable par un marqueur unique.
-    """
+    """Ramène une URL composée à la forme du schéma."""
     chemin = chemin.split("?")[0].rstrip("/")
     if not chemin.startswith("/v1"):
         chemin = "/v1" + chemin

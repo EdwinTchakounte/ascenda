@@ -1,14 +1,4 @@
-"""Reconstruit les passages d'un ouvrage dont le texte avait été jugé absent.
-
-L'ingestion écarte un document quand elle compte moins de 400 caractères par
-page : c'est le signe habituel d'un scan sans couche de texte. La règle s'est
-trompée sur « L'Afrique en 200 proverbes » : le livre porte un proverbe par
-page, quatre-vingt-dix caractères, parfaitement lisibles. Marqué « OCR en
-échec », il n'a jamais reçu un seul passage, et l'axe Afrique perdait un titre.
-
-On ne réingère pas : cela supprimerait la ligne du document, donc son identité,
-donc le rattachement de sa fiche de lecture. On construit les passages en place.
-"""
+"""Reconstruit les passages d'un ouvrage dont le texte avait été jugé absent."""
 import argparse
 import sys
 from pathlib import Path

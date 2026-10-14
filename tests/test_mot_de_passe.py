@@ -1,13 +1,4 @@
-"""La réinitialisation de mot de passe, et ce qu'elle refuse.
-
-Une route de réinitialisation est la porte de derrière de tout service : elle
-donne un compte à qui sait s'en servir. Ce que cette suite vérifie n'est donc
-pas seulement qu'elle marche, mais surtout qu'elle résiste.
-
-Elle parle au service, pas à l'API par HTTP, parce qu'il faut connaître le code
-en clair pour dérouler le parcours. Les réponses HTTP, elles, sont vérifiées par
-`test_api.py`.
-"""
+"""La réinitialisation de mot de passe, et ce qu'elle refuse."""
 import asyncio
 import sys
 import uuid

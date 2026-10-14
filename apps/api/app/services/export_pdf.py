@@ -1,13 +1,4 @@
-"""Export PDF d'un pack d'ouvrage.
-
-Un document qu'on imprime, qu'on partage, qu'on emporte dans une salle sans
-réseau. Il reprend la fiche, les idées-force, le plan de lecture, les citations
-avec leurs pages et les quiz avec leur corrigé.
-
-Écrit avec fpdf2 : deux cents kilo-octets de dépendance, aucune bibliothèque
-système. Sur une machine où l'installation d'un paquet prend des minutes, cela
-compte.
-"""
+"""Export PDF d'un pack d'ouvrage."""
 import io
 import unicodedata
 
@@ -22,13 +13,7 @@ NUIT = (11, 20, 53)
 
 
 def _latin1(texte: str | None) -> str:
-    """Les polices de base de fpdf2 sont en Latin-1.
-
-    Plutôt que d'embarquer une police Unicode de plusieurs mégaoctets, on
-    translittère ce qui ne passe pas. Les accents français passent ; les
-    guillemets typographiques et les tirets longs sont ramenés à leur
-    équivalent simple.
-    """
+    """Les polices de base de fpdf2 sont en Latin-1."""
     if not texte:
         return ""
     remplacements = {
@@ -70,12 +55,7 @@ class Document(FPDF):
     # -- aides de mise en page
 
     def bloc(self, texte: str, hauteur: float):
-        """multi_cell en repartant systematiquement de la marge gauche.
-
-        fpdf laisse le curseur ou le bloc precedent s'est arrete. Sans remise a
-        la marge, la largeur disponible finit par tomber a zero et le rendu
-        echoue au milieu du document.
-        """
+        """multi_cell en repartant systematiquement de la marge gauche."""
         self.set_x(self.l_margin)
         self.multi_cell(0, hauteur, texte)
 
@@ -116,10 +96,6 @@ class Document(FPDF):
         self.ln(5)
 
 
-# Un export complet d'un ouvrage bien fourni fait quarante-trois pages et six
-# secondes de rendu : personne n'imprime cela. Par défaut on produit un
-# compagnon de lecture d'une dizaine de pages ; l'intégrale reste accessible à
-# la demande.
 CITATIONS_PAR_DEFAUT = 60
 QUESTIONS_PAR_DEFAUT = 60
 
