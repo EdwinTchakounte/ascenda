@@ -7,7 +7,44 @@ from pathlib import Path
 
 from app.core.db import close_pool, execute, fetch_all, open_pool
 from app.services import planner
-from app.services.titres import est_appareil, titre_lisible
+from app.services.titres import est_appareil, est_repli, titre_lisible
+
+
+def par_divisions(chapitres: list[dict], plans: dict, noms: dict) -> dict:
+    """Le nom qu'un chapitre tient de la division du livre où il commence.
+
+    Les divisions sont relevées dans les ouvrages par pipeline/ingest/titrer.py.
+    Une division découpée en plusieurs chapitres les numérote.
+    """
+    par_doc: dict = {}
+    for c in chapitres:
+        par_doc.setdefault(c["document_id"], []).append(c)
+    sorties: dict = {}
+    for doc, liste in par_doc.items():
+        plan = plans.get(noms.get(str(doc)))
+        if not isinstance(plan, list):
+            continue
+        bornes = sorted(plan, key=lambda d: d["page"])
+        groupes: list[list] = []
+        for c in sorted(liste, key=lambda x: x["ord"]):
+            # Un chapitre chevauche souvent deux divisions, le découpage s'étant
+            # fait au nombre de mots : il relève de celle qui tient son milieu.
+            debut, fin = c["page_start"] or 0, c["page_end"] or c["page_start"] or 0
+            milieu = (debut + fin) // 2
+            retenu = None
+            for d in bornes:
+                if d["page"] <= milieu:
+                    retenu = d["titre"]
+            if retenu is None:
+                continue
+            if groupes and groupes[-1][0] == retenu:
+                groupes[-1][1].append(c)
+            else:
+                groupes.append([retenu, [c]])
+        for titre, membres in groupes:
+            for i, c in enumerate(membres, start=1):
+                sorties[c["id"]] = titre if len(membres) == 1 else f"{titre} ({i}/{len(membres)})"
+    return sorties
 
 
 async def titres(essai: bool) -> int:
@@ -20,6 +57,11 @@ async def titres(essai: bool) -> int:
     traduits = json.loads((Path(__file__).parent / "titres_traduits.json").read_text(encoding="utf-8"))
     noms = {str(l["id"]): l["titre"] for l in await fetch_all(
         "select id, coalesce(title_clean, title_raw) as titre from document")}
+    divisions = par_divisions(
+        chapitres,
+        json.loads((Path(__file__).parent / "titres_par_pages.json").read_text(encoding="utf-8")),
+        noms,
+    )
     changes = 0
     precedent, doc, suites = None, None, 0
     for c in chapitres:
@@ -30,8 +72,13 @@ async def titres(essai: bool) -> int:
         source = c["title_source"] or c["title"]
         releves = traduits.get(noms.get(str(c["document_id"]), ""), {})
         traduction = releves.get(str(c["ord"]))
+        # Quand l'ouvrage a été relevé page à page, la division nomme mieux le
+        # chapitre que la suite du précédent : on écarte ce repli-là.
+        division = None if traduction else divisions.get(c["id"])
         neuf = traduction or titre_lisible(source, page_start=c["page_start"], page_end=c["page_end"],
-                                           precedent=precedent, texte=c["texte"])
+                                           precedent=None if division else precedent, texte=c["texte"])
+        if division and est_repli(neuf):
+            neuf = division
         if (not traduction and releves and re.fullmatch(r"Pages? \d+( à \d+)?", neuf or "")
                 and precedent and precedent.startswith("Chapitre") and suites < 3):
             base = re.sub(r"\s*\(suite\)$", "", precedent)
@@ -274,22 +321,37 @@ async def seances(essai: bool) -> tuple[int, int]:
     return changes, plans
 
 
+ETAPES = ("titres", "durees", "seances", "tailles", "metadonnees", "accents")
+
+
 async def main() -> None:
     essai = "--essai" in sys.argv
+    # Sans étape nommée, tout est corrigé. En nommer une ou plusieurs les isole.
+    demandees = [e for e in ETAPES if f"--{e}" in sys.argv] or list(ETAPES)
+    inconnues = [a for a in sys.argv[1:] if a != "--essai" and a.lstrip("-") not in ETAPES]
+    if inconnues:
+        raise SystemExit(f"Étape inconnue : {' '.join(inconnues)}. Au choix : {', '.join(ETAPES)}.")
+    t = d = s = p = o = m = acc = 0
     await open_pool()
     try:
-        print("Titres de chapitre")
-        t = await titres(essai)
-        print("Durées de lecture")
-        d = await durees(essai)
-        print("Séances et plans")
-        s, p = await seances(essai)
-        print("Tailles des fichiers")
-        o = await tailles(essai)
-        print("Métadonnées")
-        m = await metadonnees(essai)
-        print("Accents des quiz et des citations")
-        acc = await accents(essai)
+        if "titres" in demandees:
+            print("Titres de chapitre")
+            t = await titres(essai)
+        if "durees" in demandees:
+            print("Durées de lecture")
+            d = await durees(essai)
+        if "seances" in demandees:
+            print("Séances et plans")
+            s, p = await seances(essai)
+        if "tailles" in demandees:
+            print("Tailles des fichiers")
+            o = await tailles(essai)
+        if "metadonnees" in demandees:
+            print("Métadonnées")
+            m = await metadonnees(essai)
+        if "accents" in demandees:
+            print("Accents des quiz et des citations")
+            acc = await accents(essai)
     finally:
         await close_pool()
     verbe = "à corriger" if essai else "corrigés"

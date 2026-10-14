@@ -129,6 +129,27 @@ rangs = _C(x["reponse"] for x in m)
 ok("aucune position ne domine", max(rangs.values()) / len(m) < 0.4, dict(rangs))
 ok("les questions et explications ne changent pas", [x["q"] for x in m] == [x["q"] for x in qs])
 
+print("\n" + "=" * 92)
+print("\n· Divisions relevées dans les ouvrages")
+from app.outils.corriger_corpus import par_divisions  # noqa: E402
+
+noms = {"d1": "Ouvrage essai"}
+plan = {"Ouvrage essai": [{"page": 5, "titre": "Préface"},
+                          {"page": 11, "titre": "Chapitre 1 : le début"},
+                          {"page": 31, "titre": "Chapitre 2 : la suite"}]}
+chapitres = [{"id": f"c{i}", "document_id": "d1", "ord": i, "page_start": p, "page_end": q}
+             for i, (p, q) in enumerate([(1, 4), (4, 9), (9, 14), (14, 20), (20, 26), (26, 36), (36, 42)])]
+d = par_divisions(chapitres, plan, noms)
+ok("les pages qui précèdent la première division ne sont pas nommées", "c0" not in d)
+ok("une division d'un seul chapitre ne porte pas de rang", d.get("c1") == "Préface", d.get("c1"))
+ok("une division découpée numérote ses chapitres",
+   [d.get(f"c{i}") for i in (2, 3, 4)] == ["Chapitre 1 : le début (1/3)", "Chapitre 1 : le début (2/3)",
+                                           "Chapitre 1 : le début (3/3)"],
+   [d.get(f"c{i}") for i in (2, 3, 4)])
+ok("un chapitre à cheval relève de la division qui tient son milieu",
+   d.get("c5") == "Chapitre 2 : la suite (1/2)", d.get("c5"))
+ok("un ouvrage sans relevé reste intact", par_divisions(chapitres, {}, noms) == {})
+
 _echecs = [x for x in _resultats if not x[0]]
 print(f"{len(_resultats) - len(_echecs)} sur {len(_resultats)}")
 if _echecs:

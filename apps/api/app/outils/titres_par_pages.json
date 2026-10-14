@@ -1,0 +1,805 @@
+{
+  "_lisez-moi": "Divisions relevées dans les ouvrages eux-mêmes : un chapitre que l'extraction a laissé sans nom prend celui de la division où il commence, suivi de son rang quand la division en compte plusieurs. Clé : titre de l'ouvrage. Produit par pipeline/ingest/titrer.py, appliqué par corriger_corpus, qui garde l'original dans title_source.",
+  "Panorama de l'intelligence artificielle. Volume 3 : l'intelligence artificielle, frontières et applications": [
+    {
+      "page": 5,
+      "titre": "Présentation de l'ouvrage"
+    },
+    {
+      "page": 7,
+      "titre": "Sommaire des trois volumes"
+    },
+    {
+      "page": 15,
+      "titre": "Préface"
+    },
+    {
+      "page": 21,
+      "titre": "Chapitre 1 : Informatique théorique, calculabilité, décidabilité et logique"
+    },
+    {
+      "page": 63,
+      "titre": "Chapitre 2 : Informatique théorique, complexité, automates et au-delà"
+    },
+    {
+      "page": 99,
+      "titre": "Chapitre 3 : Bases de données et intelligence artificielle"
+    },
+    {
+      "page": 129,
+      "titre": "Chapitre 4 : Web sémantique"
+    },
+    {
+      "page": 153,
+      "titre": "Chapitre 5 : Intelligence artificielle et langage"
+    },
+    {
+      "page": 173,
+      "titre": "Chapitre 6 : Bioinformatique"
+    },
+    {
+      "page": 197,
+      "titre": "Chapitre 7 : Intelligence artificielle et reconnaissance des formes, vision, apprentissage"
+    },
+    {
+      "page": 229,
+      "titre": "Chapitre 8 : Intelligence artificielle et robotique"
+    },
+    {
+      "page": 283,
+      "titre": "Chapitre 9 : Perspectives philosophiques et épistémologiques ouvertes par l'intelligence artificielle"
+    },
+    {
+      "page": 301,
+      "titre": "Chapitre 10 : Intelligence artificielle et psychologie du raisonnement et de la décision"
+    },
+    {
+      "page": 313,
+      "titre": "Chapitre 11 : Fertilisation croisée entre interaction personne-système et intelligence artificielle"
+    },
+    {
+      "page": 339,
+      "titre": "Postface : la machine en quête de sapience"
+    },
+    {
+      "page": 349,
+      "titre": "Épilogue : pour une défense de la recherche en intelligence artificielle"
+    },
+    {
+      "page": 361,
+      "titre": "Index"
+    }
+  ],
+  "Panorama de l'intelligence artificielle. Volume 2 : algorithmes pour l'intelligence artificielle": [
+    {
+      "page": 5,
+      "titre": "Présentation de l'ouvrage"
+    },
+    {
+      "page": 7,
+      "titre": "Avant-propos des trois volumes"
+    },
+    {
+      "page": 11,
+      "titre": "Liste des auteurs du volume"
+    },
+    {
+      "page": 13,
+      "titre": "Préface"
+    },
+    {
+      "page": 17,
+      "titre": "Chapitre 1 : Recherche heuristiquement ordonnée dans les graphes d'états"
+    },
+    {
+      "page": 45,
+      "titre": "Chapitre 2 : Jeux et recherche heuristique"
+    },
+    {
+      "page": 71,
+      "titre": "Chapitre 3 : Déduction automatique"
+    },
+    {
+      "page": 101,
+      "titre": "Chapitre 4 : Programmation logique"
+    },
+    {
+      "page": 135,
+      "titre": "Chapitre 5 : Logique propositionnelle et algorithmes autour de SAT"
+    },
+    {
+      "page": 173,
+      "titre": "Chapitre 6 : Raisonnement par contraintes"
+    },
+    {
+      "page": 197,
+      "titre": "Chapitre 7 : Réseaux de contraintes valués"
+    },
+    {
+      "page": 219,
+      "titre": "Chapitre 8 : Modèles graphiques pour l'incertitude, inférence et apprentissage"
+    },
+    {
+      "page": 247,
+      "titre": "Chapitre 9 : Planification en intelligence artificielle"
+    },
+    {
+      "page": 277,
+      "titre": "Chapitre 10 : Algorithmique de l'apprentissage et de la fouille de données"
+    },
+    {
+      "page": 317,
+      "titre": "Chapitre 11 : Méta-heuristiques et intelligence artificielle"
+    },
+    {
+      "page": 343,
+      "titre": "Postface : intelligence artificielle et recherche opérationnelle"
+    },
+    {
+      "page": 351,
+      "titre": "Index"
+    },
+    {
+      "page": 363,
+      "titre": "Table des matières"
+    }
+  ],
+  "Manuel d'intelligence artificielle": [
+    {
+      "page": 7,
+      "titre": "Avant-propos"
+    },
+    {
+      "page": 9,
+      "titre": "Plan de l'ouvrage"
+    },
+    {
+      "page": 11,
+      "titre": "Table des matières"
+    },
+    {
+      "page": 21,
+      "titre": "Chapitre 1 : Introduction"
+    },
+    {
+      "page": 33,
+      "titre": "Chapitre 2 : Énumération et complexité"
+    },
+    {
+      "page": 47,
+      "titre": "Chapitre 3 : Espace d'état et métaphore du labyrinthe"
+    },
+    {
+      "page": 81,
+      "titre": "Chapitre 4 : Méthodes de réduction"
+    },
+    {
+      "page": 101,
+      "titre": "Chapitre 5 : Réseaux sémantiques"
+    },
+    {
+      "page": 115,
+      "titre": "Chapitre 6 : Notions d'apprentissage"
+    },
+    {
+      "page": 133,
+      "titre": "Chapitre 7 : Bases du langage Scheme"
+    },
+    {
+      "page": 155,
+      "titre": "Chapitre 8 : Premières applications"
+    },
+    {
+      "page": 171,
+      "titre": "Chapitre 9 : Vers l'intelligence artificielle en Scheme"
+    },
+    {
+      "page": 221,
+      "titre": "Chapitre 10 : Calcul des propositions"
+    },
+    {
+      "page": 245,
+      "titre": "Chapitre 11 : Logique des prédicats"
+    },
+    {
+      "page": 265,
+      "titre": "Chapitre 12 : Éléments de Prolog"
+    },
+    {
+      "page": 299,
+      "titre": "Chapitre 13 : Compléments de programmation logique"
+    },
+    {
+      "page": 335,
+      "titre": "Chapitre 14 : Logiques multivaluées"
+    },
+    {
+      "page": 351,
+      "titre": "Chapitre 15 : Logiques floues"
+    },
+    {
+      "page": 373,
+      "titre": "Chapitre 16 : Logiques non monotones ou révisables"
+    },
+    {
+      "page": 389,
+      "titre": "Chapitre 17 : Logiques modales"
+    },
+    {
+      "page": 417,
+      "titre": "Chapitre 18 : Logiques d'ordre supérieur"
+    },
+    {
+      "page": 425,
+      "titre": "Chapitre 19 : Introduction aux systèmes experts"
+    },
+    {
+      "page": 439,
+      "titre": "Chapitre 20 : Systèmes experts, développement"
+    },
+    {
+      "page": 455,
+      "titre": "Chapitre 21 : Ingénierie et gestion des connaissances"
+    },
+    {
+      "page": 495,
+      "titre": "Chapitre 22 : Formalismes grammaticaux"
+    },
+    {
+      "page": 547,
+      "titre": "Chapitre 23 : Langages à classes"
+    },
+    {
+      "page": 569,
+      "titre": "Chapitre 24 : Langages à prototypes"
+    },
+    {
+      "page": 579,
+      "titre": "Chapitre 25 : Les acteurs"
+    },
+    {
+      "page": 599,
+      "titre": "Chapitre 26 : Agents et systèmes multi-agents"
+    },
+    {
+      "page": 623,
+      "titre": "Chapitre 27 : Les systèmes multi-agents"
+    },
+    {
+      "page": 657,
+      "titre": "Chapitre 28 : Métaconnaissances réactives et proactives"
+    },
+    {
+      "page": 673,
+      "titre": "Chapitre 29 : Traitement des langues naturelles"
+    },
+    {
+      "page": 695,
+      "titre": "Chapitre 30 : Autres systèmes intelligents spécialisés"
+    },
+    {
+      "page": 711,
+      "titre": "Chapitre 31 : Le projet robotique"
+    },
+    {
+      "page": 745,
+      "titre": "Chapitre 32 : Vie artificielle"
+    },
+    {
+      "page": 767,
+      "titre": "Conclusion"
+    },
+    {
+      "page": 769,
+      "titre": "Index"
+    }
+  ],
+  "Intelligence artificielle et informatique théorique": [
+    {
+      "page": 5,
+      "titre": "Remerciements"
+    },
+    {
+      "page": 7,
+      "titre": "Table des matières"
+    },
+    {
+      "page": 21,
+      "titre": "Avant-propos"
+    },
+    {
+      "page": 25,
+      "titre": "Chapitre 1 : Définir l'intelligence artificielle"
+    },
+    {
+      "page": 41,
+      "titre": "Chapitre 2 : Le calcul propositionnel"
+    },
+    {
+      "page": 55,
+      "titre": "Chapitre 3 : Le calcul des prédicats"
+    },
+    {
+      "page": 65,
+      "titre": "Chapitre 4 : Les machines de Turing"
+    },
+    {
+      "page": 73,
+      "titre": "Chapitre 5 : Les systèmes formels"
+    },
+    {
+      "page": 93,
+      "titre": "Chapitre 6 : Calcul propositionnel et résolution"
+    },
+    {
+      "page": 105,
+      "titre": "Chapitre 7 : Calcul des prédicats et résolution"
+    },
+    {
+      "page": 115,
+      "titre": "Chapitre 8 : Les logiques non-classiques"
+    },
+    {
+      "page": 131,
+      "titre": "Chapitre 9 : Théorie des langages formels"
+    },
+    {
+      "page": 139,
+      "titre": "Chapitre 10 : La calculabilité"
+    },
+    {
+      "page": 151,
+      "titre": "Chapitre 11 : La complexité"
+    },
+    {
+      "page": 175,
+      "titre": "Chapitre 12 : Lambda-calcul"
+    },
+    {
+      "page": 205,
+      "titre": "Chapitre 13 : Méthodes faibles"
+    },
+    {
+      "page": 227,
+      "titre": "Chapitre 14 : Problèmes de satisfaction de contraintes"
+    },
+    {
+      "page": 267,
+      "titre": "Chapitre 15 : La programmation des jeux"
+    },
+    {
+      "page": 321,
+      "titre": "Chapitre 16 : Les systèmes experts"
+    },
+    {
+      "page": 347,
+      "titre": "Chapitre 17 : Programmation fonctionnelle, ML"
+    },
+    {
+      "page": 363,
+      "titre": "Chapitre 18 : Programmation logique, Prolog"
+    },
+    {
+      "page": 389,
+      "titre": "Chapitre 19 : Apprentissage symbolique automatique"
+    },
+    {
+      "page": 395,
+      "titre": "Chapitre 20 : Les réseaux de neurones"
+    },
+    {
+      "page": 415,
+      "titre": "Chapitre 21 : Algorithmes évolutionnaires"
+    },
+    {
+      "page": 443,
+      "titre": "Chapitre 22 : Apprentissage par renforcement"
+    },
+    {
+      "page": 479,
+      "titre": "Chapitre 23 : Conclusion"
+    },
+    {
+      "page": 503,
+      "titre": "Bibliographie"
+    },
+    {
+      "page": 535,
+      "titre": "Index"
+    }
+  ],
+  "Les 48 lois du pouvoir": [
+    {
+      "page": 4,
+      "titre": "Remerciements"
+    },
+    {
+      "page": 6,
+      "titre": "Sommaire"
+    },
+    {
+      "page": 14,
+      "titre": "Préface"
+    },
+    {
+      "page": 22,
+      "titre": "Loi 1 : Ne surpassez jamais le maître"
+    },
+    {
+      "page": 29,
+      "titre": "Loi 2 : Ne vous fiez pas à vos amis, utilisez vos ennemis"
+    },
+    {
+      "page": 37,
+      "titre": "Loi 3 : Dissimulez vos intentions"
+    },
+    {
+      "page": 52,
+      "titre": "Loi 4 : Dites-en toujours moins que nécessaire"
+    },
+    {
+      "page": 58,
+      "titre": "Loi 5 : Protégez votre réputation comme la prunelle de vos yeux"
+    },
+    {
+      "page": 65,
+      "titre": "Loi 6 : Attirez l’attention à tout prix"
+    },
+    {
+      "page": 77,
+      "titre": "Loi 7 : Laissez le travail aux autres, mais recueillez-en les lauriers"
+    },
+    {
+      "page": 83,
+      "titre": "Loi 8 : Obligez l’adversaire à se battre sur votre propre terrain"
+    },
+    {
+      "page": 90,
+      "titre": "Loi 9 : Remportez la victoire par vos actes et non par vos discours"
+    },
+    {
+      "page": 97,
+      "titre": "Loi 10 : Fuyez la contagion de la malchance et du malheur"
+    },
+    {
+      "page": 103,
+      "titre": "Loi 11 : Rendez-vous indispensable"
+    },
+    {
+      "page": 110,
+      "titre": "Loi 12 : Soyez d’une honnêteté et d’une générosité désarmantes"
+    },
+    {
+      "page": 116,
+      "titre": "Loi 13 : Misez sur l’intérêt personnel, jamais sur la pitié ni la reconnaissance"
+    },
+    {
+      "page": 122,
+      "titre": "Loi 14 : Soyez un faux ami… et un vrai espion"
+    },
+    {
+      "page": 128,
+      "titre": "Loi 15 : Écrasez complètement l’ennemi"
+    },
+    {
+      "page": 136,
+      "titre": "Loi 16 : Faites-vous désirer"
+    },
+    {
+      "page": 144,
+      "titre": "Loi 17 : Soyez imprévisible"
+    },
+    {
+      "page": 151,
+      "titre": "Loi 18 : Ne restez pas dans votre tour d’ivoire"
+    },
+    {
+      "page": 158,
+      "titre": "Loi 19 : Ne marchez pas sur les pieds de n’importe qui"
+    },
+    {
+      "page": 166,
+      "titre": "Loi 20 : Ne prenez pas parti"
+    },
+    {
+      "page": 177,
+      "titre": "Loi 21 : À sot, sot et demi"
+    },
+    {
+      "page": 184,
+      "titre": "Loi 22 : Capitulez à temps"
+    },
+    {
+      "page": 192,
+      "titre": "Loi 23 : Concentrez vos forces"
+    },
+    {
+      "page": 199,
+      "titre": "Loi 24 : Soyez un courtisan modèle"
+    },
+    {
+      "page": 212,
+      "titre": "Loi 25 : Changez de peau"
+    },
+    {
+      "page": 221,
+      "titre": "Loi 26 : Gardez les mains propres"
+    },
+    {
+      "page": 236,
+      "titre": "Loi 27 : Créez une mystique"
+    },
+    {
+      "page": 248,
+      "titre": "Loi 28 : Faites preuve d’audace"
+    },
+    {
+      "page": 257,
+      "titre": "Loi 29 : Suivez un plan précis jusqu’au but final"
+    },
+    {
+      "page": 266,
+      "titre": "Loi 30 : N’ayez jamais l’air de forcer"
+    },
+    {
+      "page": 275,
+      "titre": "Loi 31 : Offrez le choix, Charybde ou Scylla ?"
+    },
+    {
+      "page": 284,
+      "titre": "Loi 32 : Touchez l’imagination"
+    },
+    {
+      "page": 292,
+      "titre": "Loi 33 : Trouvez le talon d'Achille"
+    },
+    {
+      "page": 303,
+      "titre": "Loi 34 : Soyez royal"
+    },
+    {
+      "page": 312,
+      "titre": "Loi 35 : Maîtrisez le temps"
+    },
+    {
+      "page": 321,
+      "titre": "Loi 36 : Méprisez les contrariétés"
+    },
+    {
+      "page": 330,
+      "titre": "Loi 37 : Jouez sur le visuel"
+    },
+    {
+      "page": 338,
+      "titre": "Loi 38 : Pensez librement, parlez sobrement"
+    },
+    {
+      "page": 346,
+      "titre": "Loi 39 : Exaspérez l’ennemi"
+    },
+    {
+      "page": 354,
+      "titre": "Loi 40 : N’hésitez pas à payer le prix"
+    },
+    {
+      "page": 368,
+      "titre": "Loi 41 : Ne succédez à personne"
+    },
+    {
+      "page": 379,
+      "titre": "Loi 42 : Éliminez l’agitateur"
+    },
+    {
+      "page": 388,
+      "titre": "Loi 43 : Parlez aux cœurs et aux esprits"
+    },
+    {
+      "page": 397,
+      "titre": "Loi 44 : Singez l’ennemi"
+    },
+    {
+      "page": 413,
+      "titre": "Loi 45 : Appelez au changement, pas à la révolution"
+    },
+    {
+      "page": 421,
+      "titre": "Loi 46 : Ne soyez pas trop parfait"
+    },
+    {
+      "page": 431,
+      "titre": "Loi 47 : Sachez vous arrêter"
+    },
+    {
+      "page": 440,
+      "titre": "Loi 48 : Soyez fluide"
+    },
+    {
+      "page": 453,
+      "titre": "Sources"
+    },
+    {
+      "page": 456,
+      "titre": "Index"
+    }
+  ],
+  "Forest Management and Planning. Aménagement et planification forestiers": [
+    {
+      "page": 6,
+      "titre": "Contents"
+    },
+    {
+      "page": 10,
+      "titre": "Preface"
+    },
+    {
+      "page": 12,
+      "titre": "Chapitre 1 : Management of forests and other natural resources"
+    },
+    {
+      "page": 26,
+      "titre": "Chapitre 2 : Valuing and characterizing forest conditions"
+    },
+    {
+      "page": 68,
+      "titre": "Chapitre 3 : Geographic information and land classification in support of forest planning"
+    },
+    {
+      "page": 86,
+      "titre": "Chapitre 4 : Estimation and projection of stand and forest conditions"
+    },
+    {
+      "page": 114,
+      "titre": "Chapitre 5 : Optimization of tree- and stand-level objectives"
+    },
+    {
+      "page": 136,
+      "titre": "Chapitre 6 : Graphical solution techniques for two-variable linear problems"
+    },
+    {
+      "page": 152,
+      "titre": "Chapitre 7 : Linear programming"
+    },
+    {
+      "page": 174,
+      "titre": "Chapitre 8 : Advanced planning techniques"
+    },
+    {
+      "page": 196,
+      "titre": "Chapitre 9 : Forest and natural resource sustainability"
+    },
+    {
+      "page": 210,
+      "titre": "Chapitre 10 : Models of desired forest structure"
+    },
+    {
+      "page": 224,
+      "titre": "Chapitre 11 : Control techniques for commodity production and wildlife objectives"
+    },
+    {
+      "page": 246,
+      "titre": "Chapitre 12 : Spatial restrictions and considerations in forest planning"
+    },
+    {
+      "page": 268,
+      "titre": "Chapitre 13 : Hierarchical system for planning and scheduling management activities"
+    },
+    {
+      "page": 278,
+      "titre": "Chapitre 14 : Forest supply chain management"
+    },
+    {
+      "page": 292,
+      "titre": "Chapitre 15 : Forest certification and carbon sequestration"
+    },
+    {
+      "page": 308,
+      "titre": "Annexe A : databases used throughout the book"
+    },
+    {
+      "page": 326,
+      "titre": "Annexe B : the simplex method for solving linear problems"
+    },
+    {
+      "page": 334,
+      "titre": "Annexe C : writing a memorandum or report"
+    },
+    {
+      "page": 338,
+      "titre": "Index"
+    }
+  ],
+  "Le néo-colonialisme, dernier stade de l'impérialisme": [
+    {
+      "page": 9,
+      "titre": "Dédicace"
+    },
+    {
+      "page": 11,
+      "titre": "Introduction"
+    },
+    {
+      "page": 21,
+      "titre": "Chapitre 1 : Les ressources de l'Afrique"
+    },
+    {
+      "page": 35,
+      "titre": "Chapitre 2 : Les obstacles au progrès économique"
+    },
+    {
+      "page": 55,
+      "titre": "Chapitre 3 : La finance impérialiste"
+    },
+    {
+      "page": 69,
+      "titre": "Chapitre 4 : Le capitalisme de monopole et le dollar américain"
+    },
+    {
+      "page": 85,
+      "titre": "Chapitre 5 : La vérité sous les gros titres"
+    },
+    {
+      "page": 99,
+      "titre": "Chapitre 6 : Matières premières et intérêts étrangers"
+    },
+    {
+      "page": 123,
+      "titre": "Chapitre 7 : L'empire Oppenheimer"
+    },
+    {
+      "page": 133,
+      "titre": "Chapitre 8 : Investissements étrangers dans les mines d'Afrique du Sud"
+    },
+    {
+      "page": 139,
+      "titre": "Chapitre 9 : L'Anglo American Corporation Limited"
+    },
+    {
+      "page": 149,
+      "titre": "Chapitre 10 : Les groupes du diamant"
+    },
+    {
+      "page": 163,
+      "titre": "Chapitre 11 : Les intérêts miniers en Afrique centrale"
+    },
+    {
+      "page": 171,
+      "titre": "Chapitre 12 : Compagnies et combinats"
+    },
+    {
+      "page": 187,
+      "titre": "Chapitre 13 : Les géants de l'étain, de l'aluminium et du nickel"
+    },
+    {
+      "page": 205,
+      "titre": "Chapitre 14 : L'Union minière du Haut Katanga"
+    },
+    {
+      "page": 219,
+      "titre": "Chapitre 15 : Pressions économiques sur la République du Congo"
+    },
+    {
+      "page": 227,
+      "titre": "Chapitre 16 : Zones monétaires et banques étrangères"
+    },
+    {
+      "page": 235,
+      "titre": "Chapitre 17 : Les nouvelles industries et leurs effets sur les pays producteurs de matières premières"
+    },
+    {
+      "page": 247,
+      "titre": "Chapitre 18 : Les mécanismes du néo-colonialisme"
+    },
+    {
+      "page": 263,
+      "titre": "Conclusion"
+    },
+    {
+      "page": 268,
+      "titre": "Bibliographie"
+    },
+    {
+      "page": 271,
+      "titre": "Table des matières"
+    }
+  ]
+}
