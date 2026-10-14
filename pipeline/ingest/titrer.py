@@ -29,13 +29,17 @@ LISEZ_MOI = (
 )
 
 
-def livre(nom: str):
+def fichier_livre(nom: str):
     """Les noms de fichiers mêlent accents composés et combinés : on compare pliés."""
     cible = unicodedata.normalize("NFC", nom)
-    for p in LIVRES.rglob("*.pdf"):
+    for p in LIVRES.rglob("*.*"):
         if unicodedata.normalize("NFC", str(p.relative_to(LIVRES))) == cible:
-            return pymupdf.open(p)
+            return p
     raise SystemExit(f"Fichier introuvable dans livres/ : {nom}")
+
+
+def livre(nom: str):
+    return pymupdf.open(fichier_livre(nom))
 
 
 def plier(s: str) -> str:
@@ -50,16 +54,71 @@ def lignes(doc, page: int, n: int = 6) -> list[str]:
     return [l.strip() for l in doc[page - 1].get_text("text").split("\n") if l.strip()][:n]
 
 
+SOMMAIRE = re.compile(r"\.{6,}")
+
+
 def ouvertures(doc, motif: re.Pattern, tete: int = 4) -> list[tuple[int, re.Match]]:
-    """Les pages dont une des premières lignes porte le motif cherché."""
+    """Les pages dont une des premières lignes porte le motif cherché.
+
+    Une page de sommaire, reconnaissable à ses lignes de points de conduite,
+    reprend les mêmes mentions sans ouvrir quoi que ce soit.
+    """
     trouvees = []
     for p in range(1, doc.page_count + 1):
+        if len(SOMMAIRE.findall(doc[p - 1].get_text("text"))) >= 3:
+            continue
         for l in lignes(doc, p, tete):
             m = motif.match(l)
             if m:
                 trouvees.append((p, m))
                 break
     return trouvees
+
+
+def textes_epub(nom: str) -> list[str]:
+    """Les pages d'un epub telles que l'ingestion les compte : un document par
+    page, ceux qui ne portent presque rien étant écartés."""
+    import warnings
+    warnings.filterwarnings("ignore")
+    from bs4 import BeautifulSoup
+    from ebooklib import ITEM_DOCUMENT, epub
+
+    from common import norm
+    chemin = fichier_livre(nom)
+    pages = []
+    for item in epub.read_epub(str(chemin), options={"ignore_ncx": True}).get_items():
+        if item.get_type() != ITEM_DOCUMENT:
+            continue
+        txt = norm(BeautifulSoup(item.get_content(), "lxml").get_text("\n"))
+        if len(txt.strip()) >= 40:
+            pages.append(txt)
+    return pages
+
+
+def controler(pages, divisions: list[dict], ouvrage: str) -> list[dict]:
+    """Une division relevée à la main doit se retrouver sur la page annoncée."""
+    for d in divisions:
+        intitule = d["titre"].split(" : ", 1)[-1]
+        mots = [plier(m) for m in re.findall(r"[^\W\d_]{7,}", intitule, re.UNICODE)]
+        if not mots or not (1 <= d["page"] <= len(pages)):
+            if not (1 <= d["page"] <= len(pages)):
+                raise SystemExit(f"{ouvrage} : page {d['page']} hors du fichier ({len(pages)} pages).")
+            continue
+        texte = plier(pages[d["page"] - 1][:2500])
+        if not any(m in texte for m in mots):
+            raise SystemExit(f"{ouvrage} : « {d['titre']} » ne se retrouve pas page {d['page']}.")
+    return divisions
+
+
+def premieres_pages(doc, motif: re.Pattern, convertir=None, tete: int = 4) -> dict[int, int]:
+    """La première page où chaque division s'ouvre. La table des matières, plus
+    loin dans l'ouvrage, reprend les mêmes mentions : elle ne compte pas."""
+    pages: dict[int, int] = {}
+    for p, m in ouvertures(doc, motif, tete=tete):
+        n = convertir(m) if convertir else numero(m.group(1))
+        if n and n not in pages:
+            pages[n] = p
+    return pages
 
 
 def numero(brut: str) -> int:
@@ -196,8 +255,7 @@ IA_THEORIQUE_RELUS = {
 
 def panorama(fichier: str, relus: dict[int, str], liminaires: list[dict], finales: list[dict]) -> list[dict]:
     doc = livre(fichier)
-    pages = {numero(m.group(1)): p
-             for p, m in ouvertures(doc, re.compile(r"^Chapitre\s+([\d ]{1,4})\s*$"))}
+    pages = premieres_pages(doc, re.compile(r"^Chapitre\s+([\d ]{1,4})\s*$"))
     return liminaires + adosser(pages, relus, fichier) + finales
 
 
@@ -205,8 +263,7 @@ def manuel() -> list[dict]:
     fichier = ("02-IA-Technique-Academique/"
                "Manuel dintelligence artificielle (Louis Frécon, Okba Kazar)@lechat.pdf")
     doc = livre(fichier)
-    pages = {numero(m.group(1)): p
-             for p, m in ouvertures(doc, re.compile(r"^CHAPITRE\s+([\dSOl ]{1,4})\s*$"))}
+    pages = premieres_pages(doc, re.compile(r"^CHAPITRE\s+([\dSOl ]{1,4})\s*$"))
     return (
         [{"page": 7, "titre": "Avant-propos"},
          {"page": 9, "titre": "Plan de l'ouvrage"},
@@ -315,6 +372,299 @@ def nkrumah() -> list[dict]:
     )
 
 
+PENSEE_POLITIQUE = {
+    1: "Chapitre 1 : L'œuvre de Cheikh Anta Diop face à l'épreuve de la postérité",
+    2: "Chapitre 2 : Les racines contextuelles de la pensée politique de Cheikh Anta Diop",
+    3: "Chapitre 3 : Les assises scientifiques de la pensée politique de Cheikh Anta Diop",
+    4: "Chapitre 4 : Les directives politiques de Cheikh Anta Diop",
+}
+
+# Les deux éditions du même livre. La retraduction automatique rend les titres
+# en anglais calqué (« FORMATION DU MODERNE ÉTATS EUROPÉENS ») : on reprend
+# ceux de l'édition française.
+PRECOLONIALE = {
+    1: "Chapitre I : Analyse de la notion de caste",
+    2: "Chapitre II : Évolution politico-sociale de la cité antique",
+    3: "Chapitre III : Formation des États modernes européens",
+    4: "Chapitre IV : Organisation politique en Afrique noire",
+    5: "Chapitre V : Organisation étatique, puissance des empires africains",
+    6: "Chapitre VI : Organisation économique",
+    7: "Chapitre VII : Superstructure idéologique, l'islam en Afrique noire",
+    8: "Chapitre VIII : Niveau intellectuel, enseignement et éducation",
+    9: "Chapitre IX : Niveau technique",
+    10: "Chapitre X : Migration et formation des peuples actuels de l'Afrique",
+    11: "Chapitre XI : Appendice linguistique",
+}
+
+KUNTA = {
+    1: "Première partie : je suis Kunta Kinte",
+    2: "Deuxième partie : je suis conscient du combat",
+    3: "Troisième partie : je dois acheter ma liberté",
+    4: "Quatrième partie : je consomme de façon intelligente",
+    5: "Cinquième partie : je crée d'autres sources",
+    6: "Sixième partie : je deviens maître",
+    7: "Septième partie : je prépare Kizzy",
+    8: "Huitième partie : l'état d'esprit fait la différence",
+    9: "Neuvième partie : je refuse d'être un mouton de Panurge",
+    10: "Dixième partie : je dois continuer d'aller de l'avant",
+    11: "Onzième partie : la puissance d'une idée positive",
+}
+
+ORDINAUX = ["PREMIÈRE", "DEUXIÈME", "TROISIÈME", "QUATRIÈME", "CINQUIÈME", "SIXIÈME",
+            "SEPTIÈME", "HUITIÈME", "NEUVIÈME", "DIXIÈME", "ONZIÈME"]
+
+# Les idées reçues que l'ouvrage examine, dans l'ordre, avec la page où chacune
+# s'ouvre. La numérisation abîme les guillemets et coupe les mots : les
+# intitulés sont relus, les pages contrôlées sur le texte de la page.
+GANASCIA = [
+    (19, "Alan Turing est l'inventeur de l'intelligence artificielle"),
+    (25, "Désormais des machines passent le test de Turing"),
+    (31, "L'intelligence artificielle n'est pas une science"),
+    (37, "L'intelligence artificielle est une idée neuve"),
+    (43, "Les Japonais sont les champions de l'intelligence artificielle"),
+    (49, "La recherche en intelligence artificielle est menée par les GAFA"),
+    (55, "L'intelligence artificielle pallie les défaillances de notre intelligence"),
+    (59, "Nous passerons bientôt de l'intelligence artificielle faible à la forte"),
+    (69, "Il n'y a rien à craindre avec les ordinateurs, il suffit de les débrancher"),
+    (75, "L'intelligence artificielle reproduit l'activité de notre cerveau"),
+    (81, "L'intelligence artificielle n'est pas naturelle"),
+    (85, "Les ordinateurs raisonnent de façon binaire"),
+    (89, "Les ordinateurs ne se trompent jamais"),
+    (93, "Les ordinateurs sont invincibles aux échecs et au go"),
+    (101, "Le « deep learning » révolutionne l'intelligence artificielle"),
+    (109, "Une machine ne peut pas être créative"),
+    (117, "Les machines n'ont pas d'émotions ni de conscience"),
+    (123, "Les machines n'ont pas d'intuition"),
+    (129, "Nous confierons bientôt les personnes âgées aux robots"),
+    (133, "Les voitures autonomes sont programmées pour tuer leurs passagers"),
+    (137, "Le « big data » menace la démocratie"),
+    (143, "Les « robots tueurs » remplaceront bientôt les soldats"),
+    (151, "Il faut donner des droits aux robots"),
+    (159, "Nous ne sommes pas prêts pour le tsunami technologique qui advient"),
+    (163, "L'intelligence artificielle n'a pas tenu ses promesses"),
+    (169, "Les robots nous mettront tous au chômage"),
+    (175, "Demain, nous serons les esclaves des machines"),
+    (181, "Il n'y a plus de débouchés professionnels en intelligence artificielle"),
+    (187, "L'intelligence artificielle constitue un danger existentiel pour l'humanité"),
+    (193, "Grâce à l'intelligence artificielle, nous deviendrons immortels"),
+    (199, "La machine est l'avenir de l'homme"),
+]
+
+
+def pensee_politique() -> list[dict]:
+    fichier = "07-Afrique-Histoire-Pensee/la pensée politique de Cheikh Anta Diop.pdf"
+    doc = livre(fichier)
+    pages = premieres_pages(doc, re.compile(r"^CHAPITRE\s+([\d ]{1,3})\s*$"))
+    return (
+        [{"page": 7, "titre": "Introduction"}]
+        + adosser(pages, PENSEE_POLITIQUE, fichier)
+        + [{"page": 179, "titre": "Conclusion"},
+           {"page": 183, "titre": "Bibliographie"},
+           {"page": 189, "titre": "Table des matières"}]
+    )
+
+
+def precoloniale_francaise() -> list[dict]:
+    fichier = "07-Afrique-Histoire-Pensee/LAfrique noire pré-coloniale (Cheikh Anta Diop).pdf"
+    doc = livre(fichier)
+    romains = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "Vil": 7,
+               "VIII": 8, "IX": 9, "X": 10, "XI": 11}
+    pages = premieres_pages(doc, re.compile(r"^CHAPITRE\s+([IVXil]{1,5})\s*$"),
+                            lambda m: romains.get(m.group(1)))
+    return (
+        [{"page": 15, "titre": "Préface"}]
+        + adosser(pages, PRECOLONIALE, fichier)
+        + [{"page": 224, "titre": "Bibliographie"},
+           {"page": 227, "titre": "Table des matières"}]
+    )
+
+
+def precoloniale_retraduite() -> list[dict]:
+    fichier = "07-Afrique-Histoire-Pensee/Afrique noire précoloniale Une étude Cheikh Anta Diop.pdf"
+    doc = livre(fichier)
+    lettres = {"un": 1, "deux": 2, "trois": 3, "quatre": 4, "cinq": 5, "six": 6,
+               "sept": 7, "huit": 8, "neuf": 9, "dix": 10, "x": 10}
+    pages = premieres_pages(doc, re.compile(r"^Chapitre\s+([A-Za-z]{1,7})\s*$"),
+                            lambda m: lettres.get(m.group(1).lower()))
+    titres = {n: t for n, t in PRECOLONIALE.items() if n <= 10}
+    return (
+        [{"page": 5, "titre": "Table des matières"},
+         {"page": 9, "titre": "Préface"},
+         {"page": 11, "titre": "Pages liminaires reprises par la numérisation"}]
+        + adosser(pages, titres, fichier)
+        + [{"page": 263, "titre": "Bibliographie"}]
+    )
+
+
+def kunta() -> list[dict]:
+    fichier = "07-Afrique-Histoire-Pensee/Je suis KUNTA - Ricardo Kaniama-1.pdf"
+    doc = livre(fichier)
+    pages = premieres_pages(doc, re.compile(r"^(" + "|".join(ORDINAUX) + r") PARTIE\b"),
+                            lambda m: ORDINAUX.index(m.group(1)) + 1, tete=2)
+    return (
+        [{"page": 12, "titre": "Introduction"}]
+        + adosser(pages, KUNTA, fichier)
+        + [{"page": 141, "titre": "Ainsi parla Kunta Kinte"},
+           {"page": 145, "titre": "Que son message vous parle aussi"},
+           {"page": 153, "titre": "Après la lecture"}]
+    )
+
+
+def ganascia() -> list[dict]:
+    fichier = ("04-IA-Societe-Ethique-Philosophie/"
+               "Intelligence artificielle - Jean-Gabriel GANASCIA (1).ocr.pdf")
+    doc = livre(fichier)
+    idees = [{"page": p, "titre": f"Idée reçue {i} : « {t}. »"}
+             for i, (p, t) in enumerate(GANASCIA, 1)]
+    # Les pages liminaires et les annexes n'ont pas d'intitulé sur leur première
+    # page, seul l'en-tête courant des pages suivantes le porte : rien à contrôler.
+    return (
+        [{"page": 7, "titre": "Sommaire"}, {"page": 11, "titre": "Introduction"}]
+        + controler([doc[i].get_text("text") for i in range(doc.page_count)], idees, fichier)
+        + [{"page": 203, "titre": "Conclusion"},
+           {"page": 209, "titre": "Glossaire"},
+           {"page": 213, "titre": "Pour aller plus loin"}]
+    )
+
+
+def brochure_education() -> list[dict]:
+    fichier = "05-IA-Education-Pedagogie/MEN_DNE_brochure_IA_WEB.pdf"
+    doc = livre(fichier)
+    divisions = [
+        {"page": 3, "titre": "Table des matières"},
+        {"page": 4, "titre": "Résumé"},
+        {"page": 6, "titre": "1. L'intelligence artificielle, une diversité de définitions"},
+        {"page": 11, "titre": "2. Quels enjeux pour les politiques publiques ?"},
+        {"page": 17, "titre": "3. Quels enjeux éthiques ?"},
+        {"page": 19, "titre": "4. Quels domaines d'application ?"},
+        {"page": 23, "titre": "5. Quelles pistes de travail pour former à l'intelligence artificielle ?"},
+        {"page": 26, "titre": "6. Le tournant des IA génératives et des grands modèles de langage"},
+        {"page": 35, "titre": "Références"},
+    ]
+    return controler([doc[i].get_text("text") for i in range(doc.page_count)], divisions, fichier)
+
+
+def religion_africaine() -> list[dict]:
+    fichier = ("07-Afrique-Histoire-Pensee/"
+               "CHEIKH_ANTA_DIOP_ET_L’HISTOIRE_DE_LA_RELIGION_AFRICAINE_1.pdf")
+    doc = livre(fichier)
+    divisions = [
+        {"page": 2, "titre": "Introduction"},
+        {"page": 3, "titre": "I. La fondation de l'histoire moderne de la religion africaine"},
+        {"page": 5, "titre": "II. La méthodologie de l'étude"},
+        {"page": 6, "titre": "III. La description de la cosmogonie africaine de l'Antiquité"},
+        {"page": 9, "titre": "IV. L'apport conceptuel africain aux religions révélées"},
+        {"page": 15, "titre": "V. La portée de la thèse de l'origine cosmo-théologique"},
+    ]
+    return (controler([doc[i].get_text("text") for i in range(doc.page_count)], divisions, fichier)
+            + [{"page": 23, "titre": "Notes et références"}])
+
+
+def ia_demystifiee() -> list[dict]:
+    # Les titres de cet ouvrage sont dessinés : le texte extrait colle les mots
+    # (« IAETGENAI: LESBASES »), aucun contrôle automatique n'y mord.
+    return [
+        {"page": 2, "titre": "Sommaire"},
+        {"page": 4, "titre": "Avertissement"},
+        {"page": 5, "titre": "Quiz de découverte"},
+        {"page": 6, "titre": "Introduction"},
+        {"page": 9, "titre": "IA et IA générative, les bases"},
+        {"page": 15, "titre": "Outils d'intelligence artificielle essentiels"},
+        {"page": 27, "titre": "Prompts et cas pratiques"},
+        {"page": 38, "titre": "Stratégies et astuces"},
+        {"page": 43, "titre": "Conclusion, passez à l'action"},
+    ]
+
+
+def notre_chateau() -> list[dict]:
+    """Le roman est en trois parties, dont les pages de titre ne portent qu'un
+    numéro : l'ingestion les écarte, et les sections qui suivent se numérotent
+    de 1 à 10 dans chaque partie. On nomme donc les parties, pas les sections."""
+    fichier = "08-Litterature-Romans/Regniez Emmanuel - Notre château @EpubsFR.epub"
+    pages = textes_epub(fichier)
+    if len(pages) != 40:
+        raise SystemExit(f"{fichier} : {len(pages)} pages lues, 40 attendues.")
+    return [
+        {"page": 1, "titre": "Pages liminaires"},
+        {"page": 5, "titre": "Partie I"},
+        {"page": 15, "titre": "Partie II"},
+        {"page": 25, "titre": "Partie III"},
+        {"page": 38, "titre": "Pages finales"},
+    ]
+
+
+def meditations() -> list[dict]:
+    """Chaque méditation tient une page et s'ouvre sur son titre. Les pages de
+    journal n'en ont pas : leur première phrase en tient lieu."""
+    fichier = "07-Afrique-Histoire-Pensee/Méditations africaines by Sarr Felwine (z-lib.org).epub"
+    pages = textes_epub(fichier)
+    if len(pages) != 25:
+        raise SystemExit(f"{fichier} : {len(pages)} pages lues, 25 attendues.")
+    divisions = [{"page": 1, "titre": "Mentions d'édition"},
+                 {"page": 2, "titre": "Page de titre"},
+                 {"page": 3, "titre": "Du même auteur"}]
+    for n in range(4, 26):
+        tete = next(l.strip() for l in pages[n - 1].split("\n") if l.strip())
+        divisions.append({"page": n, "titre": tete if len(tete) <= 70 else tete[:69].rstrip(" ,;:") + "…"})
+    return divisions
+
+
+def par_tetes(fichier: str, pages: range, liminaires: list[dict] | None = None) -> list[dict]:
+    """Un support de formation : chaque page porte son titre sur sa première ligne."""
+    doc = livre(fichier)
+    divisions = list(liminaires or [])
+    for n in pages:
+        # Un titre de diapositive tient souvent sur deux ou trois lignes.
+        tete = ""
+        for l in lignes(doc, n, 3):
+            tete = (tete + " " + l).strip()
+            if len(tete) >= 25:
+                break
+        if not tete:
+            continue
+        divisions.append({"page": n, "titre": tete if len(tete) <= 70 else tete[:69].rstrip(" ,;:") + "…"})
+    return divisions
+
+
+def money_management() -> list[dict]:
+    return [
+        {"page": 3, "titre": "1. Généralités et principes de base"},
+        {"page": 24, "titre": "2. Les stratégies de money-management"},
+        {"page": 42, "titre": "3. Établir un plan de trading"},
+        {"page": 48, "titre": "4. L'état d'esprit gagnant"},
+    ]
+
+
+def ia_tourisme() -> list[dict]:
+    return [
+        {"page": 1, "titre": "Ouverture et objectifs"},
+        {"page": 8, "titre": "Introduction"},
+        {"page": 16, "titre": "L'intelligence artificielle générative"},
+        {"page": 23, "titre": "Les prompts"},
+        {"page": 38, "titre": "Utiliser l'IA pour le web"},
+        {"page": 42, "titre": "Utiliser l'IA pour ses réseaux sociaux"},
+        {"page": 49, "titre": "Utiliser l'IA pour gérer sa e-réputation"},
+        {"page": 54, "titre": "Utiliser l'IA pour améliorer ses ventes en ligne"},
+        {"page": 61, "titre": "Utiliser l'IA pour améliorer sa visibilité locale"},
+    ]
+
+
+def cours_robotique() -> list[dict]:
+    return [
+        {"page": 1, "titre": "Présentation du module"},
+        {"page": 11, "titre": "Première partie : introduction à l'intelligence artificielle"},
+    ]
+
+
+def modelisation_risque() -> list[dict]:
+    return [
+        {"page": 3, "titre": "Sommaire"},
+        {"page": 4, "titre": "Introduction générale"},
+        {"page": 5, "titre": "Partie 1 : les soubassements théoriques de la modélisation du risque"},
+        {"page": 6, "titre": "Chapitre 1 : soubassements théoriques et démarche méthodologique"},
+    ]
+
+
 OUVRAGES = {
     "Panorama de l'intelligence artificielle. Volume 3 : l'intelligence artificielle, frontières et applications":
         lambda: panorama(
@@ -348,6 +698,27 @@ OUVRAGES = {
     "Les 48 lois du pouvoir": lois,
     "Forest Management and Planning. Aménagement et planification forestiers": forest,
     "Le néo-colonialisme, dernier stade de l'impérialisme": nkrumah,
+    "La pensée politique de Cheikh Anta Diop": pensee_politique,
+    "L'Afrique noire pré-coloniale. Étude comparée des systèmes politiques et sociaux de l'Europe "
+    "et de l'Afrique noire, de l'Antiquité à la formation des États modernes": precoloniale_francaise,
+    "L'Afrique noire précoloniale (retraduction automatique de l'édition américaine)": precoloniale_retraduite,
+    "Je suis Kunta Kinte. Pourquoi vous devez vous battre pour devenir riche": kunta,
+    "Intelligence artificielle : vers une domination programmée ?": ganascia,
+    "Intelligence artificielle et éducation. Apports de la recherche et enjeux "
+    "pour les politiques publiques": brochure_education,
+    "Cheikh Anta Diop et l'histoire de la religion africaine : les sources cosmo-théologiques "
+    "philosophiques africaines des religions révélées": religion_africaine,
+    "L'IA démystifiée. Guide des premiers pas": ia_demystifiee,
+    "Notre Château": notre_chateau,
+    "Méditations africaines": meditations,
+    "Le money management. Support de formation au trading, chapitre 6": money_management,
+    "Utiliser l'intelligence artificielle pour gagner du temps dans la gestion "
+    "de son marketing numérique": ia_tourisme,
+    "Enseigner avec l'IA à l'ère de la digitalisation des enseignements":
+        lambda: par_tetes("05-IA-Education-Pedagogie/Enseigner avec IA-CIESD.pdf", range(2, 19)),
+    "Introduction à l'intelligence artificielle et la robotique (support de cours)": cours_robotique,
+    "Intelligence artificielle et modélisation du risque de crédit (extrait promotionnel)":
+        modelisation_risque,
 }
 
 

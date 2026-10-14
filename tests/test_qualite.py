@@ -157,6 +157,17 @@ ok("une division découpée numérote ses chapitres",
 ok("un chapitre à cheval relève de la division qui tient son milieu",
    d.get("c5") == "Chapitre 2 : la suite (1/2)", d.get("c5"))
 ok("un ouvrage sans relevé reste intact", par_divisions(chapitres, {}, noms) == {})
+plan_serre = {"Ouvrage essai": [{"page": 3, "titre": "De la vérité"}, {"page": 5, "titre": "De la vertu"},
+                                {"page": 7, "titre": "Du destin"}]}
+serres = [{"id": f"s{i}", "document_id": "d1", "ord": i, "page_start": p, "page_end": q}
+          for i, (p, q) in enumerate([(1, 6), (6, 10)])]
+e = par_divisions(serres, plan_serre, noms)
+ok("une division plus courte qu'un chapitre est annoncée",
+   e.get("s0") == "De la vérité, et la suivante", e.get("s0"))
+large = [{"id": "g0", "document_id": "d1", "ord": 0, "page_start": 1, "page_end": 8}]
+ok("plusieurs divisions annoncées se comptent",
+   par_divisions(large, plan_serre, noms).get("g0") == "De la vérité, et les 2 suivantes",
+   par_divisions(large, plan_serre, noms).get("g0"))
 
 _echecs = [x for x in _resultats if not x[0]]
 print(f"{len(_resultats) - len(_echecs)} sur {len(_resultats)}")

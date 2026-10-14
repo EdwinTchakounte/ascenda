@@ -26,24 +26,42 @@ def par_divisions(chapitres: list[dict], plans: dict, noms: dict) -> dict:
             continue
         bornes = sorted(plan, key=lambda d: d["page"])
         groupes: list[list] = []
+        suites: dict = {}
         for c in sorted(liste, key=lambda x: x["ord"]):
-            # Un chapitre chevauche souvent deux divisions, le découpage s'étant
-            # fait au nombre de mots : il relève de celle qui tient son milieu.
             debut, fin = c["page_start"] or 0, c["page_end"] or c["page_start"] or 0
-            milieu = (debut + fin) // 2
-            retenu = None
-            for d in bornes:
-                if d["page"] <= milieu:
-                    retenu = d["titre"]
-            if retenu is None:
+            ouvertes = [k for k, d in enumerate(bornes) if debut <= d["page"] <= fin]
+            if len(ouvertes) > 1:
+                # Le chapitre ouvre plusieurs divisions : il porte le nom de la
+                # première, celle par laquelle la lecture commence.
+                rang = ouvertes[0]
+            else:
+                # Un chapitre chevauche souvent deux divisions, le découpage s'étant
+                # fait au nombre de mots : il relève de celle qui tient son milieu.
+                milieu = (debut + fin) // 2
+                rang = next((k for k in range(len(bornes) - 1, -1, -1)
+                             if bornes[k]["page"] <= milieu), None)
+                if rang is None:
+                    rang = ouvertes[0] if ouvertes else None
+            if rang is None:
                 continue
-            if groupes and groupes[-1][0] == retenu:
+            # Les divisions plus courtes qu'un chapitre : il faut les annoncer,
+            # sinon elles disparaissent du sommaire.
+            suites[c["id"]] = sum(1 for d in bornes[rang + 1:] if debut <= d["page"] <= fin)
+            if groupes and groupes[-1][0] == rang:
                 groupes[-1][1].append(c)
             else:
-                groupes.append([retenu, [c]])
-        for titre, membres in groupes:
+                groupes.append([rang, [c]])
+        for rang, membres in groupes:
             for i, c in enumerate(membres, start=1):
-                sorties[c["id"]] = titre if len(membres) == 1 else f"{titre} ({i}/{len(membres)})"
+                titre = bornes[rang]["titre"]
+                if len(membres) > 1:
+                    titre += f" ({i}/{len(membres)})"
+                n = suites[c["id"]]
+                if n == 1:
+                    titre += ", et la suivante"
+                elif n > 1:
+                    titre += f", et les {n} suivantes"
+                sorties[c["id"]] = titre
     return sorties
 
 
