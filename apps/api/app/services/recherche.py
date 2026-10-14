@@ -4,7 +4,7 @@ import logging
 from functools import lru_cache
 
 from app.core.config import settings
-from app.core.db import fetch_all, fetch_one
+from app.core.db import connection, fetch_all, fetch_one
 
 log = logging.getLogger("ascenda.recherche")
 
@@ -137,13 +137,25 @@ async def _semantique(requete: str, where: str, params: list, limite: int) -> li
     )
     litteral = "[" + ",".join(f"{x:.6f}" for x in vecteur) + "]"
     # `<=>` est la distance cosinus de pgvector : plus petite, plus proche.
-    return await fetch_all(
-        f"""select k.id, 1 - (k.embedding <=> %s::vector) as score
-            from chunk k join document d on d.id = k.document_id
-            where {where} and k.embedding is not null
-            order by k.embedding <=> %s::vector limit %s""",
-        [litteral] + params + [litteral, limite],
-    )
+    #
+    # Deux réglages posés pour cette seule requête. `random_page_cost` parce
+    # que le planificateur, avec sa valeur par défaut faite pour des disques
+    # mécaniques, juge l'index HNSW plus coûteux qu'un parcours complet et
+    # préfère lire les douze mille vecteurs : mesuré, l'index répond en 1,5 ms
+    # contre 60 ms. `hnsw.ef_search` parce que l'index est approché et que la
+    # recherche est filtrée par ouvrage ou par axe : élargir la liste de
+    # candidats évite de rendre moins de passages que demandé.
+    async with connection() as conn:
+        await conn.execute("set local random_page_cost = 1.1")
+        await conn.execute("set local hnsw.ef_search = 100")
+        cur = await conn.execute(
+            f"""select k.id, 1 - (k.embedding <=> %s::vector) as score
+                from chunk k join document d on d.id = k.document_id
+                where {where} and k.embedding is not null
+                order by k.embedding <=> %s::vector limit %s""",
+            [litteral] + params + [litteral, limite],
+        )
+        return await cur.fetchall()
 
 
 def _fusionner(listes: list[list[dict]], limite: int) -> list[str]:

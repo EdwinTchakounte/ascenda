@@ -849,7 +849,8 @@ const CLASSES = { valide: "p-ok", envoye: "p-ok", active: "p-ok", none: "p-neutr
   epuise: "p-neutre", disponible: "p-ok", utilise: "p-neutre",
   masque: "p-mauvais", ignore: "p-neutre", abandonne: "p-mauvais",
   ferme: "p-ok", ouvert: "p-mauvais", demi_ouvert: "p-attente",
-  critique: "p-mauvais", attention: "p-attente", info: "p-neutre" };
+  critique: "p-mauvais", attention: "p-attente", info: "p-neutre",
+  création: "p-ok", modification: "p-attente", suppression: "p-mauvais" };
 const pastille = (v) => v === null || v === undefined || v === ""
   ? "" : `<span class="pastille ${CLASSES[v] || "p-neutre"}">${ech(v)}</span>`;
 
@@ -1998,6 +1999,63 @@ zone({ cle: "reglages", groupe: "Exploitation", titre: "Les interrupteurs",
           setTimeout(() => (b.innerHTML = ico("oui", "pt") + "Enregistrer"), 1600);
         }
       };
+    });
+  } });
+
+const GESTES_LONG = { insert: "création", update: "modification", delete: "suppression" };
+
+zone({ cle: "journal", groupe: "Exploitation", titre: "Journal des modifications",
+  ico: "horloge",
+  aide: "Qui a changé quoi, et de quelle valeur vers quelle valeur. C'est la base elle-même qui l'écrit : une correction faite à la main en ligne de commande y figure aussi.",
+  f: { relation: "", operation: "", acteur: "", jours: "30" },
+  // Les filtres sont relus du formulaire puis redessinés avec ce qui était
+  // choisi : un filtre qui se vide à chaque rendu ne se comprend pas.
+  get filtres() {
+    const opt = (v, t, choisi) => `<option value="${ech(v)}" ${choisi === v ? "selected" : ""}>${ech(t)}</option>`;
+    const tables = (this.env && this.env.relations) || [];
+    return `<select id="f-jtable">` + opt("", "toutes les tables", this.f.relation)
+      + tables.map((t) => opt(t, t.replace(/_/g, " "), this.f.relation)).join("") + `</select>
+      <select id="f-jop">` + opt("", "tous les gestes", this.f.operation)
+      + opt("insert", "créations", this.f.operation) + opt("update", "modifications", this.f.operation)
+      + opt("delete", "suppressions", this.f.operation) + `</select>
+      <input id="f-jacteur" placeholder="qui" value="${ech(this.f.acteur)}">
+      <select id="f-jjours">` + ["1", "7", "30", "90", "365"]
+        .map((j) => opt(j, j === "1" ? "aujourd'hui" : j + " jours", this.f.jours)).join("") + `</select>`;
+  },
+  async rendre() {
+    const lu = (id, defaut) => (($(id) || {}).value ?? defaut);
+    this.f = { relation: lu("f-jtable", this.f.relation), operation: lu("f-jop", this.f.operation),
+               acteur: lu("f-jacteur", this.f.acteur), jours: lu("f-jjours", this.f.jours) };
+    const q = new URLSearchParams({ page: this.page || 1, par_page: 40, jours: this.f.jours });
+    for (const c of ["relation", "operation", "acteur"]) if (this.f[c]) q.set(c, this.f[c]);
+    const env = await api("/v1/admin/journal?" + q);
+    this.env = env;
+    this.lignes = env.lignes;
+    if (!env.lignes.length) {
+      return rienAVoir("Aucune modification sur cette période.", "horloge");
+    }
+    return table([["le", "quand", "instant"], ["table", "table"], ["geste", "geste", "pastille"],
+                  ["ligne", "ligne"], ["acteur", "qui", "large"], ["resume", "ce qui a changé", "large"]],
+      env.lignes.map((l) => ({ ...l, geste: GESTES_LONG[l.operation] || l.operation })), true)
+      + pagination(env);
+  },
+  async apres() {
+    brancherClics(this.lignes || [], async (l) => {
+      const e = await api("/v1/admin/journal/" + l.id);
+      const changements = e.changements.length
+        ? `<div class="tableau"><table><thead><tr><th>colonne</th><th>avant</th><th>après</th></tr></thead><tbody>`
+          + e.changements.map((c) =>
+            `<tr><td>${ech(c.champ)}</td><td>${ech(c.avant)}</td><td><b>${ech(c.apres)}</b></td></tr>`).join("")
+          + `</tbody></table></div>`
+        : `<p class="note">${e.operation === "insert" ? "Ligne créée." : "Ligne supprimée."}</p>`;
+      const etat = (titre, obj) => obj
+        ? `<h4>${titre}</h4>` + paires(Object.fromEntries(Object.entries(obj)
+            .map(([k, v]) => [k, ech(v === null ? "—" : typeof v === "object" ? JSON.stringify(v) : String(v))])))
+        : "";
+      ouvrirVolet(`${e.table} · ${GESTES_LONG[e.operation] || e.operation}`,
+        paires({ "le": instant(e.le), "qui": ech(e.acteur), "ligne": ech(e.ligne || "—") })
+        + `<h4>Ce qui a changé</h4>` + changements
+        + etat("État avant", e.avant) + etat("État après", e.apres), "horloge");
     });
   } });
 

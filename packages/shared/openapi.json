@@ -32,7 +32,7 @@
           "Service"
         ],
         "summary": "L'état d'exploitation",
-        "description": "Ce que les applications lisent pour savoir dans quel monde elles vivent.\n\nTrois réponses en un appel : sommes-nous en période de lancement, sommes-nous\nen maintenance, et cette version de l'application est-elle encore acceptée.\nPublique et sans jeton : une application qui ne peut pas se connecter doit\nquand même pouvoir apprendre pourquoi.",
+        "description": "Ce que les applications lisent pour savoir dans quel monde elles vivent.",
         "operationId": "etat_v1_etat_get",
         "responses": {
           "200": {
@@ -176,7 +176,7 @@
           "Administration"
         ],
         "summary": "Les notifications qu'on n'a pas su rattacher",
-        "description": "Le premier endroit à regarder quand quelqu'un affirme avoir payé.\n\nUn webhook qui n'a trouvé aucun paiement est conservé avec un identifiant\nnul plutôt que jeté : c'est la seule trace de l'argent de quelqu'un.",
+        "description": "Le premier endroit à regarder quand quelqu'un affirme avoir payé.",
         "operationId": "orphelins_v1_admin_webhooks_orphelins_get",
         "security": [
           {
@@ -412,7 +412,7 @@
           "Administration"
         ],
         "summary": "Actionner un interrupteur",
-        "description": "Bascule un réglage sans passer par SQL.\n\nC'est tout l'intérêt du tableau de bord : ouvrir une période de lancement ou\nlever une maintenance depuis un téléphone, à l'heure où l'on n'a pas de\nterminal sous la main.",
+        "description": "Bascule un réglage sans passer par SQL.",
         "operationId": "poser_reglage_v1_admin_reglages__cle__post",
         "security": [
           {
@@ -468,7 +468,7 @@
           "Administration"
         ],
         "summary": "Les ouvrages et leur état de production",
-        "description": "L'état de chaque ouvrage, en une requête.\n\nCe qu'on veut voir : ce qui est entré, ce qui est vectorisé, ce qui est\ndérivé, et ce qui manque. `manque=true` ne garde que les ouvrages\nincomplets, qui sont ceux sur lesquels il reste de l'argent à dépenser.",
+        "description": "L'état de chaque ouvrage, en une requête.",
         "operationId": "corpus_v1_admin_corpus_get",
         "security": [
           {
@@ -614,7 +614,7 @@
           "Administration"
         ],
         "summary": "Changer les droits d'un ouvrage",
-        "description": "Seuls les droits se changent ici.\n\nLe titre, les auteurs et le texte viennent du pipeline et de `data/` : les\ncorriger depuis cette page les ferait diverger de leur source, et le\nprochain import les écraserait sans prévenir.\n\nPoser `takedown_status` à autre chose que `none` retire immédiatement\nl'ouvrage de partout : bibliothèque, recherche, réponses de l'agent, plans\nde lecture déjà construits. C'est le geste qu'on fait quand un ayant droit\nécrit, et il n'a pas besoin d'être réversible pour être utile.",
+        "description": "Seuls les droits se changent ici.",
         "operationId": "changer_droits_v1_admin_corpus__document_id__patch",
         "security": [
           {
@@ -714,7 +714,7 @@
           "Administration"
         ],
         "summary": "Désactiver un compte, ou donner le droit",
-        "description": "Deux leviers, et rien d'autre.\n\nDésactiver un compte le ferme sans l'effacer : sa progression reste, et on\npeut revenir dessus. Donner le droit d'administration se fait ici ou en\nSQL, mais jamais depuis l'application.\n\nOn ne peut pas se retirer soi-même le droit : c'est le moyen le plus simple\nde se verrouiller dehors un dimanche soir.",
+        "description": "Deux leviers, et rien d'autre.",
         "operationId": "changer_compte_v1_admin_utilisateurs__user_id__patch",
         "security": [
           {
@@ -770,7 +770,7 @@
           "Administration"
         ],
         "summary": "Un paiement et son journal",
-        "description": "Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».\n\nChaque étape y est : la création, l'envoi au fournisseur, la notification,\nla stratégie qui a permis de la rattacher, ou l'abandon.",
+        "description": "Le journal est la réponse à « j'ai payé mais rien ne s'est passé ».",
         "operationId": "un_paiement_v1_admin_paiements__paiement_id__get",
         "security": [
           {
@@ -972,7 +972,7 @@
           "Administration"
         ],
         "summary": "Le contenu produit, lisible",
-        "description": "Le contenu lui-même, pas son compte.\n\nLa console disait « 97 lots de quiz » sans permettre d'en lire un seul. On\nne peut pas juger de ce qu'on a payé sans le regarder, et c'est justement\nau moment de lancer une campagne de génération qu'il faut savoir si la\nprécédente a produit quelque chose de bon.",
+        "description": "Le contenu lui-même, pas son compte.",
         "operationId": "derives_lisibles_v1_admin_corpus__document_id__derives_get",
         "security": [
           {
@@ -1052,7 +1052,7 @@
           "Administration"
         ],
         "summary": "Le PDF d'origine",
-        "description": "Sert le fichier tel qu'il est entré.\n\nLe seul moyen de vérifier qu'un découpage douteux vient du pipeline et non\ndu PDF lui-même. Servi en flux depuis le stockage objet plutôt que chargé\nen mémoire : certains ouvrages pèsent cent mégaoctets.",
+        "description": "Sert le fichier tel qu'il est entré.",
         "operationId": "fichier_source_v1_admin_corpus__document_id__fichier_get",
         "security": [
           {
@@ -1120,7 +1120,7 @@
           "Administration"
         ],
         "summary": "Ouvrir un pôle d'apprentissage",
-        "description": "Un axe nouveau naît vide, et c'est normal.\n\nIl se remplit en y rattachant des ouvrages. Son centroïde, qui sert au\nclassement automatique des nouveaux entrants, se calcule une fois qu'il en\nporte assez : `pipeline/embed/embed.py --centroides`.",
+        "description": "Un axe nouveau naît vide, et c'est normal.",
         "operationId": "creer_axe_v1_admin_axes_post",
         "requestBody": {
           "content": {
@@ -1407,7 +1407,7 @@
           "Administration"
         ],
         "summary": "Mettre un travail dans la file",
-        "description": "Lance une étape du pipeline sans ouvrir un terminal.\n\nCe n'est pas exécuté ici : l'ouvrier prendra le travail dans les secondes\nqui suivent. Une requête HTTP qui dure dix heures est une requête qui\néchoue.",
+        "description": "Lance une étape du pipeline sans ouvrir un terminal.",
         "operationId": "inscrire_travail_v1_admin_travaux_post",
         "security": [
           {
@@ -1581,7 +1581,7 @@
           "Administration"
         ],
         "summary": "Déposer un ouvrage",
-        "description": "Reçoit un PDF et inscrit son ingestion dans la file.\n\nLe fichier est écrit dans `livres/` sous l'axe demandé, là où le pipeline\nva le chercher. On l'écrit par morceaux : un ouvrage de cent mégaoctets\nchargé en mémoire ferait tomber un conteneur à deux cents.\n\nL'envoi n'est pas reprenable. Sur une connexion qui coupe, il faut\nrecommencer : c'est une limite assumée, et la console le dit.",
+        "description": "Reçoit un PDF et inscrit son ingestion dans la file.",
         "operationId": "importer_ouvrage_v1_admin_corpus_import_post",
         "requestBody": {
           "content": {
@@ -1609,6 +1609,55 @@
                 "schema": {
                   "$ref": "#/components/schemas/HTTPValidationError"
                 }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/sante": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Incidents, disjoncteurs, files et sauvegarde",
+        "operationId": "sante_detaillee_v1_admin_sante_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/sante/veille": {
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Passer la veille maintenant",
+        "description": "Utile après une réparation : l'incident se referme sans attendre cinq minutes.",
+        "operationId": "passer_veille_v1_admin_sante_veille_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
               }
             }
           }
@@ -1880,6 +1929,448 @@
         }
       }
     },
+    "/v1/admin/agent": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Le réglage de l'agent",
+        "description": "Les fournisseurs et les plafonds de jetons, en un appel.",
+        "operationId": "lire_agent_v1_admin_agent_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/agent/{code}": {
+      "put": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Régler un fournisseur",
+        "description": "Pose le modèle, la clé et l'ordre d'appel sans redéployer.",
+        "operationId": "regler_agent_v1_admin_agent__code__put",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FournisseurIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/agent/{code}/cle": {
+      "delete": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Retirer une clé",
+        "description": "Retire la clé et coupe le fournisseur, d'un seul geste.",
+        "operationId": "retirer_cle_v1_admin_agent__code__cle_delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Code"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/quotas": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les plafonds de toutes les formules",
+        "operationId": "lire_quotas_v1_admin_quotas_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/quotas/{plan}/{type_}/{periode}": {
+      "put": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Changer un plafond",
+        "description": "Change un plafond en base, sans redéploiement.",
+        "operationId": "changer_quota_v1_admin_quotas__plan___type____periode__put",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "plan",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Plan"
+            }
+          },
+          {
+            "name": "type_",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Type "
+            }
+          },
+          {
+            "name": "periode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "enum": [
+                "day",
+                "month",
+                "total"
+              ],
+              "type": "string",
+              "title": "Periode"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QuotaIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/agent/consommation": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Ce que l'agent a coûté",
+        "description": "Les jetons dépensés sur la période, en tout, par formule et par compte.",
+        "operationId": "consommation_v1_admin_agent_consommation_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "jours",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 365,
+              "minimum": 1,
+              "default": 30,
+              "title": "Jours"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/journal": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Le journal des modifications",
+        "operationId": "journal_v1_admin_journal_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "relation",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 64
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Relation"
+            }
+          },
+          {
+            "name": "acteur",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 120
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Acteur"
+            }
+          },
+          {
+            "name": "operation",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(insert|update|delete)$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Operation"
+            }
+          },
+          {
+            "name": "jours",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 365,
+              "minimum": 1,
+              "default": 30,
+              "title": "Jours"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 40,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/journal/{entree_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Une modification, ligne entière",
+        "description": "L'état complet avant et après, quand l'écart ne suffit pas à comprendre.",
+        "operationId": "entree_v1_admin_journal__entree_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "entree_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "title": "Entree Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/v1/auth/inscription": {
       "post": {
         "tags": [
@@ -1968,7 +2459,7 @@
           "Authentification"
         ],
         "summary": "Rafraichir",
-        "description": "Rotation du refresh : l'ancien jeton est révoqué à l'usage.\n\nUne connexion irrégulière peut faire échouer la réponse après révocation ;\nle client doit alors repasser par /auth/connexion. C'est le prix d'une\nrotation stricte, et c'est le bon compromis pour un jeton de 60 jours.",
+        "description": "Rotation du refresh : l'ancien jeton est révoqué à l'usage.",
         "operationId": "rafraichir_v1_auth_rafraichir_post",
         "requestBody": {
           "content": {
@@ -2068,7 +2559,7 @@
           "Authentification"
         ],
         "summary": "Demander un code de réinitialisation",
-        "description": "Répond toujours 204, que l'adresse existe ou non.\n\nDistinguer les deux cas transformerait cette route en annuaire : on\nsaurait, adresse par adresse, qui a un compte chez nous.",
+        "description": "Répond toujours 204, que l'adresse existe ou non.",
         "operationId": "mot_de_passe_oublie_v1_auth_mot_de_passe_oublie_post",
         "requestBody": {
           "content": {
@@ -2201,7 +2692,7 @@
         "tags": [
           "Axes"
         ],
-        "summary": "Liste des 11 axes",
+        "summary": "Les axes, avec leur pôle",
         "operationId": "lister_axes_v1_axes_get",
         "responses": {
           "200": {
@@ -2546,7 +3037,7 @@
           "Bibliothèque"
         ],
         "summary": "Le pack complet d'un ouvrage",
-        "description": "Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel.\n\nDestiné au téléchargement hors ligne : l'application le garde sur le\ntéléphone et reste utilisable sans réseau, y compris pour passer les quiz.\nLes réponses sont donc incluses, sans quoi rien ne se corrige hors ligne.",
+        "description": "Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel.",
         "operationId": "pack_complet_v1_bibliotheque__document_id__pack_get",
         "security": [
           {
@@ -2592,7 +3083,7 @@
           "Bibliothèque"
         ],
         "summary": "Export PDF d'un ouvrage",
-        "description": "Le même pack, mis en page pour être imprimé ou partagé.\n\nPar défaut, un compagnon de lecture d'une dizaine de pages. `complet=true`\nrend l'intégralité, ce qui peut représenter plus de quarante pages et\nplusieurs secondes de fabrication.",
+        "description": "Le même pack, mis en page pour être imprimé ou partagé.",
         "operationId": "export_v1_bibliotheque__document_id__export_pdf_get",
         "security": [
           {
@@ -2876,6 +3367,52 @@
         "responses": {
           "204": {
             "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/lecteur/{document_id}/pdf": {
+      "get": {
+        "tags": [
+          "Lecteur"
+        ],
+        "summary": "Le PDF d'un ouvrage lisible en entier",
+        "description": "Le fichier tel qu'il a été publié, pour le lire page par page.",
+        "operationId": "pdf_v1_lecteur__document_id__pdf_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Document Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
           },
           "422": {
             "description": "Validation Error",
@@ -3213,7 +3750,7 @@
           "Agent"
         ],
         "summary": "Questions proposées dans un contexte de lecture",
-        "description": "Des questions tirées du contenu réel plutôt qu'une liste générique.\n\nOn s'appuie sur les thèmes des citations retenues et sur les idées-force de\nla fiche : ce sont les objets sur lesquels l'agent aura effectivement de quoi\nrépondre.",
+        "description": "Des questions tirées du contenu réel plutôt qu'une liste générique.",
         "operationId": "suggestions_v1_agent_suggestions_get",
         "security": [
           {
@@ -3483,7 +4020,7 @@
           "Chronogramme"
         ],
         "summary": "Le questionnaire d'entrée",
-        "description": "Six questions de profil, puis jusqu'à quatre questions tirées des quiz\nréels de l'axe choisi. Sonder la connaissance sur le corpus lui-même vaut\nmieux que la faire déclarer : le lecteur se surestime ou se sous-estime.",
+        "description": "Six questions de profil, puis jusqu'à quatre questions tirées des quiz réels de l'axe\nchoisi. Sonder la connaissance sur le corpus lui-même vaut mieux que la faire déclarer :\nle lecteur se surestime ou se sous-estime.",
         "operationId": "diagnostic_v1_diagnostic_get",
         "parameters": [
           {
@@ -3766,7 +4303,7 @@
           "Chronogramme"
         ],
         "summary": "Replanifier (Ascension)",
-        "description": "Regénère les séances restantes en une nouvelle version, sans toucher à\nl'historique. Le plan précédent passe en « remplacé » : on garde la trace de\nce qui avait été promis, ce qui est la condition d'un plan honnête.",
+        "description": "Regénère les séances restantes en une nouvelle version, sans toucher à l'historique. Le\nplan précédent passe en « remplacé » : on garde la trace de ce qui avait été promis, ce\nqui est la condition d'un plan honnête.",
         "operationId": "replanifier_v1_chronogrammes__chronogramme_id__replanifier_post",
         "security": [
           {
@@ -4528,7 +5065,7 @@
           "Paiement"
         ],
         "summary": "La grille tarifaire",
-        "description": "Lue en base : la page de tarifs ne peut pas diverger de ce qui est\nréellement facturé.\n\nConnecté, le lecteur qui dispose d'un bon ambassadeur voit en plus le\nmontant réduit : c'est celui qui lui sera demandé, et il doit le lire avant\nde valider, pas le découvrir sur son téléphone.",
+        "description": "Lue en base : la page de tarifs ne peut pas diverger de ce qui est réellement facturé.",
         "operationId": "grille_v1_paiements_tarifs_get",
         "responses": {
           "200": {
@@ -4553,7 +5090,7 @@
           "Paiement"
         ],
         "summary": "Payer un abonnement",
-        "description": "Crée le paiement puis déclenche la demande sur le téléphone.\n\nLe membre valide avec son code mobile money. La confirmation arrive ensuite\npar notification du fournisseur, ou à défaut par la réconciliation.",
+        "description": "Crée le paiement puis déclenche la demande sur le téléphone.",
         "operationId": "payer_v1_paiements_post",
         "security": [
           {
@@ -4688,7 +5225,7 @@
           "Paiement"
         ],
         "summary": "Notification de Tara",
-        "description": "Répond toujours 200.\n\nUn code d'erreur ferait rejouer Tara en boucle sans rien résoudre. Ce qui ne\npasse pas est journalisé dans `payment_event`, avec un paiement nul quand le\nrattachement a échoué.",
+        "description": "Répond toujours 200.",
         "operationId": "webhook_v1_paiements_webhook_tara_post",
         "responses": {
           "200": {
@@ -4888,7 +5425,7 @@
           "Codes et avantages"
         ],
         "summary": "Vos codes, vos accès et vos réductions",
-        "description": "Tout ce que l'écran « Codes et avantages » affiche, en un appel.\n\n`nouveaux` compte les réductions gagnées que l'application n'a pas encore\nmontrées : c'est la notification dans l'application, le courriel étant\nl'autre moitié.",
+        "description": "Tout ce que l'écran « Codes et avantages » affiche, en un appel.",
         "operationId": "mes_codes_v1_codes_moi_get",
         "responses": {
           "200": {
@@ -4969,6 +5506,939 @@
           }
         ]
       }
+    },
+    "/v1/cercle/moi": {
+      "get": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Votre code, vos compteurs et vos préférences",
+        "operationId": "moi_v1_cercle_moi_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/cercle/preferences": {
+      "patch": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Partager ou non son activité",
+        "operationId": "preferences_v1_cercle_preferences_patch",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreferencesIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/cercle/amis": {
+      "get": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Vos amis et leur semaine de lecture",
+        "operationId": "amis_v1_cercle_amis_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Ajouter un ami par son code",
+        "operationId": "ajouter_v1_cercle_amis_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DemandeIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/cercle/amis/{ami_id}": {
+      "delete": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Retirer un ami",
+        "operationId": "retirer_v1_cercle_amis__ami_id__delete",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ami_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Ami Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/bloquer/{lecteur_id}": {
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Bloquer un lecteur",
+        "operationId": "bloquer_v1_cercle_bloquer__lecteur_id__post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "lecteur_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Lecteur Id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/demandes": {
+      "get": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Demandes d'ami reçues et envoyées",
+        "operationId": "demandes_v1_cercle_demandes_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/cercle/demandes/{demande_id}/accepter": {
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Accepter une demande",
+        "operationId": "accepter_v1_cercle_demandes__demande_id__accepter_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "demande_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Demande Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/demandes/{demande_id}/refuser": {
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Refuser une demande",
+        "operationId": "refuser_v1_cercle_demandes__demande_id__refuser_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "demande_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Demande Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/fil": {
+      "get": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Ce que vos amis ont lu ces derniers jours",
+        "operationId": "fil_v1_cercle_fil_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "jours",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 60,
+              "minimum": 1,
+              "default": 14,
+              "title": "Jours"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/encouragements": {
+      "get": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Les encouragements reçus",
+        "operationId": "encouragements_v1_cercle_encouragements_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Encourager un ami",
+        "operationId": "encourager_v1_cercle_encouragements_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EncouragementIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/cercle/encouragements/vus": {
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Marquer les encouragements comme vus",
+        "operationId": "encouragements_vus_v1_cercle_encouragements_vus_post",
+        "responses": {
+          "204": {
+            "description": "Successful Response"
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/cercle/echanges/{ami_id}": {
+      "get": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "La conversation avec un ami",
+        "operationId": "conversation_v1_cercle_echanges__ami_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ami_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Ami Id"
+            }
+          },
+          {
+            "name": "avant",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Avant"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Écrire à un ami",
+        "operationId": "ecrire_v1_cercle_echanges__ami_id__post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ami_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Ami Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EchangeIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/echanges/{ami_id}/lus": {
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Marquer la conversation comme lue",
+        "operationId": "lus_v1_cercle_echanges__ami_id__lus_post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "ami_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Ami Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/cercle/signalements": {
+      "post": {
+        "tags": [
+          "Cercle de lecteurs"
+        ],
+        "summary": "Signaler un message reçu",
+        "operationId": "signaler_v1_cercle_signalements_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SignalementIn"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/cercle": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Le cercle en chiffres",
+        "operationId": "vue_ensemble_v1_admin_cercle_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ]
+      }
+    },
+    "/v1/admin/cercle/relations": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les paires de lecteurs qui échangent",
+        "description": "Qui échange avec qui, combien et quand : de quoi repérer un compte qui\nécrit à tout le monde, sans ouvrir aucune conversation.",
+        "operationId": "relations_v1_admin_cercle_relations_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 40,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/cercle/signalements": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Les signalements",
+        "operationId": "signalements_v1_admin_cercle_signalements_get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "etat",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "ouverts",
+                "traites",
+                "tous"
+              ],
+              "type": "string",
+              "default": "ouverts",
+              "title": "Etat"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1,
+              "title": "Page"
+            }
+          },
+          {
+            "name": "par_page",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 200,
+              "minimum": 1,
+              "default": 40,
+              "title": "Par Page"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/cercle/signalements/{signalement_id}": {
+      "post": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Trancher un signalement",
+        "description": "`masque` retire le message des deux conversations et le garde en base ;\n`ignore` le laisse visible. Dans les deux cas, le signalement est clos.",
+        "operationId": "trancher_v1_admin_cercle_signalements__signalement_id__post",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "signalement_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Signalement Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DecisionIn"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/admin/cercle/lecteurs/{lecteur_id}": {
+      "get": {
+        "tags": [
+          "Administration"
+        ],
+        "summary": "Le cercle d'un lecteur",
+        "operationId": "cercle_lecteur_v1_admin_cercle_lecteurs__lecteur_id__get",
+        "security": [
+          {
+            "HTTPBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "lecteur_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Lecteur Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -4992,18 +6462,24 @@
             "title": "Telephone"
           },
           "reseau": {
-            "type": "string",
-            "enum": [
-              "MTN",
-              "ORANGE"
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "MTN",
+                  "ORANGE"
+                ]
+              },
+              {
+                "type": "null"
+              }
             ],
             "title": "Reseau"
           }
         },
         "type": "object",
         "required": [
-          "telephone",
-          "reseau"
+          "telephone"
         ],
         "title": "AchatIn"
       },
@@ -5298,6 +6774,19 @@
               }
             ],
             "title": "Max Utilisations"
+          },
+          "plafond_tokens": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 1000000000.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Plafond Tokens"
           }
         },
         "type": "object",
@@ -5374,6 +6863,19 @@
               }
             ],
             "title": "Max Utilisations"
+          },
+          "plafond_tokens": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 1000000000.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Plafond Tokens"
           }
         },
         "type": "object",
@@ -5431,6 +6933,39 @@
           "mot_de_passe"
         ],
         "title": "ConnexionIn"
+      },
+      "DecisionIn": {
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "masque",
+              "ignore"
+            ],
+            "title": "Decision"
+          }
+        },
+        "type": "object",
+        "required": [
+          "decision"
+        ],
+        "title": "DecisionIn"
+      },
+      "DemandeIn": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 3,
+            "title": "Code",
+            "description": "Le code ASCENDA du lecteur à ajouter"
+          }
+        },
+        "type": "object",
+        "required": [
+          "code"
+        ],
+        "title": "DemandeIn"
       },
       "DiagnosticIn": {
         "properties": {
@@ -5501,11 +7036,155 @@
               }
             ],
             "title": "Takedown Status"
+          },
+          "lecture_application": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lecture Application"
           }
         },
         "type": "object",
         "title": "DroitsIn",
-        "description": "Ce qu'on peut changer sur un ouvrage depuis le tableau de bord.\n\nUniquement ses droits. Le titre, les auteurs et le texte viennent du\npipeline et de `data/` : les corriger ici les ferait diverger de leur\nsource, et le prochain import les écraserait sans prévenir."
+        "description": "Ce qu'on peut changer sur un ouvrage depuis le tableau de bord."
+      },
+      "EchangeIn": {
+        "properties": {
+          "texte": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Texte"
+          }
+        },
+        "type": "object",
+        "required": [
+          "texte"
+        ],
+        "title": "EchangeIn"
+      },
+      "EncouragementIn": {
+        "properties": {
+          "ami_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Ami Id"
+          },
+          "genre": {
+            "type": "string",
+            "enum": [
+              "bravo",
+              "courage",
+              "defi",
+              "merci"
+            ],
+            "title": "Genre"
+          },
+          "message": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 280
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Message"
+          },
+          "evenement_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evenement Id",
+            "description": "L'activité du fil qu'on encourage"
+          }
+        },
+        "type": "object",
+        "required": [
+          "ami_id",
+          "genre"
+        ],
+        "title": "EncouragementIn"
+      },
+      "FournisseurIn": {
+        "properties": {
+          "modele": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 80,
+                "minLength": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Modele"
+          },
+          "actif": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Actif"
+          },
+          "ordre": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 9.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ordre"
+          },
+          "max_tokens_reponse": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 8000.0,
+                "minimum": 256.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Tokens Reponse"
+          },
+          "cle": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 300
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cle"
+          }
+        },
+        "type": "object",
+        "title": "FournisseurIn"
       },
       "GabaritIn": {
         "properties": {
@@ -5708,6 +7387,19 @@
         ],
         "title": "NoteIn"
       },
+      "PreferencesIn": {
+        "properties": {
+          "partage_activite": {
+            "type": "boolean",
+            "title": "Partage Activite"
+          }
+        },
+        "type": "object",
+        "required": [
+          "partage_activite"
+        ],
+        "title": "PreferencesIn"
+      },
       "ProfilIn": {
         "properties": {
           "nom": {
@@ -5824,6 +7516,36 @@
           "question"
         ],
         "title": "QuestionIn"
+      },
+      "QuotaIn": {
+        "properties": {
+          "max_value": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 1000000000.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Value"
+          },
+          "hard": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hard"
+          }
+        },
+        "type": "object",
+        "title": "QuotaIn"
       },
       "RafraichirIn": {
         "properties": {
@@ -5994,6 +7716,45 @@
           "jetons"
         ],
         "title": "SessionOuverte"
+      },
+      "SignalementIn": {
+        "properties": {
+          "echange_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Echange Id"
+          },
+          "encouragement_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uuid"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Encouragement Id"
+          },
+          "motif": {
+            "type": "string",
+            "maxLength": 500,
+            "minLength": 3,
+            "title": "Motif"
+          }
+        },
+        "type": "object",
+        "required": [
+          "motif"
+        ],
+        "title": "SignalementIn"
       },
       "SurlignageIn": {
         "properties": {

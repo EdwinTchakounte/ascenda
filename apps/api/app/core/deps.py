@@ -4,7 +4,7 @@ from typing import Annotated
 from fastapi import Depends, Request
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
-from app.core.db import fetch_one
+from app.core.db import acteur, fetch_one
 from app.core.errors import Forbidden, Unauthorized
 from app.core.security import decode_access_token
 
@@ -26,6 +26,8 @@ async def _load_user(token: str | None) -> dict | None:
     )
     if not user or not user["is_active"]:
         return None
+    # Le journal des modifications nomme l'auteur de l'écriture, pas la route.
+    acteur.set(("administrateur " if user["est_admin"] else "") + (user["email"] or str(user["id"])))
     return user
 
 

@@ -1,5 +1,6 @@
 """Accès Postgres : un pool asynchrone, des requêtes SQL écrites à la main."""
 from contextlib import asynccontextmanager
+from contextvars import ContextVar
 from typing import Any, Sequence
 
 from psycopg.rows import dict_row
@@ -8,6 +9,11 @@ from psycopg_pool import AsyncConnectionPool
 from app.core.config import settings
 
 _pool: AsyncConnectionPool | None = None
+
+# Qui agit, pour le journal des modifications. Le trigger en base le lit dans
+# `app.acteur` : il faut donc le poser dans la même transaction que l'écriture,
+# et non une fois pour la connexion, qui sert ensuite à quelqu'un d'autre.
+acteur: ContextVar[str | None] = ContextVar("acteur", default=None)
 
 
 async def open_pool() -> None:
@@ -35,6 +41,8 @@ def pool() -> AsyncConnectionPool:
 @asynccontextmanager
 async def connection():
     async with pool().connection() as conn:
+        await conn.execute("select set_config('app.acteur', %s, true)",
+                           (acteur.get() or "systeme",))
         yield conn
 
 

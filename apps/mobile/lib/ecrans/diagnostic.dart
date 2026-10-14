@@ -12,6 +12,7 @@ import '../theme/mouvement.dart';
 import '../theme/papier.dart';
 import '../widgets/etats.dart';
 import '../widgets/illustrations.dart';
+import '../widgets/selon_droit.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
@@ -503,28 +504,34 @@ class _ChoixAxe extends ConsumerWidget {
 }
 
 
-class _CarteAxe extends StatelessWidget {
+class _CarteAxe extends ConsumerWidget {
   const _CarteAxe({required this.axe, required this.onChoisi, this.dansPole = false});
   final Axe axe;
   final bool dansPole;
   final void Function(String slug) onChoisi;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final t = Theme.of(context);
     final p = context.palette;
     final a = axe;
+    // Un parcours réservé est refusé par le serveur au moment de composer le
+    // plan, c'est-à-dire après le diagnostic entier. On le dit ici.
+    final reserve = a.premium && !aLeDroit(ref, 'axes_reserves');
+    final ouvert = a.parcoursPossible && !reserve;
     // La teinte du pôle, celle de ses couvertures ; l'or à défaut.
     final teinte = Couleurs.pole(a.poleSlug ?? a.slug) ?? p.accentTexte;
     return Opacity(
-      opacity: a.parcoursPossible ? 1 : 0.55,
+      opacity: ouvert ? 1 : 0.55,
       child: Surface(
         padding: const EdgeInsets.fromLTRB(14, 14, 10, 14),
         // Un axe dont aucun ouvrage n'a de chapitres découpés ne peut pas donner
         // de plan : on le dit au lieu d'échouer après six questions.
-        onTap: a.parcoursPossible
+        onTap: ouvert
             ? () => onChoisi(a.slug)
-            : () => ScaffoldMessenger.of(context).showSnackBar(
+            : reserve
+                ? () => context.push('/abonnement')
+                : () => ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     content: Texte(
                       "Les ouvrages de « ${a.label} » ne sont pas encore "
@@ -560,24 +567,28 @@ class _CarteAxe extends StatelessWidget {
                   Texte(a.label, style: t.textTheme.titleMedium, maxLines: 3, overflow: TextOverflow.ellipsis),
                   const SizedBox(height: 4),
                   Texte(
-                    !a.parcoursPossible
-                        ? 'Consultable, pas encore de parcours'
-                        : dansPole
-                            ? '${millier(a.nbPages)} pages · ${_heures(a.dureeMin)} de lecture'
-                            : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${millier(a.nbPages)} pages',
+                    reserve
+                        ? 'Parcours réservé à Ascension'
+                        : !a.parcoursPossible
+                            ? 'Consultable, pas encore de parcours'
+                            : dansPole
+                                ? '${millier(a.nbPages)} pages · ${_heures(a.dureeMin)} de lecture'
+                                : '${a.nbOuvrages} ouvrage${a.nbOuvrages > 1 ? 's' : ''} · ${millier(a.nbPages)} pages',
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: t.textTheme.bodySmall?.copyWith(
-                      color: a.parcoursPossible ? p.attenue : p.alerte,
+                      color: reserve ? p.accentTexte : (a.parcoursPossible ? p.attenue : p.alerte),
                     ),
                   ),
                 ],
               ),
             ),
             const SizedBox(width: 6),
-            a.parcoursPossible
+            ouvert
                 ? IconeAscenda(Icone.fleche, taille: 20, couleur: p.attenue)
-                : Icon(Icons.hourglass_empty_rounded, color: p.attenue),
+                : reserve
+                    ? Icon(Icons.lock_outline_rounded, color: p.accentTexte)
+                    : Icon(Icons.hourglass_empty_rounded, color: p.attenue),
           ],
         ),
       ),

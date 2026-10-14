@@ -15,6 +15,7 @@ from app.routers import (
     admin_cercle,
     admin_agent,
     admin_codes,
+    admin_journal,
     agent,
     axes,
     bibliotheque,
@@ -84,6 +85,20 @@ _OUVERT_EN_MAINTENANCE = (
     "/v1/auth/connexion",
     "/v1/auth/rafraichir",
 )
+
+
+@app.middleware("http")
+async def nommer_acteur(request: Request, call_next):
+    """Qui agit, pour le journal des modifications en base.
+
+    Posé ici pour les écritures qui n'ont pas d'appelant identifié, comme une
+    inscription ou un retour de passerelle de paiement. Une requête
+    authentifiée écrase cette valeur par le courriel du compte."""
+    from app.core.db import acteur
+
+    if request.method not in ("GET", "HEAD", "OPTIONS"):
+        acteur.set(f"anonyme {request.method} {request.url.path}"[:120])
+    return await call_next(request)
 
 
 @app.middleware("http")
@@ -174,6 +189,7 @@ for r in (
     admin.router,
     admin_codes.router,
     admin_agent.router,
+    admin_journal.router,
     auth_router.router,
     axes.router,
     bibliotheque.router,
