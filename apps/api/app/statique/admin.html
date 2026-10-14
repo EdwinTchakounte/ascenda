@@ -778,6 +778,33 @@ function poserJetons(j) {
   } catch (_) {}
 }
 
+/** Un fichier à télécharger. Un simple lien ne marcherait pas : l'API demande
+ *  le jeton en en-tête, et un navigateur n'en met pas sur une navigation. On
+ *  récupère donc le corps, puis on déclenche l'enregistrement. */
+async function telecharger(chemin, bouton) {
+  const texte = bouton ? bouton.innerHTML : null;
+  if (bouton) { bouton.disabled = true; bouton.innerHTML = ico("horloge", "pt") + "Préparation…"; }
+  try {
+    const r = await fetch(chemin, { headers: jeton ? { Authorization: "Bearer " + jeton } : {} });
+    if (!r.ok) throw new Error("http " + r.status);
+    const nom = (r.headers.get("Content-Disposition") || "").match(/filename\*?=(?:UTF-8'')?"?([^";]+)/);
+    const url = URL.createObjectURL(await r.blob());
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = nom ? decodeURIComponent(nom[1]) : "ascenda.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    // Révoqué plus tard : le faire aussitôt annule l'enregistrement en cours.
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+    annoncer("Fichier téléchargé.");
+  } catch (_) {
+    annoncer("Le fichier n'a pas pu être préparé.", "mauvais");
+  } finally {
+    if (bouton) { bouton.disabled = false; bouton.innerHTML = texte; }
+  }
+}
+
 async function api(chemin, options = {}, reessai = true) {
   const r = await fetch(chemin, {
     ...options,
@@ -2015,22 +2042,31 @@ zone({ cle: "journal", groupe: "Exploitation", titre: "Journal des modifications
     const tables = (this.env && this.env.relations) || [];
     return `<select id="f-jtable">` + opt("", "toutes les tables", this.f.relation)
       + tables.map((t) => opt(t, t.replace(/_/g, " "), this.f.relation)).join("") + `</select>
+      <!-- Les tables surveillées viennent de la base : la liste se complète
+           au premier chargement, puis reste. -->
       <select id="f-jop">` + opt("", "tous les gestes", this.f.operation)
       + opt("insert", "créations", this.f.operation) + opt("update", "modifications", this.f.operation)
       + opt("delete", "suppressions", this.f.operation) + `</select>
       <input id="f-jacteur" placeholder="qui" value="${ech(this.f.acteur)}">
       <select id="f-jjours">` + ["1", "7", "30", "90", "365"]
-        .map((j) => opt(j, j === "1" ? "aujourd'hui" : j + " jours", this.f.jours)).join("") + `</select>`;
+        .map((j) => opt(j, j === "1" ? "aujourd'hui" : j + " jours", this.f.jours)).join("") + `</select>
+      <button class="bouton fin" id="j-csv">` + ico("fichier", "pt") + `Exporter en CSV</button>`;
   },
   async rendre() {
     const lu = (id, defaut) => (($(id) || {}).value ?? defaut);
     this.f = { relation: lu("f-jtable", this.f.relation), operation: lu("f-jop", this.f.operation),
                acteur: lu("f-jacteur", this.f.acteur), jours: lu("f-jjours", this.f.jours) };
+    const tableau = $("f-jtable");
     const q = new URLSearchParams({ page: this.page || 1, par_page: 40, jours: this.f.jours });
     for (const c of ["relation", "operation", "acteur"]) if (this.f[c]) q.set(c, this.f[c]);
     const env = await api("/v1/admin/journal?" + q);
     this.env = env;
     this.lignes = env.lignes;
+    if (tableau && tableau.options.length <= 1 && env.relations.length) {
+      for (const t of env.relations) {
+        tableau.add(new Option(t.replace(/_/g, " "), t));
+      }
+    }
     if (!env.lignes.length) {
       return rienAVoir("Aucune modification sur cette période.", "horloge");
     }
@@ -2040,6 +2076,16 @@ zone({ cle: "journal", groupe: "Exploitation", titre: "Journal des modifications
       + pagination(env);
   },
   async apres() {
+    // Le fichier reprend les filtres affichés : exporter ce qu'on ne voit pas
+    // serait une mauvaise surprise à l'ouverture du tableur.
+    const csv = $("j-csv");
+    if (csv) {
+      csv.onclick = () => {
+        const q = new URLSearchParams({ jours: this.f.jours });
+        for (const c of ["relation", "operation", "acteur"]) if (this.f[c]) q.set(c, this.f[c]);
+        telecharger("/v1/admin/journal.csv?" + q, csv);
+      };
+    }
     brancherClics(this.lignes || [], async (l) => {
       const e = await api("/v1/admin/journal/" + l.id);
       const changements = e.changements.length
@@ -2111,28 +2157,39 @@ async function afficher(z) {
   $("ecusson-zone").innerHTML = ico(z.ico || "file");
   $("menu").querySelectorAll("button").forEach((b) =>
     b.setAttribute("aria-current", b.dataset.cle === z.cle));
-  $("zone").innerHTML = squelette(z);
+  // Ce qui est saisi dans les filtres, relevé avant de vider la vue. Ils
+  // étaient réinsérés après le rendu, donc `rendre()` les relisait quand ils
+  // n'existaient plus : le filtre revenait à son défaut à chaque passage, et
+  // une frappe dans un champ de recherche perdait le curseur.
+  const saisie = {};
+  $("zone").querySelectorAll(".filtres [id]").forEach((c) => {
+    saisie[c.id] = c.type === "checkbox" ? c.checked : c.value;
+  });
+  $("zone").innerHTML = (z.filtres ? `<div class="filtres">${z.filtres}</div>` : "")
+    + `<div id="contenu-zone">${squelette(z)}</div>`;
+  Object.entries(saisie).forEach(([id, v]) => {
+    const c = $(id);
+    if (!c) return;
+    if (c.type === "checkbox") c.checked = v; else c.value = v;
+  });
+  $("zone").querySelectorAll(".filtres input, .filtres select").forEach((c) => {
+    const evenement = c.tagName === "SELECT" || c.type === "checkbox" ? "change" : "input";
+    let minuterie;
+    c.addEventListener(evenement, () => {
+      clearTimeout(minuterie);
+      // Changer un filtre ramène à la première page : rester sur la page
+      // douze d'une liste devenue longue de trois affiche un vide inexplicable.
+      minuterie = setTimeout(() => { z.page = 1; afficher(z); },
+        evenement === "input" ? 350 : 0);
+    });
+  });
   $("rafraichir").classList.add("tourne");
   try {
-    const html = await z.rendre();
-    $("zone").innerHTML = (z.filtres ? `<div class="filtres">${z.filtres}</div>` : "") + html;
-    // Les filtres sont réinsérés à chaque rendu : on rebranche, et on
-    // conserve ce qui était saisi en le relisant avant de redessiner.
-    $("zone").querySelectorAll(".filtres input, .filtres select").forEach((c) => {
-      const evenement = c.tagName === "SELECT" || c.type === "checkbox" ? "change" : "input";
-      let minuterie;
-      c.addEventListener(evenement, () => {
-        clearTimeout(minuterie);
-        // Changer un filtre ramène à la première page : rester sur la page
-        // douze d'une liste devenue longue de trois affiche un vide inexplicable.
-        minuterie = setTimeout(() => { z.page = 1; afficher(z); },
-          evenement === "input" ? 350 : 0);
-      });
-    });
+    $("contenu-zone").innerHTML = await z.rendre();
     brancherPages((n) => { z.page = n; afficher(z); });
     if (z.apres) await z.apres();
   } catch (_) {
-    $("zone").innerHTML = rienAVoir("Impossible de charger cette vue.", "alerte");
+    $("contenu-zone").innerHTML = rienAVoir("Impossible de charger cette vue.", "alerte");
   } finally {
     $("rafraichir").classList.remove("tourne");
   }

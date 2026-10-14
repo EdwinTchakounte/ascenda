@@ -1,6 +1,8 @@
 """Le journal des modifications : ce que les triggers écrivent, et ce qu'ils taisent."""
 import asyncio
+import os
 import sys
+import urllib.request
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parents[1]
@@ -32,6 +34,14 @@ async def compte(admin=False):
     _, r, _ = appel("POST", "/v1/auth/connexion", {"email": email, "mot_de_passe": MDP})
     ligne = await fetch_one("select id from app_user where email = %s", (email,))
     return str(ligne["id"]), email, r["jetons"]["access_token"]
+
+
+def telecharger(chemin, jeton):
+    """Le corps tel quel : `appel` ramène les réponses non JSON à leur taille."""
+    requete = urllib.request.Request(os.environ.get("ASCENDA_API", "http://127.0.0.1:8250") + chemin)
+    requete.add_header("Authorization", f"Bearer {jeton}")
+    with urllib.request.urlopen(requete, timeout=90) as r:
+        return r.status, r.read().decode("utf-8"), r.headers.get("Content-Disposition", "")
 
 
 async def entrees(relation, cle):
@@ -105,11 +115,33 @@ async def main():
         s, detail, _ = appel("GET", f"/v1/admin/journal/{une['id']}", jeton=jeton) if une else (0, {}, 0)
         ok("l'entrée entière se lit", s == 200 and {"avant", "apres"} <= set(detail or {}), s)
 
+        print("\n· L'export en tableur")
+        s, texte, disposition = telecharger("/v1/admin/journal.csv?jours=1&relation=app_user", jeton)
+        ok("le fichier se télécharge", s == 200, s)
+        ok("il est proposé en pièce jointe, nommé et daté",
+           disposition.startswith("attachment") and "ascenda-journal-" in disposition
+           and disposition.endswith(".csv"), disposition)
+        lignes = [l for l in texte.splitlines() if l.strip()]
+        ok("il commence par la marque d'octets et le séparateur",
+           texte.startswith("\ufeffsep=;"), texte[:12].encode("unicode_escape").decode())
+        ok("l'en-tête nomme les colonnes",
+           lignes[1].split(";") == ["entrée", "quand", "table", "geste", "ligne", "qui",
+                                    "colonne", "avant", "après"],
+           lignes[1])
+        ok("il porte autant de lignes que de changements", len(lignes) > 2, len(lignes))
+        ok("une modification se lit colonne par colonne",
+           any(l.split(";")[6] == "display_name" and l.split(";")[8] == "Relu" for l in lignes[2:]),
+           [l for l in lignes[2:4]])
+        ok("une création n'invente pas de colonne changée",
+           any(l.split(";")[3] == "création" and l.split(";")[6] == "" for l in lignes[2:]))
+
         print("\n· Le journal n'est pas public")
         lecteur_id, _, lecteur = await compte(admin=False)
         comptes.append(lecteur_id)
         s, _, _ = appel("GET", "/v1/admin/journal", jeton=lecteur)
         ok("un lecteur ne voit pas le journal", s == 403, s)
+        s, _, _ = appel("GET", "/v1/admin/journal.csv", jeton=lecteur)
+        ok("ni le fichier", s == 403, s)
         s, _, _ = appel("GET", "/v1/admin/journal")
         ok("sans jeton non plus", s in (401, 403), s)
 
