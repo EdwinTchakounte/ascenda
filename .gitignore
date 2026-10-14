@@ -47,3 +47,9 @@ transfert/
 
 # L'export brut de Figma : les quinze PDF séparés. Seul le document réuni est versionné.
 /ASCENDA, maquettes mobile/
+
+# La documentation, les maquettes et les notes de conception restent sur la
+# machine de travail : le dépôt ne porte que le logiciel.
+/docs/
+/wireframes/
+/ASCENDA, maquettes mobile/
