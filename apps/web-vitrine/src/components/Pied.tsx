@@ -5,7 +5,7 @@ const COLONNES = [
   {
     titre: "Produit",
     liens: [
-      { href: "/#axes", texte: "Les 11 axes" },
+      { href: "/#axes", texte: "Les 17 axes" },
       { href: "/#methode", texte: "Comment ça marche" },
       { href: "/bibliotheque", texte: "Bibliothèque" },
       { href: "/#tarifs", texte: "Tarifs" },

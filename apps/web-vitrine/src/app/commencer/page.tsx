@@ -8,7 +8,7 @@ import { apk, apk32, apkUniverselle } from "@/lib/telechargements";
 export const metadata = {
   title: "Commencer avec ASCENDA",
   description:
-    "Le diagnostic prend six minutes et donne un plan de lecture daté, tiré de 78 ouvrages.",
+    "Le diagnostic prend six minutes et donne un plan de lecture daté, tiré de 79 ouvrages.",
 };
 
 const ETAPES = [

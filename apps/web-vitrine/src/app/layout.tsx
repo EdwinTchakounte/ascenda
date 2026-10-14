@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(base),
   title: "ASCENDA, lecture guidée",
   description:
-    "Choisissez un axe, ASCENDA construit votre chronogramme de lecture : des séances datées tirées de 78 ouvrages, une synthèse, un quiz, et un agent qui cite toujours le livre et la page.",
+    "Choisissez un axe, ASCENDA construit votre chronogramme de lecture : des séances datées tirées de 79 ouvrages, une synthèse, un quiz, et un agent qui cite toujours le livre et la page.",
   keywords: [
     "lecture guidée", "chronogramme de lecture", "intelligence artificielle",
     "Afrique", "apprentissage", "bibliothèque", "francophone",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ASCENDA. Learn. Grow. Become.",
     description:
-      "78 ouvrages, 15 601 pages, 11 parcours. Un plan de lecture qui tient compte du temps que vous avez vraiment.",
+      "79 ouvrages, 17 299 pages, 17 parcours. Un plan de lecture qui tient compte du temps que vous avez vraiment.",
     locale: "fr_FR",
     type: "website",
     images: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ASCENDA. Learn. Grow. Become.",
-    description: "78 ouvrages, 11 parcours, un plan de lecture qui tient dans votre semaine.",
+    description: "79 ouvrages, 17 parcours, un plan de lecture qui tient dans votre semaine.",
     images: ["/images/partage-1200x630.jpg"],
   },
 };

@@ -10,7 +10,7 @@ const FORMULES = [
     detail: "Sans carte bancaire",
     resume: "De quoi lire sérieusement, sans rien payer.",
     inclus: [
-      "La bibliothèque de base, 78 ouvrages",
+      "La bibliothèque de base, 79 ouvrages",
       "Un axe et un chronogramme",
       "Les quiz déjà préparés, avec leurs justificatifs",
       "20 questions par jour à l'agent",

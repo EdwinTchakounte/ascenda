@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import PageTexte, { Bloc } from "@/components/PageTexte";
-import { CORPUS } from "@/lib/api";
+import { leCorpus } from "@/lib/api";
 import { EDITEUR } from "@/lib/editeur";
 
 export const metadata = {
@@ -10,7 +10,8 @@ export const metadata = {
     "Pourquoi un plan de lecture plutôt qu'une bibliothèque de plus, et comment ASCENDA le construit.",
 };
 
-export default function Page() {
+export default async function Page() {
+  const CORPUS = await leCorpus();
   return (
     <PageTexte
       oeil="Learn. Grow. Become."

@@ -6,7 +6,7 @@ import { DROITS, EDITEUR } from "@/lib/editeur";
 export const metadata = {
   title: "Droits et citations",
   description:
-    "Comment ASCENDA traite les 78 ouvrages de son corpus : sept intégralement, soixante et onze par extraits plafonnés.",
+    "Comment ASCENDA traite les 79 ouvrages de son corpus : sept intégralement, soixante-douze par extraits plafonnés.",
 };
 
 export default function Page() {

@@ -8,7 +8,7 @@ import { heures, lesAxes, lesOuvrages, type Ouvrage } from "@/lib/api";
 export const metadata = {
   title: "Bibliothèque ASCENDA",
   description:
-    "78 ouvrages classés en 11 axes : intelligence artificielle, pensée africaine, littérature, économie, sciences.",
+    "79 ouvrages classés en 17 axes : intelligence artificielle, pensée africaine, littérature, économie, sciences.",
 };
 
 const NIVEAUX: Record<string, string> = {
@@ -106,7 +106,7 @@ export default async function Bibliotheque({
           <div className="cadre">
             <p className="oeil">Bibliothèque</p>
             <h1 className="mt-3 text-[2.2rem] font-semibold leading-tight sm:text-[2.6rem]">
-              {axeActif ? axeActif.label : "78 ouvrages, 11 parcours"}
+              {axeActif ? axeActif.label : "79 ouvrages, 17 parcours"}
             </h1>
             <p className="mt-3 max-w-[64ch] text-[1rem] leading-[1.7] text-[var(--texte-doux)]">
               {axeActif

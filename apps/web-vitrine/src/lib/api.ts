@@ -50,22 +50,55 @@ export type Ouvrage = {
   lecture_integrale: boolean;
 };
 
-/** Chiffres du corpus, relevés en base le 29 août 2026. */
-export const CORPUS = { ouvrages: 78, pages: 15601, axes: 11 };
+/** Chiffres du corpus, relevés en base le 14 octobre 2026. Repli seulement. */
+export const CORPUS = { ouvrages: 79, pages: 17299, axes: 17, integrale: 7, plafonnes: 72 };
 
-/** Repli : les 11 axes avec leurs volumes réels. */
+/**
+ * Les chiffres du corpus, lus dans l'API plutôt que recopiés.
+ *
+ * Ils étaient figés dans le code et avaient pris un ouvrage et six axes de
+ * retard : la vitrine annonçait soixante-dix-huit ouvrages quand l'application
+ * en servait soixante-dix-neuf. Lus ici, ils ne peuvent plus diverger.
+ */
+export async function leCorpus() {
+  const [biblio, axes] = await Promise.all([
+    recuperer<{ total: number; ouvrages: Ouvrage[] }>("/bibliotheque?par_page=100", {
+      total: 0,
+      ouvrages: [],
+    }),
+    recuperer<Axe[]>("/axes", []),
+  ]);
+  if (!biblio.total || !axes.length) return CORPUS;
+  const pages = biblio.ouvrages.reduce((n, o) => n + (o.pages ?? 0), 0);
+  const integrale = biblio.ouvrages.filter((o) => o.lecture_integrale).length;
+  return {
+    ouvrages: biblio.total,
+    pages: pages || CORPUS.pages,
+    axes: axes.length,
+    integrale,
+    plafonnes: biblio.total - integrale,
+  };
+}
+
+/** Repli : les dix-sept axes avec leurs volumes réels. */
 const AXES_REPLI: Axe[] = [
-  { slug: "01-ia-fondamentaux-vulgarisation", label: "Fondamentaux de l'IA", description: null, premium: false, nb_ouvrages: 11, nb_pages: 1719, duree_estimee_min: 2751 },
-  { slug: "02-ia-technique-academique", label: "IA technique et académique", description: null, premium: false, nb_ouvrages: 7, nb_pages: 2276, duree_estimee_min: 3642 },
-  { slug: "03-ia-outils-pratique-prompting", label: "Outils, pratique et prompting", description: null, premium: false, nb_ouvrages: 8, nb_pages: 1351, duree_estimee_min: 2161 },
-  { slug: "04-ia-societe-ethique-philosophie", label: "IA, société et éthique", description: null, premium: false, nb_ouvrages: 17, nb_pages: 4015, duree_estimee_min: 5780 },
-  { slug: "05-ia-education-pedagogie", label: "IA, éducation et pédagogie", description: null, premium: false, nb_ouvrages: 3, nb_pages: 155, duree_estimee_min: 248 },
-  { slug: "06-ia-travail-management-metiers", label: "IA, travail et métiers", description: null, premium: false, nb_ouvrages: 5, nb_pages: 838, duree_estimee_min: 1341 },
-  { slug: "07-afrique-histoire-pensee", label: "Afrique, histoire et pensée", description: null, premium: false, nb_ouvrages: 10, nb_pages: 1497, duree_estimee_min: 1629 },
-  { slug: "08-litterature-romans", label: "Littérature et romans", description: null, premium: false, nb_ouvrages: 8, nb_pages: 1390, duree_estimee_min: 2224 },
-  { slug: "09-developpement-personnel-influence", label: "Développement personnel et influence", description: null, premium: false, nb_ouvrages: 7, nb_pages: 1877, duree_estimee_min: 3003 },
-  { slug: "10-economie-entrepreneuriat-finance", label: "Économie, entrepreneuriat et finance", description: null, premium: false, nb_ouvrages: 2, nb_pages: 295, duree_estimee_min: 472 },
-  { slug: "11-sciences-environnement", label: "Sciences et environnement", description: null, premium: false, nb_ouvrages: 1, nb_pages: 342, duree_estimee_min: 547 },
+  { slug: "01-ia-fondamentaux-vulgarisation", label: "Fondamentaux de l'IA", description: null, premium: false, nb_ouvrages: 11, nb_pages: 1719, duree_estimee_min: 3577 },
+  { slug: "02-ia-technique-academique", label: "IA technique et académique", description: null, premium: false, nb_ouvrages: 7, nb_pages: 2276, duree_estimee_min: 6938 },
+  { slug: "03-ia-outils-pratique-prompting", label: "Outils, pratique et prompting", description: null, premium: false, nb_ouvrages: 8, nb_pages: 1351, duree_estimee_min: 2278 },
+  { slug: "04-ia-societe-ethique-philosophie", label: "IA, société et éthique", description: null, premium: false, nb_ouvrages: 17, nb_pages: 4015, duree_estimee_min: 10343 },
+  { slug: "05-ia-education-pedagogie", label: "IA, éducation et pédagogie", description: null, premium: false, nb_ouvrages: 3, nb_pages: 155, duree_estimee_min: 231 },
+  { slug: "06-ia-travail-management-metiers", label: "IA, travail et métiers", description: null, premium: false, nb_ouvrages: 5, nb_pages: 838, duree_estimee_min: 1494 },
+  { slug: "07-afrique-histoire-pensee", label: "Afrique, histoire et pensée", description: null, premium: false, nb_ouvrages: 10, nb_pages: 1497, duree_estimee_min: 3342 },
+  { slug: "08-litterature-romans", label: "Littérature et romans", description: null, premium: false, nb_ouvrages: 8, nb_pages: 1390, duree_estimee_min: 2860 },
+  { slug: "09-developpement-personnel-influence", label: "Développement personnel et influence", description: null, premium: false, nb_ouvrages: 7, nb_pages: 1877, duree_estimee_min: 3766 },
+  { slug: "10-economie-entrepreneuriat-finance", label: "Économie, entrepreneuriat et finance", description: null, premium: false, nb_ouvrages: 2, nb_pages: 295, duree_estimee_min: 624 },
+  { slug: "11-sciences-environnement", label: "Sciences et environnement", description: null, premium: false, nb_ouvrages: 1, nb_pages: 342, duree_estimee_min: 1568 },
+  { slug: "12-1-developpement-rural", label: "Développement rural et filières", description: null, premium: false, nb_ouvrages: 1, nb_pages: 299, duree_estimee_min: 978 },
+  { slug: "12-2-agronomie-exploitation", label: "Agronomie et exploitation", description: null, premium: false, nb_ouvrages: 1, nb_pages: 405, duree_estimee_min: 1312 },
+  { slug: "12-3-protection-cultures", label: "Protection des cultures", description: null, premium: false, nb_ouvrages: 1, nb_pages: 57, duree_estimee_min: 211 },
+  { slug: "12-4-cultures-plantes", label: "Cultures et plantes utiles", description: null, premium: false, nb_ouvrages: 1, nb_pages: 446, duree_estimee_min: 1397 },
+  { slug: "12-5-elevage-sante-animale", label: "Élevage et santé animale", description: null, premium: false, nb_ouvrages: 1, nb_pages: 326, duree_estimee_min: 1008 },
+  { slug: "12-6-pisciculture-petits-elevages", label: "Pisciculture et petits élevages", description: null, premium: false, nb_ouvrages: 1, nb_pages: 76, duree_estimee_min: 253 },
 ];
 
 async function recuperer<T>(chemin: string, repli: T, revalider = 3600): Promise<T> {

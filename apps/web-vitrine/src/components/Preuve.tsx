@@ -1,14 +1,14 @@
 import Bouton from "./Bouton";
 import { Voile } from "./Formes";
-import { CORPUS } from "@/lib/api";
+import { leCorpus } from "@/lib/api";
 
-const CHIFFRES = [
-  { valeur: CORPUS.ouvrages.toString(), libelle: "ouvrages" },
-  { valeur: CORPUS.pages.toLocaleString("fr-FR"), libelle: "pages indexées" },
-  { valeur: CORPUS.axes.toString(), libelle: "parcours" },
-];
-
-export default function Preuve() {
+export default async function Preuve() {
+  const corpus = await leCorpus();
+  const CHIFFRES = [
+    { valeur: corpus.ouvrages.toString(), libelle: "ouvrages" },
+    { valeur: corpus.pages.toLocaleString("fr-FR"), libelle: "pages indexées" },
+    { valeur: corpus.axes.toString(), libelle: "parcours" },
+  ];
   return (
     <section className="relative overflow-hidden bg-[var(--color-nuit-profond)] py-24">
       <Voile teinte="#d4a23f" opacite={0.18} flou={110} className="bottom-[-30%] left-1/2 h-[480px] w-[820px] -translate-x-1/2" />
