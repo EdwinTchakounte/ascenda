@@ -1,0 +1,90 @@
+name: APK .NET
+
+on:
+  push:
+    branches: [main]
+    paths: ['apps/mobile-dotnet/**', '.github/workflows/apk-dotnet.yml']
+  pull_request:
+    paths: ['apps/mobile-dotnet/**']
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: apps/mobile-dotnet
+
+jobs:
+  verifier:
+    name: Vérifier le noyau
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Poser le SDK .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            10.0.x
+
+      - name: Vérifier
+        run: dotnet test tests/Ascenda.Noyau.Tests/Ascenda.Noyau.Tests.csproj
+             --configuration Release --logger "trx;LogFileName=verifications.trx"
+             --results-directory resultats
+
+      - name: Déposer le rapport
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verifications
+          path: apps/mobile-dotnet/resultats/
+
+  apk:
+    name: Construire l'APK
+    needs: verifier
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Poser le SDK .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Poser le JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: microsoft
+          java-version: '17'
+
+      - name: Poser la charge de travail Android
+        run: dotnet workload install maui-android --skip-sign-check
+
+      - name: Publier l'APK
+        run: dotnet publish src/Ascenda.Mobile/Ascenda.Mobile.csproj
+             -f net10.0-android -c Release
+             -p:AndroidPackageFormat=apk
+             -p:ApplicationVersion=${{ github.run_number }}
+             -o paquet
+
+      - name: Relever l'empreinte
+        run: |
+          cd paquet
+          ls -la *.apk
+          sha256sum *.apk | tee empreintes.txt
+
+      - name: Déposer l'APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: ascenda-dotnet-apk
+          path: |
+            apps/mobile-dotnet/paquet/*.apk
+            apps/mobile-dotnet/paquet/empreintes.txt
+          retention-days: 30
+
+      - name: Publier la version
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            apps/mobile-dotnet/paquet/*.apk
+            apps/mobile-dotnet/paquet/empreintes.txt
