@@ -47,26 +47,6 @@ class CoqueAscenda extends ConsumerWidget {
           borderRadius: const BorderRadius.vertical(top: Radius.circular(26)),
           child: Stack(
             children: [
-              // Le signet : un filet d'or glissé sous l'onglet ouvert.
-              AnimatedAlign(
-                duration: const Duration(milliseconds: 320),
-                curve: Curves.easeOutCubic,
-                alignment: Alignment(-1 + 2 * coque.currentIndex / (_onglets.length - 1), -1),
-                child: FractionallySizedBox(
-                  widthFactor: 1 / _onglets.length,
-                  child: Center(
-                    child: Container(
-                      width: 46,
-                      height: 3,
-                      decoration: BoxDecoration(
-                        color: p.accent,
-                        borderRadius: const BorderRadius.vertical(bottom: Radius.circular(3)),
-                        boxShadow: [BoxShadow(color: p.accent.withValues(alpha: 0.45), blurRadius: 8)],
-                      ),
-                    ),
-                  ),
-                ),
-              ),
               NavigationBar(
                 backgroundColor: Colors.transparent,
                 selectedIndex: coque.currentIndex,
@@ -82,6 +62,34 @@ class CoqueAscenda extends ConsumerWidget {
                       key: ValueKey('onglet-$i'),
                     ),
                 ],
+              ),
+              // Le signet : un filet d'or glissé sous l'onglet ouvert. Posé, et
+              // non empilé : un enfant libre étirerait la barre sur tout
+              // l'écran, et l'écran lui-même n'aurait plus de place.
+              Positioned(
+                top: 0,
+                left: 0,
+                right: 0,
+                height: 3,
+                child: AnimatedAlign(
+                  duration: const Duration(milliseconds: 320),
+                  curve: Curves.easeOutCubic,
+                  alignment: Alignment(-1 + 2 * coque.currentIndex / (_onglets.length - 1), -1),
+                  child: FractionallySizedBox(
+                    widthFactor: 1 / _onglets.length,
+                    child: Center(
+                      child: Container(
+                        width: 46,
+                        height: 3,
+                        decoration: BoxDecoration(
+                          color: p.accent,
+                          borderRadius: const BorderRadius.vertical(bottom: Radius.circular(3)),
+                          boxShadow: [BoxShadow(color: p.accent.withValues(alpha: 0.45), blurRadius: 8)],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ],
           ),
