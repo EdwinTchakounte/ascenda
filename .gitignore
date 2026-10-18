@@ -53,3 +53,6 @@ transfert/
 /docs/
 /wireframes/
 /ASCENDA, maquettes mobile/
+
+# Les règles d'agent de Next.js, réécrites à chaque « next dev ».
+apps/web-vitrine/AGENTS.md
