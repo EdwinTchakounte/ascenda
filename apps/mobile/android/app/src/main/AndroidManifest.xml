@@ -12,6 +12,7 @@
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:dataExtractionRules="@xml/regles_extraction"
+        android:networkSecurityConfig="@xml/reseau_local"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

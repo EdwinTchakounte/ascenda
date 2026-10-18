@@ -133,6 +133,9 @@ class DiagnosticIn(BaseModel):
     reponses: dict[str, str | int]
 
 
+OBJECTIFS = {"curiosite", "examen", "professionnel", "culture"}
+
+
 @router.post("/diagnostic", summary="Enregistrer le diagnostic et en déduire un niveau")
 async def enregistrer_diagnostic(data: DiagnosticIn, user: CurrentUser):
     r = data.reponses
@@ -148,6 +151,8 @@ async def enregistrer_diagnostic(data: DiagnosticIn, user: CurrentUser):
     minutes = int(r.get("minutes_semaine", 150) or 150)
     duree = int(r.get("duree_seance", 30) or 30)
     objectif = str(r.get("objectif", "curiosite"))
+    if objectif not in OBJECTIFS:
+        objectif = "curiosite"
     jours_echeance = int(r.get("echeance", 0) or 0)
 
     await execute(
