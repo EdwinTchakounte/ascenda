@@ -20,7 +20,7 @@
             <VerticalStackLayout Spacing="6">
               <Label Text="{Binding Auteur}" Style="{StaticResource Crochet}" />
               <Label Text="{Binding Texte}" />
-              <Label Text="{Binding Sources}" Style="{StaticResource Crochet}"
+              <Label Text="{Binding Resume}" Style="{StaticResource Crochet}"
                      IsVisible="{Binding ASources}" />
             </VerticalStackLayout>
           </Border>
