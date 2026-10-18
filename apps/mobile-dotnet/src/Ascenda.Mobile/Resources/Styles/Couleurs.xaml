@@ -3,28 +3,83 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
   <!-- Ivoire -->
-  <Color x:Key="Fond">#F6F3EC</Color>
-  <Color x:Key="Surface">#FFFFFF</Color>
-  <Color x:Key="SurfaceCreuse">#EFEADF</Color>
-  <Color x:Key="Encre">#0B1435</Color>
-  <Color x:Key="Texte">#3A4156</Color>
-  <Color x:Key="Attenue">#6B7080</Color>
-  <Color x:Key="Trait">#E3DCCC</Color>
-  <Color x:Key="Accent">#D4A23F</Color>
-  <Color x:Key="AccentTexte">#94690F</Color>
-  <Color x:Key="Succes">#4F8060</Color>
-  <Color x:Key="Alerte">#B9603F</Color>
-  <Color x:Key="Heros">#16245A</Color>
-  <Color x:Key="HerosFin">#0B1435</Color>
-  <Color x:Key="SurHeros">#F7F4EC</Color>
-  <Color x:Key="SurHerosDoux">#B9C1D6</Color>
-  <Color x:Key="AccentSurHeros">#E8C070</Color>
+  <Color x:Key="Fond">#FFF6F3EC</Color>
+  <Color x:Key="Surface">#FFFFFFFF</Color>
+  <Color x:Key="SurfaceCreuse">#FFEFEADF</Color>
+  <Color x:Key="Encre">#FF0B1435</Color>
+  <Color x:Key="Texte">#FF3A4156</Color>
+  <Color x:Key="Attenue">#FF6B7080</Color>
+  <Color x:Key="Trait">#170B1435</Color>
+  <Color x:Key="Accent">#FFD4A23F</Color>
+  <Color x:Key="SurAccent">#FF1A1400</Color>
+  <Color x:Key="AccentTexte">#FF94690F</Color>
+  <Color x:Key="Succes">#FF4F8060</Color>
+  <Color x:Key="Alerte">#FFB9603F</Color>
+  <Color x:Key="Heros">#FF16245A</Color>
+  <Color x:Key="HerosFin">#FF0B1435</Color>
+  <Color x:Key="SurHeros">#FFF7F4EC</Color>
+  <Color x:Key="SurHerosDoux">#FFB9C1D6</Color>
+  <Color x:Key="AccentSurHeros">#FFE8C070</Color>
+  <Color x:Key="Ombre">#FF0B1435</Color>
 
   <!-- Nuit -->
-  <Color x:Key="FondNuit">#060C1F</Color>
-  <Color x:Key="SurfaceNuit">#0F1934</Color>
-  <Color x:Key="EncreNuit">#F4F1E8</Color>
-  <Color x:Key="TexteNuit">#D3D8E6</Color>
-  <Color x:Key="AccentNuit">#E3B456</Color>
+  <Color x:Key="FondNuit">#FF060C1F</Color>
+  <Color x:Key="SurfaceNuit">#FF0F1934</Color>
+  <Color x:Key="SurfaceCreuseNuit">#FF162244</Color>
+  <Color x:Key="EncreNuit">#FFF4F1E8</Color>
+  <Color x:Key="TexteNuit">#FFD3D8E6</Color>
+  <Color x:Key="AttenueNuit">#FF939CB5</Color>
+  <Color x:Key="TraitNuit">#1FE8C070</Color>
+  <Color x:Key="AccentNuit">#FFE3B456</Color>
+  <Color x:Key="SurAccentNuit">#FF1A1400</Color>
+  <Color x:Key="AccentTexteNuit">#FFEBC477</Color>
+  <Color x:Key="SuccesNuit">#FF8DBB99</Color>
+  <Color x:Key="AlerteNuit">#FFE59474</Color>
+  <Color x:Key="HerosNuit">#FF243672</Color>
+  <Color x:Key="HerosFinNuit">#FF111C40</Color>
+  <Color x:Key="SurHerosNuit">#FFF7F4EC</Color>
+  <Color x:Key="SurHerosDouxNuit">#FFBAC3DC</Color>
+  <Color x:Key="AccentSurHerosNuit">#FFF0CB7E</Color>
+  <Color x:Key="OmbreNuit">#FF000000</Color>
+
+  <!-- Sepia -->
+  <Color x:Key="FondSepia">#FFF1E6D0</Color>
+  <Color x:Key="SurfaceSepia">#FFFBF4E5</Color>
+  <Color x:Key="SurfaceCreuseSepia">#FFE7D9BD</Color>
+  <Color x:Key="EncreSepia">#FF3A2816</Color>
+  <Color x:Key="TexteSepia">#FF4F3C28</Color>
+  <Color x:Key="AttenueSepia">#FF7F6A52</Color>
+  <Color x:Key="TraitSepia">#1F3A2816</Color>
+  <Color x:Key="AccentSepia">#FFC0843A</Color>
+  <Color x:Key="SurAccentSepia">#FF211300</Color>
+  <Color x:Key="AccentTexteSepia">#FF85551A</Color>
+  <Color x:Key="SuccesSepia">#FF5D7C49</Color>
+  <Color x:Key="AlerteSepia">#FFA9532F</Color>
+  <Color x:Key="HerosSepia">#FF6A4A2B</Color>
+  <Color x:Key="HerosFinSepia">#FF3A2816</Color>
+  <Color x:Key="SurHerosSepia">#FFFAF0DE</Color>
+  <Color x:Key="SurHerosDouxSepia">#FFDCC7A8</Color>
+  <Color x:Key="AccentSurHerosSepia">#FFF0C77F</Color>
+  <Color x:Key="OmbreSepia">#FF3A2816</Color>
+
+  <!-- Foret -->
+  <Color x:Key="FondForet">#FF0A1712</Color>
+  <Color x:Key="SurfaceForet">#FF12241B</Color>
+  <Color x:Key="SurfaceCreuseForet">#FF1A3126</Color>
+  <Color x:Key="EncreForet">#FFEFF4EA</Color>
+  <Color x:Key="TexteForet">#FFCAD8CD</Color>
+  <Color x:Key="AttenueForet">#FF8DA496</Color>
+  <Color x:Key="TraitForet">#1FCFE3C8</Color>
+  <Color x:Key="AccentForet">#FFD9B45A</Color>
+  <Color x:Key="SurAccentForet">#FF191200</Color>
+  <Color x:Key="AccentTexteForet">#FFE4C274</Color>
+  <Color x:Key="SuccesForet">#FF93C7A0</Color>
+  <Color x:Key="AlerteForet">#FFE39A78</Color>
+  <Color x:Key="HerosForet">#FF235138</Color>
+  <Color x:Key="HerosFinForet">#FF12291D</Color>
+  <Color x:Key="SurHerosForet">#FFF2F6EE</Color>
+  <Color x:Key="SurHerosDouxForet">#FFB8CDBF</Color>
+  <Color x:Key="AccentSurHerosForet">#FFEDCB7A</Color>
+  <Color x:Key="OmbreForet">#FF000000</Color>
 
 </ResourceDictionary>

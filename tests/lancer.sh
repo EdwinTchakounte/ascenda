@@ -27,7 +27,7 @@ echo
 echo "################  contrat d'API  ################"
 "$PYTHON" packages/shared/verifier_contrat.py --vif || echec=1
 
-for suite in test_api test_parcours test_revision test_axes test_paiement test_tara test_courriel test_mot_de_passe test_enrichissement test_exploitation test_admin test_import test_codes test_cercle test_pdf test_qualite test_resilience test_poles test_lecture_application test_agent_reglages test_journal; do
+for suite in test_api test_parcours test_revision test_axes test_paiement test_tara test_courriel test_mot_de_passe test_enrichissement test_exploitation test_admin test_import test_codes test_cercle test_pdf test_qualite test_resilience test_poles test_lecture_application test_agent_reglages test_journal test_portage; do
   echo
   echo "################  $suite  ################"
   ASCENDA_API="$API" "$PYTHON" "tests/$suite.py" || echec=1
