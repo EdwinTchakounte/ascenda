@@ -13,7 +13,6 @@ import '../widgets/illustrations.dart';
 import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
-/// Les ouvrages gardés sur l'appareil
 class EcranHorsLigne extends ConsumerWidget {
   const EcranHorsLigne({super.key});
 
@@ -25,7 +24,6 @@ class EcranHorsLigne extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Livres hors ligne')),
-      // Le grain du papier : l'étagère s'ouvre hors de la coque.
       body: FondPapier(
         child: packs.when(
           loading: () => const Center(child: CircularProgressIndicator()),
@@ -46,7 +44,6 @@ class EcranHorsLigne extends ConsumerWidget {
             return ListView(
               padding: const EdgeInsets.fromLTRB(0, 10, 0, 32),
               children: [
-                // L'étagère : les dos des volumes emportés, signet dehors.
                 Apparition(
                   child: Rayon(
                     hauteur: 150,
@@ -155,5 +152,4 @@ class EcranHorsLigne extends ConsumerWidget {
       ),
     );
   }
-
 }

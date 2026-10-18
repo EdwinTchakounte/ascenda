@@ -4,33 +4,22 @@ import 'palette.dart';
 
 export 'palette.dart';
 
-/// Les couleurs d'ASCENDA, lues dans le thème choisi.
 abstract final class Couleurs {
   static Palette get _p => Palette.courante;
-
-  /// Le fond profond des cartes de mise en avant, et sa fin de dégradé.
   static Color get nuit => _p.heros;
   static Color get nuitProfond => _p.herosFin;
   static Color get ardoise => Color.lerp(_p.heros, _p.herosFin, 0.5)!;
   static Color get surfaceSombre => _p.herosFin;
-
   static Color get or => _p.accent;
-
-  /// L'or lisible sur une carte de mise en avant.
   static Color get orClair => _p.accentSurHeros;
-
-  /// L'or lisible comme texte sur le fond et les cartes.
   static Color get orTexte => _p.accentTexte;
-
   static Color get ivoire => _p.surface;
   static Color get ivoireCreuse => _p.surfaceCreuse;
   static Color get encre => _p.encre;
   static Color get grisChaud => _p.attenue;
-
   static Color get sauge => _p.succes;
   static Color get terracotta => _p.alerte;
 
-  /// La teinte d'un pôle, celle-là même qui colore sa carte sur la vitrine et le dos de
   static const poles = <String, Color>{
     '01': Color(0xFFC08A2E), '02': Color(0xFF4A6FA5), '03': Color(0xFF5F8A6A),
     '04': Color(0xFF8A7F9E), '05': Color(0xFFC4704F), '06': Color(0xFF4F8687),
@@ -43,14 +32,9 @@ abstract final class Couleurs {
 
   static Color get traitClair => _p.trait;
   static Color get traitSombre => _p.trait;
-
   static Color get papier => _p.fond;
   static Color get encreDouce => _p.texte;
-
   static List<BoxShadow> get ombreDouce => _p.ombreCarte;
-
-  /// Les couleurs de la marque elle-même, qui ne suivent aucun thème : l'écran
-  /// de démarrage et le logo.
   static const marqueNuit = Color(0xFF050D22);
   static const marqueOr = Color(0xFFD4A23F);
 }

@@ -5,11 +5,9 @@ import '../etat/apparence.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// Le choix du thème : cinq échantillons de papier, chacun un aperçu de son ambiance.
 class SelecteurTheme extends ConsumerWidget {
   const SelecteurTheme({super.key, this.compact = false});
 
-  /// Dans le tiroir : échantillons plus petits, sur une ligne.
   final bool compact;
 
   @override
@@ -73,7 +71,6 @@ class _Echantillon extends StatelessWidget {
               duration: const Duration(milliseconds: 220),
               curve: Curves.easeOut,
               width: taille,
-              // La proportion d'une page, pas celle d'un jeton.
               height: taille * 1.3,
               padding: const EdgeInsets.all(2),
               decoration: BoxDecoration(
@@ -104,8 +101,6 @@ class _Echantillon extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 7),
-            // Le nom ne déborde jamais de son échantillon : sur un écran
-            // étroit ou en grande police, cinq vignettes tiennent la ligne.
             SizedBox(
               width: taille,
               child: Texte(
@@ -127,9 +122,9 @@ class _Echantillon extends StatelessWidget {
   }
 }
 
-/// Une page du thème : son papier, ses lignes d'encre
 class _Feuille extends CustomPainter {
   _Feuille({required this.clair, required this.sombre, required this.auto});
+
   final Palette clair;
   final Palette sombre;
   final bool auto;
@@ -152,12 +147,9 @@ class _Feuille extends CustomPainter {
     _page(canvas, s, clair);
   }
 
-  /// Le rendu d'une page dans une palette donnée, à l'échelle de la vignette.
   void _page(Canvas canvas, Size s, Palette p) {
     canvas.drawRect(Offset.zero & s, Paint()..color = p.fond);
 
-    // Trois lignes de texte à l'encre, la dernière plus courte : la page est
-    // écrite, on ne cherche pas à la lire.
     final encre = Paint()
       ..color = p.texte.withValues(alpha: 0.55)
       ..strokeWidth = s.height * 0.035
@@ -169,11 +161,9 @@ class _Feuille extends CustomPainter {
       canvas.drawLine(Offset(marge, y), Offset(fin, y), encre);
     }
 
-    // Le bandeau profond du bas : la carte de mise en avant du thème.
     final bandeau = Rect.fromLTWH(0, s.height * 0.58, s.width, s.height * 0.42);
     canvas.drawRect(bandeau, Paint()..shader = p.degradeHeros.createShader(bandeau));
 
-    // Le point d'or, posé sur le bandeau comme sur la carte.
     canvas.drawCircle(
       Offset(s.width * 0.28, s.height * 0.79),
       s.width * 0.11,

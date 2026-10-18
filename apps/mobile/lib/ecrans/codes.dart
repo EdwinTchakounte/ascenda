@@ -17,13 +17,10 @@ import '../widgets/illustrations.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
-/// « 1er décembre 2026 » : en français, le premier du mois porte son rang, les
-/// autres quantièmes s'écrivent en chiffres simples.
 String _jour(DateTime? d) => d == null
     ? 'date à confirmer'
     : '${d.day == 1 ? '1er' : d.day} ${DateFormat('MMMM y', 'fr_FR').format(d)}';
 
-/// Codes et avantages : ce qu'un code a ouvert, le code à partager
 class EcranCodes extends ConsumerStatefulWidget {
   const EcranCodes({super.key});
 
@@ -60,7 +57,6 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
                   .post('/codes/activer', corps: {'code': code})
               as Map<String, dynamic>;
       _saisie.clear();
-      // Tout ce qui dépend des plafonds doit se relire tout de suite
       await ref.read(sessionProvider.notifier).rafraichirUtilisateur();
       ref.invalidate(codesProvider);
       ref.invalidate(usageProvider);
@@ -84,7 +80,6 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
     }
   }
 
-  /// La bonne nouvelle se montre une fois.
   void _signalerVus(CodesEtAvantages c) {
     if (_vusSignales || c.nouveaux == 0) return;
     _vusSignales = true;
@@ -96,8 +91,6 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
     final donnees = ref.watch(codesProvider);
     return Scaffold(
       appBar: AppBar(title: const Texte('Codes et avantages')),
-      // Le grain du papier : l'écran s'ouvre hors de la coque, il ne l'hérite
-      // donc pas du tiroir.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
@@ -191,8 +184,6 @@ class _Saisie extends StatelessWidget {
           const SizedBox(height: 16),
           const Filet(redouble: true),
           const SizedBox(height: 16),
-          // Le champ est la ligne pointillée du bon : un cadre à l'encre, les
-          // lettres espacées comme on les recopie d'un courriel.
           Container(
             decoration: BoxDecoration(
               color: p.surfaceCreuse,
@@ -231,8 +222,6 @@ class _Saisie extends StatelessWidget {
               ),
             ),
           ),
-          // Le motif du refus se lit sous le bon, dans l'alerte commune à
-          // tous les formulaires, et non en petit sous un champ.
           if (erreur != null) ...[
             const SizedBox(height: 12),
             AlerteFormulaire(erreur!),
@@ -259,6 +248,7 @@ class _Saisie extends StatelessWidget {
 
 class _SectionAcces extends StatelessWidget {
   const _SectionAcces({required this.donnees});
+
   final CodesEtAvantages donnees;
 
   @override
@@ -310,7 +300,6 @@ class _SectionAcces extends StatelessWidget {
   }
 }
 
-/// Un accès ouvert pour tous les usages : sur voile doré, sans ombre.
 class _LigneAcces extends StatelessWidget {
   const _LigneAcces({
     required this.icone,
@@ -358,6 +347,7 @@ class _LigneAcces extends StatelessWidget {
 
 class _CarteCode extends StatelessWidget {
   const _CarteCode({required this.code, required this.donnees});
+
   final AccesCode code;
   final CodesEtAvantages donnees;
 
@@ -472,6 +462,7 @@ class _CarteCode extends StatelessWidget {
 
 class _CarteAmbassadeur extends StatelessWidget {
   const _CarteAmbassadeur({required this.donnees});
+
   final CodesEtAvantages donnees;
 
   Future<void> _copier(BuildContext context) async {
@@ -523,8 +514,6 @@ class _CarteAmbassadeur extends StatelessWidget {
             style: t.textTheme.headlineSmall?.copyWith(color: p.surHeros, fontSize: 22, height: 1.15),
           ),
           const SizedBox(height: 16),
-          // Le code dans un cartouche à double filet, comme un billet qu'on
-          // tend : le cadre extérieur d'or, le cadre intérieur plus pâle.
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(5),
@@ -587,8 +576,6 @@ class _CarteAmbassadeur extends StatelessWidget {
                   onPressed: donnees.programmeActif
                       ? () => _partager(context)
                       : null,
-                  // Le rembourrage du thème (24) coupait « Partager » en deux boutons
-                  // côte à côte sur un écran de 360 px.
                   style: FilledButton.styleFrom(padding: const EdgeInsets.symmetric(horizontal: 12)),
                   icon: const Icon(Icons.send_rounded, size: 17),
                   label: const Texte('Partager', maxLines: 1),
@@ -624,8 +611,6 @@ class _CarteAmbassadeur extends StatelessWidget {
   }
 }
 
-/// Un chiffre de la carte ambassadeur, dans son petit bloc translucide.
-/// Un nombre monte jusqu'à sa valeur ; un montant déjà écrit se pose tel quel.
 class _Chiffre extends StatelessWidget {
   const _Chiffre({this.valeur, this.nombre, required this.libelle})
       : assert(valeur != null || nombre != null);
@@ -661,6 +646,7 @@ class _Chiffre extends StatelessWidget {
 
 class _SectionReductions extends StatelessWidget {
   const _SectionReductions({required this.donnees});
+
   final CodesEtAvantages donnees;
 
   @override
@@ -702,6 +688,7 @@ class _SectionReductions extends StatelessWidget {
 
 class _LigneBon extends StatelessWidget {
   const _LigneBon({required this.bon});
+
   final BonReduction bon;
 
   @override
@@ -729,8 +716,6 @@ class _LigneBon extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // Le talon du bon : le pourcentage, en grand sur le dégradé profond
-          // tant qu'il sert encore.
           Container(
             width: 62,
             height: 56,
@@ -756,7 +741,6 @@ class _LigneBon extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 10),
-          // La ligne de perforation : c'est là qu'on détacherait le talon.
           const _Perforation(hauteur: 52),
           const SizedBox(width: 10),
           Expanded(
@@ -818,10 +802,9 @@ class _LigneBon extends StatelessWidget {
   }
 }
 
-/// La ligne de perforation d'un coupon : des tirets verticaux, comme sur un
-/// carnet à souches.
 class _Perforation extends StatelessWidget {
   const _Perforation({required this.hauteur});
+
   final double hauteur;
 
   @override
@@ -837,6 +820,7 @@ class _Perforation extends StatelessWidget {
 
 class _Pointilles extends CustomPainter {
   _Pointilles(this.couleur);
+
   final Color couleur;
 
   @override

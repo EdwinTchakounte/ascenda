@@ -2,26 +2,25 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-/// Les icônes d'ASCENDA, dessinées à la plume.
 enum Icone {
-  soleil,        // l'accueil : la séance du jour
-  volumes,       // les livres
-  plume,         // l'agent
-  pousse,        // la progression
-  cahier,        // le menu
-  lecteur,       // un compte
-  loupe,         // chercher
-  signet,        // emporter, marquer
-  page,          // un PDF, un document
-  cercle,        // le cercle de lecture
-  cartes,        // les révisions
-  clef,          // les notions, le glossaire
-  sceau,         // Ascension
-  jeton,         // un code
-  boussole,      // le diagnostic, le parcours
-  question,      // un quiz
-  encrier,       // une note
-  fleche,        // aller plus loin
+  soleil,
+  volumes,
+  plume,
+  pousse,
+  cahier,
+  lecteur,
+  loupe,
+  signet,
+  page,
+  cercle,
+  cartes,
+  clef,
+  sceau,
+  jeton,
+  boussole,
+  question,
+  encrier,
+  fleche,
 }
 
 class IconeAscenda extends StatelessWidget {
@@ -31,9 +30,6 @@ class IconeAscenda extends StatelessWidget {
   final double taille;
   final Color? couleur;
   final double epaisseur;
-
-  /// La variante « pleine » marque l'onglet actif : le même dessin, avec un
-  /// aplat léger derrière le trait.
   final bool pleine;
 
   @override
@@ -49,6 +45,7 @@ class IconeAscenda extends StatelessWidget {
 
 class _Plume extends CustomPainter {
   _Plume(this.icone, this.couleur, this.epaisseur, this.pleine);
+
   final Icone icone;
   final Color couleur;
   final double epaisseur;
@@ -84,7 +81,6 @@ class _Plume extends CustomPainter {
   Path p() => Path();
   switch (i) {
     case Icone.soleil:
-      // Un soleil qui se lève sur l'horizon : la séance du jour.
       final arc = p()
         ..addArc(Rect.fromCircle(center: const Offset(12, 15), radius: 5.5), pi, pi);
       final rayons = p();
@@ -100,7 +96,6 @@ class _Plume extends CustomPainter {
       return (traits: [arc, rayons, sol], pleins: [arc..close()]);
 
     case Icone.volumes:
-      // Trois volumes sur un rayon, dont un penché.
       final a = p()..addRect(const Rect.fromLTWH(4, 6, 4.4, 13));
       final b = p()..addRect(const Rect.fromLTWH(9.6, 6, 4.4, 13));
       final c = p()
@@ -118,7 +113,6 @@ class _Plume extends CustomPainter {
       return (traits: [a, b, c, tablette, nerf], pleins: [a, b, c]);
 
     case Icone.plume:
-      // Une plume et sa goutte d'encre : l'agent qui écrit en citant.
       final plume = p()
         ..moveTo(4.5, 19.5)
         ..cubicTo(9, 19, 17, 16, 19.5, 5)
@@ -131,7 +125,6 @@ class _Plume extends CustomPainter {
       return (traits: [plume, nervure, goutte], pleins: [plume]);
 
     case Icone.pousse:
-      // Une pousse qui sort d'une ligne : ce qui grandit.
       final tige = p()
         ..moveTo(12, 21)
         ..cubicTo(12, 15, 12, 11, 12, 7);
@@ -151,7 +144,6 @@ class _Plume extends CustomPainter {
       return (traits: [tige, feuilleD, feuilleG, sol], pleins: [feuilleD, feuilleG]);
 
     case Icone.cahier:
-      // Un cahier fermé, trois signets : le menu.
       final couv = p()..addRect(const Rect.fromLTWH(4, 3.5, 16, 17));
       final dos = p()
         ..moveTo(7.4, 3.5)

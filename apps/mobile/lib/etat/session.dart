@@ -10,6 +10,7 @@ enum EtatSession { inconnu, deconnecte, connecte }
 
 class Session {
   const Session({required this.etat, this.utilisateur});
+
   final EtatSession etat;
   final Utilisateur? utilisateur;
 
@@ -17,7 +18,6 @@ class Session {
   bool get premium => utilisateur?.estPremium ?? false;
 }
 
-/// La session : un jeton en mémoire, un utilisateur, et rien d'autre.
 class SessionNotifier extends StateNotifier<Session> {
   SessionNotifier(this._api) : super(const Session(etat: EtatSession.inconnu)) {
     reprendre();
@@ -36,7 +36,6 @@ class SessionNotifier extends StateNotifier<Session> {
       state = Session(etat: EtatSession.connecte, utilisateur: Utilisateur.depuisJson(j));
     } catch (e) {
       debugPrint('Session non reprise : $e');
-      // Seul un refus du serveur ferme la session.
       final refusee = e is ErreurApi && e.estAuth || !await _api.aUneSession;
       final profil = refusee ? null : await _api.profilGarde();
       if (profil != null) {
@@ -55,8 +54,6 @@ class SessionNotifier extends StateNotifier<Session> {
     await _ouvrir(j);
   }
 
-  /// Ouvre le compte. Renvoie le message à montrer quand un code a été saisi :
-  /// ce qu'il a ouvert, ou pourquoi il n'a pas pu l'être.
   Future<String?> inscription(String email, String motDePasse, String? nom,
       {String? code}) async {
     final j = await _api.post('/auth/inscription', auth: false, corps: {
@@ -86,15 +83,12 @@ class SessionNotifier extends StateNotifier<Session> {
     state = const Session(etat: EtatSession.deconnecte);
   }
 
-  /// À appeler après un changement de formule pour rafraîchir le plan porté
-  /// par la session sans forcer une reconnexion.
   Future<void> rafraichirUtilisateur() async {
     try {
       final j = await _api.get('/auth/moi') as Map<String, dynamic>;
       await _api.garderProfil(j);
       state = Session(etat: EtatSession.connecte, utilisateur: Utilisateur.depuisJson(j));
     } catch (_) {
-      // Un échec ici ne doit pas déconnecter : l'état précédent reste valable.
     }
   }
 }

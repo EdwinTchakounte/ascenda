@@ -18,7 +18,6 @@ import '../widgets/illustrations.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
-/// L'abonnement Ascension, du choix de la formule à la confirmation.
 class EcranAbonnement extends ConsumerStatefulWidget {
   const EcranAbonnement({super.key});
 
@@ -33,14 +32,10 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
   int? _periode;
   bool _envoi = false;
 
-  /// Le paiement en cours de validation. Tant qu'il est là, l'écran montre
-  /// l'attente et non le formulaire.
   Paiement? _encours;
   Timer? _sondage;
   int _secondes = 0;
 
-  /// Au delà, on cesse d'interroger et on laisse la main. Le paiement n'est pas
-  /// perdu pour autant : la réconciliation du serveur le rattrape.
   static const _limiteAttente = 180;
 
   @override
@@ -57,8 +52,6 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Ascension')),
-      // Le grain du papier : l'écran s'ouvre hors de la coque, il ne l'hérite
-      // donc pas du tiroir.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
@@ -108,7 +101,6 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
       child: ListView(
         padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
         children: [
-          // La page d'offre se pose bloc par bloc, une fois, à l'ouverture.
           Apparition(
             child: _CarteOffre(abonnement: a != null && a.actif ? a : null, formules: formules),
           ),
@@ -243,8 +235,6 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
         _secondes = 0;
         _envoi = false;
       });
-      // Un paiement déjà validé (formule offerte, ou validation immédiate en
-      // environnement de test) n'a rien à attendre.
       if (p.valide) {
         await _conclure();
       } else {
@@ -286,14 +276,10 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
           timer.cancel();
         }
       } catch (_) {
-        // Une interrogation qui échoue n'arrête rien : le réseau mobile coupe
-        // souvent quelques secondes, et le paiement suit son cours au serveur.
       }
     });
   }
 
-  /// Le paiement est passé : on rafraîchit ce qui dépend du plan pour que
-  /// l'application cesse immédiatement de proposer d'acheter.
   Future<void> _conclure() async {
     await ref.read(sessionProvider.notifier).rafraichirUtilisateur();
     ref.invalidate(abonnementProvider);
@@ -321,11 +307,9 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
   }
 }
 
-/// La carte de mise en avant : ce qu'est Ascension et à partir de quel tarif, ou
 class _CarteOffre extends StatelessWidget {
   const _CarteOffre({required this.abonnement, required this.formules});
 
-  /// L'abonnement en cours, s'il est actif.
   final Abonnement? abonnement;
   final List<Formule> formules;
 
@@ -366,8 +350,6 @@ class _CarteOffre extends StatelessWidget {
             const SizedBox(height: 16),
             Filet(redouble: true, couleur: p.surHeros.withValues(alpha: 0.22)),
             const SizedBox(height: 14),
-            // Le prix dans son cartouche d'or : le chiffre en Fraunces, son
-            // unité en petit. Il vient du serveur, jamais d'ici.
             Container(
               width: double.infinity,
               padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
@@ -413,9 +395,9 @@ class _CarteOffre extends StatelessWidget {
   }
 }
 
-/// Où en est l'accès d'un abonné, dans la carte de mise en avant.
 class _EtatAbonnement extends StatelessWidget {
   const _EtatAbonnement({required this.abonnement});
+
   final Abonnement abonnement;
 
   @override
@@ -529,7 +511,6 @@ class _Avantages extends StatelessWidget {
   }
 }
 
-/// Ce qui change, compteur par compteur, lu au serveur.
 class _Comparaison extends ConsumerWidget {
   const _Comparaison();
 
@@ -558,8 +539,6 @@ class _Comparaison extends ConsumerWidget {
       return null;
     }
 
-    // On ne montre que les compteurs qui changent : afficher une ligne
-    // identique des deux côtés fait douter qu'il y ait une différence.
     final types = <String>[];
     for (final l in (paye['limites'] as List? ?? [])) {
       final code = '${l['type']}';
@@ -579,7 +558,6 @@ class _Comparaison extends ConsumerWidget {
       padding: EdgeInsets.zero,
       child: Stack(
         children: [
-          // La colonne Ascension, sur un voile doré de haut en bas.
           Positioned(
             top: 0,
             bottom: 0,
@@ -662,10 +640,9 @@ class _Comparaison extends ConsumerWidget {
   }
 }
 
-/// La réduction ambassadeur, dite avant le choix de la formule : le montant
-/// barré ne doit pas surprendre, il doit s'expliquer.
 class _AvisReduction extends StatelessWidget {
   const _AvisReduction({required this.tarifs});
+
   final Tarifs tarifs;
 
   @override
@@ -746,8 +723,6 @@ class _CarteFormuleChoix extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(14, 16, 16, 16),
                 child: Row(
                   children: [
-                    // La case à cocher d'une fiche : un carré à l'encre, rempli
-                    // d'or quand la formule est retenue.
                     AnimatedContainer(
                       duration: const Duration(milliseconds: 220),
                       width: 24,
@@ -821,8 +796,6 @@ class _CarteFormuleChoix extends StatelessWidget {
   }
 }
 
-/// Un seul moyen de paiement, donc rien à choisir : on dit simplement par où
-/// passe l'argent et que les deux opérateurs sont acceptés.
 class _BandeauTara extends StatelessWidget {
   const _BandeauTara();
 
@@ -861,8 +834,6 @@ class _BandeauTara extends StatelessWidget {
   }
 }
 
-/// Le seul message de l'écran qui parle de sécurité, et il parle d'une seule
-/// chose : personne ne doit jamais demander le code mobile money.
 class _AvisCodeSecret extends StatelessWidget {
   const _AvisCodeSecret();
 
@@ -893,8 +864,6 @@ class _AvisCodeSecret extends StatelessWidget {
   }
 }
 
-/// L'écran d'attente. Il montre le temps écoulé, parce qu'une attente sans
-/// repère paraît deux fois plus longue et pousse à payer une seconde fois.
 class _Attente extends StatelessWidget {
   const _Attente({
     required this.paiement,
@@ -914,8 +883,6 @@ class _Attente extends StatelessWidget {
     final p = context.palette;
     final expire = secondes >= limite && paiement.enAttente;
 
-    // Une scène dessinée plutôt qu'un pictogramme : le laurier quand c'est
-    // gagné, la lampe tant qu'on attend. Un refus garde son signe franc.
     final (scene, teinte, titre) = paiement.valide
         ? (Scene.laurier, p.succes, 'Paiement confirmé')
         : paiement.rejete
@@ -1015,6 +982,7 @@ class _Attente extends StatelessWidget {
 
 class _LigneRecu extends StatelessWidget {
   const _LigneRecu(this.libelle, this.valeur);
+
   final String libelle;
   final String valeur;
 

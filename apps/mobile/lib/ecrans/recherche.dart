@@ -15,7 +15,6 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// La recherche dans le texte des 78 ouvrages.
 class EcranRecherche extends ConsumerStatefulWidget {
   const EcranRecherche({super.key, this.initiale});
 
@@ -29,12 +28,9 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
   late final TextEditingController _champ =
       TextEditingController(text: widget.initiale ?? '');
 
-  /// Ce qui est réellement envoyé au serveur, une fois la frappe retombée.
   String _requete = '';
   Timer? _attente;
 
-  /// Interroger à chaque touche ferait une requête par lettre. Trois cents
-  /// millisecondes suffisent à distinguer une pause d'une frappe continue.
   static const _repos = Duration(milliseconds: 350);
 
   @override
@@ -69,8 +65,6 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
       appBar: AppBar(
         titleSpacing: 0,
         toolbarHeight: 64,
-        // Le champ en pilule creusée dans la barre : l'écran entier est une
-        // question, elle mérite d'être le premier objet visible.
         title: Padding(
           padding: const EdgeInsets.only(right: 16),
           child: TextField(
@@ -110,7 +104,6 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
           ),
         ),
       ),
-      // Le grain du papier : la recherche s'ouvre hors de la coque.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
@@ -193,9 +186,9 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
   }
 }
 
-/// Par quelle voie la réponse est venue.
 class _Mode extends StatelessWidget {
   const _Mode({required this.mode});
+
   final String mode;
 
   @override
@@ -217,6 +210,7 @@ class _Mode extends StatelessWidget {
 
 class _LigneOuvrage extends StatelessWidget {
   const _LigneOuvrage({required this.ouvrage});
+
   final Map<String, dynamic> ouvrage;
 
   @override
@@ -230,8 +224,6 @@ class _LigneOuvrage extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Le dos du volume plutôt qu'une icône de livre : le titre trouvé est
-          // le même objet que sur l'étagère.
           DosLivre(titre: '${ouvrage['titre']}', axeSlug: ouvrage['axe_slug'] as String?, hauteur: 74, largeur: 28),
           const SizedBox(width: 14),
           Expanded(
@@ -260,6 +252,7 @@ class _LigneOuvrage extends StatelessWidget {
 
 class _CarteResultat extends StatelessWidget {
   const _CarteResultat({required this.resultat});
+
   final Map<String, dynamic> resultat;
 
   @override
@@ -272,8 +265,6 @@ class _CarteResultat extends StatelessWidget {
     final documentId = '${r['document_id']}';
 
     return Surface(
-      // Sans chapitre identifié, on ouvre la fiche de l'ouvrage : mieux
-      // vaut arriver sur le livre que sur un écran vide.
       onTap: () => context.push(chapitreId == null
           ? '/ouvrage/$documentId'
           : '/lecture/$documentId/$chapitreId'),
@@ -286,14 +277,11 @@ class _CarteResultat extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: t.textTheme.titleMedium),
           const SizedBox(height: 6),
-          // Le titre courant d'une page de livre
           TitreCourant(
             '${r['chapitre'] ?? ''}'.isNotEmpty ? '${r['chapitre']}' : 'dans le texte',
             folio: page != null ? '\u00A0\u00A0p. $page' : null,
           ),
           const SizedBox(height: 12),
-          // L'extrait en exergue, marge à l'encre d'or, en Fraunces : c'est la
-          // voix du livre, distincte des libellés de l'application.
           IntrinsicHeight(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,

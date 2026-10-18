@@ -3,13 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'palette.dart';
 
-/// Le thème Material d'ASCENDA, monté depuis une [Palette].
 abstract final class ThemeAscenda {
   static TextTheme _typo(TextTheme base, Palette p) {
     final t = GoogleFonts.frauncesTextTheme(base);
     final c = GoogleFonts.interTextTheme(base);
     return base.copyWith(
-      // L'échelle d'un livre : un titre de page franc, des intertitres nets
       displayLarge: t.displayLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1.2),
       displayMedium: t.displayMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1),
       displaySmall: t.displaySmall?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -0.8),
@@ -195,8 +193,6 @@ abstract final class ThemeAscenda {
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: p.surface,
         surfaceTintColor: Colors.transparent,
-        // Aucune pastille derrière l'onglet actif : la coque dessine un filet
-        // d'or sous l'onglet retenu, comme un signet glissé dans la page.
         indicatorColor: Colors.transparent,
         indicatorShape: const RoundedRectangleBorder(borderRadius: Rayons.pilule),
         elevation: 0,

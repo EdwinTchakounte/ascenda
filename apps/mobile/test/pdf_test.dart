@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : que la fiche d'un ouvrage ne propose « Lire le PDF » que
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

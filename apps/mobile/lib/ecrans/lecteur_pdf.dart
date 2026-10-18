@@ -17,17 +17,13 @@ import '../widgets/etats.dart';
 import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
-/// Ce que l'écran d'où l'on vient sait déjà des droits de l'ouvrage.
 final reservesConnus = <String, bool>{};
 
-/// Lire le PDF d'origine d'un ouvrage, page par page, dans l'application.
 class EcranLecteurPdf extends ConsumerStatefulWidget {
   const EcranLecteurPdf({super.key, required this.documentId, this.titre, this.page});
 
   final String documentId;
   final String? titre;
-
-  /// La page où ouvrir : celle du chapitre ou de la séance d'où l'on vient.
   final int? page;
 
   @override
@@ -37,12 +33,8 @@ class EcranLecteurPdf extends ConsumerStatefulWidget {
 class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
   final _controleur = PdfViewerController();
 
-  /// Le fichier en clair d'un ouvrage libre : le lecteur y puise les pages
-  /// qu'il affiche, et rien de plus.
   File? _fichier;
 
-  /// Les octets d'un ouvrage réservé : le coffre ne rend son contenu qu'en
-  /// mémoire, c'est le seul cas où le livre entier y monte.
   Uint8List? _octets;
   Object? _erreur;
   int _recu = 0;
@@ -66,8 +58,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
     });
     final depot = ref.read(depotHorsLigneProvider);
     try {
-      // Déjà sur l'appareil : lu sans réseau, en clair pour un ouvrage libre,
-      // depuis le coffre pour un ouvrage réservé.
       final clair = await depot.fichierPdfClair(widget.documentId);
       if (clair != null && await clair.exists()) {
         if (mounted) setState(() => _fichier = clair);
@@ -89,7 +79,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
       }
 
       if (!reserve && clair != null) {
-        // Ouvrage libre : le téléchargement va droit dans le fichier, morceau par morceau
         final ecrit = await ref
             .read(clientApiProvider)
             .telechargerVers('/lecteur/${widget.documentId}/pdf', clair, progression: avance);
@@ -101,12 +90,10 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
         progression: avance,
       );
       if (reserve || clair == null) {
-        // Réservé à l'application : gardé chiffré dans l'espace privé
         await depot.enregistrerPdf(widget.documentId, octets);
         if (mounted) setState(() => _octets = octets);
         return;
       }
-      // Ouvrage libre : écrit tel quel dans l'espace privé de l'application
       final provisoire = File('${clair.path}.part');
       await provisoire.writeAsBytes(octets, flush: true);
       await provisoire.rename(clair.path);
@@ -116,12 +103,9 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
     }
   }
 
-  /// L'ouvrage est-il réservé à l'application ?
   Future<bool> _reserve(DepotHorsLigne depot) async {
     final connu = reservesConnus[widget.documentId];
     if (connu != null) return connu;
-    // La fiche, si l'écran qui l'a chargée est encore là : on ne la redemande
-    // pas au serveur pour autant.
     if (mounted) {
       final fiche = ficheOuvrageProvider(widget.documentId);
       if (ProviderScope.containerOf(context, listen: false).exists(fiche)) {
@@ -129,7 +113,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
         if (droits is Map) return droits['application_seulement'] == true;
       }
     }
-    // Un pack emporté qui porte le texte intégral : ouvrage réservé.
     final pack = await depot.lire(widget.documentId);
     return pack == null || pack['lecture'] != null;
   }
@@ -145,7 +128,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
           backgroundColor: Colors.transparent,
           leading: IconButton(
             tooltip: 'Retour',
-            // La flèche du kit, retournée : la même plume que le reste.
             icon: Transform.scale(
               scaleX: -1,
               child: IconeAscenda(Icone.fleche, taille: 21, couleur: p.attenue),
@@ -157,8 +139,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
               overflow: TextOverflow.ellipsis,
               style: t.appBarTheme.titleTextStyle?.copyWith(fontSize: 18)),
           actions: [
-            // Toucher le folio ouvre « aller à la page » : dans un livre de
-            // 700 pages, faire défiler jusqu'à la page 412 n'est pas une option.
             if (_pages > 0) _Folio(page: _page, pages: _pages, onTap: _allerA),
             const SizedBox(width: 12),
           ],
@@ -200,14 +180,10 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
       return EtatErreur(erreur: e!, reessayer: _ouvrir);
     }
     final parametres = PdfViewerParams(
-      // Les pages du PDF posées à même le papier du thème : elles se détachent
-      // par leur ombre, comme des feuilles sur une table.
       backgroundColor: Colors.transparent,
       margin: 12,
       calculateInitialPageNumber: (document, controleur) =>
           widget.page?.clamp(1, document.pages.length),
-      // Un signet sur le bord droit, qui porte son folio : on traverse le livre
-      // d'un geste.
       viewerOverlayBuilder: (context, taille, lien) => [
         PdfViewerScrollThumb(
           controller: _controleur,
@@ -235,8 +211,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
         ),
       ],
       onViewerReady: (document, controleur) {
-        // Ouvert à une page précise, le folio doit l'annoncer tout de suite :
-        // le changement de page initial ne déclenche pas `onPageChanged`.
         if (mounted) {
           setState(() {
             _pages = document.pages.length;
@@ -251,7 +225,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
         child: SizedBox(width: 26, height: 26, child: CircularProgressIndicator(strokeWidth: 2.6)),
       ),
     );
-    // Depuis le fichier quand il y en a un
     if (_fichier != null) {
       return PdfViewer.file(_fichier!.path, controller: _controleur, params: parametres);
     }
@@ -263,8 +236,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
   }
 }
 
-/// Le folio de la page courante, en petites capitales, comme au bas d'une page
-/// de livre.
 class _Folio extends StatelessWidget {
   const _Folio({required this.page, required this.pages, required this.onTap});
 
@@ -325,8 +296,6 @@ class _Telechargement extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Le volume qu'on va ouvrir, plutôt qu'un tourniquet : l'attente
-                // se passe devant un livre.
                 if (titre != null && titre!.isNotEmpty)
                   CouvertureLivre(titre: titre!, hauteur: 132)
                 else
@@ -334,8 +303,6 @@ class _Telechargement extends StatelessWidget {
                 const SizedBox(height: 20),
                 const EtiquetteCrochet('préparation du volume'),
                 const SizedBox(height: 18),
-                // Tant que la taille est inconnue, la barre défile sans valeur :
-                // une jauge figée à zéro ferait croire à un blocage.
                 if (part != null)
                   Jauge(valeur: part, hauteur: 8)
                 else

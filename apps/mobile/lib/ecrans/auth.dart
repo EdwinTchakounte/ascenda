@@ -9,14 +9,10 @@ import '../theme/papier.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
-/// La marque ASCENDA : le vrai logo, pas une approximation.
 class MarqueAscenda extends StatelessWidget {
   const MarqueAscenda({super.key, this.taille = 44, this.couleur});
 
   final double taille;
-
-  /// Ignorée : le logo porte ses propres couleurs. Le paramètre reste pour ne
-  /// pas casser les appels existants.
   final Color? couleur;
 
   @override
@@ -31,7 +27,6 @@ class MarqueAscenda extends StatelessWidget {
   }
 }
 
-/// L'accueil des visiteurs.
 class EcranBienvenue extends StatelessWidget {
   const EcranBienvenue({super.key});
 
@@ -43,8 +38,6 @@ class EcranBienvenue extends StatelessWidget {
       backgroundColor: Couleurs.marqueNuit,
       body: Stack(
         children: [
-          // Deux lueurs très basses : l'or du logo en haut, un bleu plus
-          // profond en bas. Le fond cesse d'être un aplat sans devenir un décor.
           Positioned(
             top: -140,
             left: 0,
@@ -57,8 +50,6 @@ class EcranBienvenue extends StatelessWidget {
             child: _Lueur(couleur: nuit.heros.withValues(alpha: 0.55), taille: 380),
           ),
           SafeArea(
-            // Défilable : avec une grande taille de police réglée sur le
-            // téléphone, les boutons ne doivent jamais sortir de l'écran.
             child: LayoutBuilder(
               builder: (context, contraintes) => SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(28, 36, 28, 28),
@@ -67,7 +58,6 @@ class EcranBienvenue extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Column(
                       children: [
-                        // Le bloc complet porte déjà le nom et la baseline.
                         Image.asset(
                           'assets/marque/logo-complet.png',
                           height: 120,
@@ -79,8 +69,6 @@ class EcranBienvenue extends StatelessWidget {
                         if (contraintes.maxHeight >= 640) ...[
                           const _Rayonnage(),
                           const SizedBox(height: 24),
-                          // Le titre courant de la couverture : petites
-                          // capitales d'or, comme sur un dos de volume.
                           Texte(
                             'ATELIER DE LECTURE',
                             textAlign: TextAlign.center,
@@ -120,8 +108,6 @@ class EcranBienvenue extends StatelessWidget {
                         SizedBox(
                           width: double.infinity,
                           child: OutlinedButton(
-                            // Le thème clair donne une teinte encre, invisible sur
-                            // ce fond de nuit : les couleurs sont posées ici.
                             style: OutlinedButton.styleFrom(
                               foregroundColor: nuit.encre,
                               backgroundColor: nuit.surHeros.withValues(alpha: 0.05),
@@ -152,9 +138,9 @@ class EcranBienvenue extends StatelessWidget {
   }
 }
 
-/// Une lueur ronde qui s'efface vers ses bords.
 class _Lueur extends StatelessWidget {
   const _Lueur({required this.couleur, required this.taille});
+
   final Color couleur;
   final double taille;
 
@@ -173,7 +159,6 @@ class _Lueur extends StatelessWidget {
       );
 }
 
-/// Un rayonnage de dos de livres, aux teintes des parcours
 class _Rayonnage extends StatelessWidget {
   const _Rayonnage();
 
@@ -194,7 +179,6 @@ class _Rayonnage extends StatelessWidget {
           children: [
             for (var i = 0; i < _dos.length; i++)
               Transform.rotate(
-                // Le dernier volume penche, comme sur une vraie étagère.
                 angle: i == _dos.length - 1 ? 0.14 : 0,
                 alignment: Alignment.bottomLeft,
                 child: Container(
@@ -202,7 +186,6 @@ class _Rayonnage extends StatelessWidget {
                   height: _dos[i].h,
                   margin: const EdgeInsets.symmetric(horizontal: 1.5),
                   decoration: BoxDecoration(
-                    // Des dos arrondis en tête, posés à plat sur l'étagère.
                     borderRadius: const BorderRadius.vertical(top: Radius.circular(5), bottom: Radius.circular(2)),
                     gradient: LinearGradient(
                       colors: [
@@ -253,8 +236,6 @@ class _Rayonnage extends StatelessWidget {
 class EcranConnexion extends ConsumerStatefulWidget {
   const EcranConnexion({super.key, this.connexion = false});
 
-  /// Ouvre l'écran directement sur la connexion. Un lecteur qui touche
-  /// « J'ai déjà un compte » ne doit pas arriver sur un formulaire d'inscription.
   final bool connexion;
 
   @override
@@ -267,7 +248,6 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
   final _motDePasse = TextEditingController();
   final _nom = TextEditingController();
   final _code = TextEditingController();
-
   late bool _inscription = !widget.connexion;
   bool _masque = true;
   bool _envoi = false;
@@ -294,8 +274,6 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
         final messageCode =
             await s.inscription(_email.text, _motDePasse.text, _nom.text, code: _code.text);
         if (!mounted) return;
-        // Le messager survit à la navigation : le lecteur lit ce que son code
-        // a ouvert en arrivant sur le diagnostic.
         if (messageCode != null) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Texte(messageCode), duration: const Duration(seconds: 6)),
@@ -332,8 +310,6 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // La marque dans son cartouche : une plaque de titre à double
-                  // filet d'or, qui la pose sans la noyer quel que soit le thème.
                   Center(
                     child: Container(
                       padding: const EdgeInsets.all(5),
@@ -482,8 +458,6 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
                         ? "J'ai déjà un compte"
                         : "Je n'ai pas encore de compte"),
                   ),
-                  // Le lien n'apparaît qu'en connexion : le proposer pendant une
-                  // inscription n'aurait aucun sens, il n'y a rien à retrouver.
                   if (!_inscription)
                     TextButton(
                       style: TextButton.styleFrom(foregroundColor: p.attenue),
@@ -504,4 +478,3 @@ class _EcranConnexionState extends ConsumerState<EcranConnexion> {
     );
   }
 }
-

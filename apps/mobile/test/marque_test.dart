@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : que la marque est bien centrée là où elle est seule
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -10,7 +9,6 @@ import 'package:ascenda/theme/theme.dart';
 
 Widget _sous(Widget ecran) => MaterialApp(theme: ThemeAscenda.clair, home: ecran);
 
-/// L'écart entre le centre du widget et le centre de l'écran.
 double _decentrage(WidgetTester t, Finder cible) {
   final r = t.getRect(cible);
   final ecran = t.getRect(find.byType(MaterialApp));
@@ -23,8 +21,6 @@ void main() {
     await t.pump();
     final logo = find.byType(Image);
     expect(logo, findsWidgets);
-    // Deux pixels de tolérance : un arrondi de mise en page, pas un alignement
-    // à gauche, qui se compterait en dizaines.
     expect(_decentrage(t, logo.first), lessThan(2));
   });
 

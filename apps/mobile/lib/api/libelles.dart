@@ -1,4 +1,3 @@
-/// Les libellés des compteurs d'usage, en un seul endroit.
 library;
 
 const Map<String, String> libellesQuota = {
@@ -11,7 +10,6 @@ const Map<String, String> libellesQuota = {
   'export_pdf': 'Exports PDF',
 };
 
-/// Un compteur que l'API connaîtrait sans que nous l'ayons traduit s'affiche tel quel
 String libelleQuota(String code) => libellesQuota[code] ?? code.replaceAll('_', ' ');
 
 String periodeQuota(String code) => switch (code) {
@@ -20,7 +18,6 @@ String periodeQuota(String code) => switch (code) {
       _ => 'au total',
     };
 
-/// Zéro veut dire « pas du tout », et un plafond très haut veut dire « sans compter ».
 String valeurQuota(int? limite) {
   if (limite == null) return 'sans limite';
   if (limite == 0) return 'non';

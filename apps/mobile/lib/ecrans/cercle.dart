@@ -18,7 +18,6 @@ import '../widgets/etats.dart';
 import '../widgets/illustrations.dart';
 import '../widgets/ui.dart' hide Pastille;
 
-/// Le cercle de lecteurs : ses amis, ce qu'ils lisent
 class EcranCercle extends ConsumerStatefulWidget {
   const EcranCercle({super.key});
 
@@ -34,8 +33,6 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
     await ref.read(amisProvider.future).catchError((_) => <Ami>[]);
   }
 
-  /// Les encouragements affichés sont marqués vus, une fois : la pastille de
-  /// l'onglet retombe, mais la carte reste à l'écran jusqu'au prochain retour.
   void _marquerVus(List<EncouragementRecu> liste) {
     if (_vusEnvoyes || !liste.any((e) => e.nouveau)) return;
     _vusEnvoyes = true;
@@ -61,7 +58,6 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Mon cercle')),
-      // Le grain du papier : le cercle s'ouvre hors de la coque.
       body: FondPapier(
         child: SafeArea(
           top: false,
@@ -134,10 +130,9 @@ class _EcranCercleState extends ConsumerState<EcranCercle> {
   }
 }
 
-/// Le titre d'une section du registre : petites capitales entre crochets, le
-/// nombre d'éléments en folio à droite, et le filet d'imprimeur dessous.
 class _Titre extends StatelessWidget {
   const _Titre(this.texte, {this.compte});
+
   final String texte;
   final int? compte;
 
@@ -172,9 +167,9 @@ class _Titre extends StatelessWidget {
   }
 }
 
-/// Une remarque en ligne, sous une liste : pas de bloc, une icône et le texte.
 class _EnAttente extends StatelessWidget {
   const _EnAttente(this.texte);
+
   final String texte;
 
   @override
@@ -199,9 +194,9 @@ class _EnAttente extends StatelessWidget {
   }
 }
 
-/// Un bloc creusé qui dit ce qui manque
 class _Discret extends StatelessWidget {
   const _Discret(this.texte, {required this.scene});
+
   final String texte;
   final Scene scene;
 
@@ -233,12 +228,12 @@ class _Discret extends StatelessWidget {
 
 class AvatarLecteur extends StatelessWidget {
   const AvatarLecteur({super.key, required this.lecteur, this.taille = 42});
+
   final Lecteur lecteur;
   final double taille;
 
   @override
   Widget build(BuildContext context) {
-    // Une teinte stable par lecteur, prise dans celles des pôles
     final teintes = Couleurs.poles.values.toList();
     final teinte = teintes[lecteur.id.codeUnits.fold(0, (a, b) => a + b) % teintes.length];
     return Container(
@@ -262,10 +257,9 @@ class AvatarLecteur extends StatelessWidget {
   }
 }
 
-// ------------------------------------------------------------------ le code
-
 class _CarteCode extends ConsumerWidget {
   const _CarteCode({required this.moi});
+
   final CercleMoi moi;
 
   Future<void> _inviter(BuildContext context) async {
@@ -320,8 +314,6 @@ class _CarteCode extends ConsumerWidget {
             ],
           ),
           const SizedBox(height: 16),
-          // Le code frappé dans un cartouche : deux filets d'or, rien d'autre.
-          // C'est un objet à recopier, pas un champ de formulaire.
           Container(
             width: double.infinity,
             padding: const EdgeInsets.fromLTRB(16, 13, 16, 13),
@@ -485,10 +477,9 @@ class _DialogueAjoutState extends ConsumerState<_DialogueAjout> {
   }
 }
 
-// ---------------------------------------------------------------- les lignes
-
 class _LigneDemande extends ConsumerWidget {
   const _LigneDemande({required this.demande});
+
   final DemandeAmi demande;
 
   Future<void> _repondre(BuildContext context, WidgetRef ref, bool accepter) async {
@@ -578,6 +569,7 @@ class _LigneDemande extends ConsumerWidget {
 
 class _CarteEncouragement extends StatelessWidget {
   const _CarteEncouragement({required this.encouragement});
+
   final EncouragementRecu encouragement;
 
   @override
@@ -650,10 +642,9 @@ IconData iconeGenre(String genre) => switch (genre) {
       _ => Icons.menu_book_outlined,
     };
 
-/// Le fil : un registre d'atelier. Une seule feuille, les activités portées
-/// l'une sous l'autre, séparées d'un filet d'imprimeur.
 class _Fil extends StatelessWidget {
   const _Fil({required this.evenements});
+
   final List<EvenementFil> evenements;
 
   @override
@@ -674,6 +665,7 @@ class _Fil extends StatelessWidget {
 
 class _LigneFil extends ConsumerWidget {
   const _LigneFil({required this.evenement});
+
   final EvenementFil evenement;
 
   @override
@@ -725,7 +717,6 @@ class _LigneFil extends ConsumerWidget {
                     ),
                     if (e.encourage) ...[
                       const SizedBox(width: 8),
-                      // Le sceau apposé : cette activité a déjà reçu son mot.
                       Semantics(
                         label: 'Encouragé',
                         child: IconeAscenda(Icone.sceau, taille: 16, couleur: p.succes),
@@ -757,6 +748,7 @@ class _LigneFil extends ConsumerWidget {
 
 class _LigneAmi extends StatelessWidget {
   const _LigneAmi({required this.ami});
+
   final Ami ami;
 
   @override
@@ -824,6 +816,7 @@ class _LigneAmi extends StatelessWidget {
 
 class _Partage extends ConsumerStatefulWidget {
   const _Partage({required this.actif});
+
   final bool actif;
 
   @override
@@ -864,10 +857,6 @@ class _PartageState extends ConsumerState<_Partage> {
   }
 }
 
-// ------------------------------------------------------------ encourager
-
-/// Ouvre le choix d'un encouragement. Trois messages prêts, et la place d'un
-/// mot à soi : encourager doit prendre deux secondes, pas une rédaction.
 Future<void> encourager(BuildContext context, WidgetRef ref, Lecteur ami, {EvenementFil? evenement}) async {
   final envoye = await showModalBottomSheet<bool>(
     context: context,
@@ -884,6 +873,7 @@ Future<void> encourager(BuildContext context, WidgetRef ref, Lecteur ami, {Evene
 
 class _FeuilleEncouragement extends ConsumerStatefulWidget {
   const _FeuilleEncouragement({required this.ami, this.evenement});
+
   final Lecteur ami;
   final EvenementFil? evenement;
 
@@ -1005,7 +995,6 @@ class _FeuilleEncouragementState extends ConsumerState<_FeuilleEncouragement> {
   }
 }
 
-/// Un message prêt à envoyer, choisi d'une touche : la carte s'allume en or.
 class _ChoixGenre extends StatelessWidget {
   const _ChoixGenre({required this.icone, required this.libelle, required this.choisi, required this.onTap});
 
@@ -1062,8 +1051,6 @@ class _ChoixGenre extends StatelessWidget {
   }
 }
 
-// ----------------------------------------------------------- la conversation
-
 class EcranConversation extends ConsumerStatefulWidget {
   const EcranConversation({super.key, required this.amiId, this.nom});
 
@@ -1083,8 +1070,6 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
   void initState() {
     super.initState();
     _marquerLus();
-    // Une conversation ouverte se tient à jour toute seule. Dix secondes : assez
-    // vif pour un échange, assez sobre pour un forfait mobile.
     _sondage = Timer.periodic(const Duration(seconds: 10), (_) {
       if (mounted) ref.invalidate(conversationProvider(widget.amiId));
       _marquerLus();
@@ -1281,6 +1266,7 @@ class _EcranConversationState extends ConsumerState<EcranConversation> {
 
 class _Bulle extends StatelessWidget {
   const _Bulle({required this.message, this.onSignaler});
+
   final Echange message;
   final VoidCallback? onSignaler;
 
@@ -1297,8 +1283,6 @@ class _Bulle extends StatelessWidget {
           constraints: BoxConstraints(maxWidth: MediaQuery.sizeOf(context).width * 0.78),
           margin: const EdgeInsets.symmetric(vertical: 4),
           padding: const EdgeInsets.fromLTRB(15, 10, 15, 8),
-          // Un billet plié : trois coins arrondis, le quatrième presque vif, du
-          // côté de celui qui l'a écrit.
           decoration: BoxDecoration(
             color: m.deMoi ? null : p.surface,
             gradient: m.deMoi ? p.degradeHeros : null,

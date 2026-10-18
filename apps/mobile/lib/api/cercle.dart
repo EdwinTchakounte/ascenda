@@ -1,4 +1,3 @@
-/// Les données du cercle de lecteurs, telles que l'API les renvoie.
 library;
 
 DateTime? _date(dynamic v) => v == null ? null : DateTime.tryParse('$v')?.toLocal();
@@ -213,8 +212,6 @@ class Conversation {
       );
 }
 
-/// « il y a 3 h », « hier », « le 12/09 » : une date que l'on lit d'un coup
-/// d'œil dans un fil, sans calcul.
 String ilYA(DateTime? d, {DateTime? maintenant}) {
   if (d == null) return '';
   final m = maintenant ?? DateTime.now();

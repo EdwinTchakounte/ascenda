@@ -7,7 +7,6 @@ import '../theme/icones.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// La bonne nouvelle, sur l'écran d'accueil
 class BandeauRecompense extends ConsumerWidget {
   const BandeauRecompense({super.key});
 
@@ -25,7 +24,6 @@ class BandeauRecompense extends ConsumerWidget {
             "Vos réductions vous attendent.";
 
     final p = context.palette;
-    // Un bon posé sur la page : le filet d'or à gauche fait la souche.
     return Container(
       key: const Key('bandeau-recompense'),
       margin: const EdgeInsets.only(bottom: 16),

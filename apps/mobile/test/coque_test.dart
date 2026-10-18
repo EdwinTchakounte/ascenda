@@ -1,8 +1,3 @@
-// La coque : quatre onglets en bas, et l'écran au-dessus.
-//
-// Le signet de l'onglet ouvert était un enfant libre du Stack de la barre : il
-// s'étirait sur toute la hauteur offerte, la barre avec lui, et l'écran se
-// retrouvait avec zéro pixel. Ce qui suit mesure les deux.
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

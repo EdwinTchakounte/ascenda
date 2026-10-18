@@ -19,7 +19,6 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// L'écran d'accueil : ce qu'il y a à faire maintenant, puis de quoi garder l'élan.
 class EcranAujourdhui extends ConsumerWidget {
   const EcranAujourdhui({super.key});
 
@@ -42,8 +41,6 @@ class EcranAujourdhui extends ConsumerWidget {
               leading: const BoutonMenu(),
               titleSpacing: 4,
               toolbarHeight: 74,
-              // Le haut de l'accueil est une page de titre : la date en petites
-              // capitales, la salutation en grand, un filet dessous.
               title: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -87,11 +84,6 @@ class EcranAujourdhui extends ConsumerWidget {
               data: (a) => SliverPadding(
                 padding: const EdgeInsets.fromLTRB(20, 6, 20, 36),
                 sliver: SliverList.list(children: [
-                  // L'accueil se pose bloc par bloc : on voit la page se
-                  // construire, une fois, à l'ouverture.
-
-                  // Le bandeau de lancement, s'il y a lieu. Il se retire tout
-                  // seul à l'échéance, sans rien à changer dans l'application.
                   const BandeauLancement(),
                   const BandeauRecompense(),
                   Apparition(
@@ -208,7 +200,6 @@ class _AucuneSeance extends StatelessWidget {
   }
 }
 
-/// Trois chiffres qui disent l'élan, tirés de la progression réelle.
 class _Elan extends ConsumerWidget {
   const _Elan();
 
@@ -217,8 +208,6 @@ class _Elan extends ConsumerWidget {
     final prog = ref.watch(progressionProvider).valueOrNull;
     if (prog == null) return const SizedBox.shrink();
     final heures = prog.minutesLues ~/ 60;
-    // Trois chiffres sur une seule bande, séparés par des filets : c'est la
-    // ligne de repères d'une page de titre, pas trois tuiles d'application.
     return Surface(
       padding: const EdgeInsets.fromLTRB(8, 16, 8, 14),
       child: IntrinsicHeight(
@@ -266,6 +255,7 @@ class _FiletVertical extends StatelessWidget {
 
 class _Chiffre extends StatelessWidget {
   const _Chiffre({required this.valeur, required this.libelle, this.unite});
+
   final int valeur;
   final String? unite;
   final String libelle;
@@ -305,6 +295,7 @@ class _Chiffre extends StatelessWidget {
 
 class _CarteRevision extends StatelessWidget {
   const _CarteRevision({required this.nombre});
+
   final int nombre;
 
   @override
@@ -444,7 +435,6 @@ class _AccesRapides extends StatelessWidget {
   }
 }
 
-/// Le rayon : les volumes du corpus, posés sur une tablette.
 class _Rayon extends ConsumerWidget {
   const _Rayon();
 
@@ -477,7 +467,6 @@ class _Rayon extends ConsumerWidget {
   }
 }
 
-/// Les pôles en carrousel : chacun à sa teinte, celle de ses couvertures.
 class _Poles extends ConsumerWidget {
   const _Poles();
 

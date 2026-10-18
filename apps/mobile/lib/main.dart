@@ -13,10 +13,8 @@ import 'widgets/exploitation.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Les polices sont embarquées dans assets/google_fonts.
   GoogleFonts.config.allowRuntimeFetching = false;
   await Reseau.preparer();
-  // Les dates s'affichent en français partout : « Sam. 29 août », pas « Sat ».
   await initializeDateFormatting('fr_FR');
   final theme = await ApparenceNotifier.themeEnregistre();
   runApp(ProviderScope(
@@ -45,7 +43,6 @@ class _ApplicationAscendaState extends ConsumerState<ApplicationAscenda> with Wi
     super.dispose();
   }
 
-  /// Le téléphone passe en sombre : le thème automatique suit.
   @override
   void didChangePlatformBrightness() => setState(() {});
 
@@ -57,7 +54,6 @@ class _ApplicationAscendaState extends ConsumerState<ApplicationAscenda> with Wi
 
     if (Palette.courante.id != palette.id) {
       Palette.courante = palette;
-      // Beaucoup d'écrans lisent leurs couleurs sans passer par Theme.of
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) return;
         void marquer(Element e) {
@@ -70,7 +66,6 @@ class _ApplicationAscendaState extends ConsumerState<ApplicationAscenda> with Wi
 
     final barres = palette.sombre ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark;
 
-    // Le voile enveloppe tout, y compris les écrans d'authentification
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: barres.copyWith(
         statusBarColor: Colors.transparent,

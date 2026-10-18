@@ -1,5 +1,3 @@
-/// Les objets échangés avec l'API. Champs en français, comme l'API elle-même :
-/// une seule langue d'un bout à l'autre évite les traductions silencieuses.
 library;
 
 int? _entier(dynamic v) => v == null ? null : (v is int ? v : int.tryParse('$v'));
@@ -20,18 +18,12 @@ class Utilisateur {
   final String? email;
   final String? nom;
   final String plan;
-
-  /// Ce que le compte peut faire aujourd'hui.
   final AccesEffectif? acces;
 
-  /// Abonné payant. Sert à ce qui concerne l'abonnement lui-même (prolonger,
-  /// échéance), pas à décider si une fonction est ouverte.
   bool get estPremium => plan != 'free';
 
-  /// Tout Ascension est ouvert, quelle qu'en soit la raison.
   bool get accesComplet => estPremium || (acces?.complet ?? false);
 
-  /// Cette fonction précise est ouverte.
   bool aAcces(String fonction) =>
       accesComplet || (acces?.fonctions.contains(fonction) ?? false);
 
@@ -46,8 +38,6 @@ class Utilisateur {
       );
 }
 
-/// L'accès effectif et d'où il vient : `abonnement`, `lancement`, `code` ou
-/// `aucune`.
 class AccesEffectif {
   const AccesEffectif({
     required this.complet,
@@ -74,7 +64,6 @@ class AccesEffectif {
       );
 }
 
-/// Un accès ouvert par un code, tant qu'il court.
 class AccesCode {
   const AccesCode({
     required this.code,
@@ -87,8 +76,6 @@ class AccesCode {
 
   final String code;
   final String libelle;
-
-  /// `complet` ou `limite`.
   final String niveau;
   final List<String> fonctions;
   final DateTime? fin;
@@ -106,7 +93,6 @@ class AccesCode {
       );
 }
 
-/// Une réduction gagnée par un ambassadeur.
 class BonReduction {
   const BonReduction({
     required this.pourcent,
@@ -119,17 +105,11 @@ class BonReduction {
   });
 
   final int pourcent;
-
-  /// `disponible`, `utilise` ou `expire`.
   final String statut;
   final DateTime? expireLe;
   final DateTime? utiliseLe;
   final DateTime? gagneLe;
-
-  /// Le prénom de la personne venue avec le code, et rien de plus.
   final String? filleul;
-
-  /// Pas encore montré dans l'application.
   final bool nouveau;
 
   bool get disponible => statut == 'disponible';
@@ -145,7 +125,6 @@ class BonReduction {
       );
 }
 
-/// Tout ce que montre l'écran « Codes et avantages ».
 class CodesEtAvantages {
   const CodesEtAvantages({
     required this.code,
@@ -170,8 +149,6 @@ class CodesEtAvantages {
   final AccesEffectif acces;
   final List<BonReduction> bons;
   final int nouveaux;
-
-  /// Le pourcentage qui s'appliquera au prochain paiement, s'il y en a un.
   final int? reductionProchaine;
   final Map<String, String> libellesFonctions;
 
@@ -223,13 +200,8 @@ class Axe {
   final int nbPages;
   final int dureeMin;
   final bool premium;
-
-  /// Nombre d'ouvrages dont les chapitres sont découpés. Sans eux, le
-  /// planificateur n'a rien à répartir en séances.
   final int ouvragesExploitables;
   final bool parcoursPossible;
-
-  /// Le pôle qui regroupe cet axe (« Agriculture et élevage »), s'il en a un.
   final String? poleSlug;
   final String? poleLabel;
 
@@ -247,9 +219,9 @@ class Axe {
       );
 }
 
-/// Un axe seul, ou un pôle et ses sous-axes, dans l'ordre où l'API les donne.
 class GroupeAxes {
   const GroupeAxes({required this.axes, this.poleSlug, this.poleLabel});
+
   final String? poleSlug;
   final String? poleLabel;
   final List<Axe> axes;
@@ -308,8 +280,6 @@ class Ouvrage {
   final bool aFiche;
   final bool aQuiz;
   final List<String> axes;
-
-  /// Le raccourci du premier pôle, qui donne sa teinte à la carte.
   final String? axeSlug;
 
   String get auteursCourt => auteurs.isEmpty
@@ -380,21 +350,16 @@ class Seance {
 
   bool get faite => statut == 'fait';
 
-  /// Le chapitre à afficher sous le titre de l'ouvrage. Vide quand il répète
-  /// ce titre, ce qui arrive sur les pages de garde du corpus.
   String? get sousTitre {
     String net(String? x) =>
         (x ?? '').replaceAll('\u2019', "'").trim().toLowerCase();
     if (chapitre == null || net(chapitre) == net(ouvrage)) return null;
-    // Un chapitre sans vrai titre porte le nom de ses pages : la carte les
-    // affiche déjà, les répéter en sous-titre n'apprend rien.
     if (_nomDePages.hasMatch(chapitre!.trim())) return null;
     return partie ?? chapitre;
   }
 
   static final _nomDePages = RegExp(r'^[Pp]ages? \d+( à \d+)?$');
 
-  /// Ce que la séance lit dans l'ouvrage : le libellé sans le titre du livre.
   String? get partie {
     final o = ouvrage;
     if (o == null || !objectif.startsWith('$o : ')) return null;
@@ -431,6 +396,7 @@ class Seance {
 
 class JourSemaine {
   const JourSemaine({required this.jour, required this.statut, required this.nb});
+
   final DateTime jour;
   final String statut;
   final int nb;
@@ -444,6 +410,7 @@ class JourSemaine {
 
 class Aujourdhui {
   const Aujourdhui({this.seance, this.semaine = const [], this.notionsAReviser = 0});
+
   final Seance? seance;
   final List<JourSemaine> semaine;
   final int notionsAReviser;
@@ -478,8 +445,6 @@ class Chronogramme {
 
   int get faites => seances.where((s) => s.faite).length;
   double get avancement => seances.isEmpty ? 0 : faites / seances.length;
-  /// Une séance prévue aujourd'hui n'est pas en retard : on compare les dates,
-  /// pas les horodatages.
   int get enRetard => seances.where((s) {
         if (s.faite || s.prevueLe == null) return false;
         final j = DateTime.now();
@@ -738,7 +703,6 @@ class Progression {
   }
 }
 
-/// Une formule d'abonnement, telle que l'API la lit dans `plan_tarif`.
 class Formule {
   const Formule({
     required this.periodeMois,
@@ -754,19 +718,14 @@ class Formule {
   final String devise;
   final String libelle;
   final int parMois;
-
-  /// Le montant après réduction ambassadeur, quand le lecteur en a une.
   final int? montantReduit;
 
-  /// Ce qui sera réellement demandé.
   int get montantDu => montantReduit ?? montant;
   String get montantDuLisible => '${_millier(montantDu)} $devise';
 
-  /// « 8 000 FCFA », séparateur d'une espace insécable fine comme il se doit.
   String get montantLisible => '${_millier(montant)} $devise';
   String get parMoisLisible => '${_millier(parMois)} $devise';
 
-  /// Ce qu'on économise par rapport au tarif mensuel, en pourcentage.
   int economieContre(Formule mensuel) {
     if (periodeMois <= 1 || mensuel.montant <= 0) return 0;
     final plein = mensuel.montant * periodeMois;
@@ -790,7 +749,6 @@ class MoyenPaiement {
   final String libelle;
   final String operateur;
 
-  /// Le code que l'API attend pour `reseau`, en majuscules.
   String get reseau => code.toUpperCase();
 
   factory MoyenPaiement.depuisJson(Map<String, dynamic> j) => MoyenPaiement(
@@ -810,8 +768,6 @@ class Tarifs {
 
   final List<MoyenPaiement> moyens;
   final List<Formule> formules;
-
-  /// La réduction ambassadeur qui s'appliquera, lue par le serveur.
   final int? reductionPourcent;
   final DateTime? reductionExpire;
 
@@ -834,7 +790,6 @@ class Tarifs {
       );
 }
 
-/// L'état d'un paiement en cours ou passé.
 class Paiement {
   const Paiement({
     required this.id,
@@ -852,20 +807,12 @@ class Paiement {
 
   final String id;
   final int montant;
-
-  /// Le tarif avant réduction, quand une réduction s'est appliquée.
   final int? montantBrut;
   final int? reductionPourcent;
   final String devise;
   final int periodeMois;
-
-  /// `en_attente`, `valide` ou `rejete`.
   final String statut;
-
-  /// Le texte que l'API destine à l'écran. On l'affiche tel quel plutôt que
-  /// d'en écrire un second ici, qui dirait autre chose au premier changement.
   final String message;
-
   final String? telephone;
   final String? reseau;
   final DateTime? creeLe;
@@ -891,8 +838,6 @@ class Paiement {
       );
 }
 
-/// L'abonnement courant. `joursRestants` est la seule donnée que l'écran
-/// affiche en gros : c'est la question que se pose un abonné.
 class Abonnement {
   const Abonnement({
     required this.actif,
@@ -912,7 +857,6 @@ class Abonnement {
   final int? periodeMois;
   final String? message;
 
-  /// Sept jours ou moins : on le dit avant que l'accès ne se referme, pas après.
   bool get bientotEchu => actif && joursRestants != null && joursRestants! <= 7;
 
   factory Abonnement.depuisJson(Map<String, dynamic> j) => Abonnement(
@@ -928,8 +872,6 @@ class Abonnement {
 
 DateTime? _date(dynamic v) => v == null ? null : DateTime.tryParse('$v')?.toLocal();
 
-/// 28000 devient « 28 000 ». Une espace insécable : un montant ne se coupe pas
-/// en fin de ligne.
 String _millier(int n) {
   final s = n.abs().toString();
   final tampon = StringBuffer(n < 0 ? '-' : '');

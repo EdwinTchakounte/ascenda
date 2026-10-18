@@ -5,15 +5,10 @@ import 'package:flutter/material.dart';
 import 'palette.dart';
 import 'texte.dart';
 
-/// La matière de l'application : du papier, de l'encre, des filets.
-
-/// Le grain du papier, posé une fois pour toute la page.
 class FondPapier extends StatelessWidget {
   const FondPapier({super.key, required this.child, this.grain = 1});
 
   final Widget child;
-
-  /// 0 supprime le grain, 1 est la valeur de lecture, 2 le double.
   final double grain;
 
   @override
@@ -33,13 +28,13 @@ class FondPapier extends StatelessWidget {
 
 class _Grain extends CustomPainter {
   _Grain(this.p, this.force);
+
   final Palette p;
   final double force;
 
   @override
   void paint(Canvas canvas, Size taille) {
     final hasard = Random(20260923);
-    // Des fibres courtes, très peu contrastées : on ne les voit pas, on les sent.
     final encre = p.sombre ? Colors.white : p.encre;
     final n = (taille.width * taille.height / 900).round();
     for (var i = 0; i < n; i++) {
@@ -57,8 +52,6 @@ class _Grain extends CustomPainter {
           ..strokeCap = StrokeCap.round,
       );
     }
-    // Une ombre de reliure au bord gauche et un voile en bas : la page a une
-    // épaisseur.
     canvas.drawRect(
       Rect.fromLTWH(0, 0, 26, taille.height),
       Paint()
@@ -72,11 +65,9 @@ class _Grain extends CustomPainter {
   bool shouldRepaint(covariant _Grain autre) => autre.p.id != p.id || autre.force != force;
 }
 
-/// Un filet d'imprimeur : trait fin, parfois doublé d'un trait plus fin encore.
 class Filet extends StatelessWidget {
   const Filet({super.key, this.redouble = false, this.couleur, this.largeur, this.marge = 0});
 
-  /// Deux traits, le second plus pâle : la marque d'un filet d'imprimeur.
   final bool redouble;
   final Color? couleur;
   final double? largeur;
@@ -99,15 +90,11 @@ class Filet extends StatelessWidget {
   }
 }
 
-/// Une étiquette entre crochets, en petites capitales : la marque d'un cahier
-/// d'atelier. « ⟦ SÉANCE DU JOUR ⟧ ».
 class EtiquetteCrochet extends StatelessWidget {
   const EtiquetteCrochet(this.texte, {super.key, this.couleur, this.capitales = true});
+
   final String texte;
   final Color? couleur;
-
-  /// Les petites capitales sont la règle. On les retire quand le libellé doit
-  /// rester lisible tel quel, par exemple une phrase entière.
   final bool capitales;
 
   @override
@@ -138,6 +125,7 @@ class EtiquetteCrochet extends StatelessWidget {
 
 class _Crochet extends StatelessWidget {
   const _Crochet({required this.couleur, required this.ouvrant});
+
   final Color couleur;
   final bool ouvrant;
 
@@ -151,6 +139,7 @@ class _Crochet extends StatelessWidget {
 
 class _CrochetPeint extends CustomPainter {
   _CrochetPeint(this.couleur, this.ouvrant);
+
   final Color couleur;
   final bool ouvrant;
 
@@ -177,10 +166,9 @@ class _CrochetPeint extends CustomPainter {
   bool shouldRepaint(covariant _CrochetPeint a) => a.couleur != couleur || a.ouvrant != ouvrant;
 }
 
-/// La lettrine d'un chapitre : la première lettre en grand, dans un cadre à
-/// l'encre, comme en tête d'un livre imprimé.
 class Lettrine extends StatelessWidget {
   const Lettrine(this.lettre, {super.key, this.taille = 62, this.couleur});
+
   final String lettre;
   final double taille;
   final Color? couleur;
@@ -209,9 +197,9 @@ class Lettrine extends StatelessWidget {
   }
 }
 
-/// Le titre courant d'une page de livre : petites capitales, filet dessous.
 class TitreCourant extends StatelessWidget {
   const TitreCourant(this.texte, {super.key, this.folio});
+
   final String texte;
   final String? folio;
 
@@ -233,8 +221,6 @@ class TitreCourant extends StatelessWidget {
               ),
             ),
             if (folio != null) ...[
-              // Sans cette espace, un titre coupé collait à son folio :
-              // « LES CONSÉQU…p. 245 ».
               const SizedBox(width: 14),
               Texte(folio!, style: t.textTheme.labelSmall?.copyWith(color: p.attenue, letterSpacing: 1)),
             ],
@@ -247,9 +233,9 @@ class TitreCourant extends StatelessWidget {
   }
 }
 
-/// Un fleuron : le petit ornement qui clôt un chapitre dans un livre.
 class Fleuron extends StatelessWidget {
   const Fleuron({super.key, this.taille = 26});
+
   final double taille;
 
   @override
@@ -281,10 +267,9 @@ class Fleuron extends StatelessWidget {
   }
 }
 
-
-/// Une coche tracée à la plume, en deux temps.
 class Coche extends StatelessWidget {
   const Coche({super.key, this.taille = 20, this.couleur, this.epaisseur = 2.2});
+
   final double taille;
   final Color? couleur;
   final double epaisseur;
@@ -299,9 +284,9 @@ class Coche extends StatelessWidget {
       );
 }
 
-/// La croix qui répond à la coche : ce qui manque, ce qui est faux.
 class Croix extends StatelessWidget {
   const Croix({super.key, this.taille = 20, this.couleur, this.epaisseur = 2.2});
+
   final double taille;
   final Color? couleur;
   final double epaisseur;
@@ -318,6 +303,7 @@ class Croix extends StatelessWidget {
 
 class _Trace extends CustomPainter {
   _Trace(this.couleur, this.epaisseur, {required this.croix});
+
   final Color couleur;
   final double epaisseur;
   final bool croix;

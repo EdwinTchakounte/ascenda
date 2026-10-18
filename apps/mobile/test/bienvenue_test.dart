@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : que l'accueil tient sur un petit téléphone réglé en
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : un ouvrage réservé à l'application (le Mémento de
 
 import 'dart:convert';
 import 'dart:io';

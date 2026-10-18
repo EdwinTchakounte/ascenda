@@ -30,8 +30,6 @@ import 'etat/session.dart';
 import 'theme/mouvement.dart';
 import 'theme/texte.dart';
 
-/// Ouvrir un livre, c'est tourner une page : les écrans de lecture entrent en
-/// glissant depuis la droite, au lieu du fondu vertical de Material.
 CustomTransitionPage<void> _pageTournee(GoRouterState etat, Widget page) => CustomTransitionPage(
       key: etat.pageKey,
       child: page,
@@ -49,7 +47,6 @@ CustomTransitionPage<void> _pageTournee(GoRouterState etat, Widget page) => Cust
 final _racine = GlobalKey<NavigatorState>();
 final _coque = GlobalKey<NavigatorState>();
 
-/// Réveille le routeur quand la session change, sans le reconstruire.
 class _EveilSession extends ChangeNotifier {
   _EveilSession(this._ref) {
     _ref.listen<Session>(sessionProvider, (_, _) => notifyListeners());
@@ -57,8 +54,6 @@ class _EveilSession extends ChangeNotifier {
   final Ref _ref;
 }
 
-/// Le routeur est créé une seule fois. La redirection lit l'état courant à
-/// chaque navigation : aucun écran n'a besoin de code de garde.
 final routeurProvider = Provider<GoRouter>((ref) {
   final eveil = _EveilSession(ref);
   ref.onDispose(eveil.dispose);
@@ -72,8 +67,6 @@ final routeurProvider = Provider<GoRouter>((ref) {
       final chemin = etat.matchedLocation;
       final surAuth = chemin.startsWith('/bienvenue') || chemin.startsWith('/connexion');
 
-      // Tant qu'on ignore s'il y a une session, on n'envoie l'utilisateur
-      // nulle part : on l'attend sur un écran qui porte la marque.
       if (session.etat == EtatSession.inconnu) {
         return chemin == '/demarrage' ? null : '/demarrage';
       }
@@ -81,8 +74,6 @@ final routeurProvider = Provider<GoRouter>((ref) {
         return session.etat == EtatSession.connecte ? '/aujourdhui' : '/bienvenue';
       }
       if (session.etat == EtatSession.deconnecte) {
-        // La bibliothèque et les fiches restent consultables sans compte :
-        // c'est la vitrine du produit, pas une zone protégée.
         final libre = chemin.startsWith('/bibliotheque') ||
             chemin.startsWith('/ouvrage') ||
             chemin.startsWith('/mot-de-passe-oublie') ||
@@ -174,7 +165,6 @@ final routeurProvider = Provider<GoRouter>((ref) {
         path: '/chronogramme/:id',
         builder: (c, s) => EcranChronogramme(chronogrammeId: s.pathParameters['id']!),
       ),
-      // Hors de la barre d'onglets : ouverts depuis le tiroir, en plein écran.
       GoRoute(parentNavigatorKey: _racine, path: '/profil', builder: (c, s) => const EcranProfil()),
       GoRoute(parentNavigatorKey: _racine, path: '/cercle', builder: (c, s) => const EcranCercle()),
       GoRoute(parentNavigatorKey: _racine, path: '/hors-ligne', builder: (c, s) => const EcranHorsLigne()),

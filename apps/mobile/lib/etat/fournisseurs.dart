@@ -5,9 +5,6 @@ import '../api/modeles.dart';
 import 'hors_ligne.dart';
 import 'session.dart';
 
-/// Les lectures de données. Chaque famille est indexée par ce qui la
-/// détermine, pour que Riverpod recharge exactement ce qui a changé.
-
 final aujourdhuiProvider = FutureProvider.autoDispose<Aujourdhui>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/aujourdhui') as Map<String, dynamic>;
@@ -22,12 +19,10 @@ final axesProvider = FutureProvider<List<Axe>>((ref) async {
 
 class FiltreBiblio {
   const FiltreBiblio({this.axe, this.niveau, this.recherche, this.page = 1});
+
   final String? axe;
   final String? niveau;
   final String? recherche;
-
-  /// La page demandée. Elle fait partie de la clé : Riverpod garde une entrée
-  /// par page, et revenir en arrière ne redemande rien au serveur.
   final int page;
 
   FiltreBiblio a(int autrePage) =>
@@ -45,9 +40,9 @@ class FiltreBiblio {
   int get hashCode => Object.hash(axe, niveau, recherche, page);
 }
 
-/// Une page de la bibliothèque, et de quoi savoir s'il en reste.
 class PageOuvrages {
   const PageOuvrages({required this.ouvrages, required this.total, required this.page});
+
   final List<Ouvrage> ouvrages;
   final int total;
   final int page;
@@ -55,7 +50,6 @@ class PageOuvrages {
   bool get encore => ouvrages.length < total;
 }
 
-/// Combien d'ouvrages par chargement.
 const int parPageBiblio = 24;
 
 final bibliothequeProvider =
@@ -80,12 +74,9 @@ final bibliothequeProvider =
 final ficheOuvrageProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, id) async {
   final api = ref.watch(clientApiProvider);
-  // Avec le jeton s'il y en a un : les droits d'un ouvrage réservé à
-  // l'application dépendent du lecteur (lecture intégrale, PDF, hors ligne).
   try {
     return await api.get('/bibliotheque/$id') as Map<String, dynamic>;
   } on HorsLigne {
-    // Sans réseau, un ouvrage emporté s'ouvre depuis son pack.
     final depot = ref.read(depotHorsLigneProvider);
     final pack = await depot.lire(id);
     if (pack == null) rethrow;
@@ -155,7 +146,6 @@ final usageProvider = FutureProvider.autoDispose<Map<String, dynamic>>((ref) asy
   return await api.get('/compte/usage') as Map<String, dynamic>;
 });
 
-/// Codes d'accès, code ambassadeur et réductions.
 final codesProvider = FutureProvider.autoDispose<CodesEtAvantages>((ref) async {
   final api = ref.watch(clientApiProvider);
   return CodesEtAvantages.depuisJson(await api.get('/codes/moi') as Map<String, dynamic>);
@@ -166,12 +156,9 @@ final compteProvider = FutureProvider.autoDispose<Map<String, dynamic>>((ref) as
   return await api.get('/compte') as Map<String, dynamic>;
 });
 
-/// Le contenu d'un chapitre, sous contrôle de droits côté serveur.
 final lectureProvider = FutureProvider.autoDispose
     .family<Map<String, dynamic>, ({String documentId, String chapitreId})>((ref, cle) async {
   final api = ref.watch(clientApiProvider);
-  // Avec le jeton : un abonné lit en entier un ouvrage réservé à l'application.
-  // Sans réseau, le texte vient du pack hors ligne, s'il a été emporté.
   try {
     return await api.get('/lecteur/${cle.documentId}/chapitre/${cle.chapitreId}')
         as Map<String, dynamic>;
@@ -190,8 +177,6 @@ final lectureProvider = FutureProvider.autoDispose
   }
 });
 
-/// Lecture par plage de pages : une séance qui regroupe plusieurs chapitres
-/// couvre plus que le premier d'entre eux.
 final lecturePagesProvider = FutureProvider.autoDispose
     .family<Map<String, dynamic>, ({String documentId, int debut, int fin})>((ref, cle) async {
   final api = ref.watch(clientApiProvider);
@@ -215,30 +200,24 @@ final notesProvider =
   return j.cast<Map<String, dynamic>>();
 });
 
-/// La grille tarifaire.
 final tarifsProvider = FutureProvider.autoDispose<Tarifs>((ref) async {
   final api = ref.watch(clientApiProvider);
-  // Authentifié quand on l'est : le serveur y ajoute la réduction ambassadeur.
   final j = await api.get('/paiements/tarifs') as Map<String, dynamic>;
   return Tarifs.depuisJson(j);
 });
 
-/// L'état de l'abonnement du membre, avec les jours restants avant fermeture.
 final abonnementProvider = FutureProvider.autoDispose<Abonnement>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/paiements/abonnement/etat') as Map<String, dynamic>;
   return Abonnement.depuisJson(j);
 });
 
-/// L'historique des paiements. Un membre à qui l'on demande de l'argent a le
-/// droit de voir ce qu'il a déjà versé, et quand.
 final paiementsProvider = FutureProvider.autoDispose<List<Paiement>>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/paiements') as List;
   return j.map((e) => Paiement.depuisJson(e as Map<String, dynamic>)).toList();
 });
 
-/// Les surlignages d'un ouvrage.
 final surlignagesProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, String>((ref, docId) async {
   final api = ref.watch(clientApiProvider);
@@ -246,7 +225,6 @@ final surlignagesProvider =
   return j.cast<Map<String, dynamic>>();
 });
 
-/// La recherche dans le corpus.
 final rechercheProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, requete) async {
   final q = requete.trim();
@@ -256,7 +234,6 @@ final rechercheProvider =
       as Map<String, dynamic>;
 });
 
-/// Les ouvrages dont le titre approche ce qu'on tape, pendant la frappe.
 final suggestionsProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, String>((ref, requete) async {
   final q = requete.trim();
@@ -267,14 +244,12 @@ final suggestionsProvider =
   return ((j['ouvrages'] as List?) ?? []).cast<Map<String, dynamic>>();
 });
 
-/// Les quiz préparés pour un ouvrage, chapitre par chapitre.
 final quizOuvrageProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, documentId) async {
   final api = ref.watch(clientApiProvider);
   return await api.get('/quiz/document/$documentId', auth: false) as Map<String, dynamic>;
 });
 
-/// Vos tentatives passées sur un ouvrage, la plus récente d'abord.
 final historiqueQuizProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, String>((ref, documentId) async {
   final api = ref.watch(clientApiProvider);
@@ -282,21 +257,18 @@ final historiqueQuizProvider =
   return j.cast<Map<String, dynamic>>();
 });
 
-/// La comparaison des formules, lue au serveur.
 final formulesProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/compte/formules', auth: false) as List;
   return j.cast<Map<String, dynamic>>();
 });
 
-/// Le journal d'activité, le plus récent d'abord.
 final journalProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/progression/journal', params: {'limite': 60}) as List;
   return j.cast<Map<String, dynamic>>();
 });
 
-/// Le glossaire du corpus, filtrable par axe et par terme.
 final glossaireProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, ({String? axe, String q})>(
         (ref, f) async {
@@ -309,21 +281,18 @@ final glossaireProvider =
   return j.cast<Map<String, dynamic>>();
 });
 
-/// Une notion et les passages du corpus où elle apparaît, définition d'abord.
 final notionProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, id) async {
   final api = ref.watch(clientApiProvider);
   return await api.get('/concepts/$id', auth: false) as Map<String, dynamic>;
 });
 
-/// Un axe et les ouvrages qu'il porte.
 final axeProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, slug) async {
   final api = ref.watch(clientApiProvider);
   return await api.get('/axes/$slug', auth: false) as Map<String, dynamic>;
 });
 
-/// L'état d'exploitation : lancement, maintenance, version minimale.
 final etatServiceProvider = StreamProvider<Map<String, dynamic>?>((ref) async* {
   final api = ref.watch(clientApiProvider);
   Future<Map<String, dynamic>?> lire() async {
@@ -341,8 +310,6 @@ final etatServiceProvider = StreamProvider<Map<String, dynamic>?>((ref) async* {
   }
 });
 
-/// Recharge tout ce qui dépend de la progression après une action.
-/// Prend un WidgetRef : ces invalidations sont déclenchées depuis les écrans.
 void rafraichirProgression(WidgetRef ref) {
   ref.invalidate(aujourdhuiProvider);
   ref.invalidate(progressionProvider);

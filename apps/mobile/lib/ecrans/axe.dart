@@ -13,12 +13,10 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// La fiche d'un axe : ce qu'il contient, dans l'ordre où il le contient.
 class EcranAxe extends ConsumerWidget {
   const EcranAxe({super.key, required this.slug});
 
   final String slug;
-
   static const _rang = {'debutant': 0, 'intermediaire': 1, 'avance': 2};
   static const _niveaux = {
     'debutant': 'Débutant',
@@ -34,7 +32,6 @@ class EcranAxe extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Axe de lecture')),
-      // Le grain du papier : la fiche d'un axe s'ouvre hors de la coque.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
@@ -57,13 +54,10 @@ class EcranAxe extends ConsumerWidget {
                   if (ra != rb) return ra.compareTo(rb);
                   return (a['pages'] as int? ?? 0).compareTo(b['pages'] as int? ?? 0);
                 });
-              // Un ouvrage borné (le Mémento de l'agronome dans « Protection des
-              // cultures ») compte pour la part que l'axe en lit, pas pour ses 1 698 pages.
               int part(Map<String, dynamic> o, String cle, String cleLivre) =>
                   (o['perimetre'] as Map?)?[cle] as int? ?? o[cleLivre] as int? ?? 0;
               final pages = ouvrages.fold<int>(0, (s, o) => s + part(o, 'pages', 'pages'));
               final minutes = ouvrages.fold<int>(0, (s, o) => s + part(o, 'duree_min', 'duree_min'));
-
               final pole = Couleurs.pole(slug);
               final teinte = pole ?? p.accentTexte;
               final heures = (minutes / 60).round();
@@ -71,8 +65,6 @@ class EcranAxe extends ConsumerWidget {
               return ListView(
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
                 children: [
-                  // L'en-tête sur un voile de la teinte du pôle : l'axe se
-                  // reconnaît à la couleur de ses livres dans la bibliothèque.
                   Container(
                     padding: const EdgeInsets.fromLTRB(20, 22, 20, 22),
                     decoration: BoxDecoration(
@@ -107,8 +99,6 @@ class EcranAxe extends ConsumerWidget {
                                         offset: const Offset(0, 6)),
                                   ],
                                 ),
-                                // Icône blanche sur une teinte de pôle, fixe dans
-                                // les quatre thèmes.
                                 child: const IconeAscenda(Icone.boussole, taille: 25, couleur: Colors.white),
                               )
                             else
@@ -232,6 +222,7 @@ class EcranAxe extends ConsumerWidget {
 
 class _Mesure extends StatelessWidget {
   const _Mesure({required this.icone, required this.valeur, required this.libelle, this.unite});
+
   final Icone icone;
   final int valeur;
   final String? unite;
@@ -251,7 +242,6 @@ class _Mesure extends StatelessWidget {
           const SizedBox(height: 10),
           const Filet(),
           const SizedBox(height: 10),
-          // Le chiffre en grand, son unité en petit
           FittedBox(
             fit: BoxFit.scaleDown,
             alignment: Alignment.centerLeft,
@@ -260,8 +250,6 @@ class _Mesure extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.baseline,
               textBaseline: TextBaseline.alphabetic,
               children: [
-                // Le chiffre et son unité dans un seul texte : « 4 h » se lit et
-                // se retrouve d'un bloc, y compris par un lecteur d'écran.
                 CompteurAnime(valeur, style: chiffre, suffixe: unite == null ? '' : ' $unite'),
               ],
             ),
@@ -309,7 +297,6 @@ class _LigneOuvrage extends StatelessWidget {
       if (o['lecture_integrale'] == false) 'extraits',
     ].join('  ·  ');
 
-    // Une seule surface par ouvrage
     return Surface(
       padding: EdgeInsets.zero,
       child: Column(
@@ -322,7 +309,6 @@ class _LigneOuvrage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Le rang, puis le dos du volume
                   SizedBox(
                     width: 20,
                     child: Padding(

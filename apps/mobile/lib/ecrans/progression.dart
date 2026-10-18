@@ -15,7 +15,6 @@ import '../widgets/illustrations.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// L'onglet des progrès : le carnet de bord du lecteur.
 class EcranProgression extends ConsumerWidget {
   const EcranProgression({super.key});
 
@@ -51,8 +50,6 @@ class EcranProgression extends ConsumerWidget {
             ),
             SliverPadding(
               padding: const EdgeInsets.fromLTRB(20, 6, 20, 36),
-              // Le carnet s'ouvre page après page : une entrée en cascade, une
-              // seule fois, à l'arrivée sur l'onglet.
               sliver: SliverList.list(children: [
                 progression.when(
                   loading: () => const SqueletteCarte(lignes: 4),
@@ -122,7 +119,6 @@ class EcranProgression extends ConsumerWidget {
                 const SizedBox(height: 12),
                 const Apparition(rang: 3, child: _Regularite()),
                 const SizedBox(height: 28),
-                // La carte dit où l'on en est ; le glossaire dit ce qu'il y a à savoir.
                 Apparition(
                   rang: 4,
                   child: TitreSection(
@@ -154,14 +150,11 @@ class EcranProgression extends ConsumerWidget {
   }
 }
 
-/// Le réglage « animations réduites » du téléphone.
 bool _reduites(BuildContext context) => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 
-/// Le journal d'activité.
 class _Journal extends ConsumerWidget {
   const _Journal();
 
-  /// Ce que raconte chaque type d'évènement, du point de vue du lecteur et non de la base.
   static const _recits = {
     'quiz_attempt': ('Quiz passé', Icone.question),
     'question_asked': ("Question à l'agent", Icone.plume),
@@ -218,11 +211,8 @@ class _LigneJournal extends StatelessWidget {
 
   final Map<String, dynamic> evenement;
   final Map<String, (String, Icone)> recits;
-
-  /// La dernière ligne n'a pas de filet de frise sous elle.
   final bool derniere;
 
-  /// « il y a 3 h », « hier », « le 12/08 ».
   String _quand(DateTime? d) {
     if (d == null) return '';
     final ecart = DateTime.now().difference(d);
@@ -233,7 +223,6 @@ class _LigneJournal extends StatelessWidget {
     return 'le ${d.day.toString().padLeft(2, '0')}/${d.month.toString().padLeft(2, '0')}';
   }
 
-  /// Le chiffre qui donne sa valeur à la ligne : un score, un nombre de pages.
   String _precision() {
     final d = evenement['details'];
     if (d is! Map) return '';
@@ -258,7 +247,6 @@ class _LigneJournal extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // La frise : un cachet à l'encre par évènement, relié au suivant.
           Column(
             children: [
               _CachetIcone(
@@ -317,9 +305,9 @@ class _LigneJournal extends StatelessWidget {
   }
 }
 
-/// Une icône de la plume dans un cadre d'encre : le cachet d'un carnet.
 class _CachetIcone extends StatelessWidget {
   const _CachetIcone({required this.icone, this.couleur, this.taille = 36});
+
   final Icone icone;
   final Color? couleur;
   final double taille;
@@ -341,10 +329,9 @@ class _CachetIcone extends StatelessWidget {
   }
 }
 
-/// La page de garde du carnet : l'anneau d'avancement du chronogramme, tracé à
-/// l'encre et rempli à l'ouverture.
 class _Anneau extends StatelessWidget {
   const _Anneau({required this.progression});
+
   final Progression progression;
 
   @override
@@ -377,8 +364,6 @@ class _Anneau extends StatelessWidget {
                     child: enfant,
                   ),
                   child: Center(
-                    // Le chiffre tient dans l'anneau, même avec une grande
-                    // police : il se réduit plutôt que de déborder.
                     child: FittedBox(
                       fit: BoxFit.scaleDown,
                       child: Row(
@@ -437,9 +422,9 @@ class _Anneau extends StatelessWidget {
   }
 }
 
-/// L'anneau : une piste, un arc d'encre, et le cerne fin d'un tampon.
 class _AnneauPeint extends CustomPainter {
   _AnneauPeint({required this.part, required this.piste, required this.encre});
+
   final double part;
   final Color piste;
   final Color encre;
@@ -482,10 +467,9 @@ class _AnneauPeint extends CustomPainter {
       a.part != part || a.encre != encre || a.piste != piste;
 }
 
-/// Une étiquette posée sur la carte de mise en avant : la teinte en pastille
-/// pleine, le texte clair du héros par-dessus, lisible dans les quatre thèmes.
 class _EtiquetteHeros extends StatelessWidget {
   const _EtiquetteHeros({required this.texte, required this.couleur});
+
   final String texte;
   final Color couleur;
 
@@ -521,7 +505,6 @@ class _EtiquetteHeros extends StatelessWidget {
   }
 }
 
-/// Une fiche de chiffre : le cachet, le nombre qui monte, son libellé.
 class _Fiche extends StatelessWidget {
   const _Fiche({
     required this.libelle,
@@ -531,7 +514,6 @@ class _Fiche extends StatelessWidget {
     this.unite,
   });
 
-  /// Sans nombre, la fiche n'a rien à compter : elle montre un tiret.
   final num? nombre;
   final String? unite;
   final String libelle;
@@ -579,9 +561,9 @@ class _Fiche extends StatelessWidget {
   }
 }
 
-/// Le temps de lecture : les minutes montent en dessous d'une heure
 class _FicheDuree extends StatelessWidget {
   const _FicheDuree({required this.minutes});
+
   final int minutes;
 
   @override
@@ -608,7 +590,6 @@ class _FicheDuree extends StatelessWidget {
   }
 }
 
-/// La régularité en calendrier de cahier : une case par jour, douze colonnes de semaines.
 class _Regularite extends ConsumerWidget {
   const _Regularite();
 
@@ -625,8 +606,6 @@ class _Regularite extends ConsumerWidget {
         if (liste.isEmpty) return const SizedBox.shrink();
         final max = liste.fold<int>(1, (m, p) => (p['minutes'] as int) > m ? p['minutes'] as int : m);
         final visibles = liste.skip(liste.length > 84 ? liste.length - 84 : 0).toList();
-        // Le décompte des jours actifs se lit dans les cases mêmes : on ne
-        // fait que les compter, sans rien ajouter.
         final actifs = visibles.where((p) => (p['actions'] as int) > 0).length;
         return Surface(
           padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
@@ -679,8 +658,6 @@ class _Regularite extends ConsumerWidget {
   }
 }
 
-/// Les cases du calendrier : une colonne par semaine, sept lignes par colonne,
-/// du lundi au dimanche. L'intensité de l'encre dit les minutes lues.
 class _CalendrierCahier extends StatelessWidget {
   const _CalendrierCahier({required this.points, required this.maximum});
 
@@ -691,8 +668,6 @@ class _CalendrierCahier extends StatelessWidget {
   Widget build(BuildContext context) {
     final p = context.palette;
     final aujourdhui = DateUtils.dateOnly(DateTime.now());
-    // La date d'un point : celle du serveur quand elle se lit, sinon déduite de
-    // son rang, la série se terminant toujours aujourd'hui.
     DateTime jourDe(int i) =>
         DateTime.tryParse('${points[i]['jour']}') ??
         aujourdhui.subtract(Duration(days: points.length - 1 - i));
@@ -746,6 +721,7 @@ class _CalendrierCahier extends StatelessWidget {
 
 class _Case extends StatelessWidget {
   const _Case({required this.cote, this.encre});
+
   final double cote;
   final Color? encre;
 
@@ -766,8 +742,6 @@ class _Case extends StatelessWidget {
 class _Maitrise extends ConsumerWidget {
   const _Maitrise();
 
-  /// Les trois niveaux, dans l'ordre où on les lit : ce qui est acquis
-  /// d'abord, ce qui est fragile ensuite.
   static const _niveaux = [
     ('acquis', 'Acquises'),
     ('en_cours', 'En cours'),
@@ -805,7 +779,6 @@ class _Maitrise extends ConsumerWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // La répartition d'un coup d'oeil : une barre en trois segments.
               ClipRRect(
                 borderRadius: Rayons.pilule,
                 child: SizedBox(
@@ -856,7 +829,6 @@ class _Maitrise extends ConsumerWidget {
                 spacing: 7,
                 runSpacing: 7,
                 children: [
-                  // Des fiches de glossaire plutôt que des pastilles
                   for (final n in liste)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),

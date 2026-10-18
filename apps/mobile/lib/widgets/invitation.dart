@@ -9,13 +9,10 @@ import '../theme/papier.dart';
 import '../theme/texte.dart';
 import 'ui.dart';
 
-/// L'invitation à ouvrir un compte, montrée aux visiteurs seulement.
 class InvitationCompte extends ConsumerWidget {
   const InvitationCompte({super.key, this.compact = false, this.raison});
 
   final bool compact;
-
-  /// Ce que l'utilisateur gagnerait, formulé pour l'écran où il se trouve.
   final String? raison;
 
   @override
@@ -87,7 +84,6 @@ class InvitationCompte extends ConsumerWidget {
             style: t.textTheme.bodyMedium?.copyWith(color: p.surHeros, height: 1.6),
           ),
           const SizedBox(height: 18),
-          // Empilés plutôt que côte à côte
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(

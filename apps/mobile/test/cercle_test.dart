@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : que l'onglet du cercle affiche ce que l'API renvoie
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -15,7 +14,6 @@ import 'outils.dart';
 final _maintenant = DateTime.now().toUtc();
 String _il(Duration d) => _maintenant.subtract(d).toIso8601String();
 
-/// Un serveur en mémoire : il répond comme l'API et retient les appels.
 class _ServeurFactice extends ClientApi {
   final appels = <String>[];
   final corps = <String, Object?>{};
@@ -116,7 +114,6 @@ void main() {
     expect(texte('Chloé'), findsOneWidget);
     expect(texte('veut rejoindre votre cercle'), findsOneWidget);
     expect(texte('« Tu tiens le rythme, continue. »'), findsOneWidget);
-    // Montré, l'encouragement est signalé comme vu une seule fois.
     expect(serveur.appels.where((a) => a == 'POST /cercle/encouragements/vus'), hasLength(1));
 
     final defiler = find.byType(Scrollable).first;
@@ -194,7 +191,6 @@ void main() {
     expect(serveur.corps['/cercle/echanges/u-ben'], {'texte': 'Bon courage pour la fin !'});
     expect(texte('Bon courage pour la fin !'), findsOneWidget);
     expect(t.takeException(), isNull);
-    // Le sondage de la conversation s'arrête avec l'écran.
     await t.pumpWidget(const SizedBox());
   });
 

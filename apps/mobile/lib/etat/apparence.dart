@@ -4,14 +4,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../theme/palette.dart';
 
-/// Le thème choisi par le lecteur : une des quatre ambiances, ou « automatique »,
-/// qui suit le réglage clair ou sombre du téléphone (Ivoire le jour, Nuit le soir).
 class Apparence {
   const Apparence({this.theme = automatique});
 
   static const automatique = 'auto';
-
-  /// `auto`, ou l'identifiant d'une [Palette].
   final String theme;
 
   Palette palette(Brightness systeme) => theme == automatique
@@ -24,8 +20,6 @@ class ApparenceNotifier extends StateNotifier<Apparence> {
 
   static const _cle = 'ascenda_theme';
 
-  /// Lu avant le premier affichage : l'application s'ouvre directement dans son
-  /// thème, sans éclair d'ivoire avant la Nuit.
   static Future<String?> themeEnregistre() async {
     try {
       return (await SharedPreferences.getInstance()).getString(_cle);

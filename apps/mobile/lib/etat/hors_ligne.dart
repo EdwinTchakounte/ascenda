@@ -9,9 +9,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'coffre.dart';
 import 'session.dart';
 
-/// La bibliothèque hors ligne.
-
-/// Un poids de fichier, écrit en français.
 String poidsLisible(int octets) => octets < 1024 * 1024
     ? '${(octets / 1024).round()} Ko'
     : '${(octets / (1024 * 1024)).toStringAsFixed(1).replaceAll('.', ',')} Mo';
@@ -31,7 +28,6 @@ class PackHorsLigne {
   final int octets;
   final Map<String, int> compteurs;
 
-  /// « 9,7 Mo » : la virgule, comme partout ailleurs dans l'application.
   String get poids => poidsLisible(octets);
 
   Map<String, dynamic> versJson() => {
@@ -59,9 +55,6 @@ class DepotHorsLigne {
         _racine = racine;
 
   static const _cleIndex = 'ascenda_packs';
-
-  /// Le texte intégral d'un ouvrage réservé et son PDF sont chiffrés ; le reste
-  /// du pack (fiche, quiz, citations) l'est aussi, dès lors qu'il voyage avec eux.
   final Coffre _coffre;
   final Future<Directory> Function()? _racine;
 
@@ -82,7 +75,6 @@ class DepotHorsLigne {
       return m.map((k, v) =>
           MapEntry(k, PackHorsLigne.depuisJson(v as Map<String, dynamic>)));
     } catch (_) {
-      // Un index illisible ne doit pas bloquer l'application : on repart de zéro.
       return {};
     }
   }
@@ -99,16 +91,12 @@ class DepotHorsLigne {
     final contenu = jsonEncode(pack);
     final octets = utf8.encode(contenu).length;
     final integral = pack['lecture'] != null;
-
     final d = await _dossier();
     if (d != null) {
-      // Toujours chiffré, et jamais sous un nom qui s'ouvrirait ailleurs.
       await File('${d.path}/$documentId.bin').writeAsBytes(await _coffre.chiffrerTexte(contenu), flush: true);
       final ancien = File('${d.path}/$documentId.json');
       if (await ancien.exists()) await ancien.delete();
     } else if (!integral) {
-      // Le web n'a pas d'espace privé : il garde le compagnon de lecture, jamais
-      // le texte d'un ouvrage réservé à l'application.
       final p = await SharedPreferences.getInstance();
       await p.setString('ascenda_pack_$documentId', contenu);
     } else {
@@ -139,8 +127,6 @@ class DepotHorsLigne {
         if (await chiffre.exists()) {
           pack = jsonDecode(await _coffre.dechiffrerTexte(await chiffre.readAsBytes())) as Map<String, dynamic>;
         } else {
-          // Un pack d'une version précédente, écrit en clair dans les documents :
-          // lu une dernière fois, puis réécrit chiffré au prochain téléchargement.
           final documents = await getApplicationDocumentsDirectory();
           final clair = File('${documents.path}/packs/$documentId.json');
           if (_racine != null || !await clair.exists()) return null;
@@ -157,7 +143,6 @@ class DepotHorsLigne {
     }
   }
 
-  /// Le texte intégral hors ligne a une date de validité
   Map<String, dynamic> _valable(Map<String, dynamic> pack, DateTime maintenant) {
     if (pack['lecture'] == null) return pack;
     final jusqu = DateTime.tryParse('${pack['lecture_valable_jusqu_au'] ?? ''}');
@@ -167,13 +152,11 @@ class DepotHorsLigne {
     return pack;
   }
 
-  /// Le PDF d'un ouvrage, gardé chiffré pour la lecture hors ligne.
   Future<File?> _fichierPdf(String documentId) async {
     if (kIsWeb) return null;
     final base = await (_racine?.call() ?? getApplicationSupportDirectory());
     final d = Directory('${base.path}/pdf');
     if (!await d.exists()) await d.create(recursive: true);
-    // Un PDF gardé en clair par une version précédente disparaît.
     final ancien = File('${d.path}/$documentId.pdf');
     if (await ancien.exists()) await ancien.delete();
     return File('${d.path}/$documentId.bin');
@@ -193,14 +176,12 @@ class DepotHorsLigne {
     try {
       return await _coffre.dechiffrer(await f.readAsBytes());
     } catch (e) {
-      // Altéré, ou chiffré par une autre installation : on le retélécharge.
       debugPrint('PDF hors ligne illisible pour $documentId : $e');
       await f.delete();
       return null;
     }
   }
 
-  /// Le PDF d'un ouvrage libre, gardé tel quel.
   Future<File?> fichierPdfClair(String documentId) async {
     if (kIsWeb) return null;
     final base = await (_racine?.call() ?? getApplicationSupportDirectory());
@@ -209,7 +190,6 @@ class DepotHorsLigne {
     return File('${d.path}/$documentId.pdf');
   }
 
-  /// Vrai si le PDF est sur l'appareil, sous l'une ou l'autre forme.
   Future<bool> aPdf(String documentId) async {
     final f = await _fichierPdf(documentId);
     if (f != null && await f.exists()) return true;
@@ -221,8 +201,6 @@ class DepotHorsLigne {
     final d = await _dossier();
     final pdf = await _fichierPdf(documentId);
     if (pdf != null && await pdf.exists()) await pdf.delete();
-    // Le PDF en clair d'un ouvrage libre part aussi : « retirer de l'appareil »
-    // doit rendre la place, quelle que soit la forme du fichier.
     final clair = await fichierPdfClair(documentId);
     if (clair != null && await clair.exists()) await clair.delete();
     if (d != null) {
@@ -247,12 +225,10 @@ class DepotHorsLigne {
 
 final depotHorsLigneProvider = Provider((ref) => DepotHorsLigne());
 
-/// L'index des packs présents sur l'appareil.
 final packsProvider = FutureProvider<Map<String, PackHorsLigne>>((ref) async {
   return ref.watch(depotHorsLigneProvider).index();
 });
 
-/// Télécharge le pack d'un ouvrage et le range sur l'appareil.
 final telechargerPackProvider =
     FutureProvider.autoDispose.family<PackHorsLigne, String>((ref, documentId) async {
   final api = ref.read(clientApiProvider);
@@ -263,14 +239,11 @@ final telechargerPackProvider =
   return (await depot.index())[documentId]!;
 });
 
-/// Le pack local d'un ouvrage, s'il a été téléchargé.
 final packLocalProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>?, String>((ref, documentId) async {
   return ref.watch(depotHorsLigneProvider).lire(documentId);
 });
 
-
-/// Un chapitre lu depuis le pack hors ligne, sous la forme que rend l'API.
 Map<String, dynamic>? chapitreHorsLigne(Map<String, dynamic> pack, String chapitreId) {
   final lecture = (pack['lecture'] as List?)?.cast<Map<String, dynamic>>();
   if (lecture == null) return null;
@@ -295,7 +268,6 @@ Map<String, dynamic>? chapitreHorsLigne(Map<String, dynamic> pack, String chapit
     'passages': [
       for (final p in ((texte['passages'] as List?) ?? []).cast<Map<String, dynamic>>())
         {
-          // Pas d'identifiant de passage : surligner demande le réseau.
           'id': '',
           'page_debut': p['page_debut'],
           'page_fin': p['page_fin'],
@@ -304,7 +276,6 @@ Map<String, dynamic>? chapitreHorsLigne(Map<String, dynamic> pack, String chapit
     ],
     'droits': {
       'lecture_integrale': true,
-      // Le PDF s'ouvre depuis le coffre s'il a été emporté ; l'écran le vérifie.
       'pdf': true,
       'application_seulement': true,
       'tronque': false,
@@ -317,7 +288,6 @@ Map<String, dynamic>? chapitreHorsLigne(Map<String, dynamic> pack, String chapit
   };
 }
 
-/// La fiche d'un ouvrage emporté, reconstituée depuis son pack pour l'écran de l'ouvrage.
 Map<String, dynamic> ficheHorsLigne(Map<String, dynamic> pack, {bool pdf = false}) {
   final o = (pack['ouvrage'] as Map?)?.cast<String, dynamic>() ?? {};
   final integral = pack['lecture'] != null;
@@ -351,8 +321,6 @@ Map<String, dynamic> ficheHorsLigne(Map<String, dynamic> pack, {bool pdf = false
   };
 }
 
-/// Le sommaire d'un ouvrage emporté, au format de la route `/sommaire`. Le pack
-/// ne garde que les chapitres assez longs pour être lus.
 List<Map<String, dynamic>> sommaireHorsLigne(Map<String, dynamic> pack) {
   final questions = <String, int>{};
   for (final q in ((pack['quiz'] as List?) ?? []).cast<Map<String, dynamic>>()) {

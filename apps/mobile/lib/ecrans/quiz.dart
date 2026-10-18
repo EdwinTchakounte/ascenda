@@ -16,9 +16,9 @@ import '../widgets/illustrations.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le quiz : une question à la fois, posée sur le papier, puis la correction.
 class EcranQuiz extends ConsumerStatefulWidget {
   const EcranQuiz({super.key, required this.quizId, this.seanceId});
+
   final String quizId;
   final String? seanceId;
 
@@ -115,7 +115,6 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
     final q = _questions[_index];
     final choisi = _reponses[q.index];
     final dernier = _index == _questions.length - 1;
-    // Le chapitre d'abord, l'ouvrage ensuite
     final entete = [
       if (_quiz?['chapitre'] != null) '${_quiz!['chapitre']}',
       if (_quiz?['ouvrage'] != null) '${_quiz!['ouvrage']}',
@@ -140,8 +139,6 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
             Expanded(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(20, 26, 20, 24),
-                // La page change avec la question : elle se repose, une fois,
-                // à chaque tour de page.
                 child: KeyedSubtree(
                   key: ValueKey(q.index),
                   child: Column(
@@ -251,8 +248,6 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
           children: [
-            // Le résultat se pose en grand : c'est le moment qu'on retient
-            // d'une séance de lecture.
             Apparition(
               echelle: true,
               child: SurfaceHeros(
@@ -351,12 +346,8 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
   static String _lettre(int i) => i < 26 ? String.fromCharCode(65 + i) : '${i + 1}';
 }
 
-/// L'état d'une carte de choix : neutre, choisie pendant le quiz, ou marquée
-/// juste ou fausse dans la correction.
 enum _EtatChoix { neutre, choisi, juste, faux }
 
-/// Un choix en fiche : sa lettre dans un cadre d'encre, son libellé, et une
-/// couleur qui dit son état sans qu'il faille lire la marque.
 class _CarteChoix extends StatelessWidget {
   const _CarteChoix({
     required this.lettre,
@@ -409,7 +400,6 @@ class _CarteChoix extends StatelessWidget {
             padding: EdgeInsets.all(compact ? 12 : 15),
             child: Row(
               children: [
-                // La lettre du choix, dans le cadre d'une lettrine.
                 Lettrine(lettre, taille: compact ? 30 : 38, couleur: teinte ?? p.attenue),
                 SizedBox(width: compact ? 12 : 14),
                 Expanded(
@@ -435,17 +425,15 @@ class _CarteChoix extends StatelessWidget {
   }
 }
 
-/// La marque du correcteur : une coche ou une croix, tracée à la plume.
 class _MarqueEncre extends StatelessWidget {
   const _MarqueEncre({required this.juste, required this.couleur, this.taille = 22});
+
   final bool juste;
   final Color couleur;
   final double taille;
 
   @override
   Widget build(BuildContext context) {
-    // Le trait se pose au moment où la marque apparaît : un geste bref, une
-    // seule fois.
     final rapide = MediaQuery.maybeDisableAnimationsOf(context) ?? false;
     return SizedBox(
       width: taille,
@@ -462,6 +450,7 @@ class _MarqueEncre extends StatelessWidget {
 
 class _MarquePeinte extends CustomPainter {
   _MarquePeinte(this.juste, this.couleur, this.avance);
+
   final bool juste;
   final Color couleur;
   final double avance;
@@ -477,7 +466,6 @@ class _MarquePeinte extends CustomPainter {
       ..strokeJoin = StrokeJoin.round;
     final v = avance.clamp(0.0, 1.0);
     if (juste) {
-      // Une coche en deux temps : la descente, puis la remontée.
       final a = Offset(4, 13), b = Offset(9.5, 18.5), c = Offset(20, 6);
       final t1 = (v / 0.4).clamp(0.0, 1.0);
       canvas.drawLine(a, Offset.lerp(a, b, t1)!, plume);
@@ -502,10 +490,8 @@ class _MarquePeinte extends CustomPainter {
 
 class _CorrectionQuestion extends StatelessWidget {
   const _CorrectionQuestion({required this.detail, required this.choix});
-  final CorrectionQuestion detail;
 
-  /// Les choix de la question, tels que chargés avec le quiz : ils permettent
-  /// de rappeler la réponse donnée et la bonne sans nouvel appel.
+  final CorrectionQuestion detail;
   final List<String> choix;
 
   @override
@@ -573,8 +559,6 @@ class _CorrectionQuestion extends StatelessWidget {
             const SizedBox(height: 14),
             const Filet(redouble: true),
             const SizedBox(height: 14),
-            // L'extrait qui fonde la réponse : une citation en exergue, avec
-            // son folio, comme dans la marge d'un livre.
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

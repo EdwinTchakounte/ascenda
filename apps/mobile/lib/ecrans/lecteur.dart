@@ -15,7 +15,6 @@ import '../widgets/ui.dart';
 import 'agent.dart';
 import 'lecteur_pdf.dart';
 
-/// Le lecteur : une page de livre, pas un écran d'application.
 class EcranLecteur extends ConsumerStatefulWidget {
   const EcranLecteur({
     super.key,
@@ -31,13 +30,8 @@ class EcranLecteur extends ConsumerStatefulWidget {
   final String documentId;
   final String chapitreId;
   final String? seanceId;
-
-  /// Ce que la séance attend après la lecture : un quiz, ou une note.
   final String? livrable;
   final String? livrableId;
-
-  /// La plage de pages de la séance. Quand elle déborde du chapitre, c'est
-  /// qu'elle en regroupe plusieurs : on lit alors par pages, pas par chapitre.
   final int? pageDebut;
   final int? pageFin;
 
@@ -45,7 +39,6 @@ class EcranLecteur extends ConsumerStatefulWidget {
   ConsumerState<EcranLecteur> createState() => _EcranLecteurState();
 }
 
-/// Une lettre, pour savoir si un passage peut porter une lettrine.
 final _lettre = RegExp(r'\p{L}', unicode: true);
 
 class _EcranLecteurState extends ConsumerState<EcranLecteur> {
@@ -55,8 +48,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   @override
   void initState() {
     super.initState();
-    // Le journal de progression alimente la replanification : on signale
-    // l'ouverture sans attendre la réponse.
     ref.read(clientApiProvider).post('/lecteur/${widget.documentId}/ouvert').ignore();
   }
 
@@ -68,7 +59,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
         _marquee = true;
         rafraichirProgression(ref);
       } catch (_) {
-        // Marquer la séance ne doit pas empêcher d'enchaîner sur le quiz.
       }
     }
     if (!mounted) return;
@@ -79,7 +69,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     }
   }
 
-  /// Le texte de lecture : Fraunces, interligne ample
   TextStyle? _styleLecture(ThemeData t, Palette p) => t.textTheme.bodyLarge?.copyWith(
         fontFamily: t.textTheme.headlineSmall?.fontFamily,
         fontSize: _taille,
@@ -94,13 +83,9 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     final lecture = ref.watch(lectureProvider(cle));
     final t = Theme.of(context);
     final p = context.palette;
-    // Des marges de livre : généreuses sur téléphone, et une colonne de 680 px
-    // au plus sur tablette, au-delà de quoi l'oeil perd la ligne suivante.
     final largeur = MediaQuery.sizeOf(context).width;
     final marge = largeur > 728 ? (largeur - 680) / 2 : 26.0;
 
-    // Le grain du papier sous toute la page, barre du haut comprise : la
-    // page n'est pas coupée en deux.
     return FondPapier(
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -109,7 +94,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
           toolbarHeight: 52,
           leading: IconButton(
             tooltip: 'Retour',
-            // La flèche du kit, retournée : la même plume que le reste de la page.
             icon: Transform.scale(
               scaleX: -1,
               child: IconeAscenda(Icone.fleche, taille: 21, couleur: p.attenue),
@@ -124,7 +108,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                 onPressed: () {
                   final d = lecture.valueOrNull!;
                   final page = d['chapitre']?['page_debut'];
-                  // Le lecteur de PDF ne reçoit que l'identifiant
                   reservesConnus[widget.documentId] =
                       d['droits']?['application_seulement'] == true;
                   context.push('/pdf/${widget.documentId}'
@@ -134,7 +117,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
               ),
             IconButton(
               tooltip: 'Taille du texte',
-              // Deux A de la police de lecture : le bouton montre ce qu'il règle.
               icon: Texte('Aa',
                   style: t.textTheme.titleLarge
                       ?.copyWith(fontSize: 17, height: 1, color: p.attenue)),
@@ -173,8 +155,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
             final droits = d['droits'] as Map<String, dynamic>;
             final passages = (d['passages'] as List).cast<Map<String, dynamic>>();
             final suivant = d['suivant'] as Map<String, dynamic>?;
-            // Une liste vide si l'appel échoue : ne pas pouvoir teinter le texte
-            // ne doit pas empêcher de le lire.
             final surlignages =
                 ref.watch(surlignagesProvider(widget.documentId)).valueOrNull ?? const [];
             final style = _styleLecture(t, p);
@@ -184,8 +164,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                 ListView(
                   padding: EdgeInsets.fromLTRB(marge, 6, marge, 136),
                   children: [
-                    // Le titre courant et son folio : on sait toujours quel
-                    // ouvrage on tient, et à quelles pages on est.
                     TitreCourant('${ouvrage['titre']}', folio: _folio(chapitre)),
                     const SizedBox(height: 24),
                     Texte('${chapitre['titre'] ?? 'Chapitre ${chapitre['ordre']}'}',
@@ -198,7 +176,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                       ),
                     ],
                     const SizedBox(height: 20),
-                    // Le filet d'imprimeur qui ferme l'en-tête et ouvre le texte.
                     const Align(
                       alignment: Alignment.centerLeft,
                       child: SizedBox(width: 92, child: Filet(redouble: true)),
@@ -250,8 +227,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                         const SizedBox(height: 24),
                       ],
 
-                    // Complément : le reste de la plage de la séance, quand elle
-                    // regroupe plusieurs chapitres.
                     if (_debordement(chapitre) case (final debut, final fin))
                       _PagesSupplementaires(
                         documentId: widget.documentId,
@@ -260,7 +235,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                         style: style,
                       ),
 
-                    // Le fleuron qui clôt le chapitre, avant la porte du suivant.
                     if (passages.isNotEmpty) ...[
                       const SizedBox(height: 6),
                       const Fleuron(),
@@ -302,8 +276,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                   ],
                 ),
 
-                // Le texte s'efface sous la barre d'actions au lieu d'être coupé
-                // net par elle.
                 Positioned(
                   left: 0,
                   right: 0,
@@ -322,7 +294,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                   ),
                 ),
 
-                // Barre d'actions basse, flottante et arrondie.
                 Positioned(
                   left: 16,
                   right: 16,
@@ -331,8 +302,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                     child: Center(
                       child: ConstrainedBox(
                         constraints: const BoxConstraints(maxWidth: 520),
-                        // Une réglette posée sur la page plutôt qu'une pilule
-                        // flottante : le filet d'encre, et les outils de l'atelier.
                         child: DecoratedBox(
                           decoration: BoxDecoration(
                             color: p.surface,
@@ -354,11 +323,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                                       padding: const EdgeInsets.symmetric(horizontal: 14),
                                       shape: const RoundedRectangleBorder(borderRadius: Rayons.petit),
                                     ),
-                                    // Le sceau : la séance se clôt comme on cachette
-                                    // une page lue.
                                     icon: IconeAscenda(Icone.sceau, taille: 19, couleur: p.surAccent),
-                                    // Sous 360 px, le libellé complet ne tient pas à côté
-                                    // des deux outils : on garde le verbe.
                                     label: Texte(
                                       MediaQuery.sizeOf(context).width < 360
                                           ? (widget.seanceId != null ? 'Terminer' : 'Lu')
@@ -396,7 +361,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     );
   }
 
-  /// Le folio du chapitre : la plage de pages qu'il occupe dans l'ouvrage.
   String? _folio(Map<String, dynamic> chapitre) {
     final debut = chapitre['page_debut'];
     if (debut == null) return null;
@@ -404,7 +368,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     return fin == null ? 'p. $debut' : 'p. $debut à $fin';
   }
 
-  /// Un passage du chapitre, sélectionnable et surlignable.
   Widget _passage(
     BuildContext context,
     Map<String, dynamic> x,
@@ -416,8 +379,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     final texte = '${x['texte']}';
     final corps = _teinter(texte, surlignages, style);
     final initiale = lettrine ? _initiale(texte) : null;
-    // La lettrine tient exactement sur la première ligne : plus haute, elle
-    // mordrait sur la deuxième, que le texte ne peut pas décaler.
     final cote = _taille * 1.75;
 
     final page = SelectableText.rich(
@@ -446,12 +407,9 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     );
   }
 
-  /// La lettre qui ouvre un passage, quand il en ouvre bien un par une lettre :
-  /// un passage qui commence par un guillemet ou un chiffre n'a pas de lettrine.
   String? _initiale(String texte) =>
       texte.isNotEmpty && _lettre.hasMatch(texte[0]) ? texte[0] : null;
 
-  /// Le texte du premier passage, moins sa lettre initiale
   TextSpan _placeALaLettrine(TextSpan corps, TextStyle? base, double cote) {
     final espaces = ' ' * _espacesPour(cote + 10, base);
     final enfants = corps.children;
@@ -467,7 +425,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     ]);
   }
 
-  /// Combien d'espaces couvrent une largeur, dans le style de lecture.
   int _espacesPour(double largeur, TextStyle? style) {
     double mesure(String texte) {
       final peintre = TextPainter(
@@ -484,7 +441,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     return (largeur / espace).ceil();
   }
 
-  /// La part de la séance qui dépasse le chapitre affiché, s'il y en a une.
   (int, int)? _debordement(Map<String, dynamic> chapitre) {
     final finChapitre = chapitre['page_fin'] as int?;
     final finSeance = widget.pageFin;
@@ -499,8 +455,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
       context: context,
       isScrollControlled: true,
       useSafeArea: true,
-      // Le fond du papier de lecture, arrondi en haut seulement : la feuille
-      // monte du bas de l'écran, ses coins inférieurs ne se voient pas.
       backgroundColor: context.palette.fond,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
@@ -512,10 +466,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     );
   }
 
-  /// Compose le texte en teintant les portions déjà surlignées.
   TextSpan _teinter(String texte, List<Map<String, dynamic>> surlignages, TextStyle? base) {
-    // Même longueur que le texte d'origine : les positions trouvées sur l'un
-    // valent pour l'autre.
     final affiche = lisible(texte, composes: false);
     final marques = <({int debut, int fin, Color teinte})>[];
     for (final s in surlignages) {
@@ -535,8 +486,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     final morceaux = <TextSpan>[];
     var curseur = 0;
     for (final m in marques) {
-      // Deux surlignages qui se chevauchent : on garde le premier et on saute
-      // le second, plutôt que de produire des indices négatifs.
       if (m.debut < curseur) continue;
       if (m.debut > curseur) {
         morceaux.add(TextSpan(text: affiche.substring(curseur, m.debut), style: base));
@@ -553,7 +502,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     return TextSpan(children: morceaux);
   }
 
-  /// Le menu de sélection, augmenté d'un « Surligner ».
   Widget _menuTexte(
     BuildContext context,
     EditableTextState etat,
@@ -564,8 +512,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     final entrees = etat.contextMenuButtonItems;
     final selection = etat.textEditingValue.selection;
     if (selection.isValid && !selection.isCollapsed) {
-      // Le texte affiché porte des espaces insécables (voir `lisible`) : la
-      // citation enregistrée garde les espaces du livre.
       final choisi = selection.textInside(etat.textEditingValue.text).replaceAll('\u00A0', ' ').trim();
       if (choisi.isNotEmpty && choisi.length <= 2000) {
         entrees.insert(
@@ -645,9 +591,9 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   }
 }
 
-/// Un outil de la réglette basse : une icône à la plume sur un creux de papier.
 class _BoutonOutil extends StatelessWidget {
   const _BoutonOutil({required this.icone, required this.onTap, this.tooltip});
+
   final Icone icone;
   final VoidCallback onTap;
   final String? tooltip;
@@ -674,8 +620,6 @@ class _BoutonOutil extends StatelessWidget {
   }
 }
 
-
-/// Les pages d'une séance qui débordent du chapitre courant.
 class _PagesSupplementaires extends ConsumerWidget {
   const _PagesSupplementaires({
     required this.documentId,
@@ -687,8 +631,6 @@ class _PagesSupplementaires extends ConsumerWidget {
   final String documentId;
   final int debut;
   final int fin;
-
-  /// Le style du texte principal, pour que la suite se lise sans rupture.
   final TextStyle? style;
 
   @override
@@ -708,8 +650,6 @@ class _PagesSupplementaires extends ConsumerWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // La suite reprend comme une nouvelle page du même livre : son
-            // titre courant, son folio, son filet.
             Padding(
               padding: const EdgeInsets.only(top: 8, bottom: 20),
               child: TitreCourant('suite de la séance', folio: 'p. $debut à $fin'),

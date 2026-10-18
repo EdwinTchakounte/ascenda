@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : les quatre thèmes restent lisibles
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

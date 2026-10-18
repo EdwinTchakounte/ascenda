@@ -9,8 +9,6 @@ import '../theme/palette.dart';
 import '../theme/texte.dart';
 import 'illustrations.dart';
 
-/// Les états qui ne sont pas le cas idéal.
-
 class EtatMessage extends StatelessWidget {
   const EtatMessage({
     super.key,
@@ -26,9 +24,6 @@ class EtatMessage extends StatelessWidget {
   final String titre;
   final String texte;
   final IconData? icone;
-
-  /// Une scène dessinée, préférée à l'icône quand elle est fournie : un écran
-  /// vide raconte un moment de lecture, pas un code d'erreur.
   final Scene? scene;
   final VoidCallback? action;
   final String? libelleAction;
@@ -85,9 +80,9 @@ class EtatMessage extends StatelessWidget {
   }
 }
 
-/// L'icône d'un état : une pastille arrondie posée dans un halo de sa teinte.
 class _GrandePastille extends StatelessWidget {
   const _GrandePastille({required this.icone, required this.couleur});
+
   final IconData icone;
   final Color couleur;
 
@@ -119,8 +114,6 @@ class _GrandePastille extends StatelessWidget {
   }
 }
 
-/// Traduit une exception en écran compréhensible. Le hors-ligne, le quota et
-/// l'offre payante ne se disent pas de la même façon.
 class EtatErreur extends StatelessWidget {
   const EtatErreur({super.key, required this.erreur, this.reessayer});
 
@@ -143,8 +136,6 @@ class EtatErreur extends StatelessWidget {
     }
     if (erreur is ErreurApi) {
       final e = erreur as ErreurApi;
-      // Buter sur l'offre payante et n'avoir qu'un bouton « Réessayer » sous les yeux est
-      // une
       final versAbonnement = e.estPremium || e.estQuota;
       return EtatMessage(
         icone: e.estQuota
@@ -169,7 +160,6 @@ class EtatErreur extends StatelessWidget {
   }
 }
 
-/// Squelette de chargement : des blocs à la forme du contenu attendu
 class Squelette extends StatefulWidget {
   const Squelette({super.key, this.hauteur = 16, this.largeur, this.rayon = 0});
 
@@ -214,6 +204,7 @@ class _SqueletteState extends State<Squelette> with SingleTickerProviderStateMix
 
 class SqueletteCarte extends StatelessWidget {
   const SqueletteCarte({super.key, this.lignes = 3});
+
   final int lignes;
 
   @override
@@ -230,7 +221,6 @@ class SqueletteCarte extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // L'amorce d'une ligne de liste : la pastille, puis le titre.
           const Row(
             children: [
               Squelette(hauteur: 42, largeur: 42, rayon: 13),
@@ -257,9 +247,9 @@ class SqueletteCarte extends StatelessWidget {
   }
 }
 
-/// Bandeau discret pour signaler une limite de droits sur un ouvrage.
 class BandeauDroits extends StatelessWidget {
   const BandeauDroits({super.key, required this.message});
+
   final String message;
 
   @override

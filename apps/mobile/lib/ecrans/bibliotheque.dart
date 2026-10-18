@@ -16,7 +16,6 @@ import '../widgets/invitation.dart';
 import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
-/// La bibliothèque : une salle de lecture, pas une liste de résultats.
 class EcranBibliotheque extends ConsumerStatefulWidget {
   const EcranBibliotheque({super.key});
 
@@ -30,7 +29,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
   String? _niveau;
   String _texte = '';
 
-  /// La page demandée, et ce qui a déjà été reçu.
   int _page = 1;
   int _total = 0;
   final List<Ouvrage> _recus = [];
@@ -40,8 +38,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
     _recus.clear();
   }
 
-  /// Le titre courant de la page : ce que le lecteur regarde en ce moment.
-  /// Un pôle sélectionné porte son nom, pas celui de son premier sous-axe.
   String _libelleFiltre(List<Axe> liste) {
     if (_axe == null) return 'Tout le fonds';
     for (final a in liste) {
@@ -93,8 +89,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
               child: Row(
                 children: [
                   Expanded(
-                    // Une ligne à remplir, pas une boîte : le champ est un filet
-                    // d'encre sur le papier, dans l'esprit d'un bulletin de prêt.
                     child: Container(
                       decoration: BoxDecoration(
                         border: Border(bottom: BorderSide(color: p.encre.withValues(alpha: 0.32), width: 1.4)),
@@ -136,8 +130,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  // Chercher dans le texte des ouvrages est un autre geste que chercher un
-                  // titre
                   Tooltip(
                     message: 'Chercher dans le texte des livres',
                     child: Material(
@@ -175,7 +167,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         _reinitialiser();
                       }),
                     ),
-                    // Un pôle tient en une pastille ; ses sous-axes s'ouvrent dessous.
                     for (final g in regrouperParPole(liste))
                       if (g.estPole)
                         _Filtre(
@@ -216,7 +207,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                             libelle: a.label,
                             actif: _axe == a.slug,
                             onTap: () => setState(() {
-                              // Retirer un sous-axe revient au pôle, pas à « Tous ».
                               _axe = _axe == a.slug ? g.poleSlug : a.slug;
                               _reinitialiser();
                             }),
@@ -224,7 +214,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                       ],
                     ),
                   ),
-            // Un axe sélectionné devient une porte.
             if (_axe != null && !listeAxes.any((a) => a.poleSlug == _axe))
               Align(
                 alignment: Alignment.centerLeft,
@@ -253,7 +242,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                 ],
               ),
             ),
-            // Le filet qui ferme l'appareil de tri : dessous commence le fonds.
             const Padding(
               padding: EdgeInsets.fromLTRB(20, 2, 20, 0),
               child: Filet(redouble: true),
@@ -275,8 +263,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         reessayer: () => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
                       ),
                 data: (page) {
-                  // On empile les pages déjà reçues. Repartir de zéro à chaque
-                  // chargement ramènerait le lecteur en haut de la liste.
                   if (page.page == 1) {
                     _recus
                       ..clear()
@@ -293,8 +279,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                         onRefresh: () async => ref.invalidate(bibliothequeProvider(filtre.a(_page))),
                         child: ListView.separated(
                           padding: const EdgeInsets.fromLTRB(20, 14, 20, 24),
-                          // Une ligne de plus en queue : le bouton qui charge
-                          // la suite, ou le mot de la fin.
                           itemCount: liste.length + 2,
                           separatorBuilder: (_, _) => const SizedBox(height: 12),
                           itemBuilder: (context, i) {
@@ -335,8 +319,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                         "que vous pouvez tenir, et vous interroge sur ce "
                                         "que vous lisez.",
                                   ),
-                                  // Le rayon en tête : on reconnaît un fonds à ses dos
-                                  // avant de lire ses notices.
                                   if (liste.length >= 3) ...[
                                     const SizedBox(height: 14),
                                     Rayon(
@@ -382,8 +364,6 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
   }
 }
 
-/// Un filtre : une étiquette d'encre pour les parcours, une petite capitale
-/// soulignée pour les niveaux. Deux familles qui ne se confondent pas.
 class _Filtre extends StatelessWidget {
   const _Filtre({
     required this.libelle,
@@ -397,9 +377,6 @@ class _Filtre extends StatelessWidget {
   final bool actif;
   final VoidCallback onTap;
   final int? compte;
-
-  /// Les niveaux se lisent comme les titres courants d'un catalogue, les
-  /// parcours comme des étiquettes collées sur une boîte d'archives.
   final bool souligne;
 
   @override
@@ -414,8 +391,6 @@ class _Filtre extends StatelessWidget {
           onTap: onTap,
           child: Padding(
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 6),
-            // Le filet prend la largeur du mot : dans une rangée qui défile,
-            // une colonne étirée réclamerait une largeur infinie.
             child: IntrinsicWidth(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -431,8 +406,6 @@ class _Filtre extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 5),
-                  // Le filet sous le niveau retenu : la marque d'un onglet de
-                  // catalogue, sans pastille ni ombre.
                   AnimatedContainer(
                     duration: const Duration(milliseconds: 200),
                     height: 1.6,
@@ -472,8 +445,6 @@ class _Filtre extends StatelessWidget {
               ),
               if (compte != null) ...[
                 const SizedBox(width: 8),
-                // Le nombre d'ouvrages comme un folio : chiffres tabulaires,
-                // séparés du libellé par un filet vertical.
                 Container(
                   width: 1,
                   height: 13,
@@ -497,7 +468,6 @@ class _Filtre extends StatelessWidget {
   }
 }
 
-/// Le fonds ne rend rien : un carton de catalogue, pas une icône barrée.
 class _RayonVide extends StatelessWidget {
   const _RayonVide();
 
@@ -537,9 +507,9 @@ class _RayonVide extends StatelessWidget {
   }
 }
 
-/// Sans réseau, la bibliothèque montre ce qui a été emporté.
 class _LivresEmportes extends ConsumerWidget {
   const _LivresEmportes({required this.reessayer});
+
   final VoidCallback reessayer;
 
   @override
@@ -577,7 +547,6 @@ class _LivresEmportes extends ConsumerWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Le signet dépasse : ce volume est sur l'appareil.
                   DosLivre(titre: pack.titre, hauteur: 78, largeur: 36, marque: true),
                   const SizedBox(width: 16),
                   Expanded(

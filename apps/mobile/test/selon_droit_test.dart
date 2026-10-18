@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : qu'un contenu fermé se voit avant d'être heurté
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -11,9 +10,9 @@ import 'package:ascenda/widgets/selon_droit.dart';
 
 import 'outils.dart';
 
-/// Un client qui n'appelle personne et rend le profil qu'on lui donne.
 class _ClientProfil extends ClientApi {
   _ClientProfil(this.profil);
+
   final Map<String, dynamic>? profil;
 
   @override
@@ -51,7 +50,6 @@ Widget _sous(Widget enfant, Map<String, dynamic>? profil) => ProviderScope(
       ),
     );
 
-/// L'écran attend que la session soit reprise avant de décider.
 Future<void> monter(WidgetTester t, Widget enfant, Map<String, dynamic>? profil) async {
   await t.pumpWidget(_sous(enfant, profil));
   await t.pumpAndSettle();

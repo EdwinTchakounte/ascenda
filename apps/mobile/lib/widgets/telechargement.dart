@@ -13,7 +13,6 @@ import '../theme/texte.dart';
 import 'livre.dart';
 import 'ui.dart';
 
-/// Le bloc de téléchargement d'un ouvrage.
 class BlocTelechargement extends ConsumerStatefulWidget {
   const BlocTelechargement({
     super.key,
@@ -25,9 +24,6 @@ class BlocTelechargement extends ConsumerStatefulWidget {
 
   final String documentId;
   final String titre;
-
-  /// Ce lecteur peut emporter le texte intégral et le PDF (ouvrage réservé à
-  /// l'application, lecteur abonné). Ils sont gardés chiffrés dans l'application.
   final bool integral;
   final int? pdfOctets;
 
@@ -39,8 +35,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
   bool _enCours = false;
   bool _pdfEnCours = false;
 
-  /// Ce que le PDF emporté pèse. Nul quand il n'y en a pas ; [_pdfSansTaille]
-  /// dit qu'il y en a un mais qu'on ne sait pas le mesurer.
   int? _pdfOctetsLocal;
   bool _pdfSansTaille = false;
 
@@ -50,7 +44,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
     _mesurerPdf();
   }
 
-  /// La taille du PDF gardé sur l'appareil.
   Future<void> _mesurerPdf() async {
     final depot = ref.read(depotHorsLigneProvider);
     int? octets;
@@ -67,8 +60,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
         }
       }
     } catch (_) {
-      // Une mesure impossible ne doit rien casser : on n'annonce alors que le
-      // poids du pack.
     }
     if (!mounted) return;
     setState(() {
@@ -77,7 +68,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
     });
   }
 
-  /// Ce que l'ouvrage occupe réellement : le pack, et le PDF s'il est là.
   String _tailleSurAppareil(PackHorsLigne local) {
     final total = local.octets + (_pdfOctetsLocal ?? 0);
     final poids = total < 1024 * 1024
@@ -94,8 +84,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       final depot = ref.read(depotHorsLigneProvider);
       final pack = await api.get('/bibliotheque/${widget.documentId}/pack') as Map<String, dynamic>;
       await depot.enregistrer(widget.documentId, pack);
-      // Le PDF part avec le texte quand le lecteur peut les emporter : lire hors
-      // ligne, c'est aussi pouvoir retrouver une figure ou un tableau.
       if (pack['lecture'] != null && widget.integral && !await depot.aPdf(widget.documentId)) {
         final octets = await api.telecharger('/lecteur/${widget.documentId}/pdf');
         await depot.enregistrerPdf(widget.documentId, octets);
@@ -143,8 +131,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
     try {
       final base = ref.read(clientApiProvider).base;
       final url = Uri.parse('$base/v1/bibliotheque/${widget.documentId}/export.pdf');
-      // On laisse le système ouvrir le PDF : visionneuse, partage et
-      // impression sont déjà là, il n'y a rien à réécrire.
       if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
         messager.showSnackBar(const SnackBar(
           content: Texte("Aucune application ne peut ouvrir le PDF."),
@@ -176,7 +162,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Un bandeau teinté en tête : vert quand l'ouvrage est déjà sur le téléphone
           Apparition(
             key: ValueKey(garde),
             echelle: garde,
@@ -186,7 +171,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
               color: teinte.withValues(alpha: p.sombre ? 0.14 : 0.08),
               child: Row(
                 children: [
-                  // Le dos du volume, signet dehors une fois emporté.
                   DosLivre(titre: widget.titre, hauteur: 62, largeur: 26, marque: garde),
                   const SizedBox(width: 16),
                   Expanded(
@@ -279,7 +263,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
                                 width: 16, height: 16,
                                 child: CircularProgressIndicator(strokeWidth: 2))
                             : IconeAscenda(Icone.page, taille: 18, couleur: p.accentTexte),
-                        // Le compagnon de lecture (fiche, citations, quiz), jamais le livre.
                         label: const Texte('Compagnon', maxLines: 1, overflow: TextOverflow.ellipsis),
                         style: OutlinedButton.styleFrom(
                           minimumSize: const Size(0, 48),

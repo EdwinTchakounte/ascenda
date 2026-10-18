@@ -19,7 +19,6 @@ import '../widgets/ui.dart';
 import 'auth.dart';
 import '../theme/texte.dart';
 
-/// Le profil : la page de garde du lecteur.
 class EcranProfil extends ConsumerWidget {
   const EcranProfil({super.key});
 
@@ -35,7 +34,6 @@ class EcranProfil extends ConsumerWidget {
       appBar: AppBar(
         title: const Texte('Profil'),
         actions: [
-          // La déconnexion vit dans la barre du haut
           IconButton(
             tooltip: 'Se déconnecter',
             icon: const Icon(Icons.logout_rounded, size: 21),
@@ -44,15 +42,12 @@ class EcranProfil extends ConsumerWidget {
           const SizedBox(width: 6),
         ],
       ),
-      // Le grain du papier : le profil s'ouvre hors de la coque, il ne l'hérite
-      // donc pas du tiroir.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
           child: ListView(
             padding: const EdgeInsets.fromLTRB(20, 8, 20, 36),
             children: [
-              // La page se pose bloc par bloc, une fois, à l'ouverture.
               Apparition(child: _EnTeteCompte(premium: session.premium)),
               const SizedBox(height: 14),
               const Apparition(rang: 1, child: _EntreeCodes()),
@@ -217,7 +212,6 @@ class EcranProfil extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: 32),
-              // L'achevé d'imprimer : le fleuron, la marque, la devise.
               Apparition(
                 rang: 7,
                 child: Column(
@@ -253,7 +247,6 @@ class EcranProfil extends ConsumerWidget {
         _ => 'non renseigné',
       };
 
-  /// Se déconnecter efface la session
   Future<void> _fermerPartout(BuildContext context, WidgetRef ref) async {
     final oui = await showDialog<bool>(
       context: context,
@@ -359,9 +352,9 @@ class EcranProfil extends ConsumerWidget {
   }
 }
 
-/// L'en-tête du compte : l'initiale frappée comme un ex-libris, le nom
 class _EnTeteCompte extends ConsumerWidget {
   const _EnTeteCompte({required this.premium});
+
   final bool premium;
 
   @override
@@ -371,14 +364,11 @@ class _EnTeteCompte extends ConsumerWidget {
     final u = ref.watch(sessionProvider).utilisateur;
     final abonnement = ref.watch(abonnementProvider).valueOrNull;
     final acces = u?.acces;
-    // Le descriptif et le nom viennent du serveur
     final formules = ref.watch(formulesProvider).valueOrNull;
     final formule = formules?.cast<Map<String, dynamic>?>().firstWhere(
           (f) => f?['code'] == (premium ? 'premium' : 'free'),
           orElse: () => null,
         );
-    // La même initiale que sur l'avatar des onglets, mais frappée dans un
-    // cadre à l'encre plutôt que posée dans un disque.
     final initiale =
         (u?.nom?.trim().isNotEmpty == true ? u!.nom!.trim()[0] : (u?.email?[0] ?? 'A')).toUpperCase();
 
@@ -421,8 +411,6 @@ class _EnTeteCompte extends ConsumerWidget {
           const SizedBox(height: 18),
           Filet(redouble: true, couleur: p.surHeros.withValues(alpha: 0.22)),
           const SizedBox(height: 16),
-          // Le cartouche de la formule : un cadre d'or, comme la mention
-          // portée au dos d'un volume.
           Container(
             padding: const EdgeInsets.fromLTRB(14, 13, 14, 14),
             decoration: BoxDecoration(
@@ -517,10 +505,9 @@ class _EnTeteCompte extends ConsumerWidget {
   }
 }
 
-/// Une précision sur la carte du compte : icône à la plume et texte de même
-/// teinte.
 class _MentionHeros extends StatelessWidget {
   const _MentionHeros({required this.icone, required this.texte, required this.couleur});
+
   final Icone icone;
   final String texte;
   final Color couleur;
@@ -552,8 +539,6 @@ String _accesOffert(AccesEffectif a) {
   return 'Code actif : $n fonction${n > 1 ? 's' : ''} d\'Ascension ouverte${n > 1 ? 's' : ''}$fin.';
 }
 
-/// L'entrée vers les codes. La pastille compte les réductions gagnées que le
-/// lecteur n'a pas encore vues : c'est la notification dans l'application.
 class _EntreeCodes extends ConsumerWidget {
   const _EntreeCodes();
 
@@ -592,8 +577,6 @@ class _EntreeCodes extends ConsumerWidget {
   }
 }
 
-/// L'entrée vers les livres gardés sur l'appareil. La liste et la place
-/// qu'elle prend vivent sur leur propre écran.
 class _EntreeHorsLigne extends ConsumerWidget {
   const _EntreeHorsLigne();
 
@@ -627,8 +610,6 @@ class _EntreeHorsLigne extends ConsumerWidget {
   }
 }
 
-/// Une ligne de réglage : l'icône tracée à la plume, le titre et son détail,
-/// le chevron. Rien n'est encadré : ce sont des lignes de cahier.
 class _LigneReglage extends StatelessWidget {
   const _LigneReglage({
     required this.icone,
@@ -644,8 +625,6 @@ class _LigneReglage extends StatelessWidget {
   final String titre;
   final String? detail;
   final VoidCallback onTap;
-
-  /// La teinte de toute la ligne, pour une action à part (la déconnexion).
   final Color? couleur;
   final Color? couleurIcone;
   final Widget? suffixe;
@@ -699,11 +678,9 @@ class _LigneReglage extends StatelessWidget {
   }
 }
 
-/// Le filet entre deux lignes d'un groupe, en retrait sous l'icône.
 class _FiletLigne extends StatelessWidget {
   const _FiletLigne({this.retrait = 46});
 
-  /// Le filet part sous le texte, pas sous l'icône.
   final double retrait;
 
   @override
@@ -711,7 +688,6 @@ class _FiletLigne extends StatelessWidget {
       Padding(padding: EdgeInsets.only(left: retrait), child: const Filet());
 }
 
-/// Un compteur : le libellé, la mesure, et la jauge qui se remplit.
 class _Compteur extends StatelessWidget {
   const _Compteur({
     required this.libelle,
@@ -735,8 +711,6 @@ class _Compteur extends StatelessWidget {
       _ => 'au total',
     };
 
-    // Une fonction réservée n'est pas une jauge vide : une barre pleine et
-    // rouge se lisait comme une erreur. On dit simplement ce qui l'ouvre.
     if (limite == 0) {
       return Row(
         children: [
@@ -757,7 +731,6 @@ class _Compteur extends StatelessWidget {
           children: [
             Expanded(child: Texte(libelle, style: t.textTheme.bodyMedium?.copyWith(color: p.texte))),
             const SizedBox(width: 8),
-            // Le chiffre monte jusqu'à sa valeur : on voit ce qu'on a consommé.
             CompteurAnime(
               utilise,
               style: t.textTheme.titleLarge?.copyWith(fontSize: 19, color: atteint ? p.alerte : p.encre),
@@ -780,9 +753,9 @@ class _Compteur extends StatelessWidget {
   }
 }
 
-/// Une ligne du profil de lecture : la clé à gauche, la réponse à droite.
 class _Ligne extends StatelessWidget {
   const _Ligne({required this.icone, required this.cle, required this.valeur});
+
   final Icone icone;
   final String cle;
   final String valeur;

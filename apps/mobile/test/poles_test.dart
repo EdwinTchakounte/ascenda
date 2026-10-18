@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : que l'application range les sous-axes sous leur pôle («
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -34,7 +33,6 @@ final _axes = [
   _axe('12-5-elevage-sante-animale', 'Élevage et santé animale', pole: '12-agriculture-elevage'),
 ];
 
-/// Un client qui répond sans réseau et retient les filtres demandés.
 class _ClientFaux extends ClientApi {
   final filtres = <String?>[];
 
@@ -79,8 +77,6 @@ void main() {
   });
 
   testWidgets('la bibliothèque : une pastille pour le pôle, ses sous-axes dessous', (t) async {
-    // Assez large pour que toutes les pastilles soient construites : la liste
-    // horizontale ne bâtit que ce qui est à l'écran.
     t.view.physicalSize = const Size(1600, 900);
     t.view.devicePixelRatio = 1;
     addTearDown(t.view.reset);
@@ -91,7 +87,6 @@ void main() {
     ));
     await t.pumpAndSettle();
 
-    // Le pôle tient en une pastille ; ses sous-axes ne sont pas encore montrés.
     await t.ensureVisible(texte('Agriculture et élevage'));
     await t.pumpAndSettle();
     expect(texte('Protection des cultures'), findsNothing);
@@ -101,7 +96,6 @@ void main() {
     expect(client.filtres.last, '12-agriculture-elevage', reason: 'le pôle filtre sur tous ses sous-axes');
     expect(find.byKey(const Key('sous-axes')), findsOneWidget);
     expect(texte('Développement rural et filières'), findsOneWidget);
-    // Un pôle n'a pas de fiche d'axe : pas de « Par où commencer ».
     expect(texte('Par où commencer dans cet axe'), findsNothing);
 
     await t.ensureVisible(texte('Protection des cultures'));
@@ -112,7 +106,6 @@ void main() {
     expect(texte('Par où commencer dans cet axe'), findsOneWidget);
     expect(find.byKey(const Key('sous-axes')), findsOneWidget, reason: 'la rangée reste ouverte');
 
-    // Retirer le sous-axe revient au pôle, pas à « Tous ».
     await t.tap(texte('Protection des cultures'));
     await t.pumpAndSettle();
     expect(client.filtres.last, '12-agriculture-elevage');

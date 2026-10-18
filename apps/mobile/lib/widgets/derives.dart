@@ -8,9 +8,6 @@ import '../theme/papier.dart';
 import '../theme/texte.dart';
 import 'ui.dart';
 
-/// L'affichage des textes qu'ASCENDA écrit sur un ouvrage.
-
-/// Le compte rendu d'un chapitre, dans le lecteur.
 class CompteRenduChapitre extends StatelessWidget {
   const CompteRenduChapitre({super.key, required this.contenu});
 
@@ -26,7 +23,6 @@ class CompteRenduChapitre extends StatelessWidget {
     final reserves = (c['reserves'] as List?)?.cast<dynamic>() ?? const [];
     final afrique = '${c['pour_le_lecteur_africain'] ?? ''}'.trim();
 
-    // Un voile doré posé sur le papier de lecture, pas une carte blanche
     return Container(
       margin: const EdgeInsets.only(top: 8, bottom: 28),
       padding: const EdgeInsets.fromLTRB(18, 18, 18, 16),
@@ -101,7 +97,6 @@ class CompteRenduChapitre extends StatelessWidget {
   }
 }
 
-/// La synthèse et le résumé exécutif, sur la fiche d'un ouvrage.
 class SyntheseOuvrage extends StatelessWidget {
   const SyntheseOuvrage({super.key, this.synthese, this.resumeExecutif});
 
@@ -125,8 +120,6 @@ class SyntheseOuvrage extends StatelessWidget {
         if (r != null) ...[
           const TitreSection('En bref'),
           const SizedBox(height: 12),
-          // La seule carte de mise en avant de la fiche : l'ouvrage en une
-          // phrase est ce qu'on retient si l'on ne lit rien d'autre.
           SurfaceHeros(
             padding: const EdgeInsets.fromLTRB(22, 22, 22, 20),
             child: Column(
@@ -219,9 +212,9 @@ class SyntheseOuvrage extends StatelessWidget {
   }
 }
 
-/// Une liste de points sous un titre et son icône, sur une surface.
 class _Bloc extends StatelessWidget {
   const _Bloc({required this.titre, required this.icone, required this.teinte, required this.points});
+
   final String titre;
   final Icone icone;
   final Color teinte;
@@ -268,6 +261,7 @@ class _Bloc extends StatelessWidget {
 
 class _Section extends StatelessWidget {
   const _Section({required this.section});
+
   final Map<String, dynamic> section;
 
   @override
@@ -285,7 +279,6 @@ class _Section extends StatelessWidget {
               child: Texte('${section['section'] ?? ''}',
                   style: t.textTheme.titleLarge?.copyWith(fontSize: 16, height: 1.3)),
             ),
-            // Le folio, comme en tête d'une page de livre.
             if (pages.isNotEmpty) ...[
               const SizedBox(width: 10),
               Padding(
@@ -305,6 +298,7 @@ class _Section extends StatelessWidget {
 
 class _Puce extends StatelessWidget {
   const _Puce(this.texte, {this.teinte});
+
   final String texte;
   final Color? teinte;
 
@@ -316,7 +310,6 @@ class _Puce extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Un losange d'encre plutôt qu'un point : la puce du typographe.
           Container(
             margin: const EdgeInsets.only(top: 9, right: 12, left: 2),
             width: 6,
@@ -337,6 +330,7 @@ class _Puce extends StatelessWidget {
 
 class _Encadre extends StatelessWidget {
   const _Encadre({required this.titre, required this.texte, required this.icone, this.teinte});
+
   final String titre;
   final String texte;
   final Icone icone;

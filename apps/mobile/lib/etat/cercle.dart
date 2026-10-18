@@ -34,7 +34,6 @@ final conversationProvider =
   return Conversation.depuisJson(j);
 });
 
-/// Tout ce que l'onglet affiche, rafraîchi d'un geste.
 void rafraichirCercle(WidgetRef ref) {
   ref
     ..invalidate(cercleMoiProvider)

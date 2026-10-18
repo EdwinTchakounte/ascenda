@@ -14,7 +14,6 @@ import '../widgets/invitation.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Tous les quiz d'un ouvrage, hors séance
 class EcranQuizOuvrage extends ConsumerWidget {
   const EcranQuizOuvrage({super.key, required this.documentId, this.titre});
 
@@ -31,8 +30,6 @@ class EcranQuizOuvrage extends ConsumerWidget {
         ? ref.watch(historiqueQuizProvider(documentId)).valueOrNull
         : null;
 
-    // Le meilleur score par chapitre : c'est ce qu'on veut voir en face d'un
-    // titre, pas la liste de toutes les tentatives.
     final meilleurs = <String, num>{};
     for (final h in historique ?? const []) {
       final id = '${h['chapitre_id']}';
@@ -55,8 +52,6 @@ class EcranQuizOuvrage extends ConsumerWidget {
               reessayer: () => ref.invalidate(quizOuvrageProvider(documentId)),
             ),
             data: (d) {
-              // Les chapitres d'appareil sont enregistrés avec zéro question et le motif
-              // qui
               final lots = ((d['chapitres'] as List?) ?? [])
                   .cast<Map<String, dynamic>>()
                   .where((c) => (c['nb_questions'] as int? ?? 0) > 0)
@@ -70,7 +65,6 @@ class EcranQuizOuvrage extends ConsumerWidget {
                 );
               }
               final connecte = session.etat == EtatSession.connecte;
-              // Les chapitres déjà tentés, comptés sur les scores déjà chargés.
               final tentes = lots.where((c) => meilleurs.containsKey('${c['chapitre_id']}')).length;
               return ListView(
                 padding: const EdgeInsets.fromLTRB(20, 8, 20, 32),
@@ -130,8 +124,6 @@ class EcranQuizOuvrage extends ConsumerWidget {
                   const SizedBox(height: 10),
                   const Apparition(rang: 1, child: TitreCourant('sommaire des exercices')),
                   const SizedBox(height: 12),
-                  // Le sommaire est une seule feuille : des lignes numérotées
-                  // séparées par des filets, et non douze cartes empilées.
                   Surface(
                     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
                     child: Column(
@@ -139,8 +131,6 @@ class EcranQuizOuvrage extends ConsumerWidget {
                       children: [
                         for (var i = 0; i < lots.length; i++)
                           Apparition(
-                            // La cascade s'arrête au septième rang : au delà, la
-                            // dernière ligne arriverait après que l'oeil est passé.
                             rang: 1 + (i < 6 ? i + 1 : 6),
                             child: _LigneQuiz(
                               numero: i + 1,
@@ -165,8 +155,6 @@ class EcranQuizOuvrage extends ConsumerWidget {
   }
 }
 
-/// Une ligne du sommaire des exercices : son numéro à l'encre, son titre, son
-/// folio, et le meilleur score obtenu.
 class _LigneQuiz extends StatelessWidget {
   const _LigneQuiz({
     required this.numero,
@@ -191,8 +179,6 @@ class _LigneQuiz extends StatelessWidget {
         ? ''
         : 'p. ${lot['page_debut']}${lot['page_fin'] != null ? ' à ${lot['page_fin']}' : ''}';
 
-    // Sans compte, la ligne reste lisible mais en retrait : l'invitation
-    // au-dessus dit pourquoi on ne peut pas l'ouvrir.
     return Opacity(
       opacity: connecte ? 1 : 0.55,
       child: Column(
@@ -241,9 +227,9 @@ class _LigneQuiz extends StatelessWidget {
   }
 }
 
-/// Le meilleur score obtenu, en couleur.
 class _Score extends StatelessWidget {
   const _Score({required this.score});
+
   final num score;
 
   @override

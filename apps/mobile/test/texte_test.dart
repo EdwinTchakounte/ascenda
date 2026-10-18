@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : qu'aucun mot ne reste seul sur la dernière ligne d'un
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

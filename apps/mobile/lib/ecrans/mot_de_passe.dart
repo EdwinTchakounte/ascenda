@@ -11,11 +11,9 @@ import '../theme/papier.dart';
 import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
-/// Retrouver son mot de passe, en deux temps sur un seul écran.
 class EcranMotDePasseOublie extends ConsumerStatefulWidget {
   const EcranMotDePasseOublie({super.key, this.email});
 
-  /// Pré-remplie depuis l'écran de connexion, quand l'adresse y était déjà.
   final String? email;
 
   @override
@@ -29,7 +27,6 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
   final _code = TextEditingController();
   final _nouveau = TextEditingController();
 
-  /// Faux tant qu'on n'a pas demandé le code.
   bool _codeDemande = false;
   bool _masque = true;
   bool _envoi = false;
@@ -89,8 +86,6 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
             auth: false,
           );
       if (!mounted) return;
-      // On enchaîne sur la connexion : demander de ressaisir ce qu'on vient de
-      // choisir, trente secondes après l'avoir choisi, n'a aucun sens.
       await ref
           .read(sessionProvider.notifier)
           .connexion(_email.text.trim(), _nouveau.text);
@@ -121,7 +116,6 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  // L'écran se pose bloc par bloc, une fois, à l'ouverture.
                   Apparition(
                     child: _EnTete(
                       icone: _codeDemande ? Icone.encrier : Icone.clef,
@@ -152,8 +146,6 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
 
                   if (_codeDemande) ...[
                     const SizedBox(height: 18),
-                    // Le code se recopie d'un courriel : les six chiffres sont
-                    // espacés au centre d'un cadre, comme sur un bon.
                     Container(
                       decoration: BoxDecoration(
                         color: p.surfaceCreuse,
@@ -275,7 +267,6 @@ class _EtatMotDePasseOublie extends ConsumerState<EcranMotDePasseOublie> {
   }
 }
 
-/// Changer son mot de passe en connaissant l'ancien, depuis le profil.
 class EcranChangerMotDePasse extends ConsumerStatefulWidget {
   const EcranChangerMotDePasse({super.key});
 
@@ -311,7 +302,6 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
         'nouveau': _nouveau.text,
       });
       if (!mounted) return;
-      // Le serveur ferme toutes les sessions, celle-ci comprise.
       await ref.read(sessionProvider.notifier).deconnexion();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -420,16 +410,12 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
   }
 }
 
-/// L'en-tête d'un écran de mot de passe : l'icône tracée à la plume, l'étape
-/// entre crochets, le titre en Fraunces et son explication sous un filet.
 class _EnTete extends StatelessWidget {
   const _EnTete({required this.icone, required this.titre, required this.texte, this.etape});
 
   final Icone icone;
   final String titre;
   final String texte;
-
-  /// L'étape en cours sur deux, ou rien pour un écran en un temps.
   final int? etape;
 
   @override
@@ -479,4 +465,3 @@ class _EnTete extends StatelessWidget {
     );
   }
 }
-

@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : sans réseau, l'application garde la session.
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -10,6 +9,7 @@ const _profil = {'id': 'u-1', 'email': 'lecteur@example.com', 'nom': 'Kouam', 'p
 
 class _Client extends ClientApi {
   _Client(this.reponse);
+
   final Object reponse;
 
   @override

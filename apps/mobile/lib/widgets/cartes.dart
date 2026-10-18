@@ -22,7 +22,6 @@ const niveaux = {
   'avance': 'Avancé',
 };
 
-/// La carte de séance du jour : l'objet principal de l'écran d'accueil.
 class CarteSeance extends StatelessWidget {
   const CarteSeance({super.key, required this.seance, this.onCommencer});
 
@@ -53,7 +52,6 @@ class CarteSeance extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Le volume du jour, posé sur la feuille.
               DosLivre(titre: titre, hauteur: 132, largeur: 44, marque: true),
               const SizedBox(width: 18),
               Expanded(
@@ -109,6 +107,7 @@ class CarteSeance extends StatelessWidget {
 
 class _Etiquette extends StatelessWidget {
   const _Etiquette({required this.icone, required this.texte});
+
   final Icone icone;
   final String texte;
 
@@ -126,7 +125,6 @@ class _Etiquette extends StatelessWidget {
   }
 }
 
-/// Carte d'ouvrage dans la bibliothèque : une fiche de livre.
 class CarteOuvrage extends StatelessWidget {
   const CarteOuvrage({super.key, required this.ouvrage, this.onTap});
 
@@ -138,8 +136,6 @@ class CarteOuvrage extends StatelessWidget {
     final t = Theme.of(context);
     final reperes = [
       if (ouvrage.niveau != null) niveaux[ouvrage.niveau] ?? ouvrage.niveau!,
-      // Les pages restent sur la fiche : sur une carte étroite, trois repères
-      // et deux marqueurs finissaient coupés par des points de suspension.
       if (ouvrage.dureeMin != null) dureeLisible(ouvrage.dureeMin!),
     ];
     return Surface(
@@ -229,7 +225,6 @@ class CarteOuvrage extends StatelessWidget {
   }
 }
 
-/// Les sept jours de la semaine en pastilles.
 class PastillesSemaine extends StatelessWidget {
   const PastillesSemaine({super.key, required this.jours});
 
@@ -241,7 +236,6 @@ class PastillesSemaine extends StatelessWidget {
     final lundi = DateTime.now().subtract(Duration(days: DateTime.now().weekday - 1));
     final noms = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
-    // Chaque jour prend le septième de la largeur
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(7, (i) {

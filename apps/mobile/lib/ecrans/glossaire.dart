@@ -14,7 +14,6 @@ import '../widgets/illustrations.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le glossaire : les notions du corpus, et où elles sont dites.
 class EcranGlossaire extends ConsumerStatefulWidget {
   const EcranGlossaire({super.key, this.axe});
 
@@ -50,7 +49,6 @@ class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Les notions')),
-      // Le grain du papier : le glossaire s'ouvre hors de la coque.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
@@ -61,8 +59,6 @@ class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
                 child: TextField(
                   controller: _champ,
                   onChanged: _saisie,
-                  // En pilule, comme la recherche : les deux champs cherchent dans
-                  // le corpus et se reconnaissent à la même forme.
                   decoration: InputDecoration(
                     hintText: 'Une notion, un terme…',
                     fillColor: p.surface,
@@ -101,8 +97,6 @@ class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
                         ref.invalidate(glossaireProvider((axe: widget.axe, q: _q))),
                   ),
                   data: (liste) {
-                    // Les notions ancrées dans le texte d'abord : ce sont les
-                    // seules qui mènent quelque part.
                     final ancrees = liste.where((n) => (n['occurrences'] as int? ?? 0) > 0).toList();
                     final orphelines = liste.where((n) => (n['occurrences'] as int? ?? 0) == 0).toList();
                     if (liste.isEmpty) {
@@ -148,6 +142,7 @@ class _EtatGlossaire extends ConsumerState<EcranGlossaire> {
 
 class _LigneNotion extends StatelessWidget {
   const _LigneNotion({required this.notion});
+
   final Map<String, dynamic> notion;
 
   @override
@@ -158,8 +153,6 @@ class _LigneNotion extends StatelessWidget {
     final terme = '${notion['terme']}';
     final initiale = terme.trim().isEmpty ? '?' : terme.trim().characters.first.toUpperCase();
     final ancree = n > 0;
-    // Une notion qui ne mène nulle part reste lisible mais s'efface : pas de
-    // surface blanche, pas d'or, pas de chevron.
     return Surface(
       onTap: ancree ? () => context.push('/notion/${notion['id']}') : null,
       couleur: ancree ? null : p.surfaceCreuse.withValues(alpha: 0.5),
@@ -167,8 +160,6 @@ class _LigneNotion extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(14, 13, 12, 13),
       child: Row(
         children: [
-          // La lettrine du dictionnaire : la première lettre du terme, encadrée
-          // à l'encre comme en tête d'un chapitre.
           Lettrine(initiale, taille: 42, couleur: ancree ? p.accentTexte : p.attenue),
           const SizedBox(width: 14),
           Expanded(
@@ -193,8 +184,6 @@ class _LigneNotion extends StatelessWidget {
           ),
           if (ancree) ...[
             const SizedBox(width: 10),
-            // Le nombre de passages, en folio : c'est ce qui dit si la notion
-            // mène quelque part.
             Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -211,7 +200,6 @@ class _LigneNotion extends StatelessWidget {
   }
 }
 
-/// Une notion et les passages qui la portent.
 class EcranNotion extends ConsumerWidget {
   const EcranNotion({super.key, required this.notionId});
 
@@ -225,7 +213,6 @@ class EcranNotion extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Notion')),
-      // Le grain du papier : la notice d'une notion s'ouvre hors de la coque.
       body: FondPapier(
         child: SafeArea(
           bottom: false,
@@ -251,8 +238,6 @@ class EcranNotion extends ConsumerWidget {
                   Texte('${d['terme']}', style: t.textTheme.headlineMedium?.copyWith(fontSize: 28)),
                   if ('${d['definition'] ?? ''}'.isNotEmpty) ...[
                     const SizedBox(height: 16),
-                    // La définition comme l'entrée d'un dictionnaire : la lettrine
-                    // du terme, puis le texte. On la relit, on ne la parcourt pas.
                     Surface(
                       padding: const EdgeInsets.fromLTRB(18, 16, 18, 18),
                       child: Row(
@@ -302,6 +287,7 @@ class EcranNotion extends ConsumerWidget {
 
 class _CarteOccurrence extends StatelessWidget {
   const _CarteOccurrence({required this.occurrence});
+
   final Map<String, dynamic> occurrence;
 
   @override
@@ -309,12 +295,10 @@ class _CarteOccurrence extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     final o = occurrence;
-    // Le serveur marque le passage qui définit la notion
     final definit = o['definition'] == true;
     final chapitreId = o['chapitre_id'];
 
     return Surface(
-      // Un voile doré sur le passage qui définit : il se repère avant d'être lu.
       couleur: definit ? Color.alphaBlend(p.accentVoile, p.surface) : null,
       onTap: () => context.push(chapitreId == null
           ? '/ouvrage/${o['document_id']}'
@@ -339,13 +323,11 @@ class _CarteOccurrence extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 6),
-          // Le titre courant de la page citée : le chapitre, puis le folio.
           TitreCourant(
             '${o['chapitre'] ?? ''}'.isNotEmpty ? '${o['chapitre']}' : 'dans le texte',
             folio: o['page'] != null ? 'p. ${o['page']}' : null,
           ),
           const SizedBox(height: 12),
-          // L'extrait en exergue, marge à l'encre d'or.
           IntrinsicHeight(
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.stretch,

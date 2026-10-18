@@ -16,9 +16,9 @@ import '../widgets/livre.dart';
 import '../widgets/telechargement.dart';
 import '../widgets/ui.dart';
 
-/// La fiche d'un ouvrage : la page de titre du volume, puis ce qu'il dit.
 class FicheOuvrage extends ConsumerWidget {
   const FicheOuvrage({super.key, required this.documentId});
+
   final String documentId;
 
   @override
@@ -28,8 +28,6 @@ class FicheOuvrage extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(title: const Texte('Ouvrage')),
-      // Le grain du papier : la fiche s'ouvre hors de la coque, elle ne l'hérite
-      // donc pas du tiroir.
       body: FondPapier(
         child: fiche.when(
           loading: () => const Padding(
@@ -69,7 +67,6 @@ class FicheOuvrage extends ConsumerWidget {
                   ].join(' · '),
                 ),
                 const SizedBox(height: 18),
-                // Les trois repères d'avant-lecture, séparés par des filets
                 _Reperes(
                   niveau: peda['niveau'] != null
                       ? (niveaux['${peda['niveau']}'] ?? '${peda['niveau']}')
@@ -163,8 +160,6 @@ class FicheOuvrage extends ConsumerWidget {
                   ],
                 ],
 
-                // Nos textes sur l'ouvrage : ils viennent après la fiche et avant les
-                // compteurs
                 if (d['synthese'] != null || d['resume_executif'] != null) ...[
                   const SizedBox(height: 26),
                   SyntheseOuvrage(
@@ -186,8 +181,6 @@ class FicheOuvrage extends ConsumerWidget {
                     ),
                     const SizedBox(width: 10),
                     Expanded(
-                      // Le compteur devient un accès : afficher « 248 questions » sans
-                      // donner le moyen de les
                       child: _Stat(
                         icone: Icone.question,
                         valeur: millier(questions),
@@ -244,8 +237,6 @@ class FicheOuvrage extends ConsumerWidget {
   }
 }
 
-/// La page de titre : le volume, son axe entre crochets, son titre en Fraunces,
-/// puis le colophon entre deux filets, comme au dos d'une page de garde.
 class _PageDeTitre extends StatelessWidget {
   const _PageDeTitre({
     required this.titre,
@@ -298,8 +289,6 @@ class _PageDeTitre extends StatelessWidget {
           const SizedBox(height: 18),
           const Filet(redouble: true),
           const SizedBox(height: 12),
-          // Le colophon : qui a écrit, quand, chez qui. En petites capitales,
-          // il se lit comme la mention d'édition d'un livre imprimé.
           Texte(
             colophon,
             textAlign: TextAlign.center,
@@ -317,9 +306,9 @@ class _PageDeTitre extends StatelessWidget {
   }
 }
 
-/// Les trois repères d'avant-lecture, séparés par des filets verticaux.
 class _Reperes extends StatelessWidget {
   const _Reperes({required this.niveau, required this.duree, required this.pages});
+
   final String niveau;
   final String duree;
   final String pages;
@@ -346,6 +335,7 @@ class _Reperes extends StatelessWidget {
 
 class _Repere extends StatelessWidget {
   const _Repere({required this.valeur, required this.libelle});
+
   final String valeur;
   final String libelle;
 
@@ -355,8 +345,6 @@ class _Repere extends StatelessWidget {
     final p = context.palette;
     return Column(
       children: [
-        // « Intermédiaire » dans une colonne de 90 px : la valeur se réduit
-        // plutôt que de se couper.
         FittedBox(
           fit: BoxFit.scaleDown,
           child: Texte(
@@ -381,11 +369,10 @@ class _Repere extends StatelessWidget {
   }
 }
 
-/// La thèse centrale, en exergue
 class _These extends StatelessWidget {
   const _These({required this.texte});
-  final String texte;
 
+  final String texte;
   static final _lettre = RegExp(r'\p{L}', unicode: true);
 
   @override
@@ -399,8 +386,6 @@ class _These extends StatelessWidget {
       height: 1.55,
       color: p.encre,
     );
-    // Une thèse qui commence par un guillemet ou un chiffre n'a pas de lettrine
-    // à donner : on la pose alors telle quelle, sans initiale de fantaisie.
     final initiale = net.isEmpty ? null : net.characters.first;
     final avecLettrine = initiale != null && _lettre.hasMatch(initiale);
 
@@ -429,10 +414,9 @@ class _These extends StatelessWidget {
   }
 }
 
-/// Un numéro d'ordre, en chiffres tabulaires dorés : le rang d'une idée dans
-/// la liste, pas une puce de plus.
 class _Numero extends StatelessWidget {
   const _Numero(this.n);
+
   final int n;
 
   @override
@@ -455,7 +439,6 @@ class _Numero extends StatelessWidget {
   }
 }
 
-/// Un ouvrage qui défend l'autre position : son dos, la controverse, son titre.
 class _Contrepoint extends StatelessWidget {
   const _Contrepoint({
     required this.controverse,
@@ -518,10 +501,9 @@ class _Contrepoint extends StatelessWidget {
   }
 }
 
-/// Un compteur du volume. Celui qu'on peut ouvrir porte la flèche et l'or :
-/// sans ce signe, rien ne le distingue de deux compteurs inertes.
 class _Stat extends StatelessWidget {
   const _Stat({required this.icone, required this.valeur, required this.libelle, this.onTap});
+
   final Icone icone;
   final String valeur;
   final String libelle;
@@ -575,9 +557,9 @@ class _Stat extends StatelessWidget {
   }
 }
 
-/// Le sommaire du volume, en entier.
 class _Sommaire extends ConsumerStatefulWidget {
   const _Sommaire({required this.documentId, required this.lectureIntegrale});
+
   final String documentId;
   final bool lectureIntegrale;
 
@@ -586,7 +568,6 @@ class _Sommaire extends ConsumerStatefulWidget {
 }
 
 class _SommaireState extends ConsumerState<_Sommaire> {
-  /// Quarante lignes remplissent déjà plusieurs écrans.
   static const _pas = 40;
   int _montres = _pas;
 
@@ -600,8 +581,6 @@ class _SommaireState extends ConsumerState<_Sommaire> {
       loading: () => const SqueletteCarte(lignes: 4),
       error: (_, _) => const SizedBox.shrink(),
       data: (chapitres) {
-        // Les chapitres d'appareil, marqués sans questions lors de la campagne
-        // de génération, ne méritent pas une ligne dans le sommaire de lecture.
         final utiles = chapitres.where((c) => (c['tokens'] as int? ?? 0) >= 300).toList();
         if (utiles.isEmpty) return const SizedBox.shrink();
         final fin = _montres < utiles.length ? _montres : utiles.length;
@@ -615,8 +594,6 @@ class _SommaireState extends ConsumerState<_Sommaire> {
               sousTitre: utiles.length == 1 ? '1 chapitre' : '${utiles.length} chapitres',
             ),
             const SizedBox(height: 12),
-            // Une seule surface, des lignes numérotées séparées d'un filet : un
-            // sommaire se parcourt d'un trait, pas carte après carte.
             Surface(
               padding: const EdgeInsets.symmetric(vertical: 4),
               child: Column(
@@ -670,7 +647,6 @@ class _SommaireState extends ConsumerState<_Sommaire> {
   }
 }
 
-/// Une ligne du sommaire : son rang, son titre, son folio à droite.
 class _LigneSommaire extends StatelessWidget {
   const _LigneSommaire({
     required this.rang,
@@ -747,7 +723,6 @@ class _LigneSommaire extends StatelessWidget {
   }
 }
 
-/// « 2,7 Mo », « 92 Mo », « 540 Ko » : ce qu'un forfait mobile va payer.
 String tailleLisible(int octets) {
   if (octets < 1000000) return '${(octets / 1000).round()} Ko';
   final mo = octets / 1000000;

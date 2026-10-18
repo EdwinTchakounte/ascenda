@@ -13,7 +13,6 @@ import '../widgets/selecteur_theme.dart';
 import '../widgets/ui.dart';
 import 'auth.dart';
 
-/// La coque : quatre onglets en bas, et un tiroir pour tout le reste.
 class CoqueAscenda extends ConsumerWidget {
   const CoqueAscenda({super.key, required this.coque});
 
@@ -63,9 +62,6 @@ class CoqueAscenda extends ConsumerWidget {
                     ),
                 ],
               ),
-              // Le signet : un filet d'or glissé sous l'onglet ouvert. Posé, et
-              // non empilé : un enfant libre étirerait la barre sur tout
-              // l'écran, et l'écran lui-même n'aurait plus de place.
               Positioned(
                 top: 0,
                 left: 0,
@@ -99,7 +95,6 @@ class CoqueAscenda extends ConsumerWidget {
   }
 }
 
-/// Le tiroir : le compte en tête, les espaces secondaires, puis le thème.
 class TiroirAscenda extends ConsumerWidget {
   const TiroirAscenda({super.key});
 
@@ -126,7 +121,6 @@ class TiroirAscenda extends ConsumerWidget {
               child: ListView(
                 padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
                 children: [
-                  // L'en-tête : la carte du compte, sur le dégradé du thème.
                   SurfaceHeros(
                     padding: const EdgeInsets.fromLTRB(18, 18, 18, 18),
                     onTap: connecte ? () => aller('/profil') : null,
@@ -256,6 +250,7 @@ class TiroirAscenda extends ConsumerWidget {
 
 class _Rubrique extends StatelessWidget {
   const _Rubrique(this.titre);
+
   final String titre;
 
   @override

@@ -16,7 +16,6 @@ import '../widgets/illustrations.dart';
 import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
-/// La conversation avec l'agent.
 class PanneauAgent extends ConsumerStatefulWidget {
   const PanneauAgent({
     super.key,
@@ -28,15 +27,11 @@ class PanneauAgent extends ConsumerStatefulWidget {
     this.actions = const [],
   });
 
-  /// Dans l'onglet, le panneau tient lieu de barre du haut
   final Widget? avant;
   final List<Widget> actions;
-
   final String? documentId;
   final String? chapitreId;
   final String? axe;
-
-  /// Une conversation passée à rouvrir. Nulle, on en commence une nouvelle.
   final String? conversationId;
 
   @override
@@ -64,7 +59,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
     }
   }
 
-  /// Recharge les messages d'une conversation passée.
   Future<void> _rouvrir(String id) async {
     setState(() => _attente = true);
     try {
@@ -104,7 +98,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
       if (!mounted) return;
       setState(() => _suggestions = (j['suggestions'] as List).map((e) => '$e').toList());
     } catch (_) {
-      // Sans suggestions l'écran reste utilisable : on n'affiche rien.
     }
   }
 
@@ -189,7 +182,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
                     const SizedBox(height: 2),
                     Row(
                       children: [
-                        // Le point d'encre qui dit si la plume est encore chargée.
                         Container(
                           width: 7,
                           height: 7,
@@ -224,7 +216,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
             ],
           ),
         ),
-        // Un filet d'imprimeur sépare l'en-tête de la correspondance.
         const Padding(padding: EdgeInsets.symmetric(horizontal: 20), child: Filet(redouble: true)),
         Expanded(
           child: _messages.isEmpty
@@ -241,8 +232,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
         ),
         SafeArea(
           top: false,
-          // Une marge basse franche : la correspondance s'arrête net avant le
-          // champ, elle ne vient pas mourir dessous.
           child: Padding(
             padding: EdgeInsets.fromLTRB(14, 10, 14, clavier ? 8 : 14),
             child: ZoneMessage(
@@ -259,9 +248,9 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
   }
 }
 
-/// Le cachet de l'agent : la plume frappée sur un carré d'encre.
 class _AvatarAgent extends StatelessWidget {
   const _AvatarAgent({this.taille = 30});
+
   final double taille;
 
   @override
@@ -282,9 +271,9 @@ class _AvatarAgent extends StatelessWidget {
   }
 }
 
-/// Une vignette d'encre : l'icône dessinée dans un cadre filetté.
 class _Vignette extends StatelessWidget {
   const _Vignette(this.icone, {this.taille = 40});
+
   final Icone icone;
   final double taille;
 
@@ -308,6 +297,7 @@ class _Vignette extends StatelessWidget {
 
 class _Accueil extends StatelessWidget {
   const _Accueil({required this.suggestions, required this.onChoisi});
+
   final List<String> suggestions;
   final void Function(String) onChoisi;
 
@@ -318,7 +308,6 @@ class _Accueil extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 28),
       children: [
-        // La lampe allumée sur la table : la lecture attend qu'on lui parle.
         Apparition(
           child: Column(
             children: [
@@ -350,8 +339,6 @@ class _Accueil extends StatelessWidget {
             folio: suggestions.length > 1 ? '${suggestions.length} questions' : '1 question',
           ),
           const SizedBox(height: 12),
-          // Chaque question est une fiche à tirer du casier : on la touche, elle
-          // part telle quelle.
           for (final (i, s) in suggestions.indexed)
             Apparition(
               rang: i + 1,
@@ -382,6 +369,7 @@ class _Accueil extends StatelessWidget {
 
 class _Bulle extends StatelessWidget {
   const _Bulle({required this.message});
+
   final MessageAgent message;
 
   @override
@@ -391,8 +379,6 @@ class _Bulle extends StatelessWidget {
     final utilisateur = message.deLUtilisateur;
     final largeurMax = MediaQuery.of(context).size.width * (utilisateur ? 0.8 : 0.76);
 
-    // Le billet du lecteur est écrit à l'or ; la réponse arrive sur une feuille
-    // de papier, bordée d'un filet d'encre. Deux mains, deux papiers.
     final bulle = Container(
       constraints: BoxConstraints(maxWidth: largeurMax),
       padding: const EdgeInsets.fromLTRB(16, 13, 16, 13),
@@ -448,8 +434,6 @@ class _Bulle extends StatelessWidget {
                 bulle,
                 if (message.citations.isNotEmpty) ...[
                   const SizedBox(height: 14),
-                  // Les volumes consultés, en pied de page : le dos du livre, le
-                  // passage, le folio.
                   Padding(
                     padding: const EdgeInsets.only(right: 4),
                     child: TitreCourant(
@@ -502,14 +486,13 @@ class _Bulle extends StatelessWidget {
 
 class _CarteCitation extends StatelessWidget {
   const _CarteCitation({required this.citation});
+
   final Citation citation;
 
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context);
     final p = context.palette;
-    // La fiche d'une source : le dos du volume, le passage, le folio. On
-    // reconnaît le livre avant d'avoir lu son titre.
     return SizedBox(
       width: 252,
       child: Surface(
@@ -584,8 +567,6 @@ class _CarteCitation extends StatelessWidget {
   }
 }
 
-/// L'agent réfléchit : trois gouttes d'encre qui s'allument tour à tour, sur la
-/// feuille qui va recevoir la réponse.
 class _Reflexion extends StatefulWidget {
   const _Reflexion();
 
@@ -638,7 +619,6 @@ class _ReflexionState extends State<_Reflexion> with SingleTickerProviderStateMi
                     for (var i = 0; i < 3; i++) ...[
                       if (i > 0) const SizedBox(width: 6),
                       Builder(builder: (context) {
-                        // Chaque point s'allume à son tour, décalé d'un tiers de cycle.
                         final phase = (_c.value - i / 3) % 1;
                         final eclat = phase < 0.5 ? 1 - (phase - 0.25).abs() * 4 : 0.0;
                         final v = eclat.clamp(0.0, 1.0);
@@ -666,7 +646,6 @@ class _ReflexionState extends State<_Reflexion> with SingleTickerProviderStateMi
   }
 }
 
-/// L'onglet Agent : la conversation en plein écran, et l'accès aux précédentes.
 class EcranAgent extends ConsumerStatefulWidget {
   const EcranAgent({super.key});
 
@@ -675,8 +654,6 @@ class EcranAgent extends ConsumerStatefulWidget {
 }
 
 class _EcranAgentState extends ConsumerState<EcranAgent> {
-  /// Change quand on rouvre une conversation : la clé force la reconstruction
-  /// du panneau, sans quoi les messages de la précédente resteraient à l'écran.
   String? _conversation;
 
   @override
@@ -728,10 +705,8 @@ class _EcranAgentState extends ConsumerState<EcranAgent> {
   }
 }
 
-/// La liste des conversations passées, avec de quoi en effacer une.
 class _Historique extends ConsumerWidget {
   const _Historique({required this.onOuvrir});
-
   final void Function(String) onOuvrir;
 
   @override

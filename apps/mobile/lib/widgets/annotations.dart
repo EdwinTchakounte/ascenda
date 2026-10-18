@@ -10,7 +10,6 @@ import '../theme/texte.dart';
 import 'illustrations.dart';
 import 'ui.dart';
 
-/// Les quatre teintes que le serveur accepte pour un surlignage.
 Map<String, Color> get teintesSurlignage => {
   'or': Couleurs.or,
   'sauge': Couleurs.sauge,
@@ -20,7 +19,6 @@ Map<String, Color> get teintesSurlignage => {
 
 Color teinteDe(String? code) => teintesSurlignage[code] ?? Couleurs.or;
 
-/// Le panneau des annotations d'un ouvrage
 class PanneauAnnotations extends ConsumerWidget {
   const PanneauAnnotations({super.key, required this.documentId});
 
@@ -31,13 +29,10 @@ class PanneauAnnotations extends ConsumerWidget {
     final t = Theme.of(context);
     final notes = ref.watch(notesProvider(documentId));
     final surlignages = ref.watch(surlignagesProvider(documentId));
-
     final p = context.palette;
     final nbSurlignages = surlignages.valueOrNull?.length;
     final nbNotes = notes.valueOrNull?.length;
 
-    // La poignée de la feuille vient du thème (`showDragHandle`) : la dessiner
-    // ici aussi en montrait deux.
     return DefaultTabController(
       length: 2,
       child: Column(
@@ -55,8 +50,6 @@ class PanneauAnnotations extends ConsumerWidget {
               ],
             ),
           ),
-          // Deux onglets en segments arrondis : l'onglet actif est une pilule
-          // dorée, dans le langage des filtres du reste de l'application.
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 20),
             padding: const EdgeInsets.all(4),
@@ -129,7 +122,6 @@ class PanneauAnnotations extends ConsumerWidget {
       BuildContext context, WidgetRef ref, Map<String, dynamic> note) async {
     final texte = await editerNote(context, initial: '${note['texte'] ?? note['body'] ?? ''}');
     if (texte == null || texte.isEmpty) return;
-    // L'identifiant est sorti de l'interpolation
     final id = '${note['id']}';
     try {
       await ref.read(clientApiProvider).patch('/notes/$id', corps: {'texte': texte});
@@ -140,7 +132,6 @@ class PanneauAnnotations extends ConsumerWidget {
   }
 }
 
-/// La saisie d'une note, à la création comme à la correction.
 Future<String?> editerNote(BuildContext context, {String initial = ''}) {
   final controleur = TextEditingController(text: initial);
   return showModalBottomSheet<String>(
@@ -211,8 +202,6 @@ class _Liste extends StatelessWidget {
 
   final AsyncValue<List<Map<String, dynamic>>> contenu;
   final String vide;
-
-  /// La scène qui raconte l'absence : une page encore blanche.
   final Scene scene;
   final Widget Function(Map<String, dynamic>) construire;
 
@@ -238,10 +227,9 @@ class _Liste extends StatelessWidget {
   }
 }
 
-/// Une liste vide ou en échec, dite par une scène dessinée plutôt qu'une ligne
-/// nue : une page blanche est un moment de la lecture, pas une panne.
 class _Vide extends StatelessWidget {
   const _Vide({required this.scene, required this.texte});
+
   final Scene scene;
   final String texte;
 
@@ -265,9 +253,9 @@ class _Vide extends StatelessWidget {
   }
 }
 
-/// Une vignette d'encre : l'icône dessinée dans un cadre filetté.
 class _Vignette extends StatelessWidget {
   const _Vignette(this.icone, {required this.couleur, this.taille = 40});
+
   final Icone icone;
   final Color couleur;
   final double taille;
@@ -306,8 +294,6 @@ class _CarteSurlignage extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Le trait de la teinte choisie, en marge de la citation : c'est la
-          // marque laissée dans la page.
           Container(
             width: 4,
             height: 44,
@@ -318,7 +304,6 @@ class _CarteSurlignage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // En Fraunces, comme dans le lecteur : c'est le texte du livre.
                 Texte('${surlignage['citation'] ?? ''}',
                     style: t.textTheme.bodyMedium?.copyWith(
                       fontFamily: t.textTheme.headlineSmall?.fontFamily,
@@ -365,8 +350,6 @@ class _CarteNote extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     final page = note['page'];
-    // Une note écrite en marge : le filet de la marge à gauche, la main du
-    // lecteur à droite.
     return Surface(
       padding: const EdgeInsets.fromLTRB(16, 16, 6, 6),
       child: Column(

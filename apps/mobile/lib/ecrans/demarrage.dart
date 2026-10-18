@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
 
-/// L'écran des premières secondes.
 class EcranDemarrage extends StatelessWidget {
   const EcranDemarrage({super.key});
 
@@ -14,8 +13,6 @@ class EcranDemarrage extends StatelessWidget {
       backgroundColor: Couleurs.marqueNuit,
       body: Stack(
         children: [
-          // Une lueur dorée très basse derrière le logo, comme une lampe de
-          // lecture allumée au centre de la pièce.
           Positioned.fill(
             child: IgnorePointer(
               child: DecoratedBox(
@@ -42,8 +39,6 @@ class EcranDemarrage extends StatelessWidget {
                   semanticLabel: 'ASCENDA, Learn. Grow. Become.',
                 ),
                 const SizedBox(height: 26),
-                // Le titre courant d'une page de livre : petites capitales
-                // entre deux filets d'or.
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -83,9 +78,9 @@ class EcranDemarrage extends StatelessWidget {
   }
 }
 
-/// Un court filet d'or, de part et d'autre du titre courant.
 class _FiletOr extends StatelessWidget {
   const _FiletOr({required this.largeur});
+
   final double largeur;
 
   @override

@@ -8,7 +8,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'reseau.dart';
 
-/// Erreur remontée par l'API, avec le message destiné à l'utilisateur.
 class ErreurApi implements Exception {
   ErreurApi(this.message, {this.code = 'erreur', this.statut = 0, this.quota});
 
@@ -25,14 +24,12 @@ class ErreurApi implements Exception {
   String toString() => message;
 }
 
-/// Perte de réseau.
 class HorsLigne implements Exception {
   const HorsLigne();
   @override
   String toString() => 'Pas de connexion.';
 }
 
-/// Client HTTP de l'API ASCENDA.
 class ClientApi {
   ClientApi({String? base})
       : base = base ??
@@ -40,7 +37,6 @@ class ClientApi {
 
   final String base;
   final _http = Reseau.client();
-
   static const _cleAcces = 'ascenda_acces';
   static const _cleRefresh = 'ascenda_refresh';
   static const _cleProfil = 'ascenda_profil';
@@ -75,7 +71,6 @@ class ClientApi {
     await p.remove(_cleProfil);
   }
 
-  /// Le dernier profil reçu du serveur.
   Future<void> garderProfil(Map<String, dynamic> j) async {
     final p = await SharedPreferences.getInstance();
     await p.setString(_cleProfil, jsonEncode(j));
@@ -92,13 +87,11 @@ class ClientApi {
     }
   }
 
-  /// Révoque le jeton de rafraîchissement côté serveur.
   Future<void> revoquerSession() async {
     await _charger();
     final jeton = _refresh;
     if (jeton == null) return;
     try {
-      // La route est authentifiée : elle ne révoque que les jetons du porteur.
       await post('/auth/deconnexion', corps: {'refresh_token': jeton});
     } catch (e) {
       debugPrint('Révocation impossible, sortie locale quand même : $e');
@@ -110,8 +103,6 @@ class ClientApi {
     return _refresh != null;
   }
 
-  /// Qui appelle. Un ouvrage réservé à l'application ne se sert en entier qu'aux
-  /// clients mobiles : la version web ne reçoit que des extraits.
   static String get client {
     if (kIsWeb) return 'web';
     if (Platform.isAndroid) return 'android';
@@ -152,7 +143,6 @@ class ClientApi {
       };
       r = await envoi.timeout(const Duration(seconds: 25));
     } on HandshakeException catch (e) {
-      // Le réseau fonctionne, mais la connexion sécurisée n'a pas abouti.
       debugPrint('Échec TLS vers $base : $e');
       throw ErreurApi(
         "La connexion sécurisée au serveur a échoué. Vérifiez que la date et "
@@ -170,7 +160,6 @@ class ClientApi {
       rethrow;
     }
 
-    // Jeton expiré : on le renouvelle une fois, puis on rejoue la requête.
     if (r.statusCode == 401 && authentifie && rejoue && _refresh != null) {
       if (await _renouveler()) {
         return _envoyer(methode, chemin,
@@ -204,7 +193,6 @@ class ClientApi {
       );
     }
     if (json is Map && json['detail'] is List) {
-      // Erreur de validation : on ne montre pas le détail technique à l'écran.
       return ErreurApi('Certaines informations saisies ne conviennent pas.',
           code: 'validation', statut: statut);
     }
@@ -239,7 +227,6 @@ class ClientApi {
     }
   }
 
-  /// Télécharge un fichier en flux, en signalant l'avancement.
   Future<Uint8List> telecharger(
     String chemin, {
     void Function(int recu, int? total)? progression,
@@ -282,7 +269,6 @@ class ClientApi {
     return morceaux.takeBytes();
   }
 
-  /// Télécharge un fichier directement sur le disque
   Future<File> telechargerVers(
     String chemin,
     File cible, {

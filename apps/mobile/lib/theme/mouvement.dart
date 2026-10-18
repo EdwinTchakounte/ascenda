@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Le mouvement d'ASCENDA : ce qui rend l'application vivante sans la rendre bavarde.
 abstract final class Duree {
   static const bref = Duration(milliseconds: 180);
   static const moyen = Duration(milliseconds: 300);
@@ -12,7 +11,6 @@ const courbeDouce = Curves.easeOutCubic;
 
 bool _reduites(BuildContext context) => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 
-/// Une apparition : le contenu monte de quelques pixels en se révélant.
 class Apparition extends StatefulWidget {
   const Apparition({
     super.key,
@@ -26,12 +24,7 @@ class Apparition extends StatefulWidget {
   final Widget child;
   final int rang;
   final Duration duree;
-
-  /// De combien de pixels le contenu monte en entrant.
   final double depuis;
-
-  /// Ajoute un léger agrandissement : réservé aux éléments qu'on veut fêter
-  /// (un résultat de quiz, une récompense).
   final bool echelle;
 
   @override
@@ -39,7 +32,6 @@ class Apparition extends StatefulWidget {
 }
 
 class _ApparitionState extends State<Apparition> with SingleTickerProviderStateMixin {
-  // Le décalage de la cascade est porté par la courbe, pas par un minuteur.
   late final Duration _attente = Duree.decalage * widget.rang;
   late final AnimationController _c =
       AnimationController(vsync: this, duration: widget.duree + _attente)..forward();
@@ -70,7 +62,6 @@ class _ApparitionState extends State<Apparition> with SingleTickerProviderStateM
   }
 }
 
-/// « 1698 » devient « 1 698 » : une espace insécable sépare les milliers
 String millier(num n) {
   final chiffres = n.round().abs().toString();
   final tampon = StringBuffer(n < 0 ? '-' : '');
@@ -81,7 +72,6 @@ String millier(num n) {
   return tampon.toString();
 }
 
-/// Un nombre qui monte jusqu'à sa valeur, milliers séparés.
 class CompteurAnime extends StatelessWidget {
   const CompteurAnime(
     this.valeur, {
@@ -114,10 +104,9 @@ class CompteurAnime extends StatelessWidget {
   }
 }
 
-/// Une pulsation lente, pour attirer l'oeil sans l'agiter : la séance du jour,
-/// un bouton qui attend une réponse.
 class Respire extends StatefulWidget {
   const Respire({super.key, required this.child, this.amplitude = 0.02});
+
   final Widget child;
   final double amplitude;
 

@@ -1,19 +1,13 @@
 import 'package:flutter/material.dart';
 
-/// Espace insécable : le moteur de texte ne coupe jamais la ligne à cet endroit.
 const _nbsp = '\u00A0';
-
 final _avantPonctuation = RegExp(r' ([:;?!»%])');
 final _apresGuillemet = RegExp(r'« ');
 final _dernierMot = RegExp(r' (\S{1,14})$');
 final _paragraphe = RegExp(r'\n');
 final _traitUnion = RegExp(r'(?<=\p{L})-(?=\p{L})', unicode: true);
-
-/// Trait d'union insécable : « vingt-quatre » ne se coupe plus en fin de ligne,
-/// ce qui laissait un demi-mot seul et creusait la ligne justifiée.
 const _traitInsecable = '\u2011';
 
-/// Rend un texte français plus lisible une fois coupé en lignes.
 String lisible(String texte, {bool composes = true}) {
   if (!texte.contains(' ')) return texte;
   return texte.split(_paragraphe).map((p) {
@@ -21,8 +15,6 @@ String lisible(String texte, {bool composes = true}) {
         .replaceAllMapped(_avantPonctuation, (m) => '$_nbsp${m[1]}')
         .replaceAll(_apresGuillemet, '«$_nbsp')
         .replaceAll(_traitUnion, composes ? _traitInsecable : '-');
-    // Sous quatre mots, un titre court ou un libellé : rien à protéger, et
-    // les coller empêcherait un bouton étroit de passer sur deux lignes.
     if (' '.allMatches(r.trim()).length >= 3) {
       r = r.trimRight().replaceFirstMapped(_dernierMot, (m) => '$_nbsp${m[1]}') +
           p.substring(p.trimRight().length);
@@ -31,7 +23,6 @@ String lisible(String texte, {bool composes = true}) {
   }).join('\n');
 }
 
-/// Le texte de l'application : un `Text` qui applique [lisible]
 class Texte extends StatelessWidget {
   const Texte(
     this.data, {
@@ -65,22 +56,13 @@ class Texte extends StatelessWidget {
   final TextWidthBasis? textWidthBasis;
   final TextHeightBehavior? textHeightBehavior;
   final Color? selectionColor;
-
-  /// Au-delà, un texte de corps court sur plusieurs lignes dans un téléphone.
   static const seuilJustification = 90;
-
-  /// Sans césure, une ligne justifiée de moins de 52 signes se creuse de
-  /// trous : on ne justifie que si la ligne en porte assez.
   static const signesMinimum = 52;
 
   static TextAlign? alignement(String texte, TextStyle? style, int? maxLines, {double largeur = 360}) {
-    // Un texte borné en lignes est un titre ou un aperçu coupé par « … » :
-    // justifié, sa dernière ligne visible s'étire en trous béants.
     if (texte.length < seuilJustification || maxLines != null) return null;
     final taille = style?.fontSize ?? 14;
     if (taille > 17) return null;
-    // Largeur utile : l'écran moins les marges habituelles des pages. Un signe
-    // d'Inter occupe environ la moitié de la taille de police.
     final signesParLigne = (largeur - 48) / (taille * 0.52);
     return signesParLigne >= signesMinimum ? TextAlign.justify : null;
   }

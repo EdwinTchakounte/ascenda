@@ -16,9 +16,9 @@ import '../widgets/selon_droit.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le diagnostic d'entrée : un questionnaire d'atelier, une question par page
 class DiagnosticEcran extends ConsumerStatefulWidget {
   const DiagnosticEcran({super.key, this.axe});
+
   final String? axe;
 
   @override
@@ -149,8 +149,6 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
             Expanded(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.fromLTRB(20, 28, 20, 24),
-                // Une page par question : elle se pose une fois, puis laisse
-                // la place à la suivante.
                 child: KeyedSubtree(
                   key: ValueKey(cle),
                   child: Column(
@@ -230,9 +228,9 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
   }
 }
 
-/// La progression du questionnaire, étape par étape
 class _Etapes extends StatelessWidget {
   const _Etapes({required this.total, required this.courante});
+
   final int total;
   final int courante;
 
@@ -299,7 +297,6 @@ class _Etapes extends StatelessWidget {
   }
 }
 
-/// Une réponse en fiche : la case d'atelier à gauche, le libellé à droite.
 class _CarteChoix extends StatelessWidget {
   const _CarteChoix({required this.libelle, required this.choisi, required this.onTap});
 
@@ -334,7 +331,6 @@ class _CarteChoix extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
             child: Row(
               children: [
-                // Le témoin de sélection : une case cochée à la plume.
                 _CaseAtelier(cochee: choisi),
                 const SizedBox(width: 14),
                 Expanded(
@@ -356,9 +352,9 @@ class _CarteChoix extends StatelessWidget {
   }
 }
 
-/// La case d'un questionnaire d'atelier : un cadre à l'encre, coché au trait.
 class _CaseAtelier extends StatelessWidget {
   const _CaseAtelier({required this.cochee});
+
   final bool cochee;
 
   @override
@@ -381,6 +377,7 @@ class _CaseAtelier extends StatelessWidget {
 
 class _CochePeinte extends CustomPainter {
   _CochePeinte(this.couleur);
+
   final Color couleur;
 
   @override
@@ -425,8 +422,6 @@ class _ChoixAxe extends ConsumerWidget {
           loading: () => const Center(child: CircularProgressIndicator()),
           error: (e, _) => EtatErreur(erreur: e, reessayer: () => ref.invalidate(axesProvider)),
           data: (liste) {
-            // Le rang d'entrée court d'un pôle à l'autre, puis s'arrête de
-            // compter : la dernière carte ne doit pas se faire attendre.
             var rang = 1;
             int suivant() => rang < 7 ? rang++ : 7;
             return ListView(
@@ -462,7 +457,6 @@ class _ChoixAxe extends ConsumerWidget {
                 ),
                 const SizedBox(height: 26),
                 for (final g in regrouperParPole(liste)) ...[
-                  // Un pôle ouvre une section : son nom, puis ses parcours.
                   if (g.estPole) ...[
                     const SizedBox(height: 14),
                     Apparition(
@@ -493,9 +487,9 @@ class _ChoixAxe extends ConsumerWidget {
   }
 }
 
-
 class _CarteAxe extends ConsumerWidget {
   const _CarteAxe({required this.axe, required this.onChoisi, this.dansPole = false});
+
   final Axe axe;
   final bool dansPole;
   final void Function(String slug) onChoisi;
@@ -505,18 +499,13 @@ class _CarteAxe extends ConsumerWidget {
     final t = Theme.of(context);
     final p = context.palette;
     final a = axe;
-    // Un parcours réservé est refusé par le serveur au moment de composer le
-    // plan, c'est-à-dire après le diagnostic entier. On le dit ici.
     final reserve = a.premium && !aLeDroit(ref, 'axes_reserves');
     final ouvert = a.parcoursPossible && !reserve;
-    // La teinte du pôle, celle de ses couvertures ; l'or à défaut.
     final teinte = Couleurs.pole(a.poleSlug ?? a.slug) ?? p.accentTexte;
     return Opacity(
       opacity: ouvert ? 1 : 0.55,
       child: Surface(
         padding: const EdgeInsets.fromLTRB(14, 14, 10, 14),
-        // Un axe dont aucun ouvrage n'a de chapitres découpés ne peut pas donner
-        // de plan : on le dit au lieu d'échouer après six questions.
         onTap: ouvert
             ? () => onChoisi(a.slug)
             : reserve
@@ -534,7 +523,6 @@ class _CarteAxe extends ConsumerWidget {
                 ),
         child: Row(
           children: [
-            // Le cachet teinté marque l'appartenance au pôle.
             Container(
               width: 44,
               height: 44,
@@ -585,8 +573,6 @@ class _CarteAxe extends ConsumerWidget {
     );
   }
 
-  /// Arrondie à l'heure la plus proche, comme la fiche d'axe : 214 minutes
-  /// font « 4 h » sur les deux écrans, et non « 3 h » ici et « 4 h » là.
   static String _heures(int minutes) {
     final h = (minutes / 60).round();
     return minutes < 60 ? '$minutes min' : '$h h';

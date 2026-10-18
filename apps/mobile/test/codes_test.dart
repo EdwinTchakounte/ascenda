@@ -1,4 +1,3 @@
-// Ce que ce fichier vérifie : que l'application lit correctement ce que l'API dit des
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,7 +15,6 @@ import 'package:ascenda/widgets/avantages.dart';
 
 import 'outils.dart';
 
-/// Un client qui n'appelle personne et retient ce qu'on lui a demandé.
 class _ClientMuet extends ClientApi {
   final appels = <String>[];
 
@@ -177,9 +175,7 @@ void main() {
         scrollable: find.byType(Scrollable).first);
     expect(texte('Nouveau'), findsOneWidget);
     expect(texte('Grâce à Paul'), findsOneWidget);
-    // Montrée une fois, la bonne nouvelle est signalée comme vue.
     expect(client.appels, contains('/codes/bons/vus'));
-    // Aucun débordement sur 360 pixels : Flutter lève une exception s'il y en a.
     expect(t.takeException(), isNull);
   });
 

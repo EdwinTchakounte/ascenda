@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Les rôles de couleur d'ASCENDA, déclinés en quatre ambiances.
 @immutable
 class Palette extends ThemeExtension<Palette> {
   const Palette({
@@ -30,43 +29,25 @@ class Palette extends ThemeExtension<Palette> {
   final String id;
   final String nom;
   final bool sombre;
-
-  /// Le fond des écrans, et les cartes posées dessus.
   final Color fond;
   final Color surface;
-
-  /// Un aplat en retrait : champ de recherche, bloc secondaire, piste de jauge.
   final Color surfaceCreuse;
-
-  /// Titres ; texte courant ; texte secondaire.
   final Color encre;
   final Color texte;
   final Color attenue;
-
-  /// Filets et contours, toujours discrets.
   final Color trait;
-
-  /// L'or de la marque : le bouton principal et l'élément actif.
   final Color accent;
   final Color surAccent;
-
-  /// L'accent lisible comme texte ou icône sur [fond] et [surface].
   final Color accentTexte;
-
   final Color succes;
   final Color alerte;
-
-  /// Les grandes cartes de mise en avant (séance du jour, abonnement) : un
-  /// dégradé profond, avec son texte et son accent propres.
   final Color heros;
   final Color herosFin;
   final Color surHeros;
   final Color surHerosDoux;
   final Color accentSurHeros;
-
   final Color ombre;
 
-  /// L'accent posé en voile léger derrière une icône ou une pastille.
   Color get accentVoile => accentTexte.withValues(alpha: sombre ? 0.16 : 0.10);
 
   LinearGradient get degradeHeros => LinearGradient(
@@ -181,11 +162,7 @@ class Palette extends ThemeExtension<Palette> {
   );
 
   static const tous = [ivoire, nuit, sepia, foret];
-
   static Palette parId(String? id) => tous.firstWhere((p) => p.id == id, orElse: () => ivoire);
-
-  /// La palette en vigueur. Posée par l'application à chaque changement de
-  /// thème ; les écrans la lisent par [Couleurs] ou par `context.palette`.
   static Palette courante = ivoire;
 
   @override
@@ -199,7 +176,6 @@ extension PaletteDuContexte on BuildContext {
   Palette get palette => Theme.of(this).extension<Palette>() ?? Palette.courante;
 }
 
-/// Les arrondis : doux et réguliers, du plus petit au plus grand.
 abstract final class Rayons {
   static const petit = BorderRadius.all(Radius.circular(10));
   static const moyen = BorderRadius.all(Radius.circular(14));

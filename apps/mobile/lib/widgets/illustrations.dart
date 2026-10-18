@@ -4,16 +4,15 @@ import 'package:flutter/material.dart';
 
 import '../theme/palette.dart';
 
-/// Les scènes dessinées d'ASCENDA.
 enum Scene {
-  rayonVide,     // aucun ouvrage emporté
-  lampe,         // une lecture qui attend, le soir
-  graine,        // un parcours qui commence
-  cercleVide,    // personne dans le cercle
-  sansReseau,    // le serveur ne répond pas
-  laurier,       // un quiz réussi, une étape franchie
-  pageBlanche,   // aucune note, aucun surlignage
-  loupeVide,     // une recherche sans résultat
+  rayonVide,
+  lampe,
+  graine,
+  cercleVide,
+  sansReseau,
+  laurier,
+  pageBlanche,
+  loupeVide,
 }
 
 class Illustration extends StatelessWidget {
@@ -39,6 +38,7 @@ class Illustration extends StatelessWidget {
 
 class _Scene extends CustomPainter {
   _Scene(this.scene, this.encre, this.or);
+
   final Scene scene;
   final Color encre;
   final Color or;
@@ -61,7 +61,6 @@ class _Scene extends CustomPainter {
 
     switch (scene) {
       case Scene.rayonVide:
-        // Une tablette vide, deux volumes couchés dans un coin.
         canvas.drawLine(const Offset(10, 70), const Offset(110, 70), trait);
         canvas.drawLine(const Offset(16, 70), const Offset(16, 78), trait);
         canvas.drawLine(const Offset(104, 70), const Offset(104, 78), trait);
@@ -70,7 +69,6 @@ class _Scene extends CustomPainter {
           canvas.drawRect(Rect.fromLTWH(20 + i * 3, y, 34 - i * 4, 8), trait);
         }
         canvas.drawRect(const Rect.fromLTWH(20, 52, 30, 8), voile);
-        // Un emplacement vide, marqué par un pointillé.
         for (var x = 64.0; x < 100; x += 8) {
           canvas.drawLine(Offset(x, 70), Offset(x + 4, 70), rehaut);
         }
@@ -79,7 +77,6 @@ class _Scene extends CustomPainter {
           ..style = PaintingStyle.fill);
 
       case Scene.lampe:
-        // Une lampe de lecture posée sur un livre ouvert.
         final abatjour = Path()
           ..moveTo(44, 34)
           ..lineTo(76, 34)
@@ -90,14 +87,12 @@ class _Scene extends CustomPainter {
         canvas.drawPath(abatjour, voile);
         canvas.drawLine(const Offset(60, 34), const Offset(60, 20), trait);
         canvas.drawLine(const Offset(60, 52), const Offset(60, 62), rehaut);
-        // La lumière, en éventail.
         for (var k = -2; k <= 2; k++) {
           canvas.drawLine(Offset(60 + k * 9, 56), Offset(60 + k * 16.0, 70), rehaut..color = or.withValues(alpha: 0.5));
         }
         _livreOuvert(canvas, trait, const Offset(60, 78));
 
       case Scene.graine:
-        // Une graine qui lève, et la terre.
         canvas.drawLine(const Offset(16, 74), const Offset(104, 74), trait);
         canvas.drawLine(const Offset(60, 74), const Offset(60, 40), trait);
         final feuille = Path()
@@ -116,7 +111,6 @@ class _Scene extends CustomPainter {
         canvas.drawArc(const Rect.fromLTWH(48, 74, 24, 16), pi, pi, false, rehaut);
 
       case Scene.cercleVide:
-        // Trois places autour d'une table, deux encore libres.
         canvas.drawOval(const Rect.fromLTWH(26, 40, 68, 32), trait);
         canvas.drawCircle(const Offset(60, 26), 9, trait);
         canvas.drawCircle(const Offset(60, 26), 9, voile);
@@ -131,7 +125,6 @@ class _Scene extends CustomPainter {
         }
 
       case Scene.sansReseau:
-        // Un nuage barré, et un livre qui reste ouvert dessous.
         final nuage = Path()
           ..addArc(const Rect.fromLTWH(34, 22, 30, 30), pi, pi)
           ..addArc(const Rect.fromLTWH(56, 26, 26, 26), pi * 1.2, pi * 1.1)
@@ -142,7 +135,6 @@ class _Scene extends CustomPainter {
         _livreOuvert(canvas, trait, const Offset(60, 74));
 
       case Scene.laurier:
-        // Deux rameaux et une étoile : ce qui est acquis.
         for (final sens in [-1.0, 1.0]) {
           final rameau = Path()..moveTo(60 + sens * 14, 74);
           for (var i = 0; i < 5; i++) {
@@ -170,7 +162,6 @@ class _Scene extends CustomPainter {
         canvas.drawPath(etoile, voile);
 
       case Scene.pageBlanche:
-        // Une page vierge et une plume posée.
         canvas.drawRect(const Rect.fromLTWH(34, 18, 52, 62), trait);
         for (var y = 34.0; y < 74; y += 10) {
           canvas.drawLine(Offset(42, y), Offset(78, y), Paint()
@@ -186,7 +177,6 @@ class _Scene extends CustomPainter {
         canvas.drawPath(plume, voile);
 
       case Scene.loupeVide:
-        // Une loupe posée sur une page, et rien dedans.
         canvas.drawRect(const Rect.fromLTWH(26, 20, 50, 58), trait);
         canvas.drawCircle(const Offset(72, 52), 20, trait);
         canvas.drawCircle(const Offset(72, 52), 20, Paint()..color = or.withValues(alpha: 0.10));
@@ -199,7 +189,6 @@ class _Scene extends CustomPainter {
     }
   }
 
-  /// Un livre ouvert, vu de face : deux pages et leur pli.
   void _livreOuvert(Canvas canvas, Paint trait, Offset centre) {
     final c = centre;
     final gauche = Path()

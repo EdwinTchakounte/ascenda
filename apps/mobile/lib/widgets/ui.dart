@@ -7,12 +7,8 @@ import '../theme/icones.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// Les composants communs de l'interface.
-
-/// Ouvre le tiroir de la coque depuis n'importe quel onglet.
 final cleCoque = GlobalKey<ScaffoldState>();
 
-/// Le bouton du tiroir, à placer en tête de la barre d'un onglet.
 class BoutonMenu extends StatelessWidget {
   const BoutonMenu({super.key});
 
@@ -26,7 +22,6 @@ class BoutonMenu extends StatelessWidget {
   }
 }
 
-/// L'initiale du lecteur dans un disque doré. Ouvre le profil.
 class AvatarCompte extends ConsumerWidget {
   const AvatarCompte({super.key, this.taille = 38, this.ouvrirProfil = true});
 
@@ -38,7 +33,6 @@ class AvatarCompte extends ConsumerWidget {
     final p = context.palette;
     final session = ref.watch(sessionProvider);
     final u = session.utilisateur;
-    // Sans compte, pas d'initiale inventée : une porte vers la connexion.
     if (!session.connecte && ouvrirProfil) {
       return Padding(
         padding: const EdgeInsets.only(right: 8),
@@ -84,7 +78,6 @@ class AvatarCompte extends ConsumerWidget {
   }
 }
 
-/// Une surface posée sur le fond : arrondie, ombre légère, filet discret.
 class Surface extends StatelessWidget {
   const Surface({
     super.key,
@@ -115,8 +108,6 @@ class Surface extends StatelessWidget {
       ),
       child: Material(
         color: couleur ?? p.surface,
-        // Un filet d'encre plutôt qu'un contour effacé : la fiche est posée sur
-        // le papier, elle ne flotte pas dedans.
         shape: RoundedRectangleBorder(
           borderRadius: rayon,
           side: BorderSide(color: p.encre.withValues(alpha: p.sombre ? 0.22 : 0.12)),
@@ -131,7 +122,6 @@ class Surface extends StatelessWidget {
   }
 }
 
-/// La grande carte de mise en avant, sur le dégradé profond du thème.
 class SurfaceHeros extends StatelessWidget {
   const SurfaceHeros({super.key, required this.child, this.padding = const EdgeInsets.all(22), this.onTap});
 
@@ -154,7 +144,6 @@ class SurfaceHeros extends StatelessWidget {
               onTap: onTap,
               child: Stack(
                 children: [
-                  // Deux halos dorés, très bas : la lumière d'une lampe de lecture.
                   Positioned(
                     right: -60,
                     top: -70,
@@ -178,6 +167,7 @@ class SurfaceHeros extends StatelessWidget {
 
 class _Halo extends StatelessWidget {
   const _Halo({required this.couleur, required this.taille});
+
   final Color couleur;
   final double taille;
 
@@ -194,7 +184,6 @@ class _Halo extends StatelessWidget {
       );
 }
 
-/// Une icône dans une pastille arrondie teintée.
 class IconePastille extends StatelessWidget {
   const IconePastille(this.icone, {super.key, this.couleur, this.taille = 42, this.fond});
 
@@ -220,7 +209,6 @@ class IconePastille extends StatelessWidget {
   }
 }
 
-/// Le titre d'une section, avec son action éventuelle à droite.
 class TitreSection extends StatelessWidget {
   const TitreSection(this.titre, {super.key, this.sousTitre, this.action, this.onAction});
 
@@ -266,9 +254,9 @@ class TitreSection extends StatelessWidget {
   }
 }
 
-/// Une petite étiquette en capitales espacées, en or : le surtitre d'un bloc.
 class Surtitre extends StatelessWidget {
   const Surtitre(this.texte, {super.key, this.couleur});
+
   final String texte;
   final Color? couleur;
 
@@ -283,9 +271,9 @@ class Surtitre extends StatelessWidget {
       );
 }
 
-/// Une pastille : un libellé court sur un voile de couleur.
 class Pastille extends StatelessWidget {
   const Pastille(this.texte, {super.key, this.icone, this.couleur});
+
   final String texte;
   final IconData? icone;
   final Color? couleur;
@@ -311,9 +299,9 @@ class Pastille extends StatelessWidget {
   }
 }
 
-/// Une jauge arrondie.
 class Jauge extends StatelessWidget {
   const Jauge({super.key, required this.valeur, this.hauteur = 8, this.couleur, this.piste});
+
   final double valeur;
   final double hauteur;
   final Color? couleur;
@@ -346,9 +334,9 @@ class Jauge extends StatelessWidget {
   }
 }
 
-/// Un message d'erreur de formulaire, sur un voile de la couleur d'alerte.
 class AlerteFormulaire extends StatelessWidget {
   const AlerteFormulaire(this.message, {super.key});
+
   final String message;
 
   @override
@@ -379,8 +367,6 @@ class AlerteFormulaire extends StatelessWidget {
   }
 }
 
-/// La saisie d'un message : une pilule flottante et son bouton d'envoi rond.
-/// Sert à l'agent comme aux conversations du cercle.
 class ZoneMessage extends StatelessWidget {
   const ZoneMessage({
     super.key,
@@ -395,15 +381,10 @@ class ZoneMessage extends StatelessWidget {
 
   final TextEditingController controleur;
   final VoidCallback onEnvoyer;
-
-  /// Un envoi est en cours : le bouton s'éteint.
   final bool attente;
   final String indication;
   final int lignesMax;
   final int? longueurMax;
-
-  /// La touche Entrée du clavier envoie (une question courte) au lieu d'aller
-  /// à la ligne (un message).
   final bool envoiAuClavier;
 
   @override
@@ -452,7 +433,6 @@ class ZoneMessage extends StatelessWidget {
   }
 }
 
-/// Le bouton rond d'envoi, en or ; éteint pendant un envoi.
 class BoutonEnvoi extends StatelessWidget {
   const BoutonEnvoi({super.key, required this.actif, required this.onTap});
 

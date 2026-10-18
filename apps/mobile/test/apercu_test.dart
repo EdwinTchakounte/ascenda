@@ -1,4 +1,3 @@
-// Le banc de capture : il rend les écrans hors ligne et les écrit en images.
 @Tags(['apercu'])
 library;
 
@@ -52,7 +51,6 @@ final _texteLong = List.generate(
       "Paragraphe ${i + 1}.",
 ).join('\n\n');
 
-/// Un client qui répond à tout, sans réseau.
 class _Faux extends ClientApi {
   @override
   Future<bool> get aUneSession async => true;
@@ -334,8 +332,6 @@ const _resumeChronogramme = {
   'en_retard': 1,
 };
 
-/// Le plan de lecture complet : onze séances faites, une en retard, le reste
-/// à venir. C'est l'état le plus riche de l'écran, donc celui qu'on regarde.
 final _chronogramme = {
   'id': _chrono,
   'version': 2,
@@ -373,8 +369,6 @@ final _chronogramme = {
         'lecture_integrale': true,
         'axe_label': 'Agriculture et élevage',
       },
-    // Une séance de révision : ni ouvrage ni chapitre, comme le planificateur
-    // les produit en fin de semaine.
     {
       'id': 's16',
       'ordre': 17,
@@ -400,7 +394,6 @@ final _chronogramme = {
   ],
 };
 
-/// Les notions suivies, telles que les lit `Notion.depuisJson`.
 const _maitrise = [
   {'concept_id': 'n1', 'terme': 'Érosion hydrique', 'axe': _slugAxe,
    'axe_label': 'Agriculture et élevage', 'revisions': 5, 'facilite': 2.6,
@@ -413,8 +406,6 @@ const _maitrise = [
    'prochaine_revision': null},
 ];
 
-/// Les notions à revoir : le serveur les donne sans niveau, et l'axe y est un
-/// slug et non un libellé. C'est la forme réelle, gardée telle quelle.
 const _aReviser = [
   {'concept_id': 'n1', 'terme': 'Érosion hydrique', 'axe': _slugAxe,
    'definition': "Le détachement puis le transport des particules de sol par l'eau de "
@@ -426,7 +417,6 @@ const _aReviser = [
    'facilite': 1.9, 'intervalle_jours': 1, 'revisions': 0, 'a_revoir_depuis': null},
 ];
 
-/// Le glossaire, tel que l'écran le lit : des lignes brutes, pas des `Notion`.
 const _glossaire = [
   {'id': 'n1', 'terme': 'Érosion hydrique', 'axe': _slugAxe,
    'axe_label': 'Agriculture et élevage', 'occurrences': 12,
@@ -444,7 +434,6 @@ const _glossaire = [
    'definition': "Un modèle qu'on entraîne sur des exemples déjà étiquetés."},
 ];
 
-/// Un quiz de chapitre : quatre questions, quatre choix chacune.
 const _quizJson = {
   'quiz_id': _quiz,
   'ouvrage': "Mémento de l'agronome",
@@ -585,8 +574,6 @@ final _quizOuvrage = {
         'titre': _titresChapitres[i - 1],
         'page_debut': 13 + i * 19,
         'page_fin': 20 + i * 19,
-        // Un chapitre d'appareil est enregistré sans question : l'écran doit
-        // le retirer du sommaire plutôt que d'afficher une ligne morte.
         'nb_questions': i == 1 ? 0 : 3 + (i % 4),
         'motif_vide': i == 1 ? "Chapitre d'appareil : pas de contenu interrogeable." : null,
       },
@@ -933,8 +920,6 @@ const _amis = [
       'lit': "Mémento de l'agronome",
     },
   },
-  // Un ami qui ne partage pas son activité : l'API ne renvoie alors que la
-  // clé `partage`, et l'écran doit s'en accommoder.
   {
     'id': 'a4',
     'nom': 'Sandrine',
@@ -968,8 +953,6 @@ const _encouragements = [
    'auteur': {'id': 'a1', 'nom': 'Moussa Diallo'}},
 ];
 
-/// Un volume emporté sur l'appareil. Le dépôt hors ligne passe par des fichiers
-/// chiffrés : il ne se nourrit pas par l'API, on surcharge donc son fournisseur.
 final _packs = {
   _doc: PackHorsLigne(
     documentId: _doc,
@@ -990,35 +973,26 @@ final _packs = {
 Widget _sous(Widget ecran, Palette p) => ProviderScope(
       overrides: [
         clientApiProvider.overrideWithValue(_Faux()),
-        // Le sondage de l'état du service tourne toutes les deux minutes : il
-        // n'a rien à faire dans un banc de capture.
         etatServiceProvider.overrideWith((ref) => Stream.value(null)),
-        // L'étagère hors ligne vit dans des fichiers chiffrés, hors de l'API.
         packsProvider.overrideWith((ref) async => _packs),
       ],
       child: MaterialApp(
-        // Le ruban « debug » mangeait le coin haut droit de chaque capture.
         debugShowCheckedModeBanner: false,
         theme: ThemeAscenda.depuis(p),
         home: ecran,
       ),
     );
 
-/// Retrouve un `Texte` par la chaîne qu'on lui a donnée. `find.text` échoue
-/// ici : `Texte` recompose ses signes avant de les rendre.
 Finder _texte(String data) => find.byWidgetPredicate(
       (w) => w is Texte && w.data == data,
       description: 'Texte("$data")',
     );
 
-/// Les deux formats de revue, en points logiques.
 const _formats = <({String nom, Size taille, double densite})>[
   (nom: '', taille: Size(1080, 2000), densite: 3),
   (nom: '-petit', taille: Size(320, 700), densite: 1),
 ];
 
-/// La police des icônes n'est pas chargée dans un test : sans elle, chaque
-/// icône se rend en carré vide.
 Future<void> _chargerIcones() async {
   final racine = Platform.environment['FLUTTER_ROOT'] ??
       File(Platform.resolvedExecutable).parent.parent.parent.path;
@@ -1029,8 +1003,6 @@ Future<void> _chargerIcones() async {
   await chargeur.load();
 }
 
-/// Les images d'asset se chargent hors de l'horloge du test : sans ce répit, le
-/// logo manque à la première image capturée.
 Future<void> _chargerImages(WidgetTester t) async {
   await t.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 60)));
   await t.pump();
@@ -1077,8 +1049,6 @@ void main() {
           await _chargerImages(t);
           await t.pump(const Duration(milliseconds: 900));
           await t.pump(const Duration(milliseconds: 900));
-          // L'image est écrite avant le verdict : un débordement doit se
-          // regarder, pas seulement se lire dans un journal de test.
           final incident = t.takeException();
           await expectLater(
             find.byType(MaterialApp),
@@ -1088,8 +1058,6 @@ void main() {
         });
       }
 
-      // La correction du quiz ne s'atteint qu'en répondant : on coche le
-      // premier choix de chaque question, puis on demande la correction.
       testWidgets('quiz-correction${f.nom} en ${p.nom}', (t) async {
         t.view.physicalSize = f.taille;
         t.view.devicePixelRatio = f.densite;

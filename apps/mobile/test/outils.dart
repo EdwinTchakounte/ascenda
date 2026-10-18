@@ -1,4 +1,3 @@
-// Chercher un texte tel qu'on l'écrit, espaces insécables comprises.
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';

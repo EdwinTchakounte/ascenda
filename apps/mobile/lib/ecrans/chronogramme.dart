@@ -15,9 +15,9 @@ import '../widgets/etats.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le chronogramme en vue chronologique : le cahier des séances, semaine après semaine.
 class EcranChronogramme extends ConsumerWidget {
   const EcranChronogramme({super.key, required this.chronogrammeId});
+
   final String chronogrammeId;
 
   @override
@@ -40,7 +40,6 @@ class EcranChronogramme extends ConsumerWidget {
             reessayer: () => ref.invalidate(chronogrammeProvider(chronogrammeId)),
           ),
           data: (c) {
-            // Regroupement par semaine : douze cartes valent mieux que soixante-dix lignes.
             final parSemaine = <String, List<Seance>>{};
             for (final s in c.seances) {
               final d = s.prevueLe ?? DateTime.now();
@@ -48,8 +47,6 @@ class EcranChronogramme extends ConsumerWidget {
               parSemaine.putIfAbsent(DateFormat('yyyy-MM-dd').format(lundi), () => []).add(s);
             }
             final semaines = parSemaine.keys.toList()..sort();
-            // Le rang d'entrée court d'une semaine à l'autre : la page se pose
-            // ligne à ligne, puis s'arrête de compter.
             var rang = 1;
 
             return ListView(
@@ -116,8 +113,6 @@ class EcranChronogramme extends ConsumerWidget {
                     child: _EnteteSemaine(lundi: DateTime.parse(cle), seances: parSemaine[cle]!),
                   ),
                   const SizedBox(height: 12),
-                  // Une feuille par semaine : les séances y sont des lignes
-                  // séparées par des filets, comme un cahier réglé.
                   Surface(
                     padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
                     child: Column(
@@ -212,8 +207,6 @@ class _BandeauRetard extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 4),
-          // Un bouton grisé dit qu'on ne peut pas, jamais comment on pourrait.
-          // Pour un membre de la formule Découverte, il ouvre l'abonnement.
           TextButton(
             onPressed: premium ? onReplanifier : () => context.push('/abonnement'),
             child: Texte(premium ? 'Replanifier' : 'Débloquer'),
@@ -224,10 +217,9 @@ class _BandeauRetard extends StatelessWidget {
   }
 }
 
-/// Le titre courant d'une semaine : son libellé entre crochets, un filet, et le
-/// compte des séances tenues en guise de folio.
 class _EnteteSemaine extends StatelessWidget {
   const _EnteteSemaine({required this.lundi, required this.seances});
+
   final DateTime lundi;
   final List<Seance> seances;
 
@@ -244,7 +236,6 @@ class _EnteteSemaine extends StatelessWidget {
     final faites = seances.where((s) => s.faite).length;
     final complete = faites == seances.length;
 
-    // L'étiquette passe avant le filet.
     return LayoutBuilder(
       builder: (context, contraintes) => Row(
         children: [
@@ -273,6 +264,7 @@ class _EnteteSemaine extends StatelessWidget {
 
 class _LigneSeance extends ConsumerWidget {
   const _LigneSeance({required this.seance, required this.chronogrammeId, required this.derniere});
+
   final Seance seance;
   final String chronogrammeId;
   final bool derniere;
@@ -286,7 +278,6 @@ class _LigneSeance extends ConsumerWidget {
     final passee = !seance.faite && seance.prevueLe != null && !aujourdhui &&
         seance.prevueLe!.isBefore(DateUtils.dateOnly(DateTime.now()));
 
-    // L'état se lit à trois endroits qui disent la même chose
     final teinte = seance.faite
         ? p.succes
         : passee
@@ -317,8 +308,6 @@ class _LigneSeance extends ConsumerWidget {
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 4),
               child: Row(
                 children: [
-                  // La case du cahier : cochée à l'encre quand la séance est
-                  // tenue, ouverte tant qu'elle ne l'est pas.
                   _CaseACocher(
                     cochee: seance.faite,
                     couleur: teinte ?? p.attenue,
@@ -352,7 +341,6 @@ class _LigneSeance extends ConsumerWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // L'ouvrage sur une ligne, ce qu'on y lit sur la suivante
                         Texte(
                           seance.ouvrage ?? seance.objectif,
                           style: t.textTheme.titleMedium?.copyWith(
@@ -365,8 +353,6 @@ class _LigneSeance extends ConsumerWidget {
                         ),
                         if (seance.partie != null) ...[
                           const SizedBox(height: 1),
-                          // La rature porte sur la séance entière, l'ouvrage et le
-                          // chapitre
                           Texte(
                             seance.partie!,
                             style: t.textTheme.bodySmall?.copyWith(
@@ -412,14 +398,11 @@ class _LigneSeance extends ConsumerWidget {
   }
 }
 
-/// Une case à cocher tracée à la plume : le cadre à l'encre, et la coche par
-/// dessus quand la séance est tenue.
 class _CaseACocher extends StatelessWidget {
   const _CaseACocher({required this.cochee, required this.couleur});
+
   final bool cochee;
   final Color couleur;
-
-  /// Le côté de la case : celui d'une case de cahier, sous le texte courant.
   static const cote = 22.0;
 
   @override
@@ -439,6 +422,7 @@ class _CaseACocher extends StatelessWidget {
 
 class _CochePeinte extends CustomPainter {
   _CochePeinte(this.couleur);
+
   final Color couleur;
 
   @override
@@ -450,7 +434,6 @@ class _CochePeinte extends CustomPainter {
       ..strokeWidth = 2.6
       ..strokeCap = StrokeCap.round
       ..strokeJoin = StrokeJoin.round;
-    // Une coche qui dépasse du cadre, comme une main la trace.
     canvas.drawPath(
       Path()
         ..moveTo(4, 12.5)

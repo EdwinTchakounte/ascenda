@@ -5,9 +5,6 @@ import 'package:flutter/material.dart';
 import '../theme/couleurs.dart';
 import '../theme/texte.dart';
 
-/// Les ouvrages, dessinés comme des livres.
-
-/// Ce qu'on peut écrire sur un dos de cette hauteur.
 String titreSurDos(String titre, double hauteur) {
   final maximum = (hauteur / 4.6).round();
   if (titre.length <= maximum) return titre;
@@ -22,12 +19,9 @@ String titreSurDos(String titre, double hauteur) {
   return '${garde.join(' ')}…';
 }
 
-/// Le corps du titre sur un dos, en pixels.
 double corpsSurDos(String titre, {required double hauteur, required double largeur}) {
-  const large = 0.62;   // largeur moyenne d'un signe en Fraunces, en parts du corps
+  const large = 0.62;
   const interligne = 1.22;
-  // Le texte reste à l'intérieur du filet doré, qui court de 0,175 à 0,825 de
-  // la hauteur du dos : sinon la dernière lettre chevauche le cadre.
   final dispoLigne = hauteur * 0.60;
   final dispoLignes = largeur * 0.68;
   final motLong = titre.split(RegExp(r"[ \u2019'\-]")).fold<int>(3, (m, x) => x.length > m ? x.length : m);
@@ -40,13 +34,11 @@ double corpsSurDos(String titre, {required double hauteur, required double large
   return 6;
 }
 
-/// Une graine stable tirée du titre : deux lancements donnent le même volume.
 int _graine(String titre) => titre.codeUnits.fold(7, (a, c) => (a * 31 + c) & 0x7fffffff);
 
 Color teinteOuvrage(String titre, String? axeSlug) =>
     Couleurs.pole(axeSlug) ?? Couleurs.poles.values.elementAt(_graine(titre) % Couleurs.poles.length);
 
-/// Le dos d'un volume, tel qu'il se voit sur un rayon.
 class DosLivre extends StatelessWidget {
   const DosLivre({
     super.key,
@@ -61,12 +53,8 @@ class DosLivre extends StatelessWidget {
   final String titre;
   final String? axeSlug;
   final double hauteur;
-
-  /// Par défaut, une épaisseur tirée du titre : un rayon régulier fait faux.
   final double? largeur;
   final VoidCallback? onTap;
-
-  /// Un signet dépasse du volume : l'ouvrage est commencé ou emporté.
   final bool marque;
 
   @override
@@ -112,7 +100,6 @@ class DosLivre extends StatelessWidget {
                       child: RotatedBox(
                         quarterTurns: 3,
                         child: Center(
-                          // Le corps suit la longueur du titre
                           child: FittedBox(
                             fit: BoxFit.scaleDown,
                             child: SizedBox(
@@ -157,9 +144,9 @@ class DosLivre extends StatelessWidget {
   }
 }
 
-/// Les nerfs du dos, la pièce de titre et le filet doré.
 class _Dos extends CustomPainter {
   _Dos({required this.teinte, required this.graine});
+
   final Color teinte;
   final int graine;
 
@@ -174,16 +161,13 @@ class _Dos extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeWidth = 1.1;
 
-    // Deux nerfs en tête, deux en pied : la reliure d'un volume relié.
     for (final y in [t.height * 0.10, t.height * 0.135, t.height * 0.865, t.height * 0.90]) {
       canvas.drawLine(Offset(0, y), Offset(t.width, y), nerf);
     }
-    // Le filet d'or qui borde le dos.
     canvas.drawRect(
       Rect.fromLTWH(t.width * 0.12, t.height * 0.175, t.width * 0.76, t.height * 0.65),
       filet,
     );
-    // Un fleuron discret en pied, différent d'un volume à l'autre.
     final y = t.height * 0.935;
     final motif = graine % 3;
     final p = Paint()
@@ -203,8 +187,6 @@ class _Dos extends CustomPainter {
   bool shouldRepaint(covariant _Dos a) => a.teinte != teinte || a.graine != graine;
 }
 
-/// Le plat d'un volume, pour la fiche d'un ouvrage : toile teintée, titre
-/// frappé à l'or, filet d'encadrement.
 class CouvertureLivre extends StatelessWidget {
   const CouvertureLivre({
     super.key,
@@ -231,7 +213,6 @@ class CouvertureLivre extends StatelessWidget {
       height: hauteur,
       child: Stack(
         children: [
-          // La tranche, à gauche : le volume a une épaisseur.
           Positioned(
             left: 0, top: 4, bottom: 4, width: 14,
             child: Container(
@@ -263,8 +244,6 @@ class CouvertureLivre extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Le titre s'ajuste au cadre : sur une couverture, un mot
-                      // coupé en deux se voit comme une faute d'impression.
                       Flexible(
                         child: FittedBox(
                           fit: BoxFit.scaleDown,
@@ -314,7 +293,6 @@ class CouvertureLivre extends StatelessWidget {
   }
 }
 
-/// Un rayon : des volumes posés sur une tablette, qui défilent.
 class Rayon extends StatelessWidget {
   const Rayon({
     super.key,
@@ -323,7 +301,6 @@ class Rayon extends StatelessWidget {
     this.padding = const EdgeInsets.symmetric(horizontal: 20),
   });
 
-  /// (titre, raccourci d'axe, ouvrage emporté ou commencé, action)
   final List<({String titre, String? axeSlug, bool marque, VoidCallback? onTap})> volumes;
   final double hauteur;
   final EdgeInsets padding;
@@ -335,7 +312,6 @@ class Rayon extends StatelessWidget {
       height: hauteur + 26,
       child: Stack(
         children: [
-          // La tablette : un trait épais et son ombre portée.
           Positioned(
             left: padding.left * 0.4, right: padding.right * 0.4, bottom: 12,
             child: Column(

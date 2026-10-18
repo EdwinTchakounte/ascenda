@@ -16,7 +16,6 @@ import '../widgets/illustrations.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// La révision espacée : une fiche qu'on retourne, deux gestes.
 class EcranRevision extends ConsumerStatefulWidget {
   const EcranRevision({super.key});
 
@@ -41,7 +40,6 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
         'reussi': reussi,
       });
     } catch (_) {
-      // Une révision perdue n'est pas grave : la notion reviendra.
     }
     if (_index >= total && mounted) {
       rafraichirProgression(ref);
@@ -89,7 +87,6 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                   ),
                 ),
                 Expanded(
-                  // La fiche se taille sur son texte et se pose au milieu de la page.
                   child: LayoutBuilder(
                     builder: (context, contraintes) => SingleChildScrollView(
                       padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
@@ -98,8 +95,6 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                         child: Center(
                           child: GestureDetector(
                             onTap: () => setState(() => _retournee = !_retournee),
-                            // Chaque notion est une fiche neuve : elle se pose,
-                            // puis elle se retourne sur elle-même.
                             child: KeyedSubtree(
                               key: ValueKey(n.conceptId),
                               child: Apparition(
@@ -152,8 +147,6 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
   }
 }
 
-/// Le retournement de la fiche : une rotation autour de l'axe vertical, la
-/// face arrière remise à l'endroit à mi-course.
 class _Retournement extends StatelessWidget {
   const _Retournement({required this.retournee, required this.recto, required this.verso});
 
@@ -190,7 +183,6 @@ class _Retournement extends StatelessWidget {
   }
 }
 
-/// Un raccourci d'axe (« 12-agriculture-elevage ») rendu lisible.
 String _axeLisible(String axe) {
   if (!_raccourciAxe.hasMatch(axe)) return axe;
   final mots = axe.substring(axe.indexOf('-') + 1).replaceAll('-', ' ');
@@ -199,9 +191,9 @@ String _axeLisible(String axe) {
 
 final _raccourciAxe = RegExp(r'^\d+(-[a-z0-9]+)+$');
 
-/// Une face de la fiche : le terme au recto, la définition au verso.
 class _FaceNotion extends StatelessWidget {
   const _FaceNotion({required this.notion, required this.retournee});
+
   final Notion notion;
   final bool retournee;
 
@@ -228,8 +220,6 @@ class _FaceNotion extends StatelessWidget {
         borderRadius: Rayons.carte,
         child: Stack(
           children: [
-            // Un signe en filigrane, pour que la fiche ne soit pas un
-            // rectangle vide autour d'un mot.
             Positioned(
               right: -18,
               bottom: -18,
@@ -293,8 +283,6 @@ class _FaceNotion extends StatelessWidget {
                     const SizedBox(height: 22),
                     const Filet(redouble: true),
                     const SizedBox(height: 14),
-                    // Le pied de la fiche : la consigne à gauche, le compte des
-                    // passages à droite, comme un folio.
                     Row(
                       children: [
                         IconeAscenda(Icone.cartes, taille: 18, couleur: p.attenue),
@@ -329,6 +317,7 @@ class _FaceNotion extends StatelessWidget {
 
 class _Fin extends StatelessWidget {
   const _Fin({required this.sues, required this.total});
+
   final int sues;
   final int total;
 
