@@ -2,7 +2,10 @@
 @Tags(['apercu'])
 library;
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -1014,8 +1017,30 @@ const _formats = <({String nom, Size taille, double densite})>[
   (nom: '-petit', taille: Size(320, 700), densite: 1),
 ];
 
+/// La police des icônes n'est pas chargée dans un test : sans elle, chaque
+/// icône se rend en carré vide.
+Future<void> _chargerIcones() async {
+  final racine = Platform.environment['FLUTTER_ROOT'] ??
+      File(Platform.resolvedExecutable).parent.parent.parent.path;
+  final f = File('$racine/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf');
+  if (!f.existsSync()) return;
+  final chargeur = FontLoader('MaterialIcons')
+    ..addFont(Future.value(ByteData.sublistView(f.readAsBytesSync())));
+  await chargeur.load();
+}
+
+/// Les images d'asset se chargent hors de l'horloge du test : sans ce répit, le
+/// logo manque à la première image capturée.
+Future<void> _chargerImages(WidgetTester t) async {
+  await t.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 60)));
+  await t.pump();
+}
+
 void main() {
-  setUpAll(() => initializeDateFormatting('fr_FR'));
+  setUpAll(() async {
+    await _chargerIcones();
+    await initializeDateFormatting('fr_FR');
+  });
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
   final ecrans = <String, Widget>{
@@ -1049,6 +1074,7 @@ void main() {
           addTearDown(t.view.reset);
           Palette.courante = p;
           await t.pumpWidget(_sous(e.value, p));
+          await _chargerImages(t);
           await t.pump(const Duration(milliseconds: 900));
           await t.pump(const Duration(milliseconds: 900));
           // L'image est écrite avant le verdict : un débordement doit se
@@ -1070,6 +1096,7 @@ void main() {
         addTearDown(t.view.reset);
         Palette.courante = p;
         await t.pumpWidget(_sous(const EcranQuiz(quizId: _quiz), p));
+        await _chargerImages(t);
         await t.pump(const Duration(milliseconds: 900));
         await t.pump(const Duration(milliseconds: 900));
 

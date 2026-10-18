@@ -31,7 +31,7 @@ void main() {
     const t = "Une première phrase assez longue ici.\nUne seconde phrase qui finit par un mot.";
     final r = lisible(t);
     expect(r.length, t.length);
-    expect(r.split('\n').every((p) => p.contains('$_nbsp')), isTrue);
+    expect(r.split('\n').every((p) => p.contains(_nbsp)), isTrue);
   });
 
   test("une ligne trop courte pour être justifiée sans trous reste alignée à gauche", () {

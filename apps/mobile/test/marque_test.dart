@@ -57,7 +57,7 @@ void main() {
     };
     formes.forEach((nom, forme) {
       expect(forme, isNotNull, reason: '$nom : aucune forme déclarée, Material arrondira');
-      expect(forme, isA<RoundedRectangleBorder>(), reason: '$nom');
+      expect(forme, isA<RoundedRectangleBorder>(), reason: nom);
       final r = (forme! as RoundedRectangleBorder).borderRadius.resolve(TextDirection.ltr);
       final rayon = [r.topLeft.x, r.topRight.x, r.bottomLeft.x, r.bottomRight.x].reduce((a, b) => a > b ? a : b);
       expect(rayon, greaterThanOrEqualTo(10), reason: '$nom : angle droit, hors du langage de l\'application');
