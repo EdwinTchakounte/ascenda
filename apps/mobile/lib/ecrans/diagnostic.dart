@@ -16,12 +16,7 @@ import '../widgets/selon_droit.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le diagnostic d'entrée : un questionnaire d'atelier, une question par page,
-/// grande et centrée, avec ses étapes numérotées en tête.
-///
-/// Le questionnaire vient du serveur, y compris les sondes tirées des vrais
-/// quiz de l'axe. Rien n'est codé en dur ici : ajouter une question se fait
-/// côté API.
+/// Le diagnostic d'entrée : un questionnaire d'atelier, une question par page
 class DiagnosticEcran extends ConsumerStatefulWidget {
   const DiagnosticEcran({super.key, this.axe});
   final String? axe;
@@ -235,10 +230,7 @@ class _DiagnosticEcranState extends ConsumerState<DiagnosticEcran> {
   }
 }
 
-/// La progression du questionnaire, étape par étape : des cases numérotées,
-/// encrées à mesure qu'on avance. Au delà de huit, les numéros deviennent
-/// illisibles et les segments reprennent la main ; au delà de douze, la jauge
-/// continue.
+/// La progression du questionnaire, étape par étape
 class _Etapes extends StatelessWidget {
   const _Etapes({required this.total, required this.courante});
   final int total;
@@ -470,9 +462,7 @@ class _ChoixAxe extends ConsumerWidget {
                 ),
                 const SizedBox(height: 26),
                 for (final g in regrouperParPole(liste)) ...[
-                  // Un pôle ouvre une section : son nom, puis ses parcours. Six cartes
-                  // « Agriculture » à plat, au milieu des axes sur l'IA, se lisaient
-                  // comme une liste sans ordre.
+                  // Un pôle ouvre une section : son nom, puis ses parcours.
                   if (g.estPole) ...[
                     const SizedBox(height: 14),
                     Apparition(

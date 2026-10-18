@@ -1,5 +1,4 @@
-"""Réinjecte le texte des PDF OCRisés dans le document EXISTANT (même id).
-Remplace chapitres et chunks, ne crée jamais de nouvelle entrée."""
+"""Réinjecte le texte des PDF OCRisés dans le document EXISTANT (même id)."""
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -24,8 +23,7 @@ for doc_id, name, key in rows:
     except Exception as e:
         print(f"  illisible {src[:55]} :: {e}"); continue
     chars = sum(len(x) for x in pages); cpp = chars / max(n, 1)
-    # Un export de diapositives a légitimement peu de texte par page :
-    # après OCR, 250 c/p suffisent à en faire un document exploitable.
+    # Un export de diapositives a légitimement peu de texte par page
     seuil = 250 if '.pptx' in name.lower() else SCAN_THRESHOLD
     if cpp < seuil:
         print(f"  OCR insuffisant ({cpp:.0f} c/p) {src[:50]}")

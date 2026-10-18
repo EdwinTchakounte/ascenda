@@ -840,7 +840,7 @@
           "Administration"
         ],
         "summary": "Corriger un message",
-        "description": "Les gabarits vivent en base précisément pour cela : corriger une faute\ndans un message qui part à tous les nouveaux membres ne doit pas demander\nune construction d'image et un redémarrage.",
+        "description": "Les gabarits vivent en base précisément pour cela.",
         "operationId": "changer_gabarit_v1_admin_gabarits__code__patch",
         "security": [
           {
@@ -1495,7 +1495,7 @@
           "Administration"
         ],
         "summary": "Annuler un travail en attente",
-        "description": "Un travail en cours ne s'annule pas d'ici : il tourne dans un autre\nprocessus, et le tuer à mi-parcours laisserait la base à moitié écrite.",
+        "description": "Un travail en cours ne s'annule pas d'ici.",
         "operationId": "annuler_travail_v1_admin_travaux__travail_id__delete",
         "security": [
           {
@@ -1819,7 +1819,7 @@
           "Administration"
         ],
         "summary": "Désactiver, prolonger ou renommer un code",
-        "description": "Désactiver un code referme aussitôt les accès qu'il avait ouverts.\nAvancer sa date de fin les referme à cette date.",
+        "description": "Désactiver un code referme aussitôt les accès qu'il avait ouverts.",
         "operationId": "changer_v1_admin_codes__code_id__patch",
         "security": [
           {
@@ -2377,7 +2377,7 @@
           "Administration"
         ],
         "summary": "Le journal des modifications, en tableur",
-        "description": "Une ligne par colonne changée, et non par entrée du journal.\n\nC'est ce qu'on veut dans un tableur : trier sur la colonne touchée, filtrer\nsur un auteur, compter les changements d'un plafond. L'identifiant de\nl'entrée est gardé pour regrouper les lignes d'une même modification.",
+        "description": "Une ligne par colonne changée, et non par entrée du journal.",
         "operationId": "journal_csv_v1_admin_journal_csv_get",
         "security": [
           {
@@ -3368,7 +3368,7 @@
           "Lecteur"
         ],
         "summary": "Les citations retenues d'un ouvrage",
-        "description": "Les citations sont déjà courtes et vérifiées mot à mot contre le texte source :\nelles sont servables même sur un ouvrage non redistribuable.",
+        "description": "Les citations sont déjà courtes et vérifiées mot à mot contre le texte source.",
         "operationId": "citations_v1_lecteur__document_id__citations_get",
         "security": [
           {
@@ -4120,7 +4120,7 @@
           "Chronogramme"
         ],
         "summary": "Le questionnaire d'entrée",
-        "description": "Six questions de profil, puis jusqu'à quatre questions tirées des quiz réels de l'axe\nchoisi. Sonder la connaissance sur le corpus lui-même vaut mieux que la faire déclarer :\nle lecteur se surestime ou se sous-estime.",
+        "description": "Six questions de profil, puis jusqu'à quatre questions tirées des quiz réels de\nl'axe.",
         "operationId": "diagnostic_v1_diagnostic_get",
         "parameters": [
           {
@@ -4403,7 +4403,7 @@
           "Chronogramme"
         ],
         "summary": "Replanifier (Ascension)",
-        "description": "Regénère les séances restantes en une nouvelle version, sans toucher à l'historique. Le\nplan précédent passe en « remplacé » : on garde la trace de ce qui avait été promis, ce\nqui est la condition d'un plan honnête.",
+        "description": "Regénère les séances restantes en une nouvelle version, sans toucher à l'historique.",
         "operationId": "replanifier_v1_chronogrammes__chronogramme_id__replanifier_post",
         "security": [
           {
@@ -4473,7 +4473,7 @@
           "Progression"
         ],
         "summary": "Courbe de régularité",
-        "description": "Un point par jour sur la période, y compris les jours sans activité :\nc'est l'irrégularité qui se voit, pas la somme.",
+        "description": "Un point par jour sur la période, y compris les jours sans activité.",
         "operationId": "regularite_v1_progression_regularite_get",
         "security": [
           {
@@ -5505,7 +5505,7 @@
           "Compte"
         ],
         "summary": "Les formules disponibles",
-        "description": "Lues depuis plan_quota : la page de tarifs ne peut pas diverger du code\nqui applique les limites.",
+        "description": "Lues depuis plan_quota : la page de tarifs ne peut pas diverger du code qui\napplique.",
         "operationId": "formules_v1_compte_formules_get",
         "responses": {
           "200": {
@@ -6309,7 +6309,7 @@
           "Administration"
         ],
         "summary": "Les paires de lecteurs qui échangent",
-        "description": "Qui échange avec qui, combien et quand : de quoi repérer un compte qui\nécrit à tout le monde, sans ouvrir aucune conversation.",
+        "description": "Qui échange avec qui, combien et quand.",
         "operationId": "relations_v1_admin_cercle_relations_get",
         "security": [
           {
@@ -6443,7 +6443,7 @@
           "Administration"
         ],
         "summary": "Trancher un signalement",
-        "description": "`masque` retire le message des deux conversations et le garde en base ;\n`ignore` le laisse visible. Dans les deux cas, le signalement est clos.",
+        "description": "`masque` retire le message des deux conversations et le garde en base.",
         "operationId": "trancher_v1_admin_cercle_signalements__signalement_id__post",
         "security": [
           {

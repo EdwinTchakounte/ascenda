@@ -1,6 +1,4 @@
-"""OCR des documents sans couche texte, puis ré-ingestion.
-Écrit une version OCRisée à côté de l'original (suffixe .ocr.pdf) et bascule
-document.storage_key dessus. Idempotent : ne retraite pas ocr_status='done'."""
+"""OCR des documents sans couche texte, puis ré-ingestion."""
 import sys, subprocess, shutil
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))

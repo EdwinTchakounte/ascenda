@@ -148,8 +148,7 @@ async def repondre(
 async def _anthropic(f: dict, messages: list[dict]) -> dict:
     from anthropic import AsyncAnthropic
 
-    # 45 s au plus et une seule reprise : le client attend dix minutes par défaut,
-    # et chaque question bloquée tient une connexion de l'API.
+    # 45 s au plus et une seule reprise
     client = AsyncAnthropic(api_key=f["cle"], timeout=45.0, max_retries=1)
     reponse = await client.messages.create(
         model=f["modele"],

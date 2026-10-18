@@ -129,8 +129,7 @@ async def main(ecrire: bool) -> int:
          "séances de 30 min, sans échéance.")
     dire()
     densite = {str(d["id"]): (d["jetons"] or 0) / max(1, d["page_count"] or 1) for d in docs}
-    # Un pôle regroupe des sous-axes et n'est pas un parcours : on simule ses sous-axes,
-    # chacun borné à ses chapitres (axis_chapter), comme le fait l'API.
+    # Un pôle regroupe des sous-axes et n'est pas un parcours
     axes = await fetch_all("""select id, slug, label from axis a where slug not like '\\_%%'
                                  and not exists (select 1 from axis e where e.parent_id = a.id)
                                order by sort_order""")
@@ -148,8 +147,7 @@ async def main(ecrire: bool) -> int:
             if m < 10:
                 probleme = "séance de moins de 10 min"
             elif pages > 0 and pages / m > 4 and densite.get(s["document_id"], 0) >= 150:
-                # Seul un livre au texte dense se lit trop vite à ce rythme : un
-                # recueil de proverbes, un par page, se feuillette.
+                # Seul un livre au texte dense se lit trop vite à ce rythme
                 probleme = "plus de 4 pages par minute sur un texte dense"
             elif re.search(r"Pages \d+ à \d+ et \d+ chapitre", s["objective"]):
                 probleme = "libellé contradictoire avec les pages"

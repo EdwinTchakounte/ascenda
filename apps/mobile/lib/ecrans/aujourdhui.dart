@@ -19,9 +19,7 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// L'écran d'accueil : ce qu'il y a à faire maintenant, puis de quoi garder
-/// l'élan. La séance du jour d'abord, en grand ; les repères de la semaine
-/// ensuite ; les portes vers la bibliothèque et les pôles pour finir.
+/// L'écran d'accueil : ce qu'il y a à faire maintenant, puis de quoi garder l'élan.
 class EcranAujourdhui extends ConsumerWidget {
   const EcranAujourdhui({super.key});
 

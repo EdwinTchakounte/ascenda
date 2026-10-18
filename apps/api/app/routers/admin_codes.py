@@ -155,8 +155,7 @@ async def un_code(code_id: str, user: AdminUser):
 
 @router.patch("/codes/{code_id}", summary="Désactiver, prolonger ou renommer un code")
 async def changer(code_id: str, data: CodeChangeIn, user: AdminUser):
-    """Désactiver un code referme aussitôt les accès qu'il avait ouverts.
-    Avancer sa date de fin les referme à cette date."""
+    """Désactiver un code referme aussitôt les accès qu'il avait ouverts."""
     c = await fetch_one("select * from code_acces where id = %s", (code_id,))
     if not c:
         raise NotFound("Ce code n'existe pas.")

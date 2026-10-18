@@ -4,19 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'palette.dart';
 
 /// Le thème Material d'ASCENDA, monté depuis une [Palette].
-///
-/// Fraunces porte les titres : elle dit « livre » sans être décorative. Inter
-/// porte l'interface. Les surfaces sont arrondies avec douceur, les ombres
-/// larges et légères, les filets presque invisibles : une carte se détache par
-/// sa lumière, pas par un contour.
 abstract final class ThemeAscenda {
   static TextTheme _typo(TextTheme base, Palette p) {
     final t = GoogleFonts.frauncesTextTheme(base);
     final c = GoogleFonts.interTextTheme(base);
     return base.copyWith(
-      // L'échelle d'un livre : un titre de page franc, des intertitres nets, un
-      // corps de lecture confortable. Les titres sont serrés (Fraunces respire
-      // d'elle-même), les petites capitales largement espacées.
+      // L'échelle d'un livre : un titre de page franc, des intertitres nets
       displayLarge: t.displayLarge?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1.2),
       displayMedium: t.displayMedium?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -1),
       displaySmall: t.displaySmall?.copyWith(color: p.encre, fontWeight: FontWeight.w600, letterSpacing: -0.8),

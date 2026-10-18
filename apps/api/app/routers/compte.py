@@ -114,13 +114,13 @@ async def usage(user: CurrentUser):
 
 @router.get("/formules", summary="Les formules disponibles")
 async def formules():
-    """Lues depuis plan_quota : la page de tarifs ne peut pas diverger du code
-    qui applique les limites."""
+    """Lues depuis plan_quota : la page de tarifs ne peut pas diverger du code qui
+    applique.
+    """
     lignes = await fetch_all(
         "select plan, type, period, max_value, hard from plan_quota order by plan, type"
     )
-    # La formule la moins chère : c'est le prix d'appel, celui qu'on affiche à
-    # côté du nom de l'offre.
+    # La formule la moins chère : c'est le prix d'appel
     tarif = await fetch_one(
         """select montant, devise, periode_mois from plan_tarif
             where plan = 'premium' and actif order by montant limit 1"""

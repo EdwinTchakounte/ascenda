@@ -37,8 +37,7 @@ def sans_recouvrement(precedent, suivant, fenetre=1400):
     return suivant
 
 def deja_fait(conn, doc_id, genre="quiz"):
-    """Chapitres déjà pourvus du dérivé demandé. Un ouvrage entièrement
-    couvert en QCM reste à couvrir en citations : le genre change le reste."""
+    """Chapitres déjà pourvus du dérivé demandé."""
     with conn.cursor() as cur:
         cur.execute("""select chapter_id from derivative
                        where document_id=%s and kind=%s and superseded_by is null
@@ -88,8 +87,7 @@ if __name__ == "__main__":
                    f"   p. {ps}-{pe}   {tok} tokens\n{'='*72}")
         morceaux = texte(conn, cid)
         if tok > a.max_chap and len(morceaux) > 3:
-            # chapitre trop long pour une lecture integrale : on echantillonne
-            # en gardant toujours le debut et la fin, et on le signale.
+            # chapitre trop long pour une lecture integrale
             pas = 2
             while pas < len(morceaux):
                 garde = [morceaux[0]] + morceaux[1:-1][::pas] + [morceaux[-1]]

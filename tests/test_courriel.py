@@ -174,8 +174,7 @@ async def main():
        await evenements.bienvenue(anonyme) == "ignore")
 
     print("\n· Le formatage")
-    # L'espace des milliers est une espace fine insécable (U+202F) : un montant
-    # ne se coupe pas en fin de ligne, et c'est l'usage typographique français.
+    # L'espace des milliers est une espace fine insécable (U+202F)
     ok("28000 devient « 28 000 XAF », espace fine insécable comprise",
        evenements.montant_fr(28000) == "28\u202f000 XAF",
        repr(evenements.montant_fr(28000)))

@@ -42,8 +42,7 @@ class Settings(BaseSettings):
     anthropic_api_key: str = ""
     agent_model: str = "claude-opus-5"
     agent_max_context_chunks: int = 8
-    # Le modèle qui vectorise le corpus. Doit correspondre à la dimension
-    # de la colonne `chunk.embedding`.
+    # Le modèle qui vectorise le corpus.
     embed_model: str = "intfloat/multilingual-e5-large"
 
     dossier_livres: str = str(ROOT / "livres")
@@ -53,7 +52,6 @@ class Settings(BaseSettings):
     tara_business_id: str = ""
     public_base_url: str = "http://localhost:8250"
     # Ces deux réglages valident des paiements sans passer par Tara.
-    # Ils ne doivent jamais valoir true en production.
     paiement_test_auto_valide: bool = False
     reconciliation_timeout_heures: int = 24
     reconciliation_pause_secondes: float = 20.0

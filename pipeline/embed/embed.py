@@ -11,8 +11,7 @@ from pipeline.common import PG, pg  # noqa: E402
 MODELE = "intfloat/multilingual-e5-large"
 DIMENSIONS = 1024
 
-# e5 attend un préfixe explicite : « passage: » pour ce qu'on indexe,
-# « query: » pour ce qu'on cherche. Sans lui, la qualité chute nettement.
+# e5 attend un préfixe explicite
 PREFIXE_PASSAGE = "passage: "
 PREFIXE_REQUETE = "query: "
 

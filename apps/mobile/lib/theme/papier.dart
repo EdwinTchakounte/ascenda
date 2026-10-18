@@ -6,17 +6,8 @@ import 'palette.dart';
 import 'texte.dart';
 
 /// La matière de l'application : du papier, de l'encre, des filets.
-///
-/// Un aplat de couleur derrière des cartes blanches, c'est le décor de
-/// n'importe quelle application. Ici le fond porte un grain de papier, les
-/// séparations sont des filets d'imprimeur, et les titres se posent comme sur
-/// une page de livre. Tout est dessiné, rien n'est une image : le grain suit le
-/// thème, il ne jure jamais avec lui, et l'application ne grossit pas.
 
 /// Le grain du papier, posé une fois pour toute la page.
-///
-/// Semé par une graine fixe : le grain ne bouge pas d'une image à l'autre, donc
-/// il ne scintille pas au défilement.
 class FondPapier extends StatelessWidget {
   const FondPapier({super.key, required this.child, this.grain = 1});
 
@@ -48,9 +39,7 @@ class _Grain extends CustomPainter {
   @override
   void paint(Canvas canvas, Size taille) {
     final hasard = Random(20260923);
-    // Des fibres courtes, très peu contrastées : on ne les voit pas, on les
-    // sent. Sur un fond sombre elles éclairent, sur un fond clair elles
-    // assombrissent.
+    // Des fibres courtes, très peu contrastées : on ne les voit pas, on les sent.
     final encre = p.sombre ? Colors.white : p.encre;
     final n = (taille.width * taille.height / 900).round();
     for (var i = 0; i < n; i++) {
@@ -293,9 +282,7 @@ class Fleuron extends StatelessWidget {
 }
 
 
-/// Une coche tracée à la plume, en deux temps. Elle remplace la coche de
-/// Material partout où l'on marque quelque chose comme fait : c'est le geste
-/// d'un lecteur qui coche son cahier.
+/// Une coche tracée à la plume, en deux temps.
 class Coche extends StatelessWidget {
   const Coche({super.key, this.taille = 20, this.couleur, this.epaisseur = 2.2});
   final double taille;

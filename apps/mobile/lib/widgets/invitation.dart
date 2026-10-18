@@ -10,15 +10,6 @@ import '../theme/texte.dart';
 import 'ui.dart';
 
 /// L'invitation à ouvrir un compte, montrée aux visiteurs seulement.
-///
-/// La bibliothèque et les fiches sont consultables sans compte : c'est la
-/// vitrine du produit. Mais rien n'invitait à s'inscrire une fois sur place, et
-/// un visiteur qui trouve un ouvrage intéressant n'avait aucun chemin vers la
-/// suite. Ce bloc est ce chemin.
-///
-/// Il ne s'affiche jamais à un utilisateur connecté, et jamais tant que l'état
-/// de la session n'est pas établi : un bandeau qui apparaît puis disparaît au
-/// démarrage donne le sentiment d'une application mal finie.
 class InvitationCompte extends ConsumerWidget {
   const InvitationCompte({super.key, this.compact = false, this.raison});
 
@@ -96,9 +87,7 @@ class InvitationCompte extends ConsumerWidget {
             style: t.textTheme.bodyMedium?.copyWith(color: p.surHeros, height: 1.6),
           ),
           const SizedBox(height: 18),
-          // Empilés plutôt que côte à côte : sur un écran de 320 px, deux
-          // boutons sur une ligne laissent si peu de place que « Créer
-          // mon compte » se coupait en quatre lignes dans sa pastille.
+          // Empilés plutôt que côte à côte
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(

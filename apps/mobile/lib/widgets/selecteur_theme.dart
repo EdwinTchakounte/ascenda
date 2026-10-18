@@ -5,13 +5,7 @@ import '../etat/apparence.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// Le choix du thème : cinq échantillons de papier, chacun un aperçu de son
-/// ambiance.
-///
-/// Une pastille ronde ne dit rien du papier qu'on choisit. Ici chaque vignette
-/// est une petite page : le fond du thème, quelques lignes de texte à l'encre,
-/// le bandeau profond des cartes de mise en avant et le point d'or. On choisit
-/// une matière, pas une couleur.
+/// Le choix du thème : cinq échantillons de papier, chacun un aperçu de son ambiance.
 class SelecteurTheme extends ConsumerWidget {
   const SelecteurTheme({super.key, this.compact = false});
 
@@ -133,9 +127,7 @@ class _Echantillon extends StatelessWidget {
   }
 }
 
-/// Une page du thème : son papier, ses lignes d'encre, son bandeau profond et
-/// son point d'or. Pour « Auto », la feuille est déchirée en diagonale, moitié
-/// Ivoire, moitié Nuit.
+/// Une page du thème : son papier, ses lignes d'encre
 class _Feuille extends CustomPainter {
   _Feuille({required this.clair, required this.sombre, required this.auto});
   final Palette clair;

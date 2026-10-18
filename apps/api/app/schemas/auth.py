@@ -8,8 +8,7 @@ class InscriptionIn(BaseModel):
     email: EmailStr
     mot_de_passe: str = Field(min_length=8, max_length=128)
     nom: str | None = Field(default=None, max_length=120)
-    # Un code d'accès ou un code ambassadeur, facultatif. Vérifié avant que le
-    # compte soit créé : un code refusé ne laisse pas de compte derrière lui.
+    # Un code d'accès ou un code ambassadeur, facultatif.
     code: str | None = Field(default=None, max_length=40)
 
 
@@ -58,7 +57,6 @@ class MotDePasseOublieIn(BaseModel):
 
 class ReinitialiserIn(BaseModel):
     email: EmailStr
-    # Six chiffres, saisis à la main depuis un courriel. On accepte les espaces
-    # que les gens ajoutent en recopiant, ils sont retirés côté service.
+    # Six chiffres, saisis à la main depuis un courriel.
     code: str = Field(min_length=6, max_length=12)
     nouveau: str = Field(min_length=8, max_length=128)

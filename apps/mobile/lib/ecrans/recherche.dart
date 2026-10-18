@@ -16,12 +16,6 @@ import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// La recherche dans le texte des 78 ouvrages.
-///
-/// Elle cherche dans ce que les livres disent, pas seulement dans leurs titres.
-/// Deux voies fusionnées : les mots exacts, qui trouvent un nom propre ou une
-/// date, et le sens, qui trouve un passage qui parle de la même chose sans
-/// employer les mêmes termes. C'est cette seconde voie qui répond à une
-/// question posée avec ses propres mots.
 class EcranRecherche extends ConsumerStatefulWidget {
   const EcranRecherche({super.key, this.initiale});
 
@@ -200,10 +194,6 @@ class _EtatRecherche extends ConsumerState<EcranRecherche> {
 }
 
 /// Par quelle voie la réponse est venue.
-///
-/// Le dire coûte une ligne et évite un malentendu : tant que le corpus n'est
-/// pas vectorisé, la recherche est en plein texte, et un lecteur qui l'ignore
-/// croit que le moteur comprend mal alors qu'il ne fait que chercher des mots.
 class _Mode extends StatelessWidget {
   const _Mode({required this.mode});
   final String mode;
@@ -296,10 +286,7 @@ class _CarteResultat extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
               style: t.textTheme.titleMedium),
           const SizedBox(height: 6),
-          // Le titre courant d'une page de livre : le chapitre à gauche, le
-          // folio à droite, le filet dessous. Le folio porte son blanc devant
-          // lui : un chapitre long est coupé par une ellipse, et « …p. 245 »
-          // se lisait d'un seul tenant.
+          // Le titre courant d'une page de livre
           TitreCourant(
             '${r['chapitre'] ?? ''}'.isNotEmpty ? '${r['chapitre']}' : 'dans le texte',
             folio: page != null ? '\u00A0\u00A0p. $page' : null,

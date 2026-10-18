@@ -34,8 +34,7 @@ for i, bloc in enumerate(lot):
         erreurs.append(f"bloc {i} : chapitre '{court}' {'ambigu' if cible else 'introuvable'}"); continue
     qs = bloc.get("questions") or []
     if not qs:
-        # un chapitre sans matière (appareil éditorial, table, index) se solde
-        # par un enregistrement vide motivé : le registre reste honnête.
+        # un chapitre sans matière (appareil éditorial, table
         if bloc.get("motif"):
             resolus.append((cible[0], [], bloc["motif"])); continue
         erreurs.append(f"bloc {i} : aucune question"); continue
@@ -59,8 +58,7 @@ for i, bloc in enumerate(lot):
 if erreurs:
     print("\n".join(erreurs[:20])); sys.exit(f"\n{len(erreurs)} erreur(s), rien enregistré")
 
-# Les rédacteurs mettent la bonne réponse en premier : on mélange les choix à
-# l'enregistrement, de façon déterministe (même outil que pour le corpus).
+# Les rédacteurs mettent la bonne réponse en premier
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "apps" / "api"))
 from app.outils.melanger_choix import MARQUE, melanger  # noqa: E402
 

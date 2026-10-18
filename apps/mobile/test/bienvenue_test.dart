@@ -1,9 +1,4 @@
-// Ce que ce fichier vérifie : que l'accueil tient sur un petit téléphone réglé
-// en grande police, et que ses boutons se voient sur le fond de nuit.
-//
-// Le défaut a été constaté sur un vrai téléphone : une colonne fixe poussait
-// les boutons hors de l'écran, sans défilement pour les rattraper, et le
-// bouton secondaire prenait la teinte encre du thème clair.
+// Ce que ce fichier vérifie : que l'accueil tient sur un petit téléphone réglé en
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

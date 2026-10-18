@@ -10,14 +10,6 @@ import 'coffre.dart';
 import 'session.dart';
 
 /// La bibliothèque hors ligne.
-///
-/// Un pack contient tout ce qu'ASCENDA sait d'un ouvrage : fiche, idées-force,
-/// citations avec leurs pages, quiz jouables et corrigeables, plan de lecture.
-/// Une fois rapatrié, il ne dépend plus du réseau.
-///
-/// Les packs pèsent de 50 Ko à 1 Mo : ils vont dans des fichiers, pas dans les
-/// préférences, qui sont relues en entier à chaque accès. Sur le web, où le
-/// système de fichiers n'existe pas, on retombe sur les préférences.
 
 /// Un poids de fichier, écrit en français.
 String poidsLisible(int octets) => octets < 1024 * 1024
@@ -165,9 +157,7 @@ class DepotHorsLigne {
     }
   }
 
-  /// Le texte intégral hors ligne a une date de validité : l'abonnement qui l'a
-  /// ouvert peut prendre fin. Passé cette date, le pack garde sa fiche et ses
-  /// quiz, mais plus le texte, jusqu'à la prochaine connexion.
+  /// Le texte intégral hors ligne a une date de validité
   Map<String, dynamic> _valable(Map<String, dynamic> pack, DateTime maintenant) {
     if (pack['lecture'] == null) return pack;
     final jusqu = DateTime.tryParse('${pack['lecture_valable_jusqu_au'] ?? ''}');
@@ -211,11 +201,6 @@ class DepotHorsLigne {
   }
 
   /// Le PDF d'un ouvrage libre, gardé tel quel.
-  ///
-  /// Un ouvrage libre n'a rien à cacher : le chiffrer obligerait à le relire en
-  /// entier en mémoire pour l'ouvrir, ce qui coûte cher sur un gros PDF. Il vit
-  /// donc en clair, dans un dossier à part de celui du coffre, et le lecteur
-  /// l'ouvre page par page depuis le disque.
   Future<File?> fichierPdfClair(String documentId) async {
     if (kIsWeb) return null;
     final base = await (_racine?.call() ?? getApplicationSupportDirectory());
@@ -286,10 +271,6 @@ final packLocalProvider =
 
 
 /// Un chapitre lu depuis le pack hors ligne, sous la forme que rend l'API.
-///
-/// Rien si le pack ne porte pas le texte de ce chapitre (ouvrage non réservé,
-/// texte expiré, chapitre sans passage) : l'écran affiche alors l'erreur réseau
-/// habituelle plutôt qu'une page vide.
 Map<String, dynamic>? chapitreHorsLigne(Map<String, dynamic> pack, String chapitreId) {
   final lecture = (pack['lecture'] as List?)?.cast<Map<String, dynamic>>();
   if (lecture == null) return null;
@@ -336,9 +317,7 @@ Map<String, dynamic>? chapitreHorsLigne(Map<String, dynamic> pack, String chapit
   };
 }
 
-/// La fiche d'un ouvrage emporté, reconstituée depuis son pack pour l'écran de
-/// l'ouvrage. Sans réseau, c'est la porte d'entrée vers le sommaire, le texte
-/// et le PDF gardés sur l'appareil.
+/// La fiche d'un ouvrage emporté, reconstituée depuis son pack pour l'écran de l'ouvrage.
 Map<String, dynamic> ficheHorsLigne(Map<String, dynamic> pack, {bool pdf = false}) {
   final o = (pack['ouvrage'] as Map?)?.cast<String, dynamic>() ?? {};
   final integral = pack['lecture'] != null;

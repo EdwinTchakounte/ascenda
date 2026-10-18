@@ -50,8 +50,7 @@ async def relations(
     page: Annotated[int, Query(ge=1)] = 1,
     par_page: Annotated[int, Query(ge=1, le=200)] = PAR_PAGE,
 ):
-    """Qui échange avec qui, combien et quand : de quoi repérer un compte qui
-    écrit à tout le monde, sans ouvrir aucune conversation."""
+    """Qui échange avec qui, combien et quand."""
     limite, decalage = bornes(page, par_page)
     total = await fetch_one("select count(*) as n from amitie where statut = 'acceptee'")
     lignes = await fetch_all(
@@ -132,8 +131,7 @@ async def signalements(
 
 @router.post("/signalements/{signalement_id}", summary="Trancher un signalement")
 async def trancher(signalement_id: UUID, data: DecisionIn, user: AdminUser):
-    """`masque` retire le message des deux conversations et le garde en base ;
-    `ignore` le laisse visible. Dans les deux cas, le signalement est clos."""
+    """`masque` retire le message des deux conversations et le garde en base."""
     async with connection() as conn:
         cur = await conn.execute(
             """update signalement set traite_le = now(), traite_par = %s, decision = %s

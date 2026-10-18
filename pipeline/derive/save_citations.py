@@ -64,8 +64,7 @@ for i, bloc in enumerate(lot):
         if not c.get("portee"): erreurs.append(f"{ref} : portee manquante")
         if not isinstance(c.get("page"), int):
             erreurs.append(f"{ref} : page doit être un entier")
-        # Le tiret cadratin est proscrit dans ce qu'ASCENDA rédige, pas dans ce
-        # qu'ASCENDA cite : une citation doit rester le texte de l'auteur.
+        # Le tiret cadratin est proscrit dans ce qu'ASCENDA rédige
         for k in ("theme", "portee"):
             if "—" in str(c.get(k, "")) or "–" in str(c.get(k, "")):
                 erreurs.append(f"{ref} : tiret cadratin interdit dans {k}")

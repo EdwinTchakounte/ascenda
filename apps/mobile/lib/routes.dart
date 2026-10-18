@@ -50,10 +50,6 @@ final _racine = GlobalKey<NavigatorState>();
 final _coque = GlobalKey<NavigatorState>();
 
 /// Réveille le routeur quand la session change, sans le reconstruire.
-///
-/// Reconstruire le GoRouter à chaque changement d'état ramènerait l'application
-/// à sa route initiale : après une inscription, l'utilisateur était renvoyé à
-/// l'accueil au lieu du diagnostic. On notifie donc, on ne recrée pas.
 class _EveilSession extends ChangeNotifier {
   _EveilSession(this._ref) {
     _ref.listen<Session>(sessionProvider, (_, _) => notifyListeners());

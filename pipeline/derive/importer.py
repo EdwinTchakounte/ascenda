@@ -124,10 +124,7 @@ def importer_lots(conn, ref, dossier, motif, kind, cle_liste, bilan, doc_filtre,
 
 
 def importer_fiches(conn, ref, bilan, doc_filtre, ecrire):
-    """La fiche porte son `document_id` : le rattachement ne dépend donc pas du titre, qui peut
-    diverger entre le fichier et la base. À défaut d'identifiant, on retombe sur le titre
-    normalisé, et les cas non résolus sont signalés, jamais devinés.
-    """
+    """La fiche porte son `document_id`."""
     non_resolues = []
     for f in sorted((DATA / "derivatives").glob("fiche_*.json")):
         contenu = json.loads(f.read_text())

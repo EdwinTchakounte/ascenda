@@ -11,8 +11,7 @@ from app.services import exploitation
 
 log = logging.getLogger("ascenda.codes")
 
-# Sans 0, O, 1, I ni L : un code dicté au téléphone ou recopié d'une capture
-# d'écran ne doit pas se tromper de caractère.
+# Sans 0, O, 1, I ni L : un code dicté au téléphone ou recopié d'une capture d'écran ne
 _ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789"
 
 INTROUVABLE = "Ce code n'existe pas. Vérifiez qu'il est bien recopié."
@@ -24,8 +23,7 @@ class CodeRefuse(ApiError):
 
 
 def normaliser(brut: str | None) -> str:
-    """« lancement 2026 » devient « LANCEMENT2026 ». Les espaces que l'on ajoute
-    en recopiant disparaissent, les tirets restent."""
+    """« lancement 2026 » devient « LANCEMENT2026 »."""
     return re.sub(r"\s+", "", (brut or "")).upper()
 
 
@@ -198,7 +196,6 @@ async def bon_disponible(user_id: str) -> dict | None:
 
 
 def montant_reduit(montant: int, pourcent: int) -> int:
-    """Arrondi à la dizaine inférieure, jamais sous 10 XAF : un mobile money ne
-    débite pas de centimes, et un montant nul n'est pas un paiement."""
+    """Arrondi à la dizaine inférieure, jamais sous 10 XAF."""
     brut = montant * (100 - pourcent) / 100
     return max(10, int(brut // 10) * 10)

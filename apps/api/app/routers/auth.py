@@ -89,8 +89,7 @@ async def inscription(data: InscriptionIn, request: Request):
            returning id, email, display_name, plan, plan_until, locale, created_at""",
         (email, data.nom, hash_password(data.mot_de_passe)),
     )
-    # Le mot de bienvenue ne conditionne pas l'ouverture du compte : si le
-    # service de courriel est en panne, on ne va pas refuser une inscription.
+    # Le mot de bienvenue ne conditionne pas l'ouverture du compte
     try:
         from app.services.courriel import evenements
 
@@ -203,8 +202,7 @@ async def mot_de_passe_oublie(data: MotDePasseOublieIn):
 async def reinitialiser_mot_de_passe(data: ReinitialiserIn):
     user = await mot_de_passe.reinitialiser(data.email, data.code, data.nouveau)
     if not user:
-        # Un seul message pour le code faux, expiré, déjà servi ou trop essayé :
-        # préciser lequel aiderait surtout celui qui essaie des codes.
+        # Un seul message pour le code faux, expiré, déjà servi ou trop essayé
         raise Unauthorized("Ce code n'est pas valable. Demandez-en un nouveau.")
     try:
         from app.services.courriel import envoyer
@@ -237,8 +235,7 @@ async def changer_mot_de_passe(data: ChangerMotDePasseIn, user: CurrentUser):
     except Exception:  # noqa: BLE001
         log.exception("Avis de changement de mot de passe non envoyé.")
 
-    # Changer de mot de passe ferme les autres sessions : c'est ce qu'on attend
-    # quand on le change parce qu'on le croit compromis.
+    # Changer de mot de passe ferme les autres sessions
     await execute(
         "update refresh_token set revoked_at = now() where user_id = %s and revoked_at is null",
         (user["id"],),

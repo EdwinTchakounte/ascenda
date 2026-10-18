@@ -14,8 +14,7 @@ _APPAREIL = {
     "bibliographie", "biographie", "les auteurs", "a propos de l'auteur", "a propos des auteurs",
     "l'auteur", "des memes auteurs", "table", "sources", "credits", "credits photographiques",
 }
-# Un nom de fichier ou une étiquette de numérisation pris pour un titre :
-# « PIA3_Страница_177_1L ».
+# Un nom de fichier ou une étiquette de numérisation pris pour un titre
 _NOM_FICHIER = re.compile(r"\w+_\w+_\d|[\u0400-\u04FF\u0590-\u05FF]")
 _MOT_COUPE = re.compile(r"[A-Za-zÀ-ÿ’']-$")
 _SEPARATEUR_FINAL = re.compile(r"\s+[-–—]\s*$")
@@ -55,8 +54,7 @@ def completer_mot_coupe(titre: str, texte: str | None) -> str | None:
     debut = titre.rstrip("-").strip()
     if len(debut) < 12:
         return None
-    # Le texte peut porter le tiret de coupure suivi d'un saut de ligne, ou le
-    # mot entier : on accepte les deux.
+    # Le texte peut porter le tiret de coupure suivi d'un saut de ligne, ou le mot entier
     motif = re.escape(debut).replace(r"\ ", r"\s+") + r"-?\s*([A-Za-zÀ-ÿ’']+)"
     m = re.search(motif, texte, flags=re.IGNORECASE)
     if not m:

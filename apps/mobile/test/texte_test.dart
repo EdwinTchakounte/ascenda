@@ -1,6 +1,4 @@
-// Ce que ce fichier vérifie : qu'aucun mot ne reste seul sur la dernière ligne
-// d'un paragraphe, qu'un « : » ne commence jamais une ligne, et que le texte
-// garde sa longueur (les surlignages du lecteur en dépendent).
+// Ce que ce fichier vérifie : qu'aucun mot ne reste seul sur la dernière ligne d'un
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

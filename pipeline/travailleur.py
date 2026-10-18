@@ -20,7 +20,6 @@ if not Path(PYTHON).exists():
 REPOS = 5  # secondes entre deux regards à la file, quand elle est vide
 
 # Le signe de vie lu par la sonde Docker : la boucle et le battement le touchent.
-# Un fichier plutôt qu'un port : l'ouvrier n'écoute rien, et n'a pas à le faire.
 SIGNE_DE_VIE = Path(os.getenv("SIGNE_DE_VIE", "/tmp/ouvrier-vivant"))
 
 
@@ -30,8 +29,7 @@ def signaler_vie() -> None:
     except OSError:
         pass
 
-# Ce que chaque type lance. La même table que côté API, recopiée ici parce que
-# l'ouvrier ne dépend pas du code de l'API : il ne partage avec elle que la base.
+# Ce que chaque type lance.
 COMMANDES = {
     "ingestion": ["pipeline/ingest/ingest.py"],
     "structure": ["pipeline/ingest/structure.py", "--tous"],
@@ -45,9 +43,8 @@ _arret = False
 
 
 def _stop(*_):
-    """Arrêt propre : on finit le travail en cours plutôt que de le laisser à
-    moitié fait, puis on sort. Un conteneur qu'on redéploie ne doit pas laisser
-    une base à demi écrite."""
+    """Arrêt propre : on finit le travail en cours plutôt que de le laisser à moitié fait.
+    """
     global _arret
     _arret = True
     print("\nArrêt demandé. Le travail en cours va jusqu'au bout.", flush=True)
@@ -126,8 +123,7 @@ def executer(conn, travail) -> tuple[str, str, str | None]:
         return "echec", "", f"Type de travail inconnu : {type_}"
 
     args = [PYTHON] + commande
-    # Un travail qui vise un ouvrage le passe au script, quand celui-ci sait le
-    # recevoir. Les autres tournent sur tout le corpus.
+    # Un travail qui vise un ouvrage le passe au script, quand celui-ci sait le recevoir.
     if document_id and type_ in ("vecteurs", "derive"):
         args += ["--doc", str(document_id)[:8]]
     if type_ == "derive" and (charge or {}).get("kind"):
@@ -151,8 +147,7 @@ def executer(conn, travail) -> tuple[str, str, str | None]:
         dernier = 0.0
         for ligne in proc.stdout:
             sortie.append(ligne.rstrip())
-            # On remonte l'avancement toutes les cinq secondes, pas à chaque
-            # ligne : un script bavard écrirait mille fois par minute en base.
+            # On remonte l'avancement toutes les cinq secondes, pas à chaque ligne
             if time.time() - dernier > 5:
                 dernier = time.time()
                 avancer(conn, travail_id, "\n".join(sortie), _progres(sortie))

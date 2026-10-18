@@ -31,15 +31,12 @@ CONSIGNES = {
 
 TARIF_ENTREE = float(os.getenv("TARIF_ENTREE", "15"))
 TARIF_SORTIE = float(os.getenv("TARIF_SORTIE", "75"))
-# Sortie moyenne observée par dérivé. Réévaluée dès qu'un lot réel a tourné :
-# la table `derivative` porte les jetons de chaque appel.
+# Sortie moyenne observée par dérivé.
 SORTIE_ESTIMEE = 2500
 
 # ------------------------------------------------------------------ contexte
 def context_pack(conn, doc_id, budget=CTX_BUDGET, chapter_id=None):
-    """Assemble les extraits d'un document (ou d'un chapitre) sous contrainte de budget.
-    Sur un gros ouvrage, on échantillonne régulièrement plutôt que de tronquer au début :
-    une synthèse bâtie sur les 100 premières pages est une synthèse fausse."""
+    """Assemble les extraits d'un document (ou d'un chapitre) sous contrainte de budget."""
     with conn.cursor() as cur:
         if chapter_id:
             cur.execute("""select ord, page_start, page_end, text, token_count

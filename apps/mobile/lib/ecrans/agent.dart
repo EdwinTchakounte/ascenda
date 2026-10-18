@@ -17,12 +17,6 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
 /// La conversation avec l'agent.
-///
-/// Ce n'est pas une messagerie, c'est une correspondance : on écrit un billet,
-/// il revient une page avec, en pied, les volumes consultés. Chaque réponse
-/// porte donc ses citations sous forme de fiches « dos du volume, p. 47 ».
-/// C'est la règle du produit : on ne répond jamais sans dire d'où vient la
-/// réponse.
 class PanneauAgent extends ConsumerStatefulWidget {
   const PanneauAgent({
     super.key,
@@ -34,9 +28,7 @@ class PanneauAgent extends ConsumerStatefulWidget {
     this.actions = const [],
   });
 
-  /// Dans l'onglet, le panneau tient lieu de barre du haut : il porte le bouton
-  /// du tiroir et les actions, au lieu d'empiler un titre « Agent » au-dessus
-  /// de son propre en-tête « L'agent ».
+  /// Dans l'onglet, le panneau tient lieu de barre du haut
   final Widget? avant;
   final List<Widget> actions;
 
@@ -73,10 +65,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
   }
 
   /// Recharge les messages d'une conversation passée.
-  ///
-  /// La liste des conversations existait déjà, mais on ne pouvait rien en
-  /// faire : les rouvrir était la seule chose qu'un lecteur cherche à faire
-  /// avec un historique.
   Future<void> _rouvrir(String id) async {
     setState(() => _attente = true);
     try {
@@ -272,9 +260,6 @@ class _PanneauAgentState extends ConsumerState<PanneauAgent> {
 }
 
 /// Le cachet de l'agent : la plume frappée sur un carré d'encre.
-///
-/// Un disque à l'étincelle ferait un assistant de plus ; ici c'est une main qui
-/// écrit, et elle signe ses pages du même cachet d'un bout à l'autre.
 class _AvatarAgent extends StatelessWidget {
   const _AvatarAgent({this.taille = 30});
   final double taille;

@@ -82,9 +82,8 @@ QUESTIONS_PROFIL = [
 
 @router.get("/diagnostic", summary="Le questionnaire d'entrée")
 async def diagnostic(axe: Annotated[str | None, Query(description="slug d'axe")] = None):
-    """Six questions de profil, puis jusqu'à quatre questions tirées des quiz réels de l'axe
-    choisi. Sonder la connaissance sur le corpus lui-même vaut mieux que la faire déclarer :
-    le lecteur se surestime ou se sous-estime.
+    """Six questions de profil, puis jusqu'à quatre questions tirées des quiz réels de
+    l'axe.
     """
     sondage = []
     if axe:
@@ -141,8 +140,7 @@ async def enregistrer_diagnostic(data: DiagnosticIn, user: CurrentUser):
     aisance = int(r.get("aisance_lecture", 1) or 0)
     sondes = [v for k, v in r.items() if k.startswith("sonde_")]
 
-    # Le déclaratif pèse deux tiers, les sondes un tiers : quatre questions ne
-    # suffisent pas à établir un niveau, elles corrigent une auto-évaluation.
+    # Le déclaratif pèse deux tiers, les sondes un tiers
     base = (familiarite + aisance) / 6.0
     score = base * 0.66 + (0.34 if not sondes else 0.34 * (sum(1 for s in sondes if s != -1) / len(sondes)))
     niveau = "debutant" if score < 0.4 else ("intermediaire" if score < 0.72 else "avance")
@@ -464,9 +462,7 @@ async def replanifier(
     chronogramme_id: str,
     user: Annotated[dict, Depends(exige("chronogramme_adaptatif"))],
 ):
-    """Regénère les séances restantes en une nouvelle version, sans toucher à l'historique. Le
-    plan précédent passe en « remplacé » : on garde la trace de ce qui avait été promis, ce
-    qui est la condition d'un plan honnête.
+    """Regénère les séances restantes en une nouvelle version, sans toucher à l'historique.
     """
     c = await fetch_one(
         """select c.*, ua.id as user_axis_id, ua.axis_id

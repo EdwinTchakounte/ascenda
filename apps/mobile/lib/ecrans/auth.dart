@@ -10,9 +10,6 @@ import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
 /// La marque ASCENDA : le vrai logo, pas une approximation.
-///
-/// Le « A » porte une comète, une étoile et une silhouette aux bras levés, avec
-/// des dégradés qu'un tracé redessiné ne rendrait pas. On sert donc le fichier.
 class MarqueAscenda extends StatelessWidget {
   const MarqueAscenda({super.key, this.taille = 44, this.couleur});
 
@@ -35,11 +32,6 @@ class MarqueAscenda extends StatelessWidget {
 }
 
 /// L'accueil des visiteurs.
-///
-/// Il garde les couleurs fixes de la marque (le bleu nuit et l'or du logo)
-/// quel que soit le thème choisi : c'est la couverture du livre, elle ne
-/// change pas avec la lampe du lecteur. Les teintes viennent donc de
-/// [Palette.nuit], jamais de la palette courante.
 class EcranBienvenue extends StatelessWidget {
   const EcranBienvenue({super.key});
 
@@ -181,9 +173,7 @@ class _Lueur extends StatelessWidget {
       );
 }
 
-/// Un rayonnage de dos de livres, aux teintes des parcours : l'accueil dit
-/// d'emblée qu'on entre dans une bibliothèque. Dessiné, pas téléchargé : rien
-/// à charger, rien qui manque sans réseau.
+/// Un rayonnage de dos de livres, aux teintes des parcours
 class _Rayonnage extends StatelessWidget {
   const _Rayonnage();
 

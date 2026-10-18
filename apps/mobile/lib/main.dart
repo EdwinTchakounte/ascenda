@@ -13,9 +13,7 @@ import 'widgets/exploitation.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Les polices sont embarquées dans assets/google_fonts. Sans cette ligne,
-  // google_fonts les téléchargerait au lancement : sans réseau, l'application
-  // s'afficherait dans une police de secours.
+  // Les polices sont embarquées dans assets/google_fonts.
   GoogleFonts.config.allowRuntimeFetching = false;
   await Reseau.preparer();
   // Les dates s'affichent en français partout : « Sam. 29 août », pas « Sat ».
@@ -59,9 +57,7 @@ class _ApplicationAscendaState extends ConsumerState<ApplicationAscenda> with Wi
 
     if (Palette.courante.id != palette.id) {
       Palette.courante = palette;
-      // Beaucoup d'écrans lisent leurs couleurs sans passer par Theme.of : ils
-      // ne se reconstruiraient pas d'eux-mêmes. On reconstruit tout l'arbre,
-      // état conservé, dès la fin de cette image.
+      // Beaucoup d'écrans lisent leurs couleurs sans passer par Theme.of
       WidgetsBinding.instance.addPostFrameCallback((_) {
         if (!mounted) return;
         void marquer(Element e) {
@@ -74,9 +70,7 @@ class _ApplicationAscendaState extends ConsumerState<ApplicationAscenda> with Wi
 
     final barres = palette.sombre ? SystemUiOverlayStyle.light : SystemUiOverlayStyle.dark;
 
-    // Le voile enveloppe tout, y compris les écrans d'authentification : une
-    // mise à jour doit se voir avant qu'on essaie de se connecter, pas après un
-    // échec inexpliqué.
+    // Le voile enveloppe tout, y compris les écrans d'authentification
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: barres.copyWith(
         statusBarColor: Colors.transparent,

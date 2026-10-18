@@ -14,18 +14,6 @@ final _traitUnion = RegExp(r'(?<=\p{L})-(?=\p{L})', unicode: true);
 const _traitInsecable = '\u2011';
 
 /// Rend un texte français plus lisible une fois coupé en lignes.
-///
-/// - un signe double (« : », « ? », « ! », « ; ») ou un guillemet ne commence
-///   jamais une ligne ;
-/// - le dernier mot d'un paragraphe ne reste jamais seul sur sa ligne : il
-///   emmène le précédent avec lui ;
-/// - un mot composé ne se coupe pas à son trait d'union, sauf avec [composes]
-///   à faux : Fraunces n'a pas le trait d'union insécable, et un glyphe de
-///   secours au milieu d'un titre se verrait plus qu'une coupure.
-///
-/// Seuls des caractères existants sont remplacés, un pour un, jamais ajoutés ni retirés :
-/// la longueur du texte ne change pas, et une position de surlignage calculée
-/// sur le texte d'origine reste juste.
 String lisible(String texte, {bool composes = true}) {
   if (!texte.contains(' ')) return texte;
   return texte.split(_paragraphe).map((p) {
@@ -43,13 +31,7 @@ String lisible(String texte, {bool composes = true}) {
   }).join('\n');
 }
 
-/// Le texte de l'application : un `Text` qui applique [lisible], et justifie
-/// les paragraphes de lecture.
-///
-/// Justifier un libellé ou un titre n'apporterait rien et creuserait des
-/// trous : seuls les textes de corps (police de 17 px au plus) assez longs pour
-/// courir sur plusieurs lignes le sont, et seulement quand l'appelant n'a pas
-/// choisi d'alignement lui-même.
+/// Le texte de l'application : un `Text` qui applique [lisible]
 class Texte extends StatelessWidget {
   const Texte(
     this.data, {

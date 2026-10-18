@@ -25,9 +25,7 @@ class ErreurApi implements Exception {
   String toString() => message;
 }
 
-/// Perte de réseau. Distinguée d'une erreur serveur : le message et l'écran
-/// à afficher ne sont pas les mêmes, et beaucoup de nos lecteurs sont sur des
-/// connexions intermittentes.
+/// Perte de réseau.
 class HorsLigne implements Exception {
   const HorsLigne();
   @override
@@ -35,10 +33,6 @@ class HorsLigne implements Exception {
 }
 
 /// Client HTTP de l'API ASCENDA.
-///
-/// Il porte le jeton d'accès, le renouvelle tout seul quand il expire, et
-/// rejoue la requête une fois. L'appelant n'a donc jamais à gérer le
-/// rafraîchissement, sauf quand la session est réellement perdue.
 class ClientApi {
   ClientApi({String? base})
       : base = base ??
@@ -81,9 +75,7 @@ class ClientApi {
     await p.remove(_cleProfil);
   }
 
-  /// Le dernier profil reçu du serveur. Il sert à rouvrir la session sans
-  /// réseau : un lecteur qui a emporté un ouvrage doit pouvoir le lire en zone
-  /// blanche, pas retomber sur l'écran d'accueil.
+  /// Le dernier profil reçu du serveur.
   Future<void> garderProfil(Map<String, dynamic> j) async {
     final p = await SharedPreferences.getInstance();
     await p.setString(_cleProfil, jsonEncode(j));
@@ -101,22 +93,12 @@ class ClientApi {
   }
 
   /// Révoque le jeton de rafraîchissement côté serveur.
-  ///
-  /// Effacer les jetons du téléphone ne fermait rien : le jeton restait valable
-  /// soixante jours en base. Sur un appareil perdu ou revendu, quelqu'un qui
-  /// retrouvait la valeur rouvrait le compte. On prévient donc le serveur.
-  ///
-  /// L'appel ne bloque pas la déconnexion : si le réseau manque, l'utilisateur
-  /// a quand même demandé à sortir et on le fait sortir. Le jeton finira par
-  /// expirer.
   Future<void> revoquerSession() async {
     await _charger();
     final jeton = _refresh;
     if (jeton == null) return;
     try {
       // La route est authentifiée : elle ne révoque que les jetons du porteur.
-      // On passe donc par l'envoi normal, qui pose l'en-tête et renouvelle
-      // l'accès si celui du téléphone vient d'expirer.
       await post('/auth/deconnexion', corps: {'refresh_token': jeton});
     } catch (e) {
       debugPrint('Révocation impossible, sortie locale quand même : $e');
@@ -170,9 +152,7 @@ class ClientApi {
       };
       r = await envoi.timeout(const Duration(seconds: 25));
     } on HandshakeException catch (e) {
-      // Le réseau fonctionne, mais la connexion sécurisée n'a pas abouti. Dire
-      // « pas de connexion » enverrait le lecteur vérifier un réseau qui va
-      // bien. La cause la plus fréquente est une heure du téléphone fausse.
+      // Le réseau fonctionne, mais la connexion sécurisée n'a pas abouti.
       debugPrint('Échec TLS vers $base : $e');
       throw ErreurApi(
         "La connexion sécurisée au serveur a échoué. Vérifiez que la date et "
@@ -260,9 +240,6 @@ class ClientApi {
   }
 
   /// Télécharge un fichier en flux, en signalant l'avancement.
-  ///
-  /// Pour les PDF : certains pèsent des dizaines de mégaoctets, et une barre
-  /// qui avance vaut mieux qu'un écran qui semble figé sur une connexion lente.
   Future<Uint8List> telecharger(
     String chemin, {
     void Function(int recu, int? total)? progression,
@@ -305,15 +282,7 @@ class ClientApi {
     return morceaux.takeBytes();
   }
 
-  /// Télécharge un fichier directement sur le disque, sans jamais le tenir en
-  /// entier en mémoire.
-  ///
-  /// [telecharger] accumule tout avant de rendre les octets : sur un PDF de
-  /// quatre-vingt-dix mégaoctets, cela suffit à faire fermer l'application sur
-  /// un téléphone d'entrée de gamme. Ici, chaque morceau reçu part dans le
-  /// fichier et est relâché. L'écriture se fait dans un fichier provisoire,
-  /// renommé à la fin : une coupure ne laisse jamais un fichier à moitié écrit
-  /// qu'on croirait complet.
+  /// Télécharge un fichier directement sur le disque
   Future<File> telechargerVers(
     String chemin,
     File cible, {

@@ -69,8 +69,7 @@ async def main():
     await execute(
         """insert into refresh_token (user_id, token_hash, expires_at)
            values (%s, %s, now() + interval '60 days')""",
-        # Une empreinte unique : la colonne l'exige, et une suite doit pouvoir
-        # se rejouer sans qu'on nettoie la base entre deux passages.
+        # Une empreinte unique : la colonne l'exige
         (u["id"], f"essai-{uuid.uuid4().hex}"),
     )
     _, code = await mot_de_passe.demander(u["email"])

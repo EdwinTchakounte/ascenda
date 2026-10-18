@@ -18,8 +18,7 @@ with conn.cursor() as cur:
                 (a.doc, a.chapter, a.kind, a.level, json.dumps(data, ensure_ascii=False), a.model))
     did = cur.fetchone()[0]
     if a.kind == "fiche_lecture":
-        # La fiche est le référentiel bibliographique validé : elle fait autorité
-        # sur le titre, les auteurs et l'année, que l'extraction avait souvent ratés.
+        # La fiche est le référentiel bibliographique validé
         cur.execute("""update document set
                          title_clean=%s, authors=%s, year=coalesce(%s, year),
                          biblio_confidence=greatest(coalesce(biblio_confidence,0), 0.95),

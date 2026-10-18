@@ -1,6 +1,4 @@
-"""Le PDF dans le lecteur : servi entier pour les ouvrages redistribuables, refusé pour les
-autres.
-"""
+"""Le PDF dans le lecteur : servi entier pour les ouvrages redistribuables."""
 import sys
 import urllib.request
 import uuid

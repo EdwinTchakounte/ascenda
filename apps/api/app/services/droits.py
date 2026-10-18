@@ -100,8 +100,7 @@ def tronquer(texte: str, budget: int) -> tuple[str, bool]:
 
 
 def repartir(budget: int, morceaux: list[str]) -> list[str]:
-    """Répartit un budget d'extrait sur plusieurs passages, du plus court au plus long,
-    pour qu'un passage bref ne soit pas sacrifié au profit d'un long."""
+    """Répartit un budget d'extrait sur plusieurs passages, du plus court au plus long."""
     if budget <= 0:
         return ["" for _ in morceaux]
     restant, reste_n = budget, len(morceaux)

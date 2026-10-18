@@ -16,8 +16,7 @@ router = APIRouter(prefix="/paiements", tags=["Paiement"])
 class AchatIn(BaseModel):
     periode_mois: Literal[1, 3, 12] = 1
     telephone: str = Field(min_length=8, max_length=20)
-    # Facultatif : Tara déduit l'opérateur du numéro. Le champ reste accepté
-    # pour les applications déjà installées qui l'envoient encore.
+    # Facultatif : Tara déduit l'opérateur du numéro.
     reseau: Literal["MTN", "ORANGE"] | None = None
 
 
@@ -30,8 +29,7 @@ async def grille(user: OptionalUser):
     bon = await codes.bon_disponible(str(user["id"])) if user else None
     return {
         "moyens": [
-            # Pour information : le lecteur ne choisit rien, Tara reconnaît
-            # l'opérateur à son numéro.
+            # Pour information : le lecteur ne choisit rien
             {"code": "mtn", "libelle": "MTN Mobile Money", "operateur": "MTN Cameroun"},
             {"code": "orange", "libelle": "Orange Money", "operateur": "Orange Cameroun"},
         ],

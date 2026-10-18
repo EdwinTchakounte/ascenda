@@ -19,13 +19,6 @@ import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
 /// L'abonnement Ascension, du choix de la formule à la confirmation.
-///
-/// Le paiement passe par Tara Money. Le lecteur ne choisit pas d'opérateur :
-/// Tara le reconnaît au numéro, MTN comme Orange.
-/// L'application ne voit jamais le code secret du membre : elle envoie le
-/// numéro, Tara pousse la demande sur le téléphone, le membre valide avec son
-/// code sur son propre appareil. C'est dit à l'écran, parce que la fraude au
-/// mobile money commence presque toujours par quelqu'un qui réclame ce code.
 class EcranAbonnement extends ConsumerStatefulWidget {
   const EcranAbonnement({super.key});
 
@@ -328,9 +321,7 @@ class _EcranAbonnementState extends ConsumerState<EcranAbonnement> {
   }
 }
 
-/// La carte de mise en avant : ce qu'est Ascension et à partir de quel tarif,
-/// ou, pour un abonné, où en est son accès. Le tarif affiché est le plus bas
-/// par mois de la grille reçue du serveur, jamais un chiffre écrit ici.
+/// La carte de mise en avant : ce qu'est Ascension et à partir de quel tarif, ou
 class _CarteOffre extends StatelessWidget {
   const _CarteOffre({required this.abonnement, required this.formules});
 
@@ -539,11 +530,6 @@ class _Avantages extends StatelessWidget {
 }
 
 /// Ce qui change, compteur par compteur, lu au serveur.
-///
-/// Les cinq lignes d'avantages au dessus sont notre argumentaire. Ce tableau
-/// est la promesse chiffrée, et il vient des mêmes tables que celles qui
-/// appliquent les limites : personne ne peut y lire autre chose que ce qui
-/// sera réellement accordé.
 class _Comparaison extends ConsumerWidget {
   const _Comparaison();
 

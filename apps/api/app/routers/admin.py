@@ -28,8 +28,9 @@ def bornes(page: int, par_page: int) -> tuple[int, int]:
 
 
 def enveloppe(lignes: list, total: int, page: int, par_page: int) -> dict:
-    """Toujours la même forme : le client sait s'il reste quelque chose sans
-    avoir à deviner. `pages` évite de le faire recalculer partout."""
+    """Toujours la même forme : le client sait s'il reste quelque chose sans avoir à
+    deviner.
+    """
     return {
         "total": total,
         "page": page,
@@ -66,8 +67,7 @@ class CompteIn(BaseModel):
 
 
 class AxeIn(BaseModel):
-    # Le raccourci sert d'adresse publique : il ne porte ni majuscule, ni
-    # accent, ni espace, et il ne change plus une fois posé.
+    # Le raccourci sert d'adresse publique
     slug: str = Field(min_length=3, max_length=80, pattern=r"^[a-z0-9][a-z0-9-]*$")
     label: str = Field(min_length=2, max_length=120)
     description: str | None = None
@@ -104,8 +104,7 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
            from app_user""",
         (jours, jours, jours),
     )
-    # Un compte actif est un compte qui a fait quelque chose, pas un compte qui
-    # existe. La différence est tout l'intérêt de la mesure.
+    # Un compte actif est un compte qui a fait quelque chose, pas un compte qui existe.
     actifs = await fetch_one(
         """select
              count(distinct user_id) filter (where at >= now() - interval '1 day') as jour,
@@ -129,8 +128,7 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
            from payment""",
         (jours, jours, jours),
     )
-    # Un webhook arrivé sans paiement à qui le rattacher. C'est la première
-    # chose à regarder quand quelqu'un affirme avoir payé.
+    # Un webhook arrivé sans paiement à qui le rattacher.
     orphelins = await fetch_one(
         """select count(*) as n from payment_event
             where payment_id is null and type in ('webhook_orphelin', 'webhook_illisible')""",
@@ -199,8 +197,7 @@ async def tableau_de_bord(user: AdminUser, jours: Annotated[int, Query(ge=1, le=
             order by choix desc limit 8""",
         (jours,),
     )
-    # L'entonnoir. Chaque marche perdue est une marche à réparer, et on ne sait
-    # laquelle qu'en les voyant côte à côte.
+    # L'entonnoir.
     entonnoir = await fetch_one(
         """select
              (select count(*) from app_user) as comptes,
@@ -438,8 +435,7 @@ async def corpus(
         )
         params.append(axe)
 
-    # Le filtre des incomplets vit dans le WHERE, pas en Python : filtrer après
-    # la pagination ne rendrait jamais une page pleine, et le total serait faux.
+    # Le filtre des incomplets vit dans le WHERE, pas en Python
     if manque:
         where.append(
             """(select count(*) from derivative v where v.document_id = d.id
@@ -762,9 +758,7 @@ async def gabarits(user: AdminUser):
 
 @router.patch("/gabarits/{code}", summary="Corriger un message")
 async def changer_gabarit(code: str, data: GabaritIn, user: AdminUser):
-    """Les gabarits vivent en base précisément pour cela : corriger une faute
-    dans un message qui part à tous les nouveaux membres ne doit pas demander
-    une construction d'image et un redémarrage."""
+    """Les gabarits vivent en base précisément pour cela."""
     champs = data.model_dump(exclude_none=True)
     if not champs:
         raise NotFound("Rien à changer.")
@@ -925,8 +919,7 @@ async def rattacher(document_id: str, slug: str, user: AdminUser,
     axe = await fetch_one("select id from axis where slug = %s", (slug,))
     if not axe or not await fetch_one("select 1 from document where id = %s", (document_id,)):
         raise NotFound("Cet ouvrage ou cet axe n'existe pas.")
-    # 'curator' et non 'admin' : la table n'accepte que auto, user et curator,
-    # et c'est bien un rattachement décidé par une personne qu'on note ici.
+    # 'curator' et non 'admin' : la table n'accepte que auto, user et curator
     await execute(
         """insert into document_axis (document_id, axis_id, weight, assigned_by)
            values (%s, %s, %s, 'curator')
@@ -995,8 +988,7 @@ async def relancer_travail(travail_id: str, user: AdminUser):
 
 @router.delete("/travaux/{travail_id}", status_code=204, summary="Annuler un travail en attente")
 async def annuler_travail(travail_id: str, user: AdminUser):
-    """Un travail en cours ne s'annule pas d'ici : il tourne dans un autre
-    processus, et le tuer à mi-parcours laisserait la base à moitié écrite."""
+    """Un travail en cours ne s'annule pas d'ici."""
     if not await travaux.annuler(travail_id):
         raise Conflict("Seul un travail encore en attente s'annule.")
 

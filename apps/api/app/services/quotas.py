@@ -41,8 +41,7 @@ async def quota_for(user: dict, kind: str) -> dict | None:
     if kind != "agent_tokens":
         return quota
 
-    # Un code d'accès peut porter son propre plafond de jetons. On applique le
-    # plus serré des deux, et on compte depuis l'activation du code.
+    # Un code d'accès peut porter son propre plafond de jetons.
     borne = await acces.plafond_jetons(str(user["id"]))
     if not borne:
         return quota
@@ -78,8 +77,7 @@ async def check(user: dict, kind: str, quantity: int = 1) -> dict:
     limite = int(quota["max_value"])
     if used + quantity > limite:
         if quota.get("code"):
-            # Un plafond porté par un code ne se recharge pas au mois : dire le
-            # contraire enverrait le lecteur attendre une date qui ne viendra pas.
+            # Un plafond porté par un code ne se recharge pas au mois
             message = (f"Le volume inclus dans le code {quota['code']} est épuisé "
                        f"({limite} jetons).")
         else:

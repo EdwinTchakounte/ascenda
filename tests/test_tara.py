@@ -190,8 +190,7 @@ def _attendu(libelle, reponse, rejouable):
         ok(libelle, False, "aucune exception")
 
 
-# Une panne serveur se rejoue ; un refus métier, jamais : le rejouer débiterait
-# une seconde fois pour la même raison de refus.
+# Une panne serveur se rejoue ; un refus métier, jamais
 _attendu("une erreur 500 est rejouable", httpx.Response(500, text="boom"), True)
 _attendu("un refus 400 n'est pas rejouable",
          httpx.Response(400, json={"message": "solde insuffisant"}), False)

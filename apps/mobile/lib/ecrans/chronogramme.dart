@@ -15,9 +15,7 @@ import '../widgets/etats.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Le chronogramme en vue chronologique : le cahier des séances, semaine après
-/// semaine. Les séances faites sont cochées à l'encre et en sourdine, celle du
-/// jour en or, les retards en terracotta.
+/// Le chronogramme en vue chronologique : le cahier des séances, semaine après semaine.
 class EcranChronogramme extends ConsumerWidget {
   const EcranChronogramme({super.key, required this.chronogrammeId});
   final String chronogrammeId;
@@ -246,11 +244,7 @@ class _EnteteSemaine extends StatelessWidget {
     final faites = seances.where((s) => s.faite).length;
     final complete = faites == seances.length;
 
-    // L'étiquette passe avant le filet. Partagée en parts égales avec lui,
-    // elle cédait la moitié de la ligne et la semaine se coupait dès
-    // « 31 août au 6 … » : elle prend maintenant ce qu'il lui faut, le filet
-    // se contente du reste. Les 64 points réservés sont les deux espaces de
-    // 12, le folio (« 3/3 ») et de quoi tracer un filet, même court.
+    // L'étiquette passe avant le filet.
     return LayoutBuilder(
       builder: (context, contraintes) => Row(
         children: [
@@ -292,9 +286,7 @@ class _LigneSeance extends ConsumerWidget {
     final passee = !seance.faite && seance.prevueLe != null && !aujourdhui &&
         seance.prevueLe!.isBefore(DateUtils.dateOnly(DateTime.now()));
 
-    // L'état se lit à trois endroits qui disent la même chose : la case cochée,
-    // la date et la pastille. Faite en vert, du jour en or, en retard en
-    // terracotta, à venir en neutre.
+    // L'état se lit à trois endroits qui disent la même chose
     final teinte = seance.faite
         ? p.succes
         : passee
@@ -360,9 +352,7 @@ class _LigneSeance extends ConsumerWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // L'ouvrage sur une ligne, ce qu'on y lit sur la suivante :
-                        // un libellé d'un seul tenant coupait le chapitre sous le
-                        // titre du livre.
+                        // L'ouvrage sur une ligne, ce qu'on y lit sur la suivante
                         Texte(
                           seance.ouvrage ?? seance.objectif,
                           style: t.textTheme.titleMedium?.copyWith(
@@ -375,9 +365,8 @@ class _LigneSeance extends ConsumerWidget {
                         ),
                         if (seance.partie != null) ...[
                           const SizedBox(height: 1),
-                          // La rature porte sur la séance entière, l'ouvrage et
-                          // le chapitre : barrer le seul titre laissait la ligne
-                          // à moitié corrigée.
+                          // La rature porte sur la séance entière, l'ouvrage et le
+                          // chapitre
                           Texte(
                             seance.partie!,
                             style: t.textTheme.bodySmall?.copyWith(

@@ -5,12 +5,6 @@ import 'palette.dart';
 export 'palette.dart';
 
 /// Les couleurs d'ASCENDA, lues dans le thème choisi.
-///
-/// Les noms d'origine (l'or, le bleu nuit, le gris chaud) restent, mais chacun
-/// désigne désormais un rôle de la [Palette] en vigueur : en thème Sépia,
-/// « nuit » est le brun profond des cartes de mise en avant, et « grisChaud »
-/// le texte secondaire de ce thème. Un nouvel écran lit plutôt
-/// `context.palette`, qui dit le rôle au lieu de la teinte.
 abstract final class Couleurs {
   static Palette get _p => Palette.courante;
 
@@ -36,9 +30,7 @@ abstract final class Couleurs {
   static Color get sauge => _p.succes;
   static Color get terracotta => _p.alerte;
 
-  /// La teinte d'un pôle, celle-là même qui colore sa carte sur la vitrine et
-  /// le dos de ses volumes sur l'étagère. La clé est le préfixe numérique du
-  /// raccourci, qui ne change jamais une fois posé.
+  /// La teinte d'un pôle, celle-là même qui colore sa carte sur la vitrine et le dos de
   static const poles = <String, Color>{
     '01': Color(0xFFC08A2E), '02': Color(0xFF4A6FA5), '03': Color(0xFF5F8A6A),
     '04': Color(0xFF8A7F9E), '05': Color(0xFFC4704F), '06': Color(0xFF4F8687),

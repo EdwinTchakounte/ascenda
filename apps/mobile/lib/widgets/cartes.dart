@@ -23,8 +23,6 @@ const niveaux = {
 };
 
 /// La carte de séance du jour : l'objet principal de l'écran d'accueil.
-/// La couverture n'existe pas dans le corpus, on compose donc un fond à partir
-/// du titre plutôt que d'afficher un rectangle gris.
 class CarteSeance extends StatelessWidget {
   const CarteSeance({super.key, required this.seance, this.onCommencer});
 
@@ -129,12 +127,6 @@ class _Etiquette extends StatelessWidget {
 }
 
 /// Carte d'ouvrage dans la bibliothèque : une fiche de livre.
-///
-/// Le corpus n'a pas de couvertures. Plutôt qu'un rectangle gris, la carte
-/// compose une petite couverture à la teinte du parcours, la même que sur la
-/// vitrine et le dos des volumes de l'étagère : soixante livres se reconnaissent
-/// alors d'un coup d'oeil. Pas de cadre, pas d'étiquettes encadrées : une
-/// surface blanche posée sur le papier, et une ligne de repères discrète.
 class CarteOuvrage extends StatelessWidget {
   const CarteOuvrage({super.key, required this.ouvrage, this.onTap});
 
@@ -249,9 +241,7 @@ class PastillesSemaine extends StatelessWidget {
     final lundi = DateTime.now().subtract(Duration(days: DateTime.now().weekday - 1));
     final noms = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
-    // Chaque jour prend le septième de la largeur : sur un écran de 320 points,
-    // sept pastilles de 38 pixels réclamaient 266 pixels dans une rangée qui en
-    // offrait 252, et la semaine débordait.
+    // Chaque jour prend le septième de la largeur
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(7, (i) {

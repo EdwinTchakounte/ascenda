@@ -6,19 +6,8 @@ import '../theme/couleurs.dart';
 import '../theme/texte.dart';
 
 /// Les ouvrages, dessinés comme des livres.
-///
-/// Le corpus n'a pas de couvertures : les éditeurs ne nous les donnent pas, et
-/// un rectangle gris ne fait pas une bibliothèque. On compose donc le volume :
-/// un dos à la teinte de son pôle, ses nerfs, sa pièce de titre, son titre à la
-/// verticale. Deux ouvrages du même pôle se reconnaissent de loin, et chaque
-/// titre garde le sien : la teinte et les ornements sont tirés du titre, donc
-/// toujours les mêmes pour un même livre.
 
 /// Ce qu'on peut écrire sur un dos de cette hauteur.
-///
-/// Sur un volume de vignette, un titre entier ne tient pas : il se coupait au
-/// milieu d'un mot, ce qu'aucun imprimeur ne ferait. On s'arrête donc au mot,
-/// et les points de suspension disent la suite.
 String titreSurDos(String titre, double hauteur) {
   final maximum = (hauteur / 4.6).round();
   if (titre.length <= maximum) return titre;
@@ -34,12 +23,6 @@ String titreSurDos(String titre, double hauteur) {
 }
 
 /// Le corps du titre sur un dos, en pixels.
-///
-/// Un dos donne deux contraintes : sa hauteur borne la longueur d'une ligne, son
-/// épaisseur borne le nombre de lignes. Le mot le plus long décide du reste :
-/// sans lui, « l'intelligence » se coupait en deux, ce qu'aucun imprimeur ne
-/// ferait. On essaie donc du plus grand au plus petit et on garde le premier
-/// corps qui tient dans les deux sens.
 double corpsSurDos(String titre, {required double hauteur, required double largeur}) {
   const large = 0.62;   // largeur moyenne d'un signe en Fraunces, en parts du corps
   const interligne = 1.22;
@@ -129,17 +112,7 @@ class DosLivre extends StatelessWidget {
                       child: RotatedBox(
                         quarterTurns: 3,
                         child: Center(
-                          // Le corps suit la longueur du titre : « La Planète
-                          // invisible » tient en deux lignes là où un titre de
-                          // cinq mots en demande trois, sans jamais couper un
-                          // mot en deux.
-                          // Le corps calculé tient dans presque tous les cas ;
-                          // l'ajustement rattrape le reste en réduisant, jamais
-                          // en rognant une ligne.
-                          // Un `Text` brut, et non `Texte` : la règle qui lie le
-                          // dernier mot au précédent par une espace insécable
-                          // rend service dans un paragraphe, mais allonge la
-                          // ligne d'un dos, où elle finissait rognée.
+                          // Le corps suit la longueur du titre
                           child: FittedBox(
                             fit: BoxFit.scaleDown,
                             child: SizedBox(

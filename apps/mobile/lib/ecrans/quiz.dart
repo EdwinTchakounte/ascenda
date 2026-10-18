@@ -17,10 +17,6 @@ import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// Le quiz : une question à la fois, posée sur le papier, puis la correction.
-///
-/// L'écran de correction ne se contente pas de dire juste ou faux : il donne
-/// l'explication et l'extrait du livre qui la fonde, avec sa page. C'est ce
-/// qui distingue un quiz de lecture d'un questionnaire de culture générale.
 class EcranQuiz extends ConsumerStatefulWidget {
   const EcranQuiz({super.key, required this.quizId, this.seanceId});
   final String quizId;
@@ -119,9 +115,7 @@ class _EcranQuizState extends ConsumerState<EcranQuiz> {
     final q = _questions[_index];
     final choisi = _reponses[q.index];
     final dernier = _index == _questions.length - 1;
-    // Le chapitre d'abord, l'ouvrage ensuite : sur une seule ligne coupée par
-    // une ellipse, le titre du livre prenait toute la place et ne laissait que
-    // quatre lettres au chapitre, qui est pourtant ce qu'on travaille.
+    // Le chapitre d'abord, l'ouvrage ensuite
     final entete = [
       if (_quiz?['chapitre'] != null) '${_quiz!['chapitre']}',
       if (_quiz?['ouvrage'] != null) '${_quiz!['ouvrage']}',

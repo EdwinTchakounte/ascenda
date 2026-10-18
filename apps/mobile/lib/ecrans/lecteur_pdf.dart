@@ -18,25 +18,9 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
 /// Ce que l'écran d'où l'on vient sait déjà des droits de l'ouvrage.
-///
-/// La route `/pdf/:doc` ne porte que l'identifiant, le titre et la page ; la
-/// fiche et le chapitre, eux, portent `droits.application_seulement`. L'écran
-/// qui l'a sous la main le dépose ici avant d'ouvrir le PDF : le lecteur de PDF
-/// sait alors s'il doit garder le fichier chiffré, sans redemander la fiche au
-/// serveur. À retirer le jour où la route portera le droit elle-même.
 final reservesConnus = <String, bool>{};
 
 /// Lire le PDF d'origine d'un ouvrage, page par page, dans l'application.
-///
-/// Pour les ouvrages lisibles en entier : libres, ou réservés à l'application
-/// pour un abonné. L'API refuse les autres, et la fiche ne propose le bouton que
-/// là où il fonctionne.
-///
-/// Le fichier est gardé sur le téléphone après la première ouverture : chiffré
-/// dans le coffre pour un ouvrage réservé à l'application, tel quel dans
-/// l'espace privé de l'application pour un ouvrage libre. Un ouvrage libre
-/// s'ouvre alors depuis son fichier, page par page : le rapport de l'Académie
-/// pèse 92 Mo, et aucun téléphone d'entrée de gamme ne les tient en mémoire.
 class EcranLecteurPdf extends ConsumerStatefulWidget {
   const EcranLecteurPdf({super.key, required this.documentId, this.titre, this.page});
 
@@ -105,9 +89,7 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
       }
 
       if (!reserve && clair != null) {
-        // Ouvrage libre : le téléchargement va droit dans le fichier, morceau
-        // par morceau, et le lecteur n'ouvre que les pages qu'il affiche. Rien
-        // ne passe en entier par la mémoire.
+        // Ouvrage libre : le téléchargement va droit dans le fichier, morceau par morceau
         final ecrit = await ref
             .read(clientApiProvider)
             .telechargerVers('/lecteur/${widget.documentId}/pdf', clair, progression: avance);
@@ -119,16 +101,12 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
         progression: avance,
       );
       if (reserve || clair == null) {
-        // Réservé à l'application : gardé chiffré dans l'espace privé, il ne
-        // s'ouvre nulle part ailleurs. Le coffre ne se lit pas par morceaux, le
-        // livre reste donc en mémoire le temps de la lecture.
+        // Réservé à l'application : gardé chiffré dans l'espace privé
         await depot.enregistrerPdf(widget.documentId, octets);
         if (mounted) setState(() => _octets = octets);
         return;
       }
-      // Ouvrage libre : écrit tel quel dans l'espace privé de l'application,
-      // puis lu depuis ce fichier. Les octets reçus sont relâchés aussitôt, et
-      // le lecteur ne charge plus que les pages qu'il affiche.
+      // Ouvrage libre : écrit tel quel dans l'espace privé de l'application
       final provisoire = File('${clair.path}.part');
       await provisoire.writeAsBytes(octets, flush: true);
       await provisoire.rename(clair.path);
@@ -139,9 +117,6 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
   }
 
   /// L'ouvrage est-il réservé à l'application ?
-  ///
-  /// Dans le doute on chiffre : un ouvrage libre gardé chiffré ne coûte que de
-  /// la mémoire, un ouvrage réservé gardé en clair coûte notre parole.
   Future<bool> _reserve(DepotHorsLigne depot) async {
     final connu = reservesConnus[widget.documentId];
     if (connu != null) return connu;
@@ -276,9 +251,7 @@ class _EcranLecteurPdfState extends ConsumerState<EcranLecteurPdf> {
         child: SizedBox(width: 26, height: 26, child: CircularProgressIndicator(strokeWidth: 2.6)),
       ),
     );
-    // Depuis le fichier quand il y en a un : le lecteur n'y prend que les pages
-    // qu'il affiche. En mémoire seulement pour un ouvrage réservé, que le
-    // coffre ne rend pas autrement.
+    // Depuis le fichier quand il y en a un
     if (_fichier != null) {
       return PdfViewer.file(_fichier!.path, controller: _controleur, params: parametres);
     }

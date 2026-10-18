@@ -10,9 +10,7 @@ from app.core.config import settings
 
 _pool: AsyncConnectionPool | None = None
 
-# Qui agit, pour le journal des modifications. Le trigger en base le lit dans
-# `app.acteur` : il faut donc le poser dans la même transaction que l'écriture,
-# et non une fois pour la connexion, qui sert ensuite à quelqu'un d'autre.
+# Qui agit, pour le journal des modifications.
 acteur: ContextVar[str | None] = ContextVar("acteur", default=None)
 
 

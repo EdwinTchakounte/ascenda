@@ -17,9 +17,6 @@ import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// La révision espacée : une fiche qu'on retourne, deux gestes.
-///
-/// « Je savais » éloigne la notion, « À revoir » la ramène demain. C'est tout
-/// l'algorithme vu de l'utilisateur ; le reste se passe côté serveur.
 class EcranRevision extends ConsumerStatefulWidget {
   const EcranRevision({super.key});
 
@@ -92,9 +89,7 @@ class _EcranRevisionState extends ConsumerState<EcranRevision> {
                   ),
                 ),
                 Expanded(
-                  // La fiche se taille sur son texte et se pose au milieu de la
-                  // page. Une définition longue fait défiler la page ; une
-                  // notion courte ne laisse plus un carton vide aux deux tiers.
+                  // La fiche se taille sur son texte et se pose au milieu de la page.
                   child: LayoutBuilder(
                     builder: (context, contraintes) => SingleChildScrollView(
                       padding: const EdgeInsets.fromLTRB(20, 22, 20, 20),
@@ -196,10 +191,6 @@ class _Retournement extends StatelessWidget {
 }
 
 /// Un raccourci d'axe (« 12-agriculture-elevage ») rendu lisible.
-///
-/// La liste à réviser renvoie parfois l'axe sans son libellé : le numéro
-/// d'ordre tombe, les traits d'union redeviennent des espaces, la première
-/// lettre passe en capitale. Un libellé déjà écrit en clair n'est pas touché.
 String _axeLisible(String axe) {
   if (!_raccourciAxe.hasMatch(axe)) return axe;
   final mots = axe.substring(axe.indexOf('-') + 1).replaceAll('-', ' ');

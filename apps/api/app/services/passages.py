@@ -13,8 +13,7 @@ def sans_reprise(precedent: str | None, texte: str) -> str:
         reprise = fin[-k:].lstrip()
         if len(reprise) >= 15 and texte.startswith(reprise):
             return texte[len(reprise):].lstrip()
-    # Sans reprise reconnue, on ne coupe rien : un début en minuscule est bien
-    # plus souvent la suite d'une phrase, d'une page à l'autre, qu'un fragment.
+    # Sans reprise reconnue, on ne coupe rien
     return texte
 
 
@@ -42,8 +41,7 @@ def replier(texte: str) -> str:
         elif _FIN_PHRASE.search(precedente) and _DEBUT_BLOC.match(ligne):
             sortie.append(ligne)
         elif len(precedente) < 45 and _DEBUT_BLOC.match(ligne) and not precedente.endswith(","):
-            # Une ligne courte suivie d'une majuscule : un titre ou une entrée
-            # de liste, qu'on ne fond pas dans le paragraphe suivant.
+            # Une ligne courte suivie d'une majuscule
             sortie.append(ligne)
         else:
             sortie[-1] = f"{precedente} {ligne}"

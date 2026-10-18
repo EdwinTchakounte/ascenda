@@ -89,8 +89,7 @@ async def reinitialiser(email: str, code: str, nouveau: str) -> dict | None:
         await conn.execute(
             "update password_reset set used_at = now() where id = %s", (demande["id"],)
         )
-        # Les autres demandes en cours tombent avec celle-ci : un second code
-        # envoyé plus tôt ne doit pas rester utilisable.
+        # Les autres demandes en cours tombent avec celle-ci
         await conn.execute(
             """update password_reset set used_at = now()
                 where user_id = %s and used_at is null""",

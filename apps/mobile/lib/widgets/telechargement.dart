@@ -14,16 +14,6 @@ import 'livre.dart';
 import 'ui.dart';
 
 /// Le bloc de téléchargement d'un ouvrage.
-///
-/// Emporter un livre, c'est le poser sur son étagère : le bloc montre donc le
-/// dos du volume, et le signet sort quand il est là.
-///
-/// Deux gestes distincts, pour deux besoins distincts.
-///
-/// - **Hors ligne** : le pack est rangé sur le téléphone et tout reste
-///   utilisable sans réseau, y compris les quiz et leur correction. C'est la
-///   fonction qui change l'usage réel sur une connexion intermittente.
-/// - **PDF** : le même contenu, mis en page, pour imprimer ou partager.
 class BlocTelechargement extends ConsumerStatefulWidget {
   const BlocTelechargement({
     super.key,
@@ -61,15 +51,6 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
   }
 
   /// La taille du PDF gardé sur l'appareil.
-  ///
-  /// Le pack compte le texte, les quiz et les citations, jamais le PDF : la
-  /// taille annoncée était donc toujours trop basse pour un ouvrage emporté
-  /// avec son PDF. On la complète ici, sans rien lire du fichier : le dépôt
-  /// donne le chemin du PDF en clair (les ouvrages libres), dont la taille se
-  /// lit exactement ; pour un ouvrage réservé, le PDF vit chiffré dans le
-  /// coffre et le dépôt n'en donne pas le fichier, on retombe alors sur la
-  /// taille annoncée par le serveur, qui est celle du fichier à peu de chose
-  /// près. Sans l'une ni l'autre, on ne compte rien et on le dit.
   Future<void> _mesurerPdf() async {
     final depot = ref.read(depotHorsLigneProvider);
     int? octets;
@@ -195,10 +176,7 @@ class _BlocTelechargementState extends ConsumerState<BlocTelechargement> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Un bandeau teinté en tête : vert quand l'ouvrage est déjà sur le
-          // téléphone, doré quand il reste à emporter. L'état se lit avant le
-          // texte, et le volume se pose sur l'étagère quand l'emport aboutit :
-          // la clé change avec l'état, l'apparition rejoue une fois.
+          // Un bandeau teinté en tête : vert quand l'ouvrage est déjà sur le téléphone
           Apparition(
             key: ValueKey(garde),
             echelle: garde,

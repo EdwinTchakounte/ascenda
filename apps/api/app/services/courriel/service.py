@@ -12,8 +12,7 @@ from .gabarit import envelopper, rendre
 
 log = logging.getLogger("ascenda.courriel")
 
-# Jamais mis en file : leur contexte porte un secret (le code de réinitialisation
-# en clair), que la base ne garde par ailleurs que haché. Le lecteur redemande.
+# Jamais mis en file : leur contexte porte un secret (le code de réinitialisation en
 SANS_FILE = {"mot_de_passe_oublie"}
 
 _fournisseur: Brevo | None = None
@@ -57,7 +56,7 @@ async def envoyer(
 
     if not gabarit:
         # Un gabarit absent est une erreur de configuration, pas un incident
-        # d'exploitation : on le dit fort.
+        # d'exploitation
         log.error("Gabarit de courriel %r introuvable.", code)
         return "ignore"
     if not gabarit["actif"]:

@@ -67,8 +67,7 @@ async def main():
         ok("chaque point porte ses quatre séries",
            all({"comptes", "paiements", "encaisse", "actifs"} <= set(j) for j in tb["courbe"]),
            tb["courbe"][0])
-        # Même contrôle que pour la courbe des comptes : une jointure de travers
-        # sur les paiements gonflerait l'encaissement du jour.
+        # Même contrôle que pour la courbe des comptes
         somme_xaf = sum(j["encaisse"] for j in tb["courbe"])
         ok("l'encaissement de la courbe s'accorde à celui de la période",
            somme_xaf == tb["paiements"]["encaisse_periode"],
@@ -84,8 +83,7 @@ async def main():
         ok("l'entonnoir porte ses cinq marches",
            {"comptes", "diagnostiques", "plans", "en_marche", "abonnes"} <= set(tb["entonnoir"]),
            list(tb["entonnoir"]))
-        # Chaque marche est un sous-ensemble de la précédente. Si l'une dépasse,
-        # la requête compte autre chose que ce que son nom annonce.
+        # Chaque marche est un sous-ensemble de la précédente.
         e = tb["entonnoir"]
         ok("chaque marche tient dans la précédente",
            e["comptes"] >= e["diagnostiques"] >= e["plans"] >= e["en_marche"],
@@ -175,8 +173,7 @@ async def main():
         code, inc, _ = appel("GET", "/v1/admin/corpus?manque=true&par_page=40", jeton=jeton_admin)
         ok("le filtre des incomplets ne garde que les incomplets",
            all(not o["complet"] for o in inc["lignes"]), len(inc["lignes"]))
-        # Le filtre vit dans le WHERE : sans cela, filtrer après la pagination
-        # ne rendrait jamais une page pleine et le total serait faux.
+        # Le filtre vit dans le WHERE : sans cela
         ok("et son total est celui des incomplets, pas celui du corpus",
            inc["total"] < envc["total"], f"{inc['total']} sur {envc['total']}")
 
@@ -192,8 +189,7 @@ async def main():
         ok("le plafond de citation se pose", code == 200, code)
         ligne = await fetch_one("select max_excerpt_chars from document where id = %s", (un["id"],))
         ok("et il est écrit en base", ligne["max_excerpt_chars"] == 777, ligne)
-        # On rend l'ouvrage tel qu'on l'a trouvé : cette suite tourne sur le
-        # corpus réel, elle n'a pas à le laisser modifié.
+        # On rend l'ouvrage tel qu'on l'a trouvé
         await execute("update document set max_excerpt_chars = %s where id = %s",
                       (avant, un["id"]))
 

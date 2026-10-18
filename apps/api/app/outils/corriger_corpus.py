@@ -11,11 +11,7 @@ from app.services.titres import est_appareil, est_repli, titre_lisible
 
 
 def par_divisions(chapitres: list[dict], plans: dict, noms: dict) -> dict:
-    """Le nom qu'un chapitre tient de la division du livre où il commence.
-
-    Les divisions sont relevées dans les ouvrages par pipeline/ingest/titrer.py.
-    Une division découpée en plusieurs chapitres les numérote.
-    """
+    """Le nom qu'un chapitre tient de la division du livre où il commence."""
     par_doc: dict = {}
     for c in chapitres:
         par_doc.setdefault(c["document_id"], []).append(c)
@@ -31,12 +27,10 @@ def par_divisions(chapitres: list[dict], plans: dict, noms: dict) -> dict:
             debut, fin = c["page_start"] or 0, c["page_end"] or c["page_start"] or 0
             ouvertes = [k for k, d in enumerate(bornes) if debut <= d["page"] <= fin]
             if len(ouvertes) > 1:
-                # Le chapitre ouvre plusieurs divisions : il porte le nom de la
-                # première, celle par laquelle la lecture commence.
+                # Le chapitre ouvre plusieurs divisions
                 rang = ouvertes[0]
             else:
-                # Un chapitre chevauche souvent deux divisions, le découpage s'étant
-                # fait au nombre de mots : il relève de celle qui tient son milieu.
+                # Un chapitre chevauche souvent deux divisions
                 milieu = (debut + fin) // 2
                 rang = next((k for k in range(len(bornes) - 1, -1, -1)
                              if bornes[k]["page"] <= milieu), None)
@@ -44,8 +38,7 @@ def par_divisions(chapitres: list[dict], plans: dict, noms: dict) -> dict:
                     rang = ouvertes[0] if ouvertes else None
             if rang is None:
                 continue
-            # Les divisions plus courtes qu'un chapitre : il faut les annoncer,
-            # sinon elles disparaissent du sommaire.
+            # Les divisions plus courtes qu'un chapitre
             suites[c["id"]] = sum(1 for d in bornes[rang + 1:] if debut <= d["page"] <= fin)
             if groupes and groupes[-1][0] == rang:
                 groupes[-1][1].append(c)
@@ -85,13 +78,11 @@ async def titres(essai: bool) -> int:
     for c in chapitres:
         if c["document_id"] != doc:
             doc, precedent, suites = c["document_id"], None, 0
-        # On repart toujours de l'original : rejouer la correction après une
-        # amélioration des règles ne corrige pas une correction.
+        # On repart toujours de l'original
         source = c["title_source"] or c["title"]
         releves = traduits.get(noms.get(str(c["document_id"]), ""), {})
         traduction = releves.get(str(c["ord"]))
-        # Quand l'ouvrage a été relevé page à page, la division nomme mieux le
-        # chapitre que la suite du précédent : on écarte ce repli-là.
+        # Quand l'ouvrage a été relevé page à page
         division = None if traduction else divisions.get(c["id"])
         neuf = traduction or titre_lisible(source, page_start=c["page_start"], page_end=c["page_end"],
                                            precedent=None if division else precedent, texte=c["texte"])
@@ -104,8 +95,7 @@ async def titres(essai: bool) -> int:
             if ", puis chapitre " in base:
                 base = "Chapitre " + base.split(", puis chapitre ", 1)[1]
             neuf = base + " (suite)"
-        # Au-delà de trois sections, ce ne sont plus des suites plausibles d'un
-        # chapitre (annexes, notes de fin) : elles gardent le nom de leurs pages.
+        # Au-delà de trois sections, ce ne sont plus des suites plausibles d'un chapitre
         suites = suites + 1 if (neuf or "").endswith("(suite)") and not traduction else 0
         if neuf != c["title"]:
             changes += 1
@@ -122,8 +112,8 @@ async def titres(essai: bool) -> int:
 
 async def durees(essai: bool) -> int:
     if not essai:
-        # Un ouvrage sans fiche pédagogique n'avait aucune durée : la fiche
-        # affichait un tiret. On pose la ligne, la durée suit.
+        # Un ouvrage sans fiche pédagogique n'avait aucune durée : la fiche affichait un
+        # tiret.
         await execute(
             """insert into document_pedagogy (document_id)
                select id from document d
@@ -157,8 +147,7 @@ async def accents(essai: bool) -> int:
             where kind in ('quiz', 'citation') and superseded_by is null""")
 
     def retoucher(x):
-        # Phrase sans aucun accent : restitution au contexte. Phrase déjà en
-        # partie accentuée : seulement les mots sans ambiguïté.
+        # Phrase sans aucun accent : restitution au contexte.
         if not isinstance(x, str):
             return x
         return accentueur.accentuer(x) if sans_accents(x) else accentueur.accentuer_sur(x)
@@ -197,8 +186,7 @@ async def accents(essai: bool) -> int:
                 if paires:
                     print(f"  accents : « {paires[0][0][:80]} »\n         → « {paires[0][1][:80]} »")
             if not essai:
-                # On repart toujours de l'original : une règle améliorée corrige
-                # l'original, pas une retouche précédente.
+                # On repart toujours de l'original
                 await execute(
                     "update derivative set content_source = coalesce(content_source, content), content = %s::jsonb "
                     "where id = %s",
@@ -230,8 +218,7 @@ async def metadonnees(essai: bool) -> int:
                 valeur_sql = json.dumps(valeur, ensure_ascii=False) if champ == "authors" else valeur
                 cast = "::jsonb" if champ == "authors" else ""
                 await execute(f"update document set {champ} = %s{cast} where id = %s", (valeur_sql, d["id"]))
-    # La fiche de lecture porte sa propre copie des auteurs et de l'année : on
-    # l'aligne sur l'ouvrage corrigé, pour qu'aucune donnée n'en contredise une autre.
+    # La fiche de lecture porte sa propre copie des auteurs et de l'année
     for f in await fetch_all(
         """select dv.id, dv.content, d.authors, d.year from derivative dv join document d on d.id = dv.document_id
             where dv.kind = 'fiche_lecture' and dv.superseded_by is null"""):
@@ -249,8 +236,9 @@ async def metadonnees(essai: bool) -> int:
 
 
 async def tailles(essai: bool) -> int:
-    """La taille enregistrée à l'import ne correspond pas toujours au fichier
-    stocké (1,7 Mo annoncés pour un PDF de 92 Mo). On relit celle du stockage."""
+    """La taille enregistrée à l'import ne correspond pas toujours au fichier stocké (1,7
+    Mo.
+    """
     from minio import Minio
 
     from app.core.config import settings

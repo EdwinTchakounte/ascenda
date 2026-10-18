@@ -4,14 +4,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import pg
 
-# les minuscules et quelques glyphes hauts portent les caractères que la
-# police de substitution ne pouvait pas rendre : accents, ligatures, guillemets
+# les minuscules et quelques glyphes hauts portent les caractères que la police de
 ACCENTS = {"p": "é", "q": "è", "r": "ê", "v": "î", "k": "â", "o": "ç",
            "e": "É", "w": "ï", "j": "à", "a": "»", "{": "ô",
            "¿": "fi", "À": "fl", "¶": "’", "±": "–", "©": "«"}
 DECALAGE = 29
-# une majuscule d'origine se chiffre en ponctuation ou en chiffre : on ne la
-# décode que si elle ouvre le mot, pour ne pas manger un vrai trait d'union
+# une majuscule d'origine se chiffre en ponctuation ou en chiffre
 TOKEN = re.compile(r"(^|[\s(«\"'’\-])([\x24-\x3d])?([A-Za-z¿À¶±©{\[\\\]]{1,})", re.M)
 CORPS = set("DEFGHIJKLMNOPQRSTUVWXYZ[\\]")
 ROMAINS = {"I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII",
@@ -68,14 +66,12 @@ def reparer(texte, n, total, mots):
         fu, fc = mots.get(t.lower(), 0), mots.get(clair.lower(), 0)
         corps = sum(1 for c in t if c in CORPS)
 
-        # une capitale d'origine chiffrée en ponctuation ne trompe pas, pourvu
-        # que ce qui suit soit bien une lettre chiffrée et non un ordinal
+        # une capitale d'origine chiffrée en ponctuation ne trompe pas
         if tete and (len(t) > 1 or t in CORPS): return rendre()
 
         if len(t) == 1:
             suite = m.string[m.end():m.end() + 1]
-            # une capitale devant une apostrophe : seules huit d'entre elles
-            # donnent une élision française, et aucune n'existe telle quelle
+            # une capitale devant une apostrophe
             if suite in "’'":
                 return rendre() if t in CORPS and clair in ELISIONS else garder()
             # une lettre isolée entre deux espaces peut être un accent chiffré

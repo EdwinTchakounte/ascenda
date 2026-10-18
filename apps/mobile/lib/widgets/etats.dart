@@ -9,9 +9,7 @@ import '../theme/palette.dart';
 import '../theme/texte.dart';
 import 'illustrations.dart';
 
-/// Les états qui ne sont pas le cas idéal. Ils sont dessinés, pas subis :
-/// beaucoup de nos lecteurs sont sur des connexions intermittentes, et une
-/// page blanche avec un message technique est la pire réponse possible.
+/// Les états qui ne sont pas le cas idéal.
 
 class EtatMessage extends StatelessWidget {
   const EtatMessage({
@@ -145,9 +143,8 @@ class EtatErreur extends StatelessWidget {
     }
     if (erreur is ErreurApi) {
       final e = erreur as ErreurApi;
-      // Buter sur l'offre payante et n'avoir qu'un bouton « Réessayer » sous les
-      // yeux est une impasse : réessayer donnera exactement le même refus. On
-      // ouvre donc l'abonnement, qui est la seule suite possible.
+      // Buter sur l'offre payante et n'avoir qu'un bouton « Réessayer » sous les yeux est
+      // une
       final versAbonnement = e.estPremium || e.estQuota;
       return EtatMessage(
         icone: e.estQuota
@@ -172,11 +169,7 @@ class EtatErreur extends StatelessWidget {
   }
 }
 
-/// Squelette de chargement : des blocs à la forme du contenu attendu, plutôt
-/// qu'un tourniquet centré qui ne dit rien de ce qui arrive.
-///
-/// Sans [rayon] explicite, le bloc prend un arrondi doux proportionné à sa
-/// hauteur : aucune arête vive, même quand l'appelant n'y a pas pensé.
+/// Squelette de chargement : des blocs à la forme du contenu attendu
 class Squelette extends StatefulWidget {
   const Squelette({super.key, this.hauteur = 16, this.largeur, this.rayon = 0});
 

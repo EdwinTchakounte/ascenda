@@ -61,8 +61,8 @@ async def main():
     await open_pool()
     crees = []
     try:
-        # Le lancement ouvrirait tout à tout le monde et rendrait chaque
-        # vérification d'accès vraie pour une mauvaise raison.
+        # Le lancement ouvrirait tout à tout le monde et rendrait chaque vérification
+        # d'accès
         await execute("update reglage set valeur = valeur || '{\"actif\": false}' where cle = 'lancement'")
         await execute("""update reglage set valeur = '{"actif": true, "pourcent": 20, "validite_jours": 180}'
                          where cle = 'parrainage'""")

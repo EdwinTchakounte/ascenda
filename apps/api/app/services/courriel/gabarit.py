@@ -41,8 +41,7 @@ _ENVELOPPE = """\
 </html>
 """
 
-# Le surtitre de l'en-tête, déduit du code : il situe le message d'un coup d'œil
-# dans une boîte encombrée.
+# Le surtitre de l'en-tête, déduit du code
 _OEIL = {
     "bienvenue": "Votre compte",
     "paiement_confirme": "Paiement",

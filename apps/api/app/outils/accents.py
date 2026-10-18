@@ -19,8 +19,7 @@ _AUXILIAIRES = {"est", "sont", "a", "ont", "ete", "etait", "etaient", "etre", "a
                 "etant", "se", "s", "bien", "tres", "plus", "moins", "deja", "souvent", "mal"}
 
 
-# Deux mots français distincts, avec et sans accent : le mode sûr ne les touche
-# jamais, seul le contexte peut trancher (« ça marche », « le marché »).
+# Deux mots français distincts, avec et sans accent
 _HOMOGRAPHES = {"cite", "cites", "marche", "marches", "cote", "cotes", "tache", "taches", "peche", "peches", "foret", "forets",
                 "jeune", "jeunes", "mur", "murs", "pale", "sur", "sure", "du", "des", "la", "ou", "a", "mais",
                 "colle", "cree", "crees", "retraite", "legue", "roder", "boite", "chasse", "cure", "interesse",
@@ -52,8 +51,7 @@ class Accentueur:
         variantes = self.formes.get(plier(bas))
         if not variantes:
             return mot
-        # Un mot déjà accentué, ou qu'aucune variante accentuée ne concurrence,
-        # ne se touche pas.
+        # Un mot déjà accentué, ou qu'aucune variante accentuée ne concurrence
         if bas != plier(bas) or set(variantes) == {bas}:
             return mot
 
@@ -79,8 +77,7 @@ class Accentueur:
                 and plier(suivant) in _ARTICLES
                 and not (precedent and plier(precedent) in _AUXILIAIRES)):
             return mot
-        # Après un pronom sujet, un verbe au présent ne devient pas un participe
-        # sans auxiliaire : « il plagie », pas « il plagié ».
+        # Après un pronom sujet, un verbe au présent ne devient pas un participe sans
         if (precedent and plier(precedent) in {"il", "elle", "on", "je", "tu", "qui", "cela", "ca"}
                 and bas.endswith(("e", "es", "ent")) and choix.endswith(("é", "ée", "és", "ées"))):
             return mot
@@ -92,9 +89,7 @@ class Accentueur:
         return choix
 
     def sur(self, mot: str) -> str:
-        """Le mot accentué seulement s'il n'y a pas d'ambiguïté : une variante
-        accentuée domine nettement (« qualité »), et non deux (« présente » et
-        « présenté »)."""
+        """Le mot accentué seulement s'il n'y a pas d'ambiguïté."""
         bas = mot.lower()
         if bas != plier(bas) or bas in _HOMOGRAPHES:
             return mot

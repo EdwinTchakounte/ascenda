@@ -14,13 +14,7 @@ import '../widgets/invitation.dart';
 import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
-/// Tous les quiz d'un ouvrage, hors séance : le cahier d'exercices du volume,
-/// chapitre après chapitre, chacun avec son folio.
-///
-/// Un livre du corpus porte souvent plus de deux cents questions, et on ne
-/// pouvait y accéder qu'une séance à la fois. Cet écran ouvre le livre par ses
-/// exercices : pour réviser avant un examen, ou reprendre un chapitre raté sans
-/// attendre que le chronogramme le reprogramme.
+/// Tous les quiz d'un ouvrage, hors séance
 class EcranQuizOuvrage extends ConsumerWidget {
   const EcranQuizOuvrage({super.key, required this.documentId, this.titre});
 
@@ -61,9 +55,8 @@ class EcranQuizOuvrage extends ConsumerWidget {
               reessayer: () => ref.invalidate(quizOuvrageProvider(documentId)),
             ),
             data: (d) {
-              // Les chapitres d'appareil sont enregistrés avec zéro question et
-              // le motif qui l'explique. Les montrer ferait une liste où une
-              // ligne sur trois n'est pas cliquable.
+              // Les chapitres d'appareil sont enregistrés avec zéro question et le motif
+              // qui
               final lots = ((d['chapitres'] as List?) ?? [])
                   .cast<Map<String, dynamic>>()
                   .where((c) => (c['nb_questions'] as int? ?? 0) > 0)
@@ -249,10 +242,6 @@ class _LigneQuiz extends StatelessWidget {
 }
 
 /// Le meilleur score obtenu, en couleur.
-///
-/// Le vert marque un chapitre acquis, l'or un chapitre à consolider, la
-/// terracotta un chapitre à reprendre. Trois seuils suffisent : au delà, on
-/// demande au lecteur de lire une échelle au lieu de lire son résultat.
 class _Score extends StatelessWidget {
   const _Score({required this.score});
   final num score;

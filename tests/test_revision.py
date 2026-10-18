@@ -30,8 +30,8 @@ for o in b["ouvrages"]:
     for lot in lots[:4]:
         s,q = call("GET",f"/v1/quiz/{lot['quiz_id']}",tok=tok)
         if s != 200: continue
-        # On rate tout volontairement : la bonne réponse n'est jamais l'indice 3
-        # sur toutes les questions à la fois.
+        # On rate tout volontairement : la bonne réponse n'est jamais l'indice 3 sur
+        # toutes les
         faux = {str(i): 3 for i in range(len(q["questions"]))}
         s,co = call("POST",f"/v1/quiz/{lot['quiz_id']}/corriger",{"reponses":faux},tok)
         if s == 200 and co["justes"] < co["total"]:

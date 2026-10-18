@@ -16,14 +16,6 @@ import 'agent.dart';
 import 'lecteur_pdf.dart';
 
 /// Le lecteur : une page de livre, pas un écran d'application.
-///
-/// Le texte est posé sur le papier du thème, entre des marges de livre, sous le
-/// titre courant de l'ouvrage et son folio. Il s'ouvre sur une lettrine et se
-/// referme sur un fleuron, comme un chapitre imprimé.
-///
-/// Sur les 71 ouvrages non redistribuables, le serveur ne renvoie que des
-/// extraits plafonnés. On le dit clairement plutôt que de laisser croire à un
-/// bug d'affichage.
 class EcranLecteur extends ConsumerStatefulWidget {
   const EcranLecteur({
     super.key,
@@ -87,9 +79,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
     }
   }
 
-  /// Le texte de lecture : Fraunces, interligne ample, et une encre un peu
-  /// plus soutenue que le texte d'interface. Sur le papier Sépia comme sur la
-  /// Nuit, c'est le contraste d'un livre, pas celui d'un formulaire.
+  /// Le texte de lecture : Fraunces, interligne ample
   TextStyle? _styleLecture(ThemeData t, Palette p) => t.textTheme.bodyLarge?.copyWith(
         fontFamily: t.textTheme.headlineSmall?.fontFamily,
         fontSize: _taille,
@@ -134,9 +124,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
                 onPressed: () {
                   final d = lecture.valueOrNull!;
                   final page = d['chapitre']?['page_debut'];
-                  // Le lecteur de PDF ne reçoit que l'identifiant : on lui passe
-                  // au passage ce que le chapitre dit des droits de l'ouvrage,
-                  // pour qu'il sache s'il doit garder le fichier chiffré.
+                  // Le lecteur de PDF ne reçoit que l'identifiant
                   reservesConnus[widget.documentId] =
                       d['droits']?['application_seulement'] == true;
                   context.push('/pdf/${widget.documentId}'
@@ -417,9 +405,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   }
 
   /// Un passage du chapitre, sélectionnable et surlignable.
-  ///
-  /// Le premier porte la lettrine : sa lettre initiale passe dans le cadre à
-  /// l'encre, et le texte lui garde sa place en tête de la première ligne.
   Widget _passage(
     BuildContext context,
     Map<String, dynamic> x,
@@ -466,11 +451,7 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   String? _initiale(String texte) =>
       texte.isNotEmpty && _lettre.hasMatch(texte[0]) ? texte[0] : null;
 
-  /// Le texte du premier passage, moins sa lettre initiale, précédé de la place
-  /// qu'il réserve à la lettrine sur sa première ligne.
-  ///
-  /// La lettre n'est pas retirée du texte d'origine : les positions des
-  /// surlignages, calculées dessus, restent justes.
+  /// Le texte du premier passage, moins sa lettre initiale
   TextSpan _placeALaLettrine(TextSpan corps, TextStyle? base, double cote) {
     final espaces = ' ' * _espacesPour(cote + 10, base);
     final enfants = corps.children;
@@ -487,10 +468,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   }
 
   /// Combien d'espaces couvrent une largeur, dans le style de lecture.
-  ///
-  /// Mesurées entre deux lettres : une espace finale ne compte pas dans la
-  /// largeur d'un texte. Arrondi au-dessus, la lettrine garde sa place quoi
-  /// qu'il arrive.
   int _espacesPour(double largeur, TextStyle? style) {
     double mesure(String texte) {
       final peintre = TextPainter(
@@ -536,11 +513,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   }
 
   /// Compose le texte en teintant les portions déjà surlignées.
-  ///
-  /// On retrouve chaque citation par recherche littérale dans le passage. Une
-  /// citation qui ne s'y retrouve plus (texte corrigé depuis, extrait abrégé
-  /// autrement) est simplement ignorée : mieux vaut un surlignage qui ne
-  /// s'affiche pas qu'un texte qui refuse de s'afficher.
   TextSpan _teinter(String texte, List<Map<String, dynamic>> surlignages, TextStyle? base) {
     // Même longueur que le texte d'origine : les positions trouvées sur l'un
     // valent pour l'autre.
@@ -582,9 +554,6 @@ class _EcranLecteurState extends ConsumerState<EcranLecteur> {
   }
 
   /// Le menu de sélection, augmenté d'un « Surligner ».
-  ///
-  /// On garde les entrées natives (copier, tout sélectionner) : les remplacer
-  /// priverait le lecteur de gestes qu'il connaît déjà.
   Widget _menuTexte(
     BuildContext context,
     EditableTextState etat,

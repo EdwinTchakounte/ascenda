@@ -6,15 +6,6 @@ import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
 
 /// Le transport HTTP de l'application, préparé une fois au démarrage.
-///
-/// Le certificat de l'API remonte à ISRG Root X2, et, par une contre-signature,
-/// à ISRG Root X1. Les téléphones n'ont pas tous ces racines : X1 n'est connue
-/// qu'à partir d'Android 7.1.1, X2 qu'à partir d'Android 14. Plutôt que de
-/// dépendre du magasin de certificats de chaque appareil, l'application
-/// embarque les deux racines et les ajoute à celles du système. Les racines du
-/// système restent valables : on élargit la confiance, on ne la remplace pas.
-///
-/// Sur le web, c'est le navigateur qui décide : il n'y a rien à préparer.
 class Reseau {
   Reseau._();
 

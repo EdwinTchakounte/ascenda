@@ -29,8 +29,7 @@ PROPRES = {
 
 
 def plier(s: str) -> str:
-    # L'apostrophe courbe disparaîtrait à la conversion ASCII et collerait les mots
-    # (« lalimentation ») : on la remplace d'abord par une espace.
+    # L'apostrophe courbe disparaîtrait à la conversion ASCII et collerait les mots («
     s = s.replace("’", " ").replace("'", " ")
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
     return re.sub(r"\s+", " ", re.sub(r"[^a-z0-9]+", " ", s)).strip()
@@ -94,8 +93,7 @@ def sections(doc, sommaire: list[dict]) -> list[dict]:
             if plier(titre) in GENERIQUES:
                 porteur = PORTEURS.get(parent["titre"], parent["titre"])
                 lisible = f"{porteur} : {lisible[0].lower()}{lisible[1:]}"
-            # `ligne` : le titre tel qu'imprimé, pour couper la page à cet endroit
-            # (redecouper.py) plutôt qu'au début de la page.
+            # `ligne` : le titre tel qu'imprimé
             trouvees.append({"num": "", "titre": lisible, "niveau": parent["niveau"] + 1,
                              "page": pi + 1, "type": "section", "ligne": l, "_parent": parent["num"]})
     return trouvees

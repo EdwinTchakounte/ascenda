@@ -12,13 +12,6 @@ import '../theme/texte.dart';
 import '../widgets/ui.dart';
 
 /// Retrouver son mot de passe, en deux temps sur un seul écran.
-///
-/// Un code à six chiffres plutôt qu'un lien : on lit souvent ses courriels sur
-/// un autre appareil que celui où l'application tourne, et un lien profond
-/// suppose un site déployé, ce que nous n'avons pas. Un code se recopie.
-///
-/// L'écran ne dit jamais si l'adresse existe. Le serveur répond la même chose
-/// dans tous les cas, et l'interface ne doit pas trahir ce que le serveur tait.
 class EcranMotDePasseOublie extends ConsumerStatefulWidget {
   const EcranMotDePasseOublie({super.key, this.email});
 
@@ -318,9 +311,7 @@ class _EtatChangerMotDePasse extends ConsumerState<EcranChangerMotDePasse> {
         'nouveau': _nouveau.text,
       });
       if (!mounted) return;
-      // Le serveur ferme toutes les sessions, celle-ci comprise. Rester sur
-      // place donnerait une application qui échoue à la première requête
-      // suivante sans dire pourquoi.
+      // Le serveur ferme toutes les sessions, celle-ci comprise.
       await ref.read(sessionProvider.notifier).deconnexion();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(

@@ -7,8 +7,7 @@ from app.core.db import execute, fetch_all, fetch_one
 
 log = logging.getLogger("ascenda.travaux")
 
-# Ce que chaque type de travail lance, et ce qu'on lui passe. L'ouvrier lit
-# cette table : ajouter un type se fait ici et nulle part ailleurs.
+# Ce que chaque type de travail lance, et ce qu'on lui passe.
 RECETTES: dict[str, dict[str, Any]] = {
     "ingestion": {
         "libelle": "Ingérer un ouvrage",
@@ -123,8 +122,7 @@ async def relancer(travail_id: str) -> dict | None:
 
 
 async def purger(jours: int = 30) -> int:
-    """Efface les travaux terminés anciens. La file est un outil de suivi, pas
-    une archive : garder six mois de lignes réussies n'apprend rien."""
+    """Efface les travaux terminés anciens."""
     await execute(
         """delete from travail
             where etat in ('termine', 'annule')

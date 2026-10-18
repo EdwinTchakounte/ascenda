@@ -1,10 +1,4 @@
-// Ce que ce fichier vérifie : que l'onglet du cercle affiche ce que l'API
-// renvoie (code, demandes, encouragements, fil, amis) sans déborder sur un
-// petit téléphone, que chaque geste appelle la bonne route, et que la
-// conversation se lit dans le bon sens.
-//
-// Les règles d'accès (qui peut écrire à qui, blocage, modération) sont tenues
-// par le serveur et vérifiées par tests/test_cercle.py.
+// Ce que ce fichier vérifie : que l'onglet du cercle affiche ce que l'API renvoie
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

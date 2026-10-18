@@ -1,18 +1,4 @@
 // Le banc de capture : il rend les écrans hors ligne et les écrit en images.
-//
-// Ce n'est pas un test de non-régression, c'est un outil de revue : on juge un
-// design sur des pixels, pas sur du code. Les écrans sont nourris par un client
-// d'API factice, puis capturés dans les quatre thèmes.
-//
-//   flutter test test/apercu_test.dart --run-skipped --update-goldens
-//
-// Les images sortent dans test/apercu/. Elles ne sont pas versionnées : le
-// dépôt n'a pas à porter des captures d'écran, et un écart de rendu entre deux
-// machines ferait échouer la suite pour rien.
-//
-// Deux formats sont capturés pour chaque écran : le téléphone courant
-// (360 x 667 points) et un petit appareil (320 x 700 points), qui est celui
-// sur lequel les débordements se voient.
 @Tags(['apercu'])
 library;
 

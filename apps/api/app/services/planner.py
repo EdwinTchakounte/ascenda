@@ -4,8 +4,7 @@ from datetime import date, timedelta
 from app.core.db import fetch_all
 from app.services.titres import est_appareil, est_repli
 
-# Un token vaut environ 0,75 mot. La vitesse par défaut est prudente : mieux vaut
-# un plan tenu qu'un plan flatteur.
+# Un token vaut environ 0,75 mot.
 MOTS_PAR_TOKEN = 0.75
 VITESSE_DEFAUT_WPM = 200
 DUREE_SEANCE_DEFAUT = 30
@@ -13,8 +12,7 @@ TOKENS_MIN_CHAPITRE = 300  # en deçà, c'est de l'appareil : sommaire, colophon
 
 ORDRE_NIVEAU = {"debutant": 0, "intermediaire": 1, "avance": 2, None: 1}
 
-# En deçà de ce seuil, une unité de lecture ne mérite pas une séance à elle seule :
-# on l'agrège au chapitre suivant du même ouvrage.
+# En deçà de ce seuil, une unité de lecture ne mérite pas une séance à elle seule
 SEANCE_MIN_RATIO = 0.5
 
 
@@ -59,8 +57,7 @@ async def ouvrages_de_l_axe(axis_id: str, niveau: str | None) -> list[dict]:
 
     def cle(o: dict) -> tuple:
         n = ORDRE_NIVEAU.get(o["level"], 1)
-        # Les ouvrages du niveau visé passent devant ; en dessous ensuite (révision),
-        # au-dessus à la fin (progression).
+        # Les ouvrages du niveau visé passent devant
         rang = 0 if n == depart else (1 if n < depart else 2)
         return (rang, -float(o["weight"] or 1), o["titre"] or "")
 
@@ -100,8 +97,7 @@ async def chapitres_de_plusieurs(document_ids: list[str], axis_id: str | None = 
     )
     par_doc: dict[str, list[dict]] = {d: [] for d in document_ids}
     for l in lignes:
-        # Couverture, copyright, sommaire : repérés par leur titre quand la
-        # campagne des quiz ne les a pas déjà marqués.
+        # Couverture, copyright, sommaire
         if est_appareil(l["title"]):
             continue
         par_doc.setdefault(str(l["document_id"]), []).append(l)
@@ -198,11 +194,8 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
     plancher = max(5, round(duree_seance * SEANCE_MIN_RATIO))
 
     def contigus(a: dict, b: dict) -> bool:
-        """Deux unités qui se suivent dans le livre. Un axe borné à certains
-        chapitres (le Mémento de l'agronome) laisse des trous : fusionner par-dessus
-        ferait lire « p. 713 à 1206 » pour une demi-heure."""
-        # Seuls les ouvrages bornés ont des trous. Ailleurs, l'ordre des chapitres
-        # ne suit pas toujours celui des pages, et la fusion reste celle d'avant.
+        """Deux unités qui se suivent dans le livre."""
+        # Seuls les ouvrages bornés ont des trous.
         if not (a.get("borne") and b.get("borne")):
             return True
         if a["page_end"] is None or b["page_start"] is None:
@@ -236,8 +229,7 @@ def _fusionner(unites: list[dict], duree_seance: int) -> list[dict]:
         else:
             fusionnees.append(dict(u))
 
-    # Une séance d'ouverture trop courte (une préface avant un long chapitre
-    # découpé) rejoint la séance qui la suit.
+    # Une séance d'ouverture trop courte (une préface avant un long chapitre découpé)
     avant: list[dict] = []
     i = 0
     while i < len(fusionnees):
@@ -365,8 +357,7 @@ def _titre_de_part(titre: str | None, fraction: tuple | None) -> str | None:
 
 
 def _enumerer(titres: list[str]) -> str:
-    # Le point-virgule plutôt que « et » : bien des titres en contiennent déjà un
-    # (« Les bâtiments et le matériel »).
+    # Le point-virgule plutôt que « et »
     return " ; ".join(titres)
 
 
@@ -389,8 +380,7 @@ def libelle_seance(u: dict) -> str:
     if not titre or est_repli(titre) or u.get("repli"):
         return f"{ouvrage} : {pages}" if pages else ouvrage
     if len(titres) > 1 and not any(est_repli(t) for t in titres):
-        # Autant de titres que la carte en tient, puis le compte du reste :
-        # « Le gombo ; La laitue ; L'oignon et 4 autres ».
+        # Autant de titres que la carte en tient, puis le compte du reste
         pris: list[str] = []
         for t in titres[:TITRES_MAX]:
             if len(" ; ".join(pris + [t])) > SIGNES_MAX and pris:
@@ -402,8 +392,7 @@ def libelle_seance(u: dict) -> str:
         return f"{ouvrage} : {_enumerer(pris)} et {reste} autre{'s' if reste > 1 else ''}"
     if u.get("mixte"):
         return f"{ouvrage} : {pages}" if pages else ouvrage
-    # Quand le chapitre porte le titre de l'ouvrage (fréquent sur les pages de
-    # garde), l'énoncer deux fois n'apprend rien au lecteur.
+    # Quand le chapitre porte le titre de l'ouvrage (fréquent sur les pages de garde)
     base = ouvrage if _meme_titre(titre, ouvrage) else f"{ouvrage} : {titre}"
     if fraction:
         return f"{base} ({fraction[0]}/{fraction[1]})"

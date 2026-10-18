@@ -816,8 +816,7 @@ async function api(chemin, options = {}, reessai = true) {
   }
   if (r.status === 401 || r.status === 403) { sortir(); throw new Error("refuse"); }
   if (!r.ok) {
-    // Le message de l'API est écrit pour être lu : on le garde pour l'afficher
-    // quand la vue sait quoi en faire.
+    // Le message de l'API est écrit pour être lu
     const e = new Error("http " + r.status);
     try { const c = await r.json(); e.lisible = c?.detail?.message || null; } catch (_) { /* corps vide */ }
     throw e;
@@ -888,8 +887,7 @@ function cellule(v, f) {
   if (f === "xaf") return xaf(v);
   if (f === "pastille") return pastille(v);
   if (f === "oui") return v ? `<span class="pastille p-ok">oui</span>` : "";
-  // Un état normal ne mérite pas de pastille : n'afficher que ce qui demande
-  // qu'on s'en occupe fait ressortir les deux lignes qui comptent sur soixante.
+  // Un état normal ne mérite pas de pastille
   if (f === "signal") return v && v !== "none" ? pastille(v) : "";
   if (f === "json") return `<code>${ech(JSON.stringify(v)).slice(0, 110)}</code>`;
   if (f === "liste") return ech(Array.isArray(v) ? v.join(", ") : v);
@@ -1053,9 +1051,7 @@ zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble",
   const p = d.paiements, c = d.comptes, e = d.entonnoir;
   const orph = p.orphelins || 0, ratees = d.courriels.echecs || 0, attente = p.en_attente || 0;
 
-  // Ce qui demande qu'on s'en occupe passe avant tout le reste. Trois chiffres
-  // à zéro valent une seule ligne verte ; un seul qui ne l'est pas mérite sa
-  // propre porte vers la vue qui le traite.
+  // Ce qui demande qu'on s'en occupe passe avant tout le reste.
   const soucis = [
     { n: orph, un: "webhook orphelin", des: "webhooks orphelins",
       i: "orphelin", va: "orphelins" },
@@ -1092,7 +1088,6 @@ zone({ cle: "ensemble", groupe: "Piloter", titre: "Vue d'ensemble",
     <span>${jour(dernier && dernier.jour)}</span></div>`;
 
   // L'entonnoir se lit de haut en bas, chaque marche rapportée à la précédente.
-  // C'est la seule façon de voir laquelle on perd.
   const etapes = [
     { l: "Comptes créés", v: e.comptes, i: "membres" },
     { l: "Diagnostic passé", v: e.diagnostiques, i: "poles" },
@@ -1572,8 +1567,7 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
     const env = await api("/v1/admin/corpus?par_page=40&page=" + (this.page || 1) +
       (q.length > 1 ? "&q=" + encodeURIComponent(q) : "") + (m ? "&manque=true" : ""));
     this.lignes = env.lignes; this.env = env;
-    // Les compteurs viennent du total du serveur, pas de la page affichée :
-    // annoncer « 40 ouvrages » parce que la page en montre quarante serait faux.
+    // Les compteurs viennent du total du serveur, pas de la page affichée
     const incomplets = m ? env.total : (resume ? env.total - 0 : env.total);
     return `<div class="tuiles serre" style="margin-bottom:16px">` + [
         { v: nb(env.total), l: "ouvrages " + (m ? "incomplets" : "au corpus"), i: "livre",
@@ -1639,8 +1633,7 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
           ["tokens", "tokens", "nombre"], ["quiz", "quiz", "nombre"],
           ["citations", "citations", "nombre"]], d.chapitres)}`, "livre");
 
-      // Le PDF part avec le jeton : une balise `a href` ne peut pas porter
-      // d'en-tête d'autorisation. On récupère le flux et on l'ouvre.
+      // Le PDF part avec le jeton : une balise `a href` ne peut pas porter d'en-tête
       const bp = $("v-pdf");
       if (bp) bp.onclick = async () => {
         bp.innerHTML = ico("horloge", "pt") + "Ouverture…";
@@ -1650,8 +1643,7 @@ zone({ cle: "corpus", groupe: "Contenu", titre: "Le corpus",
           if (!r.ok) throw new Error();
           const url = URL.createObjectURL(await r.blob());
           window.open(url, "_blank");
-          // On rend la mémoire au navigateur : un PDF de cent mégaoctets gardé
-          // en objet blob le reste tant que l'onglet vit.
+          // On rend la mémoire au navigateur
           setTimeout(() => URL.revokeObjectURL(url), 60000);
           bp.innerHTML = ico("pdf", "pt") + "Ouvrir le PDF d'origine";
         } catch (_) {
@@ -1768,8 +1760,7 @@ zone({ cle: "import", groupe: "Contenu", titre: "Ajouter un ouvrage",
       $("i-etat").textContent = `Envoi de ${(f.size / 1048576).toFixed(1)} Mo…`;
       envoyer.disabled = true;
       try {
-        // Pas de `Content-Type` : le navigateur pose lui-même la frontière
-        // multipart, et l'écraser casse l'envoi.
+        // Pas de `Content-Type` : le navigateur pose lui-même la frontière multipart
         const r = await fetch("/v1/admin/corpus/import", { method: "POST",
           headers: { Authorization: "Bearer " + jeton }, body: forme });
         if (!r.ok) {
@@ -2035,8 +2026,7 @@ zone({ cle: "journal", groupe: "Exploitation", titre: "Journal des modifications
   ico: "horloge",
   aide: "Qui a changé quoi, et de quelle valeur vers quelle valeur. C'est la base elle-même qui l'écrit : une correction faite à la main en ligne de commande y figure aussi.",
   f: { relation: "", operation: "", acteur: "", jours: "30" },
-  // Les filtres sont relus du formulaire puis redessinés avec ce qui était
-  // choisi : un filtre qui se vide à chaque rendu ne se comprend pas.
+  // Les filtres sont relus du formulaire puis redessinés avec ce qui était choisi
   get filtres() {
     const opt = (v, t, choisi) => `<option value="${ech(v)}" ${choisi === v ? "selected" : ""}>${ech(t)}</option>`;
     const tables = (this.env && this.env.relations) || [];
@@ -2076,8 +2066,7 @@ zone({ cle: "journal", groupe: "Exploitation", titre: "Journal des modifications
       + pagination(env);
   },
   async apres() {
-    // Le fichier reprend les filtres affichés : exporter ce qu'on ne voit pas
-    // serait une mauvaise surprise à l'ouverture du tableur.
+    // Le fichier reprend les filtres affichés
     const csv = $("j-csv");
     if (csv) {
       csv.onclick = () => {
@@ -2134,8 +2123,7 @@ function rendreContenu(kind, c) {
       <div class="just">${x.page ? `p. ${x.page}` : ""} ${ech(x.commentaire || x.contexte || "")}</div>
     </div>`).join("");
   }
-  // Les autres types n'ont pas de forme figée : on les rend lisibles sans
-  // prétendre les mettre en page.
+  // Les autres types n'ont pas de forme figée
   return `<pre>${ech(JSON.stringify(c, null, 2)).slice(0, 4000)}</pre>`;
 }
 
@@ -2157,10 +2145,7 @@ async function afficher(z) {
   $("ecusson-zone").innerHTML = ico(z.ico || "file");
   $("menu").querySelectorAll("button").forEach((b) =>
     b.setAttribute("aria-current", b.dataset.cle === z.cle));
-  // Ce qui est saisi dans les filtres, relevé avant de vider la vue. Ils
-  // étaient réinsérés après le rendu, donc `rendre()` les relisait quand ils
-  // n'existaient plus : le filtre revenait à son défaut à chaque passage, et
-  // une frappe dans un champ de recherche perdait le curseur.
+  // Ce qui est saisi dans les filtres, relevé avant de vider la vue.
   const saisie = {};
   $("zone").querySelectorAll(".filtres [id]").forEach((c) => {
     saisie[c.id] = c.type === "checkbox" ? c.checked : c.value;
@@ -2177,8 +2162,7 @@ async function afficher(z) {
     let minuterie;
     c.addEventListener(evenement, () => {
       clearTimeout(minuterie);
-      // Changer un filtre ramène à la première page : rester sur la page
-      // douze d'une liste devenue longue de trois affiche un vide inexplicable.
+      // Changer un filtre ramène à la première page
       minuterie = setTimeout(() => { z.page = 1; afficher(z); },
         evenement === "input" ? 350 : 0);
     });
@@ -2227,8 +2211,7 @@ async function demarrer() {
     menu();
     await afficher(ZONES[0]);
   } catch (e) {
-    // Revenir au formulaire sans rien dire, c'est ce qui donnait l'impression
-    // d'une console qui refuse sans raison. On nomme la cause.
+    // Revenir au formulaire sans rien dire
     sortir(false);
     $("erreur").innerHTML = ico("alerte", "pt") + "<span>" + (e && e.message === "refuse"
       ? "Ce compte existe, mais il ne porte pas le droit d'administration."

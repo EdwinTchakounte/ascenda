@@ -52,8 +52,7 @@ def extract_epub(path):
 
 # ---------------------------------------------------------------- chunking
 def build_chunks(pages, chapters):
-    """Chunks ~750 tokens, alignés sur les frontières de chapitre, avec overlap.
-    Chaque chunk connaît ses pages -> l'agent peut citer « p. 47 »."""
+    """Chunks ~750 tokens, alignés sur les frontières de chapitre, avec overlap."""
     def chap_of(page):
         cur = None
         for c in chapters:
@@ -81,8 +80,7 @@ def build_chunks(pages, chapters):
             token_count=int(len(text) / CHARS_PER_TOKEN),
             content_hash=hashlib.sha256(text.encode()).hexdigest(),
         ))
-        # La reprise commence sur un début de mot : coupée au caractère près,
-        # elle ouvrait le passage suivant sur un fragment (« ère Les textes… »).
+        # La reprise commence sur un début de mot
         tail = text[-ovl:] if len(text) > ovl else ""
         espace = tail.find(" ")
         tail = tail[espace + 1:] if 0 <= espace < 40 else tail
@@ -123,8 +121,7 @@ def build_chapters(toc, n_pages):
 
 # ---------------------------------------------------------------- droits
 def guess_rights(path: Path, title: str):
-    """Heuristique conservatrice : par défaut 'restricted', non redistribuable.
-    Seuls les documents institutionnels identifiés passent en 'institutional'."""
+    """Heuristique conservatrice : par défaut 'restricted', non redistribuable."""
     name = path.name.lower()
     inst = any(k in name for k in ("men_dne", "ciesd", "cours-", "lexique", "brochure"))
     if inst:

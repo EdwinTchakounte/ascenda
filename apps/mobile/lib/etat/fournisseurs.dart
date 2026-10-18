@@ -56,11 +56,6 @@ class PageOuvrages {
 }
 
 /// Combien d'ouvrages par chargement.
-///
-/// Vingt-quatre remplissent deux écrans et pèsent peu. Charger les soixante-dix
-/// huit d'un coup faisait, sur une connexion lente, plusieurs secondes d'attente
-/// devant une page blanche pour des ouvrages que personne ne fait défiler
-/// jusqu'au bout.
 const int parPageBiblio = 24;
 
 final bibliothequeProvider =
@@ -220,9 +215,7 @@ final notesProvider =
   return j.cast<Map<String, dynamic>>();
 });
 
-/// La grille tarifaire. Publique : un visiteur doit pouvoir voir les prix avant
-/// d'ouvrir un compte. Elle ne dépend pas de la session, donc pas d'autoDispose :
-/// la relire à chaque aller-retour vers l'écran d'abonnement n'apporte rien.
+/// La grille tarifaire.
 final tarifsProvider = FutureProvider.autoDispose<Tarifs>((ref) async {
   final api = ref.watch(clientApiProvider);
   // Authentifié quand on l'est : le serveur y ajoute la réduction ambassadeur.
@@ -245,9 +238,7 @@ final paiementsProvider = FutureProvider.autoDispose<List<Paiement>>((ref) async
   return j.map((e) => Paiement.depuisJson(e as Map<String, dynamic>)).toList();
 });
 
-/// Les surlignages d'un ouvrage. Indexés par ouvrage et non globalement : le
-/// lecteur n'a besoin que des siens, et un membre qui annote beaucoup en aurait
-/// des centaines.
+/// Les surlignages d'un ouvrage.
 final surlignagesProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, String>((ref, docId) async {
   final api = ref.watch(clientApiProvider);
@@ -255,13 +246,7 @@ final surlignagesProvider =
   return j.cast<Map<String, dynamic>>();
 });
 
-/// La recherche dans le corpus. Publique : elle est la vitrine du produit,
-/// et un visiteur doit pouvoir voir ce que la bibliothèque contient avant
-/// d'ouvrir un compte.
-///
-/// Le champ `mode` que renvoie l'API dit par quelle voie la réponse est venue :
-/// plein texte, sémantique, ou les deux fusionnées. On l'affiche, parce qu'un
-/// moteur qui explique comment il a trouvé se fait corriger plus vite.
+/// La recherche dans le corpus.
 final rechercheProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, requete) async {
   final q = requete.trim();
@@ -283,10 +268,6 @@ final suggestionsProvider =
 });
 
 /// Les quiz préparés pour un ouvrage, chapitre par chapitre.
-///
-/// Publique : un visiteur doit pouvoir voir ce que l'ouvrage contient comme
-/// exercices avant d'ouvrir un compte. Passer le quiz, en revanche, demande
-/// un compte, puisqu'il faut bien enregistrer le résultat quelque part.
 final quizOuvrageProvider =
     FutureProvider.autoDispose.family<Map<String, dynamic>, String>((ref, documentId) async {
   final api = ref.watch(clientApiProvider);
@@ -302,10 +283,6 @@ final historiqueQuizProvider =
 });
 
 /// La comparaison des formules, lue au serveur.
-///
-/// Les limites viennent de `plan_quota`, celle-là même que l'API applique, et
-/// le prix de `plan_tarif`. Un descriptif recopié dans l'application finit
-/// toujours par promettre autre chose que ce qui est réellement accordé.
 final formulesProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/compte/formules', auth: false) as List;
@@ -313,10 +290,6 @@ final formulesProvider = FutureProvider<List<Map<String, dynamic>>>((ref) async 
 });
 
 /// Le journal d'activité, le plus récent d'abord.
-///
-/// La table est en ajout seul : elle porte tout ce que le lecteur a fait, et
-/// c'est d'elle que sortent les chiffres de la page Progression. La montrer
-/// telle quelle permet de vérifier un total qu'on trouverait douteux.
 final journalProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((ref) async {
   final api = ref.watch(clientApiProvider);
   final j = await api.get('/progression/journal', params: {'limite': 60}) as List;
@@ -324,9 +297,6 @@ final journalProvider = FutureProvider.autoDispose<List<Map<String, dynamic>>>((
 });
 
 /// Le glossaire du corpus, filtrable par axe et par terme.
-///
-/// Public : c'est un index de ce que les ouvrages contiennent, et il se
-/// consulte avant d'ouvrir un compte comme une table des matières en librairie.
 final glossaireProvider =
     FutureProvider.autoDispose.family<List<Map<String, dynamic>>, ({String? axe, String q})>(
         (ref, f) async {
@@ -354,12 +324,6 @@ final axeProvider =
 });
 
 /// L'état d'exploitation : lancement, maintenance, version minimale.
-///
-/// Relu au démarrage et toutes les deux minutes. Publique et sans jeton : une
-/// application qui ne peut pas se connecter doit quand même pouvoir apprendre
-/// pourquoi. Une lecture en échec ne renvoie rien plutôt qu'une erreur : une
-/// panne de ce réglage ne doit pas figer l'écran, ce serait l'inverse de ce
-/// qu'il sert à faire.
 final etatServiceProvider = StreamProvider<Map<String, dynamic>?>((ref) async* {
   final api = ref.watch(clientApiProvider);
   Future<Map<String, dynamic>?> lire() async {

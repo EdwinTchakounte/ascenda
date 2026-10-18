@@ -15,12 +15,6 @@ import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// Le glossaire : les notions du corpus, et où elles sont dites.
-///
-/// Ce n'est pas un dictionnaire. Une notion n'a d'intérêt ici que parce qu'on
-/// peut aller lire le passage qui la définit, dans l'ouvrage qui la définit.
-/// Le nombre d'occurrences est donc affiché, et une notion qui n'est ancrée
-/// nulle part est reléguée : elle vient d'une fiche de lecture sans que le
-/// texte l'emploie, et elle ne mène à rien.
 class EcranGlossaire extends ConsumerStatefulWidget {
   const EcranGlossaire({super.key, this.axe});
 
@@ -315,9 +309,7 @@ class _CarteOccurrence extends StatelessWidget {
     final t = Theme.of(context);
     final p = context.palette;
     final o = occurrence;
-    // Le serveur marque le passage qui définit la notion, par opposition à
-    // ceux qui l'emploient. C'est celui-là qu'on veut lire en premier, et il
-    // arrive en tête : autant le dire.
+    // Le serveur marque le passage qui définit la notion
     final definit = o['definition'] == true;
     final chapitreId = o['chapitre_id'];
 

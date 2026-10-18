@@ -1,8 +1,4 @@
 // Chercher un texte tel qu'on l'écrit, espaces insécables comprises.
-//
-// `Texte` remplace certaines espaces par des insécables pour tenir la mise en
-// ligne : les finders de Flutter comparent caractère par caractère et ne
-// retrouveraient plus « Accès limité à : ».
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';

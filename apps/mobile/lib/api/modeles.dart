@@ -21,9 +21,7 @@ class Utilisateur {
   final String? nom;
   final String plan;
 
-  /// Ce que le compte peut faire aujourd'hui. Le plan ne suffit plus à le
-  /// dire : un code d'accès ou le lancement ouvrent des fonctions sans le
-  /// changer.
+  /// Ce que le compte peut faire aujourd'hui.
   final AccesEffectif? acces;
 
   /// Abonné payant. Sert à ce qui concerne l'abonnement lui-même (prolonger,
@@ -397,10 +395,6 @@ class Seance {
   static final _nomDePages = RegExp(r'^[Pp]ages? \d+( à \d+)?$');
 
   /// Ce que la séance lit dans l'ouvrage : le libellé sans le titre du livre.
-  ///
-  /// Les titres d'ouvrage sont longs (« Cheikh Anta Diop et l'histoire de la
-  /// religion africaine : les sources… ») : affiché en entier, le libellé
-  /// coupait justement la partie utile, le chapitre ou les pages.
   String? get partie {
     final o = ouvrage;
     if (o == null || !objectif.startsWith('$o : ')) return null;
@@ -745,10 +739,6 @@ class Progression {
 }
 
 /// Une formule d'abonnement, telle que l'API la lit dans `plan_tarif`.
-///
-/// Le montant vient du serveur et jamais du téléphone : une grille tarifaire
-/// recopiée dans l'application finit toujours par diverger de ce qui est
-/// réellement débité.
 class Formule {
   const Formule({
     required this.periodeMois,

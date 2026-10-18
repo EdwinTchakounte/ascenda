@@ -43,8 +43,7 @@ async def current_user(
 async def optional_user(
     credentials: Annotated[HTTPAuthorizationCredentials | None, Depends(_bearer_optional)],
 ) -> dict | None:
-    """Pour les routes publiques qui s'enrichissent quand l'appelant est connu
-    (la bibliothèque affiche la progression si l'on sait qui regarde)."""
+    """Pour les routes publiques qui s'enrichissent quand l'appelant est connu."""
     return await _load_user(credentials.credentials if credentials else None)
 
 
@@ -77,9 +76,7 @@ def exige(fonction: str):
 
 
 async def admin_user(user: Annotated[dict, Depends(current_user)]) -> dict:
-    """Le droit d'administration, posé à la main en base et jamais accordé par
-    une route. Le message ne dit pas qu'il existe un espace d'administration :
-    une réponse qui renseigne est une réponse qui aide à chercher."""
+    """Le droit d'administration, posé à la main en base et jamais accordé par une route."""
     if not user.get("est_admin"):
         raise Forbidden("Vous n'avez pas accès à cette ressource.")
     return user

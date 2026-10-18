@@ -26,8 +26,7 @@ async def rechercher(
     )
     resultats = []
     for l in lignes:
-        # Un extrait de recherche est court par nature ; on applique quand même
-        # le plafond de l'ouvrage, et jamais plus de 400 caractères ici.
+        # Un extrait de recherche est court par nature
         budget = 10_000 if l["redistributable"] else min(400, int(l["max_excerpt_chars"] or 0))
         extrait, _ = tronquer(passage_extrait(l["text"]), max(budget, 0))
         resultats.append(

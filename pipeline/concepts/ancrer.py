@@ -6,15 +6,13 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import pg  # noqa: E402
 
-# En deçà, un terme est trop court pour être cherché sans bruit : « IA » se
-# retrouve dans « biais », « aujourd'hui » et un millier d'autres mots.
+# En deçà, un terme est trop court pour être cherché sans bruit
 LONGUEUR_MIN = 5
 
 # Au-delà, la liste n'apprend plus rien au lecteur et alourdit la table.
 MAX_PAR_CONCEPT = 30
 
 # Tournures qui signalent une définition plutôt qu'une simple mention.
-# L'apostrophe est doublée : la chaîne part telle quelle dans du SQL.
 DEFINITOIRES = r"(est |sont |designe|se definit|consiste|signifie|appelle|" \
                r"nomme|c''est |, a savoir|correspond a)"
 

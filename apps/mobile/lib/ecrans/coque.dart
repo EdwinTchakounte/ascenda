@@ -14,12 +14,6 @@ import '../widgets/ui.dart';
 import 'auth.dart';
 
 /// La coque : quatre onglets en bas, et un tiroir pour tout le reste.
-///
-/// Six onglets laissaient 53 px chacun sur un petit écran : des libellés
-/// tronqués et des cibles trop étroites. Les quatre gestes du quotidien
-/// (lire la séance, choisir un livre, demander à l'agent, voir ses progrès)
-/// restent sous le pouce ; le profil, le cercle, les codes et le thème
-/// s'ouvrent depuis le tiroir.
 class CoqueAscenda extends ConsumerWidget {
   const CoqueAscenda({super.key, required this.coque});
 
@@ -53,9 +47,7 @@ class CoqueAscenda extends ConsumerWidget {
           borderRadius: const BorderRadius.vertical(top: Radius.circular(26)),
           child: Stack(
             children: [
-              // Le signet : un filet d'or glissé sous l'onglet ouvert. Il se
-              // déplace d'un onglet à l'autre au lieu d'apparaître et de
-              // disparaître, si bien qu'on suit des yeux où l'on va.
+              // Le signet : un filet d'or glissé sous l'onglet ouvert.
               AnimatedAlign(
                 duration: const Duration(milliseconds: 320),
                 curve: Curves.easeOutCubic,

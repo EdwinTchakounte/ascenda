@@ -5,14 +5,6 @@ import 'package:flutter/material.dart';
 import '../theme/palette.dart';
 
 /// Les scènes dessinées d'ASCENDA.
-///
-/// Un écran vide est un moment de la vie du lecteur : il n'a encore rien
-/// emporté, son cercle est vide, le réseau manque. Une icône grise ne dit rien
-/// de tout cela. Ces scènes sont tracées au trait, dans les couleurs du thème,
-/// et racontent la situation en une image.
-///
-/// Elles sont dessinées et non dessinées à l'avance : elles suivent les quatre
-/// thèmes, ne pèsent rien dans l'application, et restent nettes à toute taille.
 enum Scene {
   rayonVide,     // aucun ouvrage emporté
   lampe,         // une lecture qui attend, le soir

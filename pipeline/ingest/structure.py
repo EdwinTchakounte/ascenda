@@ -44,8 +44,7 @@ def passages(conn, doc_id):
 
 def titre_detecte(tete: str) -> str | None:
     """Un marqueur en tête de passage, et le titre qui le suit s'il existe."""
-    # On ne regarde que le début : un « CHAPITRE » cité au milieu d'un
-    # paragraphe n'ouvre pas une section.
+    # On ne regarde que le début : un « CHAPITRE » cité au milieu d'un paragraphe n'ouvre
     debut = "\n".join(tete.split("\n")[:6])
     m = MARQUEURS.search(debut)
     if not m:
@@ -131,8 +130,7 @@ def consolider(sections: list[dict]) -> list[dict]:
         if t <= TOKENS_MAX or len(s["morceaux"]) < 2:
             finales.append(s)
             continue
-        # Trop longue : on la coupe en parts égales, en gardant le titre suivi
-        # d'un numéro de partie pour que le lecteur s'y retrouve.
+        # Trop longue : on la coupe en parts égales
         parts = max(2, round(t / TOKENS_CIBLE))
         taille = max(1, len(s["morceaux"]) // parts)
         for k in range(0, len(s["morceaux"]), taille):
@@ -149,8 +147,7 @@ def consolider(sections: list[dict]) -> list[dict]:
 
 def nommer(section: dict) -> str:
     titre = section["titre"]
-    # « Section 4 » ne dit rien de plus qu'une plage de pages, et fait croire à
-    # un sommaire qui n'existe pas.
+    # « Section 4 » ne dit rien de plus qu'une plage de pages
     if titre and not titre.startswith("Section"):
         return titre
     p0 = section["morceaux"][0]["page_start"]

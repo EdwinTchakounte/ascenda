@@ -7,12 +7,7 @@ import '../theme/icones.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// La bonne nouvelle, sur l'écran d'accueil : quelqu'un a créé son compte
-/// avec votre code, et votre prochain abonnement coûte moins cher.
-///
-/// Elle reste là jusqu'à ce qu'on ouvre « Codes et avantages ». Le courriel
-/// dit la même chose, mais tout le monde ne lit pas ses courriels ; tout le
-/// monde ouvre l'application pour lire.
+/// La bonne nouvelle, sur l'écran d'accueil
 class BandeauRecompense extends ConsumerWidget {
   const BandeauRecompense({super.key});
 

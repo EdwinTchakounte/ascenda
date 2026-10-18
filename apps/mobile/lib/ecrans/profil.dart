@@ -20,11 +20,6 @@ import 'auth.dart';
 import '../theme/texte.dart';
 
 /// Le profil : la page de garde du lecteur.
-///
-/// Son initiale y est frappée comme un ex-libris, sa formule tient dans un
-/// cartouche, ses compteurs se remplissent comme des jauges d'imprimeur et ses
-/// réglages se suivent, séparés par des filets. La page se ferme sur un
-/// fleuron et la marque, comme un volume se ferme sur son achevé d'imprimer.
 class EcranProfil extends ConsumerWidget {
   const EcranProfil({super.key});
 
@@ -40,9 +35,7 @@ class EcranProfil extends ConsumerWidget {
       appBar: AppBar(
         title: const Texte('Profil'),
         actions: [
-          // La déconnexion vit dans la barre du haut, pas au fond d'une page
-          // qu'il faut faire défiler. C'est le geste qu'on cherche quand on
-          // prête son téléphone.
+          // La déconnexion vit dans la barre du haut
           IconButton(
             tooltip: 'Se déconnecter',
             icon: const Icon(Icons.logout_rounded, size: 21),
@@ -260,15 +253,7 @@ class EcranProfil extends ConsumerWidget {
         _ => 'non renseigné',
       };
 
-  /// Se déconnecter efface la session : on demande confirmation, parce que
-  /// retrouver son mot de passe sur un téléphone n'est pas toujours simple.
-  /// Révoque toutes les sessions, celle-ci comprise.
-  ///
-  /// Le serveur ne fait pas d'exception pour l'appareil qui demande : il coupe
-  /// tous les jetons de rafraîchissement du compte. Écrire « celui-ci reste
-  /// ouvert » serait faux, et le mensonge se découvrirait une demi-heure plus
-  /// tard, à l'expiration du jeton d'accès, par une déconnexion inexpliquée.
-  /// On sort donc franchement, tout de suite.
+  /// Se déconnecter efface la session
   Future<void> _fermerPartout(BuildContext context, WidgetRef ref) async {
     final oui = await showDialog<bool>(
       context: context,
@@ -374,9 +359,7 @@ class EcranProfil extends ConsumerWidget {
   }
 }
 
-/// L'en-tête du compte : l'initiale frappée comme un ex-libris, le nom, puis
-/// la formule en cours dans son cartouche. La seule carte de mise en avant de
-/// la page.
+/// L'en-tête du compte : l'initiale frappée comme un ex-libris, le nom
 class _EnTeteCompte extends ConsumerWidget {
   const _EnTeteCompte({required this.premium});
   final bool premium;
@@ -388,10 +371,7 @@ class _EnTeteCompte extends ConsumerWidget {
     final u = ref.watch(sessionProvider).utilisateur;
     final abonnement = ref.watch(abonnementProvider).valueOrNull;
     final acces = u?.acces;
-    // Le descriptif et le nom viennent du serveur, qui les lit dans les mêmes
-    // tables que celles appliquant les limites. Recopiés ici, ils finissaient
-    // par promettre autre chose que ce qui est réellement accordé. Les valeurs
-    // en dur ne servent plus que de secours hors connexion.
+    // Le descriptif et le nom viennent du serveur
     final formules = ref.watch(formulesProvider).valueOrNull;
     final formule = formules?.cast<Map<String, dynamic>?>().firstWhere(
           (f) => f?['code'] == (premium ? 'premium' : 'free'),

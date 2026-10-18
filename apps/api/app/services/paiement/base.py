@@ -5,8 +5,7 @@ from typing import Any
 
 
 class ErreurFournisseur(Exception):
-    """`rejouable` distingue une panne passagère d'un refus définitif : la
-    première mérite une nouvelle tentative, la seconde jamais."""
+    """`rejouable` distingue une panne passagère d'un refus définitif."""
 
     def __init__(self, message: str, *, rejouable: bool = False, brut: dict | None = None):
         super().__init__(message)

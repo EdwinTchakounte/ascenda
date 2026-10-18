@@ -1,15 +1,4 @@
 // Ce que ce fichier vérifie : un ouvrage réservé à l'application (le Mémento de
-// l'agronome) se lit hors ligne, mais ne devient jamais un fichier lisible
-// ailleurs.
-//
-// - le coffre chiffre, refuse une donnée altérée ou une autre clé ;
-// - le pack et le PDF sont écrits chiffrés : aucune phrase du livre, aucune
-//   signature « %PDF » sur le disque ;
-// - le texte emporté expire à sa date de validité, le reste du pack demeure ;
-// - un chapitre se reconstitue depuis le pack, avec ses voisins, pour le lecteur.
-//
-// Les droits eux-mêmes (abonné, application mobile) sont décidés par le serveur
-// et vérifiés par tests/test_lecture_application.py.
 
 import 'dart:convert';
 import 'dart:io';

@@ -12,11 +12,9 @@ router = APIRouter(prefix="/admin", tags=["Administration"])
 
 PAR_PAGE = 40
 COUPE = 120
-# Un export est fait pour être ouvert dans un tableur, pas pour vider la base :
-# au-delà, on affine la période ou la table plutôt que de tout tirer.
+# Un export est fait pour être ouvert dans un tableur, pas pour vider la base
 PLAFOND_EXPORT = 50_000
-# Même un export garde des cellules lisibles : une valeur plus longue qu'un
-# paragraphe n'apporte rien et casse l'affichage du tableur.
+# Même un export garde des cellules lisibles
 COUPE_EXPORT = 2000
 
 
@@ -137,12 +135,7 @@ async def journal_csv(
     operation: Annotated[str | None, Query(pattern="^(insert|update|delete)$")] = None,
     jours: Annotated[int, Query(ge=1, le=365)] = 30,
 ):
-    """Une ligne par colonne changée, et non par entrée du journal.
-
-    C'est ce qu'on veut dans un tableur : trier sur la colonne touchée, filtrer
-    sur un auteur, compter les changements d'un plafond. L'identifiant de
-    l'entrée est gardé pour regrouper les lignes d'une même modification.
-    """
+    """Une ligne par colonne changée, et non par entrée du journal."""
     filtre, params = _filtre(relation, operation, acteur, jours)
     lignes = await fetch_all(
         f"""select id, au, relation, operation, cle, acteur, ecart

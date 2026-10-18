@@ -48,8 +48,8 @@ async def main():
         crees.append(str(t["id"]))
         ok("un travail s'inscrit", not t.get("deja") and t["etat"] == "en_attente", t.get("etat"))
 
-        # Deux vectorisations en parallèle se disputeraient le processeur pour
-        # faire deux fois le même ouvrage.
+        # Deux vectorisations en parallèle se disputeraient le processeur pour faire deux
+        # fois
         double = await travaux.inscrire("import_data", {})
         ok("le même travail lourd ne s'inscrit pas deux fois", double.get("deja") is True)
 

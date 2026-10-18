@@ -1,5 +1,4 @@
-"""Erreurs métier. Le message est destiné à l'utilisateur : il est en français
-et dit quoi faire, pas seulement ce qui a échoué."""
+"""Erreurs métier."""
 from fastapi import HTTPException, status
 
 

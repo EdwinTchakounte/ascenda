@@ -1,19 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Le mouvement d'ASCENDA : ce qui rend l'application vivante sans la rendre
-/// bavarde.
-///
-/// Trois règles, tenues partout :
-///
-/// 1. **Une entrée se voit une fois.** Une liste qui arrive se pose ligne après
-///    ligne, avec un décalage de quelques dizaines de millisecondes. Au
-///    défilement, plus rien ne bouge : une animation qui se rejoue à chaque
-///    passage fatigue.
-/// 2. **Un chiffre qui change se compte.** Une jauge se remplit, un nombre
-///    monte. C'est ce qui donne le sentiment d'avancer.
-/// 3. **Rien ne dure plus de 420 ms**, et tout respecte le réglage
-///    « animations réduites » du téléphone : sous ce réglage, l'écran s'affiche
-///    d'un coup, sans que rien ne disparaisse.
+/// Le mouvement d'ASCENDA : ce qui rend l'application vivante sans la rendre bavarde.
 abstract final class Duree {
   static const bref = Duration(milliseconds: 180);
   static const moyen = Duration(milliseconds: 300);
@@ -26,8 +13,6 @@ const courbeDouce = Curves.easeOutCubic;
 bool _reduites(BuildContext context) => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 
 /// Une apparition : le contenu monte de quelques pixels en se révélant.
-///
-/// [rang] décale l'entrée pour qu'une liste se pose en cascade.
 class Apparition extends StatefulWidget {
   const Apparition({
     super.key,
@@ -55,9 +40,6 @@ class Apparition extends StatefulWidget {
 
 class _ApparitionState extends State<Apparition> with SingleTickerProviderStateMixin {
   // Le décalage de la cascade est porté par la courbe, pas par un minuteur.
-  // Un `Future.delayed` survivait à la disparition de l'écran : en test, Flutter
-  // signalait « A Timer is still pending », et en vrai un écran quitté trop vite
-  // laissait tourner une attente pour rien.
   late final Duration _attente = Duree.decalage * widget.rang;
   late final AnimationController _c =
       AnimationController(vsync: this, duration: widget.duree + _attente)..forward();
@@ -88,12 +70,7 @@ class _ApparitionState extends State<Apparition> with SingleTickerProviderStateM
   }
 }
 
-/// « 1698 » devient « 1 698 » : une espace insécable sépare les milliers, et le
-/// nombre ne se coupe jamais en fin de ligne.
-///
-/// L'espace fine serait la bonne, mais aucune de nos polices ne la dessine :
-/// elle s'affiche à zéro et les chiffres restent collés. C'est donc l'insécable
-/// ordinaire, celle des montants.
+/// « 1698 » devient « 1 698 » : une espace insécable sépare les milliers
 String millier(num n) {
   final chiffres = n.round().abs().toString();
   final tampon = StringBuffer(n < 0 ? '-' : '');

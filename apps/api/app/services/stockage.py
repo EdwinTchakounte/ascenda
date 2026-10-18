@@ -32,8 +32,8 @@ def servir(storage_key: str, *, nom: str, mime: str | None) -> StreamingResponse
             reponse.release_conn()
 
     entetes = {
-        # `inline` : un navigateur l'ouvre dans son lecteur plutôt que de le
-        # déposer dans les téléchargements.
+        # `inline` : un navigateur l'ouvre dans son lecteur plutôt que de le déposer dans
+        # les
         "Content-Disposition": f"inline; filename*=UTF-8''{_encoder(nom)}",
     }
     reelle = reponse.headers.get("Content-Length")

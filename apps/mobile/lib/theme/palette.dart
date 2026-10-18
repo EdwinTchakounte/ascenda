@@ -1,15 +1,6 @@
 import 'package:flutter/material.dart';
 
 /// Les rôles de couleur d'ASCENDA, déclinés en quatre ambiances.
-///
-/// Un écran ne choisit jamais une teinte : il choisit un rôle (le fond, le texte
-/// atténué, l'accent). Chaque thème donne sa valeur à chaque rôle, pensée pour
-/// lui, sans inverser mécaniquement le thème clair.
-///
-/// - **Ivoire** : le papier chaud et l'or sur bleu nuit du logo. Le défaut.
-/// - **Nuit** : bleu nuit profond, or lumineux. Lecture du soir, écrans OLED.
-/// - **Sépia** : le brun d'un vieux livre. Les longues séances de lecture.
-/// - **Forêt** : vert profond et or, en écho au pôle Agriculture.
 @immutable
 class Palette extends ThemeExtension<Palette> {
   const Palette({

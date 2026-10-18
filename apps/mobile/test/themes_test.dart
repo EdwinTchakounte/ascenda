@@ -1,9 +1,4 @@
-// Ce que ce fichier vérifie : les quatre thèmes restent lisibles, et le choix
-// du lecteur est retenu.
-//
-// Un thème se juge à l'oeil, mais le contraste se mesure. Chaque paire texte /
-// fond que les écrans emploient doit tenir le seuil WCAG : 4,5 pour le texte
-// courant, 3 pour le texte secondaire et les grands titres dorés.
+// Ce que ce fichier vérifie : les quatre thèmes restent lisibles
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

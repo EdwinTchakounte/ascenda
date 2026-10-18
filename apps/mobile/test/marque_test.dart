@@ -1,10 +1,4 @@
-// Ce que ce fichier vérifie : que la marque est bien centrée là où elle est
-// seule, et que chaque forme du thème est déclarée et arrondie avec douceur.
-//
-// Deux contrôles qu'aucune relecture ne remplace. Un `Center` oublié se voit
-// à l'écran, mais seulement si on regarde cet écran là ; ici il se voit à
-// chaque exécution. Et les formes arrondies de Material sont posées par le
-// framework, pas par notre code : seule une mesure les attrape.
+// Ce que ce fichier vérifie : que la marque est bien centrée là où elle est seule
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

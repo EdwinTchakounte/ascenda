@@ -9,14 +9,6 @@ import '../theme/texte.dart';
 import 'ui.dart';
 
 /// L'affichage des textes qu'ASCENDA écrit sur un ouvrage.
-///
-/// Compte rendu de chapitre, synthèse et résumé exécutif sont nos textes, pas
-/// ceux de l'auteur : ce sont des oeuvres dérivées, elles ne tombent pas sous
-/// le plafond de citation qui gouverne les extraits littéraux.
-///
-/// Chacun est nul tant qu'il n'a pas été produit. Les blocs ci-dessous
-/// disparaissent alors sans rien dire : annoncer « pas encore de synthèse » sur
-/// cinquante ouvrages ferait une bibliothèque qui s'excuse.
 
 /// Le compte rendu d'un chapitre, dans le lecteur.
 class CompteRenduChapitre extends StatelessWidget {
@@ -34,9 +26,7 @@ class CompteRenduChapitre extends StatelessWidget {
     final reserves = (c['reserves'] as List?)?.cast<dynamic>() ?? const [];
     final afrique = '${c['pour_le_lecteur_africain'] ?? ''}'.trim();
 
-    // Un voile doré posé sur le papier de lecture, pas une carte blanche : le
-    // compte rendu accompagne le texte sans rompre la page, dans les quatre
-    // thèmes.
+    // Un voile doré posé sur le papier de lecture, pas une carte blanche
     return Container(
       margin: const EdgeInsets.only(top: 8, bottom: 28),
       padding: const EdgeInsets.fromLTRB(18, 18, 18, 16),

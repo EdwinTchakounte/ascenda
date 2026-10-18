@@ -1,9 +1,4 @@
-// Ce que ce fichier vérifie : qu'un contenu fermé se voit avant d'être
-// heurté, et qu'il tient la place du contenu absent.
-//
-// La décision d'accès appartient au serveur, et tests/test_codes.py la
-// vérifie. Ici on vérifie la moitié qui reste : à droit égal, l'écran montre
-// la même chose, et un parcours réservé ne se présente pas comme ouvert.
+// Ce que ce fichier vérifie : qu'un contenu fermé se voit avant d'être heurté
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

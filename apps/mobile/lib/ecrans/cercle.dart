@@ -18,13 +18,7 @@ import '../widgets/etats.dart';
 import '../widgets/illustrations.dart';
 import '../widgets/ui.dart' hide Pastille;
 
-/// Le cercle de lecteurs : ses amis, ce qu'ils lisent, et de quoi se tenir
-/// mutuellement au rythme.
-///
-/// On n'y cherche personne : on partage son code, on ajoute celui d'un ami.
-/// C'est un cercle de gens qui se connaissent, pas un réseau public. La page se
-/// tient donc comme un registre d'atelier : un cartouche en tête, des sections
-/// en petites capitales, et les activités portées l'une sous l'autre.
+/// Le cercle de lecteurs : ses amis, ce qu'ils lisent
 class EcranCercle extends ConsumerStatefulWidget {
   const EcranCercle({super.key});
 
@@ -205,11 +199,7 @@ class _EnAttente extends StatelessWidget {
   }
 }
 
-/// Un bloc creusé qui dit ce qui manque : un cercle encore vide, un fil sans
-/// activité, un serveur qui n'a pas répondu.
-///
-/// La scène raconte le moment plutôt qu'elle ne le constate : une icône grise
-/// ne dit rien à quelqu'un qui vient d'arriver.
+/// Un bloc creusé qui dit ce qui manque
 class _Discret extends StatelessWidget {
   const _Discret(this.texte, {required this.scene});
   final String texte;
@@ -248,9 +238,7 @@ class AvatarLecteur extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Une teinte stable par lecteur, prise dans celles des pôles : un visage se
-    // reconnaît à sa couleur avant son nom. Les teintes de pôle sont fixes,
-    // l'initiale est donc blanche dans tous les thèmes.
+    // Une teinte stable par lecteur, prise dans celles des pôles
     final teintes = Couleurs.poles.values.toList();
     final teinte = teintes[lecteur.id.codeUnits.fold(0, (a, b) => a + b) % teintes.length];
     return Container(

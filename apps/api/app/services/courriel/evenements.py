@@ -11,11 +11,9 @@ log = logging.getLogger("ascenda.courriel.evenements")
 _MOIS = ("janvier", "février", "mars", "avril", "mai", "juin", "juillet",
          "août", "septembre", "octobre", "novembre", "décembre")
 
-# Sous ce seuil, on prévient. Sept jours laissent le temps de renouveler sans
-# que l'accès se referme entre deux séances de lecture.
+# Sous ce seuil, on prévient.
 JOURS_RAPPEL = 7
-# L'ordonnanceur repasse toutes les heures. Sans ce garde-fou, un abonné à sept
-# jours du terme recevrait vingt-quatre rappels par jour.
+# L'ordonnanceur repasse toutes les heures.
 FENETRE_RAPPEL_HEURES = 20
 
 
@@ -26,8 +24,7 @@ def date_fr(d: datetime | None) -> str:
 
 
 def montant_fr(valeur: int | None, devise: str = "XAF") -> str:
-    """28000 devient « 28 000 XAF ». Une espace insécable : un montant ne se
-    coupe pas en fin de ligne."""
+    """28000 devient « 28 000 XAF »."""
     s = str(int(valeur or 0))
     morceaux = []
     for i, c in enumerate(s):
@@ -69,8 +66,7 @@ async def paiement_confirme(paiement: dict, abonnement: dict | None) -> str:
             "montant": montant_fr(paiement.get("montant"), paiement.get("devise") or "XAF"),
             "periode": paiement.get("periode_mois") or 1,
             "fin": date_fr((abonnement or {}).get("current_end")),
-            # La référence du fournisseur si nous l'avons, sinon la nôtre :
-            # dans les deux cas elle permet de retrouver la trace.
+            # La référence du fournisseur si nous l'avons, sinon la nôtre
             "reference": paiement.get("reference_externe") or str(paiement["id"])[:8],
         },
     )

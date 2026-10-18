@@ -1,9 +1,4 @@
 // Ce que ce fichier vérifie : sans réseau, l'application garde la session.
-//
-// Un lecteur qui a emporté un ouvrage l'ouvre souvent en zone blanche. Au
-// démarrage, la vérification du compte échoue faute de réseau : effacer les
-// jetons à ce moment le renvoyait sur l'écran d'accueil, ouvrage inaccessible.
-// Seul un refus du serveur (401) ferme la session.
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';

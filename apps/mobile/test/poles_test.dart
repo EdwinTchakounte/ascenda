@@ -1,9 +1,4 @@
-// Ce que ce fichier vérifie : que l'application range les sous-axes sous leur
-// pôle (« Agriculture et élevage »), et que la bibliothèque filtre par pôle
-// puis par sous-axe sans déborder sur un petit téléphone.
-//
-// Les périmètres de chapitres sont décidés par le serveur et vérifiés par
-// tests/test_poles.py. Ici, on vérifie ce que le lecteur voit.
+// Ce que ce fichier vérifie : que l'application range les sous-axes sous leur pôle («
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

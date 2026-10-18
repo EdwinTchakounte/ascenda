@@ -45,8 +45,7 @@ async def boucle_reconciliation() -> None:
         except asyncio.CancelledError:
             raise
         except Exception:  # noqa: BLE001
-            # Une panne ici ne doit jamais arrêter la boucle : le prochain tour
-            # repassera sur les mêmes paiements.
+            # Une panne ici ne doit jamais arrêter la boucle
             log.exception("Réconciliation en échec, reprise au prochain tour.")
 
 

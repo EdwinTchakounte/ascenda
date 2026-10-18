@@ -5,8 +5,7 @@ from app.core.db import connection, execute, fetch_all, fetch_one
 from app.core.errors import ApiError, Conflict, NotFound
 from app.services import codes
 
-# Des plafonds larges pour un usage normal, bas pour un robot. Au-delà, un
-# refus poli : on ne coupe pas le compte.
+# Des plafonds larges pour un usage normal, bas pour un robot.
 PLAFONDS = {
     "amitie": (30, "demandes d'ami"),
     "encouragement": (60, "encouragements"),
@@ -59,9 +58,7 @@ async def relation(a: str, b: str) -> dict | None:
 
 
 async def exiger_ami(user_id: str, ami_id: str) -> dict:
-    """L'ami, s'il l'est vraiment. Un identifiant quelconque ne donne rien : on
-    répond « introuvable » plutôt que « interdit », pour ne pas confirmer qu'un
-    compte existe."""
+    """L'ami, s'il l'est vraiment."""
     r = await relation(user_id, ami_id)
     if not r or r["statut"] != "acceptee" or await bloque(user_id, ami_id):
         raise NotFound("Ce lecteur ne fait pas partie de votre cercle.")
@@ -97,8 +94,7 @@ async def demander(user: dict, code_brut: str) -> dict:
             raise Conflict("Votre demande est déjà envoyée. Elle attend une réponse.")
         if existante["statut"] == "en_attente":
             return await repondre(user, str(existante["id"]), accepter=True)
-        # Une demande refusée peut être renouvelée, mais pas plus d'une fois
-        # par semaine : un refus doit rester un refus.
+        # Une demande refusée peut être renouvelée, mais pas plus d'une fois par semaine
         if existante["repondu_le"] and existante["repondu_le"] > datetime.now(timezone.utc) - timedelta(days=7):
             raise Conflict("Cette demande a reçu une réponse récemment. Réessayez plus tard.")
         await _plafond("amitie", "demandeur_id", uid)
@@ -149,8 +145,7 @@ async def retirer(user: dict, ami_id: str) -> None:
 
 
 async def bloquer(user: dict, autre_id: str) -> None:
-    """Bloquer retire l'amitié et empêche toute nouvelle demande. Les messages
-    passés restent en base pour la modération, mais ne se montrent plus."""
+    """Bloquer retire l'amitié et empêche toute nouvelle demande."""
     uid = str(user["id"])
     if uid == autre_id:
         raise Conflict("Vous ne pouvez pas vous bloquer vous-même.")
@@ -169,8 +164,7 @@ async def bloquer(user: dict, autre_id: str) -> None:
 # ------------------------------------------------------------- lectures
 
 async def resume_lecture(user_ids: list[str]) -> dict[str, dict]:
-    """Ce qu'un ami voit de la lecture d'un autre : sa semaine, sa régularité,
-    son dernier livre. Rien de plus, et rien pour qui ne partage pas."""
+    """Ce qu'un ami voit de la lecture d'un autre."""
     if not user_ids:
         return {}
     lignes = await fetch_all(
@@ -399,8 +393,7 @@ async def marquer_lus(user: dict, ami_id: str) -> int:
 
 
 async def signaler(user: dict, *, echange_id: str | None, encouragement_id: str | None, motif: str) -> dict:
-    """On ne signale que ce qu'on a reçu : un lecteur ne peut pas faire lire à
-    la modération les messages d'une conversation à laquelle il n'a pas part."""
+    """On ne signale que ce qu'on a reçu."""
     uid = str(user["id"])
     if bool(echange_id) == bool(encouragement_id):
         raise codes.CodeRefuse("Indiquez le message ou l'encouragement à signaler.")

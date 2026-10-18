@@ -44,8 +44,7 @@ async def quiz_disponibles(document_id: str, user: OptionalUser):
                 "page_debut": l["page_start"],
                 "page_fin": l["page_end"],
                 "nb_questions": l["nb"] or 0,
-                # Un chapitre d'appareil (sommaire, bibliographie) est enregistré vide,
-                # avec son motif : le compteur reste sincère.
+                # Un chapitre d'appareil (sommaire, bibliographie) est enregistré vide
                 "motif_vide": l["motif"],
             }
             for l in lignes
@@ -104,8 +103,7 @@ async def corriger(quiz_id: str, data: ReponsesIn, user: CurrentUser):
         raise NotFound("Ce quiz n'existe pas.")
     questions = (q["content"] or {}).get("questions", [])
 
-    # Les citations du même chapitre servent de pièce justificative : on cherche
-    # celle dont la page est la plus proche de celle visée par la question.
+    # Les citations du même chapitre servent de pièce justificative
     citations = []
     if q["chapter_id"]:
         lignes = await fetch_all(

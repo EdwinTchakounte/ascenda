@@ -1,8 +1,4 @@
 /// Les libellés des compteurs d'usage, en un seul endroit.
-///
-/// Ils étaient écrits dans le profil, et l'écran d'abonnement en aurait eu
-/// besoin d'une seconde copie. Le jour où l'API ajoute un compteur, il n'y a
-/// qu'une liste à compléter.
 library;
 
 const Map<String, String> libellesQuota = {
@@ -15,9 +11,7 @@ const Map<String, String> libellesQuota = {
   'export_pdf': 'Exports PDF',
 };
 
-/// Un compteur que l'API connaîtrait sans que nous l'ayons traduit s'affiche
-/// tel quel plutôt que de disparaître : un quota invisible est un quota qu'on
-/// découvre en le heurtant.
+/// Un compteur que l'API connaîtrait sans que nous l'ayons traduit s'affiche tel quel
 String libelleQuota(String code) => libellesQuota[code] ?? code.replaceAll('_', ' ');
 
 String periodeQuota(String code) => switch (code) {
@@ -26,9 +20,7 @@ String periodeQuota(String code) => switch (code) {
       _ => 'au total',
     };
 
-/// Zéro veut dire « pas du tout », et un plafond très haut veut dire « sans
-/// compter ». Écrire « 10000 par jour » ferait croire à une limite qu'on
-/// pourrait atteindre.
+/// Zéro veut dire « pas du tout », et un plafond très haut veut dire « sans compter ».
 String valeurQuota(int? limite) {
   if (limite == null) return 'sans limite';
   if (limite == 0) return 'non';

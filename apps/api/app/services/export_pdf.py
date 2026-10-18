@@ -198,8 +198,7 @@ def produire(pack: dict, complet: bool = False) -> bytes:
     # --- quiz et corrigé
     quiz = pack.get("quiz") or []
     if not complet:
-        # On garde les premiers lots jusqu'au plafond, plutôt que de couper au
-        # milieu d'un chapitre : un quiz tronqué n'a pas de sens.
+        # On garde les premiers lots jusqu'au plafond
         retenus, compte = [], 0
         for lot in quiz:
             if compte and compte + len(lot["questions"]) > QUESTIONS_PAR_DEFAUT:

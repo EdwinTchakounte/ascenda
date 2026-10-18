@@ -84,8 +84,7 @@ with conn.cursor() as cur:
                     order by c.ord limit 1""", (doc_id, derive.TOKENS_MIN_CHAPITRE))
     chap = cur.fetchone()[0]
 
-# On travaille sur un type dont le corpus ne porte encore aucune ligne : ainsi
-# la suite n'a rien à restaurer, et elle ne peut pas abîmer un vrai dérivé.
+# On travaille sur un type dont le corpus ne porte encore aucune ligne
 TYPE_ESSAI = "compte_rendu"
 
 
@@ -108,8 +107,7 @@ with conn.cursor() as cur:
     remplace = cur.fetchone()[0]
 ok("l'ancien pointe vers celui qui le remplace", str(remplace) == str(second), f"{remplace}")
 
-# Ménage : les deux lignes partent ensemble, la clé étrangère de l'une vers
-# l'autre disparaissant avec elles.
+# Ménage : les deux lignes partent ensemble
 with conn.cursor() as cur:
     cur.execute("delete from derivative where id = any(%s)", ([premier, second],))
 conn.commit()

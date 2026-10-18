@@ -18,10 +18,6 @@ class Session {
 }
 
 /// La session : un jeton en mémoire, un utilisateur, et rien d'autre.
-///
-/// Au démarrage on tente de reprendre la session enregistrée. Si le jeton n'est
-/// plus valable, on retombe proprement sur l'état déconnecté au lieu de laisser
-/// l'application dans un entre-deux.
 class SessionNotifier extends StateNotifier<Session> {
   SessionNotifier(this._api) : super(const Session(etat: EtatSession.inconnu)) {
     reprendre();
@@ -40,9 +36,7 @@ class SessionNotifier extends StateNotifier<Session> {
       state = Session(etat: EtatSession.connecte, utilisateur: Utilisateur.depuisJson(j));
     } catch (e) {
       debugPrint('Session non reprise : $e');
-      // Seul un refus du serveur ferme la session. Sans réseau, ou si le
-      // serveur répond mal, les jetons restent : on rouvre avec le dernier
-      // profil connu, et le serveur tranchera au retour du réseau.
+      // Seul un refus du serveur ferme la session.
       final refusee = e is ErreurApi && e.estAuth || !await _api.aUneSession;
       final profil = refusee ? null : await _api.profilGarde();
       if (profil != null) {

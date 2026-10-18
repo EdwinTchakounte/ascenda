@@ -45,8 +45,7 @@ async def lifespan(app: FastAPI):
     await open_pool()
     log.info("Connecté à %s:%s/%s", settings.postgres_host, settings.postgres_port, settings.postgres_db)
     taches = ordonnanceur.demarrer()
-    # Le modèle de recherche se charge en fond : quarante secondes que le
-    # premier lecteur n'a pas à payer. La tâche ne bloque pas le démarrage.
+    # Le modèle de recherche se charge en fond
     taches.append(asyncio.create_task(service_recherche.prechauffer(), name="prechauffage"))
     try:
         yield
@@ -89,11 +88,7 @@ _OUVERT_EN_MAINTENANCE = (
 
 @app.middleware("http")
 async def nommer_acteur(request: Request, call_next):
-    """Qui agit, pour le journal des modifications en base.
-
-    Posé ici pour les écritures qui n'ont pas d'appelant identifié, comme une
-    inscription ou un retour de passerelle de paiement. Une requête
-    authentifiée écrase cette valeur par le courriel du compte."""
+    """Qui agit, pour le journal des modifications en base."""
     from app.core.db import acteur
 
     if request.method not in ("GET", "HEAD", "OPTIONS"):
@@ -114,8 +109,7 @@ async def garde_maintenance(request: Request, call_next):
     try:
         m = await exploitation.maintenance()
     except Exception:  # noqa: BLE001
-        # Réglages illisibles : on laisse passer. Une panne de lecture ne doit
-        # pas fermer le service.
+        # Réglages illisibles : on laisse passer.
         return await call_next(request)
 
     if m["actif"]:

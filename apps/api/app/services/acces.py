@@ -3,8 +3,7 @@ from datetime import datetime, timezone
 
 from app.core.db import fetch_all
 
-# Le catalogue des fonctions qu'un code limité peut ouvrir. La clé est stable,
-# le libellé est ce que voient le lecteur et la console.
+# Le catalogue des fonctions qu'un code limité peut ouvrir.
 FONCTIONS: dict[str, str] = {
     "agent_question": "Questions à l'agent sans compter",
     "quiz_generated": "Quiz à la demande",
@@ -17,8 +16,7 @@ FONCTIONS: dict[str, str] = {
     "lecture_application": "Lecture intégrale et hors ligne des ouvrages réservés",
 }
 
-# Un compteur de quota qui n'a pas sa propre entrée au catalogue suit celle dont
-# il dépend : le traitement des scans ne sert à rien sans l'import.
+# Un compteur de quota qui n'a pas sa propre entrée au catalogue suit celle dont il
 _COMPTEUR_VERS_FONCTION = {"ocr_pages": "doc_uploaded", "agent_tokens": "agent_question"}
 
 

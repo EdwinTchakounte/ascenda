@@ -11,14 +11,6 @@ import 'illustrations.dart';
 import 'ui.dart';
 
 /// Les quatre teintes que le serveur accepte pour un surlignage.
-///
-/// La liste vit ici et dans la contrainte de l'API. Elle est courte et stable :
-/// une palette libre produirait, au bout de six mois, des surlignages de
-/// quarante nuances dont aucune ne veut rien dire.
-///
-/// Relue à chaque appel : une table figée au premier accès garderait les
-/// teintes du thème d'alors, et un surlignage fait en Ivoire resterait pâle une
-/// fois passé en Nuit.
 Map<String, Color> get teintesSurlignage => {
   'or': Couleurs.or,
   'sauge': Couleurs.sauge,
@@ -28,15 +20,7 @@ Map<String, Color> get teintesSurlignage => {
 
 Color teinteDe(String? code) => teintesSurlignage[code] ?? Couleurs.or;
 
-/// Le panneau des annotations d'un ouvrage : ce qu'on a surligné, ce qu'on a
-/// noté, et de quoi le corriger ou l'effacer.
-///
-/// Ce sont des notes en marge, pas des fiches d'application : chacune garde sa
-/// marge à l'encre, sa citation en Fraunces et son folio.
-///
-/// Jusqu'ici on pouvait écrire une note et plus jamais y toucher. Une note
-/// fausse qu'on ne peut pas corriger vaut moins que pas de note du tout : on
-/// finit par ne plus s'y fier.
+/// Le panneau des annotations d'un ouvrage
 class PanneauAnnotations extends ConsumerWidget {
   const PanneauAnnotations({super.key, required this.documentId});
 
@@ -145,9 +129,7 @@ class PanneauAnnotations extends ConsumerWidget {
       BuildContext context, WidgetRef ref, Map<String, dynamic> note) async {
     final texte = await editerNote(context, initial: '${note['texte'] ?? note['body'] ?? ''}');
     if (texte == null || texte.isEmpty) return;
-    // L'identifiant est sorti de l'interpolation : une apostrophe imbriquée
-    // dans un littéral de chemin échappe au relevé des appels, et la
-    // vérification de contrat ne voit plus la route.
+    // L'identifiant est sorti de l'interpolation
     final id = '${note['id']}';
     try {
       await ref.read(clientApiProvider).patch('/notes/$id', corps: {'texte': texte});
@@ -159,9 +141,6 @@ class PanneauAnnotations extends ConsumerWidget {
 }
 
 /// La saisie d'une note, à la création comme à la correction.
-///
-/// Un seul formulaire pour les deux : ce qui distingue une correction d'une
-/// création, c'est le texte déjà présent, rien d'autre.
 Future<String?> editerNote(BuildContext context, {String initial = ''}) {
   final controleur = TextEditingController(text: initial);
   return showModalBottomSheet<String>(

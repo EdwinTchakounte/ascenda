@@ -17,10 +17,6 @@ import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
 /// La bibliothèque : une salle de lecture, pas une liste de résultats.
-///
-/// L'écran s'ouvre sur le rayon des volumes, puis donne les fiches. Les filtres
-/// sont des étiquettes d'encre au-dessus d'un filet : ce qui trie le fonds se
-/// lit comme l'appareil d'un catalogue, pas comme une barre d'outils.
 class EcranBibliotheque extends ConsumerStatefulWidget {
   const EcranBibliotheque({super.key});
 
@@ -34,9 +30,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
   String? _niveau;
   String _texte = '';
 
-  /// La page demandée, et ce qui a déjà été reçu. Changer un filtre repart de
-  /// la première page : garder la page huit d'une liste devenue courte
-  /// afficherait un vide inexplicable.
+  /// La page demandée, et ce qui a déjà été reçu.
   int _page = 1;
   int _total = 0;
   final List<Ouvrage> _recus = [];
@@ -142,9 +136,8 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                     ),
                   ),
                   const SizedBox(width: 10),
-                  // Chercher dans le texte des ouvrages est un autre geste que
-                  // chercher un titre : il a son propre bouton, bien visible.
-                  // La page ouverte plutôt que la loupe : on cherche dedans.
+                  // Chercher dans le texte des ouvrages est un autre geste que chercher un
+                  // titre
                   Tooltip(
                     message: 'Chercher dans le texte des livres',
                     child: Material(
@@ -231,9 +224,7 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                       ],
                     ),
                   ),
-            // Un axe sélectionné devient une porte. Le filtre dit ce qu'on
-            // retire ; la fiche d'axe dit dans quel ordre lire ce qui reste.
-            // Un pôle n'a pas de fiche à lui : la porte s'ouvre sur un sous-axe.
+            // Un axe sélectionné devient une porte.
             if (_axe != null && !listeAxes.any((a) => a.poleSlug == _axe))
               Align(
                 alignment: Alignment.centerLeft,
@@ -344,10 +335,8 @@ class _EcranBibliothequeState extends ConsumerState<EcranBibliotheque> {
                                         "que vous pouvez tenir, et vous interroge sur ce "
                                         "que vous lisez.",
                                   ),
-                                  // Le rayon en tête : on reconnaît un fonds à
-                                  // ses dos avant de lire ses notices. Sous
-                                  // trois volumes, une tablette presque vide
-                                  // ferait pauvre : on passe aux fiches.
+                                  // Le rayon en tête : on reconnaît un fonds à ses dos
+                                  // avant de lire ses notices.
                                   if (liste.length >= 3) ...[
                                     const SizedBox(height: 14),
                                     Rayon(
@@ -548,11 +537,7 @@ class _RayonVide extends StatelessWidget {
   }
 }
 
-/// Sans réseau, la bibliothèque montre ce qui a été emporté. Sans cela, un
-/// ouvrage gardé sur l'appareil n'avait aucune porte d'entrée en zone blanche.
-///
-/// Les volumes emportés gardent leur dos : en zone blanche, on retrouve le
-/// livre qu'on a commencé à l'endroit exact où il se rangeait avant.
+/// Sans réseau, la bibliothèque montre ce qui a été emporté.
 class _LivresEmportes extends ConsumerWidget {
   const _LivresEmportes({required this.reessayer});
   final VoidCallback reessayer;

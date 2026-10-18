@@ -10,8 +10,7 @@ from app.services.resilience import DISJONCTEURS, OUVERT
 
 log = logging.getLogger("ascenda.veille")
 
-# Ce que l'ordonnanceur a fait, et quand : la veille le lit pour repérer une
-# boucle arrêtée. Rempli par `ordonnanceur`.
+# Ce que l'ordonnanceur a fait, et quand
 PASSAGES: dict[str, float] = {}
 DEMARRAGE = time.monotonic()
 

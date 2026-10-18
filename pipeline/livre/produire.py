@@ -13,8 +13,7 @@ from etat import ATTENDUS, etat_document  # noqa: E402
 
 PYTHON = str(RACINE / ".venv" / "bin" / "python")
 
-# L'ordre compte : la fiche fixe le titre, les auteurs et le niveau, dont
-# dépendent les invites de tout le reste.
+# L'ordre compte : la fiche fixe le titre, les auteurs et le niveau
 ORDRE = [
     "vecteurs",
     "fiche_lecture",

@@ -23,16 +23,7 @@ String _jour(DateTime? d) => d == null
     ? 'date à confirmer'
     : '${d.day == 1 ? '1er' : d.day} ${DateFormat('MMMM y', 'fr_FR').format(d)}';
 
-/// Codes et avantages : ce qu'un code a ouvert, le code à partager, et les
-/// réductions qu'il a rapportées.
-///
-/// L'ordre suit ce qu'on vient chercher. On arrive ici avec un code reçu, donc
-/// la saisie d'abord ; ensuite ce qui est ouvert et jusqu'à quand ; enfin son
-/// propre code, qui est ce qu'on revient consulter pour le partager.
-///
-/// Tout y prend la forme du papier : le champ de saisie est un bon à remplir,
-/// le code ambassadeur un billet qu'on tend, les réductions des coupons avec
-/// leur talon et leur ligne de perforation.
+/// Codes et avantages : ce qu'un code a ouvert, le code à partager
 class EcranCodes extends ConsumerStatefulWidget {
   const EcranCodes({super.key});
 
@@ -69,9 +60,7 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
                   .post('/codes/activer', corps: {'code': code})
               as Map<String, dynamic>;
       _saisie.clear();
-      // Tout ce qui dépend des plafonds doit se relire tout de suite : le
-      // lecteur vient d'obtenir un accès, il ne doit pas avoir à relancer
-      // l'application pour le voir.
+      // Tout ce qui dépend des plafonds doit se relire tout de suite
       await ref.read(sessionProvider.notifier).rafraichirUtilisateur();
       ref.invalidate(codesProvider);
       ref.invalidate(usageProvider);
@@ -95,9 +84,7 @@ class _EcranCodesState extends ConsumerState<EcranCodes> {
     }
   }
 
-  /// La bonne nouvelle se montre une fois. On le signale au serveur dès que
-  /// l'écran l'a affichée, sans rafraîchir : la pastille « Nouveau » reste
-  /// visible le temps de cette visite.
+  /// La bonne nouvelle se montre une fois.
   void _signalerVus(CodesEtAvantages c) {
     if (_vusSignales || c.nouveaux == 0) return;
     _vusSignales = true;

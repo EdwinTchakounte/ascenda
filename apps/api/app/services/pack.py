@@ -10,9 +10,7 @@ VALIDITE_HORS_LIGNE_JOURS = 30
 
 async def construire(document_id: str, *, avec_reponses: bool = False, avec_texte: bool = False,
                      acces_jusqu_au=None) -> dict:
-    """Assemble le pack. `avec_reponses` n'est vrai que pour l'usage hors ligne : sans elles,
-    l'application ne pourrait pas corriger un quiz sans réseau.
-    """
+    """Assemble le pack."""
     d = await fetch_one(
         """select d.id, coalesce(d.title_clean, d.title_raw) as titre, d.subtitle,
                   d.authors, d.year, d.publisher, d.page_count, d.language,

@@ -4,14 +4,6 @@ import '../theme/couleurs.dart';
 import '../theme/texte.dart';
 
 /// L'écran des premières secondes.
-///
-/// Le temps de savoir si une session existe, l'application affichait l'accueil,
-/// qui appelait l'API sans jeton et montrait « Session expirée » avant de
-/// rediriger. Deux dixièmes de seconde d'erreur suffisent à donner le sentiment
-/// d'un produit fragile.
-///
-/// Il garde les couleurs fixes de la marque, quel que soit le thème choisi :
-/// c'est le logo qui accueille, pas encore l'application.
 class EcranDemarrage extends StatelessWidget {
   const EcranDemarrage({super.key});
 

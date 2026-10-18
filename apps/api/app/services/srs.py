@@ -97,8 +97,7 @@ async def enregistrer_echecs(
             vus.add(cid)
 
     if not vus and echecs:
-        # Aucun terme reconnu : on ramène les notions du chapitre, pour que
-        # rater un chapitre ait toujours une suite.
+        # Aucun terme reconnu : on ramène les notions du chapitre
         vus.update(await _concepts_du_chapitre(chapter_id))
 
     for cid in vus:

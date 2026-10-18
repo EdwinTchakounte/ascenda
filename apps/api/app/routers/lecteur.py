@@ -23,8 +23,7 @@ async def _precedent(document_id: str, passages: list[dict]) -> str | None:
 
 
 def _rendu(passages: list[dict], budget: int, precedent: str | None = None) -> tuple[list[dict], bool]:
-    # Le nettoyage passe avant le plafond de droits : la reprise d'un passage sur
-    # l'autre ne doit pas consommer le budget d'extrait.
+    # Le nettoyage passe avant le plafond de droits
     propres = lisibles([p["text"] for p in passages], precedent)
     # Un passage qui n'était que la reprise du précédent n'a plus rien à dire.
     gardes = [(p, t) for p, t in zip(passages, propres) if t.strip()]
@@ -36,8 +35,7 @@ def _rendu(passages: list[dict], budget: int, precedent: str | None = None) -> t
     for p, t, propre in zip(passages, textes, propres):
         coupe = len(t) < len(propre)
         tronque = tronque or coupe
-        # Après un extrait abrégé, le passage suivant reprend en cours de phrase :
-        # on le signale plutôt que de laisser croire à une coquille.
+        # Après un extrait abrégé, le passage suivant reprend en cours de phrase
         if t and precedent_coupe and t[:1].islower():
             t = f"…{t}"
         precedent_coupe = coupe
@@ -153,8 +151,7 @@ async def citations(
     chapitre_id: Annotated[str | None, Query()] = None,
     axe: Annotated[str | None, Query()] = None,
 ):
-    """Les citations sont déjà courtes et vérifiées mot à mot contre le texte source :
-    elles sont servables même sur un ouvrage non redistribuable."""
+    """Les citations sont déjà courtes et vérifiées mot à mot contre le texte source."""
     params: list = [document_id]
     where = "dv.document_id = %s and dv.kind = 'citation' and dv.superseded_by is null"
     if chapitre_id:
@@ -217,7 +214,6 @@ async def pdf(document_id: str, user: OptionalUser, client_app: ClientApplicatio
         d["storage_key"], nom=f"{d['titre']}.pdf", mime="application/pdf"
     )
     if dr.lecture_application and not dr.redistributable:
-        # Ni cache intermédiaire ni copie de navigateur : l'application le garde
-        # elle-même, chiffré, dans son espace privé.
+        # Ni cache intermédiaire ni copie de navigateur
         reponse.headers["Cache-Control"] = "private, no-store"
     return reponse

@@ -14,12 +14,6 @@ import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// La fiche d'un axe : ce qu'il contient, dans l'ordre où il le contient.
-///
-/// Un axe n'est pas un rayon de bibliothèque. Il ordonne : celui-ci d'abord
-/// parce qu'il pose le vocabulaire, celui-là ensuite parce qu'il le discute.
-/// L'écran montre donc les ouvrages du plus accessible au plus exigeant, et
-/// non par ordre alphabétique, comme la notice d'un catalogue : le rang en
-/// chiffre, le dos du volume, la notice, et ce que le parcours en lit.
 class EcranAxe extends ConsumerWidget {
   const EcranAxe({super.key, required this.slug});
 
@@ -257,9 +251,7 @@ class _Mesure extends StatelessWidget {
           const SizedBox(height: 10),
           const Filet(),
           const SizedBox(height: 10),
-          // Le chiffre en grand, son unité en petit : « 1 240 pages » se lit
-          // d'abord comme une quantité. Il monte jusqu'à sa valeur, comme
-          // ailleurs dans l'application.
+          // Le chiffre en grand, son unité en petit
           FittedBox(
             fit: BoxFit.scaleDown,
             alignment: Alignment.centerLeft,
@@ -317,9 +309,7 @@ class _LigneOuvrage extends StatelessWidget {
       if (o['lecture_integrale'] == false) 'extraits',
     ].join('  ·  ');
 
-    // Une seule surface par ouvrage ; la tête ouvre la fiche, chaque section
-    // ouvre sa lecture. La surface elle-même ne réagit pas, pour qu'un toucher
-    // entre deux sections ne mène pas à la fiche par surprise.
+    // Une seule surface par ouvrage
     return Surface(
       padding: EdgeInsets.zero,
       child: Column(
@@ -332,9 +322,7 @@ class _LigneOuvrage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Le rang, puis le dos du volume : c'est l'ordre de lecture,
-                  // l'information que l'écran existe pour donner, et le livre
-                  // qu'on reconnaîtra ensuite sur l'étagère.
+                  // Le rang, puis le dos du volume
                   SizedBox(
                     width: 20,
                     child: Padding(

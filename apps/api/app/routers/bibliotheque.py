@@ -155,8 +155,7 @@ async def fiche(document_id: str, user: OptionalUser, client_app: ClientApplicat
            where da.document_id = %s order by da.weight desc""",
         (document_id,),
     )
-    # Les trois dérivés d'ouvrage arrivent en une requête. Chargés un par un,
-    # c'était trois allers-retours pour une page que le lecteur ouvre souvent.
+    # Les trois dérivés d'ouvrage arrivent en une requête.
     lus = await fetch_all(
         """select distinct on (kind) kind, content, generated_at from derivative
            where document_id = %s and superseded_by is null
@@ -233,11 +232,10 @@ async def fiche(document_id: str, user: OptionalUser, client_app: ClientApplicat
             # Le PDF d'origine s'ouvre dans l'application, sous la même règle.
             "pdf": dr.texte_integral and bool(d["storage_key"])
                    and (d["mime"] or "application/pdf") == "application/pdf",
-            # La taille du fichier : un PDF de 90 Mo ne se télécharge pas sur un
-            # forfait mobile sans prévenir.
+            # La taille du fichier : un PDF de 90 Mo ne se télécharge pas sur un forfait
+            # mobile
             "pdf_octets": d["size_bytes"] if dr.texte_integral else None,
-            # Lisible en entier dans l'application seulement : pas d'export du
-            # livre, et un hors-ligne gardé chiffré par l'application.
+            # Lisible en entier dans l'application seulement
             "application_seulement": dr.lecture_application and not dr.redistributable,
             "hors_ligne_integral": dr.hors_ligne_integral,
             "statut": dr.statut,
@@ -299,8 +297,7 @@ async def sommaire(document_id: str, user: OptionalUser):
 @router.get("/{document_id}/pack", summary="Le pack complet d'un ouvrage")
 async def pack_complet(document_id: str, user: OptionalUser, client_app: ClientApplication):
     """Tout ce qu'ASCENDA sait de cet ouvrage, en un seul appel."""
-    # Le texte intégral n'y entre que pour un lecteur qui peut le lire, depuis
-    # l'application : c'est elle qui le garde chiffré pour la lecture hors ligne.
+    # Le texte intégral n'y entre que pour un lecteur qui peut le lire
     dr = await droits(document_id, user, client_app)
     jusqu = None
     if dr.hors_ligne_integral and user and not dr.redistributable:

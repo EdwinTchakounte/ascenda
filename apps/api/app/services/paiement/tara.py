@@ -12,8 +12,7 @@ from .base import ErreurFournisseur, EvenementWebhook, FournisseurPaiement, Resu
 
 log = logging.getLogger("ascenda.paiement.tara")
 
-# Table de correspondance des statuts Tara. Au niveau du module pour qu'on
-# puisse l'étendre sans toucher à la classe.
+# Table de correspondance des statuts Tara.
 STATUTS = {
     "SUCCESS": "valide",
     "VALIDATED": "valide",
@@ -67,8 +66,7 @@ class Tara(FournisseurPaiement):
         charge = {
             "apiKey": self.cle,
             "businessId": self.business_id,
-            # C'est notre clé de rattachement nº 1. Tara la renvoie en principe
-            # dans le webhook sous `productId`.
+            # C'est notre clé de rattachement nº 1.
             "productId": str(paiement["idempotency_key"]),
             "productName": libelle,
             "productPrice": int(paiement["montant"]),  # entier XAF, pas une chaîne
@@ -85,8 +83,7 @@ class Tara(FournisseurPaiement):
             tel, charge["productPrice"], charge["productId"], donnees,
         )
         return ResultatInitiation(
-            # Avant le webhook, Tara ne nous donne pas d'identifiant : on garde
-            # le nôtre. Le `paymentId` arrivera avec la notification.
+            # Avant le webhook, Tara ne nous donne pas d'identifiant : on garde le nôtre.
             reference_fournisseur=str(paiement["idempotency_key"]),
             url_paiement=donnees.get("authUrl"),  # Wave seulement, sinon absent
             brut={**donnees, "_telephone": tel, "_reseau": reseau},
@@ -96,8 +93,7 @@ class Tara(FournisseurPaiement):
 
     async def statut(self, paiement: dict) -> str:
         if self.simule:
-            # Le mode simulé ne valide jamais tout seul : la confirmation passe
-            # par la route de développement prévue à cet effet.
+            # Le mode simulé ne valide jamais tout seul
             return "en_attente"
         # Une lecture : on peut la rejouer sans risque, avec des pauses croissantes.
         donnees = await avec_reprises(
@@ -115,10 +111,7 @@ class Tara(FournisseurPaiement):
     # ---------------------------------------------------------------- webhook
 
     def lire_webhook(self, corps: bytes) -> EvenementWebhook:
-        """Tara ne signe pas ses webhooks : ni HMAC, ni en-tête de signature. La sécurité tient au
-        HTTPS et au fait que l'URL n'est connue que d'eux. On ajoute une vérification du
-        `businessId` : deviner l'URL ne suffit alors plus, il faut aussi connaître notre.
-        """
+        """Tara ne signe pas ses webhooks : ni HMAC, ni en-tête de signature."""
         try:
             charge: dict[str, Any] = json.loads(corps.decode("utf-8") or "{}")
         except (ValueError, UnicodeDecodeError) as exc:

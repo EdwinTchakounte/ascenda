@@ -7,9 +7,7 @@ import '../theme/icones.dart';
 import '../theme/palette.dart';
 import '../theme/texte.dart';
 
-/// Les composants communs de l'interface. Un écran se compose de ces briques
-/// plutôt que de conteneurs décorés à la main : l'application garde une seule
-/// voix, dans les quatre thèmes.
+/// Les composants communs de l'interface.
 
 /// Ouvre le tiroir de la coque depuis n'importe quel onglet.
 final cleCoque = GlobalKey<ScaffoldState>();

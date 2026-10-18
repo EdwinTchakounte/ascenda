@@ -1,11 +1,4 @@
-// Ce que ce fichier vérifie : que l'application lit correctement ce que
-// l'API dit des accès, et que l'écran « Codes et avantages » l'affiche sans
-// déborder sur un petit téléphone.
-//
-// Les décisions d'accès sont prises par le serveur, et vérifiées par
-// tests/test_codes.py. Ici, on vérifie la moitié qui reste : un accès limité
-// ne doit pas se lire comme un accès complet, et une réduction gagnée doit se
-// voir.
+// Ce que ce fichier vérifie : que l'application lit correctement ce que l'API dit des
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

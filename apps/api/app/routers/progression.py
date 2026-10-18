@@ -73,8 +73,7 @@ async def vue_ensemble(user: CurrentUser):
 
 @router.get("/regularite", summary="Courbe de régularité")
 async def regularite(user: CurrentUser, jours: Annotated[int, Query(ge=7, le=365)] = 84):
-    """Un point par jour sur la période, y compris les jours sans activité :
-    c'est l'irrégularité qui se voit, pas la somme."""
+    """Un point par jour sur la période, y compris les jours sans activité."""
     lignes = await fetch_all(
         """with jours as (
              select generate_series(current_date - %s::int, current_date, '1 day')::date as j

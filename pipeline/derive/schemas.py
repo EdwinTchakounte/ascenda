@@ -101,7 +101,6 @@ SCHEMAS = {"fiche_lecture": FICHE, "synthese": SYNTHESE, "quiz": QUIZ, "flashcar
 
 
 # --- Citations : des extraits vérifiés mot à mot contre le texte source.
-# `texte` doit être une reprise exacte, sans quoi l'enregistrement échoue.
 CITATION = {
     "type": "object",
     "additionalProperties": False,
@@ -127,8 +126,7 @@ CITATION = {
     },
 }
 
-# --- Compte rendu de chapitre : ce qu'un lecteur doit en retenir, et ce que
-# le chapitre laisse de côté ou avance sans le démontrer.
+# --- Compte rendu de chapitre : ce qu'un lecteur doit en retenir
 COMPTE_RENDU = {
     "type": "object",
     "additionalProperties": False,

@@ -65,7 +65,6 @@ async def lister_axes(user: OptionalUser):
             "ouvrages_exploitables": l["ouvrages_exploitables"],
             "chapitres_utiles": int(l["chapitres_utiles"] or 0),
             # Un axe sans chapitre découpé ne peut pas donner de chronogramme.
-            # Ses ouvrages restent consultables, avec fiche, citations et quiz.
             "parcours_possible": (l["ouvrages_exploitables"] or 0) > 0,
         }
         for l in lignes

@@ -8,12 +8,10 @@ from app.core.db import connection, fetch_all, fetch_one
 
 log = logging.getLogger("ascenda.recherche")
 
-# e5 attend un préfixe explicite. « query: » pour ce qu'on cherche,
-# « passage: » pour ce qu'on a indexé. L'omettre dégrade nettement la qualité.
+# e5 attend un préfixe explicite.
 PREFIXE_REQUETE = "query: "
 
-# Constante d'amortissement de la fusion par rang réciproque. 60 est la valeur
-# de la publication d'origine ; elle empêche la première place d'écraser tout.
+# Constante d'amortissement de la fusion par rang réciproque.
 K_FUSION = 60
 
 _modele = None
@@ -85,8 +83,7 @@ def oublier_disponibilite() -> None:
     _cache_disponibilite.cache_clear()
 
 
-# Le seuil du planificateur, repris ici : en deçà, un chapitre est de
-# l'appareil éditorial.
+# Le seuil du planificateur, repris ici
 TOKENS_MIN_CHAPITRE = 300
 
 _SANS_APPAREIL = """
@@ -137,14 +134,6 @@ async def _semantique(requete: str, where: str, params: list, limite: int) -> li
     )
     litteral = "[" + ",".join(f"{x:.6f}" for x in vecteur) + "]"
     # `<=>` est la distance cosinus de pgvector : plus petite, plus proche.
-    #
-    # Deux réglages posés pour cette seule requête. `random_page_cost` parce
-    # que le planificateur, avec sa valeur par défaut faite pour des disques
-    # mécaniques, juge l'index HNSW plus coûteux qu'un parcours complet et
-    # préfère lire les douze mille vecteurs : mesuré, l'index répond en 1,5 ms
-    # contre 60 ms. `hnsw.ef_search` parce que l'index est approché et que la
-    # recherche est filtrée par ouvrage ou par axe : élargir la liste de
-    # candidats évite de rendre moins de passages que demandé.
     async with connection() as conn:
         await conn.execute("set local random_page_cost = 1.1")
         await conn.execute("set local hnsw.ef_search = 100")

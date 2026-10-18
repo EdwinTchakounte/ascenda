@@ -13,12 +13,7 @@ import '../widgets/illustrations.dart';
 import '../widgets/livre.dart';
 import '../widgets/ui.dart';
 
-/// Les ouvrages gardés sur l'appareil : lisibles sans réseau, et de quoi libérer
-/// la place qu'ils prennent.
-///
-/// C'est une étagère personnelle, pas une liste de fichiers : les volumes
-/// emportés sont posés sur leur tablette, signet dehors, et la notice de chacun
-/// suit en dessous.
+/// Les ouvrages gardés sur l'appareil
 class EcranHorsLigne extends ConsumerWidget {
   const EcranHorsLigne({super.key});
 

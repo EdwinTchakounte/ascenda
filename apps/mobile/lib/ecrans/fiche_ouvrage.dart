@@ -17,10 +17,6 @@ import '../widgets/telechargement.dart';
 import '../widgets/ui.dart';
 
 /// La fiche d'un ouvrage : la page de titre du volume, puis ce qu'il dit.
-///
-/// L'ordre est celui d'un livre qu'on ouvre : la couverture et le colophon, les
-/// repères de lecture, la thèse en exergue, les idées-force, ce avec quoi il
-/// dialogue, et le sommaire pour finir.
 class FicheOuvrage extends ConsumerWidget {
   const FicheOuvrage({super.key, required this.documentId});
   final String documentId;
@@ -73,9 +69,7 @@ class FicheOuvrage extends ConsumerWidget {
                   ].join(' · '),
                 ),
                 const SizedBox(height: 18),
-                // Les trois repères d'avant-lecture, séparés par des filets :
-                // trois tuiles encadrées disaient « tableau de bord », alors
-                // qu'on lit ici l'ours d'une page de garde.
+                // Les trois repères d'avant-lecture, séparés par des filets
                 _Reperes(
                   niveau: peda['niveau'] != null
                       ? (niveaux['${peda['niveau']}'] ?? '${peda['niveau']}')
@@ -169,9 +163,8 @@ class FicheOuvrage extends ConsumerWidget {
                   ],
                 ],
 
-                // Nos textes sur l'ouvrage : ils viennent après la fiche et avant
-                // les compteurs, parce qu'on lit ce qu'un livre dit avant de
-                // regarder combien il compte de chapitres.
+                // Nos textes sur l'ouvrage : ils viennent après la fiche et avant les
+                // compteurs
                 if (d['synthese'] != null || d['resume_executif'] != null) ...[
                   const SizedBox(height: 26),
                   SyntheseOuvrage(
@@ -193,9 +186,8 @@ class FicheOuvrage extends ConsumerWidget {
                     ),
                     const SizedBox(width: 10),
                     Expanded(
-                      // Le compteur devient un accès : afficher « 248 questions »
-                      // sans donner le moyen de les passer, c'est une vitrine
-                      // fermée.
+                      // Le compteur devient un accès : afficher « 248 questions » sans
+                      // donner le moyen de les
                       child: _Stat(
                         icone: Icone.question,
                         valeur: millier(questions),
@@ -389,9 +381,7 @@ class _Repere extends StatelessWidget {
   }
 }
 
-/// La thèse centrale, en exergue : une lettrine, le texte en Fraunces, un
-/// fleuron pour clore. Posée sur le papier plutôt que dans une fiche : c'est le
-/// seul endroit de l'écran où l'ouvrage parle en son nom.
+/// La thèse centrale, en exergue
 class _These extends StatelessWidget {
   const _These({required this.texte});
   final String texte;
@@ -586,12 +576,6 @@ class _Stat extends StatelessWidget {
 }
 
 /// Le sommaire du volume, en entier.
-///
-/// Il s'arrêtait aux quarante premiers chapitres : sur le Mémento de
-/// l'agronome, deux cent soixante-dix-huit chapitres sur trois cent dix-huit
-/// n'existaient pas pour le lecteur. Ils sont tous là, mais dépliés par
-/// quarantaines : bâtir trois cents lignes d'un coup dans une page qui défile
-/// se paie en saccades, et personne ne lit un sommaire de bout en bout.
 class _Sommaire extends ConsumerStatefulWidget {
   const _Sommaire({required this.documentId, required this.lectureIntegrale});
   final String documentId;

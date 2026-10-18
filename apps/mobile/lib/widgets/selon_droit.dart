@@ -1,17 +1,4 @@
 /// Ce que le lecteur voit à la place de ce qui lui est fermé.
-///
-/// Jusqu'ici l'application découvrait une restriction en la heurtant : elle
-/// appelait, le serveur refusait, et l'écran affichait une erreur. Le lecteur
-/// apprenait donc qu'une porte était fermée après l'avoir poussée, et ne
-/// pouvait pas savoir avant d'essayer ce que son accès ouvrait.
-///
-/// `SelonDroit` prend la décision avant l'appel, depuis ce que l'API a déjà
-/// dit du compte, et met à la place du contenu un bloc de la même forme :
-/// même emplacement, même hauteur, un cadenas et une phrase. La mise en page
-/// ne saute pas, et le chemin vers l'abonnement est à portée de doigt.
-///
-/// La règle reste au serveur : ce composant ne garde rien, il annonce. Un
-/// appel refusé est toujours refusé par l'API.
 library;
 
 import 'package:flutter/material.dart';
@@ -74,9 +61,6 @@ class SelonDroit extends ConsumerWidget {
 }
 
 /// Le bloc qui tient la place d'un contenu fermé.
-///
-/// Les barres ne scintillent pas : une animation voudrait dire « cela arrive »,
-/// alors que rien n'arrive tant que l'accès n'est pas ouvert.
 class ContenuReserve extends StatelessWidget {
   const ContenuReserve({
     super.key,

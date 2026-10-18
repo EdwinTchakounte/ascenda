@@ -3,14 +3,6 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 /// Les icônes d'ASCENDA, dessinées à la plume.
-///
-/// Les icônes de Material sont excellentes et se voient partout : elles font
-/// ressembler l'application à toutes les autres. Celles-ci sont tracées à la
-/// main dans une grille de 24, d'un seul trait d'épaisseur constante, avec le
-/// vocabulaire du livre : la page, le dos, le signet, la plume, le fleuron.
-///
-/// Elles se dessinent, elles ne se chargent pas : la couleur suit le thème et
-/// l'application ne porte aucune police d'icônes.
 enum Icone {
   soleil,        // l'accueil : la séance du jour
   volumes,       // les livres

@@ -12,8 +12,7 @@ from .tara import Tara, normaliser_telephone
 
 log = logging.getLogger("ascenda.paiement")
 
-# Fenêtre du rattachement par téléphone. Au-delà, le risque d'attribuer le
-# paiement d'un membre à un autre dépasse le bénéfice.
+# Fenêtre du rattachement par téléphone.
 FENETRE_TELEPHONE = timedelta(minutes=30)
 
 FOURNISSEURS = {"tara": Tara}
@@ -133,8 +132,7 @@ async def initier(paiement: dict, telephone: str, reseau: str | None = None) -> 
     await tracer(str(paiement["id"]), "initie", "api",
                  {"telephone": tel, "reseau": reseau, "simule": f.simule})
 
-    # En développement, sans identifiants Tara, on valide immédiatement : sinon
-    # aucun parcours d'abonnement n'est testable en local.
+    # En développement, sans identifiants Tara, on valide immédiatement
     if settings.paiement_test_auto_valide and f.simule:
         log.warning("Validation automatique (mode test) du paiement %s", paiement["id"])
         await appliquer(maj, "valide", source="systeme", strategie="mode_test")
@@ -215,8 +213,7 @@ async def appliquer(paiement: dict, statut: str, *, source: str,
             abonnement = await ouvrir_abonnement(ecrit, conn=conn)
 
     if ecrit is None:
-        # Quelqu'un est passé avant : la notification ou la réconciliation a
-        # déjà posé ce statut, ou le paiement est validé et ne se défait pas.
+        # Quelqu'un est passé avant : la notification ou la réconciliation a déjà posé ce
         actuel = await fetch_one("select statut from payment where id = %s", (paiement["id"],))
         evenement = f"deja_{statut}" if actuel and actuel["statut"] == statut else "changement_refuse"
         await tracer(str(paiement["id"]), evenement, source, {"vers": statut}, strategie=strategie)
@@ -306,8 +303,7 @@ async def reconcilier(taille: int = 100, pause: float | None = None) -> dict:
         from app.services.resilience import OUVERT, disjoncteur
 
         if disjoncteur("tara").vue()["etat"] == OUVERT:
-            # Tara est jugée indisponible : insister ne ferait qu'user ses
-            # quotas. Les paiements restants passeront au prochain tour.
+            # Tara est jugée indisponible : insister ne ferait qu'user ses quotas.
             bilan["reportes"] = len(en_attente) - i
             await tracer(None, "reconciliation_reportee", "reconciliation",
                          {"restants": bilan["reportes"], "cause": disjoncteur("tara").dernier_echec})
@@ -421,8 +417,7 @@ async def fermer_echus() -> dict:
         await tracer(None, "abonnements_fermes", "systeme",
                      {"expires": len(echus), "comptes_redescendus": ferme})
 
-    # Prévenir après la transaction, jamais dedans : un envoi lent tiendrait la
-    # table `subscription` verrouillée le temps de joindre le fournisseur.
+    # Prévenir après la transaction, jamais dedans
     for a in echus:
         try:
             from app.services.courriel import evenements

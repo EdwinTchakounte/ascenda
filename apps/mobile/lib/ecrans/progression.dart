@@ -16,13 +16,6 @@ import '../widgets/ui.dart';
 import '../theme/texte.dart';
 
 /// L'onglet des progrès : le carnet de bord du lecteur.
-///
-/// L'avancement en grand sur la page de garde, les chiffres clés en fiches, la
-/// régularité comme un calendrier de cahier, les notions en étiquettes, et le
-/// journal qui fonde le tout.
-///
-/// Aucun chiffre n'est fabriqué ici : tout vient des trois fournisseurs de la
-/// progression, et le journal permet de recouper chacun d'eux.
 class EcranProgression extends ConsumerWidget {
   const EcranProgression({super.key});
 
@@ -129,9 +122,7 @@ class EcranProgression extends ConsumerWidget {
                 const SizedBox(height: 12),
                 const Apparition(rang: 3, child: _Regularite()),
                 const SizedBox(height: 28),
-                // La carte dit où l'on en est ; le glossaire dit ce qu'il y a
-                // à savoir. L'un sans l'autre laisse le lecteur devant un
-                // constat sans issue.
+                // La carte dit où l'on en est ; le glossaire dit ce qu'il y a à savoir.
                 Apparition(
                   rang: 4,
                   child: TitreSection(
@@ -163,22 +154,14 @@ class EcranProgression extends ConsumerWidget {
   }
 }
 
-/// Le réglage « animations réduites » du téléphone. Les briques de
-/// `mouvement.dart` le lisent déjà ; les mouvements écrits ici le lisent par
-/// cette même porte.
+/// Le réglage « animations réduites » du téléphone.
 bool _reduites(BuildContext context) => MediaQuery.maybeDisableAnimationsOf(context) ?? false;
 
 /// Le journal d'activité.
-///
-/// La table est en ajout seul et porte tout ce qui a été fait. La montrer telle
-/// quelle permet de vérifier un total qu'on trouverait douteux : un compteur
-/// qu'on ne peut pas recouper est un compteur qu'on finit par ignorer.
 class _Journal extends ConsumerWidget {
   const _Journal();
 
-  /// Ce que raconte chaque type d'évènement, du point de vue du lecteur et non
-  /// de la base. Un type inconnu s'affiche sous son nom technique plutôt que de
-  /// disparaître, sinon le journal mentirait par omission.
+  /// Ce que raconte chaque type d'évènement, du point de vue du lecteur et non de la base.
   static const _recits = {
     'quiz_attempt': ('Quiz passé', Icone.question),
     'question_asked': ("Question à l'agent", Icone.plume),
@@ -239,9 +222,7 @@ class _LigneJournal extends StatelessWidget {
   /// La dernière ligne n'a pas de filet de frise sous elle.
   final bool derniere;
 
-  /// « il y a 3 h », « hier », « le 12/08 ». Une date absolue pour ce qui est
-  /// vieux, un repère relatif pour ce qui est récent : c'est ainsi qu'on situe
-  /// spontanément ce qu'on vient de faire.
+  /// « il y a 3 h », « hier », « le 12/08 ».
   String _quand(DateTime? d) {
     if (d == null) return '';
     final ecart = DateTime.now().difference(d);
@@ -337,9 +318,6 @@ class _LigneJournal extends StatelessWidget {
 }
 
 /// Une icône de la plume dans un cadre d'encre : le cachet d'un carnet.
-///
-/// La brique `IconePastille` attend une icône Material ; celle-ci porte les
-/// icônes dessinées d'ASCENDA, dans un cadre plutôt que sur un voile arrondi.
 class _CachetIcone extends StatelessWidget {
   const _CachetIcone({required this.icone, this.couleur, this.taille = 36});
   final Icone icone;
@@ -601,9 +579,7 @@ class _Fiche extends StatelessWidget {
   }
 }
 
-/// Le temps de lecture : les minutes montent en dessous d'une heure, les heures
-/// au-dessus, avec les minutes restantes en unité. Le libellé reste celui de
-/// `dureeLisible` : « 45 min », « 2 h », « 2 h 30 ».
+/// Le temps de lecture : les minutes montent en dessous d'une heure
 class _FicheDuree extends StatelessWidget {
   const _FicheDuree({required this.minutes});
   final int minutes;
@@ -632,9 +608,7 @@ class _FicheDuree extends StatelessWidget {
   }
 }
 
-/// La régularité en calendrier de cahier : une case par jour, douze colonnes de
-/// semaines. Une case pleine d'encre pour un jour lu, une case vide pour un
-/// jour sans rien. Ce sont les trous qui se voient.
+/// La régularité en calendrier de cahier : une case par jour, douze colonnes de semaines.
 class _Regularite extends ConsumerWidget {
   const _Regularite();
 
@@ -882,9 +856,7 @@ class _Maitrise extends ConsumerWidget {
                 spacing: 7,
                 runSpacing: 7,
                 children: [
-                  // Des fiches de glossaire plutôt que des pastilles : un terme
-                  // long doit pouvoir passer à la ligne au lieu de déborder sur
-                  // un petit écran.
+                  // Des fiches de glossaire plutôt que des pastilles
                   for (final n in liste)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
