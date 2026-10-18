@@ -42,3 +42,25 @@ l'APK et la dépose en artefact sous le nom `ascenda-apk`, avec son empreinte SH
 `src/Ascenda.Mobile/MauiProgram.cs` porte l'adresse de l'interface de programmation. Pour
 une recette locale, la remplacer par `http://10.0.2.2:5000` et autoriser le trafic en clair
 vers cette adresse seulement.
+
+## Recette sur appareil branché
+
+L'adresse du service est une propriété de construction. Pour viser la machine de
+développement plutôt que la production :
+
+```bash
+adb reverse tcp:8250 tcp:8250
+dotnet publish src/Ascenda.Mobile/Ascenda.Mobile.csproj -f net10.0-android -c Release \
+  -p:AndroidPackageFormat=apk -p:AdresseApi=http://127.0.0.1:8250 \
+  -p:ApplicationId=com.ascenda.dotnet.recette -o paquet-recette
+```
+
+La chaîne d'intégration produit les deux variantes : celle de production et celle de
+recette, qui porte un identifiant distinct et s'installe donc à côté.
+
+## Comparer au pixel avec l'application Flutter
+
+```bash
+./tests/test_portage.py          # les jetons ne dérivent pas
+./tests/comparer_portage.py      # l'écart réel, écran par écran, sur l'appareil
+```

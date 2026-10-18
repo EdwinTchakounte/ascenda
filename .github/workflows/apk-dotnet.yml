@@ -66,6 +66,15 @@ jobs:
              -p:ApplicationVersion=${{ github.run_number }}
              -o paquet
 
+      - name: Publier l'APK de recette
+        run: dotnet publish src/Ascenda.Mobile/Ascenda.Mobile.csproj
+             -f net10.0-android -c Release
+             -p:AndroidPackageFormat=apk
+             -p:ApplicationVersion=${{ github.run_number }}
+             -p:ApplicationId=com.ascenda.dotnet.recette
+             -p:AdresseApi=http://127.0.0.1:8250
+             -o paquet-recette
+
       - name: Relever l'empreinte
         run: |
           cd paquet
@@ -79,6 +88,7 @@ jobs:
           path: |
             apps/mobile-dotnet/paquet/*.apk
             apps/mobile-dotnet/paquet/empreintes.txt
+            apps/mobile-dotnet/paquet-recette/*.apk
           retention-days: 30
 
       - name: Publier la version

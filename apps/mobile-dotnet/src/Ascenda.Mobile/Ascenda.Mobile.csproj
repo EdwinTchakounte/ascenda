@@ -16,6 +16,9 @@
     <SupportedOSPlatformVersion>24.0</SupportedOSPlatformVersion>
 
     <AndroidPackageFormat>apk</AndroidPackageFormat>
+
+    <!-- Réglable à la construction : -p:AdresseApi=http://127.0.0.1:8250 pour une recette -->
+    <AdresseApi Condition="'$(AdresseApi)' == ''">https://api.ascenda-books.online</AdresseApi>
     <AndroidLinkMode Condition="'$(Configuration)' == 'Release'">SdkOnly</AndroidLinkMode>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
   </PropertyGroup>
@@ -28,6 +31,13 @@
 
   <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>AdresseApi</_Parameter1>
+      <_Parameter2>$(AdresseApi)</_Parameter2>
+    </AssemblyAttribute>
   </ItemGroup>
 
   <ItemGroup>

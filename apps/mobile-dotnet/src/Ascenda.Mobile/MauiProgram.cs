@@ -10,7 +10,12 @@ namespace Ascenda.Mobile;
 
 public static class MauiProgram
 {
-    public const string AdresseApi = "https://api.ascenda-books.online";
+    public static string AdresseApi =>
+        typeof(MauiProgram).Assembly
+            .GetCustomAttributes(typeof(System.Reflection.AssemblyMetadataAttribute), false)
+            .Cast<System.Reflection.AssemblyMetadataAttribute>()
+            .FirstOrDefault(a => a.Key == "AdresseApi")?.Value
+        ?? "https://api.ascenda-books.online";
 
     public static MauiApp CreateMauiApp()
     {
