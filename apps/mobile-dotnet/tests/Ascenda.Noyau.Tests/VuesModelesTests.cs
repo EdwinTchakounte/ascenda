@@ -208,6 +208,16 @@ public class VuesModelesTests
         Assert.Equal("1 sur 3 ouvrages", vm.Compteur);
     }
 
+    [Theory]
+    [InlineData(8, "Bonjour")]
+    [InlineData(11, "Bonjour")]
+    [InlineData(12, "Bon après-midi")]
+    [InlineData(17, "Bon après-midi")]
+    [InlineData(18, "Bonsoir")]
+    [InlineData(23, "Bonsoir")]
+    public void La_salutation_suit_l_heure(int heure, string attendu) =>
+        Assert.Equal(attendu, VmJour.Moment(heure));
+
     private sealed class TransportCoupe : HttpMessageHandler
     {
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request,

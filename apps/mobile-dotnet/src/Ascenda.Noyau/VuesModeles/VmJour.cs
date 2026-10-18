@@ -27,7 +27,13 @@ public partial class VmJour : VmBase
     public ObservableCollection<JourSemaine> Semaine { get; } = new();
 
     public string Salutation =>
-        $"Bonjour, {_session.Courante.Utilisateur?.Prenom ?? "lecteur"}";
+        $"{Moment()}, {_session.Courante.Utilisateur?.Prenom ?? "lecteur"}";
+
+    public static string Moment(int? heure = null)
+    {
+        var h = heure ?? DateTime.Now.Hour;
+        return h < 12 ? "Bonjour" : h < 18 ? "Bon après-midi" : "Bonsoir";
+    }
 
     public bool RienAFaire => !Occupe && Seance is null && !EnEchec;
 
