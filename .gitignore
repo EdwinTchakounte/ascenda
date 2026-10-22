@@ -62,3 +62,6 @@ apps/mobile-dotnet/**/bin/
 apps/mobile-dotnet/**/obj/
 apps/mobile-dotnet/paquet/
 apps/mobile-dotnet/resultats/
+
+# La phase finale reste sur la machine de travail.
+/phase_final/
