@@ -21,7 +21,7 @@ COUPE_EXPORT = 2000
 def _lisible(v: Any) -> str:
     """Une valeur de colonne, rendue courte et lisible dans un tableau."""
     if v is None:
-        return "—"
+        return "·"
     if isinstance(v, bool):
         return "oui" if v else "non"
     texte = v if isinstance(v, str) else str(v)

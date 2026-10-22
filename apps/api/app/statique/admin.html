@@ -2085,10 +2085,10 @@ zone({ cle: "journal", groupe: "Exploitation", titre: "Journal des modifications
         : `<p class="note">${e.operation === "insert" ? "Ligne créée." : "Ligne supprimée."}</p>`;
       const etat = (titre, obj) => obj
         ? `<h4>${titre}</h4>` + paires(Object.fromEntries(Object.entries(obj)
-            .map(([k, v]) => [k, ech(v === null ? "—" : typeof v === "object" ? JSON.stringify(v) : String(v))])))
+            .map(([k, v]) => [k, ech(v === null ? "·" : typeof v === "object" ? JSON.stringify(v) : String(v))])))
         : "";
       ouvrirVolet(`${e.table} · ${GESTES_LONG[e.operation] || e.operation}`,
-        paires({ "le": instant(e.le), "qui": ech(e.acteur), "ligne": ech(e.ligne || "—") })
+        paires({ "le": instant(e.le), "qui": ech(e.acteur), "ligne": ech(e.ligne || "·") })
         + `<h4>Ce qui a changé</h4>` + changements
         + etat("État avant", e.avant) + etat("État après", e.apres), "horloge");
     });

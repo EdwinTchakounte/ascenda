@@ -52,7 +52,7 @@ SYNTHESE = {
                 "required": ["section", "contenu", "pages"], "additionalProperties": False}},
         "a_retenir": {"type": "array", "minItems": 3, "maxItems": 7, "items": {"type": "string"}},
         "questions_ouvertes": {"type": "array", "items": {"type": "string"},
-            "description": "Ce que le texte laisse sans réponse — matière à discussion."}
+            "description": "Ce que le texte laisse sans réponse : matière à discussion."}
     },
     "required": ["resume_court", "resume_structure", "a_retenir", "questions_ouvertes"],
     "additionalProperties": False,

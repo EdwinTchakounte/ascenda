@@ -1,4 +1,4 @@
--- ASCENDA — schema PostgreSQL (canonique). Genere depuis db/schema.sql
+-- ASCENDA : schema PostgreSQL (canonique). Genere depuis db/schema.sql
 -- Prerequis : extensions vector, pg_trgm, unaccent, uuid-ossp (infra/docker/initdb)
 SET client_min_messages = warning;
 

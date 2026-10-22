@@ -1,4 +1,4 @@
--- ASCENDA — schéma V1 (SQLite local ; portable PostgreSQL)
+-- ASCENDA : schéma V1 (SQLite local ; portable PostgreSQL)
 -- Portage PG : TEXT id -> UUID, TEXT JSON -> JSONB, embedding BLOB -> vector(N),
 --              strftime -> now(). Le reste est identique.
 PRAGMA foreign_keys = ON;
