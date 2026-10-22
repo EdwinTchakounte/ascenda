@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Le portage .NET ne doit pas dériver de l'application Flutter.
+"""Le client .NET ne doit pas dériver de la mise en forme de référence.
 
 Ce que cette suite vérifie, sans rien construire : que les jetons de couleur, les
 polices et les onglets déclarés côté .NET sont ceux de l'application de référence.
@@ -42,7 +42,7 @@ def cle(champ, palette):
 
 
 def main():
-    b = Bilan("Portage .NET : les jetons suivent l'application Flutter")
+    b = Bilan("Portage .NET : les jetons suivent la référence")
 
     flutter = palettes_flutter()
     dotnet = jetons_dotnet()
@@ -81,7 +81,7 @@ def main():
     poses = re.findall(r'<ShellContent Title="([^"]+)"', shell)
     b.verifier("les quatre onglets portent les mêmes libellés",
                onglets == [o for o in poses if o in onglets] and len(onglets) == 4,
-               f"Flutter {onglets} · .NET {poses}")
+               f"référence {onglets} · .NET {poses}")
 
     b.section("Couverture des écrans")
     ecrans = {p.stem for p in (FLUTTER / "lib/ecrans").glob("*.dart")} - {"coque", "demarrage"}
@@ -91,7 +91,7 @@ def main():
     b.verifier("au moins les huit écrans du premier jet sont portés", len(pages) >= 8,
                f"{len(pages)} pages : {', '.join(portes)}")
     b.verifier("la couverture est annoncée sans l'arrondir", True,
-               f"{len(pages)} pages .NET pour {len(ecrans)} écrans Flutter")
+               f"{len(pages)} pages .NET pour {len(ecrans)} écrans de référence")
 
     return b.verdict()
 
