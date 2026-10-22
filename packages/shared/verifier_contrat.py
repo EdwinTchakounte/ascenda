@@ -14,6 +14,7 @@ APPELS = [
     re.compile(r"""\.(?:get|post|put|patch|delete)\(\s*['"](/[^'"]*)['"]"""),
     re.compile(r"""_uri\(\s*['"](/[^'"]*)['"]"""),
     re.compile(r"""recuperer<[^>]*>\(\s*[`'"]([^`'"]+)[`'"]"""),
+    re.compile(r'''\$?"(/v1/[^"]*)"'''),
 ]
 
 
@@ -22,7 +23,7 @@ def normaliser(chemin: str) -> str:
     chemin = chemin.split("?")[0].rstrip("/")
     if not chemin.startswith("/v1"):
         chemin = "/v1" + chemin
-    # Interpolations Dart et TypeScript, et paramètres de schéma.
+    # Interpolations C#, Dart et TypeScript, et paramètres de schéma.
     chemin = re.sub(r"\$\{[^}]+\}|\$\w+|\{[^}]+\}", "{}", chemin)
     return chemin
 
@@ -36,6 +37,7 @@ def chemins_appeles() -> dict[str, set[str]]:
     trouves: dict[str, set[str]] = {}
     sources = [
         *(RACINE / "apps" / "mobile" / "lib").rglob("*.dart"),
+        *(RACINE / "apps" / "mobile-dotnet" / "src").rglob("*.cs"),
         *(RACINE / "apps" / "web-vitrine" / "src").rglob("*.ts"),
         *(RACINE / "apps" / "web-vitrine" / "src").rglob("*.tsx"),
     ]

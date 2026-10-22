@@ -11,7 +11,7 @@ public class ServiceAgent
 
     public async Task<Echange> DemanderAsync(string question, string? documentId = null)
     {
-        var dto = await _api.PosterAsync<ReponseAgentDto>("/v1/agent/question",
+        var dto = await _api.PosterAsync<ReponseAgentDto>("/v1/agent/questions",
             new { question, document_id = documentId });
 
         var sources = (dto?.Sources ?? new List<SourceDto>())
