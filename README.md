@@ -4,14 +4,15 @@ Lecture guidée sur un corpus d'ouvrages : un diagnostic, un chronogramme de
 séances datées avec leurs pages, un quiz par séance et une révision espacée.
 
 Trois surfaces : une API FastAPI, un site public Next.js, une application
-Flutter.
+mobile .NET MAUI.
 
 ## Arborescence
 
 ```
 apps/api/           API FastAPI, console d'exploitation sur /admin
 apps/web-vitrine/   site public (Next.js 16, React 19, Tailwind 4)
-apps/mobile/        application (Flutter, Riverpod, go_router)
+apps/mobile-dotnet/ application mobile (.NET MAUI 10, C#, XAML)
+apps/mobile/        mise en forme de référence, servant de modèle au portage
 packages/shared/    openapi.json figé et vérificateur de contrat
 pipeline/           ingestion, OCR, vectorisation, dérivés pédagogiques
 db/                 schema.pg.sql, migrations/, verifier.sh
@@ -57,7 +58,8 @@ cd apps/api && PYTHONPATH=. ../../.venv/bin/python -m uvicorn app.main:app --por
 cd apps/web-vitrine && npm install && npm run dev
 
 # Application
-cd apps/mobile && flutter pub get && flutter run --dart-define=API_URL=http://localhost:8250
+cd apps/mobile-dotnet && dotnet build src/Ascenda.Mobile \
+  -f net10.0-android -p:AdresseApi=http://10.0.2.2:8250
 ```
 
 L'image `api` ne porte pas la recherche sémantique par défaut : elle demande
@@ -84,7 +86,7 @@ séparément et versionnés avec leur modèle et leur coût en jetons.
 ```bash
 ./tests/lancer.sh                                       # l'API doit tourner
 .venv/bin/python packages/shared/verifier_contrat.py    # contrat d'API
-cd apps/mobile && flutter test
+cd apps/mobile-dotnet && dotnet test tests/Ascenda.Noyau.Tests
 ```
 
 ## Déployer

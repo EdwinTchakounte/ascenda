@@ -9,9 +9,9 @@ l'écart : part de pixels qui diffèrent, écart moyen, et une carte qui montre 
     ./tests/comparer_portage.py jour quiz       # seulement ceux-là
 
 Les images sortent dans docs/comparaison-portage/ : pour chaque écran, la
-capture Flutter, la capture .NET, et la carte des différences.
+capture de référence, la capture .NET, et la carte des différences.
 
-Les deux moteurs ne dessinent pas le texte de la même façon : Flutter pose lui
+Les deux moteurs ne dessinent pas le texte de la même façon : le premier pose lui
 même ses glyphes, MAUI passe par les vues d'Android. Un écart résiduel sur le
 tracé des lettres est donc attendu ; ce qui doit coïncider, ce sont les teintes,
 les espacements et les tailles.

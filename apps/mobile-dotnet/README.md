@@ -58,7 +58,7 @@ dotnet publish src/Ascenda.Mobile/Ascenda.Mobile.csproj -f net10.0-android -c Re
 La chaîne d'intégration produit les deux variantes : celle de production et celle de
 recette, qui porte un identifiant distinct et s'installe donc à côté.
 
-## Comparer au pixel avec l'application Flutter
+## Comparer au pixel avec la mise en forme de référence
 
 ```bash
 ./tests/test_portage.py          # les jetons ne dérivent pas

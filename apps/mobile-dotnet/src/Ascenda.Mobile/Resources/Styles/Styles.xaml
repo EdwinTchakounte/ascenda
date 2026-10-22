@@ -29,7 +29,7 @@
     <Setter Property="TextColor" Value="{StaticResource Encre}" />
   </Style>
 
-  <!-- L'étiquette entre crochets, reprise de l'application Flutter -->
+  <!-- L'étiquette entre crochets, reprise de la mise en forme de référence -->
   <Style x:Key="Crochet" TargetType="Label">
     <Setter Property="FontFamily" Value="InterGras" />
     <Setter Property="FontSize" Value="11" />
